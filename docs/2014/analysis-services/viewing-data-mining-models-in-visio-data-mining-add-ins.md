@@ -1,5 +1,5 @@
 ---
-title: Visualizzazione di modelli di Data Mining in Visio (componenti aggiuntivi Data Mining Data) | Documenti Microsoft
+title: Visualizzazione di modelli di Data Mining in Visio (componenti aggiuntivi Data Mining dei dati) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagram, modifying
 - templates [Visio]
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - diagram
 ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 572bbd3b2c3bbcebbd1b5a829ac193ac0bb909a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9dbb4e78685982dc3b7cd981fc6df6db9bf40a13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259357"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Visualizzazione di modelli di data mining in Visio (componenti aggiuntivi Data mining)
   Le forme di Visio per il data mining consentono di connettersi a un server e creare un diagramma che rappresenta un modello di data mining esistente. I diagrammi possono quindi essere personalizzati utilizzando i controlli di Visio, ma è anche possibile eseguire il drill-down nei dati, esporre alcune delle statistiche sottostanti e utilizzare il modello sottostante.  
   
 ## <a name="building-a-model-diagram"></a>Compilazione di un diagramma del modello  
- Quando si apre il file contenente le forme di Visio per il data mining, il **forme** riquadro vengono visualizzate le seguenti forme.  
+ Quando si apre il file contenente le forme di Visio per il data mining, il **forme** riquadro sono elencate le forme seguenti.  
   
  Se all'apertura di Visio le forme di data mining non sono visibili, aprire il file modello dalla cartella di installazione.  
   
@@ -74,9 +74,9 @@ ms.locfileid: "36156075"
 ## <a name="walkthroughs"></a>Procedure dettagliate  
  Per esempi di come utilizzare e interpretare un diagramma completato, vedere i seguenti argomenti:  
   
- [Descrizione dettagliata del diagramma del cluster](cluster-diagram-walkthrough-data-mining-add-ins.md)  
+ [Descrizione dettagliata del diagramma dei cluster](cluster-diagram-walkthrough-data-mining-add-ins.md)  
   
- [Descrizione dettagliata del diagramma della rete dipendenze](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
+ [Descrizione dettagliata di diagramma della rete di dipendenze](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
   
  [Descrizione dettagliata del diagramma dell'albero delle decisioni](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a57374d5a33afe95539b00b3cb3eeb4801915064
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ce41539fc2dfadf7e2499a0828ad44752948666e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157732"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Punti dati vuoti e Null nei grafici (Generatore report e SSRS)
   Quando si visualizzano campi con valori vuoti o Null nel grafico, è possibile che il grafico non presenti l'aspetto previsto. I valori vuoti vengono elaborati in modo diverso a seconda del tipo di grafico specificato:  
   
--   Se il grafico è di tipo lineare (grafico a barre, a dispersione, a linee, ad area, con intervalli o istogramma) i valori vuoti vengono visualizzati come spazi vuoti o "gap". Se si desidera identificare i punti vuoti, è necessario aggiungere segnaposti di punti vuoti. Per altre informazioni, vedere [Aggiungi punti vuoti al grafico &#40;Generatore Report e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Se il grafico è di tipo lineare (grafico a barre, a dispersione, a linee, ad area, con intervalli o istogramma) i valori vuoti vengono visualizzati come spazi vuoti o "gap". Se si desidera identificare i punti vuoti, è necessario aggiungere segnaposti di punti vuoti. Per altre informazioni, vedere [aggiunta di punti vuoti al grafico &#40;Generatore Report e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Se il grafico è di tipo lineare contiguo (ad area, a barre, a linee, a dispersione o istogramma), vengono aggiunti punti dati vuoti per mantenere la continuità nella serie.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36156633"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="removing-empty-or-null-values"></a>Rimozione di valori vuoti o Null  
- Per evitare che dati importanti risultino nascosti, rimuovere i valori vuoti dal set di dati. Per filtrare i valori Null, è possibile usare la clausola NOT IS NULL nella query. In alternativa, è possibile aggiungere un'espressione di filtro per specificare che si desidera visualizzare solo i valori diversi da zero. Per altre informazioni, vedere [aggiungere i filtri di set di dati, filtri delle aree dati e i filtri di gruppo &#40;Generatore Report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
+ Per evitare che dati importanti risultino nascosti, rimuovere i valori vuoti dal set di dati. Per filtrare i valori Null, è possibile usare la clausola NOT IS NULL nella query. In alternativa, è possibile aggiungere un'espressione di filtro per specificare che si desidera visualizzare solo i valori diversi da zero. Per altre informazioni, vedere [aggiungere filtri per set di dati, aree dati e filtri di gruppo &#40;Generatore Report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
   
 ## <a name="fields-with-no-values-in-a-chart"></a>Campi senza valori in un grafico  
  Se un campo non contiene valori nel set di dati restituito, verrà visualizzato un grafico vuoto senza punti dati, ma con l'aggiunta del nome della serie (solitamente il nome del campo) come elemento della legenda.  
@@ -48,7 +48,7 @@ ms.locfileid: "36156633"
 ## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Aggiungere un grafico a un Report &#40;SSRS e Generatore Report&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
- [Risolvere i grafici &#40;SSRS e Generatore Report&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [Aggiungere un grafico a un Report &#40;Report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
+ [Risolvere i problemi di grafici &#40;Report e SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
   
   

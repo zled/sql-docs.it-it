@@ -1,5 +1,5 @@
 ---
-title: Barra degli strumenti (scheda Struttura cubo, Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Sulla barra degli strumenti (scheda Struttura cubo, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bb13932-350d-4c6c-96f7-893d6cbdf449
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 22857975aee349abdb1a258f9aa013ffe2adf1d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28f8711f832d4dd06b5ea66e4e2a587db1c57cec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209901"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Struttura cubo, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Barra degli strumenti** per eseguire le operazioni più frequenti, quale l'elaborazione o la creazione di nuovi gruppi di misure, nella scheda **Struttura cubo** in Progettazione cubi.  
@@ -42,6 +42,6 @@ ms.locfileid: "36158067"
 |**Nascondi tabella**|Fare clic su questo pulsante per nascondere la tabella selezionata nel riquadro **Vista origine dati** .<br /><br /> Nota: questa opzione è disabilitata se non viene selezionata una tabella nel riquadro **Vista origine dati** .|  
 |**Trova tabella**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Trova tabella** e cercare una tabella nel riquadro **Vista origine dati** .|  
 |**Zoom**|Fare clic su questo pulsante per selezionare in successione le opzioni relative alle percentuali di zoom oppure per selezionare una percentuale di zoom disponibile per il riquadro **Vista origine dati** .|  
-|**Mostra**|Fare clic su questo pulsante per selezionare in successione le opzioni seguenti oppure per selezionare una delle opzioni seguenti che consentono di cambiare il tipo di visualizzazione del riquadro **Vista origine dati** :<br /><br /> **Visualizzazione struttura ad albero**: visualizzare tabelle, query denominate, colonne, calcoli denominati e relazioni in una visualizzazione albero.<br /><br /> **Vista diagramma**: visualizzare tabelle, query denominate, colonne, calcoli denominati e relazioni in un diagramma di database.|  
+|**Mostra**|Fare clic su questo pulsante per selezionare in successione le opzioni seguenti oppure per selezionare una delle opzioni seguenti che consentono di cambiare il tipo di visualizzazione del riquadro **Vista origine dati** :<br /><br /> **Visualizzazione albero**: visualizzare tabelle, denominate query, colonne, calcoli denominati e relazioni in una visualizzazione albero.<br /><br /> **Vista diagramma**: visualizzare tabelle, query denominate, colonne, calcoli denominati e relazioni in un diagramma di database.|  
   
   

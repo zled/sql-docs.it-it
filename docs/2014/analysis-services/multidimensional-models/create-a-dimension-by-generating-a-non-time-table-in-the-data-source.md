@@ -1,5 +1,5 @@
 ---
-title: Creare una dimensione generando una tabella Non temporale nell'origine dati | Documenti Microsoft
+title: Creare una dimensione generando una tabella Non temporale nell'origine dei dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Analysis Services], dimensions without data source
 - dimensions [Analysis Services], standard
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - standard dimensions [Analysis Services]
 ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7165c8da6afd7b67669f21f8aecc06edcc24b5d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45ba4a55fae371792ecffdc79cde7e8b9b51ed23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210101"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Creare una dimensione generando una tabella non temporale nell'origine dati
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile usare Creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione senza usare un'origine dati esistente. A questo scopo, selezionare l'opzione **Genera una tabella diversa dalla tabella dei tempi nell'origine dati** della pagina **Seleziona metodo di creazione** della procedura guidata. Per creare una nuova tabella della dimensione nell'origine dati sottostanti è necessario disporre delle autorizzazioni per creare oggetti nell'origine dati sottostanti. In caso di definizione di una dimensione senza una vista origine dati predefinita, è possibile sia definire la dimensione da zero sia definirla in base a un modello di dimensione.  
@@ -108,7 +108,7 @@ ms.locfileid: "36070154"
  Nella pagina **Completamento procedura guidata** assegnare un nome alla nuova dimensione e quindi verificarne la struttura. Selezionare la casella di controllo **Genera schema adesso** per avviare Generazione guidata schema dopo avere fatto clic su **Fine**. Nella maggior parte dei casi non è necessario selezionare questa casella di controllo quando si pianifica la creazione di oggetti aggiuntivi. Se non si seleziona questa casella di controllo, è possibile utilizzare Progettazione dimensioni per generare lo schema in un secondo momento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una dimensione temporale generando una tabella dei tempi](create-a-time-dimension-by-generating-a-time-table.md)   
+ [Creare una dimensione temporale generando una tabella temporale](create-a-time-dimension-by-generating-a-time-table.md)   
  [Creare una dimensione temporale generando una tabella dei tempi](create-a-time-dimension-by-generating-a-time-table.md)  
   
   

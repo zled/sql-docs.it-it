@@ -1,5 +1,5 @@
 ---
-title: Elemento Actions (ASSL) | Documenti Microsoft
+title: Elemento Actions (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Actions element
 ms.assetid: 100a4209-2c22-4902-a8ca-f2bd99bf8fbb
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 109a6ea97218a75d64a0b9e84371e8e3667134ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 583f265b0fb45b22cd0f6b3d20b577276d70ae92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183228"
 ---
 # <a name="actions-element-assl"></a>Elemento Actions (ASSL)
   Contiene la raccolta di azioni per un [cubo](../objects/cube-element-assl.md) oppure [prospettiva](../objects/perspective-element-assl.md) elemento.  
@@ -69,9 +69,9 @@ ms.locfileid: "36157610"
 |Predecessore o padre|Elementi figlio|  
 |------------------------|--------------------|  
 |[Cubo](../data-type/action-data-type-assl.md), [ReportAction](../data-type/reportaction-data-type-assl.md), [StandardAction](../data-type/standardaction-data-type-assl.md)|  
-|[Prospettiva](../data-type/perspectiveaction-data-type-assl.md)|  
+|[Punto di vista](../data-type/perspectiveaction-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Gli elementi corrispondenti nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.ActionCollection> e <xref:Microsoft.AnalysisServices.PerspectiveActionCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10058"
 - "10057"
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.deletecolumns.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a15db177426dc39d10363abbfb2b160ef82d7ab5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8e064d68544b72844d364047b51ba90cda39c63b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163816"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celle, righe e colonne dell'area dati Tablix (Generatore report e SSRS)
   Per controllare la modalità di visualizzazione in un report dei dati di righe e colonne di un'area dati Tablix, è necessario comprendere in che modo specificare righe e colonne relative a dati dettaglio, dati di gruppo, etichette e totali. Per visualizzare i dati, in molti casi è possibile utilizzare le strutture predefinite per una tabella, una matrice o un elenco. Per altre informazioni, vedere [tabelle &#40;Generatore Report e SSRS&#41;](tables-report-builder-and-ssrs.md), [matrici &#40;Generatore Report e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), oppure [Elenca &#40;Generatore Report e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
@@ -124,6 +124,6 @@ ms.locfileid: "36155712"
  È possibile dividere una cella precedentemente unita. Le celle possono essere divise orizzontalmente nelle colonne o verticalmente tra le righe. Per dividere una cella in un blocco di celle, dividere prima la cella in orizzontale, quindi in verticale, ripetendo l'operazione più volte fino al raggiungimento del risultato desiderato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Area dati Tablix &#40;SSRS e Generatore Report&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Un'area dati Tablix &#40;Report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

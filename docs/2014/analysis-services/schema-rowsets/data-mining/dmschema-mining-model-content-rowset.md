@@ -1,5 +1,5 @@
 ---
-title: Set di righe DMSCHEMA_MINING_MODEL_CONTENT | Documenti Microsoft
+title: Set di righe DMSCHEMA_MINING_MODEL_CONTENT | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODEL_CONTENT rowset
 ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6eb96e8a4a277ee5b7e198fca3d96062bd6d486
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76724967936008e52cb43f7af02bbb7a833475d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165452"
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>Set di righe DMSCHEMA_MINING_MODEL_CONTENT
   Consente alle applicazioni client di esplorare il contenuto di un modello di data mining. Per passare al contenuto del modello di data mining, le applicazioni client possono utilizzare le restrizioni speciali relative alle operazioni sull'albero descritte alla fine di questo argomento.  

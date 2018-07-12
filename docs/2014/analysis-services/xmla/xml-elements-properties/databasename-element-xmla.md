@@ -1,5 +1,5 @@
 ---
-title: Elemento DatabaseName (XMLA) | Documenti Microsoft
+title: Elemento DatabaseName (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DatabaseName element
 ms.assetid: 5cfd9a1f-da53-497a-b677-c51be4641bd0
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fbfff4e4389406496cf5df467ad044b6fa847727
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fc7969194f91afa5dcf4d795ce33fae39d00c398
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183208"
 ---
 # <a name="databasename-element-xmla"></a>Elemento DatabaseName (XMLA)
   Identifica la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database da ripristinare dall'elemento padre [ripristinare](../xml-elements-commands/restore-element-xmla.md) comando.  
@@ -63,7 +63,7 @@ ms.locfileid: "36157813"
 |Elementi padre|[Ripristina](../xml-elements-commands/restore-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `DatabaseName` identifica il database in cui il comando `Restore` ripristina un file di backup. Se questo elemento non è specificato o contiene una stringa vuota, viene utilizzato il nome del database contenuto nel file di backup.  
   
  Se il database esiste già nell'istanza di destinazione, si verifica un errore a meno che l'elemento `AllowOverwrite` per il comando padre `Restore` non sia impostato su `True`.  

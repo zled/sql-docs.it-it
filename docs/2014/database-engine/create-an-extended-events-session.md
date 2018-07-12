@@ -1,5 +1,5 @@
 ---
-title: Creare una sessione eventi estesi | Documenti Microsoft
+title: Creare una sessione eventi estesi | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34b1e95a-a80e-4aca-9201-abde47f2ca74
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db38720b01cf8e851dfb3f047f37701381a613d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 54be2f1352a6b4c17aeccb623dfddf1fd648f547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277537"
 ---
 # <a name="create-an-extended-events-session"></a>Creare una sessione Eventi estesi
   È possibile creare una sessione Eventi estesi tramite l'editor di query o è possibile creare una sessione in Esplora oggetti. In Eventi estesi in Esplora oggetti sono disponibili due interfacce utente che è possibile utilizzare per creare, modificare e visualizzare dati della sessione eventi. Tramite una procedura guidata vengono illustrati il processo di creazione della sessione eventi e una nuova interfaccia utente della sessione che fornisce opzioni di configurazione più avanzate. È possibile creare sessioni di eventi estesi per la diagnosi della traccia di SQL Server, che consente di risolvere problemi come i seguenti:  
@@ -39,6 +39,6 @@ ms.locfileid: "36068094"
   
  [Creare una sessione eventi estesi utilizzando la procedura guidata &#40;Esplora oggetti&#41;](../ssms/object/object-explorer.md)  
   
- [Creare una sessione eventi estesi utilizzando la finestra di dialogo nuova sessione](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
+ [Creare una sessione Eventi estesi usando la finestra di dialogo Nuova sessione](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
   
   

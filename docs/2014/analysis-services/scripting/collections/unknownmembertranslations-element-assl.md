@@ -1,5 +1,5 @@
 ---
-title: Elemento UnknownMemberTranslations (ASSL) | Documenti Microsoft
+title: Elemento UnknownMemberTranslations (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnknownMemberTranslations element
 ms.assetid: 72920843-2d43-4ff4-b38e-19c9a7451cb2
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: acd95365eef8c2655748dffac5f75ce71e40258f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 331f61e1e0cea88ee8dfb58b5d69333f99961be4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159342"
 ---
 # <a name="unknownmembertranslations-element-assl"></a>Elemento UnknownMemberTranslations (ASSL)
   Contiene la raccolta di traduzioni per la didascalia del [UnknownMember](../objects/member-element-assl.md) elemento di una dimensione.  
@@ -63,8 +63,8 @@ ms.locfileid: "36157256"
 |Elementi padre|[Dimension](../objects/dimension-element-assl.md)|  
 |Elementi figlio|[UnknownMemberTranslation](../objects/translation-element-assl.md) di tipo [traduzione](../data-type/translation-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `UnknownMemberTranslations` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Dimension>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `UnknownMemberTranslations` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipo di dati Translation &#40;ASSL&#41;](../data-type/translation-data-type-assl.md)   

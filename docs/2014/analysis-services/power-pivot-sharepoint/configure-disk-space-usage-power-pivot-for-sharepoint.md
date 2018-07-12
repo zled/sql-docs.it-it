@@ -1,5 +1,5 @@
 ---
-title: Configurare l'utilizzo di spazio su disco (PowerPivot per SharePoint) | Documenti Microsoft
+title: Configurare l'utilizzo di spazio su disco (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76f4688acd348f8ee2bcbe87d8832f5f770ba4b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 538efc15ea53c9c7666589c71c039ce21fa21b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151492"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurare l'utilizzo di spazio su disco (PowerPivot per SharePoint)
   Una distribuzione di PowerPivot per SharePoint consente di utilizzare lo spazio su disco del computer host per memorizzare nella cache database PowerPivot per ricaricamenti più veloci. Ogni database PowerPivot caricato in memoria viene innanzitutto memorizzato nella cache su disco in modo che possa essere ricaricato rapidamente in un secondo momento per soddisfare nuove richieste. Per impostazione predefinita, in PowerPivot per SharePoint viene utilizzato tutto lo spazio su disco disponibile per memorizzare nella cache i database, ma è possibile modificare questo comportamento impostando proprietà che limitano la quantità di spazio su disco utilizzata.  
@@ -46,7 +46,7 @@ ms.locfileid: "36157838"
   
  La cartella Backup consente l'archiviazione cache comune per qualsiasi database di PowerPivot caricato in memoria nel computer locale. Se si dispone di più applicazioni del servizio PowerPivot definite nella farm, una di esse può utilizzare il server locale per caricare e successivamente memorizzare nella cache dati PowerPivot. Sia il caricamento sia la memorizzazione nella cache dei dati sono operazioni del server Analysis Services. Pertanto, l'utilizzo dello spazio su disco totale è gestito a livello dell'istanza di Analysis Services nella cartella Backup. Le impostazioni di configurazione che limitano l'utilizzo dello spazio su disco vengono pertanto impostate sulla singola istanza di SQL Server Analysis Services in esecuzione in un server applicazioni di SharePoint.  
   
- Nella cache sono contenuti solo database PowerPivot. Questi database vengono archiviati in più file in una singola cartella padre (cartella Backup). Poiché i database PowerPivot devono essere utilizzati come dati interni a una cartella di lavoro di Excel, i nomi dei database sono basati su GUID piuttosto che su descrizioni. Una cartella GUID in  **\<serviceApplicationName >** è la cartella padre di un database PowerPivot. Quando i database PowerPivot vengono caricati nel server, vengono create cartelle aggiuntive per ognuno.  
+ Nella cache sono contenuti solo database PowerPivot. Questi database vengono archiviati in più file in una singola cartella padre (cartella Backup). Poiché i database PowerPivot devono essere utilizzati come dati interni a una cartella di lavoro di Excel, i nomi dei database sono basati su GUID piuttosto che su descrizioni. Una cartella GUID in  **\<Nomeapplicazioneservizio >** è la cartella padre di un database PowerPivot. Quando i database PowerPivot vengono caricati nel server, vengono create cartelle aggiuntive per ognuno.  
   
  Poiché i dati PowerPivot potrebbero essere caricati in qualsiasi istanza di Analysis Services in una farm, gli stessi dati potrebbero anche essere memorizzati nella cache in più computer della farm. Questa procedura favorisce le prestazioni rispetto all'utilizzo dello spazio su disco, ma in questo modo gli utenti ottengono accesso più veloce ai dati se già disponibili su disco.  
   
@@ -54,11 +54,11 @@ ms.locfileid: "36157838"
   
  A livello di sistema, è possibile creare avvisi di posta elettronica tramite cui si notifica all'utente quando lo spazio su disco non è sufficiente. In Microsoft System Center è disponibile una funzionalità di avvisi di posta elettronica. Per impostare gli avvisi, è possibile utilizzare anche Gestione risorse file server, l'Utilità di pianificazione o uno script di PowerShell. Nei collegamenti seguenti vengono fornite informazioni utili per la configurazione di notifiche di spazio su disco insufficiente:  
   
--   [Novità in Gestione risorse File Server](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
+-   [Quali sono le novità in Gestione risorse File Server](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
   
--   [Guida dettagliata di gestione risorse file Server per Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Guida dettagliata alla gestione risorse file Server per Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
   
--   [Impostazione avvisi di spazio su disco insufficiente in Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [L'impostazione di avvisi di spazio su disco insufficiente in Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>Come limitare la quantità di spazio su disco utilizzata per l'archiviazione di file memorizzati nella cache  
   
@@ -95,9 +95,9 @@ ms.locfileid: "36157838"
 5.  Scegliere **OK** per salvare le modifiche.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- Un'installazione di PowerPivot per SharePoint fornisce regole di integrità in modo che sia possibile eseguire azioni correttive in caso di problemi di integrità, configurazione o disponibilità del server. Alcune di queste regole consentono di utilizzare le impostazioni di configurazione per stabilire le condizioni in base alle quali vengono attivate le regole di integrità. Se si ottimizzano le prestazioni del server, è necessario rivedere queste impostazioni anche per assicurarsi che le impostazioni predefinite rappresentino la scelta migliore per il sistema. Per altre informazioni, vedere [configurare le regole di integrità di PowerPivot -](configure-power-pivot-health-rules.md).  
+ Un'installazione di PowerPivot per SharePoint fornisce regole di integrità in modo che sia possibile eseguire azioni correttive in caso di problemi di integrità, configurazione o disponibilità del server. Alcune di queste regole consentono di utilizzare le impostazioni di configurazione per stabilire le condizioni in base alle quali vengono attivate le regole di integrità. Se si ottimizzano le prestazioni del server, è necessario rivedere queste impostazioni anche per assicurarsi che le impostazioni predefinite rappresentino la scelta migliore per il sistema. Per altre informazioni, vedere [configurare le regole di integrità PowerPivot -](configure-power-pivot-health-rules.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione Server PowerPivot e la configurazione in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

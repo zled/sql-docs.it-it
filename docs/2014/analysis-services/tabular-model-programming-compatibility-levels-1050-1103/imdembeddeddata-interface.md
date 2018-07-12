@@ -1,5 +1,5 @@
 ---
-title: Interfaccia IMDEmbedded | Documenti Microsoft
+title: Interfaccia IMDEmbedded | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3973640b4a4efca789ec107c1c1f086801cac234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc1f1032a644277cab9645a11f8b3bedbb65c13d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156076"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157142"
 ---
 # <a name="imdembedded-interface"></a>Interfaccia IMDEmbedded
   L'interfaccia IMDEmbedded è un'interfaccia pubblica utilizzata per gestire un database PowerPivot incorporato o un database modello tabulare. L'interfaccia eredita dall'interfaccia `IPersistStream` e consente di effettuare le operazioni seguenti:  
@@ -44,7 +44,7 @@ ms.locfileid: "36156076"
 -   Salvare il database locale o in-process nel flusso incorporato del documento contenitore. Ereditato da `IPersistStream`.  
   
 ## <a name="reference"></a>Riferimento  
- I seguenti riferimenti a documenti di `IMDEmbedded` interfaccia come presentata nel **msmd** file di intestazione.  
+ Di seguito fanno riferimento i documenti il `IMDEmbedded` interfaccia illustrata nella **msmd** file di intestazione.  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>File di origine: PXOEmbeddedData.idl  
   
@@ -103,7 +103,7 @@ HRESULT GetStreamIdentifier (
  `E_FAIL`  
  Si è verificato un errore durante l'accesso all'identificatore di flusso.  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>Note  
  Per verificare se la connessione corrente contiene un database incorporato, l'utente deve controllare il valore della proprietà DBPROP_MSMD_EMBEDDED_DATA dalle proprietà di connessione di OLE DB.  
   
  I valori possibili per DBPROP_MSMD_EMBEDDED_DATA sono:  

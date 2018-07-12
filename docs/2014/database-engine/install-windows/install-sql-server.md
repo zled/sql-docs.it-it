@@ -1,5 +1,5 @@
 ---
-title: Installare SQL Server 2014 | Documenti Microsoft
+title: Installare SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, preparing to install
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bf415bef00710562247bcfd9fa310e2c0728497f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7f03f01be41395cea94acdc40acd582a6fb78772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157012"
 ---
 # <a name="install-sql-server-2014"></a>Installare SQL Server 2014
-## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ Scaricare SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
-  **Grazie per aver per [Scott Hanselman](http://www.hanselman.com/) per la raccolta di tutti i collegamenti di pacchetto del programma di installazione in un'unica posizione.**
+## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ Download di SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+  **Grazie per aver preso parte alla [Scott Hanselman](http://www.hanselman.com/) per la raccolta di tutti i collegamenti di pacchetto del programma di installazione in un'unica posizione.**
   
- In questo argomento è contenuta una panoramica delle diverse opzioni disponibili per l'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per ulteriori informazioni sui vari [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti che possono essere installati e sul processo di installazione, vedere [installazione per SQL Server 2014](installation-for-sql-server.md).  
-> **Nota:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile nelle edizioni a 32 e 64 bit. Le edizioni a 64 bit e a 32 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installate tramite l'Installazione guidata o il prompt dei comandi. Per ulteriori informazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti, vedere [edizioni e componenti di SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ In questo argomento è contenuta una panoramica delle diverse opzioni disponibili per l'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni sui vari [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti che possono essere installati e il processo di installazione, vedere [installazione per SQL Server 2014](installation-for-sql-server.md).  
+> **Nota:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile nelle edizioni a 32 e 64 bit. Le edizioni a 64 bit e a 32 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installate tramite l'Installazione guidata o il prompt dei comandi. Per altre informazioni sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti, vedere [edizioni e componenti di SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Per impostazione predefinita, i database di esempio e il codice di esempio non vengono installati come parte dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per installare i database di esempio e il codice di esempio per le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diverse da Express, vedere il [sito Web CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). Per informazioni sul supporto per il codice e i database di esempio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], vedere [Panoramica di database ed esempi](http://go.microsoft.com/fwlink/?LinkId=110391).  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36158326"
   
 |Argomento|Description|  
 |-----------|-----------------|  
-|[Sul motore di Database di SQL Server](../sql-server-database-engine-overview.md)|Viene descritto come installare e configurare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
+|[Informazioni sul Motore di database di SQL Server](../sql-server-database-engine-overview.md)|Viene descritto come installare e configurare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Installare la replica di SQL Server](install-sql-server-replication.md)|Viene descritto come installare e configurare la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Installare Riesecuzione distribuita](../../tools/distributed-replay/install-distributed-replay-overview.md)|Vengono elencati gli argomenti sull'installazione della funzionalità Riesecuzione distribuita.|  
 |[Installare gli strumenti di gestione di SQL Server](../../sql-server/install/install-sql-server-management-tools.md)|Viene descritto come installare e configurare gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -64,7 +64,7 @@ ms.locfileid: "36158326"
 |[Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|Le procedure fornite in questo argomento consentono di configurare le impostazioni di porte e firewall necessarie per accedere ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o PowerPivot per SharePoint.|  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Installare funzionalità di Business Intelligence di SQL Server 2014](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
+ [Installare le funzionalità di Business Intelligence di SQL Server 2014](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
  Le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che fanno parte della piattaforma di Business Intelligence di [!INCLUDE[msCoName](../../includes/msconame-md.md)] includono [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] e diverse applicazioni client utilizzate per la creazione o l'utilizzo di dati analitici. In questa sezione della documentazione relativa al programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene descritto come installare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  [Installazione del cluster di failover di SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  

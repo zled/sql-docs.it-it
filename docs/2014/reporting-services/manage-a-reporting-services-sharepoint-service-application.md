@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7f33036175d395359efbdb5708a422b27bf711db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6539627f9b1fc5fc41b9cc535efd5cb4c5949ecc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153872"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gestire un'applicazione di servizio SharePoint di Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Le applicazioni di servizio vengono gestite da Amministrazione centrale SharePoint. Le pagine Gestione e Proprietà consentono di aggiornare la configurazione dell'applicazione di servizio e le attività di amministrazione comuni.  
@@ -94,7 +94,7 @@ ms.locfileid: "36156650"
   
 |Impostazione|Commenti|  
 |-------------|--------------|  
-|Abilita registrazione di esecuzione|Il valore predefinito è TRUE.<br /><br /> Consente di specificare se il server di report deve generare log di traccia, nonché il numero di giorni per cui conservare tali log. , I log vengono archiviati nel computer del server di report, nella cartella \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Viene creato un nuovo file di log a ogni riavvio del servizio. Per ulteriori informazioni sui file di log, vedere [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)|  
+|Abilita registrazione di esecuzione|Il valore predefinito è TRUE.<br /><br /> Consente di specificare se il server di report deve generare log di traccia, nonché il numero di giorni per cui conservare tali log. , I log vengono archiviati nel computer del server di report, nella cartella \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Viene creato un nuovo file di log a ogni riavvio del servizio. Per altre informazioni sui file di log, vedere [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)|  
 |Giorni di mantenimento del log di esecuzione|Il valore predefinito è 60 giorni.|  
   
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è supportata la registrazione ULS di SharePoint.  Per altre informazioni, vedere [Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
@@ -131,7 +131,7 @@ ms.locfileid: "36156650"
   
 |Pagina|Description|  
 |----------|-----------------|  
-|Backup della chiave di crittografia|1) Digitare una password nelle caselle **Password:** e **Conferma password** , quindi fare clic su **Esporta**. Se la password digitata non soddisfa i requisiti di complessità dei criteri di dominio, verrà visualizzato un avviso.<br /><br /> 2) Viene chiesto di specificare un percorso in cui salvare il file della chiave. È consigliabile archiviare il file della chiave in un computer separato da quello che è in esecuzione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Il nome file predefinito corrisponde al nome dell'applicazione di servizio.|  
+|Backup della chiave di crittografia|1) Digitare una password nelle caselle **Password:** e **Conferma password** , quindi fare clic su **Esporta**. Se la password digitata non soddisfa i requisiti di complessità dei criteri di dominio, verrà visualizzato un avviso.<br /><br /> 2) Viene chiesto di specificare un percorso in cui salvare il file della chiave. È consigliabile archiviare i file della chiave in un computer separato da quello che è in esecuzione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Il nome file predefinito corrisponde al nome dell'applicazione di servizio.|  
 |Ripristina chiave di crittografia|1) Digitare o individuare il file della chiave nella casella **Percorso file**<br /><br /> 2) Nella casella **Password** digitare la password usata per eseguire il backup del file di crittografia.<br /><br /> 3) Fare clic su **OK**|  
 |Cambia chiave di crittografia|Questa operazione comporta la creazione di una chiave nuova e l'esecuzione di una nuova operazione di crittografia del contenuto crittografato. Se si dispone di grandi quantità di contenuto, questa operazione può richiedere diverse ore.<br /><br /> Al termine dell'operazione di modifica della chiave di crittografia, è consigliabile eseguire un backup della nuova chiave.|  
 |Elimina contenuto crittografato|Il contenuto eliminato non può essere recuperato.<br /><br /> **\*\* Importante \*\*** L'azione di eliminazione e ricreazione della chiave simmetrica non può essere invertita o annullata. e può comportare conseguenze significative nell'installazione corrente. Se si elimina la chiave, verranno eliminati anche tutti i dati esistenti crittografati con questa chiave simmetrica. I dati eliminati possono includere stringhe di connessione a origini dei dati esterne per i report, stringhe di connessione archiviate e alcune informazioni relative alle sottoscrizioni.|  
@@ -195,7 +195,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
 2.  Nella pagina Associazioni applicazione di servizio modificare la visualizzazione in **Applicazioni di servizio**.  
   
-3.  Trovare e fare clic sul nome della nuova [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applicazione del servizio. È possibile fare clic anche sull' **impostazione predefinita** del nome del gruppo proxy di applicazione per aggiungere il proxy per impostare il gruppo piuttosto che completare i passaggi seguenti.  
+3.  Trovare e fare clic sul nome del nuovo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applicazione del servizio. È possibile fare clic anche sull' **impostazione predefinita** del nome del gruppo proxy di applicazione per aggiungere il proxy per impostare il gruppo piuttosto che completare i passaggi seguenti.  
   
 4.  Nella casella di selezione **Modifica il gruppo di connessioni seguente** scegliere **Personalizza**.  
   

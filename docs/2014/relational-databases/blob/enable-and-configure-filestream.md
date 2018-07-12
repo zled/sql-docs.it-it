@@ -3,25 +3,23 @@ title: Abilitare e configurare FILESTREAM | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
+ms.technology: filestream
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fb7929585ca40c0a419d0e655c2c4cc3f298ddf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 463df899682bc2466c53e0069200e7a9aa32fa89
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069621"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413150"
 ---
 # <a name="enable-and-configure-filestream"></a>Abilitare e configurare FILESTREAM
   Prima di iniziare a utilizzare FILESTREAM, è necessario abilitarlo nell'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. In questo argomento viene descritto come abilitare FILESTREAM utilizzando Gestione configurazione SQL Server.  
@@ -85,7 +83,7 @@ ms.locfileid: "36069621"
   
 ||||||  
 |-|-|-|-|-|  
-|Livello RAID|Prestazioni di scrittura|Prestazioni di lettura|Tolleranza di errore|Remarks|  
+|Livello RAID|Prestazioni di scrittura|Prestazioni di lettura|Tolleranza di errore|Note|  
 |RAID 5|Normale|Normale|Eccellenti|Le prestazioni sono più elevate rispetto all'utilizzo di un unico disco o di JBOD e meno elevate rispetto all'utilizzo di RAID 0 o RAID 5 con striping.|  
 |RAID 0|Eccellenti|Eccellenti|None||  
 |RAID 5 + striping|Eccellenti|Eccellenti|Eccellenti|Opzione più costosa.|  
@@ -95,7 +93,7 @@ ms.locfileid: "36069621"
 ###  <a name="database"></a> Progettazione fisica di database  
  Quando si progetta un database FILESTREAM, tenere presenti le linee guida seguenti:  
   
--   Colonne FILESTREAM devono essere associate a un corrispondente `uniqueidentifier`colonna ROWGUID. Questi tipi di tabelle devono inoltre essere associati a un indice univoco. Solitamente questo indice non è cluster. Se la logica di business dei database richiede un indice cluster, è necessario assicurarsi che i valori archiviati nell'indice non siano casuali. In caso contrario, l'indice verrà riordinato ogni volta che viene aggiunta o rimossa una riga dalla tabella.  
+-   Le colonne FILESTREAM devono essere accompagnate da un oggetto corrispondente `uniqueidentifier`colonna ROWGUID. Questi tipi di tabelle devono inoltre essere associati a un indice univoco. Solitamente questo indice non è cluster. Se la logica di business dei database richiede un indice cluster, è necessario assicurarsi che i valori archiviati nell'indice non siano casuali. In caso contrario, l'indice verrà riordinato ogni volta che viene aggiunta o rimossa una riga dalla tabella.  
   
 -   Ai fini delle prestazioni, i contenitori e i filegroup FILESTREAM dovrebbero risiedere in volumi anziché nel sistema operativo, nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nel log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel file di paging.  
   

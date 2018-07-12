@@ -1,5 +1,5 @@
 ---
-title: Aggiungere espressioni ai vincoli di precedenza | Documenti Microsoft
+title: Aggiunta di espressioni ai vincoli di precedenza | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence executables [Integration Services]
 - precedence constraints [Integration Services], adding expressions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4066b5b5c6ebd18d6dbbf02f6a150770d5e3b51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc4a614af4bd20a4209d323902c17db1c0a61ece
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161042"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Aggiunta di espressioni ai vincoli di precedenza
   In un vincolo di precedenza è possibile utilizzare un'espressione per definire il vincolo tra due eseguibili: l'eseguibile con precedenza e l'eseguibile soggetto al vincolo. Gli eseguibili possono essere attività o contenitori. L'espressione può essere utilizzata da sola o in combinazione con il risultato dell'esecuzione dell'eseguibile con precedenza. Il risultato dell'esecuzione di un eseguibile può essere Success o Failure. Quando si configura il risultato dell'esecuzione di un vincolo di precedenza è possibile impostare il risultato dell'esecuzione su `Success`, `Failure` o `Completion`. `Success` richiede che l'esecuzione dell'eseguibile con precedenza venga completata correttamente, `Failure` richiede che l'esecuzione dell'eseguibile con precedenza non riesca e `Completion` indica che l'eseguibile soggetto al vincolo deve essere eseguito indipendentemente dall'esito dell'esecuzione dell'attività con precedenza. Per altre informazioni, vedere [Vincoli di precedenza](control-flow/precedence-constraints.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "36156054"
   
  ![Vincolo di precedenza tra due attività](media/mw-dts-03.gif "Vincolo di precedenza tra due attività")  
   
- Per collegare gli eseguibili è inoltre possibile utilizzare più vincoli di precedenza contenenti espressioni diverse. Nella figura seguente, ad esempio, le attività B e C sono collegate all'attività A da vincoli di precedenza che utilizzano risultati di esecuzione ed espressioni. Entrambi i valori di vincolo viene impostate su `Success.` un vincolo di precedenza include l'espressione `@X >== @Z`, e il vincolo di precedenza include l'espressione `@X < @Z`. A seconda dei valori assunti dalle variabili `X` e `Z`, verrà eseguita l'attività C o l'attività B.  
+ Per collegare gli eseguibili è inoltre possibile utilizzare più vincoli di precedenza contenenti espressioni diverse. Nella figura seguente, ad esempio, le attività B e C sono collegate all'attività A da vincoli di precedenza che utilizzano risultati di esecuzione ed espressioni. Entrambi i valori del vincolo è impostati su `Success.` un vincolo di precedenza include l'espressione `@X >== @Z`, mentre il vincolo di precedenza include l'espressione `@X < @Z`. A seconda dei valori assunti dalle variabili `X` e `Z`, verrà eseguita l'attività C o l'attività B.  
   
  ![Espressioni nei vincoli di precedenza](media/mw-dts-04.gif "Espressioni nei vincoli di precedenza")  
   
@@ -65,9 +65,9 @@ ms.locfileid: "36156054"
   
 ### <a name="to-add-an-expression-to-a-precedence-constraint"></a>Per aggiungere un'espressione a un vincolo di precedenza  
   
--   [Utilizzare un'espressione in un vincolo di precedenza](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
+-   [Uso di un'espressione in un vincolo di precedenza](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
   
--   [Impostare le proprietà di un vincolo di precedenza](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  
+-   [Impostazione delle proprietà di un vincolo di precedenza](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  
   
 ## <a name="external-resources"></a>Risorse esterne  
  Articolo tecnico [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761) (Esempi di espressioni SSIS) nel sito Web social.technet.microsoft.com  

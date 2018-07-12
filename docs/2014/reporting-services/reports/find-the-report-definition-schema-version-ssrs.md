@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML schemas [Reporting Services]
 - Report Definition Language, XML schema
 - schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e6991a19701b1ac63634f57e02be3ca97c0ace2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 42fd97141fad21c9995857a6e51c495cf6eac078
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151912"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Individuare la versione dello schema di definizione del report (SSRS)
   Un file di definizione del report specifica lo spazio dei nomi RDL per la versione dello schema di definizione del report utilizzata per convalidare il file rdl. Quando si apre un file con estensione rdl in un ambiente di creazione di report, ad esempio Progettazione report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o Generatore report, se il report è creato per uno spazio dei nomi precedente, viene automaticamente creato un file di backup e il report viene aggiornato allo spazio dei nomi corrente. Salvando la definizione del report aggiornata, si salva il file con estensione rdl convertito. Questo è l'unico modo per aggiornare una definizione del report. La definizione del report non viene aggiornata su un server di report. Il report compilato viene aggiornato su un server di report. Per altre informazioni, vedere [Upgrade Reports](../install-windows/upgrade-reports.md).  

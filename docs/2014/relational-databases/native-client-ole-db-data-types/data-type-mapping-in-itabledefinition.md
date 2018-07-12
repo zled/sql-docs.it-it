@@ -1,13 +1,11 @@
 ---
-title: Mapping dei tipi di dati in ITableDefinition | Documenti Microsoft
+title: Mapping dei tipi di dati in ITableDefinition | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,37 +18,37 @@ helpviewer_keywords:
 - OLE DB, data types
 ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c09ac0e561f06236a9580ae7a84ed892ca1fcd31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2ff2a43c9ff48322e3b93e01899942a692f52a39
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067166"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412270"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Mapping dei tipi di dati in ITableDefinition
-  Quando si creano tabelle utilizzando il **itabledefinition:: CreateTable** funzione, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumer del provider OLE DB Native Client può specificare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati nel *pwszTypeName* membri della matrice DBCOLUMNDESC passata. Se il consumer specifica il tipo di dati di una colonna in base al nome, mapping, rappresentato da dei tipi di dati OLE DB di *wType* membro della struttura DBCOLUMNDESC viene ignorato.  
+  Durante la creazione di tabelle tramite il **itabledefinition:: CreateTable** funzione, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumer del provider OLE DB Native Client può specificare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati del *pwszTypeName* membro della matrice DBCOLUMNDESC passata. Se il consumer specifica il tipo di dati di una colonna in base al nome, rappresentato dal mapping del tipo di dati OLE DB di *wType* membro della struttura DBCOLUMNDESC viene ignorato.  
   
  Quando si specificano nuovi tipi di dati di colonna con tipi di dati OLE DB utilizzando una struttura DBCOLUMNDESC *wType* membro, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipi di dati OLE DB come indicato di seguito.  
   
 |Tipo di dati OLE DB|SQL Server<br /><br /> Tipo di dati|Informazioni aggiuntive|  
 |----------------------|------------------------------|----------------------------|  
 |DBTYPE_BOOL|**bit**||  
-|DBTYPE_BYTES|**binario**, **varbinary**, **immagine** o **varbinary (max)**|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla il *ulColumnSize* membro della struttura DBCOLUMNDESC. In, il valore e la versione di base il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo su cui **immagine**.<br /><br /> Se il valore di *ulColumnSize* è minore della lunghezza massima di un **binario** colonna di tipo di dati, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla DBCOLUMNDESC  *rgPropertySets* membro. Se DBPROP_COL_FIXEDLENGTH è VARIANT_TRUE, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo su cui **binario**. Se il valore della proprietà è VARIANT_FALSE, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo su cui **varbinary**. In entrambi i casi, DBCOLUMNDESC *ulColumnSize* determina la larghezza della colonna di SQL Server creata.|  
+|DBTYPE_BYTES|**binario**, **varbinary**, **immagine** o **varbinary (max)**|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla le *ulColumnSize* membro della struttura DBCOLUMNDESC. Base, il valore e la versione del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo **immagine**.<br /><br /> Se il valore di *ulColumnSize* è minore della lunghezza massima di un **binario** colonna tipo di dati, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla DBCOLUMNDESC  *rgPropertySets* membro. Se DBPROP_COL_FIXEDLENGTH è VARIANT_TRUE, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo da **binario**. Se il valore della proprietà è VARIANT_FALSE, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo da **varbinary**. In entrambi i casi, DBCOLUMNDESC *ulColumnSize* determina la larghezza della colonna di SQL Server creata.|  
 |DBTYPE_CY|**money**||  
 |DBTYPE_DBTIMESTAMP|**datetime**||  
 |DBTYPE_GUID|**uniqueidentifier**||  
 |DBTYPE_I2|**smallint**||  
 |DBTYPE_I4|**int**||  
-|DBTYPE_NUMERIC|**numeric**|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla il DBCOLUMDESC *bPrecision* e *bScale* membri per determinare la precisione e scala per il **numerico** colonna.|  
+|DBTYPE_NUMERIC|**numeric**|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla il DBCOLUMDESC *bPrecision* e *bScale* membri per determinare la precisione e scala per i **numerico** colonna.|  
 |DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  
-|DBTYPE_STR|**Char**, **varchar**, **testo** o **varchar (max)**|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla il *ulColumnSize* membro della struttura DBCOLUMNDESC. In base al valore e la versione del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo su cui **testo**.<br /><br /> Se il valore di *ulColumnSize* è minore della lunghezza massima di una colonna di tipo di dati carattere multibyte, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla DBCOLUMNDESC *rgPropertySets*membro. Se DBPROP_COL_FIXEDLENGTH è VARIANT_TRUE, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo su cui **char**. Se il valore della proprietà è VARIANT_FALSE, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo su cui **varchar**. In entrambi i casi, DBCOLUMNDESC *ulColumnSize* determina la larghezza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonna creata.|  
-|DBTYPE_UDT|**UDT**|Le seguenti informazioni vengono utilizzate `DBCOLUMNDESC` strutture dal **itabledefinition:: CreateTable** quando sono necessarie colonne di tipo definito dall'utente:<br /><br /> -   *pwSzTypeName* viene ignorato.<br />-   *rgPropertySets* deve includere un `DBPROPSET_SQLSERVERCOLUMN` proprietà impostata come descritto nella sezione sul `DBPROPSET_SQLSERVERCOLUMN`, nel [User-Defined Type](../native-client/features/using-user-defined-types.md).|  
+|DBTYPE_STR|**Char**, **varchar**, **testo** o **varchar (max)**|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla le *ulColumnSize* membro della struttura DBCOLUMNDESC. In base al valore e una versione del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo **testo**.<br /><br /> Se il valore di *ulColumnSize* è minore della lunghezza massima di una colonna di tipo di dati carattere multibyte, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla DBCOLUMNDESC *rgPropertySets*membro. Se DBPROP_COL_FIXEDLENGTH è VARIANT_TRUE, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo da **char**. Se il valore della proprietà è VARIANT_FALSE, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo da **varchar**. In entrambi i casi, DBCOLUMNDESC *ulColumnSize* determina la larghezza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonna creata.|  
+|DBTYPE_UDT|**UDT**|Le informazioni seguenti vengono utilizzate `DBCOLUMNDESC` strutture dal **itabledefinition:: CreateTable** quando sono necessarie colonne di tipo definito dall'utente:<br /><br /> -   *pwSzTypeName* viene ignorato.<br />-   *rgPropertySets* deve includere una `DBPROPSET_SQLSERVERCOLUMN` proprietà impostata come descritto nella sezione sul `DBPROPSET_SQLSERVERCOLUMN`, in [User-Defined Type](../native-client/features/using-user-defined-types.md).|  
 |DBTYPE_UI1|**tinyint**||  
-|DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext** o **nvarchar (max)**|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla il *ulColumnSize* membro della struttura DBCOLUMNDESC. In base al valore, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo su cui **ntext**.<br /><br /> Se il valore di *ulColumnSize* è minore della lunghezza massima di una colonna a tipo di dati character Unicode, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla DBCOLUMNDESC *rgPropertySets*membro. Se DBPROP_COL_FIXEDLENGTH è VARIANT_TRUE, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo su cui **nchar**. Se il valore della proprietà è VARIANT_FALSE, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo su cui **nvarchar**. In entrambi i casi, DBCOLUMNDESC *ulColumnSize* determina la larghezza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonna creata.|  
+|DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext** o **nvarchar (max)**|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla le *ulColumnSize* membro della struttura DBCOLUMNDESC. In base al valore, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo da **ntext**.<br /><br /> Se il valore di *ulColumnSize* è minore della lunghezza massima di una colonna a tipo di dati carattere Unicode, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla DBCOLUMNDESC *rgPropertySets*membro. Se DBPROP_COL_FIXEDLENGTH è VARIANT_TRUE, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo da **nchar**. Se il valore della proprietà è VARIANT_FALSE, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client esegue il mapping di tipo da **nvarchar**. In entrambi i casi, DBCOLUMNDESC *ulColumnSize* determina la larghezza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonna creata.|  
 |DBTYPE_XML|**XML**||  
   
 > [!NOTE]  

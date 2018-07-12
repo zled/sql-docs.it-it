@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], events final support
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d17f65ff5265e4a68a327f90266b9f9855ebcd3e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6be712b5b2ecf84e68abf7be1681962a83dc86d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154342"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support - classe di evento
   La classe di evento **Deprecation Final Support** viene generata quando si utilizza una caratteristica che verrà rimossa dalla successiva versione principale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per garantire la massima durata delle applicazioni, non utilizzare caratteristiche da cui viene generata la classe di evento **Deprecation Announcement** o **Deprecation Final Support** . Modificare le applicazioni che utilizzano le caratteristiche deprecate finali il prima possibile.  
@@ -51,7 +51,7 @@ ms.locfileid: "36156463"
 |ObjectName|`nvarchar`|Nome della caratteristica deprecata.|34|Sì|  
 |RequestID|`int`|ID della richiesta contenente l'istruzione.|49|Sì|  
 |ssSqlProfiler|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
-|SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Ad esempio, se ci si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Login1 e si esegue un'istruzione come Account2, `SessionLoginName` indica Login1 e `LoginName` indica Login2. In questa colonna vengono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
+|SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Ad esempio, se ci si connette al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Account1 e si esegue un'istruzione come Login2, `SessionLoginName` indica Login1 e `LoginName` indica Login2. In questa colonna vengono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |SPID|`int`|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |SqlHandle|`image`|Handle binario che è possibile utilizzare per identificare batch o stored procedure SQL.|63|Sì|  
 |StartTime|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Sì|  
@@ -62,6 +62,6 @@ ms.locfileid: "36156463"
 ## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Classe di evento Deprecation Announcement](deprecation-announcement-event-class.md)   
- [Funzionalità del motore di Database deprecate in SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
+ [Funzionalità del Motore di database deprecate in SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Opzioni (risultati SQL Server-risultati della Query alla pagina di testo) | Documenti Microsoft
+title: Opzioni (risultati SQL Server-risultati della Query alla pagina di testo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToText
 ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 190d508cc4e1e637d95516a8c9daf148692aa2df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72bcaf98c2a7089aa101379001559ee12b8f9b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165332"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>Opzioni (risultati SQL Server-risultati della Query alla pagina di testo)
   Utilizzare questa pagina per specificare le opzioni di visualizzazione di un set di risultati di una query in formato testo. Le modifiche apportate a queste opzioni vengono applicate solo alle nuove query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni relative alle query correnti, scegliere **Opzioni query** dal menu **Query** oppure fare clic con il pulsante destro del mouse nella finestra Query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e quindi scegliere **Opzioni query**. Nella finestra di dialogo **Opzioni query** fare clic su **Testo** in **Risultati**.  
@@ -36,7 +36,7 @@ ms.locfileid: "36070122"
  **Includi intestazioni di colonna nel set di risultati**  
  Deselezionare questa casella di controllo se non si desidera applicare un titolo alle colonne.  
   
- **Includi la query nel set di risultati**  
+ **Includi la query del set di risultati**  
  Selezionare questa casella di controllo per includere il testo della query in esecuzione nel riquadro dei risultati prima dei risultati della query.  
   
  **Scorri i risultati ricevuti**  
@@ -45,13 +45,13 @@ ms.locfileid: "36070122"
  **Allinea a destra i valori numerici**  
  Selezionare questa casella di controllo per allineare i valori numeri a destra nella colonna in modo da semplificare l'esame delle cifre con un numero di posizioni decimali predefinito.  
   
- **Elimina risultati dopo l'esecuzione della query**  
+ **Elimina risultati dopo l'esecuzione di query**  
  Selezionare questa casella di controllo per scartare i risultati della query dopo che vengono visualizzati nel riquadro dei risultati della finestra di query.  
   
  **Visualizzare i risultati in una scheda separata**  
  Selezionare questa casella di controllo per visualizzare il set di risultati in una nuova finestra del documento invece che nella parte inferiore della finestra della query.  
   
- **Passare alla scheda risultati dopo l'esecuzione della query**  
+ **Passare alla scheda risultati dopo l'esecuzione di query**  
  Selezionare questa casella per impostare lo stato attivo dello schermo sul set di risultati.  
   
  **Numero massimo di caratteri visualizzati in ogni colonna**  

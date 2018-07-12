@@ -1,5 +1,5 @@
 ---
-title: Bulk Insert Task Editor (pagina generale) | Documenti Microsoft
+title: Bulk Insert Task Editor (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.general.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d70cc6a4745e2965dcf28ea97bcc52ccfdc66133
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8debd4ea8acc8e27dde18970110b6792ee7a9109
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158842"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>Editor attività Inserimento bulk (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Inserimento bulk** per assegnare un nome e una descrizione all'attività Inserimento bulk.  
@@ -41,7 +41,7 @@ ms.locfileid: "36158276"
  Consente di digitare una descrizione dell'attività Inserimento bulk.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività inserimento bulk &#40;pagina di connessione&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [Editor attività inserimento bulk &#40;pagina di opzioni&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
  [Pagina espressioni](expressions/expressions-page.md)   

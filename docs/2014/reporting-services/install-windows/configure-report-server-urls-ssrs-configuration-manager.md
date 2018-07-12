@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Windows service, virtual directories
 - report servers [Reporting Services], virtual directories
@@ -18,13 +18,13 @@ ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: e16c0149e7d0a590d3bf89ce6632a654bcb233c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 085eaf6b8b21462f675d2eca2033cbf8cfa4efa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230601"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurare gli URL del server di report (Gestione configurazione SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], gli URL vengono utilizzati per accedere al servizio Web ReportServer e gestione Report. Per poter utilizzare una delle due applicazioni, è necessario configurare almeno un URL ciascuno per il servizio Web e per Gestione report. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili valori predefiniti per entrambi gli URL dell'applicazione, appropriati per la maggior parte degli scenari di distribuzione, incluse le distribuzioni side-by-side con altri servizi e applicazioni Web.  
@@ -46,7 +46,7 @@ ms.locfileid: "36069776"
 ## <a name="default-urls"></a>URL predefiniti  
  Quando si accede a un server di report o a Gestione report tramite il relativo URL, quest'ultimo deve includere il nome host e non l'indirizzo IP. In una rete TCP/IP l'indirizzo IP verrà risolto in un nome host o nel nome di rete del computer. Se per configurare gli URL sono stati utilizzati i valori predefiniti, dovrebbe essere possibile accedere al servizio Web ReportServer utilizzando gli URL che specificano come nome host il nome del computer o localhost:  
   
--   http://\<computername > / reportserver  
+-   http://\<nomecomputer > / reportserver  
   
 -   http://localhost/reportserver  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36069776"
 |Directory virtuale|ReportServer|Si noti che entrambi gli URL di esempio includono il nome della directory virtuale. A meno che non si personalizzi la definizione dell'URL, è sempre necessario specificare il nome della directory virtuale dell'applicazione nell'URL.|  
   
 > [!NOTE]  
->  Una prenotazione URL sottostante consente l'utilizzo di qualsiasi nome host valido in un URL. Lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] crea una prenotazione URL in HTTP.SYS utilizzando una sintassi che consente la risoluzione delle varianti del nome host in una determinata istanza del server di report. Per ulteriori informazioni sulle prenotazioni URL, vedere [su prenotazioni e registrazione URL &#40;Gestione configurazione SSRS&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md).  
+>  Una prenotazione URL sottostante consente l'utilizzo di qualsiasi nome host valido in un URL. Lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] crea una prenotazione URL in HTTP.SYS utilizzando una sintassi che consente la risoluzione delle varianti del nome host in una determinata istanza del server di report. Per altre informazioni sulle prenotazioni URL, vedere [sulle prenotazioni e registrazione URL &#40;Gestione configurazione SSRS&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md).  
   
 ## <a name="server-side-permissions-on-a-report-server-url"></a>Autorizzazioni sul lato server per un URL del server di report  
  All'account del servizio del server di report vengono concesse in modo esclusivo le autorizzazioni per ogni endpoint URL. Solo tale account dispone dei diritti necessari per accettare le richieste indirizzate agli URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per l'account vengono creati e gestiti elenchi di controllo di accesso discrezionale (DACL, Discretionary Access Control List) quando si configura l'identità del servizio tramite il programma di installazione o lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se si modifica l'account del servizio, lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiornerà tutte le prenotazioni URL create per includere le nuove informazioni sull'account. Per altre informazioni, vedere [sintassi delle prenotazioni URL &#40;Gestione configurazione SSRS&#41;](url-reservation-syntax-ssrs-configuration-manager.md).  
@@ -80,11 +80,11 @@ ms.locfileid: "36069776"
  [URL nei file di configurazione &#40;Gestione configurazione SSRS&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
  Il file RSReportServer.config contiene più voci per le prenotazioni URL e gli URL utilizzati per il recapito tramite posta elettronica di Gestione report e del server di report. In questo argomento viene fornito un riepilogo delle impostazioni di configurazione degli URL, utile per la comprensione delle relative analogie e differenze.  
   
- [Le distribuzioni di Server di Report di prenotazioni URL per più istanze &#40;Gestione configurazione SSRS&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
+ [Le distribuzioni del Server di Report le prenotazioni URL per istanze multiple &#40;Gestione configurazione SSRS&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
  Quando si installano più istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in un singolo computer, aumenta la probabilità che vengano rilevati URL duplicati durante la registrazione di un URL. Per evitare questi errori, seguire i consigli indicati in questo argomento per la creazione di prenotazioni URL specifiche dell'istanza.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un URL &#40;Gestione configurazione SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
- [URL servizio Web &#40;modalità nativa SSRS&#41;](../../sql-server/install/web-service-url-ssrs-native-mode.md)  
+ [URL del servizio Web &#40;modalità nativa SSRS&#41;](../../sql-server/install/web-service-url-ssrs-native-mode.md)  
   
   

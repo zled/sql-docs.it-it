@@ -1,5 +1,5 @@
 ---
-title: Le proprietà per la struttura di Data Mining e le colonne della struttura | Documenti Microsoft
+title: Le proprietà per la struttura di Data Mining e le colonne della struttura | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], column properties
 - data mining [Analysis Services], properties
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 167e04eb8623e6d2f7f11c3bfd43e3d6427c5886
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71ce92444042b820f877290478bae067b3474b41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149512"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Proprietà delle strutture di data mining e delle colonne delle strutture di data mining
   Nella scheda **Struttura di data mining** della finestra di progettazione di data mining è possibile impostare o modificare le proprietà di una struttura di data mining e delle colonne e tabelle annidate associate. Le impostazioni delle proprietà eseguite in questa scheda vengono propagate in ogni modello di data mining associato alla struttura.  
@@ -43,13 +43,13 @@ ms.locfileid: "36158560"
   
 |Proprietà|Description|  
 |--------------|-----------------|  
-|**CacheMode**|Specifica se i case utilizzati nel training devono essere memorizzati nella cache o eliminati una volta completato il training.<br /><br /> Nota: Questa proprietà deve essere impostata su `KeepTrainingCases` per abilitare il drill-through e del controllo.|  
+|**CacheMode**|Specifica se i case utilizzati nel training devono essere memorizzati nella cache o eliminati una volta completato il training.<br /><br /> Nota: Questa proprietà deve essere impostata su `KeepTrainingCases` per abilitare il drill-through e il controllo.|  
 |**Regole di confronto**|Specifica le regole di confronto predefinite per la colonna. Se non specificato, vengono utilizzate le regole di confronto del server.|  
 |**Descrizione**|Descrive la struttura di data mining. È consigliabile che nella descrizione vengano specificati lo scopo e la composizione dei dati nella struttura.|  
 |**ErrorConfiguration (predefinita)**|Specifica le opzioni per la gestione speciale di errori, se presenti.|  
-|**HoldoutMaxCases**|Specifica il numero massimo di case della struttura che possono essere riservati come set di dati di test.  Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate.<br /><br /> Nota: Per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su `KeepTrainingCases`.|  
-|**HoldoutPercent**|Specifica la percentuale dei case della struttura da riservare come set di dati di test. Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate.<br /><br /> Nota: Per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su `KeepTrainingCases`.|  
-|**HoldoutSeed**|Specifica un valore per l'inizializzazione del partizionamento del set di test di controllo, per assicurare che il set di dati di test possa essere ricreato.<br /><br /> Nota: Per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su `KeepTrainingCases`.|  
+|**HoldoutMaxCases**|Specifica il numero massimo di case della struttura che possono essere riservati come set di dati di test.  Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate.<br /><br /> Nota: Per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostata su `KeepTrainingCases`.|  
+|**HoldoutPercent**|Specifica la percentuale dei case della struttura da riservare come set di dati di test. Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate.<br /><br /> Nota: Per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostata su `KeepTrainingCases`.|  
+|**HoldoutSeed**|Specifica un valore per l'inizializzazione del partizionamento del set di test di controllo, per assicurare che il set di dati di test possa essere ricreato.<br /><br /> Nota: Per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostata su `KeepTrainingCases`.|  
 |**ID**|Consente di visualizzare l'identificatore univoco della struttura di data mining.<br /><br /> Il nome assegnato alla struttura di data mining quando è stata creata viene utilizzato come ID. Se successivamente si modifica il nome digitando un nuovo valore per la proprietà `Name`, il nuovo nome viene utilizzato solo come alias. L'ID non viene modificato.|  
 |**Lingua**|Specifica la lingua delle didascalie della struttura di data mining.|  
 |`Name`|Specifica il nome o l'alias della struttura di data mining.<br /><br /> Se si modifica il valore della proprietà Name, il nuovo nome viene utilizzato solo come didascalia o alias. L'identificatore della struttura di data mining non viene modificato.|  

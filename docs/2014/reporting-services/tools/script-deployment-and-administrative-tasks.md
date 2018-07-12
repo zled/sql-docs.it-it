@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
 - moving reports
@@ -25,13 +25,13 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8cec5b29e78115e606951e0bd58516a029840580
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bd4072925cf5cd48785b0c476aa4ea637f096c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159862"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Utilizzare script per l'esecuzione di attività di distribuzione e di amministrazione
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta l'uso di script per automatizzare installazioni di routine, distribuzioni e attività amministrative. La distribuzione di un server di report è un processo costituito da più passaggi. Per configurare una distribuzione è necessario utilizzare diversi strumenti e processi, in quanto non è disponibile un unico programma o approccio che consenta di automatizzare tutte le attività.  
@@ -56,7 +56,7 @@ ms.locfileid: "36156409"
 |Configurazione della connessione del database del server di report.|Se si modifica la stringa di connessione, l'account o la password oppure il tipo di autenticazione, eseguire l'utilità **rsconfig** per configurare la connessione. Per altre informazioni, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) e [Utilità rsconfig &#40;SSRS&#41;](rsconfig-utility-ssrs.md).<br /><br /> Non è possibile utilizzare rsconfig.exe per creare o aggiornare il database. Il database e RSExecRole devono esistere.|  
 |Configurazione di una distribuzione con scalabilità orizzontale.|Per eseguire in modo automatico una distribuzione con scalabilità orizzontale, scegliere uno degli approcci seguenti:<br /><br /> Eseguire l'utilità rskeymgmt.exe per unire in join le istanze del server di report e un'installazione esistente. Per altre informazioni, vedere [Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;Gestione configurazione SSRS&#41;](../install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).<br /><br /> Scrivere codice personalizzato che viene eseguito nel provider WMI per Server report.|  
 |Backup delle chiavi di crittografia.|Per eseguire in modo automatico il backup delle chiavi di crittografia, scegliere uno degli approcci seguenti:<br /><br /> Eseguire l'utilità rskeymgmt.exe per il backup delle chiavi. Per altre informazioni, vedere [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).<br /><br /> Scrivere codice personalizzato che viene eseguito nel provider WMI per Server report.|  
-|Configurazione della posta elettronica del server di report.|Scrivere codice personalizzato che viene eseguito nel provider WMI per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Il provider supporta un subset delle impostazioni di configurazione della posta elettronica.<br /><br /> Sebbene il file RSReportServer.config includa tutte le impostazioni, non utilizzare questo file in modo automatizzato. In particolare, non utilizzare un file batch per copiare il file in un altro server di report. Ogni file di configurazione include valori specifici per l'istanza corrente. Tali valori non saranno validi in altre istanze del server di report.<br /><br /> Per ulteriori informazioni sulle impostazioni, vedere [configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).|  
+|Configurazione della posta elettronica del server di report.|Scrivere codice personalizzato che viene eseguito nel provider WMI per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Il provider supporta un subset delle impostazioni di configurazione della posta elettronica.<br /><br /> Sebbene il file RSReportServer.config includa tutte le impostazioni, non utilizzare questo file in modo automatizzato. In particolare, non utilizzare un file batch per copiare il file in un altro server di report. Ogni file di configurazione include valori specifici per l'istanza corrente. Tali valori non saranno validi in altre istanze del server di report.<br /><br /> Per altre informazioni sulle impostazioni, vedere [configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).|  
 |Configurazione dell'account di esecuzione automatica.|Per configurare l'account di esecuzione automatica in modo automatico, scegliere uno degli approcci seguenti:<br /><br /> Eseguire l'utilità rsconfig.exe per configurare l'account. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).<br /><br /> Scrivere codice personalizzato per l'esecuzione di chiamate nel provider WMI per Server report.|  
 |Distribuzione di contenuti esistenti in un altro server di report, includendo gerarchia di cartelle, assegnazioni di ruolo, report, sottoscrizioni, pianificazioni, origini dei dati e risorse.|Il modo migliore per ricreare un ambiente del server di report esistente consiste nel copiare il database del server di report in una nuova istanza del server di report.<br /><br /> Un approccio alternativo consiste nello scrivere codice personalizzato per ricreare il contenuto del server di report esistente a livello di programmazione. Tenere presente, tuttavia, che le sottoscrizioni, gli snapshot dei report e la cronologia dei report non possono essere ricreati a livello di programmazione.<br /><br /> Per alcune distribuzioni può essere vantaggioso utilizzare entrambe le tecniche, ovvero ripristinare un database del server di report e quindi eseguire codice personalizzato per modificare il database per un'installazione specifica.<br /><br /> Per un esempio dettagliato, vedere [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).<br /><br /> Per altre informazioni sullo spostamento di un database del server di report, vedere [Spostamento di database del server di report in un altro computer &#40;modalità nativa SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md). Per ulteriori informazioni sulla creazione di un ambiente del server di report a livello di programmazione, vedere la sezione "Utilizzo di script per eseguire la migrazione del contenuto e delle cartelle del server di report" di questo argomento.|  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36156409"
 > [!NOTE]  
 >  Gli script vengono eseguiti con le credenziali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows dell'utente che esegue lo script, a meno che non si decida di impostare le credenziali esplicitamente.  
   
- Per ulteriori informazioni sulla formattazione ed esecuzione di un file di script, vedere [Script con il rs.exe Utilità e il servizio Web](script-with-the-rs-exe-utility-and-the-web-service.md).  
+ Per altre informazioni sulla formattazione ed esecuzione di un file di script, vedere [lo Script con il rs.exe Utilità e il servizio Web](script-with-the-rs-exe-utility-and-the-web-service.md).  
   
 ## <a name="using-scripts-to-set-server-properties"></a>Utilizzo degli script per impostare le proprietà del server  
  È possibile scrivere script che consentono di impostare le proprietà di sistema nel server di report. Nello script [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET riportato di seguito viene illustrato un sistema per impostare le proprietà: Questo esempio viene disabilitato il controllo RSClientPrint ActiveX, ma è possibile sostituire `EnableClientPrinting` e `False` con qualsiasi nome di proprietà valido e il valore. Per visualizzare un elenco completo delle proprietà del server, vedere [proprietà di sistema di Server di Report](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
@@ -129,7 +129,7 @@ End Sub
  [Metodo GenerateDatabaseRightsScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
  [Metodo GenerateDatabaseUpgradeScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
  [Installare SQL Server 2014 dal Prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [Installare un Server di Report di Reporting Services in modalità nativa](../install-windows/install-reporting-services-native-mode-report-server.md)   
+ [Installare Server di Report di Reporting Services in modalità nativa](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Server di report di Reporting Services &#40;modalità nativa&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Utilità della riga di comando di Server di report &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Pianificazione per Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   

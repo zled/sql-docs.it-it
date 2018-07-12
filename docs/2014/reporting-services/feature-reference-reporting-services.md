@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder 2.0, F1 help
 - Reporting Services, getting assistance
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 caps.latest.revision: 27
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c23e964eaee08730416daa0d52350eb72138d5f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c1a0b1b5105c5dc5be5edcd9c43028d4bca8ae2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258247"
 ---
 # <a name="feature-reference-reporting-services"></a>Guida di riferimento alle funzionalità (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] include numerosi strumenti e applicazioni che è possibile usare per la creazione, la gestione e la visualizzazione di report. In questa sezione sono disponibili argomenti specifici che descrivono le finestre di dialogo, le pagine Web e le procedure guidate di tali strumenti e applicazioni.  
@@ -35,10 +35,10 @@ ms.locfileid: "36157090"
  [Guida sensibile al contesto di Progettazione report](tools/report-designer-f1-help.md)  
  Guida per Progettazione report e le finestre di dialogo correlate, per Creazione guidata report e per Creazione guidata immagine.  
   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
  Guida per Gestione report, applicazione Web utilizzata per gestire un'istanza del server di report singola.  
   
- [Argomenti della Guida F1 di Gestione configurazione di Reporting Services &#40;modalità nativa SSRS&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
+ [Gli argomenti della Guida F1 di Gestione configurazione di Reporting Services &#40;modalità nativa SSRS&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
  Guida per lo strumento di configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usato per la distribuzione e la gestione delle istanze del server di report.  
   
  [Guida sensibile al contesto del server di report in Management Studio](tools/report-server-in-management-studio-f1-help.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "36157090"
 ## <a name="see-also"></a>Vedere anche  
  [Concetti relativi a Reporting Services &#40;SSRS&#41;](reporting-services-concepts-ssrs.md)   
  [Report di Reporting Services &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)   
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-data/report-datasets-ssrs.md)   
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Introduzione a Generatore report](http://www.microsoft.com/download/en/details.aspx?id=29072)   
  [Progettazione e implementazione di report tramite Generatore report 1.0](http://go.microsoft.com/fwlink/?LinkId=142601)  
   

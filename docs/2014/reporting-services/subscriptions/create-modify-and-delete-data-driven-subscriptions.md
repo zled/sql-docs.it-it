@@ -1,5 +1,5 @@
 ---
-title: Creare, modificare ed eliminare una sottoscrizione guidata dai dati | Documenti Microsoft
+title: Creare, modificare ed eliminare una sottoscrizione guidata dai dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query-based subscriptions [Reporting Services]
 - queries [Reporting Services], data-driven subscriptions
@@ -18,13 +18,13 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 811851675f317e6807f22035152a48b18a372eb5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87116018f43f90fa78a8f7a6d4788b9fb0e660f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183918"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Come creare, modificare ed eliminare una sottoscrizione guidata dai dati
   Una sottoscrizione guidata dai dati è una sottoscrizione basata su query che recupera i valori dei dati utilizzati per l'elaborazione della sottoscrizione in fase di esecuzione. Quando la sottoscrizione viene attivata, viene elaborata una query per recuperare informazioni aggiornate su destinatari, opzioni di recapito di report, formati di rendering e impostazioni dei parametri. I risultati della query vengono combinati con la definizione della sottoscrizione per creare una sottoscrizione dinamica che utilizza i dati già gestiti dall'utente in un database dei dipendenti, un database dei clienti o altri database contenenti informazioni che possono essere utilizzate come dati del sottoscrittore.  
@@ -37,7 +37,7 @@ ms.locfileid: "36156406"
   
 -   [Creare e modificare una sottoscrizione guidata dai dati](#bkmk_create_and_modify)  
   
--   [Definire una query che recupera informazioni sulla sottoscrizione](#bkmk_define_query)  
+-   [Definire una query che recupera le informazioni sulla sottoscrizione](#bkmk_define_query)  
   
 -   [Eseguire una sottoscrizione](#bkmk_run_subscription)  
   
@@ -89,9 +89,9 @@ ms.locfileid: "36156406"
   
 -   **Requisiti per i dati**. È necessario disporre di un'origine dei dati esterna accessibile che contenga i dati del sottoscrittore.  
   
--   **Requisiti per gli utenti**. L'autore della sottoscrizione deve disporre dell'autorizzazione per la gestione dei report e di tutte le sottoscrizioni. Per ulteriori informazioni sulle autorizzazioni a livello di elemento di attività, vedere [attività e autorizzazioni](../security/tasks-and-permissions.md). L'autore deve inoltre disporre delle credenziali necessarie per l'accesso all'origine dei dati esterna contenente i dati del sottoscrittore.  
+-   **Requisiti per gli utenti**. L'autore della sottoscrizione deve disporre dell'autorizzazione per la gestione dei report e di tutte le sottoscrizioni. Per altre informazioni sulle autorizzazioni per attività a livello di elemento, vedere [attività e autorizzazioni](../security/tasks-and-permissions.md). L'autore deve inoltre disporre delle credenziali necessarie per l'accesso all'origine dei dati esterna contenente i dati del sottoscrittore.  
   
-##  <a name="bkmk_define_query"></a> Definire una query che recupera informazioni sulla sottoscrizione  
+##  <a name="bkmk_define_query"></a> Definire una query che recupera le informazioni sulla sottoscrizione  
  In una sottoscrizione guidata dai dati è necessario specificare una query o un comando che recupera i dati del sottoscrittore. La query dovrebbe produrre una riga per ogni sottoscrittore. Se si utilizza l'estensione per il recapito tramite posta elettronica, la query dovrebbe restituire un alias di posta elettronica valido per ogni sottoscrittore. Il numero di recapiti effettuati si basa sul numero di righe restituite dalla query. Se il set di righe contiene 10.000 righe, significa che la sottoscrizione determina il recapito di 10.000 report.  
   
  Se l'elaborazione della query richiede tempi particolarmente lunghi, è possibile aumentare il valore di timeout per consentire il proseguimento delle operazioni di elaborazione.  
@@ -101,7 +101,7 @@ ms.locfileid: "36156406"
 ##  <a name="bkmk_run_subscription"></a> Eseguire una sottoscrizione  
  Configurare le condizioni per l'elaborazione della sottoscrizione. È possibile configurare una pianificazione oppure fare in modo che la sottoscrizione sia attivata in corrispondenza degli aggiornamenti a uno snapshot dell'esecuzione del report.  
   
- ![Nota](../media/rs-fyinote.png "nota") mentre non è disponibile alcuna funzionalità nell'interfaccia utente che è possibile utilizzare immediatamente per eseguire una sottoscrizione, è possibile utilizzare un semplice script di Windows PowerShell per attivare una sottoscrizione per l'esecuzione. Per altre informazioni, vedere la "Script: eseguire (attivare) una singola sottoscrizione" sezione di [utilizzare PowerShell per modifica ed elenco Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
+ ![Nota](../media/rs-fyinote.png "nota") Sebbene non siano disponibili funzionalità nell'interfaccia utente che è possibile usare immediatamente per eseguire una sottoscrizione, è possibile usare un semplice script di Windows PowerShell per attivare una sottoscrizione per l'esecuzione. Per altre informazioni, vedere la "Script: eseguire (attivare) una singola sottoscrizione" sezione dei [usare PowerShell per modificare ed elenco Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  La pianificazione e le condizioni per l'esecuzione di sottoscrizioni basate sui dati sono uguali a quelle per l'elaborazione di sottoscrizioni standard.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36156406"
  Per istruzioni sull'annullamento di una sottoscrizione guidata dai dati, vedere [Gestire un processo in esecuzione](manage-a-running-process.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare, modificare ed eliminare le sottoscrizioni Standard &#40;Reporting Services in modalità nativa&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
+ [Creare, modificare ed eliminare sottoscrizioni Standard &#40;Reporting Services in modalità nativa&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Creare e gestire sottoscrizioni per server di Report in modalità nativa](../create-manage-subscriptions-native-mode-report-servers.md)   

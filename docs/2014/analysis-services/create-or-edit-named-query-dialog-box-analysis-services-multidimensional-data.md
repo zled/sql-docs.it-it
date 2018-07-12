@@ -1,5 +1,5 @@
 ---
-title: Creare o modificare la finestra di dialogo Query denominata (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Creare o modificare la finestra di dialogo Query denominata (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createnamedquery.f1
 helpviewer_keywords:
 - Create Named Query dialog box
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f97b06c3fb67080e7ebc3adc3c1e4d84d3fdea61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: fe4ebd6e0ecaff7d6aed1aecef906bb1a8519e98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149622"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Crea query denominata o Modifica query denominata (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Crea/Modifica query denominata** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare o modificare una query denominata in **Progettazione vista origine dati**. Una query denominata può essere gestita come una tabella ed essere utilizzata come base per altri oggetti [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per visualizzare la finestra di dialogo **Crea/Modifica query denominata** , è possibile:  
@@ -65,8 +65,8 @@ ms.locfileid: "36157412"
 |**Passa a Generatore Query generico**|Selezionare questo comando per visualizzare solo le opzioni disponibili nella vista Generatore query generico. Verranno visualizzate solo le opzioni seguenti.<br />**Riquadro SQL**<br />**Riquadro risultati**<br />**Barra degli strumenti**, contenente solo **Passa a Generatore query Visual Database Tools** ed **Esegui**<br /><br /> <br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
 |**Passa a Generatore Query Visual Database Tools**|Selezionare questo comando per visualizzare tutte le opzioni disponibili nella vista Generatore query Visual Database Tools.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query generico** .|  
 |**Mostra/Nascondi riquadro diagramma**|Consente di visualizzare o nascondere il riquadro **diagramma**.<br /><br /> **Nota** Questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Mostra/Nascondi riquadro griglia**|Mostra o nasconde la **riquadro griglia**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Mostra/Nascondi riquadro SQL**|Mostra o nasconde la **riquadro SQL**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
+|**Mostra/Nascondi riquadro griglia**|Mostra o nasconde il **riquadro griglia**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
+|**Mostra/Nascondi riquadro SQL**|Mostra o nasconde il **riquadro SQL**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
 |**Mostra/Nascondi riquadro risultati**|Consente di visualizzare o nascondere il **Riquadro risultati**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
 |**Esegui**|Consente di eseguire la query. I risultati verranno visualizzati nel **riquadro dei risultati**.|  
 |**Verifica istruzione SQL**|Consente di verificare l'istruzione SQL nella query.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  

@@ -1,5 +1,5 @@
 ---
-title: Cella elemento (XMLA) | Documenti Microsoft
+title: Cella elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Cell element
 ms.assetid: 88daba54-89e9-423f-8d12-8de80cf52d6b
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: be00f4ae61817143cc986e69d543eaf4201bbe87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 18110400e76f10e9e8ac90fc2793a7a90f25d4de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241227"
 ---
 # <a name="cell-element-xmla"></a>Elemento Cell (XMLA)
   Contiene informazioni su una cella che deve essere aggiornata da un comando [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md).  
@@ -69,9 +69,9 @@ ms.locfileid: "36157000"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|CellOrdinal|Richiesto `Long` attributo. Contiene la posizione ordinale in base zero della cella da aggiornare.|  
+|CellOrdinal|Obbligatorio `Long` attributo. Contiene la posizione ordinale in base zero della cella da aggiornare.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per altre informazioni sull'aggiornamento di celle, vedere [Aggiornamento di celle &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  

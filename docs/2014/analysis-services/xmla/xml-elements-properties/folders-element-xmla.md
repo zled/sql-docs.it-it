@@ -1,5 +1,5 @@
 ---
-title: Elemento Folders (XMLA) | Documenti Microsoft
+title: Elemento Folders (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Folders element
 ms.assetid: fefb0469-22ea-4804-8dc3-9c49825b32f1
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c9042b2960a6efcce592779f5f17fd58fd98d693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 00d90fd45456a0b672c12cdd44706e63011cbb28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148532"
 ---
 # <a name="folders-element-xmla"></a>Elemento Folders (XMLA)
   Contiene una raccolta di elementi [Folder](folder-element-xmla.md) utilizzati dall'elemento [Location](location-element-xmla.md) padre durante un comando [Restore](../xml-elements-commands/restore-element-xmla.md) o [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) .  
@@ -65,7 +65,7 @@ ms.locfileid: "36158731"
 |Elementi padre|[Percorso](location-element-xmla.md)|  
 |Elementi figlio|[Cartella](folder-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento Restore &#40;XMLA&#41;](../xml-elements-commands/restore-element-xmla.md)   

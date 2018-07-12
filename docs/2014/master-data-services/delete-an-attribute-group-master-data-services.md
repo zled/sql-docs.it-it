@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ebf2b900457a7c358c86e3df2c0abe06c69b98c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: dcd85163a292cd6c8125619124d346ba876e6acc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152472"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Eliminare un gruppo di attributi (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile eliminare un gruppo di attributi quando non è più necessario visualizzare la scheda nell'area funzionale **Visualizzatore** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "36155795"
   
 4.  Dall'elenco **Entità** selezionare un'entità.  
   
-5.  Fare clic sul segno più per espandere **gruppi di foglie**, **gruppi consolidati**, o **raccolta gruppi**, a seconda del tipo di gruppo che si desidera eliminare.  
+5.  Fare clic sul segno più per espandere **gruppi di foglie**, **gruppi consolidati**, o **gruppi di raccolte**, a seconda del tipo di gruppo che si desidera eliminare.  
   
 6.  Fare clic sul gruppo di attributi che si desidera eliminare.  
   

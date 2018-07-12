@@ -1,37 +1,35 @@
 ---
-title: Campi di descrizione dei parametri con valori di tabella | Documenti Microsoft
+title: Campi di descrizione dei parametri con valori di tabella | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d6f07c164b6f267301f26d0a5fcdad5da2871d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4d126c397680f03b82a6498d57dd77ec580a7ea1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065814"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420950"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Campi di descrizione dei parametri con valori di tabella
   Il supporto per i parametri con valori di tabella include nuovi campi specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei descrittori di parametri delle applicazioni (APD, Application Parameter Descriptor) e nei descrittori di parametri di implementazione (IPD, Implementation Parameter Descriptor) ODBC.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 |nome|Percorso|Tipo|Description|  
 |----------|--------------|----------|-----------------|  
-|SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Nome del tipo di server del parametro con valori di tabella.<br /><br /> Quando in una chiamata a SQLBindParameter viene specificato un nome di tipo di parametro con valori di tabella, deve sempre essere specificato come valore Unicode, anche nelle applicazioni compilate come applicazioni ANSI. Il valore utilizzato per il parametro *StrLen_or_IndPtr* deve essere SQL_NTS o la lunghezza della stringa del nome moltiplicata per sizeof (WCHAR).<br /><br /> Quando viene specificato il nome di un tipo di parametro con valori di tabella tramite SQLSetDescField, può essere specificato con un valore letterale conforme al modo in cui l'applicazione viene compilato. In Gestione driver ODBC verrà eseguita la conversione Unicode necessaria.|  
+|SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Nome del tipo di server del parametro con valori di tabella.<br /><br /> Quando in una chiamata a SQLBindParameter viene specificato un nome di tipo di parametro con valori di tabella, deve sempre essere specificato come valore Unicode, anche nelle applicazioni compilate come applicazioni ANSI. Il valore usato per il parametro *StrLen_or_IndPtr* deve essere SQL_NTS oppure la lunghezza della stringa del nome moltiplicata per sizeof (WCHAR).<br /><br /> Quando viene specificato il nome di un tipo di parametro con valori di tabella tramite SQLSetDescField, può essere specificato usando un valore letterale conforme al modo in cui l'applicazione viene compilato. In Gestione driver ODBC verrà eseguita la conversione Unicode necessaria.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (di sola lettura)|IPD|SQLTCHAR*|Il catalogo in cui è definito il tipo.|  
 |SQL_CA_SS_TYPE_SCHEMA_NAME|IPD|SQLTCHAR*|Lo schema in cui è definito il tipo.|  
   
@@ -56,6 +54,6 @@ ms.locfileid: "36065814"
  SQL_CA_SS_TYPE_CATALOG_NAME e SQL_CA_SS_TYPE_SCHEMA_NAME possono inoltre essere utilizzati per recuperare il catalogo e lo schema associati ai parametri del tipo CLR definito dall'utente. Si tratta di alternative agli attributi dello schema del catalogo specifico del tipo esistente per questi tipi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Table-Valued Parameters &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
+ [I parametri con valori di tabella &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
   
   

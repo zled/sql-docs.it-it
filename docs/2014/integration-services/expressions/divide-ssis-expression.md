@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - / (divide)
 - divide operator (/)
@@ -16,13 +16,13 @@ ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9a752a36cbe77c437dd7dbfd87bb8825237552d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3dc1c33e2d3239311c14a6e0657a85775dc4e6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182678"
 ---
 # <a name="divide-ssis-expression"></a>Divisione (espressione SSIS)
   Viene divisa la prima espressione numerica per la seconda.  
@@ -45,7 +45,7 @@ dividend / divisor
 ## <a name="result-types"></a>Tipi restituiti  
  Dipendenti dai tipi di dati dei due argomenti. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se uno degli operandi è Null, il risultato sarà Null.  
   
  La divisione per zero non è consentita. A seconda della modalità con cui viene valutata la sottoespressione *divisor* , può verificarsi uno degli errori seguenti:  
@@ -70,7 +70,7 @@ ListPrice / StandardCost
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Associatività e precedenza operatori](operator-precedence-and-associativity.md)   
- [Gli operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md)  
+ [Precedenza e associatività degli operatori](operator-precedence-and-associativity.md)   
+ [Gli operatori &#40;espressione di SSIS&#41;](operators-ssis-expression.md)  
   
   

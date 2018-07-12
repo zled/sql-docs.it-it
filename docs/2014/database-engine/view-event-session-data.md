@@ -1,5 +1,5 @@
 ---
-title: Visualizzare i dati della sessione evento | Documenti Microsoft
+title: Visualizzare i dati di sessione di eventi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 503c9d39631ff2ec0e1ebafa437180dd7dc39739
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a6602ceccaf574827dfc49e4a90cd84c9422522b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239461"
 ---
 # <a name="view-event-session-data"></a>Visualizzare i dati della sessione eventi
   In questo argomento verrà descritto l'utilizzo dell'interfaccia utente visualizzata per vedere e analizzare i dati degli eventi estesi:  
@@ -58,7 +58,7 @@ ms.locfileid: "36070107"
   
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
   
-    -   È possibile visualizzare una o più. File XEL selezionando **Unisci file eventi estesi** dal File -> Apri menu.  
+    -   È possibile visualizzare più di uno. File XEL selezionando **Unisci file eventi estesi** dal File -> Apri menu.  
   
 ### <a name="watching-live-data"></a>Controllo dei dati dinamici  
  È possibile controllare i dati dinamici mentre vengono acquisiti.  
@@ -89,7 +89,7 @@ ms.locfileid: "36070107"
  Nel riquadro **Dettagli** vengono visualizzate tutte le colonne per l'evento selezionato, inclusi campi e azioni. È possibile aggiungere una colonna alla tabella dei dati di destinazione facendo clic con il pulsante destro del mouse su una riga nel riquadro **Dettagli** e selezionando **Mostra colonna in tabella**.  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>Creare, modificare o eliminare le colonne unite  
- Con una colonna unita è possibile combinare un set di campi da visualizzare in una sola colonna. Nella colonna unita verranno mostrati i dati dal primo campo non Null in base all'ordine con cui vengono aggiunti all'elenco dei campi. Questa operazione è simile a quanto visualizzato nelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, in cui una colonna specifica può visualizzare dati diversi a seconda dell'evento (l'esempio più comune di questo è il campo TextData [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler). Per un esempio, è possibile unire i campi statement e batch_text rispettivamente dagli eventi sql_statement_completed e sql_batch_completed in un campo denominato myStatement. Quando si visualizza la colonna myStatement nella tabella, in essa verranno mostrati i dati appropriati per l'evento associato.  
+ Con una colonna unita è possibile combinare un set di campi da visualizzare in una sola colonna. Nella colonna unita verranno mostrati i dati dal primo campo non Null in base all'ordine con cui vengono aggiunti all'elenco dei campi. Ciò è simile a quanto visualizzato nel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, in cui una colonna specifica può visualizzare dati diversi a seconda dell'evento (l'esempio più comune di questo è il campo TextData in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler). Per un esempio, è possibile unire i campi statement e batch_text rispettivamente dagli eventi sql_statement_completed e sql_batch_completed in un campo denominato myStatement. Quando si visualizza la colonna myStatement nella tabella, in essa verranno mostrati i dati appropriati per l'evento associato.  
   
  È possibile creare, modificare o eliminare le colonne unite:  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36070107"
  In caso di raggruppamento di colonne, il relativo ordinamento comporta l'esecuzione della stessa operazione esclusivamente per i dati all'interno del gruppo.  
   
 ### <a name="group-results"></a>Raggruppare i risultati  
- Risultati raggruppati sono equivalenti alle funzionalità del `GROUP BY` clausola [!INCLUDE[tsql](../includes/tsql-md.md)]. Nella tabella dei dati di destinazione verranno mostrati i dati raggruppati, consentendo all'utente di espandere e comprimere i dati.  
+ Risultati raggruppati sono equivalenti alle funzionalità dei `GROUP BY` clausola in [!INCLUDE[tsql](../includes/tsql-md.md)]. Nella tabella dei dati di destinazione verranno mostrati i dati raggruppati, consentendo all'utente di espandere e comprimere i dati.  
   
  È necessario raggruppare i dati prima di poter aggregarli. Ad esempio, è possibile raggruppare in base al valore query_hash, disporre in ordine decrescente in base alla durata, ottenere la durata media per ogni gruppo, quindi disporre in modo decrescente in base all'aggregazione.  In questo modo verrà generato un elenco contenente istruzioni univoche dalla durata media più lunga a quella più corta. Quando si espande il gruppo di livello superiore verranno visualizzate le singole esecuzioni della query specificata, ordinate dalla più lunga alla più corta.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "36070107"
   
  Per copiare i risultati della traccia, selezionare una cella, una o più righe, fare clic con il pulsante destro del mouse e scegliere **Copia** , quindi selezionare **Cella**, **Riga**o **Dettagli**. Eventi estesi supporta la copia di un massimo di 1000 righe.  
   
- È possibile esportare i risultati della traccia in una. XEL file, tabella, o. File CSV selezionando **esportare** dal **eventi estesi** opzione di menu in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+ È possibile esportare i risultati della traccia per una. XEL file, tabella, o. File CSV selezionando **esportare** dal **eventi estesi** opzione di menu in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="view-a-deadlock-graph-and-query-plans"></a>Visualizzare un evento Deadlock Graph e piani di query  
  È possibile visualizzare l'evento Deadlock Graph per **xml_deadlock_report** nel riquadro Dettagli per consentire di risolvere i problemi relativi ai deadlock. È anche possibile visualizzare i grafici del piano di query per gli eventi seguenti:  

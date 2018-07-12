@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ad258c2be4e7df3ff353a9fd1a1f9e7c083991d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94f58681e368ce3eff15a5b6ec78afbc7be2018f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258427"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lezione 2: Creazione di una sottoscrizione per una pubblicazione di tipo merge
   In questa lezione verranno descritte le procedure per creare una sottoscrizione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Verranno quindi impostate le autorizzazioni per il database di sottoscrizione e verrà generato manualmente lo snapshot dei dati filtrati per la nuova sottoscrizione. Per eseguire questa lezione è necessario aver completato la lezione precedente [Lezione 1: Pubblicazione dei dati tramite la replica di tipo merge](lesson-1-publishing-data-using-merge-replication.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36068908"
   
 5.  Nella pagina Posizione in cui eseguire l'agente di merge fare clic su **Esegui ogni agente nel relativo Sottoscrittore**e su **Avanti**.  
   
-6.  Nella pagina sottoscrittori selezionare il nome dell'istanza del server del sottoscrittore e nel **Database di sottoscrizione**, selezionare  **\<Nuovo Database >** dall'elenco.  
+6.  Nella pagina sottoscrittori selezionare il nome dell'istanza del server del sottoscrittore e in **Database di sottoscrizione**, selezionare  **\<Nuovo Database >** dall'elenco.  
   
 7.  Nella finestra di dialogo **Nuovo database** immettere **SalesOrdersReplica** nella casella **Nome database** , selezionare **OK**e fare clic su **Avanti**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36068908"
   
 9. Nella pagina Inizializzazione sottoscrizioni selezionare **Alla prima sincronizzazione** dall'elenco **Quando** , fare clic su **Avanti**e di nuovo su **Avanti** .  
   
-10. Nella pagina valori HOST_NAME immettere un valore di `adventure-works\pamela0` nella **valore HOST_NAME** e quindi scegliere **fine**.  
+10. Nella pagina valori HOST_NAME immettere un valore pari `adventure-works\pamela0` nella **valore HOST_NAME** casella e quindi fare clic su **fine**.  
   
 11. Fare di nuovo clic su **Fine** e dopo aver creato la sottoscrizione fare clic su **Chiudi**.  
   

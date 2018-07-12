@@ -1,5 +1,5 @@
 ---
-title: Definire le proprietà di dimensione cubo | Documenti Microsoft
+title: Definire le proprietà di dimensione cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], characteristics
 - properties [Analysis Services], dimensions
 ms.assetid: 9314e749-0918-4862-abaf-a21692188122
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc40ef64b7b5e9b92d0e170d89ed388a90ff01c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bda79152cc17ef8f9e94afde2f8166ecd73ba4b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157062"
 ---
 # <a name="define-cube-dimension-properties"></a>Definire le proprietà delle dimensioni del cubo
   Una dimensione del cubo è un'istanza della dimensione del database all'interno di un cubo. Una dimensione del database può essere utilizzata in più cubi e più dimensioni del cubo possono essere basate su una singola dimensione del database. Nella tabella seguente vengono descritte le proprietà della dimensione di un cubo.  
@@ -39,6 +39,6 @@ ms.locfileid: "36156585"
 |`Visible`|Determina se la dimensione del cubo è visibile. Il valore predefinito è `True`.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le dimensioni &#40;Analysis Services - dati multidimensionali&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

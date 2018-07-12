@@ -1,5 +1,5 @@
 ---
-title: Editor destinazione elaborazione dimensione (pagina Mapping) | Documenti Microsoft
+title: Editor destinazione elaborazione dimensione (pagina Mapping) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimprocessingtransformation.mappings.f1
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0f8286c541da858a64097a3536b65bdf9f7c9373
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 208a63412351e0f3e9ab6b7a5b5d79c6ef51aca3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154622"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>Editor destinazione elaborazione dimensione (pagina Mapping)
   Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione elaborazione dimensione** per eseguire il mapping tra le colonne di input e le colonne delle dimensioni.  
@@ -44,7 +44,7 @@ ms.locfileid: "36156043"
  Consente di visualizzare tutte le colonne di destinazione disponibili, indicando se sono mappate o meno.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione elaborazione dimensione &#40;pagina Gestione connessione&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
  [Editor destinazione elaborazione dimensione &#40;pagina avanzate&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   

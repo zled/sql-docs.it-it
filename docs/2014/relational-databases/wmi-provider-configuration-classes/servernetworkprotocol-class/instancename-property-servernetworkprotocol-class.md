@@ -1,5 +1,5 @@
 ---
-title: Proprietà InstanceName (classe ServerNetworkProtocol) | Documenti Microsoft
+title: Proprietà InstanceName (classe ServerNetworkProtocol) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: 456911c1-9881-4574-8576-0070eff78c27
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 932eeb4d4545a6a89580d4f3f9ef24481c37bd04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 074030b46cefbdd550702fc76789eb5acf83c121
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183908"
 ---
 # <a name="instancename-property-servernetworkprotocol-class"></a>Proprietà InstanceName (classe ServerNetworkProtocol)
-  Ottiene il nome dell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che viene fatto riferimento dal protocollo di rete del server.  
+  Ottiene il nome dell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che fa riferimento il protocollo di rete del server.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,9 +48,9 @@ object
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a cui fa riferimento il protocollo di rete del server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete Server e le librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tramite posta elettronica Database | Documenti Microsoft
+title: Tramite posta elettronica Database | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,23 +16,23 @@ helpviewer_keywords:
 - mail [SMO]
 ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d5d6d7b6d314df4917b804c0b9c9c15bc90c9427
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: df48338975af6de44979a9169ecad35321dd1fa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278723"
 ---
 # <a name="using-database-mail"></a>Utilizzo di Posta elettronica database
-  In SMO il sottosistema Posta elettronica database è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> a cui fa riferimento la proprietà <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>. Tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> SMO, è possibile configurare il sottosistema Posta elettronica database e gestire profili e account di posta elettronica. SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> oggetto appartiene al `Server` oggetto, vale a dire che l'ambito degli account di posta elettronica è a livello di server.  
+  In SMO il sottosistema Posta elettronica database è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> a cui fa riferimento la proprietà <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>. Tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> SMO, è possibile configurare il sottosistema Posta elettronica database e gestire profili e account di posta elettronica. SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> appartiene l'oggetto di `Server` oggetti, vale a dire che l'ambito degli account di posta elettronica è a livello di server.  
   
 ## <a name="examples"></a>Esempi  
- Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto di Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C#&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
- Per programmi che utilizzano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] posta elettronica Database, è necessario includere il `Imports` istruzione per qualificare lo spazio dei nomi di posta elettronica. Inserire l'istruzione dopo le altre istruzioni `Imports`, ma prima di qualsiasi dichiarazione nell'applicazione, ad esempio:  
+ Per i programmi che usano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] posta elettronica Database, è necessario includere il `Imports` istruzione per qualificare lo spazio dei nomi di posta elettronica. Inserire l'istruzione dopo le altre istruzioni `Imports`, ma prima di qualsiasi dichiarazione nell'applicazione, ad esempio:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

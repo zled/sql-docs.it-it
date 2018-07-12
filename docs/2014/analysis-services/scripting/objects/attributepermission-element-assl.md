@@ -1,5 +1,5 @@
 ---
-title: Elemento Attributepermissions (ASSL) | Documenti Microsoft
+title: Elemento Attributepermissions (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributePermission element
 ms.assetid: efc8aa63-3959-4b2e-98f8-2a9c424298c2
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ee5d846cdf849959bc1a916dd82fd95de60e6e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c39047b1f63f0abbab109e2d1e8f82ca2a4c863
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277877"
 ---
 # <a name="attributepermission-element-assl"></a>Elemento AttributePermissions (ASSL)
-  Definisce le autorizzazioni che i membri di un [ruolo](role-element-assl.md) elemento avere gli attributi di una singola dimensione in un [cubo](cube-element-assl.md) elemento.  
+  Definisce le autorizzazioni che i membri di un [ruolo](role-element-assl.md) elemento hanno gli attributi di una singola dimensione in un [cubo](cube-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36068136"
 |Elementi padre|[AttributePermissions](../collections/attributepermissions-element-assl.md)|  
 |Elementi figlio|[AllowedSet](../properties/allowedset-element-assl.md), [annotazioni](../collections/annotations-element-assl.md), [AttributeID](../properties/id-element-assl.md), [DefaultMember](member-element-assl.md), [DeniedSet](../properties/deniedset-element-assl.md), [descrizione ](../properties/description-element-assl.md), [VisualTotals](../properties/visualtotals-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.AttributePermission>.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,44 +1,42 @@
 ---
-title: Campi di descrizione per le colonne che costituiscono parametri con valori di tabella | Documenti Microsoft
+title: Campi di descrizione per le colonne che costituiscono parametri con valori di tabella | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields for constituent columns
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6888494d35b16987cf5d3b3e8a55a44784d2ca11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 94d8663f92a68bb210d093d4d10d034b753d1ee0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067373"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415076"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>Campi di descrizione per le colonne che costituiscono parametri con valori di tabella
-  I campi di descrizione parametro con valori di tabella descritti in questa sezione vengono modificati utilizzando [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) e [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) con l'handle per il (descrittore parametro di implementazione IPD).  
+  I campi di descrizione parametro con valori di tabella descritti in questa sezione vengono modificati utilizzando [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) e [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) con l'handle per il parametro di implementazione del descrittore ( IPD).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  SQL_DESC_AUTO_UNIQUE_VALUE viene utilizzato per parametri con valori di tabella e altre caratteristiche.  
   
 |Nome dell'attributo|Tipo|Description|  
 |--------------------|----------|-----------------|  
-|SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE indica che la colonna è una colonna Identity.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può utilizzare queste informazioni per ottimizzare le prestazioni, ma le applicazioni non devono impostare questo attributo per le colonne identity.|  
+|SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE indica che la colonna è una colonna Identity.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare queste informazioni per ottimizzare le prestazioni, ma le applicazioni non è necessario impostarla per le colonne identity.|  
   
  Gli attributi seguenti vengono aggiunti a tutti i tipi di parametro nel campo di descrizione del parametro dell'applicazione (APD, Application Parameter Descriptor) e nel campo di descrizione del parametro di implementazione (IPD, Implementation Parameter Descriptor):  
   
 |Nome dell'attributo|Tipo|Description|  
 |--------------------|----------|-----------------|  
-|SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE indica che la colonna è calcolata.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può utilizzare queste informazioni per ottimizzare le prestazioni, ma le applicazioni non devono impostare questo attributo per le colonne calcolate.<br /><br /> Questo attributo viene ignorato per le associazioni che non sono colonne di parametri con valori di tabella.|  
+|SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE indica che la colonna è calcolata.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare queste informazioni per ottimizzare le prestazioni, ma le applicazioni non è necessario impostarla per le colonne calcolate.<br /><br /> Questo attributo viene ignorato per le associazioni che non sono colonne di parametri con valori di tabella.|  
 |SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE indica che una colonna di parametri con valori di tabella viene utilizzata in una chiave univoca. Questa impostazione può migliorare le prestazioni di esecuzione delle query. Questo attributo viene ignorato per le associazioni che non sono colonne di parametri con valori di tabella.|  
 |SQL_CA_SS_COLUMN_SORT_ORDER|SQLSMALLINT|Indica l'ordinamento di una colonna di parametri con valori di tabella. Questa impostazione può migliorare le prestazioni di esecuzione delle query. Questo attributo viene ignorato per le associazioni che non sono colonne di parametri con valori di tabella. Di seguito sono indicati i valori possibili:<br /><br /> -SQL_SS_ASCENDING_ORDER<br />-SQL_SS_DESCENDING_ORDER<br />-SQL_SS_ORDER_UNSPECIFIED<br /><br /> I valori diversi da SQL_SS_ASCENDING_ORDER e SQL_SS_DESCENDING_ORDER generano un errore con SQLSTATE HY024 e il messaggio 'Valore di attributo non valido' e vengono considerati SQL_SS_ORDER_UNSPECIFIED, ovvero il valore predefinito per l'attributo.|  
 |SQL_CA_SS_COLUMN_SORT_ORDINAL|SQLSMALLINT|Indica l'ordinale di una colonna di parametri con valori di tabella nel set di colonne che definiscono l'ordinamento complessivo per un parametro con valori di tabella. Questa impostazione può migliorare le prestazioni di esecuzione delle query. Questo attributo viene ignorato per le associazioni che non sono colonne di parametri con valori di tabella. Gli ordinali per l'ordinamento iniziano da 1. Il valore 0, che rappresenta il valore predefinito, indica che una colonna di parametri con valori di tabella non specifica l'ordinamento delle colonne.|  
@@ -46,9 +44,9 @@ ms.locfileid: "36067373"
   
  Questi attributi sono validi solo per le colonne di parametri con valori di tabella e vengono ignorati per gli altri parametri.  
   
- Se SQL_CA_SS_COL_HAS_DEFAULT_VALUE è impostato per una colonna di parametri con valori di tabella, SQL_DESC_DATA_PTR per la colonna deve essere un puntatore null. In caso contrario, SQLExecute o SQLExecDirect restituirà SQL_ERROR. Verrà generato un record di diagnostica con SQLSTATE = 07S01 e il messaggio "utilizzo non valido del parametro predefinito per il parametro \<p >, colonna \<c >", dove \<p > è il parametro ordinale e \<c > è il numero ordinale di colonna.  
+ Se SQL_CA_SS_COL_HAS_DEFAULT_VALUE è impostato per una colonna di parametri con valori di tabella, SQL_DESC_DATA_PTR per la colonna deve essere un puntatore null. In caso contrario, SQLExecute o SQLExecDirect restituirà SQL_ERROR. Verrà generato un record di diagnostica con SQLSTATE = 07S01 e il messaggio "utilizzo valido del parametro predefinito per il parametro \<p >, colonna \<c >", dove \<p > è il parametro dell'ordinale e \<c > è il numero ordinale di colonna.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Table-Valued Parameters &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
+ [I parametri con valori di tabella &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
   
   

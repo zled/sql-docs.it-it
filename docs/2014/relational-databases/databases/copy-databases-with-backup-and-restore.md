@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
 - restoring databases [SQL Server], previous SQL Server versions
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5901a8fcdd3a2d24b84fe43d5af1fb2b46d56b39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 551677d78685c5e491d5f1c2dd347bc77f37a437
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164892"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiare database tramite backup e ripristino
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è possibile creare un nuovo database ripristinando un backup di un database utente creato tramite [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versione successiva. Tuttavia, i backup di **master**, **model** e **msdb** creati con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non possono essere ripristinati da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Inoltre, i backup di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non possono essere ripristinati da una qualsiasi versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -63,7 +63,7 @@ ms.locfileid: "36077589"
   
     -   Se non è possibile sovrascrivere il file esistente, si verifica un errore di ripristino.  
   
- Per evitare errori e conseguenze impreviste, prima dell'operazione di ripristino, è possibile usare il [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) tabella di cronologia per individuare i file di database e del log nel backup si intende ripristinare.  
+ Per evitare errori e conseguenze impreviste, prima dell'operazione di ripristino, è possibile usare la [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) tabella di cronologia per trovare i file di database e log nel backup si intende ripristinare.  
   
 ## <a name="moving-the-database-files"></a>Spostamento dei file di database  
  Se per i motivi elencati in precedenza non è possibile ripristinare i file di backup del database nel computer di destinazione, sarà necessario spostare i file in un nuovo percorso mano a mano che vengono ripristinati, Esempio:  
@@ -124,7 +124,7 @@ ms.locfileid: "36077589"
   
 -   [sp_changedbowner &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
- **Per copiare un database utilizzando SQL Server Management Objects (SMO)**  
+ **Copiare un database usando SQL Server Management Objects (SMO)**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A>  
   

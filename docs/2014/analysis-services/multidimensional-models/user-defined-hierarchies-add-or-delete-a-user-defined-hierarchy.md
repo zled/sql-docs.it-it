@@ -1,5 +1,5 @@
 ---
-title: Aggiunta o eliminazione di una gerarchia definita dall'utente | Documenti Microsoft
+title: Aggiungere o eliminare una gerarchia definita dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], adding
 - removing hierarchies
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - hierarchies [Analysis Services], removing
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 caps.latest.revision: 50
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 57e1f74d612add88c6a2c47497f0d6a55c64c665
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3cb9b55bcff41dddd2a4c648854e92222d1e8e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157122"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>Aggiungere o eliminare una gerarchia definita dall'utente
   È possibile aggiungere o rimuovere una gerarchia definita dall'utente in una dimensione nella scheda **Struttura dimensione** di Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- Quando si aggiunge una gerarchia definita dall'utente, questa non risulta disponibile per gli utenti finché non ne viene creata un'istanza in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e non viene elaborata la dimensione. Per altre informazioni, vedere [database modello multidimensionale &#40;SSAS&#41; ](multidimensional-model-databases-ssas.md) e [l'elaborazione di oggetti modello multidimensionale](processing-a-multidimensional-model-analysis-services.md).  
+ Quando si aggiunge una gerarchia definita dall'utente, questa non risulta disponibile per gli utenti finché non ne viene creata un'istanza in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e non viene elaborata la dimensione. Per altre informazioni, vedere [database modelli multidimensionali &#40;SSAS&#41; ](multidimensional-model-databases-ssas.md) e [l'elaborazione di oggetti modello multidimensionale](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-add-a-user-defined-hierarchy-to-a-dimension"></a>Per aggiungere una gerarchia definita dall'utente a una dimensione  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36166277"
   
 5.  Facoltativamente, modificare le proprietà della gerarchia definita dall'utente o dei relativi livelli.  
   
-     Può essere ad esempio utile specificare un nome per la gerarchia definita dall'utente, rinominarne uno o più livelli e definire un nome personalizzato per il livello Totale. Per altre informazioni, vedere [delle proprietà della gerarchia utente](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md), e [proprietà a livello di &#91;rimosso su&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md).  
+     Può essere ad esempio utile specificare un nome per la gerarchia definita dall'utente, rinominarne uno o più livelli e definire un nome personalizzato per il livello Totale. Per altre informazioni, vedere [proprietà della gerarchia utente](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md), e [proprietà a livello di &#91;preparazione su&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md).  
   
     > [!NOTE]  
     >  Per impostazione predefinita, una gerarchia definita dall'utente è solo un percorso che consente agli utenti di eseguire il drill-down delle informazioni. Se esistono relazioni tra i livelli, tuttavia, è possibile incrementare le prestazioni di esecuzione delle query configurando relazioni tra attributi per i livelli. Per altre informazioni, vedere [Relazioni tra attributi](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md) e [Definire relazioni tra attributi](attribute-relationships-define.md).  
@@ -66,7 +66,7 @@ ms.locfileid: "36166277"
 -   Trascinare la gerarchia definita dall'utente al di fuori dell'area di progettazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gerarchie utente](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
+ [Gerarchie definite dall'utente](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Creare gerarchie definite dall'utente](user-defined-hierarchies-create.md)  
   
   

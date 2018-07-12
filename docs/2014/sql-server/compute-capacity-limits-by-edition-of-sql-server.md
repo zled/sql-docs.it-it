@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0d9d1e3076c19df548eb2a1714a2093046fd352
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2893a0fdb04e834e2eeab0343b23888c244fd036
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157542"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limiti della capacità di calcolo per edizione di SQL Server
   In questo argomento si illustrano i limiti della capacità di calcolo per differenti edizioni di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e le differenze in ambienti fisici e virtualizzati con i processori con l'Hyper-Threading.  
@@ -96,7 +96,7 @@ ms.locfileid: "36156145"
 |Express with Tools|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|  
 |Express with Advanced Services|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|  
   
- <sup>1</sup> Enterprise Edition con Server + CAL Client Access License () in base licenze (non disponibile per nuovi contratti) è limitata a un massimo di 20 core per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] istanza. Non sono previsti limiti nel modello di licenza server basato su core.  
+ <sup>1</sup> Enterprise Edition con Server + CAL Client Access License () basati su licenza (non disponibile per nuovi contratti) è limitata a un massimo di 20 core per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] istanza. Non sono previsti limiti nel modello di licenza server basato su core.  
   
  In un ambiente virtualizzato, il limite della capacità di calcolo è basato sul numero di processori logici non core, perché l'architettura del processore non è visibile alle applicazioni guest.  Ad esempio, un server con quattro socket popolati con processori quad-core e la capacità di abilitare due Hyper-Thread per core contiene 32 processori logici con l'Hyper-Threading abilitato ma solo 16 processori logici con l'Hyper-Threading disabilitato. È possibile eseguire il mapping di questi processori logici alle macchine virtuali sul server con il caricamento del calcolo delle macchine virtuali su quel processore logico di cui si è eseguito il mapping in un processore fisico nel server host.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], DATEPART
 - DATEPART function
@@ -16,13 +16,13 @@ ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5fc80a360a044b72b42ea41af5b5e538c124c6df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8309f3f4292795cebffe94f03e1418bb36d8929
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209791"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (espressione SSIS)
   Restituisce un valore integer che rappresenta una parte di una data.  
@@ -44,7 +44,7 @@ DATEPART(datepart, date)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se l'argomento è Null, DATEPART restituirà Null.  
   
  Per i valori letterali di data è necessario eseguire il cast esplicito a uno dei tipi di dati date. Per altre informazioni, vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md).  
@@ -85,11 +85,11 @@ DATEPART("yy",GETDATE())
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DATEADD &#40;espressione SSIS&#41;](dateadd-ssis-expression.md)   
- [DATEDIFF &#40;espressione SSIS&#41;](datediff-ssis-expression.md)   
+ [DATEADD &#40;espressione di SSIS&#41;](dateadd-ssis-expression.md)   
+ [DATEDIFF &#40;espressione di SSIS&#41;](datediff-ssis-expression.md)   
  [DAY &#40;espressione SSIS&#41;](day-ssis-expression.md)   
  [MONTH &#40;espressione SSIS&#41;](month-ssis-expression.md)   
  [YEAR &#40;espressione SSIS&#41;](year-ssis-expression.md)   
- [Le funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md)  
+ [Le funzioni &#40;espressione di SSIS&#41;](functions-ssis-expression.md)  
   
   

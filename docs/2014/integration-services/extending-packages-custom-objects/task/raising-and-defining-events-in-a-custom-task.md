@@ -28,13 +28,13 @@ ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a657c8d88f93355e50e69dbcffa1edda33fcfddf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8424a0c38144dd26fadf0c0437064d541a3b5b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155102"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Generazione e definizione di eventi in un'attività personalizzata
   Il motore di runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include una raccolta di eventi che forniscono lo stato di avanzamento durante la convalida e l'esecuzione di un'attività. L'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> definisce questi eventi e viene fornita alle attività come parametro per i metodi <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>.  
@@ -48,7 +48,7 @@ ms.locfileid: "36155818"
   
  Nell'esempio di codice seguente è illustrato il metodo `InitializeTask` di un'attività personalizzata, in cui vengono creati due eventi e vengono impostate le relative proprietà. I nuovi eventi vengono quindi aggiunti alla raccolta <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>.  
   
- Il primo evento personalizzato presenta un elemento *eventName* di "**OnBeforeIncrement**" e un elemento *description* di "**Fires after the initial value is updated.**" Il parametro successivo, il valore `true`, indica che questo evento deve consentire la creazione di un contenitore del gestore eventi. Il gestore eventi è un contenitore che fornisce la struttura in un pacchetto e servizi alle attività, analogamente ad altri contenitori come Sequence, ForLoop e ForEachLoop. Quando il *allowEventHandlers* parametro `true`, <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> gli oggetti vengono creati per l'evento. I parametri definiti per l'evento sono ora disponibili per <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> nella raccolta di variabili di <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
+ Il primo evento personalizzato presenta un elemento *eventName* di "**OnBeforeIncrement**" e un elemento *description* di "**Fires after the initial value is updated.**" Il parametro successivo, il valore `true`, indica che questo evento deve consentire la creazione di un contenitore del gestore eventi. Il gestore eventi è un contenitore che fornisce la struttura in un pacchetto e servizi alle attività, analogamente ad altri contenitori come Sequence, ForLoop e ForEachLoop. Quando la *allowEventHandlers* parametro è `true`, <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> gli oggetti vengono creati per l'evento. I parametri definiti per l'evento sono ora disponibili per <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> nella raccolta di variabili di <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  
@@ -194,7 +194,7 @@ Nothing,  bFireOnBeforeIncrement)
     End Class  
 ```  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestori eventi di Integration Services &#40;SSIS&#41;](../../integration-services-ssis-event-handlers.md)   

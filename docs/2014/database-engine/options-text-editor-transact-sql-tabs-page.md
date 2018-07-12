@@ -1,5 +1,5 @@
 ---
-title: Opzioni (Editor di testo - Transact-SQL - tabulazioni) | Documenti Microsoft
+title: Opzioni (Editor di testo - Transact-SQL - tabulazioni) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.Tabs
 dev_langs:
@@ -17,15 +17,15 @@ ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
 caps.latest.revision: 10
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c070024769f59516f57d89a4c76b97ceb9b775f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c97c95ec2dff4d96f37eb274ee6ec98af117f89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152642"
 ---
-# <a name="options-text-editor---transact-sql---tabs-page"></a>Opzioni (Editor di testo - Transact-SQL - tabulazioni)
+# <a name="options-text-editor---transact-sql---tabs-page"></a>Opzioni (pagina Editor di testo - Transact-SQL - tabulazioni)
   Utilizzare questa finestra di dialogo per cambiare il comportamento di tabulazione dell'editor di query del [!INCLUDE[ssDE](../includes/ssde-md.md)] utilizzato per programmare gli script [!INCLUDE[tsql](../includes/tsql-md.md)]. Per visualizzare queste impostazioni, scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Editor di testo**, espandere la sottocartella **Transact-SQL** e quindi fare clic su **Schede**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Opzioni di impostazione in più posizioni  
@@ -38,17 +38,17 @@ ms.locfileid: "36166226"
  **Blocco**  
  Quando è selezionata questa opzione la nuova riga creata premendo INVIO viene rientrata automaticamente della stessa distanza della riga precedente.  
   
- **Intelligente**  
+ **Smart**  
  Questa opzione non è disponibile.  
   
 ## <a name="tabs"></a>Tabulazioni  
  **Dimensione tabulazione**  
  Consente di impostare la distanza in spazi tra le tabulazioni. Il valore predefinito è quattro spazi.  
   
- **Dimensione rientro**  
+ **Dimensione del rientro**  
  Consente di impostare la dimensione in spazi di un rientro automatico. Il valore predefinito è quattro spazi. Per riempire il rientro specificato verranno inseriti caratteri di tabulazione, caratteri di spazio o entrambi.  
   
- **Inserisci spazi**  
+ **Inserisci gli spazi**  
  Quando questa opzione è selezionata, durante le operazioni di rientro vengono inseriti solo caratteri spazio, non caratteri di tabulazione. Se la **Dimensione rientro** è impostata su 5, ad esempio, verranno inseriti cinque caratteri di spazio ogni volta che viene premuto TAB o si fa clic sul pulsante **Aumenta rientro** sulla barra degli strumenti della finestra principale di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .  
   
  **Mantieni tabulazioni**  

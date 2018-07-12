@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di un'estesa Stored Procedure per SQL Server | Documenti Microsoft
+title: Aggiunta di un'estesa Stored Procedure in SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - collations [SQL Server], extended stored procedures
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b69f6ba2dd0fc6c5b3b2ce4f93e70239d8868007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: c88e0640c41e7307144912cc05f9cdd21022fee6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211271"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>Aggiunta di una stored procedure estesa a SQL Server
     
@@ -49,7 +49,7 @@ ms.locfileid: "36069607"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL12.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- Se il nome della funzione specificato in `sp_addextendedproc` non corrisponde esattamente al nome presente nella DLL, il nuovo nome verrà registrato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma non sarà possibile utilizzarlo. Ad esempio, sebbene `xp_Hello` viene registrato come un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella stored procedure estesa `xp_hello.dll`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sarà in grado di trovare la funzione nella DLL se si utilizza `xp_Hello` per chiamare la funzione in un secondo momento.  
+ Se il nome della funzione specificato in `sp_addextendedproc` non corrisponde esattamente al nome presente nella DLL, il nuovo nome verrà registrato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma non sarà possibile utilizzarlo. Ad esempio, sebbene `xp_Hello` viene registrato come un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si trova nella stored procedure estesa `xp_hello.dll`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sarà in grado di trovare la funzione nella DLL se si usa `xp_Hello` per chiamare la funzione in un secondo momento.  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  
@@ -81,7 +81,7 @@ DECLARE @txt varchar(33);
 EXEC xp_HELLO @txt OUTPUT;  
 ```  
   
- Quando le regole di confronto del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza è distinzione maiuscole/minuscole, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sarà in grado di chiamare la stored procedure estesa, anche se è stata registrata esattamente lo stesso nome e regole di confronto della funzione nella DLL - se la routine viene chiamata con minuscole diverse.  
+ Quando le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza è tra maiuscole e minuscole, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sarà in grado di chiamare la stored procedure estesa, anche se è stata registrata esattamente lo stesso nome e regole di confronto della funzione nella DLL, se la procedura viene chiamata con un caso diverso.  
   
 ```  
 --Register the function (xp_hello)  

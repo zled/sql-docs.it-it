@@ -1,5 +1,5 @@
 ---
-title: Creare finestra di dialogo di dimensione di data mining | Documenti Microsoft
+title: Creare i dati della finestra di dimensione di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeldesigner.createdmdimension.f1
 ms.assetid: a6ed550c-9fae-453d-948a-b3a1f4dbdffa
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca54e5c393f8255867bf1752b72c15ad3250d690
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39279730acd14b947c4bf56695547510c9fbbc8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230021"
 ---
 # <a name="create-data-mining-dimension-dialog"></a>Finestra di dialogo Crea dimensione di data mining
   Utilizzare la finestra di dialogo **Crea dimensione di data mining** per creare una nuova dimensione di data mining in base a un modello di data mining OLAP.  
@@ -33,11 +33,11 @@ ms.locfileid: "36156592"
  **Nome della dimensione**  
  Consente di digitare un nome per la nuova dimensione.  
   
- **Crea il cubo**  
+ **Crea cubo**  
  Selezionare questa opzione per creare un cubo basato sulla dimensione del modello di data mining da creare. Dopo aver selezionato questa opzione, è possibile digitare un nuovo nome per il cubo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzazione struttura di data mining &#40;progettazione modello di Data Mining&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Visualizzazione struttura di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Creare una dimensione di data mining](data-mining/create-a-data-mining-dimension.md)  
   
   

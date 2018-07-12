@@ -1,5 +1,5 @@
 ---
-title: Elemento DatabasePermission (ASSL) | Documenti Microsoft
+title: Elemento DatabasePermission (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DatabasePermission element
 ms.assetid: 6dcb9136-a40d-42e3-ad3b-b8ce8c7ca78c
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e47203616cc76fa09c0fd0658e7dad8a89c90a9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0fbfd9544e5305169e0d25b1b0157197d39cc002
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259527"
 ---
 # <a name="databasepermission-element-assl"></a>Elemento DatabasePermission (ASSL)
-  Definisce le autorizzazioni predefinite in un [Database](database-element-assl.md) elemento per uno specifico [ruolo](role-element-assl.md) elemento.  
+  Definisce le autorizzazioni predefinite in un [Database](database-element-assl.md) (elemento) per uno specifico [ruolo](role-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,12 +62,12 @@ ms.locfileid: "36077871"
 |Elementi padre|[DatabasePermissions](../collections/databasepermissions-element-assl.md)|  
 |Elementi figlio|[Amministrare](../properties/administer-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Gli oggetti `DatabasePermission` possono essere presenti solo per i ruoli posseduti dal database e per ogni ruolo può essere presente un solo oggetto `DatabasePermission`.  
   
  Questo elemento dispone delle convalide seguenti in DeploymentMode, valore 2 (modelli tabulari).  
   
--   *Amministrare* valore predefinito dell'attributo è impostata su `False`, salvo quando l'utente dispone di privilegi amministrativi. Per utenti con privilegi amministrativi il valore dell'attributo è impostato su `True`.  
+-   *Amministrare* valore predefinito dell'attributo è impostato su `False`, salvo quando l'utente dispone di privilegi amministrativi. Per utenti con privilegi amministrativi il valore dell'attributo è impostato su `True`.  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.DatabasePermission>.  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento AutoRestart (ASSL) | Documenti Microsoft
+title: Elemento AutoRestart (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AutoRestart element
 ms.assetid: 4c6a0e40-8e13-4d63-bf98-9470ffe95d02
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b8b7a7eb4540b327e96d8730f12f87e077b241a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ecb6893c7c3e87c9e96890a917bbe8aad540433d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156999"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159102"
 ---
 # <a name="autorestart-element-assl"></a>Elemento AutoRestart (ASSL)
-  Determina se un [traccia](../objects/trace-element-assl.md) elemento deve riavviarsi automaticamente quando il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servizio verrà arrestato e riavviato.  
+  Determina se un [traccia](../objects/trace-element-assl.md) elemento deve riavviarsi automaticamente quando il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servizio sarà arrestato e riavviato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,8 +61,8 @@ ms.locfileid: "36156999"
 |Elemento padre|[Traccia](../objects/trace-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `AutoRestart` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Trace>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `AutoRestart` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Analizza l'elemento &#40;ASSL&#41;](../collections/traces-element-assl.md)   

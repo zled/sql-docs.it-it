@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo traduzione dati (Analysis Services - dati multidimensionali) dell'attributo | Documenti Microsoft
+title: Finestra di dialogo traduzione dati (Analysis Services - dati multidimensionali) dell'attributo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.dimensionstoragesettings.f1
 helpviewer_keywords:
 - Attribute Data Translation dialog box
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1b8d7f28696e04045ca5ac3f11bf38d4c67f60c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b17c7aba04bc832fd3554d82dd885e8add05214
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210361"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Traduzione dati attributo (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Traduzione dati attributo** per impostare la colonna contenente i dati della didascalia della traduzione, nonché le regole di confronto e il tipo di ordinamento da usare per i dati tradotti. Per visualizzare la finestra di dialogo **Traduzione dati attributo** , è possibile:  
@@ -59,7 +59,7 @@ ms.locfileid: "36156595"
  **Distinzione maiuscole / minuscole**  
  Selezionare questa opzione per ordinare e confrontare i dati in base alle regole del dizionario specificate per la lingua o l'alfabeto associato, nonché per distinguere tra lettere maiuscole e minuscole.  
   
- Se l'opzione non viene selezionata, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera uguali le versioni maiuscole e minuscole delle lettere. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non definisce se lettere minuscole ordinate più in alto o in relazione a maiuscola lettere quando **distinzione maiuscole/minuscole** non è selezionata.  
+ Se l'opzione non viene selezionata, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera uguali le versioni maiuscole e minuscole delle lettere. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] indica se le lettere minuscole debbano essere ordinate più o versione successiva in relazione a lettere maiuscole di lettere quando **distinzione maiuscole/minuscole** non è selezionata.  
   
  **/ Non accentati**  
  Selezionare questa opzione per ordinare e confrontare i dati in base alle regole del dizionario specificate per la lingua o l'alfabeto associato, nonché per distinguere tra lettere accentate e non accentate. Il carattere 'a' non viene ad esempio considerato uguale ad 'à'.  

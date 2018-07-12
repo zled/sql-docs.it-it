@@ -1,33 +1,31 @@
 ---
-title: Supporto sql_variant per i tipi data e ora | Documenti Microsoft
+title: Supporto sql_variant per i tipi Date e Time | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sql_variant data type
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba207a78704e8e8582bffdd4df2b2846673ff58c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e16fe8289ae2e92ee21a59c378b4093c0380e1ac
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155983"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409090"
 ---
 # <a name="sqlvariant-support-for-date-and-time-types"></a>Supporto sql_variant per i tipi data e ora
   In questo argomento viene illustrato come il tipo di dati `sql_variant` supporta la funzionalità avanzata di data e ora.  
   
- L'attributo della colonna SQL_CA_SS_VARIANT_TYPE è utilizzato per restituire il tipo C di una colonna dei risultati variant. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduce un attributo aggiuntivo, SQL_CA_SS_VARIANT_SQL_TYPE, che imposta il tipo SQL di una colonna di risultati variant nel descrittore della riga di implementazione (IRD). SQL_CA_SS_VARIANT_SQL_TYPE può essere utilizzato anche nel descrittore di parametri di implementazione (IPD) per specificare il tipo SQL di un SQL_SS_TIME2 o parametro SQL_SS_TIMESTAMPOFFSET che ha un tipo SQL_C_BINARY C associato al tipo SQL_SS_VARIANT.  
+ L'attributo della colonna SQL_CA_SS_VARIANT_TYPE è utilizzato per restituire il tipo C di una colonna dei risultati variant. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduce un attributo aggiuntivo, SQL_CA_SS_VARIANT_SQL_TYPE, che imposta il tipo SQL di una colonna di risultati variant nel descrittore della riga di implementazione (IRD). SQL_CA_SS_VARIANT_SQL_TYPE è anche utilizzabile nel descrittore di parametri di implementazione (IPD) per specificare il tipo SQL di un SQL_SS_TIME2 o SQL_SS_TIMESTAMPOFFSET parametro che ha un tipo SQL_C_BINARY C associato al tipo SQL_SS_VARIANT.  
   
  I nuovi tipi SQL_SS_TIME2 e SQL_SS_TIMESTAMPOFFSET possono essere impostati da SQLColAttribute. SQL_CA_SS_VARIANT_SQL_TYPE può essere restituito da SQLGetDescField.  
   
@@ -53,16 +51,16 @@ ms.locfileid: "36155983"
 |SQL_C_BIT|bit|SQL_CA_SS_VARIANT_SQL_TYPE viene ignorato.|  
 |SQL_C_UTINYINT|TINYINT|SQL_CA_SS_VARIANT_SQL_TYPE viene ignorato.|  
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE non è impostato.|  
-|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Scala è impostata su SQL_DESC_PRECISION (il *DecimalDigits* parametro della `SQLBindParameter`).|  
-|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Scala è impostata su SQL_DESC_PRECISION (il *DecimalDigits* parametro della `SQLBindParameter`).|  
+|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> La scala è impostata su SQL_DESC_PRECISION (il *DecimalDigits* parametro di `SQLBindParameter`).|  
+|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> La scala è impostata su SQL_DESC_PRECISION (il *DecimalDigits* parametro di `SQLBindParameter`).|  
 |SQL_C_TYPE_DATE|Data|SQL_CA_SS_VARIANT_SQL_TYPE viene ignorato.|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE viene ignorato.|  
-|SQL_C_TYPE_TIMESTAMP|datetime2|Scala è impostata su SQL_DESC_PRECISION (il *DecimalDigits* parametro della `SQLBindParameter`).|  
-|SQL_C_NUMERIC|Decimal|Precisione è impostata su SQL_DESC_PRECISION (il *ColumnSize* parametro della `SQLBindParameter`).<br /><br /> Scala impostata su SQL_DESC_SCALE (il *DecimalDigits* parametro di SQLBindParameter).|  
+|SQL_C_TYPE_TIMESTAMP|datetime2|La scala è impostata su SQL_DESC_PRECISION (il *DecimalDigits* parametro di `SQLBindParameter`).|  
+|SQL_C_NUMERIC|Decimal|La precisione è impostata su SQL_DESC_PRECISION (il *ColumnSize* parametro di `SQLBindParameter`).<br /><br /> Scala impostata su SQL_DESC_SCALE (il *DecimalDigits* parametro di SQLBindParameter).|  
 |SQL_C_SS_TIME2|time|SQL_CA_SS_VARIANT_SQL_TYPE viene ignorato|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE viene ignorato|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data e ora miglioramenti &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Data e miglioramenti per la fase &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

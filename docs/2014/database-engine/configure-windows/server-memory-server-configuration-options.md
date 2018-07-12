@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
 - max server memory option
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 caps.latest.revision: 76
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5ddbf4ccd432a7ba7ff9f4d946572dfcc6500dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4ae726d4a8706b5fbb04c8d10c8a14c3aeeb0790
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160962"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opzioni di configurazione del server Server Memory
   Usare le due opzioni per la memoria del server **min server memory** e **max server memory**per riconfigurare la quantità di memoria, in megabyte, gestita con Gestione memoria di SQL Server per un processo di SQL Server usato da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -56,10 +56,10 @@ ms.locfileid: "36157216"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegue necessariamente l'allocazione della quantità di memoria specificata in **min server memory**. Se il carico sul server non richiede mai l'allocazione della quantità di memoria specificata in **min server memory**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà eseguito con una quantità di memoria inferiore.  
   
-|Tipo di sistema operativo|Consentito quantità di memoria minima per **numero massimo di memoria del server**|  
+|Tipo di sistema operativo|Consentita quantità di memoria minima per **numero massimo di memoria del server**|  
 |-------------|----------------------------------------------------------------|  
 |32 bit|64 MB|  
-|64 bit|128 MB|  
+|64 bit|ALMENO 128 MB|  
   
 ## <a name="how-to-configure-memory-options-using-sql-server-management-studio"></a>Come configurare le opzioni per la memoria tramite SQL Server Management Studio  
  Usare le due opzioni per la memoria del server **min server memory** e **max server memory**per riconfigurare la quantità di memoria, in megabyte, gestita tramite Gestione memoria di SQL Server per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i requisiti di memoria possono variare dinamicamente in base alle risorse di sistema disponibili.  
@@ -87,14 +87,14 @@ ms.locfileid: "36157216"
 3.  Se l'opzione **Massimizza la velocità di trasmissione dati per le applicazioni di rete** è selezionata, scegliere un'altra opzione, fare clic su **OK**, quindi chiudere tutte le finestre di dialogo rimanenti.  
   
 ## <a name="lock-pages-in-memory"></a>Blocco di pagine in memoria  
- Questi criteri di Windows determinano gli account autorizzati a usare un processo per mantenere i dati nella memoria fisica, impedendo al sistema di eseguire il paging dei dati nella memoria virtuale su disco. Il blocco delle pagine in memoria può garantire il corretto funzionamento del server quando si verifica il paging della memoria su disco. SQL Server **Lock Pages in Memory** opzione è impostata su ON nelle istanze a 32 e 64 bit di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition ed edizioni superiori quando l'account con privilegi per l'esecuzione sqlservr.exe dispone le finestre "bloccato pagine Diritto utente di memoria (LPIM). In versioni precedenti di SQL Server, l'impostazione dell'opzione Blocco pagine per un'istanza a 32 bit di SQL Server richiede che l'account con i privilegi per eseguire sqlservr.exe disponga del diritto utente LPIM e che l'opzione "awe_enabled"sia impostata su ON.  
+ Questi criteri di Windows determinano gli account autorizzati a usare un processo per mantenere i dati nella memoria fisica, impedendo al sistema di eseguire il paging dei dati nella memoria virtuale su disco. Il blocco delle pagine in memoria può garantire il corretto funzionamento del server quando si verifica il paging della memoria su disco. SQL Server **Lock Pages in Memory** opzione è impostata su ON nelle istanze a 32 e 64 bit di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition ed edizioni superiori quando l'account con privilegi per eseguire sqlservr.exe dispone di Windows "Locked pagine in Diritto utente di memoria (LPIM). In versioni precedenti di SQL Server, l'impostazione dell'opzione Blocco pagine per un'istanza a 32 bit di SQL Server richiede che l'account con i privilegi per eseguire sqlservr.exe disponga del diritto utente LPIM e che l'opzione "awe_enabled"sia impostata su ON.  
   
  Per disabilitare l'opzione **Blocco di pagine in memoria** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rimuovere il diritto utente "Blocco di pagine in memoria" per l'account di avvio di SQL Server.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>Per disabilitare l'opzione Blocco di pagine in memoria  
  **Per disabilitare il lock pages in memory-opzione:**  
   
-1.  Fare clic sul menu **Start** e scegliere **Esegui**. Nel **Open** , digitare `gpedit.msc`.  
+1.  Fare clic sul menu **Start** e scegliere **Esegui**. Nel **aperto** , digitare `gpedit.msc`.  
   
      Viene visualizzata la finestra di dialogo **Criteri gruppo** .  
   
@@ -136,11 +136,11 @@ ms.locfileid: "36157216"
   
 ||32 bit|64 bit|  
 |-|-------------|-------------|  
-|Memoria convenzionale|In tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fino al limite dello spazio degli indirizzi virtuali di processo:<br /><br /> 2 GB<br /><br /> 3 GB con **3 gb** avvio parametro *<br /><br /> 4 GB in WOW64\*\*|In tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fino al limite dello spazio degli indirizzi virtuali di processo:<br /><br /> 8 TB in sistemi con architettura x64|  
+|Memoria convenzionale|In tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fino al limite dello spazio degli indirizzi virtuali di processo:<br /><br /> 2 GB<br /><br /> 3 GB con **3 gb** avvio parametro *<br /><br /> 4 GB su WOW64\*\*|In tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fino al limite dello spazio degli indirizzi virtuali di processo:<br /><br /> 8 TB in sistemi con architettura x64|  
   
  ***/3gb** è un parametro di avvio del sistema operativo. Per altre informazioni, consultare [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- * * WOW64 (Windows on Windows 64) è una modalità nella quale 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in un sistema operativo a 64 bit. Per altre informazioni, consultare [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ * * WOW64 (Windows on Windows 64) è una modalità che 32 bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in un sistema operativo a 64 bit. Per altre informazioni, consultare [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## <a name="examples"></a>Esempi  
   

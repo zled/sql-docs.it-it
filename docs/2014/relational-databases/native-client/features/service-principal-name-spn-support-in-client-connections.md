@@ -1,13 +1,11 @@
 ---
-title: Supporto per il nome dell'entità servizio (SPN) nelle connessioni Client | Documenti Microsoft
+title: Supporto per il nome dell'entità servizio (SPN) nelle connessioni Client | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,22 +15,22 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d7c1401c3f6ac3407b7fa489a90ad32290af5b69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 52135d5a953781530f1e95266846e2bc2be2022a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064443"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422510"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Supporto per nomi SPN nelle connessioni client
-  A partire da [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], supporto per i nomi dell'entità servizio (SPN) è stato esteso per consentire l'autenticazione reciproca in tutti i protocolli. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], i nomi SPN sono supportati solo per Kerberos tramite TCP quando il valore predefinito SPN per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza è stata registrata con Active Directory.  
+  A partire da [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], supporto per i nomi dell'entità servizio (SPN) è stato esteso per consentire l'autenticazione reciproca in tutti i protocolli. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], i nomi SPN erano supportati solo per Kerberos tramite TCP quando il valore predefinito SPN per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza è stata registrata con Active Directory.  
   
- I nomi SPN vengono usati dal protocollo di autenticazione per determinare l'account in cui un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguita l'istanza. Se l'account dell'istanza è noto, è possibile usare l'autenticazione Kerberos per fornire autenticazione reciproca dal client e dal server. Se l'account dell'istanza non è noto, viene usata l'autenticazione NTLM, che fornisce solo l'autenticazione del client da parte del server. Attualmente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client esegue la ricerca di autenticazione, deducendo SPN dalle proprietà di connessione istanza nome e la rete. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tenteranno di registrare SPN all'avvio o possono essere registrati manualmente. La registrazione, tuttavia, non riuscirà se l'account dispone di diritti di accesso insufficienti per la registrazione dei nomi SPN.  
+ I nomi SPN vengono utilizzati dal protocollo di autenticazione per determinare l'account in cui un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguita l'istanza. Se l'account dell'istanza è noto, è possibile usare l'autenticazione Kerberos per fornire autenticazione reciproca dal client e dal server. Se l'account dell'istanza non è noto, viene usata l'autenticazione NTLM, che fornisce solo l'autenticazione del client da parte del server. Attualmente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client esegue la ricerca di autenticazione, deducendo SPN dalle proprietà di connessione istanza nome e la rete. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tenteranno di registrare SPN all'avvio o possono essere registrati manualmente. La registrazione, tuttavia, non riuscirà se l'account dispone di diritti di accesso insufficienti per la registrazione dei nomi SPN.  
   
- Gli account di dominio e del computer vengono registrati automaticamente in Active Directory. Questi possono essere usati come SPN oppure gli amministratori possono definire i propri SPN. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rende l'autenticazione più gestibile e affidabile consentendo ai client di specificare direttamente il nome SPN da utilizzare.  
+ Gli account di dominio e del computer vengono registrati automaticamente in Active Directory. Questi possono essere usati come SPN oppure gli amministratori possono definire i propri SPN. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rende l'autenticazione più gestibile e affidabile consentendo ai client di specificare direttamente il nome SPN da usare.  
   
 > [!NOTE]  
 >  Un nome SPN specificato da un'applicazione client viene usato solo quando viene stabilita una connessione con sicurezza integrata di Windows.  
@@ -55,13 +53,13 @@ ms.locfileid: "36064443"
 |Scenario|Description|  
 |--------------|-----------------|  
 |Un'applicazione legacy non specifica un nome SPN.|Questo scenario di compatibilità garantisce che non vi saranno differenze di comportamento per le applicazioni sviluppate per le versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se non viene specificato alcun nome SPN, l'applicazione si basa sui nomi SPN generati e non è in grado di identificare il metodo di autenticazione usato.|  
-|Un'applicazione client utilizzando la versione corrente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client specifica un nome SPN nella stringa di connessione come account utente o un computer di dominio, come nome SPN specifico dell'istanza o come una stringa definita dall'utente.|È possibile utilizzare la parola chiave `ServerSPN` in una stringa del provider, di inizializzazione o di connessione per effettuare le operazioni seguenti:<br /><br /> -Specificare l'account utilizzato dal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza per una connessione. Questa operazione semplifica l'accesso all'autenticazione Kerberos. Se è presente un centro distribuzione chiavi (KDC, Key Distribution Center) Kerberos ed è stato specificato l'account corretto, è più probabile che venga usata l'autenticazione Kerberos anziché l'autenticazione NTLM. Il centro distribuzione chiavi si trova in genere nello stesso computer del controller di dominio.<br />-Specificare un nome SPN per cercare l'account del servizio per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza. Per ogni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza, i nomi SPN vengono generati due predefiniti che possono essere utilizzato per questo scopo. Non è tuttavia garantito che tali chiavi siano presenti in Active Directory, pertanto in questa situazione non è garantita neanche l'autenticazione Kerberos.<br />-Specificare un nome SPN che verrà utilizzato per cercare l'account del servizio per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza. Può trattarsi di qualsiasi stringa definita dall'utente di cui è stato eseguito il mapping all'account del servizio. In questo caso, la chiave deve essere registrata manualmente nel centro distribuzione chiavi e deve essere conforme alle regole relative ai nomi SPN definiti dall'utente.<br /><br /> Il `FailoverPartnerSPN` parola chiave può essere usato per specificare il nome SPN per il server partner di failover. L'intervallo di valori per gli account e per le chiavi di Active Directory coincide con i valori che è possibile specificare per il server principale.|  
+|Un'applicazione client utilizzando la versione corrente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client specifica un nome SPN nella stringa di connessione come account di dominio utente o computer, come nome SPN specifico dell'istanza o come una stringa definita dall'utente.|È possibile utilizzare la parola chiave `ServerSPN` in una stringa del provider, di inizializzazione o di connessione per effettuare le operazioni seguenti:<br /><br /> -Specificare l'account utilizzato dal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza per una connessione. Questa operazione semplifica l'accesso all'autenticazione Kerberos. Se è presente un centro distribuzione chiavi (KDC, Key Distribution Center) Kerberos ed è stato specificato l'account corretto, è più probabile che venga usata l'autenticazione Kerberos anziché l'autenticazione NTLM. Il centro distribuzione chiavi si trova in genere nello stesso computer del controller di dominio.<br />-Specificare un nome SPN per cercare l'account del servizio per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza. Per ogni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dell'istanza, i nomi SPN vengono generati due predefiniti che possono essere usato per questo scopo. Non è tuttavia garantito che tali chiavi siano presenti in Active Directory, pertanto in questa situazione non è garantita neanche l'autenticazione Kerberos.<br />-Specificare un nome SPN che verrà utilizzato per cercare l'account del servizio per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza. Può trattarsi di qualsiasi stringa definita dall'utente di cui è stato eseguito il mapping all'account del servizio. In questo caso, la chiave deve essere registrata manualmente nel centro distribuzione chiavi e deve essere conforme alle regole relative ai nomi SPN definiti dall'utente.<br /><br /> Il `FailoverPartnerSPN` parola chiave può essere usata per specificare il nome SPN per il server partner di failover. L'intervallo di valori per gli account e per le chiavi di Active Directory coincide con i valori che è possibile specificare per il server principale.|  
 |Un'applicazione ODBC specifica un nome SPN come attributo di connessione per il server principale o il server partner di failover.|È possibile utilizzare l'attributo di connessione `SQL_COPT_SS_SERVER_SPN` per specificare il nome SPN per una connessione al server principale.<br /><br /> È possibile utilizzare l'attributo di connessione `SQL_COPT_SS_FAILOVER_PARTNER_SPN` per specificare il nome SPN per il server partner di failover.|  
 |Un'applicazione OLE DB specifica un nome SPN come proprietà di inizializzazione dell'origine dati per il server principale o per un server partner di failover.|La proprietà di connessione `SSPROP_INIT_SERVER_SPN` nella `DBPROPSET_SQLSERVERDBINIT` set di proprietà può essere utilizzato per specificare il nome SPN per una connessione.<br /><br /> È possibile utilizzare la proprietà di connessione `SSPROP_INIT_FAILOVER_PARTNER_SPN` nel set di proprietà `DBPROPSET_SQLSERVERDBINIT` per specificare il nome SPN per il server partner di failover.|  
 |Un utente specifica un nome SPN per un server o per un server partner di failover in un nome di origine dati ODBC.|È possibile specificare il nome SPN in un nome di origine dati ODBC tramite le finestre di dialogo di configurazione del nome dell'origine dati.|  
 |L'utente specifica un nome SPN per un server o per un server partner di failover in una finestra di dialogo **Collegamento dati** o **Account di accesso** OLE DB.|È possibile specificare il nome SPN in una finestra di dialogo **Collegamento dati** o **Account di accesso** . La finestra di dialogo **Account di accesso** può essere usata con ODBC o OLE DB.|  
 |Un'applicazione ODBC determina il metodo di autenticazione usato per stabilire una connessione.|Se una connessione è stata aperta correttamente, un'applicazione può eseguire una query sull'attributo di connessione `SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD` per determinare il metodo di autenticazione utilizzato. I valori includono, ma non sono limitati a, `NTLM` e `Kerberos`.|  
-|Un'applicazione OLE DB determina il metodo di autenticazione utilizzato per stabilire una connessione.|Quando una connessione è stata aperta correttamente, un'applicazione può richiedere la proprietà di connessione `SSPROP_AUTHENTICATION_METHOD` nella `DBPROPSET_SQLSERVERDATASOURCEINFO` impostata per determinare quale metodo di autenticazione è stato utilizzato. I valori includono, ma non sono limitati a, `NTLM` e `Kerberos`.|  
+|Un'applicazione OLE DB determina il metodo di autenticazione utilizzato per stabilire una connessione.|Quando una connessione è stata aperta correttamente, un'applicazione può richiedere la proprietà di connessione `SSPROP_AUTHENTICATION_METHOD` nella `DBPROPSET_SQLSERVERDATASOURCEINFO` imposta proprietà per determinare il metodo di autenticazione utilizzato. I valori includono, ma non sono limitati a, `NTLM` e `Kerberos`.|  
   
 ## <a name="failover"></a>Failover  
  I nomi SPN non vengono archiviati nella cache di failover e pertanto non possono essere passati tra connessioni. I nomi SPN verranno usati in tutti i tentativi di connessione al server principale e al partner se specificati nella stringa di connessione o negli attributi di connessione.  
@@ -77,7 +75,7 @@ ms.locfileid: "36064443"
  Poiché il nuovo comportamento di connessione viene implementato dal client, non è specifico di una determinata versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Server collegati e delega  
- Quando si creano server collegati, la `@provstr` parametro di [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) può essere utilizzato per specificare il server e partner di failover i nomi SPN. L'uso di questo parametro offre gli stessi vantaggi ottenuti specificando i nomi SPN nelle stringhe di connessione del client e consente di stabilire in modo più semplice e affidabile connessioni che usano l'autenticazione Kerberos.  
+ Quando si creano server collegati, i `@provstr` del parametro [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) può essere utilizzato per specificare il server e partner di failover i nomi SPN. L'uso di questo parametro offre gli stessi vantaggi ottenuti specificando i nomi SPN nelle stringhe di connessione del client e consente di stabilire in modo più semplice e affidabile connessioni che usano l'autenticazione Kerberos.  
   
  La delega con server collegati richiede l'autenticazione Kerberos.  
   
@@ -86,7 +84,7 @@ ms.locfileid: "36064443"
   
 -   Sicurezza: verificare se il nome SPN specificato comporta la divulgazione di informazioni protette.  
   
--   Affidabilità: Per abilitare l'utilizzo di nomi SPN predefiniti, l'account del servizio in cui il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esecuzione dell'istanza devono disporre di privilegi sufficienti per l'aggiornamento di Active Directory nel centro distribuzione CHIAVI.  
+-   Affidabilità: Per abilitare l'uso di nomi SPN predefiniti, l'account del servizio in cui il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esecuzione dell'istanza devono avere privilegi sufficienti per l'aggiornamento di Active Directory nel centro distribuzione CHIAVI.  
   
 -   Utilità e trasparenza a livello di posizione: valutare le conseguenze sui nomi SPN di un'applicazione se il database viene spostato in un'istanza diversa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Questa considerazione si applica sia al server principale sia al relativo partner di failover se si usa il mirroring del database. Se una modifica apportata al server comporta la modifica dei nomi SPN, valutare le conseguenze sulle applicazioni e determinare se sarà possibile gestire tutte le modifiche.  
   
@@ -104,15 +102,15 @@ ms.locfileid: "36064443"
 |MSSQLSvc/*fqdn*:*InstanceName*|Nome SPN predefinito generato dal provider per un'istanza denominata quando si usa un protocollo diverso da TCP.<br /><br /> *InstanceName* è un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nome dell'istanza.|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Nome SPN di cui viene eseguito il mapping ad account del computer predefiniti registrati automaticamente in Windows.|  
 |*Username*@*Domain*|Specifica diretta di un account di dominio.<br /><br /> *Username* è un nome di account utente di Windows.<br /><br /> *Domain* è un nome di dominio di Windows o un nome di dominio completo.|  
-|*MachineName*$@*Domain*|Specifica diretta di un account del computer.<br /><br /> (Se il server a cui ci si connette a è in esecuzione nel sistema locale o account del servizio di rete, per ottenere l'autenticazione Kerberos `ServerSPN` può essere il *MachineName*$@*dominio* formato).|  
+|*MachineName*$@*Domain*|Specifica diretta di un account del computer.<br /><br /> (Se il server ci si connette a è in esecuzione nel sistema locale o account del servizio di rete, per ottenere l'autenticazione Kerberos `ServerSPN` può essere nel *MachineName*$@*dominio* formato).|  
 |*KDCKey*/*MachineName*|Nome SPN specificato dall'utente.<br /><br /> *KDCKey* è una stringa alfanumerica conforme alle regole relative alle chiavi KDC.|  
   
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>Sintassi ODBC e OLE DB con supporto di nomi SPN  
  Per informazioni specifiche della sintassi, vedere gli argomenti seguenti:  
   
--   [Nomi dell'entità servizio &#40;i nomi SPN&#41; nelle connessioni Client &#40;ODBC&#41;](../odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Nomi dell'entità servizio &#40;entità servizio&#41; nelle connessioni Client &#40;ODBC&#41;](../odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [Nomi dell'entità servizio &#40;i nomi SPN&#41; nelle connessioni Client &#40;OLE DB&#41;](../ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Nomi dell'entità servizio &#40;entità servizio&#41; nelle connessioni Client &#40;OLE DB&#41;](../ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
  Per informazioni sulle applicazioni di esempio in cui viene illustrata questa funzionalità, vedere la pagina relativa agli [esempi di programmazione dati di SQL Server](http://msftdpprodsamples.codeplex.com/).  
   

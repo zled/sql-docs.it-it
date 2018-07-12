@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1d8b400e540282fb3168cf5ea3a40a5041068bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f4c7df344ac5e4fe2d00863615783195aed6d45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182769"
 ---
 # <a name="look-up-infoobject"></a>Cerca InfoObject
   Utilizzare la finestra di dialogo **Cerca InfoObject** per cercare un InfoObject definito nel sistema SAP Netweaver BW. Quando viene visualizzato l'elenco degli InfoObject disponibili, selezionare l'InfoObject desiderato e le opzioni associate verranno compilate con i valori richiesti dalla destinazione SAP BW.  
@@ -89,6 +89,6 @@ ms.locfileid: "36070109"
  [Crea InfoSource per dati master](create-infosource-for-master-data.md)   
  [Crea nuovo InfoObject](create-new-infoobject.md)   
  [Editor destinazione SAP BW &#40;pagina Gestione connessione&#41;](sap-bw-destination-editor-connection-manager-page.md)   
- [Microsoft Connector 1.1 for SAP BW F1 Guida in linea](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Guida (F1) di Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: In Integration Services (SSIS) progetti | Documenti Microsoft
+title: In Integration Services (SSIS) progetti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
 - folders [Integration Services], projects
@@ -19,18 +19,18 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c012e6802465df8db1060bebc47920e834620d40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6777494c1d1c204fcef589eda42357fd0d50a9bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158962"
 ---
 # <a name="integration-services-ssis-projects"></a>Progetti di Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornisce [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per lo sviluppo di pacchetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- Quando si distribuiscono i pacchetti in un database [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o nell'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)], usare il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per gestire i pacchetti. Il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è disponibile solo in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per altre informazioni sul servizio, vedere [Servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md). Per ulteriori informazioni sulla distribuzione dei pacchetti, vedere [pacchetto di distribuzione &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+ Quando si distribuiscono i pacchetti in un database [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o nell'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)], usare il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per gestire i pacchetti. Il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è disponibile solo in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per altre informazioni sul servizio, vedere [Servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md). Per altre informazioni sulla distribuzione dei pacchetti, vedere [pacchetto di distribuzione &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
   
  Quando si distribuiscono progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], per gestire i progetti si utilizzano le viste e le stored procedure Transact-SQL in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per altre informazioni sulla distribuzione dei progetti, vedere [Distribuzione di progetti e pacchetti](packages/deploy-integration-services-ssis-projects-and-packages.md). Per altre informazioni sul server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vedere [Integration Services &#40;SSIS&#41; Server](catalog/integration-services-ssis-server-and-catalog.md).  
   
@@ -81,15 +81,15 @@ ms.locfileid: "36156973"
 >  Per impostazione predefinita, quando si crea un nuovo progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], la soluzione non viene visualizzata nel riquadro **Esplora progetti**. Per modificare questo comportamento predefinito, scegliere **Opzioni** dal menu **Strumenti**. Nella finestra di dialogo **Opzioni** espandere **Progetti e soluzioni**e quindi fare clic su **Generale**. Nella pagina **Generale** selezionare **Mostra sempre soluzione**.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Aggiungere o rimuovere un progetto di Integration Services in una soluzione](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
+ [Aggiunta o rimozione di un progetto di Integration Services da una soluzione](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   
- [Creare un nuovo progetto di Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
+ [Creazione di un nuovo progetto di Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
   
- [Aggiungere che un elemento all'integrazione di un progetto di servizi](../../2014/integration-services/add-an-item-to-an-integration-services-project.md)  
+ [Aggiunta di un elemento a un progetto di Integration Services](../../2014/integration-services/add-an-item-to-an-integration-services-project.md)  
   
- [Copiare gli elementi di progetto](../../2014/integration-services/copy-project-items.md)  
+ [Copia di elementi di progetto](../../2014/integration-services/copy-project-items.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Progetto di sviluppo di un Integration Services](../../2014/integration-services/development-of-an-integration-services-project.md)  
+ [Sviluppo di un progetto di Integration Services](../../2014/integration-services/development-of-an-integration-services-project.md)  
   
   

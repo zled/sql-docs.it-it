@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8f8d6b042c1284dc0a0b716524f381017320306e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1baa6e59d017df6a0491d4359a8e445fea83d722
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155822"
 ---
 # <a name="circularstring"></a>CircularString
   Oggetto `CircularString` è una raccolta di zero o più segmenti di arco circolare continui. Un segmento di arco circolare è un segmento curvo definito da tre punti su un piano bidimensionale. Il primo punto non può corrispondere al terzo punto. Se tutti e tre i punti di un segmento di arco circolare sono collineari, il segmento di arco verrà gestito come un segmento di linea.  
@@ -28,12 +28,12 @@ ms.locfileid: "36158407"
 >  Per una descrizione dettagliata ed esempi delle nuove funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui la `CircularString` sottotipo, scaricare il white paper [nuove funzionalità spaziali in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ## <a name="circularstring-instances"></a>Istanze CircularString  
- Nel disegno seguente viene illustrato valido `CircularString` istanze:  
+ Nel disegno seguente vengono illustrate valido `CircularString` istanze:  
   
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>Istanze accettate  
- Oggetto `CircularString` istanza viene accettata se è vuota o contiene un numero dispari di punti, n, dove n > 1. Nell'esempio `CircularString` le istanze vengono accettate.  
+ Oggetto `CircularString` istanza viene accettata se è vuota o contiene un numero dispari di punti, n, dove n > 1. Nell'esempio `CircularString` istanze vengono accettate.  
   
 ```  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -41,14 +41,14 @@ DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
 ```  
   
- `@g3` Mostra che `CircularString` istanza può essere accettata, ma non è valido. La dichiarazione dell'istanza CircularString seguente non viene accettata. Questa dichiarazione genera un'eccezione `System.FormatException`.  
+ `@g3` viene mostrato che `CircularString` istanza può essere accettata, ma non è valido. La dichiarazione dell'istanza CircularString seguente non viene accettata. Questa dichiarazione genera un'eccezione `System.FormatException`.  
   
 ```  
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>Istanze valide  
- Un valore valido `CircularString` istanza deve essere vuoto o contenere i seguenti attributi:  
+ Un valore valido `CircularString` istanza deve essere vuota o disporre degli attributi seguenti:  
   
 -   Deve contenere almeno un segmento di arco circolare, cioè avere un minimo di tre punti.  
   
@@ -60,7 +60,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
   
 -   Sebbene `CircularString` istanze possono contenere segmenti di linea, questi segmenti di linea devono essere definiti da tre punti collineari.  
   
- Nell'esempio seguente viene illustrato valido `CircularString` istanze.  
+ L'esempio seguente mostra valido `CircularString` istanze.  
   
 ```  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -137,7 +137,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- Si noti che il valore per il `CircularString` esempio è vicino a 2 ∏, che è la circonferenza effettiva del cerchio.  
+ Si noti che il valore per il `CircularString` esempio è vicino 2∏, ovvero la circonferenza del cerchio effettiva.  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. Dichiarazione e creazione di un'istanza Geometry utilizzando un'istanza CircularString nella stessa istruzione  
  In questo frammento viene illustrato come dichiarare e creare un'istanza `geometry` con un'istanza `CircularString` nella stessa istruzione:  

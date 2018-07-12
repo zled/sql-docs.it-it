@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati Action (ASSL) | Documenti Microsoft
+title: Tipo di dati Action (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Action data type
 ms.assetid: 8c4d2ff7-17e1-4e74-bec7-637e0b191acf
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 18047bc8a33c92e6bcd434e1a472917c269272e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77b4ef3f8507d67090b78c00807278d0d7dc6348
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154972"
 ---
 # <a name="action-data-type-assl"></a>Tipo di dati Action (ASSL)
-  Definisce un tipo di dati primitivo astratto che rappresenta un'azione in un [cubo](../objects/cube-element-assl.md) elemento o un [prospettiva](../objects/perspective-element-assl.md) elemento.  
+  Definisce un tipo di dati primitivo astratto che rappresenta un'azione in un [cubo](../objects/cube-element-assl.md) elemento o una [prospettiva](../objects/perspective-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,10 +66,10 @@ ms.locfileid: "36157016"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Azioni](../collections/actions-element-assl.md)|  
-|Elementi figlio|[Annotations](../collections/annotations-element-assl.md), [Application](../properties/application-element-assl.md), [Caption](../properties/caption-element-assl.md), [CaptionIsMdx](../properties/captionismdx-element-assl.md), [Condition](../properties/condition-element-assl.md), [Description](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [Invocation](../properties/invocation-element-assl.md), [Name](../properties/name-element-assl.md), [Target](../properties/target-element-assl.md), [TargetType](../properties/targettype-element-assl.md), [Translations](../collections/translations-element-assl.md), [Type](../properties/type-element-action-assl.md)|  
+|Elementi figlio|[Le annotazioni](../collections/annotations-element-assl.md), [Application](../properties/application-element-assl.md), [didascalia](../properties/caption-element-assl.md), [CaptionIsMdx](../properties/captionismdx-element-assl.md), [condizione](../properties/condition-element-assl.md), [descrizione ](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [chiamata](../properties/invocation-element-assl.md), [nome](../properties/name-element-assl.md), [destinazione](../properties/target-element-assl.md), [TargetType](../properties/targettype-element-assl.md), [Traduzioni](../collections/translations-element-assl.md), [tipo](../properties/type-element-action-assl.md)|  
 |Elementi derivati|[DrillThroughAction](action-data-type-assl.md), [ReportAction](reportaction-data-type-assl.md), [StandardAction](standardaction-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per altre informazioni sulle azioni, vedere [Azioni &#40;Analysis Services - Dati multidimensionali&41#;](../../multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.Action>.  

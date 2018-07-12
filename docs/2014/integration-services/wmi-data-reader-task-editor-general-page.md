@@ -1,5 +1,5 @@
 ---
-title: Editor attività lettore di dati WMI (pagina generale) | Documenti Microsoft
+title: Editor attività lettore di dati WMI (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.general.f1
 helpviewer_keywords:
 - WMI Data Reader Task Editor
 ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 393a0c0d919856734799b41c6e08b5e8c66ffb51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 70d3e2aa852acd34d28c2f2501d17117c6cf8640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154572"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>Editor attività Lettore di dati WMI (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Lettore di dati WMI** per assegnare un nome e una descrizione all'attività Lettore di dati WMI.  
@@ -41,7 +41,7 @@ ms.locfileid: "36156486"
  Consente di digitare una descrizione dell'attività Lettore di dati WMI.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività lettore di dati WMI &#40;pagina Opzioni WMI&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
  [Pagina espressioni](expressions/expressions-page.md)   
  [Attività Monitoraggio eventi WMI](control-flow/wmi-event-watcher-task.md)  

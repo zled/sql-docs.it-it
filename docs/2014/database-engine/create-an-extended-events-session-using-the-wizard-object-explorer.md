@@ -1,5 +1,5 @@
 ---
-title: Creare una sessione eventi estesi utilizzando la procedura guidata (Esplora oggetti) | Documenti Microsoft
+title: Creare una sessione eventi estesi utilizzando la procedura guidata (Esplora oggetti) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.ssms.XeWizard.Summary.f1
 - Sql12.ssms.XeWizard.SetSessionProperties.f1
@@ -32,15 +32,15 @@ helpviewer_keywords:
 - Sql11.ssms.XeWizard.SelectEvents.f1
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69a63b1b360a1ba1c0e9a106dbb78f215f9eca71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dc5a2f60cfeff0289bb0a16476fb2506c3beda6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156775"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155232"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>Creare una sessione Eventi estesi utilizzando la procedura guidata (Esplora oggetti)
   Per consentire di selezionare e acquisire gli eventi nel server, gli eventi estesi includono una Creazione guidata nuova sessione, che consente di eseguire in modo semplificato i passaggi per la creazione di una sessione Eventi estesi. Creazione guidata nuova sessione espone la maggior parte della funzionalità di Eventi estesi. La [finestra di dialogo Nuova sessione](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) consente inoltre di definire una sessione di Eventi estesi che acquisisce, visualizza e analizza i dati. La finestra di dialogo Nuova sessione espone tutta la funzionalità di Eventi estesi.  
@@ -57,7 +57,7 @@ ms.locfileid: "36156775"
   
 -   [Imposta proprietà sessione](#BKMK_SetSessionProperties)  
   
--   [Scegliere modello](#BKMK_ChooseTemplate)  
+-   [Scegliere il modello](#BKMK_ChooseTemplate)  
   
 -   [Seleziona eventi da acquisire](#BKMK_SelectEventsToCapture)  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36156775"
   
      Se si vuole avviare la sessione quando si avvia il server, selezionare la casella di controllo **Avviare la sessione eventi all'avvio del server** , quindi fare clic su **Avanti**.  
   
-##  <a name="BKMK_ChooseTemplate"></a> Scegliere modello  
+##  <a name="BKMK_ChooseTemplate"></a> Scegliere il modello  
  Nella pagina **Scegli modello** eseguire queste operazioni:  
   
 -   Selezionare l'opzione **Usa questo modello di sessione eventi** per eseguire una selezione da un set di modelli preconfigurati progettati per i problemi comuni. Selezionare il modello che si vuole usare dall'elenco a discesa, quindi fare clic su **Avanti**.  
@@ -174,6 +174,6 @@ ms.locfileid: "36156775"
 2.  Fare clic su **Controllare i dati dinamici sullo schermo al momento dell'acquisizione** per visualizzare i dati dinamici per la sessione eventi. La traccia dei dati dinamici inizierà a essere visualizzata subito dopo la creazione della sessione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una sessione eventi estesi utilizzando la finestra di dialogo nuova sessione](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
+ [Creare una sessione Eventi estesi usando la finestra di dialogo Nuova sessione](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
   
   

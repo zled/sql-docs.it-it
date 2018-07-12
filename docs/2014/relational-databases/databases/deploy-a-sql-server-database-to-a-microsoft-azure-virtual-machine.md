@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploymentwizard.deploymentsettings.f1
 - sql12.swb.deploymentwizard.progress.f1
@@ -43,15 +43,15 @@ helpviewer_keywords:
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 976bd24095536f6ae13cf40fab8129154b14864b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dc5399a395a53f2e37103b5516b0e707eb8c0335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158512"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Distribuire un database di SQL Server a una macchina virtuale di Microsoft Azure
   Usare la procedura guidata **Distribuire un database SQL Server in una macchina virtuale di Microsoft Azure** per distribuire un database da un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una macchina virtuale (VM) di Windows Azure. La procedura guidata usa un'operazione di backup completo del database, pertanto copia sempre lo schema completo del database e i dati da un database utente SQL Server. La procedura guidata esegue inoltre tutta la configurazione della macchina virtuale di Azure automaticamente, pertanto non sono necessarie operazioni preliminari per la configurazione della VM.  
@@ -88,7 +88,7 @@ ms.locfileid: "36158920"
   
 -   Credenziali con privilegi dell'operatore di backup nel database che si desidera distribuire, dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di origine.  
   
- Per ulteriori informazioni sull'esecuzione di SQL Server in macchine virtuali di Azure, vedere [preparazione della migrazione a SQL Server in macchine virtuali di Azure](http://msdn.microsoft.com/library/dn133142.aspx).  
+ Per altre informazioni sull'esecuzione di SQL Server in macchine virtuali di Azure, vedere [preparazione della migrazione a SQL Server in macchine virtuali di Windows Azure](http://msdn.microsoft.com/library/dn133142.aspx).  
   
  Nei computer che eseguono sistemi operativi Windows Server, è necessario usare le seguenti impostazioni di configurazione per eseguire questa procedura guidata:  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36158920"
 ###  <a name="permissions"></a> Autorizzazioni  
  Il database distribuito deve essere in uno stato normale e accessibile per l'account utente che esegue la procedura guidata. L'account utente deve disporre delle autorizzazioni per eseguire un'operazione di backup.  
   
-##  <a name="launch_wizard"></a> Usando il Database di distribuzione guidata macchina virtuale di Azure di Windows  
+##  <a name="launch_wizard"></a> Utilizzando il Database di distribuzione guidata macchina virtuale di Azure di Windows  
  **Per avviare la procedura guidata, effettuare i passaggi seguenti:**  
   
 1.  Usare SQL Server Management Studio per connettere l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al database che si desidera distribuire.  
@@ -210,7 +210,7 @@ ms.locfileid: "36158920"
   
 -   Nel campo **Altre impostazioni** specificare una cartella condivisa accessibile al servizio macchina virtuale di Microsoft Azure.  
   
-##  <a name="Azure_sign-in"></a> Windows Azure-Accedi  
+##  <a name="Azure_sign-in"></a> Windows Azure: Accedi  
  Usare questa pagina per connettersi a Microsoft Azure e fornire il certificato di gestione o i dettagli del profilo di pubblicazione.  
   
  **Opzioni**  

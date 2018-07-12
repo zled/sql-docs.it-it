@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà paralleli, etichette mappa | Documenti Microsoft
+title: Finestra di dialogo Proprietà paralleli, le etichette della mappa | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapparallelproperties.labels.f1
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bf650bd0fa1f87ef7dd3916a24923335420851b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 107da5c6037988987beed9794ee1ef172ed17e4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258118"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Finestra di dialogo Proprietà paralleli mappa, Etichette
-  Usare la **MapParallel proprietà** finestra di dialogo per modificare le opzioni delle etichette per la griglia orizzontale nel viewport mappa. Un parallelo rappresenta il valore seguente a seconda del sistema di coordinate specificato per il viewport:  
+  Usare la **MapParallel proprietà** finestra di dialogo per modificare le opzioni di etichetta per la griglia orizzontale nel viewport della mappa. Un parallelo rappresenta il valore seguente a seconda del sistema di coordinate specificato per il viewport:  
   
 -   **Planare.** La coordinata X.  
   
@@ -55,6 +55,6 @@ ms.locfileid: "36067978"
   
 ## <a name="see-also"></a>Vedere anche  
  [Mappe &#40;Generatore report e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Modificare legende della mappa, scala dei colori e regole associate &#40;SSRS e Generatore Report&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Modificare legende della mappa, scala dei colori e regole associate &#40;Report e SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Attributi CSDLBI per la progettazione di Report | Documenti Microsoft
+title: Attributi CSDLBI per la progettazione di Report | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e9d68293f4f71280c09d43a6b60dfa087830dc4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 26454c7ed2c1daa5d4ce512066f0a0fcf0ec7479
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259387"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Attributi CSDLBI per la progettazione di report
   In questa sezione vengono descritti gli attributi nelle estensioni a CSDL per la modellazione tabulare che influiscono sulla progettazione delle query di [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   
 ## <a name="model-attributes"></a>Attributi di modellazione  
- Questi attributi sono definiti su un sottoelemento di un file CSDL [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) elemento.  
+ Questi attributi sono definiti su un sottoelemento dell'elemento di un CSDL [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) elemento.  
   
 |Nome dell'attributo|Tipo di dati|Description|  
 |--------------------|---------------|-----------------|  
@@ -62,7 +62,7 @@ ms.locfileid: "36067682"
 |`DisplayFolder`|Text|Nome (percorso completo) della cartella in cui viene visualizzato questo campo. Se omesso, il campo viene visualizzato alla radice del modello.|  
 |`ContextualNameRule`|Enum|Valore che indica se e come deve essere modificato il nome della proprietà in base al contesto in cui viene utilizzato. I valori possibili sono i seguenti: `None`, `Role`, `Merge`.|  
 |`Alignment`|Enum|Valore che indica come devono essere allineati i valori del campo in una presentazione tabulare. I valori possibili sono i seguenti: `Default`, `Center`, `Left`, `Right`. Se omesso, il valore predefinito determina l'allineamento in base al tipo di dati del campo.|  
-|`FormatString`|Text|Stringa di formato .NET che indica come deve essere formattato il valore del campo per impostazione predefinita. Se omesso, si presuppone il formato seguente:<br /><br /> -I campi Datetime: data breve regionale o "d"<br />Funzione di aggregazione di campi a virgola mobile e campi integrali con un valore predefinito: numero regionale o "n"<br />-Funzione di aggregazione numeri interi non prevede alcun valore predefinito: numero decimale regionale o "d"<br /><br /> Per tutti gli altri tipi di campi, non è applicabile alcuna stringa di formato.|  
+|`FormatString`|Text|Stringa di formato .NET che indica come deve essere formattato il valore del campo per impostazione predefinita. Se omesso, si presuppone il formato seguente:<br /><br /> : Campi Datetime: data breve regionale o "d"<br />-Funzione di aggregazione di campi a virgola mobile e integrali con un valore predefinito: numero regionale o "n"<br />-Funzione di aggregazione numeri interi non prevede alcun valore predefinito: numero decimale regionale o "d"<br /><br /> Per tutti gli altri tipi di campi, non è applicabile alcuna stringa di formato.|  
 |`Units`|Text|Simbolo applicato ai valori del campo per esprimere unità. Se omesso, si presuppone che le unità non siano note.|  
 |`Width`|Valore intero|Larghezza preferita in caratteri che deve essere riservata alla visualizzazione dei valori del campo in una presentazione tabulare. Se omesso, una larghezza predefinita viene basata sul tipo di dati del campo.|  
 |`SortDirection`|Enum|Valore che indica la modalità di ordinamento dei valori del campo. I valori possibili sono i seguenti: `Default`, `Ascending`, `Descending`. Se omesso, il valore predefinito assegna una direzione di ordinamento in base al tipo di dati del campo.|  

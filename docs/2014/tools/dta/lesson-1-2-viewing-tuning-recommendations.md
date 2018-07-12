@@ -1,5 +1,5 @@
 ---
-title: Visualizzazione delle indicazioni di ottimizzazione | Documenti Microsoft
+title: Visualizzazione delle indicazioni di ottimizzazione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3152ba823577308d846bfe5862af16681008f64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f21cb4a4e5142cd0410153daf37b05ef181be9d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157712"
 ---
 # <a name="viewing-tuning-recommendations"></a>Visualizzazione delle indicazioni di ottimizzazione
   In questa attività viene usata la sessione di ottimizzazione creata in [Ottimizzazione di un carico di lavoro](lesson-1-1-tuning-a-workload.md). Dopo aver ottimizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tramite lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] MyScript.sql, Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] visualizza i risultati nella scheda **Indicazioni** . L'attività seguente presenta la scheda **Indicazioni** dell'interfaccia utente grafica di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] e descrive come visualizzare le informazioni della scheda sui risultati della sessione di ottimizzazione.  
@@ -48,7 +48,7 @@ ms.locfileid: "36158797"
   
 7.  Scegliere **Valuta indicazioni** dal menu **Azioni**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ottimizzazione guidata crea una nuova sessione di ottimizzazione nella quale è possibile valutare un subset delle indicazioni originali di MySession.  
   
-8.  Tipo di `EvaluateMySession` per il nuovo **nome sessione**, fare clic sui **Avvia analisi** pulsante sulla barra degli strumenti. È possibile ripetere i passaggi 2 e 3 per questa nuova sessione di ottimizzazione in modo da visualizzare le indicazioni.  
+8.  Tipo di `EvaluateMySession` per il nuovo **sul nome della sessione**, fare clic sul **Avvia analisi** pulsante sulla barra degli strumenti. È possibile ripetere i passaggi 2 e 3 per questa nuova sessione di ottimizzazione in modo da visualizzare le indicazioni.  
   
 ## <a name="summary"></a>Riepilogo  
  In questa attività è stato illustrato il contenuto della scheda **Indicazioni** per la sessione di ottimizzazione MySession ed è stato valutato un subset di indicazioni nella nuova sessione di ottimizzazione EvaluateMySession.  

@@ -1,5 +1,5 @@
 ---
-title: Gli eventi di traccia di Analysis Services | Documenti Microsoft
+title: Gli eventi di traccia di Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c400772f757dcd852ddfd2cf696a966261c60c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4c4631e20227cb1d3aeba34337d7b36c8a84c62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163442"
 ---
 # <a name="analysis-services-trace-events"></a>Eventi di traccia di Analysis Services
   È possibile seguire l'attività di un'istanza di Microsoft SQL Server Analysis Services (SSAS) acquisendo e analizzando gli eventi di traccia generati dall'istanza.  Gli eventi di traccia vengono raggruppati in modo da trovare più facilmente gli eventi di traccia correlati.  Ogni evento di traccia contiene un set di dati attinente all'evento. Non tutti i dati sono attinenti a tutti gli eventi.  
   
- Gli eventi di traccia possono essere avviati e acquisiti usando **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, vedere [utilizzare SQL Server Profiler per il monitoraggio di Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md), o può essere avviata da un comando XMLA come **SQL Server Eventi estesi** e in seguito analizzati, vedere [utilizzare SQL Server Extended Events &#40;XEvent&#41; per il monitoraggio di Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
+ Gli eventi di traccia possono essere avviati e acquisiti usando **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, vedere [usare SQL Server Profiler per monitorare Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md), o può essere avviata da un comando XMLA come **SQL Server Eventi estesi** e l'analisi in un secondo momento, vedere [utilizzare SQL Server Extended Events &#40;XEvents&#41; per monitorare Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
     
  Nelle tabelle seguenti viene descritta ogni categoria insieme agli eventi in essa contenuti.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36157815"
 |36|Discover Begin|Inizio della richiesta di individuazione.|  
 |38|Discover End|Fine della richiesta di individuazione.|  
   
- **[Categoria di eventi di stato del Server individuazione](discover-server-state-event-category.md)**  
+ **[Individuazione stato del Server-categoria di eventi](discover-server-state-event-category.md)**  
   
  Raccolta di eventi per le richieste di individuazione dello stato del server.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36157815"
 |9|Query Begin|Inizio della query.|  
 |10|Query End|Fine della query.|  
   
- **[Categoria di eventi di elaborazione delle query](query-processing-events-category.md)**  
+ **[Categoria di eventi di elaborazione di query](query-processing-events-category.md)**  
   
  Raccolta di eventi chiave durante il processo di esecuzione di una query.  
   
@@ -191,4 +191,4 @@ ms.locfileid: "36157815"
 |43|Session Initialize|Inizializzazione della sessione.|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Utilizzare SQL Server Profiler per monitorare Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)
+[Usare SQL Server Profiler per monitorare Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)

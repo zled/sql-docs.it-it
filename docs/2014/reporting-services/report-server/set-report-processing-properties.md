@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - on-demand reports
 - report processing [Reporting Services], execution properties
@@ -20,18 +20,18 @@ ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 375b691b1e0e1202bfa16f6b4919ff454fe65da3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d3ffb241dd28b0abff718f742ba9020df98195f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153592"
 ---
 # <a name="set-report-processing-properties"></a>Impostare proprietà di elaborazione dei report
   Le proprietà di esecuzione dei report consentono di controllarne le modalità di esecuzione e devono essere impostate singolarmente per ogni report.  
   
- Per impostare le proprietà di esecuzione di un report, aprire il report in Gestione report e passare alla pagina delle proprietà Esecuzione. È inoltre possibile impostare le proprietà utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Pagina delle proprietà Opzioni di elaborazione &#40;Gestione report&#41;](../processing-options-properties-page-report-manager.md).  
+ Per impostare le proprietà di esecuzione di un report, aprire il report in Gestione report e passare alla pagina delle proprietà Esecuzione. È inoltre possibile impostare le proprietà usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Pagina delle proprietà Opzioni di elaborazione &#40;Gestione report&#41;](../processing-options-properties-page-report-manager.md).  
   
 ## <a name="report-execution-modes"></a>Modalità di esecuzione dei report  
  I report possono essere eseguiti su richiesta o come snapshot. Nella sezione seguente vengono descritte le due diverse modalità.  

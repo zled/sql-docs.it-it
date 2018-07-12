@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
@@ -17,13 +17,13 @@ ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f241a4df7cdf90fa1fb05f99ba932877bdce7d05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ec8661b0a5c5362c83a767975e8c01a61779df1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149942"
 ---
 # <a name="predefined-roles"></a>Predefined Roles
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato con ruoli predefiniti che è possibile utilizzare per concedere l'accesso alle operazioni del server di report. Ogni ruolo predefinito definisce una raccolta di attività correlate. È possibile assegnare account utente e di gruppo ai ruoli predefiniti per fornire accesso immediato alle operazioni del server di report.  
@@ -73,7 +73,7 @@ ms.locfileid: "36157088"
 |Gestione della cronologia dei report|Creare, visualizzare ed eliminare la cronologia dei report, visualizzare le proprietà della cronologia dei report e visualizzare e modificare le impostazioni che determinano le limitazioni per la cronologia degli snapshot e le modalità di funzionamento della memorizzazione nella cache.|  
 |Gestione di report|Aggiungere ed eliminare report, modificare i parametri dei report, visualizzare e modificare le proprietà dei report, visualizzare e modificare le origini dei dati per il contenuto dei report, visualizzare e modificare le definizioni dei report e impostare i criteri di sicurezza a livello dei report.|  
 |Gestione di risorse|Creare, modificare ed eliminare risorse e visualizzarne e modificarne le proprietà.|  
-|Impostazione dei criteri di sicurezza per gli elementi|Definire criteri di sicurezza per report, report collegati, cartelle, risorse e origini dei dati. Per altre informazioni, vedere [elementi a protezione diretta](securable-items.md).|  
+|Impostazione dei criteri di sicurezza per gli elementi|Definire criteri di sicurezza per report, report collegati, cartelle, risorse e origini dei dati. Per altre informazioni, vedere [elementi a sicurezza diretta](securable-items.md).|  
 |Visualizzazione di origini dei dati|Visualizzare origini dei dati condivise nella gerarchia di cartelle.|  
 |Visualizzazione di report|Eseguire report e visualizzare le proprietà dei report.|  
 |Visualizzazione di modelli|Visualizzare i modelli nella gerarchia di cartelle, utilizzare i modelli come origine dei dati per un report ed eseguire query in base al modello per recuperare i dati.|  

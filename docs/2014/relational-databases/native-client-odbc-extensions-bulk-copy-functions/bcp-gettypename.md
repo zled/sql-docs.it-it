@@ -1,13 +1,11 @@
 ---
-title: bcp_gettypename | Documenti Microsoft
+title: bcp_gettypename | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: afea684549765bac4c24679cc65d74bb4dfa47df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 489980d88e5f49d2c350fa3a3784d3603deab5e0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068028"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411730"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   Restituisce il nome del tipo SQL per il nome di un tipo di token specificato.  
@@ -57,7 +55,7 @@ fIsMaxType
 ## <a name="returns"></a>Valori di codice restituiti  
  Una stringa che contiene il nome del tipo SQL che corrisponde al tipo BCP. Se viene specificato un tipo BCP non valido, viene restituita una stringa vuota.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  I token del tipo BCP vengono definiti nel file di intestazione sqlncli.h e nella libreria sqlncli11.lib.  
   
  Nella tabella seguente viene specificato quali sono i possibili tipi BCP, se si tratta di tipi max e l'output previsto.  
@@ -81,8 +79,8 @@ fIsMaxType
 |`SQLTEXT`|Prima o dopo|**text**|  
 |`SQLBIGBINARY`|no|**binary**|  
 |`SQLBINARY`|no|**Binario**|  
-|`SQLBIGVARBINARY`|no|**varbinary**|  
-|`SQLVARBINARY`|no|**varbinary**|  
+|`SQLBIGVARBINARY`|no|**Varbinary**|  
+|`SQLVARBINARY`|no|**Varbinary**|  
 |`SQLIMAGE`|Prima o dopo|**Immagine**|  
 |`SQLINTN`|Prima o dopo|**int-null**|  
 |`SQLDATETIMN`|Prima o dopo|**datetime-null**|  
@@ -95,11 +93,11 @@ fIsMaxType
 |`SQLAOPMAX`|Prima o dopo|**Max**|  
 |`SQLDATETIM4`|Prima o dopo|**smalldatetime**|  
 |`SQLMONEY4`|Prima o dopo|**Smallmoney**|  
-|`SQLFLT4`|Prima o dopo|**reale**|  
+|`SQLFLT4`|Prima o dopo|**Real**|  
 |`SQLUNIQUEID`|Prima o dopo|**uniqueidentifier**|  
 |`SQLNCHAR`|no|**Nchar**|  
 |`SQLNVARCHAR`|no|**Nvarchar**|  
-|`SQLNTEXT`|Prima o dopo|**ntext**|  
+|`SQLNTEXT`|Prima o dopo|**Ntext**|  
 |`SQLVARIANT`|Prima o dopo|**sql_variant**|  
 |`SQLINT8`|Prima o dopo|**Bigint**|  
 |`SQLCHARACTER`|Sì|**ntext**|  
@@ -116,9 +114,9 @@ fIsMaxType
 |`SQLUDT`|Prima o dopo|**Tipo definito dall'utente**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_gettypename per le caratteristiche avanzate di data e ora  
- I valori di parametro del token per i tipi di data/ora sono illustrati nella colonna "Tipo in SQLNCLI. h" della tabella [modifiche di copia Bulk per avanzate di data e ora tipi &#40;OLE DB e ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Il valore restituito si trova nella riga corrispondente della colonna "Tipo di archiviazione di file".  
+ I valori di parametro del token per i tipi di data/ora sono descritti nella colonna della tabella in "Tipo in SQLNCLI. h" [modifiche apportate alla copia Bulk per avanzate di data e ora i tipi &#40;OLE DB e ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Il valore restituito si trova nella riga corrispondente della colonna "Tipo di archiviazione di file".  
   
- Per altre informazioni, vedere [data e ora miglioramenti &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Per altre informazioni, vedere [data e miglioramenti per la fase &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)  

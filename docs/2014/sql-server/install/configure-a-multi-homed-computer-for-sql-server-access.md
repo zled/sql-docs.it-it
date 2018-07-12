@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72ea93688420a150d0193c9f91feb26dad91cffe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aa768aea67d95a107380600fee663f2f0ffa5ee8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183898"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurare un computer multihomed per l'accesso a SQL Server
   In uno scenario tipico in cui un server deve fornire una connessione a due o più reti o subnet di rete viene utilizzato un computer multihomed, che si trova in genere in una rete perimetrale. In questo argomento viene descritto come configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows Firewall con sicurezza avanzata per fornire le connessioni di rete a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ambiente multihomed.  
@@ -59,9 +59,9 @@ ms.locfileid: "36155911"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>Per determinare gli indirizzi IP disponibili nel computer  
   
-1.  Nel computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è installato, fare clic su **avviare**, fare clic su **eseguire**, tipo `cmd` e quindi [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+1.  Nel computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è installato, fare clic su **avviare**, fare clic su **eseguire**, digitare `cmd` e quindi [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-2.  Nella finestra del prompt dei comandi, digitare `ipconfig,` e quindi premere INVIO per elencare gli indirizzi IP disponibili in questo computer.  
+2.  Nella finestra del prompt dei comandi, digitare `ipconfig,` e quindi premere INVIO per elencare gli indirizzi IP disponibili nel computer.  
   
     > [!NOTE]  
     >  Quando si usa il comando **ipconfig** , talvolta vengono elencate molte possibili connessioni, incluse quelle disattivate. Il comando **ipconfig** consente di elencare indirizzi sia IPv4 che IPv6.  
@@ -89,7 +89,7 @@ ms.locfileid: "36155911"
   
 1.  Nel computer in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accedere come amministratore.  
   
-2.  Fare clic su **avviare**, fare clic su **eseguire**, tipo `wf.msc`, fare clic su **OK**.  
+2.  Fare clic su **avviare**, fare clic su **eseguito**, digitare `wf.msc`, fare clic su **OK**.  
   
 3.  Nella finestra di dialogo **Controllo account utente** fare clic su **Continua** per usare le credenziali di amministratore per aprire lo snap-in Windows Firewall con sicurezza avanzata.  
   

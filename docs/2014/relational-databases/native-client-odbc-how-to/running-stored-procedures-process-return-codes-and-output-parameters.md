@@ -1,13 +1,11 @@
 ---
-title: Elaborare codici restituiti e parametri di Output (ODBC) | Documenti Microsoft
+title: Elaborare codici restituiti e parametri di Output (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1303c15f94dc32e69378c38e5353f8e82bf1214a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d8f5eab232d9651375ea9cd2857a8b8bb9129e88
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066731"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422530"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>Elaborare codici restituiti e parametri di output (ODBC)
-  Le stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono disponibili per l'applicazione fino alla [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) restituisce SQL_NO_DATA. Se viene restituito un errore da una stored procedure, chiamare SQLMoreResults per passare al risultato successivo fino a quando non viene restituito SQL_NO_DATA.  
+  Le stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono disponibili per l'applicazione fino a quando [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) restituisce SQL_NO_DATA. Se viene restituito un errore da una stored procedure, chiamare SQLMoreResults per passare al risultato successivo fino a quando non viene restituito SQL_NO_DATA.  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -35,7 +33,7 @@ ms.locfileid: "36066731"
   
 1.  Costruire un'istruzione SQL in cui venga utilizzata la sequenza di escape ODBC CALL. Nell'istruzione devono essere utilizzati marcatori di parametro per ogni parametro di input, di input/output e di output e per il valore restituito della procedura, se disponibile.  
   
-2.  Chiamare [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) per ogni input, input/output, parametro di output e per la procedura di valore restituito (se presente).  
+2.  Chiamare [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) per ogni input, input/output, parametro di output e per la procedura di valore restituito (se disponibile).  
   
 3.  Eseguire l'istruzione con `SQLExecDirect`.  
   
@@ -194,6 +192,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di procedure per le Stored procedure &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+ [Esecuzione di procedure per la Stored procedure &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
   

@@ -1,31 +1,29 @@
 ---
-title: Invio di dati come un parametro con valori di tabella con tutti i valori in memoria (ODBC) | Documenti Microsoft
+title: Invio di dati come un parametro con valori di tabella con tutti i valori in memoria (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d60ed42fd1c568c9efe9fc693ce408929525608
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f2e154cbbba13ac1eb017a90fbb6abd7b0532b50
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066451"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422240"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Invio di dati come parametro con valori di tabella con tutti i valori in memoria (ODBC)
-  In questo argomento viene illustrato come inviare dati a una stored procedure come parametro con valori di tabella quando tutti i valori sono in memoria. Per un esempio che illustra i parametri con valori di tabella, vedere [utilizzare parametri &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
+  In questo argomento viene illustrato come inviare dati a una stored procedure come parametro con valori di tabella quando tutti i valori sono in memoria. Per un altro esempio che illustra i parametri con valori di tabella, vedere [usare parametri &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
   
 ## <a name="prerequisite"></a>Prerequisiti  
  Questa procedura presuppone che sia stata eseguita l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente nel server:  
@@ -91,7 +89,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  La seconda fase di associazione dei parametri consiste nell'associare le colonne per il parametro con valori di tabella. Lo stato attivo del parametro viene impostato prima sull'ordinale del parametro con valori di tabella, Quindi le colonne del valore di tabella vengono associate tramite SQLBindParameter esattamente come si presenterebbero se fossero parametri della stored procedure, ma con numeri ordinali di colonna per ParameterNumber. Se ci fossero più parametri con valori di tabella, lo stato attivo verrebbe impostato a sua volta su ciascuno di essi, seguito dall'associazione delle colonne. Lo stato attivo del parametro viene infine reimpostato su 0.  
+3.  La seconda fase di associazione dei parametri consiste nell'associare le colonne per il parametro con valori di tabella. Lo stato attivo del parametro viene impostato prima sull'ordinale del parametro con valori di tabella, Quindi le colonne del valore di tabella vengono associate tramite SQLBindParameter esattamente come verrebbero usati se i parametri della stored procedure, ma con gli ordinali di colonna per ParameterNumber. Se ci fossero più parametri con valori di tabella, lo stato attivo verrebbe impostato a sua volta su ciascuno di essi, seguito dall'associazione delle colonne. Lo stato attivo del parametro viene infine reimpostato su 0.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  
@@ -131,6 +129,6 @@ from @Items
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di programmazione di parametro con valori di tabella ODBC](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
+ [Esempi di programmazione di parametri con valori di tabella ODBC](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
   
   

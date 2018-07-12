@@ -1,12 +1,12 @@
 ---
-title: Accessibilità per persone affette da disabilità | Documenti Microsoft
+title: Accessibilità per persone affette da disabilità | Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server documentation, accessibility features
 - Windows accessibility options [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - customer service [SQL Server]
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b79dca7e1ef9dad294944c3494677bb1da27723e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 089dd0a7c9ab492450865d849ab3c24bd4473ec3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277177"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Accessibilità per utenti disabili
   [!INCLUDE[msCoName](../includes/msconame-md.md)] cerca di sviluppare prodotti e servizi che siano facili da utilizzare per chiunque. In questo argomento vengono fornite informazioni sulle caratteristiche, i prodotti e i servizi seguenti in grado di semplificare l'accesso di utenti disabili alla famiglia di server [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
@@ -38,25 +38,25 @@ ms.locfileid: "36068097"
 >  Le informazioni contenute in questa sezione si applicano solo agli utenti che acquistano una licenza [!INCLUDE[msCoName](../includes/msconame-md.md)] prodotti negli Stati Uniti. Se il prodotto viene acquistato fuori dagli Stati Uniti, nel pacchetto verrà inclusa una scheda informativa della filiale [!INCLUDE[msCoName](../includes/msconame-md.md)] con i numeri di telefono e gli indirizzi utili per accedere al Servizio Supporto Tecnico Clienti Microsoft. Contattare la filiale locale per stabilire se i tipi di prodotti e servizi illustrati in questa sezione sono disponibili nella propria zona. Per altre informazioni, disponibili in inglese, francese, spagnolo, cinese, giapponese e italiano, visitare il [sito Web Microsoft relativo all'accessibilità](http://go.microsoft.com/fwlink/?LinkID=8287).  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-accessibility-features"></a>Funzionalità di accessibilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
- Oltre alle funzionalità di accessibilità di Windows e di descritto nella sezione successiva, per favorire il Visualizzatore della Guida [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] più accessibile per gli utenti disabili.  
+ Oltre alle funzionalità di accessibilità di Windows e le utilità descritte nella sezione successiva, rende il Visualizzatore della Guida [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] più accessibile per le persone affette da disabilità.  
   
 ### <a name="the-help-viewer"></a>Visualizzatore della Guida  
- Il visualizzatore della Guida Microsoft 1.1 è lo strumento che consente di consultare la documentazione del prodotto. In questo strumento sono disponibili funzionalità di accessibilità, inclusi i tasti di scelta rapida per la navigazione e per i comandi, inclusi in [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer. Ad esempio, è possibile modificare i colori della visualizzazione sullo schermo del computer. Per informazioni sull'accessibilità funzionalità per Microsoft di individuare il Visualizzatore 1.1 [accessibilità le funzionalità di Microsoft Help Viewer 1.1](http://go.microsoft.com/fwlink/?LinkID=220144).  
+ Il visualizzatore della Guida Microsoft 1.1 è lo strumento che consente di consultare la documentazione del prodotto. In questo strumento sono disponibili funzionalità di accessibilità, inclusi i tasti di scelta rapida per la navigazione e per i comandi, inclusi in [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer. Ad esempio, è possibile modificare i colori della visualizzazione sullo schermo del computer. Per informazioni sull'accessibilità funzionalità per Microsoft help Viewer 1.1 vedere [accessibilità le funzionalità di Microsoft Help Viewer 1.1](http://go.microsoft.com/fwlink/?LinkID=220144).  
   
 ## <a name="accessibility-in-includemsconameincludesmsconame-mdmd-windows"></a>Accessibilità in [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows  
  Molte caratteristiche di accessibilità sono state integrate nella famiglia dei sistemi operativi [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Tali caratteristiche risultano utili per utenti con difficoltà di digitazione o di utilizzo del mouse, persone con problemi di vista oppure con problemi di udito. Tali caratteristiche possono essere installate durante l'esecuzione del programma di installazione.  
   
 ## <a name="adjusting-includemsconameincludesmsconame-mdmd-products-for-people-with-accessibility-needs"></a>Adattamento dei prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)] agli utenti con esigenze di accessibilità  
- Le opzioni di accessibilità e le funzionalità sono incluse in molti [!INCLUDE[msCoName](../includes/msconame-md.md)] prodotti, tra cui la famiglia di sistemi operativi Windows. Tali opzioni e caratteristiche risultano utili per utenti con difficoltà di digitazione o di utilizzo del mouse, persone con problemi di vista oppure con problemi di udito.  
+ Le opzioni di accessibilità e le funzionalità sono integrate in molti [!INCLUDE[msCoName](../includes/msconame-md.md)] prodotti, tra cui sistemi operativi della famiglia di Windows. Tali opzioni e caratteristiche risultano utili per utenti con difficoltà di digitazione o di utilizzo del mouse, persone con problemi di vista oppure con problemi di udito.  
   
 ### <a name="free-step-by-step-tutorials"></a>Esercitazioni dettagliate gratuite  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] offre una serie di esercitazioni che consentono di imparare a modificare le opzioni di accessibilità e le impostazioni del computer. Nelle esercitazioni sono disponibili procedure dettagliate relative alla configurazione di opzioni, caratteristiche e impostazioni, in modo da soddisfare le necessità di utenti disabili e con esigenze di accessibilità. Le informazioni vengono visualizzate in formato affiancato, per consentire di applicare subito le istruzioni in merito all'utilizzo del mouse, della tastiera o di una combinazione di mouse e tastiera. Le esercitazioni dettagliate per i diversi prodotti sono disponibili nel [sito Web Microsoft relativo all'accessibilità](http://go.microsoft.com/fwlink/?LinkID=67163).  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] offre una serie di esercitazioni dettagliate che consentono di capire come modificare le opzioni di accessibilità e le impostazioni del computer. Nelle esercitazioni sono disponibili procedure dettagliate relative alla configurazione di opzioni, caratteristiche e impostazioni, in modo da soddisfare le necessità di utenti disabili e con esigenze di accessibilità. Le informazioni vengono visualizzate in formato affiancato, per consentire di applicare subito le istruzioni in merito all'utilizzo del mouse, della tastiera o di una combinazione di mouse e tastiera. Le esercitazioni dettagliate per i diversi prodotti sono disponibili nel [sito Web Microsoft relativo all'accessibilità](http://go.microsoft.com/fwlink/?LinkID=67163).  
   
 ## <a name="assistive-technology-products-for-windows"></a>Prodotti di tecnologia per l'accessibilità per Windows  
  Svariati prodotti di tecnologia per l'accessibilità sono disponibili per facilitare l'utilizzo dei computer da parte di utenti disabili.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] fornisce un catalogo di prodotti di assistive technology che eseguono sistemi operativi Windows in ricerca di [sito Web di accessibilità Microsoft](http://go.microsoft.com/fwlink/?LinkID=67166).  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] fornisce un catalogo di prodotti di assistive technology che eseguono sistemi operativi Windows a ricerca di [sito Web di accessibilità Microsoft](http://go.microsoft.com/fwlink/?LinkID=67166).  
   
  Sono disponibili i tipi di prodotti seguenti:  
   
@@ -79,10 +79,10 @@ ms.locfileid: "36068097"
  La documentazione dei prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)] è disponibile in formati alternativi fruibili da utenti con esigenze di accessibilità.  
   
 ### <a name="obtaining-documentation-for-includessnoversionincludesssnoversion-mdmd"></a>Come ottenere la documentazione relativa a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
- La documentazione per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile online. Per altre informazioni, vedere [utilizzare la documentazione di SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+ La documentazione per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile online. Per altre informazioni, vedere [documentazione del prodotto per SQL Server Usa](../2014-toc/books-online-for-sql-server-2014.md).  
   
 ## <a name="obtaining-documentation-for-additional-includemsconameincludesmsconame-mdmd-products"></a>Come ottenere la documentazione relativa ad altri prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]  
- È possibile ottenere documentazione accessibile [!INCLUDE[msCoName](../includes/msconame-md.md)] prodotti dal [sito Web di accessibilità Microsoft](http://go.microsoft.com/fwlink/?LinkID=67164).  
+ È possibile ottenere documentazione accessibile per [!INCLUDE[msCoName](../includes/msconame-md.md)] prodotti dal [sito Web di accessibilità Microsoft](http://go.microsoft.com/fwlink/?LinkID=67164).  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  
  È possibile ottenere altre pubblicazioni [!INCLUDE[msCoName](../includes/msconame-md.md)] rivolgendosi a Recording for the Blind & Dyslexic, Inc. I documenti vengono distribuiti a membri idonei e registrati, appartenenti al servizio di distribuzione, su audio cassette o dischi floppy. La raccolta contiene oltre 80.000 titoli, compresi i libri [!INCLUDE[msCoName](../includes/msconame-md.md)] Press e la documentazione dei prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]. Per informazioni relative all'idoneità e alla disponibilità di libri [!INCLUDE[msCoName](../includes/msconame-md.md)] Press e documentazione dei prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)], contattare:  

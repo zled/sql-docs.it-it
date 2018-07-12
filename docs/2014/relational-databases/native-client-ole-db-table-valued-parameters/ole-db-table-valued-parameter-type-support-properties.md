@@ -1,34 +1,32 @@
 ---
-title: Supporto dei tipi OLE DB parametro con valori di tabella (proprietà) | Documenti Microsoft
+title: Supporto dei tipi OLE DB parametro con valori di tabella (proprietà) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01384c9827d9a204b3eeb94ae9443940548fa2ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8bc75c4ebdbbbe4d38f18692ae8c9588957e32e3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068527"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408420"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Supporto dei tipi di parametri con valori di tabella OLE DB (proprietà)
   In questo argomento sono incluse informazioni sulle proprietà e i set di proprietà OLE DB associati a oggetti set di righe di parametri con valori di tabella.  
   
 ## <a name="properties"></a>Proprietà  
- Di seguito è riportato l'elenco delle proprietà esposte tramite il metodo IRowsetInfo::GetPropeties sugli oggetti set di righe di parametri con valori di tabella. Si noti che tutte le proprietà dei set di righe di parametri con valori di tabella sono di sola lettura. Pertanto, il tentativo di impostare le proprietà tramite IOpenRowset:: OPENROWSET o ITableDefinitionWithConstraints::CreateTableWithConstraints metodi in base ai valori non predefiniti verranno generato un errore e non verrà creato alcun oggetto.  
+ Di seguito è riportato l'elenco delle proprietà esposte tramite il metodo IRowsetInfo::GetPropeties sugli oggetti set di righe di parametri con valori di tabella. Si noti che tutte le proprietà dei set di righe di parametri con valori di tabella sono di sola lettura. Pertanto, il tentativo di impostare le proprietà tramite IOpenRowset:: OPENROWSET o ITableDefinitionWithConstraints::CreateTableWithConstraints metodi per i relativi valori non predefiniti comporterà un errore e non verrà creato alcun oggetto.  
   
  Le proprietà non implementate nell'oggetto set di righe di parametri con valori di tabella non sono incluse nell'elenco. Per un elenco completo delle proprietà, vedere la documentazione di OLE DB in Windows Data Access Components.  
   
@@ -49,7 +47,7 @@ ms.locfileid: "36068527"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo,<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Nota: L'oggetto set di righe di parametri con valori di tabella supporta le interfacce IRowsetChange.<br /><br /> Un set di righe creato tramite DBPROP_IRowsetChange uguale a VARIANT_TRUE indica comportamenti basati sulla modalità di aggiornamento immediato.<br /><br /> Tuttavia, se le colonne BLOB vengono associate come oggetti ISequentialStream, il consumer deve manterrà prevedibilmente per la durata dell'oggetto set di righe di parametri con valori di tabella.|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Nota: L'oggetto set di righe di parametri con valori di tabella supporta le interfacce IRowsetChange.<br /><br /> Un set di righe creato tramite DBPROP_IRowsetChange uguale a VARIANT_TRUE indica comportamenti basati sulla modalità di aggiornamento immediato.<br /><br /> Tuttavia, se le colonne BLOB vengono associate come oggetti ISequentialStream, il consumer dovrà manterrà prevedibilmente per la durata dell'oggetto parametro con valori di tabella del set di righe.|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -79,14 +77,14 @@ ms.locfileid: "36068527"
  I set di proprietà seguenti supportano i parametri con valori di tabella.  
   
 ### <a name="dbpropsetsqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- Questa proprietà viene utilizzata dal consumer nel processo di creazione di un oggetto set di righe di parametri con valori di tabella utilizzando ITableDefinitionWithConstraints::CreateTableWithConstraints per ogni colonna della struttura DBCOLUMNDESC, se necessario.  
+ Questa proprietà viene utilizzata dal consumer nel processo di creazione di un oggetto set di righe di parametri con valori di tabella con ITableDefinitionWithConstraints::CreateTableWithConstraints per ogni colonna della struttura DBCOLUMNDESC, se necessario.  
   
 |ID proprietà|Valore proprietà|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Tipo: VT_BOOL<br /><br /> Descrizione: se impostata su VARIANT_TRUE, indica che la colonna è una colonna calcolata. VARIANT_FALSE indica che non si tratta di una colonna calcolata.|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Queste proprietà vengono lette dal consumer durante l'individuazione di informazioni sul tipo di parametro con valori di tabella nelle chiamate a ISSCommandWithParamters::GetParameterProperties e impostate dall'utente durante l'impostazione delle proprietà specifiche sul parametro con valori di tabella tramite isscommandwithparameters:: Setparameterproperties.  
+ Queste proprietà vengono lette dal consumer durante l'individuazione di informazioni sul tipo di parametro con valori di tabella nelle chiamate a ISSCommandWithParamters::GetParameterProperties e impostate dal consumer durante l'impostazione delle proprietà specifiche relative al parametro con valori di tabella tramite isscommandwithparameters:: Setparameterproperties.  
   
  Tali proprietà vengono descritte in modo dettagliato nella tabella seguente.  
   
@@ -99,7 +97,7 @@ ms.locfileid: "36068527"
 |SSPROP_PARAM_TABLE_COLUMN_ORDER|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> Descrizione: questa proprietà viene utilizzata dal consumer per fornire un hint al server per indicare il tipo di ordinamento dei dati della colonna. Il provider non esegue alcuna convalida e presuppone che il consumer sia conforme alla specifica fornita. Il server utilizza questa proprietà per eseguire ottimizzazioni.<br /><br /> Le informazioni sull'ordine delle colonne per ogni colonna vengono rappresentate da una coppia di elementi nella matrice. Il primo elemento nella coppia è il numero della colonna. Il secondo elemento nella coppia sarà 1 per l'ordine crescente o 2 per l'ordine decrescente.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto tipo di parametro con valori di tabella OLE DB](ole-db-table-valued-parameter-type-support.md)   
- [Utilizzare parametri con valori di tabella &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)  
+ [Supporto dei tipi di parametro con valori di tabella OLE DB](ole-db-table-valued-parameter-type-support.md)   
+ [Usare parametri con valori di tabella &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)  
   
   

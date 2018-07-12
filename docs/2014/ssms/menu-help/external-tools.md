@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.externaltools
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ecaf04f54600f26489aa1b34ee1cbf69645752d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 42e289a8ec12b64841f190297be60cfee31e007f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157492"
 ---
 # <a name="external-tools"></a>Strumenti esterni
   Usare questa finestra di dialogo per aggiungere strumenti esterni, ad esempio Gestione configurazione SQL Server o Blocco note, al menu **Strumenti** . Aggiungendo strumenti esterni, sarà più semplice avviare altre applicazioni quando si utilizza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Durante l'avvio dello strumento, è possibile specificare argomenti e una directory di lavoro. Gli output generati da alcuni strumenti verranno inoltre visualizzati nella finestra di output. La finestra di dialogo **Strumenti esterni** è accessibile dal menu **Strumenti** .  
@@ -76,7 +76,7 @@ ms.locfileid: "36155705"
   
 2.  Nella casella **Titolo** digitare **Gestione configurazione SQL Server**.  
   
-3.  Nel **comando** , digitare il percorso per il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Console di gestione eseguibili, ad esempio `C:\WINNT\system32\mmc.exe`  
+3.  Nel **comandi** , digitare il percorso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Console di gestione eseguibili, ad esempio `C:\WINNT\system32\mmc.exe`  
   
 4.  Nel **argomenti** , digitare il percorso del file con estensione msc, ad esempio `"C:\WINNT\system32\SQLServerManager.msc"`  
   

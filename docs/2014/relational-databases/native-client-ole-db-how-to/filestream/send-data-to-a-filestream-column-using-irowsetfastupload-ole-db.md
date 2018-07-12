@@ -1,31 +1,29 @@
 ---
-title: Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload (OLE DB) | Documenti Microsoft
+title: Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3500c914df66f661049ba1c4a8453686b5a139ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e4ce42fac1366dccc4f46285d783666c4b469036
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067800"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408932"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload (OLE DB)
   In questo esempio viene utilizzata l'interfaccia IRowsetFastUpload per inviare una quantità di dati compresa tra 4 MB e 4 GB a una colonna FILESTREAM.  
   
- Per ulteriori informazioni sulla caratteristica filestream, vedere [supporto FILESTREAM &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
+ Per altre informazioni sulla caratteristica filestream, vedere [supporto FILESTREAM &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Esempio  
  Prima di compilare ed eseguire questo esempio, abilitare il supporto FILESTREAM ([abilitare e configurare FILESTREAM](../../blob/enable-and-configure-filestream.md)).  

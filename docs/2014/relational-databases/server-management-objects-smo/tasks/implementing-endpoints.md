@@ -1,5 +1,5 @@
 ---
-title: Implementazione di endpoint | Documenti Microsoft
+title: Implementazione di endpoint | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - endpoints [SMO]
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 716088ea64e5747b4230bb916f1e510e47c67f3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1d953dc37ea474eec1dd7cc56b07726ba2488466
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148482"
 ---
 # <a name="implementing-endpoints"></a>Implementazione di endpoint
   Un endpoint è un servizio che può restare in attesa di richieste a livello nativo. SMO supporta vari tipi di endpoint tramite il <xref:Microsoft.SqlServer.Management.Smo.Endpoint> oggetto. È possibile creare un servizio di endpoint che gestisce un tipo specifico di payload, il quale utilizza un protocollo specifico, creando un'istanza di un oggetto <xref:Microsoft.SqlServer.Management.Smo.Endpoint> e impostandone le proprietà.  
@@ -47,14 +47,14 @@ ms.locfileid: "36156429"
   
  Avendo specificato il tipo di payload, il payload effettivo può essere impostato utilizzando il <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> proprietà dell'oggetto. La proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Payload> fornisce un riferimento a un oggetto payload del tipo specificato, per cui è possibile modificare le proprietà.  
   
- Per l'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>, è necessario specificare il ruolo di mirroring e se è abilitata o meno la crittografia. Il <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> richiede informazioni sull'inoltro di messaggi, numero massimo di connessioni consentite e la modalità di autenticazione. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> richiede l'impostazione di varie proprietà tra cui la proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> che specifica i metodi di payload SOAP disponibili ai client (stored procedure e funzioni definite dall'utente).  
+ Per l'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>, è necessario specificare il ruolo di mirroring e se è abilitata o meno la crittografia. Il <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> oggetto richiede informazioni sull'inoltro di messaggi, numero massimo di connessioni consentite e la modalità di autenticazione. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> richiede l'impostazione di varie proprietà tra cui la proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> che specifica i metodi di payload SOAP disponibili ai client (stored procedure e funzioni definite dall'utente).  
   
  Analogamente, il protocollo può essere impostato tramite la proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> che fa riferimento a un oggetto protocollo del tipo specificato dalla proprietà <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> richiede un elenco di indirizzi IP con restrizioni e informazioni relative a porte, siti Web e autenticazione. Il <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> oggetto richiede inoltre un elenco di indirizzi IP con restrizioni e informazioni sulla porta.  
   
  Quando l'endpoint è stato creato e definito completamente, è possibile concedere, revocare e negare l'accesso a utenti, gruppi, ruoli e account di accesso del database.  
   
 ## <a name="example"></a>Esempio  
- Per l'esempio di codice seguente, è necessario selezionare l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto di Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) e [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per l'esempio di codice seguente, è necessario selezionare l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) e [creare un Visual C#&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-basic"></a>Creazione di un servizio di endpoint del mirroring del database in Visual Basic  
  Nell'esempio di codice viene illustrato come creare un endpoint del mirroring del database in SMO. È necessario eseguire questa operazione prima di creare un database mirror. Utilizzare <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> e altre proprietà nell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> per creare un mirroring del database.  

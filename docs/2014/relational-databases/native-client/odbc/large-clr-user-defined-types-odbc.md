@@ -1,13 +1,11 @@
 ---
-title: Tipi definiti dall'utente CLR di grandi dimensioni (ODBC) | Documenti Microsoft
+title: Tipi definiti dall'utente CLR di grandi dimensioni (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,22 +13,22 @@ helpviewer_keywords:
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98cb3dadf5b0009d4c1ce8cddb3a6cb21d1c4c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e7e17bf897c91021a06ebb5605b072f27aa624d3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066069"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422360"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipi CLR definiti dall'utente di grandi dimensioni (ODBC)
   In questo argomento vengono illustrate le modifiche apportate a ODBC in SQL Server Native Client per supportare i tipi CLR (Common Language Runtime) definiti dall'utente (UDT) di grandi dimensioni.  
   
- Per un esempio che illustra il supporto ODBC per grandi tipi definiti dall'utente CLR, vedere [il supporto per i tipi UDT di grandi dimensioni](../../native-client-odbc-how-to/support-for-large-udts.md).  
+ Per un esempio che illustra il supporto ODBC per i tipi UDT CLR di grandi dimensioni, vedere [supporto per i tipi UDT di grandi dimensioni](../../native-client-odbc-how-to/support-for-large-udts.md).  
   
- Per ulteriori informazioni sul supporto per grandi tipi definiti dall'utente CLR in SQL Server Native Client, vedere [Large CLR User-Defined tipi](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+ Per altre informazioni sul supporto per i tipi UDT CLR di grandi dimensioni in SQL Server Native Client, vedere [Large CLR User-Defined tipi](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 ## <a name="data-format"></a>Formato dati  
  SQL Server Native Client utilizza SQL_SS_LENGTH_UNLIMITED per indicare che le dimensioni di una colonna sono maggiori di 8.000 byte per i tipi LOB (Large Object). A partire da SQL Server 2008, lo stesso valore viene utilizzato per i tipi CLR definiti dall'utente quando le dimensioni sono maggiori di 8.000 byte.  
@@ -148,7 +146,7 @@ ms.locfileid: "36066069"
 |SQL_C_BINARY|Supportato|  
 |SQL_C_CHAR|Supportato *|  
   
- \* Si verifica stringa esadecimale alla conversione di dati binari.  
+ \* Si verifica la stringa esadecimale alla conversione di dati binari.  
   
 ## <a name="sqlvariant-support-for-udts"></a>Supporto di SQL_VARIANT per i tipi definiti dall'utente  
  I tipi definiti dall'utente non sono supportati nelle colonne SQL_VARIANT.  

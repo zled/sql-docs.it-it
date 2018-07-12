@@ -1,5 +1,5 @@
 ---
-title: Creare un Report drill-through (RDLC) con parametri utilizzando ReportViewer (esercitazione su SSRS) | Documenti Microsoft
+title: Creare un Report drill-through (RDLC) con parametri usando ReportViewer (esercitazione su SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2124efb2b773f76b6d117d9163b159affb79ffac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bb5bb2c0a02de9d4be433203996072bb218b8c0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157822"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>Creare un report drill-through (RDLC) con parametri utilizzando ReportViewer (esercitazione su SSRS)
   Un report [drill-through](http://technet.microsoft.com/library/ff519554.aspx) è un report aperto da un utente facendo clic su un collegamento in un altro report. Nei report drill-through sono solitamente disponibili dettagli relativi a un elemento contenuto in un report di riepilogo originale. In questa esercitazione verranno illustrati le seguenti lezioni sulla creazione di un report drill-through con parametri e una query, in [report in modalità locale](http://msdn.microsoft.com/library/ff487969.aspx).  
@@ -33,9 +33,9 @@ ms.locfileid: "36158175"
   
 ## <a name="tasks"></a>Attività  
  [Lezione 1: Creare un nuovo sito Web](../reporting-services/lesson-1-create-a-new-web-site.md)   
- [Lezione 2: Definire una connessione dati e tabella di dati per il Report padre](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)   
+ [Lezione 2: Definire una connessione dati e un tabella di dati per il Report padre](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)   
  [Lezione 3: Progettare il Report padre tramite la creazione guidata Report](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)   
- [Lezione 4: Definire una connessione dati e tabella di dati per il Report figlio](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)   
+ [Lezione 4: Definire una connessione dati e un tabella di dati per il Report figlio](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)   
  [Lezione 5: Progettare il Report figlio tramite la creazione guidata Report](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)   
  [Lezione 6: Aggiungere un controllo ReportViewer all'applicazione](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)   
  [Lezione 7: Aggiungere l'azione drill-through nel Report padre](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)   

@@ -1,5 +1,5 @@
 ---
-title: Proprietà InstanceName (classe ServerNetworkProtocolProperty) | Documenti Microsoft
+title: Proprietà InstanceName (classe ServerNetworkProtocolProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: b3f24bf0-6b02-496b-b08e-327f7b320bc5
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 38737a8f5dffb2bfa2a1f7a3a3d9a981f9bd6d0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6d811b8a8d264d85ae137a8578659de73cbb3f52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151992"
 ---
 # <a name="instancename-property-servernetworkprotocolproperty-class"></a>Proprietà InstanceName (classe ServerNetworkProtocolProperty)
   Ottiene il nome di un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è installato il protocollo di rete del server.  
@@ -48,9 +48,9 @@ object
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è installato il protocollo di rete del server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete Server e le librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

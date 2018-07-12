@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], status
 - history tables [SQL Server]
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b359c9a28d03b389eb7ced8f7559b4ebde8aaa76
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9fb5c435f46788f7b3d703da16ccddab80d81d32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160921"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Monitorare il log shipping (Transact-SQL)
   Dopo aver configurato il log shipping, è possibile monitorare le informazioni relative allo stato di tutti i server di log shipping. La cronologia e lo stato delle operazioni di log shipping vengono salvati sempre in locale dai processi per il log shipping. La cronologia e lo stato dell'operazione di backup vengono memorizzati sul server primario, mentre la cronologia e lo stato delle operazioni di copia e ripristino sono memorizzati sul server secondario. Se è stato implementato un server di monitoraggio remoto, queste informazioni vengono memorizzate anche sul server di monitoraggio.  

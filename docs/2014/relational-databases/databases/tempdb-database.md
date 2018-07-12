@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
 - tempdb database [SQL Server], about tempdb
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 048386695f2b3d3736ce2b399caa9fa286e0d80c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 251ca5f656425a3a77952b4bfdb6e0b79ee8367d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154332"
 ---
 # <a name="tempdb-database"></a>Database tempdb
   Il database di sistema **tempdb** è una risorsa globale disponibile a tutti gli utenti connessi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene usata per contenere gli elementi seguenti:  
@@ -47,7 +47,7 @@ ms.locfileid: "36157471"
 |Dati primari|tempdev|tempdb.mdf|Crescita automatica del 10% fino a quando il disco risulta pieno|  
 |File di log|templog|templog.ldf|Aumento automatico delle dimensioni del 10% fino a un massimo di 2 TB|  
   
- Il valore pari **tempdb** possono influenzare le prestazioni di un sistema. Ad esempio, se il **tempdb** dimensioni sono troppo piccola, l'elaborazione del sistema potrebbe essere troppo occupata con iniziali del database per supportare il requisito di carico di lavoro ogni volta che si avvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare tale overhead, è possibile aumentare le dimensioni del **tempdb**.  
+ Il valore pari **tempdb** possono influenzare le prestazioni di un sistema. Ad esempio, se il **tempdb** dimensioni sono troppo piccola, l'elaborazione del sistema potrebbe essere troppo occupata con l'aumento automatico delle dimensioni del database per supportare i requisiti di carico di lavoro ogni volta che avvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare tale overhead, è possibile aumentare le dimensioni del **tempdb**.  
   
 ## <a name="performance-improvements-in-tempdb"></a>Miglioramenti delle prestazioni in tempdb  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le prestazioni di **tempdb** sono state migliorate come segue:  
@@ -58,7 +58,7 @@ ms.locfileid: "36157471"
   
 -   L'overhead di registrazione per il database **tempdb** è stato ridotto. In questo modo si riduce l'utilizzo di banda per operazioni di I/O su disco nel file di log di **tempdb** .  
   
--   L'algoritmo per l'allocazione delle pagine miste in **tempdb** è stata migliorata.  
+-   L'algoritmo per l'allocazione di pagine miste **tempdb** è stata migliorata.  
   
 ### <a name="moving-the-tempdb-data-and-log-files"></a>Spostamento dei dati e dei file di log di tempdb  
  Per spostare i file di log e i dati **tempdb** , vedere [Spostare i database di sistema](system-databases.md).  

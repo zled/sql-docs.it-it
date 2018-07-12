@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - impersonation [Reporting Services]
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 caps.latest.revision: 59
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3e3dc577cf7b0db69fbcc8140996ce33a4802040
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cb7ef033bc481772f0acbb524988fc8e85a2e91d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210741"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Specificare le credenziali e le informazioni sulla connessione per le origini dati del report
   Un server di report utilizza credenziali per connettersi a origini dei dati esterne che forniscono contenuto ai report o informazioni sui destinatari alle sottoscrizioni guidate dai dati. È possibile specificare credenziali che utilizzano l'autenticazione di Windows, l'autenticazione del database, l'autenticazione personalizzata o che non utilizzano alcuna autenticazione. Quando si invia una richiesta di connessione in rete, il server di report rappresenterà un account utente o l'account di esecuzione automatica. Per altre informazioni sul contesto di protezione in cui viene eseguita una richiesta di connessione, vedere [Configurazione dell'origine dei dati e connessioni di rete](#DataSourceConfigurationConnections) più avanti in questo argomento.  
@@ -45,7 +45,7 @@ ms.locfileid: "36157434"
 > [!NOTE]  
 >  Le credenziali vengono inoltre utilizzate per autenticare gli utenti che accedono a un server di report. Le informazioni relative all'autenticazione di utenti per l'accesso a un server di report sono disponibili in un altro argomento.  
   
- La connessione a un'origine dei dati esterna viene definita quando si crea il report. Può essere gestita separatamente dopo la pubblicazione del report. È possibile specificare una stringa di connessione statica oppure un'espressione che consente agli utenti di selezionare un'origine dei dati da un elenco dinamico. Per ulteriori informazioni su come specificare una stringa di connessione e tipo di origine dati, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ La connessione a un'origine dei dati esterna viene definita quando si crea il report. Può essere gestita separatamente dopo la pubblicazione del report. È possibile specificare una stringa di connessione statica oppure un'espressione che consente agli utenti di selezionare un'origine dei dati da un elenco dinamico. Per altre informazioni su come specificare una stringa di connessione e al tipo di origine dati, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 ## <a name="using-remote-data-sources"></a>Utilizzo di origini dati remote  
  Se il report recupera dati da un server di database remoto, verificare gli elementi seguenti:  
@@ -114,7 +114,7 @@ ms.locfileid: "36157434"
     2.  Se l'account è incluso nell'elenco, selezionarlo e quindi fare clic su **Rimuovi**.  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>Utilizzo della rappresentazione con le credenziali archiviate  
- È inoltre possibile utilizzare le credenziali per rappresentare l'identità di un altro utente. Per i database di SQL Server, tramite la rappresentazione set di opzioni di [SETUSER](/sql/t-sql/statements/setuser-transact-sql) (funzione).  
+ È inoltre possibile utilizzare le credenziali per rappresentare l'identità di un altro utente. Per i database di SQL Server, tramite la rappresentazione delle opzioni comporta il [SETUSER](/sql/t-sql/statements/setuser-transact-sql) (funzione).  
   
 > [!IMPORTANT]  
 >  Non utilizzare la rappresentazione per i report che supportano le sottoscrizioni o che utilizzano pianificazioni per generare la cronologia dei report o aggiornare gli snapshot dell'esecuzione dei report.  
@@ -141,7 +141,7 @@ ms.locfileid: "36157434"
 |None|Rappresenta l'account di esecuzione automatica.|Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Vengono utilizzate le credenziali definite nella stringa di connessione. La connessione ha esito negativo sul server di report se l'account di esecuzione automatica non è definito.<br /><br /> Per [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> La connessione ha sempre esito negativo se non vengono specificate credenziali, anche se l'account di esecuzione automatica è stato definito.<br /><br /> Per XML:<br /><br /> La connessione viene eseguita come utente anonimo se l'account di esecuzione automatica è definito; in caso contrario, la connessione ha esito negativo.|  
   
 ## <a name="setting-credentials-programmatically"></a>Impostazione di credenziali a livello di programmazione  
- È possibile impostare le credenziali tramite codice per controllare l'accesso ai report e al server di report. Per altre informazioni, vedere [origini dati e i metodi di connessione](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
+ È possibile impostare le credenziali tramite codice per controllare l'accesso ai report e al server di report. Per altre informazioni, vedere [origini dati e metodi di connessione](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   

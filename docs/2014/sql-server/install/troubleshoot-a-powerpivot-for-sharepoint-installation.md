@@ -1,5 +1,5 @@
 ---
-title: Risoluzione dei problemi relativi a PowerPivot for SharePoint Installation | Documenti Microsoft
+title: Risolvere i problemi di PowerPivot per SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: b4881ce3be8ede7d97dc2b71fb464b94b8677ca0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26ed6e178e6aea91aa3b0fa5aaedf3926f5d908a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161752"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>Risoluzione dei problemi di un'installazione di PowerPivot per SharePoint
   Se vengono generati errori anziché le pagine e le caratteristiche previste, effettuare le operazioni riportate di seguito.  
@@ -35,7 +35,7 @@ ms.locfileid: "36069969"
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>Le immagini di anteprima per Raccolta PowerPivot sono visualizzate come una X rossa.  
  Una delle cause possibile potrebbe essere che **Integrazione della funzionalità di PowerPivot per le raccolte siti** non è attiva. Completare la procedura seguente:  
   
-1.  Nella libreria della raccolta PowerPivot, fare clic su **Impostazioni sito** dall'icona dell'ingranaggio ![le impostazioni di SharePoint](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "impostazioni di SharePoint") o **Home** elenco.  
+1.  Nella libreria della raccolta PowerPivot, fare clic su **Impostazioni sito** dall'icona dell'ingranaggio ![impostazioni di SharePoint](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "impostazioni di SharePoint") o **Home** elenco.  
   
 2.  Nella sezione **Amministrazione raccolta siti** fare clic su **Funzionalità raccolta siti**.  
   
@@ -43,6 +43,6 @@ ms.locfileid: "36069969"
   
 4.  Verificare che **Integrazione delle funzionalità di PowerPivot per le raccolte siti** sia **Attiva**.  
   
- Per altre cause di questo problema, vedere [raccolta PowerPivot Mostra x rossa per le icone](http://support.microsoft.com/kb/2361559) (http://support.microsoft.com/kb/2361559).  
+ Per ulteriori cause di questo problema, vedere [raccolta PowerPivot viene illustrata la x rossa per le icone](http://support.microsoft.com/kb/2361559) (http://support.microsoft.com/kb/2361559).  
   
   

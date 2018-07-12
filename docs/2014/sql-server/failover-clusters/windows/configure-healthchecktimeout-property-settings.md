@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 6cd514ae1b9581a52e7dfdb382bc8fded757fb47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d975ed562e5343ceeb921358160309c20ff0bb4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260077"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Configurazione delle impostazioni HealthCheckTimeout
-  L'impostazione HealthCheckTimeout viene utilizzata per specificare l'intervallo di tempo, espresso in millisecondi, che la DLL risorse SQL Server deve attendere per le informazioni restituite dal [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) stored procedure prima di segnalare il Failover Cluster istanza (FCI) AlwaysOn come non risponde. Le modifiche apportate alle impostazioni del timeout vengono applicate immediatamente e non richiedono il riavvio della risorsa di SQL Server.  
+  L'impostazione HealthCheckTimeout viene utilizzata per specificare il periodo di tempo, espresso in millisecondi, che la DLL risorse SQL Server deve attendere per le informazioni restituite dal [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) stored procedure di prima che venga segnalato il Failover Cluster istanza (FCI) AlwaysOn che non risponde. Le modifiche apportate alle impostazioni del timeout vengono applicate immediatamente e non richiedono il riavvio della risorsa di SQL Server.  
   
 -   **Prima di iniziare:**  [Limitazioni e restrizioni](#Limits), [Sicurezza](#Security)  
   
@@ -46,7 +45,7 @@ ms.locfileid: "36068183"
   
 2.  Importare il modulo `FailoverClusters` per abilitare i cmdlet del cluster.  
   
-3.  Usare la `Get-ClusterResource` per trovare il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] risorsa, quindi utilizzare `Set-ClusterParameter` cmdlet per impostare il **HealthCheckTimeout** proprietà per l'istanza del cluster di failover.  
+3.  Usare la `Get-ClusterResource` cmdlet per individuare il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] risorsa, quindi usare `Set-ClusterParameter` cmdlet per impostare il **HealthCheckTimeout** proprietà per l'istanza del cluster di failover.  
   
 > [!TIP]  
 >  Ogni volta che si apre una nuova finestra di PowerShell, è necessario importare il `FailoverClusters` modulo.  

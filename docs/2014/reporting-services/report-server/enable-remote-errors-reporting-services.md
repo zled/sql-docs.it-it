@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - remote data source [Reporting Services]
 - EnableRemoteError server property
@@ -16,13 +16,13 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 14586062cadbdf08646ff7a6080b2849d2900d7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78a1d77440242eb96ca3ced08518829b2913a3a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159872"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Abilita errori remoti (Reporting Services)
   È possibile impostare le proprietà di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modo che vengano restituite ulteriori informazioni sulle condizioni di errore che si verificano nei server remoti. Se in un messaggio di errore è incluso il testo "Per ulteriori informazioni su questo errore, passare al server di report nel server locale oppure abilitare gli errori remoti", sarà possibile impostare la proprietà `EnableRemoteErrors` per accedere a informazioni aggiuntive che consentono di risolvere il problema. Per altre informazioni, vedere [proprietà di sistema di Server di Report](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online.  
@@ -74,7 +74,7 @@ ms.locfileid: "36157895"
   
 3.  Fare clic su **Avanzate** per aprire la pagina delle proprietà. Per altre informazioni, vedere [Proprietà server &#40;pagina Avanzate&#41; - Reporting Services](../tools/server-properties-advanced-page-reporting-services.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-4.  In `EnableRemoteErrors`, selezionare `True`.  
+4.  Nelle `EnableRemoteErrors`, selezionare `True`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -115,6 +115,6 @@ ms.locfileid: "36157895"
 ##  <a name="bkmk_ConfigurationInfo"></a> Modifica della tabella ConfigurationInfo (modalità nativa)  
   
 1.  > [!NOTE]  
-    >  È possibile modificare il **ConfigurationInfo** tabella nel database del server di report per impostare `EnableRemoteErrors` a `True`, ma se il server di report viene utilizzato attivamente, è necessario utilizzare SQL Server Management Studio o uno script per modificare le impostazioni. Se si modifica l'impostazione nel database, è necessario riavviare il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prima dell'applicazione delle modifiche.  
+    >  È possibile modificare il **ConfigurationInfo** tabella nel database del server di report per impostare `EnableRemoteErrors` a `True`, ma se viene usato attivamente il server di report, è necessario usare SQL Server Management Studio o uno script per modificare le impostazioni. Se si modifica l'impostazione nel database, è necessario riavviare il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prima dell'applicazione delle modifiche.  
   
   

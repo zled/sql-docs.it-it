@@ -1,5 +1,5 @@
 ---
-title: Master Data Services | Documenti Microsoft
+title: Master Data Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 caps.latest.revision: 12
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ab4e08f960fa7ef72daad9ff5c751cdc17bbec2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce167bf5e95e67282aa37b002c32ccaa816c3be1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156482"
 ---
 # <a name="master-data-services"></a>Master Data Services
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) è la soluzione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per la gestione dei dati master. Nella gestione dei dati master vengono descritti gli sforzi fatti da un'organizzazione per individuare e definire elenchi non transazionali di dati, con l'obiettivo della compilazione di elenchi principali gestibili. In un progetto di gestione dei dati master in genere è inclusa una valutazione e la ristrutturazione dei processi aziendali interni insieme all'implementazione della tecnologia di gestione dei dati master. Il risultato di una soluzione di gestione dei dati master riuscita sono dei dati affidabili, centralizzati che possono essere analizzati e dar luogo a decisioni aziendali ottimali.  
@@ -30,13 +30,13 @@ ms.locfileid: "36156027"
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] include gli strumenti e i componenti seguenti:  
   
--   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], uno strumento utilizzato per creare e configurare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database e applicazioni web.  
+-   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], uno strumento che consente di creare e configurare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database e applicazioni web.  
   
--   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], un'applicazione web consente di eseguire attività amministrative (quali la creazione di una regola modello o aziendale) e che gli utenti accedono per aggiornare i dati.  
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], un'applicazione web si utilizza per eseguire attività amministrative (quali la creazione di una regola di modello o aziendale) e che gli utenti accedono per aggiornare i dati.  
   
 -   MDSModelDeploy.exe, uno strumento che consente di creare pacchetti degli oggetti modello e dei dati in modo da poter distribuirli in altri ambienti.  
   
--   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] servizio Web, quali gli sviluppatori possono utilizzare per estendere o sviluppare soluzioni personalizzate per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] servizio Web, quali gli sviluppatori possono usare per estendere o sviluppare soluzioni personalizzate per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], utilizzato per gestire dati e creare nuove entità e attributi.  
   
@@ -44,6 +44,6 @@ ms.locfileid: "36156027"
   
 |||  
 |-|-|  
-|**Ricerca di contenuto per area**<br /> ![Icona della cartella File di piccole dimensioni](../../2014/integration-services/media/filefolder-small.gif "icona della cartella File piccola") [Panoramica di Master Data Services](master-data-services-overview-mds.md)<br /><br /> ![Icona della cartella File di piccole dimensioni](../../2014/integration-services/media/filefolder-small.gif "icona della cartella File piccola") [Master Data Services Features e attività](../../2014/master-data-services/master-data-services-features-and-tasks.md)<br /><br /> ![Icona della cartella File di piccole dimensioni](../../2014/integration-services/media/filefolder-small.gif "icona della cartella File piccola") [riferimento tecnico (Master Data Services)](technical-reference-master-data-services.md)<br /><br /> ![Icona della cartella File di piccole dimensioni](../../2014/integration-services/media/filefolder-small.gif "icona della cartella File piccola") [Guida per gli sviluppatori (Master Data Services)](develop/master-data-services-developer-documentation.md)||  
+|**Ricerca di contenuto per area**<br /> ![Icona cartella File piccola](../../2014/integration-services/media/filefolder-small.gif "icona cartella File piccola") [Panoramica di Master Data Services](master-data-services-overview-mds.md)<br /><br /> ![Icona cartella File piccola](../../2014/integration-services/media/filefolder-small.gif "icona cartella File piccola") [Master Data Services le funzionalità e attività](../../2014/master-data-services/master-data-services-features-and-tasks.md)<br /><br /> ![Icona cartella File piccola](../../2014/integration-services/media/filefolder-small.gif "icona cartella File piccola") [riferimento tecnico (Master Data Services)](technical-reference-master-data-services.md)<br /><br /> ![Icona cartella File piccola](../../2014/integration-services/media/filefolder-small.gif "icona cartella File piccola") [Guida per sviluppatori (Master Data Services)](develop/master-data-services-developer-documentation.md)||  
   
   

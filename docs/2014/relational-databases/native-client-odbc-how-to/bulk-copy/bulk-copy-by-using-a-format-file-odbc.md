@@ -1,13 +1,11 @@
 ---
-title: Eseguire la copia bulk utilizzando un File di formato (ODBC) | Documenti Microsoft
+title: Copia bulk mediante un File di formato (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e84914caf6b86b12db3f58beadd05ed3b75593e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5994c0904e688817fdbdcb58cd4d03e9a3338e16
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070054"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417580"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Eseguire una copia bulk utilizzando un file di formato (ODBC)
   In questo esempio viene illustrato come utilizzare la funzione ODBC bcp_init con un file di formato.  
@@ -190,7 +188,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Copia bulk con procedure di SQL Server ODBC Driver &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Copia di massa dei con le procedure SQL Server ODBC Driver &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Uso di file di dati e file di formato](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

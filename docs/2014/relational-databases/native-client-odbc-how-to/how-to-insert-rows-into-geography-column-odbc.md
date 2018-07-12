@@ -1,26 +1,24 @@
 ---
-title: 'Procedura: inserire righe in colonne geografiche (ODBC) | Documenti Microsoft'
+title: 'Procedura: inserire righe in colonne geografiche (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa77e06f2856d737ea12ba345f78704499a31e4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 85757e4defac8689f062143dcd53fba3e4ebc31e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069832"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409780"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procedura: Inserimento di righe in colonne geografiche (ODBC)
   In questo esempio vengono inserite due righe in una tabella con colonna geografica da un input WKB (Well-Known Binary) utilizzando 2 associazioni diverse, SQLCCHAR e SQLCBINARY. Viene quindi selezionata una riga dalla tabella e viene utilizzato ::STAsText() per visualizzarla. Il valore di WKB è 0x01010000000700ECFAD03A4C4001008000B5DF07C0 e tramite l'applicazione viene visualizzato nella console l'output: POINT(56.4595 -2.9842).  
@@ -29,7 +27,7 @@ ms.locfileid: "36069832"
   
  Non è possibile utilizzare questo esempio con le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Per ulteriori informazioni sull'archiviazione spaziale, vedere [dati spaziali &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
+ Per altre informazioni sull'archiviazione spaziale, vedere [dati spaziali &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Esempio  
  Il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di creare una tabella utilizzata dall'esempio.  
