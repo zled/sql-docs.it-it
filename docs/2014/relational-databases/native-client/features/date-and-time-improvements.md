@@ -1,31 +1,29 @@
 ---
-title: Data e ora miglioramenti | Documenti Microsoft
+title: Data e ora miglioramenti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a30f330bf4d7e5976d3873bec5e6042f498c9c95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0a6b3b37f1265601ab63f1db370a3aa95a3420d2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064663"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428850"
 ---
 # <a name="date-and-time-improvements"></a>Data e ora miglioramenti
   In questo argomento viene descritto il supporto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client per i tipi di dati di data e ora aggiunti in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   
- Per ulteriori informazioni sui miglioramenti di data/ora, vedere [data e ora miglioramenti &#40;OLE DB&#41; ](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md) e [data e ora miglioramenti &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Per altre informazioni sui miglioramenti apportati alla data/ora, vedere [data e miglioramenti per la fase &#40;OLE DB&#41; ](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md) e [data e ora miglioramenti &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
  Per informazioni sulle applicazioni di esempio che illustrano questa funzionalità, vedere [esempi di programmazione dati di SQL Server](http://msftdpprodsamples.codeplex.com/).  
   
@@ -38,7 +36,7 @@ ms.locfileid: "36064663"
 ### <a name="use-time-as-a-distinct-data-type"></a>Utilizzare il tipo time come tipo di dati distinto  
  OLE DB include già un tipo di dati che contiene solo l'ora, ovvero DBTYPE_DBTIME, che garantisce precisione pari a 1 secondo. Il tipo equivalente in ODBC è SQL_TYPE_TIME (SQL_TIME per le applicazioni ODBC 2.0).  
   
- Il nuovo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ora tipo di dati ha frazionaria dei secondi precisione di 100 nanosecondi. Ciò richiede nuovi tipi in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client: DBTYPE_DBTIME2 (OLE DB) e SQL_SS_TIME2 (ODBC). Le applicazioni esistenti scritte per utilizzare le ore senza secondi frazionari possono utilizzare colonne time(0). I tipi OLE DB DBTYPE_TIME e ODBC SQL_TYPE_TIME esistenti e le strutture corrispondenti funzioneranno correttamente, a meno che le applicazioni non si basino sul tipo restituito nei metadati.  
+ Il nuovo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tempo tipo di dati ha frazionaria dei secondi accurate a 100 nanosecondi. Ciò richiede nuovi tipi in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client: DBTYPE_DBTIME2 (OLE DB) e SQL_SS_TIME2 (ODBC). Le applicazioni esistenti scritte per utilizzare le ore senza secondi frazionari possono utilizzare colonne time(0). I tipi OLE DB DBTYPE_TIME e ODBC SQL_TYPE_TIME esistenti e le strutture corrispondenti funzioneranno correttamente, a meno che le applicazioni non si basino sul tipo restituito nei metadati.  
   
 ### <a name="use-time-as-a-distinct-data-type-with-extended-fractional-seconds-precision"></a>Utilizzare il tipo time come tipo di dati distinto con precisione frazionaria dei secondi estesa  
  Alcune applicazioni, ad esempio le applicazioni di controllo dei processi e di produzione, richiedono la possibilità di gestire i dati di tipo time con una precisione pari a fino 100 nanosecondi. I nuovi tipi a tale scopo sono DBTYPE_DBTIME2 (OLE DB) e SQL_SS_TIME2 (ODBC).  
