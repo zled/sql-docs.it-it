@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6e4917b0e20c9046382e1ae7700388d758b08ab4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0915cda96047732894ec848c861e83319888d6d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148672"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formule nelle query del modello di report (Generatore report e SSRS)
   Le formule sono calcoli eseguiti su valori in un report che utilizzano un modello di report come origine dati. Una formula può includere funzioni, operatori, costanti e riferimenti a campi oppure entità. Le formule consentono di combinare, aggregare, filtrare e restituire dati sia numerici sia di testo. È possibile creare formule e salvarle come nuovi campi oppure modificare quelle esistenti.  
@@ -34,7 +34,7 @@ ms.locfileid: "36171375"
   
 -   6+12  
   
--   `SUM`(`IF`(**Completato merci Flag**, "Completato", "Completati"))  
+-   `SUM`(`IF`(**Terminato Flag beni**, "Completato", "Non terminato"))  
   
  Una volta definita una formula, è possibile vedere il risultato in Progettazione query.  
   

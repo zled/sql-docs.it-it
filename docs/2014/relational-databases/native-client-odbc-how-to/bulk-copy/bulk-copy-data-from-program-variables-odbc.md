@@ -1,13 +1,11 @@
 ---
-title: Copia bulk di dati dalle variabili di programma (ODBC) | Documenti Microsoft
+title: Copia bulk di dati dalle variabili di programma (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,22 +13,22 @@ helpviewer_keywords:
 - bulk copy [ODBC]
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9ef4b98997305cf1bd3232f51fd9d7ae0fb8a3b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0e76a57da680d224989b013db5a5121fa3e7c224
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170627"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420590"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Eseguire una copia bulk di dati da variabili di programma (ODBC)
   In questo esempio viene illustrato come utilizzare le funzioni che consentono di eseguire la copia bulk di dati dalle variabili di programma a SQL Server utilizzando `bcp_bind` e `bcp_sendrow`. Per semplificare questo esempio, è stato rimosso il codice per il controllo degli errori.  
   
  L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
- **Nota sulla sicurezza** quando possibile, utilizzare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle utilizzando [cryptoAPI Win32](http://go.microsoft.com/fwlink/?LinkId=9504).  
+ **Nota sulla sicurezza** quando possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle utilizzando [cryptoAPI Win32](http://go.microsoft.com/fwlink/?LinkId=9504).  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>Per utilizzare le funzioni di copia bulk direttamente sulle variabili di programma  
   
@@ -50,15 +48,15 @@ ms.locfileid: "36170627"
   
     -   Direzione della copia, ovvero DB_IN per indicare la copia dall'applicazione alla vista o alla tabella oppure DB_OUT per indicare la copia dalla tabella o dalla vista all'applicazione.  
   
-5.  Chiamare [bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per ogni colonna della copia bulk per associare la colonna a una variabile di programma.  
+5.  Chiamare [bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per ogni colonna della copia bulk da associare alla colonna a una variabile di programma.  
   
 6.  Compilare le variabili di programma con i dati e chiamare [bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) per inviare una riga di dati.  
   
-7.  Dopo che sono state inviate diverse righe, chiamare [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) checkpoint delle righe già inviate. È consigliabile chiamare [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) almeno una volta ogni 1000 righe.  
+7.  Dopo che sono state inviate diverse righe, chiamare [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) checkpoint delle righe già inviate. È buona norma chiamare [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) almeno una volta ogni 1000 righe.  
   
 8.  Dopo che tutte le righe sono state inviate, chiamare [bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) per completare l'operazione.  
   
- È possibile variare il percorso e la lunghezza delle variabili di programma durante un'operazione di copia bulk chiamando [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) e [bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Uso [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) impostare varie opzioni di copia bulk. Uso [bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) inviare `text`, `ntext`, e `image` dati in segmenti al server.  
+ È possibile variare il percorso e lunghezza delle variabili di programma durante un'operazione di copia bulk chiamando [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) e [bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Uso [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) per impostare varie opzioni di copia bulk. Uso [bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) inviare `text`, `ntext`, e `image` i dati in segmenti al server.  
   
 ## <a name="example"></a>Esempio  
  Questo esempio non è supportato in IA64.  
@@ -306,7 +304,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Copia bulk con procedure di SQL Server ODBC Driver &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Copia di massa dei con le procedure SQL Server ODBC Driver &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Copia bulk da variabili di programma](../../native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   

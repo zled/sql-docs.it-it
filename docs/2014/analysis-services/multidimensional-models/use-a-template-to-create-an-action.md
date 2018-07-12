@@ -1,5 +1,5 @@
 ---
-title: Utilizzare un modello per creare un'azione | Documenti Microsoft
+title: Usare un modello per creare un'azione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad0917d6-349a-4923-97be-83c778424286
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0b608f3ffeb7836481adb23fc316d3dce63bd3bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c1f322ee3d775605a0c9636c5da060044d35006
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259567"
 ---
 # <a name="use-a-template-to-create-an-action"></a>Utilizzare un modello per creare un'azione
   Nella vista **Azioni** di Progettazione cubi sono inclusi diversi modelli usabili per la creazione di azioni comuni. L'accesso a Progettazione cubi può essere effettuato da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
->  Una volta creata, l'azione diventerà disponibile agli utenti al termine dell'aggiornamento o della rielaborazione del cubo. Per altre informazioni, vedere [l'elaborazione di oggetti modello multidimensionale](processing-a-multidimensional-model-analysis-services.md).  
+>  Una volta creata, l'azione diventerà disponibile agli utenti al termine dell'aggiornamento o della rielaborazione del cubo. Per altre informazioni, vedere [elaborazione di oggetti modello multidimensionale](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-use-a-template-to-create-an-action"></a>Per utilizzare un modello per creare un'azione  
   
@@ -36,6 +36,6 @@ ms.locfileid: "36170465"
 -   Inserire le informazioni necessarie per completare la compilazione dell'azione in base al modello.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le azioni &#40;Analysis Services - dati multidimensionali&#41;](actions-analysis-services-multidimensional-data.md)  
+ [Azioni &#40;Analysis Services - dati multidimensionali&#41;](actions-analysis-services-multidimensional-data.md)  
   
   

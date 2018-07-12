@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - retrieving report data
 - datasets [Reporting Services], with DMX queries
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - queries [Reporting Services], data mining prediction
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1e9d492d5c01f4445a7f8ed79a9b386eaa5b5ad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7755e5026dc99e13f27de9619bb619e5f9e22db7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152242"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>Recuperare i dati da un modello di data mining (DMX) (SSRS)
   Per usare dati da un modello di data mining di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in un report, è necessario definire un'origine dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e uno o più set di dati del report. Quando si crea la definizione dell'origine dati, è necessario specificare una stringa di connessione e le credenziali, in modo da poter accedere all'origine dati dal computer client.  
@@ -68,11 +68,11 @@ ms.locfileid: "36171164"
   
 ### <a name="to-create-a-dataset-for-a-microsoft-sql-server-analysis-services"></a>Per creare un set di dati per un'origine dati di Microsoft SQL Server Analysis Services  
   
-1.  Nel **i dati del Report** riquadro destro del mouse sul nome dell'origine dati che si connette a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] origine dati e quindi fare clic su **Aggiungi set di dati**.  
+1.  Nel **dati Report** riquadro, fare doppio clic il nome dell'origine dati che si connette a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] origine dati e quindi fare clic su **Aggiungi set di dati**.  
   
 2.  Nella finestra di dialogo **Proprietà set di dati** digitare un nome nella casella di testo **Nome** .  
   
-3.  Nel **finestra di origine dati**, verificare che il nome è il nome di un'origine dati che si connette a un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] origine dati.  
+3.  Nel **finestra di origine dati**, verificare che il nome è il nome di un'origine dati che si connette a un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] zdroj dat.  
   
 4.  Fare clic su **Progettazione query** per aprire la finestra Progettazione query con interfaccia grafica e creare una query in modo interattivo. Se la finestra si apre in modalità MDX, fare clic su **Tipo di comando DMX** (![Passa alla visualizzazione linguaggio query DMX](../media/rsqdicon-commandtypedmx.gif "Passa alla visualizzazione linguaggio query DMX")) sulla barra degli strumenti per passare alla finestra Progettazione query relativa alla funzionalità di data mining. Per altre informazioni, vedere [Interfaccia utente di Progettazione query DMX di Analysis Services](analysis-services-dmx-query-designer-user-interface.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36171164"
      Il set di dati e la relativa raccolta di campi verranno visualizzati nel riquadro dei dati del report sotto il nodo dell'origine dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipo di connessione di Analysis Services per DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Tipo di connessione Analysis Services per DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

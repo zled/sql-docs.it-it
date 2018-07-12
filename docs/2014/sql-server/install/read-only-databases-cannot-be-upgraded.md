@@ -1,5 +1,5 @@
 ---
-title: Non è possibile aggiornare i database di sola lettura | Documenti Microsoft
+title: Non è possibile aggiornare i database di sola lettura | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database cannot be upgraded
 ms.assetid: 27964211-ea30-4390-b791-dcf225fb9ae7
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 11f94ceed205d8984ed5a253e1d989211012f10f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8ce09bf818efcedca3fdfce7f138219236a254f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183828"
 ---
 # <a name="read-only-databases-cannot-be-upgraded"></a>Non è possibile aggiornare database di sola lettura
   Alcuni database di questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non possono essere aggiornati.  
@@ -33,7 +33,7 @@ ms.locfileid: "36170967"
  È stato rilevato un database di sola lettura. Per aggiornare il database, è necessario che sia accessibile in scrittura dal programma di installazione.  
   
 ## <a name="corrective-action"></a>Azione correttiva  
- Quando non viene utilizzato il database, utilizzare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], o l'istruzione ALTER DATABASE per modificare il database in lettura / scrittura. Per impostare il database in lettura/scrittura, utilizzare l'istruzione seguente.  
+ Quando non venga utilizzato il database, usare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], oppure l'istruzione ALTER DATABASE per modificare il database in lettura / scrittura. Per impostare il database in lettura/scrittura, utilizzare l'istruzione seguente.  
   
 ```  
 USE master;  
@@ -47,6 +47,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;nuovo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

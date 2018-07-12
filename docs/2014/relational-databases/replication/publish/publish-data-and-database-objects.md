@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined types [SQL Server replication]
 - articles [SQL Server replication], dropping
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 caps.latest.revision: 83
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dfce55b3732c2e6715ad84e079c7c0707a243929
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a7513569ed762aaad446b726ce1a6ac58ac5a59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154082"
 ---
 # <a name="publish-data-and-database-objects"></a>Pubblicazione di dati e oggetti di database
   Quando si crea una pubblicazione, è possibile scegliere le tabelle e gli altri oggetti di database che si desidera pubblicare. Tramite la replica è possibile pubblicare gli oggetti di database elencati di seguito.  
@@ -188,7 +188,7 @@ ms.locfileid: "36171203"
   
 -   I valori predefiniti associati creati con [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) non vengono replicati. I valori predefiniti associati sono deprecati e sono stati sostituiti dai valori predefiniti creati con la parola chiave DEFAULT di ALTER TABLE o CREATE TABLE.  
   
--   Le funzioni contenenti l'hint `NOEXPAND` su viste indicizzate non possono essere pubblicate nella stessa pubblicazione delle tabelle con riferimenti e viste indicizzate a causa dell'ordine in cui sono consegnate dall'agente di distribuzione. Per risolvere questo problema, collocare la creazione di tabella e vista indicizzata in una prima pubblicazione, e aggiungere funzioni contenenti l'hint `NOEXPAND` sulle viste indicizzate di una seconda pubblicazione, che sarà pubblicata dopo il completamento della prima. In alternativa, creare script per queste funzioni e consegnare lo script utilizzando il *@post_snapshot_script* parametro di `sp_addpublication`.  
+-   Le funzioni contenenti l'hint `NOEXPAND` su viste indicizzate non possono essere pubblicate nella stessa pubblicazione delle tabelle con riferimenti e viste indicizzate a causa dell'ordine in cui sono consegnate dall'agente di distribuzione. Per risolvere questo problema, collocare la creazione di tabella e vista indicizzata in una prima pubblicazione, e aggiungere funzioni contenenti l'hint `NOEXPAND` sulle viste indicizzate di una seconda pubblicazione, che sarà pubblicata dopo il completamento della prima. In alternativa, creare script per queste funzioni e consegnare lo script usando il *@post_snapshot_script* parametro `sp_addpublication`.  
   
 ### <a name="schemas-and-object-ownership"></a>Schemi e proprietà degli oggetti  
  In relazione agli schemi e alla proprietà degli oggetti, la replica ha il seguente comportamento predefinito nella Creazione guidata nuova pubblicazione:  

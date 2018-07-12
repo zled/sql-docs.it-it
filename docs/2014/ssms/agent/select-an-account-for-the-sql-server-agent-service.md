@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
 - SQL Server Agent, accounts
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - security [SQL Server], SQL Server Agent
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab05d53c3c9f989252ab248305f000033ff54ccf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d82cf9589289c9646950174081a19f3449accb46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210481"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selezionare un account per il servizio SQL Server Agent
   L'account di avvio del servizio definisce l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, nonché le relative autorizzazioni di rete. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene eseguito con un account utente specificato. Selezionare un account per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in cui è possibile scegliere tra le opzioni seguenti:  
@@ -82,7 +82,7 @@ ms.locfileid: "36170930"
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Account di dominio di Windows (membro del gruppo Administrators di Windows)|Supportato|Supportato|Supportato|  
 |Account di dominio di Windows (non amministrativo)|Supportato<sup>1</sup>|Supportato<sup>1</sup>|Supportato<sup>1</sup>|  
-|Account Servizio di rete (NT AUTHORITY\NetworkService)|Supportato<sup>1, 3 e 4</sup>|Non supportato|Non supportato|  
+|Account Servizio di rete (NT AUTHORITY\NetworkService)|Supportato<sup>1, 3, 4</sup>|Non supportato|Non supportato|  
 |Account Utente locale (non amministrativo)|Supportato<sup>1</sup>|Non supportato|Non applicabile|  
 |Account Sistema locale (NT AUTHORITY\System)|Supportato<sup>2</sup>|Non supportato|Supportato<sup>2</sup>|  
 |Account Servizio locale (NT AUTHORITY\NetworkService)|Non supportato|Non supportato|Non supportato|  

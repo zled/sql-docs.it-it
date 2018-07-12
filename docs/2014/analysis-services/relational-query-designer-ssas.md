@@ -1,5 +1,5 @@
 ---
-title: Progettazione Query relazionale (SSAS) | Documenti Microsoft
+title: Progettazione Query relazionale (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.relquerydesginer.f1
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 301653a9279cec3690ea0451fe96771342bec030
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 386ac327689aa74028d28dc688dee28257568cae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170005"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259657"
 ---
 # <a name="relational-query-designer-ssas"></a>Progettazione query relazionale (SSAS)
   Progettazione query relazionale consente di creare una query che specifica i dati da recuperare dai database relazionali di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] e da [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]. Utilizzare Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo la query e visualizzarne i risultati.  Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
@@ -126,7 +126,7 @@ ms.locfileid: "36170005"
 -   **Rilevamento automatico** Attiva e disattiva la funzionalità di rilevamento automatico che crea automaticamente le relazioni tra tabelle. Se il rilevamento automatico è abilitato, Progettazione query crea relazioni dalle chiavi esterne delle tabelle. In caso contrario, è necessario creare le relazioni manualmente. Quando si selezionano tabelle nel riquadro **Vista di database** , la funzione di rilevamento automatico tenta di creare relazioni. Se si abilita il rilevamento automatico dopo avere creato manualmente join, tali join verranno rimossi.  
   
     > [!IMPORTANT]  
-    >  Quando si utilizza con [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] i metadati necessari a creare join non sono stato specificato e le relazioni non possono essere rilevate automaticamente. Se la query recupera dati da [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], è necessario creare tutti i join della tabella manualmente.  
+    >  Quando si usa con [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] i metadati necessari a creare join non sia disponibile e le relazioni non possono essere rilevate automaticamente. Se la query recupera dati da [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], è necessario creare tutti i join della tabella manualmente.  
   
 -   **Aggiungi relazione** Aggiunge una relazione all'elenco **Relazione** .  
   
@@ -150,7 +150,7 @@ ms.locfileid: "36170005"
   
 -   **Tabella a sinistra** Visualizza il nome della prima tabella che fa parte di una relazione di join.  
   
--   **Tipo di join** Visualizza il tipo di istruzione SQL JOIN usata nella query generata automaticamente. Per impostazione predefinita, se viene rilevato un vincolo di chiave esterna, viene utilizzato INNER JOIN. Altri tipi di join possono essere LEFT JOIN o RIGHT JOIN. Se nessuno di questi tipi di join è applicabile, nella colonna **Tipo di join** viene visualizzato **Nessuna relazione**. Non vengono creati join CROSS JOIN per le tabelle non correlate. È invece necessario creare manualmente relazioni mediante la creazione di un join delle colonne presenti nelle tabelle a sinistra e a destra. Per ulteriori informazioni sui tipi di join, vedere "Nozioni fondamentali sui JOIN" nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione Online di](http://go.microsoft.com/fwlink/?LinkId=141687) sul sito msdn.microsoft.com.  
+-   **Tipo di join** Visualizza il tipo di istruzione SQL JOIN usata nella query generata automaticamente. Per impostazione predefinita, se viene rilevato un vincolo di chiave esterna, viene utilizzato INNER JOIN. Altri tipi di join possono essere LEFT JOIN o RIGHT JOIN. Se nessuno di questi tipi di join è applicabile, nella colonna **Tipo di join** viene visualizzato **Nessuna relazione**. Non vengono creati join CROSS JOIN per le tabelle non correlate. È invece necessario creare manualmente relazioni mediante la creazione di un join delle colonne presenti nelle tabelle a sinistra e a destra. Per altre informazioni sui tipi di join, vedere "Nozioni fondamentali sui JOIN" nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione Online di](http://go.microsoft.com/fwlink/?LinkId=141687) sul sito msdn.microsoft.com...  
   
 -   **Tabella a destra** Visualizza il nome della seconda tabella nella relazione di join.  
   
@@ -251,7 +251,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Fare clic sul pulsante **Esegui** (**!**). Nella tabella seguente fornisce un esempio di `uspGetWhereUsedProductID` parametri per i quali vengono forniti valori nella **Definisci parametro Query** finestra di dialogo.  
+ Fare clic sul pulsante **Esegui** (**!**). Nella tabella seguente fornisce un esempio di `uspGetWhereUsedProductID` parametri per i quali vengono forniti valori nella **Definisci parametri Query** nella finestra di dialogo.  
   
 |||  
 |-|-|  

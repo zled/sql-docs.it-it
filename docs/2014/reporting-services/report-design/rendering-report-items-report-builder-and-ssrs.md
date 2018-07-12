@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 66738f617a6b882e1b72c526fb66aad5f438f969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c4b2c799771c6ff5e87100e4906411b4a8a613bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240401"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendering degli elementi del report (Generatore report e SSRS)
   Il numero, le dimensioni e la posizione degli elementi del report influiscono sulla modalità di paginazione del corpo del report da parte dei renderer. Di seguito è riportata una descrizione della modalità di rendering dei vari elementi del report.  
@@ -81,13 +81,13 @@ ms.locfileid: "36170520"
   
 -   Intestazioni di colonna e intestazioni di riga ripetute.  
   
-     Le intestazioni hanno la precedenza rispetto ai piè di pagina. I gruppi ripetuti interni hanno la priorità rispetto ai gruppi esterni. Gli elementi con il `RepeatWith` viene impostata che si trovano più vicino all'area dati di destinazione hanno la priorità rispetto agli elementi che sono più lontano rispetto all'area dati.  
+     Le intestazioni hanno la precedenza rispetto ai piè di pagina. I gruppi ripetuti interni hanno la priorità rispetto ai gruppi esterni. Gli elementi con il `RepeatWith` proprietà impostata che si trovano più vicino all'area dati di destinazione hanno priorità rispetto agli elementi più lontani dall'area dati.  
   
--   Elementi di report di piccole dimensioni, ad esempio caselle di testo o rettangoli, con una proprietà KeepTogether esplicita impostata su `true`.  
+-   Elementi di report di piccole dimensioni, ad esempio caselle di testo o rettangoli, con la proprietà KeepTogether esplicita impostata su `true`.  
   
--   Gli elementi di report di grandi dimensioni, ad esempio sottoreport o un membro tablix non più interno, con una proprietà KeepTogether esplicita impostata su `true`.  
+-   Elementi di report di grandi dimensioni, ad esempio sottoreport o un membro tablix non più interno, con la proprietà KeepTogether esplicita impostata su `true`.  
   
--   Aree dati Tablix con una proprietà KeepTogether esplicita impostata su `true`.  
+-   Aree dati Tablix con la proprietà KeepTogether esplicita impostata su `true`.  
   
 ### <a name="subreports"></a>Sottoreport  
  Un sottoreport viene visualizzato come un rettangolo che contiene un altro report definito in un file rdl di report separato. Il file del sottoreport deve essere pubblicato in un server di report prima che il report padre possa accedervi.  
@@ -111,7 +111,7 @@ ms.locfileid: "36170520"
 ## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il Rendering di Report differenti &#40;SSRS e Generatore Report&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

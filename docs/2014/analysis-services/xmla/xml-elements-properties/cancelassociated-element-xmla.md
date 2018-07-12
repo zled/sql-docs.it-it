@@ -1,5 +1,5 @@
 ---
-title: Elemento CancelAssociated (XMLA) | Documenti Microsoft
+title: Elemento CancelAssociated (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CancelAssociated element
 ms.assetid: fd890440-d1a7-4c05-9e81-c81e6b8c274c
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1e747815b30daf86edff4ad976d6fb5370bf9c3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 66a866a9f00a745e24fe2c83a4fce31ac67b2f34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159232"
 ---
 # <a name="cancelassociated-element-xmla"></a>Elemento CancelAssociated (XMLA)
   Indica se l'elemento [Cancel](../xml-elements-commands/cancel-element-xmla.md) padre deve annullare tutti i comandi associati.  
@@ -63,8 +63,8 @@ ms.locfileid: "36170639"
 |Elementi padre|[Annulla](../xml-elements-commands/cancel-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Se questo elemento viene specificato e impostato su `True`, ogni connessione corrispondente, sessione e comando identificati nel padre `Cancel` comando viene annullato.  
+## <a name="remarks"></a>Note  
+ Se questo elemento viene specificato e impostato su `True`, ogni connessione corrispondente, sessione e comando identificati nel padre `Cancel` viene annullato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento ConnectionID &#40;XMLA&#41;](id-element-xmla.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server event classes
 ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0afc75d01e181c4b91e19e38a446d925299b7651
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: aea5b9aaed8d44162fb9f63474751de47a81e2bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154592"
 ---
 # <a name="sql-server-event-class-reference"></a>Guida di riferimento alla classe di evento SQL Server
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente di registrare gli eventi nel momento in cui vengono generati in un'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Gli eventi registrati corrispondono a istanze delle classi di evento nella definizione della traccia. In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]le classi di evento e le rispettive categorie di eventi sono disponibili nella scheda **Selezione eventi** della finestra di dialogo **Proprietà file di traccia** .  
@@ -41,7 +41,7 @@ ms.locfileid: "36170632"
 |Nella [categoria di eventi CLR](clr-event-category.md) sono incluse classi di evento generate dall'esecuzione di oggetti CLR (Common Language Runtime) di .NET.|[Classe di evento Assembly Load](../../database-engine/assembly-load-event-class.md)|  
 |Nella [categoria di eventi Database](database-event-category.md) sono incluse classi di evento generate dall'aumento o dalla riduzione automatica delle dimensioni dei file di dati o di log.|[Classe di evento Data File Auto Grow](data-file-auto-grow-event-class.md)<br /><br /> [Classe di evento Data File Auto Shrink](data-file-auto-shrink-event-class.md)<br /><br /> [Classe di evento Database Mirroring State Change](database-mirroring-state-change-event-class.md)<br /><br /> [Classe di evento Log File Auto Grow](log-file-auto-grow-event-class.md)<br /><br /> [Classe di evento Log File Auto Shrink](log-file-auto-shrink-event-class.md)|  
 |Nella [categoria di eventi Deprecation](deprecation-event-category.md) sono inclusi eventi relativi a elementi deprecati.|[Classe di evento Deprecation Announcement](deprecation-announcement-event-class.md)<br /><br /> [Classe di evento Deprecation Final Support](deprecation-final-support-event-class.md)|  
-|Il [categoria errori e avvisi evento &#40;motore di Database&#41; ](errors-and-warnings-event-category-database-engine.md) include le classi di evento vengono generate quando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Classe di evento Attention](attention-event-class.md)<br /><br /> [Classe di evento Background Job Error](background-job-error-event-class.md)<br /><br /> [Classe di evento Blocked Process Report](blocked-process-report-event-class.md)<br /><br /> [Classe di evento CPU Threshold Exceeded](cpu-threshold-exceeded-event-class.md)<br /><br /> [Classe di evento ErrorLog](errorlog-event-class.md)<br /><br /> [Classe di evento EventLog](eventlog-event-class.md)<br /><br /> [Classe di evento Exception](exception-event-class.md)<br /><br /> [Classe di evento Exchange Spill](exchange-spill-event-class.md)<br /><br /> [Classe di evento Execution Warnings](execution-warnings-event-class.md)<br /><br /> [Classe di evento Hash Warning](hash-warning-event-class.md)<br /><br /> [Classe di evento Missing Column Statistics](missing-column-statistics-event-class.md)<br /><br /> [Classe di evento Missing Join Predicate](missing-join-predicate-event-class.md)<br /><br /> [Classe di evento Sort Warnings](sort-warnings-event-class.md)<br /><br /> [Classe di evento User Error Message](user-error-message-event-class.md)|  
+|Il [categoria errori e avvisi evento &#40;motore di Database&#41; ](errors-and-warnings-event-category-database-engine.md) incluse classi di evento che vengono generate quando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Classe di evento Attention](attention-event-class.md)<br /><br /> [Classe di evento Background Job Error](background-job-error-event-class.md)<br /><br /> [Classe di evento Blocked Process Report](blocked-process-report-event-class.md)<br /><br /> [Classe di evento CPU Threshold Exceeded](cpu-threshold-exceeded-event-class.md)<br /><br /> [Classe di evento ErrorLog](errorlog-event-class.md)<br /><br /> [Classe di evento EventLog](eventlog-event-class.md)<br /><br /> [Classe di evento Exception](exception-event-class.md)<br /><br /> [Classe di evento Exchange Spill](exchange-spill-event-class.md)<br /><br /> [Classe di evento Execution Warnings](execution-warnings-event-class.md)<br /><br /> [Classe di evento Hash Warning](hash-warning-event-class.md)<br /><br /> [Classe di evento Missing Column Statistics](missing-column-statistics-event-class.md)<br /><br /> [Classe di evento Missing Join Predicate](missing-join-predicate-event-class.md)<br /><br /> [Classe di evento Sort Warnings](sort-warnings-event-class.md)<br /><br /> [Classe di evento User Error Message](user-error-message-event-class.md)|  
 |Nella [categoria di eventi Full Text](full-text-event-category.md) sono incluse classi di evento generate dall'avvio, dalla sospensione o dall'arresto di ricerche full-text.|[Classe di evento FT:Crawl Aborted](ft-crawl-aborted-event-class.md)<br /><br /> [Classe di evento FT:Crawl Started](ft-crawl-started-event-class.md)<br /><br /> [Classe di evento FT:Crawl Stopped](ft-crawl-stopped-event-class.md)|  
 |Nella [categoria di eventi Blocchi](locks-event-category.md) sono incluse classi di evento generate per l'acquisizione, l'annullamento o il rilascio di un blocco oppure quando vengono eseguite altre operazioni su un blocco.|[Classe di evento Deadlock Graph](deadlock-graph-event-class.md)<br /><br /> [Classe Lock:Acquired Event](lock-acquired-event-class.md)<br /><br /> [Classe di evento Lock:Cancel](lock-cancel-event-class.md)<br /><br /> [Classe di evento Lock:Deadlock Chain](lock-deadlock-chain-event-class.md)<br /><br /> [Classe di evento Lock:Deadlock](lock-deadlock-event-class.md)<br /><br /> [Classe di evento Lock:Escalation](lock-escalation-event-class.md)<br /><br /> [Classe di evento Lock:Released](lock-released-event-class.md)<br /><br /> [Classe di evento Lock:Timeout &#40;timeout &#62; 0&#41;](lock-timeout-timeout-0-event-class.md)<br /><br /> [Classe di evento Lock:Timeout](lock-timeout-event-class.md)|  
 |Nella [categoria di eventi Objects](objects-event-category.md) sono incluse classi di evento generate dalla creazione, dall'apertura, dalla chiusura, dalla rimozione o dall'eliminazione di oggetti di database.|[Classe di evento Auto Stats](auto-stats-event-class.md)<br /><br /> [Classe di evento Object:Altered](object-altered-event-class.md)<br /><br /> [Classe di evento Object:Created](object-created-event-class.md)<br /><br /> [Classe di evento Object:Deleted](object-deleted-event-class.md)|  

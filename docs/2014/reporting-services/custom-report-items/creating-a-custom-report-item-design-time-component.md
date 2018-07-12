@@ -14,15 +14,15 @@ helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14ff967c6b21fbf4438db3c44d28eb86e9738281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 996e70b70e2cf253212baae972dd6caa6acdf7c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149272"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione
   Un componente dell'elemento del report personalizzato per la fase di progettazione è un controllo che può essere utilizzato nell'ambiente Progettazione report di Visual Studio. Il componente dell'elemento del report personalizzato per la fase di progettazione fornisce un'area di progettazione attivata in grado di accettare operazioni di trascinamento della selezione, integrazione con il Visualizzatore proprietà di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e la possibilità di fornire editor di proprietà personalizzati.  
@@ -189,7 +189,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Utilizzo delle aree di controllo  
- Le classi di un elemento del report personalizzato possono anche implementare una classe `Microsoft.ReportDesigner.Design.Adornment`. Un'area di controllo consente al controllo dell'elemento del report personalizzato di fornire aree esterne al rettangolo principale dell'area di progettazione. Tali aree possono gestire eventi dell'interfaccia utente, quali clic del mouse e operazioni di trascinamento della selezione. Il `Adornment` classe definita in cui la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` dello spazio dei nomi è un'implementazione pass-through del <xref:System.Windows.Forms.Design.Behavior.Adorner> classe trovata in Windows Form. Per informazioni complete sul `Adorner` classe, vedere [Cenni preliminari sul servizio comportamento](http://go.microsoft.com/fwlink/?LinkId=116673) in MSDN library. Per il codice di esempio che implementa un `Microsoft.ReportDesigner.Design.Adornment` classe, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Le classi di un elemento del report personalizzato possono anche implementare una classe `Microsoft.ReportDesigner.Design.Adornment`. Un'area di controllo consente al controllo dell'elemento del report personalizzato di fornire aree esterne al rettangolo principale dell'area di progettazione. Tali aree possono gestire eventi dell'interfaccia utente, quali clic del mouse e operazioni di trascinamento della selezione. Il `Adornment` definito nella classe la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` dello spazio dei nomi è un'implementazione pass-through del <xref:System.Windows.Forms.Design.Behavior.Adorner> trovare la classe in Windows Form. Per informazioni complete sulla `Adorner` classe, vedere [BehaviorService](http://go.microsoft.com/fwlink/?LinkId=116673) in MSDN library. Per esempi di codice che implementa una `Microsoft.ReportDesigner.Design.Adornment` classe, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Per ulteriori informazioni sulla programmazione e sull'utilizzo di Windows Form in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vedere i seguenti argomenti in MSDN Library:  
   

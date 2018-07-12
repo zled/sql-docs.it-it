@@ -1,5 +1,5 @@
 ---
-title: Installare SQL Server 2014 tramite SysPrep | Documenti Microsoft
+title: Installare SQL Server 2014 tramite SysPrep | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2534337a9b1d4d244ade4f76c9bb08b6af1c573a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7be73952adef9269f9cf3811c8c4aa6fe3696403
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239751"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Installare SQL Server 2014 tramite SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le azioni di installazione correlate a SysPrep sono accessibili tramite Centro installazione. Nella pagina **Avanzate** di **Centro installazione** sono disponibili due opzioni: **Preparazione immagine di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e **Completamento immagine di un'istanza autonoma predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Nelle sezioni di [preparazione](#prepare) e [completamento](#complete) viene descritto in modo dettagliato il processo di installazione. Per altre informazioni, vedere [Considerazioni sull'installazione di SQL Server tramite SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
   
  È possibile inoltre preparare e completare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il prompt dei comandi o un file di configurazione. Per altre informazioni, vedere:  
   
--   [Installare SQL Server 2014 dal Prompt dei comandi](install-sql-server-from-the-command-prompt.md)  
+-   [Installazione di SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)  
   
--   [Installazione di SQL Server 2014 tramite un File di configurazione](install-sql-server-using-a-configuration-file.md)  
+-   [Installare SQL Server 2014 tramite un file di configurazione](install-sql-server-using-a-configuration-file.md)  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Prima di installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rivedere gli argomenti in [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
- Per ulteriori informazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edizioni e i requisiti hardware e software, vedere [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Per altre informazioni sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edizioni e i requisiti hardware e software, vedere [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 > [!IMPORTANT]  
 >  La funzionalità seguente non è supportata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep:  

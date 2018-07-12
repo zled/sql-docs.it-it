@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1f6eb37de996e8956468efb54fa74535e419f44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16ca3b28e9b19c0f7935f2938d054939f0cc57a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155392"
 ---
 # <a name="data-quality-services-concepts"></a>Concetti di Data Quality Services
   In questo argomento viene fornito un breve riepilogo dei concetti di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) nell'ambito della gestione delle informazioni, dei progetti Data Quality e dell'amministrazione della qualità dei dati.  
@@ -43,7 +43,7 @@ ms.locfileid: "36171090"
   
  È possibile utilizzare i dati di riferimento per convalidare, correggere e migliorare i dati, sfruttando i servizi di società che garantiscono la qualità dei dati di riferimento. È possibile utilizzare i servizi di Windows Azure MarketPlace per connettersi ai provider di dati di riferimento. In alternativa, è possibile utilizzare una connessione diretta a un provider. Per altre informazioni, vedere [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
- Per ulteriori informazioni sulla gestione Knowledge base in DQS, vedere [Knowledge Base e domini DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Per altre informazioni sulla gestione della Knowledge base in DQS, vedere [Knowledge Base e domini DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="Projects"></a> Concetti relativi ai progetti Data Quality  
  L'amministratore dei dati esegue le operazioni di qualità dei dati (pulizia e corrispondenza) utilizzando un progetto Data Quality nell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -89,9 +89,9 @@ ms.locfileid: "36171090"
   
  **Sicurezza relativa a DQS**  
   
- È possibile utilizzare i ruoli all'interno del meccanismo di sicurezza di SQL Server per proteggere DQS. Sono disponibili tre ruoli DQS tramite cui viene determinato il livello di accesso per un utente nell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cioè dqs_administrator, dqs_kb_editor e dqs_kb_operator. Non è possibile concedere ruoli agli utenti utilizzando l'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , bensì mediante SQL Server Management Studio. Per altre informazioni, vedere [DQS Security](../../2014/data-quality-services/dqs-security.md).  
+ È possibile utilizzare i ruoli all'interno del meccanismo di sicurezza di SQL Server per proteggere DQS. Sono disponibili tre ruoli DQS tramite cui viene determinato il livello di accesso per un utente nell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cioè dqs_administrator, dqs_kb_editor e dqs_kb_operator. Non è possibile concedere ruoli agli utenti utilizzando l'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , bensì mediante SQL Server Management Studio. Per altre informazioni, vedere [DQS sicurezza](../../2014/data-quality-services/dqs-security.md).  
   
- Per ulteriori informazioni sull'amministrazione DQS, vedere [amministrazione DQS](../../2014/data-quality-services/dqs-administration.md).  
+ Per altre informazioni sull'amministrazione DQS, vedere [amministrazione DQS](../../2014/data-quality-services/dqs-administration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Data Quality Services](../../2014/data-quality-services/data-quality-services.md)  

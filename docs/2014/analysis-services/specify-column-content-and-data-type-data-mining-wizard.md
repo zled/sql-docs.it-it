@@ -1,5 +1,5 @@
 ---
-title: Specificare il contenuto della colonna e il tipo di dati (Creazione guidata Data Mining) | Documenti Microsoft
+title: Specificare il contenuto della colonna e il tipo di dati (Data Mining Wizard) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8e0802d79913fe796fa636f79b6d728f3900885
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5203f517335ab3d346b5b303d4225a87e5be64ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183368"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>Impostazione tipo di contenuto e dati delle colonne (Creazione guidata modello di data mining)
   Usare la pagina **Impostazione tipo di contenuto e dati delle colonne** per specificare l'uso e il tipo di dati di ogni colonna selezionata nella pagina precedente della procedura guidata. Per ignorare la colonna, fare clic su **Indietro** per tornare alla pagina **Impostazione dati di training**e deselezionare tutte le caselle di controllo.  
@@ -31,7 +31,7 @@ ms.locfileid: "36170890"
  **Per altre informazioni:** [Strutture di data mining &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Colonne del modello di data mining](data-mining/mining-model-columns.md), [Creazione guidata modello di data mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) e [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
- **Struttura modello di data mining**  
+ **Struttura del modello di data mining**  
  Consente di visualizzare le colonne dalle viste e dalle tabelle nidificate selezionate nella pagina precedente della procedura guidata.  
   
  **Colonne**  
@@ -73,9 +73,9 @@ ms.locfileid: "36170890"
  Consente di analizzare un esempio di dati in tutte le colonne numeriche. Consente di sostituire i valori **Tipo di contenuto** con un tipo di contenuto consigliato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining della Guida F1 di procedura guidata &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [I dati della Guida F1 di procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Suggerisci colonne correlate &#40;Creazione guidata di Data Mining&#41;](suggest-related-columns-data-mining-wizard.md)   
  [Specificare i tipi di tabella &#40;Creazione guidata di Data Mining&#41;](specify-table-types-data-mining-wizard.md)   
- [Specificare il contenuto e tipo di dati della colonna &#40;Creazione guidata di Data Mining&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [Specificare il contenuto e il tipo di dati della colonna &#40;Creazione guidata di Data Mining&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

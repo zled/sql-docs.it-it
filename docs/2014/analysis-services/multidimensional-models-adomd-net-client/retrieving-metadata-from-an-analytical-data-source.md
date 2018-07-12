@@ -1,5 +1,5 @@
 ---
-title: Il recupero dei metadati da un'origine dati analitici | Documenti Microsoft
+title: Recupero di metadati da un'origine dati analitici | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3a49a4ddc8687cd2e0cfdd47e4025e9bc51eefe6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2beb806c4a76aa3ac6062f8e6ae0e44c007520ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151672"
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>Recupero di metadati da un'origine dati analitici
   I metadati sono particolarmente importanti per le applicazioni che recuperano e utilizzano dati analitici. Quando si recuperano dati da un'origine dati relazionale, la dimensionalità di tali dati è stimabile, anche con i set di dati nidificati. Sebbene la struttura dei set di risultati da un database relazionale sia in genere bidimensionale o scalare, i dati recuperati dalle origini dati analitici possono essere tuttavia di dimensioni variabili, organizzati in gerarchie con numerosi livelli potenziali.  
@@ -33,9 +33,9 @@ ms.locfileid: "36170910"
  **Il modello a oggetti**  
  Il modello a oggetti ADOMD.NET è in genere più semplice da utilizzare rispetto ai set di righe dello schema. Per la maggior parte degli scenari, per accedere ai metadati di vari oggetti di database è sufficiente utilizzare il modello a oggetti. ADOMD.NET espone il modello a oggetti tramite <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
- Per altre informazioni: [utilizzano il modello a oggetti ADOMD.NET](retrieving-metadata-working-with-adomd-net-object-model.md)  
+ Per altre informazioni: [funziona con il modello a oggetti ADOMD.NET](retrieving-metadata-working-with-adomd-net-object-model.md)  
   
- **Rowset schema**  
+ **Set di righe dello schema**  
  Un approccio completo, ma più complesso, per il recupero di metadati è costituito dai set di righe dello schema. Un set di righe dello schema è un set di righe OLE DB che incapsula la descrizione di tutti gli oggetti di un tipo specifico del database. Le informazioni sullo schema in un'origine dati analitici includono i database oppure i cataloghi disponibili dall'origine dati, i cubi e modelli di data mining in un database, i ruoli che esistono per i cubi nell'origine dati e così via. Tali metadati possono essere recuperati tramite il metodo <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.GetSchemaDataSet%2A>, passando un valore `GUID` oppure un nome XML for Analysis (XMLA).  
   
  Per altre informazioni: [Working with Schema Rowsets in ADOMD.NET](retrieving-metadata-working-with-schema-rowsets.md))  

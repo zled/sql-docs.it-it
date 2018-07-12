@@ -1,13 +1,11 @@
 ---
-title: Copia bulk di un Set di risultati SELECT (ODBC) | Documenti Microsoft
+title: Copia bulk di un Set di risultati SELECT (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d2163634fa84fc299a10c2bd608ec0da8e7aa87b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d537846035a35497404ec9a26557507b34d08a18
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169878"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428600"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Eseguire una copia bulk di un set di risultati SELECT (ODBC)
   Nell'esempio viene illustrato come utilizzare le funzioni di copia bulk per eseguire la copia bulk del set di risultati di un'istruzione SELECT. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
@@ -50,11 +48,11 @@ ms.locfileid: "36169878"
   
     -   Direzione della copia: DB_OUT.  
   
-5.  Chiamare [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), impostare eOption su BCPHINTS e inserire in iValue un puntatore a una matrice SQLTCHAR che contiene l'istruzione SELECT.  
+5.  Chiamare [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), impostare eOption su BCPHINTS e inserire in iValue un puntatore a una matrice SQLTCHAR contenente l'istruzione SELECT.  
   
 6.  Chiamare [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) per eseguire l'operazione di copia bulk.  
   
- Quando vengono seguiti questi passaggi, il file viene creato in formato nativo. È possibile convertire i valori dei dati per altri tipi di dati utilizzando [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Per altre informazioni, vedere [creare un File di formato di copia Bulk &#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md).  
+ Quando vengono seguiti questi passaggi, il file viene creato in formato nativo. È possibile convertire i valori dei dati per altri tipi di dati mediante [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Per altre informazioni, vedere [creare un File di formato di copia Bulk &#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md).  
   
 ## <a name="example"></a>Esempio  
  È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
@@ -168,6 +166,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Copia bulk con procedure di SQL Server ODBC Driver &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [Copia di massa dei con le procedure SQL Server ODBC Driver &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4847ac329b9cb7f3802fa0465f5fe93da19b588a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f77cb6ae0912bb5885cfc61aeb729a6eea25f833
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277977"
 ---
 # <a name="set-warning-thresholds"></a>Imposta valori soglia avvisi
   Usare questa finestra di dialogo per abilitare e configurare una o più soglie degli avvisi per il database selezionato nell'albero di navigazione della finestra di dialogo **Monitoraggio mirroring del database** .  
@@ -87,7 +86,7 @@ ms.locfileid: "36169968"
  **OK**  
  Se si fa clic su **OK** , questa finestra di dialogo viene chiusa e vengono visualizzati i valori attualmente specificati per le soglie degli avvisi nella griglia **Valori di soglia** della pagina a schede **Avvisi**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Una soglia è applicabile solo a un partner per volta, ma è consigliabile impostare una soglia per un determinato evento su entrambi i partner per assicurare che l'avviso venga mantenuto in caso di failover del database. La soglia appropriata per ogni partner dipende dalle capacità in termini di prestazioni del sistema di tale partner.  
   
  Un evento viene scritto nel log eventi per una prestazione solo se il relativo valore è uguale o superiore alla relativa soglia quando la tabella dello stato è in fase di aggiornamento. Se un valore di picco raggiunge la soglia solo temporaneamente tra gli aggiornamenti di stato, tale picco non viene segnalato.  

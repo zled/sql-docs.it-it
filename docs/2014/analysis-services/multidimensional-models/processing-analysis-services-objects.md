@@ -1,5 +1,5 @@
 ---
-title: L'elaborazione di Analysis Services oggetti | Documenti Microsoft
+title: Elaborazione di Analysis Services oggetti | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
 - OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45fc3c5f6ba3effb69518987256b052f5225cd25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 765db574f9db0a4e81dbdbfc4a154e1ccad01491
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210161"
 ---
 # <a name="processing-analysis-services-objects"></a>Elaborazione di oggetti di Analysis Services
   L'elaborazione interessa i tipi di oggetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seguenti: database, cubi, dimensioni, gruppi di misure, partizioni e strutture e modelli di data mining di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per ogni tipo di oggetto è possibile specificare il livello di elaborazione o impostare l'opzione Elaborazione predefinita in modo che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] selezioni automaticamente il livello di elaborazione ottimale. Per altre informazioni sui diversi livelli di elaborazione per ogni oggetto, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
@@ -76,7 +76,7 @@ ms.locfileid: "36170919"
   
  Tramite l'elaborazione delle dimensioni non è possibile creare o aggiornare i membri calcolati definiti a livello di cubo. I membri calcolati sono interessati quando viene aggiornata la definizione del cubo. Inoltre, tramite l'elaborazione delle dimensioni non è possibile creare né aggiornare le aggregazioni, tuttavia è possibile che l'elaborazione delle dimensioni provochi l'eliminazione delle aggregazioni. Le aggregazioni vengono create o aggiornate solo durante l'elaborazione delle partizioni.  
   
- Quando si elabora una dimensione, è importante tenere presente che la dimensione potrebbe essere utilizzata in più cubi. Durante l'elaborazione della dimensione tali cubi vengono contrassegnati come non elaborati e diventano non disponibili per le query. Per elaborare contemporaneamente sia la dimensione che i cubi correlati, è necessario utilizzare le impostazioni di elaborazione batch. Per altre informazioni, vedere [Batch Processing &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
+ Quando si elabora una dimensione, è importante tenere presente che la dimensione potrebbe essere utilizzata in più cubi. Durante l'elaborazione della dimensione tali cubi vengono contrassegnati come non elaborati e diventano non disponibili per le query. Per elaborare contemporaneamente sia la dimensione che i cubi correlati, è necessario utilizzare le impostazioni di elaborazione batch. Per altre informazioni, vedere [Elaborazione batch &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
   
 ##  <a name="bkmk_procmeasure"></a> Elaborazione di un gruppo di misure  
  Quando si elabora un gruppo di misure, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elabora alcune o tutte le partizioni del gruppo all'interno del gruppo di misure e tutte le dimensioni non elaborate che fanno parte del gruppo di misure. Il tipo di elaborazione varia a seconda dell'opzione di elaborazione selezionata. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile elaborare uno o più gruppi di misure senza influire sugli altri gruppi di misure di un cubo.  
@@ -97,7 +97,7 @@ ms.locfileid: "36170919"
  Per altre informazioni sull'elaborazione di strutture e modelli di data mining, vedere [Requisiti e considerazioni sull'elaborazione &#40;Data mining&#41;](../data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti e approcci per l'elaborazione &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [Strumenti e approcci per l'elaborazione di &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
  [Elaborazione batch &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Elaborazione degli oggetti modello multidimensionale](processing-a-multidimensional-model-analysis-services.md)  
   

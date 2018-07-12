@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6b9737311798edfe7f65ea74d03d7a941a145ef4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d7a43e9ff408c185abf91a4ef71e7ccc734a3cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278817"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promuovere i valori XML di uso frequente mediante colonne calcolate
   Se le query vengono eseguite principalmente su un piccolo numero di valori di attributi e di elementi, sarà possibile promuovere tali quantità al livello di colonne relazionali. Ciò risulta utile quando le query vengono eseguite su una piccola parte dei dati XML mentre viene recuperata l'intera istanza XML. Non è necessario creare un indice XML sulla colonna XML, ma è possibile indicizzare la colonna promossa. Le query devono essere scritte in modo da utilizzare la colonna promossa, poiché il Query Optimizer non reindirizza alla colonna promossa le query eseguite sulla colonna XML.  
@@ -30,7 +30,7 @@ ms.locfileid: "36170982"
  La colonna promossa può essere una colonna calcolata nella stessa tabella oppure una colonna separata e gestita dall'utente in un'altra tabella. Ciò è sufficiente quando i valori singleton vengono promossi da ogni istanza XML. Per le proprietà multivalore, invece, è necessario creare una tabella separata per la proprietà, come illustrato nella sezione seguente.  
   
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Colonna calcolata basata sul tipo di dati xml  
- Una colonna calcolata può essere creata tramite una funzione definita dall'utente che richiama `xml` metodi con tipo di dati. Il tipo della colonna calcolata può essere qualsiasi tipo SQL, incluso il tipo XML, come illustrato nell'esempio seguente.  
+ Una colonna calcolata può essere creata utilizzando una funzione definita dall'utente che richiama `xml` metodi con tipo di dati. Il tipo della colonna calcolata può essere qualsiasi tipo SQL, incluso il tipo XML, come illustrato nell'esempio seguente.  
   
 ### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Esempio: colonna calcolata basata su un metodo per il tipo di dati xml  
  Creare la funzione definita dall'utente per il codice ISBN di un libro:  
@@ -82,7 +82,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   Creare trigger sulla colonna XML per eseguire operazioni di manutenzione delle tabelle di proprietà. Nell'ambito dei trigger, eseguire una delle operazioni seguenti:  
   
-    -   Uso `xml` del tipo di dati metodi, ad esempio **Nodes ()** e **Value ()**, per inserire ed eliminare le righe delle tabelle di proprietà.  
+    -   Uso `xml` tipo di dati, i metodi, ad esempio **Nodes ()** e **Value ()**, per inserire ed eliminare le righe delle tabelle di proprietà.  
   
     -   Creare funzioni di flusso con valori di tabella in Common Language Runtime (CLR) per inserire ed eliminare righe nelle tabelle di proprietà.  
   

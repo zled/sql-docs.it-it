@@ -1,27 +1,26 @@
 ---
-title: Nuovo elenco di proprietà di ricerca | Documenti Microsoft
+title: Nuovo elenco di proprietà di ricerca | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.newsearchpropertylist.f1
 ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b9d37bad141f61ceadafc03d883f36f422965996
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3019133dd0fa326a1595f2815698e10eb9586427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159304"
 ---
 # <a name="new-search-property-list"></a>Nuovo elenco di proprietà di ricerca
   Utilizzare questa finestra di dialogo per creare un elenco di proprietà di ricerca.  
@@ -49,10 +48,10 @@ ms.locfileid: "36170407"
  Selezionare il nome di un elenco di proprietà di ricerca esistente tra quelli che appartengono al database selezionato.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Vedere [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
+ Visualizzare [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>Per utilizzare SQL Server Management Studio per gestire gli elenchi di proprietà di ricerca  
- Per informazioni su come creare, visualizzare, modificare o eliminare un elenco di proprietà di ricerca e su come configurare un indice full-text per la ricerca di proprietà, vedere [le proprietà di documento di ricerca con elenchi di proprietà di ricerca](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Per informazioni su come creare, visualizzare, modificare o eliminare un elenco di proprietà di ricerca e su come configurare un indice full-text per la ricerca di proprietà, vedere [proprietà del documento di ricerca con elenchi delle proprietà di ricerca](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   
