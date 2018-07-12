@@ -1,5 +1,5 @@
 ---
-title: Proprietà Properties (classe ServerNetworkProtocol) | Documenti Microsoft
+title: Proprietà Properties (classe ServerNetworkProtocol) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Properties property
 ms.assetid: 6c971bfc-c277-4c1e-a06e-146dcc34e759
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 62dc2149afae84eab6fa236d5601c50c9b99c1cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: cf3384908284cb25a59c35451706b0e3e535e345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157872"
 ---
 # <a name="properties-property-servernetworkprotocol-class"></a>Proprietà Properties (classe ServerNetworkProtocol)
   Ottiene le proprietà associate al protocollo di rete del server.  
@@ -48,5 +48,5 @@ object
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Matrice di oggetti della [classe ServerNetworkProtocolProperty](../servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) che rappresentano le proprietà supportate dal protocollo di rete del server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento AggregationID (ASSL) | Documenti Microsoft
+title: Elemento AggregationID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationID element
 ms.assetid: 6056da1d-b6b4-4074-84db-45be719df49a
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cc757076c638075466cd0d49ad4340c983a8294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fadf9884d769402e962c64ec00d86338a71328a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277817"
 ---
 # <a name="aggregationid-element-assl"></a>Elemento AggregationID (ASSL)
   Identifica la definizione di aggregazione dal [AggregationDesign](../objects/aggregationdesign-element-assl.md) elemento utilizzato per creare l'istanza di aggregazione.  
@@ -56,13 +56,13 @@ ms.locfileid: "36167947"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[AggregationInstance](../objects/aggregationinstance-element-assl.md)|  
+|Elementi padre|[Elemento AggregationInstance](../objects/aggregationinstance-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se questo elemento non è presente o è impostato su una stringa vuota, `AggregationInstance` rappresenta un'aggregazione definita dall'utente.  
   
- L'elemento che corrisponde al padre di `AggregationID` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.AggregationInstance>.  
+ L'elemento che corrisponde al padre di `AggregationID` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.AggregationInstance>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

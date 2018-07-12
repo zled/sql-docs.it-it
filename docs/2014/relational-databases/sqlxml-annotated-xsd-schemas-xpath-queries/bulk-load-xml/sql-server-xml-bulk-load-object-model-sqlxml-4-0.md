@@ -1,5 +1,5 @@
 ---
-title: SQL Server modello caricamento Bulk XML oggetto (SQLXML 4.0) | Documenti Microsoft
+title: SQL Server Bulk Load modello a oggetti XML (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,18 +33,18 @@ helpviewer_keywords:
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bb60aaf57869dbbd108c0815ed3fc02b07ed4bf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1157095c31a62c86530f1e8ed669700357adf982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278887"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modello a oggetti per il caricamento bulk XML di SQL Server (SQLXML 4.0)
-  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modello a oggetti di caricamento Bulk XML è costituito da sqlxmlbulkload-oggetto. Questo oggetto supporta i metodi e le proprietà seguenti.  
+  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modello a oggetti il caricamento Bulk XML è costituito da sqlxmlbulkload-oggetto. Questo oggetto supporta i metodi e le proprietà seguenti.  
   
 ## <a name="methods"></a>Metodi  
  Execute  
@@ -52,7 +52,7 @@ ms.locfileid: "36169185"
   
 ## <a name="properties"></a>Proprietà  
  Caricamento BULK  
- Specifica se deve essere eseguito un caricamento bulk. Questa proprietà è utile se si desidera generare solo gli schemi (vedere la proprietà SchemaGen, SGDropTables e SGUseID che seguono) e non esegue un caricamento bulk. Si tratta di una proprietà booleana. Quando la proprietà è impostata su TRUE, viene eseguito il caricamento bulk XML. Quando la proprietà è impostata su FALSE, il caricamento bulk XML non viene eseguito.  
+ Specifica se deve essere eseguito un caricamento bulk. Questa proprietà è utile se si desidera generare solo gli schemi (vedere le proprietà SchemaGen SGDropTables e SGUseID seguenti) e non eseguire un caricamento bulk. Si tratta di una proprietà booleana. Quando la proprietà è impostata su TRUE, viene eseguito il caricamento bulk XML. Quando la proprietà è impostata su FALSE, il caricamento bulk XML non viene eseguito.  
   
  Il valore predefinito è TRUE.  
   
@@ -62,21 +62,21 @@ ms.locfileid: "36169185"
  Quando la proprietà è impostata su TRUE, il caricamento bulk XML controlla i vincoli per ogni valore inserito. Di conseguenza, la violazione di un vincolo produce un errore.  
   
 > [!NOTE]  
->  Per lasciare questa proprietà è FALSE, è necessario disporre **ALTER TABLE** autorizzazioni sulle tabelle di destinazione. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
+>  Per lasciare questa proprietà su FALSE, è necessario disporre **ALTER TABLE** autorizzazioni sulle tabelle di destinazione. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
  Il valore predefinito è FALSE. Quando la proprietà è impostata su FALSE, il caricamento bulk XML ignora i vincoli durante un'operazione di inserimento. Nell'implementazione corrente è necessario definire le tabelle nell'ordine delle relazioni di chiave primaria/chiave esterna nello schema di mapping. Di conseguenza, una tabella con una chiave primaria deve essere definita prima della tabella corrispondente contenente la chiave esterna. In caso contrario, il caricamento bulk XML restituisce un errore.  
   
  Si noti che se viene eseguita la propagazione degli ID, questa opzione non viene applicata e il controllo dei vincoli resta attivato. Ciò si verifica quando `KeepIdentity=False` ed è presente una relazione definita in cui il padre è un campo di identità e il valore viene assegnato al figlio non appena generato.  
   
  ConnectionCommand  
- Identifica un oggetto connessione esistente (ad esempio, ADO o ICommand comando oggetto) che deve utilizzare il caricamento Bulk XML. È possibile utilizzare la proprietà ConnectionCommand anziché specificare una stringa di connessione con la proprietà ConnectionString. La proprietà di transazione deve essere impostata su TRUE se si utilizza ConnectionCommand.  
+ Identifica un oggetto connessione esistente (ad esempio, di ADO o ICommand oggetto command) che deve utilizzare il caricamento Bulk XML. È possibile usare la proprietà ConnectionCommand anziché specificare una stringa di connessione con la proprietà ConnectionString. La proprietà di transazione deve essere impostata su TRUE se si usa ConnectionCommand.  
   
- Se si utilizza la proprietà ConnectionString sia ConnectionCommand, caricamento Bulk XML utilizza l'ultima proprietà specificato.  
+ Se si usano proprietà ConnectionString sia ConnectionCommand, caricamento Bulk XML utilizza l'ultima proprietà specificato.  
   
  Il valore predefinito è NULL.  
   
  ConnectionString  
- Identifica la stringa di connessione OLE DB che fornisce le informazioni necessarie per stabilire una connessione a un'istanza del database. Se si utilizza la proprietà ConnectionString sia ConnectionCommand, caricamento Bulk XML utilizza l'ultima proprietà specificato.  
+ Identifica la stringa di connessione OLE DB che fornisce le informazioni necessarie per stabilire una connessione a un'istanza del database. Se si usano proprietà ConnectionString sia ConnectionCommand, caricamento Bulk XML utilizza l'ultima proprietà specificato.  
   
  Il valore predefinito è NULL.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36169185"
  Quando la proprietà è impostata su TRUE, i trigger vengono attivati normalmente durante le operazioni di inserimento.  
   
 > [!NOTE]  
->  Per lasciare questa proprietà è FALSE, è necessario disporre **ALTER TABLE** autorizzazioni sulle tabelle di destinazione. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
+>  Per lasciare questa proprietà su FALSE, è necessario disporre **ALTER TABLE** autorizzazioni sulle tabelle di destinazione. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
  Si noti che se viene eseguita la propagazione degli ID, questa opzione non viene applicata e i trigger restano attivati. Ciò si verifica quando `KeepIdentity=False` ed è presente una relazione definita in cui il padre è un campo di identità e il valore viene assegnato al figlio non appena generato.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36169185"
  IgnoreDuplicateKeys  
  Specifica l'operazione da effettuare se viene eseguito un tentativo di inserimento di valori duplicati in una colonna chiave. Se questa proprietà è impostata su TRUE e viene eseguito un tentativo di inserimento di un record con un valore duplicato in una colonna chiave, il record non viene inserito in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Viene invece inserito il record successivo. L'operazione di caricamento bulk, pertanto, non ha esito negativo. Se la proprietà è impostata su FALSE, il caricamento bulk non riesce quando viene eseguito un tentativo di inserimento di un valore duplicato in una colonna chiave.  
   
- Quando la proprietà IgnoreDuplicateKeys è impostata su TRUE, viene eseguita un'istruzione COMMIT per ogni record inserito nella tabella. Questo comportamento provoca una riduzione delle prestazioni. La proprietà può essere impostata su TRUE solo quando la proprietà delle transazioni è impostata su FALSE, poiché il comportamento transazionale viene implementato tramite file.  
+ Quando la proprietà IgnoreDuplicateKeys è impostata su TRUE, viene eseguita un'istruzione COMMIT per ogni record inserito nella tabella. Questo comportamento provoca una riduzione delle prestazioni. La proprietà può essere impostata su TRUE solo quando la proprietà delle transazioni è impostata su FALSE, perché il comportamento transazionale viene implementato tramite file.  
   
  Il valore predefinito è FALSE.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36169185"
  Il valore di questa proprietà si applica a tutte le colonne interessate dal caricamento bulk. Il valore predefinito è TRUE.  
   
 > [!NOTE]  
->  Per lasciare questa proprietà impostata su TRUE, è necessario disporre **ALTER TABLE** autorizzazioni sulle tabelle di destinazione. In caso contrario, la proprietà deve essere impostata sul valore FALSE. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
+>  Per lasciare questa proprietà su TRUE, è necessario disporre **ALTER TABLE** autorizzazioni sulle tabelle di destinazione. In caso contrario, la proprietà deve essere impostata sul valore FALSE. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
  KeepNulls  
  Specifica il valore da utilizzare per una colonna in cui manca un attributo corrispondente o un elemento figlio nel documento XML. Si tratta di una proprietà booleana. Quando la proprietà è impostata su TRUE, il caricamento bulk XML assegna un valore Null alla colonna. Non viene assegnato il valore predefinito della colonna, se presente, in base all'impostazione nel server. Il valore di questa proprietà si applica a tutte le colonne interessate dal caricamento bulk.  
@@ -129,15 +129,15 @@ ms.locfileid: "36169185"
   
 -   Vengono create le tabelle necessarie dai nomi di elemento e di attributo. È pertanto importante non utilizzare parole riservate di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per i nomi di elemento e di attributo nello schema.  
   
--   Restituisce un overflow dei dati per qualsiasi colonna definita utilizzando il [SQL: overflow-campi](annotation-interpretation-sql-overflow-field.md) in [tipo di dati xml](/sql/t-sql/xml/xml-transact-sql) formato.  
+-   Restituisce overflow dei dati per qualsiasi colonna definita utilizzando il [SQL: overflow-campo](annotation-interpretation-sql-overflow-field.md) nelle [tipo di dati xml](/sql/t-sql/xml/xml-transact-sql) formato.  
   
  SGDropTables  
- Specifica se le tabelle esistenti devono essere eliminate e ricreate. Utilizzare questa proprietà quando la proprietà SchemaGen è impostata su TRUE. Se SGDropTables è FALSE, le tabelle esistenti vengono mantenute. Quando questa proprietà è TRUE, le tabelle esistenti vengono eliminate e ricreate.  
+ Specifica se le tabelle esistenti devono essere eliminate e ricreate. Utilizzare questa proprietà quando schemagen-proprietà è impostata su TRUE. Se SGDropTables è FALSE, le tabelle esistenti vengono mantenute. Quando questa proprietà è TRUE, le tabelle esistenti vengono eliminate e ricreate.  
   
  Il valore predefinito è FALSE.  
   
  SGUseID  
- Specifica se l'attributo nello schema di mapping identificato come tipo `id` può essere utilizzato per la creazione di un vincolo PRIMARY KEY quando viene creata la tabella. Utilizzare questa proprietà quando la proprietà SchemaGen è impostata su TRUE. Se SGUseID è TRUE, l'utilità SchemaGen utilizza un attributo per cui `dt:type="id"` viene specificato come colonna chiave primaria e aggiunge il vincolo PRIMARY KEY appropriato durante la creazione della tabella.  
+ Specifica se l'attributo nello schema di mapping identificato come tipo `id` può essere utilizzato per la creazione di un vincolo PRIMARY KEY quando viene creata la tabella. Utilizzare questa proprietà quando schemagen-proprietà è impostata su TRUE. Se SGUseID è TRUE, l'utilità SchemaGen Usa un attributo per cui `dt:type="id"` viene specificato come colonna chiave primaria e aggiunge il vincolo PRIMARY KEY appropriato durante la creazione della tabella.  
   
  Il valore predefinito è FALSE.  
   
@@ -145,10 +145,10 @@ ms.locfileid: "36169185"
  Specifica il percorso del file in cui il caricamento bulk XML crea i file temporanei per un caricamento bulk in transazioni. Questa proprietà è utile solo quando la proprietà Transaction è impostata su TRUE. È necessario verificare che l'account di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzato per il caricamento bulk XML possa accedere a tale percorso. Se questa proprietà non è impostata, il caricamento bulk XML archivia i file temporanei nel percorso specificato nella variabile di ambiente TEMP.  
   
  Transazione  
- Specifica se il caricamento bulk deve essere eseguito come transazione. In questo caso, è garantito il rollback se il caricamento bulk ha esito negativo. Si tratta di una proprietà booleana. Se la proprietà è impostata su TRUE, il caricamento bulk viene eseguito in un contesto transazionale. La proprietà TempFilePath è utile solo quando delle transazioni sono impostata su TRUE.  
+ Specifica se il caricamento bulk deve essere eseguito come transazione. In questo caso, è garantito il rollback se il caricamento bulk ha esito negativo. Si tratta di una proprietà booleana. Se la proprietà è impostata su TRUE, il caricamento bulk viene eseguito in un contesto transazionale. La proprietà TempFilePath è utile solo quando transazione è impostata su TRUE.  
   
 > [!NOTE]  
->  Se si siano caricando dati binari (ad esempio HEX bin.base64 i tipi di dati XML del file binario, immagine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipi di dati), la proprietà di transazione deve essere impostata su FALSE.  
+>  Se si caricano dati binari (ad esempio HEX bin.base64 i tipi di dati XML per il file binario, immagine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i tipi di dati), la proprietà di transazione deve essere impostata su FALSE.  
   
  Il valore predefinito è FALSE.  
   

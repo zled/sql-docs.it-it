@@ -1,5 +1,5 @@
 ---
-title: Elemento FoldingParameters (ASSL) | Documenti Microsoft
+title: Elemento FoldingParameters (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FoldingParameters element
 ms.assetid: 5f5c5a3e-4aed-48fb-bca5-e67f421bef2f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12cae8f4ad02f57f63fd168ff41503f233f53c4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac348aa326c53b1266edfff3396feadda6c80ea6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161142"
 ---
 # <a name="foldingparameters-element-assl"></a>Elemento FoldingParameters (ASSL)
   Specifica i parametri utilizzati dal server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] quando esegue la convalida incrociata di modelli di data mining.  
@@ -66,15 +66,15 @@ ms.locfileid: "36170471"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elemento padre|[MiningModel](../objects/miningmodel-element-assl.md)|  
+|Elemento padre|[Elemento MiningModel](../objects/miningmodel-element-assl.md)|  
 |Elementi figlio|*FoldIndex*<br /><br /> *FoldCount*<br /><br /> *MaxCases*<br /><br /> *FoldTargetAttribute*|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Queste proprietà sono solo per uso interno e non sono supportate nelle istruzioni DDL.  
   
  Per informazioni su come usare la convalida incrociata in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], vedere [misure nel Report di convalida incrociata](../../data-mining/measures-in-the-cross-validation-report.md).  
   
- Per informazioni su come eseguire la convalida incrociata tramite [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] stored procedure, vedere [dati Mining Stored procedure &#40;Analysis Services - Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining).  
+ Per informazioni su come eseguire la convalida incrociata usando [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] stored procedure, vedere [Data Mining Stored procedure &#40;Analysis Services - Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

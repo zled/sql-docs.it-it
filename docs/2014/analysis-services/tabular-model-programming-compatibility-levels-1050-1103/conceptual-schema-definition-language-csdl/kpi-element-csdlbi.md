@@ -1,5 +1,5 @@
 ---
-title: Elemento KPI (CSDLBI) | Documenti Microsoft
+title: Elemento KPI (CSDLBI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 203ee6e8-eef2-4476-b09f-bd95e492ddaa
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2f6c4ee26beb74acd6817615d34847883c3b3565
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0a649ffffe6f2d9f5902ede9e6d7a6126fd09e25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155082"
 ---
 # <a name="kpi-element-csdlbi"></a>Elemento KPI (CSDLBI)
   L'elemento KPI definisce un calcolo che può essere utilizzato come indicatore di prestazioni di chiave. In un modello di dati di Business Intelligence, gli indicatori KPI sono basati sulle misure e per questo la relativa definizione contiene tutti i metadati associati alle misure, nonché le informazioni necessarie per la presentazione dei valori KPI, incluso un grafico predefinito.  
@@ -37,7 +37,7 @@ ms.locfileid: "36169300"
 |KpiStatus|Sì|Riferimento a una colonna contenente valori che rappresentano lo stato corrente dell'indicatore KPI.|  
 |StatusGraphic|Sì|Riferimento a un'immagine che indica lo stato negativo, positivo o neutro rispetto agli obiettivi definiti nell'elemento KPI.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Quando si progetta un modello, è possibile creare un indicatore KPI creando una misura e destinandola all'utilizzo come indicatore KPI. È quindi necessario aggiungere le informazioni specifiche degli indicatori di prestazione chiave, ad esempio un grafico per mostrare le tendenze.  
   
 ## <a name="example"></a>Esempio  

@@ -1,5 +1,5 @@
 ---
-title: Utilizzare i modelli di Analysis Services in SQL Server Management Studio | Documenti Microsoft
+title: Usare modelli di Analysis Services in SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff28fee126f12906e562f2fb26463a7cffad9aab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 387d1752c2e2e2a8f6bdc6e48b2d9b9e7952419f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153372"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usare i modelli di Analysis Services in SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce un set di modelli che aiutano a creare rapidamente script XMLA, query MDX o DMX oppure indicatori KPI in un cubo o in un modello tabulare, a generare script per operazioni di backup e ripristino, nonché a eseguire numerose altre attività. I modelli si trovano in **Esplora modelli** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -147,7 +147,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  Aprire **Esplora modelli**e trascinare il modello **Discover Schema Rowsets**nella finestra Query vuota.  
   
-3.  Nel modello, sostituire i [elemento RequestType &#40;XMLA&#41; ](../xmla/xml-elements-properties/type-element-xmla.md) elemento con il testo seguente: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  Nel modello sostituire il [elemento RequestType &#40;XMLA&#41; ](../xmla/xml-elements-properties/type-element-xmla.md) elemento con il testo seguente: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  Fare clic su **Esegui**.  
   
@@ -176,7 +176,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Discrete Column Values|Viene illustrato come utilizzare DMX SELECT DISTINCT FROM  *\<modello >* istruzione recuperare un set completo di valori da colonne discrete di un modello di data mining specificato.|  
 ||Drillthrough Query|Illustra l'utilizzo dell'istruzione DMX SELECT * FROM Model.CASES con la funzione DMX IsInNode per l'esecuzione di una query drill-through.|  
 ||Attributi di modellazione|Illustra l'utilizzo della funzione DMX System.GetModelAttributes per restituire un elenco degli attributi utilizzati da un modello.|  
-||PMML Content|Viene illustrato come utilizzare DMX SELECT \* FROM  *\<modello >*. Istruzione PMML per recuperare la rappresentazione (Predictive Model Markup Language) del modello di data mining, per gli algoritmi che supportano questa funzionalità.|  
+||PMML Content|Viene illustrato come utilizzare DMX SELECT \* FROM  *\<modello >*. Istruzione PMML per recuperare la rappresentazione PMML Predictive Model Markup Language () del modello di data mining, per gli algoritmi che supportano questa funzionalità.|  
 |DMX\Model Management|Add Model|Illustra l'utilizzo dell'istruzione DMX ALTER MINING MODEL STRUCTURE per l'aggiunta di un modello di data mining.|  
 ||Clear Model|Illustra l'utilizzo dell'istruzione DMX DELETE * FROM MINING MODEL per l'eliminazione del contenuto di un modello di data mining specificato.|  
 ||Clear Structure Cases|Illustra l'utilizzo dell'istruzione DMX DELETE FROM MINING STRUCTURE per la cancellazione dei case delle strutture dei modelli di data mining.|  
@@ -194,43 +194,43 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Train Model|Illustra l'utilizzo dell'istruzione DMX INSERT INTO MINING MODEL per eseguire il training di un modello di data mining all'interno di una struttura di cui è stato precedentemente eseguito il training.|  
 ||Train Nested Structure|Illustra la combinazione dell'istruzione DMX INSERT INTO MINING STRUCTURE con la query dei dati di origine SHAPE per eseguire il training di un modello di data mining contenente colonne nidificate con dati che includono tabelle nidificate recuperati tramite query da un'origine dei dati esistente.|  
 ||Train Structure|Illustra la combinazione dell'istruzione DMX INSERT INTO MINING STRUCTURE con la query dei dati di origine OPENQUERY per il training di una struttura di data mining.|  
-|DMX\Prediction Queries|Base Prediction|Viene illustrato come combinare un'istruzione DMX SELECT FROM  *\<modello >* istruzione PREDICTION JOIN con la query di dati di origine OPENQUERY per eseguire una query di stima su un modello di data mining utilizzando i dati, recuperati tramite query, di un origine dati esistente.|  
-||Nested Prediction|Viene illustrato come combinare un'istruzione DMX SELECT FROM  *\<modello >* istruzione PREDICTION JOIN con le query di dati origine SHAPE e OPENQUERY per eseguire una query di stima su un modello di data mining utilizzando i dati contenenti annidati le tabelle, recuperati tramite query, da un'origine dati esistente.|  
-||Nested Singleton Prediction|Viene illustrato come utilizzare un'istruzione DMX SELECT FROM  *\<modello >* clausola NATURAL PREDICTION JOIN per eseguire una query di stima su un modello di data mining utilizzando un singolo valore, specificato in modo esplicito nella query di stima, in una colonna il cui nome corrisponde a una colonna nel modello di data mining e che include un set di valori in una tabella nidificata creata tramite un'istruzione di unione i cui nomi corrispondono anche a colonne nidificate del modello di data mining.|  
+|DMX\Prediction Queries|Base Prediction|Illustra come combinare un'istruzione DMX SELECT FROM  *\<modello >* istruzione PREDICTION JOIN insieme alla query di dati di origine OPENQUERY per eseguire una query di stima su un modello di data mining utilizzando i dati, recuperati tramite query, di un origine dati esistente.|  
+||Nested Prediction|Illustra come combinare un'istruzione DMX SELECT FROM  *\<modello >* istruzione PREDICTION JOIN con le query di dati origine SHAPE e OPENQUERY per eseguire una query di stima su un modello di data mining utilizzando i dati contenenti annidati le tabelle, recuperati tramite query, da un'origine dati esistente.|  
+||Nested Singleton Prediction|Viene illustrato come utilizzare un'istruzione DMX SELECT FROM  *\<modello >* clausola NATURAL PREDICTION JOIN per eseguire una query di stima su un modello di data mining utilizzando un singolo valore, specificato in modo esplicito nella query di stima, in una colonna il cui nome corrisponde a una colonna nel modello di data mining e che contiene un set di valori in una tabella nidificata creata tramite un'istruzione UNION i cui nomi corrispondono anche a colonne nidificate del modello di data mining.|  
 ||Singleton Prediction|Viene illustrato come utilizzare un'istruzione DMX SELECT FROM \<model > NATURAL PREDICTION JOIN istruzione da eseguire una query di stima su un modello di data mining utilizzando un singolo valore, specificato in modo esplicito nella query di stima, in una colonna il cui nome corrisponde a una colonna il modello di data mining.|  
 ||Stored Procedure Call|Illustra l'utilizzo dell'istruzione DMX CALL per la chiamata di una stored procedure.|  
-|MDX\Expressions|Moving Average-Fixed|Viene illustrato come utilizzare MDX `ParallelPeriod` e `CurrentMember` funzioni con un set disposto per creare una misura calcolata che restituisce la media mobile di una misura in un numero fisso di periodi di tempo inclusi nella gerarchia di una dimensione temporale.|  
-||Moving Average-Variable|Viene illustrato come utilizzare MDX `CASE` istruzione all'interno di `Avg` funzione per creare una misura calcolata che restituisce la media mobile di una misura su un numero variabile di periodi di tempo inclusi nella gerarchia di una dimensione temporale.|  
+|MDX\Expressions|Moving Average-Fixed|Viene illustrato come utilizzare l'espressione MDX `ParallelPeriod` e `CurrentMember` funzioni con un set ordinato per creare una misura calcolata che restituisce la media mobile di una misura su un numero fisso di periodi di tempo inclusi nella gerarchia di una dimensione temporale.|  
+||Moving Average-Variable|Viene illustrato come utilizzare l'espressione MDX `CASE` istruzione all'interno di `Avg` funzione per creare una misura calcolata che restituisce la media mobile di una misura su un numero variabile di periodi di tempo inclusi nella gerarchia di una dimensione temporale.|  
 ||Da inizio periodo fino alla data specificata|Illustra l'utilizzo della funzione MDX `PeriodsToDate` in un membro calcolato.|  
-||Ratio to Parent|Viene illustrato come utilizzare MDX `Parent` funzione per creare una misura calcolata che rappresenta una percentuale di una misura per ogni elemento figlio di un membro padre in una gerarchia specificata.|  
+||Ratio to Parent|Viene illustrato come utilizzare l'espressione MDX `Parent` funzione per creare una misura calcolata che rappresenta un rapporto espresso in percentuale di una misura per ogni elemento figlio di un membro padre in una gerarchia specificata.|  
 ||Ratio to Total|Illustra l'utilizzo di All member per creare una misura calcolata che rappresenta un rapporto espresso in percentuale della misura di ogni membro della gerarchia specificata.|  
 |MDX\Queries|Basic Query|Illustra un'istruzione MDX SELECT di base utilizzabile per la formulazione di una query MDX.|  
-||KPI Query|Viene illustrato come utilizzare MDX `KPIValue` e `KPIGoal` funzioni per recuperare le informazioni di indicatore di prestazioni chiave in una query MDX.|  
+||KPI Query|Viene illustrato come utilizzare l'espressione MDX `KPIValue` e `KPIGoal` funzioni per recuperare le informazioni di indicatori di prestazioni chiave in una query MDX.|  
 ||Sub-select Query|Illustra come creare un'istruzione MDX SELECT per recuperare informazioni da un sottocubo definito da un'altra istruzione SELECT.|  
 ||With Calculated Member|Illustra l'utilizzo della clausola MDX WITH in un'istruzione SELECT per definire un membro calcolato per una query MDX.|  
 ||With Named Set|Illustra l'utilizzo della clausola MDX WITH in un'istruzione SELECT per definire un set denominato per una query MDX.|  
-|XMLA\Management|Backup|Viene illustrato come utilizzare il codice XMLA `Backup` comando per eseguire il backup di un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database in un file.|  
-||Annulla|Viene illustrato come utilizzare il codice XMLA `Cancel` comando per annullare tutte le operazioni in esecuzione nella sessione corrente (per utenti diversi da amministratori e gli amministratori del server), (per amministratori) del database o istanza (per gli amministratori del server.)|  
+|XMLA\Management|Backup|Viene illustrato come utilizzare XMLA `Backup` comando per eseguire il backup un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database in un file.|  
+||Annulla|Viene illustrato come utilizzare XMLA `Cancel` comando per annullare tutte le operazioni in esecuzione nella sessione corrente (per utenti diversi dagli amministratori o amministratori del server), del database (per amministratori) o dell'istanza (per gli amministratori del server.)|  
 ||Create Remote Partition Database|Illustra l'utilizzo del comando XMLA `Create` con l'elemento Database del linguaggio di scripting di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL) per creare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e un'origine dei dati per l'archiviazione di partizioni remote.|  
-||DELETE|Viene illustrato come utilizzare il codice XMLA `Delete` comando per eliminare un oggetto esistente [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.|  
+||DELETE|Viene illustrato come utilizzare XMLA `Delete` comando per eliminare un oggetto esistente [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.|  
 ||Process Dimension|Illustra l'utilizzo del comando XMLA `Batch` insieme all'elemento `Parallel` e al comando `Process` per aggiornare gli attributi di una dimensione tramite un'operazione batch parallela.|  
-||Process Partition|Viene illustrato come utilizzare il codice XMLA `Batch` comando, combinato con il `Parallel` elemento e il `Process` comando per l'elaborazione completa di una partizione tramite un'operazione batch parallela.|  
-||Ripristina|Viene illustrato come utilizzare il codice XMLA `Restore` comando per ripristinare un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database da un file di backup esistente.|  
-||Sincronizza|Viene illustrato come utilizzare il codice XMLA `Synchronize` comando per sincronizzare un altro [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database con corrente [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database con l'opzione SkipMembership per il tag SynchronizeSecurity.|  
+||Process Partition|Viene illustrato come utilizzare XMLA `Batch` comando, combinato con il `Parallel` elemento e il `Process` comando, per l'elaborazione completa di una partizione tramite un'operazione batch parallela.|  
+||Ripristina|Viene illustrato come utilizzare XMLA `Restore` comando per ripristinare un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database da un file di backup.|  
+||Sincronizza|Viene illustrato come utilizzare XMLA `Synchronize` comando per sincronizzare l'altra [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database con l'attuale [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database usando l'opzione SkipMembership per il tag SynchronizeSecurity.|  
 |XMLA\Schema Rowsets|Discover Schema Rowsets|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_SCHEMA_ROWSETS.|  
-|XMLA\Server Status|Connessioni|Viene illustrato come utilizzare il codice XMLA `Discover` metodo per recuperare il contenuto del set di righe dello schema DISCOVER_CONNECTIONS.|  
-||processi|Viene illustrato come utilizzare il codice XMLA `Discover` metodo per recuperare il contenuto del set di righe dello schema DISCOVER_JOBS.|  
-||Percorsi|Viene illustrato come utilizzare il codice XMLA `Discover` metodo per recuperare il contenuto del set di righe dello schema DISCOVER_LOCATIONS, specificando il percorso del file di backup.|  
+|XMLA\Server Status|Connessioni|Viene illustrato come utilizzare XMLA `Discover` metodo per recuperare il contenuto del set di righe dello schema DISCOVER_CONNECTIONS.|  
+||processi|Viene illustrato come utilizzare XMLA `Discover` metodo per recuperare il contenuto del set di righe dello schema DISCOVER_JOBS.|  
+||Percorsi|Viene illustrato come utilizzare XMLA `Discover` metodo per recuperare il contenuto di righe dello schema DISCOVER_LOCATIONS, specificando il percorso dei file di backup.|  
 ||Locks|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_LOCKS.|  
 ||Memory Grant|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_MEMORYGRANT.|  
-||Contatori delle prestazioni|Viene illustrato come utilizzare il codice XMLA `Discover` metodo per recuperare il contenuto del set di righe dello schema DISCOVER_PERFORMANCE_COUNTERS.|  
+||Contatori delle prestazioni|Viene illustrato come utilizzare XMLA `Discover` metodo per recuperare il contenuto del set di righe dello schema DISCOVER_PERFORMANCE_COUNTERS.|  
 ||Sessioni|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_SESSIONS.|  
-||Traces|Viene illustrato come utilizzare il codice XMLA `Discover` metodo per recuperare il contenuto del set di righe dello schema DISCOVER_TRACES.|  
-||Transazioni|Viene illustrato come utilizzare il codice XMLA `Discover` metodo per recuperare il contenuto del set di righe dello schema DISCOVER_TRANSACTIONS.|  
+||Traces|Viene illustrato come utilizzare XMLA `Discover` metodo per recuperare il contenuto del set di righe dello schema DISCOVER_TRACES.|  
+||Transazioni|Viene illustrato come utilizzare XMLA `Discover` metodo per recuperare il contenuto del set di righe dello schema DISCOVER_TRANSACTIONS.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [(Multidimensional Expressions) &#40;MDX&#41; riferimento](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [Estensioni Data Mining &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Espressioni MDX &#40;MDX&#41; riferimento](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Analysis Services Scripting Language &#40;ASSL&#41; riferimento](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Analysis Services Scripting Language &#40;ASSL&#41; riferimento](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   

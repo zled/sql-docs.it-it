@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a20097a87111ad7cbedc9b7de7599741e2a4e360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 69b6d59bce9eb4de36ad8cc33192cdee7b583f1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155742"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Creazione di un report con rientri (Generatore report e SSRS)
   In un report con rientri le righe di dettaglio oppure i gruppi figlio vengono visualizzati rientrati sotto un gruppo padre della stessa colonna, come illustrato nell'esempio seguente:  
@@ -68,7 +68,7 @@ ms.locfileid: "36168458"
   
     2.  In **Allineamento**nel riquadro Proprietà espandere le proprietà relative a **Riempimento**.  
   
-    3.  Per **sinistra**, digitare un nuovo valore di spaziatura interna, ad esempio `.5in`. Il riempimento consente di applicare il rientro al testo presente nella cella in base al valore specificato. Il valore predefinito è 2 punti. Il valore valido per le proprietà relative a Riempimento è zero (0) oppure un numero positivo, seguito da un identificatore di dimensione.  
+    3.  Per la **sinistra**, digitare un nuovo valore di spaziatura interna, ad esempio `.5in`. Il riempimento consente di applicare il rientro al testo presente nella cella in base al valore specificato. Il valore predefinito è 2 punti. Il valore valido per le proprietà relative a Riempimento è zero (0) oppure un numero positivo, seguito da un identificatore di dimensione.  
   
          Di seguito vengono riportati gli identificatori di dimensione:  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36168458"
 3.  Modificare il riempimento per la cella in cui vengono visualizzati i dati del gruppo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Intestazioni di pagina e piè di pagina &#40;SSRS e Generatore Report&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Intestazioni di pagina e piè di pagina &#40;Report e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabelle &#40;Generatore report e SSRS&#41;](tables-report-builder-and-ssrs.md)   

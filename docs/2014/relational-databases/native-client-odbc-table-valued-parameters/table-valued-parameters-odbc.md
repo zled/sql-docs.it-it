@@ -1,13 +1,11 @@
 ---
-title: Parametri con valori di tabella (ODBC) | Documenti Microsoft
+title: Parametri con valori di tabella (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,24 +13,24 @@ helpviewer_keywords:
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 955ae0daa3a2c15a5b1e6146c269c8d4095fb146
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ce0cd9e87d4bd594fb2c2be4a01e9f2cf8ef4a27
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167241"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421790"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parametri con valori di tabella (ODBC)
   Il supporto ODBC dei parametri con valori di tabella consente a un'applicazione client di inviare più efficientemente i dati con parametri al server, inviando più righe al server con una sola chiamata.  
   
- Per informazioni sui parametri con valori di tabella nel server, vedere [utilizzare parametri &#40;motore di Database&#41;](../tables/use-table-valued-parameters-database-engine.md).  
+ Per informazioni sui parametri con valori di tabella nel server, vedere [usare parametri &#40;motore di Database&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
  In ODBC è possibile inviare parametri con valori di tabella al server in due modi:  
   
--   Tutti i dati del parametro con valori di tabella possono essere in memoria al momento SQLExecDirect o SQLExecute è definita. Se sono presenti più righe nel valore di tabella, i dati vengono archiviati in matrici.  
+-   Tutti i dati del parametro con valori di tabella possono essere in memoria al momento SQLExecDirect o SQLExecute viene chiamata. Se sono presenti più righe nel valore di tabella, i dati vengono archiviati in matrici.  
   
 -   Un'applicazione può specificare data-at-execution per un parametro con valori di tabella quando viene chiamata SQLExecDirect o SQLExecute. In tal caso, le righe di dati per il valore di tabella possono essere fornite in batch o uno alla volta per ridurre i requisiti di memoria.  
   
@@ -79,11 +77,11 @@ ms.locfileid: "36167241"
  [Riepilogo delle API dei parametri con valori di tabella ODBC](odbc-table-valued-parameter-api-summary.md)  
  Vengono descritte le funzioni ODBC che supportano i parametri con valori di tabella.  
   
- [Esempi di programmazione di parametro con valori di tabella ODBC](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
+ [Esempi di programmazione di parametri con valori di tabella ODBC](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
  Viene descritta l'esecuzione delle attività più comuni.  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [Table-Valued Parameters &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [I parametri con valori di tabella &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

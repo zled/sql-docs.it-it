@@ -1,13 +1,11 @@
 ---
-title: Supporto del tipo di dati per ODBC Data e ora miglioramenti | Documenti Microsoft
+title: Supporto per tipo di dati per ODBC Date e miglioramenti per la fase | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,17 +13,17 @@ helpviewer_keywords:
 - ODBC, date/time improvements
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ca1a2693acabdb28c221b08535c17dd686a43cb5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3e0ee5b224f042cbf8f2b7a12fa96e9057b9a18d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168818"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415110"
 ---
-# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Supporto tipo di dati per ODBC Data e ora miglioramenti
+# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Supporto dei tipi di dati per ODBC Date e i miglioramenti di tempo
   In questo argomento vengono fornite informazioni sui tipi ODBC che supportano i tipi di dati di data e ora [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="data-type-mapping-in-parameters-and-resultsets"></a>Mapping dei tipi di dati nei parametri e nei set di risultati  
@@ -141,6 +139,6 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
  Se `timezone_hour` è negativo, `timezone_minute` deve essere negativo o zero. Se `timezone_hour` è positivo, `timezone_minute` deve essere positivo o zero. Se `timezone_hour` è zero, `timezone_minute` può essere qualsiasi valore compreso nell'intervallo che va da -59 a +59.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data e ora miglioramenti &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Data e miglioramenti per la fase &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

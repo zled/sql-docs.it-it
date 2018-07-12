@@ -1,5 +1,5 @@
 ---
-title: Controllare la distribuzione dei Report | Documenti Microsoft
+title: Controllare la distribuzione dei Report | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - subscriptions [Reporting Services], e-mail
@@ -21,19 +21,19 @@ ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0b184eadeefa4b9f1177597172476b743094de8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d73a5e483219df7a8b7c06a3c4719850aaf7a3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160182"
 ---
 # <a name="control-report-distribution"></a>Controllo distribuzione di Report
   È possibile configurare un server di report in modo da ridurre i rischi di sicurezza associati alla distribuzione tramite posta elettronica e condivisione file.  
   
 ## <a name="securing-reports"></a>sicurezza di report  
- Per controllare la distribuzione dei report, è innanzitutto necessario proteggerli dall'accesso non autorizzato. Per poter essere utilizzato in una sottoscrizione, un report deve utilizzare un set di credenziali archiviate che rimangano invariate per i singoli recapiti. Gli utenti che possono accedere al report nel server di report possono eseguirlo ed eventualmente distribuirlo. Per evitare che ciò accada, è necessario limitare l'accesso ai report solo agli utenti per i quali è strettamente necessario. Per altre informazioni, vedere [protezione dei report e risorse](security/secure-reports-and-resources.md) e [proteggere cartelle](security/secure-folders.md).  
+ Per controllare la distribuzione dei report, è innanzitutto necessario proteggerli dall'accesso non autorizzato. Per poter essere utilizzato in una sottoscrizione, un report deve utilizzare un set di credenziali archiviate che rimangano invariate per i singoli recapiti. Gli utenti che possono accedere al report nel server di report possono eseguirlo ed eventualmente distribuirlo. Per evitare che ciò accada, è necessario limitare l'accesso ai report solo agli utenti per i quali è strettamente necessario. Per altre informazioni, vedere [proteggere i report e le risorse](security/secure-reports-and-resources.md) e [proteggere le cartelle](security/secure-folders.md).  
   
  I report con contenuto strettamente riservato che utilizzano la sicurezza dei database per autorizzare gli accessi non possono essere distribuiti tramite sottoscrizioni.  
   

@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Impostazioni di archiviazione (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Finestra di dialogo Impostazioni di archiviazione (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.f1
 - sql12.asvs.cubeeditor.cubebuilder.measuregroupstoragesettings.f1
 ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a15f7470df4ba313e02828b4a7ef2be2c9c4e0c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d39d87c0896ba77d3e323dc762d2618098dfd39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161312"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Impostazioni di archiviazione (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Impostazioni di archiviazione** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per impostare la memorizzazione nella cache attiva, la modalità di archiviazione e le impostazioni di notifica per una dimensione, un cubo, un gruppo di misure o una partizione. Per visualizzare la finestra di dialogo **Impostazioni di archiviazione** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] è possibile:  
@@ -40,7 +40,7 @@ ms.locfileid: "36169082"
 |Nome|Definizione|Valori|  
 |----------|----------------|------------|  
 |**Impostazione standard**|Selezionare questa opzione per attivare il dispositivo di scorrimento per **Impostazione standard** e usare le impostazioni predefinite per le funzionalità relative alla modalità di archiviazione e alla memorizzazione nella cache attiva.||  
-|**Impostazione standard slider**|Consente di impostare una delle impostazioni predefinite seguenti:<br /><br /> **ROLAP in tempo reale**<br /><br /> Selezionare questa opzione per utilizzare le impostazioni seguenti per l'archiviazione e la memorizzazione nella cache attiva:|Modalità di archiviazione ROLAP.<br /><br /> Attivazione della memorizzazione nella cache attiva.<br /><br /> Eliminazione della cache obsoleta, con un periodo di latenza di 0 secondi.<br /><br /> Oggetto online immediatamente.|  
+|**Impostazione standard**|Consente di impostare una delle impostazioni predefinite seguenti:<br /><br /> **ROLAP in tempo reale**<br /><br /> Selezionare questa opzione per utilizzare le impostazioni seguenti per l'archiviazione e la memorizzazione nella cache attiva:|Modalità di archiviazione ROLAP.<br /><br /> Attivazione della memorizzazione nella cache attiva.<br /><br /> Eliminazione della cache obsoleta, con un periodo di latenza di 0 secondi.<br /><br /> Oggetto online immediatamente.|  
 ||**HOLAP in tempo reale**<br /><br /> Selezionare questa opzione per utilizzare le impostazioni seguenti per l'archiviazione e la memorizzazione nella cache attiva:|Modalità di archiviazione HOLAP.<br /><br /> Attivazione della memorizzazione nella cache attiva.<br /><br /> Eliminazione della cache obsoleta, con un periodo di latenza di 0 secondi.<br /><br /> Aggiornamento della cache in presenza di modifiche ai dati, con un intervallo di inattività di 0 secondi e nessun intervallo di inattività sostitutivo.<br /><br /> Oggetto online immediatamente.|  
 ||**MOLAP a bassa latenza**<br /><br /> Selezionare questa opzione per utilizzare le impostazioni seguenti per l'archiviazione e la memorizzazione nella cache attiva:|Modalità di archiviazione MOLAP.<br /><br /> Attivazione della memorizzazione nella cache attiva.<br /><br /> Eliminazione della cache obsoleta, con un periodo di latenza di 30 minuti.<br /><br /> Aggiornamento della cache in presenza di modifiche ai dati, con un intervallo di inattività di 10 secondi e un intervallo di inattività sostitutivo di 10 minuti.<br /><br /> Oggetto online immediatamente.|  
 ||**MOLAP a Media latenza**<br /><br /> Selezionare questa opzione per utilizzare le impostazioni seguenti per l'archiviazione e la memorizzazione nella cache attiva:|Modalità di archiviazione MOLAP.<br /><br /> Attivazione della memorizzazione nella cache attiva.<br /><br /> Eliminazione della cache obsoleta, con un periodo di latenza di 4 ore.<br /><br /> Aggiornamento della cache in presenza di modifiche ai dati, con un intervallo di inattività di 10 secondi e un intervallo di inattività sostitutivo di 10 minuti.<br /><br /> Oggetto online immediatamente.|  

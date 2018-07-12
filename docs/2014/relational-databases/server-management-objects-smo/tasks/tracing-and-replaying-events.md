@@ -1,5 +1,5 @@
 ---
-title: Traccia e la riproduzione degli eventi | Documenti Microsoft
+title: Traccia e riproduzione di eventi | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - events [SMO], tracing
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 41de47825af581e0584b8a58254e485691da1420
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: eb1d3f67ef90dcadfeb0dc976672af615b4efbba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230691"
 ---
 # <a name="tracing-and-replaying-events"></a>Traccia e riproduzione di eventi
   In SMO gli oggetti `Trace` e `Replay` nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Trace> forniscono l'accesso a livello di programmazione alla funzionalità [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], utilizzata per monitorare un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. È possibile acquisire e salvare i dati di ogni evento in un file o in una tabella per operazioni di analisi successive. È ad esempio possibile monitorare un ambiente di produzione per verificare le stored procedure che influiscono sulle prestazioni a causa di un'esecuzione troppo lenta.  
@@ -56,11 +56,11 @@ ms.locfileid: "36169382"
   
 -   Riprodurre file di traccia o tabelle di traccia.  
   
- I dati di traccia dal `Trace` e `Replay` oggetti possono essere utilizzati dall'applicazione SMO o possono essere esaminato manualmente tramite [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). I dati di traccia sono inoltre compatibili con la [traccia SQL](../../sql-trace/sql-trace.md) stored procedure che forniscono anche la funzionalità di traccia.  
+ Dati di traccia le `Trace` e `Replay` oggetti possono essere utilizzati dall'applicazione SMO o possono essere esaminato manualmente mediante [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). I dati di traccia sono anche compatibili con il [traccia SQL](../../sql-trace/sql-trace.md) stored procedure che forniscono anche le funzionalità di traccia.  
   
  Gli oggetti di traccia SMO risiedono nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Trace>, che richiede un riferimento al file Microsoft.SQLServer.ConnectionInfo.dll.  
   
- Il `Trace` e `Replay` oggetti richiedono un <xref:Microsoft.SqlServer.Management.Common.ServerConnection> <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> oggetto per stabilire una connessione con l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> risiede nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Common>, che richiede un riferimento al file Microsoft.SQLServer.ConnectionInfo.dll.  
+ Il `Trace` e `Replay` oggetti richiedono una <xref:Microsoft.SqlServer.Management.Common.ServerConnection> <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> oggetto per stabilire una connessione all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> risiede nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Common>, che richiede un riferimento al file Microsoft.SQLServer.ConnectionInfo.dll.  
   
 > [!NOTE]  
 >  Gli oggetti `Trace` e `Replay` non sono supportati in una piattaforma a 64 bit.  

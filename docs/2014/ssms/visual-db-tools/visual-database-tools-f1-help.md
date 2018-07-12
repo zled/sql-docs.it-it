@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], help
 ms.assetid: 79d15b47-6759-4f48-b9ac-2c86a3cd9980
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f6696583bda70aca44355cc2ba736cc077b09d8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 88e5c7bdab59e9e2bbee4b924f145a8b8940b769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159722"
 ---
 # <a name="visual-database-tools-f1-help"></a>Guida sensibile al contesto relativa a Visual Database Tools
   In questi argomenti vengono descritti i comandi e le opzioni delle finestre di dialogo e delle finestre delle proprietà degli elementi di Visual Database Tools, ad esempio la finestra di dialogo Proprietà tabella e la scheda Proprietà colonne.  

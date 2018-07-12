@@ -1,13 +1,11 @@
 ---
-title: Impostazione dati di grandi dimensioni | Documenti Microsoft
+title: Impostazione dati di grandi dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,18 +16,18 @@ helpviewer_keywords:
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6fd64ccaa9d5b4abb87123bc6cb1d9977c6ef03b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fa1b0857b155f077920f60eee85cbcebb2ef4250
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166612"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423020"
 ---
 # <a name="setting-large-data"></a>Impostazione di dati di grandi dimensioni
-  Con il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client, è possibile impostare dati BLOB passando un puntatore a un oggetto di archiviazione del consumer.  
+  Con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client, è possibile impostare dati BLOB passando un puntatore a un oggetto di archiviazione del consumer.  
   
  Il consumer crea un oggetto di archiviazione che contiene i dati e passa un puntatore a tale oggetto di archiviazione al provider. Il provider legge quindi i dati dall'oggetto di archiviazione del consumer e li scrive nella colonna BLOB.  
   
@@ -46,11 +44,11 @@ ms.locfileid: "36166612"
 ## <a name="how-to-set-large-data"></a>Come impostare dati di grandi dimensioni  
  Per passare un puntatore al relativo oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama il **IRowsetChange:: SetData** oppure **IRowsetChange:: InsertRow** metodi. Per impostare dati BLOB  
   
-1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare il *dwFlag* elemento della struttura DBOBJECT su STGM_READ e impostare il *iid* elemento su IID_ISequentialStream (interfaccia da esporre).  
+1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare il *dwFlag* elemento della struttura DBOBJECT su STGM_READ e impostare le *iid* elemento su IID_ISequentialStream (interfaccia da esporre).  
   
 2.  Impostare le proprietà nel gruppo di proprietà DBPROPSET_ROWSET in modo che il set di righe sia aggiornabile.  
   
-3.  Creare un set di associazioni, uno per ogni colonna, utilizzando una matrice di strutture DBBINDING. Impostare il *wType* elemento nella struttura DBBINDING su DBTYPE_IUNKNOWN e il *pObject* elemento affinché punti alla struttura DBOBJECT creata.  
+3.  Creare un set di associazioni, uno per ogni colonna, utilizzando una matrice di strutture DBBINDING. Impostare il *wType* elemento nella struttura DBBINDING su DBTYPE_IUNKNOWN e il *pObject* elemento in modo che punti alla struttura DBOBJECT creata.  
   
 4.  Creare una funzione di accesso utilizzando le informazioni di associazione nella matrice di strutture DBBINDINGS.  
   
@@ -723,7 +721,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti BLOB e OLE](blobs-and-ole-objects.md)   
+ [I BLOB e gli oggetti OLE](blobs-and-ole-objects.md)   
  [Uso di tipi valore di grandi dimensioni](../native-client/features/using-large-value-types.md)  
   
   

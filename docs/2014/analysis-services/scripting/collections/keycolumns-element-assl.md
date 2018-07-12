@@ -1,5 +1,5 @@
 ---
-title: Elemento KeyColumns (ASSL) | Documenti Microsoft
+title: Elemento KeyColumns (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyColumns element
 ms.assetid: 03f3ad21-25cb-4afd-9287-cbf942ac1ad9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 537667650495082dce004a6fffb6699e3533e38d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88df5fa8590bf3f049632abb8137e62e959a67fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151612"
 ---
 # <a name="keycolumns-element-assl"></a>Elemento KeyColumns (ASSL)
   Contiene la raccolta di [KeyColumn](../objects/column-element-assl.md) delle definizioni degli elementi per un oggetto padre.  
@@ -60,10 +60,10 @@ ms.locfileid: "36170222"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[AggregationInstanceAttribute](../data-type/aggregationinstanceattribute-data-type-assl.md), [AggregationInstanceCubeDimension](../data-type/dimension-data-type-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md), [ ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
+|Elementi padre|[Elemento AggregationInstanceAttribute](../data-type/aggregationinstanceattribute-data-type-assl.md), [AggregationInstanceCubeDimension](../data-type/dimension-data-type-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md), [ ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
 |Elementi figlio|[KeyColumn](../objects/column-element-assl.md) di tipo [DataItem](../data-type/dataitem-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  La raccolta `KeyColumns` può contenere più elementi `KeyColumn` che rappresentano una chiave in più parti per un attributo o una colonna della struttura di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  

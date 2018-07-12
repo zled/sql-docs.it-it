@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collations [SQL Server], database
 - database collations [SQL Server]
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 769adcde56f3e77cee0a2458b1d32b9e763792f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1284c5ea161942ab96d974549147f24cd72ae8ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158552"
 ---
 # <a name="set-or-change-the-database-collation"></a>Impostare o modificare le regole di confronto del database
   In questo argomento viene descritto come impostare e modificare le regole di confronto del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se non viene specificata alcuna regola di confronto, vengono utilizzate le regole di confronto del server.  
@@ -61,7 +61,7 @@ ms.locfileid: "36169909"
   
     -   Tutti i parametri di tipo `char`, `varchar`, `text`, `nchar`, `nvarchar` o `ntext` e i valori scalari restituiti per le stored procedure e le funzioni definite dall'utente vengono modificati in base alle nuove regole di confronto.  
   
-    -   Il `char`, `varchar`, `text`, `nchar`, `nvarchar`, o `ntext` vengono modificati, tipi di dati di sistema e tutti i tipi di dati definito dall'utente in base a questi tipi di dati di sistema, a nuove regole di confronto predefinito.  
+    -   Il `char`, `varchar`, `text`, `nchar`, `nvarchar`, o `ntext` tipi di dati di sistema e tutti i tipi di dati definito dall'utente basati su questi tipi di dati di sistema, vengono modificati per le nuove regole di confronto predefinite.  
   
 -   È possibile modificare le regole di confronto di qualsiasi nuovo oggetto creato in un database utente utilizzando la clausola COLLATE dell'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) . Questa istruzione non consente di modificare le regole di confronto delle colonne delle tabelle definite dall'utente esistenti. Per modificare le regole di confronto delle colonne, è necessario utilizzare la clausola COLLATE dell'istruzione [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).  
   

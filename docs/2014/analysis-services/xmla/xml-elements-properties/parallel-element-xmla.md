@@ -1,5 +1,5 @@
 ---
-title: Parallela elemento (XMLA) | Documenti Microsoft
+title: Elemento (XMLA) in parallelo | Microsoft Docs
 ms.custom: ''
 ms.date: 2015-12-07
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Parallel element
 ms.assetid: 04726d94-37ee-460b-9744-d62b45f536b9
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b139996598786827c1eef20cbe099473e725a416
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b514732345cc8c4c7c0bc2c2f4f3fa0ad2d75993
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161022"
 ---
 # <a name="parallel-element-xmla"></a>Parallel Element (XMLA)
   Identifica i comandi da eseguire in parallelo tramite il comando padre [Batch](../xml-elements-commands/batch-element-xmla.md) .  
@@ -69,9 +69,9 @@ ms.locfileid: "36169067"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|maxParallel|Parametro facoltativo `Integer` attributo. Indica il numero massimo di thread in cui eseguire comandi in parallelo. Se omesso o impostato su 0, l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] determina un numero ottimale di thread basato sul numero di processori disponibili nel computer.|  
+|maxParallel|Facoltativo `Integer` attributo. Indica il numero massimo di thread in cui eseguire comandi in parallelo. Se omesso o impostato su 0, l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] determina un numero ottimale di thread basato sul numero di processori disponibili nel computer.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;XMLA&#41;](xml-elements-properties.md)  

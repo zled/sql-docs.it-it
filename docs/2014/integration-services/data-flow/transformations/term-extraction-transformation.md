@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
 helpviewer_keywords:
@@ -28,13 +28,13 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 783e0909ceaab1d3a9636a60bd0ce27d7682dc05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f88d8b585eca518edf3aebe25e38a79e38bf3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229391"
 ---
 # <a name="term-extraction-transformation"></a>Estrazione termini - trasformazione
   La trasformazione Estrazione termini consente di estrarre termini da un testo in una colonna di input di una trasformazione e quindi scrivere tali termini in una colonna di output della trasformazione. La trasformazione è applicabile solo a testo in lingua inglese, utilizza un dizionario inglese interno e le proprie informazioni sulla lingua inglese.  
@@ -179,7 +179,7 @@ ms.locfileid: "36170387"
   
 -   [Editor trasformazione estrazione termini &#40;scheda estrazione termini&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Editor trasformazione estrazione termini &#40;scheda esclusione&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Editor trasformazione estrazione termini &#40;scheda di esclusione&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
 -   [Editor trasformazione estrazione termini &#40;scheda Avanzate&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   

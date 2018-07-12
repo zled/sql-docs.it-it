@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
 - updating, data alerts
@@ -20,13 +20,13 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d9da14f27b15da351263653d33616621cb4f7b84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0b0e8d5d18b45d15feb0f1af8f7ef2671053ab1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155702"
 ---
 # <a name="data-alert-designer"></a>Finestra di progettazione Avviso dati
   Le definizioni di avviso dati vengono create e modificate nella finestra di progettazione Avviso dati. Una definizione di avviso è una raccolta di metadati, inclusi i dati del report a cui si è interessati, le regole che i dati del report devono soddisfare per creare istanze di avviso dati e inviare messaggi di avviso dati, i destinatari del messaggio di avviso e così via.  
@@ -74,7 +74,7 @@ ms.locfileid: "36170607"
 ### <a name="alert-name"></a>Nome dell'avviso  
  Per impostazione predefinita, la definizione di avviso e il report hanno lo stesso nome. È possibile modificare il nome dell'avviso per renderlo più significativo. In questo modo sarà più semplice gestire gli avvisi, determinando quali aggiornare, eliminare e così via.  
   
- È possibile creare più avvisi in un report nonché disporre di più definizioni di avviso con lo stesso nome. Tuttavia si consiglia di utilizzare nomi di avviso univoci in modo da facilitare la differenziazione e la gestione delle definizioni di avviso. L'elenco di tutti gli avvisi creati può essere visualizzato in Gestione avvisi dati. Per altre informazioni, vedere [Gestione avvisi dati per gli amministratori di avvisi](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) e [Gestisci avvisi dati personali in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
+ È possibile creare più avvisi in un report nonché disporre di più definizioni di avviso con lo stesso nome. Tuttavia si consiglia di utilizzare nomi di avviso univoci in modo da facilitare la differenziazione e la gestione delle definizioni di avviso. L'elenco di tutti gli avvisi creati può essere visualizzato in Gestione avvisi dati. Per altre informazioni, vedere [Gestione avvisi dati per gli amministratori di avvisi](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) e [gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
   
 ### <a name="rules-and-clauses"></a>Regole e clausole  
  L'ambito delle modifiche ai dati e delle regole di avviso definisce le modifiche ai dati tramite cui viene attivato l'avviso. L'ambito delle modifiche ai dati può essere uno dei seguenti:  

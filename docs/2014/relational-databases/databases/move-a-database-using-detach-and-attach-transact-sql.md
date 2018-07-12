@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database attaching [SQL Server]
 - moving databases [SQL Server]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efd99fbc8c1b9b477ac778c3d71fbab19a413fbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a0f6c25060fa70c1b269f884a3c33ba86b3b115f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160522"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Spostamento di un database tramite la funzionalità di scollegamento e collegamento (Transact-SQL)
   In questo argomento si illustra come spostare un database scollegato in un'altra posizione e come ricollegarlo alla stessa istanza oppure a un'altra istanza del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tuttavia, è consigliabile spostare i database utilizzando la procedura di rilocazione pianificata ALTER DATABASE anziché la funzionalità di scollegamento e collegamento. Per altre informazioni, vedere [Spostare database utente](move-user-databases.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "36168322"
 3.  Collegare i file copiati. Per altre informazioni, vedere [Attach a Database](attach-a-database.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente crea una copia del [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] istruzioni vengono eseguite in una finestra dell'Editor di Query che è connesso a istanza del server a cui è collegata.  
+ L'esempio seguente crea una copia del [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] istruzioni vengono eseguite in una finestra dell'Editor di Query connessa all'istanza del server a cui è collegato.  
   
 1.  Scollegare il [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] istruzioni:  
   

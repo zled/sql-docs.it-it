@@ -1,5 +1,5 @@
 ---
-title: Elemento OnlineMode (ASSL) | Documenti Microsoft
+title: Elemento OnlineMode (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OnlineMode element
 ms.assetid: 0bbac4e2-002f-4be4-8dd6-ccd7034f5f93
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3efda242b0563f4b6b853d3bf87b831da1ea8e00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a00e12eaa54724921195727fe16f6bd98f3f44a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154852"
 ---
 # <a name="onlinemode-element-assl"></a>Elemento OnlineMode (ASSL)
   Specifica se il database ritorna immediatamente online quando la ricompilazione della cache è iniziata, o solo quando la ricompilazione della cache è completa.  
@@ -61,7 +61,7 @@ ms.locfileid: "36169758"
 |Elemento padre|[ProactiveCaching](../objects/proactivecaching-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  

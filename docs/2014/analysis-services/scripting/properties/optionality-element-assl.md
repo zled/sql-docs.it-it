@@ -1,5 +1,5 @@
 ---
-title: Elemento optionality (ASSL) | Documenti Microsoft
+title: Elemento optionality (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Optionality element
 ms.assetid: 6cd2ef0a-6fbe-4462-ab27-4cdfeb33f8ab
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 971aaf70fe3cb2e239ace81d85f02d07374ce80f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe204e2b8eed7b5629b9c6d6060295383371aa48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159362"
 ---
 # <a name="optionality-element-assl"></a>Elemento Optionality (ASSL)
-  Indica la natura facoltativa dei membri di un [AttributeRelationship](../objects/attributerelationship-element-assl.md) elemento.  
+  Indica la natura facoltativa dei membri per un [AttributeRelationship](../objects/attributerelationship-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36169989"
 |Elemento padre|[Oggetto AttributeRelationship](../objects/attributerelationship-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  

@@ -1,5 +1,5 @@
 ---
-title: Creare, modificare ed eliminare sottoscrizioni Standard (Reporting Services in modalità nativa) | Documenti Microsoft
+title: Creare, modificare ed eliminare sottoscrizioni Standard (Reporting Services in modalità nativa) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
@@ -16,13 +16,13 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 508ffaa05c0f5d30204832b49dcdf2b3b791c567
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8c38acc8b25853db76bf89008189928c4cef578
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230391"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Creare, modificare ed eliminare sottoscrizioni standard (Reporting Services in modalità nativa)
   Il termine sottoscrizione standard si riferisce alla sottoscrizione creata dai singoli utenti che desiderano che un report venga recapitato tramite posta elettronica o a una cartella condivisa. Una sottoscrizione standard viene sempre definita tramite il report su cui si basa.  
@@ -30,7 +30,7 @@ ms.locfileid: "36168261"
  L'utente che crea una sottoscrizione diventa automaticamente il proprietario di tale sottoscrizione e può pertanto modificarla o eliminarla.  
   
 > [!NOTE]  
->  A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile trasferire la proprietà di una sottoscrizione a livello di codice. Non è disponibile alcuna interfaccia utente da utilizzare per trasferire la proprietà delle sottoscrizioni. Per altre informazioni, vedere <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  A partire [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile trasferire la proprietà di una sottoscrizione a livello di codice. Non è disponibile alcuna interfaccia utente da utilizzare per trasferire la proprietà delle sottoscrizioni. Per altre informazioni, vedere <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  A seconda delle impostazioni del file di configurazione **RSReportServer.config** , potrebbe essere possibile aggiungere altri utenti a una sottoscrizione. Un responsabile potrebbe ad esempio aggiungere gli indirizzi di posta elettronica dei propri subalterni in modo che possano ricevere una copia del report. Questa funzionalità è supportata se il campo A: è visibile durante la definizione delle singole sottoscrizioni. Per altre informazioni, vedere [configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36168261"
   
 -   Il contenuto in questo argomento spiega come creare sottoscrizioni in un server di report in modalità nativa utilizzando Gestione report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Dopo avere definito una sottoscrizione, è possibile accedervi in Gestione report tramite la pagina Sottoscrizioni personali oppure la scheda **Sottoscrizioni** di un report specifico.  
   
--   [Creare e gestire sottoscrizioni per server di Report in modalità SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) viene illustrato come utilizzare le pagine dell'applicazione in un sito di SharePoint per sottoscrivere report in un server di report eseguito in modalità integrata SharePoint.  
+-   [Creare e gestire sottoscrizioni per server di Report in modalità SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) spiega come usare le pagine dell'applicazione in un sito di SharePoint per sottoscrivere report in un server di report eseguito in modalità integrata SharePoint.  
   
  In questo argomento vengono fornite le istruzioni per creare una sottoscrizione con recapito tramite posta elettronica e una sottoscrizione con recapito tramite condivisione file.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36168261"
   
 -   Per utilizzare il recapito tramite condivisione file, è necessario aver già definito la cartella di destinazione. Per altre informazioni, vedere [configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
- Per sottoscrivere un report, è necessario che l'origine dati del report sia configurata per l'utilizzo di credenziali archiviate o di nessuna credenziale. Per altre informazioni, vedere [credenziali dell'archivio in un'origine dati di Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). Se non le utilizza, il pulsante **Nuova sottoscrizione** non è disponibile.  
+ Per sottoscrivere un report, è necessario che l'origine dati del report sia configurata per l'utilizzo di credenziali archiviate o di nessuna credenziale. Per altre informazioni, vedere [credenziali di Store in un'origine dati di Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). Se non le utilizza, il pulsante **Nuova sottoscrizione** non è disponibile.  
   
  In questo argomento non viene illustrato come creare una sottoscrizione guidata dai dati. Per istruzioni sulla creazione di una sottoscrizione guidata dai dati, vedere [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) o la Guida online per la pagina Creazione di una sottoscrizione guidata dai dati in Gestione report.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36168261"
   
 6.  Selezionare l'opzione **Aggiungi estensione file alla creazione del file**. Questa opzione consente di specificare un'estensione di tre caratteri per il nome del file. L'estensione del file dipende dal formato di output del report selezionato.  
   
-7.  Nel **percorso** testo, digitare un percorso di Universal Naming Convention (UNC) per una cartella esistente in cui si desidera recapitare il report (ad esempio \\ \\< servername\>\\< MyReports\>). Includere due barre rovesciate all'inizio del percorso e non specificare una barra rovesciata finale.  
+7.  Nel **tracciato** testo, digitare un percorso Universal Naming Convention (UNC) per una cartella esistente in cui si desidera recapitare il report (ad esempio, \\ \\< servername\>\\< MyReports\>). Includere due barre rovesciate all'inizio del percorso e non specificare una barra rovesciata finale.  
   
 8.  In Formato di rendering selezionare un formato di output del report per il recapito del file. Selezionare un formato corrispondente all'applicazione desktop che verrà utilizzata per aprire il report. Evitare formati che non eseguono il rendering del report in un singolo flusso o che introducono elementi di interattività non supportati in un file statico, ad esempio il formato HTML 4.0.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36168261"
   
 3.  In **Recapito**selezionare **Messaggio di posta elettronica**. Se questo tipo di recapito non è disponibile, il server di report non è stato configurato per le sottoscrizioni tramite posta elettronica.  
   
-4.  Nella casella di testo **A** il nome del destinatario nel campo A: viene riempito automaticamente con l'account utente di dominio. Le impostazioni di configurazione del server di report determinano se il campo **A** viene riempito con l'account utente corrente. Per ulteriori informazioni sulla modifica di indirizzi di posta elettronica le impostazioni di configurazione, vedere [configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+4.  Nella casella di testo **A** il nome del destinatario nel campo A: viene riempito automaticamente con l'account utente di dominio. Le impostazioni di configurazione del server di report determinano se il campo **A** viene riempito con l'account utente corrente. Per altre informazioni sulla modifica di indirizzi di posta elettronica impostazioni di configurazione, vedere [configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
     > [!NOTE]  
     >  A seconda delle autorizzazioni, può essere possibile digitare l'indirizzo di posta elettronica cui si desidera recapitare il report. Per specificare più indirizzi di posta elettronica, separarli con un punto e virgola (;). È anche possibile digitare indirizzi di posta elettronica supplementari nelle caselle di testo **Cc**, **Ccn**e **Risposta** . A questo fine è necessario disporre dell'autorizzazione per la gestione di tutte le sottoscrizioni.  
@@ -168,7 +168,7 @@ ms.locfileid: "36168261"
   
     2.  Per eliminare una sottoscrizione, selezionare la casella di controllo accanto alla sottoscrizione e quindi fare clic su **Elimina**.  
   
- In questo argomento non vengono fornite informazioni sulle modalità di annullamento di una sottoscrizione in corso di elaborazione nel server di report. Per ulteriori informazioni sull'annullamento di sottoscrizioni, vedere [gestire un processo in esecuzione](manage-a-running-process.md)  
+ In questo argomento non vengono fornite informazioni sulle modalità di annullamento di una sottoscrizione in corso di elaborazione nel server di report. Per altre informazioni sull'annullamento di sottoscrizioni, vedere [gestire un processo in esecuzione](manage-a-running-process.md)  
   
  Se si desidera interrompere una sottoscrizione e non si riesce a individuarla in modo semplice, annotare il nome del report che si riceve e cercare il report utilizzando il nome come criterio di ricerca. Dopo aver ottenuto l'accesso al report, sarà possibile annullare la propria sottoscrizione. Se non è possibile individuarla, la sottoscrizione potrebbe essere guidata dai dati. Per ulteriori informazioni, rivolgersi all'amministratore del server di report.  
   
@@ -181,6 +181,6 @@ ms.locfileid: "36168261"
  [Sottoscrizioni guidate dai dati](data-driven-subscriptions.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Utilizzare la pagina sottoscrizioni personali](use-my-subscriptions-native-mode-report-server.md)  
+ [Usare Sottoscrizioni personali](use-my-subscriptions-native-mode-report-server.md)  
   
   

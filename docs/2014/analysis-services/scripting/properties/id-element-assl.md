@@ -1,5 +1,5 @@
 ---
-title: Elemento ID (ASSL) | Documenti Microsoft
+title: Elemento ID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ID element
 ms.assetid: ea3ce0f4-9084-45d0-8150-73afb7005af2
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0a1ad98b6b9609cf50d16816c8ae5328083a63ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c323bd71865d0dd09bf724373ece03d83e7608ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209941"
 ---
 # <a name="id-element-assl"></a>Elemento ID (ASSL)
   Contiene l'identificatore univoco (ID) dell’elemento padre.  
@@ -58,11 +58,11 @@ ms.locfileid: "36169089"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[Action](../objects/action-element-assl.md), [Aggregation](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [Assembly](../objects/assembly-element-assl.md), [Cube](../objects/cube-element-assl.md), [CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md), [CubeDimension](../data-type/dimension-data-type-assl.md), [Database](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [Hierarchy](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [Level](../objects/level-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [Measure](../objects/measure-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MeasureGroupBinding](../data-type/binding-data-type-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md), [Partition](../objects/partition-element-assl.md), [Permission](../data-type/permission-data-type-assl.md), [Perspective](../objects/perspective-element-assl.md), [Role](../objects/role-element-assl.md), [Server](../objects/server-element-assl.md), [Trace](../objects/trace-element-assl.md)|  
+|Elementi padre|[Azione](../objects/action-element-assl.md), [aggregazione](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [Assembly](../objects/assembly-element-assl.md), [cubo](../objects/cube-element-assl.md), [CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md), [CubeDimension](../data-type/dimension-data-type-assl.md), [Database](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [dimensione ](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [gerarchia](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [livello](../objects/level-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [Misura](../objects/measure-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MeasureGroupBinding](../data-type/binding-data-type-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [ MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md), [partizione](../objects/partition-element-assl.md), [autorizzazione](../data-type/permission-data-type-assl.md), [Prospettiva](../objects/perspective-element-assl.md), [ruolo](../objects/role-element-assl.md), [Server](../objects/server-element-assl.md), [traccia](../objects/trace-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Tutti gli oggetti principali [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ha un `ID` elemento come una proprietà. Il valore di un elemento `ID` ha le seguenti restrizioni:  
+## <a name="remarks"></a>Note  
+ Ogni oggetto principale nel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ha un `ID` elemento rappresenta una proprietà. Il valore di un elemento `ID` ha le seguenti restrizioni:  
   
 -   Il valore non deve contenere spazi iniziali o finali. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] rimuoveranno in modo implicito spazi iniziali o finali dal valore di un elemento `ID`.  
   
@@ -90,11 +90,11 @@ ms.locfileid: "36169089"
 |--------------------|----------------|  
 |[Server](../objects/server-element-assl.md)|Il valore deve seguire le regole per [!INCLUDE[msCoName](../../../includes/msconame-md.md)] i nomi del computer di Windows. (Gli indirizzi IP non sono validi)|  
 |[Origine dati](../objects/datasource-element-assl.md)|:/\\*&#124;?" [] (){}<>|  
-|[Livello](../objects/level-element-assl.md), [attributi elemento](../objects/attribute-element-assl.md)|.,;' `:/\\*&#124;?" & % $! + = []{}<>|  
-|Tutti gli altri elementi padre|.,;' `:/\\*&#124;?" & % $! [] () + ={}<>|  
+|[Livello](../objects/level-element-assl.md), [attributo a elemento](../objects/attribute-element-assl.md)|.,;' `:/\\*&#124;?" & % $! + = []{}<>|  
+|Tutti gli altri elementi padre|.,;' `:/\\*&#124;?" & % $! + = [] (){}<>|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Nome di elemento &#40;ASSL&#41;](name-element-assl.md)   
+ [Denominare l'elemento &#40;ASSL&#41;](name-element-assl.md)   
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  
   
   

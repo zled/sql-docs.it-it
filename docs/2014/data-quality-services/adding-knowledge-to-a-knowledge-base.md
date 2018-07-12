@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ebc2c0abd5f380dd31201908e81ac88bfead1232
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d58af6ce4b1050b4a971a0b9d4ed5620bd8bd6fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239431"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Aggiunta di informazioni a una Knowledge Base
   In questo argomento vengono descritte le modalità mediante cui è possibile aggiungere informazioni a una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Prima che sia possibile eseguire operazioni relative alla qualità dei dati, è necessario disporre di informazioni in relazione ai dati stessi. Tali informazioni si acquisiscono compilando e gestendo una Data Quality Knowledge Base e aggiungendovi informazioni correlate a un tipo specifico di origine dati. La Knowledge Base è un repository di informazioni sui dati che consente di comprenderli e mantenerne l'integrità.  
@@ -43,14 +43,14 @@ ms.locfileid: "36166144"
 ##  <a name="Discovery"></a> Esecuzione dell'individuazione di informazioni  
  L'individuazione delle informazioni consente di analizzare un esempio di dati per stabilire i criteri di qualità, quindi di aggiungere le informazioni acquisite alla Knowledge Base. Si tratta di un processo computerizzato che identifica le incoerenze e gli errori di sintassi, proponendo modifiche ai dati. L'attività di individuazione delle informazioni è una procedura guidata che include una pagina in cui è possibile gestire i valori di dominio in modo interattivo.  
   
--   Per ulteriori informazioni, vedere [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md).  
+-   Per altre informazioni, vedere [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md).  
   
 -   Per un video in cui si dimostra come eseguire l'individuazione delle informazioni, fare clic [qui](http://msdn.microsoft.com/sqlserver/hh323825.aspx).  
   
 ##  <a name="ManageDomain"></a> Gestione dei valori dei dati in un dominio  
  DQS consente di modificare e aumentare in modo interattivo i metadati generati dall'attività di individuazione delle informazioni computerizzata. L'operazione viene eseguita nell'attività di gestione del dominio, dove è possibile applicare una modifica a un valore dei dati specifico.  
   
--   Per ulteriori informazioni, vedere [Change Domain Values](../../2014/data-quality-services/change-domain-values.md).  
+-   Per altre informazioni, vedere [Change Domain Values](../../2014/data-quality-services/change-domain-values.md).  
   
 -   Per un video in cui si dimostra come eseguire la gestione di un dominio, fare clic [qui](http://msdn.microsoft.com/sqlserver/hh323825.aspx). Si noti che in questo video si modificano i valori di dominio nella pagina di gestione dei valori di dominio della procedura guidata relativa all'individuazione delle informazioni. È inoltre possibile eseguire questi passaggi nella pagina Valori di dominio dell'attività di gestione del dominio.  
   
@@ -72,6 +72,6 @@ ms.locfileid: "36166144"
 ##  <a name="Default"></a> Utilizzo della Knowledge Base DQS predefinita  
  In DQS è disponibile una Knowledge Base precompilata denominata DQS Data che contiene domini con dati relativi nomi e indirizzi di società statunitensi. Questa Knowledge Base può essere utilizzata per avviare rapidamente un progetto senza creare una nuova Knowledge Base. La Knowledge Base DQS Data è di sola lettura, ma l'amministratore dei dati può creare una nuova Knowledge Base basandosi su di essa.  
   
--   Per ulteriori informazioni, vedere [tramite DQS Default Knowledge Base](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md).  
+-   Per altre informazioni, vedere [tramite DQS Default Knowledge Base](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md).  
   
   

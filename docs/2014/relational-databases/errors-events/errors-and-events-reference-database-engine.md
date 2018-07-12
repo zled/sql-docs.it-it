@@ -5,25 +5,24 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server Database Engine]
 - Database Engine [SQL Server], errors
 - events [SQL Server Database Engine]
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 13de14dc26eff84d7a25a827ca4928056644836f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dfdd9b62c4ccdf782de88b24082306d8850e188a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169450"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410660"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Guida di riferimento a errori ed eventi (Motore di database)
   Il [Centro eventi ed errori messaggi](http://go.microsoft.com/fwlink/?LinkId=47660) su TechNet è la fonte principale di informazioni sui messaggi di errore per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tale strumento semplifica la ricerca di informazioni sui messaggi di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di altri prodotti Microsoft consentendo di eseguire ricerche full-text e di filtrare i risultati in base al prodotto, alla versione, all'origine e a un identificatore numerico o simbolico. Inoltre, è disponibile una nuova interfaccia che fornisce supporto in più lingue. Il Centro verrà continuamente aggiornato con nuove informazioni sulla risoluzione dei problemi relativi agli errori più comuni.  
@@ -31,7 +30,7 @@ ms.locfileid: "36169450"
  Grazie ai miglioramenti che verranno apportati al Centro eventi e messaggi di errore, le informazioni relative alla risoluzione dei problemi saranno disponibili per il download in modo da renderle accessibili anche per computer non connessi a Internet.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
- [Errori ed eventi di motore di database] (database-motore-eventi-e-errors.md0  
+ [Errori ed eventi di motore di database] (database-engine-eventi-e-errors.md0  
  Descrive il formato dei messaggi di errore di [!INCLUDE[ssDE](../../includes/ssde-md.md)] e illustra la procedura per visualizzare i messaggi di errore e restituirli alle applicazioni.  
   
  Contiene le spiegazioni dei messaggi di errori di [!INCLUDE[ssDE](../../includes/ssde-md.md)] , le possibili cause e le azioni che è possibile eseguire per risolvere il problema.  

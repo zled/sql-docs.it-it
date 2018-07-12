@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a036b16073f19c106b507653921185fcb8df0bbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a33777cd395bf461f85a93ba6cb625acc1436866
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210881"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>Riferimenti alla raccolta dei parametri (Generatore report e SSRS)
   I parametri di un report sono una delle raccolte predefinite a cui è possibile fare riferimento da un'espressione. Includendo parametri in un'espressione, è possibile personalizzare i dati e l'aspetto dei report in base alle opzioni scelte da un utente. È possibile usare le espressioni per qualsiasi proprietà degli elementi del report o delle caselle di testo che includa l'opzione (*Fx*) o \<**Espressione**>. Le espressioni vengono anche utilizzate per controllare il contenuto e l'aspetto dei report in altri modi. Per altre informazioni, vedere [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
@@ -55,16 +55,16 @@ ms.locfileid: "36170056"
 |`=Parameters!` *\<NomeParametroMultivalore>* `.Value(0)`|Restituisce il primo valore di un parametro multivalore.|  
 |`=Parameters!` *\<NomeParametroMultivalore>* `.Value(Parameters!` *\<NomeParametroMultivalore>* `.Count-1)`|Restituisce l'ultimo valore di un parametro multivalore.|  
 |`=Split("Value1,Value2,Value3",",")`|Restituisce una matrice di valori.<br /><br /> Creare una matrice di valori per un parametro multivalore di tipo `String`. È possibile utilizzare qualsiasi delimitatore nel secondo parametro per dividere. È possibile utilizzare questa espressione per impostare i valori predefiniti di un parametro multivalore oppure creare un parametro multivalore da inviare a un sottoreport o a un report drill-through.|  
-|`=Join(Parameters!` *\<NomeParametroMultivalore>* `.Value,", ")`|Restituisce un `String` costituito da un elenco delimitato da virgole dei valori in un parametro multivalore. È possibile utilizzare qualsiasi delimitatore nel secondo parametro per unire.|  
+|`=Join(Parameters!` *\<NomeParametroMultivalore>* `.Value,", ")`|Restituisce un `String` costituito da un elenco delimitato da virgole di valori in un parametro multivalore. È possibile utilizzare qualsiasi delimitatore nel secondo parametro per unire.|  
   
  Per altre informazioni sull'uso dei parametri in un filtro, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Filtri di uso comune &#40;Generatore report e SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)   
- [Aggiungere, modificare o eliminare un parametro di Report &#40;SSRS e Generatore Report&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Aggiungere, modificare o eliminare un parametro di Report &#40;Report e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Esercitazioni su &#40;Generatore Report&#41;](../report-builder-tutorials.md)   
- [Raccolte predefinite nelle espressioni &#40;SSRS e Generatore Report&#41;](built-in-collections-in-expressions-report-builder.md)  
+ [Raccolte predefinite nelle espressioni &#40;Report e SSRS&#41;](built-in-collections-in-expressions-report-builder.md)  
   
   

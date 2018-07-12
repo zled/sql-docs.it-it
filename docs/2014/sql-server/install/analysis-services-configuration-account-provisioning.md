@@ -1,5 +1,5 @@
 ---
-title: Analisi configurazione Services - Provisioning Account | Documenti Microsoft
+title: Analysis Services - configurazione di provisioning degli Account | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services configuration
 - account provisioning
 ms.assetid: 169b1af2-6fe2-467f-8ca4-919f24c620ce
 caps.latest.revision: 28
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 4df78bd3cf29b2f767fafb1dcc5066a2e1d80a1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f3ab054dad44d7e7c6f43604f21ec771279eb050
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151892"
 ---
 # <a name="analysis-services-configuration---account-provisioning"></a>Configurazione di Analysis Services - Provisioning account
   Utilizzare questa pagina per impostare la modalità server e per concedere le autorizzazioni amministrative a utenti o servizi che richiedono l'accesso illimitato ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Durante l'installazione non viene aggiunto automaticamente il gruppo locale BUILTIN\Administrators di Windows al ruolo di amministratore del server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dell'istanza che viene installata. Se si desidera aggiungere il gruppo Administrators locale al ruolo di amministratore del server, è necessario specificare in modo esplicito tale gruppo.  
   
- Se si installa [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], accertarsi di concedere le autorizzazioni amministrative agli amministratori di farm SharePoint o agli amministratori di servizi responsabili di una distribuzione server di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una farm [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]. Per ulteriori informazioni [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] installazione e requisiti dell'account del servizio, vedere [installare funzionalità di Business Intelligence di SQL Server con SharePoint &#40;PowerPivot e Reporting Services&#41;](../../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md).  
+ Se si installa [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], accertarsi di concedere le autorizzazioni amministrative agli amministratori di farm SharePoint o agli amministratori di servizi responsabili di una distribuzione server di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una farm [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]. Per altre informazioni sulle [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] installazione e requisiti dell'account del servizio, vedere [installare le funzionalità di Business Intelligence di SQL Server con SharePoint &#40;PowerPivot e Reporting Services&#41;](../../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md).  
   
 ## <a name="options"></a>Opzioni  
  **Modalità server** : specifica il tipo di database di Analysis Services che è possibile distribuire nel server. Le modalità del server vengono determinate durante l'installazione e non possono essere modificate successivamente. Le modalità si escludono a vicenda, ovvero saranno necessarie due istanze di Analysis Services, ciascuna configurata per una modalità diversa, in modo da supportare sia la soluzione OLAP classico che quella per il modello tabulare.  
