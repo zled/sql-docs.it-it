@@ -1,13 +1,11 @@
 ---
-title: Data/ora le conversioni di tipo di dati (ODBC) | Documenti Microsoft
+title: Data/ora le conversioni di tipo di dati (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - ODBC, bindings and conversions
 ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 922328981884624c0bfdc9650ba4ece2766912db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: eb600fd98f6741084d725140bd6f9b326e4cf250
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063578"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431690"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>Conversioni dei tipi di dati datetime (ODBC)
   Le conversioni seguenti sono già definite da ODBC o sono un'estensione coerente di ODBC. Le conversioni fornite da ogni provider dipendono dalla community servita dal provider, pertanto si può riscontrare la presenza frequente di incoerenze. I valori tra parentesi quadre sono facoltativi.  
@@ -35,7 +33,7 @@ ms.locfileid: "36063578"
   
 -   Il formato delle stringhe della data è "yyyy-mm-dd"  
   
- Le conversioni dalle stringhe consentono flessibilità nella larghezza degli spazi vuoti e dei campi. Per altre informazioni, vedere la sezione "Dati formatta: stringhe e valori letterali" di [supporto tipo di dati per ODBC Data e ora miglioramenti](data-type-support-for-odbc-date-and-time-improvements.md).  
+ Le conversioni dalle stringhe consentono flessibilità nella larghezza degli spazi vuoti e dei campi. Per altre informazioni, vedere la sezione "Dati nei formati: stringhe e valori letterali" di [supporto dei tipi di dati per ODBC Date e miglioramenti per la fase](data-type-support-for-odbc-date-and-time-improvements.md).  
   
  Di seguito vengono fornite le regole di conversione generali:  
   
@@ -56,13 +54,13 @@ ms.locfileid: "36063578"
 -   Se quando si esegue la conversione da SQL a C si verifica il troncamento dei secondi o dei secondi frazionari, viene generato un record di diagnostica con SQLSTATE 01S07 e il messaggio "Troncamento frazionario".  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
- [Conversioni da C a SQL](datetime-data-type-conversions-from-c-to-sql.md)  
+ [Conversioni da tipi di dati C a tipi di dati SQL](datetime-data-type-conversions-from-c-to-sql.md)  
  Sono elencati i problemi di cui tener conto durante le conversioni dai tipi C ai tipi di dati date/time di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Conversioni da SQL a C](datetime-data-type-conversions-from-sql-to-c.md)  
+ [Conversioni dai tipi di dati SQL ai tipi di dati C](datetime-data-type-conversions-from-sql-to-c.md)  
  Sono elencati i problemi di cui tener conto durante le conversioni dai tipi date/time di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ai tipi C.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data e ora miglioramenti &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Data e miglioramenti per la fase &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Bloccare l'elemento (XMLA) | Documenti Microsoft
+title: Bloccare l'elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Lock command
 ms.assetid: a819e805-4793-43bb-8af3-16a19f8bdab3
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d454cdcc6a87335670f483ccc06a7547e89dc7c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 44225f211ac013edd82de08c9ca82f22cb349f96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209871"
 ---
 # <a name="lock-element-xmla"></a>Elemento Lock (XMLA)
   Blocca un oggetto specificato in un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza.  
@@ -65,8 +65,8 @@ ms.locfileid: "36069009"
 |Elementi padre|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |Elementi figlio|[ID](../xml-elements-properties/id-element-xmla.md), [modalità](../xml-elements-properties/mode-element-xmla.md), [oggetto](../xml-elements-properties/object-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
- Il comando `Lock` blocca un oggetto, per utilizzo condiviso o esclusivo, all'interno del contesto della transazione attualmente attiva. Solo amministratori del database o amministratori del server possono eseguire in modo esplicito un comando `Lock`. Un blocco su un oggetto impedisce alle transazioni di eseguire il commit finché non viene rimosso. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supporta due tipi di blocchi, blocchi condivisi e blocchi esclusivi. Per ulteriori informazioni sui tipi di blocco supportati da [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], vedere [elemento Mode &#40;XMLA&#41;](../xml-elements-properties/mode-element-xmla.md).  
+## <a name="remarks"></a>Note  
+ Il comando `Lock` blocca un oggetto, per utilizzo condiviso o esclusivo, all'interno del contesto della transazione attualmente attiva. Solo amministratori del database o amministratori del server possono eseguire in modo esplicito un comando `Lock`. Un blocco su un oggetto impedisce alle transazioni di eseguire il commit finché non viene rimosso. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supporta due tipi di blocchi, blocchi condivisi e blocchi esclusivi. Per altre informazioni sui tipi di blocco supportati da [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], vedere [modalità elemento &#40;XMLA&#41;](../xml-elements-properties/mode-element-xmla.md).  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] consente solo che i database vengano bloccati. L'elemento `Object` deve contenere un riferimento all'oggetto a un database [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Se l'elemento `Object` non viene specificato oppure fa riferimento a un oggetto diverso da un database `Object`, si verifica un errore.  
   

@@ -1,13 +1,11 @@
 ---
-title: Come i cursori vengono implementati | Documenti Microsoft
+title: La modalità di implementazione dei cursori | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,22 +15,22 @@ helpviewer_keywords:
 - cursors [ODBC], about ODBC cursors
 ms.assetid: 2b1d7dd4-08a4-43fc-b3eb-70c183d0941f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f64f5e6c4d57fdc7b0165875394b9d33a62b95c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 80b3df4fd3b4e6e515de68b8e5f1a7af034bdb42
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062174"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423050"
 ---
 # <a name="how-cursors-are-implemented"></a>Modalità di implementazione dei cursori
   Le applicazioni ODBC controllano il comportamento di un cursore impostando uno o più attributi di istruzione prima di eseguire un'istruzione SQL. In ODBC sono disponibili due modalità diverse per specificare le caratteristiche di un cursore:  
   
 -   Tipo di cursore  
   
-     Tipi di cursore vengono impostati utilizzando l'attributo SQL_ATTR_CURSOR_TYPE di [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md). I tipi di cursore ODBC sono forward-only, statici, gestiti da keyset, misti e dinamici. L'impostazione del tipo di cursore è stato il metodo originale utilizzato per la specifica di cursori in ODBC.  
+     Tipi di cursore vengono impostati usando l'attributo SQL_ATTR_CURSOR_TYPE di [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md). I tipi di cursore ODBC sono forward-only, statici, gestiti da keyset, misti e dinamici. L'impostazione del tipo di cursore è stato il metodo originale utilizzato per la specifica di cursori in ODBC.  
   
 -   Comportamento dei cursori  
   

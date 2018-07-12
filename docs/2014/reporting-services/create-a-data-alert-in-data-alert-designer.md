@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d2829c12a38b75b5b50eb21c44b18252658b6a1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5671d2223c2518972f8947e9e715b6ffc4b7b55d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278797"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Creare un avviso dati nella finestra di progettazione Avviso dati
   Le definizioni di avviso dati vengono create nella finestra di progettazione Avviso dati. Dopo aver salvato le definizioni di avviso, è possibile riaprirle, modificarle, quindi salvare di nuovo nella finestra di progettazione Avviso dati. Per informazioni sulla modifica delle definizioni di avviso, vedere [Gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md) e [Modificare un avviso dati nella finestra di progettazione di avvisi](edit-a-data-alert-in-alert-designer.md).  
@@ -101,7 +101,7 @@ ms.locfileid: "36067543"
      Per impostazione predefinita, un messaggio di avviso non dispone di alcuna data di fine.  
   
     > [!NOTE]  
-    >  L'arresto di un messaggio di avviso non comporta l'eliminazione della definizione di avviso. Dopo avere arrestato un messaggio di avviso, è possibile riavviarlo aggiornando le date di inizio e di fine. Per informazioni sull'eliminazione di definizioni di avviso, vedere [Gestisci dati avvisi in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
+    >  L'arresto di un messaggio di avviso non comporta l'eliminazione della definizione di avviso. Dopo avere arrestato un messaggio di avviso, è possibile riavviarlo aggiornando le date di inizio e di fine. Per informazioni sull'eliminazione di definizioni di avviso, vedere [gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
   
 18. Facoltativamente, deselezionare la casella di controllo **Invia un messaggio solo se cambiano i risultati degli avvisi** .  
   

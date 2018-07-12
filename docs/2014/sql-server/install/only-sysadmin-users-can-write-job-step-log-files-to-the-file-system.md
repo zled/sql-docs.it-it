@@ -1,5 +1,5 @@
 ---
-title: Solo gli utenti sysadmin possono scrivere file di log di passaggi di processo nel file System | Documenti Microsoft
+title: Solo gli utenti sysadmin possono scrivere file di log di passaggio di processo nel file System | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - job step log files [SQL Server Agent]
 - log files [SQL Server Agent]
 - writing job step log files
 ms.assetid: d26a7cef-1a60-4c95-b9df-f8b4fec59f9b
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e0b7638bbbf33cdd820467cd21edc40a6f5c42ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6b31dace7b76d068187b495d6e63517967a6c0f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151952"
 ---
 # <a name="only-sysadmin-users-can-write-job-step-log-files-to-the-file-system"></a>Solo gli utenti sysadmin possono scrivere file di log dei passaggi del processo nel file system
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] scrive facoltativamente un log per ogni passaggio del processo.  
@@ -32,12 +32,12 @@ ms.locfileid: "36069962"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 ## <a name="description"></a>Description  
- In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può scrivere log nel file System per i processi che sono proprietà dei membri del **sysadmin** ruolo predefinito del server. Se il proprietario del processo non è un membro del **sysadmin** ruolo e se l'account proxy è abilitato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può scrivere log nel file System utilizzando le credenziali dell'account proxy.  
+ Nelle [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può scrivere log nel file System per i processi che sono proprietà dei membri delle **sysadmin** ruolo predefinito del server. Se il proprietario del processo non è un membro del **sysadmin** ruolo e se l'account proxy è abilitato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può scrivere log nel file System utilizzando le credenziali dell'account proxy.  
   
- Dopo l'aggiornamento, i processi di proprietà da parte degli utenti che non sono membri del **sysadmin** ruolo predefinito del server non possono più scrivere log nel file System. Al contrario, questi utenti possono selezionare l'opzione per scrivere i log in una tabella di **msdb** database. I membri del **sysadmin** ruolo può ancora scrivere file di log nel file System.  
+ Dopo l'aggiornamento, i processi che appartengono a utenti che non sono membri del **sysadmin** ruolo predefinito del server non possono più scrivere log nel file System. Al contrario, questi utenti possono selezionare l'opzione per scrivere i log in una tabella nel **msdb** database. I membri del **sysadmin** ruolo può ancora scrivere file di log nel file System.  
   
 ## <a name="corrective-action"></a>Azione correttiva  
- Dopo l'aggiornamento, i processi di proprietà da parte degli utenti che non sono membri del **sysadmin** ruolo continua a essere eseguita, ma non verranno creati log. Per registrare i passaggi del processo in una tabella, gli utenti che non sono membri del **sysadmin** ruolo è necessario aggiornare manualmente i processi.  
+ Dopo l'aggiornamento, i processi che appartengono a utenti che non sono membri del **sysadmin** ruolo continueranno a essere eseguite, ma non verranno creati i log. Per registrare i passaggi del processo in una tabella, gli utenti che non sono membri del **sysadmin** ruolo necessario aggiornare manualmente i processi.  
   
  Per ulteriori informazioni, vedere gli argomenti "Creazione di processi", "Creazione di passaggi di processo" e "Gestione di più passaggi di processo" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

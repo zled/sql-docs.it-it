@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], reports
 - security [Reporting Services], resources
@@ -19,13 +19,13 @@ ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dfb47953b60ef2a37b5a2bc3ffd9c8fc16300526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95d8ca8474c23d2ef8ffac6baa4ed822700fca81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240371"
 ---
 # <a name="secure-reports-and-resources"></a>Garantire la sicurezza di report e risorse
   È possibile impostare la sicurezza per singoli report e risorse e controllare quindi i livelli di accesso concessi ai vari utenti per questi elementi. Per impostazione predefinita, solo i membri del gruppo **Administrators** predefinito possono eseguire report, visualizzare risorse, modificare proprietà ed eliminare elementi. Per tutti gli altri utenti è necessario creare assegnazioni di ruolo che consentano l'accesso a un report o a una risorsa.  
@@ -65,7 +65,7 @@ ms.locfileid: "36066906"
  Per ridurre il rischio di includere in un report collegamenti che eseguono inavvertitamente script dannosi, associare collegamenti ipertestuali solo ai dati provenienti da origini attendibili. Verificare che i dati restituiti da query ed espressioni che determinano l'associazione di dati a collegamenti ipertestuali non creino collegamenti che possano essere sfruttati da utenti malintenzionati. Ad esempio, non basare un collegamento ipertestuale su un'espressione che concatena dati da più campi del set di dati. Se necessario, passare al report e utilizzare "Visualizza origine" per verificare la presenza di script e URL sospetti.  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>Riduzione del rischio di attacchi intrusivi nel codice SQL in un report con parametri  
- In qualsiasi report che include un parametro di tipo `String`, assicurarsi di utilizzare un elenco di valori disponibili (noto anche come elenco di valori validi) e verificare che ogni utente che esegue il report disponga solo delle autorizzazioni necessarie per visualizzare i dati nel report. Quando si definisce un parametro di tipo `String`, viene visualizzata una casella di testo che può accettare qualsiasi valore. Un elenco di valori disponibili consente di limitare i valori che è possibile immettere. Se un parametro di report è correlato a un parametro di query e non si utilizza un elenco di valori disponibili, un utente potrebbe digitare nella casella di testo sintassi SQL, esponendo il report e il server a un potenziale attacco intrusivo nel codice SQL. Se l'utente dispone di autorizzazioni sufficienti per eseguire la nuova istruzione SQL, è possibile che nel server si verifichino risultati non desiderati.  
+ In qualsiasi report che includa un parametro di tipo `String`, assicurarsi di usare un elenco di valori disponibili (noto anche come elenco di valori validi) e assicurarsi che ogni utente che esegue il report disponga solo delle autorizzazioni necessarie per visualizzare i dati nel report. Quando si definisce un parametro di tipo `String`, viene visualizzata una casella di testo che può accettare qualsiasi valore. Un elenco di valori disponibili consente di limitare i valori che è possibile immettere. Se un parametro di report è correlato a un parametro di query e non si utilizza un elenco di valori disponibili, un utente potrebbe digitare nella casella di testo sintassi SQL, esponendo il report e il server a un potenziale attacco intrusivo nel codice SQL. Se l'utente dispone di autorizzazioni sufficienti per eseguire la nuova istruzione SQL, è possibile che nel server si verifichino risultati non desiderati.  
   
  Se un parametro di report non è correlato a un parametro di query e i valori del parametro sono inclusi nel report, un utente potrebbe digitare nel valore del parametro un URL o la sintassi di un'espressione ed eseguire il rendering del report in formato Excel o HTML. Se il report viene in seguito visualizzato da un altro utente che fa clic sul contenuto dei parametri di cui è stato eseguito il rendering, è possibile che venga inavvertitamente eseguito il collegamento o lo script dannoso.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36066906"
  È consigliabile proteggere i report che contengono informazioni riservate in corrispondenza del livello di accesso ai dati, richiedendo agli utenti di specificare le credenziali per l'accesso ai dati riservati. Per altre informazioni, vedere [specificare le credenziali e informazioni di connessione per origini dati del Report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md). È inoltre possibile proteggere una cartella in modo da renderla inaccessibile agli utenti non autorizzati. Per altre informazioni, vedere [Proteggere le cartelle](secure-folders.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- (creare-e-gestire-ruolo-assignments.md)   
+ (create-e-Gestisci-ruolo-assignments.md)   
  [Configurare l'accesso a Generatore Report](../report-server/configure-report-builder-access.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)   
  [Proteggere le origini dei dati condivise](secure-shared-data-source-items.md)   

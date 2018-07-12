@@ -1,28 +1,27 @@
 ---
-title: Reporting Services con i gruppi di disponibilità AlwaysOn (SQL Server) | Documenti Microsoft
+title: Reporting Services con i gruppi di disponibilità AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 caps.latest.revision: 15
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: ec7c724049ad6ab85b72f2dee44ebcad0bf5ed07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fb5a36175e735393e079cdf7b611a11d3d50a834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153122"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services con i gruppi di disponibilità AlwaysOn (SQL Server)
   In questo argomento sono contenute informazioni sulla configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per l'utilizzo con i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. I database per le origini dati del report, i database del server di report e la progettazione report rappresentano i tre scenari per l'utilizzo di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . La funzionalità supportata e la configurazione richiesta sono diverse per i tre scenari.  
@@ -58,7 +57,7 @@ ms.locfileid: "36069912"
   
  La stringa di connessione può inoltre contenere nuove proprietà di connessione AlwaysOn che configurano le richieste della query del report in modo da usare la replica secondaria per il report di sola lettura. L'utilizzo della replica secondaria per le richieste di report riduce il carico nella replica primaria di lettura e scrittura. Nell'immagine seguente viene riportato un esempio di una configurazione dei gruppi di disponibilità a tre repliche in cui le stringhe di connessione dell'origine dati [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono state configurate con ApplicationIntent=ReadOnly. In questo esempio le richiesta della query di report vengono inviate a una replica secondaria e non alla replica primaria.  
   
- ![Origine dati SSRS utilizzando gruppi di disponibilità](../../media/rs-alwayson-basic.gif "un'origine dati SSRS tramite gruppi di disponibilità")  
+ ![Un'origine dati SSRS tramite gruppi di disponibilità](../../media/rs-alwayson-basic.gif "un'origine dati SSRS tramite gruppi di disponibilità")  
   
  Di seguito viene riportata una stringa di connessione di esempio in cui [AvailabilityGroupListenerName] è il **Nome DNS del listener** configurato al momento della creazione delle repliche:  
   

@@ -1,5 +1,5 @@
 ---
-title: Aggiungere o rimuovere un progetto di Integration Services in una soluzione | Documenti Microsoft
+title: Aggiungere o rimuovere un progetto di Integration Services in una soluzione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding projects
 - Integration Services projects, adding
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - projects [Integration Services], adding
 ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
 caps.latest.revision: 47
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 20a8d1c2de2f71a8095145a413c2594467bd2e4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19ef4acffc6fabb5d69effe0f932b7ea45f52275
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211701"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>Aggiunta o rimozione di un progetto di Integration Services da una soluzione
   Nelle procedure seguenti viene descritto come aggiungere o rimuovere un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] da una soluzione.  
@@ -73,7 +73,7 @@ ms.locfileid: "36069210"
 3.  Fare clic su **OK** per confermare la rimozione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Servizi di integrazione &#40;SSIS&#41; i progetti](integration-services-ssis-projects-and-solutions.md)   
- [Creare un nuovo progetto di Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
+ [Integration Services &#40;SSIS&#41; i progetti](integration-services-ssis-projects-and-solutions.md)   
+ [Creazione di un nuovo progetto di Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
   
   

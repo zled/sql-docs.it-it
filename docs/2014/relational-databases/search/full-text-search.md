@@ -5,26 +5,25 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d419f7a018817656ba9bb5910a71e2c2f810ae87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5b923b9b27fd7b67d61b25956f3d44102f1a5f79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158022"
 ---
 # <a name="full-text-search"></a>Ricerca full-text
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] la ricerca full-text consente a utenti e applicazioni di eseguire query full-text su dati di tipo carattere in tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Affinché le query full-text possano essere eseguite in una determinata tabella, l'amministratore del database deve prima creare un indice full-text nella tabella in questione. L'indice full-text include una o più colonne basate su caratteri nella tabella. Tali colonne possono presentare uno qualsiasi dei seguenti tipi di dati: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, o `varbinary(max)` e FILESTREAM. Ogni indice full-text consente di indicizzare una o più colonne della tabella e ciascuna colonna può essere utilizzata con una lingua specifica.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] la ricerca full-text consente a utenti e applicazioni di eseguire query full-text su dati di tipo carattere in tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Affinché le query full-text possano essere eseguite in una determinata tabella, l'amministratore del database deve prima creare un indice full-text nella tabella in questione. L'indice full-text include una o più colonne basate su caratteri nella tabella. Tali colonne possono presentare uno qualsiasi dei tipi di dati seguenti: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, o `varbinary(max)` e FILESTREAM. Ogni indice full-text consente di indicizzare una o più colonne della tabella e ciascuna colonna può essere utilizzata con una lingua specifica.  
   
  Attraverso le query full-text è possibile eseguire ricerche linguistiche rispetto ai dati di testo contenuti negli indici full-text, utilizzando parole e frasi in base alle regole di una determinata lingua, come ad esempio l'inglese o il giapponese. Le query full-text possono contenere semplici parole e frasi oppure più forme di una parola o frase. Una query full-text restituisce qualsiasi documento contenente almeno una corrispondenza, nota anche come *riscontro*. Si ottiene una corrispondenza quando un documento di destinazione contiene tutti i termini specificati nella query full-text e soddisfa qualsiasi altra condizione di ricerca, come ad esempio la distanza entro i termini corrispondenti.  
   
@@ -78,12 +77,12 @@ ms.locfileid: "36069807"
   
  [Contenuto dell'argomento](#top)  
   
-###  <a name="like"></a> Confronto tra LIKE e ricerca Full-Text  
+###  <a name="like"></a> Confronto tra LIKE e la ricerca Full-Text  
  Contrariamente alla ricerca full-text, il predicato [LIKE](/sql/t-sql/language-elements/like-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] funziona unicamente con i modelli di caratteri. Non è inoltre possibile utilizzare il predicato LIKE per eseguire query su dati binari formattati. Inoltre, l'esecuzione di una query LIKE su una grande quantità di dati di testo non strutturati è molto più lenta dell'esecuzione di una query full-text equivalente sugli stessi dati. Una query LIKE eseguita su milioni di righe di dati di testo può richiedere diversi minuti, mentre per una query full-text sugli stessi dati possono essere necessari al massimo pochi secondi, a seconda del numero di righe restituite.  
   
  [Contenuto dell'argomento](#top)  
   
-##  <a name="architecture"></a> Componenti e architettura della ricerca Full-Text  
+##  <a name="architecture"></a> Componenti e dell'architettura della ricerca Full-Text  
  L'architettura della ricerca full-text è costituita dai processi seguenti:  
   
 -   Processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (sqlservr.exe).  
@@ -138,7 +137,7 @@ ms.locfileid: "36069807"
 ###  <a name="indexing"></a> Processo di indicizzazione full-Text  
  Quando viene iniziato un popolamento full-text, noto anche come ricerca per indicizzazione, tramite il motore di ricerca full-text viene eseguito il push di batch di grandi dimensioni di dati in memoria e viene inviata una notifica all'host del daemon di filtri. L'host filtra ed esegue il word breaking dei dati ed esegue inoltre la conversione dei dati convertiti in elenchi di parole invertiti. La ricerca full-text effettua quindi il pull dei dati convertiti dagli elenchi di parole, elabora i dati per rimuovere le parole non significative e salva in modo permanente gli elenchi di parole per un batch in uno o più indici invertiti.  
   
- Quando l'indicizzazione dei dati archiviati in un `varbinary(max)` o `image` colonna, il filtro, che implementa il **IFilter** interfaccia, estrae testo in base al formato di file specificato per tali dati (ad esempio, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). In alcuni casi, i componenti di filtro richiedono la `varbinary(max)`, o `image` dati devono essere scritti nella cartella filterdata, eseguito il push in memoria.  
+ Durante l'indicizzazione dei dati archiviati in un `varbinary(max)` oppure `image` colonna, il filtro, che implementa il **IFilter** interfaccia, estrae testo in base al formato di file specificato per tali dati (ad esempio, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). In alcuni casi, i componenti filtro richiedono la `varbinary(max)`, o `image` dati devono essere scritti nella cartella filterdata e non esserne eseguito il push in memoria.  
   
  Nell'ambito dell'elaborazione, i dati di testo raccolti vengono sottoposti a un word breaker per separare il testo in singoli token o parole chiave. La lingua utilizzata per la suddivisione in token viene specificata a livello di colonna o può essere identificata all'interno dei dati `varbinary(max)`, `image` o `xml` dal componente filtro.  
   
@@ -148,7 +147,7 @@ ms.locfileid: "36069807"
   
  [Contenuto dell'argomento](#top)  
   
-###  <a name="querying"></a> Processo di esecuzione di query full-Text  
+###  <a name="querying"></a> Processo di esecuzione delle query full-Text  
  Query Processor consente di passare le parti full-text di una query al motore di ricerca full-text affinché vengano elaborate. Il motore di ricerca full-text esegue il word breaking e, facoltativamente, le espansioni del thesaurus, lo stemming e l'elaborazione delle parole non significative. Le parti full-text della query vengono rappresentate come operatori SQL, principalmente come funzioni di flusso con valori di tabella. Durante l'esecuzione della query, queste funzioni accedono all'indice invertito per recuperare i risultati corretti. I risultati vengono restituiti al client immediatamente oppure dopo essere stati ulteriormente elaborati.  
   
  [Contenuto dell'argomento](#top)  
@@ -198,7 +197,7 @@ ms.locfileid: "36069807"
   
     -   [Popolare gli indici full-text](populate-full-text-indexes.md)  
   
-    -   [Gestire indici Full-Text](../../database-engine/manage-full-text-indexes.md)  
+    -   [Gestire indici full-text](../../database-engine/manage-full-text-indexes.md)  
   
     -   [Migliorare le prestazioni degli indici full-text](improve-the-performance-of-full-text-indexes.md)  
   

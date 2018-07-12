@@ -1,13 +1,11 @@
 ---
-title: Chiamare una Stored Procedure (OLE DB) | Documenti Microsoft
+title: Chiama una Stored Procedure (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,18 +18,18 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd9a050bd3c424c832f765d02182136a5bcdef4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8b9f9456e5f916e886c366a292064d7ccd4dc5d8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065137"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412280"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Esecuzione di una chiamata a una stored procedure (OLE DB)
-  Una stored procedure può avere zero o più parametri. Può inoltre restituire un valore. Quando si utilizza il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client, è possibile passare parametri a una stored procedure:  
+  Una stored procedure può avere zero o più parametri. Può inoltre restituire un valore. Quando si usa il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client, è possibile passare parametri a una stored procedure:  
   
 -   Specificando il valore dei dati a livello di codice.  
   
@@ -40,13 +38,13 @@ ms.locfileid: "36065137"
 > [!NOTE]  
 >  Quando si esegue una chiamata alle stored procedure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando parametri denominati con OLE DB, i nomi dei parametri devono iniziare con il carattere '\@'. Si tratta di una restrizione specifica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client applica questa limitazione in modo più restrittivo rispetto a MDAC.  
   
- Per supportare i parametri, il **ICommandWithParameters** interfaccia viene esposta per l'oggetto command. Per utilizzare i parametri, il consumer descrive prima i parametri al provider chiamando il **ICommandWithParameters:: SetParameterInfo** metodo (o facoltativamente prepara un'istruzione di chiamata che chiama il  **GetParameterInfo** (metodo)). Il consumer crea quindi una funzione di accesso che specifica la struttura di un buffer e inserisce i valori dei parametri in questo buffer. Infine, passa l'handle della funzione di accesso e un puntatore al buffer a **Execute**. Nelle chiamate successive a **Execute**, il consumer inserisce i nuovi valori dei parametri nel buffer e chiama **Execute** con il puntatore del buffer e di handle della funzione di accesso.  
+ Per supportare i parametri, il **ICommandWithParameters** interfaccia viene esposta nell'oggetto comando. Per usare i parametri, il consumer descrive prima i parametri al provider chiamando il **ICommandWithParameters:: SetParameterInfo** metodo (o facoltativamente prepara un'istruzione di chiamata che chiama il  **GetParameterInfo** (metodo)). Il consumer crea quindi una funzione di accesso che specifica la struttura di un buffer e inserisce i valori dei parametri in questo buffer. Infine, passa l'handle della funzione di accesso e un puntatore al buffer in cui **Execute**. Nelle chiamate successive a **Execute**, il consumer inserisce i nuovi valori dei parametri nel buffer e le chiamate **Execute** con il puntatore di buffer e l'handle della funzione di accesso.  
   
- Un comando che chiama una stored procedure temporanea utilizzando i parametri prima necessario chiamare **ICommandWithParameters:: SetParameterInfo** per definire le informazioni sui parametri, prima che il comando possa essere preparato correttamente. Questa operazione è necessaria perché il nome interno di una stored procedure temporanea è diverso dal nome esterno utilizzato da un client e SQLOLEDB non può eseguire una query sulle tabelle di sistema per determinare le informazioni sui parametri per una stored procedure temporanea.  
+ Un comando che chiama una stored procedure temporanea utilizzando i parametri prima di tutto è necessario chiamare **ICommandWithParameters:: SetParameterInfo** per definire le informazioni sui parametri, prima che il comando possa essere preparato correttamente. Questa operazione è necessaria perché il nome interno di una stored procedure temporanea è diverso dal nome esterno utilizzato da un client e SQLOLEDB non può eseguire una query sulle tabelle di sistema per determinare le informazioni sui parametri per una stored procedure temporanea.  
   
  Di seguito sono riportati i passaggi del processo di associazione dei parametri:  
   
-1.  Completare le informazioni sui parametri in una matrice di strutture DBPARAMBINDINFO, ovvero nome del parametro, nome specifico del provider per il tipo di dati del parametro o nome del tipo di dati standard e così via. Ogni struttura della matrice descrive un solo parametro. Questa matrice viene quindi passata ai **SetParameterInfo** metodo.  
+1.  Completare le informazioni sui parametri in una matrice di strutture DBPARAMBINDINFO, ovvero nome del parametro, nome specifico del provider per il tipo di dati del parametro o nome del tipo di dati standard e così via. Ogni struttura della matrice descrive un solo parametro. Questa matrice viene quindi passata per il **SetParameterInfo** (metodo).  
   
 2.  Chiamare il **ICommandWithParameters:: SetParameterInfo** metodo per descrivere i parametri al provider. **SetParameterInfo** specifica il tipo di dati nativo di ogni parametro. **SetParameterInfo** gli argomenti sono:  
   
@@ -56,7 +54,7 @@ ms.locfileid: "36065137"
   
     -   Matrice di strutture DBPARAMBINDINFO.  
   
-3.  Creare una funzione di accesso parametro usando il **IAccessor:: CreateAccessor** comando. La funzione di accesso specifica la struttura di un buffer e inserisce i valori dei parametri nel buffer. Il **CreateAccessor** comando crea una funzione di accesso da un set di associazioni. Queste associazioni vengono descritte dal consumer mediante una matrice di strutture DBBINDING. Ogni associazione associa un singolo parametro al buffer del consumer e contiene le seguenti informazioni:  
+3.  Creare una funzione di accesso di parametro usando il **IAccessor:: CreateAccessor** comando. La funzione di accesso specifica la struttura di un buffer e inserisce i valori dei parametri nel buffer. Il **CreateAccessor** comando crea una funzione di accesso da un set di associazioni. Queste associazioni vengono descritte dal consumer mediante una matrice di strutture DBBINDING. Ogni associazione associa un singolo parametro al buffer del consumer e contiene le seguenti informazioni:  
   
     -   Numero ordinale del parametro a cui viene applicata l'associazione.  
   
@@ -66,11 +64,11 @@ ms.locfileid: "36065137"
   
     -   Lunghezza e tipo del valore dei dati esattamente come riportati nel buffer del consumer.  
   
-     Una funzione di accesso viene identificata dal relativo handle di tipo HACCESSOR. Questo handle viene restituito per il **CreateAccessor** metodo. Ogni volta che il consumer termina con una funzione di accesso, il consumer deve chiamare il **ReleaseAccessor** metodo per rilasciare la memoria vengono mantenuti.  
+     Una funzione di accesso viene identificata dal relativo handle di tipo HACCESSOR. Questo handle viene restituito per il **CreateAccessor** (metodo). Ogni volta che il consumer viene completata utilizzando una funzione di accesso, il consumer deve chiamare il **ReleaseAccessor** metodo per rilasciare la memoria vengono mantenuti.  
   
      Quando il consumer chiama un metodo, ad esempio **ICommand:: Execute**, passa l'handle a una funzione di accesso e un puntatore a un buffer. Il provider utilizza questa funzione di accesso per determinare il modo in cui trasferire i dati contenuti nel buffer.  
   
-4.  Completare la struttura DBPARAMS. Le variabili del consumer dal quale parametro di input vengono estratti i valori e per il parametro di output vengono scritti i valori vengono passate in fase di esecuzione per **ICommand:: Execute** nella struttura DBPARAMS. La struttura DBPARAMS include tre elementi:  
+4.  Completare la struttura DBPARAMS. Le variabili del consumer da quale parametro di input i valori vengono forniti e in quale parametro di output vengono scritti i valori vengono passate alla fase di esecuzione **ICommand:: Execute** nella struttura DBPARAMS. La struttura DBPARAMS include tre elementi:  
   
     -   Puntatore al buffer da cui il provider recupera i dati dei parametri di input e in cui il provider restituisce i dati dei parametri di output, in base alle associazioni specificate dall'handle della funzione di accesso.  
   
@@ -122,7 +120,7 @@ ms.locfileid: "36065137"
  Per un'applicazione di esempio che illustra una sequenza di escape RPC, vedere [eseguire una Stored Procedure &#40;utilizzando la sintassi RPC&#41; e processo di codici restituiti e parametri di Output &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Istruzione Transact-SQL EXECUTE  
- La sequenza di escape ODBC CALL e la sequenza di escape RPC rappresentano i metodi preferiti per la chiamata a una stored procedure anziché quella di [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) istruzione. Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client utilizza il meccanismo RPC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ottimizzare l'elaborazione del comando. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
+ La sequenza di escape ODBC CALL e la sequenza di escape RPC rappresentano i metodi preferiti per chiamare una stored procedure anziché [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) istruzione. Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client utilizza il meccanismo RPC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ottimizzare l'elaborazione del comando. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
   
  Questo è un esempio del [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** istruzione:  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], connections
 - administrator connections [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 caps.latest.revision: 62
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8b73b7a7c097285d242def37e9b77c87c2723f57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c30258edc86afd1a4844580553ce6d059edcb279
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209821"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connessione di diagnostica per gli amministratori di database
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una speciale connessione di diagnostica a cui possono ricorrere gli amministratori quando non è possibile usare connessioni standard al server. Questa connessione di diagnostica consente a un amministratore di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire query di diagnostica e risolvere problemi anche quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non risponde alle richieste di connessione standard.  
@@ -47,7 +47,7 @@ ms.locfileid: "36069460"
   
  Solo i membri del ruolo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin possono stabilire la connessione DAC.  
   
- L'applicazione livello dati è disponibile e supportata con l'utilità del prompt dei comandi **sqlcmd** usando un'opzione di amministrazione speciale (**-A**). Per altre informazioni sull'uso di **sqlcmd**, vedere [Utilizzo di sqlcmd con variabili di scripting](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). È inoltre possibile connettere apponendo il prefisso `admin:`al nome dell'istanza nel formato **sqlcmd - Sadmin: * * * < instance_name >.* È inoltre possibile avviare un'applicazione livello dati da un [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor di Query connettendosi al `admin:` \<* nome_istanza * >.  
+ L'applicazione livello dati è disponibile e supportata con l'utilità del prompt dei comandi **sqlcmd** usando un'opzione di amministrazione speciale (**-A**). Per altre informazioni sull'uso di **sqlcmd**, vedere [Utilizzo di sqlcmd con variabili di scripting](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). È anche possibile connessione apponendo il prefisso `admin:`al nome dell'istanza nel formato **sqlcmd - Sadmin: * * * < nome_istanza >.* È anche possibile avviare un'applicazione livello dati da un [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor di Query tramite la connessione al `admin:` \<* nome_istanza * >.  
   
 ## <a name="restrictions"></a>Restrictions  
  Dato che l'applicazione livello dati ha il solo scopo di consentire la diagnosi di problemi del server in rare circostanze, vi sono alcune restrizioni nella connessione:  

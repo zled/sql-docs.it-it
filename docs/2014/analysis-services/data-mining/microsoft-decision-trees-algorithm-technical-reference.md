@@ -1,5 +1,5 @@
 ---
-title: Microsoft Decision Trees tecnica algoritmo | Documenti Microsoft
+title: Riferimento tecnico algoritmo Microsoft Decision Trees | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
 - SPLIT_METHOD parameter
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edb2b9790ac2294f53c26b65e9897064f4050083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a73db73c49f50c49fdfd36d754f8d70ce651547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183408"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Guida di riferimento tecnico per l'algoritmo Microsoft Decision Trees
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees è un algoritmo ibrido che incorpora diversi metodi per la creazione di un albero e supporta più attività analitiche, tra le quali sono incluse la regressione, la classificazione e l'associazione. Tale algoritmo supporta la modellazione di attributi discreti e continui.  
@@ -187,7 +187,7 @@ ms.locfileid: "36069104"
   
  Non è necessario specificare che una colonna di dati numerici continui rappresenta un regressore. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees consentirà di utilizzare automaticamente la colonna come potenziale regressore e di suddividere il set di dati in aree con modelli significativi anche se non si imposta il flag REGRESSOR nella colonna.  
   
- È invece possibile utilizzare il parametro FORCE_REGRESSOR per assicurarsi che l'algoritmo consenta l'utilizzo di un determinato regressore. Questo parametro può essere utilizzato solo con gli algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression. Quando si imposta il flag di modellazione, l'algoritmo tenta di trovare equazioni di regressione nel formato un * C1 + b\*C2 + per adattare i modelli nei nodi dell'albero. Viene calcolata la somma dei residui e, se la deviazione è eccessiva, nell'albero viene forzata una divisione.  
+ È invece possibile utilizzare il parametro FORCE_REGRESSOR per assicurarsi che l'algoritmo consenta l'utilizzo di un determinato regressore. Questo parametro può essere utilizzato solo con gli algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression. Quando si imposta il flag di modellazione, l'algoritmo tenta di trovare equazioni di regressione nel formato un * C1 + b\*C2 +... per adattare i modelli nei nodi dell'albero. Viene calcolata la somma dei residui e, se la deviazione è eccessiva, nell'albero viene forzata una divisione.  
   
  Se, ad esempio, si stima il comportamento di acquisto dei clienti utilizzando **Income** come attributo ed è stato impostato il flag di modellazione REGRESSOR nella colonna, l'algoritmo tenta innanzitutto di adattare i valori **Income** utilizzando una formula di regressione standard. Se la deviazione è eccessiva, la formula di regressione viene abbandonata e l'albero viene diviso in base a un altro attributo. L'algoritmo Decision Trees tenta quindi di adattare un regressore per il reddito in ognuno dei rami dopo la divisione.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36069104"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm.md)   
- [Esempi di Query modello di alberi delle decisioni](decision-trees-model-query-examples.md)   
- [Contenuto del modello di albero delle decisioni di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Esempi di Query del modello di alberi delle decisioni](decision-trees-model-query-examples.md)   
+ [Contenuto dei modelli di albero delle decisioni di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

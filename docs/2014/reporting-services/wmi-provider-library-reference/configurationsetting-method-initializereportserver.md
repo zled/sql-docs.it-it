@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - InitializeReportServer (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - InitializeReportServer method
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5c3ace1e9e4cb25fde4d836bc15ad9f30eee3e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e534aea75ef51802db343765ad0ab00b98007336
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210681"
 ---
 # <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>Metodo InitializeReportServer (MSReportServer_ConfigurationSetting WMI)
   Inizializza l'istanza di servizio di report specificata.  
@@ -57,14 +57,14 @@ public void InitializeReportServer(string InstallationID,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Quando viene chiamato questo metodo, la chiave di crittografia che accede alle informazioni protette del database del server di report viene crittografata tramite la chiave pubblica del server di report identificato da *InstallationID*.  
   
  La chiave pubblica del server di report specificato deve essere stata precedentemente scritta nel database del server di report.  
   
  Il metodo *InitializeReportServer* deve essere chiamato per un server di report che dispone già dell'accesso alle informazioni protette in modo che sia in grado di decrittografare la chiave di crittografia. La chiave di crittografia crittografata risultante viene quindi archiviata nel database del server di report.  
   
- Se il server di report [IsInitialized](configurationsetting-property-isinitialized.md) è impostata su `true` quando viene chiamato il metodo InitializeReportServer, il metodo ha esito positivo senza tentare di crittografare la chiave di crittografia.  
+ Se il server di report [IsInitialized](configurationsetting-property-isinitialized.md) è impostata su `true` quando viene chiamato il metodo InitializeReportServer, il metodo ha esito positivo senza provare a crittografare la chiave di crittografia.  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

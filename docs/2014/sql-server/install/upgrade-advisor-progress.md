@@ -1,5 +1,5 @@
 ---
-title: Stato Preparazione aggiornamento | Documenti Microsoft
+title: Stato Preparazione aggiornamento | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], analysis progress status
 - analyzing system [Upgrade Advisor], progress information
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - status information [Upgrade Advisor]
 ms.assetid: a9e3d1c8-d492-4beb-93c7-f1bc40d4a910
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e1b867360b773253ae22d24a76ce00b35c589d96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 96ba7fd92927d5d18d7b1dc966829f3ff02911cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148602"
 ---
 # <a name="upgrade-advisor-progress"></a>Stato Preparazione aggiornamento
-  L'analisi di Preparazione aggiornamento inizia con un analizzatore dedicato che esegue un'analisi di ogni componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selezionato. Come i componenti vengono analizzati, lo stato viene segnalato nel **lo stato di avanzamento** finestra di dialogo.  
+  L'analisi di Preparazione aggiornamento inizia con un analizzatore dedicato che esegue un'analisi di ogni componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selezionato. Come i componenti vengono analizzati, lo stato viene segnalato nel **lo stato di avanzamento** nella finestra di dialogo.  
   
 ## <a name="options"></a>Opzioni  
  **Azione**  
@@ -54,6 +54,6 @@ ms.locfileid: "36069751"
  [Procedura: eseguire l'analisi guidata di preparazione aggiornamento](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Componenti di SQL Server](../../../2014/sql-server/install/sql-server-components.md)   
  [Riferimento all'interfaccia utente di preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
- [Utilizzo di preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [Uso di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

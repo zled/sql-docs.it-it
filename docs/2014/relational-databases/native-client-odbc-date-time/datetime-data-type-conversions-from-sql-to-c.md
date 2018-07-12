@@ -1,28 +1,26 @@
 ---
-title: Le conversioni da SQL a C | Documenti Microsoft
+title: Le conversioni da SQL a C | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], SQL to C
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b3d6fb49285580b3afd5a6ad785bc23886ecf4a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 094a968fb48c9eabf554bfdccb89efc69e12391a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062627"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427970"
 ---
 # <a name="conversions-from-sql-to-c"></a>Conversioni dai tipi di dati SQL ai tipi di dati C
   Nella tabella seguente sono elencati i problemi da prendere in considerazione durante le conversioni dai tipi date/time di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ai tipi C.  
@@ -70,6 +68,6 @@ ms.locfileid: "36062627"
  Nella tabella riportata in questo argomento sono descritte le conversioni tra il tipo restituito al client e il tipo presente nell'associazione. Per i parametri di output, se il tipo di server specificato in SQLBindParameter non corrisponde al tipo effettivo nel server, verrà eseguita una conversione implicita dal server e il tipo restituito al client corrisponderà al tipo specificato tramite la funzione SQLBindParameter. La conseguenza di ciò possono essere risultati di conversione imprevisti se le regole di conversione del server sono diverse da quelle elencate nella tabella precedente. Quando è ad esempio necessario specificare un valore date predefinito, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza 1900-1-1, anziché il valore date corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data e ora miglioramenti &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Data e miglioramenti per la fase &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

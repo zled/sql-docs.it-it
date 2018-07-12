@@ -1,5 +1,5 @@
 ---
-title: Installare Analysis Services in modalità tabulare | Documenti Microsoft
+title: Installare Analysis Services in modalità tabulare | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f6fabd9129e3f3e1e07e813935f36e7c70c48072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b6ee555e975e89da584c0efab3fab8bb9f9429a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183449"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Installare Analysis Services in modalità Tabella
   Se si sta installando Analysis Services per utilizzare le nuove funzionalità di modelli tabulari, è necessario installarlo in una modalità server che supporti tale tipo di modello. La modalità server è Tabella ed è configurata durante l'installazione.  
@@ -33,7 +33,7 @@ ms.locfileid: "36069506"
   
 1.  Selezionare **Analysis Services** dall'albero delle funzionalità nell'installazione.  
   
-     ![Albero delle funzionalità di installazione che mostra Analsyis Services](../../../sql-server/install/media/ssas-setupas.gif "albero delle funzionalità di installazione che mostra Analsyis Services")  
+     ![Albero delle funzionalità di installazione che mostra i servizi Analsyis](../../../sql-server/install/media/ssas-setupas.gif "albero delle funzionalità di installazione che mostra Analsyis Services")  
   
 2.  Nella pagina Configurazione di Analysis Services, assicurarsi di selezionare **modalità tabulare**.  
   
@@ -53,9 +53,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  Tutti i valori segnaposto degli account devono essere sostituiti con password e account validi.  
   
- Strumenti come SQL Server Management Studio o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] non vengono installati utilizzando la sintassi della riga di comando di esempio fornita. Per ulteriori informazioni sull'aggiunta di funzionalità, vedere [installare SQL Server 2014 dal Prompt dei comandi](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+ Strumenti come SQL Server Management Studio o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] non vengono installati utilizzando la sintassi della riga di comando di esempio fornita. Per altre informazioni sull'aggiunta di funzionalità, vedere [installare SQL Server 2014 dal Prompt dei comandi](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
- `ASSERVERMODE` è distinzione maiuscole/minuscole.  È necessario esprimere tutti i valori in lettere maiuscole. Nella tabella seguente vengono descritti i valori validi per `ASSERVERMODE`.  
+ `ASSERVERMODE` è tra maiuscole e minuscole.  È necessario esprimere tutti i valori in lettere maiuscole. Nella tabella seguente vengono descritti i valori validi per `ASSERVERMODE`.  
   
 |valore|Description|  
 |-----------|-----------------|  

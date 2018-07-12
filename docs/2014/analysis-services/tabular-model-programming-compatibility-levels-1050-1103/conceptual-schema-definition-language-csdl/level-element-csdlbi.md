@@ -1,5 +1,5 @@
 ---
-title: Livello di elemento (CSDLBI) | Documenti Microsoft
+title: Il livello di elemento (CSDLBI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdf75c47-77dc-4bdb-9931-8eca198fdb88
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b63309bec7a37ef7953eb1a358ed317b366c4bee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3fd89aaa69e8dc2b29b80ca82f89d1453dc44017
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211481"
 ---
 # <a name="level-element-csdlbi"></a>Elemento Level (CSDLBI)
   L'elemento Level è un tipo complesso che definisce un solo livello in una gerarchia.  
@@ -33,7 +33,7 @@ ms.locfileid: "36069701"
 |Origine|Sì|Contenitore per il riferimento alla proprietà.|  
 |PropertyRef|Sì|Riferimento a una proprietà dell'istanza. Altri attributi del livello, ad esempio didascalie, nome e nome del riferimento, possono essere prese dalla proprietà dell'istanza a cui si fa riferimento. In tal caso, non è necessario specificarli nell'elemento Level.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per altre informazioni sulle gerarchie nei modelli tabulari, vedere [Elemento Hierarchy &#40;CSDLBI&#41;](hierarchy-element-csdlbi.md).  
   
 ## <a name="example"></a>Esempio  

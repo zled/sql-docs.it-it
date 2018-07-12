@@ -1,5 +1,5 @@
 ---
-title: Funzione LocalDBGetInstances | Documenti Microsoft
+title: Funzione LocalDBGetInstances | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 054a5da018b0702da0851c0bc29eda6297876724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 94dba6bd5c8900d1010b4d9e7f78402c3c9b2e65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258697"
 ---
 # <a name="localdbgetinstances-function"></a>Funzione LocalDBGetInstances
   Vengono restituite tutte le istanze del database locale di SQL Server Express con la versione specificata.  
@@ -48,7 +48,7 @@ HRESULT LocalDBGetInstances(
  [Output] Il risultato restituito da questa funzione è costituito da nomi sia di istanze denominate sia di quelle predefinite del database locale nella workstation dell'utente.  
   
  *lpdwNumberOfInstances*  
- [Input/Output] Contiene il numero di slot per i nomi delle istanze in input, il *pInstanceNames* buffer. In fase di output, è invece incluso il numero di istanze del database locale trovate nella workstation dell'utente.  
+ [Input/Output] Per l'input, contiene il numero di slot per i nomi delle istanze nel *pInstanceNames* buffer. In fase di output, è invece incluso il numero di istanze del database locale trovate nella workstation dell'utente.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  S_OK  
@@ -75,7 +75,7 @@ HRESULT LocalDBGetInstances(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Errore imprevisto. Per informazioni, vedere il registro eventi.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per un esempio di codice che utilizza l'API LocalDB, vedere [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  

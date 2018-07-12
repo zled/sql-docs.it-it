@@ -1,5 +1,5 @@
 ---
-title: Esplorazione del cubo | Documenti Microsoft
+title: Esplorazione del cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3819946e-d3fa-4c1d-afe3-599c938b1b2e
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: ca4f0a6ee14d46ce9229eb068e3554fe29e0db62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 763fea9f0ff216fab263edb1d30b56e8ca6a630f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239861"
 ---
 # <a name="browsing-the-cube"></a>Esplorazione del cubo
   Dopo aver distribuito un cubo, è possibile visualizzarne i dati nella scheda **Esplorazione** di Progettazione cubi, mentre i dati della dimensione possono essere visualizzati nella scheda **Esplorazione** di Progettazione dimensioni. L'esplorazione dei dati del cubo e delle dimensioni consente di controllare il lavoro in modo incrementale. È possibile verificare che le piccole modifiche a proprietà, relazioni e altri oggetti abbiano l'effetto desiderato dopo l'elaborazione dell'oggetto. Sebbene la scheda Esplorazione venga utilizzata per visualizzare sia i dati del cubo che quelli delle dimensioni, le funzionalità da essa fornite variano a seconda dell'oggetto visualizzato.  
@@ -34,7 +34,7 @@ ms.locfileid: "36067085"
   
 1.  Passare a **Progettazione dimensioni** per la dimensione Product in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. A tale scopo, fare doppio clic sulla dimensione **Product** nel nodo **Dimensioni** di Esplora soluzioni.  
   
-2.  Fare clic sul **Browser** tab per visualizzare il **tutte** membro del `Product Key` gerarchia dell'attributo. Nella lezione 3 verrà definita una gerarchia utente per la dimensione Product che consentirà di esplorare la dimensione.  
+2.  Fare clic sul **Browser** scheda per visualizzare i **tutti i** membro del `Product Key` gerarchia dell'attributo. Nella lezione 3 verrà definita una gerarchia utente per la dimensione Product che consentirà di esplorare la dimensione.  
   
 3.  Passare a **Progettazione cubi** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. A tale scopo, fare doppio clic sul cubo **Analysis Services Tutorial** nel nodo **Cubi** di Esplora soluzioni.  
   

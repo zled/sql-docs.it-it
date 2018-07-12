@@ -1,13 +1,11 @@
 ---
-title: Supporto FILESTREAM (ODBC) | Documenti Microsoft
+title: Supporto FILESTREAM (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,28 +13,28 @@ helpviewer_keywords:
 - ODBC, FILESTREAM support
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f4441a357652c00db89a8b96c2e95c1164ef851
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f45ccb411eeaafb072b7e2832f5628068431f9cc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067579"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410310"
 ---
 # <a name="filestream-support-odbc"></a>Supporto FILESTREAM (ODBC)
-  ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta la caratteristica FILESTREAM avanzata. Per ulteriori informazioni su questa funzionalità, vedere [supporto FILESTREAM](../features/filestream-support.md). Per un esempio che illustra il supporto ODB per FILESTREAM, vedere [trasmissione e ricezione di dati in modo incrementale mediante FILESTREAM &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
+  ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta la caratteristica FILESTREAM avanzata. Per altre informazioni su questa funzionalità, vedere [supporto FILESTREAM](../features/filestream-support.md). Per un esempio che illustra il supporto ODB per FILESTREAM, vedere [trasmissione e ricezione di dati in modo incrementale mediante FILESTREAM &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
   
- Per inviare e ricevere `varbinary(max)` valori superiori a 2 GB, un'applicazione deve associare parametri usando SQLBindParameter con *ColumnSize* impostata su `SQL_SS_LENGTH_UNLIMITED`e impostare il contenuto di *StrLen_or_IndPtr* a `SQL_DATA_AT_EXEC` prima SQLExecDirect o SQLExecute.  
+ Per inviare e ricevere `varbinary(max)` i valori maggiori di 2 GB, un'applicazione deve associare parametri utilizzando SQLBindParameter con *ColumnSize* impostata su `SQL_SS_LENGTH_UNLIMITED`e impostare il contenuto di *StrLen_or_IndPtr* a `SQL_DATA_AT_EXEC` prima SQLExecDirect o SQLExecute.  
   
  Come con qualsiasi parametro data-at-execution, i dati verranno forniti con SQLParamData e SQLPutData.  
   
- È possibile chiamare SQLGetData per recuperare i dati in blocchi per una colonna FILESTREAM se la colonna non è associata con SQLBindCol.  
+ È possibile chiamare per recuperare i dati in blocchi per una colonna FILESTREAM se la colonna non è associata con SQLBindCol SQLGetData.  
   
  È possibile aggiornare i dati FILESTREAM se sono associati a SQLBindCol.  
   
- Se si chiama SQLFetch su una colonna associata, si riceverà un avviso "dati troncati" se il buffer non è sufficientemente grande da contenere l'intero valore. Ignorare questo avviso e aggiornare i dati in questa colonna associata con chiamate SQLParamData e SQLPutData. È possibile aggiornare i dati FILESTREAM tramite SQLSetPos se sono associati a SQLBindCol.  
+ Se si chiama la funzione SQLFetch per una colonna associata, si riceverà un avviso "dati troncati" se il buffer non è sufficientemente grande da contenere l'intero valore. Ignorare questo avviso e aggiornare i dati in questa colonna associata con chiamate SQLParamData e SQLPutData. È possibile aggiornare i dati FILESTREAM con SQLSetPos se sono associati a SQLBindCol.  
   
 ## <a name="example"></a>Esempio  
  Le colonne FILESTREAM presentano lo stesso comportamento delle colonne `varbinary(max)`, ma senza un limite nelle dimensioni. Vengono associate come SQL_VARBINARY. SQL_LONGVARBINARY viene utilizzato con le colonne dell'immagine e questo tipo presenta delle restrizioni. SQL_LONGVARBINARY, ad esempio, non può essere utilizzato come parametro di output. Negli esempi seguenti viene illustrato l'accesso NTFS diretto per le colonne FILESTREAM, presupponendo che nel database sia stato eseguito il codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente:  

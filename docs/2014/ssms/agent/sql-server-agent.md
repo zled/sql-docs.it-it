@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e90a916b586215b23f15e6d3237690352f9aedd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4f3a29acfe387b4b4e80d9e9a0ee232476d6074d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230471"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è un servizio di Microsoft Windows per l'esecuzione di attività amministrative pianificate, denominate *processi* in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -118,10 +118,10 @@ ms.locfileid: "36067327"
  È possibile definire un operatore come alias assegnato a un gruppo di utenti. In questo modo la notifica può raggiungere contemporaneamente tutti i membri dell'alias. Per altre informazioni, vedere [Operatori](operators.md).  
   
 ##  <a name="Security"></a> Sicurezza per l'amministrazione di SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza il **SQLAgentUserRole**, **SQLAgentReaderRole**, e **SQLAgentOperatorRole** ruoli del database nel **msdb** database per controllare l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per gli utenti che non sono membri del `sysadmin` ruolo predefinito del server. Sottosistemi e proxy consentono agli amministratori del database di garantire l'esecuzione di tutti i passaggi di processo con le autorizzazioni minime necessarie all'esecuzione della relativa attività.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L'agente utilizza il **SQLAgentUserRole**, **SQLAgentReaderRole**, e **SQLAgentOperatorRole** ruoli predefiniti del database nel **msdb** database per controllare l'accesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per gli utenti che non sono membri del `sysadmin` ruolo predefinito del server. Sottosistemi e proxy consentono agli amministratori del database di garantire l'esecuzione di tutti i passaggi di processo con le autorizzazioni minime necessarie all'esecuzione della relativa attività.  
   
 ### <a name="roles"></a>Ruoli  
- I membri del **SQLAgentUserRole**, **SQLAgentReaderRole**, e **SQLAgentOperatorRole** ruoli del database in **msdb**, e i membri del `sysadmin` ruolo predefinito del server hanno accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dell'agente. Un utente che non appartiene a nessuno di questi ruoli non può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per altre informazioni sui ruoli usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
+ I membri del **SQLAgentUserRole**, **SQLAgentReaderRole**, e **SQLAgentOperatorRole** ruoli predefiniti del database in **msdb**, e i membri del `sysadmin` ruolo predefinito del server ha accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dell'agente. Un utente che non appartiene a nessuno di questi ruoli non può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per altre informazioni sui ruoli usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Sottosistemi  
  Un sottosistema è un oggetto predefinito che rappresenta funzionalità disponibili per un passaggio di processo. Ogni proxy ha accesso a uno o più sottosistemi. I sottosistemi offrono sicurezza in quanto delimitano l'accesso alle funzionalità disponibili per un proxy. Ogni passaggio di processo viene eseguito nel contesto di un proxy, ad eccezione dei passaggi di processo [!INCLUDE[tsql](../../includes/tsql-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzano il comando EXECUTE AS per impostare il contesto di sicurezza.  
@@ -130,7 +130,7 @@ ms.locfileid: "36067327"
   
 |Nome sottosistema|Description|  
 |--------------------|-----------------|  
-|Script Microsoft ActiveX|Esegue un passaggio di processo con script ActiveX.<br /><br /> **\*\* Importante \* \***  verrà rimosso dal sottosistema di Scripting ActiveX The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
+|Script Microsoft ActiveX|Esegue un passaggio di processo con script ActiveX.<br /><br /> **\*\* Importanti \* \***  verrà rimosso dal sottosistema di Scripting ActiveX The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
 |Sistema operativo (**CmdExec**)|Esegue un programma eseguibile.|  
 |PowerShell|Esegue un passaggio di processo con script di PowerShell.|  
 |Server di distribuzione repliche|Esegue un passaggio di processo tramite cui viene attivata l'utilità Agente distribuzione repliche.|  
