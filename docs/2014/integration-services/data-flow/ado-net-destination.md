@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8f795c264fb46076ec203e4a21ca8d5fa6ccd82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0233bc6dad87580764f67eea68f20171bcb5e82e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164842"
 ---
 # <a name="ado-net-destination"></a>Destinazione ADO NET
   La destinazione ADO NET consente di caricare i dati in un'ampia gamma di database compatibili con [!INCLUDE[vstecado](../../includes/vstecado-md.md)]che utilizzano una tabella o una vista di database. È disponibile l'opzione per caricare i dati in una tabella o in una vista esistenti o è possibile creare una nuova tabella e caricare i dati in essa.  
@@ -55,7 +55,7 @@ ms.locfileid: "36166206"
   
 -   [Editor destinazione ADO NET &#40;pagina mapping&#41;](../ado-net-destination-editor-mappings-page.md)  
   
--   [Editor destinazione ADO NET &#40;pagina di Output di errore&#41;](../ado-net-destination-editor-error-output-page.md)  
+-   [Editor destinazione ADO NET &#40;pagina dell'Output degli errori&#41;](../ado-net-destination-editor-error-output-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   

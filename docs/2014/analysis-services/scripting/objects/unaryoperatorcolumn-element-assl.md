@@ -1,5 +1,5 @@
 ---
-title: Elemento UnaryOperatorColumn (ASSL) | Documenti Microsoft
+title: Elemento UnaryOperatorColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnaryOperatorColumn element
 ms.assetid: 10889e51-69e5-4f50-9749-ecbc66c247d3
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d52b742916c6e5876d76fbeb1ba112672ea5b225
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2e4bd33bc95b1322e5a3125e6222dc9cdfb1b05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161162"
 ---
 # <a name="unaryoperatorcolumn-element-assl"></a>Elemento UnaryOperatorColumn (ASSL)
   Definisce i dettagli di una colonna che fornisce un operatore unario.  
@@ -61,10 +61,10 @@ ms.locfileid: "36158292"
 |Elementi padre|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Per ulteriori informazioni sul `DataItem` tipo, inclusa una tabella di oggetti di Analysis Services Scripting Language (ASSL) e le proprietà del `DataItem` del tipo, vedere [tipo di dati DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+## <a name="remarks"></a>Note  
+ Per altre informazioni sul `DataItem` tipo, inclusa una tabella di oggetti di Analysis Services Scripting Language (ASSL) e le proprietà del `DataItem` del tipo, vedere [tipo di dati DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- L'elemento che corrisponde al padre di `UnaryOperatorColumn` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ L'elemento che corrisponde al padre di `UnaryOperatorColumn` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gli oggetti &#40;ASSL&#41;](objects-assl.md)  

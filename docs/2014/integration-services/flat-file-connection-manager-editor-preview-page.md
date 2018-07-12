@@ -1,5 +1,5 @@
 ---
-title: Flat File Connection Manager Editor (pagina anteprima) | Documenti Microsoft
+title: Flat File Connection Manager Editor (pagina anteprima) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.preview.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1e5853aa5d63967597ce54d56e43864f4e57c312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4e257676ff8a20cbc29e80cde49998c67a07aee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182784"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>Editor gestione connessione file flat (pagina Anteprima)
   Utilizzare il nodo **Anteprima** della finestra di dialogo **Editor gestione connessione file flat** per visualizzare il contenuto del file di origine in formato tabella.  
@@ -47,9 +47,9 @@ ms.locfileid: "36158494"
  Consente di visualizzare i dati di esempio del file flat suddivisi in colonne e righe, a seconda delle opzioni selezionate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor gestione connessione File flat &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor gestione connessione File flat &#40;pagina colonne&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [Editor gestione connessione File flat &#40;(pagina colonne)&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [Editor gestione connessione file flat &#40;pagina Avanzate&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
   

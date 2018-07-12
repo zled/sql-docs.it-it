@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.extractdacwizard.buildandsave.f1
 - sql12.swb.extractdacwizard.setdacproperties.f1
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0da72e16f77d6f3c850a41f85caa453123afc802
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9eb33630708143700d7f5ce6749cf720c71a65fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211501"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Estrarre un'applicazione livello dati da un database
   Usare la **procedura guidata Estrai applicazione livello dati** o uno script di Windows PowerShell per estrarre un pacchetto di applicazione livello dati da un database di SQL Server esistente. Il processo di estrazione crea un file di pacchetto DAC che contiene le definizioni degli oggetti di database e i relativi elementi a livello di istanza. Ad esempio, un file di pacchetto di applicazione livello dati contiene tutte le tabelle di database, le stored procedure, le viste e gli utenti, nonché gli account di accesso che eseguono il mapping agli utenti del database.  
   
 -   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
   
--   **Per estrarre un'applicazione livello dati, utilizzando:**[estrarre la procedura guidata di applicazione livello dati](#UsingDACExtractWizard), [PowerShell  ](#ExtractDACPowerShell)  
+-   **Per estrarre una DAC, utilizzando:**[Creazione guidata applicazione livello dati estrarre The](#UsingDACExtractWizard), [PowerShell  ](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  È possibile estrarre un'applicazione livello dati dai database che risiedono in istanze di [!INCLUDE[ssSDS](../../includes/sssds-md.md)], o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4, o versioni successive. Se il processo di estrazione viene eseguito rispetto a un database distribuito da un'applicazione livello dati, vengono estratte solo le definizioni degli oggetti nel database. Il processo non fa riferimento l'applicazione livello dati registrata nel `msdb` (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Il processo di estrazione non consente di registrare la definizione DAC nell'istanza corrente del motore di database. Per ulteriori informazioni sulla registrazione di un'applicazione livello dati, vedere [Register a Database As a DAC](register-a-database-as-a-dac.md).  

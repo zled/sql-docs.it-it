@@ -1,13 +1,11 @@
 ---
-title: Utilizzo delle funzioni di catalogo | Documenti Microsoft
+title: Uso delle funzioni catalogo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - functions [ODBC]
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d13d091efbadba5971360cc8a019b432770c228a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fd1dfb0266a13b32d4dde81ee961621fc4ccdc24
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156683"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421360"
 ---
 # <a name="using-catalog-functions"></a>Utilizzo delle funzioni di catalogo
   Tutti i database presentano una struttura che contiene i dati archiviati nel database. Una definizione di tale struttura, insieme ad altre informazioni quali le autorizzazioni, è archiviata in un catalogo (implementato come un set di tabelle di sistema), noto anche come dizionario dei dati.  
@@ -48,7 +46,7 @@ ms.locfileid: "36156683"
   
      Restituisce un elenco dei cataloghi presenti in un server collegato.  
   
- Dopo aver ottenuto un nome di server collegato e un nome di catalogo, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta ottenere informazioni dal catalogo utilizzando un nome in due parti di *linked_server_name ***.*** catalogo* per *CatalogName* su ODBC seguenti funzioni di catalogo:  
+ Dopo aver ottenuto un nome del server collegato e un nome di catalogo, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta recupero delle informazioni dal catalogo usando un nome composto due parti *linked_server_name ***.*** catalogo* per *CatalogName* funzioni di catalogo in ODBC seguenti:  
   
 -   **SQLColumnPrivileges**  
   
@@ -62,7 +60,7 @@ ms.locfileid: "36156683"
   
 -   **SQLTables**  
   
- Le due parti *linked_server_name ***.*** catalogo* è supportata anche per *FKCatalogName* e *PKCatalogName* in [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
+ Le due parti *linked_server_name ***.*** catalogo* è supportata anche per *FKCatalogName* e *PKCatalogName* sul [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
   
  L'utilizzo di SQLLinkedServers e SQLLinkedCatalogs richiede i file seguenti:  
   

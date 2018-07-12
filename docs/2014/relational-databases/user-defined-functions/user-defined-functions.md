@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 27830819baa6b5381b8e9b9c41a62067e66f65e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1d8b8569a35a67d2700c0ce48c9c1cd4b29da7e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156419"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427470"
 ---
 # <a name="user-defined-functions"></a>Funzioni definite dall'utente
   In modo analogo alle funzioni dei linguaggi di programmazione, le funzioni definite dall'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono routine che accettano parametri, eseguono un'azione (ad esempio un calcolo complesso) e restituiscono il risultato dell'azione sotto forma di valore. Il valore restituito può essere un valore scalare singolo o un set di risultati.  
@@ -39,7 +37,7 @@ ms.locfileid: "36156419"
   
  [Funzioni associate a schema](#SchemaBound)  
   
- [Specifica dei parametri](#Parameters)  
+ [Specificare i parametri](#Parameters)  
   
  [Attività correlate](#Tasks)  
   
@@ -68,7 +66,7 @@ ms.locfileid: "36156419"
  Le funzioni scalari definite dall'utente restituiscono un singolo valore di dati del tipo definito nella clausola RETURNS. Per una funzione scalare inline, non è disponibile alcun corpo della funzione. Il valore scalare corrisponde al risultato di una singola istruzione. Per una funzione scalare con istruzioni multiple, il corpo della funzione, definito in un blocco BEGIN...END, include una serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un solo valore. Il tipo restituito può essere qualsiasi tipo di dati tranne `text`, `ntext`, `image`, `cursor`, e `timestamp`.  
   
  Funzioni con valori di tabella  
- Funzioni con valori di tabella definito dall'utente restituiscono un `table` tipo di dati. Per una funzione inline con valori di tabella non è disponibile alcun corpo della funzione. La tabella corrisponde al set di risultati di una singola istruzione SELECT.  
+ Funzioni con valori di tabella definite dall'utente restituiscono un `table` tipo di dati. Per una funzione inline con valori di tabella non è disponibile alcun corpo della funzione. La tabella corrisponde al set di risultati di una singola istruzione SELECT.  
   
  Funzioni di sistema  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili molte funzioni di sistema che è possibile utilizzare per eseguire diverse operazioni. Tali funzioni non possono essere modificate. Per altre informazioni, vedere [Funzioni predefinite &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions), [Funzioni archiviate di sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql), and [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views).  
@@ -137,7 +135,7 @@ ms.locfileid: "36156419"
   
  È possibile utilizzare l'istruzione ALTER FUNCTION per eliminare l'associazione allo schema. L'istruzione ALTER FUNCTION deve ridefinire la funzione senza specificare WITH SCHEMABINDING.  
   
-##  <a name="Parameters"></a> Specifica dei parametri  
+##  <a name="Parameters"></a> Specificare i parametri  
  Le funzioni definite dall'utente accettano zero o più parametri di input e restituiscono tabelle o valori scalari. Una funzione può avere al massimo 1024 parametri di input. Quando a un parametro della funzione è associato un valore predefinito, quando si chiama la funzione è necessario specificare la parola chiave DEFAULT per ottenere il valore predefinito. Questa funzionalità risulta diversa per i parametri con valore predefinito nelle stored procedure definite dall'utente in cui l'omissione del parametro implica l'utilizzo del valore predefinito. Le funzioni definite dall'utente non supportano parametri di output.  
   
 ##  <a name="Tasks"></a> Attività correlate  

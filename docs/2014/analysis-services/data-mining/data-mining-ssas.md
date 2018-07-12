@@ -1,5 +1,5 @@
 ---
-title: Data Mining (SSAS) | Documenti Microsoft
+title: Data Mining (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b118f03580aeb0053203cd2535bafecd1649ccb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff1d223cee1ce86851b3021bad15582db156639
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163432"
 ---
 # <a name="data-mining-ssas"></a>Data mining (SSAS)
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è disponibile una piattaforma integrata per le soluzioni in cui è incorporato il data mining. Per creare soluzioni di Business Intelligence con analisi predittiva è possibile utilizzare i dati relazionali o del cubo.  
@@ -53,7 +53,7 @@ ms.locfileid: "36158565"
 ## <a name="in-this-section"></a>Argomenti della sezione  
  Negli argomenti di questa sezione sono illustrate le caratteristiche principali di Data mining di SQL Server e le attività correlate.  
   
--   [Concetti di Data Mining](data-mining-concepts.md)  
+-   [Concetti di data mining](data-mining-concepts.md)  
   
 -   [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
@@ -63,14 +63,14 @@ ms.locfileid: "36158565"
   
 -   [Test e convalida &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
   
--   [Query di Data Mining](data-mining-queries.md)  
+-   [Query di data mining](data-mining-queries.md)  
   
--   [Soluzioni di Data Mining](data-mining-solutions.md)  
+-   [Soluzioni di data mining](data-mining-solutions.md)  
   
--   [Strumenti di Data Mining](data-mining-tools.md)  
+-   [Strumenti di data mining](data-mining-tools.md)  
   
--   [Architettura di Data Mining](data-mining-architecture.md)  
+-   [Architettura di data mining](data-mining-architecture.md)  
   
--   [Cenni preliminari sulla sicurezza &#40;Data Mining&#41;](security-overview-data-mining.md)  
+-   [Panoramica della sicurezza &#40;Data Mining&#41;](security-overview-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Guida per l'utilizzo di funzionalità di Business Intelligence di SQL Server in una Farm di SharePoint 2010 | Documenti Microsoft
+title: Linee guida per l'uso di funzionalità di Business Intelligence di SQL Server in una Farm di SharePoint 2010 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,41 +8,41 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 42502473536215297cb047d4e5e563433b66c67b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f16ab06ab21f266c4993a3148668effadbee2175
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149872"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Guida per l'utilizzo delle funzionalità di Business Intelligence di SQL Server in una farm di SharePoint 2010
-  In questo argomento viene riepilogata la disponibilità delle funzionalità in base alle versioni e alle edizioni del software in uso. Vengono inoltre illustrati i requisiti di installazione di SharePoint 2010 per l'utilizzo di funzionalità SQL Server specifiche. Per informazioni correlate a SharePoint 2013, vedere [topologie di distribuzione per SQL Server BI Features in SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
+  In questo argomento viene riepilogata la disponibilità delle funzionalità in base alle versioni e alle edizioni del software in uso. Vengono inoltre illustrati i requisiti di installazione di SharePoint 2010 per l'utilizzo di funzionalità SQL Server specifiche. Per informazioni correlate a SharePoint 2013, vedere [topologie di distribuzione per le funzionalità di SQL Server BI in SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
   
  Contenuto dell'argomento:  
   
--   [Requisiti di generali SharePoint 2010](#bkmk_generalsharepoint)  
+-   [Requisiti generali di SharePoint 2010](#bkmk_generalsharepoint)  
   
 -   [SharePoint 2010 Service Pack 1 (SP1)](#bkmk_sp1)  
   
 -   [Supporto di SharePoint edizioni e funzionalità di Business Intelligence](#bkmk_vers)  
   
--   [Utilità di preparazione prodotti SharePoint 2010](#bkmk_prereq)  
+-   [Utilità preparazione prodotti SharePoint 2010](#bkmk_prereq)  
   
 -   [Requisiti e suggerimenti per l'esecuzione dell'installazione di SharePoint](#bkmk_install)  
   
-##  <a name="bkmk_generalsharepoint"></a> Requisiti di generali SharePoint 2010  
+##  <a name="bkmk_generalsharepoint"></a> Requisiti generali di SharePoint 2010  
   
 -   I prodotti SharePoint 2010 sono solo a 64 bit. Se si dispone di un'installazione a 32 bit di una versione precedente di SharePoint e di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installato in modalità integrata SharePoint, non è possibile effettuare l'aggiornamento a SharePoint 2010. Per ulteriori informazioni, esaminare la documentazione relativa a SharePoint.  
   
--   Reporting Services include un componente aggiuntivo per prodotti SharePoint. Le configurazioni supportate per il componente aggiuntivo e il server di report sono disponibili con un livello di granularità superiore rispetto a quello indicato qui. Per altre informazioni, vedere [combinazioni supportate di SharePoint e Server di Reporting Services e componente aggiuntivo &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
+-   Reporting Services include un componente aggiuntivo per prodotti SharePoint. Le configurazioni supportate per il componente aggiuntivo e il server di report sono disponibili con un livello di granularità superiore rispetto a quello indicato qui. Per altre informazioni, vedere [combinazioni supportate di SharePoint e Server Reporting Services e componente aggiuntivo &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
--   Gli strumenti di sviluppo di SharePoint supportano solo una configurazione autonoma di SharePoint.  Per altre informazioni, vedere la documentazione di SharePoint: [requisiti per lo sviluppo di soluzioni SharePoint](http://msdn.microsoft.com/library/ee231582.aspx).  
+-   Gli strumenti di sviluppo di SharePoint supportano solo una configurazione autonoma di SharePoint.  Per altre informazioni, vedere la documentazione di SharePoint: [i requisiti per lo sviluppo di soluzioni SharePoint](http://msdn.microsoft.com/library/ee231582.aspx).  
   
 ##  <a name="bkmk_vers"></a> Supporto di SharePoint edizioni e funzionalità di Business Intelligence  
  Alcune funzionalità di Business Intelligence di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono supportate solo in edizioni specifiche di prodotti SharePoint.  
@@ -61,13 +61,13 @@ ms.locfileid: "36166557"
   
 -   Si desidera utilizzare [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
   
- Uno dei motivi principali per cui SP1 è necessario per le installazioni di SharePoint in esecuzione con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] è la funzionalità del motore di database **sp_dboption**, che è stata deprecata in una versione precedente, è stato interrotto il [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versione. Per altre informazioni, vedere [funzionalità del motore di Database non più disponibile in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
+ Uno dei motivi principali per cui SP1 è obbligatorio per le installazioni di SharePoint in esecuzione con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] è la funzionalità del motore di database **sp_dboption**, che è stata deprecata in una versione precedente, è stato interrotto il [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versione. Per altre informazioni, vedere [funzionalità del motore di Database non più disponibile in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>Guida all'installazione di SharePoint 2010 SP1  
  [Scaricare SharePoint Server 2010 SP1](http://go.microsoft.com/fwlink/?LinkID=219697) e applicarlo a tutti i server nella farm.  
   
 > [!NOTE]  
->  In una farm esistente, sarà necessario utilizzare uno dei seguenti **aggiuntive** aggiornare i passaggi per completare SharePoint SP1. Per altre informazioni, vedere [problemi noti quando si installa Office 2010 SP1 e SharePoint 2010 SP1](http://support.microsoft.com/kb/2532126) e [descrizione di SharePoint Server 2010 SP1](http://support.microsoft.com/kb/2460045):  
+>  In una farm esistente, è necessario usare uno dei seguenti **aggiuntive** passaggi da completare SharePoint SP1 l'aggiornamento. Per altre informazioni, vedere [problemi noti quando si installa Office 2010 SP1 e SharePoint 2010 SP1](http://support.microsoft.com/kb/2532126) e [descrizione di SharePoint Server 2010 SP1](http://support.microsoft.com/kb/2460045):  
   
 -   **Configurazione guidata prodotti SharePoint:** eseguire la procedura guidata per completare l'aggiornamento SP1 e la configurazione.  
   
@@ -77,13 +77,13 @@ ms.locfileid: "36166557"
   
 ## <a name="sharepoint-installation-with-sql-server-bi-features"></a>Installazione di SharePoint con le funzionalità di Business Intelligence di SQL Server  
   
-###  <a name="bkmk_prereq"></a> Utilità di preparazione prodotti SharePoint 2010  
+###  <a name="bkmk_prereq"></a> Utilità preparazione prodotti SharePoint 2010  
  L'Utilità preparazione prodotti SharePoint consente di abilitare i ruoli del server nel sistema operativo e di installare altro software necessario richiesto da un'installazione SharePoint. Nella tabella seguente vengono identificati i passaggi aggiuntivi per configurare il server per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |Componente|Azione|  
 |---------------|------------|  
-|Componente aggiuntivo Reporting Services|L'Utilità preparazione prodotti SharePoint 2010 consente di installare la versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del componente aggiuntivo Reporting Services. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è inclusa una versione più recente di questo componente aggiuntivo richiesta per le funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Il componente aggiuntivo può essere installato utilizzando l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure può essere scaricato da MSDN. Per ulteriori informazioni su come ottenere la versione corrente di componente aggiuntivo e su come installarlo, vedere [dove trovare il componente aggiuntivo di Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md) e [installare o disinstallare Reporting Services Componente aggiuntivo per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).|  
-|Provider OLE DB per Analysis Services (MSOLAP)|Mediante SharePoint 2010 viene installata la versione SQL Server 2008 del provider OLE DB come parte di una distribuzione di Excel Services. Questa versione non supporta l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. È necessario installare versioni successive del provider su server SharePoint che supportano connessioni dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Per altre informazioni, vedere [installare il Provider OLE DB di Analysis Services nei server di SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)|  
+|Componente aggiuntivo Reporting Services|L'Utilità preparazione prodotti SharePoint 2010 consente di installare la versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del componente aggiuntivo Reporting Services. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è inclusa una versione più recente di questo componente aggiuntivo richiesta per le funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Il componente aggiuntivo può essere installato utilizzando l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure può essere scaricato da MSDN. Per altre informazioni su come ottenere la versione corrente del componente aggiuntivo e su come installarlo, vedere [dove trovare il componente aggiuntivo di Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md) e [installare o disinstallare Reporting Services Componente aggiuntivo per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).|  
+|Provider OLE DB per Analysis Services (MSOLAP)|Mediante SharePoint 2010 viene installata la versione SQL Server 2008 del provider OLE DB come parte di una distribuzione di Excel Services. Questa versione non supporta l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. È necessario installare versioni successive del provider su server SharePoint che supportano connessioni dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Per altre informazioni, vedere [installare il Provider OLE DB di Analysis Services nei server SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)|  
 |Servizi Web ADO.NET|I servizi ADO.NET sono presenti nell'elenco dei prerequisiti in SharePoint 2010, ma non vengono tuttavia installati dal programma di installazione dei prerequisiti. Per aggiungere servizi ADO.NET, è necessario installarli manualmente. L'installazione di servizi ADO.NET è necessaria se si desidera utilizzare gli elenchi SharePoint come feed di dati per cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o report di Reporting Services. Per istruzioni, vedere [installare ADO.NET Data Services per supportare dati esportazioni di feed di elenchi SharePoint](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).|  
   
 ###  <a name="bkmk_install"></a> Requisiti e suggerimenti per l'esecuzione dell'installazione di SharePoint  
@@ -91,7 +91,7 @@ ms.locfileid: "36166557"
   
  Una farm SharePoint può essere costituita da uno o più server. Ciò che distingue una farm da un'installazione autonoma è la presenza di infrastrutture aggiuntive, ad esempio Attestazioni per il servizio token Windows.  
   
- Una farm viene abilitata quando si sceglie il **Server Farm** opzione nel programma di installazione di SharePoint. Se si desidera utilizzare [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], è necessario disporre dell'installazione di una farm. L'installazione autonoma di SharePoint è supportata ed è comune per gli ambienti di sviluppo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Un'installazione di una farm di SharePoint è tuttavia consigliata per un ambiente di produzione.  
+ Una farm viene abilitata quando si sceglie la **Server Farm** opzione nel programma di installazione di SharePoint. Se si desidera utilizzare [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], è necessario disporre dell'installazione di una farm. L'installazione autonoma di SharePoint è supportata ed è comune per gli ambienti di sviluppo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Un'installazione di una farm di SharePoint è tuttavia consigliata per un ambiente di produzione.  
   
  ![GMNI_SetupUI_SharePoint2010InstallType](../../../2014/sql-server/install/media/gmni-setupui-sharepoint2010installtype.gif "GMNI_SetupUI_SharePoint2010InstallType")  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36166557"
  ![GMNI_SetupUI_DoNotConfigureMOSS](../../../2014/sql-server/install/media/gmni-setupui-donotconfiguremoss.gif "GMNI_SetupUI_DoNotConfigureMOSS")  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installazione e la distribuzione di SharePoint Server 2010](http://technet.microsoft.com/sharepoint/ee518643.aspx)   
+ [Installazione e distribuzione di SharePoint Server 2010](http://technet.microsoft.com/sharepoint/ee518643.aspx)   
  [Più server per una farm a tre livelli (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?linkID=219834)  
   
   

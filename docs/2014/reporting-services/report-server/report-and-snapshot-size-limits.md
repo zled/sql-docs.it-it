@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - large reports
 - maximum report size
@@ -20,13 +20,13 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 525f1af5c7ca1aadd909c306a3397134d9275a93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15925e061103c12f869dae722b1b5881f4146919
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159882"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limiti delle dimensioni di report e snapshot
   Le informazioni contenute in questo argomento consentono agli amministratori che gestiscono una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di conoscere i limiti relativi alle dimensioni dei report quando questi ultimi vengono pubblicati in un server di report, quando ne viene eseguito il rendering in fase di esecuzione e quando vengono salvati nel file system. In questo argomento vengono inoltre fornite indicazioni pratiche su come calcolare le dimensioni di un database del server di report e vengono descritti gli effetti delle dimensioni degli snapshot sulle prestazioni del server.  
@@ -53,7 +53,7 @@ ms.locfileid: "36158149"
   
  Per calcolare le dimensioni su disco di un report visualizzabile, è possibile esportare e quindi salvare il report nel file system. Il file salvato includerà le informazioni di formattazione dei dati e del report.  
   
- L'unico caso in cui vi è un limite fisico per le dimensioni del report è quando si esegue il rendering in formato Excel. Nei fogli di lavoro non possono essere presenti più di 65536 righe o 256 colonne. Con altri formati di rendering non sono presenti limiti simili, pertanto le dimensioni sono limitate solo dalla quantità di risorse disponibili nel server. Per ulteriori informazioni sui limiti di file di Excel, vedere [esportare un Report in un altro tipo di File &#40;Generatore Report e SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
+ L'unico caso in cui vi è un limite fisico per le dimensioni del report è quando si esegue il rendering in formato Excel. Nei fogli di lavoro non possono essere presenti più di 65536 righe o 256 colonne. Con altri formati di rendering non sono presenti limiti simili, pertanto le dimensioni sono limitate solo dalla quantità di risorse disponibili nel server. Per altre informazioni sui limiti dei file di Excel, vedere [esportare un Report in un altro tipo di File &#40;Generatore Report e SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  I processi di elaborazione e rendering dei report avvengono in memoria. Se si utilizzano report di grandi dimensioni o sono presenti numerosi utenti, eseguire una pianificazione delle capacità per garantire agli utenti un livello soddisfacente di prestazioni della distribuzione del server di report. Per altre informazioni su strumenti e linee guida, vedere le pubblicazioni seguenti su MSDN: [Pianificazione di scalabilità e prestazioni con Reporting Services](http://go.microsoft.com/fwlink/?LinkID=70650) e [Uso di Visual Studio 2005 per eseguire test di carico in un server di report di SQL Server 2005 Reporting Services](http://go.microsoft.com/fwlink/?LinkID=77519).  
@@ -84,7 +84,7 @@ EXEC sp_spaceused
  La quantità di snapshot archiviati in un database del server di report non è un fattore che influisce sulle prestazioni. È possibile archiviare un numero elevato di snapshot senza influenzare le prestazioni del server, nonché mantenere gli snapshot per un periodo illimitato. Tenere tuttavia presente che la cronologia del report può essere modificata. Se un amministratore del server di report riduce il limite per la cronologia del report, si potrebbero perdere snapshot presenti nella cronologia che si desiderava mantenere. Se si elimina il report, viene eliminata anche tutta la relativa cronologia.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare le proprietà di elaborazione di Report](set-report-processing-properties.md)   
+ [Impostare le proprietà di elaborazione dei Report](set-report-processing-properties.md)   
  [Database del Server di report &#40;modalità nativa SSRS&#41;](report-server-database-ssrs-native-mode.md)   
  [Elaborare report di grandi dimensioni](process-large-reports.md)  
   

@@ -1,13 +1,11 @@
 ---
-title: SQLGetDiagField | Documenti Microsoft
+title: SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d10a9383294f02b26bd15113d17f6d6bd0e182c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8fcb95ada7482f48f9316d02553bba9aab4867fc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068245"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421890"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client specifica i campi di diagnostica aggiuntivi seguenti per `SQLGetDiagField`. Questi campi supportano la segnalazione dettagliata degli errori per le applicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sono disponibili in tutti i record di diagnostica generati negli handle di istruzione ODBC e di connessione ODBC collegati. I campi sono definiti in sqlncli.h.  
@@ -65,7 +63,7 @@ ms.locfileid: "36068245"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|Istruzione DROP TRIGGER|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|Istruzione BACKUP o DUMP DATABASE |  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|Istruzione DUMP TABLE|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Istruzione BACKUP o DUMP TRANSACTION. Viene restituito anche per un'istruzione CHECKPOINT se il **trunc. log nel chkpt.** opzione di database è attiva.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Istruzione BACKUP o DUMP TRANSACTION. Viene restituito anche per un'istruzione CHECKPOINT se il **trunc. log sul chkpt.** opzione di database è attiva.|  
 |SQL_DIAG_DFC_SS_GOTO|Istruzione per il controllo di flusso GOTO|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|Istruzione INSERT BULK |  
 |SQL_DIAG_DFC_SS_KILL|Istruzione KILL|  
@@ -102,7 +100,7 @@ ms.locfileid: "36068245"
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField e parametri con valori di tabella  
  SQLGetDiagField può essere utilizzato per recuperare due campi di diagnostica: SQL_DIAG_SS_TABLE_COLUMN_NUMBER e SQL_DIAG_SS_TABLE_ROW_NUMBER. Tali campi consentono di identificare il valore che ha generato l'errore o l'avviso associato al record di diagnostica.  
   
- Per ulteriori informazioni sui parametri con valori di tabella, vedere [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzione SQLGetDiagField](http://go.microsoft.com/fwlink/?LinkId=59352)   

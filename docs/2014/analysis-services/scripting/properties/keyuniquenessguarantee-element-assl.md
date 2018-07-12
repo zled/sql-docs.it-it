@@ -1,5 +1,5 @@
 ---
-title: Elemento KeyUniquenessGuarantee (ASSL) | Documenti Microsoft
+title: Elemento KeyUniquenessGuarantee (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyUniquenessGuarantee element
 ms.assetid: 6e0cf107-dd02-4bbd-94f5-c26d96438d4b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d95c6c4479a0ce6b496dec934206ad893df6ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3038ab6fe49f3791d62ae171171783e46207365
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153272"
 ---
 # <a name="keyuniquenessguarantee-element-assl"></a>Elemento KeyUniquenessGuarantee (ASSL)
   Indica se la relazione tra la chiave dell'attributo e il nome e la relazione con gli attributi correlati, è valida.  
@@ -61,10 +61,10 @@ ms.locfileid: "36166468"
 |Elemento padre|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Usa il `KeyUniquenessGuarantee` elemento per ottimizzare la costruzione delle query quando vengono recuperati i membri dall'origine dati sottostante per questo attributo.  
+## <a name="remarks"></a>Note  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Usa il `KeyUniquenessGuarantee` elemento per ottimizzare la costruzione di query quando vengono recuperati i membri dall'origine dati sottostante per questo attributo.  
   
- L'elemento che corrisponde al padre di `KeyUniquenessGuarantee` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ L'elemento che corrisponde al padre di `KeyUniquenessGuarantee` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

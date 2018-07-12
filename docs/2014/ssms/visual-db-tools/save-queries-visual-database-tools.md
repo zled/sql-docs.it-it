@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], saving
 - saving queries
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6c6194c1b4ac931428c3573bcca1811d1faf32d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a786d6abb774a461739268d2a0484007f8453bda
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210401"
 ---
 # <a name="save-queries-visual-database-tools"></a>Salvataggio di query (Visual Database Tools)
   Per poter riutilizzare successivamente una query appena creata, è necessario salvarla. L'esecuzione della query infatti non determina il salvataggio automatico delle modifiche effettuate.  
@@ -40,7 +40,7 @@ ms.locfileid: "36158125"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di query &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Esecuzione di query &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
+ [Eseguire query &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
  [Annullare le modifiche apportate alle query &#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
  [Procedure per le query e visualizzazioni di progettazione &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Tipi di query &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   

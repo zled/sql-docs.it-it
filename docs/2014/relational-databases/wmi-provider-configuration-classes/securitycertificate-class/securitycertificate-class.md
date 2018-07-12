@@ -1,5 +1,5 @@
 ---
-title: Classe SecurityCertificate | Documenti Microsoft
+title: Classe SecurityCertificate | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - SecurityCertificate class
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d7415e610eddb5b16f827a9f430e214936e8cd69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0954783d3f9a7d7e3b97ce4faf9f82f4fa381d49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258487"
 ---
 # <a name="securitycertificate-class"></a>Classe SecurityCertificate
-  Il protocollo class.md-[classe SecurityCertificate] securitycertificate) rappresenta un certificato di sicurezza. Un certificato è un'istruzione firmata digitalmente che associa il valore di una chiave pubblica all'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], che detiene la corrispondente chiave privata. Il certificato viene emesso da un'autorità di certificazione.  
+  Il securitycertificate [classe SecurityCertificate]-class.md) rappresenta un certificato di sicurezza. Un certificato è un'istruzione firmata digitalmente che associa il valore di una chiave pubblica all'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], che detiene la corrispondente chiave privata. Il certificato viene emesso da un'autorità di certificazione.  
   
- Con il securitycertificate delle [classe SecurityCertificate]-class.md), è possibile eseguire le attività seguenti:  
+ Con la securitycertificate delle [classe SecurityCertificate]-class.md), è possibile eseguire le attività seguenti:  
   
 -   Visualizzare le proprietà del certificato di sicurezza.  
   

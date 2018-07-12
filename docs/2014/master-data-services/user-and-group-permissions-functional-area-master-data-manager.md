@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a48d3a18632f54367d1cac4983939735a5c73dad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 76002bcb850104bfaaafa86f4264fed91231a711
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156353"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Area funzionale Autorizzazioni utenti e gruppi (Gestione dati master)
   Nell'area funzionale Autorizzazioni utenti e gruppi, gli amministratori possono concedere l'autorizzazione ad aree funzionali, ad attributi (nella scheda Modelli) e a membri (nella scheda Membri gerarchia). Le autorizzazioni sovrapposte vengono risolte per determinare l'autorizzazione di un utente a ogni singolo valore di attributo.  
@@ -28,7 +28,7 @@ ms.locfileid: "36166646"
   
  [Creare un amministratore di modelli &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)  
   
- [Gli utenti e gruppi di &#40;Master Data Services&#41;](../../2014/master-data-services/users-and-groups-master-data-services.md)  
+ [Utenti e gruppi &#40;Master Data Services&#41;](../../2014/master-data-services/users-and-groups-master-data-services.md)  
   
  [Aggiungere un utente &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36166646"
   
  [Applicare immediatamente autorizzazioni membri &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   
- [Modo in cui vengono determinate le autorizzazioni &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [Come vengono determinate le autorizzazioni &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
  [Risoluzione dei problemi relativi alla sicurezza di Gestione dati master](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   

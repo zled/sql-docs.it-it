@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati ScalarMiningStructureColumn (ASSL) | Documenti Microsoft
+title: Tipo di dati ScalarMiningStructureColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ScalarMiningStructureColumn data type
 ms.assetid: 8f4afc15-601c-4189-bc45-f5a216aed879
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15e88a5e82dc960e3428587b8d74a046781b90ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90f855bf55292b310e32a167dc005ab2f2f81c14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211691"
 ---
 # <a name="scalarminingstructurecolumn-data-type-assl"></a>Tipo di dati ScalarMiningStructureColumn (ASSL)
-  Definisce un tipo di dati derivato che rappresenta un [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) elemento che contiene valori scalari, a differenza delle tabelle nidificate associate le [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md) elemento che contiene tabelle nidificate.  
+  Definisce un tipo di dati derivato che rappresenta un [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) elemento che contiene valori scalari, invece di tabelle nidificate associate le [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md) elemento che contiene tabelle nidificate.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -67,10 +67,10 @@ ms.locfileid: "36166159"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[ClassifiedColumnID](../properties/id-element-assl.md), [contenuto](../properties/content-element-assl.md), [DiscretizationBucketCount](../properties/discretizationbucketcount-element-assl.md), [DiscretizationMethod](../properties/discretizationmethod-element-assl.md), [distribuzione](../properties/distribution-element-assl.md), [IsKey](../properties/iskey-element-assl.md), [KeyColumns](../collections/columns-element-assl.md), [ModelingFlags](../collections/modelingflags-element-assl.md), [NameColumn](../objects/column-element-assl.md), [origine](../properties/source-element-binding-assl.md), [ Traduzioni](../collections/translations-element-assl.md)|  
-|Elementi derivati|[Colonna](../objects/column-element-assl.md) ([le colonne](../collections/columns-element-assl.md) insieme [MiningStructure](../objects/miningstructure-element-assl.md))|  
+|Elementi figlio|[ClassifiedColumnID](../properties/id-element-assl.md), [contenuti](../properties/content-element-assl.md), [DiscretizationBucketCount](../properties/discretizationbucketcount-element-assl.md), [DiscretizationMethod](../properties/discretizationmethod-element-assl.md), [distribuzione](../properties/distribution-element-assl.md), [IsKey](../properties/iskey-element-assl.md), [KeyColumns](../collections/columns-element-assl.md), [ModelingFlags](../collections/modelingflags-element-assl.md), [NameColumn](../objects/column-element-assl.md), [origine](../properties/source-element-binding-assl.md), [ Traduzioni](../collections/translations-element-assl.md)|  
+|Elementi derivati|[Colonna](../objects/column-element-assl.md) ([colonne](../collections/columns-element-assl.md) insieme [MiningStructure](../objects/miningstructure-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
 ## <a name="see-also"></a>Vedere anche  

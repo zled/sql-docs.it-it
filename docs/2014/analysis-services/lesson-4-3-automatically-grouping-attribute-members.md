@@ -1,5 +1,5 @@
 ---
-title: Raggruppamento automatico dei membri dell'attributo | Documenti Microsoft
+title: Raggruppamento automatico dei membri di attributo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: eef5ca79172be96af5ded2c01a8c3f01e633caa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10a6ae9dee61d211c178a42e38087ad104344343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183428"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Raggruppamento automatico dei membri degli attributi
   Quando si esplora un cubo, in genere i membri di una gerarchia di attributi si dimensionano in base a quelli di un'altra gerarchia di attributi. Ad esempio, le vendite clienti si potrebbero raggruppare per città, per prodotto acquistato o per sesso. Tuttavia, con alcuni tipi di attributi, è utile ottenere la creazione automatica di raggruppamenti di membri di attributi da parte di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in base alla distribuzione dei membri all'interno di una gerarchia di attributi. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , ad esempio, è possibile ottenere la creazione di gruppi di valori di reddito annuale per i clienti. In questo caso, gli utenti che esplorano la gerarchia di attributi vedranno i nomi e i valori dei gruppi anziché i membri stessi. L'operazione limiterà inoltre il numero di livelli presentato agli utenti, cosa che può essere più utile per l'analisi.  
@@ -48,11 +48,11 @@ ms.locfileid: "36166737"
   
 4.  Nel riquadro **Attributi** selezionare **Yearly Income**.  
   
-5.  Nella finestra Proprietà modificare il valore per il **DiscretizationMethod** proprietà **automatica** e modificare il valore per il **DiscretizationBucketCount** proprietà per `5`.  
+5.  Nella finestra Proprietà modificare il valore per il **DiscretizationMethod** proprietà **automatici** e modificare il valore per il **DiscretizationBucketCount** proprietà per `5`.  
   
      Nella figura seguente vengono illustrate le proprietà modificate per **Yearly Income**.  
   
-     ![Le proprietà modificate per Yearly Income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "le proprietà modificate per Yearly Income")  
+     ![Le proprietà modificate per Yearly Income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "proprietà modificate per Yearly Income")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Raggruppamento dei membri delle gerarchie di attributi nella dimensione Employee  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36166737"
   
 6.  Nel riquadro **Attributi** selezionare **Vacation Hours**.  
   
-7.  Nella finestra Proprietà modificare il valore per il **DiscretizationMethod** proprietà **aree uguali** e modificare il valore per il **DiscretizationBucketCount** proprietà per `5`.  
+7.  Nella finestra Proprietà modificare il valore per il **DiscretizationMethod** proprietà **Equal Areas** e modificare il valore per il **DiscretizationBucketCount** proprietà per `5`.  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Esplorazione delle gerarchie di attributi modificati  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36166737"
   
      Nella figura seguente vengono illustrate le vendite dimensionate per ore di permesso per malattia.  
   
-     ![Vendite dimensionate per malattia dipendente lascia ore](../../2014/tutorials/media/l4-discretizationmethod-2.gif "vendite dimensionate per malattia dipendente lascia ore")  
+     ![Le vendite dimensionate dall'assenza per malattia dipendente lascia ore](../../2014/tutorials/media/l4-discretizationmethod-2.gif "vendite dimensionate dall'assenza per malattia dipendente lascia ore")  
   
 10. Rimuovere la gerarchia di attributi **Sick Leave Hours** dall'area colonna del riquadro **Dati** .  
   

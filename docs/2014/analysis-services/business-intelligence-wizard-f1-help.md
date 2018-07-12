@@ -1,5 +1,5 @@
 ---
-title: Della Guida F1 di Business Intelligence guidata | Documenti Microsoft
+title: Guida F1 di Business Intelligence guidata | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Wizard
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1fbdaa3573d77306993a024513895426e91d1ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9fa73095aa52b5c5c5f1ec53dcce18884731b4b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163592"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence
   Utilizzare questa procedura guidata per definire le funzionalità di Business Intelligence ed impostare le opzioni avanzate di cubi e dimensioni. La procedura guidata consente di impostare proprietà di oggetti esistenti, creare nuovi oggetti e generare script MDX (Multidimensional Expression) per offrire, ad esempio, funzionalità di Business Intelligence per le dimensioni e di conversione di valuta.  
@@ -56,29 +56,29 @@ ms.locfileid: "36158776"
   
 -   [Definizione ambito dei calcoli &#40;configurazione guidata Business Intelligence&#41;](define-scope-of-calculations-business-intelligence-wizard.md)  
   
--   [Definizione funzionalità di Business Intelligence &#40;dimensione&#41; &#40;guidata funzionalità di Business Intelligence&#41;](define-account-intelligence-dimension-business-intelligence-wizard.md)  
+-   [Funzionalità di Business Intelligence Account &#40;dimensione&#41; &#40;configurazione guidata Business Intelligence&#41;](define-account-intelligence-dimension-business-intelligence-wizard.md)  
   
 -   [Configurazione attributi dimensione &#40;configurazione guidata Business Intelligence&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
   
--   [Definizione funzionalità di Business Intelligence &#40;configurazione guidata Business Intelligence&#41;](define-account-intelligence-business-intelligence-wizard.md)  
+-   [Funzionalità di Business Intelligence Account &#40;configurazione guidata Business Intelligence&#41;](define-account-intelligence-business-intelligence-wizard.md)  
   
 -   [Set di funzionalità di Business Intelligence &#40;configurazione guidata Business Intelligence&#41;](set-dimension-intelligence-options-business-intelligence-wizard.md)  
   
 -   [Definizione funzionalità di Business Intelligence &#40;configurazione guidata Business Intelligence&#41;](define-dimension-intelligence-business-intelligence-wizard.md)  
   
--   [Specificare un operatore unario &#40;dimensione&#41; &#40;guidata funzionalità di Business Intelligence&#41;](specify-a-unary-operator-dimension-business-intelligence-wizard.md)  
+-   [Impostazione operatore unario &#40;dimensione&#41; &#40;configurazione guidata Business Intelligence&#41;](specify-a-unary-operator-dimension-business-intelligence-wizard.md)  
   
--   [Specificare un operatore unario &#40;configurazione guidata Business Intelligence&#41;](specify-a-unary-operator-business-intelligence-wizard.md)  
+-   [Impostazione operatore unario &#40;configurazione guidata Business Intelligence&#41;](specify-a-unary-operator-business-intelligence-wizard.md)  
   
--   [Creare una Formula personalizzata membro &#40;dimensione&#41; &#40;guidata funzionalità di Business Intelligence&#41;](create-a-custom-member-formula-dimension-business-intelligence-wizard.md)  
+-   [Creare una Formula personalizzata membro &#40;dimensione&#41; &#40;configurazione guidata Business Intelligence&#41;](create-a-custom-member-formula-dimension-business-intelligence-wizard.md)  
   
 -   [Creare una Formula personalizzata membro &#40;configurazione guidata Business Intelligence&#41;](create-a-custom-member-formula-business-intelligence-wizard.md)  
   
--   [Impostazione ordinamento attributi &#40;dimensione&#41; &#40;guidata funzionalità di Business Intelligence&#41;](specify-attribute-ordering-dimension-business-intelligence-wizard.md)  
+-   [Impostazione ordinamento attributi &#40;dimensione&#41; &#40;configurazione guidata Business Intelligence&#41;](specify-attribute-ordering-dimension-business-intelligence-wizard.md)  
   
 -   [Impostazione ordinamento attributi &#40;configurazione guidata Business Intelligence&#41;](specify-attribute-ordering-business-intelligence-wizard.md)  
   
--   [Abilitazione writeback della dimensione &#40;dimensione&#41; &#40;guidata funzionalità di Business Intelligence&#41;](enable-dimension-writeback-dimension-business-intelligence-wizard.md)  
+-   [Abilitazione writeback della dimensione &#40;dimensione&#41; &#40;configurazione guidata Business Intelligence&#41;](enable-dimension-writeback-dimension-business-intelligence-wizard.md)  
   
 -   [Abilitazione writeback della dimensione &#40;configurazione guidata Business Intelligence&#41;](enable-dimension-writeback-business-intelligence-wizard.md)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36158776"
   
 -   [Selezionare i membri &#40;configurazione guidata Business Intelligence&#41;](select-members-business-intelligence-wizard.md)  
   
--   [Selezione tipo di conversione &#40;configurazione guidata Business Intelligence&#41;](select-conversion-type-business-intelligence-wizard.md)  
+-   [Selezionare il tipo di conversione &#40;configurazione guidata Business Intelligence&#41;](select-conversion-type-business-intelligence-wizard.md)  
   
 -   [Definizione associazioni valute locali &#40;configurazione guidata Business Intelligence&#41;](define-local-currency-reference-business-intelligence-wizard.md)  
   

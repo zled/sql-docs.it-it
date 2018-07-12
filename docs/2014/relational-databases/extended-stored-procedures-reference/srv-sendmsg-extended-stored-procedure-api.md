@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_sendmsg
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 34575c3377c806b2671a2bdf92405864d0d5bf1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b7f30a780f0428754af82c6adf57fb1d4efd35fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240731"
 ---
 # <a name="srvsendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API Stored procedure estesa)
     
@@ -111,7 +111,7 @@ msglen
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Questa funzione invia messaggi informativi o di errore al client. Viene chiamata una volta per ogni messaggio da inviare.  
   
  I messaggi possono essere inviati al client con **srv_sendmsg** in qualsiasi ordine prima o dopo l'invio di tutte le righe, se presenti, con **srv_sendrow**. Tutti i messaggi, se presenti, devono essere inviati al client prima dell'invio dello stato di completamento con **srv_senddone**.  

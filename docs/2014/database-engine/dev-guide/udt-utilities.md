@@ -1,5 +1,5 @@
 ---
-title: UDT Utilities | Documenti Microsoft
+title: UDT Utilities | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 655bfd340dd7ad45c4e4266461058e7a4908cf22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bd4617a057a768522064546806dfd23e99366656
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211531"
 ---
 # <a name="udt-utilities"></a>UDT Utilities
   L'esempio UDT Utilities include una serie di funzioni di utilità, quali funzioni per l'esposizione dei metadati dell'assembly a Transact-SQL, funzioni di flusso di esempio con valori di tabella per la restituzione dei tipi di un assembly sotto forma di tabella e funzioni per la restituzione di campi, metodi e proprietà di un tipo di dati definito dall'utente. Le tecnologie illustrate comprendono funzioni di flusso con valori di tabella, API di reflection .NET Framework e il richiamo di funzioni con valori di tabella da Transact-SQL.  
@@ -30,7 +30,7 @@ ms.locfileid: "36166238"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](http://go.microsoft.com/fwlink/?LinkId=31046)Express  
   
--   Il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database disponibile in Codeplex [sito Web](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   Il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database in cui è disponibile in Codeplex [sito Web](http://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   .NET Framework SDK 2.0 o versione successiva oppure Microsoft Visual Studio 2005 o versione successiva. .NET Framework SDK è disponibile gratuitamente.  
   

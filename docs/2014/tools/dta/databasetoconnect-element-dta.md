@@ -1,5 +1,5 @@
 ---
-title: Elemento DatabaseToConnect (DTA) | Documenti Microsoft
+title: Elemento DatabaseToConnect (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DatabaseToConnect element
 ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fb0a5e8b6f20a53f8675e1740ffe57b7227437de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9a29e28782207d5da0e3166669c6c38a7119f597
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161592"
 ---
 # <a name="databasetoconnect-element-dta"></a>Elemento DatabaseToConnect (DTA)
   Specifica il primo database al quale Ottimizzazione guidata motore di database si connette durante l'ottimizzazione di un carico di lavoro.  
@@ -43,7 +43,7 @@ ms.locfileid: "36158322"
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|`string`, lunghezza illimitata.|  
 |**Valore predefinito**|Nessuna.|  
-|**Occorrenza**|Facoltativo. Può utilizzare una sola volta per ogni `TuningOptions` elemento.|  
+|**Occorrenza**|Facoltativo. Può usare una sola volta per ogni `TuningOptions` elemento.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
@@ -52,8 +52,8 @@ ms.locfileid: "36158322"
 |**Elemento padre**|[Elemento TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**Elementi figlio**|None|  
   
-## <a name="remarks"></a>Remarks  
- Utilizzare `DatabaseToConnect` per specificare il nome del primo database a cui si desidera che Ottimizzazione guidata motore Database per la connessione al momento dell'avvio della sessione di ottimizzazione. È possibile specificare un solo database con questo elemento. Se vengono specificati più nomi di database, Ottimizzazione guidata motore di database restituisce un errore.  
+## <a name="remarks"></a>Note  
+ Usare `DatabaseToConnect` per specificare il nome del primo database a cui si desidera che Ottimizzazione guidata motore per la connessione all'avvio della sessione di ottimizzazione. È possibile specificare un solo database con questo elemento. Se vengono specificati più nomi di database, Ottimizzazione guidata motore di database restituisce un errore.  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di uso, vedere [Esempio di file di input XML con carico di lavoro inline &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md).  

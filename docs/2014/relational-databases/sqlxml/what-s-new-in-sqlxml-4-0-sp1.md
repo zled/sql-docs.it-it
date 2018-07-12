@@ -1,5 +1,5 @@
 ---
-title: Novità&#39;s New in SQLXML 4.0 SP1 | Documenti Microsoft
+title: Cosa&#39;s novità di SQLXML 4.0 SP1 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -21,17 +21,17 @@ helpviewer_keywords:
 - side-by-side installations [SQLXML]
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 caps.latest.revision: 67
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c9d44f1eb8bc7cff3c3163cc4a9da8085749dca4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ab3336a913a5b2a34c45800858af1b0b371f0746
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258227"
 ---
-# <a name="what39s-new-in-sqlxml-40-sp1"></a>Novità&#39;s New in SQLXML 4.0 SP1
+# <a name="what39s-new-in-sqlxml-40-sp1"></a>Cosa&#39;s novità di SQLXML 4.0 SP1
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 sono inclusi diversi aggiornamenti e miglioramenti. In questo argomento viene fornito un riepilogo degli aggiornamenti e vengono riportati i collegamenti a informazioni più dettagliate, se disponibili. In SQLXML 4.0 SP1 sono stati apportati ulteriori miglioramenti per supportare i nuovi tipi di dati introdotti in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Vengono inoltre presentati gli argomenti seguenti:  
   
 -   Installazione di SQLXML 4.0 SP1  
@@ -87,7 +87,7 @@ ms.locfileid: "36158191"
  È inoltre necessario ridistribuire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se viene usato come provider di dati con l'applicazione. Per altre informazioni, vedere [Installazione di SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="support-for-sql-server-native-client"></a>Supporto per SQL Server Native Client  
- SQLXML 4.0 supporta sia il provider SQLOLEDB e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider Native Client. È consigliabile utilizzare la stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider Native Client e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è stato sviluppato per supportare qualsiasi nuovi tipi di dati disponibili nel server, ad esempio il `Date, Time`, `DateTime2`, e `dateTimeOffset` tipi di dati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e supportato dalla [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client.  
+ SQLXML 4.0 supporta sia il provider SQLOLEDB e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider Native Client. È consigliabile usare la stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider Native Client e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è stato sviluppato per supportare eventuali nuovi tipi di dati disponibili nel server, ad esempio il `Date, Time`, `DateTime2`, e `dateTimeOffset` tipi di dati di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e supportata da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è una tecnologia di accesso ai dati introdotta in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Questa tecnologia integra il provider SQLOLEDB e il driver SQLODBC in un'unica libreria a collegamento dinamico (DLL) nativa, offrendo contemporaneamente nuove funzionalità diverse da Microsoft Data Access Components (MDAC).  
   
@@ -97,21 +97,21 @@ ms.locfileid: "36158191"
 >  SQLXML 4.0 non è completamente compatibile con la versione precedente SQLXML 3.0. A causa di alcune correzioni di bug e di altre modifiche funzionali, in modo specifico la rimozione del supporto ISAPI SQLXML, non è possibile usare le directory virtuali IIS con SQLXML 4.0. Anche se la maggior parte delle applicazioni viene eseguita con modifiche minori, è necessario testare le applicazioni prima di metterle in produzione con SQLXML 4.0.  
   
 ## <a name="support-for-data-types-introduced-in-sql-server-2005-and-sql-server-2008"></a>Supporto per i tipi di dati introdotti in SQL Server 2005 e SQL Server 2008  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdotto il `xml` tipo di dati e SQLXML 4.0 supporta la `xml` tipo di dati. Per altre informazioni, vedere [xml supporto tipo di dati in SQLXML 4.0](xml-data-type-support-in-sqlxml-4-0.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdotto il `xml` tipo di dati e SQLXML 4.0 supporta il `xml` tipo di dati. Per altre informazioni, vedere [xml supporto dei tipi di dati in SQLXML 4.0](xml-data-type-support-in-sqlxml-4-0.md).  
   
  Per esempi relativi all'utilizzo del tipo di dati `xml` in SQLXML in caso di mapping di viste XML, di caricamento bulk XML o di esecuzione di updategram XML, fare riferimento agli esempi forniti negli argomenti seguenti.  
   
--   [Mapping predefinito di attributi ed elementi XSD a tabelle e colonne](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+-   [Mapping predefinito degli attributi ed elementi XSD a tabelle e colonne](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
 -   [Inserimento di dati mediante Updategram XML](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)  
   
 -   [Esempi di documenti XML di caricamento Bulk](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)  
   
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introdotto il `Date, Time`, `DateTime2`, e **DateTimeOffset** tipi di dati. I quattro nuovi tipi di dati vengono abilitati come tipi scalari predefiniti quando SQLXML 4.0 SP1 viene usato con il provider OLE DB di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client (SQLNCLI11), fornito con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introdotto il `Date, Time`, `DateTime2`, e **DateTimeOffset** i tipi di dati. I quattro nuovi tipi di dati vengono abilitati come tipi scalari predefiniti quando SQLXML 4.0 SP1 viene usato con il provider OLE DB di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client (SQLNCLI11), fornito con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="xml-bulk-load-changes-for-sqlxml-40-sp1"></a>Modifiche al caricamento bulk XML per SQLXML 4.0 SP1  
   
--   Per SQLXML 4.0, il campo di overflow SchemaGen viene creato utilizzando il `xml` tipo di dati. Per altre informazioni, vedere [modello oggetto di caricamento Bulk di SQL Server XML](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md).  
+-   Per SQLXML 4.0, viene creato il campo di overflow SchemaGen utilizzando il `xml` tipo di dati. Per altre informazioni, vedere [modello oggetto di caricamento Bulk di SQL Server XML](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md).  
   
 -   Se sono state precedentemente create applicazioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic e si desidera usare SQLXML 4.0, è necessario ricompilarle con il riferimento a Xblkld4.dll.  
   
@@ -202,15 +202,15 @@ ms.locfileid: "36158191"
  Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="supportability-for-sqlxml-30-isapi-and-data-types-introduced-in-sql-server-2005"></a>Supporto per ISAPI SQLXML 3.0 e per i tipi di dati introdotti in SQL Server 2005  
- Supporto ISAPI è stato rimosso da SQLXML 4.0, se la soluzione richiede la tipizzazione avanzata dei dati le caratteristiche introdotte in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , ad esempio il [tipo di dati xml](/sql/t-sql/xml/xml-transact-sql) o [i tipi di dati definito dall'utente (UDT)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)e l'accesso basato su Web, sarà necessario utilizzare un'altra soluzione, ad esempio [classi gestite SQLXML](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md) o un altro tipo di gestore HTTP, ad esempio servizi Web XML nativi per SQL Server 2005.  
+ Poiché il supporto ISAPI è stato rimosso da SQLXML 4.0, se la soluzione richiede la tipizzazione dei dati migliorati introdotte funzionalità nella [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , ad esempio il [tipo di dati xml](/sql/t-sql/xml/xml-transact-sql) o [tipi di dati definito dall'utente (UDT)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)e l'accesso basato sul Web, sarà necessario usare un'altra soluzione, ad esempio [classi gestite SQLXML](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md) o un altro tipo di gestore HTTP, ad esempio servizi Web XML nativi per SQL Server 2005.  
   
- In alternativa, se non sono necessarie tali estensioni del tipo, è possibile continuare a usare SQLXML 3.0 per connettersi al [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] installazioni. Il supporto ISAPI SQLXML 3.0 funziona con le versioni più recenti, ma non supporta o riconosce il tipo di dati `xml` o i tipi definiti dall'utente introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ In alternativa, se non si richiedono queste estensioni di tipo, è possibile continuare a usare SQLXML 3.0 per connettersi al [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] installazioni. Il supporto ISAPI SQLXML 3.0 funziona con le versioni più recenti, ma non supporta o riconosce il tipo di dati `xml` o i tipi definiti dall'utente introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ### <a name="xml-bulk-load-security-changes-for-temporary-files"></a>Modifiche alla sicurezza del caricamento bulk XML per i file temporanei  
  Per SQLXML 4.0 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le autorizzazioni per i file del caricamento bulk XML vengono concesse all'utente che esegue l'operazione di caricamento bulk. Le autorizzazioni di lettura e scrittura vengono ereditate dal file system. Nelle versioni precedenti di SQLXML e SQL Server, il caricamento bulk XML in SQLXML crea file temporanei non protetti che potrebbero essere letti da chiunque.  
   
 ### <a name="migration-issues-for-client-side-for-xml"></a>Problemi di migrazione per FOR XML sul lato client  
- A causa di modifiche nel motore di esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengano restituiti valori diversi nei metadati per una tabella di base che verrebbe restituito se la query FOR XML è stata eseguita nel [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. In questi casi, la formattazione sul lato client dei risultati della query FOR XML presenterà un output differente, a seconda della versione sulla quale viene eseguita la query.  
+ A causa di modifiche al motore di esecuzione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengano restituiti valori diversi nei metadati per una tabella di base che verrebbe restituito se è stata eseguita la query FOR XML in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. In questi casi, la formattazione sul lato client dei risultati della query FOR XML presenterà un output differente, a seconda della versione sulla quale viene eseguita la query.  
   
  Se una query FOR XML viene eseguita sul lato client usando SQLXML 3.0 su una colonna con tipo di dati `xml`, i dati dei risultati verranno restituiti sotto forma di stringa sostituita completamente da entità. In SQLXML 4.0, se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) viene specificato come provider, i dati verranno restituiti come XML.  
   

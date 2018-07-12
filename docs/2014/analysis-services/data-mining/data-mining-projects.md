@@ -1,5 +1,5 @@
 ---
-title: Progetti di Data Mining | Documenti Microsoft
+title: Progetti di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 035a8a822ffa49502ec93978b2ce8b619fff9630
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e0c9df62ccc0c76dead70001e4ae253ff51cc9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259717"
 ---
 # <a name="data-mining-projects"></a>Progetti di data mining
   Un progetto di data mining è parte di una soluzione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante il processo di progettazione, gli oggetti creati nel progetto sono disponibili per l'esecuzione di test e query come parte di un database dell'area di lavoro. Per consentire agli utenti di eseguire query o esplorare gli oggetti nel progetto, è necessario distribuire il progetto in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità multidimensionale.  
@@ -66,7 +66,7 @@ ms.locfileid: "36157415"
   
  Ad esempio, un solo progetto di data mining può contenere un riferimento a più origini dati, ciascuna delle quali supporta più viste origine dati. A sua volta, ogni vista origine dati può supportare più strutture di data mining, ciascuna con molti modelli di data mining correlati.  
   
- Inoltre, il progetto potrebbe includere algoritmi plug-in, assembly personalizzati o stored procedure personalizzate; questi oggetti tuttavia non vengono descritti in questo argomento. Per altre informazioni, vedere [Guida per gli sviluppatori &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md).  
+ Inoltre, il progetto potrebbe includere algoritmi plug-in, assembly personalizzati o stored procedure personalizzate; questi oggetti tuttavia non vengono descritti in questo argomento. Per altre informazioni, vedere [Guida per sviluppatori di &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md).  
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  
@@ -209,7 +209,7 @@ ms.locfileid: "36157415"
 |Vengono fornite ulteriori informazioni su Analysis Services|[I database modello multidimensionale &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Progettazione di Data Mining](data-mining-designer.md)   
+ [Progettazione modelli di Data Mining](data-mining-designer.md)   
  [Creazione multidimensionali di modelli di utilizzo di SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Database dell'area di lavoro &#40;tabulare di SSAS&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   

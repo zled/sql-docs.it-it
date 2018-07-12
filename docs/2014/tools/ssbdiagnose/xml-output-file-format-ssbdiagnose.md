@@ -1,5 +1,5 @@
 ---
-title: Formato File di Output XML (ssbdiagnose) | Documenti Microsoft
+title: Formato di File di Output XML (ssbdiagnose) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML output file format [ssbdiagnose]
 - ssbdiagnose
 ms.assetid: 3ceb991b-6f15-4504-8828-de5adf448bc5
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9b8f29b17e54c0abf406ee30ad542d960d4556ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fd4555fdcf53aace8eb48b74f0c62c7da9bf21e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183478"
 ---
 # <a name="xml-output-file-format-ssbdiagnose"></a>Formato del file di output XML (ssbdiagnose)
   L'utilità **ssbdiagnose** restituisce un file di output in formato XML quando viene eseguita con l'opzione **-XML** . Nel file di output XML vengono elencate informazioni di intestazione e gli errori rilevati nella configurazione o nella conversazione di [!INCLUDE[ssSB](../../includes/sssb-md.md)] analizzata. È possibile scrivere un'applicazione per analizzare o generare un report relativo agli errori elencati nel file. In alternativa, è possibile visualizzare il file XML in un editor XML generico, ad esempio XML Notepad.  

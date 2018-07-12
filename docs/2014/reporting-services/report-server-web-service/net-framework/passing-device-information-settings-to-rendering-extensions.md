@@ -23,15 +23,15 @@ helpviewer_keywords:
 - extensions [Reporting Services], device information settings
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 caps.latest.revision: 46
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 71eb9ad4d6066b6dbf3b0c942ee9d7e6f521a590
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 9fc300712ecac2eeb4e13257515e1300e704d21c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240221"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]le impostazioni relative alle informazioni sul dispositivo vengono usate per passare i parametri di rendering a un'estensione per il rendering. Le impostazioni nel servizio Web ReportServer vengono passate come elemento XML **DeviceInfo** ed elaborate dal server di report. Poiché le impostazioni delle informazioni sul dispositivo dispongono di valori predefiniti, sono considerate argomenti facoltativi nel processo di rendering. È tuttavia possibile usare le impostazioni delle informazioni sul dispositivo per personalizzare il rendering ed eseguire l'override dei valori predefiniti forniti dal server.  
@@ -39,7 +39,7 @@ ms.locfileid: "36157932"
  È possibile specificare le impostazioni delle informazioni sul dispositivo in vari modi. A livello di codice è possibile usare il metodo Render. Se si accede a un report tramite il relativo URL, è possibile specificare le informazioni sul dispositivo come parametri URL. È inoltre possibile modificare le impostazioni sulle informazioni sul dispositivo nei file di configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per specificare a livello globale i parametri di rendering. Per altre informazioni su come specificare i parametri di rendering a livello globale, vedere [Personalizzare i parametri di estensione per il rendering in RSReportServer.config](../../customize-rendering-extension-parameters-in-rsreportserver-config.md).  
   
 ## <a name="passing-device-information-using-the-render-method"></a>Passaggio di informazioni sul dispositivo tramite il metodo Render  
- Per passare le impostazioni informazioni dispositivo a un'estensione per il rendering, utilizzare il <xref:ReportExecution2005.ReportExecutionService.Render%2A> metodo. Ad esempio, è possibile passare la stringa XML seguente al metodo <xref:ReportExecution2005.ReportExecutionService.Render%2A> per creare un frammento HTML durante il rendering in HTML.  
+ Per trasferire impostazioni informazioni dispositivo a un'estensione per il rendering, utilizzare il <xref:ReportExecution2005.ReportExecutionService.Render%2A> (metodo). Ad esempio, è possibile passare la stringa XML seguente al metodo <xref:ReportExecution2005.ReportExecutionService.Render%2A> per creare un frammento HTML durante il rendering in HTML.  
   
 ```  
 <DeviceInfo>  

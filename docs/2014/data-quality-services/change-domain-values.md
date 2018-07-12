@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 161c6a33ac0afb9159f186eb46210a4ae17c343e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ef4a5f7264309be27c53f3a71ae6118a403c4ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156712"
 ---
 # <a name="change-domain-values"></a>Modificare i valori di dominio
   In questo argomento viene descritto come modificare e aumentare i metadati in una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Dopo avere generato le informazioni mediante l'individuazione delle informazioni, importato le informazioni nella Knowledge Base o nei domini oppure basato una Knowledge Base su un'altra Knowledge Base, è possibile modificare in modo interattivo i valori dei dati. La generazione della Knowledge Base non solo sfrutta i processi computerizzati, ma consente di utilizzare informazioni personalizzate per verificare i valori dei dati e modificarli nei modi seguenti:  
@@ -98,7 +98,7 @@ ms.locfileid: "36167733"
   
 9. **Importa valori di dominio da Excel**: per aggiungere nuovi valori da un foglio di calcolo di Excel, fare clic sulla freccia in giù per l'icona **Importa valori** , quindi selezionare **Importa valori di dominio da Excel**. Immettere il nome file, selezionare **Utilizza la prima riga come intestazione** se appropriato, quindi fare clic su **OK**. Per altre informazioni, vedere [Importare i valori da un file di Excel in un dominio](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
   
-10. **Importa valori progetto**: per aggiungere nuovi valori da un progetto Data Quality, fare clic sulla freccia in giù per l'icona **Importa valori** , quindi selezionare **Importa valori progetto**. Immettere il nome file, selezionare **Utilizza la prima riga come intestazione** se appropriato, quindi fare clic su **OK**. Selezionare il progetto da cui si desidera importare i valori, quindi fare clic su **OK**. Verranno visualizzati i valori importati. Fare clic su **Fine**. Per ulteriori informazioni, vedere Importare i valori di progetto in un dominio.  
+10. **Importa valori progetto**: per aggiungere nuovi valori da un progetto Data Quality, fare clic sulla freccia in giù per l'icona **Importa valori** , quindi selezionare **Importa valori progetto**. Immettere il nome file, selezionare **Utilizza la prima riga come intestazione** se appropriato, quindi fare clic su **OK**. Selezionare il progetto da cui si desidera importare i valori, quindi fare clic su **OK**. Verranno visualizzati i valori importati. Scegliere **Fine**. Per ulteriori informazioni, vedere Importare i valori di progetto in un dominio.  
   
 11. **Elimina valori di dominio selezionati**: per rimuovere uno o più valori esistenti dal dominio, selezionare i valori nella tabella dei valori, quindi fare clic sull'icona **Elimina valori di dominio selezionati** . Non è possibile eliminare il valore DQS_NULL, pertanto se si scelgono più valori da eliminare e il valore DQS_NULL è tra questi, l'operazione non riuscirà.  
   

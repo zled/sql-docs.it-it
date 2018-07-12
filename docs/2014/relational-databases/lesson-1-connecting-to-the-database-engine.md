@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02942c1f5e223cdf996cb691a4e7d42cc95c1b81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0dd6a74e002a6eb8dcb266d2ede766becc89813b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184247"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lezione 1: Connessione al Motore di database
   Gli strumenti che vengono installati con [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]dipendono dall'edizione in uso e dalle opzioni di installazione selezionate. In questa lezione vengono illustrati gli strumenti principali e vengono descritte le procedure per la connessione e l'esecuzione di una funzione di base, ovvero la concessione di autorizzazione ad altri utenti.  
@@ -31,7 +31,7 @@ ms.locfileid: "36156957"
   
 ### <a name="basic-tools"></a>Strumenti di base  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è lo strumento principale per l'amministrazione di [!INCLUDE[ssDE](../includes/ssde-md.md)] e la scrittura di codice [!INCLUDE[tsql](../includes/tsql-md.md)]. È ospitato nella shell di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Non è incluso [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] ma è disponibile come download separato dal [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è lo strumento principale per l'amministrazione di [!INCLUDE[ssDE](../includes/ssde-md.md)] e la scrittura di codice [!INCLUDE[tsql](../includes/tsql-md.md)]. È ospitato nella shell di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Non è incluso [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] ma è disponibile come download separato [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346).  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione viene installato sia con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che con gli strumenti client. Consente di abilitare protocolli server, configurare le opzioni relative ai protocolli quali le porte TCP, configurare i servizi server per l'avvio automatico e configurare i computer client per la connessione con le modalità preferite. Questo strumento consente di configurare gli elementi di connettività più avanzati ma non le funzionalità.  
   
@@ -40,13 +40,13 @@ ms.locfileid: "36156957"
   
 ##### <a name="to-start-sql-server-management-studio"></a>Per avviare SQL Server Management Studio  
   
--   Nel **avviare** dal menu **tutti i programmi**, scegliere [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], quindi fare clic su **SQL Server Management Studio**.  
+-   Nel **avviare** dal menu **tutti i programmi**, scegliere [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]e quindi fare clic su **SQL Server Management Studio**.  
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>Per avviare Gestione configurazione SQL Server  
   
 -   Fare clic sul menu **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Strumenti di configurazione**e quindi **Gestione configurazione SQL Server**.  
   
-##  <a name="connect"></a> La connessione con Management Studio  
+##  <a name="connect"></a> Connessione con Management Studio  
  La connessione a [!INCLUDE[ssDE](../includes/ssde-md.md)] dagli strumenti in esecuzione nello stesso computer risulta semplice se si conosce il nome dell'istanza e se si esegue la connessione con un account membro del gruppo Administrators nel computer. Le procedure illustrate di seguito devono essere eseguite nello stesso computer che ospita [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>Per determinare il nome dell'istanza del Motore di database  
@@ -89,7 +89,7 @@ ms.locfileid: "36156957"
   
      Viene visualizzata la finestra di dialogo **Account di accesso - Nuovo** .  
   
-2.  Nel **generali** nella pagina di **nome account di accesso** , digitare un account di accesso di Windows nel formato  *\<dominio >\\< account di accesso\>*.  
+2.  Nel **generali** nella pagina il **nome account di accesso** , digitare un account di accesso di Windows nel formato  *\<dominio >\\< login\>*.  
   
 3.  Nella casella **Database predefinito** selezionare [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , se disponibile. In caso contrario, selezionare **master**.  
   

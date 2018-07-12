@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati PerspectiveMeasureGroup (ASSL) | Documenti Microsoft
+title: Tipo di dati PerspectiveMeasureGroup (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveMeasureGroup data type
 ms.assetid: 5927120d-f30e-4f87-8523-6d17012817d7
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc1978c2ae733b07071c7c95d3fd232c207d2853
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da4817ba23f7e4be50eb11aa97a3163e48536425
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154952"
 ---
 # <a name="perspectivemeasuregroup-data-type-assl"></a>Tipo di dati PerspectiveMeasureGroup (ASSL)
   Definisce un tipo di dati primitivo che rappresenta le informazioni su un gruppo di misure in un [prospettiva](../objects/perspective-element-assl.md) elemento.  
@@ -58,10 +58,10 @@ ms.locfileid: "36167527"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Annotazioni](../collections/annotations-element-assl.md), [MeasureGroupID](../properties/id-element-assl.md), [misure](../collections/measures-element-assl.md)|  
-|Elementi derivati|[MeasureGroup](../objects/group-element-assl.md) ([MeasureGroups](../collections/groups-element-assl.md) insieme [prospettiva](../objects/perspective-element-assl.md))|  
+|Elementi figlio|[Le annotazioni](../collections/annotations-element-assl.md), [MeasureGroupID](../properties/id-element-assl.md), [misure](../collections/measures-element-assl.md)|  
+|Elementi derivati|[Elemento MeasureGroup](../objects/group-element-assl.md) ([MeasureGroups](../collections/groups-element-assl.md) insieme [prospettiva](../objects/perspective-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Un gruppo di misure in una prospettiva ha la stessa struttura di un gruppo di misure nel cubo sottostante.  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>.  

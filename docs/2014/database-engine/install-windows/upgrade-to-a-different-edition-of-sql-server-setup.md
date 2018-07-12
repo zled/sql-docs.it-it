@@ -1,5 +1,5 @@
 ---
-title: Eseguire l'aggiornamento a un'edizione diversa di SQL Server 2014 (programma di installazione) | Documenti Microsoft
+title: Eseguire l'aggiornamento a un'edizione diversa di SQL Server 2014 (programma di installazione) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f2b3739bf23e2e7405d95e856df7e776e498709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1d88903151c3557ec48b9457a50d4a257075eb04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182858"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Eseguire l'aggiornamento a un'edizione diversa di SQL Server 2014 (programma di installazione)
   Il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'aggiornamento dell'edizione fra le varie edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni sui percorsi di aggiornamento supportati, vedere [Aggiornamenti di versione ed edizione supportati](supported-version-and-edition-upgrades.md). Prima di iniziare l'aggiornamento dell'edizione di un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], rivedere gli argomenti seguenti:  
@@ -30,7 +30,7 @@ ms.locfileid: "36166230"
   
 -   [Limiti della capacità di calcolo per edizione di SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
--   [Requisiti hardware e Software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Requisiti hardware e software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
 >  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ambiente cluster:** è sufficiente eseguire l'aggiornamento dell'edizione su uno dei nodi del cluster di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo nodo può essere attivo o passivo e il motore non imposta le risorse offline durante l'aggiornamento dell'edizione. Dopo l'aggiornamento dell'edizione è necessario per riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o eseguire il failover a un nodo diverso.  

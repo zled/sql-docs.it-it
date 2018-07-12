@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f54e95b0b9bee1e989d9d9ccf85f513210302367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6f201b93b3469278d0335cbc60bcc00aa679e6b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228751"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a barre al report (Generatore report)
   In un grafico a barre i dati delle categorie vengono visualizzati orizzontalmente per gli scopi seguenti:  
@@ -41,7 +41,7 @@ ms.locfileid: "36157433"
   
 2.  [Scegliere il tipo di grafico](#ChartType)  
   
-3.  [Visualizzare tutti i valori di categoria sull'asse verticale](#AllValues)  
+3.  [Visualizzare tutti i valori di categorie sull'asse verticale](#AllValues)  
   
 4.  [Modificare la visualizzazione dei nomi sull'asse verticale](#Sort)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36157433"
   
 6.  [Spostare il titolo del grafico](#ChartTitle)  
   
-7.  [Formattare e assegnare etichette agli assi orizzontali](#Horizontal)  
+7.  [Formattare e assegnare un'etichetta asse orizzontale](#Horizontal)  
   
 8.  [Aggiungere un filtro per visualizzare i primi cinque valori](#Filter)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36157433"
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Chart"></a> 1. Creare un report grafico da Creazione guidata grafico  
- Dal **Getting Started** la finestra di dialogo, creare un set di dati incorporato, scegliere un'origine dati condivisa, creare un grafico a barre tramite Creazione guidata grafico.  
+ Dal **introduttiva** nella finestra di dialogo Crea un set di dati incorporato, scegliere un'origine dati condivisa e creare un grafico a barre tramite Creazione guidata grafico.  
   
 > [!NOTE]  
 >  Nella query di questa esercitazione sono contenuti i valori dei dati in modo che non sia necessaria un'origine dati esterna. Tale condizione rende tuttavia la query piuttosto lunga. In una query di un ambiente aziendale non sarebbe incluso alcun dato. Questo esempio è solo a scopo illustrativo.  
@@ -78,7 +78,7 @@ ms.locfileid: "36157433"
      Verrà visualizzata la finestra di dialogo **Riquadro attività iniziale** .  
   
     > [!NOTE]  
-    >  Se il **Getting Started** finestra di dialogo non vengono visualizzati, fare clic sul pulsante Generatore Report e quindi fare clic su **New**.  
+    >  Se il **Guida introduttiva** finestra di dialogo non vengono visualizzati, fare clic sul pulsante Generatore Report e quindi fare clic su **New**.  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36157433"
   
 2.  Fare clic su **Barre**, quindi su **Avanti**.  
   
-     Nel **Disponi campi del grafico** pagina, sono disponibili quattro campi il **campi disponibili** riquadro: FirstName, LastName, SalesYear2009 e SalesYear2008.  
+     Nel **Disponi campi del grafico** pagina, sono contenuti quattro campi il **campi disponibili** riquadro: FirstName, LastName, SalesYear2009 e SalesYear2008.  
   
 3.  Trascinare LastName nel riquadro Categorie.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36157433"
   
      Uno stile specifica lo stile del carattere, il set di colori e uno stile del bordo. Quando si seleziona uno stile, nel riquadro di anteprima viene visualizzato un esempio del grafico con lo stile selezionato.  
   
-8.  Fare clic su **Fine**.  
+8.  Scegliere **Fine**.  
   
      Il grafico verrà aggiunto all'area di progettazione.  
   
@@ -156,13 +156,13 @@ ms.locfileid: "36157433"
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Il pulsante destro l'asse verticale e quindi fare clic su **proprietà asse verticale**.  
+2.  Fare doppio clic dell'asse verticale e quindi fare clic su **proprietà asse verticale**.  
   
 3.  Nella casella **Intervallo**di **Intervallo asse** digitare **1**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  Fare doppio clic su verticale **titolo dell'asse** e deselezionare il **Mostra titolo asse** casella di controllo.  
+5.  Fare doppio clic su verticale **titolo asse** e deselezionare le **Mostra titolo asse** casella di controllo.  
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -210,19 +210,19 @@ ms.locfileid: "36157433"
   
 4.  Fare clic su **Ordinamento**. Nella pagina **Modificare le opzioni di ordinamento** viene visualizzato un elenco di espressioni di ordinamento. Per impostazione predefinita, l'elenco dispone di un'unica espressione di ordinamento che equivale all'espressione originale di raggruppamento delle categorie.  
   
-5.  In Ordina per, fare clic su espressione (**Fx**) pulsante.  
+5.  In Ordina per scegliere l'espressione (**Fx**) pulsante.  
   
 6.  Digitare l'espressione seguente: `=Fields!LastName.Value & ", " & Fields!FirstName.Value`  
   
 7.  Fare clic su **OK**.  
   
-8.  Nel **proprietà gruppo categorie** nella pagina di **ordine** elenco a discesa, seleziona **dalla Z alla A**. In questo modo verrà selezionato l'ordine alfabetico inverso, che comporta la visualizzazione dei nomi dall'alto verso il basso.  
+8.  Riaccenderle il **proprietà gruppo categorie** pagina il **ordine** elenco a discesa, seleziona **dalla Z alla A**. In questo modo verrà selezionato l'ordine alfabetico inverso, che comporta la visualizzazione dei nomi dall'alto verso il basso.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
- I nomi sull'asse orizzontale vengono ordinati in ordine inverso, con **Alerca** nella parte superiore e **Zeng** nella parte inferiore.  
+ I nomi sull'asse orizzontale vengono ordinati in ordine inverso, partendo **Alerca** nella parte superiore e **Zeng** nella parte inferiore.  
   
 ##  <a name="Legend"></a> 5. Spostare la legenda  
  Per migliorare la leggibilità dei valori del grafico, è possibile spostare la legenda del grafico. In un grafico a barre in cui le barre sono visualizzate orizzontalmente, è ad esempio possibile modificare la posizione della legenda in modo che si trovi al di sopra o al di sotto dell'area del grafico. In questo modo lo spazio orizzontale disponibile per le barre risulterà maggiore.  
@@ -249,7 +249,7 @@ ms.locfileid: "36157433"
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Selezionare le parole **titolo del grafico** nella parte superiore del grafico e quindi digitare il testo seguente: **delle vendite per 2008 e 2009**.  
+2.  Selezionare le parole **titolo del grafico** nella parte superiore del grafico e quindi digitare il seguente testo: **vendite per 2008 e 2009**.  
   
 3.  Fare clic in un punto qualsiasi all'esterno del testo.  
   
@@ -264,19 +264,19 @@ ms.locfileid: "36157433"
   
 2.  Fare clic sull'asse orizzontale lungo il bordo inferiore del grafico per selezionarlo.  
   
-     Sulla barra multifunzione, nel **Home** nella scheda il **numero** di gruppo, fare clic sul **valuta** pulsante. Le etichette dell'asse orizzontale vengono convertite nel formato valuta.  
+     Sulla barra multifunzione, nel **Home** nella scheda il **numero** raggruppare, fare clic il **valuta** pulsante. Le etichette dell'asse orizzontale vengono convertite nel formato valuta.  
   
 3.  (Facoltativo) Rimuovere le cifre decimali. Fare clic due volte sul pulsante **Diminuisci decimali** accanto al pulsante **Valuta** .  
   
 4.  Fare clic con il pulsante destro del mouse sull'asse orizzontale e scegliere **Proprietà asse orizzontale**.  
   
-5.  Nel **numero** , selezionare **Mostra valori in migliaia.**  
+5.  Nel **numero** scheda, seleziona **Mostra valori in migliaia.**  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Fare doppio clic su **titolo dell'asse** e fare clic su **proprietà titolo asse**.  
+7.  Fare doppio clic su **titolo asse** e fare clic su **proprietà titolo asse**.  
   
-8.  Nel **testo titolo** , digitare **delle vendite in migliaia** e fare clic su **OK**.  
+8.  Nel **testo titolo** , digitare **vendite in migliaia** e fare clic su **OK**.  
   
 9. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -297,7 +297,7 @@ ms.locfileid: "36157433"
   
 5.  Scegliere **Aggiungi**. Verrà visualizzato un nuovo filtro vuoto.  
   
-6.  In **espressione**, tipo **[Sum(SalesYear2009)]**. Verrà creata l'espressione sottostante `=Sum(Fields!SalesYear2009.Value)`, che è possibile vedere se si sceglie il **fx** pulsante.  
+6.  Nelle **espressione**, digitare **[Sum(SalesYear2009)]**. Verrà creata l'espressione sottostante `=Sum(Fields!SalesYear2009.Value)`, che è possibile vedere se si sceglie il **fx** pulsante.  
   
 7.  Verificare che il tipo di dati sia **Text**.  
   
@@ -319,7 +319,7 @@ ms.locfileid: "36157433"
   
 1.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
-2.  Tipo di **grafico a barre-vendite**, premere INVIO e quindi digitare **primi cinque venditori per 2009**, in modo analogo al seguente:  
+2.  Tipo di **grafico a barre-vendite**, premere INVIO e quindi digitare **primi cinque venditori per 2009**, in modo che risulti simile al seguente:  
   
      **Grafico a barre - Vendite**  
   
@@ -327,7 +327,7 @@ ms.locfileid: "36157433"
   
 3.  Selezionare **Grafico a barre - Vendite**e fare clic sul pulsante **Grassetto** .  
   
-4.  Selezionare **primi cinque venditori per 2009**e il **carattere** sezione il **Home** scheda, impostare le dimensioni del carattere su **10**.  
+4.  Selezionare **primi cinque venditori per 2009**e il **Font** sezione il **Home** scheda, impostare la dimensione del carattere su **10**.  
   
 5.  (Facoltativo) Per contenere le due righe del testo potrebbe essere necessario aumentare l'altezza della casella di testo Titolo.  
   

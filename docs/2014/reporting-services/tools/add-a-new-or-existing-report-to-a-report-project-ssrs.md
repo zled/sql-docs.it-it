@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: af7fe1fceeacc7b49daff9514f5ba1e10fc20518
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8d1d96273c21f2b22b3482a74b5b55370b09589e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230181"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Aggiungere un report nuovo o esistente a un progetto report (SSRS)
   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], è possibile aggiungere un nuovo report tramite la creazione guidata Report o aggiungendo un nuovo report vuoto al progetto. È anche possibile aggiungere un report esistente. Dopo l'aggiunta di un report, il relativo nome verrà visualizzato nella cartella **Report** nel progetto.  
   
 > [!NOTE]  
->  Per visualizzare in anteprima un report con le origini dati esistenti, è necessario disporre delle autorizzazioni per l'origine dati dal client di creazione report. Per altre informazioni, vedere [creare un'origine dati condivisa o un incorporata &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md).  
+>  Per visualizzare in anteprima un report con le origini dati esistenti, è necessario disporre delle autorizzazioni per l'origine dati dal client di creazione report. Per altre informazioni, vedere [creare un'origine dati condivisa o un Embedded &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md).  
   
  Dopo l'aggiunta di un report, è possibile definire origini dati e set di dati, nonché progettarne il layout. Per iniziare, vedere [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md) o [Tabelle &#40;Generatore report e SSRS&#41;](../report-design/tables-report-builder-and-ssrs.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36157637"
     -   **Scegliere uno stile.** In questo passaggio si applica uno stile al report tramite un modello di stili. Selezionare un modello per applicare stili di carattere, colore e bordo al report. In Progettazione report sono disponibili sei modelli di stile: Ardesia, Foresta, Aziendale, Grassetto, Oceano e Generico. È inoltre possibile aggiungere ulteriori modelli di stili.  
   
         > [!NOTE]  
-        >  È possibile modificare i modelli esistenti o aggiungerne di nuovi modificando il file StyleTemplates. XML nel 10.0\Common7\IDE\PrivateAssemblies\Business Visual Studio \Programmi\Microsoft Wizards\Reports\Styles Intelligence\\< lang\>cartella, dove \<lang > è la lingua in uso (ad esempio, se si utilizza la versione in lingua inglese di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], il nome della cartella è "EN"). Questa cartella è disponibile nel computer in cui è installato Progettazione report. Sono disponibili due copie del file StyleTemplates.xml. Per modificare gli stili applicati tramite Creazione guidata report, modificare il file nella cartella creata per la lingua in uso.  
+        >  È possibile modificare i modelli esistenti o aggiungerne di nuovi modificando il file StyleTemplates XML in \Programmi\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\< lang\>cartella, dove \<lang > è il linguaggio in uso (ad esempio, se si usa la versione in lingua inglese di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], il nome della cartella è "EN"). Questa cartella è disponibile nel computer in cui è installato Progettazione report. Sono disponibili due copie del file StyleTemplates.xml. Per modificare gli stili applicati tramite Creazione guidata report, modificare il file nella cartella creata per la lingua in uso.  
   
     -   **Assegnazione di un nome al report.**  Nell'ultimo passaggio della procedura guidata si assegna un nome al report e si verificano i campi che verranno inclusi nel report. Dopo il completamento di tutti i passaggi il report viene creato automaticamente e aggiunto al progetto server di report.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36157637"
   
 ### <a name="to-add-an-existing-report"></a>Per aggiungere un report esistente  
   
-1.  Dal **progetto** menu, fare clic su **Add**, quindi **elemento esistente**.  
+1.  Dal **Project** menu, fare clic su **Add**e quindi **elemento esistente**.  
   
 2.  Passare al percorso del file con estensione rdl, selezionarlo, quindi fare clic su **Aggiungi**.  
   

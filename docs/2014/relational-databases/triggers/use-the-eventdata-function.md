@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 610822ec0eb896180ebfffa40d53198749df0428
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: e45ee2308f7f399c08053f8ff4cd6b862b3978df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155728"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427600"
 ---
 # <a name="use-the-eventdata-function"></a>Utilizzo della funzione EVENTDATA
   La funzione EVENTDATA consente di acquisire le informazioni relative a un evento che attiva un trigger DDL. La funzione restituisce un valore `xml`. XML Schema include le informazioni relative a:  
@@ -53,7 +51,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- L'istruzione `EVENTDATA()` nel trigger DDL acquisisce il testo dell'istruzione `CREATE TABLE` , che non è consentita. Questo risultato viene ottenuto tramite un'istruzione XQuery sul `xml` dati generati da EVENTDATA e viene recuperato il \<CommandText > elemento. Per altre informazioni, vedere [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
+ L'istruzione `EVENTDATA()` nel trigger DDL acquisisce il testo dell'istruzione `CREATE TABLE` , che non è consentita. Questo risultato viene ottenuto tramite un'istruzione XQuery sui `xml` i dati generati da EVENTDATA e viene recuperato il \<CommandText > elemento. Per altre informazioni, vedere [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  EVENTDATA acquisisce i dati degli eventi CREATE_SCHEMA e, se presente, il contenuto di <schema_element> della definizione CREATE SCHEMA corrispondente. Riconosce inoltre la definizione <schema_element> come evento separato. Un trigger DDL creato in un evento CREATE_SCHEMA e un evento rappresentato dal contenuto di <schema_element> della definizione CREATE SCHEMA possono pertanto restituire due volte gli stessi dati di evento, ad esempio i dati `TSQLCommand`. Si consideri ad esempio la creazione di un trigger DDL su entrambi gli eventi CREATE_SCHEMA e CREATE_TABLE e la successiva esecuzione del batch seguente:  
@@ -99,7 +97,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   Istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] inclusa nell'evento.  
   
- Anche in questo caso gli ultimi due elementi vengono acquisiti utilizzando XQuery il `xml` dati generati da EVENTDATA.  
+ Anche in questo caso, gli ultimi due elementi vengono acquisiti utilizzando XQuery di `xml` dati generati da EVENTDATA.  
   
 ```  
 USE AdventureWorks2012;  
@@ -129,7 +127,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Per la restituzione di dati sugli eventi è consigliabile utilizzare il metodo XQuery `value()` anziché il metodo `query()`. Il `query()` metodo restituisce XML e sottoposto a escape e commerciale ritorno a capo e avanzamento riga (CRLF) istanze nell'output, mentre il `value()` metodo viene eseguito il rendering le istanze CR / invisibili nell'output.  
+>  Per la restituzione di dati sugli eventi è consigliabile utilizzare il metodo XQuery `value()` anziché il metodo `query()`. Il `query()` metodo restituisce XML e sottoposto a escape e commerciale ritorno a capo e avanzamento riga (CRLF) istanze nell'output, mentre il `value()` metodo rende le istanze CRLF invisibili nell'output.  
   
  Un esempio simile di trigger DDL è disponibile nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Per visualizzare l'esempio, individuare la cartella Trigger database utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Questa cartella si trova all'interno della cartella **Programmabilità** del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Fare clic con il pulsante destro del mouse su **ddlDatabseTriggerLog** e scegliere **Crea script per trigger database**. Il trigger DLL **ddlDatabseTriggerLog** è disabilitato per impostazione predefinita.  
   

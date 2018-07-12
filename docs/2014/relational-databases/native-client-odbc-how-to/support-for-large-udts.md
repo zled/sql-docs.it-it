@@ -1,33 +1,31 @@
 ---
-title: Supporto per i tipi UDT di grandi dimensioni | Documenti Microsoft
+title: Supporto per i tipi UDT di grandi dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 672da57ed995d872bf952bc7126b56282ad12312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2626ba94c971f3d31b592e692da3d9fef7227f05
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157978"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409990"
 ---
 # <a name="support-for-large-udts"></a>Supporto per tipi definiti dall'utente di grandi dimensioni
   Questa soluzione di esempio include due progetti. Un progetto consente di creare un assembly (DLL) dal codice sorgente C# che contiene il tipo CLR. Nel database verrà aggiunta una tabella con una colonna di un tipo definito nell'assembly. Per impostazione predefinita, in questo esempio verrà utilizzato il database master. Il secondo progetto è un'applicazione C nativa che consente di leggere i dati dalla tabella.  
   
  Non è possibile utilizzare questo esempio con le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Per ulteriori informazioni sul supporto per i tipi UDT di grandi dimensioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Per altre informazioni sul supporto per i tipi UDT di grandi dimensioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="example"></a>Esempio  
  Il primo listato di codice rappresenta il codice sorgente C#. Incollarlo in un file denominato LargeStringUDT.cs e compilarlo in una DLL. Copiare LargeStringUDT.dll nella directory radice dell'unità C.  

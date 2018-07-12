@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 136335f0e56433a9478ddee37d0b8f585564776e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc37afd9e91b23ebef0e7f53fc5690f845f49d28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152132"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
   In questa lezione verranno utilizzate le pagine di sottoscrizione guidate dai dati per connettersi a un'origine dei dati di sottoscrizione, verrà compilata una query che recupera i dati di sottoscrizione e sarà eseguito il mapping tra il set di risultati e le opzioni di recapito e del report.  
@@ -31,7 +31,7 @@ ms.locfileid: "36167576"
   
  Contenuto dell'argomento:  
   
--   [Avviare la creazione guidata sottoscrizione guidata dai dati](#bkmk_startwizard)  
+-   [Avviare la procedura guidata sottoscrizione guidata dai dati](#bkmk_startwizard)  
   
 -   [Passaggio 1: definire una descrizione](#bkmk_definesubscription)  
   
@@ -43,9 +43,9 @@ ms.locfileid: "36167576"
   
 -   [Passaggio 5: configurare un valore del parametro di Output del Report molto](#bkmk_configure_parameter)  
   
--   [Passaggio 6: per pianificare una sottoscrizione](#bkmk_schedule_subscription)  
+-   [Passaggio 6: pianificare una sottoscrizione](#bkmk_schedule_subscription)  
   
-##  <a name="bkmk_startwizard"></a> Avviare la creazione guidata sottoscrizione guidata dai dati  
+##  <a name="bkmk_startwizard"></a> Avviare la procedura guidata sottoscrizione guidata dai dati  
   
 1.  In Gestione report fare clic su **Home**e passare alla cartella contenente il report **Ordini vendita** .  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36167576"
   
 1.  Per **OrderNumber**selezionare **Estrai il valore dal database**. In Valore selezionare **Ordine**. Scegliere **Avanti.**  
   
-##  <a name="bkmk_schedule_subscription"></a> Passaggio 6: per pianificare una sottoscrizione  
+##  <a name="bkmk_schedule_subscription"></a> Passaggio 6: pianificare una sottoscrizione  
   
 1.  Fare clic su **In base a una pianificazione creata per questa sottoscrizione**, quindi fare clic su **Avanti**.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36167576"
   
 3.  Specificare un'ora di inizio posticipata di alcuni minuti rispetto all'ora corrente.  
   
-4.  Fare clic su **Fine**.  
+4.  Scegliere **Fine**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Quando la sottoscrizione viene eseguita, nella condivisione file specificata vengono recapitati quattro file di report, uno per ogni ordine nell'origine dati *Sottoscrittori* . Ogni recapito deve essere univoco in termini di dati (che devono essere specifici dell'ordine), di formato di visualizzazione e di formato di file. È possibile aprire tutti i report dalla cartella condivisa per verificare che ogni versione sia personalizzata in base alle opzioni di sottoscrizione definite.  
@@ -139,13 +139,13 @@ ms.locfileid: "36167576"
   
  ![Risultati della sottoscrizione in Gestione report](../../2014/tutorials/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.gif "Risultati della sottoscrizione in Gestione report")  
   
- Questo passaggio conclude l'esercitazione relativa alla definizione di una sottoscrizione guidata dai dati. Per ulteriori informazioni sulle altre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] esercitazioni, vedere [esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md).  
+ Questo passaggio conclude l'esercitazione relativa alla definizione di una sottoscrizione guidata dai dati. Per altre informazioni sulle altre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] esercitazioni, vedere [esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Sottoscrizioni guidate dai dati](subscriptions/data-driven-subscriptions.md)   
  [Creare, modificare ed eliminare una sottoscrizione guidata dai dati](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Utilizzare un'origine dati esterna per i dati del sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [Usare un'origine dati esterna per i dati del sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   
