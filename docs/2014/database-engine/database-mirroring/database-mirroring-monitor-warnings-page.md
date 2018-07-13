@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a28b20147dc0ab0bfac0b5f6962fdcab82002ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 18cf646a29f6a6c0d8e0c80a283e9920a3da7888
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192429"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Monitoraggio mirroring del database (pagina Avvisi)
   Consente di visualizzare un elenco di sola lettura degli avvisi supportati negli eventi di mirroring del database e i valori soglia degli avvisi specificati, se disponibili.  
@@ -51,7 +50,7 @@ ms.locfileid: "36055769"
   
  Per ulteriori informazioni, vedere la sezione "Note" più avanti in questo argomento.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se attualmente le informazioni per un'istanza del server non sono disponibili, le celle della colonna **Valore soglia su** sono visualizzate con uno sfondo grigio e un testo filigrana. Se il monitoraggio non è connesso all'istanza del server, in ogni cella della griglia viene visualizzato **Non connesso a** *<NOME_SISTEMA>* o **Non connesso a** *<NOME_SISTEMA>***\\***<nome_istanza>*, a seconda che l'istanza sia quella predefinita o una denominata. Se il monitoraggio è in attesa della restituzione di una query, in ogni cella della griglia viene visualizzato **In attesa di dati…** .  
   
  Quando le informazioni sono disponibili, nella cella per ogni avviso viene visualizzato un valore soglia specificato (insieme all'unità di misura) o **Non abilitato**.  

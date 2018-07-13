@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows Firewall ports
 - WMI firewall ports
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67bf7427229a117ff541ae353c222839e27a8aab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 142606e6d344fc1431bc287771fc429d6e05e056
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198828"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   I sistemi firewall contribuiscono a impedire l'accesso non autorizzato alle risorse del computer. Se un firewall viene abilitato ma non configurato correttamente, i tentativi di connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbero essere bloccati.  
@@ -95,7 +95,7 @@ ms.locfileid: "36055727"
   
     -   Impostazione di alcune restrizioni dell'ambito  
   
-     L'elemento **Windows Firewall** del Pannello di controllo risulta particolarmente adatto agli utenti che hanno scarsa familiarità con la configurazione del firewall e che effettuano la configurazione delle opzioni di base del firewall per computer non portatili. È inoltre possibile aprire il **Windows Firewall** nel Pannello di controllo dal `run` comando utilizzando la procedura seguente:  
+     L'elemento **Windows Firewall** del Pannello di controllo risulta particolarmente adatto agli utenti che hanno scarsa familiarità con la configurazione del firewall e che effettuano la configurazione delle opzioni di base del firewall per computer non portatili. È anche possibile aprire il **Windows Firewall** nel Pannello di controllo dal `run` comando utilizzando la procedura seguente:  
   
     #### <a name="to-open-the-windows-firewall-item"></a>Per aprire l'elemento Windows Firewall  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36055727"
   
 1.  Nella scheda **Eccezioni** dell'elemento **Windows Firewall** nel Pannello di controllo fare clic su **Aggiungi programma**.  
   
-2.  Passare al percorso dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si vuole consentire nel firewall, ad esempio **c:\Programmi\Microsoft SQL Server\MSSQL12. \MSSQL\Binn < nome_istanza >**, selezionare  **sqlservr.exe**, quindi fare clic su **Open**.  
+2.  Passare al percorso dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si desidera consentire nel firewall, ad esempio **c:\Programmi\Microsoft SQL Server\MSSQL12. < nome_istanza > \MSSQL\Binn**, selezionare  **sqlservr.exe**, quindi fare clic su **Open**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

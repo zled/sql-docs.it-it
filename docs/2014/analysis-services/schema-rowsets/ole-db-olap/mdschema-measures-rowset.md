@@ -1,5 +1,5 @@
 ---
-title: Set di righe MDSCHEMA_MEASURES | Documenti Microsoft
+title: Set di righe MDSCHEMA_MEASURES | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_MEASURES rowset
 ms.assetid: 6ff5bd1a-aad0-49b8-9f8d-7df2637caacf
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6608c64caa882499282ad7a7e30090ab4118b522
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84ea2ceeaef0c6431f3860f3b23da07f43ee6c5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237471"
 ---
 # <a name="mdschemameasures-rowset"></a>Set di righe MDSCHEMA_MEASURES
   Descrive ogni misura all'interno di un cubo.  
@@ -43,7 +43,7 @@ ms.locfileid: "36054373"
 |`MEASURE_UNIQUE_NAME`|`DBTYPE_WSTR`||Nome univoco della misura. Per i provider che generano nomi univoci tramite qualificazione, i singoli componenti di tale nome sono delimitati.|  
 |`MEASURE_CAPTION`|`DBTYPE_WSTR`||Etichetta o didascalia associata alla misura. Utilizzata principalmente a scopo di visualizzazione. Se non esiste una didascalia, viene restituito `MEASURE_NAME`.|  
 |`MEASURE_GUID`|`DBTYPE_GUID`||Non supportato.|  
-|`MEASURE_AGGREGATOR`|`DBTYPE_I4`||Enumerazione tramite cui viene identificata la modalità di derivazione di una misura. I possibili valori sono i seguenti:<br /><br /> -   `MDMEASURE_AGGR_SUM` (`1`) indicato che la misura viene aggregata da `SUM`.<br />-   `MDMEASURE_AGGR_COUNT` (`2`) indicato che la misura viene aggregata da `COUNT`.<br />-   **MDMEASURE_AGGR_MIN** (`3`) indicato che la misura viene aggregata da `MIN`.<br />-   **MDMEASURE_AGGR_MAX** (`4`) indicato che la misura viene aggregata da `MAX`.<br />-   `MDMEASURE_AGGR_AVG` (`5`) indicato che la misura viene aggregata da `AVG`.<br />-   `MDMEASURE_AGGR_VAR` (`6`) indicato che la misura viene aggregata da `VAR`.<br />-   `MDMEASURE_AGGR_STD` (`7`) indicato che la misura viene aggregata da `STDEV`.<br />-   `MDMEASURE_AGGR_DST` (`8`) indicato che la misura viene aggregata da `DISTINCT COUNT`.<br />-   `MDMEASURE_AGGR_NONE` (`9`) indicato che la misura viene aggregata da `NONE`.<br />-   `MDMEASURE_AGGR_AVGCHILDREN` (`10`) indicato che la misura viene aggregata da `AVERAGEOFCHILDREN`.<br />-   `MDMEASURE_AGGR_FIRSTCHILD` (`11`) indicato che la misura viene aggregata da `FIRSTCHILD`.<br />-   `MDMEASURE_AGGR_LASTCHILD` (`12`) indicato che la misura viene aggregata da `LASTCHILD`.<br />-   `MDMEASURE_AGGR_FIRSTNONEMPTY` (`13`) indicato che la misura viene aggregata da `FIRSTNONEMPTY`,<br />-   `MDMEASURE_AGGR_LASTNONEMPTY` (`14`) indicato che la misura viene aggregata da `LASTNONEMPTY`.<br />-   `MDMEASURE_AGGR_BYACCOUNT` (`15`) indicato che la misura viene aggregata da `BYACCOUNT`.<br />-   `MDMEASURE_AGGR_CALCULATED` (`127`) indica che la misura è stata derivata da una formula che non è stato in parte delle funzioni precedenti.<br />-   `MDMEASURE_AGGR_UNKNOWN` (`0`) indica che la misura è stata derivata da una formula o una funzione di aggregazione sconosciuto.|  
+|`MEASURE_AGGREGATOR`|`DBTYPE_I4`||Enumerazione tramite cui viene identificata la modalità di derivazione di una misura. I possibili valori sono i seguenti:<br /><br /> -   `MDMEASURE_AGGR_SUM` (`1`) indicato che la misura viene aggregata da `SUM`.<br />-   `MDMEASURE_AGGR_COUNT` (`2`) indicato che la misura viene aggregata da `COUNT`.<br />-   **MDMEASURE_AGGR_MIN** (`3`) indicato che la misura viene aggregata da `MIN`.<br />-   **MDMEASURE_AGGR_MAX** (`4`) indicato che la misura viene aggregata da `MAX`.<br />-   `MDMEASURE_AGGR_AVG` (`5`) indicato che la misura viene aggregata da `AVG`.<br />-   `MDMEASURE_AGGR_VAR` (`6`) indicato che la misura viene aggregata da `VAR`.<br />-   `MDMEASURE_AGGR_STD` (`7`) indicato che la misura viene aggregata da `STDEV`.<br />-   `MDMEASURE_AGGR_DST` (`8`) indicato che la misura viene aggregata da `DISTINCT COUNT`.<br />-   `MDMEASURE_AGGR_NONE` (`9`) indicato che la misura viene aggregata da `NONE`.<br />-   `MDMEASURE_AGGR_AVGCHILDREN` (`10`) indicato che la misura viene aggregata da `AVERAGEOFCHILDREN`.<br />-   `MDMEASURE_AGGR_FIRSTCHILD` (`11`) indicato che la misura viene aggregata da `FIRSTCHILD`.<br />-   `MDMEASURE_AGGR_LASTCHILD` (`12`) indicato che la misura viene aggregata da `LASTCHILD`.<br />-   `MDMEASURE_AGGR_FIRSTNONEMPTY` (`13`) indicato che la misura viene aggregata da `FIRSTNONEMPTY`,<br />-   `MDMEASURE_AGGR_LASTNONEMPTY` (`14`) indicato che la misura viene aggregata da `LASTNONEMPTY`.<br />-   `MDMEASURE_AGGR_BYACCOUNT` (`15`) indicato che la misura viene aggregata da `BYACCOUNT`.<br />-   `MDMEASURE_AGGR_CALCULATED` (`127`) indica che la misura è stata derivata da una formula che non era parte delle funzioni precedenti.<br />-   `MDMEASURE_AGGR_UNKNOWN` (`0`) indica che la misura è stata derivata da una funzione di aggregazione sconosciuto o una formula.|  
 |`DATA_TYPE`|`DBTYPE_UI2`||Tipo di dati della misura.|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||Precisione massima della proprietà se il tipo di dati dell'oggetto misura è un valore numerico esatto. `NULL` per tutti gli altri tipi di proprietà.|  
 |`NUMERIC_SCALE`|`DBTYPE_I2`||Numero di cifre a destra del separatore decimale se l'indicatore del tipo di oggetto misura è `DBTYPE_NUMERIC` o `DBTYPE_DECIMAL`. In caso contrario il valore è `NULL`.|  
@@ -71,7 +71,7 @@ ms.locfileid: "36054373"
 |`MEASURE_NAME`|`DBTYPE_WSTR`|Facoltativo.|  
 |`MEASURE_UNIQUE_NAME`|`DBTYPE_WSTR`|Facoltativo.|  
 |`MEASUREGROUP_NAME`|`DBTYPE_WSTR`|Facoltativo.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -1 CUBO<br />-QUOTA 2<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -1 CUBO<br />-DIMENSIONE DI 2<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
 |`MEASURE_VISIBILITY`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -Visible 1<br />-2 non visibile<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
   
 ## <a name="see-also"></a>Vedere anche  

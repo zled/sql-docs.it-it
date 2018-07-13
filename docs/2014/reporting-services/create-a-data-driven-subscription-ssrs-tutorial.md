@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9096317e6ab364ae440ad921045d5bed38083af2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616ca1e1984c36c2a20814367b3bd030825f3c0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181528"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Creare una sottoscrizione guidata dai dati (esercitazione su SSRS)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili sottoscrizioni guidate dai dati che consentono di personalizzare la distribuzione di un report in base ai dati dinamici del Sottoscrittore. Le sottoscrizioni guidate dai dati sono progettate per i tipi di scenari seguenti:  
@@ -59,7 +59,7 @@ ms.locfileid: "36055194"
   
 -   È necessario che il servizio SQL Server Agent sia in esecuzione.  
   
--   Un report con parametri. Questa esercitazione si presuppone che il report di esempio `Sales Orders` crei utilizzando l'esercitazione [creare un Report tabella semplice &#40;esercitazione su SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
+-   Un report con parametri. Questa esercitazione si presuppone che il report di esempio `Sales Orders` è stato creato utilizzando l'esercitazione [creare un Report tabella semplice &#40;esercitazione su SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
   
 -   Il database di esempio [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] che contiene i dati per il report di esempio.  
   

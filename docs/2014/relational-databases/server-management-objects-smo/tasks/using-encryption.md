@@ -1,5 +1,5 @@
 ---
-title: Uso della crittografia | Documenti Microsoft
+title: Uso della crittografia | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,31 +21,31 @@ helpviewer_keywords:
 - service master key [SMO]
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc5e06d1b63429830fe7216ab28c4ed45f0279a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a0d99702b9b6a48e02fe5acc36abed823718c560
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236731"
 ---
 # <a name="using-encryption"></a>Uso della crittografia
-  In SMO la chiave master del servizio è rappresentata dal <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> oggetto. Ciò fa riferimento il <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> proprietà del <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto. Può essere rigenerata tramite il <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> metodo.  
+  In SMO la chiave master del servizio è rappresentata dal <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> oggetto. Ciò fa riferimento il <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> proprietà del <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto. Può essere rigenerata tramite il <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> (metodo).  
   
- La chiave master del database è rappresentata dal <xref:Microsoft.SqlServer.Management.Smo.MasterKey> oggetto. Il <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> proprietà indica se la chiave master del database viene crittografata tramite la chiave master del servizio. La copia crittografata nel database master viene aggiornata automaticamente ogni volta che viene modificata la chiave master del database.  
+ La chiave master del database è rappresentata dal <xref:Microsoft.SqlServer.Management.Smo.MasterKey> oggetto. Il <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> proprietà indica se la chiave master del database viene crittografata dalla chiave master del servizio. La copia crittografata nel database master viene aggiornata automaticamente ogni volta che viene modificata la chiave master del database.  
   
- È possibile eliminare la crittografia della chiave di servizio utilizzando il <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> (metodo) e crittografare la chiave master del database con una password. In questo caso sarà necessario aprire in modo esplicito la chiave master del database prima di accedere a chiavi private protette dalla chiave master.  
+ È possibile eliminare la chiave di crittografia di servizio utilizzando il <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> metodo e crittografare la chiave master del database con una password. In questo caso sarà necessario aprire in modo esplicito la chiave master del database prima di accedere a chiavi private protette dalla chiave master.  
   
  Quando un database viene allegato a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario specificare la password per la chiave master del database oppure eseguire il <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> metodo per rendere disponibili per la crittografia con il servizio di una copia non crittografata della chiave master del database chiave master. Si consiglia di eseguire questo passaggio per evitare la necessità di aprire in modo esplicito la chiave master del database.  
   
  Il <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> metodo rigenera la chiave master del database. In seguito alla rigenerazione della chiave master del database, tutte le chiavi crittografate con tale chiave vengono decrittografate e successivamente crittografate con la nuova chiave master del database. Il <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> metodo rimuove la crittografia della chiave master del database tramite la chiave master del servizio. <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> con una copia della chiave master viene crittografata utilizzando la chiave master del servizio e archiviata sia nel database corrente che nel database master.  
   
- In SMO i certificati sono rappresentati dal <xref:Microsoft.SqlServer.Management.Smo.Certificate> oggetto. Il <xref:Microsoft.SqlServer.Management.Smo.Certificate> oggetto ha le proprietà che specificano la chiave pubblica, il nome del soggetto, il periodo di validità e le informazioni sull'autorità emittente. L'autorizzazione per accedere al certificato è controllata tramite il `Grant`, `Revoke` e `Deny` metodi.  
+ In SMO i certificati sono rappresentati dalla <xref:Microsoft.SqlServer.Management.Smo.Certificate> oggetto. Il <xref:Microsoft.SqlServer.Management.Smo.Certificate> oggetto include proprietà che specificano la chiave pubblica, il nome del soggetto, il periodo di validità e le informazioni sull'autorità emittente. L'autorizzazione per accedere al certificato è controllata tramite il `Grant`, `Revoke` e `Deny` metodi.  
   
 ## <a name="example"></a>Esempio  
- Per l'esempio di codice seguente, è necessario selezionare l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto di Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) e [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per l'esempio di codice seguente, è necessario selezionare l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) e [creare un Visual C#&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-a-certificate-in-visual-basic"></a>Aggiunta di un certificato in Visual Basic  
  Nell'esempio di codice viene creato un certificato semplice con una password di crittografia. A differenza di altri oggetti, il <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> metodo dispone di diversi overload. L'overload utilizzato nell'esempio crea un nuovo certificato con una password di crittografia.  
@@ -101,6 +101,6 @@ $c.Create("pGFD4bb925DGvbd2439587y")
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo delle chiavi di crittografia](using-encryption.md)  
+ [Usando le chiavi di crittografia](using-encryption.md)  
   
   

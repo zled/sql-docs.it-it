@@ -1,5 +1,5 @@
 ---
-title: Elemento AllowOverwrite (XMLA) | Documenti Microsoft
+title: Elemento AllowOverwrite (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - AllowOverwrite element
 ms.assetid: e7e92481-5f29-47f2-9efd-4e5e60c002bb
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b34b0becd78adca99e4052e142fc696c155f6e20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0ad153d33b57f7fea763666d19e8e0b44fa155c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190901"
 ---
 # <a name="allowoverwrite-element-xmla"></a>Elemento AllowOverwrite (XMLA)
   Determina se l'elemento padre [Backup](../xml-elements-commands/backup-element-xmla.md) oppure [ripristinare](../xml-elements-commands/restore-element-xmla.md) comando tenta di sovrascrivere il file di destinazione o il database.  
@@ -59,10 +59,10 @@ ms.locfileid: "36055369"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[Backup](../xml-elements-commands/backup-element-xmla.md), [ripristinare](../xml-elements-commands/restore-element-xmla.md)|  
+|Elementi padre|[Copia di backup](../xml-elements-commands/backup-element-xmla.md), [ripristinare](../xml-elements-commands/restore-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per i comandi `Backup`, l'elemento `AllowOverwrite` determina se il comando può sovrascrivere il file di backup specificato nell'elemento `File`.  
   
  Per `Restore` elementi, il `AllowOverwrite` elemento determina se il comando può sovrascrivere il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database indicato con il `DatabaseName` elemento.  

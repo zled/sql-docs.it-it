@@ -1,5 +1,5 @@
 ---
-title: Definizione di una relazione di riferimento | Documenti Microsoft
+title: Definizione di una relazione di riferimento | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 50be0ad05e579d21095e6446b8e84d39cbef1f20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f49d90e05c7d76129b5c2385ed1af05fc6e3731a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200381"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definizione di una relazione di tipo Riferimento
   Fino a questo punto dell'esercitazione, ogni dimensione del cubo definita è stata basata su una tabella direttamente collegata alla tabella dei fatti per un gruppo di misure tramite una relazione chiave primaria–chiave esterna. Nelle attività di questo argomento la dimensione **Geography** verrà collegata alla tabella dei fatti relativa alle vendite dei rivenditori tramite la dimensione **Reseller** , denominata *dimensione di riferimento*. Ciò consente agli utenti di dimensionare le vendite dei rivenditori in base all'area geografica. Per altre informazioni, vedere [Definire una relazione di tipo Riferimento e le relative proprietà](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "36055109"
   
      Si noti che la misura **Reseller Sales-Sales Amount** non viene dimensionata correttamente dai membri dell'attributo **Country-Region** della gerarchia **Regions** . Il valore per **Reseller Sales-Sales Amount** viene ripetuto per ogni membro dell'attributo **Country-Region** .  
   
-     ![Dimensionate misura Reseller Sales-Sales Amount](../../2014/tutorials/media/l5-referencedrelationship-1.gif "misura dimensionata Reseller Sales-Sales Amount")  
+     ![Dimensionata misura Reseller Sales-Sales Amount](../../2014/tutorials/media/l5-referencedrelationship-1.gif "misura dimensionata Reseller Sales-Sales Amount")  
   
 4.  Aprire Progettazione vista origine dati per la vista origine dati **Adventure Works DW 2012** .  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36055109"
   
      Nella figura seguente viene illustrata la finestra di dialogo **Define Relationship** con una relazione di tipo Regolare tra la tabella delle dimensioni **DimCustomer** e la tabella del gruppo di misure **FactInternetSales** .  
   
-     ![Finestra di dialogo Definisci relazione](../../2014/tutorials/media/l5-referencedrelationship-4.gif "finestra di dialogo Definisci relazione")  
+     ![Finestra di dialogo Definisci relazione](../../2014/tutorials/media/l5-referencedrelationship-4.gif "nella finestra di dialogo Definisci relazione")  
   
 9. Fare clic su **Annulla**.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36055109"
   
 9. Nell'elenco **Dimensioni** della scheda **Utilizzo dimensioni** fare clic con il pulsante destro del mouse su **Geography**e quindi scegliere **Rinomina**.  
   
-10. Modificare il nome di questa dimensione del cubo per `Reseller Geography`.  
+10. Modificare il nome di questa dimensione del cubo a `Reseller Geography`.  
   
      Dal momento che la dimensione del cubo è ora collegata al gruppo di misure **Reseller Sales** , per gli utenti sarà vantaggioso definirne esplicitamente l'uso nel cubo evitando possibili confusioni.  
   
@@ -118,11 +118,11 @@ ms.locfileid: "36055109"
   
 2.  Una volta completata la distribuzione, selezionare la scheda **Esplorazione** in Progettazione cubi per il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial e fare clic sul pulsante **Riconnetti** .  
   
-3.  Nel riquadro metadati espandere `Reseller Geography`, fare doppio clic su **aree geografiche**, quindi fare clic su **Aggiungi all'Area riga**.  
+3.  Nel riquadro metadati espandere `Reseller Geography`, fare doppio clic su **Geographies**, quindi fare clic su **Aggiungi all'Area riga**.  
   
      Si noti che la misura **Reseller Sales-Sales Amount** è ora dimensionata correttamente dall'attributo **Country-Region** della gerarchia definita dall'utente **Geographies** , come illustrato nella figura seguente.  
   
-     ![Finestra di dialogo Definisci relazione](../../2014/tutorials/media/l5-referencedrelationship-5.gif "finestra di dialogo Definisci relazione")  
+     ![Finestra di dialogo Definisci relazione](../../2014/tutorials/media/l5-referencedrelationship-5.gif "nella finestra di dialogo Definisci relazione")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Definizione di una relazione di tipo Fatti](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  

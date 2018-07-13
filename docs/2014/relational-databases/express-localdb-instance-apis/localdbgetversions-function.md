@@ -1,5 +1,5 @@
 ---
-title: Funzione LocalDBGetVersions | Documenti Microsoft
+title: Funzione LocalDBGetVersions | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95117c20b67777f7202ee823c17ba8775843295e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: b84c4db0ce70bdf11459a2d4e5d6214760738e74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191721"
 ---
 # <a name="localdbgetversions-function"></a>Funzione LocalDBGetVersions
   Vengono restituite tutte le versioni del database locale di SQL Server Express disponibili nel computer.  
@@ -44,7 +44,7 @@ ms.locfileid: "36055681"
  [Output] Sono contenuti i nomi delle versioni del database locale disponibili nella workstation dell'utente.  
   
  *lpdwNumberOfVersions*  
- [Input/Output] Nell'input contiene il numero di slot per le versioni nel *pVersionNames* buffer.   
+ [Input/Output] Per l'input contiene il numero di slot per le versioni nel *pVersionNames* buffer.   
 In fase di output, è contenuto il numero di versioni del database locale esistenti.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
@@ -63,7 +63,7 @@ In fase di output, è contenuto il numero di versioni del database locale esiste
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Errore imprevisto. Per informazioni, vedere il registro eventi.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per un esempio di codice che utilizza l'API LocalDB, vedere [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  

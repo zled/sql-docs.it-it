@@ -5,10 +5,9 @@ ms.date: 11/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption
 - database encryption key, about
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7e1f31b2cfced2f94ecf0417a4cf8b62f53fbb15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 25893299dfc708e952cbc2cb4673e34e5612cf23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236601"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
   *Transparent Data Encryption* (TDE) consente di crittografare i file di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] mediante un'operazione nota come crittografia dei dati "non operativi". Per proteggere il database è possibile adottare alcune accortezze, tra cui la progettazione di un sistema sicuro, la crittografia dei dati riservati e la compilazione di un firewall attorno ai server di database. Tuttavia, nel caso in cui i supporti fisici (ad esempio unità o nastri di backup) venissero rubati, un malintenzionato potrebbe ripristinare o collegare il database e accedere ai dati. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
@@ -41,7 +40,7 @@ ms.locfileid: "36054305"
 >   
 >  -   [Transparent Data Encryption con il database SQL di Azure](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
 > -   [Spostare un database protetto da TDE in un'altra istanza di SQL Server](move-a-tde-protected-database-to-another-sql-server.md)  
-> -   [Abilitare Transparent Data Encryption tramite Extensible Key Management](enable-tde-on-sql-server-using-ekm.md)  
+> -   [Abilitare TDE usando EKM](enable-tde-on-sql-server-using-ekm.md)  
   
 ## <a name="about-tde"></a>Informazioni su TDE  
  La crittografia del file di database viene eseguita a livello di pagina. Le pagine di un database crittografato sono crittografate prima di essere scritte sul disco e decrittografate quando vengono lette in memoria. L'uso di TDE non comporta un aumento delle dimensioni del database crittografato.  
@@ -234,7 +233,7 @@ GO
  È possibile abilitare TDE in un database contenente oggetti di OLTP in memoria. Se la funzionalità TDE è abilitata, i record del log di OLTP in memoria vengono crittografati. I dati nel filegroup MEMORY_OPTIMIZED_DATA non vengono crittografati se la funzionalità TDE è abilitata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Spostare che database a un altro Server SQL protetto con TDE](move-a-tde-protected-database-to-another-sql-server.md)   
+ [Spostare che database in un altro Server SQL protetto con TDE](move-a-tde-protected-database-to-another-sql-server.md)   
  [Abilitare Transparent Data Encryption tramite Extensible Key Management](enable-tde-on-sql-server-using-ekm.md)   
  [Transparent Data Encryption con il Database SQL di Azure](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [Crittografia di SQL Server](sql-server-encryption.md)   

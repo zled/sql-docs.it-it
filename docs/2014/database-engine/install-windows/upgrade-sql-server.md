@@ -1,5 +1,5 @@
 ---
-title: Eseguire l'aggiornamento a SQL Server 2014 | Documenti Microsoft
+title: Eseguire l'aggiornamento a SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a9cc1e34ab957e869996d5c8e190de6e0a78979b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b5c7262807cddc848c12e08988e1d28cb0965279
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203947"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Eseguire l'aggiornamento a SQL Server 2014
   È possibile aggiornare a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]le istanze di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Prima di avviare il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere la [guida tecnica per l'aggiornamento a SQL Server 2014](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (PDF da scaricare), esaminare gli argomenti sul processo di aggiornamento presenti in questa sezione e leggere le [Note sulla versione di SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
@@ -31,9 +31,9 @@ ms.locfileid: "36054824"
   
 -   [Aggiornamenti di versione ed edizione supportati](supported-version-and-edition-upgrades.md)  
   
--   [Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
+-   [Usare la Preparazione aggiornamento per preparare gli aggiornamenti](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
--   [Utilizzare Distributed Replay Utility per preparare gli aggiornamenti](../../sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)  
+-   [Usare l'utilità Riesecuzione distribuita per preparare gli aggiornamenti](../../sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)  
   
 -   [Aggiornare Analysis Services](upgrade-analysis-services.md)  
   

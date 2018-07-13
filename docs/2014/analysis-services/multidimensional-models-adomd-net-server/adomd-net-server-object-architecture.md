@@ -1,5 +1,5 @@
 ---
-title: Architettura degli oggetti Server ADOMD.NET | Documenti Microsoft
+title: Architettura degli oggetti Server ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - object model [ADOMD.NET]
 ms.assetid: bdc81de9-b390-4654-b62a-cd6c0c9ca10d
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a5bcdd6ef56fe8d072b8c22537a55ed3888ad6ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f18dd57b9232a9ef9e3405ccc77b5db1bb8a1c82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237721"
 ---
 # <a name="adomdnet-server-object-architecture"></a>Architettura degli oggetti server in ADOMD.NET
   Gli oggetti server ADOMD.NET sono oggetti helper che possono essere utilizzati per creare funzioni definite dall'utente (UDF) o stored procedure nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -31,7 +31,7 @@ ms.locfileid: "36054649"
 > [!NOTE]  
 >  Per utilizzare lo spazio dei nomi `Microsoft.AnalysisServices.AdomdServer` e tali oggetti, è necessario aggiungere un riferimento a msmgdsrv.dll nel progetto di una funzione definita dall'utente o di una stored procedure.  
   
- ![Mostra le relazioni tra oggetti server ADOMD.NET](../../../2014/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "Mostra le relazioni tra oggetti server ADOMD.NET")  
+ ![Mostra le relazioni tra oggetti nel Server di ADOMD.NET](../../../2014/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "Mostra le relazioni tra oggetti nel Server di ADOMD.NET")  
 Modello a oggetti ADOMD.NET  
   
  L'interazione con la gerarchia di oggetti ADOMD.NET viene avviata in genere con uno o più oggetti del livello più alto della gerarchia, come descritto nella tabella seguente.  

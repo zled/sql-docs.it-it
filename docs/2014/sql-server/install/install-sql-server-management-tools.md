@@ -1,5 +1,5 @@
 ---
-title: Installare gli strumenti di gestione di SQL Server | Documenti Microsoft
+title: Installare gli strumenti di gestione di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Tools
 ms.assetid: af68d59a-a04d-4f23-9967-ad4ee2e63381
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 27ec5095c487df430534596a3610cf1420240380
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f7bc2bac998a7624bcf010d5ade7a03a3ed778c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206571"
 ---
 # <a name="install-sql-server-management-tools"></a>Installare gli strumenti di gestione di SQL Server
   Gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includono i componenti seguenti:  
@@ -34,7 +34,7 @@ ms.locfileid: "36055634"
   
 -   Strumenti del prompt dei comandi, ad esempio sqlcmd.exe e osql.exe  
   
--   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] componenti aggiuntivi per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] componenti aggiuntivi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
  Tenere presente che [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] si presenta come opzione separata durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -46,6 +46,6 @@ ms.locfileid: "36055634"
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Edizioni e componenti di SQL Server 2014](../editions-and-components-of-sql-server-2016.md)   
  [Installare SQL Server 2014 dall'installazione guidata di &#40;programma di installazione&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [Eseguire l'aggiornamento a SQL Server 2014 tramite l'installazione guidata &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Eseguire l'aggiornamento a SQL Server 2014 usando l'installazione guidata di &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

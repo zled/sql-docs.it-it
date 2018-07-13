@@ -1,5 +1,5 @@
 ---
-title: Chiave elemento (XMLA) | Documenti Microsoft
+title: Chiave elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Key element
 ms.assetid: 09d3cd48-49f7-4b58-b8bb-ca75b81bb02f
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d6ec30e8c55648975294f82a7c927b3815b00471
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1f98ae6863f0aab25149ee4f8a69ef13b65da974
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055076"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213761"
 ---
 # <a name="key-element-xmla"></a>Elemento Key (XMLA)
   Contiene un valore di chiave membro per un membro dell'attributo.  
@@ -63,7 +63,7 @@ ms.locfileid: "36055076"
 |Elementi padre|[Chiavi](keys-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il tipo di dati utilizzato da questo elemento deve corrispondere al tipo di dati della colonna chiave appropriata dell'attributo specificato. Se gli elementi `Key` non sono specificati per un elemento padre `Attribute`, gli elementi `AttributeName` e `Name` specificati nell'elemento padre `Attribute` vengono utilizzati per identificare il membro dell'attributo da modificare.  
   
 ## <a name="see-also"></a>Vedere anche  

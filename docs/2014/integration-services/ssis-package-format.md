@@ -1,5 +1,5 @@
 ---
-title: Formato del pacchetto SSIS | Documenti Microsoft
+title: Formato dei pacchetti SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dcb50760bcbe0ce1a4eb01a9a1a2de29565defdf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c025877f39e66fcf25e6ed2b27d6e1b422a299d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237121"
 ---
 # <a name="ssis-package-format"></a>Formato del pacchetto SSIS
   Nella versione corrente di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono state apportate modifiche significative al formato dei pacchetti (file DTSX) per semplificare la lettura del formato e il confronto dei pacchetti. Inoltre, è possibile unire in maniera più affidabile i pacchetti in cui non sono contenute modifiche in conflitto o modifiche archiviate in formato binario.  
@@ -36,7 +36,7 @@ ms.locfileid: "36054782"
   
      Il `refId` valore è una stringa univoca che è leggibile e comprensibile, rispetto ai valori GUID o valori integer. La stringa è simile ai valori del percorso utilizzati per le configurazioni del pacchetto nelle versioni precedenti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Se si siano unendo le modifiche tra due versioni di un pacchetto, il `refId` può essere utilizzato nelle operazioni di ricerca/sostituzione per assicurarsi che tutti i riferimenti a tale oggetto siano stati aggiornati correttamente.  
+     Se si uniscono le modifiche tra due versioni di un pacchetto, il `refId` può essere utilizzato nelle operazioni di ricerca/sostituzione per verificare che tutti i riferimenti a tale oggetto siano stati aggiornati correttamente.  
   
 -   Le informazioni sul layout sono contenute in una sezione CData.  
   

@@ -1,14 +1,13 @@
 ---
-title: 'Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità) Always On | Documenti Microsoft'
+title: 'Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità) Always On | Microsoft Docs'
 ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
 - Availability Groups [SQL Server], availability replicas
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 caps.latest.revision: 75
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: bb88bd5c239be09d17abf5bfeb3553ce958be542
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7c483e09f0136ec85ef9a5355a31b0fab733d1af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176548"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità Always On)
   Le funzionalità secondarie attive di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] includono il supporto per l'accesso in sola lettura a una o più repliche secondarie (*repliche secondarie leggibili*). Una replica secondaria leggibile consente l'accesso in sola lettura a tutti i relativi database secondari. Tuttavia, i database secondari leggibili non sono impostati per la sola lettura. Sono dinamici. Un database secondario viene modificato in base ai cambiamenti apportati al database primario corrispondente. Per una replica secondaria tipica, i dati presenti nel database secondario, comprese le tabelle durevoli con ottimizzazione per la memoria, sono quasi in tempo reale. Inoltre, gli indici full-text sono sincronizzati con i database secondari. In molte circostanze, la latenza dei dati tra un database primario e il database secondario corrispondente è in genere solo di pochi secondi.  
@@ -298,10 +297,10 @@ GO
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [SQL Server AlwaysOn Team Blog: Di SQL Server AlwaysOn Team Blog ufficiale](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: Il Blog ufficiale di SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Statistiche](../../../relational-databases/statistics/statistics.md)  

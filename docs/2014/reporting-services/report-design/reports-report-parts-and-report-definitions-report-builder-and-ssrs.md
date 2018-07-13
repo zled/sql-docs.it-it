@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 55004b30ac7f462b677875f6f8b872ccebf25be8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e06d0e989b357d939da4a024a6c904c6e1cf175c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212351"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Report, parti del report e definizioni dei report (Generatore report e SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Usa vari termini per descrivere un report nei suoi diversi stati, inclusi la definizione iniziale, il report pubblicato e il report così come viene visualizzato all'utente.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Usa vari termini per descrivere un report nei diversi stati, inclusi la definizione iniziale, il report pubblicato e il report così come viene visualizzato all'utente.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -67,10 +67,10 @@ ms.locfileid: "36054956"
  Sottoscrivere un report, che viene recapitato a una cartella Posta in arrivo o a una condivisione file in un formato di output specificato dall'utente. Il formato di rendering predefinito per un report è HTML 4.0. Oltre al formato HTML, sono disponibili vari formati di output in cui è possibile eseguire il rendering dei report, inclusi i formati Excel, Word, XML, PDF, TIFF e CSV. Come per i report pubblicati, anche i report visualizzabili non possono essere modificati o salvati nuovamente su un server di report. Per altre informazioni, vedere [esportazione di report &#40;Generatore Report e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti di creazione di report &#40;SSRS e Generatore Report&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Concetti relativi alla creazione di report &#40;Report e SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Generatore report in SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
- [Installazione, disinstallazione e supporto di Generatore Report](../install-uninstall-and-report-builder-support.md)   
+ [Installare, disinstallare e supporto di Generatore Report](../install-uninstall-and-report-builder-support.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Esportazione di report &#40;SSRS e Generatore Report&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Esportazione di report &#40;Report e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

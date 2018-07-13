@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
 - viewing operators
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - displaying operators
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cdabd9ef6382066fad31154dad126e30ced0d8d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2a66bc4a276b425d8ec0ffeebf260dafcef7ff0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220797"
 ---
 # <a name="view-information-about-an-operator"></a>Visualizzazione delle informazioni relative a un operatore
   In questo argomento viene descritta la procedura per visualizzare le infomazioni relative a un operatoe di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -72,9 +72,9 @@ ms.locfileid: "36055388"
   
      Per altre informazioni sulle opzioni disponibili contenute nella finestra di dialogo ****Proprietà nome_operatore** vedere:  
   
-    -   [Le proprietà dell'operatore e operatore New &#40;pagina Generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Proprietà operatore e operatore New &#40;pagina Generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Le proprietà dell'operatore: Operatore New &#40;pagina di notifica&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [Proprietà operatore: Nuovo operatore &#40;pagina delle notifiche&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [Proprietà operatore &#40;pagina Cronologia&#41;](operator-properties-history-page.md)  
   

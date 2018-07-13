@@ -1,5 +1,5 @@
 ---
-title: Gli sviluppatori&#39;s Guide (Integration Services) | Documenti Microsoft
+title: Per gli sviluppatori&#39;Guida (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 caps.latest.revision: 76
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7649030fb22c9e0786d481f34a29974dcddbe863
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7989f708adf6025fddb223e6052dca8810035230
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206051"
 ---
-# <a name="developer39s-guide-integration-services"></a>Gli sviluppatori&#39;s Guide (Integration Services)
+# <a name="developer39s-guide-integration-services"></a>Per gli sviluppatori&#39;Guida (Integration Services)
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è disponibile un modello a oggetti completamente riscritto, potenziato con diverse funzionalità grazie alle quali l'estensione e la programmazione di pacchetti diventano operazioni più semplici, flessibili ed efficaci. Gli sviluppatori possono estendere e programmare quasi ogni aspetto dei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  Gli sviluppatori di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] possono adottare due approcci fondamentali per la programmazione di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7ee40544fc76385d65d6b0b4d38b39c7112218d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3e40443fc2691c33a1d40603b932a4ac031d0a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246303"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Tipo di connessione Analysis Services per MDX (SSRS)
   Per includere dati da un cubo di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Questo tipo di origine dati incorporato è basato sull'estensione per i dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . È possibile recuperare metadati su dimensioni, gerarchie, livelli, indicatori di prestazioni chiave (KPI), misure e attributi da un cubo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per usarli come dati del report.  
@@ -75,7 +75,7 @@ data source=<server name>;initial catalog=<database name>
   
  In fase di progettazione eseguire la query per visualizzare un set di risultati. I risultati della query vengono recuperati automaticamente come un set di righe bidimensionale. Le colonne nel set di risultati per una query popolano la raccolta dei campi per un set di dati. Dopo aver compilato la query, visualizzare la raccolta dei campi del set di dati generata dai metadati nel riquadro dei dati del report. Quando viene eseguito il report, vengono restituiti i dati effettivi dall'origine dati esterna.  
   
- L'estensione per l'elaborazione dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta proprietà estese dei campi del set di dati. Si tratta di valori che sono disponibili nell'origine dati esterna e non nel riquadro dei dati del report. È possibile utilizzare le proprietà di campo estese supportate dal [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] estensione per l'elaborazione dati nel report tramite l'elemento predefinito `Fields` insieme. Per le proprietà che dispongono di valori nell'origine dati, è possibile accedere ai valori predefiniti, ad esempio `FormattedValue`, `Color` o `UniqueName`. Per altre informazioni, vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+ L'estensione per l'elaborazione dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta proprietà estese dei campi del set di dati. Si tratta di valori che sono disponibili nell'origine dati esterna e non nel riquadro dei dati del report. È possibile usare le proprietà di campo estese supportate dal [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] estensione per l'elaborazione dei dati nel report tramite l'elemento predefinito `Fields` raccolta. Per le proprietà che dispongono di valori nell'origine dati, è possibile accedere ai valori predefiniti, ad esempio `FormattedValue`, `Color` o `UniqueName`. Per altre informazioni, vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
   
@@ -98,7 +98,7 @@ data source=<server name>;initial catalog=<database name>
 ##  <a name="Related"></a> Sezioni correlate  
  In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le informazioni necessarie sulle procedure per definire, personalizzare e usare parti di un report correlate ai dati.  
   
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-datasets-ssrs.md)  
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

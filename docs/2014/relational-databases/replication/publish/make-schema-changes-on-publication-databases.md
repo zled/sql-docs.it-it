@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
 - snapshot replication [SQL Server], replicating schema changes
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: 71
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c5fdf15e3038f865bb123f3dd79321d036813281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4c84487775fb5eb3839910fd800489927edcc77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172732"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifiche allo schema nei database di pubblicazione
   La replica supporta una vasta gamma di modifiche dello schema negli oggetti pubblicati. Quando si apporta una delle modifiche di schema seguenti nell'oggetto pubblicato appropriato in un server di pubblicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la modifica viene propagata per impostazione predefinita a tutti i Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -61,7 +61,7 @@ ms.locfileid: "36054309"
   
 -   Le modifiche dello schema sono soggette a tutte le restrizioni imposte da [!INCLUDE[tsql](../../../includes/tsql-md.md)]. ALTER TABLE, ad esempio, non consente di eseguire l'istruzione ALTER per le colonne chiave primaria.  
   
--   Il mapping dei tipi di dati viene eseguito solo per lo snapshot iniziale. Il mapping delle modifiche dello schema alle versioni precedenti dei tipi di dati non viene eseguito. Ad esempio, se l'istruzione `ALTER TABLE ADD datetime2 column` viene utilizzata [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], il tipo di dati non viene convertito in `nvarchar` per [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] i sottoscrittori. In alcuni casi, le modifiche dello schema vengono bloccate nel server di pubblicazione.  
+-   Il mapping dei tipi di dati viene eseguito solo per lo snapshot iniziale. Il mapping delle modifiche dello schema alle versioni precedenti dei tipi di dati non viene eseguito. Ad esempio, se l'istruzione `ALTER TABLE ADD datetime2 column` viene utilizzata [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], il tipo di dati non viene convertito in `nvarchar` per [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] sottoscrittori. In alcuni casi, le modifiche dello schema vengono bloccate nel server di pubblicazione.  
   
 -   Se si imposta una pubblicazione in modo da consentire la propagazione delle modifiche dello schema, queste ultime vengono propagate indipendentemente da come è impostata la relativa opzione dello schema per un articolo nella pubblicazione. Se, ad esempio, si sceglie di non replicare i vincoli di chiave esterna per un articolo di tabella, ma in seguito si esegue un comando ALTER TABLE che aggiunge una chiave esterna alla tabella nel server di pubblicazione, la chiave esterna viene aggiunta alla tabella nel Sottoscrittore. Per evitare questo problema, disabilitare la propagazione delle modifiche dello schema prima di eseguire il comando ALTER TABLE.  
   

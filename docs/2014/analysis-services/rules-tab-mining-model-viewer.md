@@ -1,5 +1,5 @@
 ---
-title: Scheda (Visualizzatore modello di Data Mining) regole | Documenti Microsoft
+title: Scheda (Visualizzatore modello di Data Mining) regole | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.associationrules.rules.f1
 ms.assetid: 705d5492-b58f-45d9-94d7-ed57b7025823
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 78c8cb99023f4e28300ff8eb3f8eb27e4884bf0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 614491293ed7cafc51ca885876b401a99e0a4ed9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197971"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>Scheda Regole (Visualizzatore modello di data mining)
   Usare il riquadro **Regole** in un modello di associazione per visualizzare le regole che l'algoritmo ha consentito di estrarre dai dati. Nelle regole vengono descritte le modalità di correlazione tra gli elementi e di relativo utilizzo per creare indicazioni.  
@@ -92,7 +92,7 @@ ms.locfileid: "36055789"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori dei modelli di data mining &#40;progettazione modello di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

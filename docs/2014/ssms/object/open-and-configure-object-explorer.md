@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abc9d5df546baf36bdf566e4669faf6a2611a612
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a9005404601b3600da088678741434bd192d0579
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238001"
 ---
 # <a name="open-and-configure-object-explorer"></a>Aprire e configurare Esplora oggetti
   Aprire Esplora oggetti tramite il menu **Visualizza** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Configurare le opzioni di Esplora oggetti tramite **Opzioni** dal menu **Strumenti** .  

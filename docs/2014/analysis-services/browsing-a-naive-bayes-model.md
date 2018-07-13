@@ -1,5 +1,5 @@
 ---
-title: Esplorazione di un modello Naive Bayes | Documenti Microsoft
+title: Esplorazione di un modello Naive Bayes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36031bb080ff80c14a4f91bca102bd859df1f539
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 61592c58fd629ef705e044a13c7a2bd90cca8ae2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244081"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Esplorazione di un modello Naïve Bayes
-  Quando si apre un modello Naïve Bayes utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo con quattro riquadri diversi. Il visualizzatore consente di esplorare le correlazioni e ottenere informazioni sul modello e sui dati sottostanti.  
+  Quando si apre un modello Naïve Bayes utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo con quattro diversi riquadri. Il visualizzatore consente di esplorare le correlazioni e ottenere informazioni sul modello e sui dati sottostanti.  
   
 -   [Rete di dipendenze](#bkmk_DepNet)  
   
@@ -35,9 +35,9 @@ ms.locfileid: "36054669"
 ##  <a name="BKMK_Tabs"></a> Esplorare il modello  
  Lo scopo del visualizzatore è consentire di esplorare l'interazione tra gli attributi di input e output (input e variabili dipendenti) che sono stati individuati dal modello [!INCLUDE[msCoName](../includes/msconame-md.md)] Naïve Bayes.  
   
- Se si desidera sperimentare il Visualizzatore Naïve Bayes, utilizzare il [classificare guidata &#40;aggiuntivi di Data Mining per Excel&#41; ](classify-wizard-data-mining-add-ins-for-excel.md) guidata nella barra multifunzione Data Mining, fare clic sui **avanzate** opzione e modificare l'algoritmo da utilizzare l'algoritmo Naïve Bayes  
+ Se si vuole provare il Visualizzatore Naïve Bayes, usare il [procedura guidata classificazione &#40;aggiuntivi di Data Mining per Excel&#41; ](classify-wizard-data-mining-add-ins-for-excel.md) guidata nella barra multifunzione Data Mining, fare clic sui **avanzate** opzione e modificare l'algoritmo utilizzerà l'algoritmo Naïve Bayes  
   
- Per questi esempi, abbiamo utilizzato i dati di origine della cartella di lavoro di esempio e raggruppata la colonna **Yearly Income**, in cinque gruppi di reddito, da **molto bassa** al **molto elevato**. Nel modello Naïve Bayes sono stati quindi analizzati i fattori correlati a ogni categoria di reddito.  
+ Per questi esempi, viene utilizzata l'origine dati nella cartella di lavoro di esempio e raggruppata la colonna **Yearly Income**, in cinque gruppi di reddito, da **molto bassa** al **molto elevato**. Nel modello Naïve Bayes sono stati quindi analizzati i fattori correlati a ogni categoria di reddito.  
   
 ###  <a name="bkmk_DepNet"></a> Rete di dipendenze  
  È la prima finestra si userà il **rete di dipendenze**. Vengono visualizzati immediatamente gli input strettamente correlati al risultato selezionato.  
@@ -46,7 +46,7 @@ ms.locfileid: "36054669"
   
 ##### <a name="explore-the-dependency-network"></a>Esplorare la rete di dipendenze  
   
-1.  In primo luogo, fare clic sul risultato di destinazione **Yearly Income**, rappresentato come un nodo nel grafico.  
+1.  In primo luogo, fare clic sul risultato di destinazione, **Yearly Income**, rappresentato come un nodo nel grafico.  
   
      I nodi evidenziati che circondano la variabile di destinazione sono quelli correlati statisticamente con questo risultato. Utilizzare la legenda nella parte inferiore del visualizzatore per comprendere la natura della relazione.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "36054669"
  [Torna all'inizio](#BKMK_Tabs)  
   
 ###  <a name="bkmk_AttProf"></a> Profili attributo  
- Il **profili attributo** windows offre un'indicazione visiva del modo in cui tutte le altre variabili sono correlate ai singoli risultati.  
+ Il **profili attributo** windows ti offre un'indicazione visiva di come tutte le altre variabili sono correlate ai singoli risultati.  
   
 ##### <a name="explore-the-profiles"></a>Esplorazione del profili  
   
 1.  Per nascondere alcuni valori in modo da poter confrontare più facilmente i risultati, fare clic sull'intestazione di colonna e trascinarla sotto un'altra colonna.  
   
-     ![attributo profili in Visualizzatore Naive Bayes](media/dm13-nb-attprof.gif "attributo profili in Visualizzatore Naive Bayes")  
+     ![attributo di profili in Visualizzatore Naive Bayes](media/dm13-nb-attprof.gif "attributo profili in Visualizzatore Naive Bayes")  
   
 2.  Fare clic su qualsiasi cella per visualizzare la distribuzione dei valori di **legenda Data Mining**.  
   
@@ -78,40 +78,40 @@ ms.locfileid: "36054669"
  [Torna all'inizio](#BKMK_Tabs)  
   
 ###  <a name="bkmk_AttChar"></a> Caratteristiche attributo  
- Il **caratteristiche attributo** Vista è utile per un esame di una determinata variabile di risultato e fattori determinanti.  
+ Il **caratteristiche attributo** Vista è utile per un esame dettagliato di una determinata variabile di risultato e fattori determinanti.  
   
  ![attributo caratteristiche in Visualizzatore Naive Bayes](media/dm13-nb-viewer.gif "attributo caratteristiche in Visualizzatore Naive Bayes")  
   
 ##### <a name="explore-the-attribute-characteristics"></a>Esplorazione delle caratteristiche degli attributi  
   
-1.  Fare clic su **valore** e selezionare un elemento dal **valore**.  
+1.  Fare clic su **valore** e selezionare un elemento dalle **valore**.  
   
      Quando si seleziona un risultato di destinazione, il grafico viene aggiornato per visualizzare i fattori associati in modo più sicuro al risultato, ordinati in base alla priorità.  
   
      Si noti che se si crea un modello utilizzando il [analizza fattori di influenza chiave &#40;strumenti di analisi tabelle per Excel&#41; ](analyze-key-influencers-table-analysis-tools-for-excel.md) opzione, è possibile creare modelli che includono più di un attributo stimabile. Tuttavia, tutte le altre procedure guidate nei componenti aggiuntivi Data mining limitano l'utente a un attributo stimabile.  
   
-2.  Fare clic su **copia in Excel** per creare una tabella, in un nuovo foglio di lavoro elencati i punteggi per tutti gli attributi correlati al risultato di destinazione selezionato.  
+2.  Fare clic su **copia in Excel** per creare una tabella, in un nuovo foglio di lavoro elencati i punteggi per tutti gli attributi correlati al risultato di destinazione selezionata.  
   
  [Torna all'inizio](#BKMK_Tabs)  
   
 ###  <a name="bkmk_AttDisc"></a> Analisi discriminante attributi  
- Il **analisi discriminante attributi** visualizzazione consente di confrontare due risultati oppure un risultato rispetto a tutti gli altri risultati.  
+ Il **analisi discriminante attributi** Vista consente di confrontare due risultati oppure un risultato e tutti gli altri risultati.  
   
- ![attributo dell'analisi discriminante in Visualizzatore Naive Bayes](media/dm13-nb-attdisc.gif "attributo analisi discriminante in Visualizzatore Naive Bayes")  
+ ![attributo dell'analisi discriminante in Visualizzatore Naive Bayes](media/dm13-nb-attdisc.gif "attributo dell'analisi discriminante in Visualizzatore Naive Bayes")  
   
 ##### <a name="explore-attribute-discrimination"></a>Esplorazione dell'analisi discriminante attributi  
   
 1.  Utilizzare i controlli **valore 1** e **valore 2**, selezionare i risultati che si desidera confrontare.  
   
-     Ad esempio, in questo modello sono disponibili alcuni attributi interessanti nel gruppo di reddito basso, quindi si sceglie il gruppo di reddito più basso nel primo elenco a discesa e scelto **tutti gli altri stati** nel secondo elenco a discesa.  
+     Ad esempio, in questo modello si sono verificati alcuni attributi interessanti nel gruppo di reddito basso, pertanto abbiamo scelto il gruppo di reddito più basso nel primo elenco a discesa e scegliere **tutti gli altri stati** nel secondo elenco a discesa.  
   
      Gli attributi vengono ordinati in ordine di importanza (calcolata in base ai dati di training). Pertanto, occupazione è il fattore più strettamente correlato al reddito (almeno per questo gruppo di destinazione).  
   
-     Per visualizzare le cifre esatte, fare clic sulla barra colorata e visualizza i **legenda Data Mining**.  
+     Per visualizzare le cifre esatte, scegliere la barra colorata e visualizzare il **legenda Data Mining**.  
   
 2.  Si noti che anche i redditi inferiori sono correlati con l'area Europa.  
   
-     Il modello Naïve Bayes non supporta il drill-down; tuttavia, se si desidera esaminare i case associati a questo gruppo di risultati, è possibile utilizzare una query. Per informazioni sulle query in questo tipo di modello, vedere [Naive Bayes Model Query Examples](data-mining/naive-bayes-model-query-examples.md).  
+     Il modello Naïve Bayes non supporta il drill-down; tuttavia, se si desidera esaminare i case associati a questo gruppo di risultati, è possibile utilizzare una query. Per informazioni sulle query su questo tipo di modello, vedere [Naive Bayes Model Query Examples](data-mining/naive-bayes-model-query-examples.md).  
   
  [Torna all'inizio](#BKMK_Tabs)  
   

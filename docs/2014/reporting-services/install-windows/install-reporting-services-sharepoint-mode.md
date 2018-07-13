@@ -1,5 +1,5 @@
 ---
-title: Installazione in modalità SharePoint (SharePoint 2010 e SharePoint 2013) di Reporting Services | Documenti Microsoft
+title: Installazione in modalità SharePoint (SharePoint 2010 e SharePoint 2013) di Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - installing Reporting Services, SharePoint integrated mode
@@ -17,16 +17,16 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f0e75a75ffb14f720f2b421d659fa6142b579019
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8800556239018222cd3ac63650a1a44c2a750227
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249671"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Installazione della modalità SharePoint di Reporting Services (SharePoint 2010 e SharePoint 2013)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint è una raccolta di componenti server che forniscono la generazione del report e il recapito, in base alle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] prodotti SharePoint.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint è una raccolta di componenti server che forniscono la generazione di report e il recapito, in base [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] prodotti SharePoint.  
   
  L'esecuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint fornisce [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] e funzionalità di avvisi dati. Per altre informazioni sulle funzionalità in modalità SharePoint, vedere la sezione "Supporto della funzionalità e differenze di comportamento in base alla modalità server" in [Server di report di Reporting Services](../reporting-services-report-server.md).  
   
@@ -48,11 +48,11 @@ ms.locfileid: "36054496"
   
  [Installare la modalità SharePoint di Reporting Services per SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
- [Installare o disinstallare il componente aggiuntivo di servizi Reporting per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [Installare o disinstallare il Reporting aggiuntivo Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
  [Dove trovare il componente aggiuntivo di Reporting Services per prodotti SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [Aggiungere un ulteriore Server di Report a una Farm di &#40;con scalabilità orizzontale SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
+ [Aggiungere un ulteriore Server di Report a una Farm di &#40;scalabilità orizzontale SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
  [Aggiungere un ulteriore front-end Web di Reporting Services a una farm](add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36054496"
   
  [Provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
- [Servizio di Token delle attestazioni a Windows &#40;C2WTS&#41; e Reporting Services](../../sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)  
+ [Attestazioni per Windows Token Service &#40;C2WTS&#41; e Reporting Services](../../sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Architettura e flusso di lavoro degli avvisi dati](../reporting-services-data-alerts.md#AlertingWF)   

@@ -5,10 +5,9 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server], backing up and restoring
 - restoring system databases [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 caps.latest.revision: 57
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 39266ab9ca20c174ee61a1ed2e52c33fb0d4b5ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 81645730d3a854eff8b318ef04ee234f6206b4d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197551"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Backup e ripristino di Database di sistema (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestisce un set di database a livello di sistema, denominati*database di sistema*, fondamentali per un corretto funzionamento di un'istanza del server. Dopo ogni aggiornamento importante, è necessario eseguire il backup di numerosi database di sistema. Alcuni database di sistema di cui è necessario eseguire sempre il backup sono **msdb**, **master**e **model**. Se un database usa la replica nell'istanza del server, è necessario eseguire il backup anche di un database di sistema **distribution** . I backup di questi database di sistema consentono di ripristinare e recuperare il sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qualora si verifichi un errore a livello di sistema, ad esempio un problema che impedisce di utilizzare un disco rigido.  
@@ -41,11 +40,11 @@ ms.locfileid: "36055260"
 |[tempdb](../databases/tempdb-database.md)|Area di lavoro per il mantenimento dei set di risultati temporanei o intermedi. Questo database viene ricreato ogni volta che viene avviata un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando l'istanza del server viene chiusa, i dati inclusi in **tempdb** vengono eliminati in modo definitivo.|no|Simple|Non è possibile eseguire il backup del database di sistema **tempdb** .|  
 |[Configurare la distribuzione](../replication/configure-distribution.md)|Database esistente solo se il server è configurato come server di distribuzione repliche. In questo database sono memorizzati metadati e dati della cronologia per tutti i tipi di replica, nonché transazioni per la replica transazionale.|Sì|Simple|Per informazioni su quando eseguire il backup del database **distribution**, vedere [Eseguire il backup e ripristino di database replicati](../replication/administration/back-up-and-restore-replicated-databases.md).|  
   
- <sup>1</sup> per individuare il modello di recupero corrente del modello, vedere [consente di visualizzare o modificare il modello di recupero di un Database &#40;SQL Server&#41; ](view-or-change-the-recovery-model-of-a-database-sql-server.md) oppure [Sys. Databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup> per informazioni sul modello di recupero corrente del modello, vedere [visualizzare o modificare il modello di recupero di un Database &#40;SQL Server&#41; ](view-or-change-the-recovery-model-of-a-database-sql-server.md) oppure [Sys. Databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
 ## <a name="limitations-on-restoring-system-databases"></a>Limitazioni sul ripristino di database di sistema  
   
--   I database di sistema possono essere ripristinati solo da backup creati nella versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguita nell'istanza del server. Ad esempio, per ripristinare un database di sistema in un'istanza del server in esecuzione in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1.  
+-   I database di sistema possono essere ripristinati solo da backup creati nella versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguita nell'istanza del server. Ad esempio, per ripristinare un database di sistema in un'istanza del server in esecuzione su [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1.  
   
 -   Per ripristinare un database, è necessario che l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia in esecuzione. Per l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario che il database **master** sia accessibile e utilizzabile almeno in parte. Se il database **master** diventa inutilizzabile, è possibile ripristinare uno stato utilizzabile del database in uno dei modi seguenti:  
   

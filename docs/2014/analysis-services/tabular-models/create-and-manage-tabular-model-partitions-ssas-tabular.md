@@ -1,5 +1,5 @@
 ---
-title: Creare e gestire partizioni di modelli tabulari (SSAS tabulare) | Documenti Microsoft
+title: Creare e gestire partizioni di modelli tabulari (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cd7eb0621d95d11c29db213cfcff654da3f1240
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 5fbe478866d3e333893c4a01c78df53590e7fe0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228271"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>Creare e gestire partizioni di modelli tabulari (SSAS tabulare)
   Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente dalle altre. Le partizioni definite per un modello durante la relativa creazione vengono duplicate in un modello distribuito. Una volta distribuite, tali partizioni possono essere gestite tramite la finestra di dialogo **Partizioni** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o tramite uno script. Nelle attività presentate in questo argomento viene descritto come creare e gestire partizioni per un modello distribuito.  
@@ -57,7 +57,7 @@ ms.locfileid: "36054598"
   
 ###  <a name="bkmk_merge"></a> Per unire due o più partizioni  
   
--   Nel **partizioni** della finestra di dialogo il **partizioni** elenco, utilizzare Ctrl + fare clic per selezionare le partizioni da unire e quindi fare clic sul **Merge** pulsante.  
+-   Nel **partizioni** nella finestra di dialogo il **partizioni** elenco, usare Ctrl + fare clic per selezionare le partizioni da unire e quindi fare clic sui **Merge** pulsante.  
   
 > [!IMPORTANT]  
 >  L'unione delle partizioni non consente di aggiornare i metadati della partizione. Gli amministratori devono modificare l'istruzione SQL per la partizione risultante per assicurare che tramite le operazioni di elaborazione vengano elaborati tutti i dati nella partizione unita.  

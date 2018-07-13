@@ -1,5 +1,5 @@
 ---
-title: L'elaborazione di requisiti e considerazioni (Data Mining) | Documenti Microsoft
+title: L'elaborazione di requisiti e considerazioni (Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], objects
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbb38b12357b90b8ee2e4183af2d44724e7ce969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 982349548e300e17f97c61f4679c085ed98b3208
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232391"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Requisiti e considerazioni sull'elaborazione (data mining)
   In questo argomento vengono illustrate alcune considerazioni tecniche da tenere presenti quando si elaborano oggetti di data mining. Per una spiegazione generale dell'elaborazione e della modalità di applicazione al data mining, vedere [Elaborazione di oggetti di data mining](processing-data-mining-objects.md).  
@@ -39,11 +39,11 @@ ms.locfileid: "36054885"
   
  Il server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue query sul database che fornisce i dati non elaborati. Tale database può essere un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o una versione precedente del motore di database di SQL Server. Quando si elabora una struttura di data mining, i dati presenti nell'origine vengono trasferiti nella struttura di data mining e resi persistenti su disco in un nuovo formato compresso. Non tutte le colonne dell'origine dati vengono elaborate, ma solo quelle incluse nella struttura di data mining, come definito dalle associazioni.  
   
- Con questi dati, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene compilato un indice di tutti i dati e le colonne discretizzate e viene creato un indice separato per le colonne continue. Per ogni tabella nidificata, viene eseguita una query per creare l'indice e viene generata una query aggiuntiva per elaborare le relazioni tra ogni coppia di tabella nidificata e tabella del case. La creazione di più query è necessaria per elaborare uno speciale archivio dati multidimensionale interno. È possibile limitare il numero di query che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] invia all'archivio relazionale impostando la proprietà del server, `DatabaseConnectionPoolMax`. Per altre informazioni, vedere [Proprietà OLAP](../server-properties/olap-properties.md).  
+ Con questi dati, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene compilato un indice di tutti i dati e le colonne discretizzate e viene creato un indice separato per le colonne continue. Per ogni tabella nidificata, viene eseguita una query per creare l'indice e viene generata una query aggiuntiva per elaborare le relazioni tra ogni coppia di tabella nidificata e tabella del case. La creazione di più query è necessaria per elaborare uno speciale archivio dati multidimensionale interno. È possibile limitare il numero di query che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] invia all'archivio relazionale impostando la proprietà del server `DatabaseConnectionPoolMax`. Per altre informazioni, vedere [Proprietà OLAP](../server-properties/olap-properties.md).  
   
  Quando si elabora il modello, quest'ultimo non legge nuovamente i dati dall'origine dati, ma ne ottiene il riepilogo dalla struttura di data mining. Utilizzando il cubo creato e i dati dell'indice e del case memorizzati nella cache, nel server vengono creati thread indipendenti per eseguire il training dei modelli.  
   
- Per ulteriori informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano l'elaborazione parallela di modello, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+ Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano l'elaborazione parallela dei modelli, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_ProcessStructures"></a> Elaborazione di strutture di data mining  
  È possibile elaborare una struttura di data mining insieme a tutti i modelli dipendenti o separatamente. L'elaborazione di una struttura di data mining separatamente dai modelli può essere utile quando si prevede che l'elaborazione di alcuni modelli richieda molto tempo e si desidera rinviare tale operazione.  

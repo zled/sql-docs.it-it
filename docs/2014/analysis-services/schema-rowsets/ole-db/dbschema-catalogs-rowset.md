@@ -1,5 +1,5 @@
 ---
-title: Set di righe DBSCHEMA_CATALOGS | Documenti Microsoft
+title: Set di righe DBSCHEMA_CATALOGS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DBSCHEMA_CATALOGS rowset
 ms.assetid: f02dc75d-5442-4eea-b33a-567dc816be7a
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df3b146d3e1015fd4a78254be0d8a7a6083991d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2151d55ce06a8111ab1707e5673ee6d6982ef05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187048"
 ---
 # <a name="dbschemacatalogs-rowset"></a>Set di righe DBSCHEMA_CATALOGS
   Identifica gli attributi fisici associati a cataloghi accessibili dal sistema di gestione di database (DBMS).  
@@ -38,7 +38,7 @@ ms.locfileid: "36055580"
 |-----------------|--------------------|------------|-----------------|  
 |`CATALOG_NAME`|`DBTYPE_WSTR`|255|Nome del catalogo. Non può essere null.|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||Descrizione leggibile della tabella.|  
-|`ROLES`|`DBTYPE_WSTR`||Elenco di ruoli delimitato da virgole a cui appartiene l'utente corrente.<br /><br /> Un asterisco (\*) è incluso come un ruolo se l'utente corrente è un amministratore del server o database.<br /><br /> `Username` viene aggiunto a `ROLES` se uno dei ruoli utilizza la sicurezza dinamica.|  
+|`ROLES`|`DBTYPE_WSTR`||Elenco di ruoli delimitato da virgole a cui appartiene l'utente corrente.<br /><br /> Un asterisco (\*) è incluso come ruolo se l'utente corrente è un server o un amministratore del database.<br /><br /> `Username` viene aggiunto a `ROLES` se uno dei ruoli utilizza la sicurezza dinamica.|  
 |`DATE_MODIFIED`|`DBTYPE_DBTIMESTAMP`||Data dell'ultima modifica apportata al catalogo.|  
   
  Il set di righe viene ordinato in base a `CATALOG_NAME`.  

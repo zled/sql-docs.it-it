@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_paramstatus
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9a160d82d6bbc64e0665b6f62064be3ffc43f39f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 01dc9aa7608cacfabb980803b79a27c9f55f8ce3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195321"
 ---
 # <a name="srvparamstatus-extended-stored-procedure-api"></a>srv_paramstatus (API Stored procedure estesa)
     
@@ -63,7 +63,7 @@ n
 ## <a name="returns"></a>Valori di codice restituiti  
  `int` contenente flag di stato per il parametro. Attualmente è disponibile un solo flag: se il bit 0 è impostato su 1, il parametro è un parametro restituito. Se non è presente nessun parametro *n* o nessuna stored procedure remota, restituisce -1.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Questa routine restituisce i flag di stato per un determinato parametro di chiamata a una stored procedure remota.  
   
  I parametri contengono i dati passati tra i client e l'applicazione con stored procedure remote. Il client può specificare determinati parametri come parametri restituiti. Questi parametri restituiti possono contenere valori che l'applicazione passa nuovamente al client.  

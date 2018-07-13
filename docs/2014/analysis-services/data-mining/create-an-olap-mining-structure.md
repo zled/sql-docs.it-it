@@ -1,5 +1,5 @@
 ---
-title: Creare una struttura di Data Mining OLAP | Documenti Microsoft
+title: Creare una struttura di Data Mining OLAP | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71efb42dd17c6b959fedab50841d09625f62f458
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 060b2fc3a8cfcb54470d21dace787cd1ccbc025c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232431"
 ---
 # <a name="create-an-olap-mining-structure"></a>Create an OLAP Mining Structure
   La creazione di un modello di data mining basato su un cubo OLAP o un altro archivio dati multidimensionale presenta numerosi vantaggi. Una soluzione OLAP contiene già enormi quantità di dati ben organizzati, puliti e formattati correttamente; tuttavia, la complessità dei dati è tale che difficilmente gli utenti possono trovare modelli significativi tramite l'esplorazione ad hoc. Il data mining consente di individuare nuove correlazioni e fornire informazioni su cui è possibile eseguire azioni.  
@@ -117,7 +117,7 @@ ms.locfileid: "36054880"
 |Ricerca di celle interessanti o anomale|Identificare le vendite dei negozi che risultano controcorrente rispetto alle tendenze tipiche registrate nel tempo.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series|  
 |Trovare le correlazioni|Identificare i fattori correlati al tempo di inattività del server, tra cui area, tipo di computer, sistema operativo o data di acquisto.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes|  
   
-##  <a name="bkmk_Filters"></a> Sezionamento di un cubo e. applicazione di filtri ai modelli  
+##  <a name="bkmk_Filters"></a> Un cubo e di sezionamento. applicazione di filtri ai modelli  
  Il sezionamento del cubo mentre si compila un modello equivale alla creazione di un filtro su un modello di data mining relazionale. In un modello relazionale il filtro sull'origine dati è definito come clausola WHERE su un'istruzione SQL; in un cubo si usa l'editor per creare istruzioni di filtro mediante MDX.  
   
  Ad esempio, un cubo potrebbe contenere informazioni sugli acquisti di prodotti in tutto il mondo, ma per una campagna di marketing si desidera creare un modello basato sull'analisi dei clienti di sesso femminile oltre i 30 anni che vivono nel Regno Unito.  

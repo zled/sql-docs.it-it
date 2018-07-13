@@ -1,5 +1,5 @@
 ---
-title: Tiene traccia di elemento (ASSL) | Documenti Microsoft
+title: Traccia elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Traces element
 ms.assetid: 7ca2c7d1-fda3-4c76-9e32-fd9b5dda56e9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc4088ac641b754e70e02508bbef2f629f49ba95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e761f8ac9bb193ed0c04b0a475f0841513505e5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215951"
 ---
 # <a name="traces-element-assl"></a>Elemento Traces (ASSL)
   Contiene la raccolta di elementi [Trace](../objects/trace-element-assl.md) associati a un elemento [Server](../objects/server-element-assl.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "36054865"
 |Elementi padre|[Server](../objects/server-element-assl.md)|  
 |Elementi figlio|[Traccia](../objects/trace-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.TraceCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

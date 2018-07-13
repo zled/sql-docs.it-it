@@ -1,5 +1,5 @@
 ---
-title: Elemento AttributeHierarchyOptimizedState (ASSL) | Documenti Microsoft
+title: Elemento AttributeHierarchyOptimizedState (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeHierarchyOptimizedState element
 ms.assetid: d87148c8-2011-45ae-94c3-851f48babc5f
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 027bd8713038fd1b090697d8891f93eaabc11f9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59b2036773b516d3ea79cda06c51502a9d096cec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247241"
 ---
 # <a name="attributehierarchyoptimizedstate-element-assl"></a>Elemento AttributeHierarchyOptimizedState (ASSL)
   Determina il livello di ottimizzazione applicato alla gerarchia dell'attributo.  
@@ -62,7 +62,7 @@ ms.locfileid: "36054370"
 |Elemento padre|[CubeAttribute](../data-type/cubeattribute-data-type-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
 |valore|Description|  

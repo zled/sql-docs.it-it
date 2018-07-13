@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - exporting data
 - bulk importing [SQL Server], about bulk importing
@@ -25,26 +24,26 @@ helpviewer_keywords:
 - importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 615da1ce995a23b9518997570a9e34df71b4efb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4bfbd00c0079aec3e9bcfa67560962356be1cad4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227691"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Informazioni sull'importazione ed esportazione bulk di dati (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'esportazione in blocco dei dati (*dati in blocco*) da una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'importazione in blocco dei dati in una tabella o in una vista non partizionata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'importazione e l'esportazione bulk sono essenziali per trasferire in modo efficiente i dati tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e origini dei dati eterogenee. Per*esportazione bulk* si intende la copia di dati da una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file di dati. L'*importazione in blocco* indica il caricamento di dati da un file di dati a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ad esempio, è possibile esportare dati da un'applicazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel in un file di dati e quindi eseguire l'importazione bulk di tali dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Contenuto dell'argomento**  
   
--   [Introduzione all'importazione Bulk e le operazioni di esportazione Bulk](#Intro)  
+-   [Introduzione all'importazione in blocco e operazioni di esportazione Bulk](#Intro)  
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="Intro"></a> Panoramica di esportazione Bulk e l'importazione BULK  
+##  <a name="Intro"></a> Panoramica delle operazioni Bulk esportazione e importazione BULK  
  In questa sezione vengono elencati e confrontati sinteticamente i vari metodi disponibili per l'importazione e l'esportazione bulk dei dati. Vengono inoltre introdotti i file di formato.  
   
  **Contenuto dell'argomento:**  
@@ -81,7 +80,7 @@ ms.locfileid: "36054316"
   
 -   [Importazione ed esportazione Bulk di dati tramite l'utilità bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)  
   
--   [Importazione Bulk dei dati tramite BULK INSERT o OPENROWSET&#40;BULK... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)  
+-   [Importare dati per operazioni Bulk usando BULK INSERT o OPENROWSET&#40;BULK... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)  
   
 -   [Mantenere i valori Identity durante l'importazione in blocco dei dati &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
@@ -128,7 +127,7 @@ ms.locfileid: "36054316"
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)   
  [Copia di database in altri server](../databases/copy-databases-to-other-servers.md)   
  [Esecuzione del caricamento bulk di dati XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)   
- [L'esecuzione di operazioni di copia Bulk](../native-client/features/performing-bulk-copy-operations.md)   
+ [Esecuzione di operazioni di copia Bulk](../native-client/features/performing-bulk-copy-operations.md)   
  [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)   

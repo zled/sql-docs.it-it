@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 caps.latest.revision: 5
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 4d13b8b46066eb6c2c8c855859fdab0114269700
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 5c8b5a9f50c30cccb7a0e24799ca59105294aba0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236771"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configurazione dell'archiviazione per le tabelle con ottimizzazione per la memoria
   È necessario configurare la capacità di archiviazione e le operazioni di input/output al secondo (IOPS).  
@@ -34,7 +34,7 @@ ms.locfileid: "36054527"
   
 -   Le tabelle con ottimizzazione per la memoria sono persistenti nei file distribuiti in uno o più contenitori. In genere è necessario eseguire il mapping al proprio spindle di ogni contenitore, che viene usato per aumentare la capacità di archiviazione e migliorare le prestazioni. È necessario assicurarsi che le operazioni di IOPS sequenziali del supporto di archiviazione possono supportare un aumento pari a 3 volte la velocità effettiva del log delle transazioni.  
   
-     Ad esempio, se le tabelle con ottimizzazione per la memoria generano 500MB/sec di attività nel log delle transazioni, lo spazio di archiviazione per le tabelle con ottimizzazione per la memoria deve supportare 1,5 GB/sec. La necessità di supportare un 3 volte aumento della velocità effettiva del log delle transazioni deriva dall'analisi che le coppie di file di dati e differenziali vengono prima scritti con i dati iniziali e quindi devono essere in lettura e riscritti come parte di un'operazione di unione.  
+     Ad esempio, se le tabelle ottimizzate per la memoria generano 500MB/sec di attività nel log delle transazioni, l'archiviazione per le tabelle ottimizzate per la memoria deve supportare 1,5 GB/sec. La necessità di supportare un 3 volte aumento della velocità effettiva del log delle transazioni deriva dall'analisi che le coppie di file di dati e differenziali vengono prima scritti con dati iniziali e quindi devono essere in lettura e riscritti come parte di un'operazione di unione.  
   
      Un altro fattore per stimare la velocità effettiva per l'archiviazione è il tempo di recupero per le tabelle ottimizzate per la memoria. I dati delle tabelle durevoli devono essere letti in memoria prima che un database viene reso disponibile alle applicazioni. In genere, il caricamento dei dati nelle tabelle ottimizzate per la memoria può essere eseguito alla velocità delle operazioni di IOPS. Pertanto se l'archiviazione totale per le tabelle ottimizzate per la memoria durevoli è di 60 GB e si desidera essere in grado di caricare i dati in 1 minuto, le operazioni di IOPS per l'archiviazione devono essere impostati su 1 GB/sec.  
   

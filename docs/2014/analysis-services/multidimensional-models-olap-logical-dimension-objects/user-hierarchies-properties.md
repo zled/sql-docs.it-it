@@ -1,5 +1,5 @@
 ---
-title: Proprietà della gerarchia utente | Documenti Microsoft
+title: Proprietà della gerarchia utente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - multilevel hierarchies [Analysis Services]
 ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f128972a6878eb5104f07d4aa9ac3bee2517f526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8234cf83073565f3c88d9f63aa923d7564a21c7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257727"
 ---
 # <a name="user-hierarchy-properties"></a>Proprietà delle gerarchie definite dall'utente
   Nella tabella seguente vengono descritte le proprietà di una gerarchia definita dall'utente.  
@@ -40,7 +40,7 @@ ms.locfileid: "36054872"
 |nome|Contiene il nome della gerarchia.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gerarchie utente](user-hierarchies.md)   
- [Proprietà del livello](user-hierarchies-level-properties.md)  
+ [Gerarchie definite dall'utente](user-hierarchies.md)   
+ [Proprietà di livello](user-hierarchies-level-properties.md)  
   
   

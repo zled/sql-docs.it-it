@@ -1,5 +1,5 @@
 ---
-title: Tipo di elemento (ClrAssemblyFile) (ASSL) | Documenti Microsoft
+title: Tipo di elemento (ClrAssemblyFile) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: ab9e1e2c-ab06-4cd1-b007-16d738dc5604
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c253b2975c5e4f4cbf27c5b2d655a09617d644de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02a32dffab7d0274b98a5dcae3099703446b184b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218021"
 ---
 # <a name="type-element-clrassemblyfile-assl"></a>Elemento Type (ClrAssemblyFile) (ASSL)
   Specifica il tipo di file di uno dei file che appartengono a un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] assembly .NET Framework.  
@@ -61,7 +61,7 @@ ms.locfileid: "36054850"
 |Elemento padre|[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe seguenti.  
   
 |valore|Description|  
@@ -72,7 +72,7 @@ ms.locfileid: "36054850"
   
  L'enumerazione che corrisponde ai valori consentiti di `Type` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.ClrAssemblyFileType>.  
   
- L'elemento che corrisponde al padre di `Type` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+ L'elemento che corrisponde al padre di `Type` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [File di elemento &#40;ASSL&#41;](../objects/file-element-assl.md)   

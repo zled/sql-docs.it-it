@@ -1,5 +1,5 @@
 ---
-title: Elemento AggregationInstances (ASSL) | Documenti Microsoft
+title: Elemento AggregationInstances (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationInstances element
 ms.assetid: e8321aa8-361b-4d8a-bd89-a596eeb814b1
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2559602f932379272e948bd6e24e8ec6a6a7b246
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4580f50935a9819bba3a10531376389033c3ae04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237591"
 ---
 # <a name="aggregationinstances-element-assl"></a>Elemento AggregationInstances (ASSL)
   Contiene la raccolta di istanze di aggregazione definite in un [partizione](../objects/partition-element-assl.md) elemento.  
@@ -59,9 +59,9 @@ ms.locfileid: "36054632"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Partizione](../objects/partition-element-assl.md)|  
-|Elementi figlio|[AggregationInstance](../objects/aggregationinstance-element-assl.md)|  
+|Elementi figlio|[Elemento AggregationInstance](../objects/aggregationinstance-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.AggregationInstanceCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

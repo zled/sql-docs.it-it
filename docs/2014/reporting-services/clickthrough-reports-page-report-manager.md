@@ -1,5 +1,5 @@
 ---
-title: Report click-through pagina (gestione Report) | Documenti Microsoft
+title: Report click-through pagina (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0e9deeb0187814b89a4445ae13edaf9e1e5a5a16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20c212e7829a04e1c6261a8818cebf7534d2529a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244351"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Pagina Report click-through (Gestione report)
   Un report click-through consente di visualizzare una tabella di dati correlati quando si fa clic sui dati interattivi inclusi nel report. Questi report vengono generati dal server di report in base alle informazioni incluse nel modello utilizzato per creare il report. Se non si desidera utilizzare i report click-through generati dal server di report, è possibile creare report personalizzati da pubblicare in un server di report e di cui eseguire il mapping a punti dati interattivi definiti nel modello. I report personalizzati devono essere creati in Generatore report dallo stesso modello, quindi pubblicati nel server di report. Per eseguire il mapping dei report personalizzati agli elementi nel modello, utilizzare la pagina Report click-through in Gestione report.  
@@ -35,7 +35,7 @@ ms.locfileid: "36054711"
  Sebbene sia possibile selezionare qualsiasi report per cui si dispone di accesso, è opportuno selezionare solo i report creati specificamente per il modello di cui si esegue la configurazione.  
   
 > [!NOTE]  
->  Report click-through non sono disponibili in ogni edizione di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Se non si è certi dell'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzata nell'organizzazione, contattare l'amministratore del database.  
+>  Report click-through non sono disponibili in tutte le edizioni di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Se non si è certi dell'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzata nell'organizzazione, contattare l'amministratore del database.  
   
 ## <a name="navigation"></a>Navigazione  
  Utilizzare la procedura riportata di seguito per navigare fino a questo percorso nell'interfaccia utente.  
@@ -57,10 +57,10 @@ ms.locfileid: "36054711"
  **Report a istanza singola**  
  Consente di specificare il report personalizzato da utilizzare quando per la navigazione dell'utente è necessaria una visualizzazione di dati a istanza singola. Fare clic sul pulsante Sfoglia per selezionare il report che si desidera utilizzare.  
   
- **Report a istanze multiple**  
+ **Report a più istanze**  
  Consente di specificare il report personalizzato da utilizzare quando per la navigazione dell'utente è necessaria una visualizzazione di dati a istanza multipla. Fare clic sul pulsante Sfoglia per selezionare il report che si desidera utilizzare.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pubblicare i report](../../2014/reporting-services/publish-reports.md)  
+ [Pubblicazione di report](../../2014/reporting-services/publish-reports.md)  
   
   

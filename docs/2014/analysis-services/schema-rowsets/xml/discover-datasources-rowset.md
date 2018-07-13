@@ -1,5 +1,5 @@
 ---
-title: Set di righe DISCOVER_DATASOURCES | Documenti Microsoft
+title: Set di righe DISCOVER_DATASOURCES | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - DISCOVER_DATASOURCES rowset
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32e7aa7327cce301cc8415f45635fda651d861f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e319b05d1d9aec74b01b73b671f613a2703d900f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185258"
 ---
 # <a name="discoverdatasources-rowset"></a>Set di righe DISCOVER_DATASOURCES
   Restituisce un elenco delle origini dati del provider XMLA (XML for Analysis) disponibili nel server o servizio Web. Le origini dati pubblicate vengono restituite da un URL del server Web dell'applicazione. Il client può connettersi a una delle origini dati incluse in questo elenco.  
   
- Se si chiama il [Discover](../../xmla/xml-elements-methods-discover.md) metodo con il `DISCOVER_DATASOURCES` valore di enumerazione nel [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) elemento, il `Discover` metodo restituisce il `DISCOVER_DATASOURCES` set di righe.  
+ Se si chiama il [Discover](../../xmla/xml-elements-methods-discover.md) metodo con il `DISCOVER_DATASOURCES` il valore di enumerazione nel [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) elemento, il `Discover` metodo restituisce il `DISCOVER_DATASOURCES` set di righe.  
   
  **Si applica a:** modelli tabulari, modelli multidimensionali  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
- Il client seleziona un'origine dati impostando il `DataSourceInfo` proprietà nel [proprietà](../../xmla/xml-elements-properties/properties-element-xmla.md) elemento che viene inviata insieme al [comando](../../xmla/xml-elements-properties/command-element-xmla.md) elemento mediante la [Execute](../../xmla/xml-elements-methods-execute.md) metodo. Un client non deve costruire il contenuto della proprietà `DataSourceInfo` da inviare al server. Al contrario, il client deve utilizzare il metodo `Discover` per individuare le origini dati supportate dal provider. Il client restituisce quindi lo stesso valore per la proprietà `DataSourceInfo` ottenuto dal set di righe `DISCOVER_DATASOURCES`.  
+ Il client seleziona un'origine dati impostando il `DataSourceInfo` proprietà nel [proprietà](../../xmla/xml-elements-properties/properties-element-xmla.md) elemento che viene inviato insieme al [comando](../../xmla/xml-elements-properties/command-element-xmla.md) elemento in base il [Execute](../../xmla/xml-elements-methods-execute.md) metodo. Un client non deve costruire il contenuto della proprietà `DataSourceInfo` da inviare al server. Al contrario, il client deve utilizzare il metodo `Discover` per individuare le origini dati supportate dal provider. Il client restituisce quindi lo stesso valore per la proprietà `DataSourceInfo` ottenuto dal set di righe `DISCOVER_DATASOURCES`.  
   
  Il `DISCOVER_DATASOURCES` set di righe contiene le colonne seguenti.  
   

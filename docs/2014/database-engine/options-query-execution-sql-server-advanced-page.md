@@ -1,5 +1,5 @@
 ---
-title: 'Opzioni (Query in esecuzione: SQL Server: pagina avanzate) | Documenti Microsoft'
+title: 'Opzioni (Query in esecuzione: SQL Server: pagina avanzate) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 679c6d8f5a6abf931eb28d0f2f8116ac9f551d91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 179cddf3670cc29cbb298b53c442c30b80dd202f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187238"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>Opzioni (Query in esecuzione: SQL Server: pagina avanzate)
   Utilizzando il comando SET sono disponibili numerose opzioni. Usare questa pagina per specificare un'opzione **set** per l'esecuzione di query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nell'editor di query di SQL Server. Le opzioni non hanno avranno alcun effetto su altri editor del codice. Le modifiche apportate a queste opzioni si applicano soltanto alle nuove query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni delle query correnti scegliere **Opzioni query** dal menu **Query** o il menu di scelta rapida della finestra Query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Fare clic su **Avanzate** in **Esecuzione**. Per ulteriori informazioni su ognuna di queste opzioni, vedere la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -71,7 +71,7 @@ GO
  **Non visualizzare intestazioni messaggi provider**  
  Se questa casella di controllo è selezionata, non vengono visualizzati i messaggi di stato provenienti dal provider, ad esempio il provider SQLClient. Questa casella di controllo è selezionata per impostazione predefinita. Deselezionare questa casella di controllo per visualizzare i messaggi del provider durante la risoluzione dei problemi relativi alle query che potrebbero essersi verificati a livello del provider.  
   
- **Disconnetti al termine della query**  
+ **Disconnetti al termine dell'esecuzione della query**  
  Se questa casella di controllo è selezionata, la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene terminata dopo il completamento della query. Questa casella di controllo è deselezionata per impostazione predefinita.  
   
  **Ripristina predefiniti**  

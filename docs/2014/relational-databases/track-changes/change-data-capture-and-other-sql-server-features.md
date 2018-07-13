@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d947f43f2f08c38a01102971dd62581affc80b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0b96ae16398f9ed8fd3ec6c62c61451966b458f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212701"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture e altre funzionalità di SQL Server
   In questo argomento viene descritta l'interazione tra Change Data Capture e le funzionalità seguenti:  
@@ -67,7 +67,7 @@ ms.locfileid: "36054722"
   
 -   Se un database viene ripristinato in un altro server, per impostazione predefinita la funzionalità Change Data Capture viene disabilitata e tutti i metadati correlati vengono eliminati.  
   
-     Per mantenere funzionalità change data capture, utilizzare il `KEEP_CDC` opzione quando si ripristina il database. Per ulteriori informazioni su questa opzione, vedere [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
+     Per mantenere l'acquisizione dei dati, usare il `KEEP_CDC` durante il ripristino del database. Per ulteriori informazioni su questa opzione, vedere [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 -   Se un database viene scollegato e collegato allo stesso o a un altro server, la funzionalità Change Data Capture rimane abilitata.  
   

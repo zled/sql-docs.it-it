@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4f376b2ba1e707afdba55b6fc7443d9d8be257e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 00ee8c2e88f571e3e9fcf5455a6627c0d7ff65cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204851"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Aggiunta di un parametro multivalore a un report
   È possibile aggiungere un parametro a un report che consente all'utente di selezionare più valori per il parametro.  
@@ -97,7 +97,7 @@ ms.locfileid: "36055191"
      Per altre informazioni, vedere [Aggiungere, modificare o eliminare valori disponibili per un parametro di report &#40;Generatore report e SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere parametri di propagazione a un Report &#40;SSRS e Generatore Report&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Aggiungere, modificare o eliminare un parametro di Report &#40;SSRS e Generatore Report&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+ [Aggiungere parametri di propagazione a un Report &#40;Report e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Aggiungere, modificare o eliminare un parametro di Report &#40;Report e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   

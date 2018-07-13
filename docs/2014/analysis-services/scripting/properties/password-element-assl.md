@@ -1,5 +1,5 @@
 ---
-title: Elemento password (ASSL) | Documenti Microsoft
+title: Elemento password (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Password element
 ms.assetid: ee756b01-fb08-4a9a-8c2a-7c04af0f8658
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e702e7307e11c506652e91ca4cdc8f02ca06318d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99d7eabdd66e6c7f036389b4825c5926873367b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197741"
 ---
 # <a name="password-element-assl"></a>Elemento Password (ASSL)
   Contiene la password dell'account utente per il [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) elemento.  
@@ -59,8 +59,8 @@ ms.locfileid: "36055079"
 |Elemento padre|[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il valore della `Password` elemento, nonché il valore del [Account](account-element-impersonationinfo-assl.md) elemento, viene utilizzato per gli scopi della rappresentazione se il valore della [ImpersonationMode](impersonationmode-element-assl.md) elemento per qualsiasi elemento derivato dal `ImpersonationInfo` tipo di dati è impostato su *ImpersonateAccount*.  
+## <a name="remarks"></a>Note  
+ Il valore del `Password` elemento, nonché il valore della [Account](account-element-impersonationinfo-assl.md) elemento, viene usato per gli scopi della rappresentazione se il valore del [ImpersonationMode](impersonationmode-element-assl.md) (elemento) per qualsiasi elemento derivato dal `ImpersonationInfo` tipo di dati è impostato su *ImpersonateAccount*.  
   
  Solo membri del ruolo di amministratore del server per l'istanza [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] possono fornire un valore vuoto per l'elemento `Password`  
   

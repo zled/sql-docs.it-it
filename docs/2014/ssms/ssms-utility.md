@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], opening
 - command prompt utilities [SQL Server], sqlwb
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - opening SQL Server Management Studio
 ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 194de1d69f739874a32f6a4de2f371ae7fa953da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3d3ee44ae621e20c382c081e7d8699c98ec04fb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200731"
 ---
 # <a name="ssms-utility"></a>Utilità Ssms
   L'utilità **Ssms** apre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Se specificato, **Ssms** anche una connessione a un server e apre query, script, file, progetti e soluzioni.  
@@ -79,7 +79,7 @@ ms.locfileid: "36054906"
  [**-?**]  
  Visualizza informazioni della Guida relative alla riga di comando.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Tutte le opzioni sono facoltative e devono essere separate da uno spazio, a differenza dei file che devono essere separati da virgole. Se non viene specificata alcuna opzione, **Ssms** apre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] in base alle impostazioni definite in **Opzioni** nel menu **Strumenti** . Ad esempio, se l'opzione **All'avvio** della pagina **Ambiente/Generale** specifica **Apri nuova finestra Query**, **Ssms** viene aperto con un editor di query vuoto.  
   
  L'opzione **-log** deve essere visualizzata alla fine della riga di comando, dopo tutte le altre opzioni. L'argomento del nome del file è facoltativo. Se il nome del file è specificato e il file non esiste, il file viene creato. Se non è possibile creare il file, ad esempio a causa dell'accesso in scrittura insufficiente, il log viene invece scritto nella posizione APPDATA non localizzata (vedere di seguito). Se l'argomento del nome del file non viene specificato, i file vengono scritti nella cartella di dati dell'applicazione non localizzata dell'utente corrente. La cartella di dati dell'applicazione non localizzata per SQL Server può essere individuata tramite la variabile di ambiente APPDATA. Ad esempio, per SQL Server 2012, la cartella è \<unità di sistema>:\Users\\<nomeutente\>\AppData\Roaming\Microsoft\AppEnv\10.0\\. Per impostazione predefinita, i due file sono denominati ActivityLog.xml e ActivityLog.xsl. Nel primo sono contenuti i dati del log attività e il secondo è un foglio di stile XML tramite cui risulta più semplice la visualizzazione del file XML. Usare i passaggi seguenti per visualizzare il file di log nel visualizzatore XML predefinito, ad esempio Internet Explorer. Fare clic sul pulsante Start, scegliere Esegui, digitare "\<unità di sistema>:\Users\\<nomeutente\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml" nel campo visualizzato e quindi premere INVIO.  

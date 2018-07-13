@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 caps.latest.revision: 113
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fcddb47c254b897403cb784810703a1c7b20437a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77db86a684089c0696d499499bc52c816f35c0d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231551"
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
   L'attività Esegui SQL consente di eseguire istruzioni SQL o stored procedure da un pacchetto. L'attività può includere una o più istruzioni SQL che vengono eseguite in ordine sequenziale. È possibile utilizzare l'attività Esegui SQL per gli scopi seguenti:  
@@ -84,7 +84,7 @@ ms.locfileid: "36054569"
 -   Se l'attività utilizza un'associazione di parametri, tutte le query incluse nel batch dovranno avere lo stesso numero e gli stessi tipi di parametri.  
   
 ## <a name="running-parameterized-sql-commands"></a>Esecuzione di comandi SQL con parametri  
- Le istruzioni SQL e le stored procedure utilizzano spesso parametri di input, parametri di output e codici restituiti. L'attività Esegui SQL supporta il `Input`, `Output`, e `ReturnValue` i tipi di parametro. Utilizzare la `Input` tipo per i parametri di input, `Output` per i parametri di output e `ReturnValue` per codici restituiti.  
+ Le istruzioni SQL e le stored procedure utilizzano spesso parametri di input, parametri di output e codici restituiti. L'attività Esegui SQL supporta il `Input`, `Output`, e `ReturnValue` i tipi di parametro. Si utilizza il `Input` tipo per i parametri di input `Output` per i parametri di output e `ReturnValue` per i codici restituiti.  
   
 > [!NOTE]  
 >  È possibile utilizzare parametri in un'attività Esegui SQL solo se il provider di dati li supporta.  
@@ -99,7 +99,7 @@ ms.locfileid: "36054569"
 ## <a name="troubleshooting-the-execute-sql-task"></a>Risoluzione dei problemi relativi all'attività Esegui SQL  
  È possibile registrare le chiamate eseguite dall'attività Esegui SQL a provider di dati esterni. Questa funzionalità di registrazione può essere utilizzata per risolvere i problemi relativi ai comandi SQL eseguiti dall'attività Esegui SQL. Per registrare le chiamate eseguite dall'attività Esegui SQL a provider di dati esterni, abilitare la registrazione dei pacchetti e selezionare l'evento **Diagnostic** a livello del pacchetto. Per altre informazioni, vedere [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
- Talvolta un comando SQL o una stored procedure restituiscono più set di risultati. Questi set di risultati includono non solo i set di righe che sono il risultato del `SELECT` query, ma anche valori singoli che sono il risultato di errori di `RAISERROR` o `PRINT` istruzioni. L'attività ignora gli errori nei set di risultati che si verificano dopo il primo set di risultati in base al tipo di gestione connessione utilizzata:  
+ Talvolta un comando SQL o una stored procedure restituiscono più set di risultati. Questi set di risultati includono non solo i set di righe che sono il risultato ottenuto `SELECT` query, ma anche valori singoli che sono il risultato di errori di `RAISERROR` o `PRINT` istruzioni. L'attività ignora gli errori nei set di risultati che si verificano dopo il primo set di risultati in base al tipo di gestione connessione utilizzata:  
   
 -   Se si utilizzano le gestioni connessioni OLE DB e ADO, l'attività ignora i set di risultati che si verificano dopo il primo set di risultati. Pertanto, con tali gestioni connessioni, l'attività ignora un errore restituito da un comando SQL o da una stored procedure quando l'errore non fa parte del primo set di risultati.  
   
@@ -150,9 +150,9 @@ ms.locfileid: "36054569"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Mapping dei parametri di Query a variabili in un'attività Esegui SQL](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
+-   [Mapping di parametri di query a variabili in un'attività Esegui SQL](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
   
--   [Set di risultati della mappa a variabili in un'attività Esegui SQL](../map-result-sets-to-variables-in-an-execute-sql-task.md)  
+-   [Mapping di set di risultati a variabili in un'attività Esegui SQL](../map-result-sets-to-variables-in-an-execute-sql-task.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   

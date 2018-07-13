@@ -27,13 +27,13 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 614e925a7481c574bce63c0815b587e4984604df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a9a34f810805817075651cfe148f2d5de252c91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243001"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Utilizzo di immagini con l'attività Script
   Un database di prodotti o utenti include di frequente immagini oltre a testo e dati numerici. Lo spazio dei nomi `System.Drawing` in Microsoft .NET Framework fornisce le classi per la modifica delle immagini.  
@@ -52,7 +52,7 @@ ms.locfileid: "36054564"
   
 1.  Creare una variabile di stringa denominata `CurrentImageFile` e impostarne il valore sul percorso e sul nome di un file di immagine esistente.  
   
-2.  Nel **Script** pagina del **Editor attività Script**, aggiungere il `CurrentImageFile` variabile per il `ReadOnlyVariables` proprietà.  
+2.  Nel **Script** pagina della **Editor attività Script**, aggiungere il `CurrentImageFile` variabile il `ReadOnlyVariables` proprietà.  
   
 3.  Nel progetto di script impostare un riferimento allo spazio dei nomi `System.Drawing`.  
   
@@ -163,7 +163,7 @@ End Function
   
 2.  Creare anche la variabile di tipo integer `MaxThumbSize` e assegnare un valore in pixel, ad esempio 100.  
   
-3.  Nel **Script** pagina del **Editor attività Script**, aggiungere entrambe le variabili per il `ReadOnlyVariables` proprietà.  
+3.  Nel **Script** pagina della **Editor attività Script**, aggiungere entrambe le variabili per il `ReadOnlyVariables` proprietà.  
   
 4.  Nel progetto di script impostare un riferimento allo spazio dei nomi `System.Drawing`.  
   
@@ -294,6 +294,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Esercitazione su DMX per market Basket | Documenti Microsoft
+title: Esercitazione su DMX per market Basket | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -21,13 +21,13 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a8806eceb5c16354d6581c8fcdd4e664619d2d2a
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: b73a618c5318d88ec6ee09751e09327687d865f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220581"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Esercitazione su DMX per Market Basket
   In questa esercitazione vengono descritte le procedure per la creazione, il training e l'esplorazione dei modelli di data mining utilizzando il linguaggio di query DMX (Data Mining Extensions). Questi modelli di data mining verranno quindi utilizzati per la creazione di stime che indicano quali prodotti tendono a essere acquistati contemporaneamente.  
@@ -37,7 +37,7 @@ ms.locfileid: "36312929"
 ## <a name="tutorial-scenario"></a>Scenario dell'esercitazione  
  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha deciso di creare un'applicazione personalizzata dotata di funzionalità di data mining per stimare quali tipi di prodotti i clienti tendono ad acquistare contemporaneamente. L'obiettivo dell'applicazione personalizzata consiste nella possibilità di specificare un set di prodotti e di stimare quali prodotti aggiuntivi verranno acquistati insieme a quelli specificati. Queste informazioni verranno quindi utilizzate da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] per aggiungere una caratteristica di suggerimento nel sito Web e ottimizzare la presentazione delle informazioni alla clientela.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] offre diversi strumenti che possono essere usati per eseguire questa attività:  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] offre diversi strumenti che possono essere utilizzati per eseguire questa attività:  
   
 -   Il linguaggio di query DMX  
   
@@ -85,21 +85,21 @@ ms.locfileid: "36312929"
   
  **Per altre informazioni**  
   
- [Estensioni Data Mining &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference), [comprensione DMX Select (istruzione)](/sql/dmx/understanding-the-dmx-select-statement), [struttura e l'utilizzo di query di stima DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference), [comprensione DMX un'istruzione Select](/sql/dmx/understanding-the-dmx-select-statement), [struttura e l'utilizzo di query di stima DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
  L'esercitazione è suddivisa nelle lezioni seguenti:  
   
- [Lezione 1: Creazione della struttura di Data Mining Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
+ [Lezione 1: Creazione della struttura di data mining Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
  In questa lezione verranno illustrate le procedure per l'utilizzo dell'istruzione `CREATE` per creare strutture di data mining.  
   
- [Lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  In questa lezione verranno illustrate le procedure per l'utilizzo dell'istruzione `ALTER` per aggiungere modelli di data mining a una struttura di data mining.  
   
- [Lezione 3: Elaborazione della struttura di Data Mining Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Lezione 3: Elaborazione della struttura di data mining Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
  In questa lezione verranno illustrate le procedure per l'utilizzo dell'istruzione `INSERT INTO` per elaborare le strutture di data mining e i modelli di data mining ad esse associati.  
   
- [Lezione 4: Esecuzione di stime Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Lezione 4: Esecuzione delle stime relative a Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  In questa lezione verranno illustrate le procedure per l'utilizzo dell'istruzione `PREDICTION JOIN` per creare stime basate su modelli di data mining.  
   
 ## <a name="requirements"></a>Requisiti  
@@ -111,7 +111,7 @@ ms.locfileid: "36312929"
   
 -   Il database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]  
   
- Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio ufficiali per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], passare alla [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417) o nella home page Microsoft SQL Server Samples and Community Projects nella sezione Microsoft SQL Server Product Samples. Fare clic su **database**, quindi fare clic sui **versioni** scheda e selezionare i database desiderati.  
+ Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio ufficiali per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]passare alla [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417) o nella home page Microsoft SQL Server Samples and Community Projects nella sezione Microsoft SQL Server Product Samples. Fare clic su **database**, quindi fare clic sui **versioni** scheda e selezionare i database desiderati.  
   
 > [!NOTE]  
 >  Quando si esaminano le esercitazioni, è consigliabile aggiungere **argomento successivo** e **argomento precedente** pulsanti alla barra degli strumenti del Visualizzatore di documenti.  
@@ -119,6 +119,6 @@ ms.locfileid: "36312929"
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione su DMX per bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [Esercitazione di base di Data Mining](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Lezione 3: Compilazione di uno Scenario Market Basket &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lezione 3: Compilazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

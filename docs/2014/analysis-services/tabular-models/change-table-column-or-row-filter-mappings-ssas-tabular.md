@@ -1,5 +1,5 @@
 ---
-title: Modifica tabella, colonna o il mapping dei filtri di riga (SSAS tabulare) | Documenti Microsoft
+title: Modifica tabella, colonna o il mapping dei filtri di riga (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e085b0693e0043283cc142ccf2ca764ae234eed7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db70af7541a46fb061a3b668b61040361b261347
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241311"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Modificare i mapping di filtri tabella, colonna o riga (SSAS tabulare)
   Questo argomento descrive come modificare i mapping di filtri tabella, colonna o riga tramite la finestra di dialogo **Modifica proprietà tabella** di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -48,6 +48,6 @@ ms.locfileid: "36054855"
          Se si commette un errore ed è necessario ricominciare, fare clic su **Cancella filtri di riga**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Proprietà tabella Modifica &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+ [Modifica finestra di dialogo Proprietà tabella &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
   
   

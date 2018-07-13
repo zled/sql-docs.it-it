@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_message_handler
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea139b6d0c65f8e1401dc6236c8bd44c6f12f19f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 039ffe0f446b5d17da50a15840f58f3eda9ddc2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244801"
 ---
 # <a name="srvmessagehandler-extended-stored-procedure-api"></a>srv_message_handler (API Stored procedure estesa)
     
@@ -105,7 +105,7 @@ oserrtextlen
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  La funzione **srv_message_handler** consente a una stored procedure estesa di integrarsi con le funzioni centralizzate di registrazione e report errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli avvisi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere stabiliti per gli eventi dalle stored procedure estese e SQL Server Agent monitorerà queste condizioni di avviso.  
   
  Se il messaggio di errore è più lungo, viene troncato a 412 byte.  

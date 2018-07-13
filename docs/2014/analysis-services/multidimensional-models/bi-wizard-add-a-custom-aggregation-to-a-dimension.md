@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un'aggregazione personalizzata a una dimensione | Documenti Microsoft
+title: Aggiungere un'aggregazione personalizzata a una dimensione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], Business Intelligence enhancements
 - Business Intelligence enhancements [Analysis Services], custom aggregations
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - custom aggregations [Analysis Services]
 ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f6d9b77272272eadd2844a1ab5da18ec1cfd7a41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8567e17759af61b151a3fc27c05df0ed1df49b63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243951"
 ---
 # <a name="add-a-custom-aggregation-to-a-dimension"></a>Aggiungere un'aggregazione personalizzata a una dimensione
   È possibile aggiungere una funzionalità avanzata di aggregazione personalizzata a un cubo o una dimensione per sostituire le aggregazioni predefinite associate a un membro di una dimensione con un operatore unario diverso. Questa funzionalità consente di specificare nella tabella della dimensione una colonna dell'operatore unario che definisce il rollup per i membri di una gerarchia padre-figlio. L'operatore unario funge da attributo padre nella gerarchia padre-figlio.  
@@ -42,7 +42,7 @@ ms.locfileid: "36054653"
  Nella prima pagina di **Impostazione operatore unario** della procedura guidata specificare la dimensione a cui si vuole applicare un'aggregazione personalizzata. L'aggiunta dell'aggregazione personalizzata alla dimensione selezionata comporterà modifiche della dimensione. Tali modifiche verranno ereditate da tutti i cubi che includono la dimensione selezionata.  
   
 ## <a name="adding-custom-aggregation-unary-operator"></a>Aggiunta di un'aggregazione personalizzata (operatore unario)  
- Nella seconda pagina di **Impostazione operatore unario** specificare l'attributo padre desiderato per l'aggregazione personalizzata e la colonna di origine nella tabella della dimensione per l'operatore unario. **Attributo padre** sono elencati gli attributi con i relativi `Usage` impostata su `Parent`. Se gli attributi padre sono più di uno, scegliere quello corrispondente alla relazione padre-figlio che si desidera utilizzare. Se non è indicato alcun attributo padre, significa che la dimensione non include una gerarchia padre-figlio valida.  
+ Nella seconda pagina di **Impostazione operatore unario** specificare l'attributo padre desiderato per l'aggregazione personalizzata e la colonna di origine nella tabella della dimensione per l'operatore unario. **Attributo padre** sono elencati gli attributi con loro `Usage` impostata su `Parent`. Se gli attributi padre sono più di uno, scegliere quello corrispondente alla relazione padre-figlio che si desidera utilizzare. Se non è indicato alcun attributo padre, significa che la dimensione non include una gerarchia padre-figlio valida.  
   
  In **Colonna di origine**selezionare la colonna stringa che contiene gli operatori unari. (Questa selezione imposta la `UnaryOperatorColumn` proprietà dell'attributo padre.) La tabella della dimensione dovrebbe inoltre contenere una colonna stringa che specifica l'operatore di rollup unario. I valori stringa di questa colonna devono contenere operatori di aggregazione validi. Se una riga è vuota, il membro corrispondente viene calcolato normalmente. Se la formula in una colonna non è valida, si verifica un errore di run-time ogni volta che viene recuperato il valore di una cella che utilizza il membro. Per altre informazioni, vedere [Operatori unari nelle dimensioni padre-figlio](parent-child-dimension-attributes-unary-operators.md).  
   

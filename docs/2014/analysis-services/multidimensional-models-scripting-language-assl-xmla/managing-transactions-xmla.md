@@ -1,5 +1,5 @@
 ---
-title: La gestione delle transazioni (XMLA) | Documenti Microsoft
+title: La gestione delle transazioni (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - starting transactions
 ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 84ec16569d7e4118c159b7a611cba9d711b9d761
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fefda354d9f596c92a06673e7692bb840f582071
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167612"
 ---
 # <a name="managing-transactions-xmla"></a>Gestione di transazioni (XMLA)
-  Ogni comando XML for Analysis (XMLA) inviato a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito all'interno del contesto di una transazione nella sessione implicita o esplicita corrente. Per gestire ognuna di queste transazioni, utilizzare il [BeginTransaction](../xmla/xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../xmla/xml-elements-commands/committransaction-element-xmla.md), e [RollbackTransaction](../xmla/xml-elements-commands/rollbacktransaction-element-xmla.md) comandi. che consentono di creare transazioni implicite o esplicite, modificare il conteggio dei riferimenti alla transazione nonché di avviare le transazioni ed eseguirne il commit e il rollback.  
+  Ogni comando XML for Analysis (XMLA) inviato a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito all'interno del contesto di una transazione nella sessione implicita o esplicita corrente. Per gestire ognuna di queste transazioni, si utilizza il [BeginTransaction](../xmla/xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../xmla/xml-elements-commands/committransaction-element-xmla.md), e [RollbackTransaction](../xmla/xml-elements-commands/rollbacktransaction-element-xmla.md) comandi. che consentono di creare transazioni implicite o esplicite, modificare il conteggio dei riferimenti alla transazione nonché di avviare le transazioni ed eseguirne il commit e il rollback.  
   
 ## <a name="implicit-and-explicit-transactions"></a>Transazioni implicite ed esplicite  
  Una transazione può essere implicita o esplicita, come descritto di seguito.  
@@ -42,7 +42,7 @@ ms.locfileid: "36054401"
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Crea un' *implicita* transazione per un XMLA comando se il `BeginTransaction` comando non specifica l'inizio di una transazione. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue sempre il commit di una transazione implicita se il comando riesce e ne esegue il rollback se il comando non riesce.  
   
  **Transazione esplicita**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Crea un' *esplicita* transazione se il `BeginTransaction` comando avvia una transazione. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tuttavia esegue il commit di una transazione esplicita solo se viene inviato un comando `CommitTransaction` e ne esegue il rollback se viene inviato un comando `RollbackTransaction`.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Crea un' *esplicite* transazione se il `BeginTransaction` comando avvia una transazione. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tuttavia esegue il commit di una transazione esplicita solo se viene inviato un comando `CommitTransaction` e ne esegue il rollback se viene inviato un comando `RollbackTransaction`.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inoltre esegue il rollback sia di transazioni implicite che di transazioni esplicite se la sessione corrente termina prima del completamento della transazione attiva.  
   
