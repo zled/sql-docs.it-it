@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting tables
 - removing tables
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - queries [SQL Server], tables
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 131a7e5ad9837c795b8a7f3c7360b84f8858177a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 25d995d1049956652a326a3b759f272a5ecfc5e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200611"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>Rimozione di tabelle da query (Visual Database Tools)
   Dalla query è possibile rimuovere una tabella o qualsiasi altro oggetto con valori di tabella.  
   
 > [!NOTE]  
->  Se viene rimossa una tabella o un oggetto con valori di tabella, la rimozione non riguarderà in alcun modo i dati contenuti nel database, ma solo la query corrente. Per informazioni dettagliate sulla rimozione di una tabella da un database, vedere [eliminare tabelle &#40;motore di Database&#41;](../../relational-databases/tables/delete-tables-database-engine.md).  
+>  Se viene rimossa una tabella o un oggetto con valori di tabella, la rimozione non riguarderà in alcun modo i dati contenuti nel database, ma solo la query corrente. Per altre informazioni sulla rimozione di una tabella da un database, vedere [eliminare le tabelle &#40;motore di Database&#41;](../../relational-databases/tables/delete-tables-database-engine.md).  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>Per rimuovere una tabella o un oggetto con struttura di tabella  
   
@@ -43,10 +43,10 @@ ms.locfileid: "36068186"
  Quando viene rimossa una tabella o un oggetto con valori di tabella, in Progettazione query e Progettazione viste vengono eliminati automaticamente i join che lo riguardano e i riferimenti alle colonne dell'oggetto nel **riquadro SQL** e nel **riquadro Criteri**. Se tuttavia la query contiene espressioni complesse che coinvolgono l'oggetto, quest'ultimo non verrà automaticamente eliminato fino a che non siano stati eliminati tutti i riferimenti ad esso.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiunta di tabelle a query &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Creazione di alias di tabella &#40;Visual Database Tools&#41;](create-table-aliases-visual-database-tools.md)   
+ [Aggiungere tabelle a query &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Creare alias di tabella &#40;Visual Database Tools&#41;](create-table-aliases-visual-database-tools.md)   
  [Specificare i criteri di ricerca &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [Riepiloga i risultati di Query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Riepilogo dei risultati di Query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

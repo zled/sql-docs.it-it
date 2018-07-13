@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 4: Contrassegna come tabella data | Documenti Microsoft'
+title: 'Lezione 4: Contrassegna come tabella data | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a283b56c215e51dbdb0df90b9c51c21e232df2f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a2a6ce44a66fbb1e9045116580acc726f648df9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265747"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>Lezione 4: Contrassegna come tabella data
   Nella Lezione 2: Aggiungere dati è stata importata una tabella delle dimensioni denominata DimDate. Nella Lezione 3: Rinominare colonne è stato quindi modificato il nome della tabella DimDate in Data. Mentre nel modello questa tabella è ora denominata Date, può anche essere nota come *tabella data*, in quanto sono contenuti dati relativi a data e ora.  

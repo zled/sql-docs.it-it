@@ -1,5 +1,5 @@
 ---
-title: Connettersi a un Database Microsoft Access (SSAS) | Documenti Microsoft
+title: Connettersi a un Database Microsoft Access (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connaccessdb.f1
 ms.assetid: 9fa81839-dd8b-41d3-915e-c774a707ed53
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 92a5f0b94e41cf2d5bf72a7bb22417888ca946b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c97b313a5f1cfc3a9c4dfb76f7f0b58f77e59f7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204461"
 ---
 # <a name="connect-to-a-microsoft-access-database-ssas"></a>Connessione a un database di Microsoft Access (SSAS)
   Questa pagina dell'**Importazione guidata tabella** consente di specificare le impostazioni per connettersi a un database di Microsoft Access. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -32,7 +32,7 @@ ms.locfileid: "36067698"
 >  Le credenziali dell'utente corrente vengono utilizzate in caso di selezione di un file in questa pagina. Tuttavia, l'importazione non verrà completata se l'utente specificato nella pagina Impostazioni di rappresentazione non dispone di privilegi sufficienti per leggere dal file selezionato.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Nome descrittivo della connessione**  
+ **Nome descrittivo connessione**  
  Digitare un nome univoco per questa connessione all'origine dati. Questo campo è obbligatorio.  
   
  **Nome database**  

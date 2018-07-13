@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà origine dati condivisa, credenziali | Documenti Microsoft
+title: Finestra di dialogo Proprietà origine dati condivisa, credenziali | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.credentials.f1
 ms.assetid: c08d1a5f-206b-4d53-ab1a-368b651ee5bb
 caps.latest.revision: 28
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4956317c08b1f48e6504122e30392426e3dbcfcd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e70c54de0c3d43d68753780b1b4cde5084ad64b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068849"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192591"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>Finestra di dialogo Proprietà origine dati condivisa, Credenziali
   Selezionare **Credenziali** nella finestra di dialogo **Proprietà origine dati condivisa** per visualizzare e modificare le credenziali per la connessione a un'origine dati condivisa nel report. Le credenziali specificate vengono utilizzate per accedere all'origine dati e per memorizzare una copia dei dati nella cache per l'anteprima dei report. Per altre informazioni sulla modalità di memorizzazione nella cache dei dati di anteprima, vedere [Anteprima dei report](reports/previewing-reports.md). Per altre informazioni sulle credenziali, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="options"></a>Opzioni  
- **Utilizzare l'autenticazione di Windows (sicurezza integrata)**  
+ **Usare l'autenticazione di Windows (sicurezza integrata)**  
  Selezionare questa opzione per utilizzare l'autenticazione di Windows.  
   
  **Usare questo nome utente e password**  
@@ -42,7 +42,7 @@ ms.locfileid: "36068849"
  **Richiedi credenziali**  
  Selezionare questa opzione per richiedere le credenziali durante l'esecuzione del report.  
   
- **Immettere stringa di messaggio di richiesta**  
+ **Immettere una stringa di richiesta**  
  Digitare una frase con cui chiedere all'utente di specificare le credenziali di accesso per l'origine dati.  
   
  **Nessuna credenziale**  
@@ -51,6 +51,6 @@ ms.locfileid: "36068849"
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Finestra di dialogo Proprietà origine dati condivisa, generale](../../2014/reporting-services/shared-data-source-properties-dialog-box-general.md)  
+ [Finestra di dialogo Proprietà origine dati condivisa, Generale](../../2014/reporting-services/shared-data-source-properties-dialog-box-general.md)  
   
   

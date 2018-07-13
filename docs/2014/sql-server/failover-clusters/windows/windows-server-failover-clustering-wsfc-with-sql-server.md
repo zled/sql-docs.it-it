@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - Windows Server Failover Clustering (WSFC), with SQL Server
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5489a7997f6b4aab1ef61226b90fe4de7cb28473
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d3fa961c07b1a4fbf9d688d31b2451598e5c8ca2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187738"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>WSFC (Windows Server Failover Clustering) con SQL Server
   Un cluster *Windows Server Failover Clustering (WSFC)* è un gruppo di server indipendenti usati congiuntamente per aumentare la disponibilità di applicazioni e servizi. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] vengono utilizzate le funzionalità e i servizi di WSFC per supportare le istanze del cluster di failover di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -83,8 +82,8 @@ ms.locfileid: "36068417"
   
  Per ulteriori informazioni, vedere la pagina relativa ai [cluster di failover in Windows Server 2008 R2](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx).  
   
-##  <a name="AlwaysOnWsfcTech"></a> Tecnologie SQL Server AlwaysOn e WSFT  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* è una nuova elevata disponibilità e ripristino soluzione che sfrutta i vantaggi di WSFC. AlwaysOn è una soluzione integrata e flessibile che aumenta la disponibilità delle applicazioni, garantisce un migliore utile sugli investimenti in componenti hardware e semplifica la distribuzione e la gestione della disponibilità elevata.  
+##  <a name="AlwaysOnWsfcTech"></a> Cluster WSFC e le tecnologie SQL Server AlwaysOn  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* è una nuova elevata disponibilità e ripristino di emergenza soluzione di ripristino che si avvale del cluster WSFC. AlwaysOn è una soluzione integrata e flessibile che aumenta la disponibilità delle applicazioni, garantisce un migliore utile sugli investimenti in componenti hardware e semplifica la distribuzione e la gestione della disponibilità elevata.  
   
  Per le istanze del cluster di failover [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e AlwaysOn viene utilizzata la tecnologia della piattaforma WSFC che prevede la registrazione dei componenti come risorse cluster WSFC.  Le risorse correlate vengono combinate in un *gruppo di risorse*che può essere reso dipendente dalle altre risorse del cluster WSFC. Il servizio cluster WSFC può quindi rilevare e segnalare la necessità di riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o eseguirne automaticamente il failover a un altro nodo server nel cluster WSFC.  
   
@@ -195,7 +194,7 @@ ms.locfileid: "36068417"
   
 ## <a name="see-also"></a>Vedere anche  
  [Istanze del Cluster di Failover AlwaysOn (SQL Server)](always-on-failover-cluster-instances-sql-server.md)   
- [Panoramica di gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modalità quorum WSFC e configurazione del voto &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Criteri di failover per istanze del cluster di failover](failover-policy-for-failover-cluster-instances.md)   
  [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  

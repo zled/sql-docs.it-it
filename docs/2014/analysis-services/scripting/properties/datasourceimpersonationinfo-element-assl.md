@@ -1,5 +1,5 @@
 ---
-title: Elemento DataSourceImpersonationInfo (ASSL) | Documenti Microsoft
+title: Elemento DataSourceImpersonationInfo (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DataSourceImpersonationInfo element
 ms.assetid: a153044b-2d6c-406b-aeb3-15bf096931f4
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4d99a11e1f0801024544e7a64a4321e8f6e53d6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da8889abe558a33b18e20ca8ee81855656f149f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187078"
 ---
 # <a name="datasourceimpersonationinfo-element-assl"></a>Elemento DataSourceImpersonationInfo (ASSL)
   Contiene le informazioni utilizzate per determinare il comportamento di rappresentazione durante la connessione all'origine dati per un [Database](../objects/database-element-assl.md) elemento.  
@@ -59,7 +59,7 @@ ms.locfileid: "36068782"
 |Elementi padre|[Database](../objects/database-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

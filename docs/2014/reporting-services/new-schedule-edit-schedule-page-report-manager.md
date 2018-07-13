@@ -1,5 +1,5 @@
 ---
-title: 'Nuova pianificazione: Modifica pianificazione pagina (gestione Report) | Documenti Microsoft'
+title: 'Nuova pianificazione: Modifica pianificazione pagina (gestione Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 019cb1a12e25ac3c347d1dbdb72296c2f2a888f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2772db639b664724ee6d594d061f6c9ccdc847cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262007"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Nuova pianificazione: Modifica pianificazione (gestione Report)
   Utilizzare la pagina Nuova pianificazione/Modifica pianificazione per creare una pianificazione per un report. Le pianificazioni vengono utilizzate con le sottoscrizioni, per aggiornare i report memorizzati nella cache e per creare snapshot autonomi o nella cronologia dei report.  
@@ -77,12 +77,12 @@ ms.locfileid: "36066425"
 5.  In **Opzioni di elaborazione sottoscrizione**, fare clic su **Nuova pianificazione**.  
   
 ## <a name="options"></a>Opzioni  
- **Dettagli della pianificazione**  
+ **Dettagli pianificazione**  
  Selezionare le opzioni per stabilire quando eseguire il report e con quale frequenza. Le opzioni relative alla frequenza sono suddivise in due gruppi. Il primo set di opzioni consente di specificare la frequenza (oraria, giornaliera, settimanale e così via). Il secondo set di opzioni varia a seconda dell'opzione selezionata nel primo gruppo.  
   
 -   **Ora** definisce una pianificazione eseguita a intervalli di ore. Utilizzare le opzioni nella sezione **Date di inizio e fine** per specificare il giorno di esecuzione della pianificazione.  
   
--   **Giorno** definisce una pianificazione eseguita nei giorni selezionati a un'ora specifica. È possibile specificare i giorni nei modi seguenti: ogni \< *giorno*>, ogni giorno feriale e ogni \< *numero*> giorno. La selezione di un'opzione determina la disattivazione delle altre anche se può sembrare che siano selezionati altri giorni.  
+-   **Giorno** definisce una pianificazione eseguita nei giorni selezionati a un'ora specifica. È possibile specificare i giorni nei modi seguenti: ogni \< *giorno*>, ogni giorno feriale e ogni \< *numero*> giorni. La selezione di un'opzione determina la disattivazione delle altre anche se può sembrare che siano selezionati altri giorni.  
   
 -   **Settimana** definisce una pianificazione eseguita settimanalmente a un'ora specifica. È possibile impostare un intervallo di una o più settimane intere (ad esempio, ogni due settimane) oppure di alcuni giorni della settimana.  
   
@@ -98,6 +98,6 @@ ms.locfileid: "36066425"
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

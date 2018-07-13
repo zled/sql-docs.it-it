@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione script (pagina input e output) | Documenti Microsoft
+title: Editor trasformazione script (pagina input e output) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.columnproperties.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c3d03826e9259a67ddd113e38ba9b58a9054e067
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52d82b5ca8010e3343d089281f3f66e85f32864b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324631"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>Editor trasformazione Script (pagina Input e output)
   Utilizzare la pagina **Input e output** della finestra di dialogo **Editor trasformazione Script** per aggiungere, rimuovere e configurare input e output per la trasformazione script.  
@@ -54,9 +54,9 @@ ms.locfileid: "36067217"
  Selezionare una colonna e quindi rimuoverla facendo clic su **Rimuovi colonna**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Seleziona tipo componente Script](../../2014/integration-services/select-script-component-type.md)   
- [Editor trasformazione script &#40;pagina colonne di Input&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [Editor trasformazione script &#40;Input (pagina colonne)&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
  [Editor trasformazione script &#40;pagina Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
  [Editor trasformazione script &#40;pagina gestioni connessioni&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [Ulteriori esempi di componente script](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  

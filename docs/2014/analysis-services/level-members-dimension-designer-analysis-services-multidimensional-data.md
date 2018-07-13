@@ -1,5 +1,5 @@
 ---
-title: Livelli e dei membri (scheda esplorazione, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Livello e membri (scheda esplorazione, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb9a6361159c67c24b8254939f3353a2a0063c04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 2e30aae23fda8e929b3348ef09d20265ae1d9784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193971"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Livello e membri (scheda Esplorazione, Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
   Utilizzare questo riquadro per visualizzare i membri della gerarchia e della lingua attualmente selezionate. Per selezionare una gerarchia o una lingua da visualizzare, utilizzare le opzioni **Gerarchia** e **Lingua** nel riquadro **Barra degli strumenti** . Per altre informazioni sul riquadro Barra degli strumenti, vedere [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="writeback-mode"></a>Modalità writeback  
- La funzionalità di questo riquadro cambia se la modalità writeback è abilitata. La dimensione selezionata deve essere abilitata per la scrittura (in altre parole, il `WriteEnabled` proprietà della dimensione deve essere impostata su true) e la dimensione deve essere distribuita a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza per poter abilitare la modalità writeback.  
+ La funzionalità di questo riquadro cambia se la modalità writeback è abilitata. La dimensione selezionata deve essere abilitata per la scrittura (in altre parole, il `WriteEnabled` della dimensione deve essere impostata su true) e la dimensione deve essere distribuita a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza per poter abilitare la modalità writeback.  
   
  Per abilitare la modalità di writeback, puoi selezionare **Writeback** dal riquadro **Toolbar**, oppure fare clic con il pulsante destro del mouse sul riquadro **Level e Members** e selezionare **Writeback** dal menu di scelta rapida.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36068147"
  Selezionare questa opzione per abilitare la modalità writeback.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Barra degli strumenti &#40;scheda esplorazione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Sulla barra degli strumenti &#40;scheda esplorazione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
  [Browser &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

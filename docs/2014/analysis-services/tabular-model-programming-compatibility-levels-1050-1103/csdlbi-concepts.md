@@ -1,5 +1,5 @@
 ---
-title: Concetti di CSDLBI | Documenti Microsoft
+title: Concetti di CSDLBI | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,22 +12,22 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 caps.latest.revision: 28
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 150ebbbf646f8c51a226f25f9b4799463608f823
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cf610ad76b4ccc4e30e5f1e4f55c5dcd293a8bc9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257307"
 ---
 # <a name="csdlbi-concepts"></a>Concetti di CSDLBI
   Il linguaggio CSDL (Conceptual Schema Definition Language) con annotazioni Business Intelligence (CSDLBI) è basato su Entity Data Framework, ovvero un'astrazione per la rappresentazione di dati in modo da rendere possibile l'accesso, l'esecuzione di query o l'esportazione di set di dati diversi a livello di programmazione. CSDLBI viene utilizzato per rappresentare i modelli di dati creati utilizzando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] perché supporta le applicazioni e la creazione di rapporti guidata dai dati e avanzata.  
   
  In questa sezione viene illustrato come la rappresentazione CSDLBI esegue il mapping ai modelli di dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (tabulari e multidimensionali), insieme a esempi per ogni tipo di modello.  
   
- Gli esempi utilizzati per illustrare questi provengono dal database di esempio AdventureWorks, disponibile su Codeplex. Per ulteriori informazioni sugli esempi, vedere [esempi di Adventure Works per SQL Server](http://go.microsoft.com/fwlink/?linkID=220093).  
+ Gli esempi utilizzati per illustrare questi provengono dal database di esempio AdventureWorks, disponibile su Codeplex. Per altre informazioni sugli esempi, vedere [esempi di Adventure Works per SQL Server](http://go.microsoft.com/fwlink/?linkID=220093).  
   
 ## <a name="structure-of-a-tabular-model-in-csdlbi"></a>Struttura di un modello tabulare in CSDLBI  
  Un documento CSDLBI che descrive un modello di report e i relativi dati inizia con l'istruzione xsd, seguito dalla definizione di un modello.  
@@ -90,9 +90,9 @@ ms.locfileid: "36067054"
 ### <a name="relationships"></a>Relazioni  
  In Entity Data Framework, le relazioni sono definite come *associazioni* tra entità.  
   
- Le associazioni dispongono sempre esattamente di due endpoint, ognuno dei quali punta a un campo o una colonna in una tabella. Tra due tabelle sono pertanto possibili più relazioni, se queste ultime dispongono di endpoint diversi. Agli endpoint dell'associazione viene assegnato un nome di ruolo, che indica come viene utilizzata l'associazione nel contesto del modello di dati. Un esempio di un nome di ruolo potrebbe essere **ShipTo**, quando applicato a un ID cliente correlato all'ID cliente in una tabella Orders.  
+ Le associazioni dispongono sempre esattamente di due endpoint, ognuno dei quali punta a un campo o una colonna in una tabella. Tra due tabelle sono pertanto possibili più relazioni, se queste ultime dispongono di endpoint diversi. Agli endpoint dell'associazione viene assegnato un nome di ruolo, che indica come viene utilizzata l'associazione nel contesto del modello di dati. Un esempio di un nome di ruolo potrebbe essere **ShipTo**, quando applicato a un ID cliente correlato all'ID cliente in una tabella degli ordini.  
   
- La rappresentazione CSDLBI del modello contiene inoltre attributi relativi all'associazione che determinano il modo in cui l'entità viene eseguito il mapping tra loro in termini del *molteplicità* dell'associazione. La molteplicità indica se l'attributo o la colonna corrispondente all'endpoint di una relazione tra tabelle si trova sul lato uno o sul lato molti di una relazione. Non sono presenti valori distinti per le relazioni uno-a-uno. Le annotazioni CSDLBI supportano una molteplicità pari a 0 (ovvero l'entità non è associata ad alcun elemento) oppure 0..1, per indicare una relazione uno-a-uno o uno-a-molti.  
+ La rappresentazione CSDLBI del modello contiene inoltre attributi relativi all'associazione che determinano il modo in cui l'entità viene eseguito il mapping tra loro in termini dei *molteplicità* dell'associazione. La molteplicità indica se l'attributo o la colonna corrispondente all'endpoint di una relazione tra tabelle si trova sul lato uno o sul lato molti di una relazione. Non sono presenti valori distinti per le relazioni uno-a-uno. Le annotazioni CSDLBI supportano una molteplicità pari a 0 (ovvero l'entità non è associata ad alcun elemento) oppure 0..1, per indicare una relazione uno-a-uno o uno-a-molti.  
   
  Nell'esempio seguente viene rappresentato l'output di CSDLBI per una relazione tra le tabelle Date e ProductInventory di cui è stato creato un join alla colonna DateAlternateKey. Si noti che, per impostazione predefinita, il nome di `AssociationSet` è il nome completo delle colonne interessate dalla relazione. È tuttavia possibile modificare questo comportamento quando si progetta il modello, in modo da utilizzare un formato di denominazione diverso.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36067054"
 ## <a name="additions-to-support-multidimensional-models"></a>Aggiunte per supportare modelli multidimensionali  
  La versione 1.0 delle annotazioni CSDLBI supporta solo i modelli tabulari. Nella versione 1.1, è stato aggiunto il supporto per i modelli multidimensionali (cubi OLAP) creati utilizzando gli strumenti di sviluppo tradizionali di Business Intelligence. Pertanto, è ora possibile generare una richiesta XML a un modello multidimensionale e ricevere una definizione CSDLBI del modello da utilizzare nella creazione di rapporti.  
   
- **Cubi:** SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database tabulare può contenere solo una modalità. Ciascun database multidimensionale, invece, può contenere più cubi, ogni database associato a un cubo predefinito. Pertanto quando si invia una richiesta XML a un server multidimensionale, è necessario specificare il cubo; in caso contrario, sarà restituito l'XML per il cubo predefinito.  
+ **Cubi:** un Server SQL [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database tabulare può contenere solo un modello. Ciascun database multidimensionale, invece, può contenere più cubi, ogni database associato a un cubo predefinito. Pertanto quando si invia una richiesta XML a un server multidimensionale, è necessario specificare il cubo; in caso contrario, sarà restituito l'XML per il cubo predefinito.  
   
  La rappresentazione di un cubo è molto simile a quella di un database modello tabulare. Il nome del cubo e il cubo corrispondono all'identificatore del database e al nome del database tabulare.  
   
@@ -140,9 +140,9 @@ ms.locfileid: "36067054"
   
  **Membri:** il supporto per il membro predefinito è stato aggiunto e i valori predefiniti vengono aggiunti automaticamente all'output di CSDLBI.  
   
- **I membri calcolati:** i modelli multidimensionali supportano i membri calcolati per l'elemento figlio di **tutti** con un membro reale singolo.  
+ **I membri calcolati:** i modelli multidimensionali supportano i membri calcolati per l'elemento figlio **tutto** con un membro reale singolo.  
   
- **Attributi della dimensione:** nell'output di CSDLBI, gli attributi della dimensione sono supportati e automaticamente contrassegnati come non aggregabile.  
+ **Attributi di dimensione:** nell'output di CSDLBI, gli attributi della dimensione sono supportati e automaticamente contrassegnati come non aggregabile.  
   
  **Gli indicatori KPI:** gli indicatori KPI sono supportati in CSDLBI versione 1.1, ma la rappresentazione è stata modificata. Prima, un indicatore KPI era la proprietà di una misura. Nella versione 1.1, l'elemento KPI può essere aggiunto a una misura  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 702850c72f684c1e9a48871557f89e86da67c2b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6ab017df400de3a9894a64108d97cbd97fd3374c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218981"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operatori nelle espressioni (Generatore report e SSRS)
   Un operatore è un simbolo che rappresenta le azioni applicate a uno o più termini di un'espressione. In un'espressione sono supportate le categorie di operatori seguenti: aritmetico, di confronto, di concatenazione, logico o bit per bit e di scorrimento bit.  
@@ -51,7 +51,7 @@ ms.locfileid: "36068418"
 |>=|Maggiore o uguale a.|  
 |=|Uguale a.|  
 |<>|Diverso da.|  
-|Simile a|Determina se una stringa di caratteri specifica corrisponde a un modello specificato. Il modello può contenere caratteri specifici e caratteri jolly. In una ricerca in base a un modello i normali caratteri devono corrispondere esattamente ai caratteri specificati nella stringa di caratteri del modello. I caratteri jolly tuttavia possono venire abbinati a frammenti arbitrari della stringa. L'utilizzo di caratteri jolly rende l'operatore LIKE più flessibile rispetto all'utilizzo degli operatori di confronto tra stringhe = e !=.<br /><br /> I seguenti elenchi di caratteri che possono essere utilizzati come caratteri jolly:<br /><br /> **%**: Qualsiasi stringa di zero o più caratteri.<br /><br /> **_**: Qualsiasi carattere singolo.<br /><br /> **[]**: Qualsiasi carattere singolo compreso nell'intervallo specificato (ad esempio, [a-f]) o impostare (ad esempio, [aeiou]).<br /><br /> **[^]** : Qualsiasi carattere singolo non compreso nell'intervallo specificato (ad esempio, [^ a-f]) o impostare (ad esempio, [^ aeiou]).|  
+|Simile a|Determina se una stringa di caratteri specifica corrisponde a un modello specificato. Il modello può contenere caratteri specifici e caratteri jolly. In una ricerca in base a un modello i normali caratteri devono corrispondere esattamente ai caratteri specificati nella stringa di caratteri del modello. I caratteri jolly tuttavia possono venire abbinati a frammenti arbitrari della stringa. L'utilizzo di caratteri jolly rende l'operatore LIKE più flessibile rispetto all'utilizzo degli operatori di confronto tra stringhe = e !=.<br /><br /> I seguenti elenchi di caratteri che possono essere utilizzati come carattere jolly:<br /><br /> **%**: Qualsiasi stringa di zero o più caratteri.<br /><br /> **_**: Qualsiasi carattere singolo.<br /><br /> **[]**: Qualsiasi carattere singolo compreso nell'intervallo specificato (ad esempio, [a-f]) o impostare (ad esempio, [aeiou]).<br /><br /> **[^]** : Qualsiasi carattere singolo non compreso nell'intervallo specificato (ad esempio, [^ a-f]) o impostare (ad esempio, [^ aeiou]).|  
 |Is|Confronta due riferimenti a oggetti.|  
   
 ### <a name="string-concatenation"></a>Concatenazione di stringhe  

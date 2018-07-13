@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - queries [Visual Database Tools]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 65172c670d13b1cf38f3017d3477c5a3888014fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 56c05c3d2b67c7e468fbf66930b3321de742c90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249511"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Utilizzo dei dati nel riquadro Risultati (Visual Database Tools)
   Dopo l'esecuzione di una query o di una vista, i risultati ottenuti vengono visualizzati nel riquadro Risultati e su di essi è possibile eseguire numerose operazioni, ad esempio aggiungere ed eliminare righe, immettere o modificare dati e navigare con facilità nell'ambito di set di risultati estesi.  
@@ -119,9 +119,9 @@ ms.locfileid: "36066894"
 ### <a name="what-can-not-be-represented-fully"></a>Elementi che non possono essere rappresentati in modo completo  
  Gli elementi restituiti dal database e visualizzati nel riquadro Risultati sono in gran parte controllati dal provider dell'origine dati in uso. Nel riquadro Risultati non sempre vengono convertiti i dati provenienti da tutti i sistemi di gestione di database. Di seguito vengono descritti alcuni casi in cui si verifica questa situazione.  
   
--   I tipi di dati binari spesso non sono di alcuna utilità per chi lavora nel riquadro Risultati, oltre a richiedere lunghi tempi di download. Vengono pertanto rappresentati da  *\<dati binari >* o *Null*.  
+-   I tipi di dati binari spesso non sono di alcuna utilità per chi lavora nel riquadro Risultati, oltre a richiedere lunghi tempi di download. Vengono pertanto rappresentati da  *\<i dati binari >* oppure *Null*.  
   
--   Non è sempre possibile mantenere il livello di precisione e il fattore di scala. Il riquadro Risultati supporta ad esempio un livello di precisione pari a 27. Se i dati di un tipo di dati con una precisione maggiore, i dati potrebbero essere troncati o può essere rappresentati da  *\<Impossibile leggere i dati >*.  
+-   Non è sempre possibile mantenere il livello di precisione e il fattore di scala. Il riquadro Risultati supporta ad esempio un livello di precisione pari a 27. Se i dati sono di un tipo di dati con una precisione maggiore, i dati potrebbero essere troncati o può essere rappresentati da  *\<non è possibile leggere i dati >*.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

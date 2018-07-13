@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
 caps.latest.revision: 65
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 77b0bb18dde4c6f6bc8a1ff22bf3fda11b6f414f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6427878b5c032e0560859ab7ba68af8d06fb40e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276547"
 ---
 # <a name="memory-optimized-tables"></a>Tabelle con ottimizzazione per la memoria
   Con la funzionalità OLTP in memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile migliorare le prestazioni delle applicazioni OLTP tramite l'accesso ai dati efficiente e ottimizzato per la memoria, la compilazione nativa della logica di business e gli algoritmi senza blocchi e latch. La funzionalità include tabelle ottimizzate per la memoria e tipi di tabella, nonché la compilazione nativa delle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] per l'accesso efficiente a queste tabelle.  
@@ -38,7 +38,7 @@ ms.locfileid: "36066733"
   
      Linee guida per l'aggiornamento delle tabelle ottimizzate per la memoria, compresa la modifica di colonne di tabella, indici e bucket_count.  
   
--   [Informazioni sulle transazioni nelle tabelle con ottimizzazione per la memoria](../../database-engine/understanding-transactions-on-memory-optimized-tables.md)  
+-   [Informazioni sulle transazioni in tabelle con ottimizzazione per la memoria](../../database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
      Questa sezione fornisce diversi argomenti relativi all'esecuzione di transazioni in tabelle ottimizzate per la memoria compresi i livelli di isolamento delle transazioni e le transazioni tra contenitori.  
   

@@ -1,5 +1,5 @@
 ---
-title: Opzioni query-esecuzione (pagina generale) | Documenti Microsoft
+title: Opzioni di query esecuzione (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.general.f1
 ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
 caps.latest.revision: 29
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 63ce901d2b1e0bd91cdfedd54880c386abcfbe68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6e8e45ea1ba74aeef1f063ad03154a9574bc9e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269807"
 ---
 # <a name="query-options-execution-general-page"></a>Opzioni query - Esecuzione (pagina Generale)
   Utilizzare questa pagina per specificare le opzioni per l'esecuzione di query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per accedere a questa finestra di dialogo, fare clic con il pulsante destro del mouse su una finestra dell'editor di query e quindi scegliere **Opzioni query**.  
@@ -36,7 +36,7 @@ ms.locfileid: "36066144"
  **Timeout esecuzione**  
  Consente di indicare il numero di secondi di attesa prima dell'annullamento della query. Il valore 0 indica un'attesa infinita, ovvero nessun timeout.  
   
- **Separatore batch**  
+ **Separatore di batch**  
  Consente di digitare una parola che verrà utilizzata per separare le istruzioni Transact-SQL in batch. Il valore predefinito è GO.  
   
  **Per impostazione predefinita, Apri le nuove query in modalità SQLCMD**  

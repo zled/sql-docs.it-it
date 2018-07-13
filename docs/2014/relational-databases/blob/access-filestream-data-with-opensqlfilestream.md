@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - OpenSqlFilestream
 api_location:
@@ -17,20 +16,20 @@ helpviewer_keywords:
 - OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 81dab09c293fff8ad4d47df63a7069e48f63d638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ee7c3745466565a5baf8262fe6cc20dc80c0a3d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250341"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Accesso ai dati FILESTREAM con OpenSqlFilestream
-  L'API OpenSqlFilestream Ottiene un handle di file compatibile con Win32 per un FILESTREAM BLOB binary large object () che viene archiviato nel file system. L'handle può essere passato a una qualsiasi delle API Win32 seguenti: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Se si passa questo handle a qualsiasi altra API Win32, viene restituito l'errore ERROR_ACCESS_DENIED. L'handle deve essere chiuso passandolo all'API [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) Win32 prima che venga eseguito il commit o il rollback della transazione. La mancata chiusura dell'handle provoca perdite di risorse sul lato server.  
+  L'API OpenSqlFilestream Ottiene un handle di file compatibile con Win32 per un oggetto binario FILESTREAM grandi dimensioni (BLOB) che viene archiviato nel file system. L'handle può essere passato a una qualsiasi delle API Win32 seguenti: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Se si passa questo handle a qualsiasi altra API Win32, viene restituito l'errore ERROR_ACCESS_DENIED. L'handle deve essere chiuso passandolo all'API [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) Win32 prima che venga eseguito il commit o il rollback della transazione. La mancata chiusura dell'handle provoca perdite di risorse sul lato server.  
   
- Accesso al contenitore di dati FILESTREAM tutti deve essere eseguita un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delle transazioni. [!INCLUDE[tsql](../../includes/tsql-md.md)] Anche le istruzioni possono essere eseguite nella stessa transazione. In questo modo viene mantenuta la coerenza tra i dati SQL e dati BLOB FILESTREAM.  
+ Tutti gli accessi di contenitore di dati FILESTREAM devono essere eseguito un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delle transazioni. [!INCLUDE[tsql](../../includes/tsql-md.md)] Anche le istruzioni possono essere eseguite nella stessa transazione. In questo modo viene mantenuta la coerenza tra i dati SQL e dati BLOB FILESTREAM.  
   
  Per accedere al BLOB FILESTREAM usando Win32, è necessario abilitare l' [autorizzazione Windows](../security/choose-an-authentication-mode.md) .  
   
@@ -82,7 +81,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  [in] Valore restituito dalla funzione [GET_FILESTREAM_TRANSACTION_CONTEXT](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) .  
   
  *FilestreamTransactionContextLength*  
- [in] Numero di byte nei `varbinary(max)` i dati restituiti dalla funzione GET_FILESTREAM_TRANSACTION_CONTEXT. La funzione restituisce una matrice di N byte. Il valore N è determinato dalla funzione e costituisce una proprietà della matrice di byte restituita.  
+ [in] Numero di byte nei `varbinary(max)` dati restituiti dalla funzione GET_FILESTREAM_TRANSACTION_CONTEXT. La funzione restituisce una matrice di N byte. Il valore N è determinato dalla funzione e costituisce una proprietà della matrice di byte restituita.  
   
  *AllocationSize*  
  [in] Specifica le dimensioni dell'allocazione iniziale del file di dati in byte. In modalità di lettura viene ignorato. Questo parametro può essere Null nel caso in cui venga utilizzato il comportamento del file system predefinito.  
@@ -99,7 +98,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cpp/filestream.cpp#fs_cpp_writeblob)]  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per utilizzare questa API, è necessario che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sia installato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client viene installato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o con gli strumenti client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Installazione di SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="see-also"></a>Vedere anche  

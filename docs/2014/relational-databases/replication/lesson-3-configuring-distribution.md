@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ab6c3ab7b14b8e7443b9ac6b39225aa02671fa88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 633e71fd1755746a37c258500d4f98c93db28b4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322221"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lezione 3: Configurazione della distribuzione
   In questa lezione verrà configurata la distribuzione nel server di pubblicazione e verranno impostate le autorizzazioni necessarie per i database di pubblicazione e di distribuzione. Se il server di distribuzione è già stato configurato, è necessario disabilitare la pubblicazione e la distribuzione prima di iniziare questa lezione. Non eseguire questa operazione se è necessario mantenere la topologia di replica esistente.  
@@ -39,7 +39,7 @@ ms.locfileid: "36066725"
   
      Verrà avviata la Configurazione guidata distribuzione.  
   
-3.  Nel **server di distribuzione** pagina, selezionare **'***\<nomeserver >***' fungerà da database di distribuzione; SQL Server verrà creato un database di distribuzione e di log**, quindi fare clic su **successivo**.  
+3.  Nel **distributore** pagina, selezionare **'***\<nomeserver >***' fungerà da database di distribuzione; SQL Server verrà creato un database di distribuzione e di log**, quindi fare clic su **successivo**.  
   
 4.  Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in esecuzione, nella pagina [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agent** selezionare **Sì**e configurare l'avvio automatico del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Scegliere **Avanti**.  
   
@@ -57,11 +57,11 @@ ms.locfileid: "36066725"
   
 3.  Nell'elenco **Utenti con mapping all'account di accesso seguente** nella pagina **Mapping utenti** selezionare il database **e il database di** distribuzione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-     Nel **l'appartenenza al ruolo del Database** elenco selezionare il `db_owner` ruolo per l'account di accesso per entrambi i database.  
+     Nel **appartenenza al ruolo del Database** elenco selezionare la `db_owner` ruolo per l'account di accesso per entrambi i database.  
   
 4.  Fare clic su **OK** per creare l'account di accesso.  
   
-5.  Ripetere i passaggi da 1 a 4 per creare un account di accesso per l'account locale repl_logreader. Questo account di accesso deve inoltre eseguire il mapping agli utenti che sono membri del `db_owner` ruolo predefinito del database nel **distribuzione** e **AdventureWorks** database.  
+5.  Ripetere i passaggi da 1 a 4 per creare un account di accesso per l'account locale repl_logreader. Questo account di accesso deve essere mappato anche gli utenti che sono membri del `db_owner` ruolo predefinito del database nel **distribuzione** e **AdventureWorks** i database.  
   
 6.  Ripetere i passaggi da 1 a 4 per creare un account di accesso per l'account locale repl_distribution. Questo account di accesso deve essere mappato a un utente che è un membro del `db_owner` ruolo predefinito del database nel **distribuzione** database.  
   

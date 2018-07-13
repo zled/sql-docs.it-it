@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 28c5f5063aa7e1c6e6fabe68405eb08a31feaad4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9bf84f3d8cd8e0c1b00c4a2e891d6a727b9b91a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220794"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Pubblicare e ripubblicare parti del report (Generatore report e SSRS)
   È possibile pubblicare una parte del report con le impostazioni predefinite in un percorso predefinito o modificare i metadati della parte del report, ad esempio il nome e la descrizione, e salvarla altrove in un server di report. Il salvataggio può avvenire anche in un sito di SharePoint integrato con un server di report, se si dispone delle opportune autorizzazioni.  
@@ -61,10 +61,10 @@ ms.locfileid: "36068406"
 >  Se pubblicata come nuova parte di report, presenterà un nuovo ID univoco. Non riceverà più gli aggiornamenti quando la parte di report originale viene modificata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Parti di report &#40;SSRS e Generatore Report&#41;](../report-parts-report-builder-and-ssrs.md)   
- [Le parti del report e set di dati in Generatore Report](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [Risoluzione dei problemi relativi a parti del Report &#40;SSRS e Generatore Report&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [Cercare gli aggiornamenti o Turn Off &#40;SSRS e Generatore Report&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [Ricerca di parti del Report e impostare una cartella predefinita &#40;SSRS e Generatore Report&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [Parti di report &#40;Report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Parti del report e set di dati in Generatore Report](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Risolvere i problemi di parti del Report &#40;Report e SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Verificare o gli aggiornamenti Turn Off &#40;Report e SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [Ricerca di parti del Report e impostazione di una cartella predefinita &#40;Report e SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

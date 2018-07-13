@@ -1,5 +1,5 @@
 ---
-title: Elemento HideMemberIf (ASSL) | Documenti Microsoft
+title: Elemento HideMemberIf (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - HideMemberIf element
 ms.assetid: ff0e6b19-6216-43ac-ba76-1628da8c333b
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b1540a3b7f5d1e1a93ea3b4628bfbde186e5bb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0829804ae0225c848da3583c429e39d9bc176821
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187028"
 ---
 # <a name="hidememberif-element-assl"></a>Elemento HideMemberIf (ASSL)
   Indica se e quando un membro di un livello deve essere nascosto per le applicazioni client.  
@@ -61,7 +61,7 @@ ms.locfileid: "36068328"
 |Elemento padre|[Level](../objects/level-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
 |valore|Description|  
@@ -72,7 +72,7 @@ ms.locfileid: "36068328"
 |*NoName*|Un membro viene nascosto quando il suo nome è vuoto.|  
 |*ParentName*|Un membro viene nascosto quando il suo nome è identico a quello del padre.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'enumerazione che corrisponde ai valori consentiti di `HideMemberIf` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.HideIfValue>.  
   
 ## <a name="see-also"></a>Vedere anche  

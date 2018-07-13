@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - GUID regenerating [Integration Services]
 - reusing packages
@@ -19,13 +19,13 @@ ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fe70bf7dd471d11f023adab63f6581bcbb2feb9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2be515df284d420790350c6be6fcc609666bcd56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206081"
 ---
 # <a name="reuse-of-package-objects"></a>Riutilizzo di oggetti di pacchetto
   Viene compressa frequentemente la funzionalità che si desidera riutilizzare. Se, ad esempio, è stato creato un set di attività, potrebbe essere necessario riutilizzare questi elementi insieme, come gruppo, oppure riutilizzare singoli elementi quali una gestione connessione creata in un altro progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -45,7 +45,7 @@ ms.locfileid: "36068281"
   
 -   [Copiare gli oggetti di un pacchetto](../../2014/integration-services/copy-package-objects.md)  
   
--   [Copiare gli elementi di progetto](../../2014/integration-services/copy-project-items.md)  
+-   [Copia di elementi di progetto](../../2014/integration-services/copy-project-items.md)  
   
 -   [Salvare un pacchetto come modello di pacchetto](../../2014/integration-services/save-a-package-as-a-package-template.md)  
   

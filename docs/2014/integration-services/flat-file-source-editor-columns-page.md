@@ -1,5 +1,5 @@
 ---
-title: File di origine Editor flat (pagina colonne) | Documenti Microsoft
+title: Flat File Source Editor (pagina colonne) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.columns.f1
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3be667dc6fe7dcaefdc183a831f762a566a56c99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d0007a98a02da095887aa0faedb12ba629f5e01
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171022"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>Editor origine file flat (pagina Colonne)
   Usare il nodo **Colonne** della finestra di dialogo **Editor origine file flat** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  
   
 > [!NOTE]  
->  Il `FileNameColumnName` proprietà dell'origine File Flat e il `FastParse` proprietà delle colonne di output non sono disponibili nel **Editor origine File Flat**, ma può essere impostata tramite il **Editor avanzato** . Per ulteriori informazioni su queste proprietà, vedere la sezione relativa all'origine file flat in [Flat File Custom Properties](data-flow/flat-file-custom-properties.md).  
+>  Il `FileNameColumnName` proprietà dell'origine File Flat e il `FastParse` proprietà delle colonne di output non sono disponibili nel **Editor origine File Flat**, ma può essere impostata utilizzando il **Editor avanzato** . Per ulteriori informazioni su queste proprietà, vedere la sezione relativa all'origine file flat in [Flat File Custom Properties](data-flow/flat-file-custom-properties.md).  
   
  Per ulteriori informazioni sull'origine file flat, vedere [Flat File Source](data-flow/flat-file-source.md).  
   
@@ -44,9 +44,9 @@ ms.locfileid: "36067841"
  Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine File flat &#40;pagina Gestione connessione&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
- [Editor origine File flat &#40;pagina di Output di errore&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [Editor origine File flat &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Gestione connessione file flat](connection-manager/file-connection-manager.md)  
   
   

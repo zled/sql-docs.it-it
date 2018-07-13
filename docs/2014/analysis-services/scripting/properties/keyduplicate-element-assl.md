@@ -1,5 +1,5 @@
 ---
-title: Elemento KeyDuplicate (ASSL) | Documenti Microsoft
+title: Elemento KeyDuplicate (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyDuplicate element
 ms.assetid: d7000b8b-e81f-4401-8738-00c2e0f73a59
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 353c8d1eac5803db6f76014519d1c812813f535d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bbd445a1b362e7ae5bc7c12df3404efe1a781ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192443"
 ---
 # <a name="keyduplicate-element-assl"></a>Elemento KeyDuplicate (ASSL)
   Determina la modalità [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] gestisce un errore di chiave duplicata che si verifica durante l'elaborazione.  
@@ -61,7 +61,7 @@ ms.locfileid: "36068577"
 |Elemento padre|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Gli errori di chiave duplicata vengono generati solo durante l'elaborazione della dimensione, quando una chiave dell'attributo si ripete più di una volta. Poiché le chiavi dell'attributo devono essere univoche, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] elimina i record duplicati. In genere gli errori di chiave duplicata indicano un difetto nella progettazione della dimensione, specificamente nelle relazioni tra attributi.  
   
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  

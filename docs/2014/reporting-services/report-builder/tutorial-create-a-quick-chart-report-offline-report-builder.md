@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports, creating
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03ec9b9f8f953f0c4947e3f39cd125e54d6d7272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a5298705230f13aca363cd266a274c807e4e09a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216811"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Esercitazione: Creare un report grafico rapido offline (Generatore report)
   In questa esercitazione verrà creato un grafico a torta utilizzando una procedura guidata e verranno quindi apportate alcune modifiche allo scopo di illustrare le potenzialità offerte all'utente. È possibile eseguire questa esercitazione in due modi diversi. Con entrambi i metodi si otterrà lo stesso risultato, ovvero un grafico a torta simile a quello riportato nell'illustrazione seguente:  
@@ -56,7 +56,7 @@ ms.locfileid: "36069144"
 ## <a name="also-in-this-article"></a>Ulteriore contenuto dell'articolo  
  [Dopo aver eseguito la procedura guidata](#AfterWizard)  
   
- [Che cos'è Avanti](#WhatsNext)  
+ [Quali sono le novità](#WhatsNext)  
   
 ##  <a name="CreatePieChartXML"></a> Creazione del grafico a torta con dati XML  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36069144"
      Verrà visualizzata la finestra di dialogo **Riquadro attività iniziale** .  
   
     > [!NOTE]  
-    >  Se il **Getting Started** finestra di dialogo non viene visualizzata, dal **Generatore Report** pulsante, fare clic su **nuovo**.  
+    >  Se il **Guida introduttiva** non viene visualizzato nella finestra di dialogo, dalle **Generatore Report** pulsante, fare clic su **New**.  
   
 2.  Nel riquadro sinistro, verificare che **Report** sia selezionata.  
   
@@ -83,11 +83,11 @@ ms.locfileid: "36069144"
   
 7.  Nel **Seleziona tipo di connessione** fare clic su **XML.**  
   
-8.  Fare clic sulla scheda **Credenziali**, selezionare **Use current Windows user (Usa utente di Windows corrente). Potrebbe essere richiesta la delega Kerberos**, quindi fare clic su **OK**.  
+8.  Fare clic sulla scheda **Credenziali**, selezionare **Use current Windows user (Usa utente di Windows corrente). Potrebbe essere necessaria la delega Kerberos**, quindi fare clic su **OK**.  
   
 9. Nella pagina **Scegliere una connessione a un'origine dei dati** fare clic su **Grafico a torta**, quindi su **Avanti**.  
   
-10. Copiare il testo seguente e incollarlo nella casella grande al centro della **progettare una query** pagina.  
+10. Copiare il testo seguente e incollarlo nella casella grande al centro della **Progettazione query** pagina.  
   
     ```  
     <Query>  
@@ -128,7 +128,7 @@ ms.locfileid: "36069144"
   
 16. Nel **scegliere uno stile** pagina **Oceano** è selezionata per impostazione predefinita. Fare clic sugli altri stili per visualizzarne l'aspetto.  
   
-17. Fare clic su **Fine**.  
+17. Scegliere **Fine**.  
   
      Osservare ora il nuovo report grafico a torta nell'area di progettazione. Gli elementi visualizzati sono esemplificativi. Nella legenda sono riportate le diciture Full Name 1, Full Name 2 e così via, anziché i nomi dei venditori, e le dimensioni delle sezioni della torta non sono precise. L'esempio serve solo per dare un'idea generale dell'aspetto del report.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36069144"
   
 1.  Fare clic sul menu **Start**, scegliere **Programmi**, **Generatore report per Microsoft SQL Server 2012**e quindi fare clic su **Generatore report**.  
   
-2.  Nel **nuovo report o set di dati** finestra di dialogo, verificare che **Report** selezionato nel riquadro sinistro.  
+2.  Nel **nuovo report o set di dati** finestra di dialogo, verificare che **Report** sia selezionata nel riquadro sinistro.  
   
 3.  Nel riquadro destro fare clic su **Creazione guidata grafico**, quindi scegliere **Crea**.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "36069144"
   
 13. Per impostazione predefinita, nella pagina **Scegliere uno stile** è selezionato lo stile Oceano. Fare clic sugli altri stili per visualizzarne l'aspetto.  
   
-14. Fare clic su **Fine**.  
+14. Scegliere **Fine**.  
   
      Osservare ora il nuovo report grafico a torta nell'area di progettazione. Gli elementi visualizzati sono esemplificativi. Nella legenda sono riportate le diciture Full Name 1, Full Name 2 e così via, anziché i nomi dei venditori, e le dimensioni delle sezioni della torta non sono precise. L'esempio serve solo per dare un'idea generale dell'aspetto del report.  
   
@@ -204,9 +204,9 @@ ms.locfileid: "36069144"
   
 2.  Fare clic su etichette e scegliere **proprietà etichetta serie**. Verrà visualizzata la finestra di dialogo **Proprietà etichetta serie** .  
   
-3.  Tipo di `#PERCENT{P0}` per il **etichettatura dei dati** opzione.  
+3.  Tipo di `#PERCENT{P0}` per il **dati etichetta** opzione.  
   
-     Il `{P0}` specifica la percentuale senza cifre decimali. Se si digita solo `#PERCENT`, i numeri avranno due cifre decimali. `#PERCENT` è una parola chiave che esegue un calcolo o una funzione. Esistono molti altri.  
+     Il `{P0}` specifica la percentuale senza cifre decimali. Se si digita solo `#PERCENT`, i numeri avranno due cifre decimali. `#PERCENT` è una parola chiave che esegue un calcolo o una funzione per l'utente; Esistono molti altri.  
   
  Per altre informazioni sulla personalizzazione di etichette e legende dei grafici, vedere [Visualizzare i valori in percentuale in un grafico a torta &#40;Generatore report e SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) e [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md).  
   
@@ -219,7 +219,7 @@ ms.locfileid: "36069144"
   
  Per salvare infine i report in un server di report o in un sito di SharePoint integrato con un server di report, è necessario disporre dell'URL e delle autorizzazioni appropriate. Tutti i report creati possono essere eseguiti direttamente dal computer, tuttavia quando vengono eseguiti dal server di report o dal sito di SharePoint i report offrono maggiori funzionalità. Per eseguire i propri report o quelli presenti sul server di report o nel sito di SharePoint in cui vengono pubblicati è necessario disporre delle autorizzazioni appropriate. Per ottenere l'accesso è necessario rivolgersi all'amministratore di sistema.  
   
- Prima di iniziare può essere utile leggere le informazioni su alcuni concetti e termini. Per altre informazioni, vedere [concetti relativi ai Report di creazione &#40;Generatore Report e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). È inoltre consigliabile dedicarsi alla pianificazione prima di creare il primo report. Questa fase preliminare risulterà infatti molto utile. Per altre informazioni, vedere [pianificazione di un Report &#40;Generatore Report&#41;](../report-design/planning-a-report-report-builder.md).  
+ Prima di iniziare può essere utile leggere le informazioni su alcuni concetti e termini. Per altre informazioni, vedere [concetti di creazione di Report &#40;Generatore Report e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). È inoltre consigliabile dedicarsi alla pianificazione prima di creare il primo report. Questa fase preliminare risulterà infatti molto utile. Per altre informazioni, vedere [pianificazione di un Report &#40;Generatore Report&#41;](../report-design/planning-a-report-report-builder.md).  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#TwoWays)  
   

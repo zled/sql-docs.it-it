@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0792825135920bff993088c00bf5eec1694a342d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3d682f7018261e967729a26db201bef5a3b6e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220721"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Ancorare il riquadro dei dati del report in Progettazione report (SSRS)
-  In Progettazione Report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], il riquadro dati Report consente di visualizzare una visualizzazione gerarchica degli oggetti dati che è possibile utilizzare un report, comprese origini dati, set di dati, campi, parametri e immagini. Le origini dati presenti in questa vista possono essere incorporate o fare riferimento a origini dati condivise visualizzate in Esplora soluzioni.  
+  In Progettazione Report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], nel riquadro dei dati del Report vengono visualizzati una visualizzazione gerarchica di oggetti dati che è possibile usare in un report, tra cui origini dati, set di dati, campi, parametri e immagini. Le origini dati presenti in questa vista possono essere incorporate o fare riferimento a origini dati condivise visualizzate in Esplora soluzioni.  
   
 ### <a name="to-display-the-report-data-pane"></a>Per visualizzare il riquadro Dati report  
   
--   Nella visualizzazione della struttura nel **vista** dal menu **i dati del Report**.  
+-   Nella visualizzazione della struttura nel **View** dal menu **i dati del Report**.  
   
 ### <a name="to-dock-the-report-data-pane"></a>Per ancorare il riquadro Dati report  
   
@@ -38,11 +38,11 @@ ms.locfileid: "36068185"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>Per modificare il riquadro Dati report da una finestra ancorata in una finestra a schede  
   
--   Fare clic sulla barra del titolo del riquadro dati Report e quindi fare clic su **documento a schede**.  
+-   Fare doppio clic la barra del titolo del riquadro dati Report e quindi fare clic su **documento a schede**.  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>Per modificare il riquadro Dati report da una finestra a schede in una finestra ancorata  
   
--   Fare doppio clic su scheda dati Report e quindi fare clic su **finestra ancorata**.  
+-   Fare clic sulla scheda dati Report e quindi fare clic su **finestra ancorata**.  
   
      Per passare tra gli ultimi due stati visualizzati, fare doppio clic sulla barra del titolo del riquadro Dati report.  
   

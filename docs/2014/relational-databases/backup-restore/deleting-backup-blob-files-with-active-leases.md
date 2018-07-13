@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f3c46becd5ae766627e96ad935900f063c4389bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 491cde35ec200cdacc9c12794d5692d657ad22f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256687"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Eliminazione dei file BLOB di backup con lease attivi
   Quando si esegue il backup nell'archiviazione di Windows Azure o il ripristino dallo stesso, tramite SQL Server viene acquisito un lease infinito per bloccare l'accesso esclusivo al BLOB. Quando il processo di backup o ripristino viene completato correttamente, il lease viene rilasciato. Se il backup o il ripristino non viene completato, il processo di backup tenta di eliminare i BLOB non validi. Tuttavia, se il backup non viene completato a causa di un problema di connettività di rete che persiste nel tempo, è possibile che il processo di backup non sia in grado di accedere al BLOB e che quindi quest'ultimo rimanga orfano. Di conseguenza, il BLOB non può essere scritto o eliminato finché il lease non viene rilasciato. In questo argomento viene descritto come rilasciare il lease ed eliminare il BLOB.  
@@ -43,7 +42,7 @@ ms.locfileid: "36067400"
 3.  **Eliminazione del BLOB:** per eliminare un BLOB con un lease attivo è innanzitutto necessario interrompere il lease.  
   
 ###  <a name="Code_Example"></a> Esempio di script di PowerShell  
- **\*\* Importante \* \***  se si esegue PowerShell 2.0, è possibile problemi durante il caricamento dell'assembly WindowsAzure.Storage.dll Microsoft. È consigliabile effettuare l'aggiornamento a Powershell 3.0 per risolvere il problema. È inoltre possibile utilizzare la soluzione alternativa per PowerShell 2.0:  
+ **\*\* Importanti \* \***  se si esegue PowerShell 2.0, è possibile caricare l'assembly Microsoft WindowsAzure.Storage.dll problemi. È consigliabile effettuare l'aggiornamento a Powershell 3.0 per risolvere il problema. È inoltre possibile utilizzare la soluzione alternativa per PowerShell 2.0:  
   
 -   Creare o modificare il file powershell.exe.config per caricare gli assembly .NET 2.0 e .NET 4.0 in fase di esecuzione con quanto riportato di seguito:  
   

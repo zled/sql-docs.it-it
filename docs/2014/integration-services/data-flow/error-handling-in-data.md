@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
 - data conversion errors [Integration Services]
@@ -23,13 +23,13 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 125bcb31a9edb23e4ffe3ba05cdc46227da33cac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ecae86e05bc67275d21d0811d3b1abd642a7e62c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201621"
 ---
 # <a name="error-handling-in-data"></a>Gestione degli errori nei dati
   Quando tramite un componente flusso di dati viene applicata una trasformazione ai dati delle colonne, vengono estratti dati dalle origini o vengono caricati dati nelle destinazioni, possono verificarsi errori. Gli errori sono spesso dovuti alla presenza di valori non previsti. Una conversione di dati può ad esempio avere esito negativo perché una colonna contiene una stringa anziché un numero, un inserimento in una colonna di database può avere esito negativo perché i dati rappresentano una data mentre la colonna ha un tipo di dati numeric oppure la valutazione di un'espressione può avere esito negativo perché il valore di una colonna è zero e dà luogo a un'operazione matematica non valida.  
@@ -72,11 +72,11 @@ ms.locfileid: "36067425"
 ## <a name="adding-the-error-description"></a>Aggiunta della descrizione dell'errore  
  Per impostazione predefinita l'output egli errori include il codice numerico dell'errore e contiene in genere l'identificatore della colonna in cui si è verificato l'errore. È possibile utilizzare il componente script per includere la descrizione dell'errore in una colonna aggiuntiva, utilizzando una singola riga di script per chiamare il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> dell'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
- Il componente script può essere aggiunto al segmento del flusso di dati relativo agli errori, in qualsiasi punto a valle dei componenti del flusso di dati di cui si desidera acquisire gli errori, ma viene in genere collocato immediatamente prima della scrittura delle righe di errore in una destinazione. In questo modo, lo script cerca solo le descrizioni relative alle righe di errore da scrivere. Se ad esempio il segmento del flusso di dati relativo agli errori corregge alcuni errori, le relative righe di errore non verranno scritte in una destinazione degli errori. Per altre informazioni, vedere [miglioramento un Output degli errori con il componente Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+ Il componente script può essere aggiunto al segmento del flusso di dati relativo agli errori, in qualsiasi punto a valle dei componenti del flusso di dati di cui si desidera acquisire gli errori, ma viene in genere collocato immediatamente prima della scrittura delle righe di errore in una destinazione. In questo modo, lo script cerca solo le descrizioni relative alle righe di errore da scrivere. Se ad esempio il segmento del flusso di dati relativo agli errori corregge alcuni errori, le relative righe di errore non verranno scritte in una destinazione degli errori. Per altre informazioni, vedere [ottimizzazione un Output degli errori con il componente Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
 ### <a name="to-configure-an-error-output"></a>Per configurare un output degli errori  
   
--   [Configurare un Output degli errori in un componente del flusso di dati](../configure-an-error-output-in-a-data-flow-component.md)  
+-   [Configurazione di un output degli errori in un componente del flusso di dati](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](data-flow.md)   

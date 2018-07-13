@@ -1,5 +1,5 @@
 ---
-title: Aprire una tabella di traccia (SQL Server Profiler) | Documenti Microsoft
+title: Aprire una tabella di traccia (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening trace tables
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b6c677835dbddf650516100da0fd4df97159942a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f3f83c194bbf52b824c8ce447f061c0230047fe5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226491"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>Aprire una tabella di traccia (SQL Server Profiler)
   In questo argomento viene descritto come aprire una tabella di traccia esistente utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "36067699"
 4.  Nell'elenco **Tabella** selezionare il nome della tabella. Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare e analizzare tracce con SQL Server Profiler](view-and-analyze-traces-with-sql-server-profiler.md)   
+ [Visualizzare e analizzare le tracce con SQL Server Profiler](view-and-analyze-traces-with-sql-server-profiler.md)   
  [Salvare tracce e modelli di traccia](save-traces-and-trace-templates.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

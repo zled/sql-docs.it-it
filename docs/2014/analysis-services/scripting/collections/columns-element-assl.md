@@ -1,5 +1,5 @@
 ---
-title: Elemento Columns (ASSL) | Documenti Microsoft
+title: Elemento Columns (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Columns element
 ms.assetid: 14011eed-6f10-4120-b256-d599d59bde80
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e635738dddc7eabda62f0c35df860db3d9a10b60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad5104e3b0fc0b6b34c7b0a4aa3eed9b18336aab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231911"
 ---
 # <a name="columns-element-assl"></a>Elemento Columns (ASSL)
   Contiene la raccolta di colonne associate all'elemento padre.  
@@ -70,19 +70,19 @@ ms.locfileid: "36067895"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[Azione](../objects/action-element-assl.md) di tipo [DrillThroughAction](../data-type/action-data-type-assl.md), [evento](../objects/event-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [ MiningStructure](../objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
+|Elementi padre|[Azione](../objects/action-element-assl.md) typu [DrillThroughAction](../data-type/action-data-type-assl.md), [evento](../objects/event-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [ Elemento MiningStructure](../objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
   
 |Predecessore o padre|Elementi figlio|  
 |------------------------|--------------------|  
 |[DrillThroughAction](../data-type/binding-data-type-assl.md) o [MeasureBinding](../data-type/measurebinding-data-type-assl.md)|  
 |[Evento](../data-type/eventcolumn-data-type-assl.md)|  
-|[MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|[MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|  
-|[MiningStructure](../objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|[MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
+|[Elemento MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|[MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|  
+|[Elemento MiningStructure](../objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|[MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
- Per `DrillThroughAction` elementi, il `Columns` raccolta identifica le colonne che contengono dati da restituire quando viene eseguita l'azione.  
+## <a name="remarks"></a>Note  
+ Per la `DrillThroughAction` elementi, il `Columns` raccolta identifica le colonne che contengono dati da restituire quando viene eseguita l'azione.  
   
- Per `TableMiningStructureColumn` elementi, il `Columns` raccolta consente solo uno livello di ricorsione. In altri termini, qualsiasi `TableMiningStructureColumn` non può contenere qualsiasi elemento incluso nella raccolta `TableMiningStructureColumn` elementi nel relativo `Columns` insieme.  
+ Per la `TableMiningStructureColumn` elementi, il `Columns` raccolta consente solo uno livello di ricorsione. In altri termini, qualsiasi `TableMiningStructureColumn` incluso in questa raccolta l'elemento non può contenere `TableMiningStructureColumn` gli elementi nel relativo `Columns` raccolta.  
   
  Alcuni degli elementi corrispondenti nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.TraceColumnCollection>, <xref:Microsoft.AnalysisServices.MiningModelColumnCollection> e <xref:Microsoft.AnalysisServices.MiningStructureColumnCollection>.  
   

@@ -1,5 +1,5 @@
 ---
-title: Dati di SQL Server, componenti aggiuntivi Data Mining per Office | Documenti Microsoft
+title: Dati di SQL Server, componenti aggiuntivi Data Mining per Office | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 66865664b7713f869ef1f007ba5b35f04218e8f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d8897cdb41d1d72806bf93335b13bf8c683cc31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273897"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Componenti aggiuntivi Data mining di SQL Server per Office 2007
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Componenti aggiuntivi Data mining di SQL Server per Office è un semplice set di strumenti per l'analisi predittiva che consente l'utilizzo dei dati in Excel al fine di compilare modelli analitici per stima, indicazioni o esplorazione.  
@@ -63,9 +63,9 @@ ms.locfileid: "36067092"
   
 -   [Strumenti di analisi tabelle per Excel](../table-analysis-tools-for-excel.md)  
   
--   [Forme di Data Mining per Visio](../data-mining-shapes-for-visio.md)  
+-   [Forme di data mining per Visio](../data-mining-shapes-for-visio.md)  
   
--   [Connettersi a un Server di Data Mining](../connect-to-a-data-mining-server.md)  
+-   [Connessione al server di data mining](../connect-to-a-data-mining-server.md)  
   
 ## <a name="support-and-requirements"></a>Supporto e requisiti  
  I componenti aggiuntivi Data mining di SQL Server per Office sono disponibili per il download gratuito. Per utilizzare questi strumenti, è necessario che sia già installata una delle seguenti versioni di Office:  
@@ -87,6 +87,6 @@ ms.locfileid: "36067092"
   
  A seconda dell'edizione di SQL Server Analysis Services a cui ci si connette, alcuni algoritmi avanzati potrebbero non essere disponibili. Per informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2014](https://msdn.microsoft.com/en-us/library/cc645993.aspx).  
   
- Per ulteriori informazioni sull'installazione, vedere la pagina nell'area Download Microsoft: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ Per altre informazioni sull'installazione, vedere la pagina nell'area download: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   

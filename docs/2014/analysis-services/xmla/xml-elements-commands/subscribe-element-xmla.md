@@ -1,5 +1,5 @@
 ---
-title: Elemento Subscribe (XMLA) | Documenti Microsoft
+title: Elemento Subscribe (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Subscribe command
 ms.assetid: aad50dd7-44d4-4d83-a973-187f9aed35ec
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 94caa1327febf0c7fd5a489c7558ea793977d027
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 97b473820ee809f5a606e8bb9f30be6e315a2801
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247261"
 ---
 # <a name="subscribe-element-xmla"></a>Elemento Subscribe (XMLA)
   Sottoscrive una traccia e restituisce un set di righe che contiene gli eventi di traccia da un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza.  
@@ -63,12 +63,12 @@ ms.locfileid: "36067460"
 |Elementi padre|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |Elementi figlio|[Oggetto](../xml-elements-properties/object-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il `Subscribe` comando sottoscrive e trasmette di nuovo un set di righe da una traccia specificata su un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza. Se un oggetto diverso da una traccia viene specificato nella `Object` si verifica un errore di elemento.  
   
  Se l'elemento `Object` non viene specificato, una traccia della sessione viene definita e sottoscritta sull'istanza [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. La traccia della sessione restituisce un set fisso di eventi traccia dalla sessione corrente.  
   
- Se l'applicazione client chiude la connessione viene terminato nel flusso di set di righe restituito da questo comando il [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza, oppure se la sessione in cui il `Subscribe` comando viene eseguito viene terminata.  
+ Il flusso di set di righe restituito da questo comando viene concluso se l'applicazione client chiude la connessione di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza, o se la sessione sulla quale il `Subscribe` comando viene eseguito viene terminata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [I comandi &#40;XMLA&#41;](xml-elements-commands.md)  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_rpcname
 ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab357fd57d16f822d9490f52d2e57852bf7f8bb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4415c7cd4ed79426403d73650d4502edace44fd8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324271"
 ---
 # <a name="srvrpcname-extended-stored-procedure-api"></a>srv_rpcname (API Stored procedure estesa)
     
@@ -63,7 +63,7 @@ len
 ## <a name="returns"></a>Valori di codice restituiti  
  Puntatore DBCHAR alla stringa con terminazione Null per il componente del nome della stored procedure remota della stored procedure remota corrente. Se non è presente alcuna stored procedure remota corrente, viene restituito NULL e *len* viene impostato su -1.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Questa funzione restituisce solo il nome della stored procedure remota. Non include gli identificatori facoltativi per il proprietario, il nome del database e il numero della stored procedure remota.  
   
  Poiché è possibile chiamare **srv_rpcname** in assenza di stored procedure remote (non viene visualizzato alcun errore informativo), questa funzione offre un metodo per la verifica dell'eventuale presenza di una stored procedure remota.  

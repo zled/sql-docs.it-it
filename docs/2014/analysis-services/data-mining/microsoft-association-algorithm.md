@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Association Rules | Documenti Microsoft
+title: Algoritmo Microsoft Association Rules | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
 - itemsets [Analysis Services]
@@ -31,18 +31,18 @@ helpviewer_keywords:
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 caps.latest.revision: 53
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4dfed3abb4cff8826c42770996a2ea78ab4b324a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fffd2e560cc8b9aaace349fefbcc4da1fe3fb0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165672"
 ---
 # <a name="microsoft-association-algorithm"></a>Algoritmo Microsoft Association Rules
-  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è un algoritmo di associazione incluso in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], utile per i motori dei suggerimenti. Un motore dei suggerimenti consiglia prodotti ai clienti in base agli articoli che hanno già acquistato o a cui sono interessati. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è utile anche per analisi di mercato sugli acquisti. Per un esempio di un'analisi di mercato sugli acquisti, vedere [lezione 3: compilazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining Data&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) nell'esercitazione di Data Mining.  
+  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è un algoritmo di associazione incluso in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], utile per i motori dei suggerimenti. Un motore dei suggerimenti consiglia prodotti ai clienti in base agli articoli che hanno già acquistato o a cui sono interessati. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è utile anche per analisi di mercato sugli acquisti. Per un esempio di market basket analysis, vedere [lezione 3: compilazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining dei dati&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) nell'esercitazione di Data Mining.  
   
  I modelli di associazione vengono compilati in base a set di dati che includono sia gli indicatori dei singoli case che gli indicatori degli elementi contenuti nei case. Un gruppo di elementi in un case viene chiamato *set di elementi*. Un modello di associazione è costituito da una serie di set di elementi e di regole che descrivono la modalità di raggruppamento di tali elementi all'interno dei case. È possibile utilizzare le regole identificate dall'algoritmo per stimare i probabili acquisti futuri di un cliente, in base agli elementi già esistenti nel relativo carrello acquisti. Nel diagramma seguente viene illustrata una serie di regole all'interno di un set di elementi.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36067924"
  Per informazioni generali sulla creazione di query su un modello di data mining, vedere [Query di data mining](data-mining-queries.md).  
   
 ## <a name="performance"></a>restazioni  
- Il processo di creazione di set di elementi e di conteggio delle correlazioni può richiedere tempi lunghi. Sebbene il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Microsoft Association Rules utilizza tecniche di ottimizzazione per risparmiare spazio e velocizzare l'elaborazione, tenere presente che potrebbero verificarsi dei problemi di prestazioni in condizioni come illustrato di seguito:  
+ Il processo di creazione di set di elementi e di conteggio delle correlazioni può richiedere tempi lunghi. Sebbene il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Microsoft Association Rules Usa tecniche di ottimizzazione per risparmiare spazio e velocizzare l'elaborazione, tenere presente che potrebbero verificarsi problemi di prestazioni in condizioni come la seguente:  
   
 -   Il set di dati è di grandi dimensioni con molti singoli elementi.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36067924"
   
  Per ridurre i tempi di elaborazione e la complessità dei set di elementi, provare a raggruppare gli elementi correlati per categorie prima di analizzare i dati.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 -   Non supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   
@@ -102,8 +102,8 @@ ms.locfileid: "36067924"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzare un modello utilizzando il visualizzatore Microsoft Association Rules](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Contenuto del modello per i modelli di associazione di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [Visualizzare un modello usando il visualizzatore Microsoft Association Rules](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Contenuto dei modelli di associazione modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Association Rules](microsoft-association-algorithm-technical-reference.md)   
  [Esempi di query sul modello di associazione](association-model-query-examples.md)  
   

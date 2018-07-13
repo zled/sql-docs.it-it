@@ -1,5 +1,5 @@
 ---
-title: Pagina Scegli percorso elemento (gestione Report) | Documenti Microsoft
+title: Pagina Scegli percorso elemento (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bf08188225c10d72230eea781ac9ebbff3d7c5f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3e0f94a0785aa13fc4c83c304e207b8775e58b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260517"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Pagina Scegli percorso elemento (Gestione report)
   La pagina Scegli percorso elemento consente di selezionare una cartella per un nuovo report collegato o per un nuovo modello. Se si crea un modello o un report collegato per un gruppo di utenti specifico, potrebbe essere utile inserire l'elemento in una cartella contenente altri report e modelli utilizzati dallo stesso gruppo. È necessario selezionare una cartella esistente e per la quale si dispone delle autorizzazioni per l'aggiunta di contenuto.  
@@ -62,11 +62,11 @@ ms.locfileid: "36066431"
  **Visualizzazione struttura ad albero**  
  Mostra la struttura di cartelle dello spazio dei nomi del server di report. Fare clic sul nome di una cartella per aggiungere il percorso completo nel campo **Percorso** .  
   
- Fare clic su di espansione (+) e comprimere le icone (-) nella visualizzazione albero per aprire e chiudere le cartelle senza aggiungere i nomi delle cartelle per il **posizione** campo. Per aggiungere un nome di cartella al campo **Percorso** fare clic sul nome della cartella.  
+ Fare clic su di espansione (+) e comprimere le icone (-) nella visualizzazione albero per aprire e chiudere le cartelle senza aggiungere i nomi delle cartelle per i **posizione** campo. Per aggiungere un nome di cartella al campo **Percorso** fare clic sul nome della cartella.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagina Nuovo report collegato &#40;Gestione report&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [Pagina nuovo modello &#40;gestione Report&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

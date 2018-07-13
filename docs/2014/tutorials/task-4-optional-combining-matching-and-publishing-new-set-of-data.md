@@ -1,5 +1,5 @@
 ---
-title: 'Attività 4 (facoltativo): combinazione, corrispondenza e pubblicazione di un nuovo Set di dati | Documenti Microsoft'
+title: 'Attività 4 (facoltativo): la combinazione, corrispondenza e pubblicazione di un nuovo Set di dati | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,65 +10,65 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4ab096c1f43fbeab2165e1e32a83f2ba854b3b13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 207f6141338c4d9e44c4fc7763177276ea623686
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167768"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Attività 4 (facoltativa): Combinazione, corrispondenza e pubblicazione di un nuovo set di dati
-  Con il tempo, sarà necessario aggiungere ulteriori dati al repository MDS. Prima di aggiungere i dati, può essere utile confrontare i nuovi dati con quelli già gestiti in MDS, per verificare che non si stiano aggiungendo dati duplicati o non accurati. Nel componente aggiuntivo Master Data Services per Excel è possibile combinare i dati di due fogli di lavoro e confrontarli per identificare e rimuovere i duplicati prima di pubblicare i dati in MDS. Per identificare le corrispondenze nei dati viene utilizzata la funzionalità di corrispondenza di DQS dalla relativa caratteristica del componente aggiuntivo MDS per Excel. In questa attività verranno combinati i dati di due fogli di lavoro in uno e, successivamente, verrà eseguita l'attività di individuazione delle corrispondenze per identificare e rimuovere i duplicati prima della pubblicazione in MDS. Vedere [corrispondenza Data Quality nel componente aggiuntivo MDS per Excel](http://msdn.microsoft.com/library/hh548681.aspx) e [combina dati](http://msdn.microsoft.com/library/hh548680.aspx) argomenti per ulteriori dettagli.  
+  Con il tempo, sarà necessario aggiungere ulteriori dati al repository MDS. Prima di aggiungere i dati, può essere utile confrontare i nuovi dati con quelli già gestiti in MDS, per verificare che non si stiano aggiungendo dati duplicati o non accurati. Nel componente aggiuntivo Master Data Services per Excel è possibile combinare i dati di due fogli di lavoro e confrontarli per identificare e rimuovere i duplicati prima di pubblicare i dati in MDS. Per identificare le corrispondenze nei dati viene utilizzata la funzionalità di corrispondenza di DQS dalla relativa caratteristica del componente aggiuntivo MDS per Excel. In questa attività verranno combinati i dati di due fogli di lavoro in uno e, successivamente, verrà eseguita l'attività di individuazione delle corrispondenze per identificare e rimuovere i duplicati prima della pubblicazione in MDS. Visualizzare [corrispondenza Data Quality nel componente aggiuntivo MDS per Excel](http://msdn.microsoft.com/library/hh548681.aspx) e [combina dati](http://msdn.microsoft.com/library/hh548680.aspx) argomenti per altri dettagli.  
   
-1.  Avviare la nuova istanza di **Excel**. Fare clic su **avviare**, scegliere **eseguire**, tipo **Excel**, fare clic su **OK**.  
+1.  Avvia nuova istanza della **Excel**. Fare clic su **avviare**, scegliere **eseguire**, digitare **Excel**, fare clic su **OK**.  
   
-2.  Passare il **dati Master** scheda, fare clic su **dati Master** nella barra dei menu.  
+2.  Passare al **dati Master** scheda, fare clic su **Master Data** nella barra dei menu.  
   
-3.  Fare clic su **Connect** sulla barra multifunzione nel **Connetti e carica** gruppo a cui connettersi il **server MDS**. Questa connessione è stata configurata in precedenza nel corso della lezione.  
+3.  Fare clic su **Connect** sulla barra multifunzione nel **Connetti e carica** gruppo a cui connettersi per il **server MDS**. Questa connessione è stata configurata in precedenza nel corso della lezione.  
   
-     ![Excel - pulsante Esplora Mostra nella scheda dati master Master](../../2014/tutorials/media/et-combinematchandpublishnewsod-01.jpg "Excel - pulsante Esplora Mostra nella scheda dati master schema")  
+     ![Excel - pulsante Esplora Mostra nella scheda dati master Master](../../2014/tutorials/media/et-combinematchandpublishnewsod-01.jpg "Excel - pulsante Esplora Mostra nella scheda dati master Master")  
   
-4.  Dovrebbe vedere il **Esplora dati Master** riquadro a destra. Se non viene visualizzato Esplora dati Master, fare clic su **Mostra Esplora** pulsante della barra multifunzione.  
+4.  Dovrebbero vedere le **Esplora dati Master** riquadro a destra. Se non viene visualizzato Esplora dati Master, fare clic su **Mostra Esplora** pulsante della barra multifunzione.  
   
-5.  Nel **Esplora dati Master** finestra, selezionare **Suppliers** nell'elenco a discesa per il **modello**. Verificare che il modello disponga di un'entità: **fornitore**.  
+5.  Nel **Esplora dati Master** finestra, selezionare **Suppliers** nell'elenco a discesa per il **modello**. Verificare che il modello disponga di un'entità: **Supplier**.  
   
-     ![Excel - finestra Esplora dati Master](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel - finestra Esplora dati Master")  
+     ![Excel - finestra di Esplora dati Master](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel - finestra di Esplora dati Master")  
   
-6.  Fare doppio clic su **fornitore** nell'elenco delle entità per caricare i membri dell'entità nel foglio di lavoro di Excel.  
+6.  Fare doppio clic su **Supplier** nell'elenco delle entità per caricare i membri dell'entità del foglio di lavoro di Excel.  
   
-7.  Fare clic su **Foglio2** nella parte inferiore per passare al **Foglio2** scheda. Se non viene visualizzato **Foglio2**, aggiungere un nuovo foglio di lavoro.  
+7.  Fare clic su **Foglio2** nella parte inferiore per passare alle **Foglio2** scheda. Se non viene visualizzata **Foglio2**, aggiungere un nuovo foglio di lavoro.  
   
-8.  Aprire **Suppliers. xls** file (file di input originale incluso nei file dell'esercitazione) e copiare tutte le righe (tre) il **CombineAndCleanse** foglio di lavoro **Foglio2**.  
+8.  Aprire **Suppliers. xls** file (originale file di input che è incluso nei file dell'esercitazione) e copiare tutte le righe (tre) delle **CombineAndCleanse** foglio di lavoro **Foglio2**.  
   
-9. Torna al **fornitore** foglio nel **cartella 1 – Microsoft Excel** (non il **Cleansed and Matched Supplier List** Excel) connesso a **MDS**.  
+9. Tornare alla **Supplier** foglio nel **cartella 1 – Microsoft Excel** (non il **Cleansed and Matched Supplier List** Excel) che è connesso a **MDS**.  
   
 10. Fare clic su **dati Master** nella barra dei menu.  
   
-11. Fare clic su **combinare i dati** sulla barra multifunzione. Verrà visualizzato il **combinare i dati** finestra di dialogo.  
+11. Fare clic su **combinare i dati** sulla barra multifunzione. Verrà visualizzato il **combinare i dati** nella finestra di dialogo.  
   
-12. Nel **combinare i dati** finestra di dialogo fare clic sul pulsante accanto a **intervallo da combinare con dati MDS** casella di testo come illustrato nella figura seguente.  
+12. Nel **combinare i dati** finestra di dialogo fare clic sul pulsante accanto a **intervallo da combinare con dati MDS** casella di testo, come illustrato nell'immagine seguente.  
   
      ![Excel - finestra di dialogo dati di combinare](../../2014/tutorials/media/et-combinematchandpublishnewsod-03.jpg "Excel - finestra di dialogo dati di combinare")  
   
-13. A questo punto viene visualizzata la finestra di dialogo ridotta. A questo punto, fare clic su **Foglio2** per attivare il **Foglio2** scheda con i nuovi dati fornitore con 4 righe (incluso uno intestazione).  
+13. A questo punto viene visualizzata la finestra di dialogo ridotta. A questo punto, fare clic su **Foglio2** per passare alle **Foglio2** scheda con i nuovi dati fornitore con 4 righe (tra cui riga di uno intestazione).  
   
-14. Nel **Foglio2**, selezionare **tutte le righe incluse la riga di intestazione** (anche se sembrano essere già selezionata). Dovrebbe vedere il **intervallo da combinare con dati MDS** viene aggiornato automaticamente.  
+14. Nel **Foglio2**, selezionare **tutte le righe tra cui la riga di intestazione** (anche se sembrano essere già selezionate). Dovrebbero vedere le **intervallo da combinare con dati MDS** viene aggiornato automaticamente.  
   
-     ![Excel - finestra di dialogo dati - ridotta a icona di combinare](../../2014/tutorials/media/et-combinematchandpublishnewsod-04.jpg "Excel - finestra di dialogo dati - ridotta a icona di combinare")  
+     ![Excel - combinare finestra di dialogo dati - ridotta a icona](../../2014/tutorials/media/et-combinematchandpublishnewsod-04.jpg "Excel - combinare finestra di dialogo dati - ridotta a icona")  
   
-15. Torna al **Suppliers** scheda senza chiudere la **combina dati** finestra di dialogo.  
+15. Tornare al **Suppliers** scheda senza chiudere il **combina dati** nella finestra di dialogo.  
   
-16. Fare clic sui **pulsante** accanto al **casella di testo**. A questo punto viene visualizzata la finestra di dialogo espansa. Si dovrebbero vedere tutti i mapping tra le colonne del **fornitore** MDS **entità** al **Excel** le colonne vengono popolate automaticamente.  
+16. Fare clic sui **sul pulsante** accanto al **casella di testo**. A questo punto viene visualizzata la finestra di dialogo espansa. Si dovrebbero vedere tutti i mapping tra colonne del **Supplier** MDS **entity** al **Excel** colonne popolate automaticamente.  
   
-     ![Excel - combinare nella finestra di dialogo contenente dati](../../2014/tutorials/media/et-combinematchandpublishnewsod-05.jpg "Excel - combinare nella finestra di dialogo contenente dati")  
+     ![Excel - finestra di dialogo di dati è occupata dai dati di combinare](../../2014/tutorials/media/et-combinematchandpublishnewsod-05.jpg "Excel - finestra di dialogo di dati è occupata dai dati di combinare")  
   
-17. Assicurarsi che **codice** viene eseguito il mapping di entità che la colonna per il **SupplierID** colonna nel foglio di lavoro e **CAP** viene eseguito il mapping di entità che la colonna per il **CAP** colonna nel foglio di lavoro.  
+17. Assicurarsi che **codice** colonna di entità è mappata al **SupplierID** colonna nel foglio di lavoro e **CAP** colonna di entità è mappata al **CAP** colonne nel foglio di lavoro.  
   
 18. Nel **combinare i dati** finestra di dialogo, fare clic su **combinare**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36067297"
   
 21. Nel **abbina dati** finestra di dialogo **Suppliers** per **Knowledge Base DQS**.  
   
-     ![Excel - finestra di dialogo dati di corrispondenza](../../2014/tutorials/media/et-combinematchandpublishnewsod-07.jpg "Excel - finestra di dialogo dati di corrispondenza")  
+     ![Excel - finestra di dialogo dati di corrispondenza](../../2014/tutorials/media/et-combinematchandpublishnewsod-07.jpg "Excel - finestra di dialogo di corrispondenza dei dati")  
   
 22. Eseguire il mapping delle colonne del foglio di lavoro ai domini come illustrato nella tabella riportata di seguito.  
   
@@ -90,13 +90,13 @@ ms.locfileid: "36067297"
     |Name (è stato caricato Supplier Name come Name dell'entità Supplier in MDS)|Supplier Name|  
     |ContactEmailAddress|ContactEmail|  
   
-23. Selezionare **prerequisito** per il **codice** mapping della colonna.  
+23. Selezionare **prerequisito** per il **codice** mapping delle colonne.  
   
-24. Immettere **70%** come il **peso** per **Supplier Name** e **30%** come il **peso** per **Contact Email** come illustrato nell'immagine.  
+24. Immettere **70%** come la **peso** per **Supplier Name** e **30%** come il **peso** per **Contact Email** come illustrato nell'immagine.  
   
 25. Fare clic su **OK**.  
   
-26. Il processo di corrispondenza deve essere identificato un duplicato per il fornitore con **codice: S1**.  
+26. Il processo di corrispondenza deve essere identificato un duplicato per il fornitore con **Code: S1**.  
   
      ![Excel - risultati corrispondenza](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel - risultati corrispondenza")  
   
@@ -104,19 +104,19 @@ ms.locfileid: "36067297"
   
 28. Eliminare il **CLUSTER_ID** colonna perché non più necessaria.  
   
-29. Fare clic su **pubblica** per pubblicare le altre due nuovi record con **codici S66** e **S57** a MDS.  
+29. Fare clic su **Publish** per la pubblicazione di altri due nuovi record con **codici S66** e **S57** a MDS.  
   
-30. Nel **pubblicazione e annotazione** finestra di dialogo, aggiungere un **annotazione**, fare clic su **pubblica**.  
+30. Nel **pubblicazione e annotazione** finestra di dialogo, aggiungere un' **annotazione**, fare clic su **Publish**.  
   
-31. Passare il **applicazione Web gestione dati Master**.  
+31. Passare al **applicazione Web gestione dati Master**.  
   
 32. Nella home page, assicurarsi che **Suppliers** sia selezionata per il **modello**, fare clic su **Esplora**. Se si dispone già di **Explorer** aprire, aggiornare il browser internet.  
   
-33. **Ordinamento** l'elenco in base **codice** e cercare i record con **S57** e **S66** come codici. È anche possibile usare il **filtro** pulsante sulla barra degli strumenti per cercare un record specifico nell'elenco.  
+33. **Ordinamento** l'elenco in base **codice** e cercare i record con **S57** e **S66** come codici. È anche possibile usare la **filtro** pulsante sulla barra degli strumenti per cercare un record specifico nell'elenco.  
   
 34. A questo punto, chiudere **Cartella1 – Microsoft Excel** finestra senza salvare il file.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 5: Creazione di un attributo basato su dominio da Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [Attività 5: Creazione di un attributo basato su dominio di Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

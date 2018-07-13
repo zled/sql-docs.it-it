@@ -1,5 +1,5 @@
 ---
-title: Strumenti e approcci per l'elaborazione (Analysis Services) | Documenti Microsoft
+title: Strumenti e approcci per l'elaborazione (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - process [Analysis Services]
 - processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8c191732dd66214c19c949d28e3dcd0efe01f7fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: f00c1a31869bdfb9375d1e97822c98a0e4f9f914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261405"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Strumenti e approcci per l'elaborazione (Analysis Services)
   L'elaborazione è un'operazione durante la quale tramite Analysis Services viene effettuata una query su un'origine dati relazionale e gli oggetti di Analysis Services vengono popolati utilizzando i dati ottenuti.  
@@ -50,7 +50,7 @@ ms.locfileid: "36067287"
  L'elaborazione è un'operazione estremamente configurabile, controllata da un set di opzioni che determinano se si verifica un'elaborazione completa o incrementale a livello di oggetto. Per altre informazioni sulle opzioni di elaborazione e gli oggetti, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) ed [Elaborazione di oggetti di Analysis Services](processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  In questo argomento vengono descritti gli strumenti e gli approcci per l'elaborazione di modelli multidimensionali. Per ulteriori informazioni sull'elaborazione di modelli tabulari, vedere [elaborare Database, tabella o partizione](../tabular-models/process-database-table-or-partition-analysis-services.md) e [elaborare i dati &#40;modello tabulare di SSAS&#41;](../process-data-ssas-tabular.md).  
+>  In questo argomento vengono descritti gli strumenti e gli approcci per l'elaborazione di modelli multidimensionali. Per altre informazioni sull'elaborazione dei modelli tabulari, vedere [elaborare Database, tabella o partizione](../tabular-models/process-database-table-or-partition-analysis-services.md) e [elaborare i dati &#40;modello tabulare di SSAS&#41;](../process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Gestione di oggetti in SQL Server Management Studio  
   

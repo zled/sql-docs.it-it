@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
 - null columns
 - sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5f89bf86f17cf274d579ed22d3439f8ec0d7a662
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 37706a23164e3948eb139deff9fd1eb14c654e22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204971"
 ---
 # <a name="use-sparse-columns"></a>Utilizzo di colonne di tipo sparse
   Le colonne di tipo sparse sono colonne comuni che dispongono di archiviazione ottimizzata per i valori Null. Tali colonne consentono di ridurre i requisiti di spazio per i valori Null aumentando tuttavia l'overhead per il recupero dei valori non Null. È consigliabile utilizzare colonne di tipo sparse quando la quantità di spazio risparmiata è compresa almeno tra il 20% e il 40%. Le colonne di tipo sparse e i set di colonne vengono definiti utilizzando l'istruzione [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) o [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) .  
@@ -124,7 +124,7 @@ ms.locfileid: "36067564"
 ## <a name="restrictions-for-using-sparse-columns"></a>Restrizioni relative all'utilizzo di colonne di tipo sparse  
  Le colonne di tipo sparse possono essere di qualsiasi tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e presentano un comportamento analogo a qualsiasi altra colonna, ma con le restrizioni seguenti:  
   
--   Una colonna di tipo sparse deve ammettere i valori Null e non può includere proprietà ROWGUIDCOL o IDENTITY. Una colonna di tipo sparse non può essere di tipi di dati seguenti: `text`, `ntext`, `image`, `timestamp`, tipo di dati definito dall'utente `geometry`, o `geography`; o dispone dell'attributo FILESTREAM.  
+-   Una colonna di tipo sparse deve ammettere i valori Null e non può includere proprietà ROWGUIDCOL o IDENTITY. Una colonna di tipo sparse non può essere di tipi di dati seguenti: `text`, `ntext`, `image`, `timestamp`, tipo di dati definito dall'utente `geometry`, o `geography`; o con l'attributo FILESTREAM.  
   
 -   Una colonna di tipo sparse non può avere un valore predefinito.  
   

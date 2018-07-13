@@ -1,5 +1,5 @@
 ---
-title: Utilizza un Updategram in un'applicazione ASP di esempio (SQLXML 4.0) | Documenti Microsoft
+title: Utilizza un Updategram in un'applicazione ASP di esempio (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - updategrams [SQLXML], ASP applications
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 851d82413ec1959487132ec277d50e3f0a771b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 037b7fc64a53bdba26154933a19b3f147b8c1b3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260417"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Utilizzo di un updategram in un'applicazione ASP di esempio (SQLXML 4.0)
   Questa applicazione ASP (Active Server Pages) consente di aggiornare le informazioni sul cliente nella tabella Person.Contact nel database di esempio AdventureWorks in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'applicazione effettua quanto segue:  
@@ -81,7 +81,7 @@ ms.locfileid: "36067139"
 </ROOT>  
 ```  
   
- Il codice seguente è l'applicazione ASP (SampleASP.asp). Salvarlo nella directory associata a una radice virtuale che è possibile creare mediante l'utilità Gestione Internet Services. (Questa radice virtuale non viene creata tramite la gestione di Directory virtuale IIS per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilità perché Gestione Directory virtuale IIS per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non può accedere alle applicazioni ASP o identificarle.).  
+ Il codice seguente è l'applicazione ASP (SampleASP.asp). Salvarlo nella directory associata a una radice virtuale che è possibile creare mediante l'utilità Gestione Internet Services. (Questa radice virtuale non viene creata tramite la gestione di Directory virtuale IIS per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilità perché Gestione Directory virtuale IIS per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non è possibile accedere alle applicazioni ASP o identificarle.).  
   
 > [!NOTE]  
 >  Nel codice è necessario sostituire "ServerName" con il nome del server che esegue Microsoft Internet Information Services (IIS).  
@@ -164,6 +164,6 @@ You may update customer information below.<br><br>
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza di updategram &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

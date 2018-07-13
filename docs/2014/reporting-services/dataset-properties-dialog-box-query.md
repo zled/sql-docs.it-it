@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà set di dati, Query | Documenti Microsoft
+title: Finestra di dialogo Proprietà set di dati, Query | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10160"
 - sql12.rtp.rptdesigner.datasetproperties.query.f1
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
 caps.latest.revision: 37
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 56030cb08b8197958436e46438e1561165776101
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db00bf6e36f20da59e548acef394c786a70d40fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208561"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>Finestra di dialogo Proprietà set di dati, Query
-  Selezionare **Query** sul **proprietà set di dati** finestra di dialogo per scegliere un'origine dati e creare una query.  
+  Selezionare **Query** nel **proprietà set di dati** finestra di dialogo per scegliere un'origine dati e creare una query.  
   
  Nella finestra di dialogo **Proprietà set di dati** sono presenti le seguenti opzioni:  
   
 -   [Finestra di dialogo Proprietà set di dati, Parametri](report-data/dataset-properties-dialog-box-parameters.md)  
   
--   [Finestra di dialogo Proprietà set di dati, campi](../../2014/reporting-services/dataset-properties-dialog-box-fields.md)  
+-   [Finestra di dialogo Proprietà set di dati, Campi](../../2014/reporting-services/dataset-properties-dialog-box-fields.md)  
   
 -   [Finestra di dialogo Proprietà set di dati, Opzioni](../../2014/reporting-services/dataset-properties-dialog-box-options.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36067544"
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-data/report-datasets-ssrs.md)   
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Finestre di progettazione query &#40;Generatore report&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
  [Strumenti di progettazione query in Reporting Services](../../2014/reporting-services/reporting-services-query-designers.md)  
   

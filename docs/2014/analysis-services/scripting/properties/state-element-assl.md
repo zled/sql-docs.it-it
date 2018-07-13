@@ -1,5 +1,5 @@
 ---
-title: Stato elemento (ASSL) | Documenti Microsoft
+title: Stato elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - State element
 ms.assetid: b6ee1144-89f7-4ced-bc87-c2e33ca25f73
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 391babe6cba3330c0a072739c01748d618aec3e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 507dab440db095f844b4fad9dcdd96e29d18d487
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206031"
 ---
 # <a name="state-element-assl"></a>Elemento State (ASSL)
   Contiene un valore di sola lettura che descrive lo stato dell'elaborazione corrente dell'elemento padre.  
@@ -61,14 +61,14 @@ ms.locfileid: "36067468"
 |Elementi padre|[Cubo](../objects/cube-element-assl.md), [dimensione](../objects/dimension-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [partizione](../objects/partition-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
 |-----------|-----------------|  
 |*Elaborati*|L'elemento è stato elaborato interamente.|  
 |*PartiallyProcessed*|L'elemento è stato elaborato parzialmente. ([Cubo](../objects/cube-element-assl.md) e [MeasureGroup](../objects/group-element-assl.md) solo.)|  
-|*Non elaborato*|L'elemento non è stato elaborato.|  
+|*Non elaborati*|L'elemento non è stato elaborato.|  
   
  L'enumerazione che corrisponde ai valori consentiti di `State` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.AnalysisState>.  
   

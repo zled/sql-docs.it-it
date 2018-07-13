@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DTAXML element
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c521ec45d5b9227d53fcc9f39b59301ba18b7e69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d460721fd138c0629322687b1160b8c75cdd0cfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177138"
 ---
 # <a name="dtaxml-element-dta"></a>Elemento DTAXML (DTA)
   L'elemento radice di un file di input o di output XML di Ottimizzazione guidata motore di database, **DTAXML** , contiene tutti gli elementi che descrivono l'input e l'output di ottimizzazione generati da Ottimizzazione guidata motore di database.  
@@ -59,9 +59,9 @@ ms.locfileid: "36067946"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|None|  
-|**Elementi figlio**|[Elemento DTAInput &#40;DTA&#41;](dtainput-element-dta.md)<br /><br /> `DTAOutput` Elemento (vedere [Engine Tuning Advisor XML schema di Database](http://schemas.microsoft.com/sqlserver/) informazioni)|  
+|**Elementi figlio**|[Elemento DTAInput &#40;DTA&#41;](dtainput-element-dta.md)<br /><br /> `DTAOutput` Elemento (vedere [Engine Tuning Advisor XML schema di Database](http://schemas.microsoft.com/sqlserver/) per informazioni)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per ulteriori informazioni sugli spazi dei nomi XML, vedere [Spazi dei nomi in un documento XML](http://go.microsoft.com/fwlink/?LinkId=7341) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN Library.  
   
 ## <a name="example"></a>Esempio  

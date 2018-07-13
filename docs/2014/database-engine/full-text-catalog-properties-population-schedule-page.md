@@ -1,27 +1,26 @@
 ---
-title: Proprietà catalogo full-Text (pagina pianificazione popolamento) | Documenti Microsoft
+title: Proprietà catalogo full-Text (pagina pianificazione popolamento) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.schedule.f1
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 04d4cc9c596fa642e895d8d895c1fc1e0a16848c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 55ec07c88ab453b0757206d05d4219fad2290ef8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213741"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Proprietà catalogo full-text (pagina Pianificazione popolamento)
   Utilizzare questa finestra di dialogo per aggiungere o modificare pianificazioni che determinano il momento in cui il catalogo full-text verrà popolato o ripopolato.  
@@ -42,7 +41,7 @@ ms.locfileid: "36069226"
  Descrizione dell'operazione pianificata.  
   
  **Nuova**  
- Fare clic su questo pulsante per creare una nuova pianificazione di indicizzazione. Verrà visualizzata la **nuova pianificazione catalogo Full-Text indicizzazione** finestra di dialogo.  
+ Fare clic su questo pulsante per creare una nuova pianificazione di indicizzazione. Verrà visualizzata la **nuova pianificazione catalogo Full-Text indicizzazione** nella finestra di dialogo.  
   
  **Modifica**  
  Fare clic su questo pulsante per modificare la pianificazione di popolamento selezionata.  

@@ -1,5 +1,5 @@
 ---
-title: Eseguire il mapping di finestra di dialogo proprietà Viewport, Centra e Zoom | Documenti Microsoft
+title: Eseguire il mapping di finestra di dialogo proprietà Viewport, al centro e Zoom | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c3c75a22ee1a367f752cd310a19aebdb241c90eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33fb01fb1383edd45200f6d803960ff72c981a1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255783"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>Finestra di dialogo Proprietà viewport mappa, Allineamento al centro e zoom
   Selezionare **Centra e zoom** affinché tramite la finestra di dialogo **Proprietà viewport mappa** venga impostata la vista con allineamento al centro e il fattore di zoom per una mappa. Dopo aver specificato un'origine dati della mappa e i limiti della mappa che si desidera includere nel report, è possibile specificare l'allineamento al centro della vista e il fattore di zoom per controllare ulteriormente la visualizzazione della mappa. Le opzioni variano a seconda del metodo utilizzato per specificare i valori di allineamento al centro e zoom. Fare clic sul pulsante **Espressione** (*fx*) per modificare un'espressione che imposta il valore per l'opzione.  
   
 ## <a name="options"></a>Opzioni  
- **Impostare un visualizzazione al centro e livello di zoom**  
+ **Imposta un visualizzazione al centro e a livello di zoom**  
  Scegliere questa opzione per specificare valori personalizzati per il livello di allineamento al centro e zoom della vista.  
   
  **Centra mappa per mostrare un livello mappa**  
@@ -50,7 +50,7 @@ ms.locfileid: "36066917"
  **Visualizzazione center (X) %**  
  Coordinata orizzontale. Il valore predefinito 50% consente di allineare al centro la vista sul punto medio tra i valori orizzontali minimo e massimo.  
   
- **% Di visualizzazione Centro (Y)**  
+ **Visualizzazione center (Y) %**  
  Coordinata verticale. Il valore predefinito, 50%, allinea al centro la vista sul punto medio tra i valori verticali minimo e massimo.  
   
  **Livello di zoom (%)**  

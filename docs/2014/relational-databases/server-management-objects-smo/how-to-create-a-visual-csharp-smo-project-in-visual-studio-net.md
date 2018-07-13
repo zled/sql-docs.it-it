@@ -1,5 +1,5 @@
 ---
-title: Creare un progetto Visual c# SMO in Visual Studio .NET | Documenti Microsoft
+title: Creare un progetto Visual c# SMO in Visual Studio .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Visual C# [SMO]
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b96b2f52b1d993c02536b70e39ba7d1868643a04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c63f02cc9496a09744f403eaac9ec8dd84cc38b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270667"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>Creare un progetto SMO per Visual C# in Visual Studio .NET
   In questa sezione viene descritto come compilare un'applicazione console SMO semplice.  
@@ -35,11 +35,11 @@ ms.locfileid: "36067350"
   
 2.  Scegliere **Nuovo progetto** dal menu **File**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-3.  In **tipi di progetto** finestra di dialogo **Visual c#**, quindi selezionare **Windows**. Nel [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] riquadro Modelli installati, selezionare **applicazione Windows**.  
+3.  Nella **tipi di progetto** finestra di dialogo **Visual c#**, quindi selezionare **Windows**. Nel [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] riquadro Modelli installati, selezionare **applicazione di Windows**.  
   
-4.  (Facoltativo) Nel **nome** , digitare il nome della nuova applicazione  
+4.  (Facoltativo) Nel **nome** digitare il nome della nuova applicazione  
   
-5.  Selezionare il tipo di applicazione di Visual C#. Per gli esempi che seguono, selezionare **applicazione Console**.  
+5.  Selezionare il tipo di applicazione di Visual C#. Per gli esempi che seguono selezionare **applicazione Console**.  
   
 6.  Scegliere **Aggiungi riferimento** dal menu **Progetto**. Verrà visualizzata la finestra di dialogo **Aggiungi riferimento**.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36067350"
   
 9. Fare clic su **Apri**.  
   
-10. Nel **vista** menu, fare clic su **codice**. oppure selezionare Program1.cs [Progettazione] Windows e fare doppio clic su windows form per visualizzare la finestra del codice.  
+10. Nel **View** menu, fare clic su **codice**. oppure selezionare il Program1.cs [Progettazione] Windows e fare doppio clic sul windows form per visualizzare la finestra del codice.  
   
 11. Nel codice prima dell'istruzione dello spazio dei nomi, digitare le istruzioni `using` seguenti per qualificare i tipi nello spazio dei nomi SMO:  
   

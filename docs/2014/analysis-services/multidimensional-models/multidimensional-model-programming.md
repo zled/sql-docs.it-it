@@ -1,5 +1,5 @@
 ---
-title: Programmazione del modello multidimensionale | Documenti Microsoft
+title: Programmazione del modello multidimensionale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 16372428210bd140dab65c73d62d823fb5b53bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a31015e4103f480899bfb423d506b38ef5b7f140
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245627"
 ---
 # <a name="multidimensional-model-programming"></a>Programmazione del modello multidimensionale
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono disponibili diverse API per la programmazione in un'istanza di Analysis Services e sui database multidimensionali che vengono da questa resi disponibili. In questa sezione vengono descritti gli approcci disponibili per gli sviluppatori che desiderano creare applicazioni personalizzate utilizzando Analysis Services. È possibile utilizzare queste informazioni per scegliere l'interfaccia di programmazione che più soddisfa i requisiti di un particolare progetto. I progetti di sviluppo di Analysis Services possono essere basati su codice gestito o non gestito eseguito su una piattaforma Windows o altre piattaforme che supportano accesso HTTP.  
@@ -41,7 +41,7 @@ ms.locfileid: "36066786"
  [Provider OLE DB di Analysis Services &#40;Analysis Services - dati multidimensionali&#41;](../dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Programmazione del modello tabulare](../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [Programmazione di Data Mining](../dev-guide/data-mining-programming.md)  
+ [Programmazione dei modelli tabulari](../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
+ [Programmazione di data mining](../dev-guide/data-mining-programming.md)  
   
   

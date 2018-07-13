@@ -1,5 +1,5 @@
 ---
-title: Elemento ReportParameter (ASSL) | Documenti Microsoft
+title: Elemento ReportParameter (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportParameter element
 ms.assetid: 653a5c64-f1af-4796-bb7b-b44a40e52901
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58aeafeaee114c1d08d0ad8b0119bee2dc5d5dea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e1ceef5a3794aaaaec6ac24d9aca6e66384267ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197823"
 ---
 # <a name="reportparameter-element-assl"></a>Elemento ReportParameter (ASSL)
-  Contiene il nome e il valore di un parametro passato a un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report in fase di esecuzione.  
+  Contiene il nome e il valore di un parametro che viene passato a un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report in fase di esecuzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36069016"
 |Elementi padre|[ReportParameters](../collections/reportparameters-element-assl.md)|  
 |Elementi figlio|[Nome](../properties/name-element-assl.md), [valore](../properties/value-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `Value` deve contenere un'espressione MDX (Multidimensional Expressions).  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.ReportParameter>.  

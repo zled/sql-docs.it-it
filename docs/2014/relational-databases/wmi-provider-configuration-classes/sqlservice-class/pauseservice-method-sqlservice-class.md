@@ -1,5 +1,5 @@
 ---
-title: Metodo PauseService (classe SqlService) | Documenti Microsoft
+title: Metodo PauseService (classe SqlService) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PauseService method
 ms.assetid: 5c3a8feb-58b8-4385-b4c8-bf33cf4d276d
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 538266bbfdc097792be4043fdc62716a7a9cd9aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 4372b51553f2aff11908ddac5dc639b076dca408
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325601"
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>Metodo PauseService (classe SqlService)
   Esegue un tentativo di sospensione del servizio.  
@@ -49,7 +49,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore uint32 che è 0 se il servizio è stato arrestato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvio e arresto di servizi](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

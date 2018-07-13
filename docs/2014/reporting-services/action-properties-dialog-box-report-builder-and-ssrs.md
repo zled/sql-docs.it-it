@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà azione (Generatore Report e SSRS) | Documenti Microsoft
+title: Finestra di dialogo Proprietà azione (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
 - "10413"
@@ -34,15 +34,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4cae7e5c0de408c4a2ed9636e3c941f8e0a32b0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e245d03b32dc48a96b0f1d967cc7c83b684654ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323761"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà azione (Generatore report e SSRS)
   È possibile utilizzare la finestra di dialogo **Azione** per abilitare opzioni dei collegamenti ipertestuali per un grafico, un misuratore e gli elementi della mappa che supportano i collegamenti. Definire un'azione in modo che un utente possa fare clic sul report e collegarsi a un URL, a un report diverso nello stesso server di report o in un sito di SharePoint integrato con un server di report oppure a un percorso diverso nello stesso report.  
@@ -93,7 +93,7 @@ ms.locfileid: "36067134"
  **Vai al segnalibro**  
  Selezionare questa opzione per definire un collegamento a un segnalibro nel report corrente. L'opzione aggiuntiva elencata di seguito viene visualizzata quando si seleziona **Vai al segnalibro**.  
   
- **Selezionare un segnalibro**  
+ **Seleziona un segnalibro**  
  Digitare o selezionare l'ID del segnalibro del report a cui passare quando viene fatto clic sul collegamento. Fare clic sul pulsante Espressione (**fx**) per modificare l'espressione. L'ID del segnalibro può essere un ID statico oppure un'espressione che restituisce l'ID di un segnalibro. L'espressione può includere un campo contenente un ID del segnalibro.  
   
  Per creare un collegamento a un segnalibro, è innanzitutto necessario impostare la proprietà Bookmark di un elemento del report. Per impostare la proprietà Bookmark, selezionare un elemento del report e nel riquadro Proprietà digitare un valore o un'espressione per l'ID del segnalibro, ad esempio SalesChart o 5TopSales.  
@@ -102,13 +102,13 @@ ms.locfileid: "36067134"
  Selezionare questa opzione per definire un collegamento a una pagina Web. Digitare o selezionare l'URL di una pagina Web o un'espressione che restituisca l'URL di una pagina Web. Fare clic sul pulsante **Espressione** (*fx*) per modificare l'espressione. L'espressione può includere un campo contenente un URL. L'opzione aggiuntiva elencata di seguito viene visualizzata quando si seleziona **Vai a URL**.  
   
  **Selezionare un URL**  
- Digitare o immettere l'URL dell'elemento. Per un elemento pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo. Ad esempio, http://*\<nomeserver >*  /Images/Image1.jpg. Per un elemento pubblicato in un server di report configurato in modalità integrata SharePoint, utilizzare un URL completo (ad esempio, http://*\<NomeServerSharePoint > /\<sito >*  /documenti/immagini / Image1).  
+ Digitare o immettere l'URL dell'elemento. Per un elemento pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo. Ad esempio, http://*\<nomeserver >*  /Images/Image1.jpg. Per un elemento pubblicato in un server di report configurato in modalità integrata SharePoint, utilizzare un URL completo (ad esempio, http://*\<NomeServerSharePoint > /\<sito >*  /documenta/immagini / Image1).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Parametri report &#40;Generatore report e Progettazione report&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Aggiungere un sottoreport e parametri &#40;Generatore report e SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
- [Ordinamento interattivo, mappe documento e collegamenti &#40;SSRS e Generatore Report&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [Ordinamento interattivo, mappe documento e collegamenti &#40;Report e SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
   

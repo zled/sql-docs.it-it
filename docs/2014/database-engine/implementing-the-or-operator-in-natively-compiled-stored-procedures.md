@@ -1,5 +1,5 @@
 ---
-title: Implementa l'operatore OR (operatore) nelle Stored procedure compilate in modo nativo | Documenti Microsoft
+title: Implementazione dell'operatore OR operatore in Natively Compiled Stored Procedures | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
 caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 562917bdb9cad0fd8471d97663e01616091ce475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce9b8660fa52d2a09302b51b0f95e368071caa4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228181"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Implementazione dell'operatore OR in stored procedure compilate in modalità nativa
   Gli operatori OR non sono supportati nei predicati di query in stored procedure compilate in modo nativo. Dal momento che anche gli operatori NOT non sono supportati nei predicati di query in stored procedure compilate in modo nativo, gli effetti degli operatori OR non possono essere simulati da soli tramite l'utilizzo degli operatori logici equivalenti. Tuttavia, gli effetti di un operatore OR possono essere simulati con variabili di tabella ottimizzata per la memoria.  
@@ -50,7 +50,7 @@ ms.locfileid: "36067864"
   
 5.  Utilizzare il contenuto della variabile di tabella ottimizzata per la memoria come risultato della query.  
   
- Nell'esempio seguente vengono utilizzate tabelle del database AdventureWorks2012 aggiornate per [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Per scaricare i file per questo esempio, andare [database AdventureWorks 2012, 2008R2 e 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Per applicare [!INCLUDE[hek_2](../includes/hek-2-md.md)] il codice di esempio AdventureWorks2012, andare a [esempio di OLTP In memoria di SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+ Nell'esempio seguente vengono utilizzate tabelle del database AdventureWorks2012 aggiornate per [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Per scaricare i file per questo esempio, goto [database AdventureWorks 2012, 2008R2 e 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Per applicare [!INCLUDE[hek_2](../includes/hek-2-md.md)] codice di esempio per AdventureWorks2012, andare a [esempio di OLTP In memoria di SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Aggiungere la seguente stored procedure al database. Questa stored procedure verrà convertita per utilizzare la compilazione nativa.  
   
@@ -165,7 +165,7 @@ GO
   
 5.  Utilizzare il contenuto della variabile di tabella ottimizzata per la memoria come risultato della query.  
   
- Nell'esempio seguente vengono utilizzate tabelle del database AdventureWorks2012 aggiornate per [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Per scaricare i file per questo esempio, andare [database AdventureWorks 2012, 2008R2 e 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Per applicare [!INCLUDE[hek_2](../includes/hek-2-md.md)] il codice di esempio AdventureWorks2012, andare a [esempio di OLTP In memoria di SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+ Nell'esempio seguente vengono utilizzate tabelle del database AdventureWorks2012 aggiornate per [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Per scaricare i file per questo esempio, goto [database AdventureWorks 2012, 2008R2 e 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Per applicare [!INCLUDE[hek_2](../includes/hek-2-md.md)] codice di esempio per AdventureWorks2012, andare a [esempio di OLTP In memoria di SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Aggiungere la seguente stored procedure al database. Questa stored procedure verrà convertita per utilizzare la compilazione nativa. In questo esempio vengono utilizzate le condizioni INNER JOIN.  
   

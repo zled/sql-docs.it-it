@@ -1,5 +1,5 @@
 ---
-title: Selezione dei calendari (Creazione guidata dimensione) | Documenti Microsoft
+title: Selezione calendari (Creazione guidata dimensione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.serverSpecialCalendars.f1
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6796c7c3064adc65982b1d5aaec005249e224cae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7166b39dd5cc9d8a2a4cbb6da1c8f44d49181d46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245591"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Selezione calendari (Creazione guidata dimensione)
   Usare la pagina **Selezione calendari** per creare gerarchie aggiuntive che rappresentano calendari fiscali, di report, di produzione o ISO 8601 per la dimensione temporale.  
@@ -54,7 +54,7 @@ ms.locfileid: "36066779"
 > [!NOTE]  
 >  Questa opzione è disponibile se è stata selezionata l'opzione **Calendario report (o marketing)** .  
   
- **Settimana da schema di mese**  
+ **Settimana dal modello mese**  
  Consente di selezionare lo schema di settimane per mese utilizzato dal calendario di report.  
   
 > [!NOTE]  
@@ -87,8 +87,8 @@ ms.locfileid: "36066779"
  Selezionare questa opzione per creare una gerarchia basata sul calendario ISO 8601.  
   
 ## <a name="see-also"></a>Vedere anche  
- [F1 Guida della procedura guidata di dimensione](dimension-wizard-f1-help.md)   
- [Le dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Guida F1 di creazione guidata dimensione](dimension-wizard-f1-help.md)   
+ [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

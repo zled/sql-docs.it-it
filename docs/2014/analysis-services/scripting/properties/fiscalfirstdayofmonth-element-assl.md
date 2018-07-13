@@ -1,5 +1,5 @@
 ---
-title: Elemento FiscalFirstDayOfMonth (ASSL) | Documenti Microsoft
+title: Elemento FiscalFirstDayOfMonth (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FiscalFirstDayOfMonth element
 ms.assetid: f793e93f-62de-4c3b-90b0-a46bd3cadae5
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf66dd72e1d74104a2008a0535ff5986dd3c53cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d183e519ddd3a103cd8e9cf90105b9c8848acb55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235541"
 ---
 # <a name="fiscalfirstdayofmonth-element-assl"></a>Elemento FiscalFirstDayOfMonth (ASSL)
   Definisce il primo giorno del mese fiscale per un [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
@@ -61,8 +61,8 @@ ms.locfileid: "36066780"
 |Elemento padre|[TimeBinding](../data-type/binding-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `FiscalFirstDayOfMonth` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.TimeBinding>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `FiscalFirstDayOfMonth` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

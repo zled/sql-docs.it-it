@@ -1,5 +1,5 @@
 ---
-title: Elemento MasterDatasourceID (ASSL) | Documenti Microsoft
+title: Elemento MasterDatasourceID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MasterDatasourceID element
 ms.assetid: a9cbd3a9-581f-4a08-93d8-e1eea8757ce9
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa35f3090a10dd175d507dec4a109f04d36644cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 70258c84b128c879406a8c0cdda837d9f0475789
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228461"
 ---
 # <a name="masterdatasourceid-element-assl"></a>Elemento MasterDatasourceID (ASSL)
   Contiene l'identificatore dell'origine dati master (ID) per un [Database](../objects/database-element-assl.md) elemento.  
@@ -61,10 +61,10 @@ ms.locfileid: "36067273"
 |Elementi padre|[Database](../objects/database-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Per i database su istanze remote di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] che contengono partizioni remote, il `MasterDatasourceID` elemento contiene l'origine dati ID dell'origine dati utilizzata per identificare l'istanza master di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] che gestisce il partizioni remote.  
+## <a name="remarks"></a>Note  
+ Per i database su istanze remote di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] che contengono partizioni remote, il `MasterDatasourceID` elemento contiene l'ID dell'origine dati utilizzato per identificare l'istanza master di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] che gestisce il partizioni remote.  
   
- L'elemento che corrisponde al padre di `MasterDatasourceID` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Database>.  
+ L'elemento che corrisponde al padre di `MasterDatasourceID` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Database>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

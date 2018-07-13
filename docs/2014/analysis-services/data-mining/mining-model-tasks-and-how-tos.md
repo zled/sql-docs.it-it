@@ -1,5 +1,5 @@
 ---
-title: Modello attività e procedure di data mining | Documenti Microsoft
+title: Modello attività e procedure relative al data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
 - mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1ce8f3b6441c7b1ac09a2c4e5de9b151a14112c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80f6f7d87f1e7ae3ffaf9fc7b17254a42675b192
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178918"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Attività e procedure relative al modello di data mining
   La scheda **Modelli di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] consente di gestire ed elaborare i modelli di data mining in una struttura di data mining.  
@@ -39,7 +39,7 @@ ms.locfileid: "36068362"
   
 -   [Modificare la discretizzazione di una colonna in un modello di data mining](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [Consente di visualizzare o modificare flag di modellazione &#40;Data Mining&#41;](modeling-flags-data-mining.md)  
+-   [Visualizzare o modificare flag di modellazione &#40;Data Mining&#41;](modeling-flags-data-mining.md)  
   
 -   [Specificare una colonna da usare come regressore in un modello](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -62,6 +62,6 @@ ms.locfileid: "36068362"
 ## <a name="see-also"></a>Vedere anche  
  [Data mining struttura attività e procedure](mining-structure-tasks-and-how-tos.md)   
  [Modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)   
- [Concetti di Data Mining](data-mining-concepts.md)  
+ [Concetti di data mining](data-mining-concepts.md)  
   
   

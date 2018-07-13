@@ -1,5 +1,5 @@
 ---
-title: Elemento MiningStructurePermissions (ASSL) | Documenti Microsoft
+title: Elemento MiningStructurePermissions (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningStructurePermissions element
 ms.assetid: 4db9a9b2-8525-441f-a202-fd253282f540
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4771102a81dfae1e4a0e62ea1527a5ad6d19199
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91beb4cef1679150255283621403b53abeadfa7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324861"
 ---
 # <a name="miningstructurepermissions-element-assl"></a>Elemento MiningStructurePermissions (ASSL)
   Contiene la raccolta di autorizzazioni per un [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  
@@ -60,14 +60,14 @@ ms.locfileid: "36067072"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elemento padre|[MiningStructure](../objects/miningstructure-element-assl.md)|  
-|Elementi figlio|[MiningStructurePermission](../objects/miningstructurepermission-element-assl.md) di tipo [autorizzazione](../data-type/permission-data-type-assl.md)|  
+|Elemento padre|[Elemento MiningStructure](../objects/miningstructure-element-assl.md)|  
+|Elementi figlio|[Elemento MiningStructurePermission](../objects/miningstructurepermission-element-assl.md) di tipo [autorizzazione](../data-type/permission-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.MiningStructurePermissionCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipo di dati di autorizzazione &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
+ [Tipo di dati Permission &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
  [Le raccolte &#40;ASSL&#41;](collections-assl.md)  
   
   

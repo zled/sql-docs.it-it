@@ -1,5 +1,5 @@
 ---
-title: Esempio di File (DTA) di Input XML semplice | Documenti Microsoft
+title: Esempio di File (DTA) di Input XML semplice | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - sample applications [DTA]
 ms.assetid: 5b00e4eb-1742-43ec-98d8-d84216b6b840
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a95a5c086d5c9c941407e6e3a92e2ea4f8cdcd72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 77aac926ba5963fbef68a1b5db83687ddf5f77c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321381"
 ---
 # <a name="simple-xml-input-file-sample-dta"></a>Esempio di file di input XML semplice (DTA)
   Copiare e incollare questo esempio di file di input XML semplice da utilizzare per l'ottimizzazione dei carichi di lavoro nell'editor XML o nell'editor di testo preferito. Sostituire quindi i valori specificati per gli elementi **Server**, **Database**, **Schema**, **Table**, **Workload**e **TuningOptions** con quelli per la sessione di ottimizzazione specifica. Per altre informazioni sugli attributi e sugli elementi figlio che è possibile usare con questi elementi, vedere [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md). Nell'esempio seguente viene utilizzato solo un subset delle opzioni relative agli attributi e agli elementi figlio disponibili.  

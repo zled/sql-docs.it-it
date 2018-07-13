@@ -1,5 +1,5 @@
 ---
-title: Database dell'area di lavoro (SSAS tabulare) | Documenti Microsoft
+title: Database dell'area di lavoro (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a52eb01f176eddd8e69dcdc14609c3776bd54a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 54a56f1339a3a81385afc9b41fa4b202fed22cd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271587"
 ---
 # <a name="workspace-database-ssas-tabular"></a>Database dell'area di lavoro (SSAS tabulare)
   Il database dell'area di lavoro modello tabulare, usato durante la creazione del modello, viene creato quando si crea un nuovo progetto di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Tale database risiede in memoria in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità tabulare, in genere nello stesso computer di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  In questo argomento sono contenute le sezioni seguenti:  
   
--   [Panoramica di Database dell'area di lavoro](#bkmk_overview)  
+-   [Panoramica del Database dell'area di lavoro](#bkmk_overview)  
   
 -   [Proprietà del Database dell'area di lavoro](#bkmk_ws_prop)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "36067261"
   
 -   [Attività correlate](#bkmk_related_tasks)  
   
-##  <a name="bkmk_overview"></a> Panoramica di Database dell'area di lavoro  
+##  <a name="bkmk_overview"></a> Panoramica del Database dell'area di lavoro  
  Un database dell'area di lavoro viene creato nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , specificata nella proprietà Server dell'area di lavoro, quando si crea un nuovo progetto di business intelligence tramite uno dei modelli del progetto di modello tabulare in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Ogni progetto di modello tabulare disporrà del relativo database dell'area di lavoro. È possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per visualizzare il database dell'area di lavoro nel server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Nel nome del database dell'area di lavoro è incluso il nome del progetto, seguito da un carattere di sottolineatura, dal nome utente, da un carattere di sottolineatura e infine da un GUID.  
   
  Il database dell'area di lavoro si trova in memoria mentre il progetto di modello tabulare viene aperto in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Quando si chiude il progetto, il database dell'area di lavoro può essere mantenuto in memoria, archiviato su disco e rimosso dalla memoria (impostazione predefinita) o essere rimosso dalla memoria e non archiviato su disco, come determinato dalla proprietà Memorizzazione area di lavoro. Per altre informazioni sulla proprietà Memorizzazione area di lavoro, vedere le [proprietà del database dell'area di lavoro](#bkmk_ws_prop) più avanti in questo argomento.  
@@ -69,7 +69,7 @@ ms.locfileid: "36067261"
 |--------------|---------------------|-----------------|  
 |**Database dell'area di lavoro**|Nome del progetto, seguito da un carattere di sottolineatura, dal nome utente, da un carattere di sottolineatura e infine da un GUID.|Nome del database dell'area di lavoro utilizzato per l'archiviazione e la modifica del progetto di modello. Al termine della creazione di un progetto di modello tabulare, questo database verrà visualizzato nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specificata nella proprietà **Server dell'area di lavoro**. Questa proprietà non può essere impostata nella finestra Proprietà.|  
 |**Memorizzazione area di lavoro**|Scarica dalla memoria|Viene specificato come viene mantenuto un database dell'area di lavoro dopo la chiusura di un progetto di modello. In un database dell'area di lavoro sono inclusi i metadati del modello e i dati importati. In alcuni casi, le dimensioni del database dell'area di lavoro possono essere elevate e utilizzare quindi una grande quantità di memoria. Per impostazione predefinita, quando si chiude un progetto di modello in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], il database dell'area di lavoro viene scaricato dalla memoria. Quando si modifica questa impostazione, è importante considerare le risorse di memoria disponibili, nonché pianificare la frequenza con la quale utilizzare il progetto di modello. Per questa impostazione della proprietà sono disponibili le opzioni seguenti:<br /><br /> **Mantieni in memoria** : viene specificato di mantenere il database dell'area di lavoro in memoria dopo la chiusura di un progetto di modello. Per questa opzione verrà utilizzata più memoria; tuttavia, in caso di apertura di un progetto di modello in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vengono utilizzate meno risorse e i carichi nel database dell'area di lavoro verranno eseguiti più velocemente.<br /><br /> **Scarica dalla memoria** : viene specificato di mantenere il database dell'area di lavoro su disco, ma non più in memoria dopo la chiusura di un progetto di modello. Per questa opzione verrà usa meno memoria. Tuttavia, in caso di apertura di un progetto di modello in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], il database dell'area di lavoro deve essere collegato di nuovo. Vengono usate risorse aggiuntive e il caricamento del progetto di modello sarà più lento rispetto a quando il database dell'area di lavoro è mantenuto in memoria. Utilizzare questa opzione quando le risorse in memoria sono limitate o quando in uso in un database dell'area di lavoro remoto.<br /><br /> **Elimina area di lavoro** : viene specificato di eliminare il database dell'area di lavoro dalla memoria e di non mantenerlo su disco dopo la chiusura del progetto di modello. Per questa opzione verranno usati meno memoria e meno spazio di archiviazione. Tuttavia, in caso di apertura di un progetto di modello in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vengono use risorse aggiuntive e il caricamento del progetto di modello sarà più lento rispetto a quando il database dell'area di lavoro è mantenuto in memoria o su disco. Utilizzare questa opzione quando i progetti di modello vengono utilizzati solo occasionalmente.<br /><br /> <br /><br /> L'impostazione predefinita per questa proprietà può essere modificata nella pagina **Modellazione dati** nelle impostazioni di **Analysis Server** in Strumenti\finestra di dialogo Opzioni.|  
-|**Server dell'area di lavoro**|localhost|Questa proprietà consente di specificare il server predefinito che sarà utilizzato per ospitare il database dell'area di lavoro mentre si crea il progetto di modello in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Tutte le istanze disponibili di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione nel computer locale sono incluse nella casella di riepilogo.<br /><br /> Per specificare un server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] diverso (in esecuzione in modalità tabulare), digitare il nome del server. L'utente connesso deve essere un amministratore nel server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Si noti che è consigliabile specificare locale [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server come server dell'area. Per database dell'area di lavoro in un server remoto, l'importazione da PowerPivot non è supportata, non è possibile eseguire il backup dei dati in locale e nell'interfaccia utente si potrebbe rilevare latenza durante le query.<br /><br /> Si noti inoltre che l'impostazione predefinita per questa proprietà può essere modificato nella pagina modellazione dati [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] impostazioni nella finestra di dialogo Opzioni.|  
+|**Server dell'area di lavoro**|localhost|Questa proprietà consente di specificare il server predefinito che sarà utilizzato per ospitare il database dell'area di lavoro mentre si crea il progetto di modello in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Tutte le istanze disponibili di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione nel computer locale sono incluse nella casella di riepilogo.<br /><br /> Per specificare un server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] diverso (in esecuzione in modalità tabulare), digitare il nome del server. L'utente connesso deve essere un amministratore nel server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Si noti che si consiglia di specificare una variabile locale [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server come server di area di lavoro. Per database dell'area di lavoro in un server remoto, l'importazione da PowerPivot non è supportata, non è possibile eseguire il backup dei dati in locale e nell'interfaccia utente si potrebbe rilevare latenza durante le query.<br /><br /> Si noti inoltre che l'impostazione predefinita per questa proprietà può essere modificato nella pagina modellazione dati [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] impostazioni in strumenti\finestra di dialogo.|  
   
 ##  <a name="bkmk_use_ssms"></a> Utilizzo di SSMS per gestire il database dell'area di lavoro  
  È possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) per connettersi al server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui è ospitato il database dell'area di lavoro. In genere non è necessaria alcuna attività di gestione del database dell'area di lavoro. L'unica eccezione è data dallo scollegamento o dall'eliminazione di un database dell'area di lavoro che deve essere eseguita da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -84,7 +84,7 @@ ms.locfileid: "36067261"
 |[Proprietà del modello &#40;tabulare di SSAS&#41;](model-properties-ssas-tabular.md)|Vengono forniti passaggi di configurazione e descrizioni per le proprietà del database dell'area di lavoro di un modello.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare la modellazione di dati predefinito e le proprietà di distribuzione &#40;tabulare di SSAS&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Configurare le proprietà di distribuzione e la modellazione dei dati predefinite &#40;tabulare di SSAS&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
  [Proprietà del progetto &#40;tabulare di SSAS&#41;](properties-ssas-tabular.md)  
   
   
