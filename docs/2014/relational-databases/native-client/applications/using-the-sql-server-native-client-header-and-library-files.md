@@ -1,13 +1,11 @@
 ---
-title: Usando l'intestazione SQL Server Native Client e i file di libreria | Documenti Microsoft
+title: Usando l'intestazione SQL Server Native Client e i file di libreria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,18 +22,18 @@ helpviewer_keywords:
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f10805d7a28fbeb291244913ae602055f16a1462
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cf209f7897aed59e32d648e0305f9c7ba0e119a9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170785"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415073"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Utilizzo dei file di intestazione e della libreria di SQL Server Native Client
-  I file di intestazione e di libreria di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client vengono installati con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando si sviluppa un'applicazione, è importante copiare e installare nell'ambiente di sviluppo tutti i file necessari per lo sviluppo. Per ulteriori informazioni sull'installazione e la ridistribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vedere [installazione di SQL Server Native Client](installing-sql-server-native-client.md).  
+  I file di intestazione e di libreria di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client vengono installati con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando si sviluppa un'applicazione, è importante copiare e installare nell'ambiente di sviluppo tutti i file necessari per lo sviluppo. Per altre informazioni sull'installazione e la ridistribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vedere [installazione di SQL Server Native Client](installing-sql-server-native-client.md).  
   
  I file di intestazione e di libreria di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client vengono installati nel percorso seguente:  
   
@@ -103,7 +101,7 @@ include "sqlncli.h";
   
  Se ad esempio si compila un'applicazione utilizzando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, nonché il file di libreria (sqlncli11.lib) e il file di intestazione (sqlncli.h) associati presenti in \Programmi\Microsoft SQL Server\110\SDK, assicurarsi di specificare (utilizzando ODBC come esempio) "DRIVER={SQL Server Native Client 11.0}" nella stringa di connessione.  
   
- Per altre informazioni, vedere esecuzione [l'esecuzione di operazioni di copia Bulk](../features/performing-bulk-copy-operations.md).  
+ Per altre informazioni, vedere Performing [esecuzione di operazioni di copia Bulk](../features/performing-bulk-copy-operations.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione di applicazioni con SQL Server Native Client](building-applications-with-sql-server-native-client.md)  

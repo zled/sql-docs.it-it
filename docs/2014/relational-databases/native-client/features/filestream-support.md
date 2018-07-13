@@ -1,13 +1,11 @@
 ---
-title: Supporto FILESTREAM | Documenti Microsoft
+title: Supporto FILESTREAM | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - SQL Server Native Client [FILESTREAM support]
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 407bf9e6816a08af989b18cfeed3a52ee7fa8465
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b499fee530484c14297d04cc6ffe8db38983e214
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170782"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424330"
 ---
 # <a name="filestream-support"></a>Supporto FILESTREAM
-  FILESTREAM consente di archiviare e accedere a valori binari di grandi dimensioni mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o accesso diretto al file system di Windows. Un valore binario di grandi dimensioni è un valore superiore a 2 gigabyte (GB). Per ulteriori informazioni sul supporto FILESTREAM avanzato, vedere [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md).  
+  FILESTREAM consente di archiviare e accedere a valori binari di grandi dimensioni mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o accesso diretto al file system di Windows. Un valore binario di grandi dimensioni è un valore superiore a 2 gigabyte (GB). Per altre informazioni sul supporto FILESTREAM avanzato, vedere [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md).  
   
  Quando si apre una connessione al database, per impostazione predefinita `@@TEXTSIZE` viene impostato su -1 (senza limiti).  
   
@@ -45,7 +43,7 @@ ms.locfileid: "36170782"
   
  Funzioni di catalogo, ad esempio SQLColumns di ODBC non segnalerà se una colonna è una colonna FILESTREAM.  
   
- Per creare colonne FILESTREAM o per rilevare le colonne esistenti sono colonne FILESTREAM, è possibile utilizzare il `is_filestream` colonna del [Sys. Columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) vista del catalogo.  
+ Per creare colonne FILESTREAM o per rilevare le colonne esistenti sono colonne FILESTREAM, è possibile usare la `is_filestream` colonna il [Sys. Columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) vista del catalogo.  
   
  Di seguito è riportato un esempio:  
   
@@ -61,11 +59,11 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Compatibilità con le versioni precedenti  
- Se il client è stato compilato utilizzando la versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client inclusa con [!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)], `varbinary(max)` comportamento sarà compatibile con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Questo significa che i dati restituiti avranno come dimensione massima 2 GB. Per valori di dimensioni superiori a 2 GB, verificherà il troncamento e verrà restituito un avviso "troncamento a destra dei dati di stringa".  
+ Se il client è stato compilato utilizzando la versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client inclusa con [!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)], `varbinary(max)` comportamento saranno compatibile con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Questo significa che i dati restituiti avranno come dimensione massima 2 GB. Per valori di dimensioni superiori a 2 GB, si verificherà il troncamento e verrà restituito un avviso "troncamento a destra dei dati di stringa".  
   
  Quando la compatibilità con il tipo di dati è impostata su 80, il comportamento client sarà coerente con il comportamento del client legacy.  
   
- Per i client che utilizzano SQLOLEDB o altri provider rilasciati prima la [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] Native Client, `varbinary(max)` verrà eseguito il mapping all'immagine.  
+ Per i client che utilizzano SQLOLEDB o altri provider rilasciati prima la [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] Native Client, `varbinary(max)` verrà mappato all'immagine.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server Native Client](sql-server-native-client-features.md)  

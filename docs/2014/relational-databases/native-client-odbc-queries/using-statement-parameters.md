@@ -1,13 +1,11 @@
 ---
-title: Utilizzo di parametri di istruzione | Documenti Microsoft
+title: Usando i parametri delle istruzioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c359db9f39f659ac497adcf3bc6e343e1dd6796
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 41fcbf9534f8d9b1accc424dd873609a6a357ade
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171219"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422750"
 ---
 # <a name="using-statement-parameters"></a>Utilizzo dei parametri delle istruzioni
   Un parametro è una variabile in un'istruzione SQL che consente a un'applicazione ODBC di:  
@@ -37,7 +35,7 @@ ms.locfileid: "36171219"
   
 -   Migliorare l'interazione dell'utente nella costruzione di criteri di query.  
   
--   Gestire **testo**, **ntext**, e **immagine** dati e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-tipi di dati C specifici.  
+-   Gestire **testo**, **ntext**, e **immagine** dei dati e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-tipi di dati C specifici.  
   
  Ad esempio, un **parti** tabella include colonne denominate **PartID**, **descrizione**, e **prezzo**. Per aggiungere una parte senza parametri, è necessario costruire un'istruzione SQL come:  
   
@@ -57,7 +55,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
--   [Parametri di associazione](using-statement-parameters-binding-parameters.md)  
+-   [Associazione di parametri](using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [L'esecuzione di query &#40;ODBC&#41;](executing-queries-odbc.md)  
