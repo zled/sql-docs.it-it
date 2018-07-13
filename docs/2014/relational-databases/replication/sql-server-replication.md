@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], about
 - replication [SQL Server]
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e2e6c94d70c3e4fc469653ff5abba17a2b7c22c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ab832622e831b63f9487fea2187151d7a1ddd1b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253775"
 ---
 # <a name="sql-server-replication"></a>Replica di SQL Server
   La replica è costituita da un set di tecnologie per la copia e la distribuzione di dati e oggetti di database da un database a un altro e la successiva sincronizzazione dei database in modo che risultino consistenti. Grazie alla replica è possibile distribuire dati a diverse posizioni e a utenti remoti o mobili tramite reti locali e WAN, connessioni remote, connessioni wireless e Internet.  
@@ -32,12 +32,12 @@ ms.locfileid: "36054729"
  In alternativa alla replica, è possibile sincronizzare i database utilizzando Microsoft Sync Framework. Sync Framework include componenti e una API intuitiva e flessibile che facilitano la sincronizzazione fra i database di SQL Server, SQL Server Express, SQL Server Compact e SQL Azure. Sync Framework include anche classi che possono essere adattate per la sincronizzazione tra un database di SQL Server e un qualsiasi altro database compatibile con ADO.NET. Per la documentazione dettagliata dei componenti per la sincronizzazione di Sync Framework, vedere [Sincronizzazione di database](http://go.microsoft.com/fwlink/?LinkId=209079). Per una panoramica su Sync Framework, vedere la pagina relativa al [centro per sviluppatori di Microsoft Sync Framework](http://go.microsoft.com/fwlink/?LinkId=209078). Per un confronto tra Sync Framework e la replica di tipo merge, vedere [Panoramica sulla sincronizzazione di database](http://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)  
   
  **Ricerca di contenuto per area**  
- ![Icona della cartella File di piccole dimensioni](../../integration-services/media/filefolder-small.gif "icona della cartella File piccola") [novità](what-s-new-replication.md)  
+ ![Icona cartella File piccola](../../integration-services/media/filefolder-small.gif "icona cartella File piccola") [novità](what-s-new-replication.md)  
   
- ![Icona della cartella File di piccole dimensioni](../../integration-services/media/filefolder-small.gif "icona della cartella File piccola") [compatibilità con le versioni precedenti](replication-backward-compatibility.md)  
+ ![Icona cartella File piccola](../../integration-services/media/filefolder-small.gif "icona cartella File piccola") [compatibilità con le versioni precedenti](replication-backward-compatibility.md)  
   
- ![Icona della cartella File di piccole dimensioni](../../integration-services/media/filefolder-small.gif "icona della cartella File piccola") [attività e funzionalità di replica](replication-features-and-tasks.md)  
+ ![Icona cartella File piccola](../../integration-services/media/filefolder-small.gif "icona cartella File piccola") [attività e funzionalità di replica](replication-features-and-tasks.md)  
   
- ![Icona della cartella File di piccole dimensioni](../../integration-services/media/filefolder-small.gif "icona della cartella File piccola") [riferimento tecnico](technical-reference-replication.md)  
+ ![Icona cartella File piccola](../../integration-services/media/filefolder-small.gif "icona cartella File piccola") [riferimento tecnico](technical-reference-replication.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - custom data processing extensions [Reporting Services]
 - IDbConnection interface, connection strings
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], connections
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a1577c387561a74356bc31e9ce8058cf804b0235
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: a0d1026ad56474a974d261c85adf86145671c414
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222961"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Specificare le connessioni per le estensioni per l'elaborazione dati personalizzate
   È possibile creare o utilizzare estensioni per l'elaborazione dei dati personalizzate di terze parti in un server di report per migliorare la funzionalità di elaborazione dei dati delle origini dati supportate o per supportare ulteriori tipi di origini dati non disponibili in un'installazione predefinita di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le connessioni vengono gestite in modo diverso a seconda dell'implementazione. Per le estensioni per l'elaborazione dati sono disponibili le implementazioni seguenti:  
@@ -50,33 +50,33 @@ ms.locfileid: "36062598"
  Nelle precedenti versioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], tutte le estensioni per l'elaborazione dei dati personalizzate vengono chiamate durante la rappresentazione utente. Nella presente versione, invece, solo il metodo Open viene chiamato durante tale rappresentazione. Se si dispone di un'estensione per l'elaborazione dati che richiede una sicurezza integrata, è necessario modificare il codice per usare il metodo Open o archiviare l'oggetto identità dell'utente.  
   
 ## <a name="connections-for-custom-net-framework-data-providers"></a>Connessioni per i provider di dati .NET Framework personalizzati  
- Quando si configura un report per l'utilizzo di una specifica origine dei dati, vengono impostate proprietà che determinano il tipo di origine dei dati, la stringa di connessione e le credenziali utilizzate per accedere all'origine dei dati. Nella tabella seguente vengono descritti i tipi di credenziali supportati per i provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per ulteriori informazioni sull'impostazione di proprietà dell'origine dati report, vedere [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Quando si configura un report per l'utilizzo di una specifica origine dei dati, vengono impostate proprietà che determinano il tipo di origine dei dati, la stringa di connessione e le credenziali utilizzate per accedere all'origine dei dati. Nella tabella seguente vengono descritti i tipi di credenziali supportati per i provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per altre informazioni sull'impostazione delle proprietà dell'origine dati report, vedere [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 |Credenziali|Connessioni|  
 |-----------------|-----------------|  
-|sicurezza integrata|Se il provider di dati in uso la supporta, è possibile utilizzare la sicurezza integrata di Windows. La richiesta viene inviata utilizzando le credenziali dell'utente corrente.<br /><br /> Quando si definisce la stringa di connessione, assicurarsi di includere argomenti che specifichino la sicurezza integrata (ad esempio, una connessione a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati potrebbe includere `Integrated Security=SSPI` nella stringa di connessione).|  
-|Autenticazione di Windows|Se il provider di dati in uso lo supporta, è possibile utilizzare un account utente di dominio di Windows. Il server di report rappresenta l'account utente prima che venga chiamata l'estensione per l'elaborazione dati.<br /><br /> Quando si definisce la stringa di connessione, assicurarsi di includere argomenti che specifichino la sicurezza integrata (ad esempio, una connessione a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati potrebbe includere `Integrated Security=SSPI` nella stringa di connessione).|  
+|sicurezza integrata|Se il provider di dati in uso la supporta, è possibile utilizzare la sicurezza integrata di Windows. La richiesta viene inviata utilizzando le credenziali dell'utente corrente.<br /><br /> Quando si definisce la stringa di connessione, assicurarsi di includere argomenti che specifichino la sicurezza integrata (ad esempio, una connessione a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati potrà includere `Integrated Security=SSPI` nella stringa di connessione).|  
+|Autenticazione di Windows|Se il provider di dati in uso lo supporta, è possibile utilizzare un account utente di dominio di Windows. Il server di report rappresenta l'account utente prima che venga chiamata l'estensione per l'elaborazione dati.<br /><br /> Quando si definisce la stringa di connessione, assicurarsi di includere argomenti che specifichino la sicurezza integrata (ad esempio, una connessione a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati potrà includere `Integrated Security=SSPI` nella stringa di connessione).|  
 |Credenziali di database|L'autenticazione del database non è supportata per le connessioni stabilite mediante un provider di dati .NET personalizzato. La connessione avrà esito negativo in tutti i casi.|  
-|Nessuna credenziale|È possibile utilizzare l'opzione Nessuna credenziale con provider di dati .NET personalizzati. Se viene specificato l'account per l'esecuzione automatica, la stringa di connessione determina le credenziali che verranno utilizzate. Il server di report rappresenta l'account per l'esecuzione automatica per stabilire la connessione.<br /><br /> Se l'account per l'esecuzione automatica non è definito, la connessione avrà esito negativo. Per ulteriori informazioni sulla definizione dell'account, vedere [configurare l'Account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
+|Nessuna credenziale|È possibile utilizzare l'opzione Nessuna credenziale con provider di dati .NET personalizzati. Se viene specificato l'account per l'esecuzione automatica, la stringa di connessione determina le credenziali che verranno utilizzate. Il server di report rappresenta l'account per l'esecuzione automatica per stabilire la connessione.<br /><br /> Se l'account per l'esecuzione automatica non è definito, la connessione avrà esito negativo. Per altre informazioni sulla definizione dell'account, vedere [configurare l'Account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
   
 ## <a name="connections-for-idbconnection"></a>Connessioni per IDbConnection  
  Se si usa un'estensione per l'elaborazione dati personalizzata che supporta solo <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, è necessario specificare la connessione nel modo seguente:  
   
-1.  Configurazione dell'account di esecuzione automatica. La configurazione di questo account è necessaria per le connessioni stabilite utilizzando `IDbConnection`. Il server di report rappresenta l'account quando viene stabilita la connessione.  
+1.  Configurazione dell'account di esecuzione automatica. Configurazione di questo account è necessaria per le connessioni effettuate con `IDbConnection`. Il server di report rappresenta l'account quando viene stabilita la connessione.  
   
 2.  Configurare le proprietà dell'origine dei dati nel report per l'utilizzo dell'opzione **Nessuna credenziale**.  
   
 3.  Inserire le credenziali utilizzate per connettersi all'origine dei dati nella stringa di connessione.  
   
- Quando si utilizza `IDbConnection`, non sono supportati i seguenti tipi di credenziali: sicurezza integrata, account utente di Windows e le credenziali del database. Se in una connessione a un'origine dei dati vengono utilizzate queste opzioni, la connessione avrà esito negativo sul server di report.  
+ Quando si usa `IDbConnection`, non sono supportati i seguenti tipi di credenziali: sicurezza integrata, account utente di Windows e le credenziali del database. Se in una connessione a un'origine dei dati vengono utilizzate queste opzioni, la connessione avrà esito negativo sul server di report.  
   
 ## <a name="connections-for-idbconnectionextension"></a>Connessioni per IDbConnectionExtension  
  Se si usa un'estensione per l'elaborazione dati personalizzata che supporta <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>, è possibile specificare la connessione nel modo seguente:  
   
 |Credenziali|Connessioni|  
 |-----------------|-----------------|  
-|sicurezza integrata|Se il provider di dati lo supporta, è possibile utilizzare la sicurezza integrata di Windows con estensioni per l'elaborazione dati personalizzate che utilizzano `IDbConnectionExtension`.<br /><br /> Quando si definisce la stringa di connessione, assicurarsi di includere argomenti che specifichino la sicurezza integrata (ad esempio, una connessione a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati potrebbe includere `Integrated Security=SSPI` nella stringa di connessione).|  
-|Autenticazione di Windows|Se il provider di dati lo supporta, è possibile utilizzare un account utente di dominio di Windows per estensioni per l'elaborazione dati personalizzate che utilizzano `IDbConnectionExtension`.<br /><br /> Il server di report rappresenta l'account utente prima che venga chiamata l'estensione per l'elaborazione dati. Quando si definisce la stringa di connessione, assicurarsi di includere argomenti che specifichino la sicurezza integrata (ad esempio, una connessione a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati potrebbe includere `Integrated Security=SSPI` nella stringa di connessione).|  
+|sicurezza integrata|Se il provider di dati lo supporta, è possibile usare la sicurezza integrata di Windows con estensioni per l'elaborazione dati personalizzate che usano `IDbConnectionExtension`.<br /><br /> Quando si definisce la stringa di connessione, assicurarsi di includere argomenti che specifichino la sicurezza integrata (ad esempio, una connessione a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati potrà includere `Integrated Security=SSPI` nella stringa di connessione).|  
+|Autenticazione di Windows|Se il provider di dati lo supporta, è possibile usare un account utente di dominio di Windows per estensioni per l'elaborazione dati personalizzate che usano `IDbConnectionExtension`.<br /><br /> Il server di report rappresenta l'account utente prima che venga chiamata l'estensione per l'elaborazione dati. Quando si definisce la stringa di connessione, assicurarsi di includere argomenti che specifichino la sicurezza integrata (ad esempio, una connessione a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati potrà includere `Integrated Security=SSPI` nella stringa di connessione).|  
 |Credenziali di database|È possibile utilizzare l'autenticazione del database per configurare connessioni per estensioni per l'elaborazione dati personalizzate che utilizzano `IDbConnectionExtension`.|  
 |Nessuna credenziale|Se viene specificato l'account per l'esecuzione automatica, la stringa di connessione determina le credenziali che verranno utilizzate.<br /><br /> Se l'account per l'esecuzione automatica non è definito, la connessione avrà esito negativo.|  
   

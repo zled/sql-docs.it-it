@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 922df55ae21fe9eda3fa3fc5b040696a2ce1424d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3f039dcac25d3fab4c42f1f412f202f19c37d14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324651"
 ---
 # <a name="sap-bw-source"></a>Origine SAP BW
   L'origine SAP BW è il componente di origine di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Pertanto, l'origine SAP BW estrae i dati da un sistema SAP Netweaver BW versione 7 e li rende disponibili al flusso di dati in un pacchetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -110,7 +110,7 @@ ms.locfileid: "36054562"
   
     -   Per l'opzione **E - Solo estrazione** , fornire l'ID richiesta.  
   
--   Specificare le regole per la conversione di stringhe. (Ad esempio, convertire tutte le stringhe a seconda che il sistema SAP Netweaver BW sia Unicode oppure No o convertire tutte le stringhe in `varchar` o `nvarchar`).  
+-   Specificare le regole per la conversione di stringhe. (Ad esempio, convertire tutte le stringhe a seconda del fatto che il sistema SAP Netweaver BW sia Unicode oppure No o convertire tutte le stringhe in `varchar` o `nvarchar`).  
   
 -   Utilizzare le opzioni selezionate per visualizzare in anteprima i dati da estrarre.  
   
@@ -125,9 +125,9 @@ ms.locfileid: "36054562"
   
 -   [Editor origine SAP BW &#40;pagina Gestione connessione&#41;](sap-bw-source-editor-connection-manager-page.md)  
   
--   [Editor origine SAP BW &#40;pagina colonne&#41;](sap-bw-source-editor-columns-page.md)  
+-   [Editor origine SAP BW &#40;(pagina colonne)&#41;](sap-bw-source-editor-columns-page.md)  
   
--   [Editor origine SAP BW &#40;pagina di Output di errore&#41;](sap-bw-source-editor-error-output-page.md)  
+-   [Editor origine SAP BW &#40;pagina dell'Output degli errori&#41;](sap-bw-source-editor-error-output-page.md)  
   
 -   [Editor origine SAP BW &#40;pagina avanzate&#41;](sap-bw-source-editor-advanced-page.md)  
   
@@ -142,6 +142,6 @@ ms.locfileid: "36054562"
 -   [Anteprima](preview.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Microsoft Connector 1.1 for SAP BW componenti](../microsoft-connector-for-sap-bw-components.md)  
+ [Componenti di Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-components.md)  
   
   

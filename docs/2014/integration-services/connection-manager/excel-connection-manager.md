@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - files [Integration Services], connections
 - connections [Integration Services], Excel
@@ -18,20 +18,20 @@ ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5c853ba0255f0e1afc511465de6c31a62376bf4c
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 81dc5d87384613ba742986715e876a0b9bc809f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187128"
 ---
 # <a name="excel-connection-manager"></a>Gestione connessione Excel
-  Una gestione connessione Excel consente la connessione di un pacchetto a un file di cartella di lavoro di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel esistente. L'origine e destinazione Excel che [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includono utilizzano la gestione connessione Excel.  
+  Una gestione connessione Excel consente la connessione di un pacchetto a un file di cartella di lavoro di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel esistente. L'origine e destinazione Excel che [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includono utilizzo della gestione connessione Excel.  
   
  Quando si aggiunge una gestione connessione Excel a un pacchetto, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione Excel, imposta le proprietà della gestione connessione e quindi la aggiunge alla raccolta `Connections` del pacchetto.  
   
- Il `ConnectionManagerType` proprietà della gestione connessione è impostata su `EXCEL`.  
+ Il `ConnectionManagerType` della gestione connessione viene impostata su `EXCEL`.  
   
 > [!NOTE]  
 >  Non è possibile connettersi a un file di Excel protetto da password.  
@@ -47,7 +47,7 @@ ms.locfileid: "36324695"
   
  Se la gestione connessione Excel viene utilizzata da un'origine Excel, i nomi delle colonne saranno inclusi nei dati estratti. Se viene utilizzata da una destinazione Excel, i nomi delle colonne saranno inclusi nei dati scritti.  
   
- La gestione connessione Excel utilizza il provider OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Jet 4.0 e il relativo driver ISAM (Indexed Sequential Access Method, metodo di accesso sequenziale indicizzato) di Excel di supporto per stabilire la connessione con le origini dei dati Excel e quindi leggere e scrivere informazioni. Per ulteriori informazioni sul comportamento di questo provider e driver se utilizzata con origini e destinazioni Excel, vedere [origine Excel](../data-flow/excel-source.md) e [destinazione Excel](../data-flow/excel-destination.md).  
+ La gestione connessione Excel utilizza il provider OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Jet 4.0 e il relativo driver ISAM (Indexed Sequential Access Method, metodo di accesso sequenziale indicizzato) di Excel di supporto per stabilire la connessione con le origini dei dati Excel e quindi leggere e scrivere informazioni. Per altre informazioni sul comportamento del provider e driver, se utilizzato con origini e destinazioni Excel, vedere [origine Excel](../data-flow/excel-source.md) e [destinazione Excel](../data-flow/excel-destination.md).  
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   

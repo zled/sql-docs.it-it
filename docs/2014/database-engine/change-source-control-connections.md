@@ -1,5 +1,5 @@
 ---
-title: Modificare le connessioni controllo origine | Documenti Microsoft
+title: Modificare le connessioni di controllo di origine | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server Management Studio], source controls
 - source controls [SQL Server Management Studio], connections
 ms.assetid: 538e3beb-f99c-4095-bd65-6413e872d26e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bb9453806d27f55cf081eb1196e886cecf1789c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3d158c2a0981b6174bcb83948b10bacd1a97d1f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188948"
 ---
 # <a name="change-source-control-connections"></a>Modifica delle connessioni del controllo del codice sorgente
   La prima volta che viene aggiunta o aperta una soluzione dal controllo del codice sorgente, il provider del controllo crea un'associazione tra la cartella radice della directory della soluzione locale e la cartella corrispondente del server.  
@@ -35,11 +35,11 @@ ms.locfileid: "36063685"
   
 #### <a name="to-open-the-source-control-user-interface-from-the-studio-environment"></a>Per aprire l'interfaccia utente del controllo del codice sorgente dall'ambiente Studio  
   
-1.  Nel **File** dal menu **controllo del codice sorgente**, quindi fare clic su **avvia Microsoft Visual SourceSafe**.  
+1.  Nel **File** dal menu **controllo del codice sorgente**, quindi fare clic su **avviare Microsoft Visual SourceSafe**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali di controlli di origine](../../2014/database-engine/source-control-basics.md)   
  [Impostare le opzioni di controllo di origine](../../2014/database-engine/set-source-control-options.md)   
- [Escludere i file dal controllo del codice sorgente](../../2014/database-engine/exclude-files-from-source-control.md)  
+ [Esclusione di file dal controllo del codice sorgente](../../2014/database-engine/exclude-files-from-source-control.md)  
   
   

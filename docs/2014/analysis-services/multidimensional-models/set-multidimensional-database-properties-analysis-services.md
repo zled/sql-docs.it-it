@@ -1,5 +1,5 @@
 ---
-title: Impostare le proprietà di Database multidimensionale (Analysis Services) | Documenti Microsoft
+title: Impostare le proprietà di Database multidimensionale (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [Analysis Services], databases
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2ec653606418e1c3dea32b04cb1e923b54c98e45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1de79fd7eb257364069dfaa15146036dd617bdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200231"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Impostare le proprietà dei database multidimensionali (Analysis Services)
   Sono disponibili numerose proprietà di database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che possono essere configurate in Progettazione database di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "36062306"
   
 -   È possibile specificare una descrizione del database presentabile agli utenti. È inoltre possibile visualizzare il nome del database, ma non modificarlo. Per modificare il nome del database, è necessario modificare le proprietà del progetto.  
   
--   È possibile specificare traduzioni per il nome del database e la descrizione in una o più lingue. Per altre informazioni, vedere [traduzioni di cubi](../multidimensional-models-olap-logical-cube-objects/cube-translations.md), [le traduzioni delle dimensioni](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), e [traduzioni &#40;Analysis Services&#41;](../translations-analysis-services.md).  
+-   È possibile specificare traduzioni per il nome del database e la descrizione in una o più lingue. Per altre informazioni, vedere [traduzioni di cubi](../multidimensional-models-olap-logical-cube-objects/cube-translations.md), [traduzioni delle dimensioni](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), e [traduzioni &#40;Analysis Services&#41;](../translations-analysis-services.md).  
   
 -   È possibile visualizzare e modificare i mapping dei tipi di conto predefiniti. I mapping dei tipi di conto vengono usati quando una o più misure usano la funzione di aggregazione *ByAccount* . Per ogni tipo di conto è possibile specificare un alias e modificare la funzione di aggregazione predefinita associata al tipo di conto. Per altre informazioni sulla modifica dell'aggregazione predefinita, vedere [Definire una funzione semiadditiva](define-semiadditive-behavior.md).  
   
@@ -50,6 +50,6 @@ ms.locfileid: "36062306"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo proprietà del database &#40;SSAS - multidimensionale&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
- [Configurare le proprietà di progetto di Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
+ [Configurare proprietà di progetto di Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
   
   

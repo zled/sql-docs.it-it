@@ -1,5 +1,5 @@
 ---
-title: Pagina di selezione di set di dati (gestione Report) condivise | Documenti Microsoft
+title: Condiviso pagina di selezione di set di dati (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a67dc03e-f838-4ec2-9ef6-f04895bab3c7
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 24535c8bbc232852dd4706d32ac8b3910447a97b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 2c364c6d7d72860f031f81d33fe5bca39305f9f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330821"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Pagina di selezione del set di dati condiviso (Gestione report)
   La pagina di selezione del set di dati condiviso consente di controllare e modificare i set di dati condivisi attualmente associati a un report.  
@@ -57,7 +57,7 @@ ms.locfileid: "36054694"
  [Contenuto della pagina &#40;gestione Report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Gestire origini dati condivise](report-data/manage-shared-datasets.md)   
  [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
- [Le parti del report e set di dati in Generatore Report](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Parti del report e set di dati in Generatore Report](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Set di dati condivisi e incorporati &#40;Generatore report e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

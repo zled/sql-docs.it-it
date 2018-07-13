@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ae6c6adad91625ba5d5e898b7da36dc9e818d893
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: cc295fcd58d3e7609989f35a382e780614e9d7a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161902"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un istogramma al report (Generatore report)
   In un istogramma le serie vengono visualizzate come set di barre verticali raggruppate per categoria. Un istogramma può essere utile per:  
@@ -41,13 +41,13 @@ ms.locfileid: "36062358"
   
 2.  [Scegliere il tipo di grafico](#ChartType)  
   
-3.  [Formattare e assegnare etichette agli assi orizzontali](#Horizontal)  
+3.  [Formattare e assegnare un'etichetta asse orizzontale](#Horizontal)  
   
 4.  [Spostare la legenda](#Legend)  
   
 5.  [Titolo del grafico](#ChartTitle)  
   
-6.  [Formattare e assegnare un'etichetta asse verticale](#Vertical)  
+6.  [Formattare e assegnare un'etichetta dell'asse verticale](#Vertical)  
   
 7.  [Aggiungere una media mobile](#Average)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36062358"
  Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Chart"></a> 1. Creare un report grafico da Creazione guidata grafico  
- Dal **Getting Started** finestra di dialogo, utilizzare la procedura guidata grafico per creare un set di dati incorporato, scegliere un'origine dati condivisa e creare un istogramma.  
+ Dal **introduttiva** nella finestra di dialogo, utilizzare la procedura guidata grafico per creare un set di dati incorporato, scegliere un'origine dati condivisa e creare un istogramma.  
   
 > [!NOTE]  
 >  Nella query di questa esercitazione sono contenuti i valori dei dati in modo che non sia necessaria un'origine dati esterna. Tale condizione rende tuttavia la query piuttosto lunga. In una query di un ambiente aziendale non sarebbe incluso alcun dato. Questo esempio è solo a scopo illustrativo.  
@@ -76,7 +76,7 @@ ms.locfileid: "36062358"
      Verrà visualizzata la finestra di dialogo **Riquadro attività iniziale** .  
   
     > [!NOTE]  
-    >  Se il **Getting Started** finestra di dialogo non viene visualizzata, dal **Generatore Report** pulsante, fare clic su **nuovo**.  
+    >  Se il **Guida introduttiva** non viene visualizzato nella finestra di dialogo, dalle **Generatore Report** pulsante, fare clic su **New**.  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
@@ -129,11 +129,11 @@ ms.locfileid: "36062358"
   
 4.  Scegliere **Avanti**.  
   
-5.  Nel **scegliere uno stile** pagina, nella casella stili, selezionare uno stile.  
+5.  Nel **scegliere uno stile** pagina, nella casella di stili, selezionare uno stile.  
   
      Uno stile specifica lo stile del carattere, il set di colori e uno stile del bordo. Quando si seleziona uno stile, nel riquadro di anteprima viene visualizzato un esempio del grafico con lo stile selezionato.  
   
-6.  Fare clic su **Fine**.  
+6.  Scegliere **Fine**.  
   
      Il grafico verrà aggiunto all'area di progettazione.  
   
@@ -148,11 +148,11 @@ ms.locfileid: "36062358"
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Pulsante destro del mouse sull'asse orizzontale e quindi fare clic su **proprietà asse orizzontale**.  
+2.  Fare doppio clic su asse orizzontale e quindi fare clic su **proprietà asse orizzontale**.  
   
 3.  Fare clic su **numero**.  
   
-4.  In **categoria**, selezionare **data**.  
+4.  Nelle **categoria**, selezionare **data**.  
   
 5.  Nella casella **Tipo** selezionare **31 gennaio 2000**.  
   
@@ -168,15 +168,15 @@ ms.locfileid: "36062358"
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Destro del mouse sul titolo dell'asse orizzontale e quindi fare clic su **Mostra titolo asse** per rimuovere il titolo. Poiché sull'asse orizzontale vengono visualizzate le date, il titolo non è necessario.  
+2.  Fare doppio clic sul titolo dell'asse orizzontale e quindi fare clic su **Mostra titolo asse** per rimuovere il titolo. Poiché sull'asse orizzontale vengono visualizzate le date, il titolo non è necessario.  
   
-3.  Pulsante destro del mouse sull'asse orizzontale e quindi fare clic su **proprietà asse orizzontale**.  
+3.  Fare doppio clic su asse orizzontale e quindi fare clic su **proprietà asse orizzontale**.  
   
-4.  Nel **opzioni dell'asse** pagina **intervallo dell'asse e intervallo**, tipo **3** per **intervallo**. Il grafico verrà visualizzato a intervalli di tre giorni.  
+4.  Nel **opzioni dell'asse** pagina **intervallo dell'asse e l'intervallo**, digitare **3** per **intervallo**. Il grafico verrà visualizzato a intervalli di tre giorni.  
   
 5.  Fare clic su **etichette**.  
   
-6.  In **Modifica opzioni adattamento etichetta asse**, selezionare **Disabilita adattamento**.  
+6.  Nelle **Modifica opzioni adattamento etichetta asse**, selezionare **Disabilita adattamento**.  
   
 7.  In **Angolo di rotazione etichetta**selezionare **-90**.  
   
@@ -195,15 +195,15 @@ ms.locfileid: "36062358"
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Fare doppio clic su nella legenda del grafico e quindi fare clic su **proprietà legenda**.  
+2.  Fare doppio clic la legenda del grafico e quindi fare clic su **proprietà legenda**.  
   
-3.  Per **posizione e Layout**, selezionare una posizione differente. ad esempio la posizione centrale inferiore.  
+3.  Per la **Layout e posizione**, selezionare una posizione diversa. ad esempio la posizione centrale inferiore.  
   
      Quando la legenda viene posizionata alla fine o all'inizio di un grafico, il relativo layout viene modificato da verticale in orizzontale. È possibile selezionare un altro layout nell'elenco a discesa **Layout** .  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  (Facoltativo) Poiché in questa esercitazione si fa riferimento a una sola categoria, la legenda non è necessaria. Per rimuovere la legenda, fare doppio clic su legenda e quindi fare clic su **Elimina legenda**.  
+5.  (Facoltativo) Poiché in questa esercitazione si fa riferimento a una sola categoria, la legenda non è necessaria. Per rimuovere la legenda, fare doppio clic la legenda e quindi fare clic su **Elimina legenda**.  
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "36062358"
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Selezionare le parole **titolo del grafico** nella parte superiore del grafico e quindi digitare il testo seguente: **totali ordini di vendita negozi**.  
+2.  Selezionare le parole **titolo del grafico** nella parte superiore del grafico e quindi digitare il seguente testo: **totali ordini di vendita Store**.  
   
 3.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -226,21 +226,21 @@ ms.locfileid: "36062358"
   
 2.  Fare doppio clic sulle etichette dell'asse verticale lateralmente al grafico per selezionarle.  
   
-3.  Sulla barra multifunzione, nel **Home** nella scheda il **numero** di gruppo, fare clic sul **valuta** pulsante. Le etichette dell'asse cambiano per mostrare il formato della valuta.  
+3.  Sulla barra multifunzione, nel **Home** nella scheda il **numero** raggruppare, fare clic il **valuta** pulsante. Le etichette dell'asse cambiano per mostrare il formato della valuta.  
   
-4.  Sulla barra multifunzione, nel **Home** nella scheda il **numero** di gruppo, fare clic sul **Diminuisci decimali** pulsante due volte, per visualizzare il numero arrotondato al dollaro più vicino.  
+4.  Sulla barra multifunzione, nel **Home** nella scheda il **numero** raggruppare, fare clic il **Diminuisci decimali** pulsante due volte, per visualizzare il numero arrotondato al dollaro più vicino.  
   
-5.  Il pulsante destro l'asse verticale e fare clic su **proprietà asse verticale**.  
+5.  Fare doppio clic sull'asse verticale e fare clic su **proprietà asse verticale**.  
   
-6.  Fare clic su **numero**. Si noti che **valuta** è già selezionato nel **categoria** finestra, e **decimali** già **0** (zero).  
+6.  Fare clic su **numero**. Si noti che **valuta** è già selezionato nella **categoria** casella, e **decimali** è già **0** (zero).  
   
 7.  Nel **Mostra valori in** fare clic su **migliaia**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Fare clic sul titolo dell'asse verticale lateralmente al grafico e fare clic su **proprietà titolo asse**.  
+9. Fare doppio clic sul titolo dell'asse verticale lateralmente al grafico e fare clic su **proprietà titolo asse**.  
   
-10. Sostituire il testo nella **testo titolo** campo con il testo seguente: **totale vendite (in migliaia)**. È anche possibile specificare diverse opzioni relative alla formattazione del titolo.  
+10. Sostituire il testo di **testo titolo** campo con il testo seguente: **totale vendite (in migliaia)**. È anche possibile specificare diverse opzioni relative alla formattazione del titolo.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -262,7 +262,7 @@ ms.locfileid: "36062358"
   
 6.  Fare clic su **bordo**.  
   
-7.  In **spessore linea**, selezionare **3pt**.  
+7.  Nelle **spessore linea**, selezionare **3pt**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -278,17 +278,17 @@ ms.locfileid: "36062358"
   
 2.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
-3.  Tipo di **grafico-vendite**, premere INVIO e quindi digitare **gennaio-dicembre 2009**, in modo analogo al seguente:  
+3.  Tipo di **grafico-vendite**, premere INVIO e quindi digitare **gennaio-dicembre 2009**, in modo che risulti simile al seguente:  
   
      **Grafico a barre - Vendite**  
   
      **Gennaio-dicembre 2009**  
   
-4.  Selezionare **grafico-vendite**, fare clic sul **grassetto** pulsante il **carattere** sezione il **Home** scheda della barra multifunzione.  
+4.  Selezionare **grafico-vendite**e fare clic sul **grassetto** pulsante la **Font** sezione la **Home** della barra multifunzione.  
   
-5.  Selezionare **gennaio-dicembre 2009**e il **carattere** sezione il **Home** scheda, impostare le dimensioni del carattere su **10**.  
+5.  Selezionare **gennaio-dicembre 2009**e il **Font** sezione il **Home** scheda, impostare la dimensione del carattere su **10**.  
   
-6.  (Facoltativo) Potrebbe essere necessario rendere il **titolo** altezza per contenere le due righe di testo trascinando verso il basso sulle doppie frecce quando si fa clic al centro il bordo inferiore della casella di testo.  
+6.  (Facoltativo) Potrebbe essere necessario rendere il **titolo** altezza per contenere le due righe di testo da effettua il pull verso il basso le doppie frecce quando si fa clic al centro del bordo inferiore della casella di testo.  
   
      Il titolo verrà visualizzato nella parte superiore del report. Quando non è definita un'intestazione di pagina, gli elementi nella parte superiore del corpo del report equivalgono a un'intestazione di report.  
   

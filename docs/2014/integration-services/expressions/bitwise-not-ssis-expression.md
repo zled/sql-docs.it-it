@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
@@ -16,13 +16,13 @@ ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 91a5dae5b5babeb3804097d25bc41bf52c5e74af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f422eb2e9b75e7488cff9ceaa089954595d00313
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231491"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (NOT bit per bit) (espressione SSIS)
   Viene eseguita una negazione bit per bit di un valore integer. Questo operatore può essere applicato a tipi di dati integer con e senza segno.  
@@ -42,7 +42,7 @@ ms.locfileid: "36055038"
 ## <a name="result-types"></a>Tipi restituiti  
  Restituisce il tipo di dati di *integer_expression.*  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  None  
   
 ## <a name="expression-examples"></a>Esempi di espressione  
@@ -62,7 +62,7 @@ ms.locfileid: "36055038"
  1111111101010101  
   
 ## <a name="see-also"></a>Vedere anche  
- [Associatività e precedenza operatori](operator-precedence-and-associativity.md)   
- [Gli operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md)  
+ [Precedenza e associatività degli operatori](operator-precedence-and-associativity.md)   
+ [Gli operatori &#40;espressione di SSIS&#41;](operators-ssis-expression.md)  
   
   

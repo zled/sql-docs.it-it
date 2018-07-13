@@ -1,5 +1,5 @@
 ---
-title: Creare un progetto di modello tabulare (SSAS tabulare) | Documenti Microsoft
+title: Creare un progetto di modello tabulare (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d889e25351e3a944409e62a682072a8845a2c13f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 402d53f58e1d23667e181849dc5e23276bb663b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178458"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>Creare un nuovo progetto di modello tabulare (SSAS tabulare)
   In questo argomento viene descritto come creare un nuovo progetto di modello tabulare vuoto in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dopo aver creato un nuovo progetto di modello, è possibile cominciare la creazione del progetto di modello importando dati dalle origini dati.  

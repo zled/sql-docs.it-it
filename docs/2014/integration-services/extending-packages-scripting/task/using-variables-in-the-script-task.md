@@ -24,13 +24,13 @@ ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 caps.latest.revision: 62
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7a8179cd44f9cb9bb2c97971ca2c347eb76b3f82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a9e2fac6ad07c177dc3f3247207dc3d6224d9d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193521"
 ---
 # <a name="using-variables-in-the-script-task"></a>Utilizzo di variabili nell'attività Script
   Le variabili rendono possibile lo scambio di dati tra l'attività Script e altri oggetti del pacchetto. Per altre informazioni, vedere [Integration Services &#40;SSIS&#41; Variables](../../integration-services-ssis-variables.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "36063887"
  Dopo che è stato eseguito il mapping degli elementi enumerati alle variabili, è necessario aggiungere le variabili mappate al `ReadOnlyVariables` proprietà il **Script** pagina del **Editor attività Script** per renderli disponibili per il script. Per un esempio di un'attività Script all'interno di un contenitore Ciclo Foreach che elabora i file di immagine in una cartella, vedere [Uso di immagini con l'attività Script](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md).  
   
 ## <a name="variables-example"></a>Esempio di variabili  
- Nell'esempio seguente viene illustrato come accedere e utilizzare le variabili in un'attività Script per determinare il percorso del flusso di lavoro del pacchetto. Nell'esempio si presuppone di aver creato le variabili integer denominate `CustomerCount` e `MaxRecordCount` e averli aggiunti al `ReadOnlyVariables` insieme il **Editor attività Script**. La variabile `CustomerCount` contiene il numero di record di clienti da importare. Se il valore è maggiore del valore `MaxRecordCount`, l'attività Script riporta un errore. Quando si verifica un errore perché la soglia `MaxRecordCount` è stata superata, il percorso di errore del flusso di lavoro può implementare l'eventuale pulizia richiesta.  
+ Nell'esempio seguente viene illustrato come accedere e utilizzare le variabili in un'attività Script per determinare il percorso del flusso di lavoro del pacchetto. Nell'esempio si presuppone di aver creato le variabili integer denominate `CustomerCount` e `MaxRecordCount` e aggiunte al `ReadOnlyVariables` insieme il **Editor attività Script**. La variabile `CustomerCount` contiene il numero di record di clienti da importare. Se il valore è maggiore del valore `MaxRecordCount`, l'attività Script riporta un errore. Quando si verifica un errore perché la soglia `MaxRecordCount` è stata superata, il percorso di errore del flusso di lavoro può implementare l'eventuale pulizia richiesta.  
   
  Per compilare correttamente l'esempio, è necessario aggiungere un riferimento all'assembly Microsoft.SqlServer.ScriptTask.  
   
@@ -119,10 +119,10 @@ public class ScriptMain
   
 ```  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Servizi di integrazione &#40;SSIS&#41; variabili](../../integration-services-ssis-variables.md)   
- [Utilizzo di variabili nei pacchetti](../../use-variables-in-packages.md)  
+ [Integration Services &#40;SSIS&#41; le variabili](../../integration-services-ssis-variables.md)   
+ [Uso di variabili nei pacchetti](../../use-variables-in-packages.md)  
   
   

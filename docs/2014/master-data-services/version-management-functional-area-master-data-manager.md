@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b36b06422cf2e88cfd68fd640f562204a40dde6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: badabfd899f3e4bad719f5c3c731cbc768cfe645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225641"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>Area funzionale Gestione versioni (Gestione dati master)
   Nell'area funzionale Gestione versioni, gli amministratori possono convalidare dati, rivedere e invertire transazioni, creare copie di dati con versione e versioni del flag di dati per i sistemi di sottoscrizione. Per altre informazioni sugli amministratori, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ## <a name="versions"></a>Versioni  
- [Versioni di &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+ [Le versioni &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
  [Commit di una versione &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "36055931"
   
  [Copiare una versione &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)  
   
- [Eliminazione di una versione &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)  
+ [Eliminare una versione &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)  
   
 ## <a name="version-flags"></a>Flag di versione  
  [Creare un Flag di versione &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)  

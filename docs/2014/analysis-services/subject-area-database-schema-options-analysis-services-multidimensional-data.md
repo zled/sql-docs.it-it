@@ -1,5 +1,5 @@
 ---
-title: Oggetto opzioni Schema Database Area (generazione guidata Schema) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Soggetto opzioni Schema Database Area (generazione guidata Schema) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.subjectareaschemaopts.f1
 ms.assetid: 4c109bb8-e19d-412b-908f-bfdd7f872439
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ce756687e73e628d1b66a797e19711a3d6889eec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb617bca3a906162f372ce482269d3fca386acec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235591"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>Opzioni schema database area di interesse (Generazione guidata schema) (Analysis Services - Dati multidimensionali)
   Utilizzare la pagina **Opzioni schema database area di interesse** per controllare la generazione dello schema e definire la modalità di mantenimento dei dati.  
@@ -30,7 +30,7 @@ ms.locfileid: "36055078"
  **Nome schema**  
  Consente di specificare il nome dello schema all'interno del nuovo database dell'area di interesse.  
   
- **Creazione di chiavi primarie nelle tabelle delle dimensioni**  
+ **Crea chiavi primarie nelle tabelle delle dimensioni**  
  Consente di creare chiavi primarie nelle tabelle delle dimensioni nello schema generato. Se non si seleziona questa opzione non viene generato alcun indice.  
   
 > [!NOTE]  
@@ -58,6 +58,6 @@ ms.locfileid: "36055078"
 |Popola solo se vuota|Le tabelle dei tempi dell'area di interesse vengono popolate solo se sono vuote.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Della Guida F1 di procedura guidata di generazione dello schema &#40;Analysis Services - dati multidimensionali&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
+ [Guida F1 di procedura guidata di generazione dello schema &#40;Analysis Services - dati multidimensionali&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
   
   

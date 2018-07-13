@@ -1,5 +1,5 @@
 ---
-title: Modificare un nome di modello (Master Data Services) | Documenti Microsoft
+title: Modificare un nome di modello (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 caps.latest.revision: 4
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc049820c419dd2b5dd3fbcd165522ef80193d2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58f66ff01adba7661897b93076d7867bab73dcff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324421"
 ---
 # <a name="change-a-model-name-master-data-services"></a>Modificare il nome di un modello (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è possibile modificare il nome di un modello.  
@@ -39,14 +39,14 @@ ms.locfileid: "36055516"
   
 2.  Nella pagina **Vista modelli** scegliere **Gestisci** dalla barra dei menu, quindi fare clic su **Modelli**.  
   
-3.  Nel **Gestione modello** nella griglia, fare clic sulla riga per il modello con il nome che si desidera modificare.  
+3.  Nel **modello di manutenzione** griglia della pagina fare clic sulla riga per il modello con il nome che si desidera modificare.  
   
     > [!NOTE]  
     >  Non è possibile modificare il nome del modello Metadati.  
   
 4.  Fare clic su **modifica modello selezionato**.  
   
-5.  Nel **nome del modello** , digitare il nome aggiornato del modello.  
+5.  Nel **nome modello** , digitare il nome aggiornato del modello.  
   
 6.  Fare clic su **Salva modello**.  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], tracking attribute changes
 - change tracking groups [Master Data Services], initiating actions
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d27195abb30fe68b0fe515da479849dbc2019021
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2f66a7e91bcb475fe72d6abbe9f6007c8b9d668b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275537"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>Inizializzare azioni basate su modifiche dei valori di attributo (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare una regola di business per inizializzare azioni in base alle modifiche dei valori di attributo. Ad esempio, quando un valore di attributo specifico viene modificato, è necessario modificare un valore, inviare una notifica o avviare un flusso di lavoro esterno.  
@@ -58,7 +58,7 @@ ms.locfileid: "36054335"
   
 10. Nel nodo **Confronto valori** trascinare **è stato modificato** nell'etichetta **Condizioni** del riquadro **IF** .  
   
-11. Nel **attributi** riquadro, fare clic su un attributo e trascinarlo il **modifica condizione** del riquadro **attributo Select** etichetta. Tale attributo non ha alcun effetto sulla regola, selezionare quindi qualsiasi attributo disponibile.  
+11. Nel **attributi** riquadro, fare clic su un attributo e trascinarlo in modo che le **modifica condizione** del riquadro **Seleziona attributo** etichetta. Tale attributo non ha alcun effetto sulla regola, selezionare quindi qualsiasi attributo disponibile.  
   
 12. Nel riquadro **Modifica condizione** nella casella **Gruppo rilevamento modifiche** digitare il numero del gruppo di rilevamento delle modifiche assegnato come parte dei prerequisiti.  
   
@@ -89,12 +89,12 @@ ms.locfileid: "36054335"
   
 -   Applicare regole business ai dati eseguendo una delle procedure riportate di seguito:  
   
-    -   [Convalidare membri specifici rispetto alle regole Business &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [Convalidare membri specifici rispetto a regole Business &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
     -   [Convalidare una versione rispetto alle regole Business &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere attributi a un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
+ [Aggiungere attributi ad un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
  [Le regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

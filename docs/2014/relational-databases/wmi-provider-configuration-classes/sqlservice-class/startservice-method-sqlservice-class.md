@@ -1,5 +1,5 @@
 ---
-title: Metodo StartService (classe SqlService) | Documenti Microsoft
+title: Metodo StartService (classe SqlService) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - StartService method
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4a104885bf0c9b25e4ae0155e094634dcc024efb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 83c4c70e01eed39ac18de27fb26d3df5d4c3de7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329412"
 ---
 # <a name="startservice-method-sqlservice-class"></a>Metodo StartService (classe SqlService)
   Esegue un tentativo di avvio del servizio.  
@@ -124,7 +124,7 @@ object
  24  
  Servizio già sospeso. Il servizio è attualmente sospeso nel sistema.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvio e arresto di servizi](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

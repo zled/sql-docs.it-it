@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking groups [Master Data Services]
 - attributes [Master Data Services], change tracking groups
 - change tracking groups [Master Data Services], adding attributes
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 77a151fe4238c7ed99282436a9668a94d85e2b35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1ae8616c44e6ba58c254989c718eb53ea53a197f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235181"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>Aggiungere attributi ad un gruppo rilevamento modifiche (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]aggiungere attributi a un gruppo rilevamento modifiche quando si vuole tenere traccia delle modifiche apportate ai valori dell'attributo.  
@@ -58,7 +58,7 @@ ms.locfileid: "36055932"
   
     -   Se l'attributo è per membri consolidati, nel **attributi consolidati** riquadro, selezionare l'attributo e fare clic su **Modifica attributo consolidato**.  
   
-    -   Se l'attributo per le raccolte, il **attributi raccolta** riquadro, selezionare l'attributo e fare clic su **attributo raccolta modifica**.  
+    -   Se l'attributo è per raccolte, nel **attributi raccolta** riquadro, selezionare l'attributo e fare clic su **attributo raccolta modifica**.  
   
 7.  Selezionare la casella di controllo **Abilita rilevamento modifiche** .  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36055932"
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
--   [Inizializzare azioni basate su modifiche dei valori attributo &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
+-   [Inizializzare azioni basate su modifiche dei valori di attributo &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare un attributo di testo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   

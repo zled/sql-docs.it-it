@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di preparazione aggiornamento (prompt dei comandi) | Documenti Microsoft
+title: Esecuzione di preparazione aggiornamento (prompt dei comandi) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], running
 - command prompt [Upgrade Advisor]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML formats [Upgrade Advisor]
 ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 525cb2237795e778bef2aa33ad43cff7c2e5ad6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f30f9169e352b7ac7b889d0ca066eadf6c1778db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330951"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Esecuzione di Preparazione aggiornamento (prompt dei comandi)
   Usare la **UpgradeAdvisorWizardCmd** eseguire Preparazione aggiornamento dal prompt dei comandi dell'utilità. È possibile scegliere di ricevere i risultati in formato XML o in un file con valori delimitati da virgole.  
@@ -46,8 +46,8 @@ where <server_info> is any combination of the following:
  **-?**  
  Visualizza la sintassi del comando.  
   
- **-ConfigFile** *filename*  
- È il nome del percorso e il nome di un file XML contenente le impostazioni da usare quando si esegue il **UpgradeAdvisorWizardCmd** utilità.  
+ **-ConfigFile** *nomefile*  
+ È il nome del percorso e nome del file di un file XML contenente le impostazioni da usare quando si esegue la **UpgradeAdvisorWizardCmd** utilità.  
   
  *< server_info >*  
  Specifica il computer e l'istanza da analizzare. Utilizzare queste opzioni se non si utilizza un file di configurazione.  
@@ -57,7 +57,7 @@ where <server_info> is any combination of the following:
  **-Server** *nome_server*  
  Specifica il nome del computer da analizzare, che può essere il computer locale, ovvero il valore predefinito, oppure un computer remoto.  
   
- **-Istanza** *instance_name*  
+ **-Istanza** *nome_istanza*  
  Specifica il nome dell'istanza da analizzare. Nessun valore predefinito. Se non si specifica questo parametro il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non viene analizzato. Il valore per un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è MSSQLSERVER. Per un'istanza denominata, utilizzare il nome dell'istanza.  
   
  **-ASInstance***AS_instance_name*   
@@ -70,13 +70,13 @@ where <server_info> is any combination of the following:
  Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questo valore corrisponde all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che verrà utilizzato da Preparazione aggiornamento per stabilire la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se non si specifica un account di accesso, per la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà utilizzata l'autenticazione di Windows.  
   
  **-SqlPassword** *password*  
- Se si utilizza il **- SqlUser** argomento, utilizzare questo argomento per specificare la password per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso.  
+ Se si usa la **- SqlUser** argomento, usare questo argomento per specificare la password per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso.  
   
  **-CSV**  
- Specifica la restituzione dei risultati come valori delimitati da virgole in un file con estensione csv in aggiunta ai risultati XML standard. I risultati vengono scritti i documenti\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cartella Advisor\110\Reports eseguire l'aggiornamento.  
+ Specifica la restituzione dei risultati come valori delimitati da virgole in un file con estensione csv in aggiunta ai risultati XML standard. I risultati vengono scritti i documenti\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cartella Advisor\110\Reports esegue l'aggiornamento.  
   
 ## <a name="return-values"></a>Valori restituiti  
- Nella tabella seguente vengono illustrati i valori **UpgradeAdvisorWizardCmd** restituisce.  
+ Nella tabella seguente mostra i valori **UpgradeAdvisorWizardCmd** restituisce.  
   
 |valore|Description|  
 |-----------|-----------------|  
@@ -84,7 +84,7 @@ where <server_info> is any combination of the following:
 |numero intero positivo|Analisi riuscita, problemi di aggiornamento rilevati.|  
 |numero intero negativo|Analisi non riuscita.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Tutte le informazioni richieste per eseguire l'analisi, ad eccezione dei nomi utente e delle password dell'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], possono essere fornite in un file di configurazione XML. Il file di configurazione XML è documentato nel modello. Se non si utilizza un file di configurazione, è possibile analizzare tutti i componenti installati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con le impostazioni predefinite specificando i nomi di computer e i nomi di istanza. Per una descrizione delle impostazioni predefinite del file di configurazione, vedere la tabella "Descrizione degli elementi" più avanti in questo argomento.  
   
 ## <a name="configuration-file-template"></a>Modello di file di configurazione  
@@ -175,6 +175,6 @@ UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"
 ## <a name="see-also"></a>Vedere anche  
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Utilizzo di preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
- [Esecuzione di preparazione aggiornamento &#40;dell'interfaccia utente&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)  
+ [Esecuzione di preparazione aggiornamento a &#40;interfaccia utente&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)  
   
   

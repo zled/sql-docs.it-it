@@ -18,15 +18,15 @@ helpviewer_keywords:
 - reports [Reporting Services], integrating
 ms.assetid: 49eb539c-d89b-4291-839a-0ec1a65cd270
 caps.latest.revision: 56
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3a27e580a6558b6574b1bdb166f6bdbfb250f01c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 18c5e61ddd29b4f0c30eeb4e6fc856dda3276aa6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325571"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Integrazione di Reporting Services nelle applicazioni
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è una piattaforma di creazione di report aperta ed estendibile progettata per fornire agli sviluppatori un set completo di API per lo sviluppo di soluzioni.  

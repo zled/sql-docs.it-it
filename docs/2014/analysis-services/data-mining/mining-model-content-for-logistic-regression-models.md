@@ -1,5 +1,5 @@
 ---
-title: Contenuto dei modelli di regressione logistica modelli di data mining (Analysis Services - Data Mining) | Documenti Microsoft
+title: Contenuto dei modelli di regressione logistica modelli di data mining (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9846361e76eac9f4ad61edde10c0fda20f4f546
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6af2d4d2e3f5007cbe0721fe734073e7306b95a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328933"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di regressione logistica (Analysis Services - Data mining)
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Logistic Regression. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "36054666"
   
  Tuttavia, in un modello di regressione logistica, il nodo che rappresenta il livello nascosto è vuoto e non ha elementi figlio. Il modello contiene pertanto nodi che rappresentano singoli output (NODE_TYPE = 23) e singoli input (NODE_TYPE = 21), ma non singoli nodi nascosti.  
   
- ![struttura del contenuto modello di regressione logistica](../media/skt-modelcontentstructure-logregc.gif "struttura del contenuto modello di regressione logistica")  
+ ![struttura di contenuto modello di regressione logistica](../media/skt-modelcontentstructure-logregc.gif "struttura di contenuto modello di regressione logistica")  
   
  Per impostazione predefinita, un modello di regressione logistica è visualizzato nel **Visualizzatore Microsoft Neural Network**. Con questo visualizzatore personalizzato, è possibile impostare un filtro sugli attributi di input e i relativi valori e visualizzarne graficamente l'impatto sugli output. Le descrizioni comandi nel visualizzatore mostrano la probabilità e l'accuratezza associate a ogni coppia di input e valori di output. Per altre informazioni, vedere [Visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   

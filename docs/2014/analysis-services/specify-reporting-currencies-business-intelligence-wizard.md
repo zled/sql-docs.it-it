@@ -1,5 +1,5 @@
 ---
-title: Impostazione valute report (configurazione guidata Business Intelligence) | Documenti Microsoft
+title: Impostazione valute report (configurazione guidata Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.currenciestoreport.f1
 ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa25c4dcac782d67675888679efd1700097b4e7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4cda6eecd004b4e437552f3db07b7487c7529594
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243531"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>Impostazione valute report (Configurazione guidata funzionalità di Business Intelligence)
   Usare la pagina **Impostazione valute report** per definire le valute report per la funzionalità di conversione valuta che copre il tipo di conversione molti-a-molti o uno-a-molti specificato nella pagina **Selezione tipo di conversione**. La valuta report è la valuta in cui vengono convertiti i valori per le misure selezionate nella pagina **Selezione misure**. I membri selezionati dalla dimensione di tipo Valuta definiscono una dimensione di tipo Valuta report per la conversione di valuta generata dalla Configurazione guidata funzionalità di Business Intelligence.  
@@ -36,7 +36,7 @@ ms.locfileid: "36055095"
  Selezionare un membro specifico per includerlo nella dimensione di tipo Valuta report. Deselezionare un membro specifico per escluderlo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Business Intelligence guidata F1 Help](business-intelligence-wizard-f1-help.md)   
+ [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

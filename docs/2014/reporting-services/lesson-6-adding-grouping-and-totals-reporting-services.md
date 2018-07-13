@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 caps.latest.revision: 50
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c71c785f6d5cd5130223335830f53cc0fa8bf6f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c411b3780f1e3f5b91d00d08093f281a5daa286f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218881"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
   È possibile aggiungere gruppi e totali al report per organizzare e riepilogare i dati.  
   
- Per informazioni sull'aggiunta dei totali parziali ai report, vedere gli articoli in curah.microsoft.com: [aggiunta dei totali ai report di Reporting Services (SSRS)](http://go.microsoft.com/fwlink/p/?LinkId=403698).  
+ Per informazioni sull'aggiunta dei totali parziali ai report, vedere gli articoli in curah.microsoft.com: [aggiunta di totali ai report di Reporting Services (SSRS)](http://go.microsoft.com/fwlink/p/?LinkId=403698).  
   
  **Contenuto dell'argomento:**  
   
@@ -36,25 +36,25 @@ ms.locfileid: "36055630"
   
 -   [Per aggiungere un totale complessivo a un report](#bkmk_addgrandtotal)  
   
--   [Per pubblicare il Report al Server di Report (facoltativo)](#bkmk_publishreport)  
+-   [Per pubblicare il Report nel Server di Report (facoltativo)](#bkmk_publishreport)  
   
 ##  <a name="bkmk_groupdata"></a> Per raggruppare i dati in un report  
   
 1.  Fare clic sulla scheda **Progettazione** .  
   
-2.  Se non viene visualizzato il **gruppi di righe** riquadro, fare doppio clic su area di progettazione e fare clic su **vista** e quindi fare clic su **raggruppamento**.  
+2.  Se non viene visualizzato il **gruppi di righe** riquadro, fare doppio clic nell'area di progettazione e fare clic su **view** e quindi fare clic su **raggruppamento**.  
   
-3.  Dal **i dati del Report** riquadro, trascinare il `Date` campo per il **gruppi di righe** riquadro. Posizionarlo al di sopra della riga **(Dettagli)**.  
+3.  Dal **i dati del Report** riquadro, trascinare il `Date` campo il **gruppi di righe** riquadro. Posizionarlo al di sopra della riga **(Dettagli)**.  
   
      L'handle di riga contiene ora una parentesi quadra per mostrare un gruppo. La tabella presenta ora due colonne Date, una su ogni lato di una linea verticale tratteggiata.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  Dal **i dati del Report** riquadro, trascinare il `Order` campo per il **gruppi di righe** riquadro. Posizionarlo al di sotto di Date e al di sopra di **(Dettagli)**.  
+4.  Dal **i dati del Report** riquadro, trascinare il `Order` campo il **gruppi di righe** riquadro. Posizionarlo al di sotto di Date e al di sopra di **(Dettagli)**.  
   
      L'handle di riga contiene ora due parentesi quadre per mostrare due gruppi. La tabella ora presenta due `Order` colonne, troppo.  
   
-5.  Eliminare le colonne di data e l'ordine originale per la **destra** della linea doppia. Verranno rimossi i singoli valori dei record in modo da visualizzare solo il valore del gruppo. Selezionare gli handle delle due colonne, fare clic con il pulsante destro del mouse e scegliere **Elimina colonne**.  
+5.  Eliminare le colonne di data e l'ordine originale per il **a destra** della linea doppia. Verranno rimossi i singoli valori dei record in modo da visualizzare solo il valore del gruppo. Selezionare gli handle delle due colonne, fare clic con il pulsante destro del mouse e scegliere **Elimina colonne**.  
   
      ![Selezionare le colonne da eliminare](../../2014/tutorials/media/rs-basictablegroupsdeletecols.gif "Selezionare colonne da eliminare")  
   
@@ -86,9 +86,9 @@ ms.locfileid: "36055630"
   
 ##  <a name="bkmk_adddailytotal"></a> Per aggiungere un totale giornaliero a un report  
   
-1.  Fare clic sulla cella Order, scegliere **Aggiungi totale**, fare clic su **dopo**.  
+1.  Fare doppio clic sulla cella Order, scegliere **Aggiungi totale**, fare clic su **dopo**.  
   
-     Verrà aggiunta una nuova riga che contiene le somme della quantità e degli importi di ogni giorno e l'etichetta "**totale**" nella colonna Order.  
+     Verrà aggiunta una nuova riga contenente somme delle quantità e degli importi di ogni giorno e l'etichetta "**totale**" nella colonna Order.  
   
 2.  Digitare la parola **Daily** prima della parola **Total** nella stessa cella in modo da definire la frase **Daily Total**.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36055630"
   
 1.  Fare clic con il pulsante destro del mouse sulla cella Date, scegliere **Aggiungi totale**e quindi fare clic su **Dopo**.  
   
-     Verrà aggiunta una nuova riga che contiene le somme della quantità e degli importi per l'intero report e il **totale** assegnare un'etichetta nel `Date` colonna.  
+     Verrà aggiunta una nuova riga che contiene le somme delle quantità e dollari per l'intero report e il **totale** etichettare il `Date` colonna.  
   
 2.  Digitare la parola **Grand** prima della parola **Total** nella stessa cella in modo da definire la frase **Grand Total**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36055630"
   
      ![Anteprima: tabella semplice con totale complessivo](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Anteprima: tabella semplice con totale complessivo")  
   
-##  <a name="bkmk_publishreport"></a> Per pubblicare il Report al Server di Report (facoltativo)  
+##  <a name="bkmk_publishreport"></a> Per pubblicare il Report nel Server di Report (facoltativo)  
   
 1.  Un passaggio facoltativo consiste nel pubblicare il report completato nel server di report in modalità nativa in modo che sia possibile visualizzare il report da Gestione report.  
   
@@ -132,13 +132,13 @@ ms.locfileid: "36055630"
   
      Se viene visualizzato un messaggio simile al seguente nella finestra di output, la distribuzione è stata completata correttamente.  
   
-    > ------ Compilazione avviata - Progetto: tutorial, Configurazione: Debug ------'Sales Orders.rdl' verrà ignorato. Elemento è aggiornato. Compilazione completata--0 errori, 0 avvisi---Inizio distribuzione: progetto: tutorial, configurazione: Debug---distribuzione in http://\<nome server > / reportserverDeploying report '/ tutorial/Sales Orders'. Distribuzione completata-- 0 errori, 0 avvisi === compilazione: 1 completata o aggiornata, 0 non riuscite, 0 ignorate === Distribuisci: 1 completata, 0 non riuscite, 0 ignorate ===  
+    > ------ Compilazione avviata - Progetto: tutorial, Configurazione: Debug ------'Sales Orders.rdl' verrà ignorato. L'elemento è aggiornato. Compilazione completata--0 errori, 0 avvisi---Inizio distribuzione: progetto: tutorial, configurazione: Debug---distribuzione in http://\<nome server > / reportserverDeploying report '/ tutorial/Sales Orders'. Distribuzione completata-- 0 errori, 0 avvisi === compilazione: 1 completate o aggiornate, 0 non riuscite, 0 ignorate === Distribuisci: 1 completata, 0 non riuscite, 0 ignorate ===  
   
      Se viene visualizzato un messaggio di errore simile al seguente, verificare di disporre delle autorizzazione per il server di report e di aver avviato [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] con privilegi di amministratore.  
   
-    > "Le autorizzazioni concesse all'utente ' XXXXXXXX\\< nome utente\>' non sono sufficienti per eseguire questa operazione"  
+    > "Le autorizzazioni concesse all'utente ' XXXXXXXX\\< proprio nome utente\>' non sono sufficienti per eseguire questa operazione"  
   
-6.  Avviare Gestione Report con privilegi di amministratore, ad esempio, fare clic sull'icona di Internet Explorer e fare clic su **Esegui come amministratore**.  
+6.  Avviare Gestione Report con privilegi di amministratore, ad esempio, fare doppio clic sull'icona per Internet Explorer e fare clic su **Esegui come amministratore**.  
   
      Selezionare l'URL Gestione report, ad esempio `http://<server name>/reports`.  
   
@@ -148,6 +148,6 @@ ms.locfileid: "36055630"
  Questo passaggio conclude l'esercitazione relativa alla creazione di un report tabella semplice.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filtrare, raggruppare e ordinare i dati &#40;SSRS e Generatore Report&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrare, raggruppare e ordinare i dati &#40;Report e SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

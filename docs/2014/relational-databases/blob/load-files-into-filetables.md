@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], migrating files
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f04207a9f61228b48318afbc321dcc5f10358ad7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fe047d365e3ce7b8df00307499eca50553a2c76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169102"
 ---
 # <a name="load-files-into-filetables"></a>Caricamento di file in FileTable
   Viene descritto come caricare o eseguire la migrazione dei file in tabelle FileTable.  
@@ -48,15 +47,15 @@ ms.locfileid: "36055507"
 ###  <a name="HowToMigrateFiles"></a> Esempio: Migrazione di file dal file system in una tabella FileTable  
  In questo scenario i file vengono archiviati nel file system ed è disponibile una tabella di metadati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente puntatori ai file. Si desidera spostare i file in una tabella FileTable, quindi sostituire il percorso UNC originale per ogni file nei metadati con il percorso UNC della tabella FileTable. La funzione [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) consente di raggiungere tale obiettivo.  
   
- Per questo esempio, si supponga che vi sia una tabella di database esistente, `PhotoMetadata`, che contiene dati su fotografie. Questa tabella include una colonna `UNCPath` di tipo `varchar`(512) contenente il percorso UNC effettivo di un file con estensione jpg.  
+ Per questo esempio, si supponga che vi sia una tabella di database esistente, `PhotoMetadata`, che contiene dati su fotografie. Questa tabella contiene una colonna `UNCPath` di tipo `varchar`(512) contenente il percorso UNC effettivo di un file con estensione jpg.  
   
  Per eseguire la migrazione dei file di immagine dal file system in una tabella FileTable, è necessario effettuare le operazioni seguenti:  
   
-1.  Creare una nuova tabella FileTable che contenga i file. Questo esempio viene utilizzato il nome della tabella, `dbo.PhotoTable`, ma non mostra il codice per creare la tabella.  
+1.  Creare una nuova tabella FileTable che contenga i file. Questo esempio Usa il nome della tabella `dbo.PhotoTable`, ma non mostra il codice per creare la tabella.  
   
 2.  Utilizzare xcopy o uno strumento simile per copiare i file JPG, con la relativa struttura di directory, nella directory radice della tabella FileTable.  
   
-3.  Correggere i metadati nella `PhotoMetadata` tabella, tramite codice simile al seguente:  
+3.  Correggere i metadati nella `PhotoMetadata` tabella, usando codice simile al seguente:  
   
 ```tsql  
 --  Add a path locator column to the PhotoMetadata table.  

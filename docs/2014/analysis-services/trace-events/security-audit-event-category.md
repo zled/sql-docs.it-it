@@ -1,5 +1,5 @@
 ---
-title: Categoria di eventi Security Audit | Documenti Microsoft
+title: Categoria di eventi Security Audit | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Security Audit event category [SQL Server]
 - event classes [Analysis Services], security audit
 - security events [Analysis Services]
 ms.assetid: 9686a495-68d7-4137-8e30-2655aa519f6c
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00b609451a5513e801acf41f4f0ac87ae0a932b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79141f6ed5c61e03b792875fbff2253f9e8bd0aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180908"
 ---
 # <a name="security-audit-event-category"></a>Categoria di eventi Controllo di sicurezza
   La categoria di eventi Controllo di sicurezza include le classi di eventi descritte nella tabella seguente.  
@@ -39,6 +39,6 @@ ms.locfileid: "36063910"
  Per informazioni sulle colonne associate a ogni classe di evento inclusa nella categoria Controllo di sicurezza, vedere [Colonne di dati degli eventi di controllo di sicurezza](security-audit-data-columns.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli eventi di traccia di Analysis Services](analysis-services-trace-events.md)  
+ [Eventi di traccia di Analysis Services](analysis-services-trace-events.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
 - traces [Reporting Services]
@@ -18,19 +18,19 @@ ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5473021393acf02a3910b4eb8090486d838e0770
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0fd7269ca32442cc53ad86d124db2eb8c1ff5d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270277"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
-  Il [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] log di traccia di server di report è un file di testo ASCII che contiene informazioni dettagliate per le operazioni del servizio Server di Report, ad esempio operazioni eseguite dal Report Server Web del servizio, gestione Report e dall'elaborazione in background. Nel file di log di traccia sono contenute inoltre informazioni ridondanti, che vengono registrate in altri file di log, e informazioni aggiuntive non disponibili altrove. Le informazioni contenute nel log di traccia sono utili se si esegue il debug di un'applicazione che include un server di report o se è necessario analizzare un problema specifico scritto nel log eventi o nel log di esecuzione.  
+  Il [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] log di traccia di server di report è un file di testo ASCII che contiene informazioni dettagliate per operazioni del servizio Server di Report, ad esempio operazioni eseguite dal Report Server Web service, gestione Report e l'elaborazione in background. Nel file di log di traccia sono contenute inoltre informazioni ridondanti, che vengono registrate in altri file di log, e informazioni aggiuntive non disponibili altrove. Le informazioni contenute nel log di traccia sono utili se si esegue il debug di un'applicazione che include un server di report o se è necessario analizzare un problema specifico scritto nel log eventi o nel log di esecuzione.  
   
 > [!NOTE]  
->  Nelle versioni precedenti sono presenti più file di log di traccia, uno per ogni applicazione. I file seguenti sono obsoleti e non vengono più creati [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive: reportserverwebapp _*\<timestamp >*. log, ReportServer _*\<timestamp >*. log e reportserverservice_main _*\<timestamp >*. log.  
+>  Nelle versioni precedenti sono presenti più file di log di traccia, uno per ogni applicazione. I file seguenti sono obsoleti e non vengono più creati [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive: reportserverwebapp _*\<timestamp >*. log, ReportServer_*\<timestamp >*. log e reportserverservice_main _*\<timestamp >*. log.  
   
  **Contenuto dell'argomento:**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36062351"
   
 -   [Impostazioni di configurazione della traccia](#bkmk_trace_configuration_settings)  
   
--   [Aggiunta di impostazione di configurazione personalizzata per specificare un percorso del File Dump](#bkmk_add_custom)  
+-   [Aggiunta di impostazione di configurazione personalizzata per specificare il percorso del File di Dump](#bkmk_add_custom)  
   
 -   [Campi del File di log](#bkmk_log_file_fields)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36062351"
   
  `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`(Indici per tabelle con ottimizzazione per la memoria).  
   
- Nell'esempio seguente viene illustrata la struttura XML delle impostazioni `RStrace`. Il valore per `DefaultTraceSwitch` determina il tipo di informazioni che vengano aggiunto al registro. Fatta eccezione per il `Components` , i valori per l'attributo `RStrace` sono gli stessi in tutti i file di configurazione.  
+ Nell'esempio seguente viene illustrata la struttura XML delle impostazioni `RStrace`. Il valore per `DefaultTraceSwitch` determina il tipo di informazioni aggiunte al log. Fatta eccezione per il `Components` , i valori per l'attributo `RStrace` sono gli stessi in tutti i file di configurazione.  
   
 ```  
 <system.diagnostics>  
@@ -89,7 +89,7 @@ ms.locfileid: "36062351"
 |`Prefix`|Specifica un valore generato che distingue ogni istanza del log dalle altre. Per impostazione predefinita, ai nomi file dei log di traccia vengono aggiunti valori timestamp. Questo valore è impostato su "tid, time". Non modificare questa impostazione.|  
 |**TraceListeners**|Specifica una destinazione per l'output del contenuto del log di traccia. È possibile specificare più destinazioni, separandole con una virgola. I valori validi sono:<br /><br /> DebugWindow<br /><br /> File (valore predefinito)<br /><br /> StdOut|  
 |**TraceFileMode**|Specifica se i log di traccia devono contenere dati per un periodo di 24 ore. È consigliabile utilizzare un solo log di traccia al giorno per ogni componente. Questo valore è impostato su "Unique" (valore predefinito). Non modificare questo valore.|  
-|`Components`|Specifica i componenti per i quali vengono generate informazioni nel log di traccia e il livello di traccia nel formato seguente:<br /><br /> \<categoria componente>:\<livellotraccia><br /><br /> Le categorie dei componenti possono essere impostate nei modi seguenti:<br />Il valore `All` viene utilizzato per tracciare l'attività generale del server di report per tutti i processi che non sono suddivisi in categorie specifiche.<br />`RunningJobs` viene utilizzato per tracciare un'operazione di report o una sottoscrizione in corso.<br />Il valore `SemanticQueryEngine` viene utilizzato per tracciare una query semantica elaborata quando un utente esegue un'esplorazione dei dati ad hoc in un report basato su modello.<br />Il valore `SemanticModelGenerator` viene utilizzato per tracciare la generazione del modello.<br />Il valore `http` viene utilizzato per abilitare il file di log HTTP del server di report. Per altre informazioni, vedere [Log HTTP del Server di Report](report-server-http-log.md).<br /><br /> <br /><br /> I valori validi del livello di traccia sono i seguenti:<br /><br /> 0= Disabilita la funzionalità di traccia<br /><br /> 1= Eccezioni e riavvii<br /><br /> 2= Eccezioni, riavvii, avvisi<br /><br /> 3= Eccezioni, riavvii, avvisi, messaggi di stato (valore predefinito)<br /><br /> 4= Modalità dettagliata<br /><br /> Il valore predefinito per il server di report è: "all:3".<br /><br /> È possibile specificare tutti o alcuni dei componenti (`all`, `RunningJobs`, `SemanticQueryEngine`, `SemanticModelGenerator`). Se non si desidera generare informazioni per un componente specifico, è possibile disabilitare la traccia per tale componente (ad esempio "SemanticModelGenerator:0"). Non disabilitare la funzionalità di traccia per il componente `all`.<br /><br /> Se non si aggiunge un livello di traccia dopo il nome del componente, verrà utilizzato il valore specificato per `DefaultTraceSwitch`. Ad esempio, se si specifica "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", per tutti i componenti verrà utilizzato il livello di traccia predefinito.<br /><br /> È possibile impostare "SemanticQueryEngine:4" se si desidera visualizzare le istruzioni Transact-SQL che vengono generate per ogni query semantica. Le istruzioni Transact-SQL vengono registrate nel log di traccia. Nell'esempio seguente viene illustrata l'impostazione di configurazione per l'aggiunta delle istruzioni Transact-SQL al log:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
+|`Components`|Specifica i componenti per i quali vengono generate informazioni nel log di traccia e il livello di traccia nel formato seguente:<br /><br /> \<categoria componente>:\<livellotraccia><br /><br /> Le categorie dei componenti possono essere impostate nei modi seguenti:<br />Il valore `All` viene utilizzato per tracciare l'attività generale del server di report per tutti i processi che non sono suddivisi in categorie specifiche.<br />`RunningJobs` viene usato per tracciare un'operazione di report o una sottoscrizione in corso.<br />Il valore `SemanticQueryEngine` viene utilizzato per tracciare una query semantica elaborata quando un utente esegue un'esplorazione dei dati ad hoc in un report basato su modello.<br />Il valore `SemanticModelGenerator` viene utilizzato per tracciare la generazione del modello.<br />Il valore `http` viene utilizzato per abilitare il file di log HTTP del server di report. Per altre informazioni, vedere [Log HTTP del Server di Report](report-server-http-log.md).<br /><br /> <br /><br /> I valori validi del livello di traccia sono i seguenti:<br /><br /> 0= Disabilita la funzionalità di traccia<br /><br /> 1= Eccezioni e riavvii<br /><br /> 2= Eccezioni, riavvii, avvisi<br /><br /> 3= Eccezioni, riavvii, avvisi, messaggi di stato (valore predefinito)<br /><br /> 4= Modalità dettagliata<br /><br /> Il valore predefinito per il server di report è: "all:3".<br /><br /> È possibile specificare tutti o alcuni dei componenti (`all`, `RunningJobs`, `SemanticQueryEngine`, `SemanticModelGenerator`). Se non si desidera generare informazioni per un componente specifico, è possibile disabilitare la traccia per tale componente (ad esempio "SemanticModelGenerator:0"). Non disabilitare la funzionalità di traccia per il componente `all`.<br /><br /> Se non si aggiunge un livello di traccia dopo il nome del componente, verrà utilizzato il valore specificato per `DefaultTraceSwitch`. Ad esempio, se si specifica "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", per tutti i componenti verrà utilizzato il livello di traccia predefinito.<br /><br /> È possibile impostare "SemanticQueryEngine:4" se si desidera visualizzare le istruzioni Transact-SQL che vengono generate per ogni query semantica. Le istruzioni Transact-SQL vengono registrate nel log di traccia. Nell'esempio seguente viene illustrata l'impostazione di configurazione per l'aggiunta delle istruzioni Transact-SQL al log:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
   
 ##  <a name="bkmk_add_custom"></a> Aggiunta di un'impostazione di configurazione personalizzata per specificare il percorso del file di dump  
  È possibile aggiungere un'impostazione personalizzata per definire la directory di archiviazione utilizzata dallo strumento Dr. per Windows per archiviare i file di dump. L'impostazione personalizzata è `Directory`. Nell'esempio seguente viene illustrato come specificare questa impostazione di configurazione nella sezione `RStrace`:  
@@ -121,6 +121,6 @@ ms.locfileid: "36062351"
   
 ## <a name="see-also"></a>Vedere anche  
  [File di log e origini di Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Gli errori e riferimento agli eventi &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Gli errori e riferimento degli eventi &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

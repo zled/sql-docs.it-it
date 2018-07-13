@@ -5,25 +5,24 @@ ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da8d7d3b5a6cbe5864d7628ef58c61189fec6c7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cdaae11d21d1018e0c855036c4c82221c57a905d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223329"
 ---
 # <a name="the-transaction-log-sql-server"></a>Log delle transazioni (SQL Server)
   Ogni database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include un log delle transazioni in cui vengono registrate tutte le transazioni e le modifiche apportate dalle transazioni stesse al database. Per evitarne il riempimento, il log delle transazioni deve essere troncato regolarmente. Tuttavia, alcuni fattori possono posticipare il troncamento del log, pertanto è importante monitorare le dimensioni del log. Ad alcune operazioni può essere applicata la registrazione minima per ridurre l'impatto sulle dimensioni del log delle transazioni.  
@@ -39,9 +38,9 @@ ms.locfileid: "36062626"
   
 -   [Troncamento del log delle transazioni](#Truncation)  
   
--   [Fattori che possono ritardare il troncamento del Log](#FactorsThatDelayTruncation)  
+-   [Fattori che possono posticipare il troncamento del Log](#FactorsThatDelayTruncation)  
   
--   [Operazioni che supportano la registrazione minima](#MinimallyLogged)  
+-   [Operazioni che è possano eseguire la registrazione minima](#MinimallyLogged)  
   
 -   [Attività correlate](#RelatedTasks)  
   
@@ -72,7 +71,7 @@ ms.locfileid: "36062626"
 > [!NOTE]  
 >  Il troncamento del log non riduce le dimensioni del file di log fisico. Per ridurre le dimensioni fisiche di un file di log fisico, è necessario compattare il file di log. Per informazioni sulla compattazione del file di log fisico, vedere [Gestire le dimensioni del file di log delle transazioni](manage-the-size-of-the-transaction-log-file.md).  
   
-##  <a name="FactorsThatDelayTruncation"></a> Fattori che possono ritardare il troncamento del Log  
+##  <a name="FactorsThatDelayTruncation"></a> Fattori che possono posticipare il troncamento del Log  
  Quando i record del log rimangono attivi per molto tempo il troncamento viene posticipato e il log delle transazioni potrebbe riempirsi.  
   
 > [!IMPORTANT]  
@@ -86,7 +85,7 @@ ms.locfileid: "36062626"
 |1|CHECKPOINT|Non si è verificato alcun checkpoint dall'ultimo troncamento del log oppure l'inizio del log non è stato ancora spostato oltre un file di log virtuale. (Tutti i modelli di recupero)<br /><br /> Si tratta di una motivazione comune per il posticipo del troncamento del log. Per altre informazioni, vedere [Checkpoint di database &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|È necessario eseguire un backup del log prima del troncamento del log delle transazioni. (Solo modelli di recupero con registrazione completa e con registrazione minima delle operazioni bulk)<br /><br /> Quando il backup del log successivo viene completato, parte dello spazio del log potrebbe divenire riutilizzabile.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|È in esecuzione un processo di backup o ripristino dei dati (tutti i modelli di recupero).<br /><br /> Se il troncamento del log è impedito da un backup dei dati, l'annullamento del backup può risolvere il problema immediato.|  
-|4|ACTIVE_TRANSACTION|Una transazione è attiva (tutti i modelli di recupero).<br /><br /> Una transazione con esecuzione prolungata potrebbe esistere all'inizio del backup del log. In questo caso, per liberare lo spazio potrebbe essere necessario un altro backup del log. Si noti che un transazioni a esecuzione prolungata impediscono il troncamento del log in tutti i modelli di recupero, incluso il modello di recupero con registrazione minima, in cui il log delle transazioni viene generalmente troncato a ogni checkpoint automatico.<br /><br /> Viene posticipata una transazione. Una *transazione posticipata* è una transazione attiva ed efficace il cui ritorno allo stato precedente è bloccato a causa di alcune risorse non disponibili. Per informazioni sulle cause delle transazioni posticipate e su come modificarne lo stato, vedere [Transazioni posticipate &#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md). <br /><br />Anche le transazioni con esecuzione prolungata potrebbero riempire il log delle transazioni di tempdb. Tempdb viene usato in modo implicito dalle transazioni utente per gli oggetti interni, ad esempio tabelle di lavoro per l'ordinamento, file di lavoro per l'hashing, tabelle di lavoro di cursori e controllo delle versioni delle righe. Anche se la transazione utente include solo la lettura dei dati (query SELECT), gli oggetti interni possono essere creati e usati in transazioni utente. In questo modo, il log delle transazioni di tempdb potrebbe riempirsi.|  
+|4|ACTIVE_TRANSACTION|Una transazione è attiva (tutti i modelli di recupero).<br /><br /> Una transazione con esecuzione prolungata potrebbe esistere all'inizio del backup del log. In questo caso, per liberare lo spazio potrebbe essere necessario un altro backup del log. Si noti che un transazioni a esecuzione prolungata impediscono il troncamento del log con tutti i modelli di recupero, incluso il modello di recupero con registrazione minima, in cui il log delle transazioni viene generalmente troncato a ogni checkpoint automatico.<br /><br /> Viene posticipata una transazione. Una *transazione posticipata* è una transazione attiva ed efficace il cui ritorno allo stato precedente è bloccato a causa di alcune risorse non disponibili. Per informazioni sulle cause delle transazioni posticipate e su come modificarne lo stato, vedere [Transazioni posticipate &#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md). <br /><br />Anche le transazioni con esecuzione prolungata potrebbero riempire il log delle transazioni di tempdb. Tempdb viene usato in modo implicito dalle transazioni utente per gli oggetti interni, ad esempio tabelle di lavoro per l'ordinamento, file di lavoro per l'hashing, tabelle di lavoro di cursori e controllo delle versioni delle righe. Anche se la transazione utente include solo la lettura dei dati (query SELECT), gli oggetti interni possono creare e utilizzare le transazioni utente. In questo modo, il log delle transazioni di tempdb potrebbe riempirsi.|  
 |5|DATABASE_MIRRORING|Il mirroring del database è sospeso o in modalità a prestazioni elevate, il database mirror è notevolmente in ritardo rispetto al database principale. (Solo modello di recupero con registrazione completa)<br /><br /> Per altre informazioni, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |6|REPLICATION|Durante le repliche transazionali, le transazioni significative per le pubblicazioni non sono ancora state recapitate al database di distribuzione. (Solo modello di recupero con registrazione completa)<br /><br /> Per informazioni sulla replica transazionale, vedere [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).|  
 |7|DATABASE_SNAPSHOT_CREATION|Viene creato uno snapshot del database. (Tutti i modelli di recupero)<br /><br /> Si tratta di una motivazione comune, e generalmente di breve durata, per il posticipo del troncamento del log.|  
@@ -97,9 +96,9 @@ ms.locfileid: "36062626"
 |12|—|Solo per uso interno|  
 |13|OLDEST_PAGE|Se un database è configurato per l'utilizzo dei checkpoint indiretti, la pagina meno recente del database potrebbe essere meno recente dell'LSN checkpoint. In questo caso, la pagina meno recente può causare il posticipo del troncamento del log. (Tutti i modelli di recupero)<br /><br /> Per informazioni sui checkpoint indiretti, vedere [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Questo valore non è attualmente utilizzato.|  
-|16|XTP_CHECKPOINT|Quando un database presenta un filegroup con ottimizzazione per la memoria, del log delle transazioni potrebbe non essere troncato finché automatico [!INCLUDE[hek_2](../../includes/hek-2-md.md)] viene attivato il checkpoint (che si verifica a ogni 512 MB di aumento delle dimensioni del log).<br /><br /> Nota: Per troncare log delle transazioni prima che raggiunga 512 MB, attivare il comando Checkpoint manualmente il database in questione.|  
+|16|XTP_CHECKPOINT|Quando un database dispone di un filegroup ottimizzato per la memoria, del log delle transazioni potrebbe non essere troncato finché automatico [!INCLUDE[hek_2](../../includes/hek-2-md.md)] viene attivato il checkpoint (che si verifica a ogni 512 MB di aumento delle dimensioni del log).<br /><br /> Nota: Per troncare log delle transazioni prima che raggiunga 512 MB, attivare il comando Checkpoint manualmente con il database in questione.|  
   
-##  <a name="MinimallyLogged"></a> Operazioni che supportano la registrazione minima  
+##  <a name="MinimallyLogged"></a> Operazioni che è possano eseguire la registrazione minima  
  La*registrazione minima* implica la registrazione nel log delle transazioni delle sole informazioni necessarie per il recupero della transazione stesse senza il supporto del recupero temporizzato. In questo argomento vengono identificate le operazioni con registrazione minima nel modello di recupero con registrazione minima delle operazioni bulk nonché nel modello di recupero con registrazione minima, ad eccezione dei momenti in cui è in esecuzione un backup.  
   
 > [!NOTE]  
@@ -139,7 +138,7 @@ ms.locfileid: "36062626"
     -   Ricompilazione del nuovo heap DROP INDEX (se pertinente).  
   
         > [!NOTE]  
-        >  Indice deallocazione delle pagine durante un [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) operazione viene sempre registrata completamente.  
+        >  Indicizzare deallocazione delle pagine durante una [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) operazione è sempre completamente registrata.  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
  `Managing the transaction log`  

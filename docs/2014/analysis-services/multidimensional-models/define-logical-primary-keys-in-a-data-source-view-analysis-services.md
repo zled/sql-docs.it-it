@@ -1,5 +1,5 @@
 ---
-title: Definire chiavi primarie logiche in una vista origine dati (Analysis Services) | Documenti Microsoft
+title: Definire chiavi primarie logiche in una vista origine dati (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing logical primary keys
 - logical primary keys [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data source views [Analysis Services], logical primary keys
 ms.assetid: 172bc267-c637-4caa-bf55-0ba198d30b1e
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45abeb6540ca6c09e2376fa92d42ecca21cc9578
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab45dd923ca3efd4f04504e2b309f4dda4f7bf58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255663"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>Definire chiavi primarie logiche in una vista origine dati (Analysis Services)
   La Creazione guidata vista origine dati e Progettazione vista origine dati consentono di definire automaticamente una chiave primaria per una tabella che viene aggiunta a una vista origine dati in base alla tabella di database sottostante.  
@@ -49,7 +49,7 @@ ms.locfileid: "36054869"
      Una volta impostata la chiave, le colonne chiave primaria saranno identificate da un'icona a forma di chiave.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati nei modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
+ [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
  [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

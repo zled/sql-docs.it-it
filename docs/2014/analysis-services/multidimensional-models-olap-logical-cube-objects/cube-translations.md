@@ -1,5 +1,5 @@
 ---
-title: Le conversioni del cubo | Documenti Microsoft
+title: Le conversioni del cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - translations [Analysis Services], cubes
 ms.assetid: 4e4fd6a4-d324-4508-b75a-2a57de9ab8ff
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7bc7d1a6b35b093e9f5fabab41138dc90b9c10ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f894d45dffbf1c6eb746e3674127c75c4e59a81e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163312"
 ---
 # <a name="cube-translations"></a>Traduzioni di cubi
   Una traduzione è un semplice meccanismo che consente di modificare la lingua delle etichette e delle didascalie visualizzate. Ogni traduzione è definita come una coppia di valori: una stringa con il testo tradotto e un numero con l'ID della lingua. Le traduzioni sono disponibili per tutti gli oggetti in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Nel caso delle dimensioni è possibile tradurre anche i valori di attributo. L'applicazione client è responsabile della ricerca dell'impostazione della lingua definita dall'utente e del passaggio alla visualizzazione di tutte le didascalie e le etichette nella lingua in questione. Un oggetto può disporre di un numero illimitato di traduzioni.  
   
  Un oggetto <xref:Microsoft.AnalysisServices.Translation> semplice è composto dal numero ID della lingua e dalla didascalia tradotta. Il numero ID della lingua è un valore `Integer` con l'ID della lingua. La didascalia tradotta è il testo tradotto.  
   
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], conversione di un cubo è una rappresentazione specifica della lingua del nome di un oggetto cubo, ad esempio una didascalia o una cartella di visualizzazione. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta anche conversioni di dimensione e nomi del membro.  
+ Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], conversione di un cubo è una rappresentazione specifica del linguaggio del nome di un oggetto cubo, ad esempio una didascalia o una cartella di visualizzazione. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta anche conversioni di dimensione e nomi del membro.  
   
  Le traduzioni offrono supporto server per applicazioni client in grado di supportare più lingue. Spesso, i dati dei cubi vengono visualizzati da utenti di paesi diversi. La possibilità di tradurre i diversi elementi di un cubo in diverse lingue è utile in quanto consente a tali utenti di visualizzare e comprendere i metadati del cubo. Un utente aziendale in Francia, ad esempio, può accedere a un cubo da una workstation in cui vengono utilizzate le impostazioni locali francesi e visualizzare i valori delle proprietà dell'oggetto in francese. Analogamente, un utente aziendale in Germania può accedere allo stesso cubo da una workstation in cui vengono utilizzate le impostazioni locali tedesche e visualizzare i valori delle proprietà dell'oggetto in tedesco.  
   
@@ -43,6 +43,6 @@ ms.locfileid: "36055101"
 ## <a name="see-also"></a>Vedere anche  
  [Traduzioni delle dimensioni](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [Le traduzioni &#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [Globalizzazione suggerimenti e procedure consigliate &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

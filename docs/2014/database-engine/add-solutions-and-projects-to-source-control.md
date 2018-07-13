@@ -1,5 +1,5 @@
 ---
-title: Aggiungere soluzioni e progetti al controllo del codice sorgente | Documenti Microsoft
+title: Aggiungere soluzioni e progetti al controllo del codice sorgente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], source controls
 - solutions [SQL Server Management Studio], source controls
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - source controls [SQL Server Management Studio], projects
 ms.assetid: 3eaed80e-6f55-42ea-a964-aca31c09d055
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 57e6ec237aa980732b4a096f7198c0d272677959
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8365cf854d78f30be02ad3e15cd5d29c49205ce6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171442"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Aggiungere soluzioni e progetti al controllo del codice sorgente
   Quando viene aggiunta una soluzione al controllo del codice sorgente, la soluzione diviene parte di un archivio dinamico di controllo delle versioni creato e gestito dal provider del controllo del codice sorgente. Ogni volta che viene archiviata, la nuova versione della soluzione diviene parte dell'archivio ed è disponibile per altri utenti inclusi nel controllo del codice sorgente.  
@@ -39,6 +39,6 @@ ms.locfileid: "36055056"
 |[Aggiungere progetti al controllo del codice sorgente](../../2014/database-engine/add-projects-to-source-control.md)|Vengono date istruzioni per aggiungere un progetto a una soluzione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aprire soluzioni e progetti dal controllo del codice sorgente](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)  
+ [Apertura di soluzioni e progetti dal controllo del codice sorgente](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)  
   
   

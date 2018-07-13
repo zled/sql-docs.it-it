@@ -5,21 +5,19 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
-caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2f928645fb89757b2284628d0400847cf5f3a1f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 97aae9bc9e495694868c2f8dec8570cdb1742fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270227"
 ---
 # <a name="start-sql-server-management-studio"></a>Avviare SQL Server Management Studio
   Prima di iniziare questa esercitazione è opportuno esaminare brevemente [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -28,12 +26,12 @@ ms.locfileid: "36055610"
   
 #### <a name="to-open-sql-server-management-studio"></a>Per aprire SQL Server Management Studio  
   
-1.  Nel **avviare** dal menu **tutti i programmi**, scegliere [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], quindi fare clic su **SQL Server Management Studio**.  
+1.  Nel **avviare** dal menu **tutti i programmi**, scegliere [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e quindi fare clic su **SQL Server Management Studio**.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non è installato per impostazione predefinita. Se [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] non è disponibile, installarlo eseguendo il programma di installazione. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] non è disponibile con [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express è disponibile come download gratuito dal [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), ma ha un'interfaccia utente diversa da quella descritta in questa esercitazione.  
   
-2.  Nella finestra di dialogo **Connetti al server** verificare le impostazioni predefinite e quindi fare clic su **Connetti**. Per la connessione, il **nome del Server** casella deve contenere il nome del computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è installato. Se il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è un'istanza denominata, il **nome del Server** finestra deve inoltre contenere il nome dell'istanza nel formato \< *nome_computer* > \\ < *nome_istanza*>.  
+2.  Nella finestra di dialogo **Connetti al server** verificare le impostazioni predefinite e quindi fare clic su **Connetti**. Per la connessione, il **nome Server** finestra deve contenere il nome del computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è installato. Se il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è un'istanza denominata, il **nome Server** casella deve essere contenuto anche il nome dell'istanza nel formato \< *nome_computer* > \\ < *instance_name*>.  
   
 ## <a name="management-studio-components"></a>Componenti di Management Studio  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] offre informazioni in finestre dedicate a tipi di informazioni specifiche. Le informazioni di database vengono visualizzate in Esplora oggetti e nelle finestre dei documenti.  

@@ -1,5 +1,5 @@
 ---
-title: 'Opzioni (ambiente: tipi di carattere e colori&#41) | Documenti Microsoft'
+title: 'Opzioni (ambiente: tipi di carattere e colori&#41) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Fonts_And_Colors
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fb667cb31bdb718044b2c4298dcc8c174f3c0c19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9a88ae6c8205ea8267ca044f6dc978a725931f59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200781"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>Opzioni (ambiente: tipi di carattere e colori pagina)
+# <a name="options-environment-fonts-and-colors-page"></a>Opzioni (ambiente: tipi di carattere e colori&#41)
   La finestra di dialogo **Opzioni** consente di specificare una combinazione colori e un tipo di carattere personalizzati per vari elementi dell'interfaccia utente in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Scegliere **Opzioni** dal menu **Strumenti** , espandere la cartella **Ambiente** e selezionare **Tipi di carattere e colori**.  
   
  Le modifiche apportate alla combinazione colori non diventano effettive durante la sessione in cui vengono eseguite. Per valutare le modifiche dei colori, aprire un'altra istanza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e riprodurre le condizioni in cui si prevede che tali modifiche vengano applicate.  
@@ -35,7 +35,7 @@ ms.locfileid: "36055839"
 |Nome|Definizione|  
 |----------|----------------|  
 |Editor di testo|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere dell'editor di testo influiscono sull'aspetto del testo nell'editor predefinito. I documenti aperti in un editor di testo all'esterno di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non verranno influenzati da queste impostazioni.|  
-|Stampante|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore della stampante influiscono sull'aspetto del testo nei documenti stampati.<br /><br /> Suggerimento: Se necessario, è possibile selezionare un tipo di carattere predefinito per la stampa diverso da quello utilizzato per la visualizzazione nell'Editor di testo. Questa operazione può essere utile quando si esegue la stampa di codice contenente sia caratteri SBCS sia caratteri DBCS.|  
+|Stampante|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore della stampante influiscono sull'aspetto del testo nei documenti stampati.<br /><br /> Suggerimento: In base alle esigenze, è possibile selezionare un tipo di carattere predefinito per la stampa diverso da quello usato per la visualizzazione nell'Editor di testo. Questa operazione può essere utile quando si esegue la stampa di codice contenente sia caratteri SBCS sia caratteri DBCS.|  
 |[Tutte le finestre degli strumenti di testo **]**|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nelle finestre degli strumenti contenenti riquadri di output in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ad esempio la finestra di output, la finestra Risultati in formato testo e così via.<br /><br /> Nota: le modifiche apportate al testo degli elementi di [Tutte le finestre degli strumenti di testo] non diventano effettive durante la sessione in cui vengono eseguite. Per valutare tali modifiche, aprire un'altra istanza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |Finestra Risultati ricerca|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nella finestra Risultati ricerca.|  
 |Finestra Output|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nella finestra di output.|  
@@ -57,7 +57,7 @@ ms.locfileid: "36055839"
  Consente di visualizzare l'elenco di tutti gli elementi di cui è possibile modificare il colore di primo piano e quello di sfondo.  
   
 > [!NOTE]  
->  Elemento visualizzato predefinito è Text. Le proprietà assegnate a Testo verranno pertanto sovrascritte dalle proprietà assegnate ad altri elementi di visualizzazione. Se ad esempio si assegna il colore blu a **Testo** e il colore verde a Identificatore, tutti gli identificatori verranno visualizzati in verde. In questo esempio le proprietà di Identificatore sovrascrivono quelle di Testo.  
+>  Elemento visualizzato predefinito è testo. Le proprietà assegnate a Testo verranno pertanto sovrascritte dalle proprietà assegnate ad altri elementi di visualizzazione. Se ad esempio si assegna il colore blu a **Testo** e il colore verde a Identificatore, tutti gli identificatori verranno visualizzati in verde. In questo esempio le proprietà di Identificatore sovrascrivono quelle di Testo.  
   
  Alcuni elementi di visualizzazione includono:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36055839"
  Visualizza un esempio della combinazione colori, dello stile e della dimensione del tipo carattere relativi ai valori selezionati in **Mostra impostazioni per** ed **Elementi visualizzati**. È possibile utilizzare questa casella di testo per visualizzare un'anteprima dei risultati, mentre si provano diverse opzioni di formattazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Codifica con colori negli editor di Query](../../relational-databases/scripting/color-coding-in-query-editors.md)   
+ [Codifica tramite colori negli editor di Query](../../relational-databases/scripting/color-coding-in-query-editors.md)   
  [Le opzioni &#40;Editor di testo: pagina scheda Editor e barra di stato&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
   
   

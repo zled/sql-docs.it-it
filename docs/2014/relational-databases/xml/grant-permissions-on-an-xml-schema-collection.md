@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0375361f4fa794045ab51d65cadada49b73a39dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f8c467de25ce8b8aac74c659b6109c3969f9f0d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276117"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Concedere autorizzazioni per una raccolta di XML Schema
   È possibile concedere autorizzazioni per la creazione di una raccolta di XML Schema, nonché per un oggetto di una raccolta di XML Schema.  
@@ -65,7 +65,7 @@ ms.locfileid: "36055202"
   
 -   L'autorizzazione VIEW DEFINITION consente all'entità di eseguire query sul contenuto di una raccolta di XML Schema tramite XML_SCHEMA_NAMESPACE o mediante le viste del catalogo, a condizione che l'entità disponga inoltre di una delle autorizzazioni ALTER, REFERENCES o CONTROL per la raccolta.  
   
--   L'autorizzazione EXECUTE è necessaria per convalidare i valori inseriti o aggiornati dall'entità in base alla raccolta di XML schema per tipizzare o vincolare le `xml` colonne, variabili e parametri di tipo. Questa autorizzazione è necessaria inoltre quando si eseguono query sui dati XML archiviati in tali colonne e variabili.  
+-   L'autorizzazione EXECUTE è necessaria per convalidare i valori inseriti o aggiornati dall'entità in base la raccolta di XML schema per tipizzare o vincolare le `xml` colonne, variabili e parametri. Questa autorizzazione è necessaria inoltre quando si eseguono query sui dati XML archiviati in tali colonne e variabili.  
   
 ## <a name="examples"></a>Esempi  
  Gli scenari degli esempi seguenti illustrano il funzionamento delle autorizzazioni per XML Schema. In ogni esempio vengono creati il database di prova, gli schemi relazionali e gli account di accesso necessari. A tali account di accesso vengono concesse le autorizzazioni necessarie per la raccolta di XML Schema. Alla fine di ogni esempio viene eseguito il processo di eliminazione necessario.  

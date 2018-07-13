@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 4: Creare un database in archiviazione di Azure | Documenti Microsoft'
+title: 'Lezione 4: Creare un database in archiviazione di Microsoft Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b72bfc90936011fc4556fae6021fad89b134c57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1d31f0d1eabe73a681b1932b2826ef38ad9b5456
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327841"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Lezione 4: creare un database in Archiviazione di Windows Azure
   In questa lezione verrà illustrato come creare un database tramite la funzionalità relativa ai file di dati di SQL Server in Windows Azure. Si noti che prima di questa lezione, è necessario aver completato le lezioni 1, 2 e 3. La lezione 3 è un passaggio molto importante perché si archiviano le informazioni sul contenitore del servizio di archiviazione Windows Azure e il nome dei criteri e la chiave SAS associati nell'archivio delle credenziali di SQL Server, operazioni necessarie prima della lezione 4.  
@@ -115,6 +115,6 @@ ms.locfileid: "36055472"
   
  **Lezione successiva:**  
   
- [Lezione 5. &#40;Facoltativo&#41; crittografare il database tramite TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
+ [Lezione 5. &#40;Facoltativo&#41; crittografare il database tramite Transparent Data Encryption](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
   

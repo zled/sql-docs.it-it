@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Server Scope GDR event class
 ms.assetid: d3b1e47f-2ba2-49af-b404-1aa231d4e4a0
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d19eeb97966d7f2c7d178fc9e709f1b21d3ae987
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 76215fde6b6ee141364777ab8a057c46de1a1182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327691"
 ---
 # <a name="audit-server-scope-gdr-event-class"></a>Audit Server Scope GDR - classe di evento
   La classe di evento **Audit Server Scope GDR** viene generata quando si esegue un'istruzione GRANT, REVOKE o DENY per le autorizzazioni nell'ambito del server, ad esempio la creazione di un account di accesso.  

@@ -1,5 +1,5 @@
 ---
-title: Definire le dimensioni del Database | Documenti Microsoft
+title: Definire le dimensioni del Database | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], defining
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dad1c138202c64a4768f944c9308edd0144602d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c71a335db4b17f365bcb40ebf4c7cefb13c30b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269907"
 ---
 # <a name="define-database-dimensions"></a>Definire le dimensioni del database
   Usare Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per configurare una dimensione di database esistente in un progetto o un database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Progettazione dimensioni consente di eseguire le operazioni seguenti:  
@@ -62,7 +62,7 @@ ms.locfileid: "36062309"
  [Definire relazioni tra attributi](attribute-relationships-define.md)  
  Descrive come definire e configurare una relazione tra attributi.  
   
- [Utilizzare la procedura guidata di Business Intelligence per migliorare le dimensioni](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
+ [Usare la Configurazione guidata funzionalità di Business Intelligence per migliorare le dimensioni](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Viene descritto come utilizzare la Configurazione guidata funzionalità di Business Intelligence per ottimizzare una dimensione.  
   
   

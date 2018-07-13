@@ -1,5 +1,5 @@
 ---
-title: Elemento calculation (ASSL) | Documenti Microsoft
+title: Elemento calculation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Calculation element
 ms.assetid: c96e37cf-b7ff-4296-a043-f9a5a5c444ce
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7368af0fa063e3c3372e594d1108173a614243d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c7900d511cb847a98d9b4f037a39864b0b89c93a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261337"
 ---
 # <a name="calculation-element-assl"></a>Elemento Calculation (ASSL)
   Associa un calcolo con a una [prospettiva](perspective-element-assl.md) elemento.  
@@ -49,7 +49,7 @@ ms.locfileid: "36062749"
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|[Oggetto PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)|  
+|Tipo di dati e lunghezza|[PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)|  
 |Valore predefinito|None|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36062749"
 |Elementi padre|[Calcoli](../collections/calculations-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Gli elementi corrispondenti nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.CalculationType> e <xref:Microsoft.AnalysisServices.PerspectiveCalculationType>.  
   
 ## <a name="see-also"></a>Vedere anche  

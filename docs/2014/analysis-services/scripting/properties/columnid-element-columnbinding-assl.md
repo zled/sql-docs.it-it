@@ -1,5 +1,5 @@
 ---
-title: Elemento ColumnID (ColumnBinding) (ASSL) | Documenti Microsoft
+title: Elemento ColumnID (ColumnBinding) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ColumnID element
 ms.assetid: f4edf532-7e40-4ee2-9b5e-48b3c3de7a74
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 55daf893f8e819872a2dfbb58894e41d22031d80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05b1d9287eb6c7fb3fac1e514d9728c477bd2b69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198071"
 ---
 # <a name="columnid-element-columnbinding-assl"></a>Elemento ColumnID (ColumnBinding) (ASSL)
   Contiene l'identificatore (ID) della colonna all'interno della tabella alla quale è associato l'elemento dei dati.  
@@ -61,8 +61,8 @@ ms.locfileid: "36063692"
 |Elemento padre|[ColumnBinding](../data-type/binding-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `ColumnID` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ColumnBinding>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `ColumnID` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ColumnBinding>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

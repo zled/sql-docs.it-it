@@ -1,5 +1,5 @@
 ---
-title: Elemento ProcessingPriority (ASSL) | Documenti Microsoft
+title: Elemento ProcessingPriority (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProcessingPriority element
 ms.assetid: 95d07f1c-ef8d-4e38-9682-ebb7719dbe52
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0718c0b85502a7277572a9e9ce42d8c94a244b1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5dcbf28ff2dd0fbcbbc64aba7785e41caab3905c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169662"
 ---
 # <a name="processingpriority-element-assl"></a>Elemento ProcessingPriority (ASSL)
   Determina la priorità di elaborazione dell’oggetto padre durante le operazioni in background, ad esempio aggregazione lenta, indicizzazione o clustering,.  
@@ -59,7 +59,7 @@ ms.locfileid: "36055383"
 |Elementi padre|[Dimensione](../data-type/dimension-data-type-assl.md), [MeasureGroup](../objects/group-element-assl.md), [partizione](../objects/partition-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Gli elementi che corrispondono ai padri di `ProcessingPriority` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.MeasureGroup> e <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>Vedere anche  

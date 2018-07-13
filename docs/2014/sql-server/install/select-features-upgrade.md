@@ -1,5 +1,5 @@
 ---
-title: Seleziona funzionalità (aggiornamento) | Documenti Microsoft
+title: Selezionare le funzionalità (aggiornamento) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - features to upgrade
 ms.assetid: 5e906e23-6638-410d-920b-fdf35b0d3cc4
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0d9a43035a293e28f6e368a48436624f3a199c0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f308bd39c805a2d53f86d887481295d12ce11aca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175120"
 ---
 # <a name="select-features-upgrade"></a>Seleziona funzionalità (aggiornamento)
   Utilizzare la pagina **Seleziona funzionalità** dell'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per visualizzare le funzionalità da aggiornare a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

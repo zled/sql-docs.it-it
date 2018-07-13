@@ -1,5 +1,5 @@
 ---
-title: Chiamanti consentendo parzialmente attendibili | Documenti Microsoft
+title: Consentendo parzialmente attendibili ai chiamanti | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - partially trusted callers [CLR integration]
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ef6354d8dee0373af005d7da782bffc3a90eb5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: deb561ec43fda2e831f115b1c1a7f8eb21974e92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265316"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Accettazione di chiamanti parzialmente attendibili
   La condivisione delle librerie di codice rappresenta uno scenario comune quando si utilizza l'integrazione con Common Language Runtime (CLR), in cui a un assembly che contiene un tipo definito dall'utente, una stored procedure, una funzione definita dall'utente, un'aggregazione definita dall'utente, un trigger o una classe di utilità spesso accede un altro assembly o applicazione. Le librerie di codice per le quali è prevista la condivisione da parte di più applicazioni devono essere firmate con un nome sicuro.  
@@ -65,7 +65,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  L'esempio illustra inoltre l'utilizzo dell'attributo "Allow partially trusted callers" per indicare che l'assembly del set di risultati è una libreria che può essere chiamata da altri assembly senza problemi. Questo approccio è leggermente più complesso ma molto più sicuro rispetto alla registrazione dell'assembly chiamante tramite l'autorizzazione UNSAFE. È più sicuro in quanto, registrando l'assembly chiamante come sicuro, si limitano le risorse interessate al di fuori del server e si evitano danni all'integrità del server.  
   
- Le istruzioni di compilazione per questo esempio presuppongono che i file di codice sorgente si trovino in una directory denominata c:\samples.  Se si utilizza un directory diversa, è necessario modificare gli script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il [!INCLUDE[tsql](../../includes/tsql-md.md)] script richiede anche che il database AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) homepage.  
+ Le istruzioni di compilazione per questo esempio presuppongono che i file di codice sorgente si trovino in una directory denominata c:\samples.  Se si utilizza un directory diversa, è necessario modificare gli script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il [!INCLUDE[tsql](../../includes/tsql-md.md)] degli script richiede anche il database AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page di.  
   
  Per compilare ed eseguire l'esempio, incollare il primo listato di codice in un file denominato ResultSet.cs ed eseguire la compilazione con csc /target:library ResultSet.cs.  
   

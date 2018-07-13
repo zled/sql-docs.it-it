@@ -1,5 +1,5 @@
 ---
-title: Sequence Clustering scheda diagramma dei Cluster (Visualizzatore modello di Data Mining | Documenti Microsoft
+title: Sequence Clustering scheda diagramma dei Cluster (Visualizzatore modello di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.diagrams.f1
 ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56c384e39ae4ef364f608cef8fa507d20bb746ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 862dca35dcec3c1113117cf472b3866fb9df0be3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257243"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>Scheda Diagramma dei cluster in Sequence Clustering (Visualizzatore modello di data mining)
   La scheda **Diagramma dei cluster** in **Visualizzatore Microsoft Sequence Clustering** consente di visualizzare graficamente tutti i cluster contenuti nel modello Sequence Clustering.  
@@ -52,7 +52,7 @@ ms.locfileid: "36062275"
  **Copia grafico intero**  
  Consente di copiare tutto il diagramma negli Appunti.  
   
- **Scala adatta il diagramma alla finestra**  
+ **Scalabilità adatta il diagramma alla finestra**  
  Consente di eseguire lo zoom indietro del diagramma finché l'intero diagramma non si adatta alla schermata.  
   
  **Trovare il nodo**  
@@ -60,7 +60,7 @@ ms.locfileid: "36062275"
   
  Si noti che in questo contesto viene eseguita solo la ricerca del nome del cluster, non degli attributi presenti all'interno; pertanto, questa opzione è più utile se sono stati assegnati nomi descrittivi al cluster. È possibile assegnare nomi ai cluster nel visualizzatore facendo clic con il pulsante destro del mouse su ogni cluster e selezionando **Rinomina**.  
   
- **Migliorare il Layout**  
+ **Migliora Layout**  
  Consente di riordinare i cluster nel diagramma per migliorarne il layout.  
   
  **Density**  
@@ -81,7 +81,7 @@ ms.locfileid: "36062275"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori dei modelli di data mining &#40;progettazione modello di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

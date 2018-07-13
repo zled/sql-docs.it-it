@@ -1,5 +1,5 @@
 ---
-title: Pagina Cerca (gestione Report) | Documenti Microsoft
+title: Eseguire ricerche di pagina (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4bc093b32a6fe3b5311bba109a7f4e672dc1fc9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8fbd4956e5e836def836acf1693fe9f548dc081
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192991"
 ---
 # <a name="search-page-report-manager"></a>Pagina Cerca (Gestione report)
   Utilizzare la pagina Risultati ricerca per visualizzare i risultati di un'operazione di ricerca eseguita in report, report collegati, modelli di report, origini dei dati condivise, cartelle o risorse. I risultati della ricerca vengono visualizzati in ordine alfabetico e possono essere ordinati in base al tipo, al nome o alla descrizione.  
@@ -51,7 +51,7 @@ ms.locfileid: "36062346"
 >  Questo pulsante è disponibile solo in **Visualizzazione Dettagli**. Tuttavia, è possibile passare il puntatore del mouse su un elemento e utilizzare il menu per accedere alla funzionalità di spostamento in **Visualizzazione Dettagli** o in **Visualizzazione Elenco**.  
   
  Casella Cerca  
- Digitare tutto o parte del nome di un elemento che si desidera individuare e quindi fare clic su **Go** per avviare la ricerca. La stringa di ricerca può essere composta al massimo da 128 caratteri.  
+ Digitare tutto o parte del nome di un elemento che si desidera individuare e quindi fare clic su **Vai** per avviare la ricerca. La stringa di ricerca può essere composta al massimo da 128 caratteri.  
   
  Nei risultati di ricerca verranno inclusi i nomi o le descrizioni degli elementi che contengono l'intera stringa di ricerca in qualsiasi posizione nel valore di testo.  
   
@@ -69,6 +69,6 @@ ms.locfileid: "36062346"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

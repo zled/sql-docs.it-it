@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 caps.latest.revision: 74
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 811f80385261b9e688c76c6d7b472db210b7cb13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 109ba047a24211c5a41aebf96ccb373a546c26c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218951"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Progettare report con Progettazione report (SSRS)
   Progettazione report consente di ottenere report e soluzioni di creazione di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] completi. Tale strumento offre un'interfaccia grafica in cui è possibile definire origini dati, set di dati, query, posizioni di layout del report per aree dati e campi, nonché caratteristiche interattive, quali l'interazione tra parametri e set di report.  
@@ -54,7 +54,7 @@ ms.locfileid: "36062144"
   
  In Progettazione report per definire i set di dati condivisi utilizzati in un report è possibile utilizzare sia il riquadro dei dati del report che Esplora soluzioni. Per altre informazioni, vedere [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Non è possibile utilizzare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per aprire i set di dati pubblicati direttamente da un server di report o da un sito di SharePoint. Per tale caratteristica, utilizzare [Generatore Report &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md) in modalità set di dati condiviso.  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] è uno strumento client. È possibile utilizzare le finestre Progettazione query per creare e testare i risultati delle query localmente in Anteprima. Dopo la distribuzione è possibile gestire i set di dati condivisi indipendentemente dalle origini dati condivise e dai report dai quali dipendono. Per altre informazioni, vedere [set di dati incorporati di Report e set di dati condivisi &#40;Generatore Report e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [strumenti di progettazione Query nella finestra di progettazione di Report SQL Server Data Tools &#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md), e [gestire origini dati condivise](../report-data/manage-shared-datasets.md).  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] è uno strumento client. È possibile utilizzare le finestre Progettazione query per creare e testare i risultati delle query localmente in Anteprima. Dopo la distribuzione è possibile gestire i set di dati condivisi indipendentemente dalle origini dati condivise e dai report dai quali dipendono. Per altre informazioni, vedere [set di dati incorporati di Report e set di dati condivisi &#40;Generatore Report e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [strumenti di progettazione Query nella finestra di progettazione di Report SQL Server Data Tools &#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md), e [gestire set di dati condivisi](../report-data/manage-shared-datasets.md).  
   
   
 ##  <a name="bkmk_Reports"></a> Report  
@@ -121,7 +121,7 @@ ms.locfileid: "36062144"
   
     -   Premere F5.  
   
-     Se si utilizza una configurazione di progetto che compila il report senza distribuirlo, il report specificato nella `StartItem` proprietà della configurazione corrente viene aperto in una finestra di anteprima distinta.  
+     Se si usa una configurazione di progetto che compila il report senza distribuirlo, il report specificato nella `StartItem` proprietà della configurazione corrente viene aperto in una finestra di anteprima distinta.  
   
     > [!NOTE]  
     >  Per utilizzare la modalità debug, è necessario impostare un elemento iniziale. In Esplora soluzioni, fare clic sul progetto report, fare clic su **delle proprietà**e in `StartItem`, selezionare il nome del report da visualizzare.  
@@ -166,7 +166,7 @@ ms.locfileid: "36062144"
  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]è possibile distribuire report o altri elementi di progetto in più versioni di server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Utilizzare le configurazioni di progetto per controllare l'aggiornamento delle definizioni di report alle versioni dello schema compatibili con i server di report di destinazione. Le proprietà controllate dalle configurazioni di progetto includono il server di report di destinazione, la cartella in cui il processo di compilazione consente di archiviare temporaneamente le definizioni di report per l'anteprima e la distribuzione, nonché i livelli di errore. Per altre informazioni, vedere [Proprietà di configurazione e distribuzione](deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties) e [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
 ### <a name="export-a-report-to-a-different-file-format"></a>Esportare un report in un formato di file diverso  
- I report possono essere esportati in diversi formati, dai quali dipende il funzionamento di alcune funzionalità relative all'interattività e al layout del report. Per ulteriori informazioni sulle considerazioni di progettazione per diversi formati di output, vedere [esportazione di report &#40;Generatore Report e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
+ I report possono essere esportati in diversi formati, dai quali dipende il funzionamento di alcune funzionalità relative all'interattività e al layout del report. Per altre informazioni sulle considerazioni di progettazione per i diversi formati di output, vedere [esportazione di report &#40;Generatore Report e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
 ##  <a name="bkmk_ReportValidationandErrorLevels"></a> Convalida del report e livelli di errore  
@@ -186,12 +186,12 @@ ms.locfileid: "36062144"
 |3|Problemi di compilazione minori che modificano il layout del report in maniera meno significativa e quasi impercettibile.|  
 |4|Utilizzato solamente per pubblicare avvisi.|  
   
- Quando si tenta di visualizzare in anteprima o distribuire un report contenente elementi di report nuovi in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], quali mappe e barre dei dati, tali elementi possono essere rimossi dal report. Per impostazione predefinita, la proprietà ErrorLevel della configurazione è impostata su 2. Pertanto la compilazione del report potrebbe non essere eseguita correttamente in caso di rimozione della mappa. Se tuttavia si imposta il valore della proprietà ErrorLevel su 0 o 1, la mappa viene rimossa, viene visualizzato un avviso e il processo di compilazione continua.  
+ Quando si tenta di visualizzare in anteprima o distribuire un report contenente elementi di report nuovi in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ad esempio mappe e barre dei dati, tali elementi possono essere rimossi dal report. Per impostazione predefinita, la proprietà ErrorLevel della configurazione è impostata su 2. Pertanto la compilazione del report potrebbe non essere eseguita correttamente in caso di rimozione della mappa. Se tuttavia si imposta il valore della proprietà ErrorLevel su 0 o 1, la mappa viene rimossa, viene visualizzato un avviso e il processo di compilazione continua.  
   
   
 ## <a name="see-also"></a>Vedere anche  
  [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md)   
- [Strumenti di progettazione di Report della finestra di progettazione di SQL Server Data Tools di query &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
+ [Eseguire query di strumenti di progettazione di Report della finestra di progettazione di SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
  [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Configurare Windows Firewall per l'accesso al servizio SSIS | Documenti Microsoft
+title: Configurare un Firewall di Windows per l'accesso al servizio SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Integration Services], firewalls
 - Windows Firewall [Integration Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SSIS, firewalls
 ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 302d3d9aac30d18ae8ae887cdd65cde7147a9f22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 67a1206afe217ce2f0e358c56ee4df2b16691b8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163002"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Configurare un Windows Firewall per l'accesso al servizio SSIS
     
@@ -78,7 +78,7 @@ ms.locfileid: "36055360"
 5.  Nella finestra di dialogo **Aggiungi porta** digitare **RPC(TCP/135)** o un altro nome descrittivo nella casella **Nome**, digitare **135** nella casella **Numero porta** e quindi selezionare **TCP**.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servizio utilizza sempre la porta 135. Non è possibile specificare una porta diversa.  
+    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servizio Usa sempre la porta 135. Non è possibile specificare una porta diversa.  
   
 6.  Nella finestra di dialogo **Aggiungi porta** è possibile scegliere facoltativamente **Cambia ambito** per modificare l'ambito predefinito.  
   

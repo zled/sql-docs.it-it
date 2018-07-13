@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - updating resources
 - resources [Reporting Services], updating
@@ -16,13 +16,13 @@ ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 012d0a129f97b87423f295f56c3b00e13a542c4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b4fd1def743928ef113b732fac0fde630c0b7d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328961"
 ---
 # <a name="update-a-resource-report-manager"></a>Aggiornare una risorsa (Gestione report)
   L'aggiornamento di una risorsa viene eseguito mediante la sostituzione con una versione più recente. Le risorse sono elementi archiviati in un server di report che includono contenuto da un file caricato dall'utente. È possibile sostituire una risorsa esistente mediante l'importazione di contenuto di file diverso o nuovo nella risorsa esistente. Con l'aggiornamento di una risorsa è possibile aggiornare contenuto mantenendo le proprietà e le impostazioni di sicurezza esistenti nella risorsa.  
@@ -51,6 +51,6 @@ ms.locfileid: "36054489"
  [Contenuto della pagina &#40;gestione Report&#41;](../contents-page-report-manager.md)   
  [Pagina Carica file &#40;Gestione report&#41;](../upload-file-page-report-manager.md)   
  [Caricare file in una cartella](upload-files-to-a-folder.md)   
- [Guida F1 di gestione report](../report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../report-manager-f1-help.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Eliminare relazioni (SSAS tabulare) | Documenti Microsoft
+title: Eliminare relazioni (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e39f2f74824550940fbe206ee2185212abf7dd9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 530e00790a649ad7ccaebfddfc3582d23ee1b1e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249171"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>Eliminare relazioni (SSAS tabulare)
   È possibile eliminare relazioni esistenti utilizzando Progettazione modelli nella Vista diagramma o la finestra di dialogo Gestisci relazioni. Per informazioni sulla modalità d'uso delle relazioni nei modelli tabulari, vedere [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "36055090"
 4.  Fare clic su **Chiudi** nella finestra di dialogo **Gestisci relazioni**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Relazioni &#40;tabulare di SSAS&#41;](relationships-ssas-tabular.md)   
+ [Le relazioni &#40;tabulare di SSAS&#41;](relationships-ssas-tabular.md)   
  [Creare una relazione tra due tabelle &#40;tabulare di SSAS&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

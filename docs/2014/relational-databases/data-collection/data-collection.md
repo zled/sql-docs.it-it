@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a6669b33697e573ef0cff9de86adf39aa98301ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2cb2709d0296ce83a842086329f64d5cf0812560
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171052"
 ---
 # <a name="data-collection"></a>Raccolta dati
   L'agente di raccolta dati è un componente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che consente di raccogliere set diversi di dati. La raccolta dati viene eseguita costantemente o in base a una pianificazione definita dall'utente. L'agente di raccolta dati archivia quindi i dati raccolti in un database relazionale noto come data warehouse di gestione.  
@@ -64,7 +64,7 @@ ms.locfileid: "36062209"
   
 ## <a name="data-collector-terminology"></a>Terminologia relativa all'agente di raccolta dati  
  target  
- Istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supporta la raccolta dati. Per ulteriori informazioni sulle edizioni supportate, vedere la sezione "Gestibilità" di [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supporta la raccolta dati. Per altre informazioni sulle edizioni supportate, vedere la sezione "Gestibilità" del [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Una *radice di destinazione* definisce un sottoalbero nella gerarchia di destinazione. Un *set di destinazioni* è il gruppo di destinazioni risultante dell'applicazione di un filtro a un sottoalbero definito da una radice di destinazione. Una radice di destinazione può essere un database, un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o un'istanza del computer.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36062209"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Viene descritto come gestire aspetti diversi della raccolta dati, ad esempio l'abilitazione o la disabilitazione della raccolta di dati, la modifica di una raccolta di set di configurazione o la visualizzazione dei dati nel data warehouse di gestione.|[Gestire raccolta dati](manage-data-collection.md)|  
+|Viene descritto come gestire aspetti diversi della raccolta di dati, ad esempio l'abilitazione o disabilitazione della raccolta di dati, la modifica di una raccolta di set di configurazione o la visualizzazione dei dati nel data warehouse di gestione.|[Gestire raccolta dati](manage-data-collection.md)|  
 |Viene descritto come utilizzare questi report per ottenere informazioni per il monitoraggio della capacità del sistema e la risoluzione dei problemi relativi alle prestazioni.|[Report per i set di raccolta dati di sistema](system-data-collection-set-reports.md)|  
 |Viene descritto come utilizzare il data warehouse di gestione per la raccolta di dati da un server che costituisce una destinazione di raccolta dati.|[Data warehouse di gestione](management-data-warehouse.md)|  
   

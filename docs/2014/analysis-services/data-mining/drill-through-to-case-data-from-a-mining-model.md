@@ -1,5 +1,5 @@
 ---
-title: Il drill-Through nei dati del Case da un modello di Data Mining | Documenti Microsoft
+title: Il drill-Through nei dati del Case da un modello di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - drillthrough [Analysis Services]
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86a8cc832572d7a1c2e296c72d9bcd9a0a4d1969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3ce4a5aea740048a53ab40db8b40d0a83d40e19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272167"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Eseguire il drill-through sui dati del case da un modello di data mining
   Se il modello di data mining è stato configurato per consentire il drill-through sui case del modello, quando si esplora il modello è possibile recuperare informazioni dettagliate sui case utilizzati per creare il modello. Inoltre, se la struttura di data mining sottostante è stata configurata per consentire il drill-through sui case della struttura e si dispone delle autorizzazioni appropriate, è possibile restituire informazioni sulla struttura di data mining. Possono anche essere incluse colonne non incluse nel modello di data mining.  
@@ -35,7 +35,7 @@ ms.locfileid: "36062503"
   
 |Nome del visualizzatore|Nome del riquadro o della scheda|Selezione nodo|  
 |-----------------|----------------------|-----------------|  
-|**Visualizzatore Microsoft Decision Trees**|Scheda**Albero delle decisioni** |Fare clic su un nodo dell'albero.<br /><br /> **Nota** evitare di utilizzare il drill-through sul `All` nodo, poiché potrebbe richiedere molto tempo per restituire i risultati.|  
+|**Visualizzatore Microsoft Decision Trees**|Scheda**Albero delle decisioni** |Fare clic su un nodo dell'albero.<br /><br /> **Nota** evitare di utilizzare il drill-through su di `All` nodo, poiché potrebbe richiedere molto tempo per restituire i risultati.|  
 |**Visualizzatore Microsoft Clustering**|**Diagramma dei cluster**|Fare clic su un nodo del cluster.|  
 |**Visualizzatore Microsoft Clustering**|**Profili cluster**|Fare clic in un punto qualsiasi della colonna del cluster.|  
 |**Visualizzatore Microsoft Association**|Scheda**Regole** |Fare clic su una riga che contiene un set di regole.|  

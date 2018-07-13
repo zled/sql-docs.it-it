@@ -1,5 +1,5 @@
 ---
-title: Modello filtro sintassi ed esempi (Analysis Services - Data Mining) | Documenti Microsoft
+title: Esempi e sintassi del filtro del modello (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filter syntax [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 881b62a2e013d9e01a21272d3adeaf6819b2abb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 252af15e8afcf42d407176c4ff72f0076053b52e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236341"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintassi ed esempi di filtri dei modelli (Analysis Services – Data mining)
   In questa sezione vengono fornite informazioni dettagliate sulla sintassi dei filtri dei modelli, insieme alle espressioni di esempio.  
@@ -34,7 +34,7 @@ ms.locfileid: "36055119"
 ##  <a name="bkmk_Syntax"></a> Filter Syntax  
  Le espressioni di filtro in genere sono equivalenti al contenuto di una clausola WHERE. È possibile connettere più condizioni utilizzando gli operatori logici `AND`, `OR` e `NOT`.  
   
- Nelle tabelle nidificate, è inoltre possibile utilizzare il `EXISTS` e `NOT EXISTS` operatori. Una condizione `EXISTS` restituisce `true` se la sottoquery restituisce almeno una riga. Ciò risulta utile nei case in cui si desidera limitare il modello ai case che contengono un determinato valore nella tabella nidificata: ad esempio, i clienti che hanno acquistato almeno una volta un articolo.  
+ Nelle tabelle nidificate, è anche possibile usare la `EXISTS` e `NOT EXISTS` operatori. Una condizione `EXISTS` restituisce `true` se la sottoquery restituisce almeno una riga. Ciò risulta utile nei case in cui si desidera limitare il modello ai case che contengono un determinato valore nella tabella nidificata: ad esempio, i clienti che hanno acquistato almeno una volta un articolo.  
   
  Una condizione `NOT EXISTS` restituisce `true` se la condizione specifica nella sottoquery non esiste. Ad esempio, quando si desidera limitare il modello ai clienti che non hanno mai acquistato un determinato articolo.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36055119"
 -   **\<=** (minore o uguale a)  
   
 > [!NOTE]  
->  Indipendentemente dal tipo di dati, questi operatori non possono essere applicati a una colonna con il tipo `Discrete`, `Discretized`, o `Key`.  
+>  Indipendentemente dal tipo di dati, questi operatori non possono essere applicati a una colonna che dispone del tipo `Discrete`, `Discretized`, o `Key`.  
   
  Un'espressione che utilizza alcuni degli operatori seguenti può essere applicata a una colonna continua, discreta, discretizzata o chiave:  
   
@@ -242,9 +242,9 @@ FILTER (EXISTS (Products))
 
   
 ###  <a name="bkmk_Ex7"></a> Esempio 7: Combinazioni di filtri complessi  
- Lo scenario per questo modello è simile a quello dell'esempio 4, ma è molto più complesso. La tabella nidificata **ProductsOnSale**, ha la condizione di filtro `(OnSale)` vale a dire che il valore di **OnSale** deve essere `true` per il prodotto elencato **ProductName**. In questo caso, **OnSale** è una colonna della struttura.  
+ Lo scenario per questo modello è simile a quello dell'esempio 4, ma è molto più complesso. La tabella nidificata **ProductsOnSale**, ha la condizione di filtro `(OnSale)` vale a dire che il valore di **OnSale** deve essere `true` per il prodotto elencato in **ProductName**. In questo caso, **OnSale** è una colonna della struttura.  
   
- La seconda parte del filtro, per **ProductsNotOnSale**, ripete questa sintassi, ma i filtri per i prodotti per cui il valore di **OnSale** è `not true``(!OnSale)`.  
+ La seconda parte del filtro, per **ProductsNotOnSale**, ripete questa sintassi, ma Filtra sui prodotti per cui il valore di **OnSale** è `not true``(!OnSale)`.  
   
  Infine, le condizioni vengono combinate e viene aggiunta un'ulteriore restrizione alla tabella del case. Il risultato è la stima degli acquisti di prodotti nell'elenco **ProductsNotOnSale** , in base ai case inclusi nell'elenco **ProductsOnSale** , per tutti i clienti di età superiore ai 25 anni.  
   
@@ -287,7 +287,7 @@ FILTER (EXISTS (Products))
 ###  <a name="bkmk_Ex8"></a> Esempio 8: Filtri sulle date  
  È possibile filtrare le colonne di input in base alle date, come per qualsiasi altro tipo di dati. Le date contenute in una colonna di tipo data/ora sono valori continui; è quindi possibile specificare un intervallo di date utilizzando operatori quali maggiore di (>) o minore di (<). Se l'origine dati non rappresenta le date come tipo di dati Continuous, ma come valori discreti o di testo, non sarà possibile filtrare in base a un intervallo di date, ma sarà necessario specificare singoli valori discreti.  
   
- Tuttavia, non è possibile creare un filtro sulla colonna delle date in un modello Time Series se la colonna delle date utilizzata per il filtro è anche la colonna chiave per il modello. Infatti, i modelli time series e ai modelli sequence clustering, la colonna delle date potrebbe essere gestita come tipo `KeyTime` o `KeySequence`.  
+ Tuttavia, non è possibile creare un filtro sulla colonna delle date in un modello Time Series se la colonna delle date utilizzata per il filtro è anche la colonna chiave per il modello. Questo accade perché, nei modelli time series e sequence clustering, la colonna delle date potrebbe essere gestita come tipo `KeyTime` o `KeySequence`.  
   
  Quando è necessario applicare un filtro alle date continue in un modello Time Series, è possibile creare una copia della colonna nella struttura di data mining e filtrare il modello nella nuova colonna.  
   
@@ -296,9 +296,9 @@ FILTER (EXISTS (Products))
  `=[DateCopy] > '12:31:2003:00:00:00'`  
   
 > [!NOTE]  
->  L'aggiunta di una qualsiasi colonna al modello può influire sui risultati. Pertanto, se non si desidera che la colonna venga utilizzata nel calcolo della serie, sarà necessario aggiungere la colonna solo alla struttura di data mining e non al modello. È inoltre possibile impostare il flag del modello nella colonna `PredictOnly` o a `Ignore`. Per altre informazioni, vedere [Flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md).  
+>  L'aggiunta di una qualsiasi colonna al modello può influire sui risultati. Pertanto, se non si desidera che la colonna venga utilizzata nel calcolo della serie, sarà necessario aggiungere la colonna solo alla struttura di data mining e non al modello. È anche possibile impostare il flag del modello nella colonna `PredictOnly` o a `Ignore`. Per altre informazioni, vedere [Flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md).  
   
- Per altri tipi di modello, è possibile utilizzare le date come criteri di input o criteri di filtro come si farebbe per qualsiasi altra colonna. Tuttavia, se è necessario usare uno specifico livello di granularità che non è supportata da un `Continuous` tipo di dati, creare un valore derivato nell'origine dati utilizzando le espressioni per estrarre l'unità da utilizzare nell'applicazione di filtri e l'analisi.  
+ Per altri tipi di modello, è possibile utilizzare le date come criteri di input o criteri di filtro come si farebbe per qualsiasi altra colonna. Tuttavia, se è necessario usare uno specifico livello di granularità che non è supportata da un `Continuous` tipo di dati, può creare un valore derivato nell'origine dati usando le espressioni per estrarre l'unità da usare filtri e analisi.  
   
 > [!WARNING]  
 >  Quando si specificano le date come criteri di filtro, è necessario usare il formato seguente, indipendentemente dal formato di data del sistema operativo attualmente in uso: `mm/dd/yyyy`. Qualsiasi altro formato restituirà un errore.  

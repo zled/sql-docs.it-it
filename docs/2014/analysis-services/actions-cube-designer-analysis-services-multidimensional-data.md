@@ -1,5 +1,5 @@
 ---
-title: Azioni (Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Azioni (Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionsview.f1
 ms.assetid: 50e3afbc-7789-46b1-bcd3-50497f5b493f
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ded2ebea0129c7402e805b9c4b35ee9d9138ae5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c338840ee08404d9d8ed797bb8468bcd9f06ed67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165752"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>Azioni (Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare la scheda **Azioni** in Progettazione cubi per visualizzare e modificare le azioni, incluse le azioni drill-through e le azioni report, per il cubo selezionato.  
@@ -46,9 +46,9 @@ ms.locfileid: "36062317"
  Usare l' **editor dei form delle azioni report** per modificare le azioni report contenute nel cubo. Per altre informazioni su questo riquadro, vedere [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le azioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [Azioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Nozioni fondamentali sullo Scripting MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Barra degli strumenti &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Sulla barra degli strumenti &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Libreria azioni &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [Strumenti di calcolo &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Editor dei Form delle azioni &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   

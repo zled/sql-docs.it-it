@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: be0912f1da8e17d5fbd1723595e845393e94cf41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fce4632ddcee1ed29ce8a06ee5efc631f8ce1f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175780"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilità FILESTREAM con altre funzionalità di SQL Server
   Poiché i dati FILESTREAM sono nel file system, in questo argomento vengono fornite alcune considerazioni, linee guida e limitazioni per l'utilizzo di FILESTREAM con le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]indicate di seguito.  
@@ -82,12 +81,12 @@ ms.locfileid: "36063163"
   
 -   L'opzione max text repl size consente di specificare la quantità massima di dati che è possibile inserire in una colonna pubblicata per la replica. Questa opzione può essere utilizzata per controllare le dimensioni dei dati FILESTREAM replicati.  
   
--   Se si specifica l'opzione di schema per replicare l'attributo FILESTREAM, ma si esclude il `uniqueidentifier` colonna richiesta da FILESTREAM o si specifica di non replicare il vincolo UNIQUE per la colonna, la replica non FILESTREAM attributo. La colonna viene replicata solo come `varbinary(max)`.  
+-   Se si specifica l'opzione dello schema per replicare l'attributo FILESTREAM, ma si esclude il `uniqueidentifier` colonna richiesta da FILESTREAM o si specifica di non replicare il vincolo UNIQUE per la colonna, la replica non viene replicato FILESTREAM attributo. La colonna viene replicata solo come `varbinary(max)`.  
   
 ### <a name="considerations-for-merge-replication"></a>Considerazioni per la replica di tipo merge  
  Se si utilizzano colonne FILESTREAM in tabelle pubblicate per replica di tipo merge, considerare quanto riportato di seguito.  
   
--   Le replica di tipo merge e FILESTREAM richiedono una colonna del tipo di dati `uniqueidentifier` per identificare ogni riga in una tabella. La replica di tipo merge consente di aggiungere automaticamente una colonna se la tabella non ne contiene neanche una. La replica di tipo merge richiede l'impostazione della proprietà ROWGUIDCOL per la colonna e che vi sia un'impostazione predefinita di NEWID () o NEWSEQUENTIALID (). Oltre a questi requisiti, è necessario che per FILESTREAM vi sia un vincolo UNIQUE definito per la colonna. In base a questi requisiti si verificano le seguenti conseguenze:  
+-   Le repliche di tipo merge e FILESTREAM richiedono una colonna del tipo di dati `uniqueidentifier` per identificare ogni riga in una tabella. La replica di tipo merge consente di aggiungere automaticamente una colonna se la tabella non ne contiene neanche una. La replica di tipo merge richiede l'impostazione della proprietà ROWGUIDCOL per la colonna e che vi sia un'impostazione predefinita di NEWID () o NEWSEQUENTIALID (). Oltre a questi requisiti, è necessario che per FILESTREAM vi sia un vincolo UNIQUE definito per la colonna. In base a questi requisiti si verificano le seguenti conseguenze:  
   
     -   Se si aggiunge una colonna FILESTREAM a una tabella che è già pubblicata per la replica di tipo merge, verificare che la colonna `uniqueidentifier` abbia un vincolo UNIQUE. In caso contrario, aggiungere un vincolo denominato alla tabella nel database di pubblicazione. Per impostazione predefinita questa modifica dello schema verrà pubblicata tramite la replica e applicata a ogni database di sottoscrizione.  
   
@@ -108,7 +107,7 @@ ms.locfileid: "36063163"
  Il mirroring del database non supporta FILESTREAM. Non è possibile creare un filegroup FILESTREAM nel server principale, né configurare il mirroring per un database in cui sono contenuti filegroup FILESTREAM.  
   
 ##  <a name="FullText"></a> Indicizzazione full-text  
- [L'indicizzazione full-text](../indexes/indexes.md) funziona con una colonna FILESTREAM nello stesso modo in cui avviene con un `varbinary(max)` colonna. La tabella FILESTREAM deve avere una colonna che contiene l'estensione del nome file per ogni BLOB FILESTREAM. Per altre informazioni, vedere [Esecuzione della query con ricerca Full-Text](../search/query-with-full-text-search.md), [Configurazione e gestione di filtri per la ricerca](../search/configure-and-manage-filters-for-search.md) e [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
+ [L'indicizzazione full-text](../indexes/indexes.md) funziona con una colonna FILESTREAM nello stesso modo cui avviene una `varbinary(max)` colonna. La tabella FILESTREAM deve avere una colonna che contiene l'estensione del nome file per ogni BLOB FILESTREAM. Per altre informazioni, vedere [Esecuzione della query con ricerca Full-Text](../search/query-with-full-text-search.md), [Configurazione e gestione di filtri per la ricerca](../search/configure-and-manage-filters-for-search.md) e [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
  Il motore full-text consente di indicizzare il contenuto dei BLOB FILESTREAM. L'indicizzazione di file di immagini, ad esempio, potrebbe non essere utile. Un BLOB FILESTREAM viene reindicizzato quando viene aggiornato.  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0fdbe801bc58296f0cbfa116056615c341ec3e1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: beeecbb80ff375bdb13f2a91bff84dbb34a9a4f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181635"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Grafici sparkline e barre dei dati (Generatore report e SSRS)
   I grafici sparkline e le barre dei dati sono grafici semplici e di piccole dimensioni contenenti numerose informazioni in uno spazio ridotto, spesso in linea con il testo. I grafici sparkline e le barre dei dati vengono spesso utilizzati in tabelle e matrici. La loro efficacia consiste nella possibilità di visualizzarne molti insieme e di confrontarli rapidamente l'uno con l'altro, anziché visualizzarli singolarmente. Facilitano la visualizzazione degli outlier, ovvero le righe che non si eseguono come le altre. Sebbene di dimensioni ridotte, ogni grafico sparkline spesso rappresenta, nel tempo, più punti dati. Le barre dei dati possono rappresentare più punti dati, ma generalmente ne illustrano solo uno. Solitamente in ogni grafico sparkline è presente una sola serie. Non è possibile aggiungere un grafico sparkline a un gruppo di dettagli in una tabella. Poiché nei grafici sparkline vengono visualizzati dati aggregati, devono essere inseriti in una cella associata a un gruppo. Gli elementi di base dei grafici sparkline e delle barre dei dati sono uguali a quelli delle categorie, delle serie e dei valori, tuttavia non dispongono di legende, linee assi, etichette o segni di graduazione.  
@@ -88,28 +88,28 @@ ms.locfileid: "36063049"
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="HowTo"></a> Procedure  
- [Aggiungere grafici sparkline e barre dei dati &#40;SSRS e Generatore Report&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [Aggiungere grafici sparkline e barre dei dati &#40;Report e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
- [Allineamento dei dati in un grafico in una tabella o una matrice &#40;SSRS e Generatore Report&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Allineare i dati in un grafico in una tabella o una matrice &#40;Report e SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
 ### <a name="other-how-to-topics-for-charts"></a>Altre procedure per i grafici  
  Poiché i grafici sparkline e le barre dei dati sono tipi di grafici, anche le seguenti procedure per i grafici potrebbero risultare utili e pertinenti:  
   
- [Aggiungere un grafico a un Report &#40;SSRS e Generatore Report&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Aggiungere un grafico a un Report &#40;Report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
- [Aggiunta di punti vuoti al grafico &#40;SSRS e Generatore Report&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
+ [Aggiungere punti vuoti al grafico &#40;Report e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
- [Aggiunta o rimozione dei margini da un grafico &#40;SSRS e Generatore Report&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Aggiungere o rimuovere i margini da un grafico &#40;Report e SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [Modificare un tipo di grafico &#40;SSRS e Generatore Report&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
+ [Modificare un tipo di grafico &#40;Report e SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
   
- [Definizione dei colori in un grafico mediante la tavolozza &#40;SSRS e Generatore Report&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
+ [Definire i colori in un grafico mediante la tavolozza &#40;Report e SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
  [Visualizzazione di descrizioni comandi in una serie &#40;Generatore report e SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
- [Specificare una scala logaritmica &#40;SSRS e Generatore Report&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [Specificare una scala logaritmica &#40;Report e SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
- [Specificare un intervallo dell'asse &#40;SSRS e Generatore Report&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Specificare un intervallo dell'asse &#40;Report e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
  [Specificare i colori coerenti in più grafici con forme &#40;Generatore report e SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  
   

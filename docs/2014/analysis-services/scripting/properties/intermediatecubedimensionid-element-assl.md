@@ -1,5 +1,5 @@
 ---
-title: Elemento IntermediateCubeDimensionID (ASSL) | Documenti Microsoft
+title: Elemento IntermediateCubeDimensionID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IntermediateCubeDimensionID element
 ms.assetid: 305c0a91-7bc2-4268-ba94-8f19d8c22ca3
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 46b57b224d4c9e69b285491b2df316f84e0f38d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8945791ccb2b09faf3d42821a847b2a822bceda6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204021"
 ---
 # <a name="intermediatecubedimensionid-element-assl"></a>Elemento IntermediateCubeDimensionID (ASSL)
   Contiene l'identificatore (ID) della dimensione che correla una dimensione di riferimento a un gruppo di misure.  
@@ -61,8 +61,8 @@ ms.locfileid: "36062972"
 |Elemento padre|[ReferenceMeasureGroupDimension](../data-type/dimension-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `IntermediateCubeDimensionID` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `IntermediateCubeDimensionID` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

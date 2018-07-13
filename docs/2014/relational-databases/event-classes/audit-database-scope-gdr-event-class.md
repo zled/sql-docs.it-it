@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Database Scope GDR event class
 ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e1fa782ef8802041d6563ba6611f02403e61115f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1ba228ac5c586fa806f9347a7786d82ffaeffd8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231191"
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR - classe di evento
   La classe di evento **Audit Database Scope GDR** viene generata in seguito all'emissione di GRANT, REVOKE o DENY per un'autorizzazione per l'istruzione da parte di un utente in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per azioni relative solo al database, ad esempio la concessione di autorizzazioni in un database.  

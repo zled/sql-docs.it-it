@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - full-text indexes [SQL Server], languages
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7d6f87d5916bcda7db3ff52fcca222d2c3f21816
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3ce5d56ec84c1dcf33e3a915a8fa8bf94b1cdced
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268677"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Scelta di una lingua durante la creazione di un indice full-text
   Quando si crea un indice full-text, è necessario specificare una lingua a livello di colonna per la colonna indicizzata. Il [word breaker e gli stemmer](configure-and-manage-word-breakers-and-stemmers-for-search.md) della lingua specificata verranno usati dalle query full-text sulla colonna. Quando si crea un indice full-text, è necessario considerare alcuni aspetti relativi alla scelta della lingua delle colonne. Tali considerazioni riguardano il modo in cui il testo viene suddiviso in token e quindi indicizzato dal motore di ricerca full-text.  
@@ -53,7 +52,7 @@ ms.locfileid: "36055720"
   
 -   Security  
   
-     I nuovi word breaker sono abilitati per impostazione predefinita in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grazie ai miglioramenti della sicurezza nei componenti linguistici. È vivamente consigliabile che i componenti esterni quali word breaker e filtri vengano firmati per migliorare la sicurezza e l'affidabilità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. È possibile configurare la funzionalità full-text per verificare che questi componenti siano firmati come descritto di seguito:  
+     I nuovi word breaker sono abilitati per impostazione predefinita in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grazie a miglioramenti della sicurezza nei componenti linguistici. È vivamente consigliabile che i componenti esterni quali word breaker e filtri vengano firmati per migliorare la sicurezza e l'affidabilità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. È possibile configurare la funzionalità full-text per verificare che questi componenti siano firmati come descritto di seguito:  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -63,7 +62,7 @@ ms.locfileid: "36055720"
   
      I word breaker sono di nuova progettazione e i test effettuati hanno dimostrato una qualità semantica migliore rispetto a quella dei word breaker precedenti. Ne risulta una maggiore accuratezza delle chiamate.  
   
--   Code coverage per numerose lingue, i word breaker sono inclusi in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disattivata la casella e abilitato per impostazione predefinita.  
+-   Per numerose lingue, word breaker sono inclusi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] orizzontale della finestra e abilitato per impostazione predefinita.  
   
  Per un elenco delle lingue per cui [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include un word breaker e stemmer, vedere [Sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
@@ -73,7 +72,7 @@ ms.locfileid: "36055720"
  Quando si crea un indice full-text, è necessario specificare un nome di lingua valido per ogni colonna. Se un nome di lingua è valido, ma non restituito dalla vista del catalogo [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) , la ricerca full-text opta per il nome di lingua disponibile più simile nella stessa famiglia, se disponibile. Se non è disponibile una lingua simile, viene specificato il word breaker neutro. Questo comportamento potrebbe influire negativamente sull'accuratezza delle chiamate. Per creare un indice full-text, è pertanto consigliabile specificare un nome di lingua valido e disponibile per ogni colonna.  
   
 > [!NOTE]  
->  L'identificatore LCID viene utilizzato per tutti i tipi di dati considerati idonei per l'indicizzazione full-text, ad esempio `char` o `nchar`. Se si dispone dell'ordinamento di un `char`, `varchar`, o `text` tipo set di colonne per una lingua diversa da quella identificata dal LCID, l'identificatore LCID verrà utilizzata comunque durante l'indicizzazione e query di quelle colonne full-text.  
+>  L'identificatore LCID viene utilizzato per tutti i tipi di dati considerati idonei per l'indicizzazione full-text, ad esempio `char` o `nchar`. Se si dispone dell'ordinamento di una `char`, `varchar`, o `text` colonna con tipo impostato su una lingua diversa da quella identificata dal LCID, l'identificatore LCID verrà utilizzato comunque durante l'indicizzazione e query di quelle colonne full-text.  
   
 
   
@@ -100,7 +99,7 @@ ms.locfileid: "36055720"
   
 -   Contenuto di testo normale  
   
-     Se il contenuto è testo normale, è possibile convertirlo il `xml` tipo di dati e aggiungere tag che indichino la lingua corrispondente a ogni sezione di documento o un documento specifico. Affinché questa soluzione funzioni, tuttavia, è necessario conoscere la lingua prima di procedere all'indicizzazione full-text.  
+     Quando il contenuto è testo normale, è possibile convertirlo per il `xml` tipo di dati e aggiungere tag che indichino la lingua corrispondente a ogni sezione di documento o un documento specifico. Affinché questa soluzione funzioni, tuttavia, è necessario conoscere la lingua prima di procedere all'indicizzazione full-text.  
   
 
   
@@ -110,7 +109,7 @@ ms.locfileid: "36055720"
 
   
 ##  <a name="type"></a> Effetto del tipo di colonna sulla ricerca full-text  
- Un'altra considerazione relativa alla scelta della lingua riguarda la modalità di rappresentazione dei dati. Per i dati che non vengono memorizzati in `varbinary(max)` la colonna, nessun filtro speciale viene eseguita. Il testo, al contrario, viene normalmente passato tramite il componente per l'esecuzione del word breaking così com'è.  
+ Un'altra considerazione relativa alla scelta della lingua riguarda la modalità di rappresentazione dei dati. Per i dati che non vengono memorizzati in `varbinary(max)` colonna, nessun filtro speciale viene eseguita. Il testo, al contrario, viene normalmente passato tramite il componente per l'esecuzione del word breaking così com'è.  
   
  I word breaker, inoltre, vengono progettati soprattutto per elaborare il testo scritto. Ne consegue che, se il testo include un tipo qualsiasi di markup (ad esempio HTML) le operazioni di indicizzazione e ricerca potrebbero non essere sufficientemente accurate dal punto di vista linguistico. In tal caso esistono due possibilità. Il metodo preferito consiste semplicemente nell'archiviare i dati di testo nella colonna `varbinary(max)` e indicare il tipo del documento per consentire l'applicazione del filtro. Se questa operazione non è possibile, valutare la possibilità di utilizzare il word breaker neutro ed eventualmente di aggiungere dati di markup, ad esempio "br" nel codice HTML, agli elenchi delle parole non significative.  
   

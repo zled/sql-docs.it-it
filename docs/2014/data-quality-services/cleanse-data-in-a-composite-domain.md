@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ba152d105052ae8f481794ca28869cb5d4528de4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f03d5f5961bd09494fccde146a812ea07bb390c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261437"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Pulire i dati in un dominio composito
   In questo argomento vengono fornite informazioni sulla pulizia dei domini compositi in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio composito è costituito da due o più singoli domini di cui viene eseguito il mapping a un campo dati costituito da più termini correlati. I singoli domini in un dominio composito devono contenere un'area delle informazioni in comune. Per informazioni dettagliate sui domini compositi, vedere [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -31,11 +31,11 @@ ms.locfileid: "36054594"
   
     -   Se il mapping del dominio composito viene eseguito a un servizio dati di riferimento, i dati di origine verranno inviati così come sono al servizio dati di riferimento per la correzione e l'analisi.  
   
-    -   Se il mapping del dominio composito non viene eseguito a un servizio dati di riferimento, i dati di origine verranno analizzati in base al metodo di analisi definito per il dominio composito. Per ulteriori informazioni su come specificare un metodo di analisi per i domini compositi, vedere [crea un dominio composito](../../2014/data-quality-services/create-a-composite-domain.md)  
+    -   Se il mapping del dominio composito non viene eseguito a un servizio dati di riferimento, i dati di origine verranno analizzati in base al metodo di analisi definito per il dominio composito. Per altre informazioni su come specificare un metodo di analisi per i domini compositi, vedere [crea un dominio composito](../../2014/data-quality-services/create-a-composite-domain.md)  
   
 -   Dati di origine costituiti da più campi, ad esempio Nome, Secondo nome e Cognome, di cui viene eseguito il mapping ai singoli domini all'interno di un dominio composito.  
   
- Per un esempio di come eseguire il mapping di domini compositi ai dati di origine, vedere [collegare un dominio o dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+ Per un esempio di come eseguire il mapping di domini compositi ai dati di origine, vedere [collegare un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
 ##  <a name="CDCorrection"></a> Correzione dei dati mediante le regole definitive tra domini  
  Le regole tra domini in un dominio composito consentono di creare regole che indicano la relazione tra i singoli domini in un dominio composito. Le regole tra domini vengono prese in considerazione quando si esegue l'attività di pulizia sui dati di origine relativi ai domini compositi. Oltre a indicare la validità di una regola tra domini, la regola definitiva tra domini *Then* , **Il valore è uguale a**, corregge anche i dati durante l'attività di pulizia dei dati.  
@@ -58,7 +58,7 @@ ms.locfileid: "36054594"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Quando viene eseguito il test della regola definitiva tra domini *Then* , **Il valore è uguale a**, la finestra di dialogo **Test regola dominio composito** conterrà una nuova colonna, **Correggi in**, in cui vengono visualizzati i dati corretti. In un progetto Data Quality per la pulizia dei dati, questa regola definitiva tra domini modifica i dati con livello di attendibilità del 100% e nella colonna **Motivo** viene visualizzato il messaggio seguente: Con correzione in base alla regola *\<<Nome regola tra domini>*. Per ulteriori informazioni sulle regole tra domini, vedere [creare una regola tra domini](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
+ Quando viene eseguito il test della regola definitiva tra domini *Then* , **Il valore è uguale a**, la finestra di dialogo **Test regola dominio composito** conterrà una nuova colonna, **Correggi in**, in cui vengono visualizzati i dati corretti. In un progetto Data Quality per la pulizia dei dati, questa regola definitiva tra domini modifica i dati con livello di attendibilità del 100% e nella colonna **Motivo** viene visualizzato il messaggio seguente: Con correzione in base alla regola *\<<Nome regola tra domini>*. Per altre informazioni sulle regole tra domini, vedere [creare una regola tra domini](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  La regola definitiva tra domini non funziona per i domini compositi associati al servizio dati di riferimento.  

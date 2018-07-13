@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bd5353f86fd042c556d0c7287f176514e262903f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86290de5911ed16aa0c662ccdd0e93057bedc52b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273187"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importazione dei valori di un progetto di pulizia in un dominio
   In [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), è possibile importare informazioni sulla qualità dei dati raccolta durante il processo di pulizia in un processo di pulizia Data Quality o in un pacchetto di Integration Services contenente il componente di pulizia di DQS in un dominio. Ciò garantisce che le informazioni attendibili non vadano perse e che la Knowledge Base venga continuamente migliorata.  
@@ -70,10 +70,10 @@ ms.locfileid: "36054847"
   
 9. Per cercare una stringa specifica, immettere la stringa nella casella di testo **Trova** . Fare clic sulla freccia Su o Giù per spostarsi tra i valori che soddisfano il criterio di ricerca. Questi verranno evidenziati in giallo.  
   
-10. Fare clic su **Fine**.  
+10. Scegliere **Fine**.  
   
     > [!NOTE]  
-    >  Per ulteriori informazioni sull'utilizzo di valori nel **i valori di dominio** scheda, vedere [Change Domain Values](../../2014/data-quality-services/change-domain-values.md).  
+    >  Per altre informazioni sull'utilizzo di valori nel **i valori di dominio** scheda, vedere [Change Domain Values](../../2014/data-quality-services/change-domain-values.md).  
   
 ##  <a name="FollowUp"></a> Completamento: Dopo avere importato i valori di progetto in un dominio  
  Dopo avere importato le informazioni sulla qualità dei dati raccolta durante il processo di pulizia in un dominio, è possibile eseguire attività di gestione relative ai domini sul dominio e sui relativi valori. Per altre informazioni, vedere [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md).  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], supported objects
 - objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a7b77ccd5d7fdae2ef81b3a19ae557ef6e662d85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c7af236b8e48b76787e77baa0e0720153ee8489f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244991"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Supporto dell'applicazione livello dati per oggetti e versioni di SQL Server
   Un'applicazione livello dati (DAC) supporta gli oggetti del [!INCLUDE[ssDE](../../includes/ssde-md.md)] più comunemente utilizzati.  
@@ -111,7 +111,7 @@ ms.locfileid: "36055733"
 ##  <a name="Considerations"></a> Considerazioni aggiuntive per le azioni di distribuzione  
  Si tengano presenti le considerazioni seguenti per le azioni di distribuzione dati di DAC Framework:  
   
--   **Estrazione/Esportazione** : queste limitazioni non sono applicabili alle azioni che usano DAC Framework per creare un pacchetto da un database, ad esempio l'estrazione di un file con estensione dacpac e l'esportazione di un file con estensione bacpac. I dati del pacchetto sono una rappresentazione totalmente fedele dei dati nel database di origine. Se una di queste condizioni è presente nel pacchetto, nel registro di estrazione/esportazione sarà contenuto un riepilogo dei problemi tramite i messaggi indicati in precedenza. In questo modo, l'utente verrà avvisato di potenziali problemi di distribuzione dati con il pacchetto creato. Inoltre, visualizzerà il seguente messaggio di riepilogo contenuto nel registro: **Queste limitazioni non influiscono sulla fedeltà dei valori e tipi di dati archiviati nel pacchetto di applicazione livello dati (DAC) creato da DAC Framework. Le limitazioni sono applicabili unicamente ai valori e tipi di dati derivanti dalla distribuzione di un pacchetto di applicazione livello dati (DAC) in un database. Per ulteriori informazioni sui dati interessati e su come risolvere questa limitazione, vedere** [in questo argomento](http://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Estrazione/Esportazione** : queste limitazioni non sono applicabili alle azioni che usano DAC Framework per creare un pacchetto da un database, ad esempio l'estrazione di un file con estensione dacpac e l'esportazione di un file con estensione bacpac. I dati del pacchetto sono una rappresentazione totalmente fedele dei dati nel database di origine. Se una di queste condizioni è presente nel pacchetto, nel registro di estrazione/esportazione sarà contenuto un riepilogo dei problemi tramite i messaggi indicati in precedenza. In questo modo, l'utente verrà avvisato di potenziali problemi di distribuzione dati con il pacchetto creato. Inoltre, visualizzerà il seguente messaggio di riepilogo contenuto nel registro: **Queste limitazioni non influiscono sulla fedeltà dei valori e tipi di dati archiviati nel pacchetto di applicazione livello dati (DAC) creato da DAC Framework. Le limitazioni sono applicabili unicamente ai valori e tipi di dati derivanti dalla distribuzione di un pacchetto di applicazione livello dati (DAC) in un database. Per altre informazioni sui dati interessati e su come risolvere questa limitazione, vedere** [in questo argomento](http://go.microsoft.com/fwlink/?LinkId=267086).  
   
 -   **Distribuzione/Pubblicazione/Importazione** : queste limitazioni si applicano alle azioni che usano DAC Framework per distribuire un pacchetto in un database, ad esempio la distribuzione o pubblicazione di un file con estensione dacpac e l'importazione di un file con estensione bacpac. I dati presenti nel database di destinazione potrebbero non rappresentare in modo totalmente fedele quelli del pacchetto. Nel registro di distribuzione/importazione sarà contenuto un messaggio, indicato in precedenza, per ogni situazione in cui si è verificato il problema. L'operazione verrà bloccata da errori (vedere la categoria 3 precedente), ma continuerà con gli altri avvisi.  
   

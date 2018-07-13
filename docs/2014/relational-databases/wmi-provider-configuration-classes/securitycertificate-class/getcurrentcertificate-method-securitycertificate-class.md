@@ -1,5 +1,5 @@
 ---
-title: Metodo GetCurrentCertificate (classe SecurityCertificate) | Documenti Microsoft
+title: Metodo GetCurrentCertificate (classe SecurityCertificate) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - GetCurrentCertificate method
 ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8cae4ad7891c364bd5cc1d403be672503443dd78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: ff4cc656d05a4c0c2d8cb0bb05a74680113dce4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274157"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>Metodo GetCurrentCertificate (classe SecurityCertificate)
   Ottiene il certificato di sicurezza corrente.  
@@ -58,9 +58,9 @@ SHA , SQLInstance
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore `uint32` che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete Server e le librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

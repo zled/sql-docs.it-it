@@ -1,5 +1,5 @@
 ---
-title: Filtrare e ordinare dati (SSAS tabulare) | Documenti Microsoft
+title: Filtrare e ordinare dati (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.customfilterdb.f1sql12.asvs.bidtoolset.notallitemsshowing.f1sql12.asvs.bidtoolset.autofiltermenu.f1
 ms.assetid: 55ebd7a6-2458-4398-911f-fcfeb2413f1b
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4e40f6aa8f6459522aee0a2ff713d8747b769b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8d9e9c4301b3d2319ed6091db24582efe18a337
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192952"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>Filtrare e ordinare dati (SSAS tabulare)
   Quando si utilizzano tabelle in un modello tabulare, è possibile filtrare o ordinare i dati utilizzando i controlli disponibili in Progettazione modelli. Inoltre, è possibile creare filtri nei calcoli per controllare i dati utilizzati da una colonna o una tabella di dati. Ogni tipo di filtro funziona solo nella rispettiva finestra.  

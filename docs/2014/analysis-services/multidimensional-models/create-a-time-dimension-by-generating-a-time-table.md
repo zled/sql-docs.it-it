@@ -1,5 +1,5 @@
 ---
-title: Creare una dimensione temporale generando una tabella dei tempi | Documenti Microsoft
+title: Creare una dimensione temporale generando una tabella temporale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - dimensions [Analysis Services], time
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - table-based time dimensions [Analysis Services]
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 184d2d276abeb835b578d7c1f3ef26ea36ab60e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cb6230863b9e898f50ab30c6fc4288998024e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180938"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Create a Time Dimension by Generating a Time Table
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile usare Creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione temporale quando non sono disponibili tabelle tempo nel database di origine. È possibile eseguire questa operazione selezionando una delle opzioni seguenti nella pagina **Seleziona metodo di creazione** :  
@@ -45,7 +45,7 @@ ms.locfileid: "36063455"
   
  Accanto a **Lingua per i nomi dei membri della dimensione temporale**selezionare la lingua da utilizzare nelle etichette dei membri della dimensione.  
   
- Dopo avere creato una dimensione temporale basata su un intervallo di date, è possibile utilizzare Progettazione dimensioni per aggiungere o rimuovere attributi temporali. L'attributo Data non può essere rimosso perché è l'attributo chiave della dimensione. Per nascondere l'attributo Data agli utenti, è possibile modificare il `AttributeHierarchyVisible` proprietà dell'attributo in `False`.  
+ Dopo avere creato una dimensione temporale basata su un intervallo di date, è possibile utilizzare Progettazione dimensioni per aggiungere o rimuovere attributi temporali. L'attributo Data non può essere rimosso perché è l'attributo chiave della dimensione. Per nascondere l'attributo Data agli utenti, è possibile modificare il `AttributeHierarchyVisible` proprietà dell'attributo su `False`.  
   
 ## <a name="select-calendars"></a>Selezione dei calendari  
  Quando si crea una dimensione temporale, viene sempre incluso il calendario standard di 12 mesi (gregoriano), che ha inizio il primo gennaio e termina il 31 dicembre. Nella pagina **Selezione calendari** della procedura guidata è possibile specificare altri calendari su cui basare le gerarchie della dimensione. Per le descrizioni dei tipi di calendario, vedere [Creare una dimensioni di tipo Date](database-dimensions-create-a-date-type-dimension.md).  
@@ -58,8 +58,8 @@ ms.locfileid: "36063455"
  Nella pagina **Completamento procedura guidata** controllare gli attributi e le gerarchie creati dalla procedura guidata e quindi assegnare un nome alla dimensione temporale. Fare clic su **Fine** per completare la procedura guidata e creare la dimensione. Dopo avere completato la dimensione, è possibile modificarla in Progettazione dimensioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati nei modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
- [Creare una dimensione di tipo Data](database-dimensions-create-a-date-type-dimension.md)   
+ [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
+ [Creare una dimensione di tipo Date](database-dimensions-create-a-date-type-dimension.md)   
  [Proprietà delle dimensioni di database](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [Relazioni tra dimensioni](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Creare una dimensione utilizzando una tabella esistente](create-a-dimension-by-using-an-existing-table.md)   

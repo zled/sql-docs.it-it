@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 13064f5d0033a1a4677789c6031b1f9b0f322379
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 26e3fe8feb400bb9280a37f8f33bebf510377fe0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261877"
 ---
 # <a name="hide-legend-items-on-the-chart-report-builder-and-ssrs"></a>Nascondere elementi legenda nel grafico (Generatore report e SSRS)
   Per impostazione predefinita, qualsiasi serie aggiunta a un grafico senza forme verrà aggiunta come elemento nella legenda. Per grafici a torta, ad anello, a imbuto e a piramide, qualsiasi serie aggiunta al grafico determina l'aggiunta di punti dati singoli nella legenda.  
@@ -39,8 +39,8 @@ ms.locfileid: "36055410"
     >  Non è possibile nascondere una serie per un solo gruppo. Se è stato aggiunto un campo all'area **Gruppi di serie** , verranno nascoste tutte le serie che appartengono a questo gruppo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione della legenda in un grafico &#40;SSRS e Generatore Report&#41;](chart-legend-formatting-report-builder.md)   
- [Formattazione dei punti dati in un grafico &#40;SSRS e Generatore Report&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione della legenda in un grafico &#40;Report e SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [Formattazione dei punti dati in un grafico &#40;Report e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [Aggiungere una media mobile a un grafico &#40;Generatore report e SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
  [Finestra di dialogo Proprietà legenda, Generale &#40;Generatore report e SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)  

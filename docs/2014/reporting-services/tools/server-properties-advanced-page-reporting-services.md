@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: erikre
-ms.openlocfilehash: 81c0e6a2bce527404e7c4f59c10a914e3ac938b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b8459ccb49c2e8d2d681cada3646d7d9aa447b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258127"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Proprietà server (pagina Avanzate) - Reporting Services
   Questa pagina consente di impostare le proprietà di sistema nel server di report. Le proprietà di sistema possono essere impostate in diversi modi. Questo strumento fornisce un'interfaccia utente grafica che consente di impostare le proprietà senza dovere scrivere codice.  
@@ -30,7 +30,7 @@ ms.locfileid: "36055627"
   
 ## <a name="options"></a>Opzioni  
  **EnableMyReports**  
- Indica se la caratteristica Report personali è abilitata. Il valore `true` indica che la funzionalità è abilitata.  
+ Indica se la caratteristica Report personali è abilitata. Un valore di `true` indica che la funzionalità è abilitata.  
   
  **MyReportsRole**  
  Nome del ruolo utilizzato durante la creazione dei criteri di sicurezza nelle cartelle Report personali dell'utente. Il valore predefinito è `My Reports Role`.  
@@ -39,7 +39,7 @@ ms.locfileid: "36055627"
  Determina se il controllo ActiveX RSClientPrint è disponibile per il download dal server di report. I valori validi sono `true` e `false`. Il valore predefinito è `true`. Per altre informazioni sulle impostazioni aggiuntive necessarie per questo controllo, vedere [Abilitare e disabilitare la stampa sul lato client per Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  **EnableExecutionLogging**  
- Indica se la registrazione per l'esecuzione di report è attivata. Il valore predefinito è `true`. Per ulteriori informazioni sui log di esecuzione server di report, vedere [Log di esecuzione Server di Report e vista ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+ Indica se la registrazione per l'esecuzione di report è attivata. Il valore predefinito è `true`. Per altre informazioni sul log di esecuzione del server di report, vedere [Log di esecuzione Server di Report e vista ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **ExecutionLogDaysKept**  
  Numero di giorni durante i quali le informazioni sulle esecuzioni dei report vengono conservate nel log di esecuzione. I valori validi per questa proprietà includono `-1` attraverso `2`,`147`,`483`,`647`. Se il valore è `-1` le voci non vengono eliminate dalla tabella del log di esecuzione. Il valore predefinito è `60`.  
@@ -88,7 +88,7 @@ ms.locfileid: "36055627"
  `False` = la sicurezza integrata di Windows non è attivata. Le origini dati dei report configurate per l'utilizzo della sicurezza integrata di Windows non verranno eseguite.  
   
  `EnableLoadReportDefinition`  
- Selezionare questa opzione per specificare se gli utenti possono eseguire report ad hoc da un report di Generatore report. Impostazione di questa opzione determina il valore della `EnableLoadReportDefinition` proprietà nel server di report.  
+ Selezionare questa opzione per specificare se gli utenti possono eseguire report ad hoc da un report di Generatore report. Impostando questa opzione determina il valore della `EnableLoadReportDefinition` proprietà nel server di report.  
   
  Se si deseleziona questa opzione, la proprietà viene impostata su False e nel server di report non sarà possibile generare report click-through per i report che utilizzano un modello di report come origine dati. Qualsiasi chiamata al metodo LoadReportDefinition verrà bloccata.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36055627"
  Consente di specificare il numero di secondi prima del timeout di una sessione di modifica del report. Il valore predefinito è 7200 secondi (2 ore).  
   
  **EnableTestConnectionDetailedErrors**  
- Indica se messaggi di errore dettagliati vengono inviati al computer client quando gli utenti verificano le connessioni all'origine dati utilizzando il server di report. Il valore predefinito è `true`. Se l'opzione è impostata su `false`, vengono inviati solo i messaggi di errore generico.  
+ Indica se messaggi di errore dettagliati vengono inviati al computer client quando gli utenti verificano le connessioni all'origine dati utilizzando il server di report. Il valore predefinito è `true`. Se l'opzione è impostata su `false`, vengono inviati solo messaggi di errore generico.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare le proprietà di un server di report &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

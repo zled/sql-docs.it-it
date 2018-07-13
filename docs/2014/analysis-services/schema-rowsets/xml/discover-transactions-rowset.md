@@ -1,5 +1,5 @@
 ---
-title: Set di righe DISCOVER_TRANSACTIONS | Documenti Microsoft
+title: Set di righe DISCOVER_TRANSACTIONS | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 85789177-c5df-4336-a90c-c20d69277ab4
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3869d4f8cd3adf96bd006a8669d7d82778b02450
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 979067978855e8aa1012deb8df39bea61862fdeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204551"
 ---
 # <a name="discovertransactions-rowset"></a>Set di righe DISCOVER_TRANSACTIONS
   Restituisce il set corrente di transazioni in sospeso nel sistema.  
