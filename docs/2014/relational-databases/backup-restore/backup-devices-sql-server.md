@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
 - backup devices [SQL Server]
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 caps.latest.revision: 89
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c3f5bfc7186470ed713cdb9d979af2e5b3b0367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d7a3603d8d2f8f947a2c708a11015bf031ede8ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237181"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivi di backup (SQL Server)
   Durante un'operazione di backup su un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , i dati sottoposti a *backup*vengono scritti in un dispositivo di backup fisico. Tale dispositivo di backup fisico viene inizializzato quando si scrive su di esso il primo backup di un set di supporti. I backup disponibili in un set di uno o più dispositivi di backup costituiscono un singolo set di supporti.  
@@ -43,11 +42,11 @@ ms.locfileid: "36062882"
   
 -   [Termini e definizioni](#TermsAndDefinitions)  
   
--   [Utilizzo di dispositivi di Backup su disco](#DiskBackups)  
+-   [Uso di dispositivi di Backup su disco](#DiskBackups)  
   
--   [Utilizzo di dispositivi nastro](#TapeDevices)  
+-   [Uso di dispositivi nastro](#TapeDevices)  
   
--   [Un dispositivo di Backup logico](#LogicalBackupDevice)  
+-   [Usando un dispositivo di Backup logico](#LogicalBackupDevice)  
   
 -   [Set di supporti di Backup con mirroring](#MirroredMediaSets)  
   
@@ -67,7 +66,7 @@ ms.locfileid: "36062882"
   
  I backup di SQL Server possono essere scritti nel servizio di archiviazione BLOB di Windows Azure oltre che su disco o nastro.  
   
-##  <a name="DiskBackups"></a> Utilizzo di dispositivi di Backup su disco  
+##  <a name="DiskBackups"></a> Uso di dispositivi di Backup su disco  
  **Contenuto della sezione**  
   
 -   [Specifica un File di Backup utilizzando il nome fisico (Transact-SQL)](#BackupFileUsingPhysicalName)  
@@ -150,7 +149,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="TapeDevices"></a> Utilizzo di dispositivi nastro  
+##  <a name="TapeDevices"></a> Uso di dispositivi nastro  
   
 > [!NOTE]  
 >  Il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.  
@@ -216,7 +215,7 @@ GO
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Utilizzo del servizio di archiviazione BLOB di Windows Azure  
  I backup di SQL Server possono essere scritti nel servizio di archiviazione BLOB di Windows Azure.  Per ulteriori informazioni su come utilizzare il servizio di archiviazione BLOB di Windows Azure per i backup, vedere [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
-##  <a name="LogicalBackupDevice"></a> Un dispositivo di Backup logico  
+##  <a name="LogicalBackupDevice"></a> Usando un dispositivo di Backup logico  
  Un *dispositivo di backup logico* è un nome facoltativo definito dall'utente tramite cui viene fatto riferimento a un dispositivo di backup fisico specifico, ovvero un file su disco o un'unità nastro. Un dispositivo di backup logico consente di utilizzare i riferimenti indiretti per fare riferimento al dispositivo di backup fisico corrispondente.  
   
  La definizione di un dispositivo di backup logico implica l'assegnazione di un nome logico a un dispositivo fisico. Ad esempio, un dispositivo logico, AdventureWorksBackups, può essere definito in modo da puntare al file Z:\SQLServerBackups\AdventureWorks2012.bak o all'unità nastro \\\\.\tape0. Nei comandi di backup e di ripristino è quindi possibile specificare come dispositivo di backup AdventureWorksBackups anziché DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' o TAPE = '\\\\.\tape0'.  

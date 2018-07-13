@@ -1,5 +1,5 @@
 ---
-title: Linee guida per la logica di riesecuzione per le transazioni nelle tabelle con ottimizzazione per la memoria | Documenti Microsoft
+title: Linee guida per la logica di ripetizione dei tentativi per le transazioni nelle tabelle ottimizzate per la memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
 caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 3949860a76801061a8ff01f73a417c32c5056dc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b7d4a0799a70a91c99297c3c077100235852cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243141"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>Linee guida per la logica di riesecuzione per le transazioni in tabelle con ottimizzazione per la memoria
   Esistono condizioni di errore che si verificano con le transazioni che accedono a tabelle ottimizzate per la memoria.  
@@ -34,7 +34,7 @@ ms.locfileid: "36066768"
   
  Una causa comune di questi errori è con una transazione eseguita simultaneamente. L'azione correttiva normale consiste nel ripetere la transazione.  
   
- Per ulteriori informazioni su queste condizioni di errore, vedere la sezione rilevamento dei conflitti, convalida, eseguire il Commit dipendenza controlli e in [transazioni in tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Per altre informazioni su queste condizioni di errore, vedere la sezione sul rilevamento dei conflitti, convalida e controlli di dipendenza di Commit in [transazioni in tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  I deadlock (codice di errore 1205) non possono verificarsi per le tabelle ottimizzate per la memoria. I blocchi non vengono utilizzati per le tabelle ottimizzate per la memoria. Se tuttavia nell'applicazione è già presente la logica di riesecuzione per i deadlock, la logica esistente può essere estesa in modo da includere i nuovi codici di errore.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36066768"
   
 -   L'applicazione client dispone di logica di riesecuzione per altri codici di errore, ad esempio 1205, che è possibile estendere.  
   
--   I conflitti sono rari ed è importante ridurre la latenza end-to-end mediante un'esecuzione preparata. Per ulteriori informazioni sull'esecuzione in modo nativo stored procedure compilate direttamente, vedere [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+-   I conflitti sono rari ed è importante ridurre la latenza end-to-end mediante un'esecuzione preparata. Per altre informazioni sull'esecuzione in modo nativo stored procedure compilate direttamente, vedere [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
  Nell'esempio seguente viene illustrata la logica di riesecuzione in una stored procedure [!INCLUDE[tsql](../includes/tsql-md.md)] interpretata che contiene una chiamata a una stored procedure compilata in modo nativo o a una transazione tra contenitori.  
   
@@ -130,8 +130,8 @@ END
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sulle transazioni nelle tabelle con ottimizzazione per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Transazioni in tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [Informazioni sulle transazioni nelle tabelle ottimizzate per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Transazioni nelle tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
   
   

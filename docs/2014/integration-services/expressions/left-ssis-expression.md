@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e25fcb18b0224780e3dff2fcbe62b88f8a3d0322
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da89c1a1740d8acd0f284d9cf1475d34ca651792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252593"
 ---
 # <a name="left-ssis-expression"></a>LEFT (espressione SSIS)
   Viene restituito il numero specificato di caratteri della parte più a sinistra dell'espressione di caratteri indicata.  
@@ -41,7 +41,7 @@ LEFT(character_expression,number)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se *number* è maggiore della lunghezza di *character_expression*, la funzione restituisce *character_expression*.  
   
  Se *number* ha valore zero, la funzione restituirà una stringa di lunghezza zero.  
@@ -62,7 +62,7 @@ LEFT("Mountain Bike", 8)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [RIGHT &#40;espressione SSIS&#41;](right-ssis-expression.md)   
- [Le funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md)  
+ [DESTRA &#40;espressione di SSIS&#41;](right-ssis-expression.md)   
+ [Le funzioni &#40;espressione di SSIS&#41;](functions-ssis-expression.md)  
   
   

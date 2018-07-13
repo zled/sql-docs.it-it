@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 7832b3440ae08597a84f5f0e5f6c3a8d851c3ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2468e7debaa34b08d40ffedef0a7f078f44343a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182308"
 ---
 # <a name="atomic-blocks"></a>Blocchi atomici
   `BEGIN ATOMIC` fa parte dello standard SQL ANSI. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i blocchi atomici solo al livello superiore delle stored procedure compilate in modo nativo.  
@@ -33,9 +33,9 @@ ms.locfileid: "36064682"
 ## <a name="transactions-and-error-handling"></a>Transazioni e gestione degli errori  
  Se in una sessione esiste già una transazione (perché un batch ha eseguito un'istruzione `BEGIN TRANSACTION` e la transazione rimane attiva), l'avvio di un blocco atomico creerà un punto di salvataggio nella transazione. Se il blocco viene chiuso senza un'eccezione, viene eseguito il commit del punto di salvataggio creato per il blocco, ma non verrà eseguito il commit della transazione finché non viene eseguito il commit a livello di sessione. Se il blocco genera un'eccezione, viene eseguito il rollback degli effetti del blocco, ma la transazione procede a livello di sessione, a meno che l'eccezione non la termini. Ad esempio, un conflitto di scrittura comporta la fine della transazione, ma non un errore di cast del tipo.  
   
- Se non è presente alcuna transazione attiva in una sessione, `BEGIN ATOMIC` avvia una nuova transazione. Se non viene generata alcuna eccezione all'esterno dell'ambito del blocco, verrà eseguito il commit della transazione alla fine del blocco. Se il blocco genera un'eccezione (l'eccezione non viene rilevata e gestita nel blocco), verrà eseguito il rollback della transazione. Per le transazioni che interessano un singolo blocco atomico (una singola in modo nativo stored procedure compilata), non occorre scrivere esplicita `BEGIN TRANSACTION` e `COMMIT` o `ROLLBACK` istruzioni.  
+ Se non è presente alcuna transazione attiva in una sessione, `BEGIN ATOMIC` avvia una nuova transazione. Se non viene generata alcuna eccezione all'esterno dell'ambito del blocco, verrà eseguito il commit della transazione alla fine del blocco. Se il blocco genera un'eccezione (l'eccezione non viene rilevata e gestita nel blocco), verrà eseguito il rollback della transazione. Per le transazioni che interessano un singolo blocco atomico (una singola in modo nativo stored procedure compilata), non devi scrivere espliciti `BEGIN TRANSACTION` e `COMMIT` o `ROLLBACK` istruzioni.  
   
- In modo nativo stored procedure compilate supportano la `TRY`, `CATCH`, e `THROW` costrutti per la gestione degli errori. `RAISERROR` Non è supportata.  
+ In modo nativo stored procedure compilate supportano il `TRY`, `CATCH`, e `THROW` costrutti per la gestione degli errori. `RAISERROR` non è supportato.  
   
  Nell'esempio seguente viene illustrato il comportamento della gestione degli errori con blocchi atomici e stored procedure compilate in modo nativo:  
   
@@ -130,7 +130,7 @@ GO
  I messaggi di errore seguenti specifici delle tabelle ottimizzate per la memoria comportano la fine della transazione. Se si verificano nell'ambito di un blocco atomico, causano l'interruzione della transazione: 10772, 41301, 41302, 41305, 41325, 41332 e 41333.  
   
 ## <a name="session-settings"></a>Impostazioni sessione  
- Le impostazioni di sessione nei blocchi atomici sono fisse quando la stored procedure è compilata. Alcune impostazioni possono essere specificate con `BEGIN ATOMIC` mentre altre sono sempre fisse sullo stesso valore.  
+ Le impostazioni di sessione nei blocchi atomici sono fisse quando la stored procedure è compilata. Alcune impostazioni possono essere specificati con `BEGIN ATOMIC` mentre altre sono sempre fisse sullo stesso valore.  
   
  Le opzioni seguenti sono necessarie con `BEGIN ATOMIC`:  
   

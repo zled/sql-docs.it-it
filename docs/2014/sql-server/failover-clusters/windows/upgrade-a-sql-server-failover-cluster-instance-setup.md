@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading clusters
 - clusters [SQL Server], upgrading
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 09cddbea72c375cb369f7bf4e795ae555099652e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: be393e7f9dd4eef29a26aa4d4e46c77f4ff76d9e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161872"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server (installazione)
   Per aggiornare un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un cluster di failover di [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], è possibile utilizzare l'Installazione guidata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o il prompt dei comandi.  
   
- Durante l'aggiornamento del cluster di failover, il tempo di inattività è limitato alla durata del failover e al tempo necessario per l'esecuzione degli script di aggiornamento. Se si segue il processo di aggiornamento in sequenza del cluster di failover, il tempo di inattività è minimo. In base alla disponibilità dei prerequisiti nei nodi del cluster di failover, è possibile che durante l'installazione di tali prerequisiti il tempo di inattività sia maggiore. Per ulteriori informazioni su come ridurre al minimo il tempo di inattività durante l'aggiornamento, vedere la [Best Practices prima l'aggiornamento di Cluster di Failover](#BestPractices) sezione in questa pagina.  
+ Durante l'aggiornamento del cluster di failover, il tempo di inattività è limitato alla durata del failover e al tempo necessario per l'esecuzione degli script di aggiornamento. Se si segue il processo di aggiornamento in sequenza del cluster di failover, il tempo di inattività è minimo. In base alla disponibilità dei prerequisiti nei nodi del cluster di failover, è possibile che durante l'installazione di tali prerequisiti il tempo di inattività sia maggiore. Per altre informazioni su come ridurre al minimo il tempo di inattività durante l'aggiornamento, vedere la [Best Practices prima l'aggiornamento di Cluster di Failover](#BestPractices) sezione in questa pagina.  
   
- Per ulteriori informazioni sull'aggiornamento, vedere [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md) e [esegue l'aggiornamento a SQL Server 2014](../../../database-engine/install-windows/upgrade-sql-server.md).  
+ Per altre informazioni su come eseguire l'aggiornamento, vedere [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md) e [esegue l'aggiornamento a SQL Server 2014](../../../database-engine/install-windows/upgrade-sql-server.md).  
   
- Per ulteriori informazioni sulla sintassi di esempio per l'uso del prompt dei comandi, vedere [installare SQL Server 2014 dal Prompt dei comandi](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+ Per altre informazioni sulla sintassi di esempio per l'utilizzo del prompt dei comandi, vedere [installare SQL Server 2014 dal Prompt dei comandi](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Prima di iniziare, esaminare le informazioni seguenti:  
@@ -47,9 +47,9 @@ ms.locfileid: "36063032"
   
 -   Il programma di installazione consente di installare .NET Framework 4.0 in un sistema operativo di tipo cluster. Per ridurre il tempo di inattività, si consideri di installare .NET Framework 4.0 prima di eseguire il programma di installazione.  
   
--   Per assicurarsi che il componente di Visual Studio può essere installato correttamente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è necessario installare un aggiornamento. Il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verifica la presenza di tale aggiornamento, quindi richiede di scaricarlo e installarlo prima che sia possibile procedere all'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per evitare l'interruzione dell'operazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programma di installazione, è possibile scaricare e installare l'aggiornamento prima di eseguire [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del programma di installazione come descritto di seguito (o installare tutti gli aggiornamenti per .NET 3.5 SP1 disponibili in Windows Update):  
+-   Per assicurarsi che il componente di Visual Studio può essere installato correttamente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è necessario installare un aggiornamento. Il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verifica la presenza di tale aggiornamento, quindi richiede di scaricarlo e installarlo prima che sia possibile procedere all'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per evitare l'interruzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programma di installazione, è possibile scaricare e installare l'aggiornamento prima dell'esecuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di installazione come descritto di seguito (o installare tutti gli aggiornamenti per .NET 3.5 SP1 disponibili in Windows Update):  
   
-     Se si installa [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] in un computer con sistema operativo Windows Server 2008 SP2, è possibile ottenere l'aggiornamento necessario da [qui](http://go.microsoft.com/fwlink/?LinkId=198093)  
+     Se si installano [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] in un computer con sistema operativo Windows Server 2008 SP2, è possibile ottenere l'aggiornamento necessario da [qui](http://go.microsoft.com/fwlink/?LinkId=198093)  
   
      Se si installa [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] in un computer con il sistema operativo [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 o [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] SP1, questo aggiornamento è incluso.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36063032"
   
 -   Per le installazioni locali, è necessario eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio con autorizzazioni di lettura per tale condivisione.  
   
--   Per aggiornare un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] cluster di failover, l'istanza da aggiornare deve essere un cluster di failover.  
+-   Per aggiornare un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] cluster di failover, istanza da aggiornare deve essere un cluster di failover.  
   
      Per spostare un'istanza autonoma di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un cluster di failover di [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], installare un nuovo cluster di failover di [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], quindi eseguire la migrazione dei database utente dall'istanza autonoma tramite la Copia guidata database. Per altre informazioni, vedere [Use the Copy Database Wizard](../../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -110,9 +110,9 @@ ms.locfileid: "36063032"
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , quindi nella cartella radice fare doppio clic sul file Setup.exe. Per eseguire l'installazione da una condivisione di rete, passare alla cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe. È possibile che venga richiesto di installare i prerequisiti se non sono già stati installati in precedenza.  
   
 2.  > [!IMPORTANT]  
-    >  Per ulteriori informazioni sui passaggi 3 e 4, vedere la [Best Practices prima l'aggiornamento di Cluster di Failover](#BestPractices) sezione.  
+    >  Per altre informazioni sui passaggi 3 e 4, vedere la [Best Practices prima l'aggiornamento di Cluster di Failover](#BestPractices) sezione.  
   
-3.  Una volta installati i prerequisiti, l'Installazione guidata avvia Centro installazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per aggiornare un'istanza esistente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], fare clic su **esegue l'aggiornamento da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].**  
+3.  Una volta installati i prerequisiti, l'Installazione guidata avvia Centro installazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per eseguire l'aggiornamento di un'istanza esistente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], fare clic su **esegue l'aggiornamento da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].**  
   
 4.  Se sono necessari, i file di supporto per l'installazione verranno installati dal programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se viene richiesto, riavviare il computer prima di continuare.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36063032"
   
 8.  Nella pagina Seleziona istanza specificare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da aggiornare a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Fare clic su**Avanti**per continuare.  
   
-9. Nella pagina Selezione funzionalità le funzionalità da aggiornare saranno preselezionate. Dopo aver selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. Non è possibile modificare le funzionalità da aggiornare, né aggiungere funzionalità durante l'operazione di aggiornamento. Per aggiungere funzionalità a un'istanza aggiornata del [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] una volta completata l'operazione di aggiornamento, vedere [aggiungere funzionalità a un'istanza di SQL Server 2014 &#40;programma di installazione&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md).  
+9. Nella pagina Selezione funzionalità le funzionalità da aggiornare saranno preselezionate. Dopo aver selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. Non è possibile modificare le funzionalità da aggiornare, né aggiungere funzionalità durante l'operazione di aggiornamento. Per aggiungere funzionalità a un'istanza aggiornata del [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] una volta completata l'operazione di aggiornamento, vedere [aggiunta di caratteristiche a un'istanza di SQL Server 2014 &#40;installazione&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md).  
   
      I prerequisiti per le funzionalità selezionate vengono visualizzati nel riquadro di destra. Il programma di installazione di SQL Server consentirà di installare i prerequisiti che non sono già stati installati durante la procedura di installazione descritta più avanti in questo argomento.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36063032"
   
 14. Controllo configurazione sistema eseguirà uno o più set di regole per convalidare la configurazione del computer con le funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specificate prima dell'inizio dell'operazione di aggiornamento.  
   
-15. Nella pagina Report aggiornamento cluster vengono visualizzati l'elenco dei nodi dell'istanza del cluster di failover e le informazioni sulla versione dell'istanza per i componenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in ogni nodo. In tale pagina vengono visualizzati lo stato degli script del database e di replica, nonché messaggi informativi sulle conseguenze dell'atto di scegliere **Avanti**. A seconda del numero di nodi di cluster di failover che sono già stato aggiornato e al numero complessivo di nodi, verrà visualizzato il comportamento di failover che si verifica quando si fa clic su **successivo**. Verranno inoltre visualizzati avvisi relativi al tempo di inattività potenziale non necessario nel caso in cui i prerequisiti non sia già installati.  
+15. Nella pagina Report aggiornamento cluster vengono visualizzati l'elenco dei nodi dell'istanza del cluster di failover e le informazioni sulla versione dell'istanza per i componenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in ogni nodo. In tale pagina vengono visualizzati lo stato degli script del database e di replica, nonché messaggi informativi sulle conseguenze dell'atto di scegliere **Avanti**. A seconda del numero di nodi di cluster di failover già aggiornato e al numero complessivo di nodi, verrà visualizzato il comportamento di failover che si verifica quando si fa clic **successivo**. Verranno inoltre visualizzati avvisi relativi al tempo di inattività potenziale non necessario nel caso in cui i prerequisiti non sia già installati.  
   
 16. Nella pagina Inizio aggiornamento è presente una visualizzazione albero delle opzioni specificate durante l'installazione. Per continuare, fare clic su **Aggiorna**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Il programma di installazione consentirà innanzitutto di installare i prerequisiti obbligatori per le funzionalità selezionate e, successivamente, le funzionalità stesse.  
   

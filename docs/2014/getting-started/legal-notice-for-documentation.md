@@ -1,12 +1,12 @@
 ---
-title: Nota legale sulla documentazione | Documenti Microsoft
+title: Nota legale sulla documentazione | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Copyright
 - documentation [SQL Server], legal notice
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - documentation policy [SQL Server]
 ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
 caps.latest.revision: 64
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e230cebf441753ece79e3b2ff552d2bcd2b210c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7c08db5a6681dec8ef5928369a27bc53f31a4d7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064785"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167202"
 ---
 # <a name="legal-notice-for-documentation"></a>Nota legale sulla documentazione
   Il documento viene fornito "com'è". Le informazioni e le opinioni espresse nel presente documento, inclusi gli URL e altri riferimenti a siti Web, possono essere soggette a modifiche senza preavviso. L'utente accetta di usarle a proprio rischio.  

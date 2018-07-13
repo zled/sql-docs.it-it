@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - components [SQL Server], adding to existing installations
 - versions [SQL Server], upgrading
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 caps.latest.revision: 132
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc7140188a24ba8b8ca51b792d4dd2beb8384ce6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ce657b9b4b832e1c880edd3d2c6d966cd5a78dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252643"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Aggiornamenti di versione ed edizione supportati
-  È possibile eseguire l'aggiornamento da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. In questo argomento sono elencati i percorsi di aggiornamento supportati da queste versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gli aggiornamenti di edizione supportati per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+  È possibile eseguire l'aggiornamento dal [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. In questo argomento sono elencati i percorsi di aggiornamento supportati da queste versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gli aggiornamenti di edizione supportati per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 ## <a name="pre-upgrade-checklist"></a>Elenco di controllo preliminare all'aggiornamento  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36063182"
   
 -   L'aggiornamento tra piattaforme diverse non è supportato. Non è possibile aggiornare un'istanza a 32 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'istanza a 64 bit nativa tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Tuttavia, è possibile eseguire il backup o scollegare database da un'istanza a 32 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quindi ripristinarli o collegarli a una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64 bit) se i database non sono pubblicati in replica. È necessario ricreare tutti gli account di accesso e gli altri oggetti utente nei database di sistema master, msdb e model.  
   
--   Non è possibile aggiungere nuove funzionalità durante l'aggiornamento dell'istanza esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dopo aver aggiornato un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è possibile aggiungere funzionalità tramite il programma di installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [aggiungere funzionalità a un'istanza di SQL Server 2014 &#40;programma di installazione di&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
+-   Non è possibile aggiungere nuove funzionalità durante l'aggiornamento dell'istanza esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dopo aver aggiornato un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è possibile aggiungere funzionalità tramite il programma di installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [aggiungere funzionalità a un'istanza di SQL Server 2014 &#40;installazione&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
   
 -   I cluster di failover non sono supportati nella modalità WOW.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36063182"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edizioni a 32 bit possono essere aggiornate a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nel sottosistema a 32 bit (WOW64) di un server a 64 bit.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versioni a 64 bit possono essere aggiornate a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] solo il server a 64 bit.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le versioni a 64 bit possono essere aggiornate a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] solo server a 64 bit.  
   
 > [!NOTE]  
 >  Quando si esegue l'aggiornamento a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, scegliere tra Enterprise Edition: licenze basate su core ed Enterprise Edition. Queste due edizioni differiscono solo per le modalità di gestione delle licenze, nonché per il numero massimo di core supportati. Per altre informazioni, vedere [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
@@ -109,7 +109,7 @@ ms.locfileid: "36063182"
 ### <a name="includesssql14includessssql14-mdmd-support-for-includessversion2005includesssversion2005-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Supporto per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
  In questa sezione viene illustrato il supporto di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]è possibile effettuare le operazioni seguenti:  
   
--   Aggiornare un [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] istanza del motore di database per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] eseguendo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] utilizzando l'installazione guidata o dal prompt dei comandi del programma di installazione.  
+-   Aggiornare una [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] istanza del motore di database di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] eseguendo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] utilizzando l'installazione guidata o dal prompt dei comandi di installazione.  
   
 -   Collegare un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (file ldf/mdf) all'istanza di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] del motore di database.  
   
@@ -117,13 +117,13 @@ ms.locfileid: "36063182"
   
 -   Aggiornare un pacchetto di [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Eseguire i pacchetti con l'aggiornamento automatico sul posto.  
   
--   Aggiornare un [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] al [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] eseguendo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] programma di installazione.  
+-   Aggiornare una [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] al [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] eseguendo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] il programma di installazione.  
   
 -   Eseguire il backup di un cubo di [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] e il ripristino in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 -   Aggiornare [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] eseguendo l'installazione di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
--   Connettersi al [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014.  
+-   Connettersi al [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014.  
   
  Quando un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] viene aggiornato a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], il livello di compatibilità del database viene modificato da 90 a 100. (In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], i valori validi per il livello di compatibilità del database sono 100, 110 e 120.) In [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) viene illustrato in che modo la modifica del livello di compatibilità possa influire sulle applicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -152,15 +152,15 @@ ms.locfileid: "36063182"
 ## <a name="includesssql14includessssql14-mdmd-edition-upgrade"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Aggiornamento delle edizioni  
  Nella tabella seguente sono elencati gli scenari di aggiornamento delle edizioni supportati in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
- Per istruzioni dettagliate su come eseguire un aggiornamento dell'edizione, vedere [esegue l'aggiornamento a una diversa versione di SQL Server 2014 &#40;programma di installazione di&#41;](upgrade-to-a-different-edition-of-sql-server-setup.md).  
+ Per istruzioni dettagliate su come eseguire un aggiornamento dell'edizione, vedere [esegue l'aggiornamento a una diversa versione di SQL Server 2014 &#40;installazione&#41;](upgrade-to-a-different-edition-of-sql-server-setup.md).  
   
 |Aggiornamento da|Aggiornamento a|  
 |------------------|----------------|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Server + CAL e Core) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Evaluation Enterprise <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> L'aggiornamento da Evaluation Enterprise (edizione gratuita) a qualsiasi edizione a pagamento è supportato per le installazioni autonome, ma non per le installazioni cluster.|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise Evaluation <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> L'aggiornamento da Evaluation Enterprise (edizione gratuita) a qualsiasi edizione a pagamento è supportato per le installazioni autonome, ma non per le installazioni cluster.|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Gli sviluppatori <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Per gli sviluppatori <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express <sup>1</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL o Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
   
@@ -187,6 +187,6 @@ ms.locfileid: "36063182"
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Requisiti hardware e Software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Eseguire l'aggiornamento a SQL Server 2014](upgrade-sql-server.md)   
- [Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
+ [Usare la Preparazione aggiornamento per preparare gli aggiornamenti](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
   

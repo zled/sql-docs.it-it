@@ -1,5 +1,5 @@
 ---
-title: Opzioni (pagina Editor di testo - tutti i linguaggi - generale) | Documenti Microsoft
+title: Opzioni (pagina Editor di testo - tutti i linguaggi - generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.General
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
 caps.latest.revision: 28
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4f04e097b7dec9d502848c9dc095c40ba8daa1ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39394ea71a428d634bcee27adc2b76a3fca4af02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189078"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Opzioni (Editor di testo - Tutte le lingue - pagina Generale)
   Utilizzare questa finestra di dialogo per impostare le opzioni generali di modifica in tutti e cinque gli editor di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per visualizzare le opzioni disponibili, scegliere **Opzioni** dal menu **Strumenti**. Selezionare la cartella **Editor di testo**, espandere la cartella **Tutti i linguaggi** e quindi fare clic su **Generale**.  
@@ -35,7 +35,7 @@ ms.locfileid: "36067654"
  Alcuni editor potrebbero non supportare tutte le opzioni elencate in questa pagina. Se nella pagina **Generale** della finestra di dialogo **Opzioni** un'opzione è selezionata solo per alcuni linguaggi di programmazione e non per altri, accanto all'opzione in questione verrà visualizzato un segno di spunta ombreggiato.  
   
 ## <a name="statement-completion"></a>Completamento istruzioni  
- **Elenco automatico membri**  
+ **Elenco membri automatico**  
  Consente di visualizzare gli elenchi popup dei membri, delle proprietà e dei valori disponibili mentre si immettono i dati nell'editor. Scegliere un elemento dall'elenco popup per inserirlo nel codice. Se si seleziona questa casella di controllo, viene abilitata automaticamente l'opzione **Nascondi membri avanzati**.  
   
  **Nascondi membri avanzati**  
@@ -45,19 +45,19 @@ ms.locfileid: "36067654"
  Consente di visualizzare la sintassi completa della procedura o della dichiarazione corrente a sinistra del punto di inserimento nell'editor, insieme a tutti i parametri disponibili. Il parametro successivo che può essere assegnato è evidenziato in grassetto.  
   
 ## <a name="settings"></a>Impostazioni  
- **Abilita spazio virtuale**  
+ **Attiva spazio virtuale**  
  Consente di inserire i commenti sempre nel medesimo punto accanto al codice. Quando questa casella di controllo è selezionata, è possibile posizionare il cursore oltre l'ultimo carattere nella riga. Durante l'immissione del testo, le tabulazioni e gli spazi vengono aggiunti automaticamente per completare la riga fino al punto di inserimento.  
   
  **Ritorno a capo automatico**  
  Consente di visualizzare sulla riga successiva le parti di una riga che si estendono orizzontalmente oltre l'area visibile dell'editor. Se si seleziona questa casella di controllo, viene abilitata automaticamente l'opzione **Mostra icona per ritorno a capo automatico** .  
   
- **Mostra glifi per ritorno a capo automatico**  
+ **Mostra icone per ritorno a capo automatico**  
  Consente di visualizzare un simbolo di ritorno a capo nel punto in cui una riga lunga va a capo sulla riga successiva.  
   
 > [!NOTE]  
 >  I simboli di ritorno a capo non vengono aggiunti al codice, né stampati. Si tratta esclusivamente di elementi di riferimento. Questa caratteristica non è disponibile in tutti i tipi di editor.  
   
- **Applica comandi Taglia o copia a righe vuote quando assenza di selezione**  
+ **Applica comandi Taglia o copia a righe vuote quando è presente nessuna selezione**  
  Consente di impostare il comportamento dell'editor nei casi in cui si posiziona il punto di inserimento in una riga vuota senza selezionare alcun elemento e quindi si fa clic su **Copia** o **Taglia**.  
   
  Se la casella di controllo è selezionata, la riga vuota viene copiata o incollata. Se quindi si fa clic su **Incolla**, viene inserita una nuova riga vuota.  

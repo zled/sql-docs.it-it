@@ -1,5 +1,5 @@
 ---
-title: Distribuzione di soluzioni di modelli tabulari (SSAS tabulare) | Documenti Microsoft
+title: Distribuzione di soluzioni di modelli tabulari (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 89e240e5c3a877761f8b26e9a581f462af49f395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b9e1594c4d4fbe07a6085544021b94820db640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220041"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Distribuzione di una soluzione del modello tabulare (SSAS tabulare)
   Una volta creato, un progetto di modello tabulare deve essere distribuito affinché gli utenti esplorino il modello tramite un'applicazione client di creazione report. In questo argomento vengono illustrate le varie proprietà e i diversi metodi che è possibile utilizzare in caso di distribuzione di soluzioni di modelli tabulari nell'ambiente.  
@@ -65,7 +65,7 @@ ms.locfileid: "36065677"
 |--------------|---------------------|-----------------|  
 |**Server**<br /><br /> Viene impostata quando si crea il progetto.|**localhost**|Questa proprietà, impostata quando si crea il progetto, consente di specificare il nome dell'istanza di Analysis Services in cui verrà distribuito il modello. Per impostazione predefinita, il modello sarà distribuito nell'istanza predefinita di Analysis Services nel computer locale. Tuttavia, questa impostazione può essere modificata per specificare un'istanza denominata nel computer locale oppure qualsiasi istanza in un computer remoto per cui si dispone dell'autorizzazione necessaria per creare oggetti di Analysis Services.|  
 |**Edizione**|Stessa edizione dell'istanza in cui si trova il server dell'area di lavoro.|Questa proprietà consente di specificare l'edizione del server Analysis Services in cui verrà distribuito il modello. L'edizione del server consente di definire le varie funzionalità che possono essere incorporate nel progetto. Per impostazione predefinita, l'edizione sarà quella del server Analysis Services locale. Se si specifica un server Analysis Services diverso, ad esempio, un server Analysis Services di produzione, assicurarsi di specificare l'edizione di tale server.|  
-|**Database**|**\<projectname>**|Questa proprietà consente di specificare il nome del database di Analysis Services in cui verrà creata un'istanza degli oggetti modello durante la distribuzione. Questo nome verrà specificato anche nella connessione dati di uno strumento client di creazione report o in un file di connessione dati con estensione bism.<br /><br /> È possibile modificare questo nome in qualsiasi momento durante la creazione del modello. Se si modifica il nome dopo la distribuzione del modello, le modifiche apportate dopo questa operazione non verranno applicate al modello distribuito in precedenza. Ad esempio, se si apre una soluzione denominata `TestDB` e distribuire la soluzione con il nome del Database modello predefinito Model, quindi modificare la soluzione e rinominare il modello di Database `Sales`, l'istanza di Analysis Services sono state distribuite le soluzioni per verrà visualizzato separare i database, uno denominato Model e uno denominato Sales.|  
+|**Database**|**\<projectname>**|Questa proprietà consente di specificare il nome del database di Analysis Services in cui verrà creata un'istanza degli oggetti modello durante la distribuzione. Questo nome verrà specificato anche nella connessione dati di uno strumento client di creazione report o in un file di connessione dati con estensione bism.<br /><br /> È possibile modificare questo nome in qualsiasi momento durante la creazione del modello. Se si modifica il nome dopo la distribuzione del modello, le modifiche apportate dopo questa operazione non verranno applicate al modello distribuito in precedenza. Ad esempio, se si apre una soluzione denominata `TestDB` e Distribuisci la tua soluzione con il nome del Database modello predefinito Model, quindi modificare la soluzione e rinominare il Database modello `Sales`, l'istanza di Analysis Services sono state distribuite le soluzioni per verrà visualizzato separare i database, uno denominato Model e uno denominato Sales.|  
 |**Nome cubo**|**Modello**|Questa proprietà consente di specificare il nome del cubo come mostrato negli strumenti client (ad esempio Excel) e negli oggetti AMO (Analysis Management Objects).|  
   
 ### <a name="directquery-options-properties"></a>Proprietà delle opzioni DirectQuery  

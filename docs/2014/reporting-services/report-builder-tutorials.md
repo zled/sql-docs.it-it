@@ -1,5 +1,5 @@
 ---
-title: Esercitazioni (Generatore Report) | Documenti Microsoft
+title: Esercitazioni (Generatore Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 92d54d4e6f0db25605bf3d59ac7de59953d43d71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d5c422eded8ac3ffb54306790c88a80b0f841736
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266157"
 ---
 # <a name="tutorials-report-builder"></a>esercitazioni (Generatore report)
   Usare le esercitazioni seguenti di Generatore report per apprendere come creare report di base.  
@@ -44,7 +44,7 @@ ms.locfileid: "36066007"
  [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](tutorial-format-text-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per apprendere alcuni dei modi in cui è possibile formattare il testo nei report.  
   
- [Esercitazione: Aggiungere un istogramma al report &#40;Generatore Report&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
+ [Esercitazione: Aggiungere un istogramma al Report &#40;Generatore Report&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per aggiungere un istogramma con un media mobile a un report.  
   
  [Esercitazione: Aggiungere un grafico a torta al Report &#40;Generatore Report&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "36066007"
  [Esercitazione: Report mappa &#40;Generatore Report&#41;](tutorial-map-report-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per aggiungere una mappa a un report.  
   
- [Esercitazione: Aggiungere un parametro al report &#40;Generatore Report&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Esercitazione: Aggiungere un parametro al Report &#40;Generatore Report&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per apprendere come personalizzare l'aspetto e il contenuto di un report tramite l'utilizzo di parametri.  
   
  [Esercitazione: Creazione di drill-through e report principali &#40;Generatore Report&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  

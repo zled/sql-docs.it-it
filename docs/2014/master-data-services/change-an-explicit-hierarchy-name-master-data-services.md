@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, changing name
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4b9ae4e9db2e2d48def332b337ff9788e26464e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e56e52948282d49db948b76fd1b3837f656fd8de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267077"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Modificare il nome di una gerarchia esplicita (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile modificare il nome di una gerarchia esplicita.  
@@ -45,7 +45,7 @@ ms.locfileid: "36065856"
   
 5.  Fare clic su **Modifica entità selezionata**.  
   
-6.  Nel **modifica entità** pagina, fare clic sulla gerarchia esplicita che si desidera rinominare.  
+6.  Nel **modifica entità** pagina, scegliere la gerarchia esplicita che si desidera rinominare.  
   
 7.  Fare clic su **Modifica gerarchia selezionata**.  
   

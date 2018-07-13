@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
 - XMLSCHEMA option
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8cc6009563ca46e47e40e61c054fbe732ccc401a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e629d7c6e23f5e609f0d6734774d58bbc16f83f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194781"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generazione di uno schema XSD inline
   In una clausola FOR XML è possibile richiedere che la query restituisca uno schema inline oltre ai risultati della query. Per ottenere uno schema XDR, utilizzare la parola chiave XMLDATA nella clausola FOR XML. Per ottenere uno schema XSD, utilizzare invece la parola chiave XMLSCHEMA.  
@@ -36,7 +36,7 @@ ms.locfileid: "36067993"
   
 -   È possibile specificare la parola chiave XMLSCHEMA unicamente nelle modalità RAW e AUTO e non nella modalità EXPLICIT.  
   
--   Se una query FOR XML nidificata è specificata la direttiva TYPE, il risultato della query è di `xml` tipo e il risultato viene considerato come un'istanza di dati XML non tipizzati. Per altre informazioni, vedere [Dati XML &#40;SQL Server&#41;](xml-data-sql-server.md).  
+-   Se una query FOR XML nidificata è specificata la direttiva TYPE, il risultato della query è di `xml` tipo e viene considerato come un'istanza di dati XML non tipizzati. Per altre informazioni, vedere [Dati XML &#40;SQL Server&#41;](xml-data-sql-server.md).  
   
  Se si specifica la parola chiave XMLSCHEMA in una query FOR XML, si otterrà sia uno schema che i dati XML, ovvero il risultato della query. Ogni elemento di livello principale dei dati fa riferimento allo schema precedente tramite una dichiarazione dello spazio dei nomi predefinito che, a sua volta, fa riferimento allo spazio dei nomi di destinazione dello schema inline.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36067993"
   
 -   Un altro documento di schema che descrive la forma del risultato della query FOR XML.  
   
- Inoltre, se tipizzati `xml` tipi di dati sono inclusi nel risultato della query, gli schemi associati a tali tipizzati `xml` sono inclusi tipi di dati.  
+ Inoltre, se tipizzati `xml` tipi di dati sono inclusi nel risultato della query, gli schemi associati a quelli tipizzati `xml` sono inclusi i tipi di dati.  
   
  Lo spazio dei nomi di destinazione del documento di schema che descrive la forma del risultato della query FOR XML contiene una parte fissa e una parte numerica che viene incrementata automaticamente. Di seguito è illustrato il formato di questo spazio dei nomi, dove *n* è un numero intero positivo. Ad esempio, nella query precedente urn:schemas-microsoft-com:sql:SqlRowSet1 rappresenta lo spazio dei nomi di destinazione.  
   

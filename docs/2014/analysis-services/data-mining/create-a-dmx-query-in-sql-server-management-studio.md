@@ -1,5 +1,5 @@
 ---
-title: Creare una Query DMX in SQL Server Management Studio | Documenti Microsoft
+title: Creare una Query DMX in SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [Analysis Services], queries
 - SQL Server Management Studio [Analysis Services], DMX queries
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], DMX
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a22250eeb6e66f8668c5a97c98971b750c1fce7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fb9c89a18eb5336199edf9b64cdfa61255b75b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325441"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Creare una query DMX in SQL Server Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre un set di funzionalità che consentono di creare query di stima, query sul contenuto e query di definizione dei dati su modelli e strutture di data mining.  
@@ -89,7 +89,7 @@ ms.locfileid: "36064567"
  [Creare una query sul contenuto di un modello di data mining](create-a-content-query-on-a-mining-model.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data nuove interfacce Query di Data Mining](data-mining-query-tools.md)   
- [Estensioni Data Mining &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Data Mining nuove interfacce Query](data-mining-query-tools.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

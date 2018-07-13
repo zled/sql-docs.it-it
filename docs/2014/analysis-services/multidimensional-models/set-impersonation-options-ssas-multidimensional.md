@@ -1,5 +1,5 @@
 ---
-title: Impostare le opzioni di rappresentazione (SSAS - multidimensionale) | Documenti Microsoft
+title: Impostare le opzioni di rappresentazione (SSAS - multidimensionale) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
 helpviewer_keywords:
 - Impersonation Information dialog box
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58fa3381106f354d810ccbf6b6253ebb20bb55bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c41bd2f5f17ac90053f397b6bfd73cf4b346fd6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176988"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Impostare opzioni di rappresentazione (SSAS - Multidimensionale)
   Quando si crea un oggetto `data source` in un modello di Analysis Services, una delle impostazioni da configurare è l'opzione di rappresentazione. Con questa opzione è possibile determinare se in Analysis Services viene acquisita l'identità di uno specifico account utente di Windows quando si eseguono operazioni locali correlate alla connessione, ad esempio il caricamento di un provider di dati OLE DB o la risoluzione di informazioni sul profilo utente in ambienti che supportano profili mobili.  
@@ -53,7 +53,7 @@ ms.locfileid: "36067900"
  Nella finestra di dialogo sono disponibili tutte le opzioni, ma solo alcune sono appropriate per ogni scenario. Utilizzare le informazioni seguenti per determinare l'opzione più adatta per il proprio scenario.  
   
  **Usa nome utente e password specifici**  
- Selezionare questa opzione per disporre il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetto utilizzi le credenziali di sicurezza di un account utente di Windows specificato nel formato seguente:  *\<nome di dominio >***\\***\<utente nome dell'account >*.  
+ Selezionare questa opzione per disporre le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetto utilizza le credenziali di sicurezza di un account utente di Windows specificato nel formato seguente:  *\<nome di dominio >***\\***\<utente nome account >*.  
   
  Scegliere questa opzione per utilizzare un'identità utente di Windows dedicata e con privilegi minimi, creata specificamente a scopo di accesso ai dati. Se, ad esempio, si crea regolarmente un account di uso generale per il recupero dei dati utilizzati nei report, è possibile specificarlo qui.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36067900"
   
  **Database: opzione Predefinito**  
   
- Per i database tabulari **predefinito** comporta l'utilizzo dell'account del servizio.  
+ Per i database tabulari **predefinito** mezzi usano l'account del servizio.  
   
  Per i database multidimensionali, l'opzione **Predefinito** comporta l'uso dell'account del servizio e dell'utente corrente per le operazioni di data mining.  
   

@@ -1,5 +1,5 @@
 ---
-title: Le proprietà TCP / IP (scheda indirizzi IP) | Documenti Microsoft
+title: Le proprietà TCP / IP (scheda indirizzi IP) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8325999f00f7b5b84bc01d1de188802c27dba7b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cb09573cd77f74044647925bd43310223c4ce67e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187592"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>Proprietà TCP / IP (scheda indirizzi IP)
   La finestra di dialogo **Proprietà TCP/IP** (scheda Indirizzi IP) consente di configurare le opzioni del protocollo TCP/IP per un indirizzo IP specifico. Solo le opzioni **Porte dinamiche TCP** e **Porta TCP** possono essere configurate contemporaneamente per tutti gli indirizzi selezionando **IPAll**.  
@@ -58,7 +58,7 @@ ms.locfileid: "36067102"
  Per configurare un unico indirizzo IP per l'attesa su più porte è inoltre necessario impostare il parametro **Attesa su tutti** su **No** nella **scheda Protocolli** della finestra di dialogo **Proprietà TCP/IP**. Per ulteriori informazioni, vedere "Procedura: Configurazione del Motore di database per l'attesa su più porte TCP" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Aggiunta o rimozione di indirizzi IP  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager consente di visualizzare gli indirizzi IP che non erano disponibili al momento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato installato. Aggiungendo o modificando schede di rete, alla scadenza di un indirizzo IP assegnato dinamicamente, quando si riconfigura la struttura della rete o quando si sposta fisicamente il computer, ad esempio quando un computer portatile si connette alla rete in un edificio diverso, gli indirizzi IP disponibili cambiano. Per modificare un indirizzo IP, modificare la casella **Indirizzo IP**, quindi riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager visualizza gli indirizzi IP disponibili al momento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato installato. Aggiungendo o modificando schede di rete, alla scadenza di un indirizzo IP assegnato dinamicamente, quando si riconfigura la struttura della rete o quando si sposta fisicamente il computer, ad esempio quando un computer portatile si connette alla rete in un edificio diverso, gli indirizzi IP disponibili cambiano. Per modificare un indirizzo IP, modificare la casella **Indirizzo IP**, quindi riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Scelta di un protocollo di rete](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

@@ -1,5 +1,5 @@
 ---
-title: Opzioni (risultati SQL Server-Multi-Server di Query) | Documenti Microsoft
+title: Opzioni (risultati SQL Server-Multi-Server di Query) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.multiserverresultssettings
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLMultiServerResults
@@ -16,13 +16,13 @@ ms.assetid: d6768bd8-9cb5-4606-a726-a33a1df9e1bb
 caps.latest.revision: 9
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a1465defc783d0fde352a29648af61c0bb99ff59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3088e2e265ef44a7d490001b9a7060186ba2c3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271797"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>Opzioni (risultati SQL Server-Multi-Server di Query)
   Quando si esegue una query su più server contemporaneamente, utilizzare questa pagina per specificare le opzioni per la visualizzazione dei set di risultati. Con la funzione Unisci risultati, i set di risultati di tutti i server vengono combinati in un singolo set. Quando si uniscono i risultati, il server che risponde per primo imposta lo schema per il set di risultati. Perché sia possibile unire i set di risultati, la query deve restituire lo stesso numero di colonne con nomi uguali da ogni server. Quando si uniscono i risultati, viene visualizzato un messaggio per ogni server che non corrisponde allo schema (numero di colonne e nomi di colonna) restituito dal server che ha risposto per primo.  

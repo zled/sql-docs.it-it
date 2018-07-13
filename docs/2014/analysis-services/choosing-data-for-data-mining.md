@@ -1,5 +1,5 @@
 ---
-title: Scelta dei dati per il Data Mining | Documenti Microsoft
+title: Scelta dei dati per il Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content type [data mining]
 - nested tables
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - discretized
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 014c39cea8baea721c51308e65f894e8216ae7e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d9466397115e3562deebb91b5b3e7506bae09c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170293"
 ---
 # <a name="choosing-data-for-data-mining"></a>Scelta di dati per il data mining
   Quando si inizia il data mining, possono sorgere dubbi sulla quantità di dati necessari oppure su eventuali requisiti speciali da considerare durante la pulizia o la formattazione dei dati.  
@@ -67,7 +67,7 @@ ms.locfileid: "36064617"
   
 -   Creare più versioni dei dati e compilare più modelli.  
   
- Per altri suggerimenti su come selezionare, modificare ed esaminare i dati, vedere [elenco di controllo della preparazione per il Data Mining](checklist-of-preparation-for-data-mining.md).  
+ Per altri suggerimenti su come selezionare, modificare ed esaminare i dati, vedere [elenco di controllo di preparazione per il Data Mining](checklist-of-preparation-for-data-mining.md).  
   
 ### <a name="how-much-data-do-i-need"></a>Quanti dati sono necessari  
  Come regola pratica, non prendere mai in considerazione meno di 50-100 righe di dati per i tipi di modelli e gli scenari più semplici. Ad esempio, per la previsione di un solo attributo tramite un modello Naïve Bayes e con un set di dati ben formato, si potrebbero generare stime abbastanza accurate utilizzando 50-100 righe di dati.  
@@ -77,7 +77,7 @@ ms.locfileid: "36064617"
  Se si dispone di un set di dati di dimensioni adeguate, incentrare l'analisi sulla qualità dei dati invece di aggiungere più dati. A un certo punto, tutti i modelli statisticamente validi saranno stati trovati e aggiungere più dati non ne migliora la validità. Viceversa, l'aggiunta di altri dati può talvolta introdurre correlazioni accidentali.  
   
 ### <a name="discrete-vs-continuous-numbers"></a>Numeri discreti e numeri continui  
- Un *discreti* colonna contiene un numero finito di valori. I caratteri di testo ad esempio vengono sempre trattati come valori discreti.  
+ Oggetto *discreti* colonna contiene un numero finito di valori. I caratteri di testo ad esempio vengono sempre trattati come valori discreti.  
   
  I valori discreti hanno alcuni attributi importanti. Ad esempio, se si considerano i numeri come discreti, non vi è un ordine implicito tra loro e non è possibile calcolare la media o la somma dei numeri. Gli indicativi di località telefonici sono un valido esempio di dati numerici discreti che non si utilizzerebbero mai per eseguire operazioni matematiche.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36064617"
   
  **Conversione di numeri in variabili categoriche**  
   
- Non necessariamente i numeri contenuti in una colonna devono essere considerati numeri continui. *Discretizzazione* offre numerosi vantaggi per l'analisi. uno dei quali è rappresentato dal fatto che si riduce lo spazio dei problemi. Un altro vantaggio è legato al fatto che talvolta i numeri non sono il modo migliore per esprimere un risultato.  
+ Non necessariamente i numeri contenuti in una colonna devono essere considerati numeri continui. *Discretizzazione* offre molti vantaggi per l'analisi. uno dei quali è rappresentato dal fatto che si riduce lo spazio dei problemi. Un altro vantaggio è legato al fatto che talvolta i numeri non sono il modo migliore per esprimere un risultato.  
   
  Il numero di figli per nucleo familiare ad esempio può essere considerato sia come valore continuo che come valore discreto. Poiché una famiglia non può avere 2,5 figli e i nuclei familiari con 3 o più figli possono adottare comportamenti molto diversi rispetto a quelli con 2 figli, è possibile ottenere risultati migliori considerando questo numero come una categoria. Se, tuttavia, si compila un modello di regressione o è necessario trovare una media (ad esempio 1,357 figlio per nucleo familiare), è preferibile utilizzare un tipo di dati di numeri continui.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36064617"
   
 -   Pre-raggruppare i dati manualmente, creando alcuni set di raggruppamenti che abbiano significato a livello aziendale o più facili da utilizzare. In questo modo, spesso si perde la vera distribuzione dei valori, ma gli intervalli possono essere letti più facilmente dagli utenti.  
   
--   Consentire all'algoritmo di determinare il numero ottimale di bucket e la distribuzione di valori. Questa è l'impostazione predefinita nella maggior parte degli strumenti, ma è possibile eseguire l'override di tali impostazioni predefinite nel **Data Mining** procedure guidate della barra degli strumenti.  
+-   Consentire all'algoritmo di determinare il numero ottimale di bucket e la distribuzione di valori. Questo è l'impostazione predefinita nella maggior parte degli strumenti, ma è possibile eseguire l'override di questi valori predefiniti in di **Data Mining** procedure guidate sulla barra degli strumenti.  
   
 -   Approssimare i valori a una media centrale o a un valore rappresentativo.  
   
@@ -120,9 +120,9 @@ ms.locfileid: "36064617"
   
  Per impostazione predefinita, quando si importano dati numerici in [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel, i numeri vengono archiviati in formato decimale con due cifre decimali. Se tale formato numerico non è appropriato, cambiare formato o cambiare il numero di cifre decimali.  
   
- Un'opzione consiste nell'usare il [Modifica etichette](relabel-sql-server-data-mining-add-ins.md) strumento per modificare la modalità che i numeri sono visualizzati o raggruppati.  
+ Una possibilità consiste nell'usare la [Rietichettare](relabel-sql-server-data-mining-add-ins.md) dello strumento per modificare il modo che i numeri sono visualizzati o raggruppati.  
   
- Tuttavia, se i dati sono troppo complessi per essere elaborati con il **Modifica etichette** strumento, è possibile utilizzare le funzioni numeriche in Excel per convertire i dati in intervalli discreti, salvare il risultato in una colonna separata e quindi utilizzare la colonna discretizzata per classificazione invece.  
+ Tuttavia, se i dati sono troppo complessi per l'elaborazione con la **Rietichettare** strumento, è possibile usare le funzioni numeriche di Excel per convertire i dati in intervalli discreti, salvare il risultato in una colonna separata e quindi usare la colonna discretizzata per classificazione invece.  
   
  Se ad esempio si desidera analizzare i risultati di una corsa e si desidera raggruppare i partecipanti in base ai tempi di arrivo espressi in minuti, è possibile eseguire un arrotondamento per eccesso al minuto più prossimo e salvare il valore arrotondato in una nuova colonna. È inoltre possibile estrarre solo il valore relativo al minuto utilizzando la funzione `MINUTE` e quindi salvare tale valore in una nuova colonna utilizzabile per l'analisi.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "36064617"
   
 1.  Nella tabella dati di Excel evidenziare la colonna o la cella contenente il numero in notazione scientifica.  
   
-2.  Mouse e scegliere **formattare le celle** dal menu di scelta rapida.  
+2.  Fare doppio clic e selezionare **formattare le celle** dal menu di scelta rapida.  
   
 3.  Nel **categoria** elenco, selezionare **numero**.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "36064617"
      Verrà modificata solo la visualizzazione del numero, mentre il valore sottostante resterà invariato.  
   
 ### <a name="working-with-dates-and-times"></a>Utilizzo di date e ore  
- Quando in una tabella di Excel sono contenute date e si utilizza la colonna come input o per la stima, i risultati ottenuti potrebbero non essere quelli previsti, a seconda della formattazione delle informazioni relative a data o ora. Ad esempio, quando si usa **rileva categorie** oppure **classificazione** e includere una colonna contenente date, le date sono suddivisi in categorie come numeri con molte cifre decimali. Non si tratta di un errore, bensì di una rappresentazione accurata dei dati sottostanti. L'algoritmo di data mining utilizza il formato di archiviazione sottostante, non il formato di visualizzazione.  
+ Quando in una tabella di Excel sono contenute date e si utilizza la colonna come input o per la stima, i risultati ottenuti potrebbero non essere quelli previsti, a seconda della formattazione delle informazioni relative a data o ora. Ad esempio, quando si usa **rileva categorie** oppure **classifica** e includere una colonna che contiene date, le date sono suddivisi in categorie come numeri con molte cifre decimali. Non si tratta di un errore, bensì di una rappresentazione accurata dei dati sottostanti. L'algoritmo di data mining utilizza il formato di archiviazione sottostante, non il formato di visualizzazione.  
   
  Se si incontrano difficoltà con le date e si desidera analizzarle utilizzando raggruppamenti basati sulla logica comune come mese o giorno, è possibile utilizzare le funzioni DATA in Excel per estrarre l'anno, il mese o il giorno in una colonna separata e utilizzare quindi la colonna per la classificazione.  
   
@@ -160,13 +160,13 @@ ms.locfileid: "36064617"
   
 -   Non è inoltre possibile stimare valori continui con questo tipo di modello. Se si desidera stimare un numero continuo, ad esempio i redditi, è pertanto necessario suddividere prima i valori in intervalli significativi. Se si hanno dubbi sugli intervalli appropriati, è possibile utilizzare l'algoritmo di clustering per individuare gruppi di numeri nei dati.  
   
--   Quando si utilizza una procedura guidata in base a questo algoritmo (ad esempio [analizza fattori di influenza chiave &#40;strumenti di analisi tabelle per Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)), le colonne continue verranno categorizzate dalla procedura guidata è.  
+-   Quando si usa una procedura guidata basata su questo algoritmo (ad esempio [analizza fattori di influenza chiave &#40;strumenti di analisi tabelle per Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)), le colonne continue verranno categorizzate dalla procedura guidata è.  
   
--   Se si compila un modello Naive Bayes utilizzando il [modellazione avanzata &#40;aggiuntivi di Data Mining per Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) opzione, le colonne di numeri verranno rimosse dal modello. Se si desidera evitare questo problema, utilizzare il [modificare le etichette &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](relabel-sql-server-data-mining-add-ins.md) strumento per creare una nuova colonna con valori suddivisi.  
+-   Se si compila un modello Naive Bayes utilizzando il [modellazione avanzata &#40;aggiuntivi di Data Mining per Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) opzione, le colonne di numeri verranno rimosse dal modello. Se si vuole evitare questo problema, usare il [modificare le etichette &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](relabel-sql-server-data-mining-add-ins.md) dello strumento per creare una nuova colonna con valori suddivisi.  
   
- **Modelli di clustering**  
+ **I modelli di clustering**  
   
--   Gli strumenti di clustering ([Creazione guidata Cluster di &#40;aggiuntivi di Data Mining per Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) e [rileva categorie &#40;strumenti di analisi tabelle per Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)) inoltre possibile utilizzare continua numeri, ma entrambi gli strumenti suddividono automaticamente le colonne di numeri per l'utente.  
+-   Gli strumenti di clustering ([Creazione guidata Cluster &#40;aggiuntivi di Data Mining per Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) e [rileva categorie &#40;strumenti di analisi tabelle per Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)) che non è possibile anche usare continua numeri, ma entrambi gli strumenti suddividono automaticamente le colonne di numeri per l'utente.  
   
 -   Entrambi gli strumenti offrono la possibilità di scegliere il numero di categorie di output nei risultati, ma se si desidera controllare il modo in cui vengono raggruppati i valori in singole colonne, è necessario creare una nuova colonna con il raggruppamento desiderato.  
   
@@ -179,11 +179,11 @@ ms.locfileid: "36064617"
 -   Se si desidera creare un grafico a dispersione di un modello di regressione, le variabili di input devono essere numeri continui, espressi come tipo di dati appropriato.  
   
 ### <a name="using-content-types-to-make-better-models"></a>Utilizzo di tipi di contenuto per ottimizzare i modelli  
- Un *tipo di contenuto* è una proprietà si applica a una colonna per specificare come i dati della colonna devono essere utilizzati dal modello. L'algoritmo può utilizzare il tipo di contenuto come istruzione o hint durante l'analisi.  
+ Oggetto *tipo di contenuto* è una proprietà si applica a una colonna per specificare come i dati della colonna devono essere utilizzati dal modello. L'algoritmo può utilizzare il tipo di contenuto come istruzione o hint durante l'analisi.  
   
  Se, ad esempio, una colonna contiene numeri che si ripetono in un intervallo specifico per indicare i giorni della settimana, è possibile contrassegnare il tipo di contenuto di tale colonna come `Cyclical`.  
   
- Non occorre preoccuparsi dei tipi di contenuto se si utilizzano le procedure guidate e gli strumenti forniti in questo componente aggiuntivo. Tuttavia, se si utilizza il [aggiunta modello a struttura &#40;aggiuntivi di Data Mining per Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) opzione per aggiungere un nuovo modello ai dati esistenti di modellazione, è possibile che venga visualizzato un errore relativo ai tipi di contenuto.  
+ Non occorre preoccuparsi dei tipi di contenuto se si utilizzano le procedure guidate e gli strumenti forniti in questo componente aggiuntivo. Tuttavia, se si usa la [aggiunta modello a struttura &#40;aggiuntivi di Data Mining per Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) modellazione opzione per aggiungere un nuovo modello ai dati esistenti, si verifichi un errore relativo ai tipi di contenuto.  
   
  Il motivo è che alcuni tipi di modello richiedono un determinato tipo di dati, ad esempio timestamp. Gli strumenti elaborano queste colonne in base ai requisiti specifici e aggiungono inoltre una proprietà del tipo di contenuto. Pertanto, se si riutilizzano i dati con un algoritmo completamente diverso, potrebbe essere necessario modificare il tipo di dati o il tipo di contenuto.  
   
@@ -209,14 +209,14 @@ ms.locfileid: "36064617"
   
  In genere la colonna chiave è un identificatore numerico o di testo che non deve essere utilizzato per l'analisi, ma solo per la registrazione di record. Le eccezioni sono chiavi della serie temporale e chiavi della sequenza.  
   
- **Chiavi delle tabelle annidate** vengono utilizzati solo quando si ottengono dati da un'origine dati esterna definita come un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vista origine dati. Per ulteriori informazioni sulle tabelle nidificate, vedere [ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
+ **Chiavi delle tabelle annidate** vengono utilizzati solo quando si ottengono dati da un'origine dati esterna definita come un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vista origine dati. Per altre informazioni sulle tabelle annidate, vedere [ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
   
  Questo tipo di contenuto può essere utilizzato con i tipi di dati seguenti: `Date`, `Double`, `Long` e `Text`.  
   
  **Sequenza di tasti**  
  La colonna contiene valori che rappresentano una sequenza di eventi. I valori sono ordinati, ma non è necessario che siano equidistanti.  
   
- Questo tipo di contenuto è supportato dai seguenti tipi di dati: `Double`, `Long`, `Text`, e `Date`.  
+ Questo tipo di contenuto è supportato dai tipi di dati seguenti: `Double`, `Long`, `Text`, e `Date`.  
   
  **Chiave temporale**  
  La colonna contiene valori ordinati che rappresentano una scala cronologica. È possibile utilizzare il tipo di contenuto chiave temporale solo se il modello è un modello Time Series o un modello Sequence Clustering.  
@@ -228,7 +228,7 @@ ms.locfileid: "36064617"
   
  Ciò in pratica significa che ogni riga di dati contiene effettivamente una tabella dati annidata, con una o più colonne e una o più righe.  
   
- Le tabelle nidificate sono molto utili, ma è possibile utilizzare solo con il [modellazione avanzata &#40;aggiuntivi di Data Mining per Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) opzioni di modellazione. Ad esempio, i dati di esempio per la [associare guidata &#40;Client di Data Mining per Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) procedura guidata e [market Basket Analysis &#40;strumenti di analisi tabelle per Excel&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md) strumento contiene dati che sono stati resi bidimensionali da una tabella nidificata.  
+ Le tabelle nidificate sono molto utili, ma è possibile usarli solo con il [modellazione avanzata &#40;aggiuntivi di Data Mining per Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) opzioni di modellazione. Ad esempio, i dati di esempio per la [associare guidata &#40;Client di Data Mining per Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) guidata e [market Basket Analysis &#40;strumenti di analisi tabelle per Excel&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md) strumento contiene dati che sono stati resi bidimensionali da una tabella nidificata.  
 
   
   

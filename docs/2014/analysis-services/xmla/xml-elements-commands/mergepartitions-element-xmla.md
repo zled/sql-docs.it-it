@@ -1,5 +1,5 @@
 ---
-title: Elemento MergePartitions (XMLA) | Documenti Microsoft
+title: Elemento MergePartitions (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - MergePartitions command
 ms.assetid: cf538189-0629-49b3-8e01-32afba7b020d
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 80f94365da716e08c50a2b3e0ce8df82132ea99e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 64d6352cd0c5a0cb7a408722b501dd62a0d47e55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226381"
 ---
 # <a name="mergepartitions-element-xmla"></a>Elemento MergePartitions (XMLA)
   Unisce i dati di una o più partizioni di origine in una partizione di destinazione e quindi elimina le partizioni di origine.  
@@ -64,7 +64,7 @@ ms.locfileid: "36065913"
 |Elementi padre|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |Elementi figlio|[Origini](../xml-elements-properties/sources-element-xmla.md), [destinazione](../xml-elements-properties/target-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Tutti i riferimenti all'oggetto negli elementi `Sources` e `Target` devono puntare alle partizioni distinte nello stesso gruppo di misure. In caso contrario si verifica un errore.  
   
 ## <a name="see-also"></a>Vedere anche  

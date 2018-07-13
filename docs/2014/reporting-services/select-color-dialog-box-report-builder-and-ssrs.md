@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo colore (Generatore Report e SSRS) seleziona | Documenti Microsoft
+title: Dialogo Seleziona colore (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
 - "10090"
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1829f9d5b598f42b54be3d6d08cb7a78ea5e11f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2b14615cb231f6df5385306ded4257a86998a56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185775"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Finestra di dialogo Seleziona colore (Generatore report e SSRS)
   Utilizzare la finestra di dialogo **Seleziona colore** per specificare le opzioni relative al colore per lo sfondo di una o più celle in un'area dati o in una casella di testo oppure per un grafico.  
@@ -50,7 +50,7 @@ ms.locfileid: "36066421"
  Quando si effettua una scelta, il centro del quadrato determina il colore. Utilizzare il dispositivo di scorrimento del colore per cambiare la gamma del colore scelto. Le coordinate x e y rappresentano gli altri due colori. Se ad esempio si sceglie il colore verde, il dispositivo di scorrimento visualizza la gamma di valori del verde, mentre le coordinate x e y rappresentano rispettivamente i valori del rosso e del blu.  
   
  **Tavolozza colori standard**  
- Utilizzo per i colori denominati dal [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` enumerazione.  
+ Per i colori denominati dall'uso di [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` enumerazione.  
   
  **Sistema colori**  
  Specificare i colori RGB o HSB. Questa opzione consente di visualizzare i valori RGB o HSB, che vengono aggiornati in modo interattivo quando si utilizza un cerchio o un quadrato di colori per **Selettore colori**.  
@@ -83,6 +83,6 @@ ms.locfileid: "36066421"
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Formattazione di testo e segnaposto &#40;SSRS e Generatore Report&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Formattazione di testo e segnaposto &#40;Report e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

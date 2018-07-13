@@ -1,5 +1,5 @@
 ---
-title: Rappresentazione di una connessione (tabulare) | Documenti Microsoft
+title: Rappresentazione di una connessione (tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4b410b16-d36e-4185-bb20-922e66e5e2b7
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3969d727e4e93bf80de0c195895a6b5c19bcf799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 136c23698e9fe9aff170a66d6a959f57e8cf304a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196001"
 ---
 # <a name="connection-representation-tabular"></a>Rappresentazione di una connessione (tabulare)
   L'oggetto connessione definisce l'origine dei dati che popolano il modello tabulare.  
@@ -73,6 +73,6 @@ newDatasource.Update();
 ```  
   
 ## <a name="tabular-amo-2012-sample"></a>Esempio Tabular AMO 2012  
- Per comprendere meglio le sull'utilizzo di AMO per creare e modificare le rappresentazioni di connessioni, vedere il codice sorgente nell'esempio di Tabular AMO 2012; in particolare controllare nel seguente file di origine: Database.cs. L'esempio è disponibile in Codeplex. Il codice di esempio viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione.  
+ Per consentire una migliore comprensione sull'utilizzo di AMO per creare e modificare le rappresentazioni di connessioni, vedere il codice sorgente nell'esempio di Tabular AMO 2012; in particolare controllare nel seguente file di origine: Database.cs. L'esempio è disponibile in Codeplex. Il codice di esempio viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione.  
   
   

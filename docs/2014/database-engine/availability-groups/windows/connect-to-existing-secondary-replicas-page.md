@@ -1,28 +1,27 @@
 ---
-title: Connettersi alla pagina di repliche secondarie esistenti (procedura guidata Aggiungi Replica e procedura guidata Aggiungi database) | Documenti Microsoft
+title: Connettersi alla pagina di repliche secondarie esistenti (procedura guidata Aggiungi Replica e procedura guidata Aggiungi database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.connecttoreplicas.f1
 - sql12.swb.adddatabasewizard.connecttoreplicas.f1
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 caps.latest.revision: 5
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: c64f0ec6d4e54da8be90063cadfac60b2837ddef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6f7282c48e5c31dc4ee71ddb8dee5d828f70a049
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245831"
 ---
 # <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>Connettersi alla pagina di repliche secondarie esistenti (procedura guidata Aggiungi Replica e procedura guidata Aggiungi database)
   Questo argomento della Guida descrive le opzioni della pagina **Connetti a repliche secondarie esistenti** . Questo argomento viene utilizzato nella [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] e nella [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -54,6 +53,6 @@ ms.locfileid: "36064980"
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato (SharePoint 2013) | Documenti Microsoft
+title: Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato (SharePoint 2013) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 18
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: fd35257533c7cbf639ea1c1fecadcf3bcff4acd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5bb205ac875315770454a9075ab0c6acbabd97fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216181"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato (SharePoint 2013)
   In questo argomento vengono illustrate l'esperienza utente relativamente alle cartelle di lavoro create in ambienti di PowerPivot precedenti e la modalità di aggiornamento delle cartelle di lavoro di PowerPivot in modo che sia possibile avvalersi delle nuove funzionalità introdotte in questa versione. Per ulteriori informazioni sulle nuove funzionalità, vedere [Novità in PowerPivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -35,7 +35,7 @@ ms.locfileid: "36065248"
   
 -   [Eseguire l'aggiornamento a cartelle di lavoro di Office 2013 da versioni create tramite il 2012 Add-In PowerPivot per Excel](#bkmk_to_2012sp1_from_2012)  
   
--   [Aggiornamento a cartelle di lavoro di SQL Server 2012 da versioni create tramite lo 2008 R2 PowerPivot Add-In per Excel 2010](#bkmk_to_2012_from_2008R2)  
+-   [Eseguire l'aggiornamento a cartelle di lavoro di SQL Server 2012 da versioni create tramite lo 2008 R2 PowerPivot Add-In per Excel 2010](#bkmk_to_2012_from_2008R2)  
   
 -   [Esecuzione di più versioni di cartelle di lavoro in un server più recente](#bkmk_runold)  
   
@@ -87,9 +87,9 @@ ms.locfileid: "36065248"
   
      Successivamente, salvare la cartella di lavoro e ripubblicarla nel server SharePoint.  
   
- Per ulteriori informazioni sulle modifiche alle funzionalità di Analysis Services, vedere [le modifiche apportate alle caratteristiche di Analysis Services in SQL Server 2014](../../behavior-changes-to-analysis-services-features-in-sql-server-2014.md)  
+ Per altre informazioni sulle modifiche apportate alle funzionalità di Analysis Services, vedere [le modifiche apportate alle funzionalità di Analysis Services in SQL Server 2014](../../behavior-changes-to-analysis-services-features-in-sql-server-2014.md)  
   
- Per ulteriori informazioni sulla cronologia dell'aggiornamento, vedere [cronologia aggiornamento dati di visualizzazione &#40;PowerPivot per SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
+ Per altre informazioni sulla cronologia di aggiornamento, vedere [cronologia aggiornamento dati di visualizzazione &#40;PowerPivot per SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_to_2012sp1_from_2012"></a> Eseguire l'aggiornamento a cartelle di lavoro di Office 2013 da versioni create tramite il 2012 Add-In PowerPivot per Excel  
  In questa sezione viene descritto l'aggiornamento **alle** cartelle di lavoro di SQL Server 2012 SP1 PowerPivot in Excel 2013 **da** cartelle di lavoro di SQL Server 2012 PowerPivot per Excel 2010.  
@@ -108,7 +108,7 @@ ms.locfileid: "36065248"
   
 4.  Successivamente, salvare la cartella di lavoro e ripubblicarla nel server SharePoint 2013.  
   
-##  <a name="bkmk_to_2012_from_2008R2"></a> Aggiornamento a cartelle di lavoro di SQL Server 2012 da versioni create tramite lo 2008 R2 PowerPivot Add-In per Excel 2010  
+##  <a name="bkmk_to_2012_from_2008R2"></a> Eseguire l'aggiornamento a cartelle di lavoro di SQL Server 2012 da versioni create tramite lo 2008 R2 PowerPivot Add-In per Excel 2010  
  In questa sezione viene descritto l'aggiornamento **a** cartelle di lavoro di SQL Server 2012 PowerPivot per Excel 2010 **da** cartelle di lavoro di SQL Server 2008 R2 PowerPivot per Excel 2010.  
   
  Tramite l'aggiornamento di una cartella di lavoro viene risolto l'errore seguente che si verifica quando si tenta l'aggiornamento dati pianificato nella cartella di lavoro della versione della cartella di lavoro precedente:  
@@ -121,7 +121,7 @@ ms.locfileid: "36065248"
   
 1.  Aggiornare ogni cartella di lavoro manualmente aprendola in Excel in un computer dotato di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] versione di PowerPivot per Excel e ripubblicarla quindi nel server. Quando si apre la cartella di lavoro nella versione più recente del componente aggiuntivo, vengono eseguite le operazioni interne seguenti: il provider di dati nella stringa di connessione dati della cartella di lavoro viene aggiornato a MSOLAP.5, i metadati vengono aggiornati e le relazioni vengono ricreate per essere conformi a un'implementazione più recente.  
   
-2.  In alternativa, un amministratore di SharePoint può abilitare la funzionalità di aggiornamento automatico per il servizio di sistema PowerPivot in una farm di SharePoint per l'aggiornamento automatico un [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] cartella di lavoro PowerPivot quando pianificazione dell'aggiornamento dati (soli le cartelle di lavoro che sono in esecuzione configurato per l'aggiornamento dati pianificato vengono aggiornate).  
+2.  In alternativa, un amministratore di SharePoint può abilitare la funzionalità di aggiornamento automatico per il servizio di sistema PowerPivot in una farm di SharePoint aggiornare automaticamente un [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] cartella di lavoro di PowerPivot quando pianificazione dell'aggiornamento dati (soli le cartelle di lavoro che sono in esecuzione configurato per l'aggiornamento dati pianificato vengono aggiornate).  
   
     > [!NOTE]  
     >  L'aggiornamento automatico è una funzionalità di configurazione del server. Non è possibile abilitarla o disabilitarla per cartelle di lavoro specifiche, librerie o raccolte siti.  
@@ -136,7 +136,7 @@ ms.locfileid: "36065248"
 PS C:\Windows\system32> Get-PowerPivotSystemService  
 ```  
   
- L'output di Get-PowerPivotSystemService è un elenco di proprietà e valori corrispondenti. Dovrebbe essere `WorkbookUpgradeOnDataRefresh` dall'elenco delle proprietà. Se l'aggiornamento automatico è abilitato, sarà impostata su **true** . Se è **false**, procedere al passaggio successivo per abilitare l'aggiornamento automatico delle cartelle di lavoro.  
+ L'output di Get-PowerPivotSystemService è un elenco di proprietà e valori corrispondenti. Dovrebbe essere `WorkbookUpgradeOnDataRefresh` nell'elenco delle proprietà. Se l'aggiornamento automatico è abilitato, sarà impostata su **true** . Se è **false**, procedere al passaggio successivo per abilitare l'aggiornamento automatico delle cartelle di lavoro.  
   
  Per abilitare l'aggiornamento automatico delle cartelle di lavoro, eseguire il comando seguente:  
   
@@ -164,7 +164,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
      **Provider=MSOLAP.4** indica [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].  
   
-     **Origine dati = $ $Embedded** indica che la cartella di lavoro è una cartella di lavoro di PowerPivot utilizzando un database incorporato.  
+     **Origine dati = $ $Embedded** indica che la cartella di lavoro è una cartella di lavoro di PowerPivot, tramite un database incorporato.  
   
 ###  <a name="bkmk_msolappc"></a> Procedura di verifica della versione corrente del provider di dati MSOLAP su un computer locale  
  Utilizzare le istruzioni seguenti per controllare quale provider OLE DB è la versione corrente sul server o sulla workstation in cui vengono eseguite le cartelle di lavoro di PowerPivot. Conoscere la versione corrente può consentire la risoluzione dei problemi relativi a errori di connessione dati dopo l'aggiornamento.  
@@ -176,7 +176,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire la migrazione di PowerPivot per SharePoint 2013](migrate-power-pivot-to-sharepoint-2013.md)   
  [Aggiornare PowerPivot per SharePoint](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
- [Novità di Analysis Services e Business Intelligence](../../what-s-new-in-analysis-services.md)   
+ [What ' s New in Analysis Services e Business Intelligence](../../what-s-new-in-analysis-services.md)   
  [Visualizzare la cronologia aggiornamento dati &#40;PowerPivot per SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

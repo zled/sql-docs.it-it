@@ -1,5 +1,5 @@
 ---
-title: Elemento Locations (XMLA) | Documenti Microsoft
+title: Elemento Locations (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Locations element
 ms.assetid: 630929cb-f0dc-472a-86bc-28b67e907c3d
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 692159e12313c20a7e91804cccdeb376228c88e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 901c2d1cccacef54462d5f8cf9df4a4c59907a11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263317"
 ---
 # <a name="locations-element-xmla"></a>Elemento Locations (XMLA)
   Contiene una raccolta di elementi [Location](query-element-xmla.md) utilizzati dal comando padre [Backup](../xml-elements-commands/backup-element-xmla.md), [Restore](../xml-elements-commands/restore-element-xmla.md) o [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) .  
@@ -65,7 +65,7 @@ ms.locfileid: "36063700"
 |Elementi padre|[Backup](../xml-elements-commands/backup-element-xmla.md), [Restore](../xml-elements-commands/restore-element-xmla.md) o [Synchronize](../xml-elements-commands/synchronize-element-xmla.md)|  
 |Elementi figlio|[Percorso](location-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;XMLA&#41;](xml-elements-properties.md)  

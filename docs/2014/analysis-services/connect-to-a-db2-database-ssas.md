@@ -1,5 +1,5 @@
 ---
-title: Connettersi a un Database di DB2 (SSAS) | Documenti Microsoft
+title: Connettersi a un Database di DB2 (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.conndb2db.f1
 ms.assetid: eeef3697-a4fd-4263-ba7e-f86afa1f46cc
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1106ee743e36299846f1ac3d503f5b748f633944
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3952978ea68e1df54772f6a6065afd9fcb8d10b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200571"
 ---
 # <a name="connect-to-a-db2-database-ssas"></a>Connettersi a un database di DB2 (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di specificare le impostazioni per connettersi a un database di DB2. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -32,7 +32,7 @@ ms.locfileid: "36067298"
 >  In caso di selezione di un database in questa pagina, vengono utilizzate le credenziali dell'utente specificate. Tuttavia, l'importazione non verrà completata se l'utente specificato nella pagina Impostazioni di rappresentazione non dispone di privilegi sufficienti per leggere dal database selezionato.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Nome descrittivo della connessione**  
+ **Nome descrittivo connessione**  
  Digitare un nome univoco per questa connessione all'origine dati. Questo campo è obbligatorio.  
   
  **Nome server**  

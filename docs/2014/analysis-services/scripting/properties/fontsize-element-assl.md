@@ -1,5 +1,5 @@
 ---
-title: Elemento FontSize (ASSL) | Documenti Microsoft
+title: Elemento FontSize (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FontSize element
 ms.assetid: 49f66a73-946a-4fbd-9749-a3ca1b717ff3
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1eaf29caf869de81e397b92f9953d9b673d17019
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f6b5ba39d52cb96061fe4d19208e6e343bab5f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167532"
 ---
 # <a name="fontsize-element-assl"></a>Elemento FontSize (ASSL)
-  Vengono descritte le caratteristiche di visualizzazione correlate al carattere il [CalculationProperty](../objects/calculationproperty-element-assl.md) oppure [misura](../objects/measure-element-assl.md) elemento padre.  
+  Descrive le caratteristiche di visualizzazione correlate al carattere la [CalculationProperty](../objects/calculationproperty-element-assl.md) oppure [misura](../objects/measure-element-assl.md) elemento padre.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,8 +61,8 @@ ms.locfileid: "36062953"
 |Elementi padre|[CalculationProperty](../objects/calculationproperty-element-assl.md), [misura](../objects/measure-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il `FontSize` proprietà contiene un'espressione MDX (Multidimensional Expressions) e si applica a `CalculationProperty` gli elementi che hanno un [CalculationType](calculationtype-element-assl.md) dei *membro* o *celle* .  
+## <a name="remarks"></a>Note  
+ Il `FontSize` proprietà contiene un'espressione MDX (Multidimensional Expressions) e si applica a `CalculationProperty` gli elementi aventi un [CalculationType](calculationtype-element-assl.md) dei *membro* o *celle* .  
   
  Gli elementi che corrispondono ai padri di `FontSize` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.CalculationProperty> e <xref:Microsoft.AnalysisServices.Measure>.  
   

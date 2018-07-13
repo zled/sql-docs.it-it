@@ -1,5 +1,5 @@
 ---
-title: Uso di OLTP In memoria in un ambiente di VM | Documenti Microsoft
+title: Uso di OLTP In memoria in un ambiente di macchina virtuale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ac5bae341711dc0ded20efdf57fe1ac776ec208b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e048f54a3ba3824981c1561c7f2308571e72c450
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180318"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>Uso di OLTP in memoria in un ambiente di VM
   La virtualizzazione del server può aiutare a ridurre i costi operativi e il capitale IT aumentandone l'efficienza grazie a provisioning di applicazioni, manutenzione, disponibilità e processi di backup/recupero migliorati. Grazie ai recenti progressi tecnologici, ora è possibile consolidare più rapidamente complessi carichi di lavoro del database utilizzando la virtualizzazione. Questo argomento illustra le procedure consigliate per l'uso di [!INCLUDE[hek_1](../includes/hek-1-md.md)] in un ambiente virtualizzato.  
   
-##  <a name="bkmk_memoryPreAllocation"></a> Preallocazione della memoria  
+##  <a name="bkmk_memoryPreAllocation"></a> Preallocazione di memoria  
  Per la memoria in un ambiente virtualizzato, prestazioni e supporto migliorati sono fattori molto importanti. È necessario essere in grado di allocare rapidamente la memoria alle macchine virtuali a seconda dei requisiti e dei carichi di lavoro nonché di fare in modo che non ci siano sprechi di memoria. La funzionalità di memoria dinamica di Hyper-V migliora la flessibilità nell'allocazione e gestione della memoria tra le macchine virtuali in esecuzione in un host.  
   
  Quando si esegue la virtualizzazione di un database con tabelle ottimizzate per la memoria è necessario modificare alcune procedure consigliate per la virtualizzazione e la gestione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Senza tabelle ottimizzate per la memoria, due delle procedure consigliate sono:  

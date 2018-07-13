@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10440"
 - "10426"
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 64398eaa537e6413f5a55bedb0aa683143047aac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 435709e17b917c1b741e1bc619bb1dca106dbd4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244381"
 ---
 # <a name="report-design-view-report-builder"></a>Visualizzazione di progettazione report (Generatore report)
   La finestra Generatore report è progettata per semplificare l'organizzazione delle risorse del report e per consentire una più rapida compilazione dei report necessari. L'area di progettazione si trova al centro della finestra, con la barra multifunzione nella parte superiore mentre i riquadri Dati report, Raggruppamento e Proprietà nonché Raccolta parti del report sono a sinistra, in basso e a destra. Nell'area di progettazione vengono aggiunti e organizzati gli elementi del report. Sulla barra multifunzione le voci di menu tradizionali sono suddivise in categorie che è possibile individuare e utilizzare facilmente. I riquadri consentono di aggiungere, selezionare e organizzare le risorse del report, nonché di modificare le proprietà degli elementi del report.  
@@ -42,15 +42,15 @@ ms.locfileid: "36065538"
   
  Nella visualizzazione di progettazione report la barra multifunzione è suddivisa nelle schede Home, Inserisci e Visualizza. Se non è possibile trovare un'attività sulla barra multifunzione, alcuni gruppi della barra multifunzione dispongono di una finestra di dialogo correlata che è possibile aprire facendo clic sulla freccia in basso a destra del gruppo. Non è possibile ridurre a icona o eliminare la barra multifunzione né sostituirla con barre degli strumenti e menu.  
   
- In modalità di esecuzione, la barra multifunzione dispone di una sola scheda **eseguire**.  
+ In modalità di esecuzione, la barra multifunzione dispone di una sola scheda **eseguiti**.  
   
 ### <a name="home-tab"></a>Scheda Home  
- La scheda Home è una raccolta di comandi di uso comune che si riferiscono all'aspetto degli elementi contenuti nel report. Dalla scheda Home è possibile accedere ai comandi relativi all'esecuzione, al tipo di carattere, al paragrafo, al bordo, al numero e al layout. Quando si fa clic su un elemento nella scheda, nell'area di progettazione l'elemento selezionato cambia. Quando fa clic su **eseguire**, il rendering del report in formato HTML in modo da poter visualizzare come il contenuto del report apparirà una volta pubblicato, e viene visualizzata la scheda Esegui anziché la scheda Home. La scheda Home è la scheda predefinita visualizzata durante la creazione di un report.  
+ La scheda Home è una raccolta di comandi di uso comune che si riferiscono all'aspetto degli elementi contenuti nel report. Dalla scheda Home è possibile accedere ai comandi relativi all'esecuzione, al tipo di carattere, al paragrafo, al bordo, al numero e al layout. Quando si fa clic su un elemento nella scheda, nell'area di progettazione l'elemento selezionato cambia. Quando fa clic su **eseguire**, il report viene eseguito il rendering in formato HTML, in modo da visualizzare come verrà visualizzato il contenuto del report quando pubblicato e viene visualizzata la scheda Esegui anziché la scheda Home. La scheda Home è la scheda predefinita visualizzata durante la creazione di un report.  
   
 ### <a name="insert-tab"></a>Scheda Inserisci  
  La scheda Inserisci è una raccolta di comandi di uso comune utilizzati per aggiungere elementi al report. Dalla scheda Inserisci è possibile utilizzare alcune procedure guidate per aggiungere una tabella, una matrice, un grafico o una mappa. È inoltre possibile aggiungere tali elementi senza utilizzare una procedura guidata e aggiungere altri elementi del report quali grafici sparkline, indicatori, caselle di testo, immagini, rettangoli, sottoreport nonché intestazioni e piè di pagina.  
   
- Facendo clic **parti del Report** sull'inserimento viene visualizzata la scheda raccolta parti del Report. È possibile cercare le parti del report salvate in un server di report. Per altre informazioni, vedere [Parti del report &#40;Generatore report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
+ Facendo clic **parti del Report** di inserimento della scheda verrà visualizzata la raccolta parti del Report. È possibile cercare le parti del report salvate in un server di report. Per altre informazioni, vedere [Parti del report &#40;Generatore report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
  Dopo avere inserito un elemento, in Generatore report viene automaticamente ripristinata la scheda Home.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36065538"
   
 -   Le proprietà intestazione e piè di pagina, ad esempio il bordo e il colore di riempimento, facendo clic con il pulsante destro del mouse sull'area bianca dell'area di progettazione nell'area dell'intestazione e piè di pagina libera da qualsiasi elemento del report e scegliendo **Proprietà intestazione** o **Proprietà piè di pagina**.  
   
--   Le proprietà del report stesso, ad esempio l'impostazione di pagina, facendo clic nell'area blu intorno all'area di progettazione e scegliendo **proprietà Report**.  
+-   Le proprietà del report stesso, ad esempio l'impostazione di pagina, facendo dell'area blu intorno all'area di progettazione e scegliendo **proprietà Report**.  
   
 -   Le proprietà degli elementi del report facendo clic con il pulsante destro del mouse sull'elemento e scegliendo **Proprietà**.  
   
@@ -104,11 +104,11 @@ ms.locfileid: "36065538"
   
  Per ulteriori informazioni sugli elementi nel riquadro dei dati del report, vedere gli argomenti seguenti:  
   
--   [Riferimenti a utenti e alle raccolte predefinite Globals &#40;SSRS e Generatore Report&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+-   [Raccolte predefinite Globals e Users riferimenti &#40;Report e SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
 -   [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Immagini &#40;SSRS e Generatore Report&#41;](../report-design/images-report-builder-and-ssrs.md)  
+-   [Immagini &#40;Report e SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
   
 -   [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   

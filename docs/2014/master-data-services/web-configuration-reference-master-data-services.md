@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - web configuration file [Master Data Services]
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1163e8575562c5a81fea3bfef65c89a77b1ce5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9c345312ddadab6c5efd689d36f36f09cc2d0a41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250221"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Guida di riferimento alla configurazione Web (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] usa un file Web.config per le impostazioni di configurazione che consentono a Internet Information Services (IIS) di ospitare il servizio Web e l'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Questo file Web.config si trova nella cartella WebApplication nel percorso di installazione [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Per altre informazioni sul percorso e le autorizzazioni, vedere [Autorizzazioni per file e cartelle &#40;Master Data Services&#41;](folder-and-file-permissions-master-data-services.md).  
@@ -59,10 +59,10 @@ ms.locfileid: "36066108"
 |Elemento|Description|  
 |----------|-----------------|  
 |`instance`|Elemento figlio. Contiene gli attributi che specificano le informazioni per la stringa di connessione al database e al servizio Web.|  
-|`virtualPath`|Attributo. Specifica il percorso virtuale del servizio e dell'applicazione Web di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Questo corrisponde al `path` attributo del  **\<applicazione >** elemento sotto il  **\<sito >** elemento nel file ApplicationHost. config IIS.|  
-|`siteName`|Attributo. Specifica il nome del sito che ospita il servizio e l'applicazione Web di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Questo corrisponde al `name` attributo del  **\<sito >** elemento sotto  **\<siti >** nel file ApplicationHost. config IIS.|  
-|`connectionName`|Attributo. Specifica il nome della connessione da utilizzare. Questo corrisponde al `name` attributo del  **\<aggiungere >** elemento sotto il  **\<connectionStrings >** elemento nel file Web. config.|  
-|`serviceName`|Attributo. Specifica il nome del servizio Web. Questo corrisponde al `name` attributo del  **\<servizio >** elemento sotto il  **\<services >** elemento nel file Web. config.|  
+|`virtualPath`|Attributo. Specifica il percorso virtuale del servizio e dell'applicazione Web di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Corrisponde al `path` attributo del  **\<applicazione >** elemento sotto il  **\<sito >** elemento nel file ApplicationHost. config IIS.|  
+|`siteName`|Attributo. Specifica il nome del sito che ospita il servizio e l'applicazione Web di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Corrisponde al `name` attributo del  **\<site >** elemento sotto  **\<siti >** nel file ApplicationHost. config IIS.|  
+|`connectionName`|Attributo. Specifica il nome della connessione da utilizzare. Corrisponde al `name` attributo del  **\<aggiungere >** elemento sotto il  **\<connectionStrings >** in Web. config.|  
+|`serviceName`|Attributo. Specifica il nome del servizio Web. Corrisponde al `name` attributo del  **\<servizio >** elemento sotto il  **\<services >** in Web. config.|  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato un servizio denominato MDS1 nel sito di Contoso e nel percorso /MDS mediante una stringa di connessione specificata da MDSDB.  

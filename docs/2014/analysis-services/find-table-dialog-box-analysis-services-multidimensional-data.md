@@ -1,5 +1,5 @@
 ---
-title: Trova finestra di dialogo tabella (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Dialogo Trova tabella (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.findtabledialog.f1
 helpviewer_keywords:
 - Find Table dialog box
 ms.assetid: 133d28e8-55eb-4783-bb8b-d3776a95ebda
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e3386756ade73e6e04391debdae8415b9b00c75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 489f85e874c6cb8ba2c9d9ca457626e52db89cce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243671"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Trova tabella (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Trova tabella** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per trovare una tabella nella vista origine dati associata a una dimensione, a un cubo o a una struttura di data mining. Questa finestra di dialogo può essere visualizzata in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] nei modi seguenti:  

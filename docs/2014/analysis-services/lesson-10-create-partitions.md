@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 11: Creare partizioni | Documenti Microsoft'
+title: 'Lezione 11: Creare partizioni | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: c480583da42aee4f73e6053d20e7bf8b6542547c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e2f9ab8d98ae4ffbb8be67c4b64f5022b0f7f8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261365"
 ---
 # <a name="lesson-11-create-partitions"></a>Lezione 11: Creare partizioni
   In questa lezione verranno create partizioni per dividere la tabella Internet Sales in parti logiche più piccole, che possono essere elaborate (aggiornate) indipendentemente dalle altre partizioni. Per impostazione predefinita, ogni tabella inclusa nel modello dispone di una partizione, che comprende tutte le colonne e le righe della tabella. Per la tabella Internet Sales, si desidera dividere i dati in base all'anno, creando una partizione per ognuno dei cinque anni della tabella.  Ogni partizione può quindi essere elaborata in modo indipendente. Per altre informazioni, vedere [Partizioni &#40;SSAS tabulare&#41;](tabular-models/partitions-ssas-tabular.md).  
@@ -37,9 +37,9 @@ ms.locfileid: "36064561"
   
      Verrà visualizzata la finestra di dialogo **Gestione partizioni** .  
   
-2.  Nel **gestione partizione** della finestra di dialogo **partizioni**, fare clic sul **Internet Sales** partizione.  
+2.  Nel **gestione partizioni** nella finestra di dialogo **partizioni**, fare clic sui **Internet Sales** partizione.  
   
-3.  In **nome della partizione**, modificare il nome in `Internet Sales 2005`.  
+3.  Nelle **nome partizione**, denominarlo `Internet Sales 2005`.  
   
     > [!TIP]  
     >  Prima di continuare con il passaggio successivo, osservare che per i nomi di colonna nella finestra Anteprima tabella vengono visualizzate le colonne incluse nella tabella del modello (selezionate) con i nomi di colonna dell'origine. Questo si verifica in quanto nella finestra Anteprima tabella vengono visualizzate le colonne della tabella di origine, non quelle della tabella del modello.  
@@ -87,11 +87,11 @@ ms.locfileid: "36064561"
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>Per creare una partizione per l'anno 2006 nella tabella Internet Sales  
   
-1.  Nel **gestione partizioni** della finestra di dialogo **partizioni**, fare clic sul `Internet Sales 2005` partizione appena creata, quindi **copia**.  
+1.  Nel **gestione partizioni** nella finestra di dialogo **partizioni**, fare clic sui `Internet Sales 2005` partizione appena creata, e quindi **copia**.  
   
-2.  In **nome della partizione**, tipo `Internet Sales 2006`.  
+2.  Nelle **nome partizione**, tipo `Internet Sales 2006`.  
   
-3.  Nell'istruzione SQL, in ordine per la partizione da includere solo le righe per l'anno 2006, sostituire la clausola WHERE con i componenti seguenti:  
+3.  Nell'istruzione SQL, affinché nella partizione siano incluse solo le righe per l'anno 2006, sostituire la clausola WHERE con gli elementi seguenti:  
   
     ```  
     WHERE (([OrderDate] >= N'2006-01-01 00:00:00') AND ([OrderDate] < N'2007-01-01 00:00:00'))  
@@ -101,11 +101,11 @@ ms.locfileid: "36064561"
   
 1.  Nella finestra di dialogo **Gestione partizioni** fare clic su **Copia**.  
   
-2.  In **nome della partizione**, tipo `Internet Sales 2007`.  
+2.  Nelle **nome partizione**, tipo `Internet Sales 2007`.  
   
-3.  In **passa a**, selezionare **dell'Editor di Query**.  
+3.  Nelle **passa a**, selezionare **Editor di Query**.  
   
-4.  Nell'istruzione SQL, in ordine per la partizione da includere solo le righe per l'anno 2007, sostituire la clausola WHERE con i componenti seguenti:  
+4.  Nell'istruzione SQL, affinché nella partizione siano incluse solo le righe per l'anno 2007, sostituire la clausola WHERE con gli elementi seguenti:  
   
     ```  
     WHERE (([OrderDate] >= N'2007-01-01 00:00:00') AND ([OrderDate] < N'2008-01-01 00:00:00'))  
@@ -115,11 +115,11 @@ ms.locfileid: "36064561"
   
 1.  Nella finestra di dialogo **Gestione partizioni** fare clic su **Nuova**.  
   
-2.  In **nome della partizione**, tipo `Internet Sales 2008`.  
+2.  Nelle **nome partizione**, tipo `Internet Sales 2008`.  
   
-3.  In **passa a**, selezionare **dell'Editor di Query**.  
+3.  Nelle **passa a**, selezionare **Editor di Query**.  
   
-4.  Nell'istruzione SQL, in ordine per la partizione da includere solo le righe per l'anno 2008, sostituire la clausola WHERE con i componenti seguenti:  
+4.  Nell'istruzione SQL, affinché nella partizione siano incluse solo le righe per l'anno di 2008, sostituire la clausola WHERE con gli elementi seguenti:  
   
     ```  
     WHERE (([OrderDate] >= N'2008-01-01 00:00:00') AND ([OrderDate] < N'2009-01-01 00:00:00'))  
@@ -129,9 +129,9 @@ ms.locfileid: "36064561"
   
 1.  Nella finestra di dialogo **Gestione partizioni** fare clic su **Nuova**.  
   
-2.  In **nome della partizione**, tipo `Internet Sales 2009`.  
+2.  Nelle **nome partizione**, tipo `Internet Sales 2009`.  
   
-3.  In **passa a**, selezionare **dell'Editor di Query**.  
+3.  Nelle **passa a**, selezionare **Editor di Query**.  
   
 4.  Nell'istruzione SQL, affinché nella partizione siano incluse solo le righe per l'anno 2009, sostituire la clausola WHERE con la seguente:  
   
@@ -154,7 +154,7 @@ ms.locfileid: "36064561"
   
      Se vengono richieste le credenziali di rappresentazione, immettere il nome utente e la password di Windows specificati al passaggio 6 della lezione 2.  
   
-     Il **processo di Data** finestra di dialogo, quindi viene visualizzata e consente di visualizzare informazioni dettagliate sul processo per ogni partizione. Si noti che per ogni partizione viene trasferito un numero diverso di righe. Questo avviene in quanto ogni partizione include solo le righe per l'anno specificato nella clausola WHERE dell'istruzione SQL. Non vi sono dati per l'anno 2010.  
+     Il **processo di Data** quindi nella finestra di dialogo viene visualizzata e consente di visualizzare i dettagli dei processi per ogni partizione. Si noti che per ogni partizione viene trasferito un numero diverso di righe. Questo avviene in quanto ogni partizione include solo le righe per l'anno specificato nella clausola WHERE dell'istruzione SQL. Non vi sono dati per l'anno 2010.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Per continuare questa esercitazione, passare alla lezione successiva: [Lezione 12: Creare ruoli](lesson-11-create-roles.md).  

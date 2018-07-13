@@ -5,10 +5,9 @@ ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b7f1393d97323a201022b4bd65066ed4cf3a49bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f4cf9c51abaaadff50a0dcc9b856eea0f6e76a57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201501"
 ---
 # <a name="control-transaction-durability"></a>Controllo della durabilità delle transazioni
   Il commit delle transazioni di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere completamente durevole, l'impostazione predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , oppure con durabilità ritardata (noto come Lazy Commit).  
@@ -69,7 +68,7 @@ ms.locfileid: "36066467"
  **È possibile tollerare un'eventuale perdita di dati.**  
  Se è possibile tollerare un'eventuale perdita di dati, ad esempio la perdita di singoli record non cruciali, purché si disponga della maggior parte dei dati, potrebbe essere opportuno considerare la durabilità ritardata. Se non è possibile tollerare un'eventuale perdita di dati, non utilizzare le transazioni con durabilità ritardata.  
   
- **Si è verificati un collo di bottiglia nella scrittura del log delle transazioni.**  
+ **Si verificano un collo di bottiglia nella scrittura del log delle transazioni.**  
  Se i problemi di prestazioni sono dovuti alla latenza nella scrittura del log delle transazioni, l'applicazione probabilmente trarrà vantaggio dall'utilizzo delle transazioni con durabilità ritardata.  
   
  **I carichi di lavoro con una frequenza elevata di contesa.**  
@@ -89,7 +88,7 @@ ms.locfileid: "36066467"
   
      Se è stato completato il commit di una transazione completamente durevole o di sp_flush_log, tutte le transazioni con durabilità ritardata di cui è stato eseguito il commit in precedenza diventano durevoli.  
   
- Il log può essere scaricato su disco periodicamente. Tuttavia, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non fornisce alcuna garanzia di durabilità delle transazioni durevoli e a sp_flush_log.  
+ Il log può essere scaricato su disco periodicamente. Tuttavia, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non fornisce alcuna garanzia di durabilità le transazioni durevoli e a sp_flush_log.  
   
 ## <a name="how-to-control-transaction-durability"></a>Come controllare la durabilità delle transazioni  
   
@@ -165,8 +164,8 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
 |`DELAYED_DURABILITY = OFF` Transazioni a livello di database.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è con durabilità ritardata.|  
 |`DELAYED_DURABILITY = ON` Transazioni a livello di database.|La transazione è completamente durevole.|La transazione è con durabilità ritardata.|La transazione è con durabilità ritardata.|  
-|`DELAYED_DURABILITY = OFF` O tra database transazione distribuita.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è completamente durevole.|  
-|`DELAYED_DURABILITY = ON` O tra database transazione distribuita.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è completamente durevole.|  
+|`DELAYED_DURABILITY = OFF` O tra database delle transazioni distribuite.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è completamente durevole.|  
+|`DELAYED_DURABILITY = ON` O tra database delle transazioni distribuite.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è completamente durevole.|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>Come forzare lo scaricamento di un log delle transazioni  
  Sono disponibili due metodi per forzare lo scaricamento del log delle transazioni su disco.  
@@ -185,13 +184,13 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Transazione distribuita o tra database**  
  Se una transazione è distribuita o tra database, è completamente durevole, indipendentemente da qualsiasi impostazione del commit della transazione o del database.  
   
- **Gruppi di disponibilità o il Mirroring Always On**  
+ **I gruppi di disponibilità o il Mirroring Always On**  
  Le transazioni con durabilità ritardata non garantiscono alcuna durabilità nel database primario né in quelli secondari. Inoltre, non garantiscono informazioni sulla transazione nel database secondario. Dopo il commit, il controllo viene restituito al client prima che venga ricevuto un acknowledgement da un database secondario sincrono.  
   
  **Clustering di failover**  
  Alcune scritture delle transazioni con durabilità ritardata potrebbero andare perse.  
   
- **Replica transazionale**  
+ **Replica di tipo transazionale**  
  La replica transazionale non supporta le transazioni con durabilità ritardata.  
   
  **Log shipping**  

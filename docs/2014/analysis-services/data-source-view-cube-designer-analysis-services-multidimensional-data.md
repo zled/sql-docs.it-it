@@ -1,5 +1,5 @@
 ---
-title: Vista origine dati (scheda Struttura cubo, Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Origine dati Visualizza (scheda Struttura cubo, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.datasourcepane.f1
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5d1f33aab84cab344ba83478045d1b4bd4962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0025792747cf0cea5fffd7b0a1a35c5efc7ea759
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185308"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Vista origine dati (scheda Struttura cubo, Progettazione cubo) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Vista origine dati** per visualizzare tabelle e colonne della vista origine dati associate al cubo selezionato. Il riquadro **Vista origine dati** consente di creare misure e gruppi di misure trascinando le colonne disponibili nel riquadro **Misure** .  
@@ -101,7 +101,7 @@ ms.locfileid: "36067928"
  **Nascondi tabella**  
  Consente di rimuovere la tabella dal riquadro.  
   
- **Esplorare i dati**  
+ **Esplorazione dati**  
  Consente di visualizzare la finestra di dialogo **Esplora dati** per la tabella selezionata.  
   
  **Modifica vista origine dati**  
@@ -122,7 +122,7 @@ ms.locfileid: "36067928"
  **Nuova misura da colonna**  
  Consente di definire una nuova misura nel riquadro **Misure** in base alla colonna selezionata.  
   
- **Esplorare i dati**  
+ **Esplorazione dati**  
  Consente di visualizzare la finestra di dialogo **Esplora dati** per la tabella contenente la colonna selezionata.  
   
  **Modifica vista origine dati**  
@@ -141,9 +141,9 @@ ms.locfileid: "36067928"
  Consente di visualizzare la finestra **Proprietà** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] relativa alla relazione selezionata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Barra degli strumenti &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Sulla barra degli strumenti &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Le misure &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Le dimensioni &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Struttura cubo &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
+ [Dimensioni &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Struttura del cubo &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Naive Bayes | Documenti Microsoft
+title: Algoritmo Microsoft Naive Bayes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Bayesian classifiers
 - algorithms [data mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 caps.latest.revision: 55
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43d3851c5a3acd6a33d051eb743797220d06cb7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9abc422430a70a8a4386b55ca0d8d4eb4fb3017b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196611"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Algoritmo Microsoft Naive Bayes
   Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes è un algoritmo di classificazione basato su teoremi di Bayes e fornito da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la modellazione predittiva. La parola naive nel nome Naive Bayes deriva dal fatto che nell'algoritmo vengono utilizzate tecniche di Bayes, ma non vengono considerate le dipendenze eventualmente presenti.  
@@ -61,7 +61,7 @@ ms.locfileid: "36067295"
   
 -   **Una colonna a chiave singola** Ogni modello deve contenere una colonna numerica o di testo che identifichi in modo univoco ogni record. Le chiavi composte non sono consentite.  
   
--   **Colonne di input** In un modello Naive Bayes, tutte le colonne devono essere discreti o discretizzati colonne. Per informazioni sulla discretizzazione delle colonne, vedere [metodi di discretizzazione &#40;Data Mining&#41;](discretization-methods-data-mining.md).  
+-   **Colonne di input** In un modello Naive Bayes, tutte le colonne devono essere discrete o discretizzate colonne. Per informazioni sulla discretizzazione delle colonne, vedere [metodi di discretizzazione &#40;Data Mining&#41;](discretization-methods-data-mining.md).  
   
      Per un modello Naive Bayes, è importante verificare inoltre che gli attributi di input siano indipendenti uno dall'altro. Questo aspetto è particolarmente importante quando si utilizza il modello per la stima.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36067295"
   
  Per informazioni sulla creazione di query in base a un modello di data mining, vedere [Query di data mining](data-mining-queries.md). Per esempi di come usare le query con un modello Naive Bayes, vedere [Esempi di query sul modello Naive Bayes](naive-bayes-model-query-examples.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 -   Supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   
@@ -98,8 +98,8 @@ ms.locfileid: "36067295"
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Selezione delle funzionalità &#40;Data Mining&#41;](feature-selection-data-mining.md)   
- [Esempi di Query modello Naive Bayes](naive-bayes-model-query-examples.md)   
- [Contenuto del modello per i modelli Naive Bayes di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+ [Esempi di Query sul modello Naive Bayes](naive-bayes-model-query-examples.md)   
+ [Contenuto dei modelli per i modelli Naive Bayes di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 06f5acf3bf8c9c4f8df7282934c99b38480a1bd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 400be71a74676d0d95ddcd56d1927aed3e7711f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195021"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Creare un amministratore di modelli (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], creare un amministratore di modelli quando si desidera che un gruppo o utente di avere **aggiornamento** delle autorizzazioni necessarie per tutti gli oggetti in uno o più modelli.  
+  Nelle [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], creare un amministratore di modelli quando si desidera che un utente o gruppo affinché **Update** dell'autorizzazione per tutti gli oggetti in uno o più modelli.  
   
 > [!TIP]  
 >  Per semplificare l'amministrazione, creare un gruppo locale o di Windows e configurarlo come amministratore di modelli. È quindi possibile aggiungere e rimuovere utenti nel gruppo senza accedere a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -52,16 +52,16 @@ ms.locfileid: "36066973"
   
 7.  Fare clic sul modello al quale si desidera concedere l'autorizzazione.  
   
-8.  Nel menu, selezionare **aggiornamento**.  
+8.  Nel menu, selezionare **Update**.  
   
 9. Completare i passaggi 7 e 8 per ogni modello per cui si desidera che il gruppo o l'utente sia configurato come amministratore.  
   
 10. Fare clic su **Salva**.  
   
-## <a name="remarks"></a>Remarks  
- Non assegnare altre autorizzazioni a oggetti modello o membri della gerarchia. In caso contrario, l'utente non è più un amministratore e non è possibile visualizzare il modello in qualsiasi area funzionale diversa da **Explorer**.  
+## <a name="remarks"></a>Note  
+ Non assegnare altre autorizzazioni a oggetti modello o membri della gerarchia. Se esegue l'operazione, l'utente non è più un amministratore e non è possibile visualizzare il modello in qualsiasi area funzionale diversa **Explorer**.  
   
- Vi è un'eccezione: se l'utente ha **aggiornamento** autorizzazione assegnata a una gerarchia **radice** sul **membri della gerarchia** scheda, l'utente è ancora considerato un modello amministratore.  
+ Vi è un'eccezione: se l'utente dispone **Update** le autorizzazioni assegnate a una gerarchia **radice** sul **membri della gerarchia** scheda, l'utente è ancora considerato un modello amministratore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gli amministratori di &#40;Master Data Services&#41;](administrators-master-data-services.md)   

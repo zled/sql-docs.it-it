@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjectstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2fcff2e593b3b1eb5f235f56b398294b0bf2edf7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7122dbdf0f99e7bf490487cd98abb3f4d4e7c81a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184738"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Attività Trasferisci oggetti di SQL Server
   L'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trasferisce uno o più tipi di oggetti di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio, tabelle e stored procedure. A seconda della versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usata come origine, sono disponibili per la copia tipi di oggetti diversi. Ad esempio, schemi e aggregati definiti dall'utente sono inclusi solo nei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -92,7 +92,7 @@ ms.locfileid: "36066764"
   
 -   TransferSqlServerObjectsTaskFinishedTransferringObjects   Indica che il trasferimento è stato completato. La voce di log include l'ora di fine.  
   
- Inoltre, una voce di log per l'evento `OnInformation` riporta il numero di oggetti del tipo specificato selezionati per il trasferimento, il numero di oggetti trasferiti e le azioni, quale il troncamento delle tabelle, eseguite quando insieme alle tabelle vengono trasferiti anche i dati. Una voce di log per il `OnWarning` evento viene scritto per ogni oggetto nella destinazione viene sovrascritto.  
+ Inoltre, una voce di log per l'evento `OnInformation` riporta il numero di oggetti del tipo specificato selezionati per il trasferimento, il numero di oggetti trasferiti e le azioni, quale il troncamento delle tabelle, eseguite quando insieme alle tabelle vengono trasferiti anche i dati. Una voce di log per il `OnWarning` viene scritto l'evento per ogni oggetto nella destinazione viene sovrascritto.  
   
 ## <a name="security-and-permissions"></a>Sicurezza e autorizzazioni  
  L'utente deve disporre dell'autorizzazione per l'esplorazione degli oggetti nel server di origine e l'autorizzazione per l'eliminazione e creazione di oggetti nel server di destinazione. Deve inoltre avere accesso al database e agli oggetti di database specificati.  

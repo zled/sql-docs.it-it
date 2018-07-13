@@ -1,5 +1,5 @@
 ---
-title: PowerPivot per SharePoint (SSAS) | Documenti Microsoft
+title: PowerPivot per SharePoint (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1caed8888e1307950971914f48887facac409741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11ee7e6690c0937477374337d80a4b239bdb7f3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224851"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot per SharePoint (SSAS)
   PowerPivot per SharePoint è un server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eseguito in modalità SharePoint. PowerPivot per SharePoint offre l'hosting nel server dei dati PowerPivot in una farm di SharePoint 2010. I dati PowerPivot sono un modello di dati analitici che viene compilato con uno degli elementi seguenti:  
@@ -39,7 +39,7 @@ ms.locfileid: "36067897"
   
  Tramite la distribuzione del componente aggiuntivo PowerPivot per SharePoint 2013 vengono abilitate le funzionalità aggiuntive nella farm di SharePoint in uso. Tra le funzionalità aggiuntive sono incluse la raccolta PowerPivot, la pianificazione dell'aggiornamento dati e il dashboard di gestione di PowerPivot.  
   
- ![Distribuzione del Server PowerPivot modalità 2 SSAS](../media/as-powerpivot-mode-2server-deployment.gif "distribuzione del Server SSAS PowerPivot modalità 2")  
+ ![Distribuzione di Server PowerPivot in modalità 2 SSAS](../media/as-powerpivot-mode-2server-deployment.gif "distribuzione di Server SSAS PowerPivot modalità 2")  
   
 ## <a name="powerpivot-for-sharepoint-2010"></a>PowerPivot per SharePoint 2010  
  PowerPivot per SharePoint 2010 offre l'hosting nel server dei dati PowerPivot in una farm di SharePoint 2010. I dati PowerPivot sono un modello di dati analitici compilato in Excel usando il componente aggiuntivo PowerPivot per Excel. L'hosting nel server di tali dati richiede SharePoint 2010, Excel Services e un'installazione di PowerPivot per SharePoint. I dati vengono caricati nelle istanze di PowerPivot per SharePoint nella farm, dove è possibile effettuare aggiornamenti a intervalli programmati usando la funzionalità di aggiornamento dati di PowerPivot fornita dal server.  
@@ -58,41 +58,41 @@ ms.locfileid: "36067897"
  Un'istanza del server Analysis Services in modalità integrata SharePoint completa la distribuzione. Carica, esegue query e scarica i dati. Elabora inoltre i dati se la cartella di lavoro viene configurata per l'aggiornamento dati PowerPivot.  Ogni istanza è strettamente associata al servizio di sistema PowerPivot locale che fa parte della stessa installazione.  
   
 ##  <a name="bkmk_RelatedContent"></a> Contenuto della sezione  
- [Amministrazione Server PowerPivot e la configurazione in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Configurazione di PowerPivot tramite Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   
  [Strumenti di configurazione PowerPivot](power-pivot-configuration-tools.md)  
   
- [Autorizzazione e autenticazione di PowerPivot](power-pivot-authentication-and-authorization.md)  
+ [Autenticazione e autorizzazione di PowerPivot](power-pivot-authentication-and-authorization.md)  
   
  [Configurare regole di integrità di PowerPivot:](configure-power-pivot-health-rules.md)  
   
- [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)  
+ [Dati di utilizzo e dashboard di gestione PowerPivot](power-pivot-management-dashboard-and-usage-data.md)  
   
  [Raccolta PowerPivot](../../2014-toc/books-online-for-sql-server-2014.md)  
   
  [Accesso ai dati PowerPivot](power-pivot-data-access.md)  
   
- [Aggiornamento dati PowerPivot](power-pivot-data-refresh.md)  
+ [Aggiornamento dei dati PowerPivot](power-pivot-data-refresh.md)  
   
  [Feed di dati PowerPivot](power-pivot-data-feeds.md)  
   
- [Connessione BI Semantic Model PowerPivot &#40;con estensione bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
+ [Connessione BI Semantic Model di PowerPivot &#40;con estensione bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
   
  **Nelle altre sezioni**  
   
 ## <a name="additional-topics"></a>Argomenti aggiuntivi  
  [Aggiornare PowerPivot per SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
- [Installazione PowerPivot per SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [Installazione di PowerPivot per SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
- [Guida di riferimento di PowerShell per PowerPivot per SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
+ [Informazioni di riferimento di PowerShell per PowerPivot per SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
  [Esempi di topologie di licenza e costi per SQL Server 2014 Self-Service di Business Intelligence](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [PowerPivot pianificazione e distribuzione](http://go.microsoft.com/fwlink/?linkID=220972)   
+ [Pianificazione di PowerPivot e la distribuzione](http://go.microsoft.com/fwlink/?linkID=220972)   
  [Ripristino di emergenza per PowerPivot per SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

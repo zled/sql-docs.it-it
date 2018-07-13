@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked reports [Reporting Services], creating
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 87e95389a4571162e07efce30c4bcd933309bef7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 971f07256e5f8b678d62f3a9b75e13299fad3ed3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191331"
 ---
 # <a name="create-a-linked-report"></a>Creare un report collegato
   Un report collegato è un elemento del server di report che fornisce un punto di accesso a un report esistente. Tale elemento è concettualmente simile al collegamento a un programma utilizzato per l'esecuzione di un programma o per l'apertura di un file.  
@@ -38,16 +38,16 @@ ms.locfileid: "36067531"
   
 2.  Digitare un nome per il nuovo report collegato. Se lo si desidera, digitare una descrizione.  
   
-3.  Per selezionare una cartella diversa per il report, fare clic su **Cambia percorso**. Selezionare la cartella che si vuole usare o digitare il nome della cartella nella casella **Percorso** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Se non si seleziona una cartella diversa, il report collegato viene creato nella cartella corrente (in cui è archiviato il report su che è basato).  
+3.  Per selezionare una cartella diversa per il report, fare clic su **Cambia percorso**. Selezionare la cartella che si vuole usare o digitare il nome della cartella nella casella **Percorso** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Se non si seleziona una cartella diversa, il report collegato viene creato nella cartella corrente (dove è archiviato il report su che è basato).  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Apre il report collegato.  
+4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Verrà aperto il report collegato.  
   
      L'icona di un report collegato è diversa da quella di altri elementi gestiti da un server di report. L'icona seguente indica un report collegato:  
   
      ![Icona di report collegato](../media/hlp-16linked.gif "Icona di report collegato")  
   
 ## <a name="see-also"></a>Vedere anche  
- [Apertura e chiusura di un Report &#40;gestione Report&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Aprire e chiudere un Report &#40;gestione Report&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [Pagina Nuovo report collegato &#40;Gestione report&#41;](../new-linked-report-page-report-manager.md)   
  [Pagina Choose Item Location (Scegli percorso elemento) &#40;Gestione report&#41;](../choose-item-location-page-report-manager.md)   
  [Pagina delle proprietà Generale, Report &#40;Gestione report&#41;](../general-properties-page-reports-report-manager.md)   

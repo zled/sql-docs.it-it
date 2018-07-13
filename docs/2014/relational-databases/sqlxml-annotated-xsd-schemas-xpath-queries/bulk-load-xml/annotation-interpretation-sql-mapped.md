@@ -1,5 +1,5 @@
 ---
-title: 'SQL: mapped (SQLXML 4.0) | Documenti Microsoft'
+title: 'SQL: mapped (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 820e30a4ac82cb54bd76d29dd689f5ddb86a58b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dfac8ddb86223ea64bcc812323170e9a02339ee5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177858"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
   Caricamento Bulk XML elabora il `sql:mapped` annotazione nello schema XSD come previsto, vale a dire, se lo schema di mapping specifica `sql:mapped="false"` per qualsiasi elemento o attributo, il caricamento Bulk XML non tenta di archiviare i dati associati nella colonna corrispondente.  
@@ -58,7 +58,7 @@ ms.locfileid: "36067138"
 </xsd:schema>  
 ```  
   
- Poiché il **HomePhone** attributo specifica `sql:mapped="false"`, caricamento Bulk XML non è mappato l'attributo nella colonna corrispondente. Lo schema XSD identifica una colonna di overflow (**OverflowColumn**) in cui il caricamento Bulk XML archivia questi dati non utilizzati.  
+ Poiché il **HomePhone** attributo specifica `sql:mapped="false"`, il caricamento Bulk XML non è associato questo attributo alla colonna corrispondente. Lo schema XSD identifica una colonna di overflow (**OverflowColumn**) in cui il caricamento Bulk XML archivia questi dati non utilizzati.  
   
 ### <a name="to-test-a-working-sample"></a>Per testare un esempio reale  
   

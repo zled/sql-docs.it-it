@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Reporting Services]
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 caps.latest.revision: 35
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ed753691683719dae20802f80e4ae635a79c4338
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b6e44a34ed1262d6e7e5a9db67e3fc61ab7ba998
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268417"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Esercitazioni su Reporting Services (SSRS)
   In questa sezione è disponibili le esercitazioni per [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -33,12 +33,12 @@ ms.locfileid: "36064843"
  Eseguire la procedura descritta in questa esercitazione per creare il primo report. In questa esercitazione vengono illustrate le modalità di utilizzo di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per la creazione di una connessione dati (origine dati), la definizione di una query semplice (set di dati) e la configurazione di un'area dati per contenere i dati.  
   
  [L'accesso al servizio Web ReportServer con Visual Basic o Visual C#&#35; &#40;esercitazione su SSRS&#41;](../tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
- Seguire i passaggi in questa esercitazione per informazioni su come accedere ai [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] da un'applicazione creata con servizi Web [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
+ Seguire i passaggi in questa esercitazione per informazioni su come accedere il [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] da un'applicazione creata con servizi Web [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] oppure [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
   
- [L'aggiornamento di report mediante le classi generate dallo Schema RDL &#40;esercitazione su SSRS&#41;](../tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
- Seguire i passaggi in questa esercitazione per imparare a usare lo strumento XML Schema Definition (Xsd.exe) per generare classi che consentono di serializzare e deserializzare i file di definizione del report (con estensione rdl e rdlc) con il [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
+ [Aggiornamento dei report mediante le classi generate dallo Schema RDL &#40;esercitazione su SSRS&#41;](../tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
+ Seguire i passaggi in questa esercitazione per imparare a usare lo strumento XML Schema Definition (Xsd.exe.) per generare le classi che consentono di serializzare e deserializzare i file di definizione del report (con estensione rdl e rdlc) con i [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
   
- [Creare un drill-through &#40;RDLC&#41; Report con parametri utilizzando ReportViewer &#40;esercitazione su SSRS&#41;](create-drillthrough-rdlc-report-with-parameters-reportviewer.md)  
+ [Creare un drill-through &#40;RDLC&#41; Report con parametri usando ReportViewer &#40;esercitazione su SSRS&#41;](create-drillthrough-rdlc-report-with-parameters-reportviewer.md)  
  Eseguire la procedura descritta in questa esercitazione per creare un report drill-through con parametri e un filtro utilizzando il controllo ReportViewer.  
   
 ## <a name="see-also"></a>Vedere anche  

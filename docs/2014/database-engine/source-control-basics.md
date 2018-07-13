@@ -1,5 +1,5 @@
 ---
-title: Nozioni fondamentali di controlli di origine | Documenti Microsoft
+title: Nozioni fondamentali di controlli di origine | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], providers
 - source controls [SQL Server Management Studio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - source controls [SQL Server Management Studio], clients
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5da8bd18f4ae5e62e5b9177a3ba76ac446bc1a6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1c70c039fd32643dc69c12e76109f5a7fc900379
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217851"
 ---
 # <a name="source-control-basics"></a>Nozioni fondamentali sul controllo del codice sorgente
   Il controllo del codice sorgente è un sistema nel quale un componente centrale di un prodotto server archivia e tiene traccia delle versioni dei file, controllando inoltre l'accesso ai file. Un tipico sistema di controllo del codice sorgente include un provider di controllo del codice sorgente e due o più client di controllo del codice sorgente.  
@@ -56,8 +56,8 @@ ms.locfileid: "36065898"
 |||  
 |-|-|  
 |**Attività**|**Argomento**|  
-|Impostare le opzioni di controllo del codice sorgente|[Impostare le opzioni di controllo di origine](../../2014/database-engine/set-source-control-options.md)|  
-|Modificare le connessioni del controllo del codice sorgente|[Connessioni di origine di controllo modifica](../../2014/database-engine/change-source-control-connections.md)|  
-|Escludere file dal controllo del codice sorgente|[Escludere i file dal controllo del codice sorgente](../../2014/database-engine/exclude-files-from-source-control.md)|  
+|Impostare le opzioni di controllo del codice sorgente|[Impostare le opzioni di controllo del codice sorgente](../../2014/database-engine/set-source-control-options.md)|  
+|Modificare le connessioni del controllo del codice sorgente|[Modificare le connessioni del controllo del codice sorgente](../../2014/database-engine/change-source-control-connections.md)|  
+|Escludere file dal controllo del codice sorgente|[Esclusione di file dal controllo del codice sorgente](../../2014/database-engine/exclude-files-from-source-control.md)|  
   
   

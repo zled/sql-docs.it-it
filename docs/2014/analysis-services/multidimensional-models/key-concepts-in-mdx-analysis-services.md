@@ -1,5 +1,5 @@
 ---
-title: Concetti chiave per MDX (Analysis Services) | Documenti Microsoft
+title: Concetti chiave per MDX (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], about MDX
 - dimensional modeling [MDX]
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 060ad452001605ee0df4d0c84381044cb38e6493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5d6e59827b0b816b898322adf729d2299540e38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272017"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Concetti chiave di MDX (Analysis Services)
   Prima di usare MDX (Multidimensional Expressions) per eseguire query su dati multidimensionali o creare espressioni MDX in un cubo, è utile comprendere i concetti e i termini relativi ai dati multidimensionali.  
   
  È consigliabile iniziare da un esempio di riepilogo dei dati già noto e quindi verificare le correlazioni tra MDX e l'esempio. Di seguito è riportata una tabella PivotTable creata in Excel, popolata con dati da un cubo di esempio di Analysis Services.  
   
- ![Tabella pivot con misure e dimensioni indicate](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "tabella pivot con callout di dimensioni e misure")  
+ ![Tabella pivot con misure e dimensioni indicate](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "tabella pivot con misure e dimensioni indicate")  
   
 ## <a name="measures-and-dimensions"></a>Dimensioni e misure  
  Un cubo Analysis Services è costituito da misure, dimensioni e attributi di dimensione. Tutti questi elementi sono evidenti nell'esempio di tabella pivot.  
@@ -65,7 +65,7 @@ ms.locfileid: "36065704"
   
  Aggregazioni come questa sono precalcolate e archiviate in anticipo e contribuiscono alla velocità delle prestazioni di query di Analysis Services.  
   
- ![Tabella pivot con tutti i membri callout](../media/ssas-keyconcepts-pivot2-allmember.png "tabella pivot con tutti i membri callout")  
+ ![Tabella pivot con tutti i membri indicate](../media/ssas-keyconcepts-pivot2-allmember.png "tabella pivot con tutti i membri indicate")  
   
  Espandere la gerarchia fino ad arrivare al livello più basso. Si tratta del **membro foglia**. Un membro foglia è un membro senza figli di una gerarchia. In questo esempio Australia membro foglia.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "36065704"
   
 |||  
 |-|-|  
-|![Tabella pivot con callout di gerarchia bilanciata](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "tabella pivot con callout di gerarchia bilanciata")|Una **gerarchia bilanciata** è una gerarchia in cui tra il livello principale e qualsiasi membro foglia esiste lo stesso numero di livelli.<br /><br /> Una **gerarchia naturale** è una gerarchia che emerge naturalmente dai dati sottostanti. Un esempio comune è costituito da Country-Region-State o Year-Month-Date o Category-Subcategory-Model, in cui ogni livello subordinato emerge in modo prevedibile dal padre.<br /><br /> In un modello multidimensionale, la maggior parte delle gerarchie è costituita da gerarchie bilanciate e molte di esse sono anche gerarchie naturali.<br /><br /> Un altro correlato termine di modellazione è un `user-defined hierarchy`, usato spesso in contrasto rispetto alle gerarchie dell'attributo. Indica semplicemente una gerarchia creata dallo sviluppatore BI, in contrapposizione con le gerarchie di attributi generate automaticamente da Analysis Services quando si definisce un attributo.|  
+|![Tabella pivot con callout gerarchia bilanciata indicata](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "tabella pivot con callout gerarchia bilanciata indicata")|Una **gerarchia bilanciata** è una gerarchia in cui tra il livello principale e qualsiasi membro foglia esiste lo stesso numero di livelli.<br /><br /> Una **gerarchia naturale** è una gerarchia che emerge naturalmente dai dati sottostanti. Un esempio comune è costituito da Country-Region-State o Year-Month-Date o Category-Subcategory-Model, in cui ogni livello subordinato emerge in modo prevedibile dal padre.<br /><br /> In un modello multidimensionale, la maggior parte delle gerarchie è costituita da gerarchie bilanciate e molte di esse sono anche gerarchie naturali.<br /><br /> Un altro correlato termine di modellazione è un `user-defined hierarchy`, usato spesso in contrapposizione alle gerarchie di attributi. Indica semplicemente una gerarchia creata dallo sviluppatore BI, in contrapposizione con le gerarchie di attributi generate automaticamente da Analysis Services quando si definisce un attributo.|  
   
  **Gerarchie sbilanciate**  
   
 |||  
 |-|-|  
-|![Tabella pivot con callout di gerarchia incompleta](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "tabella pivot con callout di gerarchia incompleta")|Una **gerarchia incompleta** o **gerarchia sbilanciata** è una gerarchia in cui tra il livello principale e i membri foglia esistono numeri di livelli diversi. Si tratta di una gerarchia creata dallo sviluppatore BI, ma in questo caso sono presenti interruzioni tra i dati.<br /><br /> Nel modello di esempio AdventureWorks Sales Territory illustra una gerarchia incompleta, perché United States ha un livello aggiuntivo (Regions) che non esiste per altri paesi in questo esempio.<br /><br /> Le gerarchie incomplete costituiscono un problema per gli sviluppatori BI se l'applicazione client non le gestisce in modo appropriato. Nel modello di Analysis Services è possibile creare una **gerarchia padre-figlio** che definisce in modo esplicito una relazione tra dati multilivello, eliminando qualsiasi ambiguità in merito alle relazioni tra un livello e il livello successivo. Vedere [gerarchia padre-figlio](parent-child-dimension.md) per informazioni dettagliate.|  
+|![Tabella pivot con gerarchia incompleta indicata](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "tabella pivot con gerarchia incompleta indicata")|Una **gerarchia incompleta** o **gerarchia sbilanciata** è una gerarchia in cui tra il livello principale e i membri foglia esistono numeri di livelli diversi. Si tratta di una gerarchia creata dallo sviluppatore BI, ma in questo caso sono presenti interruzioni tra i dati.<br /><br /> Nel modello di esempio AdventureWorks Sales Territory illustra una gerarchia incompleta, perché United States ha un livello aggiuntivo (Regions) che non esiste per altri paesi in questo esempio.<br /><br /> Le gerarchie incomplete costituiscono un problema per gli sviluppatori BI se l'applicazione client non le gestisce in modo appropriato. Nel modello di Analysis Services è possibile creare una **gerarchia padre-figlio** che definisce in modo esplicito una relazione tra dati multilivello, eliminando qualsiasi ambiguità in merito alle relazioni tra un livello e il livello successivo. Visualizzare [gerarchia padre-figlio](parent-child-dimension.md) per informazioni dettagliate.|  
   
 ## <a name="key-attributes"></a>Attributi chiave  
  I modelli sono una raccolta di oggetti correlati che si basano su chiavi e indici per creare le associazioni. I modelli Analysis Services non sono diversi. Per ogni dimensione, che è uguale a una tabella in un modello relazionale, è presente un attributo chiave. L' **attributo** chiave è usato nelle relazioni di chiave esterna con la tabella dei fatti (gruppo di misure). Tutti gli attributi non chiave della dimensione sono collegati, direttamente o indirettamente, all'attributo chiave.  
@@ -142,9 +142,9 @@ ms.locfileid: "36065704"
 ## <a name="next-steps"></a>Passaggi successivi  
  Sono stati illustrati concetti essenziali e terminologia importante. É quindi possibile passare agli argomenti aggiuntivi che illustrano in modo più dettagliato i concetti fondamentali relativi ad Analysis Services:  
   
--   [La Query MDX di base &#40;MDX&#41;](mdx/mdx-query-the-basic-query.md)  
+-   [Query MDX di base &#40;MDX&#41;](mdx/mdx-query-the-basic-query.md)  
   
--   [Lo Script MDX di base &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)  
+-   [Script MDX di base &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)  
   
 -   [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
   
@@ -153,10 +153,10 @@ ms.locfileid: "36065704"
  [Tuple](mdx/tuples.md)   
  [La caratteristica Auto Exist](mdx/autoexists.md)   
  [Utilizzo di membri, tuple e set di &#40;MDX&#41;](mdx/working-with-members-tuples-and-sets-mdx.md)   
- [Totali visualizzati e Non totali](mdx/visual-totals-and-non-visual-totals.md)   
+ [Consenti totali visualizzati e Non visualizzati](mdx/visual-totals-and-non-visual-totals.md)   
  [Nozioni fondamentali sulle Query MDX &#40;Analysis Services&#41;](mdx/mdx-query-fundamentals-analysis-services.md)   
  [Nozioni fondamentali sullo Scripting MDX &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Riferimenti al linguaggio MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [(Multidimensional Expressions) &#40;MDX&#41; riferimento](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Riferimento al linguaggio MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [Espressioni MDX &#40;MDX&#41; riferimento](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

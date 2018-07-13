@@ -1,5 +1,5 @@
 ---
-title: 'Contatori delle prestazioni per gli oggetti prestazioni ReportServer: Service e reportserversharepoint: Service | Documenti Microsoft'
+title: 'Contatori delle prestazioni per gli oggetti prestazioni ReportServer: Service e reportserversharepoint: Service | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 43e051ae17b406021092af68767ff3b196c2f250
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0573346427258d9b79188852c8d6e13af1cb8d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238391"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Contatori delle prestazioni per gli oggetti prestazioni di ReportServer:Service e ReportServerSharePoint:Service
   In questo argomento sono descritti i contatori delle prestazioni per gli oggetti prestazioni di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] seguenti:  
@@ -46,11 +46,11 @@ ms.locfileid: "36064614"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modalità SharePoint | Modalità nativa.  
   
 ##  <a name="bkmk_ReportServer"></a> Contatori delle prestazioni di ReportServer:Service (server di report in modalità nativa)  
- Nell'oggetto prestazioni `ReportServer:Service` è inclusa una raccolta di contatori per tenere traccia degli eventi correlati a HTTP e degli eventi correlati alla memoria per un'istanza del server di report. Questo oggetto prestazione viene visualizzato una volta per ogni [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] istanza nel computer ed è possibile aggiungere o rimuovere contatori nell'oggetto prestazione per ogni istanza. I contatori per l'istanza predefinita vengono visualizzati nel formato `ReportServer:Service`. I contatori per le istanze denominate vengono visualizzati nel formato `ReportServer$<` *nome_istanza*`>:Service`.  
+ Nell'oggetto prestazioni `ReportServer:Service` è inclusa una raccolta di contatori per tenere traccia degli eventi correlati a HTTP e degli eventi correlati alla memoria per un'istanza del server di report. Questo oggetto prestazione viene visualizzato una volta per ogni [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] istanza nel computer e si possa aggiungere o rimuovere contatori nell'oggetto prestazione per ogni istanza. I contatori per l'istanza predefinita vengono visualizzati nel formato `ReportServer:Service`. I contatori per le istanze denominate sono visualizzati nel formato `ReportServer$<` *nome_istanza*`>:Service`.  
   
- Il `ReportServer:Service` è una caratteristica introdotta nell'oggetto prestazione [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], e fornisce un subset di contatori inclusi in Internet Information Services (IIS) e [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Questi nuovi contatori sono specifici di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e consentono di tenere traccia di eventi correlati a HTTP per il server di report, quali richieste, connessioni e tentativi di accesso. Questo oggetto prestazione, inoltre, include contatori per tenere traccia di eventi di gestione della memoria.  
+ Il `ReportServer:Service` oggetto delle prestazioni sono state introdotta nella [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], e fornisce un subset di contatori inclusi in Internet Information Services (IIS) e [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Questi nuovi contatori sono specifici di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e consentono di tenere traccia di eventi correlati a HTTP per il server di report, quali richieste, connessioni e tentativi di accesso. Questo oggetto prestazione, inoltre, include contatori per tenere traccia di eventi di gestione della memoria.  
   
- Nella tabella seguente sono elencati i contatori inclusi nel `ReportServer:Service` oggetto prestazioni.  
+ Nella tabella seguente sono elencati i contatori inclusi nel `ReportServer:Service` oggetto delle prestazioni.  
   
  ![Contenuto correlato di PowerShell](../media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") Il seguente script di Windows PowerShell restituisce l'elenco di contatori delle prestazioni per CounterSetName  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36064614"
 |`Tasks Queued`|Numero di attività in attesa che un thread diventi disponibile per l'elaborazione. Ogni richiesta inviata al server di report corrisponde a una o più attività. Questo contatore rappresenta solo il numero di attività pronte per l'elaborazione e non include il numero di attività attualmente in esecuzione.|  
   
 ##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (server di report in modalità SharePoint)  
- Il `ReportServerSharePoint:Service` oggetto prestazione è stato aggiunto in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+ Il `ReportServerSharePoint:Service` oggetto delle prestazioni è stato aggiunto [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  ![Contenuto correlato di PowerShell](../media/rs-powershellicon.jpg "Contenuto correlato di PowerShell") Il seguente script di Windows PowerShell restituisce l'elenco di contatori delle prestazioni per CounterSetName  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36064614"
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio delle prestazioni del Server di Report](monitoring-report-server-performance.md)   
- [Contatori delle prestazioni per l'oggetto prestazione MSRS 2014 Web Service e oggetti delle prestazioni MSRS 2014 Windows Service &#40;modalità nativa&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
- [Contatori delle prestazioni per l'oggetto prestazione MSRS 2014 Web Service SharePoint Mode e oggetti prestazioni MSRS 2014 Windows Service SharePoint in modalità &#40;modalità SharePoint&#41;]... / performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [Contatori delle prestazioni per il MSRS 2014 Web Service e MSRS 2014 Windows Service prestazioni oggetti &#40;modalità nativa&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [I contatori delle prestazioni per il MSRS 2014 Web Service SharePoint Mode e oggetti prestazioni MSRS 2014 Windows Service SharePoint in modalità &#40;modalità SharePoint&#41;]... / performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
   
   

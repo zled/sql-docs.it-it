@@ -1,5 +1,5 @@
 ---
-title: Generatore report le opzioni della finestra di dialogo Impostazioni (Generatore Report) | Documenti Microsoft
+title: Generatore report le opzioni della finestra di dialogo Impostazioni (Generatore Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7ae2490cf5dcdc241120c683994e7f46bcf0b6c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 49449391408701c16b7b6da9106913a24d084d66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218841"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Finestra di dialogo Opzioni Generatore report, Impostazioni (Generatore report)
-  Fare clic sui **Generatore Report** pulsante e quindi fare clic su **opzioni** per impostare le opzioni per la visualizzazione dei file recenti e le connessioni. È anche possibile modificare il server di report predefinito o aggiungerne uno se tale server non è disponibile.  
+  Scegliere il **Generatore Report** pulsante e quindi fare clic su **opzioni** per impostare le opzioni per la visualizzazione dei file recenti e le connessioni. È anche possibile modificare il server di report predefinito o aggiungerne uno se tale server non è disponibile.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Usa questo server di report o sito di SharePoint per impostazione predefinita**  

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 caps.latest.revision: 8
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 5a81849f65e5b71acf233febb61e7725ec1e804e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 81f9d8c849622a622631bc8153dc7d4cffc7d258
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251883"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
-  La logica di stima della cardinalità, denominata strumento di stima della cardinalità, è stata riprogettata in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] per migliorare la qualità dei piani di query e pertanto le prestazioni delle query. Nel nuovo strumento di stima della cardinalità sono incorporati presupposti e algoritmi maggiormente adatti ai i carichi di lavoro di data warehouse e alle soluzioni OLTP più recenti. Lo strumento è basato sulla ricerca approfondita della stima della cardinalità sui carichi di lavoro più recenti e sulle conoscenze relative al miglioramento della stima della cardinalità di SQL Server acquisite nel corso degli ultimi 15 anni. I commenti e i suggerimenti dei clienti indicano che sebbene la maggior parte delle query registrerà un miglioramento o rimarrà invariata a seguito della modifica, una percentuale minima potrebbe registrare una regressione rispetto allo strumento di stima della cardinalità precedente.  
+  La logica di stima della cardinalità, denominata strumento di stima della cardinalità, è stata riprogettata in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] per migliorare la qualità dei piani di query e pertanto migliorare le prestazioni delle query. Nel nuovo strumento di stima della cardinalità sono incorporati presupposti e algoritmi maggiormente adatti ai i carichi di lavoro di data warehouse e alle soluzioni OLTP più recenti. Lo strumento è basato sulla ricerca approfondita della stima della cardinalità sui carichi di lavoro più recenti e sulle conoscenze relative al miglioramento della stima della cardinalità di SQL Server acquisite nel corso degli ultimi 15 anni. I commenti e i suggerimenti dei clienti indicano che sebbene la maggior parte delle query registrerà un miglioramento o rimarrà invariata a seguito della modifica, una percentuale minima potrebbe registrare una regressione rispetto allo strumento di stima della cardinalità precedente.  
   
 > [!NOTE]  
 >  Le stime della cardinalità sono una stima del numero di righe nel risultato della query. Query Optimizer usa queste stime per scegliere un piano per l'esecuzione della query. La qualità del piano di query influisce direttamente sul miglioramento delle prestazioni della query.  
@@ -36,13 +36,13 @@ ms.locfileid: "36064660"
   
  Per garantire le prestazioni ottimali per le query, fare riferimento alle indicazioni riportate di seguito per testare il carico di lavoro con il nuovo strumento di stima della cardinalità prima di abilitarlo nel sistema di produzione.  
   
-1.  Aggiornare tutti i database esistenti per l'uso del nuovo strumento di stima della cardinalità. A tale scopo, utilizzare [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) per impostare il livello di compatibilità del database su 120.  
+1.  Aggiornare tutti i database esistenti per l'uso del nuovo strumento di stima della cardinalità. A questo scopo, usare [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) per impostare il livello di compatibilità del database su 120.  
   
 2.  Eseguire il carico di lavoro di prova con il nuovo strumento di stima della cardinalità e quindi risolvere gli eventuali nuovi problemi relativi alle prestazioni adottando le attuali procedure per la risoluzione dei problemi.  
   
-3.  Quando il carico di lavoro è in esecuzione con la nuova stima della cardinalità (livello di compatibilità del database 120 (SQL Server 2014)) e una query specifica registrano una regressione, è possibile eseguire la query con il flag di traccia 9481 per usare la versione della stima della cardinalità usata nel [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]e versioni precedenti. Per eseguire una query con un flag di traccia, vedere l'articolo della Knowledge Base relativo all' [abilitazione del comportamento di SQL Server Query Optimizer con effetto sul piano che può essere controllato da flag di traccia diversi al livello della query specifica](http://support.microsoft.com/kb/2801413).  
+3.  Una volta che il carico di lavoro è in esecuzione con la nuova stima di cardinalità (livello di compatibilità 120 (SQL Server 2014)) e una query specifica registrano una regressione, è possibile eseguire la query con il flag di traccia 9481 per usare la versione della stima di cardinalità usata nella [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]e versioni precedenti. Per eseguire una query con un flag di traccia, vedere l'articolo della Knowledge Base relativo all' [abilitazione del comportamento di SQL Server Query Optimizer con effetto sul piano che può essere controllato da flag di traccia diversi al livello della query specifica](http://support.microsoft.com/kb/2801413).  
   
-4.  Se non è possibile modificare tutti i database in una sola volta per utilizzare la nuova stima della cardinalità, è possibile utilizzare lo strumento di stima della cardinalità precedente per tutti i database usando [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) a impostare il livello di compatibilità del database su 110.  
+4.  Se non è possibile modificare tutti i database in una sola volta per usare la nuova stima di cardinalità, è possibile usare lo strumento di stima della cardinalità precedente per tutti i database usando [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) a impostare il livello di compatibilità del database su 110.  
   
 5.  Se il carico di lavoro è in esecuzione con il livello di compatibilità del database impostato su 110 e si vuole verificare o eseguire una query specifica con il nuovo strumento di stima della cardinalità, è possibile eseguire la query con il flag di traccia 2312 per usare la versione di tale strumento inclusa in SQL Server 2014.  Per eseguire una query con un flag di traccia, vedere l'articolo della Knowledge Base relativo all' [abilitazione del comportamento di SQL Server Query Optimizer con effetto sul piano che può essere controllato da flag di traccia diversi al livello della query specifica](http://support.microsoft.com/kb/2801413).  
   

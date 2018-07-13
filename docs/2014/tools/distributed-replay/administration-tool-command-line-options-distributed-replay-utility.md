@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8e137d3e03594cda0a799f066ac175f78c194514
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 36f31c211affa12e7db9988200e3d04040ec227e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261797"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>Opzioni della riga di comando dello strumento di amministrazione (Distributed Replay Utility)
-  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dello strumento di amministrazione riesecuzione distribuita `DReplay.exe`, è uno strumento da riga di comando che è possibile utilizzare per comunicare con il controller di riesecuzione distribuita. Usare lo strumento di amministrazione per avviare, monitorare e annullare operazioni nel controller.  
+  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumento di amministrazione riesecuzione distribuita `DReplay.exe`, è uno strumento da riga di comando che è possibile usare per comunicare con distributed replay controller. Usare lo strumento di amministrazione per avviare, monitorare e annullare operazioni nel controller.  
   
  ![Icona di collegamento all'argomento](../../database-engine/media/topic-link.gif "Icona di collegamento all'argomento")Per altre informazioni sulle convenzioni relative alla sintassi dello strumento di amministrazione, vedere [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
   
@@ -46,7 +46,7 @@ Usage:
   dreplay cancel [-mcontroller] [-q]   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  È possibile eseguire le seguenti opzioni della riga di comando con `DReplay.exe`:  
   
  **preprocess**  
@@ -67,7 +67,7 @@ Usage:
   
 -   [Opzione Replay &#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md)  
   
--   [Opzione relativa allo stato &#40;Distributed Replay Administration Tool&#41;](status-option-distributed-replay-administration-tool.md)  
+-   [Opzione Status &#40;Distributed Replay Administration Tool&#41;](status-option-distributed-replay-administration-tool.md)  
   
 -   [Opzione Cancel &#40;Distributed Replay Administration Tool&#41;](cancel-option-distributed-replay-administration-tool.md)  
   

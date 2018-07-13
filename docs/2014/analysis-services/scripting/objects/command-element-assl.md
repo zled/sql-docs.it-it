@@ -1,5 +1,5 @@
 ---
-title: Comando elemento (ASSL) | Documenti Microsoft
+title: Comando elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Command element
 ms.assetid: 277598b5-9939-4d7f-8c75-06470c3fabdd
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 556462d93b991818e31e543049a05f7d1c7eaa8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0a9e59c50341f3ad0e517f64b67c0189a0614d57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064801"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249091"
 ---
 # <a name="command-element-assl"></a>Elemento Command (ASSL)
-  Definisce un comando che può essere utilizzata all'interno del contesto dell'elemento padre del [comandi](../collections/commands-element-assl.md) insieme.  
+  Definisce un comando che è disponibile per l'uso all'interno del contesto dell'elemento padre del [comandi](../collections/commands-element-assl.md) raccolta.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36064801"
 |Elementi padre|[Comandi](../collections/commands-element-assl.md)|  
 |Elementi figlio|[Text](../properties/text-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.Command>.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: Installare SQL Server 2014 dall'installazione guidata (programma di installazione) | Documenti Microsoft
+title: Installare SQL Server 2014 dall'installazione guidata (programma di installazione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,37 +8,37 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, steps
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 caps.latest.revision: 79
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 684a9d837fa08beaf8917a7193edff622aea4cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ff8c854a7f2004b30caa11c48423de0995d4652
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250621"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>Installare SQL Server 2014 dall'Installazione guidata (programma di installazione)
-  In questo argomento vengono fornite istruzioni dettagliate per installare una nuova istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Poiché nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un unico albero delle funzionalità per l'installazione di tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , non è necessario installarli singolarmente. Per ulteriori informazioni sui vari componenti che possono essere installati, vedere [installazione per SQL Server 2014](installation-for-sql-server.md).  Per ulteriori informazioni su come installare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti singolarmente, vedere [installare SQL Server 2014](install-sql-server.md).  
+  In questo argomento vengono fornite istruzioni dettagliate per installare una nuova istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Poiché nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un unico albero delle funzionalità per l'installazione di tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , non è necessario installarli singolarmente. Per altre informazioni sui vari componenti che possono essere installati, vedere [installazione per SQL Server 2014](installation-for-sql-server.md).  Per altre informazioni su come installare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti singolarmente, vedere [installare SQL Server 2014](install-sql-server.md).  
   
  In questi argomenti aggiuntivi vengono illustrati altri modi per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [Installare SQL Server 2014 dal Prompt dei comandi](install-sql-server-from-the-command-prompt.md).  
   
--   [Installazione di SQL Server 2014 tramite un File di configurazione](install-sql-server-using-a-configuration-file.md)  
+-   [Installare SQL Server 2014 tramite un file di configurazione](install-sql-server-using-a-configuration-file.md)  
   
--   [Installare SQL Server 2014 tramite SysPrep](install-sql-server-using-sysprep.md)  
+-   [Installare SQL Server 2014 con SysPrep](install-sql-server-using-sysprep.md)  
   
--   [Creare un nuovo Cluster di Failover SQL Server &#40;programma di installazione di&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md).  
+-   [Creare un nuovo Cluster di Failover SQL Server &#40;installazione&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md).  
   
--   [Eseguire l'aggiornamento a SQL Server 2014 tramite l'installazione guidata &#40;programma di installazione di&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
+-   [Eseguire l'aggiornamento a SQL Server 2014 usando l'installazione guidata di &#40;installazione&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Prima di installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rivedere gli argomenti in [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
@@ -179,9 +179,9 @@ ms.locfileid: "36064986"
   
 ## <a name="see-also"></a>Vedere anche  
  [Convalidare un'installazione di SQL Server](validate-a-sql-server-installation.md)   
- [Rimuovere un'installazione di SQL Server 2014](repair-a-failed-sql-server-installation.md)   
+ [Eliminare un'installazione SQL Server 2014](repair-a-failed-sql-server-installation.md)   
  [Visualizzare e leggere i file di log del programma di installazione di SQL Server](view-and-read-sql-server-setup-log-files.md)   
- [Eseguire l'aggiornamento a SQL Server 2014 tramite l'installazione guidata &#40;programma di installazione&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [Installare SQL Server 2014 dal Prompt dei comandi](install-sql-server-from-the-command-prompt.md)  
+ [Eseguire l'aggiornamento a SQL Server 2014 usando l'installazione guidata di &#40;programma di installazione&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
+ [Installazione di SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)  
   
   

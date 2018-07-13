@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati DimensionPermission (ASSL) | Documenti Microsoft
+title: Tipo di dati DimensionPermission (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DimensionPermission data type
 ms.assetid: 066405ff-903f-467a-b0d5-e58653952c52
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c614d2fd30f7bd3b831c571cc4d3de0cf26e365
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 740479b334195b36ac7f8d04446575917da04d02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178838"
 ---
 # <a name="dimensionpermission-data-type-assl"></a>Tipo di dati DimensionPermission (ASSL)
   Definisce un tipo di dati derivato che rappresenta le autorizzazioni assegnate a una dimensione del database.  
@@ -57,16 +57,16 @@ ms.locfileid: "36067894"
 |------------------|-------------|  
 |Elementi padre|None|  
 |Elementi figlio|[AttributePermissions](../collections/attributepermissions-element-assl.md), [AllowedRowsExpression](../collections/attributepermissions-element-assl.md)|  
-|Elementi derivati|[DimensionPermission](../objects/dimensionpermission-element-assl.md)|  
+|Elementi derivati|[Elemento DimensionPermission](../objects/dimensionpermission-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Questo elemento dispone delle convalide seguenti in DeploymentMode, valore 2 (modalità server tabulare).  
   
--   *AttributePermission* attributo deve essere vuoto o non si verifica un errore.  
+-   *AttributePermission* attributo deve essere vuoto o si verifica un errore.  
   
  Questo elemento dispone delle convalide seguenti in DeploymentMode, valore 0 (OLAP).  
   
--   *AllowedRowsExpression* attributo deve essere vuoto o non si verifica un errore.  
+-   *AllowedRowsExpression* attributo deve essere vuoto o si verifica un errore.  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.DimensionPermission>.  
   

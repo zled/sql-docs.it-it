@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 544931a2a43d875af5d2688bd1e52667ea5c5b5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c46f1e1993743365c9a0120a086f8732c2b60e5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264207"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout e rendering della pagina (Generatore report e SSRS)
   Quando si creano report è importante capire il comportamento dei renderer di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per assicurarsi che il report visualizzabile corrisponda a quanto desiderato, inclusi il layout e le interruzioni di pagina. Sicuramente si desidera anche verificare che il report visualizzabile si adatti al formato della carta usato comunemente.  
@@ -98,33 +98,33 @@ ms.locfileid: "36065050"
 ##  <a name="HowTo"></a> Procedure  
  In questa sezione vengono elencate le procedure in cui viene mostrato in dettaglio l'utilizzo della paginazione nei report.  
   
--   [Aggiungere un'interruzione di pagina &#40;SSRS e Generatore Report&#41;](add-a-page-break-report-builder-and-ssrs.md)  
+-   [Aggiungere un'interruzione di pagina &#40;Report e SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
   
--   [Visualizzare le intestazioni di colonna e riga in più pagine &#40;SSRS e Generatore Report&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
+-   [Visualizzare le intestazioni di colonna e riga in più pagine &#40;Report e SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
--   [Aggiungere o rimuovere un'intestazione di pagina o piè di pagina &#40;SSRS e Generatore Report&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+-   [Aggiungere o rimuovere un'intestazione di pagina o piè di pagina &#40;Report e SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
--   [Visualizzazione delle intestazioni durante lo scorrimento di un Report &#40;SSRS e Generatore Report&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+-   [Mantenere visibili le intestazioni durante lo scorrimento di un Report &#40;Report e SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
--   [Visualizzazione dei numeri di pagina o altre proprietà del Report &#40;SSRS e Generatore Report&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
+-   [Visualizzare i numeri di pagina o altre proprietà del Report &#40;Report e SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   
--   [Nascondere un'intestazione di pagina o piè di pagina nella prima o nell'ultima pagina &#40;SSRS e Generatore Report&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
+-   [Nascondere un'intestazione di pagina o piè di pagina nella prima o nell'ultima pagina &#40;Report e SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
   
   
 ##  <a name="InThisSection"></a> Contenuto della sezione  
  Negli argomenti seguenti vengono fornite ulteriori informazioni sul layout e sul rendering della pagina.  
   
- [Intestazioni di pagina e piè di pagina &#40;SSRS e Generatore Report&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Intestazioni di pagina e piè di pagina &#40;Report e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sull'utilizzo di intestazioni e piè di pagina nei report e sul controllo della paginazione attraverso questi elementi.  
   
- [Controllo pagina si interrompe, intestazioni, colonne e righe &#40;SSRS e Generatore Report&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
+ [Pagina di controllo di interruzioni, intestazioni, colonne e righe &#40;Report e SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sull'utilizzo delle interruzioni di pagina.  
   
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità interattiva per estensioni per il Rendering di Report differenti &#40;SSRS e Generatore Report&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Esportazione di report &#40;SSRS e Generatore Report&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Esportazione di report &#40;Report e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

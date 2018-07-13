@@ -1,5 +1,5 @@
 ---
-title: Elemento DbSchemaName (ASSL) | Documenti Microsoft
+title: Elemento DbSchemaName (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DbSchemaName element
 ms.assetid: ae0f0edd-7b76-400d-a288-39a36d2a746b
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0f55d446f8816ac140896dfb43b0e163f3f61314
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc5b1eda981bcd19f4f916ddb60dd511264075a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220051"
 ---
 # <a name="dbschemaname-element-assl"></a>Elemento DbSchemaName (ASSL)
   Contiene il nome dello schema utilizzato dall'elemento padre nella tabella identificata dal [DbTableName](name-element-assl.md) elemento.  
@@ -61,7 +61,7 @@ ms.locfileid: "36066606"
 |Elemento padre|[TableBinding](../data-type/binding-data-type-assl.md), [TableNotification](../objects/tablenotification-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Gli elementi che corrispondono ai padri di `DbSchemaName` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.TableBinding> e <xref:Microsoft.AnalysisServices.TableNotification>.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: Esplorazione del modello Naive Bayes (esercitazione di base di Data Mining) | Documenti Microsoft
+title: Esplorazione del modello Naive Bayes (esercitazione di base di Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,36 +8,36 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b06708d5-4477-4a51-bf8d-0b1e3c1f9ebb
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: ce01a9d352513e4b69bb4a9e735f30cc657a9c97
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 172c4eb4cd0ad134298ffce813113036b79baefd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200711"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Esplorazione del modello Naive Bayes (Esercitazione di base sul data mining)
-  Il [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Naive Bayes fornisce diversi metodi per la visualizzazione dell'interazione tra biciclette e gli attributi di input.  
+  Il [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Naive Bayes fornisce diversi metodi per la visualizzazione dell'interazione tra l'acquisto di biciclette e gli attributi di input.  
   
  Il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Naive Bayes sono disponibili le schede seguenti per l'esplorazione dei modelli di data mining Naive Bayes:  
   
  
   
 ##  <a name="DependencyNetwork"></a> Rete di dipendenze  
- Il **rete di dipendenze** tab funziona esattamente come il **rete di dipendenze** per la scheda di [!INCLUDE[msCoName](../includes/msconame-md.md)] Tree Viewer. Ogni nodo nel visualizzatore rappresenta un attributo e le righe tra i nodi rappresentano le relazioni. Nel visualizzatore è possibile osservare tutti gli attributi che influiscono sullo stato dell'attributo stimabile, ovvero Bike Buyer.  
+ Il **rete di dipendenze** pressione di tab funziona esattamente come le **rete di dipendenze** per la scheda di [!INCLUDE[msCoName](../includes/msconame-md.md)] Tree Viewer. Ogni nodo nel visualizzatore rappresenta un attributo e le righe tra i nodi rappresentano le relazioni. Nel visualizzatore è possibile osservare tutti gli attributi che influiscono sullo stato dell'attributo stimabile, ovvero Bike Buyer.  
   
 #### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>Per esplorare il modello nella scheda Rete di dipendenze  
   
-1.  Utilizzare la **modello di Data Mining** nella parte superiore dell'elenco il **visualizzatore modello di Data Mining** tab per passare al `TM_NaiveBayes` modello.  
+1.  Usare la **modello di Data Mining** elenco nella parte superiore del **visualizzatore modello di Data Mining** tab per passare al `TM_NaiveBayes` modello.  
   
-2.  Usare la **Visualizzatore** elenco per passare alla **visualizzatore Microsoft Naive Bayes**.  
+2.  Usare la **Viewer** elenco per aprirlo **visualizzatore Microsoft Naive Bayes**.  
   
-3.  Fare clic sul `Bike Buyer` nodo per identificare le relative dipendenze.  
+3.  Fare clic su di `Bike Buyer` nodo per identificarne le dipendenze.  
   
      L'ombreggiatura rosa indica che tutti gli attributi influenzano l'acquisto di biciclette.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "36311859"
  
   
 ##  <a name="AttributeProfiles"></a> Profili attributo  
- Il **profili attributo** scheda descrive come i diversi stati di attributi di input sul risultato dell'attributo stimabile.  
+ Il **profili attributo** scheda descrive come i diversi stati dell'effetto di attributi di input, il risultato dell'attributo stimabile.  
   
 #### <a name="to-explore-the-model-in-the-attribute-profiles-tab"></a>Per esplorare il modello nella scheda Profili attributo  
   
-1.  Nel **stimabile** , verificare che `Bike Buyer` sia selezionata.  
+1.  Nel **stimabile** verificare che `Bike Buyer` sia selezionata.  
   
-2.  Se il **legenda Data Mining** blocca la visualizzazione del **profili dell'attributo**, spostare la legenda.  
+2.  Se il **legenda Data Mining** blocca la visualizzazione delle **profili dell'attributo**, spostarla dall'area di lavoro.  
   
 3.  Nel **istogramma** barre, quindi selezionare **5**.  
   
@@ -63,19 +63,19 @@ ms.locfileid: "36311859"
   
 4.  Nel **attributi** colonna, trovare **Number Cars Owned**.  Si notino le differenze negli istogrammi tra gli acquirenti di biciclette (la colonna con etichetta 1) e i non acquirenti (la colonna con etichetta 0). È molto più probabile che una bicicletta venga acquistata da una persona priva di automobili o che ne possiede una sola.  
   
-5.  Fare doppio clic sui **Number Cars Owned** cella degli acquirenti di biciclette colonna (colonna con etichettata 1).  
+5.  Fare doppio clic il **Number Cars Owned** cella degli acquirenti di biciclette colonna (colonna con etichettata 1).  
   
      Il **legenda Data Mining** consente di visualizzare una visualizzazione più dettagliata.  
   
   
 ##  <a name="AttributeCharacteristics"></a> Caratteristiche attributo  
- Con il **caratteristiche attributo** scheda, è possibile selezionare un attributo e un valore per verificare la frequenza con cui i valori per altri attributi vengono visualizzati nei casi di valore selezionato.  
+ Con il **caratteristiche attributo** scheda, è possibile selezionare un attributo e valore da vedere con quale frequenza i valori per gli altri attributi vengono visualizzati nei casi valore selezionato.  
   
 #### <a name="to-explore-the-model-in-the-attribute-characteristics-tab"></a>Per esplorare il modello nella scheda Caratteristiche attributo  
   
 1.  Nel **attributo** elenco, verificare che `Bike Buyer` sia selezionata.  
   
-2.  Impostare il **valore** alla **1**.  
+2.  Impostare il **valore** al **1**.  
   
      Nel visualizzatore si osserverà che è più probabile che una bicicletta venga acquistata dai clienti senza figli, che abitano a breve distanza dal luogo di lavoro e che vivono nell'area dell'America del nord.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "36311859"
  [Esplorazione del modello di Clustering &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare un modello utilizzando il visualizzatore Microsoft Naive Bayes](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)   
- [Scheda Analisi discriminante tra dell'attributo &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/attribute-discrimination-tab-mining-model-viewer.md)   
- [Attributo profili della scheda &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/attribute-profiles-tab-mining-model-viewer.md)   
+ [Visualizzare un modello usando il visualizzatore Microsoft Naive Bayes](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)   
+ [Scheda Analisi discriminante dell'attributo &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/attribute-discrimination-tab-mining-model-viewer.md)   
+ [Attributo definisce il profilo della scheda &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/attribute-profiles-tab-mining-model-viewer.md)   
  [Scheda Caratteristiche attributo &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/attribute-characteristics-tab-mining-model-viewer.md)   
  [Scheda rete di dipendenze &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)  
   

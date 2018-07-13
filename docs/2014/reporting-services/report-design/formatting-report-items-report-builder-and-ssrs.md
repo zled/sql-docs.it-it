@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: da8b4e9e642fcaa7585041102422f05832e6ded3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f0443443f4863ed788aa22a4aeb1ca717ee891d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200741"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formattazione degli elementi del report (Generatore report e SSRS)
   La formattazione degli elementi del report consente di migliorare l'aspetto e la leggibilità del report. È possibile formattare le caselle di testo e i singoli elementi contenuti nelle caselle, le immagini, le espressioni e i dati in modalità progettazione report.  
@@ -42,22 +42,22 @@ ms.locfileid: "36066701"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
- [Formattazione di testo e segnaposto &#40;SSRS e Generatore Report&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Formattazione di testo e segnaposto &#40;Report e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  Viene descritto come formattare il testo e come personalizzare le opzioni di formattazione per diversi blocchi di testo all'interno di una casella di testo.  
   
- [Importazione di HTML in un Report &#40;SSRS e Generatore Report&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Importazione di HTML in un Report &#40;Report e SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
  Viene descritto come inserire e utilizzare dati HTML in un report.  
   
- [Formattazione di numeri e date &#40;SSRS e Generatore Report&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Formattazione di numeri e date di &#40;Report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
  Viene descritto come usare le stringhe di formattazione standard e personalizzate supportate da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Formattazione di linee, colori e immagini &#40;SSRS e Generatore Report&#41;](images-report-builder-and-ssrs.md)  
+ [Formattazione di linee, colori e immagini &#40;Report e SSRS&#41;](images-report-builder-and-ssrs.md)  
  Viene descritto come formattare linee, griglie, colori e immagini all'interno di elementi del report e aree dati.  
   
- [Impostazioni locali per un Report o una casella di testo &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [Configurare le impostazioni locali per un Report o una casella di testo &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Viene descritto come modificare l'impostazione dei formati di visualizzazione dati che differiscono in base alla lingua e al paese, ad esempio i valori relativi alla data, alla valuta e quelli numerici.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione di un grafico &#40;SSRS e Generatore Report&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [Formattazione di un grafico &#40;Report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

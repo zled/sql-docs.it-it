@@ -1,5 +1,5 @@
 ---
-title: Elemento ForeColor (ASSL) | Documenti Microsoft
+title: Elemento ForeColor (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ForeColor element
 ms.assetid: 5125520c-3bce-40e6-a722-8d4d47306fed
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d33af314081dda790edee205d12e095b018d00b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efcd4c226743ec313e338eea4af83ba68792b675
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332831"
 ---
 # <a name="forecolor-element-assl"></a>Elemento ForeColor (ASSL)
-  Vengono descritte le caratteristiche di visualizzazione correlate al colore il [CalculationProperty](../objects/calculationproperty-element-assl.md) oppure [misura](../objects/measure-element-assl.md) elemento padre.  
+  Descrive le caratteristiche di visualizzazione correlate al colore i [CalculationProperty](../objects/calculationproperty-element-assl.md) oppure [misura](../objects/measure-element-assl.md) elemento padre.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,8 +61,8 @@ ms.locfileid: "36064803"
 |Elementi padre|[CalculationProperty](../objects/calculationproperty-element-assl.md), [misura](../objects/measure-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il `ForeColor` proprietà contiene un'espressione MDX (Multidimensional Expressions) e si applica a `CalculationProperty` gli elementi che hanno un [CalculationType](calculationtype-element-assl.md) dei *membro* o *celle* .  
+## <a name="remarks"></a>Note  
+ Il `ForeColor` proprietà contiene un'espressione MDX (Multidimensional Expressions) e si applica a `CalculationProperty` gli elementi aventi un [CalculationType](calculationtype-element-assl.md) dei *membro* o *celle* .  
   
  Gli elementi che corrispondono ai padri di `ForeColor` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.CalculationProperty> e <xref:Microsoft.AnalysisServices.Measure>.  
   

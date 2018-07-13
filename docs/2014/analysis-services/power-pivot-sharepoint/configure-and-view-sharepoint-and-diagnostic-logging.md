@@ -1,5 +1,5 @@
 ---
-title: Configurare e visualizzare i file di Log di SharePoint e la registrazione diagnostica (PowerPivot per SharePoint) | Documenti Microsoft
+title: Configurare e visualizzare i file di Log di SharePoint e la registrazione diagnostica (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d78836a24938511939c65e127425439aa59f1fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c32447beac0d531f053e6945769b6eba12be23ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255843"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Configurare e visualizzare i file di log di SharePoint e la registrazione diagnostica (PowerPivot per SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] i messaggi, eventi e le operazioni del server vengono registrati nei file di log di SharePoint. Usare le informazioni in questo argomento per configurare i livelli di registrazione e visualizzare le informazioni sui file di log. È possibile controllare quali eventi server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono registrati nel file. È inoltre possibile controllare la gravità di messaggi registrati. Per altre informazioni, vedere [Configura raccolta dati di utilizzo per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] i messaggi, eventi e operazioni del server vengono registrati nei file di log di SharePoint. Usare le informazioni in questo argomento per configurare i livelli di registrazione e visualizzare le informazioni sui file di log. È possibile controllare quali eventi server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono registrati nel file. È inoltre possibile controllare la gravità di messaggi registrati. Per altre informazioni, vedere [Configure Usage Data Collection per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  Contenuto dell'argomento:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36066258"
   
 4.  Espandere la categoria e selezionare le singole categorie.  
   
-     **Richiesta pagine applicazione** specifica gli eventi attivati dall'applicazione di servizio durante l'individuazione di un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] per il caricamento di un'origine dati PowerPivot e la comunicazione con altri server nella farm.  
+     **Richiesta pagine applicazione** specifica gli eventi attivati dall'applicazione di servizio per l'individuazione di un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] per il caricamento di un'origine dati PowerPivot e la comunicazione con altri server nella farm.  
   
      **Elaborazione delle richieste** consente di specificare gli eventi attivati da richieste di query su un database PowerPivot caricato in un server della farm.  
   
@@ -126,10 +126,10 @@ ms.locfileid: "36066258"
 |w3wp.exe|Servizio PowerPivot|Front-end Web|Dettagliato|Avvio individuazione server applicazioni per l'origine dati =\<*percorso*>|Quando riceve una richiesta di connessione, il servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] identifica un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] disponibile per gestire la richiesta. Se è presente un solo server nella farm, il server locale accetta la richiesta in tutti i casi.|  
 |w3wp.exe|Servizio PowerPivot|Front-end Web|Dettagliato|Individuazione del server applicazioni riuscita.|La richiesta è stata allocata a un'applicazione di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |w3wp.exe|Servizio PowerPivot|Front-end Web|Dettagliato|Reindirizzamento della richiesta per il \< *origine dati PowerPivot*> per il [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|La richiesta è stata inoltrata a [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|Servizio PowerPivot|Elaborazione delle richieste|Dettagliato|Reindirizzamento della richiesta per nomeutente\<*utente di SharePoint*> al database|Una connessione rappresentata all'origine dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è stata creata per conto dell'utente SharePoint.|  
+|w3wp.exe|Servizio PowerPivot|Elaborazione delle richieste|Dettagliato|Reindirizzamento della richiesta per nomeutente\<*utente SharePoint*> al database|Una connessione rappresentata all'origine dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è stata creata per conto dell'utente SharePoint.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Raccolta dati di utilizzo di PowerPivot](power-pivot-usage-data-collection.md)   
+ [Raccolta dei dati sull'utilizzo di PowerPivot](power-pivot-usage-data-collection.md)   
  [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Configurare la raccolta di dati di utilizzo per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   

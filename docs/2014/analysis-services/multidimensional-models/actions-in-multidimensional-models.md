@@ -1,5 +1,5 @@
 ---
-title: Azioni nei modelli multidimensionali | Documenti Microsoft
+title: Azioni nei modelli multidimensionali | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services], creating
 - report actions [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: adf4fe01f2bf85bf4cf13e828f62eced3696a4ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6576d805e7352133bffb97ad4612cc5114764ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196541"
 ---
 # <a name="actions-in-multidimensional-models"></a>Azioni nei modelli multidimensionali
   Un'azione è un'operazione inizializzata dall'utente finale su un cubo o una parte di un cubo selezionati. L'operazione consente di avviare un'applicazione con l'elemento selezionato come parametro oppure di recuperare informazioni sull'elemento selezionato. Per altre informazioni sulle azioni, vedere [Azioni &#40;Analysis Services - Dati multidimensionali&41#;](actions-analysis-services-multidimensional-data.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "36067697"
  Dopo aver selezionato il tipo di oggetto di destinazione, in **Oggetto di destinazione**selezionare l'oggetto del cubo del tipo definito.  
   
  **Condizione (facoltativa)**  
- Specificare un'espressione MDX (Multidimensional Expressions) facoltativa che restituisca un valore booleano. Se il valore è `True`, viene eseguita l'azione nella destinazione specificata. Se il valore è `False`, non viene eseguita l'azione.  
+ Specificare un'espressione MDX (Multidimensional Expressions) facoltativa che restituisca un valore booleano. Se il valore è `True`, l'azione viene eseguita sulla destinazione specificata. Se il valore è `False`, non viene eseguita l'azione.  
   
  **Contenuto azione**  
  Selezionare il tipo di azione. Nella tabella seguente vengono riepilogati i tipi disponibili.  

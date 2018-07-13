@@ -1,5 +1,5 @@
 ---
-title: Traccia (Client di Data Mining per Excel) | Documenti Microsoft
+title: Traccia (Client di Data Mining per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tracer
 - connections
 ms.assetid: 4aea3e17-cd0f-48dd-8f22-b54a6c716426
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a62e3116fc9ba6bf3423faaf92b5374514174e42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee0268eb960aab09029774b6ad26ccccd3d352e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326521"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>Traccia (client di data mining per Excel)
   ![Pulsante traccia](media/misc-trace.gif "pulsante traccia")  
   
- Il **traccia** finestra di dialogo consente di monitorare le istruzioni vengono inviate all'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che si sta utilizzando per il data mining. Dopo aver creato una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], tutte le interazioni tra il client e server vengono registrate nel **traccia** riquadro, incluse le istruzioni che creano strutture, aggiungono modelli di data mining e prendere le stime, nonché alcuni messaggi restituiti dal server.  
+ Il **Tracer** finestra di dialogo consente di monitorare le istruzioni vengono inviate all'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che si usa per il data mining. Dopo aver creato una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], tutte le interazioni tra il client e server vengono registrate nel **traccia** riquadro, incluse le istruzioni creano strutture, aggiungere modelli di data mining e rendano le stime, nonché alcuni messaggi restituiti dal server.  
   
  A seconda dell'azione richiesta, l'istruzione potrebbe essere una query di modifica o di definizione dati DMX (Data Mining Extensions), un pacchetto ASSL (Analysis Services Scripting Language) o una chiamata a una stored procedure di Analysis Services. Non vengono tuttavia visualizzati i risultati numerici e i valori dei dati effettivi.  
   
- **Traccia** monitora solo la connessione corrente e il contenuto del **traccia** finestra di dialogo non sono archiviate.  
+ **Traccia** monitora solo la connessione corrente e il contenuto del **traccia** non vengono archiviate nella finestra di dialogo.  
   
 ## <a name="options"></a>Opzioni  
  Riquadro Utilità di traccia  
@@ -52,7 +52,7 @@ ms.locfileid: "36066518"
 ## <a name="tracing-temporary-structures-and-models"></a>Traccia di strutture e modelli temporanei  
  Se si utilizza il componente Strumenti di analisi tabelle, tramite il quale vengono creati, per impostazione predefinita, strutture e modelli temporanei, l'attività tra il server e il client viene monitorata, ma le strutture o i modelli creati non vengono salvati in modo permanente nel server.  
   
- Se si desidera conservare il lavoro quando si utilizza uno degli strumenti di analisi tabelle, è possibile deselezionare l'opzione **Usa modelli di sessione**, in modo che i modelli per essere salvato in modo permanente nel server. È inoltre possibile copiare le istruzioni nel **traccia** riquadro in un file in modo che è possibile ricreare il lavoro in un secondo momento.  
+ Se si desidera conservare il lavoro quando si usa uno degli strumenti di analisi tabelle, è possibile deselezionare l'opzione **Usa modelli di sessione**, in modo che i modelli essere salvato in modo permanente nel server. È inoltre possibile copiare le istruzioni nel **traccia** riquadro in un file in modo che sia possibile ricreare il lavoro in un secondo momento.  
   
 ## <a name="understanding-sessions"></a>Informazioni sulle sessioni  
  Quando ci si connette a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], il componente aggiuntivo di data mining crea una sessione. A ogni sessione viene assegnato un identificatore che contraddistingue una sessione esistente nell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. L'identificatore di sessione non rappresenta tuttavia una garanzia di validità della sessione. La sessione può infatti scadere in caso di timeout o se la connessione associata alla sessione viene interrotta. Se la sessione scade e non è più valida, la sessione viene terminata da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e viene eseguito il rollback di eventuali transazioni in corso. Se viene inviato un messaggio con un identificatore di sessione non più valido, l'operazione non riesce e viene generato un errore per segnalare che non è possibile trovare la sessione specificata.  
@@ -62,12 +62,12 @@ ms.locfileid: "36066518"
 ## <a name="changing-connections"></a>Cambio di connessioni  
  Se si cambia connessione, le tracce delle connessioni precedenti non vengono eliminate. La sessione viene cancellata solo in seguito alla chiusura della cartella di lavoro.  
   
- Se si cambia connessione mentre si lavora in una cartella di lavoro di Excel, la modifica di connessioni non viene registrata nel **traccia** riquadro. Per visualizzare in modo esplicito il nome e lo stato della connessione corrente, è necessario fare clic su **connessione corrente**.  
+ Se si cambia connessione mentre si lavora in una cartella di lavoro di Excel, la modifica delle connessioni non viene registrata nel **traccia** riquadro. Per visualizzare in modo esplicito il nome e lo stato della connessione corrente, è necessario fare clic su **connessione corrente**.  
   
 ## <a name="understanding-statements-in-the-tracer"></a>Informazioni sulle istruzioni visualizzate nel riquadro DMTracer  
  DMX (Data Mining Extensions) è un linguaggio che è possibile utilizzare per creare e utilizzare modelli di data mining in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Tramite DMX è possibile creare la struttura dei nuovi modelli di data mining, eseguire il training dei modelli, nonché esplorarli, gestirli ed eseguire stime basate su di essi. DMX comprende istruzioni DDL (Data Definition Language) e DML (Data Manipulation Language), nonché funzioni e operatori.  
   
- Una discussione completa sulle istruzioni DMX e la relativa sintassi esula dagli scopi di questo argomento. Tuttavia, è possibile utilizzare le informazioni contenute nel **traccia** riquadro per trovare informazioni dettagliate sul comportamento di un'istruzione DMX. I componenti aggiuntivi Data mining per Excel consentono inoltre di compilare istruzioni DMX complesse e di interagire con un server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per altre informazioni, vedere [Query &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](query-sql-server-data-mining-add-ins.md).  
+ Una discussione completa sulle istruzioni DMX e la relativa sintassi esula dagli scopi di questo argomento. Tuttavia, è possibile usare le informazioni contenute nel **traccia** riquadro che contiene informazioni dettagliate sul comportamento di un'istruzione DMX. I componenti aggiuntivi Data mining per Excel consentono inoltre di compilare istruzioni DMX complesse e di interagire con un server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per altre informazioni, vedere [Query &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](query-sql-server-data-mining-add-ins.md).  
   
 > [!NOTE]  
 >  In numerose istruzioni DMX vengono utilizzati parametri. Per i tipi semplici, i valori dei parametri vengono elencati sotto l'istruzione. Per i tipi complessi, tuttavia, viene elencato solo il tipo del parametro.  

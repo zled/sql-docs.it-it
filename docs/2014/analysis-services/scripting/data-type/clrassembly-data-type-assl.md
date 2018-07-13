@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati ClrAssembly (ASSL) | Documenti Microsoft
+title: Tipo di dati ClrAssembly (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ClrAssembly data type
 ms.assetid: 3f5dc5a1-ebd6-41b8-ac04-91d4de137eb4
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e17992a5d15113ec0de5dd75978f932cb83d11c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63809f3dd903878baf5eabf1642430fbe0d9aa8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235581"
 ---
 # <a name="clrassembly-data-type-assl"></a>Tipo di dati ClrAssembly (ASSL)
   Definisce un tipo di dati derivato che rappresenta un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly associato a un [Database](../objects/database-element-assl.md) oppure [Server](../objects/server-element-assl.md) elemento  
@@ -59,10 +59,10 @@ ms.locfileid: "36066179"
 |------------------|-------------|  
 |Elementi padre|Nessuno (tipo astratto)|  
 |Elementi figlio|[I file](../collections/files-element-assl.md), [PermissionSet](../properties/permissionset-element-assl.md)|  
-|Elementi derivati|Vedere [Assembly](../objects/assembly-element-assl.md) ([assembly](../collections/assemblies-element-assl.md) insieme [Database](../objects/database-element-assl.md) oppure [Server](../objects/server-element-assl.md))|  
+|Elementi derivati|Visualizzare [Assembly](../objects/assembly-element-assl.md) ([assembly](../collections/assemblies-element-assl.md) raccolta di [Database](../objects/database-element-assl.md) oppure [Server](../objects/server-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
- Il `ClrAssembly` elemento contiene i file necessari per ricreare un [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly, associato a un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] o a un database specifico in un'istanza di [!INCLUDE[ssAS](../../../includes/ssas-md.md)], nonché il autorizzazioni necessarie per eseguire l'assembly.  
+## <a name="remarks"></a>Note  
+ Il `ClrAssembly` elemento contiene i file necessari per ricreare una [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly, associato a un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] o a un database specifico in un'istanza di [!INCLUDE[ssAS](../../../includes/ssas-md.md)], così come il autorizzazioni necessarie per eseguire l'assembly.  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.ClrAssembly>.  
   

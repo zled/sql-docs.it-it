@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bf9d4775b776c0766e05b39d8cd271bff9fccbd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: acc07be98a39a302cb4d20f9d18ed11c0f85869b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274627"
 ---
 # <a name="examples-using-path-mode"></a>Esempi di utilizzo della modalità PATH
   Negli esempi seguenti viene illustrato l'utilizzo della modalità PATH nella creazione di codice XML da una query SELECT. Molte di queste query vengono specificate sui documenti XML di istruzioni per la produzione di biciclette archiviate nella colonna Instructions della tabella ProductModel.  
@@ -190,7 +190,7 @@ GO
   
  `</Root>`  
   
- Oltre all'ID del modello di prodotto e al nome, la query seguente consente di recuperare i percorsi delle relative istruzioni di produzione. Poiché la colonna Instructions è di `xml` digitare il `query()` metodo `xml` tipo di dati specificato per recuperare il percorso.  
+ Oltre all'ID del modello di prodotto e al nome, la query seguente consente di recuperare i percorsi delle relative istruzioni di produzione. Perché la colonna Instructions è di `xml` tipo, il `query()` metodo `xml` tipo di dati specificato per recuperare il percorso.  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -248,7 +248,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- Il prefisso `MI` è inoltre definito in `WITH XMLNAMESPACES`. Di conseguenza, il `query()` metodo il `xml` tipo specificato non definisce il prefisso nel prologo della query. Risultato:  
+ Il prefisso `MI` è inoltre definito in `WITH XMLNAMESPACES`. Di conseguenza, il `query()` metodo di `xml` tipo specificato non definisce il prefisso nel prologo della query. Risultato:  
   
  `<ns1:root xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   

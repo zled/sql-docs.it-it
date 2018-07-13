@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 f1_keywords:
@@ -20,15 +20,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.reportparameters.advanced.f1
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 caps.latest.revision: 36
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c936c8e8eaac37c18e402206d9ca7bc6e6f0bd9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 26fdc20f897d904319c9080120aa5770b53145bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168292"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parametri report (Generatore report e Progettazione report)
   Questo argomento descrive gli usi comuni dei parametri di report SSRS, le proprietà che è possibile impostare e altre informazioni sui parametri. I parametri del report consentono di controllare i dati del report, connettere report correlati e variare la presentazione del report.  
@@ -41,7 +41,7 @@ ms.locfileid: "36066717"
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> Utilizzi comuni per i parametri  
  Di seguito sono elencate alcune delle modalità più comuni in cui è possibile usare i parametri.  
   
- **Controllare i dati del Report**  
+ **Dati del Report controllo**  
   
 -   Filtrare i dati del report nell'origine dati scrivendo query del set di dati contenenti variabili.  
   
@@ -67,20 +67,20 @@ ms.locfileid: "36066717"
   
      Per altre informazioni, vedere [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md).  
   
-##  <a name="UserInterface"></a> Riquadro dei parametri  
+##  <a name="UserInterface"></a> Riquadro parametri  
  Quando si visualizza un report, ogni parametro viene visualizzato nella barra degli strumenti del visualizzatore di report in modo che gli utenti possano specificarne i valori in modo interattivo. La figura seguente mostra l'area dei parametri di un report con parametri @StartDate, @EndDate, @Subcategory, e @ShowAllRows.  
   
  ![rs_ParameterStory](../media/rs-parameterstory.gif "rs_ParameterStory")  
   
 1.  **Riquadro Parametri** Nella barra degli strumenti del visualizzatore di report vengono visualizzati un messaggio di richiesta e un valore predefinito per ogni parametro. Il layout del parametro viene formattato nella barra degli strumenti automaticamente. L'ordine in cui i parametri vengono visualizzati è determinato dall'ordine dei parametri nel riquadro dei dati del report.  
   
-2.  **@StartDate e @EndDate parametri** il parametro @StartDate tipo di dati `DateTime`. Il messaggio di richiesta Data inizio viene visualizzato accanto alla casella di testo. Per modificare la data, digitare una nuova data nella casella di testo o usare il controllo calendario.  
+2.  **@StartDate e @EndDate parametri** il parametro @StartDate è il tipo di dati `DateTime`. Il messaggio di richiesta Data inizio viene visualizzato accanto alla casella di testo. Per modificare la data, digitare una nuova data nella casella di testo o usare il controllo calendario.  
   
-     Il parametro @EndDate appare accanto a @StartDate.  
+     Il parametro @EndDate verrà visualizzato accanto a @StartDate.  
   
-3.  **@Subcategory parametro** il parametro @Subcategory è di tipo di dati `Text`. Poiché @Subcategory dispone di un elenco di valori disponibili, i valori validi vengono visualizzati in un elenco a discesa. È necessario scegliere i valori da questo elenco. Poiché @Subcategory multivalore, una **Seleziona tutto** opzione viene visualizzata che consente di cancellare tutto e selezionare tutti i valori nell'elenco.  
+3.  **@Subcategory parametro** il parametro @Subcategory è di tipo di dati `Text`. Poiché @Subcategory presenta un elenco di valori disponibili, i valori validi vengono visualizzati in un elenco a discesa. È necessario scegliere i valori da questo elenco. In quanto @Subcategory multivalore, una **Select All** opzione viene visualizzata che ti permette di cancellare tutto e selezionare tutti i valori nell'elenco.  
   
-4.  **@ShowAllRows parametro** il parametro @ShowAllRows è di tipo di dati `Boolean`. Utilizzare i pulsanti di opzione per specificare `True` o `False`.  
+4.  **@ShowAllRows parametro** il parametro @ShowAllRows è di tipo di dati `Boolean`. Usare i pulsanti di opzione per specificare `True` o `False`.  
   
 5.  **Handle Mostra o nasconde l'area dei parametri** Nella barra degli strumenti del visualizzatore di report fare clic su questa freccia per mostrare o nascondere il riquadro dei parametri.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36066717"
   
 -   Selezionare un valore da un elenco a discesa per un parametro, che determina i valori disponibili nell'elenco a discesa per un altro parametro. Tali parametri sono definiti di propagazione. I parametri di propagazione consentono di filtrare successivamente i valori di parametro da migliaia di valori a un numero gestibile.  
   
-     Per altre informazioni, vedere [aggiungere i parametri di propagazione a un Report &#40;Generatore Report e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
+     Per altre informazioni, vedere [aggiunta di parametri di propagazione a un Report &#40;Generatore Report e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
   
 -   Eseguire il report senza dovere selezionare prima un valore di parametro poiché per il parametro è stato creato un valore predefinito.  
   
@@ -136,23 +136,23 @@ ms.locfileid: "36066717"
 |--------------|-----------------|  
 |nome|Digitare un nome con distinzione tra maiuscole e minuscole per il parametro. Il nome deve iniziare con una lettera e contenere lettere, numeri e un carattere di sottolineatura (_). Il nome non può contenere spazi. Per i parametri generati automaticamente, il nome corrisponde al parametro nella query del set di dati. Per impostazione predefinita, i parametri creati manualmente sono simili a ParametroReport1.|  
 |Messaggio di richiesta|Il testo che viene visualizzato accanto al parametro nella barra degli strumenti del visualizzatore di report.|  
-|Tipo di dati|Quando sono definiti valori disponibili per un parametro, l'utente seleziona i valori da un elenco a discesa, anche quando il tipo di dati è `DateTime`. Un parametro di report deve corrispondere a uno dei seguenti tipi di dati:<br /><br /> `Boolean`(Indici per tabelle con ottimizzazione per la memoria). L'utente seleziona True o False mediante un pulsante di opzione.<br /><br /> `DateTime`(Indici per tabelle con ottimizzazione per la memoria). L'utente seleziona una data da un controllo calendario.<br /><br /> **Integer**. L'utente digita valori in una casella di testo.<br /><br /> **Float**. L'utente digita valori in una casella di testo.<br /><br /> `Text`(Indici per tabelle con ottimizzazione per la memoria). L'utente digita valori in una casella di testo.<br /><br /> Per ulteriori informazioni sui tipi di dati di report, vedere [tipi di dati RDL](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
+|Tipo di dati|Quando sono definiti valori disponibili per un parametro, l'utente seleziona i valori da un elenco a discesa, anche quando il tipo di dati è `DateTime`. Un parametro di report deve corrispondere a uno dei seguenti tipi di dati:<br /><br /> `Boolean`(Indici per tabelle con ottimizzazione per la memoria). L'utente seleziona True o False mediante un pulsante di opzione.<br /><br /> `DateTime`(Indici per tabelle con ottimizzazione per la memoria). L'utente seleziona una data da un controllo calendario.<br /><br /> **Integer**. L'utente digita valori in una casella di testo.<br /><br /> **Float**. L'utente digita valori in una casella di testo.<br /><br /> `Text`(Indici per tabelle con ottimizzazione per la memoria). L'utente digita valori in una casella di testo.<br /><br /> Per altre informazioni sui tipi di dati di report, vedere [tipi di dati RDL](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
 |Consenti nessun valore|Selezionare questa opzione se il valore del parametro può corrispondere a una stringa vuota o a un valore vuoto.<br /><br /> Se si specificano valori validi per un parametro e si desidera che uno di essi sia un valore vuoto, è necessario includere tale valore come uno dei valori specificati. La selezione di questa opzione non include automaticamente un valore vuoto tra i valori disponibili.|  
 |Consenti valore Null|Selezionare questa opzione se il valore del parametro può essere un valore Null.<br /><br /> Se si specificano valori validi per un parametro e si desidera che uno dei valori sia Null, è necessario includere tale valore come uno dei valori specificati. La selezione di questa opzione non include automaticamente un valore Null tra i valori disponibili.|  
 |Consenti più valori|Fornire i valori disponibili per creare un elenco a discesa dal quale gli utenti possono scegliere. Si tratta di un metodo efficace per assicurarsi che nella query del set di dati vengano inviati solo valori validi.<br /><br /> Selezionare questa opzione se il valore per il parametro può essere costituito da più valori visualizzati in un elenco a discesa. I valori Null non sono consentiti. Se questa opzione è selezionata, verranno aggiunte caselle di controllo all'elenco di valori disponibili nell'elenco a discesa dei parametri. Nella parte superiore dell'elenco è inclusa una casella di controllo **Seleziona tutto**. Gli utenti possono selezionare i valori desiderati.<br /><br /> Se i dati che forniscono i valori cambiano rapidamente, l'utente potrebbe non visualizzare l'elenco più recente.|  
 |Visibile|Selezionare questa opzione per visualizzare il parametro nella parte superiore del report durante l'esecuzione. Questa opzione consente agli utenti di selezionare i valori del parametro in fase di esecuzione.|  
 |Hidden|Selezionare questa opzione per nascondere il parametro nel report pubblicato. I valori dei parametri di report possono comunque essere impostati su un URL del report, nella definizione di una sottoscrizione oppure nel server di report usando Gestione report.|  
 |Interno|Selezionare questa opzione per nascondere il parametro di report. Nel report pubblicato, il parametro di report potrà essere visualizzato solo nella relativa definizione.|  
-|Valori disponibili|Se sono stati specificati valori disponibili per un parametro, tali valori vengono sempre visualizzati sotto forma di elenco a discesa. Ad esempio, se si forniscono valori disponibili per un `DateTime` viene visualizzato un elenco di riepilogo a discesa per le date di parametro, nel riquadro dei parametri invece di un controllo di calendario. Per assicurarsi che un elenco di valori sia coerente fra report e sottoreport, è possibile impostare un'opzione sull'origine dati per usare una sola transazione per tutte le query nei set di dati associati a un'origine dati.<br /><br /> **\*\* Nota sulla sicurezza \* \***  In qualsiasi report che includa un parametro di tipo di dati `Text`, assicurarsi di utilizzare un elenco di valori disponibili (noto anche come elenco di valori validi) e verificare che ogni utente che esegue il report disponga solo di autorizzazioni necessarie per visualizzare i dati nel report. Per altre informazioni, vedere [Security &#40;Report Builder&#41;](../report-builder/security-report-builder.md).|  
+|Valori disponibili|Se sono stati specificati valori disponibili per un parametro, tali valori vengono sempre visualizzati sotto forma di elenco a discesa. Ad esempio, se si forniscono valori disponibili per un `DateTime` viene visualizzato un elenco di riepilogo a discesa per le date di parametro, nel riquadro del parametro anziché un controllo calendario. Per assicurarsi che un elenco di valori sia coerente fra report e sottoreport, è possibile impostare un'opzione sull'origine dati per usare una sola transazione per tutte le query nei set di dati associati a un'origine dati.<br /><br /> **\*\* Nota sulla sicurezza \* \***  In qualsiasi report che includa un parametro di tipo di dati `Text`, assicurarsi di usare un elenco di valori disponibili (noto anche come elenco di valori validi) e assicurarsi che ogni utente che esegue il report disponga solo di autorizzazioni necessarie per visualizzare i dati nel report. Per altre informazioni, vedere [Security &#40;Report Builder&#41;](../report-builder/security-report-builder.md).|  
 |Valori predefiniti|Impostare i valori predefiniti da una query o da un elenco statico.<br /><br /> Il report viene eseguito automaticamente a prima vista quando ogni parametro ha un valore predefinito.|  
-|Advanced|Impostare l'attributo di definizione del report `UsedInQuery`, un valore che indica se questo parametro influisce direttamente o indirettamente sui dati di un report.<br /><br /> **Determina automaticamente quando eseguire l'aggiornamento**<br /> Scegliere questa opzione se si desidera che l'impostazione per questo valore venga determinata dal componente Elaborazione report. Questo valore è `True` se il componente Elaborazione report rileva una query del set di dati con un riferimento diretto o indiretto a questo parametro oppure se il report contiene sottoreport.<br /><br /> **Aggiorna sempre**<br /> Scegliere questa opzione quando il parametro di report viene usato direttamente o indirettamente in una query del set di dati o in un'espressione del parametro. Questa opzione determina l'impostazione di `UsedInQuery` su True.<br /><br /> **Non aggiornare mai**<br /> Scegliere questa opzione quando il parametro di report non viene usato direttamente o indirettamente in una query del set di dati o in un'espressione del parametro. Questa opzione imposta `UsedInQuery` su False.<br /><br /> **\*\* Attenzione \*\*** Usare **Non aggiornare mai** con cautela. Nel server di report, `UsedInQuery` viene utilizzato per consentire il controllo delle opzioni della cache per i dati del report per i report visualizzabili e opzioni di parametro per i report snapshot. L'impostazione non corretta dell'opzione **Non aggiornare mai** potrebbe determinare la memorizzazione nella cache di report o dati del report non corretti o la presenza di dati non coerenti in un report snapshot. Per altre informazioni, vedere [Report Definition Language &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md).|  
+|Advanced|Impostare l'attributo di definizione del report `UsedInQuery`, un valore che indica se questo parametro influisce direttamente o indirettamente sui dati di un report.<br /><br /> **Determina automaticamente quando eseguire l'aggiornamento**<br /> Scegliere questa opzione se si desidera che l'impostazione per questo valore venga determinata dal componente Elaborazione report. Questo valore è `True` se il componente Elaborazione report rileva una query del set di dati con un riferimento diretto o indiretto a questo parametro oppure se il report contiene sottoreport.<br /><br /> **Aggiorna sempre**<br /> Scegliere questa opzione quando il parametro di report viene usato direttamente o indirettamente in una query del set di dati o in un'espressione del parametro. Questa opzione determina l'impostazione di `UsedInQuery` su True.<br /><br /> **Non aggiornare mai**<br /> Scegliere questa opzione quando il parametro di report non viene usato direttamente o indirettamente in una query del set di dati o in un'espressione del parametro. Questa opzione imposta `UsedInQuery` su False.<br /><br /> **\*\* Attenzione \*\*** Usare **Non aggiornare mai** con cautela. Nel server di report, `UsedInQuery` viene usato per consentire il controllo delle opzioni della cache per i dati del report per i report visualizzabili e opzioni di parametro per i report snapshot. L'impostazione non corretta dell'opzione **Non aggiornare mai** potrebbe determinare la memorizzazione nella cache di report o dati del report non corretti o la presenza di dati non coerenti in un report snapshot. Per altre informazioni, vedere [Report Definition Language &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md).|  
   
 ##  <a name="bkmk_Dataset_Parameters"></a> Query del set di dati  
  Per filtrare i dati nella query del set di dati è possibile includere una clausola di restrizione che limita i dati recuperati specificando i valori da includere o escludere dal set dei risultati.  
   
  Usare Progettazione query per l'origine dati per compilare una query con parametri.  
   
--   Per query [!INCLUDE[tsql](../../includes/tsql-md.md)] , origini dati diverse supportano una sintassi diversa per i parametri. Supportare gli intervalli dei parametri identificati nella query in base alla posizione o al nome. Per altre informazioni, vedere gli argomenti per i tipi di origini dati esterni specifici in [aggiungere dati a un Report &#40;Generatore Report e SSRS&#41;](../report-data/report-datasets-ssrs.md). Nella finestra Progettazione query relazionale, è necessario selezionare l'opzione del parametro di filtro per creare una query con parametri. Per altre informazioni, vedere [Interfaccia utente di Progettazione query relazionale &#40;Generatore report&#41;](../report-data/relational-query-designer-user-interface-report-builder.md).  
+-   Per query [!INCLUDE[tsql](../../includes/tsql-md.md)] , origini dati diverse supportano una sintassi diversa per i parametri. Supportare gli intervalli dei parametri identificati nella query in base alla posizione o al nome. Per altre informazioni, vedere gli argomenti per tipi di origine dati esterna specifica nella [aggiungere dati a un Report &#40;Generatore Report e SSRS&#41;](../report-data/report-datasets-ssrs.md). Nella finestra Progettazione query relazionale, è necessario selezionare l'opzione del parametro di filtro per creare una query con parametri. Per altre informazioni, vedere [Interfaccia utente di Progettazione query relazionale &#40;Generatore report&#41;](../report-data/relational-query-designer-user-interface-report-builder.md).  
   
 -   Per query basate su un'origine di dati multidimensionale quale Microsoft SQL Server Analysis Services, SAP NetWeaver BI o Hyperion Essbase, è possibile specificare se creare un parametro basato su un filtro specificato in Progettazione query. Per altre informazioni, vedere l'argomento relativo alla progettazione query corrispondente all'estensione per i dati in [Finestre di progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md).  
   
@@ -201,7 +201,7 @@ ms.locfileid: "36066717"
  Un'alternativa più sicura all'utilizzo di parametri per i dati personali o relativi ai dipendenti consiste nel selezionare i dati basati su espressioni che includono il campo **UserID** dalla raccolta Users. La raccolta Users consente di ottenere l'identità dell'utente che esegue il report e di usarla per recuperare i dati specifici per l'utente.  
   
 > [!IMPORTANT]  
->  In qualsiasi report che include un parametro di tipo `String`, assicurarsi di utilizzare un elenco di valori disponibili (noto anche come elenco di valori validi) e verificare che ogni utente che esegue il report disponga solo delle autorizzazioni necessarie per visualizzare i dati nel report. Quando si definisce un parametro di tipo `String`, viene visualizzata una casella di testo che può accettare qualsiasi valore. Un elenco di valori disponibili consente di limitare i valori che è possibile immettere. Se un parametro di report è correlato a un parametro del set di dati e non si usa un elenco di valori disponibili, un utente potrebbe digitare nella casella di testo sintassi SQL, esponendo il report e il server a un potenziale attacco intrusivo nel codice SQL. Se l'utente dispone di autorizzazioni sufficienti per eseguire la nuova istruzione SQL, è possibile che nel server si verifichino risultati non desiderati.  
+>  In qualsiasi report che includa un parametro di tipo `String`, assicurarsi di usare un elenco di valori disponibili (noto anche come elenco di valori validi) e assicurarsi che ogni utente che esegue il report disponga solo delle autorizzazioni necessarie per visualizzare i dati nel report. Quando si definisce un parametro di tipo `String`, viene visualizzata una casella di testo che può accettare qualsiasi valore. Un elenco di valori disponibili consente di limitare i valori che è possibile immettere. Se un parametro di report è correlato a un parametro del set di dati e non si usa un elenco di valori disponibili, un utente potrebbe digitare nella casella di testo sintassi SQL, esponendo il report e il server a un potenziale attacco intrusivo nel codice SQL. Se l'utente dispone di autorizzazioni sufficienti per eseguire la nuova istruzione SQL, è possibile che nel server si verifichino risultati non desiderati.  
 >   
 >  Se un parametro di report non è correlato a un parametro del set di dati e i valori del parametro sono inclusi nel report, un utente potrebbe digitare nel valore del parametro un URL o la sintassi di un'espressione ed eseguire il rendering del report in formato Excel o HTML. Se il report viene in seguito visualizzato da un altro utente che fa clic sul contenuto dei parametri di cui è stato eseguito il rendering, è possibile che venga inavvertitamente eseguito il collegamento o lo script dannoso.  
 >   
@@ -210,19 +210,19 @@ ms.locfileid: "36066717"
 ##  <a name="bkmk_How_To_Topics"></a> Procedure  
  In questa sezione vengono elencate le procedure in cui viene mostrato in dettaglio l'utilizzo di parametri e filtri.  
   
--   [Aggiungere, modificare o eliminare un parametro di Report &#40;SSRS e Generatore Report&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+-   [Aggiungere, modificare o eliminare un parametro di Report &#40;Report e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
--   [Aggiungere, modificare o eliminare valori disponibili per un parametro di Report &#40;SSRS e Generatore Report&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)  
+-   [Aggiungere, modificare o eliminare valori disponibili per un parametro di Report &#40;Report e SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)  
   
--   [Aggiungere, modificare o eliminare valori predefiniti per un parametro di Report &#40;SSRS e Generatore Report&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)  
+-   [Aggiungere, modificare o eliminare valori predefiniti per un parametro di Report &#40;Report e SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)  
   
--   [Modificare l'ordine di un parametro di Report &#40;SSRS e Generatore Report&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+-   [Modificare l'ordine di un parametro di Report &#40;Report e SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
--   [Aggiungere parametri di propagazione a un Report &#40;SSRS e Generatore Report&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
+-   [Aggiungere parametri di propagazione a un Report &#40;Report e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
   
 -   [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
--   [Aggiungere un sottoreport e i parametri &#40;SSRS e Generatore Report&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
+-   [Aggiungere un sottoreport e parametri &#40;Report e SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
 -   [Come usare parametri SSRS con stored procedure](http://go.microsoft.com/fwlink/p/?LinkId=396970)  
   
@@ -232,22 +232,22 @@ ms.locfileid: "36066717"
 ##  <a name="bkmk_Related_Topics"></a> Contenuto correlato  
  [Configurazione dei parametri di report SSRS (quiz)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
- [Esercitazione: Aggiungere un parametro al report &#40;Generatore Report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Esercitazione: Aggiungere un parametro al Report &#40;Generatore Report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
- [Errori imprevisti di per InvalidReportParameterException nel servizio di report](http://go.microsoft.com/fwlink/p/?LinkId=393118)  
+ [Errori imprevisti di per InvalidReportParameterException nel servizio di creazione di report](http://go.microsoft.com/fwlink/p/?LinkId=393118)  
   
  [Esempi di report (Generatore report e SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
- [Espressione viene utilizzata nei report di &#40;SSRS e Generatore Report&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
  [Espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
- [Filtrare, raggruppare e ordinare i dati &#40;SSRS e Generatore Report&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrare, raggruppare e ordinare i dati &#40;Report e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  [Sicurezza &#40;Generatore Report&#41;](../report-builder/security-report-builder.md)  
   
- [Ordinamento interattivo, mappe documento e collegamenti &#40;SSRS e Generatore Report&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [Ordinamento interattivo, mappe documento e collegamenti &#40;Report e SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
- [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;SSRS e Generatore Report&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;Report e SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

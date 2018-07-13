@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], about
 - change data capture [SQL Server]
 - 22832 (Database Engine error)
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 656a66a9c0567c7d65a66983a2f459ee802ef523
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 279e47c38c5339f74545cd0b13a175a4a9a604b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170253"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Informazioni su Change Data Capture (SQL Server)
   Change Data Capture consente di registrare le attività di inserimento, aggiornamento ed eliminazione applicate a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , rendendo disponibili i dettagli delle modifiche in un formato relazionale facilmente utilizzabile. Le informazioni sulla colonna e i metadati necessari per applicare le modifiche a un ambiente di destinazione vengono acquisiti per le righe modificate e archiviati in tabelle delle modifiche che riflettono la struttura della colonna delle tabelle di origine con rilevamento. Per consentire ai consumer di accedere in modo sistematico ai dati delle modifiche, sono disponibili funzioni con valori di tabella.  
@@ -33,14 +33,14 @@ ms.locfileid: "36065074"
 ## <a name="change-data-capture-data-flow"></a>Flusso di dati di Change Data Capture  
  Nella figura seguente viene illustrato il flusso di dati principale per Change Data Capture.  
   
- ![Modificare il flusso di dati di data capture](../../database-engine/media/cdcdataflow.gif "per Change data capture flusso di dati")  
+ ![Modificare il flusso di dati di data capture](../../database-engine/media/cdcdataflow.gif "flusso di dati di Change data capture")  
   
  L'origine dei dati delle modifiche per la funzionalità Change Data Capture è data dal log delle transazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Man mano che alle tabelle di origine con rilevamento vengono applicati inserimenti, aggiornamenti ed eliminazioni, le voci che descrivono tali modifiche vengono aggiunte al log. Il log viene utilizzato come input per il processo di acquisizione Il log viene letto e le informazioni relative alle modifiche vengono aggiunte alla tabella delle modifiche associata alla tabella con rilevamento. Per enumerare le modifiche visualizzate nelle tabelle delle modifiche in un intervallo specificato, sono disponibili diverse funzioni che restituiscono le informazioni in un set di risultati filtrato. Tale set di risultati viene utilizzato in genere da un processo dell'applicazione per aggiornare una rappresentazione dell'origine in alcuni ambienti esterni.  
   
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>Informazioni su Change Data Capture e l'istanza di acquisizione  
  Affinché sia possibile rilevare le modifiche apportate a qualsiasi tabella singola di un database, è necessario che Change Data Capture venga abilitato in modo esplicito per il database. Per eseguire questa operazione, usare la stored procedure [sys.sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql). Quando il database è abilitato, le tabelle di origine possono essere identificate come tabelle con rilevamento usando la stored procedure [sys.sp_cdc_enable_table](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql). Quando la funzionalità Change Data Capture viene abilitata per una tabella, per supportare la distribuzione dei dati delle modifiche nella tabella di origine viene creata un'istanza di acquisizione associata costituita da una tabella delle modifiche e da una o due funzioni della query. I metadati che descrivono i dettagli di configurazione dell'istanza di acquisizione vengono mantenuti nelle tabelle di metadati di change data capture `cdc.change_tables`, `cdc.index_columns`, e `cdc.captured_columns`. È possibile recuperare queste informazioni usando la stored procedure [sys.sp_cdc_help_change_data_capture](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql).  
   
- Tutti gli oggetti associati a un'istanza di acquisizione vengono creati nello schema relativo a Change Data Capture del database abilitato. Il nome dell'istanza di acquisizione deve essere un nome di oggetto valido e univoco in tutte le istanze di acquisizione del database. Per impostazione predefinita, il nome è \<*nome schema*_*nome tabella*> della tabella di origine. Tabella delle modifiche associata viene denominato aggiungendo `_CT` al nome dell'istanza di acquisizione. La funzione che viene utilizzata per eseguire una query per tutte le modifiche è denominata anteponendo `fn_cdc_get_all_changes_` al nome dell'istanza di acquisizione. Se l'istanza di acquisizione è configurata per supportare `net changes`, il `net_changes` query funzione viene anche creata e anteponendo **fn_cdc_get_net_changes\_**  al nome dell'istanza di acquisizione.  
+ Tutti gli oggetti associati a un'istanza di acquisizione vengono creati nello schema relativo a Change Data Capture del database abilitato. Il nome dell'istanza di acquisizione deve essere un nome di oggetto valido e univoco in tutte le istanze di acquisizione del database. Per impostazione predefinita, il nome è \<*nome schema*_*nome tabella*> della tabella di origine. Tabella delle modifiche associata viene denominato aggiungendo `_CT` al nome dell'istanza di acquisizione. La funzione che viene usata per eseguire una query per tutte le modifiche è denominata anteponendo `fn_cdc_get_all_changes_` al nome dell'istanza di acquisizione. Se l'istanza di acquisizione è configurata per supportare `net changes`, il `net_changes` query funzione viene anche creata e denominata anteponendo **fn_cdc_get_net_changes\_**  al nome dell'istanza di acquisizione.  
   
 ## <a name="change-table"></a>Tabella delle modifiche  
  Le prime cinque colonne di una tabella delle modifiche di Change Data Capture sono costituite da metadati che forniscono informazioni aggiuntive attinenti alla modifica registrata. Le colonne rimanenti rispecchiano le colonne acquisite identificate dalla tabella di origine nel nome e, generalmente, nel tipo. Tali colonne contengono i dati delle colonne acquisite raccolti dalla tabella di origine.  
@@ -54,7 +54,7 @@ ms.locfileid: "36065074"
   
  Se non vengono eliminati in modo periodico e sistematico, i dati inseriti nelle tabelle delle modifiche aumenteranno notevolmente e non sarà più possibile gestirli. Il processo di pulizia di Change Data Capture è responsabile dell'applicazione dei criteri di pulizia basati sulla memorizzazione. Tale processo sposta innanzitutto l'endpoint inferiore dell'intervallo di validità in modo da soddisfare la restrizione relative al tempo e successivamente rimuove le voci della tabella delle modifiche scadute. Per impostazione predefinita, i dati vengono mantenuti per tre giorni.  
   
- Nella parte superiore, come l'acquisizione di processo viene eseguito il commit di ogni nuovo batch di dati delle modifiche, vengono aggiunte nuove voci a `cdc.lsn_time_mapping` per ogni transazione cui è associate voci nella tabella di modifiche. Nella tabella di mapping vengono mantenuti sia un numero di sequenza del file di log (LSN) del commit che l'ora in cui è stato eseguito il commit della transazione (colonne start_lsn e tran_end_time, rispettivamente). Il valore LSN massimo che è presente in `cdc.lsn_time_mapping` rappresenta il limite superiore della finestra di validità del database. L'ora corrispondente in cui viene eseguito il commit viene utilizzata come base per il calcolo del nuovo limite inferiore da parte del criterio di pulizia basato sulla memorizzazione.  
+ Nella parte superiore, come l'acquisizione di processo esegue il commit di ogni nuovo batch di dati delle modifiche, vengono aggiunte nuove voci alla `cdc.lsn_time_mapping` per ogni transazione cui è associate voci nella tabella di modifiche. Nella tabella di mapping vengono mantenuti sia un numero di sequenza del file di log (LSN) del commit che l'ora in cui è stato eseguito il commit della transazione (colonne start_lsn e tran_end_time, rispettivamente). Il valore LSN massimo presente in `cdc.lsn_time_mapping` rappresenta il livello più alto della finestra di validità del database. L'ora corrispondente in cui viene eseguito il commit viene utilizzata come base per il calcolo del nuovo limite inferiore da parte del criterio di pulizia basato sulla memorizzazione.  
   
  Poiché il processo di acquisizione estrae dati delle modifiche dal log delle transazioni, è presente una latenza predefinita tra il momento in cui viene eseguito il commit di una modifica in una tabella di origine e quello in cui la modifica viene visualizzata nella tabella delle modifiche associate. Mentre tale latenza è in genere bassa, è tuttavia importante tenere presente che i dati delle modifiche non sono disponibili fino a quando il processo di acquisizione non ha elaborato le voci di log correlate.  
   

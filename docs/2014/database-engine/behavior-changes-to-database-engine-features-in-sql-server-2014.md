@@ -1,5 +1,5 @@
 ---
-title: Modifiche del comportamento al Database del motore Features in SQL Server 2014 | Documenti Microsoft
+title: Funzionalità in SQL Server 2014 del motore di differenze di funzionamento di Database | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - behavior changes [SQL Server]
 - Database Engine [SQL Server], what's new
 - Transact-SQL behavior changes
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 caps.latest.revision: 134
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b91a84ac2973ee5569ff9a9f4b3fa54737492068
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d83d502ec6b384a7c3e6a5f4ee2f4e7787ead4da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193961"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Differenze di funzionamento delle funzionalità del Motore di database in SQL Server 2014
   In questo argomento vengono descritte le modifiche di comportamento introdotte nel [!INCLUDE[ssDE](../includes/ssde-md.md)]. Queste modifiche influiscono sulle modalità di utilizzo o di interazione delle funzionalità in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -36,10 +36,10 @@ ms.locfileid: "36067036"
 ### <a name="metadata-discovery"></a>Individuazione dei metadati  
  Miglioramenti nel [!INCLUDE[ssDE](../includes/ssde-md.md)] partire [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Consenti SQLDescribeCol ottenere descrizioni più accurate dei risultati previsti rispetto a quelli restituiti da SQLDescribeCol nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [individuazione dei metadati](../relational-databases/native-client/features/metadata-discovery.md).  
   
- The [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) option for determining the format of a response without actually running the query is replaced with [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), and [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
+ Il [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) opzione per la determinazione del formato di una risposta senza eseguire effettivamente la query viene sostituita con [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [DM exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), e [vista exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>Modifiche al comportamento di script di un'attività di SQL Server Agent  
- In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] se si crea un nuovo processo copiando lo script da un processo esistente, il nuovo potrebbe inavvertitamente influire su quello esistente. Per creare un nuovo processo utilizzando lo script da un processo esistente, eliminare manualmente il parametro *@schedule_uid* che corrisponde in genere l'ultimo parametro della sezione tramite cui viene creata la pianificazione di processo del processo esistente. Verrà creata una nuova pianificazione indipendente per il nuovo processo senza influire sui processi esistenti.  
+ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] se si crea un nuovo processo copiando lo script da un processo esistente, il nuovo potrebbe inavvertitamente influire su quello esistente. Per creare un nuovo processo utilizzando lo script di un processo esistente, eliminare manualmente il parametro *@schedule_uid* che in genere è l'ultimo parametro della sezione tramite cui viene creata la pianificazione del processo in quello esistente. Verrà creata una nuova pianificazione indipendente per il nuovo processo senza influire sui processi esistenti.  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>Elaborazione delle costanti in fase di compilazione per funzioni e metodi CLR definiti dall'utente  
  In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] è ora possibile eseguire l'elaborazione delle costanti in fase di compilazione per i seguenti oggetti CLR definiti dall'utente:  
@@ -78,7 +78,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  Per determinare se un oggetto spaziale è vuoto, chiamare il [STIsEmpty &#40;tipo di dati geometry&#41; ](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type) metodo.  
   
 ### <a name="log-function-has-new-optional-parameter"></a>Nuovo parametro facoltativo della funzione LOG  
- Il `LOG` funzione include ora un parametro facoltativo *base* parametro. Per altre informazioni, vedere [LOG &#40;Transact-SQL&#41;](/sql/t-sql/functions/log-transact-sql).  
+ Il `LOG` funzione include ora facoltativa *base* parametro. Per altre informazioni, vedere [LOG &#40;Transact-SQL&#41;](/sql/t-sql/functions/log-transact-sql).  
   
 ### <a name="statistics-computation-during-partitioned-index-operations-has-changed"></a>Modifica del calcolo delle statistiche durante operazioni su indici partizionati  
  In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] le statistiche non vengono create analizzando tutte le righe nella tabella se viene creato o ricompilato un indice partizionato. Query Optimizer utilizza invece l'algoritmo di campionamento predefinito per generare statistiche. Dopo avere aggiornato un database con gli indici partizionati, è possibile notare una differenza nei dati dell'istogramma relativamente a tali indici. Tale cambiamento potrebbe non influire sulle prestazioni di query. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, utilizzare CREATE STATISTICS o UPDATE STATISTICS con la clausola FULLSCAN.  
@@ -105,7 +105,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  Se si utilizza sqlcmd.exe con modalità XML (comando :XML ON) quando si esegue un'istruzione SELECT da T FOR XML …., sono previste modifiche del comportamento.  
   
 ### <a name="dbcc-checkident-revised-message"></a>Revisione del messaggio restituito da DBCC CHECKIDENT  
- In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], il messaggio restituito dal comando DBCC CHECKIDENT è cambiato solo quando viene utilizzato con RESEED *new_reseed_value* per modificare il valore identity corrente. Il nuovo messaggio è "controllo delle informazioni identity: valore identity corrente '\<valore identity corrente >'. Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema".  
+ Nelle [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], il messaggio restituito dal comando DBCC CHECKIDENT è cambiato solo quando viene utilizzato con RESEED *new_reseed_value* per modificare il valore identity corrente. Il nuovo messaggio è "controllo delle informazioni identity: valore identity corrente '\<valore identity corrente >'. Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema".  
   
  Nelle versioni precedenti, il messaggio è "controllo delle informazioni identity: valore identity corrente '\<valore identity corrente >', valore della colonna corrente '\<valore della colonna corrente >'. Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema". Il messaggio è invariato quando DBCC CHECKIDENT viene specificato con NORESEED, senza un secondo parametro o senza il valore reseed. Per altre informazioni, vedere [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   
@@ -132,7 +132,7 @@ SELECT COUNT(1) WHERE @test.exist('/dogs') IS NULL; -- 1 expected, 1 returned
 ## <a name="see-also"></a>Vedere anche  
  [Modifiche di rilievo apportate alle funzionalità del motore di Database in SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)   
  [Funzionalità del motore di Database deprecate in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
- [Funzionalità del motore di Database non più usate in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Funzionalità del motore di Database non più utilizzate in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   
   

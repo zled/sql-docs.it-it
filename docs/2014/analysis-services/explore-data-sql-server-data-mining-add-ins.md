@@ -1,5 +1,5 @@
 ---
-title: Esplorare i dati (SQL Server Data Mining Add-ins) | Documenti Microsoft
+title: Esplorare i dati (SQL Server Data Mining Add-ins) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data preparation
 - histogram [data mining]
 - data visualization
 ms.assetid: 714845a9-4c27-461a-9ba3-149e1e818386
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c648fba4cf47f117eb5dd04b76b5d7f0cb4f17c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 813da97a8128464ef105d27780f459060867f11c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177028"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>Esplorazione dati (componenti aggiuntivi Data mining di SQL Server)
-  ![Creazione guidata dati di Esplora](media/dmc-explore.gif "procedura guidata esplorazione dati")  
+  ![Explore Data wizard](media/dmc-explore.gif "procedura guidata esplorazione dati")  
   
  Il **Esplora dati** procedura guidata consente di conoscere il tipo e la quantità di dati della tabella dati. La procedura guidata consente di creare un grafico della distribuzione e dei valori delle colonne selezionate, una alla volta. È quindi possibile provare a modificare il modo in cui i dati vengono raggruppati o copiare il grafico del contenuto in una cartella di lavoro di Excel per esaminarlo.  
   
@@ -38,17 +38,17 @@ ms.locfileid: "36066610"
   
  Quando tramite la procedura guidata vengono trovati gruppi nei dati, si utilizza la distribuzione effettiva dei valori dei dati. Pertanto, il grafico a barre non visualizza i valori numerici in base a indicatori numerici tipici dell'asse costituiti da numeri interi, ad esempio 10 o 100. Gli intervalli visualizzati nel grafico a barre possono invece essere simili al seguente: 43521-55603 (per la colonna Income).  
   
- Se si desidera raggruppare i dati in altri intervalli, è necessario eseguire questa operazione in Excel prima di analizzare i dati. In alternativa, è possibile modificare le etichette dati utilizzando il [Modifica etichette](relabel-sql-server-data-mining-add-ins.md) procedura guidata.  
+ Se si desidera raggruppare i dati in altri intervalli, è necessario eseguire questa operazione in Excel prima di analizzare i dati. In alternativa, è possibile modificare le etichette dei dati usando il [Modifica etichette](relabel-sql-server-data-mining-add-ins.md) procedura guidata.  
   
 ## <a name="using-the-explore-data-wizard"></a>Utilizzo della procedura guidata Esplorazione dati  
   
 1.  Nel **Data Mining** sulla barra multifunzione, fare clic su **Esplora dati**.  
   
-2.  Nel **selezionare l'origine** finestra di dialogo, selezionare la tabella o l'intervallo di celle che contiene i dati.  
+2.  Nel **selezionare l'origine** finestra di dialogo, selezionare la tabella o un intervallo di celle contenente i dati.  
   
 3.  Nel **Seleziona colonna** finestra di dialogo scegliere la colonna da analizzare dai dati di esempio visualizzati nel riquadro.  
   
-4.  Nel **Esplora dati** finestra di dialogo, scegliere i tipi di grafico per visualizzare la distribuzione dei dati.  
+4.  Nel **Esplora dati** finestra di dialogo scegliere i tipi di grafico per visualizzare la distribuzione dei dati.  
   
 5.  È possibile aggiungere nuove colonne ai dati, cambiare il modo in cui i dati sono segmentati o copiare il grafico in Excel.  
   
@@ -56,6 +56,6 @@ ms.locfileid: "36066610"
  Usare la **Esplora dati** procedura guidata, i dati devono essere in una tabella di dati di Excel.   
   
 ## <a name="see-also"></a>Vedere anche  
- [Elenco di controllo della preparazione per il Data Mining](checklist-of-preparation-for-data-mining.md)  
+ [Elenco di controllo per la preparazione di data mining](checklist-of-preparation-for-data-mining.md)  
   
   

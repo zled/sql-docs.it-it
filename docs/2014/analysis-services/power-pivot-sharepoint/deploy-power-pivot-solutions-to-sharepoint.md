@@ -1,5 +1,5 @@
 ---
-title: Distribuire soluzioni PowerPivot in SharePoint | Documenti Microsoft
+title: Distribuire soluzioni PowerPivot in SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdbae4a2f54d6f3f2c12562a70eb5f1076046947
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce0863ef023f96580eb809b6562cfc54b0de5b60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243661"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Distribuire soluzioni PowerPivot in SharePoint
   Utilizzare le seguenti istruzioni per distribuire manualmente due pacchetti di soluzioni che consentono di aggiungere funzionalità di PowerPivot a un ambiente SharePoint Server 2010. La distribuzione delle soluzioni è un passaggio obbligatorio per la configurazione di PowerPivot per SharePoint in un server SharePoint 2010. Per visualizzare l'elenco completo dei passaggi necessari, vedere [amministrazione Server PowerPivot e la configurazione in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
- In alternativa, per distribuire le soluzioni è possibile utilizzare lo strumento di configurazione PowerPivot. L'utilizzo dello strumento di configurazione è più facile e più efficiente per installazione di un unico server, ma è possibile utilizzare Amministrazione centrale e PowerShell se si preferisce utilizzare uno strumento familiare o se si configurano più funzionalità contemporaneamente. Per ulteriori informazioni sull'uso dello strumento di configurazione, vedere [strumenti di configurazione PowerPivot](power-pivot-configuration-tools.md).  
+ In alternativa, per distribuire le soluzioni è possibile utilizzare lo strumento di configurazione PowerPivot. L'utilizzo dello strumento di configurazione è più facile e più efficiente per installazione di un unico server, ma è possibile utilizzare Amministrazione centrale e PowerShell se si preferisce utilizzare uno strumento familiare o se si configurano più funzionalità contemporaneamente. Per altre informazioni sull'uso dello strumento di configurazione, vedere [strumenti di configurazione PowerPivot](power-pivot-configuration-tools.md).  
   
  Prima della distribuzione delle soluzioni è necessario installare PowerPivot per SharePoint tramite il supporto di installazione di SQL Server 2012. I pacchetti di soluzioni che si desidera distribuire verranno installati dal programma di installazione di SQL Server.  
   
@@ -43,20 +43,20 @@ ms.locfileid: "36064327"
  [Informazioni sulle soluzioni PowerPivot](#intro)  
   
 ##  <a name="bkmk_classic"></a> Prerequisito: verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica  
- PowerPivot per SharePoint è supportato solo per le applicazioni Web che utilizzano l'autenticazione in modalità classica di Windows. Per controllare se l'applicazione utilizza la modalità classica, eseguire il seguente cmdlet di PowerShell dal **SharePoint 2010 Management Shell**, sostituendo `http://<top-level site name>` con il nome del sito di SharePoint:  
+ PowerPivot per SharePoint è supportato solo per le applicazioni Web che utilizzano l'autenticazione in modalità classica di Windows. Per controllare se l'applicazione usa la modalità di distribuzione classica, eseguire il cmdlet di PowerShell seguente dal **Shell di gestione SharePoint 2010**, sostituendo `http://<top-level site name>` con il nome del sito di SharePoint:  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
 ```  
   
- Il valore restituito dovrebbe essere **false**. Se si tratta **true**, non è possibile accedere ai dati PowerPivot con questa applicazione web.  
+ Il valore restituito dovrebbe essere **false**. Se si tratta **true**, è possibile accedere ai dati di PowerPivot con questa applicazione web.  
   
 ##  <a name="bkmk_farm"></a> Passaggio 1: distribuire la soluzione farm  
  In questa sezione viene illustrato come distribuire le soluzioni utilizzando PowerShell, ma è anche possibile utilizzare lo strumento di configurazione PowerPivot per completare questa attività. Per altre informazioni, vedere [Configura o Ripristina PowerPivot per SharePoint 2010 &#40;strumento di configurazione PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  È necessario eseguire questa attività una sola volta dopo l'installazione di PowerPivot per SharePoint.  
   
-1.  In un server che dispone di un'installazione di PowerPivot per SharePoint, aprire una Shell di gestione di SharePoint 2010 tramite il **Esegui come amministratore** opzione.  
+1.  In un server che dispone di un'installazione di PowerPivot per SharePoint, aprire una Shell di gestione SharePoint 2010 tramite il **Esegui come amministratore** opzione.  
   
 2.  Eseguire il seguente cmdlet per aggiungere la soluzione farm.  
   
@@ -108,7 +108,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Fare clic su **Distribuisci soluzione**.  
   
-4.  In **destinazione distribuzione?**, selezionare l'applicazione web di SharePoint per il quale si desidera aggiungere il supporto di funzionalità di PowerPivot.  
+4.  Nelle **destinazione distribuzione?**, selezionare l'applicazione web di SharePoint per il quale si desidera aggiungere il supporto di funzionalità di PowerPivot.  
   
 5.  Fare clic su **OK**.  
   
@@ -123,7 +123,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Fare clic su **Ritira soluzione**.  
   
- Se si verificano problemi di distribuzione server che risalgono alla soluzione farm, è possibile ridistribuirla eseguendo il **correzione** opzione nello strumento di configurazione PowerPivot. Le operazioni di ripristino tramite lo strumento sono preferibili perché richiedono meno passaggi da parte dell'utente. Per altre informazioni, vedere [Configura o Ripristina PowerPivot per SharePoint 2010 &#40;strumento di configurazione PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
+ Se si verificano problemi di distribuzione server che risalgono alla soluzione farm, è possibile ridistribuirla eseguendo il **Repair** opzione nello strumento di configurazione PowerPivot. Le operazioni di ripristino tramite lo strumento sono preferibili perché richiedono meno passaggi da parte dell'utente. Per altre informazioni, vedere [Configura o Ripristina PowerPivot per SharePoint 2010 &#40;strumento di configurazione PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Se si desidera ridistribuire ancora tutte le soluzioni, assicurarsi di effettuare le operazioni in questo ordine:  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database
 - database_uncontained_usage event
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 622a67f232bb24af9efe9c621e86f1415866dc6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8c584cbb736a494ab071dbc570cfcc67bd2e5e32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223671"
 ---
 # <a name="contained-databases"></a>Database indipendenti
   Un*database indipendente* è un database isolato dagli altri database e dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre all'utente quattro modalità per isolare il database dall'istanza.  
@@ -41,11 +41,11 @@ ms.locfileid: "36065859"
   
  In questo argomento sono contenute le sezioni seguenti.  
   
--   [Concetti di Database parzialmente indipendente](#Concepts)  
+-   [Concetti relativi ai Database parzialmente indipendente](#Concepts)  
   
 -   [Contenimento](#containment)  
   
--   [Vantaggi dell'utilizzo di database parzialmente indipendenti](#benefits)  
+-   [Vantaggi dell'uso di database parzialmente indipendenti](#benefits)  
   
 -   [Limitazioni](#Limitations)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36065859"
 ### <a name="benefit-of-contained-database-users-with-alwayson"></a>Vantaggi degli utenti di database indipendenti con AlwaysOn  
  Riducendo i valori equivalenti all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i database parzialmente indipendenti possono essere utili durante il failover quando si usano [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- La creazione di utenti indipendenti consente all'utente di connettersi direttamente al database indipendente. Si tratta di una funzionalità molto significativa in scenari a disponibilità elevata e di ripristino di emergenza, ad esempio in una soluzione AlwaysOn. Se gli utenti sono indipendenti, in caso di failover può essere possibile connettersi al database secondario senza creare account di accesso sull'istanza che ospita il database secondario. Questo rappresenta un vantaggio immediato. Per altre informazioni, vedere [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) e [prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;] ((... /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+ La creazione di utenti indipendenti consente all'utente di connettersi direttamente al database indipendente. Si tratta di una funzionalità molto significativa in scenari a disponibilità elevata e di ripristino di emergenza, ad esempio in una soluzione AlwaysOn. Se gli utenti sono indipendenti, in caso di failover può essere possibile connettersi al database secondario senza creare account di accesso sull'istanza che ospita il database secondario. Questo rappresenta un vantaggio immediato. Per altre informazioni, vedere [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) e [prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;] ((.. /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="initial-database-development"></a>Sviluppo iniziale di database  
  Poiché è possibile che uno sviluppatore non conosca l'ambiente nel quale verrà distribuita un nuovo database, limitando gli impatti ambientali distribuiti al database sarà possibile ridurre il lavoro e le problematiche per lo sviluppatore. Nel modello non indipendente lo sviluppatore deve quindi considerare i possibili impatti ambientali sul nuovo database e programmare di conseguenza. Tuttavia, usando i database parzialmente indipendenti, gli sviluppatori possono rilevare l'impatto a livello di istanza sul database e le problematiche a livello di istanza che è necessario affrontare.  
@@ -163,7 +163,7 @@ ms.locfileid: "36065859"
  L'evento XEvent viene generato quando viene identificata un'entità non indipendente in fase di esecuzione. Sono incluse le entità che hanno origine nel codice client. Questo evento XEvent verrà generato solo per le entità effettivamente non indipendenti e solo in fase di esecuzione. Pertanto, qualsiasi entità utente non indipendente non eseguita non sarà identificata da questo XEvent.  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Modificare le funzionalità &#40;Database indipendente&#41;](modified-features-contained-database.md)  
+ [Funzionalità modificate &#40;Database indipendente&#41;](modified-features-contained-database.md)  
   
  [Regole di confronto dei database indipendenti](contained-database-collations.md)  
   

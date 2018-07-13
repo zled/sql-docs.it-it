@@ -1,5 +1,5 @@
 ---
-title: Elemento Visibility (ASSL) | Documenti Microsoft
+title: Elemento Visibility (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Visibility element
 ms.assetid: 59372ebf-af52-4d60-bf9b-bb1644ae9865
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a434fe35437c049f5ec16c474695a67cfb102ffd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e4580071cefc21035ba36c645019b4c768e4a1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185198"
 ---
 # <a name="visibility-element-assl"></a>Elemento Visibility (ASSL)
   Definisce la visibilità di un [annotazione](../objects/annotation-element-assl.md) elemento.  
@@ -61,7 +61,7 @@ ms.locfileid: "36067270"
 |Elemento padre|[Annotazione](../objects/annotation-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  

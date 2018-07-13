@@ -25,13 +25,13 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 caps.latest.revision: 80
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6552bc54d8da9475adaa35b86b697c1dbdf3f437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f651eee3c926db0f808a673d7555d02f3fe07d83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184718"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Scrittura di codice e debug dell'attività Script
   Dopo avere configurato l'attività Script in **Editor attività Script**, scrivere il codice personalizzato nell'ambiente di sviluppo corrispondente.  
@@ -54,9 +54,9 @@ ms.locfileid: "36066490"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Elementi e classi del progetto dell'attività Script  
  Per impostazione predefinita, il progetto dell'attività Script visualizzato nella finestra Esplora progetti in VSTA contiene un singolo elemento, `ScriptMain`. L'elemento `ScriptMain` contiene a sua volta una singola classe, anch'essa denominata `ScriptMain`. Gli elementi di codice nella classe variano a seconda del linguaggio di programmazione selezionato per l'attività Script:  
   
--   Quando l'attività Script è configurato per il [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] linguaggio di programmazione il `ScriptMain` classe dispone di una subroutine pubblica, `Main`. La subroutine `ScriptMain.Main` è il metodo chiamato dal runtime quando si esegue l'attività Script.  
+-   Quando l'attività Script è configurato per il [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] linguaggio di programmazione le `ScriptMain` classe include una subroutine pubblica, `Main`. La subroutine `ScriptMain.Main` è il metodo chiamato dal runtime quando si esegue l'attività Script.  
   
-     Per impostazione predefinita, nella subroutine `Main` di un nuovo script è presente solo il codice costituito dalla riga `Dts.TaskResult = ScriptResults.Success`. Questa riga indica al runtime che l'operazione dell'attività è riuscita. Il `Dts.TaskResult` proprietà verrà discusso [restituzione di risultati dall'attività Script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     Per impostazione predefinita, nella subroutine `Main` di un nuovo script è presente solo il codice costituito dalla riga `Dts.TaskResult = ScriptResults.Success`. Questa riga indica al runtime che l'operazione dell'attività è riuscita. Il `Dts.TaskResult` proprietà verrà discusso [risultati restituiti dall'attività Script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
 -   Se l'attività Script è configurata per il linguaggio di programmazione Visual C#, la classe `ScriptMain` include un metodo pubblico `Main`. Il metodo viene chiamato durante l'esecuzione dell'attività Script.  
   
@@ -250,7 +250,7 @@ To open Help, press F1.
   
 -   Intervento del blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661) (Problemi di installazione e configurazione di VSTA per le installazioni SSIS 2008 e R2), in blogs.msdn.com.  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per il download più recenti, articoli, esempi e video [!INCLUDE[msCoName](../../../includes/msconame-md.md)], nonché soluzioni selezionate dalla community, visitare il [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] su MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per il download più recenti, articoli, esempi e i video [!INCLUDE[msCoName](../../../includes/msconame-md.md)], nonché soluzioni selezionate dalla community, visitare il [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] pagina su MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti ad altri assembly nelle soluzioni di scripting](../referencing-other-assemblies-in-scripting-solutions.md)   

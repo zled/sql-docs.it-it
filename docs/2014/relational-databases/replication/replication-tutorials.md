@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
 - walkthroughs [SQL Server replication]
 - replication [SQL Server], tutorials
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 976f1ee9539731da6036990da754dc1f894ced8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8d489965584903f10b613a40a073357c51b1b9aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217361"
 ---
 # <a name="replication-tutorials"></a>Esercitazioni sulla replica
   Replica include esercitazioni che descrivono come configurare ed eseguire topologie di replica in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -31,7 +31,7 @@ ms.locfileid: "36066927"
  Nelle esercitazioni sulla replica il server di pubblicazione è il server che contiene i dati di origine oggetto della replica e il Sottoscrittore è il server di destinazione. Il server di pubblicazione e il Sottoscrittore possono utilizzare la stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma ciò non è un requisito. Per altre informazioni, vedere [Panoramica del modello di pubblicazione della replica](publish/replication-publishing-model-overview.md).  
   
 > [!NOTE]  
->  La maggior parte delle attività illustrate in queste esercitazioni possono essere eseguite a livello di programmazione. Per altre informazioni, vedere [Guida per gli sviluppatori &#40;replica&#41;](concepts/replication-developer-documentation.md).  
+>  La maggior parte delle attività illustrate in queste esercitazioni possono essere eseguite a livello di programmazione. Per altre informazioni, vedere [Guida per sviluppatori di &#40;replica&#41;](concepts/replication-developer-documentation.md).  
   
 ## <a name="replication-tutorials"></a>Esercitazioni sulla replica  
  [Preparazione del server per la replica](tutorial-preparing-the-server-for-replication.md)  

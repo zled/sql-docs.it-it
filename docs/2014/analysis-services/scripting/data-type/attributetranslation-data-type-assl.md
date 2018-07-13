@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati AttributeTranslation (ASSL) | Documenti Microsoft
+title: Tipo di dati AttributeTranslation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeTranslation data type
 ms.assetid: a0e29941-ef08-42ad-ab9c-b2efd7910895
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e7f5fe2157b407cae3909666329537f85a8b7e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05e846e1cdec16388a96f7e0043aa5b0d49235be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267657"
 ---
 # <a name="attributetranslation-data-type-assl"></a>Tipo di dati AttributeTranslation (ASSL)
   Definisce un tipo di dati derivato che rappresenta una traduzione associata a un [attributo](../objects/attribute-element-assl.md) elemento  
@@ -50,7 +50,7 @@ ms.locfileid: "36065686"
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipi di dati di base|[Conversione](translation-data-type-assl.md)|  
+|Tipi di dati di base|[Traduzione](translation-data-type-assl.md)|  
 |Tipi di dati derivati|None|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  
@@ -59,9 +59,9 @@ ms.locfileid: "36065686"
 |------------------|-------------|  
 |Elementi padre|None|  
 |Elementi figlio|[CaptionColumn](../objects/column-element-assl.md), [MembersWithDataCaption](../properties/caption-element-assl.md)|  
-|Elementi derivati|Vedere [Translation](../objects/translation-element-assl.md) ([traduzioni](../collections/translations-element-assl.md) insieme [DimensionAttribute](dimensionattribute-data-type-assl.md) oppure [ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md))|  
+|Elementi derivati|Visualizzare [Translation](../objects/translation-element-assl.md) ([traduzioni](../collections/translations-element-assl.md) raccolta di [DimensionAttribute](dimensionattribute-data-type-assl.md) oppure [ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.AttributeTranslation>.  
   
 ## <a name="see-also"></a>Vedere anche  

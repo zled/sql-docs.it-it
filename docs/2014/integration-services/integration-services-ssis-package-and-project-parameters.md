@@ -1,5 +1,5 @@
 ---
-title: In Integration Services (SSIS) parametri | Documenti Microsoft
+title: Parametri (SSIS) di Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d477f12cdce1063f765c9b6be2f39ba1fe30a505
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cd87c7c7b64b9adda2a49bf892004502d951665
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172948"
 ---
 # <a name="integration-services-ssis-parameters"></a>Parametri di Integration Services (SSIS)
   I parametri (SSIS) di[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consentono di assegnare valori alle proprietà incluse nei pacchetti durante la fase di esecuzione. È possibile creare *parametri di progetto* al livello del progetto e *parametri di pacchetto* al livello del pacchetto. I parametri del progetto vengono utilizzati per fornire input esterno ricevuto dal progetto a uno o più pacchetti nel progetto. I parametri del pacchetto consentono di modificare l'esecuzione del pacchetto senza doverlo modificare e ridistribuire.  
   
- In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] è possibile creare, modificare o eliminare i parametri di progetto utilizzando la finestra **Project.params** . Per creare, modificare ed eliminare i parametri di pacchetto, utilizzare la scheda **Parametri** in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per associare un parametro nuovo o esistente a una proprietà di un'attività, utilizzare la finestra di dialogo **Imposta parametri** . Per ulteriori informazioni sull'utilizzo di **Project. params** finestra e il **parametri** scheda, vedere [creare parametri](create-parameters.md). Per ulteriori informazioni sul **imposta parametri** finestra di dialogo, vedere [Parameterize Dialog Box](parameterize-dialog-box.md).  
+ In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] è possibile creare, modificare o eliminare i parametri di progetto utilizzando la finestra **Project.params** . Per creare, modificare ed eliminare i parametri di pacchetto, utilizzare la scheda **Parametri** in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per associare un parametro nuovo o esistente a una proprietà di un'attività, utilizzare la finestra di dialogo **Imposta parametri** . Per altre informazioni sull'uso di **Project. params** finestra e il **parametri** scheda, vedere [Create Parameters](create-parameters.md). Per altre informazioni sul **imposta parametri** finestra di dialogo, vedere [parametrizzare la finestra di dialogo](parameterize-dialog-box.md).  
   
 ## <a name="parameters-and-package-deployment-model"></a>Parametri e modello di distribuzione del pacchetto  
  In generale, se un pacchetto viene distribuito mediante il relativo modello di distribuzione, è necessario utilizzare le configurazioni anziché i parametri.  
@@ -40,7 +40,7 @@ ms.locfileid: "36065621"
   
 -   [Finestra di dialogo Configura](catalog/configure-dialog-box.md)  
   
--   [Eseguire la finestra di dialogo pacchetto](../../2014/integration-services/execute-package-dialog-box.md)  
+-   [Finestra di dialogo Esecuzione pacchetto](../../2014/integration-services/execute-package-dialog-box.md)  
   
 ### <a name="parameter-values"></a>Valori di parametri  
  È possibile assegnare fino a tre tipi diversi di valori a un parametro. Quando viene avviata l'esecuzione di un pacchetto, viene utilizzato un solo valore per il parametro e il parametro viene risolto nel relativo valore letterale finale.  
@@ -101,7 +101,7 @@ ms.locfileid: "36065621"
  Durante la preparazione di un'istanza specifica di esecuzione del pacchetto, il valore 5 viene assegnato al parametro **pkgOptions** . A questo valore viene fatto riferimento come valore di esecuzione perché si applica al parametro solo per quell'istanza specifica dell'esecuzione. All'avvio dell'esecuzione, alla proprietà del pacchetto corrispondente al parametro **pkgOptions** viene assegnato il valore 5.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Creare i parametri](create-parameters.md)  
+ [Crea parametri](create-parameters.md)  
   
  [Impostare i valori dei parametri dopo la distribuzione del progetto](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
 - Integration Services, security
@@ -23,13 +23,13 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f48f1805052debe3d7120fb55cb2777cb3e5c735
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef095dd196b4deacf7fcd6ade6d2d50d3756d6f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167132"
 ---
 # <a name="security-overview-integration-services"></a>Panoramica sulla sicurezza (Integration Services)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] la sicurezza è costituita da diversi livelli che forniscono un ambiente di sicurezza protetto e flessibile. Questi livelli di sicurezza includono l'uso di firme digitali, proprietà dei pacchetti, ruoli di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e autorizzazioni del sistema operativo. La maggior parte di queste caratteristiche di sicurezza rientra nelle categorie di identità e di controllo dell'accesso.  
@@ -98,15 +98,15 @@ ms.locfileid: "36065867"
 ## <a name="related-tasks"></a>Related Tasks  
  Nell'elenco seguente sono contenuti collegamenti ad argomenti che illustrano come eseguire un'attività relativa alla sicurezza.  
   
--   [Creare un ruolo definito dall'utente](../create-a-user-defined-role.md)  
+-   [Creazione di un ruolo definito dall'utente](../create-a-user-defined-role.md)  
   
--   [Assegnare un ruolo lettura e scrittura a un pacchetto](../assign-a-reader-and-writer-role-to-a-package.md)  
+-   [Assegnazione di un ruolo lettura e scrittura a un pacchetto](../assign-a-reader-and-writer-role-to-a-package.md)  
   
--   [Implementare criteri per le firme impostando un valore del Registro di sistema](../implement-a-signing-policy-by-setting-a-registry-value.md)  
+-   [Implementazione di criteri per le firme impostando un valore del Registro di sistema](../implement-a-signing-policy-by-setting-a-registry-value.md)  
   
--   [Firmare un pacchetto usando un certificato digitale](../sign-a-package-by-using-a-digital-certificate.md)  
+-   [Firma di un pacchetto tramite certificato digitale](../sign-a-package-by-using-a-digital-certificate.md)  
   
--   [Impostare o modificare il livello di protezione dei pacchetti](../set-or-change-the-protection-level-of-packages.md)  
+-   [Impostazione o modifica del livello di protezione dei pacchetti](../set-or-change-the-protection-level-of-packages.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
 - jobs [SQL Server Agent], categories
 - categories [SQL Server Agent jobs]
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4ab1a7fdd56bf4586d3009c9c45bb29ecac0497
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a855a78a6c37fa2327a88e0a052adbbc4ce85b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179108"
 ---
 # <a name="create-a-job-category"></a>Creare una categoria di processi
   In questo argomento si descrive come creare una categoria di processi in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects.  
@@ -62,7 +62,7 @@ ms.locfileid: "36067110"
   
 8.  Nella finestra di dialogo **Gestione categorie di processi***nome_server* fare clic su **Aggiorna** per assicurarsi che la nuova categoria di processi sia attiva. Se l'aspetto è quello previsto, chiudere questa finestra di dialogo.  
   
- Per ulteriori informazioni su queste finestre di dialogo, vedere [categorie di processi: Gestione categorie processi](job-categories-manage-job-categories.md) e [proprietà categorie di processi e nuova categoria di processi](job-categories-properties-new-job-category.md).  
+ Per altre informazioni su queste finestre di dialogo, vedere [categorie di processi: Gestione categorie processi](job-categories-manage-job-categories.md) e [nuova categoria di processi e proprietà categorie processi](job-categories-properties-new-job-category.md).  
   
  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36067110"
 ##  <a name="SMO"></a> Utilizzo di SQL Server Management Objects  
  **Per creare una categoria di processi**  
   
- Chiamare il `JobCategory` classe utilizzando un linguaggio di programmazione scelto, ad esempio Visual Basic, Visual c# o PowerShell. Per un esempio di codice, vedere [Pianificazione delle attività amministrative automatiche in SQL Server Agent](sql-server-agent.md).  
+ Chiamare il `JobCategory` classe utilizzando un linguaggio di programmazione desiderato, ad esempio Visual Basic, Visual c# o PowerShell. Per un esempio di codice, vedere [Pianificazione delle attività amministrative automatiche in SQL Server Agent](sql-server-agent.md).  
   
  
   

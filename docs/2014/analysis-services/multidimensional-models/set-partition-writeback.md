@@ -1,5 +1,5 @@
 ---
-title: Impostare tabelle writeback delle partizioni | Documenti Microsoft
+title: Impostare tabelle writeback delle partizioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - write-enabled partitions [Analysis Services]
 - partitions [Analysis Services], writeback
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de2e5bc7b9c4a09d2a5a3df82586cc9fb9f856b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c58dea5dd30f32b9b137903103448ade4678c87b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250941"
 ---
 # <a name="set-partition-writeback"></a>Impostare tabelle writeback delle partizioni
   Se si abilita un gruppo di misure per la scrittura, gli utenti finali possono modificare i dati del cubo durante la relativa esplorazione; tuttavia, le modifiche vengono salvate in una tabella separata denominata tabella writeback, non nei dati del cubo o nei dati di origine. Gli utenti finali che esplorano una partizione abilitata per la scrittura visualizzano il risultato finale di tutte le modifiche nella tabella writeback per la partizione.  
@@ -65,7 +65,7 @@ ms.locfileid: "36064545"
   
 ## <a name="see-also"></a>Vedere anche  
  [Partizioni abilitate per scrittura](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Abilitazione del writeback in un cubo OLAP a livello di cella in Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Abilitazione e protezione dell'immissione di dati con Writeback di Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Abilitazione del writeback su un cubo OLAP a livello di cella in Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Abilitazione e protezione dell'immissione di dati con il Writeback di Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

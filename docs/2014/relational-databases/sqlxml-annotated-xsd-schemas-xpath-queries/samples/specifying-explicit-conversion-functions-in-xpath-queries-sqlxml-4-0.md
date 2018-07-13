@@ -1,5 +1,5 @@
 ---
-title: Specifica le funzioni di conversione esplicita nelle query XPath (SQLXML 4.0) | Documenti Microsoft
+title: Specifica le funzioni di conversione esplicita nelle query XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], explicit conversion functions
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59a2a54b1a3fe7a8136fa2ab0cb56f4cd215c245
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 841a28a156075c6342ea9c678eb938fc3414e643
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179638"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Specifica di funzioni di conversione esplicita in query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato come specificare le funzioni di conversione esplicita nelle query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "36067759"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. Utilizzo della funzione di conversione esplicita number ()  
  La funzione `number()` converte un argomento in un numero.  
   
- Supponendo che il valore di **ContactID** è un valore numerico, la query seguente converte **ContactID** su un numero e lo confronta con il valore 4. La query restituisce quindi tutti  **\<dipendente >** figli del nodo di contesto con il **ContactID** attributo con un valore numerico 4:  
+ Supponendo che il valore di **ContactID** è un valore numerico, la query seguente converte **ContactID** su un numero e lo confronta con il valore 4. La query restituisce quindi tutti  **\<Employee >** figli del nodo di contesto con il **ContactID** attributo che ha un valore numerico 4:  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -51,7 +51,7 @@ ms.locfileid: "36067759"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [schema codice di esempio](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copia il [esempi di codice schema](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello seguente (ExplicitConversionA.xml) e salvarlo nella directory in cui è stato salvato il file SampleSchema1.xml.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36067759"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. Utilizzo della funzione di conversione esplicita string ()  
  La funzione `string()` converte un argomento in una stringa.  
   
- La query seguente converte **ContactID** in una stringa e viene confrontato con la stringa di valore "4". La query restituisce tutti  **\<dipendente >** figli del nodo di contesto con un **ContactID** con un valore stringa "4":  
+ La query seguente converte **ContactID** in una stringa e la confronta con la stringa di valore "4". La query restituisce tutti  **\<Employee >** figli del nodo di contesto con un **ContactID** con un valore stringa "4":  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  
@@ -100,7 +100,7 @@ ms.locfileid: "36067759"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [schema codice di esempio](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copia il [esempi di codice schema](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello seguente (ExplicitConversionB.xml) e salvarlo nella directory in cui è stato salvato il file SampleSchema1.xml.  
   

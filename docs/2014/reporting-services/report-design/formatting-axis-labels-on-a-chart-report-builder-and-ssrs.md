@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10148"
 - sql12.rtp.rptdesigner.calculatedseriesproperties.axeschartareas.f1
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e33900e5dbc81d65d6304e82ba87f56cbcdcc89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 66ea4ea030bc3c80d9155a25737ec1828c97982c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181698"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formattazione delle etichette degli assi in un grafico (Generatore report e SSRS)
   Nei tipi di grafico basati su coordinate (grafico a barre, ad area, a punti, a linee, con intervalli e istogramma) sono inclusi due assi utilizzati per la classificazione e la visualizzazione di relazioni tra dati. A ogni asse verranno applicati tipi diversi di formattazione.  
@@ -119,15 +119,15 @@ ms.locfileid: "36066439"
  Nei tipi di grafico a barre, istogramma e a dispersione vengono automaticamente aggiunti margini laterali alle estremità dell'asse X. Non è possibile modificare le dimensioni del margine. In tutti gli altri tipi di grafico non vengono aggiunti margini laterali. Per altre informazioni, vedere [aggiungere o rimuovere i margini da un grafico &#40;Generatore Report e SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
- [Formattazione delle etichette degli assi come date o valute &#40;SSRS e Generatore Report&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
+ [Formattazione delle etichette degli assi come date o valute &#40;Report e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [Posizionamento di etichette in un grafico &#40;SSRS e Generatore Report&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [Posizionamento di etichette in un grafico &#40;Report e SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
- [Specificare un intervallo dell'asse &#40;SSRS e Generatore Report&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Specificare un intervallo dell'asse &#40;Report e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
- [Aggiunta o rimozione dei margini da un grafico &#40;SSRS e Generatore Report&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Aggiungere o rimuovere i margini da un grafico &#40;Report e SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [Specificare una scala logaritmica &#40;SSRS e Generatore Report&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [Specificare una scala logaritmica &#40;Report e SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   

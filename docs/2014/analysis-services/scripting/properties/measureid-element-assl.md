@@ -1,5 +1,5 @@
 ---
-title: Elemento MeasureID (ASSL) | Documenti Microsoft
+title: Elemento MeasureID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MeasureID element
 ms.assetid: 8457aebc-8fdd-4683-8640-baaf9d89b2a2
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 70b7695644f2aa0da85050bb9db96ac277ede298
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7a1ff1e817ae78307f8da134e88e742295892ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326531"
 ---
 # <a name="measureid-element-assl"></a>Elemento MeasureID (ASSL)
-  Associa un [misure](../objects/measure-element-assl.md) elemento con l'elemento padre.  
+  Associa un [misura](../objects/measure-element-assl.md) elemento con l'elemento padre.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,10 +58,10 @@ ms.locfileid: "36063920"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[AggregationInstanceMeasure](../data-type/aggregationinstancemeasure-data-type-assl.md), [MeasureBinding](../data-type/binding-data-type-assl.md), [PerspectiveMeasure](../data-type/perspectivemeasure-data-type-assl.md)|  
+|Elementi padre|[Elemento AggregationInstanceMeasure](../data-type/aggregationinstancemeasure-data-type-assl.md), [MeasureBinding](../data-type/binding-data-type-assl.md), [PerspectiveMeasure](../data-type/perspectivemeasure-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Gli elementi che corrispondono ai padri di `MeasureID` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.AggregationInstanceMeasure>, <xref:Microsoft.AnalysisServices.MeasureBinding> e <xref:Microsoft.AnalysisServices.PerspectiveMeasure>.  
   
 ## <a name="see-also"></a>Vedere anche  

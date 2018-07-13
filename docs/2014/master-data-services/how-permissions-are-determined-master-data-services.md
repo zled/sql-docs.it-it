@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 49929fedf5b7d1e44a300919f2c9d903efca5bc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cd396e077ba63369d256c39ba104427f595f4df4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324401"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Modalità di determinazione delle autorizzazioni (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]il modo più semplice per configurare la sicurezza consiste nell'assegnare autorizzazioni per oggetti modello a un gruppo di cui l'utente è membro.  
@@ -48,9 +48,9 @@ ms.locfileid: "36066474"
   
 -   Tutti gli oggetti che si trovano allo stesso livello dell'entità vengono negati in modo implicito.  
   
--   A tutti gli oggetti che si trovano a un livello superiore viene fornito l'accesso per la navigazione. Per ulteriori informazioni sull'accesso per la navigazione, vedere [accesso per la navigazione &#40;Master Data Services&#41;](navigational-access-master-data-services.md).  
+-   A tutti gli oggetti che si trovano a un livello superiore viene fornito l'accesso per la navigazione. Per altre informazioni sull'accesso per la navigazione, vedere [accesso per la navigazione &#40;Master Data Services&#41;](navigational-access-master-data-services.md).  
   
- In questo esempio, **readonly** autorizzazione viene assegnata a un'entità e tale autorizzazione viene ereditata dal relativo attributo, ovvero a un livello inferiore nella struttura del modello. Il modello fornisce l'accesso per la navigazione a questa entità e al relativo attributo. All'altra entità del modello non viene assegnata alcuna autorizzazione esplicita e non eredita alcuna autorizzazione, pertanto viene negata in modo implicito.  
+ In questo esempio **Read-only** autorizzazione viene assegnata a un'entità e tale autorizzazione viene ereditata dal relativo attributo che si trova a un livello inferiore della struttura del modello. Il modello fornisce l'accesso per la navigazione a questa entità e al relativo attributo. All'altra entità del modello non viene assegnata alcuna autorizzazione esplicita e non eredita alcuna autorizzazione, pertanto viene negata in modo implicito.  
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36066474"
   
 -   Tutti i nodi che si trovano a livelli superiori a cui non sono assegnate autorizzazioni vengono negati in modo implicito.  
   
- In questo esempio, **readonly** autorizzazioni vengono assegnate a un nodo della gerarchia e tale autorizzazione viene ereditata da un nodo a un livello inferiore della struttura della gerarchia. Alla radice non viene assegnata alcuna autorizzazione, pertanto viene negata in modo implicito. All'altro nodo della struttura della gerarchia non viene assegnata alcuna autorizzazione esplicita e non eredita alcuna autorizzazione, pertanto viene negato in modo implicito.  
+ In questo esempio **Read-only** autorizzazione viene assegnata a un nodo della gerarchia e tale autorizzazione viene ereditata da un nodo a un livello inferiore della struttura della gerarchia. Alla radice non viene assegnata alcuna autorizzazione, pertanto viene negata in modo implicito. All'altro nodo della struttura della gerarchia non viene assegnata alcuna autorizzazione esplicita e non eredita alcuna autorizzazione, pertanto viene negato in modo implicito.  
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36066474"
  In questo caso, la sovrapposizione delle autorizzazioni utente e gruppo deve essere risolta prima del confronto tra autorizzazioni per membri gerarchia e oggetti modello. Per altre informazioni, vedere [Overlapping User and Group Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sovrapposizione autorizzazioni utenti e gruppi &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
+ [Utente autorizzazioni e gruppi sovrapposte &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
  [Autorizzazioni per modelli e membri sovrapposte &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

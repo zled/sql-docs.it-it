@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication [SQL Server replication], about merge replication
 - merge replication [SQL Server replication]
 ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6d3dbfcb8cfa2be632f593bece964c67fadcc47a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7c68c61d5e5f7cdbe0b6da742a488db9b65a7472
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274307"
 ---
 # <a name="merge-replication"></a>Replica di tipo merge
   In genere la replica di tipo merge, come la replica transazionale, inizia con uno snapshot degli oggetti e dei dati del database di pubblicazione. Eventuali modifiche dei dati e dello schema apportate successivamente nel server di pubblicazione e nei Sottoscrittori vengono rilevate tramite trigger. Al momento della connessione alla rete il Sottoscrittore esegue la sincronizzazione con il server di pubblicazione e scambia con esso le righe modificate dopo l'ultima sincronizzazione.  
@@ -43,7 +43,7 @@ ms.locfileid: "36064429"
   
  La replica di tipo merge viene implementata dall'agente snapshot e dall'agente di merge di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se la pubblicazione non è filtrata o utilizza filtri statici, l'agente snapshot crea un singolo snapshot. Se la pubblicazione utilizza filtri con parametri, l'agente snapshot crea uno snapshot per ogni partizione di dati. L'agente di merge applica gli snapshot iniziali ai Sottoscrittori e unisce le modifiche ai dati incrementali apportate nel server di pubblicazione o nei Sottoscrittori dopo la creazione dello snapshot iniziale, quindi rileva e risolve eventuali conflitti in base alle regole configurate.  
   
- Per tener traccia delle modifiche, tramite la replica di tipo merge e la replica transazionale con sottoscrizioni ad aggiornamento in coda deve essere possibile identificare in modo univoco ogni riga di ogni tabella pubblicata. A tale scopo, tramite la replica di tipo merge la colonna `rowguid` viene aggiunta a ogni tabella, a meno che in essa non sia già inclusa una colonna di tipo di dati `uniqueidentifier` con il set di proprietà `ROWGUIDCOL`, in questo caso viene utilizzata la colonna in questione. Se la tabella viene rimossa dalla pubblicazione, il `rowguid` colonna viene rimossa; se per il rilevamento è stata utilizzata una colonna esistente, la colonna non viene eliminata. In un filtro non deve essere inclusa la colonna `rowguidcol` utilizzata dalla replica per identificare le righe. La funzione `newid()` è predefinita per la colonna `rowguid`, in ogni caso i clienti possono fornire un GUID per ogni riga, se necessario. Non specificare tuttavia il valore 00000000-0000-0000-0000-000000000000.  
+ Per tener traccia delle modifiche, tramite la replica di tipo merge e la replica transazionale con sottoscrizioni ad aggiornamento in coda deve essere possibile identificare in modo univoco ogni riga di ogni tabella pubblicata. A tale scopo, tramite la replica di tipo merge la colonna `rowguid` viene aggiunta a ogni tabella, a meno che in essa non sia già inclusa una colonna di tipo di dati `uniqueidentifier` con il set di proprietà `ROWGUIDCOL`, in questo caso viene utilizzata la colonna in questione. Se la tabella viene rimossa dalla pubblicazione, il `rowguid` colonna viene rimossa; se per il rilevamento è stata utilizzata una colonna esistente, la colonna non viene rimosso. In un filtro non deve essere inclusa la colonna `rowguidcol` utilizzata dalla replica per identificare le righe. La funzione `newid()` è predefinita per la colonna `rowguid`, in ogni caso i clienti possono fornire un GUID per ogni riga, se necessario. Non specificare tuttavia il valore 00000000-0000-0000-0000-000000000000.  
   
  Nella figura seguente vengono illustrati i componenti utilizzati nella replica di tipo merge.  
   

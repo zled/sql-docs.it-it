@@ -1,5 +1,5 @@
 ---
-title: Attributo elemento (ASSL) | Documenti Microsoft
+title: Attributo a elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Attribute element
 ms.assetid: 079ec9f8-a314-4e3c-821a-b42c65cc7363
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a9dfd4e3db4b84df6a64e8c0fe6de80bca19ca3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e94fcb4fdffacfad0bbf735bfc2fe3c7b19b798
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171462"
 ---
 # <a name="attribute-element-assl"></a>Elemento Attribute (ASSL)
   Contiene la descrizione di un attributo.  
@@ -68,13 +68,13 @@ ms.locfileid: "36065457"
 |Predecessore o padre|Tipo di dati|  
 |------------------------|---------------|  
 |[AggregationDesignDimension](../data-type/aggregationdesignattribute-data-type-assl.md)|  
-|[AggregationDimension](../data-type/aggregationattribute-data-type-assl.md)|  
+|[Elemento AggregationDimension](../data-type/aggregationattribute-data-type-assl.md)|  
 |[AggregationInstanceCubeDimension](../data-type/aggregationinstanceattribute-data-type-assl.md)|  
 |[CubeDimension](../data-type/cubeattribute-data-type-assl.md)|  
 |[Dimension](../data-type/dimensionattribute-data-type-assl.md)|  
 |[RegularMeasureGroupDimension](../data-type/measuregroupattribute-data-type-assl.md)|  
-|[PerspectiveDimension](../data-type/perspectiveattribute-data-type-assl.md)|  
-|[RelationshipEnd](../data-type/relationshipend-data-type-assl.md)|\<Attributo ><br />      \<[Oggetto AttributeID](../properties/id-element-assl.md)>... \</AttributeID > \< /attributo >|  
+|[Elemento PerspectiveDimension](../data-type/perspectiveattribute-data-type-assl.md)|  
+|[RelationshipEnd](../data-type/relationshipend-data-type-assl.md)|\<Attributo ><br />      \<[Elemento AttributeID](../properties/id-element-assl.md)>... \</AttributeID > \< /attributo >|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
@@ -83,8 +83,8 @@ ms.locfileid: "36065457"
 |Elementi padre|[Attributi](../collections/attributes-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Gli elementi corrispondenti nel modello a oggetti oggetti AMO (Analysis Management) sono <xref:Microsoft.AnalysisServices.AggregationDesignAttribute>, <xref:Microsoft.AnalysisServices.AggregationAttribute>, <xref:Microsoft.AnalysisServices.CubeAttribute>, <xref:Microsoft.AnalysisServices.DimensionAttribute>, <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>, e <xref:Microsoft.AnalysisServices.PerspectiveAttribute>.  
+## <a name="remarks"></a>Note  
+ Gli elementi corrispondenti nel modello a oggetti Strumentazione gestione Windows (AMO, Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.AggregationDesignAttribute>, <xref:Microsoft.AnalysisServices.AggregationAttribute>, <xref:Microsoft.AnalysisServices.CubeAttribute>, <xref:Microsoft.AnalysisServices.DimensionAttribute>, <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>, e <xref:Microsoft.AnalysisServices.PerspectiveAttribute>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gli oggetti &#40;ASSL&#41;](objects-assl.md)  

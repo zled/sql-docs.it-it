@@ -1,14 +1,13 @@
 ---
-title: Listener del gruppo di disponibilità, connettività Client e Failover dell'applicazione (SQL Server) | Documenti Microsoft
+title: Listener del gruppo di disponibilità, connettività Client e Failover dell'applicazione (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - read-only routing
@@ -20,13 +19,13 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: 46
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 90dc94aeebdaa99fe2884dc0874f0c01ec8212cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd5187ffce3a34c038471681a5b730b5b92313ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197871"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Listener del gruppo di disponibilità, connettività client e failover dell'applicazione (SQL Server)
   In questo argomento sono contenute informazioni sulla funzionalità di failover delle applicazioni e sulla connettività client di [!INCLUDE[ssHADR](../includes/sshadr-md.md)].  
@@ -128,7 +127,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  La finalità dell'applicazione può essere inviata da un driver client a un'istanza di livello inferiore di SQL Server.  In questo caso, la finalità dell'applicazione di sola lettura viene ignorato e la connessione procede normalmente.  
   
- È possibile ignorare il routing di sola lettura non impostando la proprietà di connessione della finalità dell'applicazione `ReadOnly` (se non viene specificata, il valore predefinito è `ReadWrite` durante l'accesso) oppure connettendosi direttamente all'istanza di replica primaria di SQL Server anziché utilizzare nome del listener gruppo di disponibilità.  Il routing in sola lettura non può avvenire se la connessione viene eseguita direttamente a una replica in sola lettura.  
+ È possibile ignorare il routing di sola lettura non impostando la proprietà di connessione della finalità dell'applicazione `ReadOnly` (se non viene specificata, il valore predefinito è `ReadWrite` durante l'accesso) oppure connettendosi direttamente all'istanza della replica primaria di SQL Server invece di usare nome del listener gruppo di disponibilità.  Il routing in sola lettura non può avvenire se la connessione viene eseguita direttamente a una replica in sola lettura.  
   
 ####  <a name="RelatedTasksApps"></a> Attività correlate  
   
@@ -161,7 +160,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 > [!NOTE]  
 >  È consigliabile utilizzare questa impostazione per le connessioni con una o più subnet a listener di gruppi di disponibilità e a istanze del cluster di failover di SQL Server.  Abilitando questa opzione si aggiungono ulteriori ottimizzazioni, anche per scenari con una sola subnet.  
   
- Il `MultiSubnetFailover` connessione opzione funziona unicamente con il protocollo di rete TCP ed è supportato solo quando ci si connette a un listener del gruppo di disponibilità e per qualsiasi rete virtuale nome che si connette a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ Il `MultiSubnetFailover` connessione opzione funziona solo con il protocollo di rete TCP ed è supportata solo quando ci si connette a un listener del gruppo di disponibilità e per qualsiasi connessione nome rete virtuale a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  Di seguito è riportato un esempio di una stringa di connessione per il provider ADO.NET (System.Data.SqlClient) che consente il failover su più subnet.  
   
@@ -169,7 +168,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
 ```  
   
- Il `MultiSubnetFailover` opzione di connessione deve essere impostato su `True` anche se il gruppo di disponibilità si estende su una sola subnet.  In questo modo è possibile preconfigurare nuovi client affinché supportino l'espansione futura su più subnet senza necessità di modificare la stringa di connessione client, oltre a ottimizzare le prestazioni dei failover su una sola subnet.  Mentre il `MultiSubnetFailover` opzione di connessione non è necessaria, offre il vantaggio di un failover su subnet.  Il driver client tenta infatti di aprire un socket TCP per ogni indirizzo IP in parallelo associato al gruppo di disponibilità.  Il driver client attende che il primo indirizzo IP risponda, quindi utilizza tale risposta per la connessione.  
+ Il `MultiSubnetFailover` opzione di connessione deve essere impostato su `True` anche se il gruppo di disponibilità si estende su una singola subnet.  In questo modo è possibile preconfigurare nuovi client affinché supportino l'espansione futura su più subnet senza necessità di modificare la stringa di connessione client, oltre a ottimizzare le prestazioni dei failover su una sola subnet.  Mentre il `MultiSubnetFailover` opzione di connessione non è obbligatorio, ma il vantaggio di accelerare il failover su subnet.  Il driver client tenta infatti di aprire un socket TCP per ogni indirizzo IP in parallelo associato al gruppo di disponibilità.  Il driver client attende che il primo indirizzo IP risponda, quindi utilizza tale risposta per la connessione.  
   
 ##  <a name="SSLcertificates"></a> Listener del gruppo di disponibilità e certificati SSL  
  Quando ci si connette a un listener del gruppo di disponibilità, se le istanze di SQL Server utilizzano i certificati SSL insieme alla crittografia della sessione, il driver client che tenta la connessione deve supportare il Nome soggetto alternativo nel certificato SSL per forzare la crittografia.  Il supporto del driver SQL Server per il Nome soggetto alternativo del certificato è pianificato per ADO.NET (SqlClient), Microsoft JDBC e SQL Native Client (SNAC).  
@@ -210,14 +209,14 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Guida alle soluzioni di Microsoft SQL Server AlwaysOn per la disponibilità elevata e ripristino di emergenza](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Introduzione al listener del gruppo di disponibilità](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (blog del team di SQL Server AlwaysOn)  
   
--   [SQL Server AlwaysOn Team Blog: Di SQL Server AlwaysOn Team Blog ufficiale](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: Il Blog ufficiale di SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Connettività Client AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Repliche secondarie attive: Repliche secondarie leggibili &#40;gruppi di disponibilità AlwaysOn&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   

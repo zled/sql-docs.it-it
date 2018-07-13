@@ -1,5 +1,5 @@
 ---
-title: Modificare la discretizzazione di una colonna in un modello di Data Mining | Documenti Microsoft
+title: Modificare la discretizzazione di una colonna in un modello di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
 - mining structures [Analysis Services], how-to topics
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - bucketing problems [Analysis Services]
 ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc0352074e37bf284bd4ea033bae759638e040a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af80e187acceb9565e939dbb3699c98b827cf648
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202171"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>Modificare la discretizzazione di una colonna in un modello di data mining
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] la discretizzazione dei dati avviene in modo automatico, ciò significa che in determinati scenari i dati vengono inseriti in colonne numeriche. Se, ad esempio, i dati includono dati numerici continui e si crea un modello di albero delle decisioni, ogni colonna di dati continui verrà automaticamente inserita in contenitori, a seconda della distribuzione dei dati. Se si desidera determinare il metodo di discretizzazione dei dati, è necessario modificare le proprietà nella colonna della struttura di data mining che controlla la modalità di utilizzo dei dati del modello.  
@@ -43,11 +43,11 @@ ms.locfileid: "36067089"
   
 ### <a name="to-change-the-discretization-method"></a>Per modificare il metodo di discretizzazione  
   
-1.  Nel **proprietà di Data Mining** finestra, fare clic accanto alla casella di testo **contenuto**e selezionare `Discretized` nell'elenco a discesa.  
+1.  Nel **proprietà di Data Mining** fare clic sulla casella di testo accanto a **contenuto**e selezionare `Discretized` nell'elenco a discesa.  
   
      Nella finestra <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> e <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> sono ora abilitate.  
   
-2.  Nel **delle proprietà** finestra, fare clic accanto alla casella di testo <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> e selezionare uno dei valori seguenti: `Automatic`, `EqualAreas`, o `Cluster`.  
+2.  Nel **delle proprietà** fare clic sulla casella di testo accanto a <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> e selezionare uno dei valori seguenti: `Automatic`, `EqualAreas`, o `Cluster`.  
   
     > [!NOTE]  
     >  Se l'utilizzo della colonna è impostata su `Ignore`, il **proprietà** finestra per la colonna è vuota.  

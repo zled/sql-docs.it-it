@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati DataBlock (ASSL) | Documenti Microsoft
+title: Tipo di dati DataBlock (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataBlock data type
 ms.assetid: 4192b388-613a-472b-881c-f9c02215aa81
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12cbd6c1a2723cfc0d9e5b68ff4a484878c82a74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 167af587de6f06d283ec29f8afbc0fedb2ebc99e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211961"
 ---
 # <a name="datablock-data-type-assl"></a>Tipo di dati DataBlock (ASSL)
-  Definisce un tipo di dati primitivo che rappresenta una raccolta di blocchi di dati utilizzato per archiviare il contenuto binario di un [ClrAssemblyFile](clrassemblyfile-data-type-assl.md) elemento.  
+  Definisce un tipo di dati primitivo che rappresenta una raccolta di blocchi di dati usato per archiviare il contenuto binario di un [ClrAssemblyFile](clrassemblyfile-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36067279"
 |------------------|-------------|  
 |Elementi padre|None|  
 |Elementi figlio|[Blocchi](../collections/blocks-element-assl.md)|  
-|Elementi derivati|[I dati](../objects/data-element-assl.md) elemento di [ClrAssemblyFile](clrassemblyfile-data-type-assl.md) tipo ([file](../collections/files-element-assl.md) insieme [ClrAssembly](assembly-data-type-assl.md) tipo)|  
+|Elementi derivati|[I dati](../objects/data-element-assl.md) elemento della [ClrAssemblyFile](clrassemblyfile-data-type-assl.md) tipo ([file](../collections/files-element-assl.md) insieme di [ClrAssembly](assembly-data-type-assl.md) tipo)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento assembly &#40;ASSL&#41;](../objects/assembly-element-assl.md)   

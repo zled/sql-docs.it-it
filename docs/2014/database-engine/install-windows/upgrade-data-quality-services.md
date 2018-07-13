@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f1feb8292020b61d00705e662bda80d2b3af4eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ecbf266c87e5aebe47f0f7af9c7a244c0e8dfb20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171432"
 ---
 # <a name="upgrade-data-quality-services"></a>Aggiornare Data Quality Services
   In questo argomento vengono fornite le informazioni su come aggiornare l'installazione esistente di Data Quality Services (DQS) a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Come parte dell'aggiornamento di Data Quality Server in DQS a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è inoltre necessario aggiornare lo schema dei database DQS.  
@@ -27,7 +27,7 @@ ms.locfileid: "36067011"
 > [!IMPORTANT]  
 >  -   Per evitare eventuali perdite di dati accidentali durante l'aggiornamento dello schema, è necessario eseguire il backup dei database DQS prima di aggiornare DQS. Per altre informazioni sul ripristino dei database DQS, vedere [Backup e ripristino di database DQS](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   È possibile connettersi alla versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di Data Quality Server usando la versione corrente o una precedente del client Data Quality o [Trasformazione DQS Cleansing](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services per eseguire le attività relative alla qualità dei dati.  
-> -   È possibile continuare a utilizzare la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del componente aggiuntivo Master Data Services per Excel dopo l'aggiornamento di Data Quality Services e di Master Data Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Tuttavia, una versione precedente del componente aggiuntivo Master Data Services per Excel non funzionerà dopo l'aggiornamento a SQL Server 2014 CTP2. È possibile scaricare il [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versione SP1 di Master Data Services aggiuntivo per Excel da [qui](http://go.microsoft.com/fwlink/?LinkId=328664).  
+> -   È possibile continuare a utilizzare la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del componente aggiuntivo Master Data Services per Excel dopo l'aggiornamento di Data Quality Services e di Master Data Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Tuttavia, una versione precedente del componente aggiuntivo Master Data Services per Excel non funzionerà dopo l'aggiornamento a SQL Server 2014 CTP2. È possibile scaricare il [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versione SP1 di Master Data Services componente aggiuntivo per Excel dal [qui](http://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ##  <a name="Prerequisites"></a> Prerequisiti  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36067011"
   
     2.  Fare clic su **Installazione**nel riquadro sinistro.  
   
-    3.  Nel riquadro destro, fare clic su **esegue l'aggiornamento da SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 o SQL Server 2012**.  
+    3.  Nel riquadro di destra, fare clic su **esegue l'aggiornamento da SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 o SQL Server 2012**.  
   
     4.  Completare l'Installazione guidata.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36067011"
         dqsinstaller.exe -upgrade  
         ```  
   
-    4.  Tramite il programma di installazione viene richiesta all'utente la conferma dell'esecuzione del backup dei database DQS prima di continuare. Se è già stato eseguito il backup dei database DQS, digitare `Y` o `Yes`, quindi premere INVIO per continuare con l'aggiornamento.  
+    4.  Tramite il programma di installazione viene richiesta all'utente la conferma dell'esecuzione del backup dei database DQS prima di continuare. Se già stato eseguito il backup dei database DQS, digitare `Y` o `Yes`, e quindi premere INVIO per continuare con l'aggiornamento.  
   
     5.  Se l'aggiornamento dello schema dei database DQS viene terminato correttamente, viene visualizzato un messaggio di completamento.  
   

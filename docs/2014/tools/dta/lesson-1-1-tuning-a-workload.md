@@ -1,5 +1,5 @@
 ---
-title: Ottimizzazione di un carico di lavoro | Documenti Microsoft
+title: Ottimizzare un carico di lavoro | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - workloads [SQL Server], tuning
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5a414a8fac51b52549982ef08456288981b1c9b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 02c10662607423a5dba423977572876f18394e22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172092"
 ---
 # <a name="tuning-a-workload"></a>Ottimizzazione di un carico di lavoro
   Per individuare la migliore struttura fisica di database per l'esecuzione di query sulle tabelle e i database selezionati per l'ottimizzazione, è possibile utilizzare Ottimizzazione guidata motore di database.  
@@ -30,7 +30,7 @@ ms.locfileid: "36064359"
   
 ### <a name="tune-a-workload-transact-sql-script-file"></a>Per ottimizzare un file script Transact-SQL del carico di lavoro  
   
-1.  Copiare una o più istruzioni SELECT di esempio da "A. Utilizzo dell'istruzione SELECT per il recupero di righe e colonne" in [Esempi di istruzioni SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql) e incollare le istruzioni nell'Editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Salvare il file come **Myscript. SQL** in una directory in cui è possibile individuarlo facilmente.  
+1.  Copiare una o più istruzioni SELECT di esempio da "A. Utilizzo dell'istruzione SELECT per il recupero di righe e colonne" in [Esempi di istruzioni SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql) e incollare le istruzioni nell'Editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Salvare il file come **Myscript. SQL** in una directory in cui è possibile trovarlo facilmente.  
   
 2.  Avviare Ottimizzazione guidata motore di database. Vedere [Avvio dello strumento Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   

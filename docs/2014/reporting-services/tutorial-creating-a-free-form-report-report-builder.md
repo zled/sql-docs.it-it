@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 763df160d03f3f26824559b2068e3e241bb66d23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: fe42fc3dd5e1398cc0e66ad2c37cd14a3fedd67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202811"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Esercitazione: Creazione di un report in formato libero (Generatore report)
   In questa esercitazione viene illustrato come creare un report in formato libero di SSRS che sia simile a una lettera tipo. È possibile disporre gli elementi dei report in modo da creare un form, con caselle di testo, immagini e altre aree dati.  
@@ -47,7 +47,7 @@ ms.locfileid: "36065548"
   
 -   [Aggiungere una linea per separare le aree del Report](#Line)  
   
--   [Aggiungere una visualizzazione di dati di riepilogo](#Visualization)  
+-   [Aggiungere una visualizzazione dei dati di riepilogo](#Visualization)  
   
  Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36065548"
   
 4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare **Origine dati = \<nomeserver>**  
   
-     \<NomeServer >, ad esempio Report001, specifica un computer in cui è installata un'istanza del motore di Database di SQL Server. Poiché i dati del report non vengono estratti da un database di SQL Server, non è necessario includere il nome di un database. Per analizzare la query viene utilizzato il database predefinito nel server specificato.  
+     \<NomeServer >, ad esempio Report001, specifica un computer in cui è installata un'istanza del motore di Database SQL Server. Poiché i dati del report non vengono estratti da un database di SQL Server, non è necessario includere il nome di un database. Per analizzare la query viene utilizzato il database predefinito nel server specificato.  
   
 5.  Fare clic su **Credenziali**, quindi immettere le credenziali necessarie per la connessione all'istanza del motore di database di SQL Server.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36065548"
   
 5.  Fare clic con il pulsante destro del mouse nell'elenco, quindi scegliere **Proprietà rettangolo**.  
   
-     ![Il comando Proprietà rettangolo](../../2014/tutorials/media/tutorial-rectanglepropertiescommand.png "comando Proprietà rettangolo")  
+     ![Comando Proprietà rettangolo](../../2014/tutorials/media/tutorial-rectanglepropertiescommand.png "comando Proprietà rettangolo")  
   
 6.  Nella scheda **Generale** selezionare la casella di controllo **Aggiungi un'interruzione di pagina dopo** .  
   
@@ -183,15 +183,15 @@ ms.locfileid: "36065548"
   
 4.  Fare clic con il pulsante destro del mouse sulla colonna Territory, quindi scegliere **Elimina colonne**.  
   
-     ![Eliminare le colonne](../../2014/tutorials/media/tutorial-deletecolumnscommand.png "Elimina colonne")  
+     ![Elimina colonne](../../2014/tutorials/media/tutorial-deletecolumnscommand.png "Elimina colonne")  
   
 5.  Fare clic su **Elimina solo colonne**.  
   
-     ![Finestra di dialogo colonne Elimina](../../2014/tutorials/media/tutorial-deletecolumnsdialog.png "finestra di dialogo Elimina colonne")  
+     ![Dialogo Elimina colonne](../../2014/tutorials/media/tutorial-deletecolumnsdialog.png "nella finestra di dialogo Elimina colonne")  
   
 6.  Nel riquadro Gruppi di righe fare clic con il pulsante destro del mouse sul gruppo **Dettagli** , quindi scegliere **Elimina gruppo**.  
   
-     ![Elimina gruppo dettagli](../../2014/tutorials/media/tutorial-deletedetailsgroup.png "Elimina gruppo dettagli")  
+     ![Elimina gruppo di dettagli](../../2014/tutorials/media/tutorial-deletedetailsgroup.png "Elimina gruppo dettagli")  
   
 7.  Fare clic su **Elimina solo gruppo**.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "36065548"
   
 #### <a name="to-add-graphic-elements-to-the-report"></a>Per aggiungere elementi grafici al report  
   
-1.  Nel **inserire** scheda della barra multifunzione, fare clic su **rettangolo**, quindi trascinare un rettangolo nell'angolo in alto a sinistra dell'elenco. Assegnare al rettangolo un'altezza di 7 pollici (18 centimetri) e una larghezza di 1 pollice (2,5 centimetri).  
+1.  Nel **inserire** della scheda della barra multifunzione, fare clic su **rettangolo**, quindi trascinare un rettangolo nell'angolo in alto a sinistra dell'elenco. Assegnare al rettangolo un'altezza di 7 pollici (18 centimetri) e una larghezza di 1 pollice (2,5 centimetri).  
   
 2.  Fare clic con il pulsante destro del mouse sul rettangolo, quindi scegliere **Proprietà rettangolo**.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "36065548"
   
 4.  Nell'elenco a discesa **Colore riempimento** fare clic su **Altri colori**, quindi selezionare il colore **GrigioScuro** .  
   
-     ![Selezionare il colore di riempimento](../../2014/tutorials/media/tutorial-selectfillcolorwithnumbers.png "colore di riempimento selezionare")  
+     ![Selezionare il colore di riempimento](../../2014/tutorials/media/tutorial-selectfillcolorwithnumbers.png "colore di riempimento selezione")  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -236,7 +236,7 @@ ms.locfileid: "36065548"
   
 4.  Trascinare il campo Territory nella casella di testo e posizionarlo dopo il testo digitato nel passaggio 3.  
   
-     ![Aggiungi campo Territorial](../../2014/tutorials/media/tutorial-addterritorialfield.png "campo aggiungere Territorial")  
+     ![Aggiungi campo Territorial](../../2014/tutorials/media/tutorial-addterritorialfield.png "campo Territorial aggiungere")  
   
 5.  Selezionare tutto il testo, fare clic con il pulsante destro del mouse su di esso, quindi scegliere **Proprietà testo**.  
   
@@ -244,7 +244,7 @@ ms.locfileid: "36065548"
   
 7.  Nell'elenco **Tipo di carattere** selezionare **Times New Roman**, in **Dimensioni** selezionare **20 pt**e in **Colore** selezionare **Rosso**.  
   
-     ![Proprietà di testo](../../2014/tutorials/media/tutorial-textpropertieswithnumbers.png "proprietà testo")  
+     ![Proprietà testo](../../2014/tutorials/media/tutorial-textpropertieswithnumbers.png "proprietà testo")  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -289,7 +289,7 @@ ms.locfileid: "36065548"
   
 21. Trascinare il campo Sales nella casella di testo, posizionarlo dopo il testo digitato nel passaggio 20, quindi digitare un punto esclamativo (!).  
   
-22. Evidenziare il campo Sales, destro del mouse sul campo e quindi fare clic su **espressione**.  
+22. Evidenziare il campo Sales, fare clic sul campo e quindi fare clic su **espressione**.  
   
 23. Nella casella dell'espressione modificare l'espressione per includere la funzione Sum nel modo seguente:  
   
@@ -348,7 +348,7 @@ ms.locfileid: "36065548"
   
 9. Nel riquadro **Stili** della pagina **Scegliere uno stile** selezionare **Ardesia**.  
   
-10. Fare clic su **Fine**.  
+10. Scegliere **Fine**.  
   
 11. Trascinare la tabella sotto la casella di testo aggiunta nella lezione 4.  
   
@@ -374,7 +374,7 @@ ms.locfileid: "36065548"
   
 2.  Fare clic sulle celle della tabella contenenti `[Sum(SalesSales)]` e nel gruppo **Numero** della scheda **Home** fare clic sul pulsante **Valuta** .  
   
-     ![Aggiungi simbolo di valuta a vendite](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "Aggiungi simbolo di valuta a vendite totali")  
+     ![Aggiungi simbolo di valuta a vendite totali](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "Aggiungi simbolo di valuta a vendite totali")  
   
 3.  Fare clic sulle celle contenenti `[SalesDate]` e nell'elenco a discesa del gruppo **Numero** selezionare **Data**.  
   
@@ -382,7 +382,7 @@ ms.locfileid: "36065548"
   
  Nel report verranno visualizzati i dati formattati che rendono più facile la lettura.  
   
- ![Formattare i totali delle vendite nel report](../../2014/tutorials/media/tutorial-reportsalestotals-formatted.png "formattare totali vendite nel report")  
+ ![Formatta totali vendite nel report](../../2014/tutorials/media/tutorial-reportsalestotals-formatted.png "formatta totali vendite nel report")  
   
 ##  <a name="Save"></a> 7. Salvare il report  
  È possibile salvare i report in un server di report, in una raccolta di SharePoint o nel computer locale. È anche possibile esportare il report in diversi formati, ad esempio Word e PDF, eseguendo il report e scegliendo il formato dal menu **Esporta** .  
@@ -399,7 +399,7 @@ ms.locfileid: "36065548"
   
      Verrà visualizzato il messaggio "Connessione al server di report". Al termine della connessione, verrà visualizzato il contenuto della cartella di report specificata dall'amministratore del server di report come posizione predefinita per i report.  
   
-4.  In `Name`, sostituire il nome predefinito con **Informazionivenditeperterritorio**.  
+4.  Nelle `Name`, sostituire il nome predefinito con **Informazionivenditeperterritorio**.  
   
 5.  Fare clic su **Salva**.  
   
@@ -411,7 +411,7 @@ ms.locfileid: "36065548"
   
 2.  Fare clic su **Desktop**, **Documenti**o **Risorse del computer**, quindi selezionare la cartella in cui si desidera salvare il report.  
   
-3.  In `Name`, sostituire il nome predefinito con **Informazionivenditeperterritorio**.  
+3.  Nelle `Name`, sostituire il nome predefinito con **Informazionivenditeperterritorio**.  
   
 4.  Fare clic su **Salva**.  
   
@@ -455,17 +455,17 @@ ms.locfileid: "36065548"
   
 4.  Nella pagina Disponi campi del grafico trascinare Product in **Categorie**.  
   
-5.  Trascinare Quantity in **valori**, quindi fare clic su **successivo**.  
+5.  Trascinare Quantity in **i valori**, quindi fare clic su **successivo**.  
   
 6.  Nel riquadro **Stili** della pagina **Scegliere uno stile** selezionare **Ardesia**.  
   
-7.  Fare clic su **Fine**.  
+7.  Scegliere **Fine**.  
   
 8.  Ridimensionare il grafico visualizzato nell'angolo superiore sinistro del report in modo che abbia un'altezza di 1 1/2 pollici (4 centimetri) e una larghezza di 2 pollici (5 centimetri).  
   
 9. Trascinare il grafico all'interno del rettangolo.  
   
-     ![Aggiungere il grafico a torta](../../2014/tutorials/media/tutorial-addpiechart.png "Aggiungi grafico a torta")  
+     ![Aggiungi grafico a torta](../../2014/tutorials/media/tutorial-addpiechart.png "Aggiungi grafico a torta")  
   
 10. Fare clic con il pulsante destro del mouse sul titolo del grafico, quindi scegliere **Proprietà titolo**.  
   
@@ -491,7 +491,7 @@ ms.locfileid: "36065548"
   
 6.  Nel riquadro **Stili** della pagina **Scegliere uno stile** selezionare **Ardesia**.  
   
-7.  Fare clic su **Fine**.  
+7.  Scegliere **Fine**.  
   
      Un istogramma verrà aggiunto all'angolo superiore sinistro del report.  
   
@@ -530,7 +530,7 @@ ms.locfileid: "36065548"
   
 3.  Nel **delle proprietà** riquadro, verificare che il `Parent` proprietà contiene il nome del rettangolo.  
   
-     ![Proprietà per il grafico a torta Parent](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "padre proprietà per il grafico a torta")  
+     ![Proprietà per il grafico a torta padre](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "padre proprietà per il grafico a torta")  
   
 4.  Fare clic sull'istogramma e ripetere i passaggi 2 e 3.  
   
@@ -543,7 +543,7 @@ ms.locfileid: "36065548"
   
 2.  Con entrambi i grafici selezionati, fare clic con il pulsante destro del mouse, scegliere **Layout**, quindi fare clic su **Assegna stessa larghezza**.  
   
-     ![Assicurarsi di larghezze grafico lo stesso](../../2014/tutorials/media/tutorial-makechartssamewidth.png "rendere larghezze grafico lo stesso")  
+     ![Rendere la larghezza delle grafico lo stesso](../../2014/tutorials/media/tutorial-makechartssamewidth.png "rendere lo stesso larghezze grafico")  
   
     > [!NOTE]  
     >  Il primo elemento selezionato determina la larghezza di tutti gli elementi selezionati.  
@@ -555,7 +555,7 @@ ms.locfileid: "36065548"
  ![Report in formato libero dell'esercitazione, SSRS](../../2014/tutorials/media/tutorial-reportfinal.png "report in formato libero dell'esercitazione, SSRS")  
   
 ## <a name="more-information"></a>Ulteriori informazioni  
- Per ulteriori informazioni sugli elenchi, vedere [tabelle, matrici ed elenchi &#40;Generatore Report e SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md), [Elenca &#40;Generatore Report e SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [dati Tablix Aree dell'area &#40;SSRS e Generatore Report&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), e [celle di area dati Tablix, le righe e colonne &#40;Generatore Report&#41; e SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Per altre informazioni sugli elenchi, vedere [tabelle, matrici ed elenchi &#40;Generatore Report e SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md), [Elenca &#40;Generatore Report e SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [dati Tablix Aree dell'area &#40;Report e SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), e [celle di regione dati Tablix, le righe e colonne &#40;Generatore Report&#41; e SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
  Per altre informazioni sulla progettazione delle query, vedere [Finestre di progettazione query &#40;Generatore report&#41;](../../2014/reporting-services/query-designers-report-builder.md) e [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report&#41;](report-data/text-based-query-designer-user-interface-report-builder.md).  
   

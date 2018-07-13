@@ -1,5 +1,5 @@
 ---
-title: Tabella proprietà traccia (scheda Generale) | Documenti Microsoft
+title: Tracciare le proprietà della tabella (scheda Generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetableproperties.general.f1
 helpviewer_keywords:
 - Trace Table Properties dialog box
 ms.assetid: 16de6d72-0605-4264-891c-e275cd005a37
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6dd4a18bf81d89df26aec8c7c1e39637f3dbe7a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 04730fcf274b8e8febf9533b84949222e96978b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326251"
 ---
 # <a name="trace-table-properties-general-tab"></a>Proprietà tabella di traccia (scheda Generale)
-  Utilizzare la **generali** scheda della finestra il **proprietà tabella di traccia** finestra di dialogo per visualizzare le proprietà di una tabella di traccia.  
+  Usare la **generali** scheda della finestra di **proprietà tabella di traccia** finestra di dialogo per visualizzare le proprietà di una tabella di traccia.  
   
- Per visualizzare questa finestra, utilizzare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] per aprire una tabella di traccia, quindi scegliere il **File** dal menu fare clic su **proprietà**.  
+ Per visualizzare questa finestra, utilizzare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] per aprire una tabella di traccia e quindi scegliere il **File** dal menu fare clic su **proprietà**.  
   
 ## <a name="options"></a>Opzioni  
  **Nome tabella**  

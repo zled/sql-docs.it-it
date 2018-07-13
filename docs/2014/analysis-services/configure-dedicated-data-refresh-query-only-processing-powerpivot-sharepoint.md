@@ -1,5 +1,5 @@
 ---
-title: Configurare l'aggiornamento dei dati dedicata o l'elaborazione di sole Query (PowerPivot per SharePoint) | Documenti Microsoft
+title: Configurare l'aggiornamento dati dedicata o l'elaborazione di sole Query (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d84528c4d4db768ba58f125e15175604aed7af0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b56558bf2e7d49f336d756699f8b5dc59f2ac58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222301"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurare l'aggiornamento dati o l'elaborazione di sole query dedicato (PowerPivot per SharePoint)
   Nella modalità integrata SharePoint, è possibile configurare un'istanza del server Analysis Services per supportare un tipo specifico di richiesta di elaborazione, ad esempio l'aggiornamento dei dati o l'elaborazione di sole query. Per impostazione predefinita, sono abilitati entrambi i tipi di richieste di caricamento. È possibile disabilitare uno dei due tipi per creare un motore di query o un server di aggiornamento dei dati dedicato.  
@@ -47,9 +47,9 @@ ms.locfileid: "36065720"
   
 5.  In Utilizzo istanza del servizio eseguire una delle operazioni seguenti:  
   
-    1.  Deselezionare la casella di controllo **Abilita il caricamento dei database di sola lettura** per disattivare l'elaborazione di query su richiesta che si verifica ogni volta che un utente apre una cartella di lavoro che contiene dati PowerPivot.  
+    1.  Deselezionare la casella di controllo **Abilita il caricamento dei database di sola lettura** per disattivare l'elaborazione di query su richiesta che si verifica ogni volta che un utente apre una cartella di lavoro contenente dati PowerPivot.  
   
-    2.  Deselezionare la casella di controllo **Abilita il caricamento del database per l'aggiornamento** per disattivare l'aggiornamento dati pianificato.  
+    2.  Deselezionare la casella di controllo **Abilita il caricamento di database per l'aggiornamento** per disattivare l'aggiornamento dati pianificato.  
   
     > [!NOTE]  
     >  La disabilitazione dell'aggiornamento dei dati non comporta la rimozione delle opzioni di aggiornamento dei dati dai siti di SharePoint. Gli utenti che possiedono cartelle di lavoro PowerPivot possono ancora creare pianificazioni per l'aggiornamento dei dati, tuttavia quest'ultimo non si verificherà in tale server.  

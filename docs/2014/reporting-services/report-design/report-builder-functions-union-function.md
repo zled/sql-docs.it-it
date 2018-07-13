@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 46d0ee10acb57e4553c176be34572fc7f6dd02d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 954da454e2953f14cf61f1d49794829c385a6df3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206691"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Funzione Union (Generatore report e SSRS)
   Viene restituita l'unione di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.  
@@ -45,9 +45,9 @@ Union(expression, scope, recursive)
  (**Enumerated Type**) Facoltativo. `Simple` (impostazione predefinita) o `RdlRecursive`. Specifica se eseguire l'aggregazione in modo ricorsivo.  
   
 ## <a name="return"></a>Return  
- Restituisce un oggetto spaziale, `SqlGeometry` o `SqlGeography`, in base al tipo di espressione. Per ulteriori informazioni `SqlGeometry` e `SqlGeography` tipi di dati spaziali, vedere [Cenni preliminari sui tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md).  
+ Restituisce un oggetto spaziale, `SqlGeometry` o `SqlGeography`, in base al tipo di espressione. Per altre informazioni sulle `SqlGeometry` e `SqlGeography` tipi di dati spaziali, vedere [Cenni preliminari sui tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il set di dati specificato nell'espressione deve essere dello stesso tipo di dati.  
   
  Il valore di *scope* deve essere una costante di tipo stringa e non può essere un'espressione. Per aggregazioni o aggregazioni esterne che non specificano altre aggregazioni, *scope* deve fare riferimento all'ambito corrente o a un ambito contenitore. Gli ambiti del set di dati non sono supportati. Per le aggregazioni di aggregazioni, le aggregazioni nidificate possono specificare un ambito figlio.  
@@ -67,7 +67,7 @@ Union(expression, scope, recursive)
  Per altre informazioni sulle aggregazioni ricorsive, vedere [Creazione di gruppi di gerarchie ricorsive &#40;Generatore report e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 ## <a name="example"></a>Esempio  
- Nella tabella seguente vengono illustrati esempi di `SqlGeometry` espressioni e `Union` espressione, visualizzati in formato WKT (Well-Known Text) per i dati spaziali di risultato.  
+ Nella tabella seguente vengono illustrati esempi di `SqlGeometry` espressioni e `Union` result_expression, visualizzati in formato WKT (Well-Known Text) per i dati spaziali.  
   
 |Campo con dati spaziali|Esempio|Risultato Union|  
 |-----------------------------|-------------|------------------|  
@@ -82,9 +82,9 @@ Union(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressione viene utilizzata nei report di &#40;SSRS e Generatore Report&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;SSRS e Generatore Report&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento Insert (XMLA) | Documenti Microsoft
+title: Elemento Insert (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Insert command
 ms.assetid: d1137033-cc19-4bcb-b93d-8575f17bea6b
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 6b381a2b0cd45e80309f2b6a759374fd9f214f51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cfec9c9a5be2cc19c609bc9de788a4a0df388e5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169292"
 ---
 # <a name="insert-element-xmla"></a>Elemento Insert (XMLA)
   Inserisce membri di attributo in una dimensione.  
@@ -64,10 +64,10 @@ ms.locfileid: "36067051"
 |Elementi padre|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |Elementi figlio|[Gli attributi](../xml-elements-properties/attributes-element-xmla.md), [oggetto](../xml-elements-properties/object-element-dimension-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il comando `Insert` inserisce membri dell'attributo nuovi in una dimensione abilitata per la scrittura.  
   
- Per ulteriori informazioni sull'eliminazione di membri, vedere [inserimento, aggiornamento ed eliminazione di membri &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
+ Per altre informazioni sull'eliminazione di membri, vedere [inserimento, aggiornamento ed eliminazione di membri &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento DROP &#40;XMLA&#41;](drop-element-xmla.md)   

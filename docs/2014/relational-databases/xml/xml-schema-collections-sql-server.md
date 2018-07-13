@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
 - xml_schema_namespace function
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 707cb288e9c0ba85454493024350e378ae66e1b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 05b266a67aaff2a381e181ca85290c45af177225
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221091"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Raccolte di XML Schema (SQL Server)
-  Come descritto nell'argomento [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server fornisce l'archiviazione nativa dei dati XML tramite il `xml` tipo di dati. È facoltativamente possibile associare schemi XSD a una variabile o una colonna di `xml` tipo tramite una raccolta XML schema. Una raccolta di XML Schema archivia gli elementi XML Schema importati e può essere quindi utilizzata per eseguire le operazioni seguenti:  
+  Come descritto nell'argomento [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server fornisce l'archiviazione nativa dei dati XML tramite la `xml` tipo di dati. È facoltativamente possibile associare schemi XSD a una variabile o una colonna di `xml` tipo tramite una raccolta XML schema. Una raccolta di XML Schema archivia gli elementi XML Schema importati e può essere quindi utilizzata per eseguire le operazioni seguenti:  
   
 -   Convalidare istanze XML.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36065082"
   
  Lo schema viene inoltre utilizzato dal motore di elaborazione delle query per la verifica dei tipi, per l'ottimizzazione delle query e per la modifica dei dati.  
   
- Inoltre, SQL Server utilizza la raccolta XML schema associata, in caso di tipizzati `xml`per convalidare l'istanza XML. Se l'istanza XML è conforme allo schema, il database consente di archiviarla nel sistema insieme alle relative informazioni sul tipo, in caso contrario la rifiuta.  
+ Inoltre, SQL Server utilizza la raccolta XML schema associata, nel caso di tipizzata `xml`, per convalidare l'istanza XML. Se l'istanza XML è conforme allo schema, il database consente di archiviarla nel sistema insieme alle relative informazioni sul tipo, in caso contrario la rifiuta.  
   
  Per recuperare la raccolta di schemi archiviata nel database è possibile utilizzare la funzione intrinseca XML_SCHEMA_NAMESPACE. Per altre informazioni, vedere [Visualizzare una raccolta di XML Schema archiviata](../xml/view-a-stored-xml-schema-collection.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36065082"
   
 -   [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) Elimina l'intera raccolta XML Schema e tutti i relativi componenti.  
   
- Per utilizzare una raccolta XML Schema e i relativi schemi, è necessario innanzitutto creare la raccolta e gli schemi utilizzando l'istruzione CREATE XML SCHEMA COLLECTION. Dopo aver creata la raccolta di schemi, è possibile creare variabili e colonne di `xml` digitare e associare la raccolta di schemi. Si noti che dopo aver creato la raccolta, nei metadati verranno archiviati diversi componenti degli schemi. È inoltre possibile utilizzare l'istruzione ALTER XML SCHEMA COLLECTION per aggiungere altri componenti agli schemi o nuovi schemi alla raccolta.  
+ Per utilizzare una raccolta XML Schema e i relativi schemi, è necessario innanzitutto creare la raccolta e gli schemi utilizzando l'istruzione CREATE XML SCHEMA COLLECTION. Dopo aver creata la raccolta di schemi, è possibile quindi creare variabili e colonne di `xml` digitare e associare la raccolta di schemi. Si noti che dopo aver creato la raccolta, nei metadati verranno archiviati diversi componenti degli schemi. È inoltre possibile utilizzare l'istruzione ALTER XML SCHEMA COLLECTION per aggiungere altri componenti agli schemi o nuovi schemi alla raccolta.  
   
  Per eliminare la raccolta di schemi, utilizzare l'istruzione DROP XML SCHEMA COLLECTION, che consente di eliminare tutti gli schemi contenuti nella raccolta e di rimuovere l'oggetto raccolta. Si noti che prima di eliminare una raccolta di schemi è necessario soddisfare le condizioni descritte in [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql).  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36065082"
   
 -   Eliminare la raccolta XML Schema.  
   
--   Utilizzare la raccolta di XML schema al tipo `xml` colonne, variabili e parametri di tipo, oppure nei vincoli di tabella o colonna  
+-   Usare la raccolta di XML schema al tipo `xml` digitare colonne, variabili e parametri oppure nei vincoli di tabella o una colonna  
   
  Il modello di sicurezza di SQL Server consente l'autorizzazione CONTROL per tutti gli oggetti. L'utente che dispone di questa autorizzazione ottiene tutte le altre autorizzazioni per l'oggetto. Il proprietario dell'oggetto dispone anch'esso di tutte le autorizzazioni per l'oggetto.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36065082"
   
 -   Scrivere query Transact-SQL sulle viste del catalogo appropriate per le raccolte di XML Schema.  
   
--   Usare la funzione predefinita **XML_SCHEMA_NAMESPACE()**. È possibile applicare `xml` metodi con tipo di dati nell'output di questa funzione. ma non è possibile modificare gli elementi XML Schema sottostanti.  
+-   Usare la funzione predefinita **XML_SCHEMA_NAMESPACE()**. È possibile applicare `xml` metodi con tipo di dati sull'output di questa funzione. ma non è possibile modificare gli elementi XML Schema sottostanti.  
   
  Queste tecniche di enumerazione sono illustrate negli esempi seguenti.  
   
@@ -192,7 +192,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- Singoli elementi XML schema all'interno della raccolta può essere ottenuti come `xml` le istanze del tipo di dati specificando lo spazio dei nomi di destinazione come terzo argomento per **xml_schema_namespace ()**. come illustrato nell'esempio seguente.  
+ Singoli elementi di XML schema all'interno della raccolta possono essere ottenuti come `xml` istanze con tipo di dati specificando lo spazio dei nomi di destinazione come terzo argomento **xml_schema_namespace ()**. come illustrato nell'esempio seguente.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Esempio: restituzione di uno schema specifico da una raccolta di XML Schema  
  L'istruzione seguente restituisce l'elemento XML Schema con spazio dei nomi di destinazione "http://www.microsoft.com/books" dalla raccolta di XML Schema "myCollection" nell'ambito dello schema relazionale dbo.  
@@ -207,7 +207,7 @@ N'http://www.microsoft.com/books')
   
 -   Scrivere query Transact-SQL sulle viste del catalogo per gli spazi dei nomi degli elementi XML Schema.  
   
--   Creare una tabella contenente una colonna con tipo di dati `xml` per archiviare gli elementi XML Schema e quindi caricarli nel sistema di tipi XML. È possibile eseguire query sulla colonna XML utilizzando il `xml` metodi con tipo di dati. È inoltre possibile compilare un indice XML su questa colonna. Questo approccio richiede tuttavia che l'applicazione mantenga la consistenza tra gli elementi XML Schema archiviati nella colonna XML e il sistema di tipi XML. Se ad esempio si elimina lo spazio dei nomi di un elemento XML Schema dal sistema di tipi XML, per mantenere la consistenza sarà necessario eliminarlo anche dalla tabella.  
+-   Creare una tabella contenente una colonna con tipo di dati `xml` per archiviare gli elementi XML Schema e quindi caricarli nel sistema di tipi XML. È possibile eseguire una query sulla colonna XML utilizzando il `xml` metodi con tipo di dati. È inoltre possibile compilare un indice XML su questa colonna. Questo approccio richiede tuttavia che l'applicazione mantenga la consistenza tra gli elementi XML Schema archiviati nella colonna XML e il sistema di tipi XML. Se ad esempio si elimina lo spazio dei nomi di un elemento XML Schema dal sistema di tipi XML, per mantenere la consistenza sarà necessario eliminarlo anche dalla tabella.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare una raccolta di XML Schema archiviata](../xml/view-a-stored-xml-schema-collection.md)   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10010"
 helpviewer_keywords:
 - query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2996f7cfb6f7c873e57619c60f49511a62f8d533
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1c596018bcef960d176cf41a49221972d5652f20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162122"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query basata su testo (Generatore report)
   La finestra Progettazione query basata su testo consente di specificare una query tramite il linguaggio di query supportato dall'origine dati, eseguire la query e visualizzare i risultati in fase di progettazione. È possibile specificare più istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] , la sintassi della query o dei comandi per estensioni per l'elaborazione dati personalizzata e query che vengono specificate come espressioni. Poiché non esegue la pre-elaborazione della query e può gestire qualsiasi tipo di sintassi della query, la finestra Progettazione query basata su testo rappresenta lo strumento di progettazione query predefinito per molti tipi di origine dati.  
@@ -60,7 +60,7 @@ ms.locfileid: "36064852"
 |Risultato|Consente di visualizzare i risultati della query. Per eseguire la query, fare clic con il pulsante destro del mouse su un riquadro qualsiasi e scegliere **Esegui**oppure fare clic sul pulsante **Esegui** sulla barra degli strumenti.|  
   
 #### <a name="example"></a>Esempio  
- La query seguente restituisce l'elenco dei cognomi dal [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** database `ContactType` tabella per il `Person` dello schema.  
+ La query seguente restituisce l'elenco dei cognomi dal [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** database `ContactType` table per il `Person` dello schema.  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -102,7 +102,7 @@ uspGetWhereUsedProductID
  Quando si seleziona **Tipo di comando TableDirect**, la finestra Progettazione query basata su testo mostra due riquadri, il riquadro Query e il riquadro Risultati. Quando si immette una tabella e si fa clic sul pulsante **Esegui** , vengono restituite tutte le colonne della tabella.  
   
 #### <a name="example"></a>Esempio  
- Per un tipo di origine dati OLE DB, la query di set di dati seguente restituisce un set di risultati per tipi di tutti i contatti nel [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** database.  
+ Per un tipo di origine dati OLE DB, la query seguente set di dati restituisce un set di risultati per tipi di tutti i contatti nel [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** database.  
   
  `Person.ContactType`  
   

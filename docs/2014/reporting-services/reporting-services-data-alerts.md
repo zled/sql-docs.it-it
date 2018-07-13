@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c681fed24d521c978946c46caeb4a9bbe1124bd4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee4d362dc90ac51f90c91d5fcdebd849c23a6882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272337"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services Data Alerts
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] rappresentano una soluzione guidata dai dati che consente di essere informati sui dati dei report di proprio interesse o importanti al momento appropriato. Utilizzando gli avvisi dati non è più necessario andare in cerca di informazioni, che possono essere ottenute automaticamente.  
@@ -116,14 +116,14 @@ ms.locfileid: "36066429"
 ##  <a name="InstallAlerting"></a> Installare avvisi dati  
  La funzionalità relativa agli avvisi dati è disponibile solo se [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è installato in modalità SharePoint. Quando si installa [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, tramite l'installazione vengono creati automaticamente il database di avvisi in cui vengono archiviati i metadati di avviso e le definizioni di avviso dati, nonché due pagine di SharePoint per la gestione degli avvisi e la finestra di progettazione Avviso dati viene aggiunta al sito di SharePoint. Non vi sono passaggi specifici da eseguire o opzioni da impostare per gli avvisi durante l'installazione.  
   
- Se si desidera ulteriori informazioni sull'installazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, inclusi il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servizio che è stato introdotto in condiviso [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applicazione servizio che è necessario creare e configurare prima di poter usare [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] funzionalità, vedere [installare Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) in MSDN library.  
+ Se vuoi altre informazioni sull'installazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, tra cui il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] condiviso del servizio che è una novità [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] del servizio dell'applicazione che è necessario creare e configurare prima di poter usare [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] funzionalità, vedere [installare Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) in MSDN library.  
   
- Come illustrato nel diagramma riportato in precedenza in questo argomento, per gli avvisi dati vengono utilizzati processi di SQL Server Agent. Per creare i processi, è necessario che SQL Server Agent sia in esecuzione. SQL Server Agent potrebbe essere stato configurato per l'avvio automatico al momento dell'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. In caso contrario, è possibile avviare SQL Server Agent manualmente. Per altre informazioni, vedere [configurare SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) e [avviare, arrestare, sospendere, riprendere, riavviare il motore di Database, SQL Server Agent o SQL Server Browser Service](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+ Come illustrato nel diagramma riportato in precedenza in questo argomento, per gli avvisi dati vengono utilizzati processi di SQL Server Agent. Per creare i processi, è necessario che SQL Server Agent sia in esecuzione. SQL Server Agent potrebbe essere stato configurato per l'avvio automatico al momento dell'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. In caso contrario, è possibile avviare SQL Server Agent manualmente. Per altre informazioni, vedere [configurare SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) e [avviare, arrestare, sospendere, riprendere, riavviare il motore di Database, SQL Server Agent o servizio di SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
  È possibile utilizzare la pagina **Avvisi e sottoscrizioni provisioning** in Amministrazione centrale SharePoint per verificare se SQL Server Agent è in esecuzione e per creare e scaricare script [!INCLUDE[tsql](../includes/tsql-md.md)] personalizzati da eseguire per concedere autorizzazioni a SQL Server Agent. È anche possibile generare gli script [!INCLUDE[tsql](../includes/tsql-md.md)] tramite PowerShell. Per altre informazioni, vedere [Eseguire il provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="ConfigAlert"></a> Configurare avvisi dati  
- A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , le impostazioni per le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , inclusi gli avvisi dati, vengono distribuite tra il file di configurazione del server di report (rsreportserver.config) e un database di configurazione di SharePoint quando si installa [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint. Quando si crea l'applicazione di servizio come passaggio nell'installazione e nella configurazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], viene creato automaticamente il database di configurazione di SharePoint. Per altre informazioni, vedere [File di configurazione RSReportServer](report-server/rsreportserver-config-configuration-file.md) e [del file di configurazione di Reporting Services](report-server/reporting-services-configuration-files.md).  
+ A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , le impostazioni per le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , inclusi gli avvisi dati, vengono distribuite tra il file di configurazione del server di report (rsreportserver.config) e un database di configurazione di SharePoint quando si installa [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint. Quando si crea l'applicazione di servizio come passaggio nell'installazione e nella configurazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], viene creato automaticamente il database di configurazione di SharePoint. Per altre informazioni, vedere [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md) e [del file di configurazione di Reporting Services](report-server/reporting-services-configuration-files.md).  
   
  Le impostazioni per gli avvisi dati di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includono gli intervalli per la pulizia dei metadati e dei dati di avviso e il numero di tentativi di invio dei messaggi di avviso dati tramite posta elettronica. È possibile aggiornare il file di configurazione e il database di configurazione per utilizzare valori diversi per le impostazioni di avviso dati.  
   
@@ -199,9 +199,9 @@ ms.locfileid: "36066429"
 ##  <a name="Permissions"></a> Autorizzazioni per gli avvisi dati  
  Prima di poter creare avvisi dati per i report, è necessario disporre dell'autorizzazione per l'esecuzione del report e la creazione di avvisi nel sito di SharePoint. Per ulteriori informazioni sulle autorizzazioni per i report, vedere quanto riportato di seguito.  
   
--   [La generazione dei dati feed dal report &#40;SSRS e Generatore Report&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
+-   [Data di generazione di feed dal report &#40;Report e SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
--   [Impostare autorizzazioni per elementi del Server di Report in un sito di SharePoint &#40;Reporting Services in SharePoint la modalità integrata&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+-   [Impostare le autorizzazioni per elementi del Server di Report in un sito di SharePoint &#40;Reporting Services in SharePoint la modalità integrata&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supportano due livelli di autorizzazioni: Information Worker e amministratore di avvisi. Nella tabella seguente sono elencate le autorizzazioni di SharePoint e le attività utente correlate.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "36066429"
 ### <a name="logs"></a>Log  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce numerosi log che consentono di ottenere ulteriori informazioni sui report eseguiti durante l'elaborazione delle definizioni di avviso dati, sulle istanze di avviso dati create e così via. Vi sono tre log particolarmente utili: il log di esecuzione degli avvisi, il log di esecuzione del server di report e il log di traccia del server di report.  
   
- Per informazioni su altri [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] log, vedere [del file di Log di Reporting Services e origini](report-server/reporting-services-log-files-and-sources.md).  
+ Per informazioni su altri [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] log, vedere [del file di Log di Reporting Services e le origini](report-server/reporting-services-log-files-and-sources.md).  
   
 #### <a name="alerting-execution-log"></a>Log di esecuzione degli avvisi  
  Il servizio di runtime di avvisi scrive voci nella tabella ExecutionLogView del database di avvisi. È possibile eseguire una query sulla tabella oppure eseguire le stored procedure seguenti per ottenere informazioni di diagnostica più esaustive sugli avvisi dati salvati nel database di avvisi.  
@@ -268,7 +268,7 @@ ms.locfileid: "36066429"
 |GenerateAlert|Avviso: eventi elaborati - GenerateAlert|  
 |DeliverAlert|Avviso: eventi elaborati - DeliverAlert|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce contatori delle prestazioni per altre funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [contatori delle prestazioni per gli oggetti di prestazioni di reportserversharepoint: Service e ReportServer: Service](report-server/performance-counters-reportserver-service-performance-objects.md), [contatori delle prestazioni per l'oggetto prestazione MSRS 2014 Web Service e MSRS 2014 Windows Oggetti prestazione del servizio &#40;modalità nativa&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md), e [contatori delle prestazioni per l'oggetto prestazione MSRS 2014 Web Service SharePoint Mode e oggetti prestazioni MSRS 2014 Windows Service SharePoint modalità &#40;SharePoint Modalità&#41;](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce contatori delle prestazioni per altre funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [contatori delle prestazioni per il ReportServer: Service e reportserversharepoint: Service prestazioni oggetti](report-server/performance-counters-reportserver-service-performance-objects.md), [contatori delle prestazioni per il MSRS 2014 Web Service e MSRS 2014 Windows Oggetti prestazione del servizio &#40;modalità nativa&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md), e [contatori delle prestazioni per il MSRS 2014 Web Service SharePoint Mode e oggetti prestazioni MSRS 2014 Windows Service SharePoint modalità &#40;SharePoint La modalità&#41;](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
 ##  <a name="SupportForSSL"></a> Supporto per SSL  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] consente di usare il servizio SSL (Secure Sockets Layer) HTTP per stabilire connessioni crittografate a un server di report o a un sito di SharePoint.  
@@ -280,13 +280,13 @@ ms.locfileid: "36066429"
 ##  <a name="UserInterface"></a> Interfaccia utente degli avvisi dati  
  Gli avvisi dati forniscono pagine di SharePoint per la gestione degli avvisi e una finestra di progettazione per la creazione e la modifica delle definizioni di avviso dati.  
   
--   **Finestra di progettazione Avviso dati** , per la creazione e la modifica di definizioni di avviso dati. Per altre informazioni, vedere [finestra di progettazione avviso dati](../../2014/reporting-services/data-alert-designer.md), [creare un avviso di dati di progettazione avviso dati](create-a-data-alert-in-data-alert-designer.md) e [modificare un avviso dati in Alert Designer](edit-a-data-alert-in-alert-designer.md).  
+-   **Finestra di progettazione Avviso dati** , per la creazione e la modifica di definizioni di avviso dati. Per altre informazioni, vedere [finestra di progettazione avviso dati](../../2014/reporting-services/data-alert-designer.md), [creare un avviso nella finestra di progettazione avviso dati](create-a-data-alert-in-data-alert-designer.md) e [modificare un avviso dati in Alert Designer](edit-a-data-alert-in-alert-designer.md).  
   
 -   **Gestione avvisi dati** , per la visualizzazione di elenchi di avvisi dati, l'eliminazione di avvisi e l'apertura di avvisi per la modifica. Gestione avvisi dati è disponibile in due versioni: una per gli utenti per la gestione degli avvisi creati e una per gli amministratori per la gestione di avvisi che appartengono agli utenti del sito.  
   
-     Per ulteriori informazioni sulla gestione degli avvisi dati creati, vedere [Gestione avvisi dati per gli utenti di SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) e [Gestisci avvisi dati personali in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
+     Per altre informazioni sulla gestione degli avvisi dati creati, vedere [Gestione avvisi dati per gli utenti di SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) e [gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
   
-     Per ulteriori informazioni sulla gestione di tutti gli avvisi dati in un sito, vedere [Gestione avvisi dati per gli amministratori di avvisi](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) e [gestire tutti gli avvisi di dati in un sito di SharePoint in Gestione avvisi dati](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+     Per altre informazioni sulla gestione di tutti gli avvisi dati in un sito, vedere [Gestione avvisi dati per gli amministratori di avvisi](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) e [gestire tutti gli avvisi di dati in un sito di SharePoint in Gestione avvisi dati](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
 -   **Avvisi dati e sottoscrizioni provisioning** , per stabilire se tramite Reporting Services è possibile utilizzare SQL Server Agent per gli avvisi dati e per scaricare script che consentono l'accesso a SQL Server Agent. Per altre informazioni, vedere [Eseguire il provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   

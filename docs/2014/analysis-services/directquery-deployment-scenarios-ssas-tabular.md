@@ -1,5 +1,5 @@
 ---
-title: Scenari di distribuzione DirectQuery (SSAS tabulare) | Documenti Microsoft
+title: Scenari di distribuzione DirectQuery (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e2b6434b8916e0a2f21486c227b649f834823a93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89454dfd53b641401352928ecf8e08b4b23e784c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268017"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>Scenari di distribuzione DirectQuery (SSAS tabulare)
   In questo argomento viene fornita una procedura dettagliata del processo di progettazione e distribuzione per i modelli DirectQuery. È possibile configurare DirectQuery per l'utilizzo dei soli dati relazionali (solo DirectQuery) oppure è possibile configurare il modello per alternare l'utilizzo dei soli dati memorizzati nella cache o dei soli dati relazionali (modalità ibrida). In questo argomento viene illustrato il processo di implementazione per entrambe le modalità e vengono descritte le possibili differenze nei risultati della query a seconda della modalità e della configurazione della sicurezza.  
   
- [Progettazione e passaggi di distribuzione](#bkmk_DQProcedure)  
+ [Progettazione e procedure di distribuzione](#bkmk_DQProcedure)  
   
  [Confronto di configurazioni di DirectQuery](#bkmk_Configurations)  
   
-##  <a name="bkmk_DQProcedure"></a> Progettazione e passaggi di distribuzione  
+##  <a name="bkmk_DQProcedure"></a> Progettazione e procedure di distribuzione  
  **Passaggio 1. Creare la soluzione**  
   
  Indipendentemente dalla modalità che verrà utilizzata, è necessario rivedere le informazioni che descrivono le limitazioni riguardo ai dati che è possibile utilizzare nei modelli DirectQuery. Ad esempio, tutti i dati utilizzati nel modello e i report devono provenire da un solo database di SQL Server. Per altre informazioni, vedere [Modalità DirectQuery &#40;SSAS tabulare&#41;](tabular-models/directquery-mode-ssas-tabular.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "36063205"
   
  Per impostazione predefinita, la modalità DirectQuery è disabilitata. Pertanto, è necessario configurare l'ambiente di progettazione per supportare la modalità DirectQuery.  
   
- Fare doppio clic sui **Model. bim** nodo in Esplora soluzioni e impostare la proprietà **modalità DirectQuery**a `On`.  
+ Fare doppio clic il **Model. bim** nodo in Esplora soluzioni e impostare la proprietà **la modalità DirectQuery**, a `On`.  
   
  È possibile attivare la modalità DirectQuery in qualsiasi momento. Tuttavia, per assicurarsi di non creare colonne o formule incompatibili con la modalità DirectQuery, è consigliabile abilitare da subito la modalità DirectQuery.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36063205"
   
 -   Modificare le impostazioni delle proprietà necessarie per la modalità DirectQuery seguendo le indicazioni dei messaggi di errore.  
   
--   Rimuovere le colonne calcolate. Se è necessaria una colonna calcolata per una misura specifica, è sempre possibile creare la colonna utilizzando il [progettazione Query relazionale &#40;SSAS&#41; ](relational-query-designer-ssas.md) fornito nell'Importazione guidata tabella.  
+-   Rimuovere le colonne calcolate. Se è necessaria una colonna calcolata per una misura specifica, è sempre possibile creare la colonna utilizzando il [progettazione Query relazionale &#40;SSAS&#41; ](relational-query-designer-ssas.md) forniti nell'Importazione guidata tabella.  
   
 -   Modificare o rimuovere le formule incompatibili con la modalità DirectQuery. Se un calcolo richiede una funzione particolare, valutare il modo in cui fornire un equivalente utilizzando Transact-SQL.  
   
@@ -81,12 +81,12 @@ ms.locfileid: "36063205"
   
 |||  
 |-|-|  
-|**Solo DirectQuery**|Per la proprietà  **Impostazioni di rappresentazione** , specificare l'account che verrà utilizzato per la connessione all'origine dati SQL Server.<br /><br /> Se si utilizza il valore **ImpersonateCurrentUser**, l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che ospita il modello passerà le credenziali dell'utente corrente del modello al database di SQL Server.|  
+|**Solo DirectQuery**|Per la proprietà  **Impostazioni di rappresentazione** , specificare l'account che verrà utilizzato per la connessione all'origine dati SQL Server.<br /><br /> Se si usa il valore **ImpersonateCurrentUser**, l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che ospita il modello passerà le credenziali dell'utente corrente del modello per il database di SQL Server.|  
 |**Modalità ibrida**|Per la proprietà **Impostazioni di rappresentazione** , specificare l'account che verrà utilizzato per accedere ai dati nell'origine dati SQL Server.<br /><br /> Questa impostazione non influisce sulle credenziali utilizzate per elaborare la cache utilizzata dal modello.|  
   
- **Passaggio 7. Distribuire il modello.**  
+ **Passaggio 7. Distribuire il modello**  
   
- Quando si è pronti per distribuire il modello, aprire il **Project** dal menu di Visual Studio, selezionare **proprietà**. Impostare la proprietà **QueryMode** su uno dei valori descritti nella tabella seguente:  
+ Quando si è pronti per distribuire il modello, aprire il **Project** dal menu di Visual Studio e selezionare **proprietà**. Impostare la proprietà **QueryMode** su uno dei valori descritti nella tabella seguente:  
   
  Per altre informazioni, vedere [distribuire da SQL Server Data Tools &#40;modello tabulare di SSAS&#41;](tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36063205"
  **Solo DirectQuery**  
  Questa opzione è da preferire quando si desidera garantire una singola origine dati o quando la memoria non è in grado di contenere i dati a causa delle loro dimensioni troppo elevate. Se si utilizza un'origine dati relazionale di grandi dimensioni, in fase di progettazione è possibile creare il modello utilizzando un subset dei dati. Quando si distribuisce il modello in modalità Solo DirectQuery, è possibile modificare la definizione dell'origine dati per includere tutti i dati obbligatori.  
   
- Preferire questa opzione anche quando si desidera utilizzare la sicurezza fornita dall'origine dati relazionale per controllare l'accesso utente ai dati. Con i modelli tabulari memorizzati nella cache, è inoltre possibile utilizzare [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ruoli per l'accesso ai dati di controllo, ma i dati memorizzati nella cache devono essere protetti. Utilizzare sempre questa opzione se il contesto di sicurezza richiede che i dati non vengano mai memorizzati nella cache.  
+ Preferire questa opzione anche quando si desidera utilizzare la sicurezza fornita dall'origine dati relazionale per controllare l'accesso utente ai dati. Con i modelli tabulari memorizzati nella cache, è anche possibile usare [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ruoli per l'accesso ai dati di controllo, ma i dati memorizzati nella cache devono essere protetti. Utilizzare sempre questa opzione se il contesto di sicurezza richiede che i dati non vengano mai memorizzati nella cache.  
   
  Nella tabella seguente vengono descritti i possibili risultati della distribuzione per la modalità Solo DirectQuery:  
   

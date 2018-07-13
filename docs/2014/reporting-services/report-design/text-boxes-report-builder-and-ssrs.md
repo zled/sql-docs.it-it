@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10134"
 - sql12.rtp.rptdesigner.textproperties.general.f1
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3f8135c0f0526efe1db46011e22491e96db39777
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ec2d4d435145a86e5f14e8110e40ef03d4c4a1cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238531"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caselle di testo (Generatore report e SSRS)
   In genere si pensa a una casella di testo come a una casella autonoma contenente testo in un'area quale [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. In Generatore report, alcune caselle di testo sono di questo tipo e consentono di visualizzare un testo letterale per titoli, descrizioni ed etichette o un testo dinamico basato sulle espressioni. Tuttavia anche in tutte le celle di una tabella o di una matrice (area dati Tablix) è contenuta una casella di testo che può essere formattata esattamente come le caselle di testo autonome di un report.  
@@ -57,19 +57,19 @@ ms.locfileid: "36066423"
   
  L'orientamento viene impostato sulla casella di testo e si applica a tutto il testo contenuto nella casella. Non è possibile specificare un orientamento diverso per varie parti della casella di testo.  
   
- Per iniziare rapidamente a modificare l'orientamento del testo, vedere la sezione alla rotazione del testo nel [esercitazione: formattazione di testo &#40;Generatore Report&#41;](../tutorial-format-text-report-builder.md). Per altre informazioni, vedere [impostare orientamento della casella di testo &#40;Generatore Report e SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
+ Per iniziare rapidamente con la modifica l'orientamento del testo, vedere la sezione sulla rotazione del testo nel [esercitazione: formattazione di testo &#40;Generatore Report&#41;](../tutorial-format-text-report-builder.md). Per altre informazioni, vedere [impostare orientamento della casella di testo &#40;Generatore Report e SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
   
 ##  <a name="HowTo"></a> Procedure  
- [Aggiunta, spostamento o eliminazione di una casella di testo &#40;SSRS e Generatore Report&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+ [Aggiunta, spostamento o eliminazione di una casella di testo &#40;Report e SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
- [Formattare il testo in una casella di testo &#40;SSRS e Generatore Report&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [Formattazione del testo in una casella di testo &#40;Report e SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
- [Impostare l'orientamento della casella di testo &#40;SSRS e Generatore Report&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
+ [Impostare l'orientamento della casella di testo &#40;Report e SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [Espansione o riduzione di una casella di testo &#40;SSRS e Generatore Report&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [Espansione o riduzione di una casella di testo &#40;Report e SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione di testo e segnaposto &#40;SSRS e Generatore Report&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Formattazione di numeri e date &#40;SSRS e Generatore Report&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Formattazione di testo e segnaposto &#40;Report e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Formattazione di numeri e date di &#40;Report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   

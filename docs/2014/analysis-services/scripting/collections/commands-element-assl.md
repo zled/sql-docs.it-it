@@ -1,5 +1,5 @@
 ---
-title: Comandi elemento (ASSL) | Documenti Microsoft
+title: I comandi di elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Commands element
 ms.assetid: c9f69fe8-2221-469b-b5b0-08563aaa01dc
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbbe06ea797473335c5b370e02909cd866205c8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce425ce522f2288a5567fa36651bcd937a1f226b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212061"
 ---
 # <a name="commands-element-assl"></a>Elemento Commands (ASSL)
   Contiene la raccolta di elementi [Command](../objects/command-element-assl.md) associati a un elemento [MdxScript](../objects/mdxscript-element-assl.md).  
@@ -60,10 +60,10 @@ ms.locfileid: "36067281"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elemento padre|[MdxScript](../objects/mdxscript-element-assl.md)|  
+|Elemento padre|[Elemento MdxScript](../objects/mdxscript-element-assl.md)|  
 |Elementi figlio|[Command](../objects/command-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.CommandCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: Elemento TestServer (DTA) | Documenti Microsoft
+title: Elemento TestServer (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - TestServer element
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5eced520aee906a2b56abfa5034196add27bfe7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 574f391a94df9881bdec346635197fd273bc836f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194421"
 ---
 # <a name="testserver-element-dta"></a>Elemento TestServer (DTA)
   Indica il server di prova da utilizzare durante l'ottimizzazione di un server di produzione.  
@@ -44,7 +44,7 @@ ms.locfileid: "36066890"
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|**string**, lunghezza illimitata.|  
 |**Valore predefinito**|Nessuna.|  
-|**Occorrenza**|Facoltativo. Può utilizzare una sola volta per ogni `TuningOptions` elemento.|  
+|**Occorrenza**|Facoltativo. Può usare una sola volta per ogni `TuningOptions` elemento.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   

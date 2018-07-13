@@ -1,5 +1,5 @@
 ---
-title: Connettersi a un Server di Data Mining | Documenti Microsoft
+title: Connettersi a un Server di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections
 - getting started
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41d478d518ffb4dcf111542dc0eda26573ba0129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a9da9f806f69cee612c4bb99e4a3b89e190c1730
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206321"
 ---
 # <a name="connect-to-a-data-mining-server"></a>Connessione al server di data mining
   ![Pulsante connessioni](media/misc-connection.gif "pulsante connessioni")  
   
- Fare clic sui **connessione** pulsante per selezionare una connessione esistente o crearne una nuova connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Scegliere il **Connection** pulsante per selezionare una connessione esistente oppure creare una nuova connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- **Motivo per cui è necessario connettersi a un server?**  
+ **Il motivo per cui è necessario connettersi a un server?**  
   
  Quando si crea una connessione, è possibile utilizzare gli algoritmi di data mining forniti dal server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], nonché le funzionalità di elaborazione ottimizzate del server.  
   
@@ -37,11 +37,11 @@ ms.locfileid: "36066855"
   
 ## <a name="how-to-create-a-new-connection"></a>Modalità di creazione di una nuova connessione  
   
-1.  Fare clic sui **connessione** pulsante.  
+1.  Scegliere il **connessione** pulsante.  
   
 2.  Nel **connessioni ad Analysis Services** finestra di dialogo, fare clic su **New**.  
   
-3.  Nel **Connetti ad Analysis Services** finestra di dialogo, digitare un nome di server.  
+3.  Nel **Connetti a Analysis Services** finestra di dialogo digitare un nome di server.  
   
 4.  Specificare il metodo di autenticazione.  
   
@@ -59,17 +59,17 @@ ms.locfileid: "36066855"
 ## <a name="troubleshooting-connections"></a>Risoluzione dei problemi relativi alle connessioni  
  In questa sezione vengono fornite le risposte ad alcune domande frequenti sulle connessioni a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- **Viene visualizzato un messaggio "Nessuna connessione trovata".**  
+ **Viene visualizzato un messaggio "Nessuna connessione trovata."**  
   
- Se viene visualizzato il testo nella parte inferiore del pulsante **Nessuna connessione**, significa che non è stata creata una connessione per un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database oppure che la connessione non riesce. È possibile continuare a utilizzare i dati in Excel da Access o altre origini, ma per la creazione di un modello di data mining o l'esecuzione di una query di stima è necessaria una connessione attiva.  
+ Se viene visualizzato il testo nella parte inferiore del pulsante **Nessuna connessione**, significa che non è stata creata una connessione a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database oppure che la connessione non riesce. È possibile continuare a utilizzare i dati in Excel da Access o altre origini, ma per la creazione di un modello di data mining o l'esecuzione di una query di stima è necessaria una connessione attiva.  
   
- **Si supponga che dispone delle autorizzazioni per utilizzare il server?**  
+ **Si supponga che non siamo autorizzati a usare il server?**  
   
- Se non si dispone di autorizzazioni sufficienti per archiviare i modelli di data mining nel server o si desidera provare a utilizzare il data mining senza salvare il lavoro svolto, è possibile utilizzare gli Strumenti di analisi tabelle che consentono di creare strutture dei dati o modelli temporanei. Sarà comunque necessario poter archiviare i modelli temporanei nel server. Chiedere all'amministratore di abilitare l'utilizzo di *modelli di data mining di sessione* nel server.  
+ Se non si dispone di autorizzazioni sufficienti per archiviare i modelli di data mining nel server o si desidera provare a utilizzare il data mining senza salvare il lavoro svolto, è possibile utilizzare gli Strumenti di analisi tabelle che consentono di creare strutture dei dati o modelli temporanei. Sarà comunque necessario poter archiviare i modelli temporanei nel server. Chiedere all'amministratore di abilitare l'uso dei *modelli di data mining di sessione* nel server.  
   
  Per assicurarsi che i modelli vengano salvati, è possibile disabilitare l'opzione per l'utilizzo dei modelli temporanei o utilizzare le procedure guidate disponibili nel client di data mining. Queste procedure guidate archiviano tutti i modelli nel server. Poiché è necessario disporre dell'accesso amministrativo al database in cui vengono archiviati i modelli, è consigliabile chiedere all'amministratore di creare un database appositamente per la creazione di modelli di data mining con i componenti aggiuntivi.  
   
- **Ho perso la connessione; si perde anche il lavoro?**  
+ **Ho perso la connessione. si perde anche il lavoro?**  
   
  Se si interrompe la connessione al server, i risultati e i dati non andranno persi perché sono archiviati in Excel. Tuttavia, se sono stati creati alcuni modelli temporanei, tali modelli verranno eliminati dal server dopo un breve periodo di tempo. Pertanto se si perde temporaneamente la connessione, è possibile che i modelli non vengano eliminati.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "36066855"
   
  **Come è possibile monitorare l'utilizzo della connessione?**  
   
- Il [traccia &#40;Client di Data Mining per Excel&#41; ](trace-data-mining-client-for-excel.md) strumento crea un log di tutte le attività tra i componenti aggiuntivi e il server specificato.  
+ Il [Trace &#40;Client di Data Mining per Excel&#41; ](trace-data-mining-client-for-excel.md) strumento crea un log di tutte le attività tra i componenti aggiuntivi e il server specificato.  
   
- Per abilitare il monitoraggio di modelli di sessione, selezionare il **Usa modelli di sessione** opzione il **traccia** finestra di dialogo.  
+ Per abilitare il monitoraggio di modelli di sessione, selezionare la **Usa modelli di sessione** opzione il **traccia** nella finestra di dialogo.  
   
  Lo strumento Traccia consente di visualizzare i comandi DMX e XMLA generati al momento della creazione di modelli e strutture. È inoltre possibile visualizzare le query inviate dal client per generare i risultati e i report in Excel.  
   
@@ -98,12 +98,12 @@ ms.locfileid: "36066855"
   
  Al termine della procedura guidata nel client di data mining per Excel, i modelli vengono salvati nel server per impostazione predefinita, ma nella pagina finale di ogni procedura guidata è presente l'opzione per utilizzare un modello temporaneo. Se si seleziona questa opzione, la struttura e il modello di data mining creati vengono archiviati in un file temporaneo. È possibile esplorare, gestire e modificare la struttura e il modello fino a quando Excel rimane aperto. Quando si chiude Excel, tuttavia, la struttura e i modelli correlati vengono eliminati.  
   
- È possibile creare anche in modo esplicito una struttura temporanea o un modello usando il **dati Mining Editor avanzato Query di** e se si seleziona uno dei modelli DMX. Aggiungere la clausola `USE SESSION MODELS` per specificare che gli oggetti sono temporanei.   
+ È possibile creare in modo esplicito una struttura temporanea o un modello usando il **Editor avanzato Data Mining Query** e selezionando uno dei modelli DMX. Aggiungere la clausola `USE SESSION MODELS` per specificare che gli oggetti sono temporanei.   
   
 ### <a name="creating-backups-of-mining-models-and-structures"></a>Creazione di backup di strutture e modelli di data mining  
  Per creare un backup di un modello o struttura, è possibile esportarlo usando [Gestione modelli &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](manage-models-sql-server-data-mining-add-ins.md), nel Client di Data Mining per Excel.  
   
- Se è stato creato un modello di data mining temporaneo, in genere il nome assegnato è difficile da comprendere, ad esempio Table5_593679_TS_62446. Tuttavia, è possibile usare il [traccia &#40;Client di Data Mining per Excel&#41; ](trace-data-mining-client-for-excel.md) strumento per individuare i nomi delle strutture e modelli che sono stati creati con strumenti di analisi tabelle temporanei e quindi eseguirne il backup usando  **Gestire i modelli**.  
+ Se è stato creato un modello di data mining temporaneo, in genere il nome assegnato è difficile da comprendere, ad esempio Table5_593679_TS_62446. Tuttavia, è possibile usare la [Trace &#40;Client di Data Mining per Excel&#41; ](trace-data-mining-client-for-excel.md) dello strumento per individuare i nomi delle strutture e modelli creati da strumenti di analisi tabelle temporanei e quindi eseguirne il backup usando  **Gestire i modelli**.  
   
 ##### <a name="identify-and-export-a-temporary-model"></a>Identificare ed esportare un modello temporaneo  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36066855"
 4.  Fare clic su Esporta modello di data mining per generare un file script in un percorso specificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Connettersi ai dati di origine &#40;Client di Data Mining per Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md)   
- [Utilità di configurazione server &#40;componenti aggiuntivi data mining per Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+ [Connettersi all'origine dati &#40;Client di Data Mining per Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md)   
+ [Utilità di configurazione server &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
   

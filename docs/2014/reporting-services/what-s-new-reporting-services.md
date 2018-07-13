@@ -1,5 +1,5 @@
 ---
-title: Novità&#39;s nuovo (Reporting Services) | Documenti Microsoft
+title: Cosa&#39;s nuovo (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - what's new [Reporting Services]
 - Reporting Services, what's new
@@ -18,24 +18,24 @@ ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
 caps.latest.revision: 143
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 84cd5432d9f4b9808a5a16521410902129b8dbf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d25e63c996c0b5d80bfcf44b22e219906328a2b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323641"
 ---
-# <a name="what39s-new-reporting-services"></a>Novità&#39;s nuovo (Reporting Services)
+# <a name="what39s-new-reporting-services"></a>Cosa&#39;s nuovo (Reporting Services)
   
   
 ||  
 |-|  
-|Con la versione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene aggiunto il supporto per il browser Google Chrome. Per ulteriori informazioni sui browser supportati, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
+|Con la versione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene aggiunto il supporto per il browser Google Chrome. Per altre informazioni sui browser supportati, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
   
- Per informazioni su altri [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] prodotti e tecnologie, vedere [novità in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
+ Per informazioni su altri [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] prodotti e tecnologie, vedere [What ' s New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
- Per ulteriori informazioni sulle modifiche correlate a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, vedere [novità in Analysis Services e Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md).  
+ Per altre informazioni sulle modifiche correlate a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, vedere [What ' s New in Analysis Services e Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compatibilità con le versioni precedenti di Reporting Services](reporting-services-backward-compatibility.md)   

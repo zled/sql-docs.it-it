@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], dynamic filters
 - merge replication [SQL Server replication], dynamic filters
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 74cb3cd9631e0b709b7eb5cf0cb0856bc3b830af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a66dcf09bc64991be32b9d7bf66e2e1729de6c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066940"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225417"
 ---
 # <a name="parameterized-row-filters"></a>Filtri di riga con parametri
   I filtri di riga con parametri consentono l'invio di partizioni di dati diverse a Sottoscrittori diversi senza che sia necessario creare più pubblicazioni. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], i filtri con parametri vengono definiti filtri dinamici. Una partizione è un subset delle righe di una tabella. In base alle impostazioni scelte durante la creazione di un filtro di riga con parametri, ogni riga di una tabella pubblicata può appartenere a un'unica partizione, con la conseguente produzione di partizioni non sovrapposte, o a due o più partizioni, con la conseguente produzione di partizioni sovrapposte.  
@@ -98,7 +98,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Alla dipendente Pamela Ansman-Wolfe, ad esempio, è stato associato l'ID 280. Specificare il valore dell'ID del dipendente (280 nell'esempio) come valore di HOST_NAME() durante la creazione di una sottoscrizione per questo dipendente. Quando l'agente di merge si connette al server di pubblicazione, confronta il valore restituito da HOST_NAME() con i valori nella tabella e scarica solo la riga che contiene un valore di 280 nella colonna **EmployeeID** .  
   
 > [!IMPORTANT]  
->  La funzione HOST_NAME () restituisce un `nchar` valore, pertanto è necessario utilizzare CONVERT se la colonna nella clausola di filtro è di un tipo di dati numerici, come nell'esempio precedente. Per motivi relativi alle prestazioni, è consigliabile non applicare funzioni ai nomi di colonna nelle clausole di filtro di riga con parametri, come `CONVERT(nchar,EmployeeID) = HOST_NAME()`. È consigliabile invece utilizzare l'approccio indicato nell'esempio: `EmployeeID = CONVERT(int,HOST_NAME())`. Questa clausola può essere utilizzata per la **@subset_filterclause** parametro del [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), ma in genere non può essere utilizzato nella creazione guidata nuova pubblicazione (la procedura guidata esegue la clausola di filtro per la convalida, che non riesce perché il nome del computer non può essere convertito in un `int`). Se si utilizza la Creazione guidata nuova pubblicazione, è consigliabile specificare `CONVERT(nchar,EmployeeID) = HOST_NAME()` nella procedura guidata e quindi utilizzare [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) per modificare la clausola in `EmployeeID = CONVERT(int,HOST_NAME())` prima della creazione di uno snapshot per la pubblicazione.  
+>  La funzione HOST_NAME () restituisce un `nchar` valore, pertanto è necessario utilizzare CONVERT se la colonna nella clausola di filtro è di un tipo di dati numerici, come nell'esempio precedente. Per motivi relativi alle prestazioni, è consigliabile non applicare funzioni ai nomi di colonna nelle clausole di filtro di riga con parametri, come `CONVERT(nchar,EmployeeID) = HOST_NAME()`. È consigliabile invece utilizzare l'approccio indicato nell'esempio: `EmployeeID = CONVERT(int,HOST_NAME())`. Questa clausola può essere utilizzata per la **@subset_filterclause** parametro [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), ma in genere non può essere usato nella creazione guidata nuova pubblicazione (la procedura guidata esegue la clausola di filtro per convalidarlo, che ha esito negativo perché il nome del computer non può essere convertito in un `int`). Se si utilizza la Creazione guidata nuova pubblicazione, è consigliabile specificare `CONVERT(nchar,EmployeeID) = HOST_NAME()` nella procedura guidata e quindi utilizzare [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) per modificare la clausola in `EmployeeID = CONVERT(int,HOST_NAME())` prima della creazione di uno snapshot per la pubblicazione.  
   
  **Per sostituire il valore di HOST_NAME()**  
   
@@ -123,7 +123,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Per impostare le opzioni di filtro, vedere [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md).  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>Impostazione di "use partition groups" e "keep partition changes"  
- Entrambe le opzioni **use partition groups** e **keep partition changes** consentono di migliorare le prestazioni di sincronizzazione delle pubblicazioni con gli articoli filtrati tramite l'archiviazione di metadati aggiuntivi nel database di pubblicazione. L'opzione **use partition groups** offre prestazioni superiori tramite l'utilizzo della funzionalità delle partizioni pre-calcolate. Questa opzione è impostata su `true` per impostazione predefinita se gli articoli nella pubblicazione rispondono a un set di requisiti. Per altre informazioni su questi requisiti, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](parameterized-filters-optimize-for-precomputed-partitions.md). Se gli articoli non soddisfano i requisiti per l'utilizzo di partizioni pre-calcolate, il **mantenere le modifiche alle partizioni** opzione è impostata su `true`.  
+ Entrambe le opzioni **use partition groups** e **keep partition changes** consentono di migliorare le prestazioni di sincronizzazione delle pubblicazioni con gli articoli filtrati tramite l'archiviazione di metadati aggiuntivi nel database di pubblicazione. L'opzione **use partition groups** offre prestazioni superiori tramite l'utilizzo della funzionalità delle partizioni pre-calcolate. Questa opzione è impostata su `true` per impostazione predefinita se gli articoli nella pubblicazione rispondono a una serie di requisiti. Per altre informazioni su questi requisiti, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](parameterized-filters-optimize-for-precomputed-partitions.md). Se gli articoli non soddisfano i requisiti per l'utilizzo delle partizioni pre-calcolate, il **mantenere le modifiche alle partizioni** opzione è impostata su `true`.  
   
 ### <a name="setting-partition-options"></a>Impostazione di "partition options"  
  Durante la creazione di un articolo, si specifica un valore per la proprietà **partition options** in base al modo in cui i dati nella tabella filtrata verranno condivisi dai Sottoscrittori. È possibile impostare la proprietà su uno di quattro valori utilizzando [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)e la finestra di dialogo **Proprietà articolo** . La proprietà può essere impostata su uno dei due valori utilizzando la finestra di dialogo **Aggiungi filtro** o **Modifica filtro** , disponibile nella Creazione guidata nuova pubblicazione, e nella finestra di dialogo **Proprietà pubblicazione** . Nella tabella seguente vengono descritti i valori disponibili.  
@@ -135,7 +135,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 |I dati nelle partizioni non sono sovrapposti e vengono condivisi dalle sottoscrizioni. Il Sottoscrittore non può aggiornare le colonne a cui si fa riferimento in un filtro con parametri.|N/D<sup>1</sup>|**Non sovrapposte, condivise dalle sottoscrizioni**|**2**|  
 |I dati nelle partizioni non sono sovrapposti ed esiste un'unica sottoscrizione per partizione. Il sottoscrittore non è possibile aggiornare le colonne a cui fa riferimento un filtro con parametri. <sup>2</sup>|**Una riga di questa tabella verrà inviata a una sola sottoscrizione**|**Non sovrapposte, sottoscrizione unica**|**3**|  
   
- <sup>1</sup> se l'opzione di filtro sottostante è impostata su **0**, oppure **1**, o **2**, la **Aggiungi filtro** e **modifica Filtro** verranno visualizzate finestre di dialogo **una riga di questa tabella verrà inviata a più sottoscrizioni**.  
+ <sup>1</sup> se l'opzione di filtro sottostante è impostata su **0**, o **1**, oppure **2**, la **Aggiungi filtro** e **modifica Filtro** verranno visualizzate finestre di dialogo **una riga di questa tabella verrà inviata a più sottoscrizioni**.  
   
  <sup>2</sup> se si specifica questa opzione, può esistere solo una singola sottoscrizione per ogni partizione di dati dell'articolo. Se si crea una seconda sottoscrizione nella quale il criterio di filtro porta alla restituzione della stessa partizione della sottoscrizione esistente, quest'ultima viene eliminata.  
   

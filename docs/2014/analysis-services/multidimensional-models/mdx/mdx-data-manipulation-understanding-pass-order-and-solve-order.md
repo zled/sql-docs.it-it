@@ -1,5 +1,5 @@
 ---
-title: Informazioni sull'ordine di calcolo e valutazione (MDX) | Documenti Microsoft
+title: Informazioni sull'ordine di calcolo e valutazione (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - evaluation order [MDX]
 - calculation order [MDX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6275971580e7885d0ccdd92aa128811c07f297bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e62af2057276bf6533753d5c1543e686ddb5e92c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196531"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Informazioni sull'ordine di calcolo e di valutazione (MDX)
   L'operazione di calcolo di un cubo, risultante da uno script MDX, può essere suddivisa in numerose fasi di calcolo a seconda dell'utilizzo delle varie funzionalità correlate ai calcoli. Ognuna di queste fasi viene indicata come sessione di calcolo.  
@@ -129,7 +129,7 @@ FROM [Adventure Works]
 ### <a name="query-3combined-year-difference-and-net-income-calculations"></a>Query 3 - Calcolo combinato della differenza annuale e del reddito netto  
  Nella query finale, in cui vengono combinati entrambi gli esempi precedenti in una singola query MDX, l'ordine di valutazione diventa importante a causa dei calcoli in entrambe le colonne e le righe. Per assicurarsi che i calcoli vengano eseguiti nella sequenza corretta, definire la sequenza in cui i calcoli vengano eseguiti tramite il `SOLVE_ORDER` (parola chiave).  
   
- La parola chiave `SOLVE_ORDER` consente di specificare l'ordine di valutazione dei membri calcolati in una query MDX o in un comando `CREATE MEMBER`. I valori integer utilizzati con il `SOLVE_ORDER` (parola chiave) sono relativi e non necessario per iniziano da zero e non è necessario essere consecutivi. Il valore indica semplicemente al sistema MDX di calcolare un membro in base ai valori derivati dal calcolo dei membri con un valore superiore. Se un membro calcolato viene definito senza la `SOLVE_ORDER` (parola chiave), calcolato il valore predefinito di tale membro è uguale a zero.  
+ La parola chiave `SOLVE_ORDER` consente di specificare l'ordine di valutazione dei membri calcolati in una query MDX o in un comando `CREATE MEMBER`. I valori integer utilizzati con la `SOLVE_ORDER` (parola chiave) sono relativi e non devono iniziare da zero e è necessario essere consecutivi. Il valore indica semplicemente al sistema MDX di calcolare un membro in base ai valori derivati dal calcolo dei membri con un valore superiore. Se un membro calcolato viene definito senza la `SOLVE_ORDER` parola chiave, il valore predefinito di tale membro è uguale a zero.  
   
  Se ad esempio si combinano i calcoli utilizzati nelle prime due query di esempio, i due membri calcolati `Year Difference` e `Profit Margin`si intersecano in corrispondenza di una singola cella nel set di dati risultante dell'esempio di query MDX. L'unico modo per determinare come questa cella verrà valutata da [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] consiste nell'usare l'ordine di valutazione. Le formule utilizzate per creare la cella genereranno risultati diversi a seconda dell'ordine di valutazione dei due membri calcolati.  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento CalendarStartDate (ASSL) | Documenti Microsoft
+title: Elemento CalendarStartDate (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CalendarStartDate element
 ms.assetid: f6204107-9123-41f0-acbd-52134fe36e37
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e0fd15c7fa6336c1fb1ea245eb400079e95e76d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 650ccdab8099ec80b6a526671bb01f0ad2d5ea32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249381"
 ---
 # <a name="calendarstartdate-element-assl"></a>Elemento CalendarStartDate (ASSL)
-  Definisce la data di inizio del periodo di calendario per la [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
+  Definisce la data di inizio del periodo di calendario per il [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,10 +61,10 @@ ms.locfileid: "36065226"
 |Elemento padre|[TimeBinding](../data-type/binding-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  `CalendarEndDate` deve cadere dopo `CalendarStartDate`.  
   
- L'elemento che corrisponde al padre di `CalendarStartDate` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ L'elemento che corrisponde al padre di `CalendarStartDate` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

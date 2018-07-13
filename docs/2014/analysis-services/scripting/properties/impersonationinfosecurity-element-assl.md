@@ -1,5 +1,5 @@
 ---
-title: Elemento ImpersonationInfoSecurity (ASSL) | Documenti Microsoft
+title: Elemento ImpersonationInfoSecurity (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ImpersonationInfoSecurity element
 ms.assetid: 583fec36-90ef-4d6a-9888-ece6ae865c53
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 331ee3440a3cab5959f83880a08a4ef0d589cddd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6ed6386f862e6fb9d1cababe870cbcca105e7be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189188"
 ---
 # <a name="impersonationinfosecurity-element-assl"></a>Elemento ImpersonationInfoSecurity (ASSL)
-  Contiene un valore di sola lettura che indica se sono state apportate modifiche alle credenziali di sicurezza che non vengano specificate nel [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) tipo di dati.  
+  Contiene un valore di sola lettura che indica se sono state apportate modifiche alle credenziali di sicurezza fornite nel [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) tipo di dati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36067066"
 |Elemento padre|[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
 |valore|Description|  

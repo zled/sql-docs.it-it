@@ -1,5 +1,5 @@
 ---
-title: Proprietà ProtocolName (classe ServerNetworkProtocolIPAddress) | Documenti Microsoft
+title: Proprietà ProtocolName (classe ServerNetworkProtocolIPAddress) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c74a4177be994d890a5cc30bdf85f5778b6c008e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7f76b2e3cbb713a99e3e6d531e0afcad4572b5b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197081"
 ---
 # <a name="protocolname-property-servernetworkprotocolipaddress-class"></a>Proprietà ProtocolName (classe ServerNetworkProtocolIPAddress)
   Ottiene il nome del protocollo di rete del server che fa riferimento all'indirizzo IP.  
@@ -48,9 +48,9 @@ object
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il nome del protocollo di rete del server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete Server e le librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

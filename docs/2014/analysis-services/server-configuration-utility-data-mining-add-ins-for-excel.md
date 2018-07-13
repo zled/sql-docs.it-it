@@ -1,5 +1,5 @@
 ---
-title: Utilità di configurazione server (dati componenti aggiuntivi Data Mining per Excel) | Documenti Microsoft
+title: Utilità di configurazione di server (dati componenti aggiuntivi Data Mining per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c51ea6b4e492bc238fee5ea3fea763f0fd5cb439
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae026e24210385a24b53f9ddf0cf1533a0e27e40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178928"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Utilità di configurazione del server (componenti aggiuntivi data mining per Excel)
   Quando si installano i componenti aggiuntivi Data Mining per Excel, viene installata anche l'utilità di configurazione del server che viene eseguita quando si aprono per la prima volta i componenti aggiuntivi. In questo argomento viene descritto come utilizzare l'utilità per connettersi a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e impostare un database per l'utilizzo dei modelli di data mining.  
@@ -39,7 +39,7 @@ ms.locfileid: "36067674"
  **Autenticazione**  
  Specificare i metodi di autenticazione. L'autenticazione di Windows è obbligatoria per le connessioni a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], a meno che l'amministratore non abbia configurato l'accesso al server tramite HTTPPump.  
   
-##  <a name="bkmk_step2"></a> Passaggio 2: Autorizzazione modelli temporanei  
+##  <a name="bkmk_step2"></a> Passaggio 2: Consentire modelli temporanei  
  Per poter utilizzare i componenti aggiuntivi, è necessario modificare una proprietà del server di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per consentire la creazione di modelli di data mining temporanei.  
   
  I modelli di data mining temporanei sono detti anche *modelli di sessione*. in quanto i modelli rimangono archiviati solo fino a quando la sessione corrente è aperta. Quando si chiude la connessione al server, la sessione viene terminata e i modelli utilizzati durante la sessione vengono eliminati.  
@@ -48,7 +48,7 @@ ms.locfileid: "36067674"
   
  Durante la procedura guidata vengono innanzitutto rilevate le impostazioni specificate nel server. Se il server consente già i modelli di data mining temporanei, è possibile fare clic su **successivo** per continuare. La procedura guidata fornisce inoltre le istruzioni relative all'abilitazione dei modelli di data mining temporanei nel server di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] specificato o le indicazioni per effettuare una richiesta all'amministratore di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-##  <a name="bkmk_step3"></a> Passaggio 3: Creazione del Database per gli utenti aggiuntivi  
+##  <a name="bkmk_step3"></a> Passaggio 3: Creare Database per gli utenti di componente aggiuntivo  
  In questa pagina della procedura guidata di installazione e configurazione è possibile creare un nuovo database dedicato al data mining o selezionare un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esistente.  
   
 > [!WARNING]  
@@ -64,13 +64,13 @@ ms.locfileid: "36067674"
  **Nome database**  
  Digitare il nome del nuovo database. Se il nome non è già in uso, verrà creato automaticamente.  
   
- **Usa database esistente**  
+ **Utilizza database esistente**  
  Selezionare questa opzione per utilizzare un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esistente.  
   
  **Database**  
  Se si sceglie l'opzione per utilizzare un database esistente, è necessario selezionare il nome del database nell'elenco.  
   
-##  <a name="bkmk_step4"></a> Passaggio 4: Assegnazione delle autorizzazioni Appropriate agli utenti di componente aggiuntivo  
+##  <a name="bkmk_step4"></a> Passaggio 4: Concedere le autorizzazioni Appropriate agli utenti di componente aggiuntivo  
  È necessario verificare che tutti gli utenti dei componenti aggiuntivi dispongano delle autorizzazioni necessarie per esplorare, modificare, elaborare o creare strutture e modelli di data mining.  
   
  Per impostazione predefinita, per utilizzare i componenti aggiuntivi è necessaria l'autenticazione integrata di Windows.  
@@ -79,7 +79,7 @@ ms.locfileid: "36067674"
  Selezionare questa opzione per concedere l'accesso amministrativo al database agli utenti elencati.  
   
 > [!NOTE]  
->  Queste autorizzazioni si applicano solo ai database elencato il **nome del Database** casella.  
+>  Queste autorizzazioni si applicano solo per il database indicato nel **nome del Database** casella.  
   
  **Nome database**  
  Consente di visualizzare il nome del database selezionato.  

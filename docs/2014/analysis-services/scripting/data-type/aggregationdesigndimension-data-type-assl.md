@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati AggregationDesignDimension (ASSL) | Documenti Microsoft
+title: Tipo di dati AggregationDesignDimension (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDesignDimension data type
 ms.assetid: 06a0d418-014c-4f40-a63a-5cfeee3f6a41
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0828fb652833b84948552ffe1802af77e0d1e83c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74a28002d7074ad58c044b4af57310c22518a87d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247251"
 ---
 # <a name="aggregationdesigndimension-data-type-assl"></a>Tipo di dati AggregationDesignDimension (ASSL)
   Definisce un tipo di dati primitivo che rappresenta la relazione tra una dimensione del cubo e un [AggregationDesign](../objects/aggregationdesign-element-assl.md) elemento.  
@@ -58,10 +58,10 @@ ms.locfileid: "36064325"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Annotazioni](../collections/annotations-element-assl.md), [attributi](../collections/attributes-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md)|  
-|Elementi derivati|[Dimensione](../objects/dimension-element-assl.md) ([dimensioni](../collections/dimensions-element-assl.md) insieme [AggregationDesign](../objects/aggregationdesign-element-assl.md))|  
+|Elementi figlio|[Le annotazioni](../collections/annotations-element-assl.md), [attributi](../collections/attributes-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md)|  
+|Elementi derivati|[Dimensione](../objects/dimension-element-assl.md) ([quote](../collections/dimensions-element-assl.md) insieme [AggregationDesign](../objects/aggregationdesign-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.AggregationDesignDimension>.  
   
 ## <a name="see-also"></a>Vedere anche  

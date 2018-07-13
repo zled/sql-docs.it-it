@@ -1,5 +1,5 @@
 ---
-title: Stimare la procedura guidata (dati componenti aggiuntivi Data Mining per Excel) | Documenti Microsoft
+title: Stimare la procedura guidata (dati componenti aggiuntivi Data Mining per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data modeling [data mining]
 - estimation
 ms.assetid: 7f2b1d5f-c9b3-4939-b35a-34ae099af15f
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 231afdcfdc5c6e9e461e463fb5b6c3c682e70cde
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e81ee7d3ff6115cbec5774d8c139c0d9933afb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231985"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>Procedura guidata Stima (componenti aggiuntivi Data mining per Excel)
   ![Procedura guidata stima sulla barra multifunzione Data Mining](media/dmc-estimate.gif "procedura guidata stima sulla barra multifunzione Data Mining")  
@@ -35,11 +35,11 @@ ms.locfileid: "36066262"
   
 1.  Nel **Data Mining** sulla barra multifunzione, fare clic su **stima**.  
   
-2.  Nel **selezione dati di origine** finestra di dialogo, selezionare i dati di origine da utilizzare. È possibile utilizzare i dati in un Excel **tabella**, un Excel **intervallo di dati**, o da un **origine dati esterna**.  
+2.  Nel **selezione dati di origine** finestra di dialogo, selezionare i dati di origine da utilizzare. È possibile usare i dati in un Excel **tabella**, un Excel **intervallo di dati**, o da un **origine dati esterna**.  
   
      Se si utilizza un'origine dati esterna, è possibile creare viste o query personalizzate e salvarle come origine dati di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-3.  Nel **stima** finestra di dialogo, seleziona il **colonna da analizzare**.  
+3.  Nel **stima** finestra di dialogo, seleziona la **colonna da analizzare**.  
   
      La colonna di destinazione deve contenere dati numerici continui.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "36066262"
   
      Queste colonne verranno utilizzate per creare i modelli. Eliminare dall'analisi tutte le colonne di scarsa utilità, ad esempio i numeri di ID o le colonne che contengono dati irrilevanti.  
   
-5.  Il **stima** procedura guidata consente di selezionare l'algoritmo ottimale per il set di dati. Tuttavia, è possibile fare clic su **parametri** per aprire la **i parametri dell'algoritmo** finestra di dialogo e impostare le opzioni avanzate.  
+5.  Il **stima** procedura guidata consente di selezionare l'algoritmo ottimale per il set di dati. Tuttavia, è possibile fare clic su **parametri** per aprire il **i parametri dell'algoritmo** nella finestra di dialogo e impostare le opzioni avanzate.  
   
-6.  Se i dati sono numerici ed è possibile utilizzare il metodo Microsoft Linear Regression, è possibile controllare la **regressore** casella per qualsiasi colonna numerica che sa (o si sospetta) essere correlata al valore stimabile.  
+6.  Se i dati sono numerici ed è possibile usare il metodo Microsoft Linear Regression, è possibile controllare la **regressore** casella per qualsiasi colonna numerica che sa (o fortemente convinto) da correlare con il valore stimabile.  
   
-     L'algoritmo testerà quindi i valori in tale colonna per determinare se influiscono sui risultati. Se si è sicuri, fare clic su **Suggerisci** e l'algoritmo verrà testate tutte le colonne e rilevare automaticamente i valori migliori da utilizzare come regressori.  
+     L'algoritmo testerà quindi i valori in tale colonna per determinare se influiscono sui risultati. Se si è certi, fare clic su **Suggerisci** e l'algoritmo verrà testate tutte le colonne e rilevare automaticamente i valori migliori da utilizzare come regressori.  
   
     > [!NOTE]  
     >  Per creare una valutazione, è necessario un regressore. Tramite la procedura guidata viene consigliato sempre il regressore migliore, in base a un passaggio iniziale di analisi dei dati. Se pertanto non si è sicuri, è consigliabile accettare le selezioni consigliate.  
@@ -62,18 +62,18 @@ ms.locfileid: "36066262"
   
 9. Impostare le opzioni per l'utilizzo del modello.  
   
-    -   Selezionare **Sfoglia** per aprire immediatamente il modello in un visualizzatore.  
+    -   Selezionare **esplorare** per aprire immediatamente il modello in un visualizzatore.  
   
          Il visualizzatore grafico consente di visualizzare un grafico della rete di dipendenze e l'albero delle decisioni generato dall'algoritmo. Esaminando queste informazioni, è possibile comprendere meglio i fattori che contribuiscono a generare i valori valutati.  
   
-    -   Selezionare **Consenti drill-through** per consentire agli utenti di analisi di visualizzare i dati sottostanti.  
+    -   Selezionare **abilitare il drill-through** per consentire agli utenti di analisi di visualizzare i dati sottostanti.  
   
          Questa opzione è disponibile solo se si utilizzano gli algoritmi Decision Trees o Linear Regression.  
   
     -   **Usa modello temporaneo**. Se si seleziona questa opzione, il modello non verrà salvato nel server. I modelli temporanei vengono eliminati quando si chiude Excel.  
   
 ## <a name="more-about-estimation-models"></a>Ulteriori informazioni sui modelli di valutazione  
- Il **stima** guidata supporta l'utilizzo di uno degli algoritmi seguenti:  
+ Il **stima** guidata supporta l'utilizzo di uno qualsiasi degli algoritmi seguenti:  
   
 -   Algoritmo Microsoft Decision Trees  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36066262"
   
 -   Algoritmo Microsoft Neural Network  
   
- Nel **i parametri dell'algoritmo** della finestra di dialogo è possibile impostare opzioni avanzate aggiuntive, a seconda dell'algoritmo scelto. Per informazioni sulle opzioni per ciascun algoritmo, vedere questi argomenti nella documentazione online di SQL Server:  
+ Nel **i parametri dell'algoritmo** nella finestra di dialogo è possibile impostare opzioni avanzate aggiuntive, a seconda dell'algoritmo scelto. Per informazioni sulle opzioni per ciascun algoritmo, vedere questi argomenti nella documentazione online di SQL Server:  
   
  [Riferimento tecnico per l'algoritmo Microsoft Decision Trees](data-mining/microsoft-decision-trees-algorithm-technical-reference.md)  
   
@@ -102,6 +102,6 @@ ms.locfileid: "36066262"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un modello di Data Mining](creating-a-data-mining-model.md)   
- [Algoritmo Microsoft Decision descrizione dettagliata del diagramma dell'albero &#40;componenti aggiuntivi data mining&#41;](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
+ [Decision Trees descrizione dettagliata del diagramma dell'albero &#40;componenti aggiuntivi data mining&#41;](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   
   

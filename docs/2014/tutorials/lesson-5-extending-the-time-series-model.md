@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 5: Estendere la serie temporale modello | Documenti Microsoft'
+title: 'Lezione 5: Estendere la serie temporale modellare | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7aad4946-c903-4e25-88b9-b087c20cb67d
 caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: fe6a783cef802e9b68a063cf80016e7f31011cfa
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: aab77b225eeef6844dc74deb272430b0434de71e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194391"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>Lezione 5: Estensione del modello Time Series
   In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise è possibile aggiungere nuovi dati a un modello Time Series e incorporarli automaticamente nel modello. I nuovi dati possono essere aggiunti a un modello di data mining Time Series in uno dei due modi indicati di seguito:  
@@ -53,7 +53,7 @@ PREDICTION JOIN <source query>
   
 #### <a name="to-create-a-singleton-prediction-query-on-a-time-series-model"></a>Per creare una query di stima singleton in un modello Time Series  
   
-1.  In **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX**.  
+1.  Nella **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX**.  
   
      Verrà avviato l'editor di query con una nuova query vuota.  
   
@@ -144,9 +144,9 @@ PREDICTION JOIN <source query>
   
 7.  Nel **File** menu, fare clic su **Salva Dmxquery1.DMX**.  
   
-8.  Nel **Salva con nome** finestra di dialogo, selezionare la cartella appropriata e denominare il file `Singleton_TimeSeries_Query.dmx`.  
+8.  Nel **Salva con nome** della finestra di dialogo passare alla cartella appropriata e assegnare un nome di file `Singleton_TimeSeries_Query.dmx`.  
   
-9. Sulla barra degli strumenti, fare clic sui **Execute** pulsante.  
+9. Sulla barra degli strumenti, scegliere il **Execute** pulsante.  
   
      La query restituirà le stime delle quantità di vendita relative alla bicicletta M200 in Europa e nell'area del Pacifico.  
   
@@ -196,7 +196,7 @@ PREDICTION JOIN <source query>
   
 -   Richiedere stime per quattro intervalli di tempo, dove il punto iniziale è l'intervallo di tempo 3 e il punto finale è l'intervallo di tempo 6.  
   
- In altre parole, se i nuovi dati contengono intervalli di tempo n, e si richiedono stime per intervalli temporali da 1 a n, le stime coincideranno con lo stesso periodo dei nuovi dati. Per ottenere nuove stime per periodi di tempo non previsti dai dati, è necessario avviare le stime nell'intervallo di tempo n+1 dopo la nuova serie dei dati oppure verificare di aver effettuato la richiesta di ulteriori intervalli di tempo.  
+ In altre parole, se i nuovi dati sono contenuti n intervalli di tempo e si richiedono stime per gli intervalli temporali da 1 a n, le stime coincideranno con lo stesso periodo dei nuovi dati. Per ottenere nuove stime per periodi di tempo non previsti dai dati, è necessario avviare le stime nell'intervallo di tempo n+1 dopo la nuova serie dei dati oppure verificare di aver effettuato la richiesta di ulteriori intervalli di tempo.  
   
 > [!NOTE]  
 >  Non è possibile eseguire stime cronologiche quando si aggiungono nuovi dati.  
@@ -234,10 +234,10 @@ WHERE [ModelRegion] = 'M200 Europe'
 |M200 Europe|12/25/2008 12:00:00 AM|89|  
   
 ## <a name="making-predictions-with-replacemodelcases"></a>Esecuzione di stime con REPLACE_MODEL_CASES  
- La sostituzione dei case del modello risulta utile qualora si desideri eseguire il training per un modello in un case set, quindi applicare il modello a una serie di dati diversa. Una procedura dettagliata di questo scenario viene presentata nella [lezione 2: compilazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining Data&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+ La sostituzione dei case del modello risulta utile qualora si desideri eseguire il training per un modello in un case set, quindi applicare il modello a una serie di dati diversa. Una procedura dettagliata di questo scenario viene presentata nella [lezione 2: compilazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining dei dati&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tempo Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

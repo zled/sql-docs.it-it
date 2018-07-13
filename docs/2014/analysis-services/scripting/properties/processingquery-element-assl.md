@@ -1,5 +1,5 @@
 ---
-title: Elemento ProcessingQuery (ASSL) | Documenti Microsoft
+title: Elemento ProcessingQuery (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProcessingQuery element
 ms.assetid: d18e6f4b-c24c-4f73-8b85-4b6e8a82a695
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4ade6950de95029d3eea4105bd34f636fd3632a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01d9ccc0e5e5c376e0d5e7ee08aa42eb0e062b97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250891"
 ---
 # <a name="processingquery-element-assl"></a>Elemento ProcessingQuery (ASSL)
   Contiene il testo con parametri della query da eseguire per la notifica dello stato di elaborazione incrementale.  
@@ -59,10 +59,10 @@ ms.locfileid: "36066777"
 |Elemento padre|[IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- La tabella nel [DataSourceView](../objects/datasourceview-element-assl.md) che fa riferimento il `ProcessingQuery` identificata dall'elemento di pari livello [TableID](id-element-assl.md).  
+## <a name="remarks"></a>Note  
+ La tabella nel [DataSourceView](../objects/datasourceview-element-assl.md) che fa riferimento il `ProcessingQuery` identificato dall'elemento di pari livello, [TableID](id-element-assl.md).  
   
- L'elemento che corrisponde al padre di `ProcessingQuery` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>.  
+ L'elemento che corrisponde al padre di `ProcessingQuery` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  
