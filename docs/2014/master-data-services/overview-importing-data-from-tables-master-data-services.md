@@ -1,5 +1,5 @@
 ---
-title: Importazione dati (Master Data Services) | Documenti Microsoft
+title: Importazione dei dati (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
 - importing data [Master Data Services]
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 14
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d386070df790164e11763d0dfc459cb7de2c1a95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d1d0810c58b2dd0a899c95a358ddccac601b8380
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162832"
 ---
 # <a name="data-import-master-data-services"></a>Importazione dati (Master Data Services)
-  Dopo aver creato un modello per i dati nel [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], è possibile iniziare ad aggiungere dati e apportare modifiche ai dati nel [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.   È possibile usare stored procedure, tabelle di staging e Gestione dati master di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+  Dopo aver creato un modello per i dati in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], è possibile iniziare ad aggiungere dati e apportare modifiche ai dati nel [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.   È possibile usare stored procedure, tabelle di staging e Gestione dati master di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
- È anche possibile usare il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]per aggiungere dati al repository MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database). Per altre informazioni, vedere [pubblicazione di dati &#40;il componente aggiuntivo MDS per Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
+ È anche possibile usare la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]per aggiungere dati al repository MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database). Per altre informazioni, vedere [pubblicazione di dati &#40;il componente aggiuntivo MDS per Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
  Quando si aggiungono e si aggiornano dati, è possibile eseguire le operazioni seguenti.  
   
@@ -73,11 +73,11 @@ ms.locfileid: "36062214"
 ## <a name="staging-tables-and-stored-procedures"></a>Tabelle e stored procedure di gestione temporanea  
  Il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] include i tipi di tabelle di staging seguenti che è possibile popolare con i dati personali.  
   
--   [Tabella di gestione temporanea dei membri foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
+-   [Tabella di Staging dei membri foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [Tabella di gestione temporanea dei membri consolidati &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Tabella di Staging dei membri consolidati &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [Tabella di gestione temporanea delle relazioni &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [Tabella di Staging delle relazioni &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
  Per ogni entità del modello esiste una tabella di staging. Il nome della tabella indica l'entità corrispondente e il tipo di entità, ad esempio membro foglia. La figura seguente mostra le tabelle di staging per le entità currency, customer e product.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36062214"
   
  Per ogni entità nel modello esistono tre stored procedure corrispondenti alle tabelle di staging di membri foglia, membri consolidati e relazioni.  La figura seguente mostra le stored procedure di gestione temporanea per le entità currency, customer e product.  
   
- ![Gestione temporanea Stored procedure nel database MDS](../../2014/master-data-services/media/mds-stagingstoredprocedures.png "gestione temporanea Stored procedure nel database MDS")  
+ ![Gestione temporanea Stored procedure nel database MDS](../../2014/master-data-services/media/mds-stagingstoredprocedures.png "Staging Stored procedure nel database MDS")  
   
  Per altre informazioni sulle stored procedure, vedere [Stored procedure di gestione temporanea &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   

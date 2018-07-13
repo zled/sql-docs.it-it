@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0c71123c2b91cd07ca8fb93faf458f7ff42cb04d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 256a7cbabc6c07bb0e1f42aeb6a3a3d77a5d93a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171142"
 ---
 # <a name="execute-package-task"></a>Attività Esegui pacchetto
   L'attività Esegui pacchetto permette di estendere le funzionalità aziendali di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consentendo ai pacchetti di eseguire altri pacchetti nell'ambito di un flusso di lavoro.  
@@ -101,7 +101,7 @@ ms.locfileid: "36062235"
  Per altre informazioni, vedere [Utilizzare i valori di variabili e parametri in un pacchetto figlio](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### <a name="accessing-parent-package-variables"></a>Accesso alle variabili del pacchetto padre  
- Utilizzando l'attività Script è possibile consentire ai pacchetti figlio di accedere alle variabili del pacchetto padre. Quando si immette il nome della variabile del pacchetto padre nella pagina **Script** di **Editor attività Script**, non includere **Utente:** nel nome della variabile. In caso contrario, tramite il pacchetto figlio non viene individuata la variabile quando si esegue il pacchetto padre. Per ulteriori informazioni sull'utilizzo dell'attività Script per accedere a variabili del pacchetto padre, vedere questo post di blog [SSIS: l'accesso alle variabili in un pacchetto padre](http://go.microsoft.com/fwlink/?LinkId=257729), sul sito Web consultingblogs.emc.com.  
+ Utilizzando l'attività Script è possibile consentire ai pacchetti figlio di accedere alle variabili del pacchetto padre. Quando si immette il nome della variabile del pacchetto padre nella pagina **Script** di **Editor attività Script**, non includere **Utente:** nel nome della variabile. In caso contrario, tramite il pacchetto figlio non viene individuata la variabile quando si esegue il pacchetto padre. Per altre informazioni sull'utilizzo dell'attività Script per accedere alle variabili del pacchetto padre, vedere questo post di blog [SSIS: l'accesso a variabili in un pacchetto padre](http://go.microsoft.com/fwlink/?LinkId=257729), sul sito Web consultingblogs.emc.com.  
   
 ## <a name="configuring-the-execute-package-task"></a>Configurazione dell'attività Esegui pacchetto  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
@@ -120,8 +120,8 @@ ms.locfileid: "36062235"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog [SSIS: deve eseguire i pacchetti figlio in-process o out-of-process?](http://go.microsoft.com/fwlink/?LinkId=220819), sul sito Web consultingblogs.emc.com.  
+-   Intervento nel blog concernente [SSIS: è necessario eseguire pacchetti figlio in-process o out-of-process?](http://go.microsoft.com/fwlink/?LinkId=220819), sul sito Web consultingblogs.emc.com.  
   
--   Intervento nel blog [SSIS: l'accesso alle variabili in un pacchetto padre](http://go.microsoft.com/fwlink/?LinkId=257729), sul sito Web consultingblogs.emc.com.  
+-   Intervento nel blog concernente [SSIS: l'accesso a variabili in un pacchetto padre](http://go.microsoft.com/fwlink/?LinkId=257729), sul sito Web consultingblogs.emc.com.  
   
   

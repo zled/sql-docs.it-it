@@ -1,5 +1,5 @@
 ---
-title: Esplorazione dei modelli Market Basket (esercitazione intermedia di Data Mining) | Documenti Microsoft
+title: Esplorazione dei modelli Market Basket (esercitazione intermedia di Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: da1c9cb7-6c32-4b9b-96ec-ecea772aeb77
 caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 7b3a2e70a8831bd31a8397ec57a71dbf1f5a3207
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: c81bba0a055f812afddb56eac604111796f464d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179138"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Esplorazione dei modelli Market Basket (Esercitazione intermedia sul data mining)
-  Ora che è stato compilato il `Association` modello, è possibile esaminarlo utilizzando il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Association Rules nel **visualizzatore modello di Data Mining** scheda Progettazione modelli di Data Mining. In questa esercitazione viene descritto l'utilizzo del visualizzatore per esplorare le relazioni tra elementi. Il visualizzatore consente di visualizzare immediatamente i prodotti che tendono a comparire insieme e di ottenere un'idea generale degli schemi risultanti.  
+  Ora che è stata compilata la `Association` modello, è possibile esaminarlo utilizzando il [!INCLUDE[msCoName](../includes/msconame-md.md)] visualizzatore Microsoft Association nel **visualizzatore modello di Data Mining** scheda della finestra di progettazione modelli di Data Mining. In questa esercitazione viene descritto l'utilizzo del visualizzatore per esplorare le relazioni tra elementi. Il visualizzatore consente di visualizzare immediatamente i prodotti che tendono a comparire insieme e di ottenere un'idea generale degli schemi risultanti.  
   
  Il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Association Rules contiene tre schede: **regole**, **set di elementi**, e **rete di dipendenze**. Poiché ogni scheda rivela una vista leggermente diversa dei dati, quando si esplora un modello, in genere si passa diverse volte da un riquadro all'altro man mano che si ottengono le informazioni.  
   
@@ -34,10 +34,10 @@ ms.locfileid: "36313069"
   
 -   [Generic Content Tree Viewer](#bkmk_ContentViewer)  
   
- Per questa esercitazione, si inizierà la **rete di dipendenze** scheda e quindi usare il **regole** scheda e **set di elementi** tab per approfondire la comprensione delle relazioni rivelate nel Visualizzatore. Si useranno anche il **Microsoft Generic Content Tree Viewer** per recuperare statistiche dettagliate relative alle singole regole o set di elementi.  
+ Per questa esercitazione, inizierà il giorno il **rete di dipendenze** scheda e quindi utilizzare il **regole** scheda e **set di elementi** pressione di tab per approfondire la comprensione delle relazioni rivelate nel Visualizzatore. Si userà anche il **Microsoft Generic Content Tree Viewer** per recuperare statistiche dettagliate per le singole regole o set di elementi.  
   
 ##  <a name="bkmk_DepNet"></a> Scheda rete di dipendenze  
- Con il **rete di dipendenze** scheda, è possibile esaminare l'interazione tra i diversi elementi presenti nel modello. Ogni nodo nel visualizzatore rappresenta un elemento, mentre le linee tra i nodi rappresentano regole. Selezionando un nodo, è possibile visualizzare gli altri nodi che stimano l'elemento selezionato oppure gli elementi stimati dall'elemento corrente. In alcuni casi, è presente un'associazione bidirezionale tra gli elementi, ovvero che compaiono spesso nella stessa transazione. È possibile fare riferimento alla legenda dei colori nella parte inferiore della scheda per determinare la direzione dell'associazione.  
+ Con il **rete di dipendenze** scheda, è possibile esaminare l'interazione tra i diversi elementi nel modello. Ogni nodo nel visualizzatore rappresenta un elemento, mentre le linee tra i nodi rappresentano regole. Selezionando un nodo, è possibile visualizzare gli altri nodi che stimano l'elemento selezionato oppure gli elementi stimati dall'elemento corrente. In alcuni casi, è presente un'associazione bidirezionale tra gli elementi, ovvero che compaiono spesso nella stessa transazione. È possibile fare riferimento alla legenda dei colori nella parte inferiore della scheda per determinare la direzione dell'associazione.  
   
  Una linea che collega due elementi indica che è probabile che questi elementi compaiano insieme in una transazione. In altre parole, è probabile che i clienti acquistino insieme questi elementi. Il dispositivo di scorrimento è associato alla probabilità della regola. Spostare il dispositivo di scorrimento verso l'alto o verso il basso per escludere le associazioni deboli, ovvero le regole con una bassa probabilità.  
   
@@ -47,23 +47,23 @@ ms.locfileid: "36313069"
   
 #### <a name="to-open-the-association-mode-in-the-microsoft-assocaition-rules-viewer"></a>Per aprire il modello Association nel Visualizzatore Microsoft Association Rules  
   
-1.  In **Esplora soluzioni**, fare doppio clic sulla struttura Association.  
+1.  Nelle **Esplora soluzioni**, fare doppio clic sulla struttura di associazione.  
   
 2.  In Progettazione modelli di data mining fare clic sulla scheda **Visualizzatore modello di data mining** .  
   
-3.  Selezionare Association dall'elenco dei modelli di data mining di **modello di Data Mining** elenco a discesa.  
+3.  Selezionare Association dall'elenco dei modelli di data mining di **modello di Data Mining** nell'elenco a discesa.  
   
 #### <a name="to-navigate-the-dependency-graph-and-locate-specific-nodes"></a>Per navigare nel grafico delle dipendenze e individuare nodi specifici  
   
 1.  Nel **visualizzatore modello di Data Mining** scheda, fare clic sui **rete di dipendenze** scheda.  
   
-2.  Fare clic su **zoom avanti** più volte, fino a quando non sarà possibile visualizzare le etichette per ogni nodo.  
+2.  Fare clic su **zoom avanti** più volte, fino a quando non è possibile visualizzare facilmente le etichette per ogni nodo.  
   
      Per impostazione predefinita, il grafico viene visualizzato con tutti i nodi visibili. In un modello complesso possono esservi molti nodi, ognuno dei quali risulta piuttosto piccolo.  
   
-3.  Fare clic sui **+** firmare l'angolo in basso a destra del visualizzatore e tenere premuto il pulsante del mouse per eseguire la traslazione intorno al grafico.  
+3.  Scegliere il **+** Accedi nell'angolo destro inferiore del visualizzatore e tenere premuto il pulsante del mouse per una panoramica del grafico.  
   
-4.  Sul lato sinistro del visualizzatore, trascinare il dispositivo di scorrimento verso il basso, spostandolo da **tutti i collegamenti** (predefinito) nella parte inferiore del controllo dispositivo di scorrimento.  
+4.  Sul lato sinistro del visualizzatore, trascinare il dispositivo di scorrimento verso il basso, spostandolo dalla **tutti i collegamenti** (impostazione predefinita) nella parte inferiore del controllo dispositivo di scorrimento.  
   
 5.  Il visualizzatore aggiornerà il grafico in modo da mostrare solo l'associazione più forte, tra gli elementi Touring Tire e Touring Tire Tube.  
   
@@ -82,21 +82,21 @@ ms.locfileid: "36313069"
  [Torna all'inizio](#bkmk_DepNet)  
   
 ##  <a name="bkmk_Itemsets"></a> Scheda set di elementi  
- Il passaggio successivo consiste nell'ottenere maggiori informazioni sulle regole e sui set di elementi generati dal modello per i prodotti Touring Tire e Touring Tire Tube. Il **set di elementi** scheda vengono visualizzate tre importanti tipi di informazioni relative ai set di elementi che la [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo di associazione consente di individuare:  
+ Il passaggio successivo consiste nell'ottenere maggiori informazioni sulle regole e sui set di elementi generati dal modello per i prodotti Touring Tire e Touring Tire Tube. Il **set di elementi** scheda vengono visualizzate tre importanti tipi di informazioni relative ai set di elementi che il [!INCLUDE[msCoName](../includes/msconame-md.md)] individuati dall'algoritmo di associazione:  
   
 -   **Supporto:** il numero di transazioni in cui si verifica il set di elementi.  
   
 -   **Dimensioni:** il numero di elementi al suo interno.  
   
--   **Elementi:** un elenco di elementi inclusi in ogni set di elementi.  
+-   **Elementi:** un elenco degli elementi inclusi in ogni set di elementi.  
   
- L'algoritmo consente di generare molti set di elementi a seconda della modalità di impostazione dei parametri. Ciascun set di elementi visualizzato rappresenta transazioni relative alla vendita dell'elemento. Tramite i controlli nella parte superiore del **set di elementi** scheda, è possibile filtrare il visualizzatore per visualizzare solo i set di elementi che contengono un set di elementi e supporto dimensioni specificate.  
+ L'algoritmo consente di generare molti set di elementi a seconda della modalità di impostazione dei parametri. Ciascun set di elementi visualizzato rappresenta transazioni relative alla vendita dell'elemento. Usando i controlli nella parte superiore del **set di elementi** scheda, è possibile filtrare il visualizzatore per visualizzare solo i set di elementi che contengono un set di elementi e supporto dimensioni specificate.  
   
  Se si utilizza un diverso modello di data mining e non vengono elencati set di elementi, questo avviene perché nessun set di elementi soddisfa il criterio dei parametri dell'algoritmo. In tale scenario, è possibile modificare i parametri dell'algoritmo per consentire set di elementi che dispongono di un supporto inferiore.  
   
 #### <a name="to-filter-the-itemsets-that-are-shown-in-the-viewer-by-name"></a>Per filtrare i set di elementi mostrati nel visualizzatore per nome  
   
-1.  Fare clic sui **set di elementi** scheda del visualizzatore.  
+1.  Scegliere il **set di elementi** scheda del visualizzatore.  
   
 2.  Nel **Filtra set di elementi** , digitare `Touring Tire`e quindi fare clic all'esterno della casella.  
   
@@ -118,30 +118,30 @@ ms.locfileid: "36313069"
   
 #### <a name="to-view-details-for-an-itemset"></a>Per visualizzare i dettagli per un set di elementi  
   
-1.  Nell'elenco di set di elementi, fare clic sui **set di elementi** sull'intestazione di colonna per ordinare in base al nome.  
+1.  Nell'elenco dei set di elementi, scegliere il **set di elementi** sull'intestazione di colonna per ordinare in base al nome.  
   
 2.  Individuare l'elemento `Touring Tire` (con senza il secondo elemento).  
   
-3.  L'elemento `Touring Tire`, selezionare **drill-Through**, quindi selezionare **colonne struttura e modello**.  
+3.  Fare doppio clic su, l'elemento `Touring Tire`, selezionare **drill-Through**, quindi selezionare **colonne struttura e modello**.  
   
-     Il **drill-Through** finestra di dialogo consente di visualizzare le singole transazioni utilizzate come supporto per questo set di elementi.  
+     Il **drill-Through** nella finestra di dialogo consente di visualizzare le singole transazioni utilizzate come supporto per il set di elementi.  
   
 4.  Espandere la tabella nidificata vAssocSeqLineItems per visualizzare l'elenco effettivo di acquisti nella transazione.  
   
 #### <a name="to-filter-itemsets-by-support-or-size"></a>Per filtrare i set di elementi per supporto o per dimensione  
   
-1.  Cancellare qualsiasi testo che è possibile che sia il **Filtra set di elementi** casella. Non è possibile utilizzare un filtro basato su testo insieme con un filtro numerico.  
+1.  Cancellare qualsiasi testo che può essere presenti il **Filtra set di elementi** casella. Non è possibile utilizzare un filtro basato su testo insieme con un filtro numerico.  
   
-2.  Nel **supporto minimo** digitare 100, quindi fare clic sull'icona del visualizzatore.  
+2.  Nel **supporto minimo** casella, digitare 100 e quindi fare clic sull'icona del visualizzatore.  
   
      L'elenco dei set di elementi verrà aggiornato in modo da mostrare solo i set di elementi con supporto di almeno 100.  
   
  [Torna all'inizio](#bkmk_DepNet)  
   
 ##  <a name="bkmk_Rules"></a> Scheda regole  
- Il **regole** scheda vengono visualizzate le informazioni seguenti relative alle regole individuate dall'algoritmo.  
+ Il **regole** scheda vengono visualizzate le informazioni seguenti che sono correlate alle regole che l'algoritmo trova.  
   
--   **Probabilità:** il *probabilità* di una regola, definita come la probabilità di elemento di destra dato l'elemento visualizzato sul lato sinistro.  
+-   **Probabilità:** il *probabilità* di una regola, definita come la probabilità dell'elemento di destra dato l'elemento a sinistra.  
   
 -   **Importanza:** una misura dell'utilità di una regola. Un valore superiore indica una regola migliore.  
   
@@ -149,29 +149,29 @@ ms.locfileid: "36313069"
   
 -   **Regola:** la definizione della regola. Per un modello Market Basket, una regola descrive una specifica combinazione di elementi.  
   
- Ogni regola può essere utilizzata per fare previsioni sulla presenza di un elemento in una transazione in base alla presenza di altri elementi. Analogamente il **set di elementi** scheda, è possibile filtrare le regole in modo che siano visualizzate solo le regole più interessanti. Se si utilizza un modello di data mining che non dispone di regole, potrebbe essere necessario modificare i parametri dell'algoritmo per abbassare la soglia di probabilità per le regole.  
+ Ogni regola può essere utilizzata per fare previsioni sulla presenza di un elemento in una transazione in base alla presenza di altri elementi. Proprio come nel **set di elementi** scheda, è possibile filtrare le regole in modo che siano visualizzate solo le regole più interessanti. Se si utilizza un modello di data mining che non dispone di regole, potrebbe essere necessario modificare i parametri dell'algoritmo per abbassare la soglia di probabilità per le regole.  
   
 #### <a name="to-see-only-rules-that-include-the-mountain-200-bicycle"></a>Per visualizzare solo le regole che includono la bicicletta Mountain-200  
   
 1.  Nel **visualizzatore modello di Data Mining** scheda, fare clic sui **regole** scheda.  
   
-2.  Nel **regola di filtro** , immettere `Mountain-200`.  
+2.  Nel **regola di filtro** immettere `Mountain-200`.  
   
      Cancella il **Mostra nomi lunghi** casella di controllo.  
   
 3.  Dal **mostrare** elenco, selezionare **Mostra solo nomi di attributo**.  
   
-     Il Visualizzatore visualizzerà solo le regole che contengono le parole "`Mountain-200`". La probabilità della regola indica la probabilità è che quando si acquista un `Mountain-200` bicicletta, quella persona acquisti anche l'altro prodotto elencato.  
+     Il visualizzatore verrà quindi visualizzate solo le regole che contengono le parole "`Mountain-200`". La probabilità della regola indica con che probabilità è che, quando un utente acquista un `Mountain-200` bicicletta, questa persona acquisti anche l'altro prodotto elencato.  
   
  Le regole vengono ordinate per probabilità in ordine decrescente, ma è possibile fare clic sulle intestazioni di colonna per modificare l'ordinamento. Se si è interessati a ottenere maggiori dettagli su una particolare regola, è possibile utilizzare il drill-through per visualizzare i case di supporto.  
   
 #### <a name="to-view-cases-that-support-a-particular-rule"></a>Per visualizzare i case che supportano una particolare regola  
   
-1.  Nel **regole** scheda pulsante destro del mouse la regola che si desidera visualizzare.  
+1.  Nel **regole** scheda, fare doppio clic su regola che si desidera visualizzare.  
   
 2.  Selezionare **drill-Through**, quindi selezionare **solo colonne modello**, o **colonne struttura e modello**.  
   
-     Il **drill-Through** finestra di dialogo viene fornito un riepilogo della regola nella parte superiore del riquadro e un elenco di tutti i casi che sono stati utilizzati come dati di supporto per la regola.  
+     Il **drill-Through** nella finestra di dialogo viene fornito un riepilogo della regola nella parte superiore del riquadro e un elenco di tutti i case che sono stati utilizzati come dati di supporto per la regola.  
   
  [Torna all'inizio](#bkmk_DepNet)  
   
@@ -182,7 +182,7 @@ ms.locfileid: "36313069"
   
 #### <a name="to-view-details-about-the-rule-by-using-the-content-viewer"></a>Per visualizzare i dettagli sulla regola tramite Generic Content Tree Viewer  
   
-1.  Nel **visualizzatore modello di Data Mining** , selezionare **Microsoft Generic Content Tree Viewer** dal **Visualizzatore** elenco.  
+1.  Nel **visualizzatore modello di Data Mining** scheda, seleziona **Microsoft Generic Content Tree Viewer** dal **Visualizzatore** elenco.  
   
 2.  Nel riquadro Didascalia nodo scorrere fino alla fine dell'elenco, quindi fare clic sull'ultimo nodo.  
   
@@ -192,16 +192,16 @@ ms.locfileid: "36313069"
   
      Un tipo di nodo 8 è una regola e un tipo di nodo 7 è un set di elementi. Per una regola, il valore di NODE_DESCRIPTION indica le condizioni che costituiscono la regola. Per un set di elementi, il valore di NODE_DESCRIPTION indica gli elementi inclusi nel set di elementi.  
   
- È anche possibile creare una query contenuto per ottenere statistiche dettagliate sulle regole. Per ulteriori informazioni sul contenuto del modello di data mining e su come interpretare, vedere [contenuto del modello di Data Mining per i modelli di associazione &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
+ È anche possibile creare una query contenuto per ottenere statistiche dettagliate sulle regole. Per altre informazioni sul contenuto del modello di data mining e su come interpretarle, vedere [contenuto del modello di Data Mining per i modelli di associazione &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
   
  [Torna all'inizio](#bkmk_DepNet)  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Il filtro di una tabella nidificata in un modello di Data Mining &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../2014/tutorials/filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md)  
+ [Il filtro di una tabella nidificata in un modello di Data Mining &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Lezione 3: Compilazione di uno Scenario Market Basket &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
- [Lezione 4: Compilazione di una Scenario di Clustering delle sequenze &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
+ [Lezione 3: Compilazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
+ [Lezione 4: Compilazione di una Scenario di Clustering delle sequenze &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
  [Algoritmo Microsoft Association Rules](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Association Rules](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)  
   

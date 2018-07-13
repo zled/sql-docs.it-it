@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd219231d2c3933ac480f2a5fb3a56207db61eed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 523538e5c77ba71bce5a15966bc1b4dd93ee5513
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225591"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>Passaggio 1: Compilazione dell'utilità di distribuzione
   In questa attività verrà configurata e compilata un'utilità di distribuzione per il progetto Deployment Tutorial.  
@@ -38,7 +38,7 @@ ms.locfileid: "36064270"
   
 4.  Nella finestra di dialogo **Deployment Tutorial Property Pages** (Pagine delle proprietà di Deployment Tutorial) espandere le proprietà di configurazione e fare clic su Utilità di distribuzione.  
   
-5.  Nel riquadro destro del **pagine delle proprietà di Deployment Tutorial** finestra di dialogo, verificare che `AllowConfigurationChanges` è impostata su `true`, impostare `CreateDeploymentUtility` a `true`e, facoltativamente, aggiornare il valore predefinito di `DeploymentOutputPath`.  
+5.  Nel riquadro destro della **pagine delle proprietà di Deployment Tutorial** finestra di dialogo, verificare che `AllowConfigurationChanges` è impostata su `true`, impostare `CreateDeploymentUtility` al `true`e, facoltativamente, aggiornare il valore predefinito di `DeploymentOutputPath`.  
   
 6.  Fare clic su **OK**.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "36064270"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Passaggio 2: Verifica del pacchetto di distribuzione](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Icona di Integration Services (piccola)](media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un'utilità di distribuzione](../../2014/integration-services/create-a-deployment-utility.md)  
+ [Creazione di un'utilità di distribuzione](../../2014/integration-services/create-a-deployment-utility.md)  
   
   

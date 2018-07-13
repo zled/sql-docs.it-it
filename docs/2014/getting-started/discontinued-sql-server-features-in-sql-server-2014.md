@@ -1,5 +1,5 @@
 ---
-title: Funzionalità SQL Server in SQL Server 2014 non più supportate | Documenti Microsoft
+title: Funzionalità SQL Server in SQL Server 2014 non più supportate | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b842b9a3a98dd69d04f76ce26ccc84d6ec008822
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 99223e87f7d4488783ad76b355f38249d51a82af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322751"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Funzionalità di SQL Server obsolete in SQL Server 2014
   In questo argomento vengono descritte le funzionalità non più disponibili dopo l'aggiornamento a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "36063671"
 ## <a name="discontinued-features-in-sql-server-2008"></a>Funzionalità obsolete in SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>Eliminazione di SQL-DMO dall'installazione di SQL Server Express  
- SQL-DMO for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è stato rimosso da [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. È consigliabile modificare il prima possibile le applicazioni che utilizzano questa funzionalità. Se è necessario supportare SQL-DMO per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, installare i componenti di compatibilità con le versioni precedenti dal [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] feature pack dal [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=51230). Utilizzare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) per i nuovi progetti di sviluppo.  
+ SQL-DMO for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è stato rimosso da [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. È consigliabile modificare il prima possibile le applicazioni che utilizzano questa funzionalità. Se è necessario supportare SQL-DMO per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, installare i componenti per la compatibilità con le versioni precedenti dal [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] feature pack dalle [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=51230). Utilizzare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) per i nuovi progetti di sviluppo.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Opzione rimossa per Pubblicazione guidata sul Web  
  L'opzione `sp_configure` per abilitare Pubblicazione guidata sul Web è stata rimossa da [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. È consigliabile utilizzare [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in alternativa.  
@@ -69,7 +69,7 @@ ms.locfileid: "36063671"
 |----------------------------|---------------------------|  
 |ADDLOCAL|/ACTION=Uninstall e /FEATURES|  
 |DISABLENETWORKPROTOCOLS|/TCPENABLED per TCP/IP<sup>1</sup>|  
-|DISABLENETWORKPROTOCOLS|/NPENABLED per Named pipe<sup>1</sup>|  
+|DISABLENETWORKPROTOCOLS|/NPENABLED per Named Pipes<sup>1</sup>|  
 |INSTALLSQLDATADIR|/SQLUSERDBDIR<br /><br /> /SQLUSERDBLOGDIR<br /><br /> /SQLBACKUPDIR<br /><br /> /SQLTEMPDBDIR<br /><br /> /SQLTEMPDBLOGDIR|  
 |REINSTALL|Nessun parametro equivalente in questa versione.|  
 |REINSTALLMODE|Nessun parametro equivalente in questa versione.|  
@@ -82,7 +82,7 @@ ms.locfileid: "36063671"
   
  <sup>1</sup>questi parametri sono validi solo per l'installazione.  
   
- <sup>2</sup>iniziale [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], specificare /Action = EditionUpgrade, per aggiornare un'edizione esistente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a un'edizione diversa qualsiasi momento senza il supporto di installazione originale. Per ulteriori informazioni sugli aggiornamenti di versione ed edizione supportati, vedere [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+ <sup>2</sup>Starting [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], specificare /Action = EditionUpgrade, per aggiornare un'edizione esistente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a un'edizione diversa qualsiasi momento senza usare il supporto di installazione originale. Per ulteriori informazioni sugli aggiornamenti di versione ed edizione supportati, vedere [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
  Per altre informazioni, vedere [Installare SQL Server 2014 dal prompt dei comandi](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

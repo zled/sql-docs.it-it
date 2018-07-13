@@ -1,5 +1,5 @@
 ---
-title: Pagina Nuovo Report collegato (gestione Report) | Documenti Microsoft
+title: Pagina Nuovo Report collegato (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 635352076fac4e993ce7a46e3b66c2e1089f6b59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb12f9012055b4de29712255b427a93dfafef2db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201021"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Pagina Nuovo report collegato (Gestione report)
   La pagina Nuovo report collegato consente di creare un report collegato. Un report collegato è un report con impostazioni e proprietà proprie, ma collegato alla definizione di un altro report. I report collegati sono utili per utilizzare un report di base con alcune variazioni per gruppi o utenti specifici, ad esempio un report che restituisca dati diversi in base a un codice internazionale specificato come parametro. I report collegati vengono in genere creati da un report con parametri, se l'esigenza è quella di variare e quindi salvare valori di parametri diversi per ogni istanza del report. È comunque possibile creare un report collegato da qualsiasi report accessibile.  
@@ -37,7 +37,7 @@ ms.locfileid: "36065057"
   
 2.  Passare con il puntatore del mouse sul report, quindi fare clic sulla freccia a discesa.  
   
-3.  Nel menu di scelta menu a discesa, fare clic su **crea Report collegato**.  
+3.  Nel menu di riepilogo a discesa, fare clic su **crea Report collegato**.  
   
 ###### <a name="to-open-the-new-linked-report-page-from-the-general-properties-page-of-a-report"></a>Per aprire la pagina Nuovo report collegato dalla pagina delle proprietà Generale di un report  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36065057"
   
 ## <a name="options"></a>Opzioni  
  **Nome**  
- Specificare il nome del report collegato. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. I caratteri ; ? : @ & = +, $ / * \< > | "o / quando si specifica un nome.  
+ Specificare il nome del report collegato. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. I caratteri ; ? : @ & = +, $ / * \< > | "oppure / per specificare un nome.  
   
  **Descrizione**  
  Consente di digitare una descrizione del contenuto del report. Questa descrizione viene visualizzata nella pagina Contenuto per gli utenti autorizzati ad accedere al report.  
@@ -65,6 +65,6 @@ ms.locfileid: "36065057"
 ## <a name="see-also"></a>Vedere anche  
  [Creare un Report collegato](reports/create-a-linked-report.md)   
  [Pagina delle proprietà Generale, Report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

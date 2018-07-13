@@ -1,5 +1,5 @@
 ---
-title: Elemento NullProcessing (ASSL) | Documenti Microsoft
+title: Elemento NullProcessing (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NullProcessing element
 ms.assetid: 697be5c6-e9a6-4f74-9ff4-5f31400c2178
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 54b75b2e1a7bddd6f7b5df1aeda0311c1b60ff99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc55d97fabaf3f2391beb5c33e3889f6866738d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246101"
 ---
 # <a name="nullprocessing-element-assl"></a>NullProcessing Element (ASSL)
   Definisce come vengono elaborati i valori null.  
@@ -61,14 +61,14 @@ ms.locfileid: "36055782"
 |Elemento padre|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
 |-----------|-----------------|  
-|*Preserve*|Mantiene il valore Null. **Nota:** questo valore non è supportato per le misure distinct count.|  
-|*Errore*|Genera un errore di chiave Null. Il valore di [NullKeyNotAllowed](nullkeynotallowed-element-assl.md) determina la modalità con cui l'istanza reagisce all'errore. **Nota:** questo valore non è supportato per le misure.|  
-|*UnknownMember*|Genera un membro sconosciuto e un errore di conversione di valori Null. Il valore di [NullKeyConvertedToUnknown](nullkeyconvertedtounknown-element-assl.md) determina la modalità con cui l'istanza reagisce all'errore. **Nota:** questo valore non è supportato per le colonne associate alle misure.|  
+|*Mantenere*|Mantiene il valore Null. **Nota:** questo valore non è supportato per le misure distinct count.|  
+|*Errore*|Genera un errore di chiave Null. Il valore di [NullKeyNotAllowed](nullkeynotallowed-element-assl.md) determina come l'istanza reagisce all'errore. **Nota:** questo valore non è supportato per le misure.|  
+|*UnknownMember*|Genera un membro sconosciuto e un errore di conversione di valori Null. Il valore di [NullKeyConvertedToUnknown](nullkeyconvertedtounknown-element-assl.md) determina come l'istanza reagisce all'errore. **Nota:** questo valore non è supportato per le colonne associate alle misure.|  
 |*ZeroOrBlank*|Converte il valore Null in zero (per gli elementi di dati numerici) o in una stringa vuota (per gli elementi di dati di tipo stringa). **Nota:** questo valore garantisce la compatibilità con le versioni precedenti di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |*Automatico*|Utilizza l'elaborazione predefinita appropriata per l'elemento:<br /><br /> -   *ZeroOrBlank* per gli elementi di dati OLAP.<br />-   *UnknownMember* per gli elementi di dati data mining.|  
   

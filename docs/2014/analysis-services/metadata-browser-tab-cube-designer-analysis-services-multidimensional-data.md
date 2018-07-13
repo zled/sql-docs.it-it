@@ -1,5 +1,5 @@
 ---
-title: Metadati (scheda esplorazione, Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Metadati (scheda esplorazione, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.metadatapane.f1
 ms.assetid: a1ace545-488d-4645-8330-56408a5e8abd
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8469a144844e7b4bb7c02ea7fa5255a04654a34c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3d3c2c707e42204fe3ae3eb75ea90b28525f2b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055801"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241691"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Metadati (scheda Esplorazione, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Metadati** della scheda **Esplorazione** in Progettazione cubi per esplorare la struttura del cubo, visualizzare le misure correlate e visualizzare e creare dimensioni. È possibile eseguire il drill-down in gerarchie, visualizzare un elenco di misure e Indicatori KPI disponibili e copiare i nomi completi di oggetti.  
@@ -50,11 +50,11 @@ ms.locfileid: "36055801"
 |Opzione|Description|  
 |------------|-----------------|  
 |**Aggiungere alla Query**|Fare clic per aggiungere l'oggetto selezionato al riquadro inferiore dell'area di compilazione della query.|  
-|**Aggiungere al filtro**|Fare clic per aggiungere la dimensione, l'attributo, la gerarchia o il livello selezionato all'area filtro di **Esplorazione**.<br /><br /> Nota: questa opzione è abilitata solo se è selezionato un attributo, una dimensione, una gerarchia o un livello.|  
+|**Aggiungi a filtro**|Fare clic per aggiungere la dimensione, l'attributo, la gerarchia o il livello selezionato all'area filtro di **Esplorazione**.<br /><br /> Nota: questa opzione è abilitata solo se è selezionato un attributo, una dimensione, una gerarchia o un livello.|  
 |**Copia**|Fare clic su questo pulsante per aggiungere l'elemento selezionato agli Appunti.<br /><br /> Nota: questa opzione consente di copiare il nome completo dell'oggetto.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Barra degli strumenti &#40;scheda esplorazione, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Sulla barra degli strumenti &#40;scheda esplorazione, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Analizza in Excel &#40;scheda esplorazione, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
  [Progettazione query e filtro &#40;scheda esplorazione, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)   
  [Browser &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  

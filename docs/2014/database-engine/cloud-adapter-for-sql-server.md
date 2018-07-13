@@ -1,5 +1,5 @@
 ---
-title: Adattatore cloud per SQL Server | Documenti Microsoft
+title: Adattatore del cloud per SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cloud adapter
 - Deploy to Windows Azure
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74a991f9dc8c20e1cf4342312ecd66f95e1b240d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fd0a6901770c3c30138e694c9e792146be85ba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243381"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adattatore cloud per SQL Server
   Il servizio adattatore cloud viene creato durante il provisioning di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Macchine virtuali di Windows Azure. Il servizio Adattatore del cloud genera un certificato SSL autofirmato quando viene eseguito per la prima volta, quindi viene eseguito come account di **sistema locale** . Genera un file di configurazione utilizzato per autoconfigurarsi. L'adattatore cloud crea inoltre una regola di Windows Firewall per autorizzare le connessioni TCP in ingresso alla porta predefinita 11435.  
@@ -47,7 +47,7 @@ ms.locfileid: "36064525"
 ## <a name="cloud-adapter-configuration-settings"></a>Impostazioni di configurazione dell'adattatore cloud  
  Per modificare le impostazioni di un adattatore cloud, utilizzare le informazioni sulla configurazione dell'adattatore cloud riportate di seguito.  
   
--   **Percorso predefinito per il file di configurazione** – C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
+-   **Percorso predefinito per il file di configurazione** : C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
   
 -   **Parametri del file di configurazione** -  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36064525"
   
 -   **Dettagli del certificato** : il certificato presenta i valori seguenti:  
   
-    -   Oggetto – "CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
+    -   Oggetto: "CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
   
     -   Il certificato deve disporre di un solo utilizzo chiavi avanzato (EKU) nell'attributo Autenticazione server.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36064525"
 |Impossibile trovare il certificato SSL [{Identificazione digitale}] nell'archivio certificati.|45564|L'identificazione digitale del certificato è nel file di configurazione, ma l'archivio certificati personale per il servizio non contiene il certificato.<br /><br /> Autorizzazioni insufficienti.|Verificare che il certificato sia nell'archivio certificati personale per il servizio.<br /><br /> Verificare che il servizio disponga delle autorizzazioni corrette per l'archivio.|  
 |Impossibile avviare il servizio Web. {Testo dell'eccezione}.|45570|Descritto nell'eccezione.|Abilitare ExposeExceptionDetails e utilizzare le informazioni estese dell'eccezione.|  
 |Il certificato [{Identificazione digitale}] è scaduto.|45565|Si fa riferimento a un certificato scaduto nel file di configurazione.|Aggiungere un certificato valido e aggiornare il file di configurazione con la relativa identificazione digitale.|  
-|Errore servizio Web: {0}.|45571|Descritto nell'eccezione.|Abilitare ExposeExceptionDetails e utilizzare le informazioni estese dell'eccezione.|  
+|Errore del servizio Web: {0}.|45571|Descritto nell'eccezione.|Abilitare ExposeExceptionDetails e utilizzare le informazioni estese dell'eccezione.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Distribuire un database di SQL Server a una macchina virtuale di Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  

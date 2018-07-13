@@ -1,5 +1,5 @@
 ---
-title: Creare una copia di un modello di Data Mining | Documenti Microsoft
+title: Creare una copia di un modello di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], copying
 - mining models [Analysis Services], creating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - copying mining models
 ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da23bba72674c1f9ca4dd80bab01dd9d8e8e35cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 456150a7d7ba6759de20557a273875d95540f77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187778"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>Eseguire una copia di un modello di data mining
   La creazione di una copia di un modello di data mining risulta utile quando si desidera creare rapidamente diversi modelli di data mining basati sugli stessi dati. Dopo aver copiato il modello, è possibile modificare la nuova copia modificando i parametri o aggiungendo un filtro.  
@@ -57,13 +57,13 @@ ms.locfileid: "36066192"
   
      Per altre informazioni sull'uso delle finestre di dialogo Editor filtri, vedere [Applicare un filtro a un modello di data mining](apply-a-filter-to-a-mining-model.md).  
   
-4.  Nel **delle proprietà** finestra, nel `AlgorithmParameters` casella di testo, fare clic su **Setalgorithm parametri**e modificare i parametri dell'algoritmo, se lo si desidera.  
+4.  Nel **proprietà** finestra, nelle `AlgorithmParameters` casella di testo, fare clic su **impostare i parametri**e modificare i parametri dell'algoritmo, se necessario.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)   
- [Procedure dettagliate e attività di modello di data mining](mining-model-tasks-and-how-tos.md)   
+ [Procedure dettagliate e le attività del modello di data mining](mining-model-tasks-and-how-tos.md)   
  [Eliminare un filtro da un modello di data mining](delete-a-filter-from-a-mining-model.md)  
   
   

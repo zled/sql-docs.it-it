@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di oggetti di Database | Documenti Microsoft
+title: Utilizzo di oggetti di Database | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - objects [SMO]
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d0291713da7d8caccf5461eaf92de21207b0bd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 14156938fc2e80678af2d75d5cdc037532307673
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166712"
 ---
 # <a name="working-with-database-objects"></a>Utilizzo degli oggetti di database
   Le fasi di creazione di un oggetto SMO sono le seguenti:  

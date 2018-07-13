@@ -1,5 +1,5 @@
 ---
-title: Classe di evento assembly Load | Documenti Microsoft
+title: Classe di evento assembly Load | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Assembly Load event class
 ms.assetid: cfb0b69d-4ce0-4067-a3df-d82775e57886
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a84684a039ccd6276fa2be42e8fd59f5e845befa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1464f59c227577bc0c81f5f89ac84430c5b59497
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207621"
 ---
 # <a name="assembly-load-event-class"></a>Classe di evento Assembly Load
   La classe di evento **Assembly Load** viene generata quando viene eseguita la richiesta di caricamento di un assembly.  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text indexes [SQL Server], creating
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a4bdb94c371342a94c74e72a1cb1f33886fc0963
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e9745635b277a53f724b61ff4143e41af47775a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324011"
 ---
 # <a name="get-started-with-full-text-search"></a>Introduzione alla ricerca full-text
   Per impostazione predefinita, nei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è abilitata la funzionalità full-text. Per utilizzare un indice full-text in una tabella, è tuttavia necessario impostare la funzionalità di indicizzazione full-text nelle colonne delle tabelle a cui si desidera accedere mediante il motore di ricerca full-text.  
@@ -38,7 +37,7 @@ ms.locfileid: "36054938"
   
     1.  Identificare ogni colonna di testo che si desidera includere nell'indice full-text.  
   
-    2.  Se una determinata colonna contiene documenti archiviati come dati binari (`varbinary(max)`, o `image` dati), è necessario specificare una colonna di tabella (la *colonna di tipo*) che identifica il tipo di ogni documento nella colonna da indicizzare.  
+    2.  Se una determinata colonna contiene documenti archiviati come dati binari (`varbinary(max)`, o `image` dei dati), è necessario specificare una colonna di tabella (la *colonna di tipo*) che identifica il tipo di ogni documento nella colonna da indicizzare.  
   
     3.  Specificare la lingua che verrà utilizzata dalla ricerca full-text nei documenti nella colonna.  
   
@@ -105,14 +104,14 @@ ms.locfileid: "36054938"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>Associazione di un elenco di parole non significative all'indice full-text  
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono stati introdotti gli elenchi di parole non significative. Un *elenco di parole non significative* è un elenco di termini che non vengono considerati nelle query, viene associato a ogni indice full-text e le parole in esso contenute vengono applicate alle query full-text di quell'indice. Per impostazione predefinita, a un nuovo indice full-text viene associato l'elenco di parole non significative di sistema. È tuttavia possibile creare e utilizzare un elenco di parole non significative personalizzato. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- Ad esempio, il seguente [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione crea un nuovo oggetto stoplist full-text denominato mystoplist3, copiando da parole non significative di sistema:  
+ Ad esempio, il seguente [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione crea un nuovo oggetto stoplist full-text denominato mystoplist3, copiando di parole non significative di sistema:  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- I seguenti [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione consente di modificare un elenco di parole non significative denominato myStoplist, aggiungendo la parola 'en', per lo spagnolo e poi per il francese:  
+ Quanto segue [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione viene modificato un elenco di parole non significative denominato myStoplist, aggiungendo la parola 'en', per lo spagnolo e poi per il francese:  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  

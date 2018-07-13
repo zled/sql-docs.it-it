@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
 - published reports [Reporting Services], data source connections
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 caps.latest.revision: 51
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8be62bb127d6d3fed0f3156f1dc58fc276e51431
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 0c49a666894fd4811de2405f22da111298b019b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244311"
 ---
 # <a name="manage-report-data-sources"></a>Gestire origini dati dei report
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]i report, i modelli di report e le sottoscrizioni guidate dai dati recuperano i dati da origini dati esterne. Per connettersi a un'origine dati esterna, un server di report utilizza le informazioni di connessione all'origine dei dati definite in o a cui si fa riferimento dal report, dal modello o dalla sottoscrizione. Le proprietà di connessione alle origini dati vengono sempre definite al momento della creazione del report o del modello, ma possono essere gestite in modo indipendente dopo la pubblicazione del report o del modello in un server di report.  
@@ -56,9 +56,9 @@ ms.locfileid: "36055880"
  Se si pubblica un report con le proprietà dell'origine dati incorporate, passare alle proprietà di un'origine dati condivisa. Le origini dati condivise possono essere gestite più facilmente, perché è possibile aggiornare le credenziali e le stringhe di connessione in un'unica pagina. Le modifiche vengono immediatamente applicate in tutti i report, i modelli e le sottoscrizioni guidate dai dati che utilizzano tale origine dati. È anche possibile portare un'origine dati condivisa offline, mettendo in pausa il report o la sottoscrizione per impedirne l'esecuzione durante la risoluzione o l'analisi di eventuali problemi che si verificano.  
   
 ## <a name="controlling-access-data-source-properties"></a>Controllo dell'accesso alle proprietà di un'origine dati condivisa  
- Per impostazione predefinita, chiunque disponga dell'autorizzazione per la gestione dei report può impostare qualsiasi proprietà sul report, incluse le proprietà che determinano il tipo di origine dati, la stringa di connessione, le credenziali e se il report ottiene le informazioni sulla connessione da un'origine dati incorporata o condivisa. Per ulteriori informazioni sulle attività e autorizzazioni di controllano dell'accesso alle proprietà di origine dati in un server di report in modalità nativa, vedere [Secure origini dei dati condivise](../security/secure-shared-data-source-items.md) e [protezione dei report e risorse](../security/secure-reports-and-resources.md).  
+ Per impostazione predefinita, chiunque disponga dell'autorizzazione per la gestione dei report può impostare qualsiasi proprietà sul report, incluse le proprietà che determinano il tipo di origine dati, la stringa di connessione, le credenziali e se il report ottiene le informazioni sulla connessione da un'origine dati incorporata o condivisa. Per altre informazioni sulle attività e autorizzazioni di controllano dell'accesso alle proprietà di origine dati in un server di report in modalità nativa, vedere [proteggere origini dei dati condivise](../security/secure-shared-data-source-items.md) e [proteggere i report e risorse](../security/secure-reports-and-resources.md).  
   
- Le autorizzazioni per la visualizzazione e la modifica delle proprietà per gli elementi di una raccolta di SharePoint sono determinate dall'amministratore del sito. Per ulteriori informazioni sulle autorizzazioni che controllano l'accesso alle proprietà di connessione origine dati, vedere [SharePoint Site and List Permission Reference for Report Server Items](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
+ Le autorizzazioni per la visualizzazione e la modifica delle proprietà per gli elementi di una raccolta di SharePoint sono determinate dall'amministratore del sito. Per altre informazioni sulle autorizzazioni che controllano l'accesso alle proprietà di connessione origine dati, vedere [SharePoint Site and List Permission Reference for Report Server Items](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
 ## <a name="how-to-work-with-data-source-properties-on-a-report-server"></a>Gestione delle proprietà dell'origine dati in un server di report  
  È possibile utilizzare un'ampia varietà di strumenti per creare e modificare le proprietà dell'origine dati. Nella tabella seguente sono riepilogati gli approcci e gli strumenti disponibili e viene fornito un collegamento a ulteriori istruzioni.  
@@ -74,13 +74,13 @@ ms.locfileid: "36055880"
 |Archiviare credenziali come prerequisito per la creazione di sottoscrizioni o snapshot del report.|Gestione report|[Archiviare le credenziali in un'origine dati di Reporting Services](store-credentials-in-a-reporting-services-data-source.md)|  
 |Modificare le proprietà di connessione alle origini dati in un report pubblicato.|Gestione report|[Configurare le proprietà di origine dati per un Report &#40;gestione Report&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
 |Creare un'origine dei dati condivisa in un server di report.|Sito di SharePoint|[Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)|  
-|Utilizzare le informazioni di connessione odc esistenti con un report.|Sito di SharePoint|[Utilizzare una connessione Office Data Connection &#40;con estensione odc&#41; con i report &#40;Reporting Services in SharePoint la modalità integrata&#41;](use-an-office-data-connection-odc-with-reports.md)|  
+|Utilizzare le informazioni di connessione odc esistenti con un report.|Sito di SharePoint|[Usare una connessione Office Data Connection &#40;odc&#41; con i report &#40;modalità Reporting Services in SharePoint integrata&#41;](use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
 >  Le connessioni alle origini dei dati dei report vengono gestite in modo diverso rispetto alla connessione del server di report al relativo database. Per altre informazioni sulla connessione di un server di report al relativo archivio dati interno, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Associare un Report o un modello a un'origine dati condivisa &#40;SSRS&#41;](bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [Associare un Report o modello a un'origine dati condivisa &#40;SSRS&#41;](bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Creare, eliminare o modificare un'origine dati condivisa &#40;gestione Report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Archiviare le credenziali in un'origine dati di Reporting Services](store-credentials-in-a-reporting-services-data-source.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   

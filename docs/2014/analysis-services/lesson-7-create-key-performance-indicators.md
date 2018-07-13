@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 8: Creare indicatori di prestazioni chiave | Documenti Microsoft'
+title: 'Lezione 8: Creare indicatori di prestazioni chiave | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a6c8ac2b-64ba-456f-b418-7bf0afe145d1
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fd135a37a4fe2721ca6aaa70d25e869b9a83733e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0895fe1e699dc7ae53cb278087d43643cbdbf84c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187248"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>Lezione 8: Creare indicatori di prestazioni chiave
   In questa lezione verranno creati indicatori di prestazioni chiave (KPI). Gli indicatori di prestazioni chiave vengono usati per misurare le prestazioni di un valore, definito mediante una misura di *base* , rispetto a un valore *target* , definito anch'esso da una misura o da un valore assoluto. Nelle applicazioni client di creazione di report, gli indicatori KPI possono fornire ai professionisti aziendali un metodo semplice e veloce per comprendere l'andamento aziendale in generale o per identificare le tendenze. Per altre informazioni, vedere [KPI &#40;SSAS tabulare&#41;](tabular-models/kpis-ssas-tabular.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "36063460"
   
 6.  Nel **valore assoluto** digitare `1.1`, quindi premere INVIO.  
   
-7.  In **Definisci soglie stato**, nel campo dispositivo di scorrimento sinistro (in basso), digitare `1`, quindi nel destro (in alto) dispositivo di scorrimento, tipo `1.07`.  
+7.  In **Definisci soglie stato**, nel campo dispositivo di scorrimento sinistro (in basso), digitare `1`, quindi destra (alta) nel dispositivo di scorrimento, digitare `1.07`.  
   
 8.  In **Seleziona stile icona**selezionare un tipo di icona a rombo (rosso), triangolo (giallo) o cerchio (verde).  
   

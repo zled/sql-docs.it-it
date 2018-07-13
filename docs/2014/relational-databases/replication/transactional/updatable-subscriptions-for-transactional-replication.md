@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
 - updatable subscriptions, about updatable subscriptions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3a7af7b2b8da4c51b72e05a7225a4a18224b377a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 38e7b5970295bec4170c8658c254214f40d250ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268667"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,11 +80,11 @@ ms.locfileid: "36055443"
   
 -   Gli aggiornamenti nel Sottoscrittore vengono propagati al server di pubblicazione, anche se una sottoscrizione è scaduta o inattiva. Verificare che tali sottoscrizioni vengano eliminate o reinizializzate.  
   
--   Se `TIMESTAMP` o `IDENTITY` si utilizzano colonne e replicate come tipi di dati di base, i valori in queste colonne non devono essere aggiornati nel Sottoscrittore.  
+-   Se `TIMESTAMP` o `IDENTITY` colonne utilizzate e replicate come tipi di dati di base, valori in queste colonne non devono essere aggiornati nel Sottoscrittore.  
   
--   I sottoscrittori non possono aggiornare o inserire `text`, `ntext` o `image` valori perché non è possibile leggere dalle tabelle inserite o eliminate all'interno di trigger di rilevamento delle modifiche della replica. Analogamente, i sottoscrittori non possono aggiornare o inserire `text` oppure `image` valori utilizzando `WRITETEXT` o `UPDATETEXT` perché i dati vengono sovrascritti dal server di pubblicazione. È invece possibile partizionare il `text` e `image` colonne in una diversa tabella e modificare le due tabelle all'interno di una transazione.  
+-   I sottoscrittori non possono aggiornare o inserire `text`, `ntext` o `image` valori perché non è possibile leggere dalle tabelle inserite o eliminate all'interno di trigger di rilevamento delle modifiche della replica. Analogamente, i sottoscrittori non possono aggiornare o inserire `text` oppure `image` i valori usando `WRITETEXT` o `UPDATETEXT` perché i dati vengono sovrascritti dal server di pubblicazione. È invece possibile partizionare le `text` e `image` colonne in una diversa tabella e modificare le due tabelle all'interno di una transazione.  
   
-     Per aggiornare oggetti di grandi dimensioni in un sottoscrittore, utilizzare i tipi di dati `varchar(max)`, `nvarchar(max)`, `varbinary(max)` anziché `text`, `ntext`, e `image` tipi di dati, rispettivamente.  
+     Per aggiornare oggetti di grandi dimensioni in un sottoscrittore, usare i tipi di dati `varchar(max)`, `nvarchar(max)`, `varbinary(max)` anziché `text`, `ntext`, e `image` i tipi di dati, rispettivamente.  
   
 -   Gli aggiornamenti delle chiavi univoche, incluse le chiavi primarie, che generano duplicati, ad esempio, un aggiornamento del form `UPDATE <column> SET <column> =<column>+1` , non sono consentiti e vengono rifiutati in quanto violazioni dell'univocità. Infatti, gli aggiornamenti dei set eseguiti nel Sottoscrittore vengono propagati tramite replica come singole `UPDATE` istruzioni per ogni riga interessata.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36055443"
   
 -   Se per l'applicazione sono necessari trigger nel sottoscrittore, i trigger devono essere definiti con l'opzione `NOT FOR REPLICATION` nel server di pubblicazione e nel sottoscrittore. In questo modo, i trigger vengono attivati solo per modifiche ai dati originali, ma non quando le modifiche vengono replicate.  
   
-     Verificare che il trigger definito dall'utente non venga attivato quando il trigger di replica aggiorna la tabella. Questa operazione viene eseguita chiamando la stored procedure `sp_check_for_sync_trigger` nel corpo del trigger definito dall'utente. Per altre informazioni, vedere [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql).  
+     Verificare che il trigger definito dall'utente non venga attivato quando il trigger di replica aggiorna la tabella. Questa operazione viene eseguita chiamando la routine `sp_check_for_sync_trigger` nel corpo del trigger definito dall'utente. Per altre informazioni, vedere [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql).  
   
 ### <a name="immediate-updating"></a>Aggiornamento immediato  
   
@@ -110,11 +110,11 @@ ms.locfileid: "36055443"
   
 -   La chiave primaria viene utilizzata come indicatore di posizione dei record per tutte le query, pertanto non è consigliabile apportare aggiornamenti a colonne chiave primaria quando si utilizza l'aggiornamento in coda. Quando i criteri di risoluzione dei conflitti sono impostati su Prevale il Sottoscrittore, è necessario prestare attenzione durante l'aggiornamento delle chiavi primarie. Se gli aggiornamenti alla chiave primaria vengono eseguiti sia nel Sottoscrittore che nel server di pubblicazione, si ottengono due righe con chiavi primarie diverse.  
   
--   Per le colonne del tipo di dati `SQL_VARIANT`: quando i dati viene inseriti o aggiornati nel Sottoscrittore, viene eseguito il mapping nel modo seguente dall'agente di lettura coda quando vengono copiati dal sottoscrittore alla coda:  
+-   Per le colonne di tipo di dati `SQL_VARIANT`: quando i dati viene inseriti o aggiornati nel Sottoscrittore, ne viene eseguito il mapping nel modo seguente dall'agente di lettura coda quando vengono copiati dal sottoscrittore alla coda:  
   
     -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY`, e `SMALLMONEY` vengono mappati a `NUMERIC`.  
   
-    -   `BINARY` e `VARBINARY` viene eseguito il mapping a `VARBINARY` dati.  
+    -   `BINARY` e `VARBINARY` vengono mappati a `VARBINARY` dati.  
   
 ### <a name="conflict-detection-and-resolution"></a>Rilevamento e risoluzione di conflitti  
   

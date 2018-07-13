@@ -1,5 +1,5 @@
 ---
-title: Accesso al codice nativo da una funzione definita dall'utente CLR | Documenti Microsoft
+title: Accesso al codice nativo da una funzione definita dall'utente Common Language Runtime | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 161afa9d-74a1-40f5-af17-162e355e7a46
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82c2444f0d90876058bb7f062dd441f632741d0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 91e1f906e3014f4d4f702bdb2013c121a162de73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237421"
 ---
 # <a name="accessing-native-code-from-a-clr-udf"></a>Accesso al codice nativo da un funzione CLR definita dall'utente
   In questo esempio viene illustrato come richiamare una funzione in codice C++ nativo (non gestito) da una funzione definita dall'utente in un assembly, nel database.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Object Explorer, help
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 09898b2749ab1c3aafb4133ec6926aafbbcc6cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 61dffb79735ba6dcb7ab0dc8e3be498f00f7db75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226991"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Guida sensibile al contesto del server di report in Management Studio
   In questa sezione sono inclusi gli argomenti relativi alle finestre di dialogo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] che è possibile utilizzare per gestire i server di report.  
@@ -61,7 +61,7 @@ ms.locfileid: "36055854"
 -   [Proprietà ruolo utente](user-role-properties-management-studio.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzionalità (Reporting Services)](../feature-reference-reporting-services.md)   
+ [Riferimento della funzionalità (Reporting Services)](../feature-reference-reporting-services.md)   
  [Introduzione a SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
   
   

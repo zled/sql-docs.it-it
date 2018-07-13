@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 09afff6c9464261193283267b33fe5c5533aba63
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: bd78c18acc34c9549c574d3f82cfce6c0e5612a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325621"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Visualizzare dati identici in una matrice e in un grafico (Generatore report)
   Se si desidera visualizzare gli stessi dati in una matrice e in un grafico, è necessario impostare determinate proprietà su entrambe le aree dati per specificare lo stesso set di dati, nonché le stesse espressioni per filtri, gruppi, ordinamenti e dati.  
   
- Poiché entrambe le aree dati disporranno dello stesso predecessore per i dati (il set di dati del report), è possibile aggiungere alla matrice un pulsante di ordinamento interattivo che consente di modificare l'ordinamento sia per la matrice che per il grafico quando l'utente vi fa clic sopra. Per altre informazioni, vedere [Aggiungi ordinamento interattivo a una tabella o matrice &#40;Generatore Report e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ Poiché entrambe le aree dati disporranno dello stesso predecessore per i dati (il set di dati del report), è possibile aggiungere alla matrice un pulsante di ordinamento interattivo che consente di modificare l'ordinamento sia per la matrice che per il grafico quando l'utente vi fa clic sopra. Per altre informazioni, vedere [aggiungere un ordinamento interattivo a una tabella o matrice &#40;Generatore Report e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  Per utilizzare i valori di gruppo delle colonne della matrice come legenda per il grafico, è necessario specificare i colori per i dati della serie sul grafico e quindi utilizzare gli stessi colori come colori di riempimento per lo sfondo delle caselle di testo nella cella della matrice in cui sono visualizzati i valori di gruppo. Per altre informazioni, vedere [Specifica di colori coerenti in più grafici con forme &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
- In fase di esecuzione, il report potrebbe apparire poco chiaro se il numero dei valori di gruppo per le definizioni di gruppo è eccessivo. In questo caso, potrebbe essere necessario filtrare i valori, combinare i gruppi o regolare la soglia in modo che il grafico combini i gruppi automaticamente. Per altre informazioni, vedere [collegare più aree dati allo stesso set di dati &#40;Generatore Report e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ In fase di esecuzione, il report potrebbe apparire poco chiaro se il numero dei valori di gruppo per le definizioni di gruppo è eccessivo. In questo caso, potrebbe essere necessario filtrare i valori, combinare i gruppi o regolare la soglia in modo che il grafico combini i gruppi automaticamente. Per altre informazioni, vedere [collegamento di più aree dati allo stesso set di dati &#40;Generatore Report e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -103,6 +103,6 @@ ms.locfileid: "36055195"
  [Collegamento di più aree dati allo stesso set di dati &#40;Generatore report e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Grafici &#40;SSRS e Generatore Report&#41;](charts-report-builder-and-ssrs.md)  
+ [Grafici &#40;Report e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

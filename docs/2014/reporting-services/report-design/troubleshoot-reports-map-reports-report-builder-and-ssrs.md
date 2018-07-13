@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: df4a48740b1bcb32d49355d91c966741103cf059
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c4d1f9287227b3e37fd05b97d77c242173c68f2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218721"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Risoluzione dei problemi relativi alle parti del report: report mappa (Generatore report e SSRS)
   È possibile che si verifichino problemi con le mappe di un report quando si aggiunge una mappa o un livello mappa al report, quando si personalizza una mappa o un livello mappa esistente nel report, quando si visualizza in anteprima una mappa di un report o quando si pubblica un report con una mappa. Utilizzare le informazioni presenti in questo argomento per risolvere questi problemi.  
@@ -176,7 +176,7 @@ ms.locfileid: "36062155"
 -   Per altre informazioni, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>Informazioni sul valore NaN della scala dei colori.  
- `NaN` è l'acronimo di non è un numero. Si presuppone che i valori delle scale dei colori siano numerici. Verificare le impostazioni di distribuzione e il valore del testo della legenda per le regole associate alla scala dei colori. Se sono stati creati intervalli di distribuzione personalizzati, verificare di aver specificato il limite inferiore per il primo intervallo e il limite superiore per l'ultimo intervallo.  
+ `NaN` è l'acronimo non è un numero. Si presuppone che i valori delle scale dei colori siano numerici. Verificare le impostazioni di distribuzione e il valore del testo della legenda per le regole associate alla scala dei colori. Se sono stati creati intervalli di distribuzione personalizzati, verificare di aver specificato il limite inferiore per il primo intervallo e il limite superiore per l'ultimo intervallo.  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>Quando si esegue il report, la scala dei colori non viene visualizzata.  
  La scala dei colori visualizza informazioni all'utente quando un livello mappa specifica le regole colore per poligoni, linee o punti per tutto il livello o per gli elementi incorporati della mappa. Se nessun elemento della mappa specifica una regola colore o se le regole colore forniscono un'indicazione tramite una legenda anziché la mappa colori, quest'ultima non viene mostrata nel report visualizzabile.  

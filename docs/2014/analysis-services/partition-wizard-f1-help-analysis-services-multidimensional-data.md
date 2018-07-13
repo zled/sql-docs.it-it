@@ -1,5 +1,5 @@
 ---
-title: Partizione della Guida F1 di procedura guidata (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Partizione della Guida F1 di procedura guidata (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Partition Wizard
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 000e6d0cd8dcaab6aab55de6394527c118396ea9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9c8346f5319bbc8f7552546e52537157c699152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245697"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>Guida sensibile al contesto della Creazione guidata partizione (Analysis Services - Dati multidimensionali)
   La Creazione guidata partizione può essere utilizzata per definire le partizioni per un gruppo di misure in un cubo. Per impostazione predefinita, viene definita un'unica partizione per ogni gruppo di misure in un cubo. Ciò può avere tuttavia ripercussioni negative sulle prestazioni di accesso ed elaborazione nel caso di partizioni di dimensioni elevate. La creazione di più partizioni, contenenti ciascuna una parte dei dati per un gruppo di misure, consente di migliorare le prestazioni di accesso ed elaborazione di tale gruppo di misure.  

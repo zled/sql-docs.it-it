@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 7: Spostare i file di dati in archiviazione di Microsoft Azure | Documenti Microsoft'
+title: 'Lezione 7: Spostare i file di dati in archiviazione di Microsoft Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 014fd10ecd738f46160358506b3b165640d3fe09
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 44bc025ce3eb536e10f4c77410ea487e59f006ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162712"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>Lezione 7: spostare i file di dati in Archiviazione di Windows Azure
   In questa lezione, verrà illustrato come spostare i file di dati in Archiviazione di Windows Azure (non l'istanza di SQL Server). È possibile seguire questa lezione anche senza aver completato le lezioni 4, 5 e 6.  
@@ -78,9 +78,9 @@ ms.locfileid: "36055683"
   
     ```  
   
-5.  A questo punto, è necessario copiare i file di dati di archiviazione Windows Azure utilizzando uno dei seguenti metodi: [strumento AzCopy](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [riferimenti alla libreria Client di archiviazione](https://msdn.microsoft.com/library/azure/dn261237.aspx), o strumento Esplora di archiviazione di terze parti.  
+5.  A questo punto, è necessario copiare i file di dati in archiviazione di Azure usando uno dei seguenti metodi: [strumento AzCopy](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [riferimenti alla libreria Client di archiviazione](https://msdn.microsoft.com/library/azure/dn261237.aspx), o un oggetto strumento di terze parti storage explorer.  
   
-     **Importante:** quando si utilizza questa nuova funzionalità avanzata, assicurarsi sempre che crei un blob di pagine non un blob in blocchi.  
+     **Importante:** quando si usa questa nuova funzionalità avanzata, assicurarsi sempre che si crea un blob di pagine non un blob in blocchi.  
   
 6.  Quindi, impostare il database come online.  
   
@@ -93,6 +93,6 @@ ms.locfileid: "36055683"
   
  **Lezione successiva:**  
   
- [Lezione 8. Ripristinare un database in archiviazione di Microsoft Azure](lesson-7-restore-a-database-to-a-point-in-time.md)  
+ [Lezione 8. Ripristinare un database in Archiviazione di Windows Azure](lesson-7-restore-a-database-to-a-point-in-time.md)  
   
   

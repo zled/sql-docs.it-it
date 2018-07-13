@@ -1,5 +1,5 @@
 ---
-title: Le informazioni sulla rappresentazione | Documenti Microsoft
+title: Le informazioni sulla rappresentazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 42319d60-ccd0-46b8-af0b-f0968c390d8a
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90a9d2102df9bd1b6cdf2bf1e4c7b3386c0fa825
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1a0f2b5914c31c3cacce4bfb8887ebde73e0d932
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181018"
 ---
 # <a name="impersonation-information"></a>Impostazioni di rappresentazione
   Usare la pagina **Impostazioni di rappresentazione** per specificare le credenziali usate da Analysis Services per la connessione all'origine dati.  
   
 ## <a name="options"></a>Opzioni  
- **Utilizzare un nome utente di Windows specifico e una password**  
+ **Usare un nome utente di Windows specifico e una password**  
  Selezionare questa opzione per fare in modo che l'oggetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usi le credenziali di sicurezza di un account utente di Windows specificato. Le credenziali specificate verranno usate per l'elaborazione, le query ROLAP, le associazioni out-of-line, i cubi locali, i modelli di data mining, le partizioni remote, gli oggetti collegati e la sincronizzazione dalla destinazione all’origine. Per le istruzioni DMX (Data Mining Extensions) OPENQUERY, invece, questa opzione viene ignorata e verranno usate le credenziali dell'utente corrente.  
   
  **Nome utente**  

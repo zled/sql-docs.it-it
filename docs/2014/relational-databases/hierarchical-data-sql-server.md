@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
 - hierarchyid [Database Engine], concepts
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7294a3d1db75d8ef2596bf7796fa706a9a9bc269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f188b3824492ca28fdf37d4e26d2387fbd8e923a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322391"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dati gerarchici [SQL Server]
-  L'elemento predefinito `hierarchyid` tipo di dati semplifica l'archiviazione e query sui dati gerarchici. `hierarchyid` è ottimizzato per la rappresentazione di alberi, che sono il tipo più comune di dati gerarchici.  
+  L'elemento predefinito `hierarchyid` tipo di dati rende più semplice per archiviare e interrogare dati gerarchici. `hierarchyid` è ottimizzato per la rappresentazione di alberi, che sono il tipo più comune di dati gerarchici.  
   
  I dati gerarchici vengono definiti come un set di elementi di dati correlati tra loro tramite relazioni gerarchiche. Si parla di relazioni gerarchiche quando un elemento di dati è l'elemento padre di un altro elemento. Di seguito sono riportati alcuni esempi dei dati gerarchici comunemente archiviati nei database:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36055240"
  Usare [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) come tipo di dati per creare tabelle con una struttura gerarchica o per descrivere la struttura gerarchica dei dati archiviati in un altro percorso. Usare le [funzioni hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) di [!INCLUDE[tsql](../includes/tsql-md.md)] per eseguire query e gestire i dati gerarchici.  
   
 ##  <a name="keyprops"></a> Proprietà chiave di hierarchyid  
- Il valore di `hierarchyid` tipo di dati rappresenta una posizione in un albero gerarchico. I valori per `hierarchyid` hanno le proprietà descritte di seguito:  
+ Valore di `hierarchyid` tipo di dati rappresenta una posizione in un albero gerarchico. I valori per `hierarchyid` hanno le proprietà descritte di seguito:  
   
 -   Estremamente compresso  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36055240"
   
 -   Il confronto avviene in ordine di scorrimento in profondità  
   
-     Dati due `hierarchyid` valori **un** e **b**, **un < b** significa un precede b nell'attraversamento di profondità dell'albero. Gli indici sui tipi di dati `hierarchyid` sono in ordine di scorrimento della profondità e i nodi l'uno vicino all'altro nell'attraversamento del primo livello di profondità della struttura sono archiviati l'uno vicino all'altro. Ad esempio, i figli di un record sono archiviati adiacenti al record specifico.  
+     Dati due `hierarchyid` i valori **una** e **b**, **una < b** significa un precede b nell'attraversamento di profondità dell'albero. Gli indici sui tipi di dati `hierarchyid` sono in ordine di scorrimento della profondità e i nodi l'uno vicino all'altro nell'attraversamento del primo livello di profondità della struttura sono archiviati l'uno vicino all'altro. Ad esempio, i figli di un record sono archiviati adiacenti al record specifico.  
   
 -   Supporto per eliminazioni e inserimenti arbitrari  
   
@@ -108,11 +108,11 @@ GO
   
  La relazione elemento padre/figlio potrebbe essere superiore quando esistono le condizioni seguenti:  
   
--   La dimensione della chiave è importante. Per lo stesso numero di nodi, un `hierarchyid` valore è uguale a o maggiore di una famiglia di integer (`smallint`, `int`, `bigint`) valore. Infatti, solo dei motivi per utilizzare padre/figlio in casi rari, `hierarchyid` ha colloca meglio nei / o e della CPU nella complessità le espressioni di tabella comuni necessarie quando si utilizza una struttura padre/figlio.  
+-   La dimensione della chiave è importante. Per lo stesso numero di nodi, una `hierarchyid` valore è uguale o maggiore di una famiglia di integer (`smallint`, `int`, `bigint`) valore. Questo è solo dei motivi per usare padre/figlio in casi rari, poiché `hierarchyid` ha colloca meglio nei / o e CPU complessità di espressioni di tabella comune, necessarie quando si usa una struttura padre/figlio.  
   
 -   Le query vengono eseguite raramente sulle sezioni della gerarchia. In altre parole, le query di solito vengono eseguite solo su un singolo punto della gerarchia. In questi casi la condivisione percorso non è importante. Ad esempio, la relazione elemento padre/figlio è superiore se la tabella dell'organizzazione viene utilizzata solo per l'elaborazione del libro paga per i singoli dipendenti.  
   
--   I sottoalberi non-foglia vengono spostati frequentemente e le prestazioni sono molto importanti. In una rappresentazione padre/figlio, la modifica del percorso di una riga in una gerarchia influisce su una sola riga. Modifica del percorso di una riga in un `hierarchyid` influisce sull'utilizzo *n* righe, dove *n* è il numero di nodi del sottoalbero spostato.  
+-   I sottoalberi non-foglia vengono spostati frequentemente e le prestazioni sono molto importanti. In una rappresentazione padre/figlio, la modifica del percorso di una riga in una gerarchia influisce su una sola riga. Modifica del percorso di una riga in una `hierarchyid` influisce sull'utilizzo *n* righe, dove *n* è il numero di nodi del sottoalbero spostato.  
   
      Se i sottoalberi non-foglia vengono spostati frequentemente e le prestazioni sono importanti, ma la maggior parte degli spostamenti è a un livello ben definito della gerarchia, suddividere i livelli superiori e inferiori in due gerarchie. In questo modo, tutti gli spostamenti si verificano a livello di foglia nella gerarchia più elevata. Ad esempio, considerare una gerarchia di siti Web ospitata da un servizio. I siti contengono molte pagine disposte in modo gerarchico. I siti ospitati potrebbero essere spostati in altri percorsi nella gerarchia del sito, tuttavia le pagine subordinate vengono raramente disposte in modo nuovo. Questo potrebbe essere rappresentato tramite:  
   
@@ -126,7 +126,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- Un documento XML è un albero e pertanto una singola istanza del tipo di dati XML può rappresentare una gerarchia completa. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] quando viene creato un indice XML, `hierarchyid` valori vengono utilizzati internamente per rappresentare la posizione nella gerarchia.  
+ Un documento XML è un albero e pertanto una singola istanza del tipo di dati XML può rappresentare una gerarchia completa. Nelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] quando viene creato un indice XML, `hierarchyid` valori vengono usati internamente per rappresentare la posizione nella gerarchia.  
   
  L'utilizzo del tipo di dati XML può essere superiore quando tutte le seguenti condizioni sono vere:  
   
@@ -273,7 +273,7 @@ VALUES ('/', 'Earth', 'Planet');
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Gestione di un albero tramite hierarchyid  
- Sebbene un `hierarchyid` colonna non indica necessariamente una struttura, un'applicazione può assicurarsi facilmente che esegue.  
+ Sebbene un `hierarchyid` colonna non indica necessariamente una struttura ad albero, un'applicazione può assicurarsi facilmente che non.  
   
 -   Durante la generazione di nuovi valori, eseguire una delle operazioni seguenti:  
   
@@ -393,7 +393,7 @@ GO
   
   
 ###  <a name="findclr"></a> Individuazione di predecessori tramite CLR  
- Un'operazione comune che interessa due nodi in una gerarchia è la ricerca del predecessore comune minore. Ciò può essere scritto in [!INCLUDE[tsql](../includes/tsql-md.md)] o CLR, perché il `hierarchyid` tipo è disponibile in entrambi. Si consiglia di usare CLR poiché le prestazioni sono più rapide.  
+ Un'operazione comune che interessa due nodi in una gerarchia è la ricerca del predecessore comune minore. Questo può essere scritto in uno [!INCLUDE[tsql](../includes/tsql-md.md)] o CLR, perché il `hierarchyid` tipo è disponibile in entrambi. Si consiglia di usare CLR poiché le prestazioni sono più rapide.  
   
  Utilizzare il codice CLR seguente per elencare i predecessori e cercare il predecessore comune minore:  
   

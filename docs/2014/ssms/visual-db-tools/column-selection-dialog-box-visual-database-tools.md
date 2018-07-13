@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.columnselection
 - vdtsql.chm:65548
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4ae17632f9a463a19c29fee03ba33f80d4adc7c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 95d3afa041d5418c5ad9b4da5ea7e4cbb4fe4dc2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226611"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Finestra di dialogo Selezione colonne (Visual Database Tools)
   Consente di modificare la vista personalizzata per le tabelle nel diagramma di database. La vista personalizzata mostra soltanto le proprietà della colonna identificata dall'utente.  
@@ -53,7 +53,7 @@ ms.locfileid: "36055832"
  Annulla le modifiche apportate alla vista personalizzata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di diagrammi di Database &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Usare diagrammi di Database &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Personalizzazione della quantità di informazioni visualizzate nei diagrammi &#40;Visual Database Tools&#41;](customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
   
   

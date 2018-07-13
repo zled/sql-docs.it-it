@@ -1,5 +1,5 @@
 ---
-title: AMO altri metodi e classi | Documenti Microsoft
+title: AMO altri metodi e classi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15c90d9b5c11f22af27332467d3501030a9ce7d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff888c133491bfca9569daf08dc76e54e14d6d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180878"
 ---
 # <a name="amo-other-classes-and-methods"></a>Altre classi e altri metodi AMO
-  In questa sezione contiene le classi comuni che non sono specifiche per OLAP o di data mining e che sono utili per la gestione o gestione di oggetti [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Tali classi riguardano caratteristiche quali stored procedure, traccia, eccezioni e backup e ripristino.  
+  In questa sezione contiene le classi comuni che non sono specifiche per OLAP o di data mining e che sono utili quando amministrare o gestire gli oggetti in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Tali classi riguardano caratteristiche quali stored procedure, traccia, eccezioni e backup e ripristino.  
   
  In questo argomento sono incluse le sezioni seguenti:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36063466"
   
  Per rimuovere un oggetto <xref:Microsoft.AnalysisServices.Assembly>, è necessario eliminarlo tramite il metodo Drop dell'oggetto <xref:Microsoft.AnalysisServices.Assembly>. La rimozione di un oggetto <xref:Microsoft.AnalysisServices.Assembly> dalla raccolta di assembly del database non comporta l'eliminazione dell'assembly, ma ne impedisce la visualizzazione nell'applicazione fino alla successiva esecuzione dell'applicazione stessa.  
   
- Per ulteriori informazioni sui metodi e le proprietà disponibili, vedere <xref:Microsoft.AnalysisServices.Assembly> in <xref:Microsoft.AnalysisServices> .  
+ Per altre informazioni sui metodi e le proprietà disponibili, vedere <xref:Microsoft.AnalysisServices.Assembly> in <xref:Microsoft.AnalysisServices> .  
   
 > [!IMPORTANT]  
 >  Gli assembly COM potrebbero comportare un rischio per la sicurezza. A causa di tale rischio e di altre considerazioni, gli assembly COM sono stati deprecati in [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)] e potrebbero non essere supportati nelle versioni future.  
@@ -157,7 +157,7 @@ ms.locfileid: "36063466"
   
  Per avviare l'acquisizione del codice XML, la proprietà dell'oggetto server CaptureXML deve essere impostata su `true`. In questo modo verrà avviata l'acquisizione di tutte le azioni che devono essere inviate al server nella classe CaptureLog, senza che sia necessario inviare le azioni stesse al server. CaptureLog è considerata una classe poiché dispone del metodo Clear che consente di cancellare il log relativo all'acquisizione.  
   
- Per leggere il log, individuare la raccolta di stringhe e avviare l'iterazione sulle stringhe stesse. È possibile inoltre concatenare tutti i log in una stringa tramite il metodo dell'oggetto server ConcatenateCaptureLog cui sono associati tre parametri, due dei quali sono obbligatori. I parametri obbligatori sono *transazionale*, di tipo booleano, e *parallela*, di tipo Boolean. Se *transazionale* è impostata su `true`, indica che il file batch XML verrà creato come una transazione unica e ogni comando non verrà considerato come una transazione separata. Se *parallel* è impostata su `true`, indica che tutti i comandi nel file batch verranno registrati per l'esecuzione simultanea anziché in sequenza in cui sono stati registrati.  
+ Per leggere il log, individuare la raccolta di stringhe e avviare l'iterazione sulle stringhe stesse. È possibile inoltre concatenare tutti i log in una stringa tramite il metodo dell'oggetto server ConcatenateCaptureLog cui sono associati tre parametri, due dei quali sono obbligatori. I parametri obbligatori sono *transazionale*, di tipo booleano, e *parallele*, di tipo booleano. Se *transazionale* è impostata su `true`, indica che il file batch XML verrà creato come un'unica transazione anziché ogni comando non verrà considerato come una transazione separata. Se *parallele* è impostata su `true`, indica che tutti i comandi nel file batch verranno registrati per l'esecuzione simultanea anziché in sequenza come sono stati registrati.  
   
 ##  <a name="AMO"></a> Classe eccezione AMOException  
  È possibile utilizzare la classe eccezione AMOException per rilevare facilmente nell'applicazione eccezioni generate da AMO.  

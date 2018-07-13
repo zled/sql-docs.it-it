@@ -1,5 +1,5 @@
 ---
-title: Rappresentazione (SSAS tabulare) | Documenti Microsoft
+title: Rappresentazione (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 16323d7df2fa3620bbdd6fb541f028ebaf582cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c60f64bc76967fb6d4191aee4f1de7c7bbbb537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176488"
 ---
 # <a name="impersonation-ssas-tabular"></a>Rappresentazione (SSAS tabulare)
   In questo argomento vengono fornite agli autori di modelli tabulari informazioni sulla modalità di utilizzo delle credenziali di accesso da parte di Analysis Services in caso di connessione a un'origine dati per importare ed elaborare (aggiornare) i dati.  
@@ -74,9 +74,9 @@ ms.locfileid: "36063682"
 |**Nome utente di Windows specifico e la password** <sup>2</sup>|ImpersonateWindowsUserAccount|Questa opzione consente di specificare che nel modello viene utilizzato un account utente di Windows per importare o elaborare dati dall'origine dati. Il dominio e il nome dell'account utente nel formato seguente:**\<nome di dominio >\\< nome dell'account utente\>**. Si tratta dell'opzione predefinita per la creazione di un nuovo modello tramite l'Importazione guidata tabella.|  
 |**Account servizio**|ImpersonateServiceAccount|Questa opzione consente di specificare che nel modello vengono utilizzate le credenziali di sicurezza associate all'istanza del servizio Analysis Services tramite cui viene gestito il modello.|  
   
- <sup>1</sup>ImpersonationMode consente di specificare il valore per il [elemento DataSourceImpersonationInfo &#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md) proprietà sull'origine dati.  
+ <sup>1</sup>ImpersonationMode consente di specificare il valore per il [elemento DataSourceImpersonationInfo &#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md) proprietà dell'origine dati.  
   
- <sup>2</sup>quando si utilizza questa opzione, se il database dell'area di lavoro viene rimosso dalla memoria, a causa di un riavvio o il **memorizzazione area di lavoro** è impostata su **Scarica dalla memoria** o  **Elimina dall'area di lavoro**, e il progetto di modello è chiuso, nella sessione successiva, se si tenta di elaborare i dati della tabella, viene chiesto di immettere le credenziali per ogni origine dati. Analogamente, se un database modello distribuito viene rimosso dalla memoria, verranno richieste le credenziali per ogni origine dati.  
+ <sup>2</sup>quando si utilizza questa opzione, se il database dell'area di lavoro viene rimosso dalla memoria, a causa di un riavvio o il **memorizzazione area di lavoro** è impostata su **Scarica dalla memoria** o  **Elimina dall'area di lavoro**, e il progetto di modello è chiuso, nella sessione successiva, se si tenta di elaborare i dati della tabella, verrà richiesto di immettere le credenziali per ogni origine dati. Analogamente, se un database modello distribuito viene rimosso dalla memoria, verranno richieste le credenziali per ogni origine dati.  
   
 ##  <a name="bkmk_impers_sec"></a> Sicurezza  
  Le credenziali utilizzate con la rappresentazione sono salvate in modo permanente in memoria dal motore di analisi in memoria xVelocity (VertiPaq™) associato al server Analysis Services tramite cui viene gestito il database dell'area di lavoro o un modello distribuito.  In nessuna circostanza si tratta di credenziali scritte su disco. Se il database dell'area di lavoro non è in memoria quando il modello viene distribuito, all'utente verrà richiesto di immettere le credenziali utilizzate per la connessione all'origine dati e il recupero dei dati.  
@@ -94,11 +94,11 @@ ms.locfileid: "36063682"
 ##  <a name="bkmk_conf_imp_info"></a> Configurazione della rappresentazione  
  La posizione e il contesto di un modello esistente consentiranno di determinare la modalità di configurazione delle informazioni sulla rappresentazione. Per la creazione di modelli in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], è possibile configurare le informazioni sulla rappresentazione nella pagina **Impostazioni di rappresentazione** dell'Importazione guidata tabella o modificando una connessione all'origine dati nella finestra di dialogo **Connessioni esistenti** . Per visualizzare le connessioni esistenti, nel menu [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]Modello **di** fare clic su **Connessioni esistenti**.  
   
- Per i modelli distribuiti in un server Analysis Services, è possibile configurare le informazioni sulla rappresentazione facendo clic sui puntini di sospensione (...) del **rappresentazione origine dati** proprietà il **le proprietà del Database** finestra di dialogo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Per i modelli distribuiti in un server Analysis Services, è possibile configurare le informazioni sulla rappresentazione facendo clic sui puntini di sospensione (...) del **rappresentazione origine dati** proprietà nel **le proprietà del Database** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modalità DirectQuery &#40;SSAS tabulare&#41;](directquery-mode-ssas-tabular.md)   
  [Origini dati &#40;tabulare di SSAS&#41;](../data-sources-ssas-tabular.md)   
- [Distribuzione della soluzione di modello tabulare &#40;tabulare di SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Distribuzione di soluzioni di modelli tabulari &#40;tabulare di SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

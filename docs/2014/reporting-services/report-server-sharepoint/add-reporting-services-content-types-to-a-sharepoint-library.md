@@ -1,5 +1,5 @@
 ---
-title: Aggiungere la Web Part Visualizzatore Report a una pagina Web (Reporting Services in modalità integrata SharePoint) | Documenti Microsoft
+title: Aggiungere la Web Part Visualizzatore Report a una pagina Web (Reporting Services in modalità integrata SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1c6e7c2900595c99518f5ea43aa298a37f3bc363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c351c37c9666c3b0f5723fa8ea049efe788e6a02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172052"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>Aggiungere la web part Visualizzatore report a una pagina Web (Reporting Services in modalità integrata SharePoint)
   È possibile utilizzare la web part Visualizzatore report per visualizzare report eseguiti in un server di report configurato per l'esecuzione in modalità integrata SharePoint. Questa web part può essere utilizzata per visualizzare i file di definizione dei report (con estensione rdl) creati in Generatore report o Progettazione report e caricati in una raccolta.  
@@ -63,6 +63,6 @@ ms.locfileid: "36055876"
  [Web Part Visualizzatore report in un sito di SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [Personalizzare la Web Part Visualizzatore Report](../customize-the-report-viewer-web-part.md)   
  [Concessione di autorizzazioni per elementi del Server di Report in un sito di SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Installare o disinstallare il componente aggiuntivo di servizi Reporting per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [Installare o disinstallare il Reporting aggiuntivo Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

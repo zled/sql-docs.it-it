@@ -1,5 +1,5 @@
 ---
-title: Advanced stime basate su serie temporali (esercitazione intermedia di Data Mining) | Documenti Microsoft
+title: Advanced stime basate su serie temporali (esercitazione intermedia di Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2d26b05a6d6929947054cd1546b46a976aa2dc2c
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 81297beab8cea567277bd7f1e015859547ab2f7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326891"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Stime avanzate basate su serie temporali (Esercitazione intermedia sul data mining)
   Dall'esplorazione del modello di previsione è emerso che, benché le vendite nella maggior parte delle aree geografiche seguano uno schema analogo, alcune aree e alcuni modelli, ad esempio il modello M200 nell'area del Pacifico, mostrano tendenze molto diverse. Questo risultato non è sorprendente, in quanto è noto che differenze tra le diverse aree sono comuni e possono essere causate da numerosi fattori, tra cui promozioni marketing, produzione di report imprecisi o eventi geopolitici.  
@@ -34,7 +34,7 @@ ms.locfileid: "36312919"
   
 2.  [Preparare i dati aggregati (per la compilazione del modello)](#bkmk_newReplaceData)  
   
-3.  [Preparare i dati della serie (per la stima incrociata)](#bkmk_CrossData2)  
+3.  [Preparare i dati di serie (per la stima incrociata)](#bkmk_CrossData2)  
   
 4.  [Eseguire la stima utilizzando EXTEND](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
@@ -97,35 +97,35 @@ ms.locfileid: "36312919"
     >   
     >  Si noti che le date utilizzate nel database di esempio sono state modificate per questa versione. Se si utilizza una versione di AdventureWorks precedente, potrebbe essere necessario modificare le date inserite in modo appropriato.  
   
-###  <a name="bkmk_newReplaceData"></a> Creare una vista origine dati utilizzando i nuovi dati di vendita  
+###  <a name="bkmk_newReplaceData"></a> Creare una vista origine dati usando i nuovi dati di vendita  
   
-1.  In **Esplora soluzioni**, fare doppio clic su **viste origine dati**, quindi selezionare **nuova vista origine dati**.  
+1.  Nelle **Esplora soluzioni**, fare doppio clic su **viste origine dati**, quindi selezionare **nuova vista origine dati**.  
   
 2.  Nella Creazione guidata vista origine dati effettuare le selezioni seguenti:  
   
-     **Origine dati**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
+     **Zdroj dat**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
      **Selezione tabelle e viste**: selezionare la tabella appena creata, NewSalesData.  
   
-3.  Fare clic su **Fine**.  
+3.  Scegliere **Fine**.  
   
-4.  Nell'area di progettazione vista origine dati, NewSalesData e quindi scegliere **Esplora dati** per verificare i dati.  
+4.  Nell'area di progettazione vista origine dati, fare doppio clic su NewSalesData e quindi selezionare **Esplora dati** per verificare i dati.  
   
 > [!WARNING]  
 >  Si utilizzeranno solo questi dati per la stima, pertanto non si importa se i dati sono incompleti.  
   
-##  <a name="bkmk_CrossData2"></a> Creazione di dati per il modello di stima incrociata  
- I dati che è stati utilizzati nell'originale previsione modello è stato già raggruppati approssimativamente dalla vista vTimeSeries, compressi diversi modelli di bicicletta in un numero minore di categorie e i risultati di singoli paesi in aree. Per creare un modello che possa essere utilizzato per le proiezioni mondiali, si creeranno direttamente alcune semplici aggregazioni aggiuntive nella finestra di progettazione Vista origine dati. La nuova vista origine dati contiene solo una somma e una media delle vendite di tutti i prodotti per tutte le aree.  
+##  <a name="bkmk_CrossData2"></a> Creazione dei dati per il modello di stima incrociata  
+ I dati che è stati usati nell'originale previsione modello è stato già raggruppati approssimativamente dalla vista vTimeSeries, compressi diversi modelli di biciclette in un numero minore di categorie e unire i risultati di singoli paesi in aree. Per creare un modello che possa essere utilizzato per le proiezioni mondiali, si creeranno direttamente alcune semplici aggregazioni aggiuntive nella finestra di progettazione Vista origine dati. La nuova vista origine dati contiene solo una somma e una media delle vendite di tutti i prodotti per tutte le aree.  
   
  Dopo avere creato l'origine dati per il modello, è necessario creare una nuova vista origine dati da utilizzare per la stima. Se si desidera ad esempio stimare le vendite per l'Europa utilizzando il nuovo modello mondiale, è necessario inserire i dati solo per l'area Europa. Si configurerà quindi una nuova vista origine dati che filtra i dati originali e si modificherà la condizione di filtro per ogni set di query di stima.  
   
 #### <a name="to-create-the-model-data-using-a-custom-data-source-view"></a>Per creare i dati del modello utilizzando una vista origine dati personalizzata  
   
-1.  In **Esplora soluzioni**, fare doppio clic su **viste origine dati**, quindi selezionare **nuova vista origine dati**.  
+1.  Nelle **Esplora soluzioni**, fare doppio clic su **viste origine dati**, quindi selezionare **nuova vista origine dati**.  
   
 2.  Nella pagina di benvenuto della procedura guidata fare clic su **Avanti**.  
   
-3.  Nel **Seleziona origine dati** pagina, selezionare [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], quindi fare clic su **successivo**.  
+3.  Nel **selezionare un'origine dati** pagina, selezionare [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], quindi fare clic su **successivo**.  
   
 4.  Nella pagina **Selezione tabelle e viste**scegliere semplicemente **Avanti**senza aggiungere alcuna tabella.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36312919"
   
 6.  Successivamente, l'area di progettazione vista origine dati vuota e quindi scegliere **nuova Query denominata**.  
   
-7.  Nel **crea Query denominata** della finestra di dialogo per **nome**, tipo `AllRegions`e per **descrizione**, tipo **somma e Media delle vendite per tutti i modelli e aree**.  
+7.  Nel **crea Query denominata** della finestra di dialogo per **nome**, digitare `AllRegions`e per **descrizione**, tipo **somma e Media delle vendite per tutti i modelli e aree**.  
   
 8.  Nel riquadro Testo SQL digitare l'istruzione seguente, quindi scegliere OK:  
   
@@ -146,21 +146,21 @@ ms.locfileid: "36312919"
     GROUP BY ReportingDate  
     ```  
   
-9. Fare doppio clic sui `AllRegions` tabella e quindi selezionare **Esplora dati**.  
+9. Fare doppio clic il `AllRegions` tabella e quindi selezionare **Esplora dati**.  
   
 ###  <a name="bkmk_CrossData"></a> Per creare i dati della serie per la stima incrociata  
   
-1.  In **Esplora soluzioni**, fare doppio clic su **viste origine dati**, quindi selezionare **nuova vista origine dati**.  
+1.  Nelle **Esplora soluzioni**, fare doppio clic su **viste origine dati**, quindi selezionare **nuova vista origine dati**.  
   
 2.  Nella Creazione guidata vista origine dati effettuare le selezioni seguenti:  
   
-     **Origine dati**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
+     **Zdroj dat**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
      **Selezione tabelle e viste**: non selezionare alcuna tabella  
   
      **Nome**: `T1000 Pacific Region`  
   
-3.  Fare clic su **Fine**.  
+3.  Scegliere **Fine**.  
   
 4.  Fare doppio clic su area di progettazione vuota per **T1000 Pacific Region. dsv**, quindi selezionare **nuova Query denominata**.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "36312919"
      Si utilizzeranno questi dati come input del modello in caso di creazione di query di stima incrociata.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Stime basate su serie utilizzando dati aggiornati temporali &#40;esercitazione intermedia sul Data Mining Data&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+ [Stime basate su serie utilizzando dati aggiornati di tempo &#40;esercitazione intermedia sul Data Mining dei dati&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   

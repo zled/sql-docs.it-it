@@ -1,5 +1,5 @@
 ---
-title: Strumenti di calcolo (scheda KPI, Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Strumenti di calcolo (scheda KPI, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpisview.calculationtoolspane.f1
 ms.assetid: c030c725-7763-4c23-9988-4b274a88fc31
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c03f8506de2a1f0744fcc9fcebd025443ffafaa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b0602c765368e96cc97f47591e372c4bdec8427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228331"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Strumenti di calcolo (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Strumenti di calcolo** della scheda **KPI** in Progettazione cubi per esaminare i metadati, le funzioni e i modelli disponibili per gli indicatori di prestazioni chiave (KPI).  
@@ -78,7 +78,7 @@ ms.locfileid: "36055816"
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Gli indicatori KPI &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra degli strumenti &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Sulla barra degli strumenti &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Libreria KPI &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Editor Form KPI &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Visualizzatore KPI &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  

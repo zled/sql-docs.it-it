@@ -1,5 +1,5 @@
 ---
-title: Editor attività servizio Web (pagina generale) | Documenti Microsoft
+title: Editor attività servizio Web (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.general.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 caps.latest.revision: 34
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d23c975b44a9d61bb9e9b1b61ebf04285842ba01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d68fdf156caf460ee6130df7ab746fcbd13fec0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331861"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor attività Servizio Web (pagina Generale)
   Usare la pagina **Generale** della finestra di dialogo **Editor attività Servizio Web** per specificare una gestione connessione HTTP e il percorso del file WSDL (Web Services Description Language) usato dall'attività Servizio Web, descrivere l'attività Servizio Web e scaricare il file WSDL.  
@@ -48,7 +48,7 @@ ms.locfileid: "36055280"
   
 -   Selezionare questo file vuoto per l'opzione **WSDLFile** .  
   
--   Impostare il valore del **OverwriteWSDLFile** a `True` per consentire al file vuoto di essere sovrascritto con il file WSDL effettivo.  
+-   Impostare il valore della **OverwriteWSDLFile** a `True` per consentire al file vuoto di essere sovrascritto con il file WSDL effettivo.  
   
 -   Fare clic su **Scarica WSDL** per scaricare il file WSDL effettivo e sovrascrivere il file vuoto.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36055280"
  Questo pulsante non è attivato fino a quando non si fornisce il nome di un file locale esistente nella casella **WSDLFile** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività servizio Web &#40;pagina di Input&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
  [Editor attività servizio Web &#40;pagina di Output&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  

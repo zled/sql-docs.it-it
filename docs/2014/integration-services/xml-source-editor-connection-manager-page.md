@@ -1,5 +1,5 @@
 ---
-title: Editor origine XML (pagina Gestione connessione) | Documenti Microsoft
+title: Editor origine XML (pagina Gestione connessione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsourceadapter.connectionmanager.f1
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
 caps.latest.revision: 19
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 48193a85232443ea8a5fbc618582a2503e32f84b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88bbe341af005344a6c7e8984b2fa668291973fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262847"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Editor origine XML (pagina Gestione connessione)
   Utilizzare la pagina **Gestione connessione** di **Editor origine XML** per specificare un file XML e il file XSD che trasforma i dati XML.  
@@ -70,9 +70,9 @@ ms.locfileid: "36062216"
  Consente di selezionare la variabile contenente i dati XML.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor origine XML &#40;pagina colonne&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
- [Editor origine XML &#40;pagina di Output di errore&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor origine XML &#40;(pagina colonne)&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Editor origine XML &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [Estrarre i dati tramite l'origine XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

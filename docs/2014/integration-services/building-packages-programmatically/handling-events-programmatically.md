@@ -28,13 +28,13 @@ ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5d3253edf3649c7a9e530a68b7830b2b843b2b11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 818e202333a807b457e20b4372d10d2f57b909fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195651"
 ---
 # <a name="handling-events-programmatically"></a>Gestione degli eventi a livello di programmazione
   Il runtime di [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornisce una raccolta di eventi che si verificano prima, durante e dopo la convalida e l'esecuzione di un pacchetto. Tali eventi possono essere acquisiti in due modi. Il primo metodo prevede di implementare l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> in una classe e specificare la classe come parametro per i metodi `Execute` e `Validate` del pacchetto. Il secondo metodo consiste nella creazione di oggetti <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> che possono contenere altri oggetti di [!INCLUDE[ssIS](../../includes/ssis-md.md)], ad esempio attività e cicli, eseguiti quando si verifica un evento in <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. In questa sezione vengono descritti questi due metodi e vengono forniti esempi di codice per dimostrarne l'utilizzo.  
@@ -44,7 +44,7 @@ ms.locfileid: "36062924"
   
  La classe <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> è una classe che implementa già l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>; pertanto, un'alternativa all'implementazione diretta di <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> consiste nel derivare da <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> ed eseguire l'override degli eventi specifici ai quali si desidera rispondere. Specificare quindi la classe come parametro per i metodi `Validate` e `Execute` di <xref:Microsoft.SqlServer.Dts.Runtime.Package> per ricevere i callback degli eventi.  
   
- Nell'esempio di codice seguente viene illustrata una classe che deriva da <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> ed esegue l'override del metodo <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>. La classe viene quindi fornita come aparameter per il `Validate` e `Execute` metodi del pacchetto.  
+ Nell'esempio di codice seguente viene illustrata una classe che deriva da <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> ed esegue l'override del metodo <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>. La classe viene quindi specificata come parametro per il `Validate` e `Execute` metodi del pacchetto.  
   
 ```csharp  
 using System;  
@@ -252,7 +252,7 @@ Module Module1
 End Module  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestori eventi di Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md)   

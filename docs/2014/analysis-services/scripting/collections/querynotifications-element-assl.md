@@ -1,5 +1,5 @@
 ---
-title: Elemento QueryNotifications (ASSL) | Documenti Microsoft
+title: Elemento QueryNotifications (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - QueryNotifications element
 ms.assetid: 0e7e951f-c8b9-4492-bb01-e4b5d16edde6
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 73f9f779f9cc26149d051b379ee17a31e15c8bf8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb2e70a6e4b17d52568670a1a13d122387e9f613
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213971"
 ---
 # <a name="querynotifications-element-assl"></a>Elemento QueryNotifications (ASSL)
   Contiene la raccolta di [QueryNotification](../objects/querynotification-element-assl.md) gli elementi che forniscono informazioni per il [ProactiveCaching](../objects/proactivecaching-element-assl.md) elemento sulle query da eseguire per determinare se un'origine dati è stata modificata.  
@@ -61,7 +61,7 @@ ms.locfileid: "36062483"
 |Elementi padre|[ProactiveCachingQueryBinding](../data-type/binding-data-type-assl.md)|  
 |Elementi figlio|[QueryNotification](../objects/querynotification-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.QueryNotificationCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

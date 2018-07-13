@@ -1,5 +1,5 @@
 ---
-title: Elaborazione dei modelli nella struttura di Mailing diretto (esercitazione di base di Data Mining) | Documenti Microsoft
+title: Elaborazione di modelli nella struttura Targeted Mailing (esercitazione di base di Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9d8233bb-117e-4563-9302-8a5a8ad1fae2
 caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: cbc9a6edac8206a521bf26f10ecb12969f1a4c74
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 0682dc2cc2415e1f545b225206a4ecf10c250810
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274377"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Elaborazione di modelli nella struttura di mailing diretto (Esercitazione di base sul data mining)
   Per poter esplorare o utilizzare i modelli di data mining creati, è necessario distribuire il progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ed elaborare la struttura e i modelli di data mining.  
@@ -31,17 +31,17 @@ ms.locfileid: "36313199"
  Per utilizzare i modelli, è innanzitutto necessario distribuirli ed elaborarli. Inoltre, quando si apportano modifiche al modello, ad esempio se si aggiungono nuovi dati, è necessario ridistribuire e rielaborare i modelli.  
   
 ## <a name="ensuring-consistency-with-holdoutseed"></a>Verifica della coerenza con HoldoutSeed  
- Quando si distribuisce un progetto e si elaborano la struttura e i modelli, singole righe nella struttura dei dati vengono assegnate ai set di training o di testing sulla base di un valore di inizializzazione numerico. Per impostazione predefinita, il valore di inizializzazione numerico viene calcolato in base agli attributi della struttura dei dati. Tuttavia, se si modificano alcuni aspetti del modello, il valore di inizializzazione può cambiare determinando risultati lievemente diversi. Pertanto, per garantire che i risultati siano uguali a quelli descritti di seguito, si assegnerà arbitrariamente fissa *valore di inizializzazione di controllo* di `12`. Il valore di inizializzazione dei dati di controllo viene utilizzato per inizializzare l'algoritmo di campionamento e garantisce che i dati vengano partizionati approssimativamente nello stesso modo per tutte le strutture di data mining e i relativi modelli.  
+ Quando si distribuisce un progetto e si elaborano la struttura e i modelli, singole righe nella struttura dei dati vengono assegnate ai set di training o di testing sulla base di un valore di inizializzazione numerico. Per impostazione predefinita, il valore di inizializzazione numerico viene calcolato in base agli attributi della struttura dei dati. Tuttavia, se si modificano alcuni aspetti del modello, il valore di inizializzazione può cambiare determinando risultati lievemente diversi. Pertanto, per assicurarsi che i risultati corrispondano a quelli descritti in questo caso, si assegnerà arbitrariamente fisse *seed holdout* di `12`. Il valore di inizializzazione dei dati di controllo viene utilizzato per inizializzare l'algoritmo di campionamento e garantisce che i dati vengano partizionati approssimativamente nello stesso modo per tutte le strutture di data mining e i relativi modelli.  
   
  Questo valore non influisce sul numero di case nel set di training, ma garantisce semplicemente che venga utilizzato lo stesso metodo di partizionamento ogni volta che si compila il modello.  
   
- Per ulteriori informazioni sull'inizializzazione di controllo, vedere [Training e Testing Data Sets](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md).  
+ Per altre informazioni sul valore di inizializzazione dei dati di controllo, vedere [Training e Testing Data Sets](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md).  
   
 #### <a name="to-set-the-holdout-seed"></a>Per impostare il valori di inizializzazione di controllo  
   
 1.  Fare clic sui **struttura di Data Mining** scheda o il **modelli di Data Mining** scheda Progettazione modelli di Data Mining in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-     **Targeted Mailing MiningStructure** Visualizza il **proprietà** riquadro.  
+     **Targeted Mailing MiningStructure** vengono visualizzati nei **proprietà** riquadro.  
   
 2.  Verificare che il **delle proprietà** riquadro sia aperto premendo **F4**.  
   
@@ -60,13 +60,13 @@ ms.locfileid: "36313199"
   
      Se sono state apportate modifiche alla struttura, prima di elaborare i modelli verrà richiesto di compilare e distribuire il progetto. Scegliere **Sì**.  
   
-2.  Fare clic su **eseguiti** nel **elaborazione struttura di Data Mining - Targeted Mailing** finestra di dialogo.  
+2.  Fare clic su **eseguiti** nel **elaborazione struttura di Data Mining - Targeted Mailing** nella finestra di dialogo.  
   
      Verrà aperta la finestra di dialogo **Stato elaborazione** in cui vengono visualizzate informazioni sull'elaborazione dei modelli. L'elaborazione dei modelli potrebbe richiedere tempi lunghi, a seconda del computer in uso.  
   
 3.  Fare clic su **Chiudi** nella finestra di dialogo **Stato elaborazione** dopo che l'elaborazione dei modelli è stata completata.  
   
-4.  Fare clic su **Close** nel **struttura di Data Mining elaborazione - \<struttura >** finestra di dialogo.  
+4.  Fare clic su **Close** nel **Processing Mining Structure - \<struttura >** nella finestra di dialogo.  
   
 ## <a name="previous-task-in-lesson"></a>Attività precedente della lezione  
  [Aggiunta di nuovi modelli alla struttura di Mailing diretto &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md)  
@@ -75,6 +75,6 @@ ms.locfileid: "36313199"
  [Lezione 4: Esplorazione dei modelli di Mailing diretto &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni e requisiti di elaborazione &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Requisiti e considerazioni sull'elaborazione &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   
