@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c9be2d437953424ac256d593fb39a727ae96a5ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 124c7b2dee86e1bd42b2d5cb3f450323bad8161a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218591"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Errore di Reporting Services
     
@@ -57,7 +57,7 @@ ms.locfileid: "36063262"
   
 -   Un assembly personalizzato o un assembly di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] distribuito in modo non corretto non è stato caricato.  
   
--   Un parametro che include la proprietà Nullable impostata su `False` ha rilevato un valore null nel parametro.  
+-   Un parametro con le proprietà che ammette valori null è impostata su `False` ha rilevato un valore null nel parametro.  
   
 -   Un'espressione relativa alla proprietà Hidden di un'area dati contiene il seguente errore: "Riferimento oggetto non impostato su un'istanza di un oggetto".  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36063262"
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Impossibile elaborare un report principale con sottoreport  
  È necessario che un report con sottoreport venga elaborato dalla stessa versione di Elaborazione report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Durante l'aggiornamento di report alla versione corrente dello schema di definizione del report, è possibile che il report principale e i sottoreport non vengano aggiornati contemporaneamente. Se la versione di un report non è compatibile con quella dei sottoreport, viene visualizzato un messaggio di errore che indica l'impossibilità di elaborare il sottoreport.  
   
- È necessario modificare il report principale o i sottoreport in modo che tutti i report possano essere elaborati dalla stessa versione di Elaborazione report. Per informazioni sui motivi per cui un report non riesce a eseguire l'aggiornamento, vedere [Upgrade Reports](../install-windows/upgrade-reports.md).  
+ È necessario modificare il report principale o i sottoreport in modo che tutti i report possano essere elaborati dalla stessa versione di Elaborazione report. Per informazioni sui motivi per cui un report non riesce a eseguire l'aggiornamento, vedere [aggiornare i report](../install-windows/upgrade-reports.md).  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>Chiamate di funzione di Visual Basic e non SQL  
  È possibile usare le funzioni SQL nel testo della query in un database relazionale. Nel testo della query non è possibile usare funzioni [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
@@ -121,7 +121,7 @@ ms.locfileid: "36063262"
   
  Per le funzioni di aggregazione che calcolano i totali parziali (`Previous`, `RunningValue` o `RowNumber`, è possibile specificare come parametro di ambito un nome di un gruppo di righe oppure un nome di un gruppo di colonne, ma non entrambi. Questa condizione è valida per il seguente messaggio di errore:  
   
--   `Previous`, `RunningValue` o `RowNumber` utilizzate nelle celle di dati di funzioni di aggregazione il  *\<tipo degli elementi del report >* '*\<nome elemento report >*' fare riferimento ad ambiti di raggruppamento in entrambe le colonne e righe del  *\<tipo di elemento del report >*. I parametri degli ambiti di tutte le `Previous`, `RunningValue` e `RowNumber` funzioni di aggregazione un  *\<tipo degli elementi del report >* può fare riferimento a raggruppamenti di righe o raggruppamenti di colonne di dati, ma non entrambi.  
+-   `Previous`, `RunningValue` o `RowNumber` utilizzate nelle celle di dati di funzioni di aggregazione il  *\<tipo dell'elemento del report >* '*\<nome elemento report >*' fanno riferimento ad ambiti di raggruppamento in entrambe le colonne e righe del  *\<tipo di elemento del report >*. I parametri degli ambiti di tutte le `Previous`, `RunningValue` e `RowNumber` funzioni di aggregazione una  *\<tipo di elemento del report >* possono fare riferimento a raggruppamenti di righe o raggruppamenti di colonne di dati, ma non entrambi.  
   
  Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) e [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -130,12 +130,12 @@ ms.locfileid: "36063262"
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Riferimento a funzioni di aggregazione &#40;SSRS e Generatore Report&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Riferimento a funzioni di aggregazione &#40;Report e SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](../report-data/report-datasets-ssrs.md)   
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Filtri di uso comune &#40;Generatore report e SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Riferimenti alla raccolta dei parametri &#40;SSRS e Generatore Report&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Riferimenti alla raccolta Parameters &#40;Report e SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

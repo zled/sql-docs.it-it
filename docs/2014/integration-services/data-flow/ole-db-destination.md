@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdest.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 caps.latest.revision: 77
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f6b3cbdff4e837facc8a6cd2c2b0498ae6bf92a7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: eee342244a6a057a98d5ab6252c6ab970b515118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243091"
 ---
 # <a name="ole-db-destination"></a>Destinazione OLE DB
   La destinazione OLE DB consente di caricare dati in un'ampia gamma di database conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB, ad esempio, può caricare dati nelle tabelle dei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -49,7 +49,7 @@ ms.locfileid: "36324705"
 > [!NOTE]  
 >  La destinazione OLE DB non supporta parametri. Per eseguire un'istruzione INSERT con parametri, è possibile utilizzare la trasformazione Comando OLE DB. Per altre informazioni, vedere [Trasformazione Comando OLE DB](transformations/ole-db-command-transformation.md).  
   
- Quando nella destinazione OLE DB vengono caricati dati che utilizzano un Double-Byte Character Set (DBCS), è possibile che tali dati vengano danneggiati se nella modalità di accesso non viene utilizzata l'opzione di caricamento rapido e la gestione connessione OLE DB utilizza il provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Per assicurare l'integrità dei dati DBCS è necessario configurare Gestione connessione OLE DB in modo da usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o una delle modalità di accesso con caricamento rapido: **Tabella o vista - Caricamento rapido** o **Variabile nome vista o nome tabella - Caricamento rapido**. Entrambe le opzioni sono disponibili nella finestra di dialogo **Editor destinazione OLE DB** . Durante la programmazione di [!INCLUDE[ssIS](../../includes/ssis-md.md)] modello a oggetti, si deve impostare la proprietà AccessMode `OpenRowset Using FastLoad`, o `OpenRowset Using FastLoad From Variable`.  
+ Quando nella destinazione OLE DB vengono caricati dati che utilizzano un Double-Byte Character Set (DBCS), è possibile che tali dati vengano danneggiati se nella modalità di accesso non viene utilizzata l'opzione di caricamento rapido e la gestione connessione OLE DB utilizza il provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Per assicurare l'integrità dei dati DBCS è necessario configurare Gestione connessione OLE DB in modo da usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o una delle modalità di accesso con caricamento rapido: **Tabella o vista - Caricamento rapido** o **Variabile nome vista o nome tabella - Caricamento rapido**. Entrambe le opzioni sono disponibili nella finestra di dialogo **Editor destinazione OLE DB** . Durante la programmazione di [!INCLUDE[ssIS](../../includes/ssis-md.md)] modello a oggetti, è necessario impostare la proprietà AccessMode su `OpenRowset Using FastLoad`, o `OpenRowset Using FastLoad From Variable`.  
   
 > [!NOTE]  
 >  Se si usa la finestra di dialogo **Editor destinazione OLE DB[!INCLUDE[ssIS](../../includes/ssis-md.md)] in Progettazione**  per creare la tabella di destinazione in cui la destinazione OLE DB inserisce i dati, sarà necessario selezionare la nuova tabella manualmente. È necessario eseguire la selezione manuale quando un provider OLE DB, ad esempio il provider Microsoft OLE DB per DB2, aggiunge automaticamente gli identificatori di schema al nome della tabella.  
@@ -80,7 +80,7 @@ ms.locfileid: "36324705"
   
 -   È possibile specificare il numero di righe nel batch e le dimensioni del commit.  
   
- Alcune opzioni di caricamento rapido sono archiviate in proprietà specifiche della destinazione OLE DB. Ad esempio, FastLoadKeepIdentity specifica se mantenere i valori Identity, FastLoadKeepNulls specifica se mantenere i valori Null e FastLoadMaxInsertCommitSize specifica il numero di righe di cui eseguire il commit come batch. Altre opzioni di caricamento rapido sono archiviate in un elenco con valori delimitati da virgole nella proprietà FastLoadOptions. Se la destinazione OLE DB utilizza tutte le opzioni di caricamento rapido archiviate in FastLoadOptions e racchiusi il **Editor destinazione OLE DB** finestra di dialogo, il valore della proprietà è impostato su `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`. Il valore 1000 indica che la destinazione è configurata per l'utilizzo di batch di 1000 righe.  
+ Alcune opzioni di caricamento rapido sono archiviate in proprietà specifiche della destinazione OLE DB. Ad esempio, FastLoadKeepIdentity specifica se mantenere i valori Identity, FastLoadKeepNulls specifica se mantenere i valori Null e FastLoadMaxInsertCommitSize specifica il numero di righe di cui eseguire il commit come batch. Altre opzioni di caricamento rapido sono archiviate in un elenco con valori delimitati da virgole nella proprietà FastLoadOptions. Se la destinazione OLE DB utilizza tutte le opzioni di caricamento rapido che vengono archiviate in FastLoadOptions ed elencate nel **Editor destinazione OLE DB** finestra di dialogo, il valore della proprietà è impostato su `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`. Il valore 1000 indica che la destinazione è configurata per l'utilizzo di batch di 1000 righe.  
   
 > [!NOTE]  
 >  Un eventuale esito negativo della verifica dei vincoli nella destinazione causa l'interruzione dell'intero batch di righe definito da FastLoadMaxInsertCommitSize.  
@@ -109,7 +109,7 @@ ms.locfileid: "36324705"
   
 -   [Editor destinazione OLE DB &#40;pagina mapping&#41;](../ole-db-destination-editor-mappings-page.md)  
   
--   [Editor destinazione OLE DB &#40;pagina di Output di errore&#41;](../ole-db-destination-editor-error-output-page.md)  
+-   [Editor destinazione OLE DB &#40;pagina dell'Output degli errori&#41;](../ole-db-destination-editor-error-output-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36324705"
 ## <a name="related-content"></a>Contenuto correlato  
  [Origine OLE DB](ole-db-source.md)  
   
- [Servizi di integrazione &#40;SSIS&#41; variabili](../integration-services-ssis-variables.md)  
+ [Integration Services &#40;SSIS&#41; le variabili](../integration-services-ssis-variables.md)  
   
  [Flusso di dati](data-flow.md)  
   

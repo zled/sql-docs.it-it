@@ -1,5 +1,5 @@
 ---
-title: Utilizzando una versione modificata dell'analisi dei servizi progetto esercitazione | Documenti Microsoft
+title: Usando una versione modificata dell'analisi dei servizi di progetto dell'esercitazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 7ede395d0053775cd2be7adefbd158b17e69357f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b198990c967b6ef40eaa4bfdc2bfeedfff13e13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220333"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Utilizzo di una versione modificata del progetto Analysis Services Tutorial
   Le lezioni rimanenti di questa esercitazione sono basate su una versione migliorata del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial completato nelle prime tre lezioni. Altre tabelle e calcoli denominati sono stati aggiunti alla vista origine dati **Adventure Works DW 2012** ; sono state aggiunte altre dimensioni al progetto e al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Infine, è stato aggiunto un secondo gruppo di misure contenente le misure di una seconda tabella dei fatti. Il progetto migliorato consente di approfondire la conoscenza delle tecniche per l'aggiunta di funzionalità alla propria applicazione di Business Intelligence senza la necessità di tornare su informazioni già acquisite.  
@@ -60,7 +60,7 @@ ms.locfileid: "36063725"
 ### <a name="data-source-view"></a>Vista origine dati  
  Nella vista origine dati del progetto migliorato è inclusa un'ulteriore tabella dei fatti e quattro tabelle delle dimensioni aggiuntive del database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- Si noti che le dieci tabelle visualizzate nei dati di visualizzazione, origine il \<tutte le tabelle > riempiono diagramma. Di conseguenza, risulta difficile individuare sia le relazioni tra le tabelle che tabelle specifiche. Per risolvere questo problema, le tabelle vengono organizzate in due diagrammi logici, ovvero **Internet Sales** e **Reseller Sales** . Ogni diagramma è organizzato in base a una singola tabella dei fatti. La creazione di diagrammi logici consente di visualizzare e utilizzare un subset specifico delle tabelle in una vista origine dati anziché visualizzare sempre tutte le tabelle e le relative relazioni in un unico diagramma.  
+ Si noti che con dieci tabelle nei dati di visualizzazione dell'origine di \<tutte le tabelle > diagramma risulta molto pieno. Di conseguenza, risulta difficile individuare sia le relazioni tra le tabelle che tabelle specifiche. Per risolvere questo problema, le tabelle vengono organizzate in due diagrammi logici, ovvero **Internet Sales** e **Reseller Sales** . Ogni diagramma è organizzato in base a una singola tabella dei fatti. La creazione di diagrammi logici consente di visualizzare e utilizzare un subset specifico delle tabelle in una vista origine dati anziché visualizzare sempre tutte le tabelle e le relative relazioni in un unico diagramma.  
   
 #### <a name="internet-sales-diagram"></a>Diagramma Internet Sales  
  Il diagramma **Internet Sales** contiene le tabelle relative alla vendita dei prodotti [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] direttamente ai clienti tramite Internet. Le tabelle del diagramma sono le quattro tabelle delle dimensioni e una sola tabella dei fatti aggiunte alla vista origine dati di **Adventure Works DW 2012** nella Lezione 1. Le tabelle sono le seguenti:  
@@ -118,7 +118,7 @@ ms.locfileid: "36063725"
  Il cubo **Analysis Services Tutorial** contiene ora due gruppi di misure, ovvero il gruppo di misure originale basato sulla tabella **InternetSales** e un secondo gruppo di misure basato sulla tabella **ResellerSales** della vista origine dati di **Adventure Works DW 2012** .  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Definizione di proprietà dell'attributo padre in una gerarchia padre-figlio](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
+ [Definizione delle proprietà degli attributi padre in una gerarchia padre-figlio](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
 ## <a name="see-also"></a>Vedere anche  
  [Distribuzione di un progetto di Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  

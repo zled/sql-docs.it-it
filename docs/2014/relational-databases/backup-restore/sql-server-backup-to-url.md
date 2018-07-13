@@ -5,21 +5,20 @@ ms.date: 01/25/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 92af4cfa0c3ea71693932b7301feed71d1fc1327
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ee9bf066e246dec2432b4a0874a3f3d99c7d2779
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264877"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
   In questo argomento vengono introdotti i concetti, i requisiti e i componenti necessari per utilizzare il servizio di archiviazione BLOB di Windows Azure come destinazione di backup. La funzionalità di backup e ripristino è uguale o simile a quella delle opzioni DISK e TAPE, con alcune differenze. Nell'argomento sono descritte le differenze e le eccezioni rilevanti e sono inclusi alcuni esempi di codice.  
@@ -31,7 +30,7 @@ ms.locfileid: "36063376"
   
 -   [Introduzione ai componenti e ai concetti chiave](#intorkeyconcepts)  
   
--   [Servizio di archiviazione Blob di Azure di Windows](#Blob)  
+-   [Windows Azure Blob Storage Service](#Blob)  
   
 -   [Componenti di SQL Server](#sqlserver)  
   
@@ -56,18 +55,18 @@ ms.locfileid: "36063376"
 -   All'account utente usato per eseguire i comandi BACKUP o RESTORE deve essere associato il ruolo del database **db_backup operator** con autorizzazioni **Modifica qualsiasi credenziale** .  
   
 ###  <a name="intorkeyconcepts"></a> Introduzione ai componenti e ai concetti chiave  
- Due sezioni seguenti illustrati il servizio di archiviazione Blob di Windows Azure e il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti utilizzati durante l'esecuzione del backup o ripristino dal servizio di archiviazione Blob di Windows Azure. È importante comprendere i componenti e la relativa interazione per eseguire il backup nel servizio di archiviazione BLOB di Windows Azure o il ripristino dallo stesso.  
+ Le due sezioni seguenti introducono il servizio di archiviazione Blob di Windows Azure e il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti usati quando i backup o il ripristino dal servizio di archiviazione Blob di Windows Azure. È importante comprendere i componenti e la relativa interazione per eseguire il backup nel servizio di archiviazione BLOB di Windows Azure o il ripristino dallo stesso.  
   
- La creazione di un account di Windows Azure è il primo passaggio di questo processo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Usa il **nome di account di archiviazione Windows Azure** e il relativo **chiave di accesso** valori per l'autenticazione, scrivere e leggere i BLOB nel servizio di archiviazione. Le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tramite cui vengono archiviate queste informazioni di autenticazione, vengono utilizzate durante le operazioni di backup o ripristino. Per una procedura dettagliata completa della creazione di un account di archiviazione e dell'esecuzione di un ripristino semplice, vedere l' [esercitazione per l'uso del servizio di archiviazione di Microsoft Azure per il backup e il ripristino di SQL Server](http://go.microsoft.com/fwlink/?LinkId=271615).  
+ La creazione di un account di Windows Azure è il primo passaggio di questo processo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Usa il **nome account di archiviazione Windows Azure** e il relativo **chiave di accesso** i valori per autenticare, scrivere e leggere BLOB nel servizio di archiviazione. Le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tramite cui vengono archiviate queste informazioni di autenticazione, vengono utilizzate durante le operazioni di backup o ripristino. Per una procedura dettagliata completa della creazione di un account di archiviazione e dell'esecuzione di un ripristino semplice, vedere l' [esercitazione per l'uso del servizio di archiviazione di Microsoft Azure per il backup e il ripristino di SQL Server](http://go.microsoft.com/fwlink/?LinkId=271615).  
   
- ![mapping account di archiviazione alle credenziali sql](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "mapping account di archiviazione alle credenziali sql")  
+ ![mapping di account di archiviazione alle credenziali sql](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "mapping account di archiviazione alle credenziali sql")  
   
-###  <a name="Blob"></a> Servizio di archiviazione Blob di Azure di Windows  
+###  <a name="Blob"></a> Windows Azure Blob Storage Service  
  **Account di archiviazione:** questo account è il punto di partenza per tutti i servizi di archiviazione. Per accedere al servizio di archiviazione BLOB di Windows Azure, creare innanzitutto un account di archiviazione di Windows Azure. Il valore di **storage account name** e delle corrispondenti proprietà **access key** è necessario per eseguire l'autenticazione per il servizio di archiviazione BLOB di Windows Azure e i relativi componenti.  
   
  **Contenitore:** tramite un contenitore viene fornito un raggruppamento di un set di BLOB ed è possibile archiviare un numero illimitato di BLOB. Per scrivere un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel servizio BLOB di Windows Azure, è necessario aver creato almeno il contenitore radice.  
   
- **BLOB:** file di qualsiasi tipo e dimensioni. Esistono due tipi di BLOB che è possibile archiviare nel servizio di archiviazione BLOB di Windows Azure: BLOB in blocchi e di pagine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup utilizza i BLOB di pagine come tipo di Blob. I BLOB sono indirizzabili utilizzando il formato di URL seguente: https://\<account di archiviazione >.blob.core.windows.net/\<contenitore > /\<blob >  
+ **BLOB:** file di qualsiasi tipo e dimensioni. Esistono due tipi di BLOB che è possibile archiviare nel servizio di archiviazione BLOB di Windows Azure: BLOB in blocchi e di pagine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup Usa i BLOB di pagine come il tipo di Blob. I BLOB sono indirizzabili usando il formato di URL seguente: https://\<account di archiviazione >.blob.core.windows.net/\<contenitore > /\<blob >  
   
  ![Archiviazione BLOB di Azure](../../database-engine/media/backuptocloud-blobarchitecture.gif "Archiviazione BLOB di Azure")  
   
@@ -81,11 +80,11 @@ ms.locfileid: "36063376"
 > [!WARNING]  
 >  Se si sceglie di copiare e caricare un file di backup nel servizio di archiviazione BLOB di Windows Azure, utilizzare i BLOB di pagine come opzione di archiviazione. I ripristini dai BLOB in blocchi non sono supportati. Il ripristino da un BLOB in blocchi non viene completato e viene visualizzato un errore.  
   
- Questo è un valore URL di esempio: http[s]://ACCOUNTNAME.Blob.Core.Windows.NET/\<contenitore > /\<FILENAME.bak >. Anche se non richiesto, è consigliabile utilizzare HTTPS.  
+ Questo è un valore URL di esempio: http[s]://ACCOUNTNAME.Blob.Core.Windows.NET/\<contenitore > /\<nomefile >. Anche se non richiesto, è consigliabile utilizzare HTTPS.  
   
- **Credenziale:** una credenziale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un oggetto utilizzato per archiviare le informazioni di autenticazione necessarie per connettersi a una risorsa all'esterno di SQL Server.  In questo caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processi di backup e ripristino usano le credenziali per l'autenticazione nel servizio di archiviazione Blob di Windows Azure. Nelle credenziali vengono archiviati il nome dell'account di archiviazione e i relativi valori della **chiave di accesso** . Una volta create, le credenziali devono essere specificate nell'opzione WITH CREDENTIAL durante l'esecuzione delle istruzioni BACKUP/RESTORE. Per ulteriori informazioni sulla modalità di visualizzazione, copia o rigenerazione dell'account di archiviazione **access keys**, vedere la pagina relativa alle [chiavi di accesso dell'account di archiviazione](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+ **Credenziale:** una credenziale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un oggetto utilizzato per archiviare le informazioni di autenticazione necessarie per connettersi a una risorsa all'esterno di SQL Server.  In questo caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processi di backup e ripristino usano credenziali per l'autenticazione al servizio di archiviazione Blob di Windows Azure. Nelle credenziali vengono archiviati il nome dell'account di archiviazione e i relativi valori della **chiave di accesso** . Una volta create, le credenziali devono essere specificate nell'opzione WITH CREDENTIAL durante l'esecuzione delle istruzioni BACKUP/RESTORE. Per ulteriori informazioni sulla modalità di visualizzazione, copia o rigenerazione dell'account di archiviazione **access keys**, vedere la pagina relativa alle [chiavi di accesso dell'account di archiviazione](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
- Per istruzioni dettagliate su come creare un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credenziale, vedere [creare credenziali](#credential) riportato più avanti in questo argomento.  
+ Per istruzioni dettagliate su come creare un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credenziale, vedere [creare una credenziale](#credential) riportato più avanti in questo argomento.  
   
  Per informazioni generali sulle credenziali, vedere la pagina [Credenziali](http://msdn.microsoft.com/en-us/library/ms161950.aspx)  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36063376"
   
     ```  
   
--   Specifica delle dimensioni del blocco con `BACKUP` non è supportata.  
+-   Specifica delle dimensioni del blocco con `BACKUP` non è supportato.  
   
 -   La specifica di `MAXTRANSFERSIZE` non è supportata.  
   
@@ -218,7 +217,7 @@ ms.locfileid: "36063376"
   
  Nei passaggi seguenti vengono descritte le modifiche apportate all'attività Backup database per consentire il backup nel servizio di archiviazione Windows Azure:  
   
-1.  Avviare SQL Server Management Studio e connettersi all'istanza di SQL Server.  Selezionare un database che si desidera eseguire il backup e fare clic con il pulsante destro sul **attività**e selezionare **eseguire il backup...** . Viene aperta la finestra di dialogo Backup database.  
+1.  Avviare SQL Server Management Studio e connettersi all'istanza di SQL Server.  Selezionare un database che si desidera eseguire il backup e fare clic con il pulsante destro sul **attività**e selezionare **eseguire il backup..** . Viene aperta la finestra di dialogo Backup database.  
   
 2.  Nella pagina Generale utilizzare l'opzione **URL** per creare un backup nel servizio di archiviazione Windows Azure. Quando si seleziona questa opzione, nella pagina verranno abilitate altre opzioni:  
   
@@ -246,9 +245,9 @@ ms.locfileid: "36063376"
  [Creare le credenziali - Eseguire l'autenticazione nel servizio di archiviazione Azure](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> Backup di SQL Server nell'URL tramite la Creazione guidata piano di manutenzione  
- Analogamente all'attività di backup descritta in precedenza, la Creazione guidata piano di manutenzione in SQL Server Management Studio è stata migliorata per includere l' **URL** come una delle opzioni di destinazione e altri oggetti di supporto necessari per eseguire il backup nel servizio di archiviazione Windows Azure come le credenziali SQL. Per altre informazioni, vedere la **definiscono le attività di Backup** sezione [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
+ Analogamente all'attività di backup descritta in precedenza, la Creazione guidata piano di manutenzione in SQL Server Management Studio è stata migliorata per includere l' **URL** come una delle opzioni di destinazione e altri oggetti di supporto necessari per eseguire il backup nel servizio di archiviazione Windows Azure come le credenziali SQL. Per altre informazioni, vedere la **definizione delle attività di Backup** sezione [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
   
-##  <a name="RestoreSSMS"></a> Ripristino dal servizio di archiviazione Windows Azure mediante SQL Server Management Studio  
+##  <a name="RestoreSSMS"></a> Il ripristino da archiviazione di Windows Azure mediante SQL Server Management Studio  
  Se si ripristina un database, l' **URL** viene incluso come dispositivo da cui eseguire il ripristino. Nei passaggi seguenti vengono descritte le modifiche effettuate all'attività di ripristino per consentire il ripristino dal servizio di archiviazione Windows Azure:  
   
 1.  Quando si seleziona **Dispositivi** nella pagina **Generale** dell'attività di ripristino in SQL Server Management Studio, viene visualizzata la finestra di dialogo **Seleziona dispositivi di backup** che include **URL** come tipo di supporti di backup.  

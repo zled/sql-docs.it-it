@@ -1,5 +1,5 @@
 ---
-title: Utilizzare una connessione Office Data Connection (odc) ai report (Reporting Services in modalità integrata SharePoint) | Documenti Microsoft
+title: Usare una connessione Office Data Connection (odc) ai report (Reporting Services in modalità integrata SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Office Data Connection (.odc) files
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2b6f4f52d1ada7d279a5de935359022947fcf087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 63f220c5201931169546305a0b4115677aedf0e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177208"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>Utilizzare una connessione Office Data Connection (odc) ai report (Reporting Services in modalità integrata SharePoint)
   In particolari scenari è possibile utilizzare un file Office Data Connection (odc) esistente per fornire informazioni di connessione a un report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Quando si vuole creare un'origine dati condivisa, è possibile usare un file con estensione odc al posto di un file con estensione rsds. Nel server di report il file con estensione odc viene infatti utilizzato in modo analogo del file con estensione rsds, ovvero per il recupero del tipo dell'origine dati, della stringa di connessione e delle informazioni relative alle credenziali.  
@@ -38,7 +38,7 @@ ms.locfileid: "36065769"
   
 -   Nel file odc deve essere specificata una stringa di connessione.  
   
--   Le credenziali possono essere impostate su `None`, `Stored`, o `Integrated`. Se il metodo di credenziali è impostato su `Stored`, il server di report richiederà all'utente le credenziali invece di usare le credenziali archiviate. perché non è in grado di utilizzare credenziali archiviate definite nel file con estensioni odc.  
+-   Le credenziali possono essere impostate su `None`, `Stored`, o `Integrated`. Se il metodo di credenziali è impostato su `Stored`, il server di report verrà richiesto all'utente le credenziali invece di usare le credenziali archiviate. perché non è in grado di utilizzare credenziali archiviate definite nel file con estensioni odc.  
   
 -   Lo schema dell'origine dati deve essere identico a quello utilizzato per creare il report. Se le strutture di dati sono diverse, il report non verrà eseguito.  
   

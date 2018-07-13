@@ -1,5 +1,5 @@
 ---
-title: Novità&#39;s New in Analysis Services e Business Intelligence | Documenti Microsoft
+title: Cosa&#39;s New in Analysis Services e Business Intelligence | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81dc5c82b8b034556ab4eb69c9f9ca377f641c43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30789972454ecc6c32ef4cb109bfbb20a2523e37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323111"
 ---
-# <a name="what39s-new-in-analysis-services-and-business-intelligence"></a>Novità&#39;s New in Analysis Services e Business Intelligence
-  Fatta eccezione per funzionalità aggiunta che supporta i report Power View nei modelli multidimensionali, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rimane invariata dalla versione precedente.  
+# <a name="what39s-new-in-analysis-services-and-business-intelligence"></a>Cosa&#39;s New in Analysis Services e Business Intelligence
+  Fatta eccezione per funzionalità aggiunta che supporta i report di Power View per modelli multidimensionali [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è invariato dalla versione precedente.  
   
- Per informazioni su altri [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] prodotti e tecnologie che sono diverse in questa versione, vedere [novità in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
+ Per informazioni su altri [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] prodotti e tecnologie che sono diverse in questa versione, vedere [What ' s New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
 ## <a name="updates-to-design-tool-installation"></a>Aggiornamenti all'installazione dello strumento di progettazione  
  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] per Business Intelligence (SSDT-BI), precedentemente noto come Business Intelligence Development Studio (BIDS), viene utilizzato per creare i modelli di Analysis Services, i report di Reporting Services e i pacchetti di Integration Services. È possibile scaricare SSDT-BI dai percorsi seguenti:  
@@ -43,13 +43,13 @@ ms.locfileid: "36062695"
 ## <a name="features-recently-added-power-view-for-multidimensional-models"></a>Funzionalità recentemente aggiunte: Power View per i modelli multidimensionali  
  La possibilità di creare report Power View nei modelli multidimensionali è stata introdotta per la prima volta nell'aggiornamento cumulativo 4 di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1. La funzionalità Power View per i modelli multidimensionali è ora incluso in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
- **Report Power View per un modello multidimensionale**  
+ **Report di Power View per un modello multidimensionale**  
   
- ![Report Power View](media/powerviewreport-wn.gif "Report Power View")  
+ ![Report di Power View](media/powerviewreport-wn.gif "Report Power View")  
   
  Questa funzionalità consente alle organizzazioni di ottimizzare gli investimenti esistenti di business intelligence permettendo di utilizzare i modelli multidimensionali (anche noti come cubi OLAP) con i più recenti strumenti client per la creazione di report. A seconda dei tipi di dati contenuti in un modello multidimensionale, gli utenti possono creare facilmente varie visualizzazioni dinamiche dalle tabelle e dalle matrici, ai grafici a bolle, alle mappe geografiche. I modelli multidimensionali ora supportano anche le query che utilizzano Data Analysis Expressions (DAX).  
   
- Power View per modelli multidimensionali richiede la funzionalità di creazione di report Power View incorporata in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (in modalità SharePoint). Altre versioni di Power View, in particolare il componente aggiuntivo di Power View in Excel 2013, non supportano i modelli multidimensionali.  
+ Power View per modelli multidimensionali richiede la funzionalità di creazione di report Power View predefinita in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (in modalità SharePoint). Altre versioni di Power View, in particolare il componente aggiuntivo di Power View in Excel 2013, non supportano i modelli multidimensionali.  
   
  Per altre informazioni, vedere [Power View per modelli multidimensionali](http://msdn.microsoft.com/library/dn140246.aspx).  
   

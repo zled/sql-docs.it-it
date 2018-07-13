@@ -1,5 +1,5 @@
 ---
-title: Oggetti avanzati OLAP in AMO programmazione | Documenti Microsoft
+title: Oggetti avanzati OLAP in AMO programmatori | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6408cfd8dd3a7b8f7d6993ca84c3325bedddee24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c511fe1a542804ebf05077d5f9a46c77dd69b2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254923"
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Programmazione di oggetti avanzati OLAP in AMO
   In questo argomento vengono descritti i dettagli relativi alla programmazione di oggetti avanzati OLAP nella libreria AMO (Analysis Management Objects). In questo argomento sono incluse le sezioni seguenti:  
@@ -489,7 +489,7 @@ static public void CreateTranslations(Database db)
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices>   
  [Introduzione a classi AMO](amo-classes-introduction.md)   
- [Classi OLAP in AMO](amo-olap-classes.md)   
+ [Classi OLAP di AMO](amo-olap-classes.md)   
  [Architettura logica &#40;Analysis Services - dati multidimensionali&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Gli oggetti di database &#40;Analysis Services - dati multidimensionali&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Elaborazione degli oggetti modello multidimensionale](../processing-a-multidimensional-model-analysis-services.md)  

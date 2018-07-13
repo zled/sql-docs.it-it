@@ -1,5 +1,5 @@
 ---
-title: "Impossibile aggiornare i dati per una connessione dati della cartella di lavoro. Riprovare o contattare l'amministratore di sistema. Impossibile aggiornare le connessioni seguenti: dati PowerPivot | Documenti Microsoft"
+title: "Impossibile aggiornare i dati per una connessione dati della cartella di lavoro. Riprovare o contattare l'amministratore di sistema. Impossibile aggiornare le connessioni seguenti: dati PowerPivot | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 705aa014770346e7554a41d01a75235b3e2a0451
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 396b4b32d2af95b8c7d49beab0fde988d2bee903
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220271"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Impossibile aggiornare i dati per una connessione dati della cartella di lavoro. Riprovare o contattare l'amministratore di sistema. Impossibile aggiornare le connessioni seguenti: Dati PowerPivot
   Per cartelle di lavoro di Excel contenenti dati PowerPivot, in Excel Services viene restituito questo errore se viene inviata una richiesta di connessione a un server PowerPivot che non verrà completata.  
@@ -38,19 +38,19 @@ ms.locfileid: "36063214"
   
  **Scenario 1: il servizio non è stato avviato**  
   
- L'istanza di SQL Server Analysis Services (PowerPivot) non è stata avviata. Una password scaduta determinerà l'arresto del servizio in esecuzione. Per ulteriori informazioni sulla modifica della password, vedere [configurare account di servizio PowerPivot](configure-power-pivot-service-accounts.md) e [avviare o arrestare un PowerPivot per SharePoint Server](start-or-stop-a-power-pivot-for-sharepoint-server.md).  
+ L'istanza di SQL Server Analysis Services (PowerPivot) non è stata avviata. Una password scaduta determinerà l'arresto del servizio in esecuzione. Per altre informazioni sulla modifica della password, vedere [configurare account di servizio PowerPivot](configure-power-pivot-service-accounts.md) e [avviare o arrestare un PowerPivot per SharePoint Server](start-or-stop-a-power-pivot-for-sharepoint-server.md).  
   
  **Scenario 2a: apertura di una versione precedente della cartella di lavoro nel server**  
   
  La cartella di lavoro che si sta tentando di aprire potrebbe essere stata creata con la versione SQL Server 2008 R2 di PowerPivot per Excel. Molto probabilmente, il provider di dati di Analysis Services specificato nella stringa di connessione dati non è presente sul computer che sta gestendo la richiesta.  
   
- In questo caso, si noterà questo messaggio nel log ULS: "aggiornamento non riuscito per 'Dati PowerPivot' nella cartella di lavoro '\<URL cartella di lavoro >'", seguito da "Impossibile stabilire una connessione".  
+ In questo caso, si noterà il messaggio nel log ULS: "aggiornamento non riuscito per 'Dati PowerPivot' nella cartella di lavoro '\<URL cartella di lavoro >'", seguito da "Impossibile stabilire una connessione".  
   
  Per determinare la versione della cartella di lavoro, aprirla in Excel e controllare il provider di dati specificato nella stringa di connessione. In una cartella di lavoro SQL Server 2008 R2 viene utilizzato MSOLAP.4 come provider di dati.  
   
  Una soluzione alternativa al problema è l'aggiornamento della cartella di lavoro. In alternativa, è possibile installare librerie client della versione SQL Server 2008 R2 di Analysis Services nei computer fisici che eseguono PowerPivot per SharePoint o Excel Services:  
   
- [Installare il Provider Analysis Services OLE DB nei server di SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
+ [Installazione del provider OLE DB Analysis Services nei server di SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
   
  **Scenario 2b: Excel Services è in esecuzione su un server applicazioni che dispone della versione errata delle librerie client**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36063214"
   
  Per risolvere questo problema, unire in join il computer allo stesso dominio del server PowerPivot o installare un controller di dominio nel computer locale. La seconda soluzione, cioè l'installazione del controller di dominio, richiederà la creazione di account di dominio locali per tutti i servizi e gli utenti. Sarà necessario configurare gli account di servizio e le autorizzazioni di SharePoint per gli account definiti.  
   
- L'installazione di un controller di dominio nel computer è utile se si intende utilizzare PowerPivot per SharePoint in uno stato offline. Per istruzioni dettagliate sull'utilizzo di PowerPivot offline, vedere l'intervento nel blog per "Portare il server di PowerPivot fuori rete" [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
+ L'installazione di un controller di dominio nel computer è utile se si intende utilizzare PowerPivot per SharePoint in uno stato offline. Per istruzioni dettagliate sull'utilizzo di PowerPivot offline, vedere la voce del blog "Disconnettere il server PowerPivot esterno alla rete" [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
   
  **Scenario 4: server instabile**  
   

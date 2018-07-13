@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], about monitoring replication
 - transactional replication, monitoring
@@ -21,20 +21,20 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 caps.latest.revision: 38
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7434a211de780ab5a363aeec97b8914bb587f5a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1276429c773656e04a3ce15f277d08c3b3e52f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162302"
 ---
 # <a name="monitoring-replication"></a>Monitoraggio (replica)
   Il monitoraggio di una topologia di replica rappresenta un aspetto essenziale della distribuzione di una replica. Dato che l'attività di replica viene distribuita, è fondamentale monitorarne l'attività e lo stato su tutti i computer interessati. Per monitorare la replica è possibile utilizzare gli strumenti seguenti:  
   
 -   Monitoraggio replica di[!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]   
   
-     Monitoraggio replica è lo strumento principale per il monitoraggio della replica, caratterizzato da una vista dell'intera attività di replica con priorità al server di pubblicazione. Per altre informazioni, vedere [monitoraggio della replica](monitor/monitoring-replication-overview.md).  
+     Monitoraggio replica è lo strumento principale per il monitoraggio della replica, caratterizzato da una vista dell'intera attività di replica con priorità al server di pubblicazione. Per altre informazioni, vedere [monitorare la replica](monitor/monitoring-replication-overview.md).  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
@@ -55,6 +55,6 @@ ms.locfileid: "36062620"
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione &#40;Replica&#41;](administration/administration-replication.md)   
  [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
- [Monitoraggio della replica](monitor/monitoring-replication-overview.md)  
+ [Monitorare la replica](monitor/monitoring-replication-overview.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 6: Creare colonne calcolate | Documenti Microsoft'
+title: 'Lezione 6: Creare colonne calcolate | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: efec616591ab3e6d85b9199a5a4706ecd740c66e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f837fd314cd8a279e03cdfa2aa420920509510a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228411"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lezione 6: Creare colonne calcolate
   In questa lezione verranno creati nuovi dati nel modello aggiungendo colonne calcolate. Una colonna calcolata è basata sui dati già presenti nel modello. Per altre informazioni, vedere [Colonne calcolate &#40;SSAS tabulare&#41;](tabular-models/ssas-calculated-columns.md).  
@@ -41,9 +41,9 @@ ms.locfileid: "36064139"
   
 2.  In Progettazione modelli fare clic sulla tabella (scheda) **Data** .  
   
-3.  Fare doppio clic sui **Calendar Quarter** colonna e quindi fare clic su **Inserisci colonna**.  
+3.  Fare doppio clic il **Calendar Quarter** colonna e quindi fare clic su **Inserisci colonna**.  
   
-     Una nuova colonna denominata **CalculatedColumn1** viene inserito a sinistra del **Calendar Quarter** colonna.  
+     Una nuova colonna denominata **CalculatedColumn1** verrà inserita a sinistra del **Calendar Quarter** colonna.  
   
 4.  Sulla barra della formula sopra la tabella digitare la formula seguente. La funzionalità Completamento automatico consente di digitare i nomi completi di colonne e tabelle ed elencare le funzioni disponibili.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36064139"
     > [!NOTE]  
     >  Se viene visualizzato un errore, verificare che i nomi di colonna nella formula corrispondano ai nomi di colonna modificati in [Lezione 3: Rinominare colonne](rename-columns.md).  
   
-5.  Rinominare questa colonna come `Month Calendar`.  
+5.  Rinominare la colonna `Month Calendar`.  
   
  La colonna calcolata Month Calendar fornisce un nome ordinabile per il mese.  
   

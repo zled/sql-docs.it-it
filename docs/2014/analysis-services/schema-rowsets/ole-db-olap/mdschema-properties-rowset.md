@@ -1,5 +1,5 @@
 ---
-title: Set di righe MDSCHEMA_PROPERTIES | Documenti Microsoft
+title: Set di righe MDSCHEMA_PROPERTIES | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_PROPERTIES rowset
 ms.assetid: 95c480f7-c525-44ba-a59b-cd36f5855a4f
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c0e0506be8f531018285bba9145a587448e743e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f62a6e4f77053c1aec69fc2e16b8049193249466
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189218"
 ---
 # <a name="mdschemaproperties-rowset"></a>Set di righe MDSCHEMA_PROPERTIES
   Descrive le proprietà dei membri all'interno di un database.  
@@ -79,7 +79,7 @@ ms.locfileid: "36064128"
 |`PROPERTY_NAME`|`DBTYPE_WSTR`|Facoltativo|  
 |`PROPERTY_CONTENT_TYPE`|`DBTYPE_I2`|(Facoltativo) Una restrizione predefinita è attiva su `MDPROP_MEMBER` O `MDPROP_CELL`.|  
 |`PROPERTY_ORIGIN`|`DBTYPE_UI2`|(Facoltativo) Una restrizione predefinita è attiva su `MD_USER_DEFINED` O `MD_SYSTEM_ENABLED`.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -1 CUBO<br />-QUOTA 2<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -1 CUBO<br />-DIMENSIONE DI 2<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
 |`PROPERTY_VISIBILITY`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -Visible 1<br />-2 non visibile<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
   
 ## <a name="see-also"></a>Vedere anche  

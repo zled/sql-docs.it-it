@@ -1,5 +1,5 @@
 ---
-title: Set di righe DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS | Documenti Microsoft
+title: Set di righe DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2155e4a905da3aeade0f0789f05cc04cdd42f8d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae9955e9f052e4be2317206d5618ccf9294232cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325021"
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>Set di righe DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS
   Fornisce informazioni a livello di colonna e di segmento sulle tabelle di archiviazione utilizzate da un database di Analysis Services in esecuzione in modalità tabulare o PowerPivot. Questo set di righe viene utilizzato principalmente per la risoluzione dei problemi e l'analisi.  
@@ -32,8 +32,8 @@ ms.locfileid: "36056000"
   
 |**Nome colonna**|**Indicatore del tipo**|**Restrizione**|**Descrizione**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`|Sì|Specifica il database tabulare.<br /><br /> Il `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS` set di righe può essere limitato tramite questa colonna. Se omesso, viene utilizzato il database corrente.|  
-|`CUBE_NAME`|`DBTYPE_WSTR`|Sì|Il nome del modello.<br /><br /> Il `DISCOVER_STORAGE_TABLES` set di righe può essere limitato tramite questa colonna.|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`|Sì|Specifica il database tabulare.<br /><br /> Il `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS` righe può essere limitato tramite questa colonna. Se omesso, viene utilizzato il database corrente.|  
+|`CUBE_NAME`|`DBTYPE_WSTR`|Sì|Il nome del modello.<br /><br /> Il `DISCOVER_STORAGE_TABLES` righe può essere limitato tramite questa colonna.|  
 |`MEASURE_GROUP_NAME`|`DBTYPE_WSTR`|Sì|Nome del gruppo di misure.|  
 |`PARTITION_NAME`|`DBTYPE_WSTR`|Sì|Nome della partizione.|  
 |`DIMENSION_NAME`|`DBTYPE_WSTR`||Nome della dimensione.|  

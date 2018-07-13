@@ -1,5 +1,5 @@
 ---
-title: Contenuto del modello per Sequence Clustering modelli di data mining (Analysis Services - Data Mining) | Documenti Microsoft
+title: Contenuto dei modelli per i modelli Sequence Clustering di data mining (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, sequence clustering models
 - sequence clustering algorithms [Analysis Services]
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb03523f20468a24cb901f08dd0eff9a368aa8cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0b505e01e6b8334ed1a0baeaacbda7e29ba7407
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208151"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Sequence Clustering (Analysis Services - Data mining)
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Sequence Clustering. Per una spiegazione della terminologia generale e statistica relativa al contenuto dei modelli di data mining applicabile a tutti i tipi di modello, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -158,7 +158,7 @@ ms.locfileid: "36064598"
 ###  <a name="bkmk_NODEDIST"></a> Tabella NODE_DISTRIBUTION  
  Nella tabella NODE_DISTRIBUTION vengono fornite informazioni dettagliate sulla probabilità e sul supporto per le transizioni e le sequenze di un cluster specifico.  
   
- Viene sempre aggiunta una riga alla tabella delle transizioni per rappresentare i valori `Missing` possibili. Per informazioni su cosa il `Missing` valore significa e come influisce sui calcoli, vedere [valori mancanti &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Viene sempre aggiunta una riga alla tabella delle transizioni per rappresentare i valori `Missing` possibili. Per informazioni su cosa il `Missing` indica di valore, mentre il modo in cui influisce sui calcoli, vedere [mancano valori &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
  I calcoli relativi a supporto e probabilità variano a seconda che il calcolo venga applicato ai case di training o al modello finito. Questo perché il metodo di clustering predefinito, Expectation Maximization (EM), presuppone che qualsiasi case possa appartenere a più di un cluster. Quando si calcola il supporto per i case nel modello, è possibile utilizzare conteggi non elaborati e probabilità non elaborate. Tuttavia, le probabilità di una particolare sequenza in un cluster devono essere ponderate dalla somma di ogni possibile combinazione di sequenze e cluster.  
   
@@ -265,7 +265,7 @@ ORDER BY Count(*) DESC
  Per ottenere l'elenco dei percorsi osservati eseguendo una query sul contenuto del modello e per analizzare altri esempi di query su un modello Sequence Clustering, vedere [Esempi di query sul modello di cluster di sequenza](clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto del modello di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
  [Esempi di query su modelli Sequence Clustering](clustering-model-query-examples.md)  
   

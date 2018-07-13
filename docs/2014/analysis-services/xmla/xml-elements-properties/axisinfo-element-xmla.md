@@ -1,5 +1,5 @@
 ---
-title: Elemento AxisInfo (XMLA) | Documenti Microsoft
+title: Elemento AxisInfo (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - AxisInfo element
 ms.assetid: 060741db-b2ec-4174-9277-58d996440a88
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1ac7ce9fdfeca2e2c48fe990c32c809827729959
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 36eb4542923f9be42c0a114fb198c1efb1285a26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243461"
 ---
 # <a name="axisinfo-element-xmla"></a>Elemento AxisInfo (XMLA)
   Rappresenta i metadati di un singolo asse contenuto nell'elemento padre [AxesInfo](axesinfo-element-xmla.md) elemento.  
@@ -69,9 +69,9 @@ ms.locfileid: "36055985"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|nome|Richiesto `String` attributo. Nome dell'asse.|  
+|nome|Obbligatorio `String` attributo. Nome dell'asse.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  In un elemento `root` che utilizza l'oggetto `MDDataSet` un elemento `AxisInfo` contiene una raccolta di elementi `HierarchyInfo` che, combinata con il valore dell'attributo `name`, rappresenta la definizione di un singolo asse restituita nel dataset multidimensionale.  
   
 ## <a name="see-also"></a>Vedere anche  

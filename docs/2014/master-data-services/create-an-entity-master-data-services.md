@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23e267d78091895e5d0ec899835ce7aa09e8c9d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9e5c53e76330c00dde7b6d14fb0c6592546582bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329841"
 ---
 # <a name="create-an-entity-master-data-services"></a>Creare un'entità (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un'entità in cui siano contenuti i membri e i relativi attributi.  
@@ -48,16 +48,16 @@ ms.locfileid: "36055937"
   
 5.  Nel **nome dell'entità** , digitare il nome dell'entità.  
   
-6.  Nel **nome per le tabelle di gestione temporanea** , digitare un nome per la tabella di gestione temporanea.  
+6.  Nel **nome per le tabelle di staging** , digitare un nome per la tabella di staging.  
   
     > [!TIP]  
-    >  Usare il nome del modello come parte del nome della tabella di staging, ad esempio *Nomemodello_Nomeentità*. In questo modo risulta più agevole trovare le tabelle nel database. Per ulteriori informazioni sulle tabelle di gestione temporanea, vedere [importazione di dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
+    >  Usare il nome del modello come parte del nome della tabella di staging, ad esempio *Nomemodello_Nomeentità*. In questo modo risulta più agevole trovare le tabelle nel database. Per altre informazioni sulle tabelle di staging, vedere [importazione di dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
 7.  Facoltativo. Selezionare la casella di controllo **Crea valori Code automaticamente** . Per altre informazioni, vedere [Creazione di codice automatica &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md).  
   
-8.  Dal **Abilita gerarchie esplicite e raccolte** elenco, selezionare una delle opzioni seguenti:  
+8.  Dal **Abilita gerarchie esplicite e raccolte** elencare, selezionare una delle opzioni seguenti:  
   
-    -   **Non**. Selezionare questa opzione se non è necessario abilitare l'entità per gerarchie esplicite e raccolte. È possibile modificare tale opzione in seguito, se necessario.  
+    -   **No**. Selezionare questa opzione se non è necessario abilitare l'entità per gerarchie esplicite e raccolte. È possibile modificare tale opzione in seguito, se necessario.  
   
     -   **Sì**. Selezionare questa opzione quando si desidera abilitare l'entità per gerarchie esplicite e raccolte. Nel **nome gerarchia esplicita** , digitare un nome. Facoltativamente, selezionare **gerarchia obbligatoria (sono inclusi tutti i membri foglia** per rendere la gerarchia esplicita una gerarchia obbligatoria.  
   

@@ -1,14 +1,13 @@
 ---
-title: La replica, rilevamento delle modifiche, Change Data Capture e gruppi di disponibilità AlwaysOn (SQL Server) | Documenti Microsoft
+title: La replica, rilevamento delle modifiche, Change Data Capture e gruppi di disponibilità AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
 - change data capture [SQL Server], AlwaysOn Availability Groups
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: 31
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0afd1136c2426b749beaff5c713f6c5e77671940
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1519ac814a1f8a55333af5050eab8f5fcbc1b022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204031"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replica, Rilevamento modifiche, Change Data Capture e Gruppi di disponibilità AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le funzionalità di replica, di rilevamento delle modifiche (CT, Change Tracking) e Change Data Capture (CDC) sono supportate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] vengono fornite disponibilità elevata e funzionalità aggiuntive di recupero database.  
@@ -160,7 +159,7 @@ ms.locfileid: "36063429"
   
      Per individuare la replica secondaria è possibile usare il nome del listener del gruppo di disponibilità o il nome del nodo esplicito. Se viene usato il nome del listener del gruppo di disponibilità, l'accesso verrà indirizzato a qualsiasi replica secondaria adatta.  
   
-     Quando si `sp_addlinkedserver` viene utilizzato per creare un server collegato per accedere al database secondario, il *@datasrc* parametro viene utilizzato per il nome del listener del gruppo di disponibilità o il nome del server esplicito e il *@provstr* parametro viene utilizzato per specificare la finalità di sola lettura.  
+     Quando `sp_addlinkedserver` viene usato per creare un server collegato per accedere al database secondario, il *@datasrc* parametro viene utilizzato per il nome del listener del gruppo di disponibilità o il nome del server esplicito e il *@provstr* parametro viene usato per specificare la finalità di sola lettura.  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -218,7 +217,7 @@ ms.locfileid: "36063429"
   
  <sup>2</sup> Failover al database di replica è una procedura manuale. Il failover automatico non è fornito.  
   
- <sup>3</sup> database di distribuzione non è supportato per l'utilizzo con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o il mirroring del database.  
+ <sup>3</sup> database del server di distribuzione non è supportato per l'uso con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o il mirroring del database.  
   
 ### <a name="considerations"></a>Considerazioni  
   
@@ -255,8 +254,8 @@ ms.locfileid: "36063429"
   
 ## <a name="see-also"></a>Vedere anche  
  [Sottoscrittori della replica e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
- [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Panoramica di gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Gruppi di disponibilità AlwaysOn: Interoperabilità (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ le istanze del Cluster di Failover AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - connections [Reporting Services], accounts
@@ -19,19 +19,19 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6ee89d1d6b01fe39f3798eef9f39c1ca460cc799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71382e58d8709c2a0015e40819b74638413441e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062801"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266087"
 ---
 # <a name="authentication-with-the-report-server"></a>Autenticazione con il server di report
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) offre molte opzioni configurabili per l'autenticazione di utenti e applicazioni client rispetto al server di report. Per impostazione predefinita, il server di report utilizza l'autenticazione integrata di Windows e presuppone la presenza di relazioni attendibili per cui le risorse client e quelle di rete si trovano nello stesso dominio trusted. A seconda della topologia di rete e delle esigenze specifiche dell'organizzazione, è possibile personalizzare il protocollo di autenticazione usato per l'autenticazione integrata di Windows, usare l'autenticazione di base o l'estensione di autenticazione basata su moduli personalizzata indicata. Ogni tipo di autenticazione può essere singolarmente abilitato o disabilitato. È possibile abilitare più di un tipo di autenticazione se si desidera che il server di report accetti richieste di più tipi.  
   
 > [!NOTE]  
->  Nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] il supporto dell'autenticazione viene fornito completamente da IIS. A partire dalla versione [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], IIS non viene più utilizzato. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] internamente, gestisce tutte le richieste di autenticazione.  
+>  Nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] il supporto dell'autenticazione viene fornito completamente da IIS. A partire dalla versione [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], IIS non viene più utilizzato. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gestisce internamente tutte le richieste di autenticazione.  
   
  Tutti gli utenti o le applicazioni che richiedono l'accesso al contenuto oppure a operazioni del server di report devono essere autenticati prima che ne venga consentito l'accesso.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36062801"
 ## <a name="see-also"></a>Vedere anche  
  [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)   
  [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- (creare-e-gestire-ruolo-assignments.md)   
+ (create-e-Gestisci-ruolo-assignments.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
  [Implementazione di un'estensione di sicurezza](../extensions/security-extension/implementing-a-security-extension.md)   
  [Configurare connessioni SSL in un Server di Report in modalità nativa](configure-ssl-connections-on-a-native-mode-report-server.md)   

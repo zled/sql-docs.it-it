@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 3: Rinominare colonne | Documenti Microsoft'
+title: 'Lezione 3: Rinominare colonne | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ed2f495f4300abca78b3a1b7597bd0d09fd15292
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6d4f9d156889bd3a761cff2a18a908df42e8aade
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246103"
 ---
 # <a name="lesson-3-rename-columns"></a>Lezione 3: Rinominare colonne
   In questa lezione verranno rinominate numerose colonne di ogni tabella importata. La ridenominazione semplifica l'identificazione e l'esplorazione delle colonne, sia in Progettazione di modelli che da parte degli utenti che selezionano campi in un'applicazione client. Per altre informazioni, vedere [Rinominare una tabella o una colonna &#40;SSAS tabulare&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36062767"
   
      Quando si fa clic su una scheda, tale tabella diventa attiva nella finestra di Progettazione modelli.  
   
-2.  Fare doppio clic sui **CustomerKey** colonna nome, quindi digitare `Customer  Id`, quindi premere INVIO.  
+2.  Fare doppio clic il **CustomerKey** colonna nome, quindi digitare `Customer  Id`, quindi premere INVIO.  
   
     > [!TIP]  
     >  È anche possibile rinominare una colonna nella proprietà **Nome colonna** della finestra **Proprietà** della colonna o nella vista diagramma.  

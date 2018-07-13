@@ -1,5 +1,5 @@
 ---
-title: Set di righe MDSCHEMA_DIMENSIONS | Documenti Microsoft
+title: Set di righe MDSCHEMA_DIMENSIONS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_DIMENSIONS rowset
 ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b00b617adf90e1dba8eac94a9872ce07c0773e7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69cb4e0c997d3d786a55a6673327e50d0aac27a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273397"
 ---
 # <a name="mdschemadimensions-rowset"></a>Set di righe MDSCHEMA_DIMENSIONS
   Descrive le dimensioni condivise e private all'interno di un database.  
@@ -66,7 +66,7 @@ ms.locfileid: "36062989"
 |`CUBE_NAME`|`DBTYPE_WSTR`|Facoltativo.|  
 |`DIMENSION_NAME`|`DBTYPE_WSTR`|Facoltativo.|  
 |`DIMENSION_UNIQUE_NAME`|`DBTYPE_WSTR`|Facoltativo.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -1 CUBO<br />-QUOTA 2<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -1 CUBO<br />-DIMENSIONE DI 2<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
 |`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -Visible 1<br />-2 non visibile<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
   
 ## <a name="see-also"></a>Vedere anche  

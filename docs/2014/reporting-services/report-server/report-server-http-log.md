@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 83d48cf33405988c9aedaceccc677ee238a7ea5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d697c1cb894028de8ccea5e3b87fc7d0cf155d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202601"
 ---
 # <a name="report-server-http-log"></a>Log HTTP del server di report
   Nei file di log HTTP del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene mantenuto un record per ogni richiesta HTTP e relativa risposta gestite dal server di report. Poiché gli errori di overflow e di timeout relativi alle richiesta ed errori non raggiungono il server di report, non vengono registrati nel file di log.  
@@ -36,10 +36,10 @@ ms.locfileid: "36064622"
 |**Nome file**|Per impostazione predefinita, il nome del file di log è<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> È possibile personalizzare il prefisso del nome del file modificando l'attributo HttpTraceFileName nel file ReportingServicesService.exe.config. Il timestamp si basa su l'ora UTC (Coordinated Universal Time).|  
 |**Percorso del file**|I file vengono scritti nel percorso seguente:<br /><br /> `\Microsoft SQL Server\<SQL Server Instance>\Reporting Services\LogFiles`|  
 |**Formato del file**|Il file è in formato en-US ed è un file di testo ASCII.|  
-|**Creazione di file e alla conservazione**|Per creare un log HTTP, è necessario innanzitutto riabilitarlo nel file di configurazione e riavviare il servizio. Il file viene quindi creato quando il server di report gestisce una richiesta HTTP. Se le impostazioni sono state configurate ma il file di log non viene visualizzato, aprire un report o avviare un'applicazione del server di report (ad esempio Gestione report) per generare una richiesta HTTP per creare il file.<br /><br /> Una nuova istanza del file di log verrà creata dopo ogni riavvio del servizio e ogni successiva richiesta HTTP al server di report.<br /><br /> Per impostazione predefinita, i log di traccia possono occupare uno spazio massimo di 32 MB e vengono eliminati dopo 14 giorni.|  
+|**Creazione di file e la conservazione**|Per creare un log HTTP, è necessario innanzitutto riabilitarlo nel file di configurazione e riavviare il servizio. Il file viene quindi creato quando il server di report gestisce una richiesta HTTP. Se le impostazioni sono state configurate ma il file di log non viene visualizzato, aprire un report o avviare un'applicazione del server di report (ad esempio Gestione report) per generare una richiesta HTTP per creare il file.<br /><br /> Una nuova istanza del file di log verrà creata dopo ogni riavvio del servizio e ogni successiva richiesta HTTP al server di report.<br /><br /> Per impostazione predefinita, i log di traccia possono occupare uno spazio massimo di 32 MB e vengono eliminati dopo 14 giorni.|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>Impostazioni di configurazione per il log HTTP del server di report  
- Per configurare il log HTTP del Server di Report, utilizzare Blocco note per modificare il **Reportingservicesservice** file. Il percorso del file di configurazione è \Programmi\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
+ Per configurare il log HTTP del Server di Report, utilizzare Blocco note per modificare la **Reportingservicesservice** file. Il percorso del file di configurazione è \Programmi\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
   
  Per abilitare il server HTTP, aggiungere `http:4` alla sezione RStrace del file ReportingServicesService.exe.config. Tutte le altre voci del file di log HTTP sono facoltative. Nell'esempio seguente sono incluse tutte le impostazioni in modo che sia possibile incollare la sezione intera sulla sezione Rstrace e successivamente eliminare le impostazioni non necessarie.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36064622"
 ```  
   
 ## <a name="log-file-fields"></a>Campi del file di log  
- Nella tabella seguente vengono descritti i campi procedure disponibili nel log. Elenco dei campi è configurabile; è possibile specificare i campi da includere tramite la `HTTPTraceSwitches` impostazione di configurazione. Il **predefinito** colonna specifica se il campo verrà incluso nel file di log automaticamente se non si specifica `HTTPTraceSwitches`.  
+ Nella tabella seguente vengono descritti i campi procedure disponibili nel log. Elenco dei campi è configurabile; è possibile specificare i campi da includere tramite il `HTTPTraceSwitches` impostazione di configurazione. Il **predefinite** consente di specificare se il campo verrà incluso nel file di registro automaticamente se non si specifica di colonna `HTTPTraceSwitches`.  
   
 |Campo|Description|Default|  
 |-----------|-----------------|-------------|  
@@ -85,6 +85,6 @@ ms.locfileid: "36064622"
 ## <a name="see-also"></a>Vedere anche  
  [Report Server Service Trace Log](report-server-service-trace-log.md)   
  [File di log e origini di Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Gli errori e riferimento agli eventi &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Gli errori e riferimento degli eventi &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

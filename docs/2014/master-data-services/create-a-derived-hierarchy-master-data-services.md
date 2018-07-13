@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, creating
 - creating derived hierarchies [Master Data Services]
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eed0b86271cb44565e2724cc6c961521c8d683ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 696b4bc98f4feb47ae7db6cae99d1ba9ae8a6628
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217641"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>Creare una gerarchia derivata (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare una gerarchia derivata quando si desidera una gerarchia basata su livelli tramite cui viene assicurato il posizionamento dei membri al corretto livello. Le gerarchie derivate sono basate sulle relazioni tra attributi basati su dominio che esistono in un modello.  
@@ -54,7 +54,7 @@ ms.locfileid: "36063380"
   
 6.  Fare clic su **Salva gerarchia derivata**.  
   
-7.  Nel **Modifica gerarchia derivata** nella pagina di **entità e gerarchie disponibili** riquadro, fare clic su un'entità o una gerarchia e trascinarla il **livelli correnti** riquadro.  
+7.  Nel **Modifica gerarchia derivata** nella pagina il **entità e gerarchie disponibili** riquadro, fare clic su un'entità o una gerarchia e trascinarla il **livelli correnti** riquadro.  
   
 8.  Continuare a trascinare entità o gerarchie fino a che la gerarchia non è completa.  
   

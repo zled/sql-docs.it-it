@@ -1,5 +1,5 @@
 ---
-title: Origini dati da oggetti esistenti (guidata origine dati) (Analysis Services) | Documenti Microsoft
+title: Origini dati da oggetti esistenti (guidata origine dati) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.specifyobject.f1
 ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60f07885aff1d323cb2627e933330af3f35b8d45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39ae96a5ebc4849e61fe2a2630702c2a8cf16111
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180993"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>Origini dati da oggetti esistenti (Creazione guidata origine dati) (Analysis Services)
   La pagina **Origini dati da oggetti esistenti** consente di specificare un'origine dei dati o un progetto esistente su cui basare la nuova origine dei dati.  
@@ -40,7 +40,7 @@ ms.locfileid: "36064822"
  Consente di selezionare il progetto a cui fare riferimento nella nuova origine dei dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 guidata origine dati &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
+ [La Guida F1 di creazione guidata dell'origine dati &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
  [Origini dati nei modelli multidimensionali](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Origini dati supportate &#40;multidimensionale di SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Metodo SetProtocolsOrder (classe ClientNetworkProtocol) | Documenti Microsoft
+title: Metodo SetProtocolsOrder (classe ClientNetworkProtocol) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetProtocolsOrder method
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd3281ff6bcd92d53b76a25c1f7b5a127dc9cd7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0befa20fdc25df354bbfe60cfb9e3313a65ddf48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262267"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>Metodo SetProtocolsOrder (classe ClientNetworkProtocol)
   Modifica l'ordine dell'elenco di protocolli.  
@@ -57,10 +57,10 @@ ProtocolOrderList
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore `uint32` che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli Client](http://technet.microsoft.com/library/ms181035.aspx)   
- [Configurazione di protocolli di rete Client e librerie di rete](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurazione di protocolli di rete Client e le librerie di rete](http://technet.microsoft.com/library/ms181035.aspx)  
   
   

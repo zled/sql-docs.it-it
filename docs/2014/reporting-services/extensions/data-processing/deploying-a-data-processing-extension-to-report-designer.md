@@ -15,15 +15,15 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 caps.latest.revision: 40
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f95040735e7ec8987bfdfd194ef1d7f0933df3ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 25b6bfa824f6004fbd35b3a31e7268ff388fab6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216731"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Procedura: Distribuzione di un'estensione per l'elaborazione dati in Progettazione report
   In Progettazione report vengono utilizzate le estensioni per l'elaborazione dati per il recupero e l'elaborazione dei dati durante la progettazione dei report. È necessario distribuire l'assembly di estensioni per l'elaborazione dati in Progettazione report come assembly privato. È inoltre necessario immettere una voce nel file di configurazione di Progettazione report, RSReportDesigner.config.  
@@ -50,7 +50,7 @@ ms.locfileid: "36063265"
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     Il valore per `Name` è il nome univoco dell'estensione per l'elaborazione dati. Il valore per `Type` è un elenco delimitato da virgole che include una voce per lo spazio dei nomi completo della classe che implementa le interfacce <xref:Microsoft.ReportingServices.Interfaces.IExtension> e <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, seguito dal nome dell'assembly, senza l'estensione dll. Per impostazione predefinita, le estensioni per l'elaborazione dati sono visibili. Per nascondere un'estensione dalle interfacce utente, ad esempio Progettazione Report, aggiungere un `Visible` attributo per il **estensione** elemento e impostarlo su `false`.  
+     Il valore per `Name` è il nome univoco dell'estensione per l'elaborazione dati. Il valore per `Type` è un elenco delimitato da virgole che include una voce per lo spazio dei nomi completo della classe che implementa le interfacce <xref:Microsoft.ReportingServices.Interfaces.IExtension> e <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, seguito dal nome dell'assembly, senza l'estensione dll. Per impostazione predefinita, le estensioni per l'elaborazione dati sono visibili. Per nascondere un'estensione dalle interfacce utente, ad esempio Progettazione Report, aggiungere un `Visible` dell'attributo per il **estensione** elemento e impostarlo su `false`.  
   
 5.  Aggiungere infine un gruppo di codice per l'assembly personalizzato che conceda l'autorizzazione **FullTrust** per l'estensione. A tale scopo, aggiungere il gruppo di codice al file rspreviewpolicy.config che, per impostazione predefinita, si trova in C:\Programmi\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies. Il gruppo di codice può essere simile a quanto riportato di seguito:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36063265"
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>Per abilitare la finestra Progettazione query standard per un'estensione personalizzata  
   
--   Aggiungere la seguente voce al file RSReportDesigner. config sotto il **finestra di progettazione** elemento, sostituendo il `Name` attributo con il nome fornito nelle voci precedenti.  
+-   Aggiungere la voce seguente al file RSReportDesigner. config sotto il **Designer** elemento, sostituendo il `Name` attributo con il nome specificato nelle voci precedenti.  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  

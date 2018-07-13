@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 569e88c7fbf844494276948690c583f69737ff14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bf93e552732ea0a5659211fbc11c2d3751a326a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188488"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replica in sottoscrittori di tabelle con ottimizzazione per la memoria
   Le tabelle con funzione di sottoscrittori di replica transazionale, esclusa la replica transazionale peer-to-peer, possono essere configurate come tabelle ottimizzate per la memoria. Le altre configurazioni di replica non sono compatibili con le tabelle ottimizzate per la memoria.  
@@ -230,7 +230,7 @@ ms.locfileid: "36064021"
     go  
     ```  
   
-5.  Creare database sottoscrittore utilizzando il **elevare il livello di isolamento dello snapshot** opzione e impostare regole di confronto predefinite su Latin1_General_CS_AS_KS_WS in caso di utilizzo di tipi di dati carattere non Unicode.  
+5.  Creare database sottoscrittore utilizzando il **isolamento elevate to snapshot** opzione e impostate le regole di confronto predefinite su Latin1_General_CS_AS_KS_WS se si usano tipi di dati carattere non Unicode.  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -297,7 +297,7 @@ GO
   
  Nel sottoscrittore le tabelle interessate dalla replica transazionale possono essere configurate come tabelle ottimizzate per la memoria, ma le tabelle del sottoscrittore devono soddisfare i requisiti delle tabelle ottimizzate per la memoria. Si applicano pertanto le restrizioni seguenti.  
   
--   Per creare una tabella ottimizzata per la memoria in un sottoscrittore di replica transazionale, è necessario modificare manualmente i file dello schema dello snapshot utilizzati per creare le tabelle ottimizzate per la memoria. Per altre informazioni, vedere [modifica un file di schema](#Schema).  
+-   Per creare una tabella ottimizzata per la memoria in un sottoscrittore di replica transazionale, è necessario modificare manualmente i file dello schema dello snapshot utilizzati per creare le tabelle ottimizzate per la memoria. Per altre informazioni, vedere [modifica di un file di schema](#Schema).  
   
 -   Alle tabelle replicate in tabelle ottimizzate per la memoria in un sottoscrittore si applica il limite di 8060 byte per riga delle tabelle ottimizzate per la memoria.  
   
@@ -305,7 +305,7 @@ GO
   
 -   Vengono applicate restrizioni all'aggiornamento della chiave primaria delle tabelle replicate in una tabella ottimizzata per la memoria in un sottoscrittore. Per altre informazioni, vedere [la replica delle modifiche a una chiave primaria](#PrimaryKey).  
   
--   Chiave esterna, vincolo univoco, trigger, modifiche dello schema, ROWGUIDCOL, colonne calcolate, compressione dei dati, tipi di dati alias, controllo delle versioni e blocchi non sono supportati nelle tabelle ottimizzate per la memoria. Vedere [costrutti Transact-SQL non supportati da OLTP In memoria](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) per informazioni.  
+-   Chiave esterna, vincolo univoco, trigger, modifiche dello schema, ROWGUIDCOL, colonne calcolate, compressione dei dati, tipi di dati alias, controllo delle versioni e blocchi non sono supportati nelle tabelle ottimizzate per la memoria. Visualizzare [costrutti Transact-SQL non supportati da OLTP In memoria](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) per informazioni.  
   
 ##  <a name="Schema"></a> Modifica di un file dello schema  
   

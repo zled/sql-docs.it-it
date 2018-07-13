@@ -1,5 +1,5 @@
 ---
-title: Modificare i colori utilizzati nei visualizzatori Data Mining | Documenti Microsoft
+title: Modificare i colori utilizzati nei visualizzatori Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
 ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4909ee57e27caeda0835f366337695300c163ad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 000f5b89eb918654f740e2c34eb60be484d3073c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194431"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>Modificare i colori utilizzati nel visualizzatore data mining
   È possibile modificare i colori utilizzati nei visualizzatori di data mining per visualizzare serie di dati, nodi o cluster. È possibile eseguire questa operazione impostando opzioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Dopo avere modificato le impostazioni, le selezioni dei colori si applicano a tutti i modelli visualizzati tramite [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], tuttavia è necessario chiudere [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e riaprire il modello nel visualizzatore per vedere i nuovi colori.  

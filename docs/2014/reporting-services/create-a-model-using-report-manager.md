@@ -1,5 +1,5 @@
 ---
-title: Creare un modello tramite Gestione Report | Documenti Microsoft
+title: Creare un modello tramite Gestione Report | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report models [Reporting Services], creating
 - Report Manager [Reporting Services], model creation
@@ -16,13 +16,13 @@ ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9f4de8368cadbc56819cd22c65892cbf143ae02c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a4f951a901361e47e1582146d306955da0e9bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175090"
 ---
 # <a name="create-a-model-using-report-manager"></a>Creare un modello tramite Gestione report
   È possibile generare modelli da un cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , da un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o da un database Oracle utilizzando Gestione report. I modelli di report vengono generati da origini dei dati condivise che vengono pubblicate nel server di report. Se non esiste un'origine dei dati condivisa, è necessario crearla.  
@@ -30,7 +30,7 @@ ms.locfileid: "36062607"
  Il modello di report che viene generato si basa interamente sullo schema dell'origine dei dati condivisa. Non è possibile scegliere quali parti dell'origine dei dati includere nel modello, né modificare le regole o i metadati del modello generato. È tuttavia possibile impostare le proprietà del modello dopo che quest'ultimo è stato generato e definire le assegnazioni di ruolo che limitano l'accesso all'intero modello o a parte di esso.  
   
 > [!NOTE]  
->  Un modello basato su Oracle generato utilizzando Gestione Report o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] includerà oggetti di database che fanno parte dello schema per l'account utente utilizzato per la connessione all'origine dati Oracle. Il nome dell'account utente viene specificato nelle credenziali delle proprietà per l'origine dei dati.  
+>  Un modello basato su Oracle generato utilizzando Gestione Report oppure [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] includerà oggetti di database che fanno parte dello schema per l'account utente utilizzato per la connessione all'origine dati Oracle. Il nome dell'account utente viene specificato nelle credenziali delle proprietà per l'origine dei dati.  
   
 ### <a name="to-create-a-new-data-source-for-a-report-model-using-report-manager"></a>Per creare una nuova origine dei dati per un modello di report tramite Gestione report  
   

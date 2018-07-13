@@ -1,5 +1,5 @@
 ---
-title: Proprietà PropertyValType (classe ServerNetworkProtocolProperty) | Documenti Microsoft
+title: Proprietà PropertyValType (classe ServerNetworkProtocolProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyValType property
 ms.assetid: fbd42e8e-0642-4a19-b3c8-6ce88345145f
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ca660a1c991e11a15a6968eb539c36cbb63c223b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 52331d787707fbd4882055023ba289a60b2dc250
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064636"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201121"
 ---
 # <a name="propertyvaltype-property-servernetworkprotocolproperty-class"></a>Proprietà PropertyValType (classe ServerNetworkProtocolProperty)
   Ottiene il tipo di dati del valore archiviato nella proprietà a cui si fa riferimento.  
@@ -48,9 +48,9 @@ object
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore `uint32` che specifica il tipo di dati del valore della proprietà. Viene restituito 0 per un valore string e 1 per un tipo numerico.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete Server e le librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

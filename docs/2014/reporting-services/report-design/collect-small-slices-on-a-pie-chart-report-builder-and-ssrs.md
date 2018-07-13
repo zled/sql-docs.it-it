@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: af1a270524d91621cdeb15b56ace7c07ad4a4df7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 91b6e5492566c2ada0857c8708ddc786560ee387
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177188"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Raccogliere piccole sezioni in un grafico a torta (Generatore report e SSRS)
   Quando in un grafico a torta viene visualizzato un numero eccessivo di punti dati, l'aspetto finale risulta poco chiaro. Per risolvere questo problema, è possibile visualizzare tutti i dati al di sotto di un determinato valore come un'unica sezione del grafico a torta.  
   
- Per raccogliere le piccole sezioni in un'unica sezione, determinare innanzitutto se la soglia deve essere misurata come percentuale del grafico a torta o come valore fisso. Impostare le proprietà CollectedThreshold e CollectedThresholdUsePercent. Impostare la proprietà CollectedThreshold su una percentuale del grafico che il valore di raccolta non deve superare o il valore dei dati soglia effettivo per la raccolta. Impostare la proprietà CollectedThresholdUsePercent `True` per utilizzare una percentuale o `False` per utilizzare un valore effettivo.  
+ Per raccogliere le piccole sezioni in un'unica sezione, determinare innanzitutto se la soglia deve essere misurata come percentuale del grafico a torta o come valore fisso. Impostare le proprietà CollectedThreshold e CollectedThresholdUsePercent. Impostare la proprietà CollectedThreshold su una percentuale del grafico che il valore di raccolta non deve superare o il valore dei dati soglia effettivo per la raccolta. Impostare la proprietà CollectedThresholdUsePercent su `True` per usare una percentuale o `False` usare un valore effettivo.  
   
  È anche possibile raccogliere le piccole sezioni in un secondo grafico a torta derivato da una sezione del primo grafico ottenuta tramite raccolta. Il secondo grafico a torta verrà disegnato a destra di quello originale.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36064619"
          Impostare la proprietà CollectedThreshold su **10**.  
   
         > [!NOTE]  
-        >  Se si imposta CollectedStyle **SingleSlice**, CollectedThreshold su un valore maggiore di **100**, e CollectedThresholdUsePercent `True`, il grafico verrà generata un'eccezione perché non può calcolare una percentuale. Per risolvere questo problema, impostare CollectedThreshold su un valore inferiore a **100**.  
+        >  Se si imposta CollectedStyle su **SingleSlice**, CollectedThreshold su un valore maggiore **100**, e CollectedThresholdUsePercent è `True`, il grafico genererà un'eccezione perché non è possibile calcolare una percentuale. Per risolvere questo problema, impostare CollectedThreshold su un valore inferiore a **100**.  
   
     -   **Per valore di dati.** Ad esempio, per raccogliere in un'unica sezione tutte le sezioni del grafico a torta inferiori a 5000:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36064619"
   
 2.  Impostare la proprietà CollectedStyle su **CollectedPie**.  
   
-3.  Impostare la proprietà CollectedThresholdproperty su un valore che rappresenta la soglia in corrispondenza della quale le sezioni piccole verranno raccolte in un'unica sezione. Quando la proprietà CollectedStyle è impostata su **CollectedPie**, il CollectedThresholdUsePercentproperty è sempre impostata su `True`, e la soglia per la raccolta viene sempre misurata in percentuale.  
+3.  Impostare la proprietà CollectedThresholdproperty su un valore che rappresenta la soglia in corrispondenza della quale le sezioni piccole verranno raccolte in un'unica sezione. Quando la proprietà CollectedStyle è impostata **CollectedPie**, la proprietà CollectedThresholdUsePercentproperty è sempre impostata su `True`, e la soglia raccolta viene sempre misurata in percentuale.  
   
 4.  (Facoltativo) Impostare le proprietà CollectedColor, CollectedLabel, CollectedLegendText e CollectedToolTip. Tutte le altre proprietà denominate "Collected" non si applicano alla torta raccolta.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "36064619"
 >  Non è possibile formattare il grafico a torta secondario. Per questo motivo, si consiglia di utilizzare il primo approccio per la raccolta delle sezioni della torta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [I grafici a torta &#40;SSRS e Generatore Report&#41;](charts-report-builder-and-ssrs.md)   
- [Formattazione dei punti dati in un grafico &#40;SSRS e Generatore Report&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Le etichette dei punti di dati visualizzato di fuori di un grafico a torta &#40;SSRS e Generatore Report&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [I grafici a torta &#40;Report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Formattazione dei punti dati in un grafico &#40;Report e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Le etichette dei punti di visualizzazione dei dati all'esterno di un grafico a torta &#40;Report e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Visualizzare i valori in percentuale in un grafico a torta &#40;Generatore report e SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Aggiungere effetti 3D a un grafico &#40;Generatore report e SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà set di dati, campi (Generatore Report) | Documenti Microsoft
+title: Finestra di dialogo Proprietà set di dati, campi (Generatore Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10021"
 ms.assetid: 75c7e54a-3d20-4c9a-88da-ab36dce2ce42
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e9fa18bb0edfc2edac3e58e22467ba49a01cf50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cffc9683eacab63c3c8175406ba8ba724cf0ccce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262247"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>Finestra di dialogo Proprietà set di dati, Campi (Generatore report)
   Selezionare **Campi** nella finestra di dialogo **Proprietà set di dati** per modificare la raccolta di campi per il set di dati del report. L'elenco dei campi viene generato automaticamente, tuttavia è possibile usare la scheda **Campi** per aggiungere, modificare ed eliminare campi di query e calcolati.  

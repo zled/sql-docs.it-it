@@ -1,5 +1,5 @@
 ---
-title: Creazione di una struttura Market Basket e modello (esercitazione intermedia di Data Mining) | Documenti Microsoft
+title: Creazione di una struttura Market Basket e un modello (esercitazione intermedia di Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 659b7a4e-f687-44d9-a60a-86490ccbf90f
 caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 957a55114e5a4fb756c63b63779eed3fbfb5f95b
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 67d047a9bb78a8c85d59131407cc85c6aa4769f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238131"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Creazione di una struttura e di un modello Market Basket (Esercitazione intermedia sul data mining)
   Dopo aver creato una vista origine dati, verrà utilizzata la Creazione guidata modello di data mining per creare una nuova struttura di data mining. In questa attività verranno creati una struttura di data mining e un modello di data mining basati sull'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Association.  
@@ -29,21 +29,21 @@ ms.locfileid: "36312599"
   
 ### <a name="to-create-an-association-mining-structure"></a>Per creare una struttura di data mining di associazione  
   
-1.  In Esplora soluzioni [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], fare doppio clic su **strutture di Data Mining** e selezionare **nuova struttura di Data Mining** per aprire Creazione guidata di Data Mining.  
+1.  In Esplora soluzioni in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], fare doppio clic su **strutture di Data Mining** e selezionare **nuova struttura di Data Mining** per aprire la procedura guidata di Data Mining dei dati.  
   
 2.  Nella pagina iniziale **Creazione guidata modello di data mining** fare clic su **Avanti**.  
   
-3.  Nel **Selezione metodo di definizione** verificare che **da esistente database relazionale o data warehouse** sia selezionata e quindi fare clic su **Avanti**.  
+3.  Nel **Selezione metodo di definizione** verificare che **da esistenti database relazionale o data warehouse** sia selezionata e quindi fare clic su **Next**.  
   
-4.  Nel **creare la struttura di Data Mining** nella pagina **tecnica di data mining si desidera utilizzare?**, selezionare **Microsoft Association Rules** dall'elenco e quindi fare clic su **Successivo**. Il **selezione vista origine dati** verrà visualizzata la pagina.  
+4.  Nel **creare la struttura di Data Mining** nella pagina **tecnica di data mining si desidera utilizzare?**, selezionare **Microsoft Association Rules** dall'elenco, quindi fare clic su **Successivo**. Il **selezione vista origine dati** verrà visualizzata la pagina.  
   
 5.  Selezionare **ordini**sotto **viste origine dati disponibili**, quindi fare clic su **Avanti**.  
   
-6.  Nel **impostazione tipi di tabelle** nella riga relativa alla tabella vAssocSeqLineItems, selezionare il **Nested** casella di controllo e nella riga per la tabella nidificata vAssocSeqOrders, selezionare il **Case** casella di controllo. Scegliere **Avanti**.  
+6.  Nel **specificare i tipi di tabella** pagina, nella riga relativa alla tabella vAssocSeqLineItems, selezionare la **Nested** casella di controllo e nella riga per la tabella nidificata vAssocSeqOrders, selezionare il **Case** casella di controllo. Scegliere **Avanti**.  
   
-7.  Nel **specificano i dati di Training** pagina, deselezionare le caselle di controllo selezionate. Impostare la chiave per la tabella del case, vAssocSeqOrders, selezionando il **chiave** casella di controllo accanto a OrderNumber.  
+7.  Nel **specificare i dati di Training** pagina, deselezionare le caselle che potrebbero essere archiviate. Impostare la chiave per la tabella del case, vAssocSeqOrders, selezionando il **chiave** casella di controllo accanto a OrderNumber.  
   
-     Poiché lo scopo dell'analisi di mercato sugli acquisti consiste nel determinare quali prodotti sono inclusi in una singola transazione, non è necessario utilizzare il **CustomerKey** campo.  
+     Poiché lo scopo della market basket analysis è determinare quali prodotti sono inclusi in un'unica transazione, non è necessario usare il **CustomerKey** campo.  
   
 8.  Impostare la chiave per la tabella nidificata, vAssocSeqLineItems, selezionando il **chiave** casella di controllo accanto al modello. Il **Input** casella di controllo è selezionata automaticamente anche quando si esegue questa operazione. Selezionare il **stimabile** casella di controllo per `Model` anche.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "36312599"
   
 9. Selezionare la casella di controllo a sinistra delle colonne IncomeGroup e Region, ma non effettuare altre selezioni. Se si seleziona la colonna più a sinistra, verranno aggiunte le colonne alla struttura per riferimento futuro, ma non verranno utilizzate nel modello. Le selezioni effettuate dovrebbero corrispondere a quanto segue:  
   
-     ![l'aspetto di finestra di dialogo](../../2014/tutorials/media/tutorial-configassocmodel.gif "l'aspetto di finestra di dialogo")  
+     ![come dovrebbe apparire nella finestra di dialogo](../../2014/tutorials/media/tutorial-configassocmodel.gif "come dovrebbe apparire nella finestra di dialogo")  
   
 10. Scegliere **Avanti**.  
   
-11. Nel **di specificare le colonne tipo di contenuto e dati**pagina, rivedere le selezioni, che devono essere come illustrato nella tabella seguente e quindi fare clic su **successivo**.  
+11. Nel **contenuto e tipo di dati specificare colonne**pagina, rivedere le selezioni, che dovrebbero essere come illustrato nella tabella seguente e quindi fare clic su **successivo**.  
   
     |Colonne|Tipo di contenuto|Tipo di dati|  
     |-------------|------------------|---------------|  
@@ -65,21 +65,21 @@ ms.locfileid: "36312599"
     |vAssocSeqLineItems|||  
     |Modello|Key|Text|  
   
-12. Nel **creare test impostata** pagina, il valore predefinito per l'opzione **percentuale di dati per il testing** corrisponde al 30%. Questa opzione per modificare **0**. Scegliere **Avanti**.  
+12. Nel **Create Test set** pagina, il valore predefinito per l'opzione **percentuale dei dati per i test** è 30 %). Impostare questa opzione su **0**. Scegliere **Avanti**.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce diversi grafici per misurare l'accuratezza del modello. Tuttavia, alcuni tipi di grafici di accuratezza, ad esempio il grafico di accuratezza e il report di convalida incrociata, sono progettati per l'esecuzione di classificazioni e stime. Non sono supportati per la stima associativa.  
   
 13. Nel **Completamento procedura guidata** nella pagina **nome struttura di Data Mining**, tipo `Association`.  
   
-14. In **nome del modello di Data Mining**, tipo `Association`.  
+14. Nelle **nome del modello di Data Mining**, tipo `Association`.  
   
 15. Selezionare l'opzione **Consenti drill-through**, quindi fare clic su **fine**.  
   
      Verrà aperto Progettazione modelli di Data Mining per visualizzare il `Association` struttura di data mining appena creato.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Modifica ed elaborazione del modello Market Basket &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../2014/tutorials/modify-process-market-basket-model-intermediate-data-mining-tutorial.md)  
+ [Modifica ed elaborazione del modello Market Basket &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/modify-process-market-basket-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Association Rules](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   

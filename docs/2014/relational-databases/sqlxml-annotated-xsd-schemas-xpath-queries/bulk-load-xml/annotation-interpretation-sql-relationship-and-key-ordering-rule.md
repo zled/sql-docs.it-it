@@ -1,5 +1,5 @@
 ---
-title: 'SQL: Relationship e regola di ordinamento di chiave (SQLXML 4.0) | Documenti Microsoft'
+title: 'SQL: Relationship e regola di ordinamento di chiavi (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - relationship annotation
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82ac5e6fb6abc886da542d7948b01fbf9437388b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ed5cf8e5362e868f581a80da6dd60092dcd9ef54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204921"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship e regola di ordinamento delle chiavi (SQLXML 4.0)
   Poiché il caricamento bulk XML genera record quando i nodi entrano nell'ambito e invia tali record a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando i nodi abbandonano l'ambito, i dati per il record devono essere presenti nell'ambito del nodo.  
   
- Si consideri lo schema XSD seguente, in cui la relazione uno-a-molti tra  **\<cliente >** e  **\<ordine >** elementi (un cliente può effettuare molti ordini) specificato utilizzando il `<sql:relationship>` elemento:  
+ Si consideri lo schema XSD seguente, in cui la relazione uno-a-molti tra  **\<cliente >** e  **\<ordine >** elementi (un cliente può effettuare molti ordini) è specificato utilizzando il `<sql:relationship>` elemento:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -63,7 +63,7 @@ ms.locfileid: "36063549"
 </xsd:schema>  
 ```  
   
- Come le  **\<cliente >** nodo elemento entra nell'ambito, il caricamento Bulk XML genera un record del cliente. Questo record viene mantenuto fino a quando il caricamento Bulk XML legge  **\</Customer. >**. Durante l'elaborazione di  **\<ordine >** nodo elemento, il caricamento Bulk XML utilizza `<sql:relationship>` per ottenere il valore della colonna chiave esterna CustomerID della tabella CustOrder dal **\<cliente >** padre elemento, in quanto il  **\<ordine >** elemento non specifica il **CustomerID** attributo. In tal caso nel definire il  **\<cliente >** elemento, è necessario specificare la **CustomerID** attributo nello schema prima di specificare `<sql:relationship>`. In caso contrario, quando un  **\<ordine >** elemento entra nell'ambito, il caricamento Bulk XML genera un record per la tabella CustOrder e quando il codice XML in blocco caricamento raggiunge il  **\</Order >** tag di fine invia il record a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] senza il valore della colonna chiave esterna CustomerID.  
+ Come le  **\<cliente >** nodo elemento entra nell'ambito, il caricamento Bulk XML genera un record del cliente. Questo record viene mantenuto fino a quando il caricamento Bulk XML legge  **\</Customer. >**. Nell'elaborazione di  **\<ordine >** nodo elemento, il caricamento Bulk XML utilizza `<sql:relationship>` per ottenere il valore della colonna chiave esterna CustomerID della tabella CustOrder dal **\<cliente >** padre elemento, in quanto il  **\<ordine >** elemento non specifica il **CustomerID** attributo. Ciò significa che, nel definire il  **\<cliente >** elemento, è necessario specificare il **CustomerID** attributo nello schema prima di specificare `<sql:relationship>`. In caso contrario, quando un  **\<ordine >** elemento entra nell'ambito, il caricamento Bulk XML genera un record per la tabella CustOrder e quando il codice XML in blocco caricamento raggiunge il  **\</Order >** tag di fine invia il record a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] senza il valore della colonna chiave esterna CustomerID.  
   
  Salvare lo schema fornito in questo esempio come SampleSchema.xml.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36063549"
     set objBL=Nothing  
     ```  
   
-     Come risultato, il caricamento bulk XML inserisce un valore NULL nella colonna chiave esterna CustomerID della tabella CustOrder. Se si modificano i dati di esempio XML in modo che il  **\<CustomerID >** elemento figlio viene visualizzato prima il  **\<ordine >** elemento figlio, si ottiene il risultato previsto: caricamento Bulk XML Inserisce il valore di chiave esterno specificato nella colonna.  
+     Come risultato, il caricamento bulk XML inserisce un valore NULL nella colonna chiave esterna CustomerID della tabella CustOrder. Se si modificano i dati di esempio XML in modo che il  **\<CustomerID >** elemento figlio viene visualizzata prima il  **\<ordine >** elemento figlio, si ottiene il risultato previsto: caricamento Bulk XML Inserisce il valore di chiave esterno specificato nella colonna.  
   
  Di seguito viene indicato lo schema XDR equivalente:  
   

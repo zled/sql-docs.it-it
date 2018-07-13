@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f69c4a6dd5f2593650067be51eae3b63e49dcd96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2c305f6a4b4188e05f67bc8ac8ffd8cd66cdbb5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328986"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Tipi di grafico (Generatore report e SSRS)
-  È importante scegliere un tipo di grafico appropriato per il tipo di dati da visualizzare. Tale scelta risulta infatti fondamentale per una corretta interpretazione dei dati visualizzati nel grafico. Se ad esempio il set di dati contiene un numero di punti dati particolarmente elevato rispetto alla dimensioni del grafico, è opportuno rappresentarlo in un grafico ad area, a linee o a dispersione. Per informazioni su come preparare i dati in base al tipo di grafico selezionato, vedere [grafici &#40;Generatore Report e SSRS&#41;](charts-report-builder-and-ssrs.md).  
+  È importante scegliere un tipo di grafico appropriato per il tipo di dati da visualizzare. Tale scelta risulta infatti fondamentale per una corretta interpretazione dei dati visualizzati nel grafico. Se ad esempio il set di dati contiene un numero di punti dati particolarmente elevato rispetto alla dimensioni del grafico, è opportuno rappresentarlo in un grafico ad area, a linee o a dispersione. Per informazioni dettagliate sulla preparazione dei dati in base al tipo di grafico selezionato, vedere [i grafici &#40;Generatore Report e SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -38,22 +38,22 @@ ms.locfileid: "36055862"
   
 |Tipo di grafico|Visualizzazione di dati proporzionali|Visualizzazione di dati azionari|Visualizzazione di dati lineari|Visualizzazione di dati multivalore|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
-|[Grafici ad area &#40;SSRS e Generatore Report&#41;](area-charts-report-builder-and-ssrs.md)|||![Disponibile](../media/greencheck.gif "Disponibile")||  
-|[Grafici a barre &#40;SSRS e Generatore Report&#41;](bar-charts-report-builder-and-ssrs.md)|||![Disponibile](../media/greencheck.gif "Disponibile")||  
+|[Grafici ad area &#40;Report e SSRS&#41;](area-charts-report-builder-and-ssrs.md)|||![Disponibile](../media/greencheck.gif "Disponibile")||  
+|[Grafici a barre &#40;Report e SSRS&#41;](bar-charts-report-builder-and-ssrs.md)|||![Disponibile](../media/greencheck.gif "Disponibile")||  
 |[Barre dei dati](sparklines-and-data-bars-report-builder-and-ssrs.md)|||![Disponibile](../media/greencheck.gif "Disponibile")||  
-|[I grafici a colonne &#40;SSRS e Generatore Report&#41;](column-charts-report-builder-and-ssrs.md)|||![Disponibile](../media/greencheck.gif "Disponibile")||  
-|[Grafici a linee &#40;SSRS e Generatore Report&#41;](line-charts-report-builder-and-ssrs.md)|||![Disponibile](../media/greencheck.gif "Disponibile")||  
-|[I grafici a torta &#40;SSRS e Generatore Report&#41;](pie-charts-report-builder-and-ssrs.md)|![Disponibile](../media/greencheck.gif "Disponibile")||||  
-|[Grafici polari &#40;SSRS e Generatore Report&#41;](polar-charts-report-builder-and-ssrs.md)|![Disponibile](../media/greencheck.gif "Disponibile")||||  
-|[Grafici a intervallo &#40;SSRS e Generatore Report&#41;](range-charts-report-builder-and-ssrs.md)|||![Disponibile](../media/greencheck.gif "Disponibile")|![Disponibile](../media/greencheck.gif "Disponibile")|  
-|[Grafici a dispersione &#40;SSRS e Generatore Report&#41;](scatter-charts-report-builder-and-ssrs.md)|![Disponibile](../media/greencheck.gif "Disponibile")||![Disponibile](../media/greencheck.gif "Disponibile")||  
-|[I grafici con forme &#40;SSRS e Generatore Report&#41;](shape-charts-report-builder-and-ssrs.md)|![Disponibile](../media/greencheck.gif "Disponibile")||||  
+|[I grafici a colonne &#40;Report e SSRS&#41;](column-charts-report-builder-and-ssrs.md)|||![Disponibile](../media/greencheck.gif "Disponibile")||  
+|[Grafici a linee &#40;Report e SSRS&#41;](line-charts-report-builder-and-ssrs.md)|||![Disponibile](../media/greencheck.gif "Disponibile")||  
+|[I grafici a torta &#40;Report e SSRS&#41;](pie-charts-report-builder-and-ssrs.md)|![Disponibile](../media/greencheck.gif "Disponibile")||||  
+|[Grafici polari &#40;Report e SSRS&#41;](polar-charts-report-builder-and-ssrs.md)|![Disponibile](../media/greencheck.gif "Disponibile")||||  
+|[Grafici a intervalli &#40;Report e SSRS&#41;](range-charts-report-builder-and-ssrs.md)|||![Disponibile](../media/greencheck.gif "Disponibile")|![Disponibile](../media/greencheck.gif "Disponibile")|  
+|[Grafici a dispersione &#40;Report e SSRS&#41;](scatter-charts-report-builder-and-ssrs.md)|![Disponibile](../media/greencheck.gif "Disponibile")||![Disponibile](../media/greencheck.gif "Disponibile")||  
+|[I grafici con forme &#40;Report e SSRS&#41;](shape-charts-report-builder-and-ssrs.md)|![Disponibile](../media/greencheck.gif "Disponibile")||||  
 |[Grafici sparkline](sparklines-and-data-bars-report-builder-and-ssrs.md)|![Disponibile](../media/greencheck.gif "Disponibile")|![Disponibile](../media/greencheck.gif "Disponibile")|![Disponibile](../media/greencheck.gif "Disponibile")|![Disponibile](../media/greencheck.gif "Disponibile")|  
-|[Grafici delle scorte &#40;SSRS e Generatore Report&#41;](stock-charts-report-builder-and-ssrs.md)||![Disponibile](../media/greencheck.gif "Disponibile")||![Disponibile](../media/greencheck.gif "Disponibile")|  
+|[Grafici azionari &#40;Report e SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![Disponibile](../media/greencheck.gif "Disponibile")||![Disponibile](../media/greencheck.gif "Disponibile")|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Punti dati vuoti e Null nei grafici &#40;Generatore report e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Aggiungere un grafico a un Report &#40;SSRS e Generatore Report&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Aggiungere un grafico a un Report &#40;Report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

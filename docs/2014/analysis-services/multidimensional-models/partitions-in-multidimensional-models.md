@@ -1,5 +1,5 @@
 ---
-title: Partizioni nei modelli multidimensionali | Documenti Microsoft
+title: Partizioni nei modelli multidimensionali | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 884f8cbf2157dcf06958c81437a1a177ac2ae282
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7491322b775cca1a6cf65b667ffd979aa723af0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270257"
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partizioni nei modelli multidimensionali
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]una *partizione* consente l'archiviazione fisica delle tabelle dei fatti in un gruppo di misure. Per ogni gruppo di misure viene automaticamente creata una singola partizione, ma è frequente creare partizioni aggiuntive per l'ulteriore segmentazione dei dati, con il conseguente miglioramento dell'elaborazione e delle prestazioni delle query.  
@@ -51,8 +51,8 @@ ms.locfileid: "36062494"
 |Argomento|Description|  
 |-----------|-----------------|  
 |[Creare e gestire una partizione locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)|Sono contenute informazioni su come partizionare i dati utilizzando filtri o tabelle dei fatti diverse senza duplicare i dati.|  
-|[Impostare l'archiviazione della partizione &#40;di Analysis Services - multidimensionale&#41;](set-partition-storage-analysis-services-multidimensional.md)|Viene descritto come configurare l'archiviazione per le partizioni.|  
-|[Modificare o eliminare partizioni &#40;di Analysis Services - multidimensionale&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md)|Viene descritto come visualizzare e modificare le partizioni.|  
+|[Impostare l'archiviazione delle partizioni &#40;Analysis Services - multidimensionale&#41;](set-partition-storage-analysis-services-multidimensional.md)|Viene descritto come configurare l'archiviazione per le partizioni.|  
+|[Modificare o eliminare partizioni &#40;Analysis Services - multidimensionale&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md)|Viene descritto come visualizzare e modificare le partizioni.|  
 |[Unire partizioni in Analysis Services &#40;SSAS - multidimensionale&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)|Sono contenute informazioni su come unire le partizioni in cui sono presenti tabelle dei fatti o sezioni dei dati diverse senza duplicare i dati.|  
 |[Impostare tabelle writeback delle partizioni](set-partition-writeback.md)|Vengono fornite istruzioni su come abilitare una partizione per la scrittura.|  
 |[Creare e gestire una partizione remota &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)|Viene descritto come creare e gestire una partizione remota.|  

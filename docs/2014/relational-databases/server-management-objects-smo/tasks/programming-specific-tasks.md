@@ -1,5 +1,5 @@
 ---
-title: Programmazione di attività specifiche | Documenti Microsoft
+title: Programmazione di attività specifiche | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 00bd816625c9f4aa4116c1c3810957f8a95bc12e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 114cc7d651318a0c3892427a54fefb3c5f6bb781
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274407"
 ---
 # <a name="programming-specific-tasks"></a>Programmazione di attività specifiche
   Tra le attività specifiche della programmazione tramite oggetti SMO sono incluse operazioni complesse richieste esclusivamente dai programmi che hanno una funzione specifica, ad esempio il backup, il monitoraggio delle statistiche, la replica, la gestione di istanze di oggetti e l'impostazione di opzioni di configurazione.  
@@ -40,7 +40,7 @@ ms.locfileid: "36063781"
 |[Uso del partizionamento di tabelle e indici](using-table-and-index-partitioning.md)|Viene descritto come utilizzare il partizionamento di indici e tabelle in SMO.|  
 |[Uso di filegroup e file per archiviare dati](using-filegroups-and-files-to-store-data.md)|Viene descritto come utilizzare filegroup in SMO.|  
 |[Gestione di servizi e di impostazioni di rete con il provider WMI](managing-services-and-network-settings-by-using-wmi-provider.md)|Vengono descritti diversi modi per tenere traccia dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> che rappresenta il provider WMI per la gestione della configurazione.|  
-|[Utilizzo di oggetti di Database](creating-altering-and-removing-database-objects.md)|Viene descritto come creare classi di istanze che rappresentano oggetti nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|[Uso degli oggetti di database](creating-altering-and-removing-database-objects.md)|Viene descritto come creare classi di istanze che rappresentano oggetti nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[Gestione di utenti, ruoli e account di accesso](managing-users-roles-and-logins.md)|Viene descritto come utilizzare i ruoli di sicurezza in SMO.|  
 |[Concessione, revoca e negazione delle autorizzazioni](granting-revoking-and-denying-permissions.md)|Viene descritto come utilizzare SMO per concedere, revocare e negare autorizzazioni a utenti o membri di un ruolo.|  
 |[Uso della crittografia](using-encryption.md)|Viene descritto come proteggere i dati utilizzando la crittografia in SMO.|  

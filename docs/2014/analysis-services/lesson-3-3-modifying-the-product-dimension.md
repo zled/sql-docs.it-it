@@ -1,5 +1,5 @@
 ---
-title: Modifica della dimensione Product | Documenti Microsoft
+title: Modifica della dimensione Product | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 6d0fca02684392aaba37565d4b06b7cc0f1e265f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1163fdaf3e76734217fc8c2cca13a124e30f3b2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171732"
 ---
 # <a name="modifying-the-product-dimension"></a>Modifica della dimensione Product
   Nelle attività di questo argomento si utilizzerà un calcolo denominato per fornire nomi più descrittivi per le linee di prodotti, si definirà una gerarchia nella dimensione Product e si specificherà il nome membro (Totale) per la gerarchia. Si raggrupperanno inoltre gli attributi in cartelle di visualizzazione.  
@@ -33,7 +33,7 @@ ms.locfileid: "36062515"
   
 2.  Nella parte inferiore del riquadro diagramma fare clic con il pulsante destro del mouse sull'intestazione di tabella **Product** , quindi scegliere **Nuovo calcolo denominato**.  
   
-3.  Nel **Crea calcolo denominato** della finestra di dialogo tipo `ProductLineName` nel **nome della colonna** casella.  
+3.  Nel **Crea calcolo denominato** finestra di dialogo, digitare `ProductLineName` nel **nome colonna** casella.  
   
 4.  Nella casella **Espressione** digitare o copiare e incollare l'istruzione **CASE** seguente:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36062515"
   
 3.  Nella finestra Proprietà a destra dello schermo fare clic sul campo proprietà **NameColumn** nella parte inferiore della finestra, quindi fare clic sul pulsante con i puntini di sospensione (**…**) per aprire la finestra di dialogo **Colonna nome** . Per aprire la finestra Proprietà, potrebbe essere necessario fare clic sulla scheda **Proprietà** sul lato destro dello schermo.  
   
-4.  Selezionare `ProductLineName` in fondo il **colonna di origine** elenco e quindi fare clic su **OK**.  
+4.  Selezionare `ProductLineName` nella parte inferiore della **Source column** elenco e quindi fare clic su **OK**.  
   
      Il campo NameColumn ora contiene il testo **Product.ProductLineName (WChar)**. I membri della gerarchia dell'attributo **Product Line** ora vengono visualizzati con il nome completo della linea di prodotti anziché con un nome abbreviato.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36062515"
   
      Il campo NameColumn ora contiene il testo **Product.EnglishProductName (WChar)**.  
   
-8.  Nella finestra Proprietà, scorrere verso l'alto, fare clic sui **nome** campo di proprietà e quindi digitare `Product Name`.  
+8.  Nella finestra Proprietà scorrere verso l'alto, fare clic sui **Name** campo della proprietà e quindi digitare `Product Name`.  
   
 ## <a name="creating-a-hierarchy"></a>Creazione di una gerarchia  
   
@@ -83,11 +83,11 @@ ms.locfileid: "36062515"
   
 1.  Trascinare l'attributo **Product Line** dal riquadro **Attributi** al riquadro **Gerarchie** .  
   
-2.  Trascinare il **Model Name** dell'attributo dal **attributi** riquadro il  **\<nuovo livello >** cella il **gerarchie** riquadro, sotto il **Product Line** livello.  
+2.  Trascinare il **Model Name** dell'attributo dal **attributi** riquadro il  **\<nuovo livello >** cella il **gerarchie** riquadro, sotto il **linea di prodotti** livello.  
   
-3.  Trascinare il `Product Name` dell'attributo dal **attributi** riquadro il  **\<nuovo livello >** cella il **gerarchie** riquadro, sotto il  **Nome del modello** livello. L'attributo Product Key è stato rinominato in Product Name nella sezione precedente.  
+3.  Trascinare il `Product Name` dell'attributo dal **attributi** riquadro il  **\<nuovo livello >** cella il **gerarchie** riquadro, sotto il  **Nome modello** livello. L'attributo Product Key è stato rinominato in Product Name nella sezione precedente.  
   
-4.  Nel **gerarchie** riquadro del **struttura dimensione** scheda, fare clic sulla barra del titolo del **gerarchia** gerarchia, fare clic su **rinominare** , quindi digitare `Product Model Lines`.  
+4.  Nel **gerarchie** riquadro della finestra il **struttura dimensione** scheda, fare clic sulla barra del titolo del **gerarchia** gerarchia, fare clic su **rinominare** , quindi digitare `Product Model Lines`.  
   
      Il nome della gerarchia è ora `Product Model Lines`.  
   
@@ -145,9 +145,9 @@ ms.locfileid: "36062515"
   
      Questi attributi sono stati ora raggruppati in una terza cartella di visualizzazione.  
   
-7.  Selezionare il `Product Model Lines` gerarchia il **gerarchie** riquadro e quindi modificare il **AllMemberName** proprietà nella finestra proprietà per `All Products`.  
+7.  Selezionare il `Product Model Lines` gerarchia nel **gerarchie** riquadro e modificare le **AllMemberName** proprietà nella finestra proprietà per `All Products`.  
   
-8.  Fare clic su un'area vuota di **gerarchie** riquadro e quindi modificare il **AttributeAllMemberName** proprietà nella parte superiore della finestra proprietà per `All Products`.  
+8.  Fare clic su un'area aperta del **gerarchie** riquadro e modificare il **AttributeAllMemberName** nella parte superiore della finestra proprietà per proprietà `All Products`.  
   
      Facendo clic su un'area libera è possibile modificare le proprietà della dimensione Product stessa. È inoltre possibile fare clic su **Product** nella parte superiore dell'elenco di attributi nel riquadro **Attributi** .  
   
@@ -178,9 +178,9 @@ ms.locfileid: "36062515"
   
 2.  Dopo la visualizzazione del messaggio **Distribuzione completata** , fare clic sulla scheda **Esplorazione** di **Progettazione dimensioni** per la dimensione **Product** , quindi fare clic sul pulsante Riconnetti sulla barra degli strumenti della finestra di progettazione.  
   
-3.  Verificare che `Product Model Lines` è selezionata nel **gerarchia** elenco e quindi espandere `All Products`.  
+3.  Verificare che `Product Model Lines` sia selezionato nel **gerarchia** elenco e quindi espandere `All Products`.  
   
-     Si noti che il nome del **tutti** membro viene visualizzato come `All Products`. In questo modo è stato modificato il **AllMemberName** proprietà per la gerarchia allo `All Products` nella lezione precedente. Inoltre, i membri del livello **Product Line** hanno ora nomi descrittivi anziché abbreviazioni costituite da una sola lettera.  
+     Si noti che il nome del **tutte** membro viene visualizzato come `All Products`. Infatti, è stato modificato il **AllMemberName** proprietà per la gerarchia allo `All Products` nella lezione precedente. Inoltre, i membri del livello **Product Line** hanno ora nomi descrittivi anziché abbreviazioni costituite da una sola lettera.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Modifica della dimensione Date](lesson-3-4-modifying-the-date-dimension.md)  

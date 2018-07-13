@@ -1,5 +1,5 @@
 ---
-title: Specificare il tipo di dimensione (Creazione guidata dimensione) | Documenti Microsoft
+title: Specificare il tipo di dimensione (Creazione guidata dimensione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a5b5d77a8f54b24488b7152bba95ac705d5196d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bdbc0375dd2f6c77d81ab4028bb5118de93a021f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185318"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Impostazione tipo di dimensione (Creazione guidata dimensione)
   Usare la pagina **Impostazione tipo di dimensione** per definire il tipo di dimensione e aggiungere alla dimensione i tipi di attributo speciali associati al tipo di dimensione selezionato.  
@@ -45,7 +45,7 @@ ms.locfileid: "36064127"
 |**Prodotti**|Le dimensioni di tipo Product sono dimensioni regolari nelle quali i dati e i metadati rappresentano informazioni di prodotto.<br /><br /> Per altre informazioni sulle dimensioni regolari, vedere [Tipi di dimensioni](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Promotion**|Le dimensioni di tipo Promotion sono dimensioni regolari nelle quali i dati e i metadati rappresentano informazioni promozionali di marketing.<br /><br /> Per altre informazioni sulle dimensioni regolari, vedere [Tipi di dimensioni](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Quantitative**|Le dimensioni di tipo Quantitative sono dimensioni regolari nelle quali i dati e i metadati rappresentano informazioni quantitative.<br /><br /> Per altre informazioni sulle dimensioni regolari, vedere [Tipi di dimensioni](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Velocità**|Le dimensioni di tipo Rate contengono dati e metadati che rappresentano informazioni di tassi di cambio e di conversione valuta.|  
+|**Tariffe**|Le dimensioni di tipo Rate contengono dati e metadati che rappresentano informazioni di tassi di cambio e di conversione valuta.|  
 |**Regular**|Le dimensioni regolari sono le dimensioni più comunemente usate in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br /><br /> Per altre informazioni sulle dimensioni regolari, vedere [Tipi di dimensioni](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Scenario**|Le dimensioni di tipo Scenario sono dimensioni regolari nelle quali i dati e i metadati rappresentano informazioni di pianificazione o di analisi strategica.<br /><br /> Per altre informazioni sulle dimensioni regolari, vedere [Tipi di dimensioni](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Time**|Le dimensioni temporali contengono dati e metadati basati sul tempo.<br /><br /> Per altre informazioni sulle dimensioni temporali, vedere [Creare una dimensione di tipo Date](multidimensional-models/database-dimensions-create-a-date-type-dimension.md).|  
@@ -66,8 +66,8 @@ ms.locfileid: "36064127"
  Consente di selezionare l'attributo di dimensione al quale la Creazione guidata dimensione assegnerà il tipo di attributo speciale visualizzato in **Tipo attributo**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [F1 Guida della procedura guidata di dimensione](dimension-wizard-f1-help.md)   
- [Le dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Guida F1 di creazione guidata dimensione](dimension-wizard-f1-help.md)   
+ [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Specificare una versione come ultima versione | Documenti Microsoft
+title: Specificare una versione come ultima versione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version control services [SQL Server], latest version
 - latest file version specified
 - file versions [SQL Server]
 ms.assetid: 407dffb1-3ecf-461e-835d-124781f26ee7
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 598fc6f2d90220f85cef590600d8fcf397384f28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2f90851ebb0c5425e7f3948f7f0e040d2cab0618
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225921"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>Specifica di una versione come ultima versione
   Quando un file viene archiviato nel controllo del codice sorgente, l'ultima versione diventa quella archiviata. Gli utenti che la estraggono o la recuperano ricevono copie locali dell'elemento archiviato più di recente.  
@@ -44,7 +44,7 @@ ms.locfileid: "36062447"
   
 3.  Nel **File** dal menu **controllo del codice sorgente** e fare clic su **ViewHistory**.  
   
-4.  Nel **storico** \<file > finestra di dialogo, selezionare la versione che si desidera specificare come ultima e fare clic su **Pin**.  
+4.  Nel **cronologia delle** \<file > finestra di dialogo, selezionare la versione che si desidera specificare come la versione più recente e fare clic su **Pin**.  
   
      Accanto alla versione selezionata viene visualizzato un simbolo di blocco per indicare che si tratta della versione corrente del file. Se in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è caricata una versione diversa, viene chiesto di ricaricare il file.  
   
@@ -56,13 +56,13 @@ ms.locfileid: "36062447"
   
 3.  Nel **File** dal menu **controllo del codice sorgente** e fare clic su **cronologia**.  
   
-4.  Nel **Opzioni cronologia** finestra di dialogo, fare clic su **OK** per visualizzare il **cronologia di File** finestra di dialogo.  
+4.  Nel **opzioni relative alla cronologia** finestra di dialogo, fare clic su **OK** per visualizzare il **cronologia di File** nella finestra di dialogo.  
   
-5.  Nel **cronologia** , selezionare la versione che si desidera specificare come ultima versione, quindi scegliere **Rollback**.  
+5.  Nel **cronologia** , selezionare la versione che si desidera specificare come la versione più recente e fare clic su **Rollback**.  
   
      Verrà visualizzato un messaggio che informa che tutte le versioni successive a quella selezionata verranno eliminate.  
   
-6.  Fare clic su **Sì** per eseguire il rollback alla versione selezionata.  
+6.  Fare clic su **Sì** eseguire il rollback alla versione selezionata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione delle archiviazioni](../../2014/database-engine/manage-checkins.md)   

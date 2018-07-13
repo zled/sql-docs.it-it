@@ -1,5 +1,5 @@
 ---
-title: Aggiungendo o rimuovendo tabelle o viste in dati di origine vista (Analysis Services) | Documenti Microsoft
+title: Aggiungendo o rimuovendo tabelle o viste in dati di origine vista (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.tablespane.f1
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - tables [Analysis Services], data source views
 ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f5bd0cf48e266149a0666b5e8d21d4d44efe41e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ac190f75b626cf2007dee5c885c45672276ee35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179068"
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>Aggiunta o rimozione di tabelle o viste in una vista origine dati (Analysis Services)
   Dopo aver creato una vista origine dati in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], è possibile modificarla in Progettazione vista origine dati aggiungendo o rimuovendo tabelle e colonne, incluse quelle provenienti da un'altra origine dati.  
@@ -39,17 +39,17 @@ ms.locfileid: "36064345"
 >  Prestare attenzione in caso di rimozione di una tabella. Se si rimuove una tabella vengono eliminate anche tutte le colonne e relazioni associate dalla vista origine dati e tutti gli oggetti associati a tale tabella non sono più validi.  
   
 ## <a name="selecting-tables-or-views-to-add-or-remove"></a>Selezione delle tabelle o delle viste da aggiungere o rimuovere  
- Usando la finestra di dialogo **Aggiungi/Rimuovi tabelle** è possibile spostare tabelle o viste tra gli elenchi **Oggetti disponibili** e **Oggetti inclusi** . Nell'elenco **Oggetti disponibili** vengono incluse inizialmente tutte le tabelle o le viste dell'origine dei dati primaria che non sono già contenute nella vista origine dati. Se l'origine dati primaria supporta la `OPENROWSET` funzione, è anche possibile aggiungere tabelle o viste da altre origini dati nel progetto o nel database.  
+ Usando la finestra di dialogo **Aggiungi/Rimuovi tabelle** è possibile spostare tabelle o viste tra gli elenchi **Oggetti disponibili** e **Oggetti inclusi** . Nell'elenco **Oggetti disponibili** vengono incluse inizialmente tutte le tabelle o le viste dell'origine dei dati primaria che non sono già contenute nella vista origine dati. Se l'origine dati primaria supporta la `OPENROWSET` (funzione), è anche possibile aggiungere tabelle o viste da altre origini dati nel progetto o nel database.  
   
  Se si aggiunge o si rimuove una tabella dalla vista origine dati, la tabella verrà aggiunta o rimossa anche dal diagramma corrente selezionato nella vista. Per altre informazioni sui diagrammi, vedere [Work with Diagrams in Data Source View Designer &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md).  
   
- Dopo aver spostato una tabella nell'elenco **Oggetti inclusi** della finestra di dialogo **Aggiungi/Rimuovi tabelle** , è possibile aggiungere tutte le tabelle correlate. Questa operazione consente di aggiungere le tabelle nell'origine dei dati in base a vincoli di chiave esterna, se esistono. Se non esistono vincoli di chiave esterna, è possibile utilizzare il `NameMatchingCriteria` proprietà della vista origine dati per determinare le relazioni specificando un criterio di corrispondenza nomi di colonna nelle tabelle per generare le relazioni probabili. Se il `NameMatchingCriteria`proprietà specificata per la vista origine dati, fare clic su **Aggiungi tabelle correlate** per aggiungere tabelle dall'origine dati che hanno nomi di colonna corrispondenti. Per ulteriori informazioni sull'impostazione di `NameMatchingCriteria` proprietà, vedere [le viste origine dati nei modelli multidimensionali](data-source-views-in-multidimensional-models.md).  
+ Dopo aver spostato una tabella nell'elenco **Oggetti inclusi** della finestra di dialogo **Aggiungi/Rimuovi tabelle** , è possibile aggiungere tutte le tabelle correlate. Questa operazione consente di aggiungere le tabelle nell'origine dei dati in base a vincoli di chiave esterna, se esistono. Se non esistono vincoli di chiave esterna, è possibile usare il `NameMatchingCriteria` proprietà della vista origine dati per determinare le relazioni specificando un criterio di corrispondenza nomi delle colonne nelle tabelle per generare le relazioni probabili. Se il `NameMatchingCriteria`proprietà viene specificata per la vista origine dati, fare clic su **Aggiungi tabelle correlate** per aggiungere tabelle dall'origine dati con nomi di colonna corrispondenti. Per altre informazioni sull'impostazione di `NameMatchingCriteria` proprietà, vedere [viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md).  
   
 > [!NOTE]  
 >  L'aggiunta o la rimozione di oggetti in una vista origine dati non influisce sull'origine dati sottostante.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati nei modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
+ [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
  [Utilizzare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

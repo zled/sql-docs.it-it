@@ -1,5 +1,5 @@
 ---
-title: Misure di elemento (ASSL) | Documenti Microsoft
+title: Le misure di elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Measures element
 ms.assetid: d2107112-f620-4fd7-a05f-bb2606b4be18
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38b21b53bf8173b709a43393710256b7040648b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f781eb542d290635bb01b8582c8e51a7cb2b05f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272297"
 ---
 # <a name="measures-element-assl"></a>Elemento Measures (ASSL)
-  Contiene la raccolta di [misure](../objects/measure-element-assl.md) elementi associati all'elemento padre.  
+  Contiene la raccolta di [misura](../objects/measure-element-assl.md) elementi associati all'elemento padre.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,10 +60,10 @@ ms.locfileid: "36063194"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[AggregationInstance](../objects/aggregationinstance-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MeasureGroupBinding (out-of-line)](../data-type/measuregroupbinding-data-type-out-of-line-assl.md), [PerspectiveMeasureGroup](../data-type/perspectivemeasuregroup-data-type-assl.md)|  
+|Elementi padre|[Elemento AggregationInstance](../objects/aggregationinstance-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MeasureGroupBinding (out-of-line)](../data-type/measuregroupbinding-data-type-out-of-line-assl.md), [PerspectiveMeasureGroup](../data-type/perspectivemeasuregroup-data-type-assl.md)|  
 |Elementi figlio|[Misura](../objects/measure-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Gli elementi corrispondenti nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.MeasureCollection> e <xref:Microsoft.AnalysisServices.PerspectiveMeasureCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -44,13 +44,13 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d73b7d0b58742998a0c30f58399e8deaceb1f3ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 75a43dd1ba07915bdba0ce3b42aee2a517311769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243191"
 ---
 # <a name="transformation-custom-properties"></a>proprietà personalizzate della trasformazione
   Oltre alle proprietà comuni alla maggior parte degli oggetti del flusso di dati nel modello a oggetti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , molti oggetti del flusso di dati hanno proprietà personalizzate specifiche dell'oggetto. Tali proprietà personalizzate sono disponibili solo in fase di esecuzione e non sono trattate nella documentazione di riferimento relativa alla programmazione gestita in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -105,7 +105,7 @@ ms.locfileid: "36062716"
 |AggregationType|Integer (enumerazione)|Valore che specifica l'operazione di aggregazione da eseguire sulla colonna. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Count** (1)<br /><br /> **Count all** (2)<br /><br /> **Countdistinct** (3)<br /><br /> **Sum** (4)<br /><br /> **Average** (5)<br /><br /> **Maximum** (7)<br /><br /> **Minimum** (6)<br /><br /> **Group by** (0)|  
 |CountDistinctKeys|Valore intero|Quando il tipo di aggregazione è **Count Distinct**, valore che specifica il numero esatto di chiavi che possono essere scritte dall'aggregazione. Se viene specificato un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza.|  
 |CountDistinctScale|Integer (enumerazione)|Quando il tipo di aggregazione è **Count Distinct**, valore che descrive approssimativamente il numero di valori di chiave che possono essere scritti dall'aggregazione. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Bassa** (1): indica fino a 500.000 valori di chiave<br /><br /> **Media** (2): indica fino a 5 milioni di valori di chiave<br /><br /> **Alta** (3): indica più di 25 milioni di valori di chiave.<br /><br /> **Non specificata** (0): indica che non viene usato alcun valore CountDistinctScale.|  
-|IsBig|Boolean|Valore che indica se la colonna contiene un valore maggiore di 4 miliardi o un valore con una precisione maggiore di un valore a virgola mobile a precisione doppia. Il valore può essere 0 o 1. 0 indica che IsBig `False` e la colonna non contiene un valore di grandi dimensioni o un valore preciso. Il valore predefinito di questa proprietà è 1.|  
+|IsBig|Boolean|Valore che indica se la colonna contiene un valore maggiore di 4 miliardi o un valore con una precisione maggiore di un valore a virgola mobile a precisione doppia. Il valore può essere 0 o 1. 0 indica che IsBig è `False` e la colonna non contiene un valore di grandi dimensioni o un valore preciso. Il valore predefinito di questa proprietà è 1.|  
   
  L'input e le colonne di input della trasformazione Aggregazione non includono proprietà personalizzate.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "36062716"
 |--------------|---------------|-----------------|  
 |AllowAppend|Boolean|Valore che specifica se la trasformazione aggiunge dati a un file esistente. Il valore predefinito di questa proprietà è `False`.|  
 |ForceTruncate|Boolean|Valore che specifica se la trasformazione tronca un file esistente prima di scrivere i dati. Il valore predefinito di questa proprietà è `False`.|  
-|FileDataColumnID|Valore intero|Valore che identifica la colonna contenente i dati inseriti in un file dalla trasformazione. Nella colonna estrazione questa proprietà ha un valore di **0**; nella colonna Percorso File, questa proprietà contiene il `LineageID` di colonna estrazione.|  
+|FileDataColumnID|Valore intero|Valore che identifica la colonna contenente i dati inseriti in un file dalla trasformazione. In colonna estrazione questa proprietà ha un valore pari **0**; nella colonna Percorso File, questa proprietà contiene il `LineageID` di colonna estrazione.|  
 |WriteBOM|Boolean|Valore che specifica se nel file viene scritto un indicatore per l'ordine dei byte.|  
   
  L'input, l'output e le colonne di output della trasformazione Esporta colonna non includono proprietà personalizzate.  
@@ -251,7 +251,7 @@ ms.locfileid: "36062716"
 |Proprietà|Tipo di dati|Description|  
 |--------------|---------------|-----------------|  
 |ExpectBOM|Boolean|Valore che specifica se nella trasformazione Importa colonna è previsto un indicatore per l'ordine dei byte. È previsto un indicatore dell'ordine dei byte solo se i dati sono di tipo DT_NTEXT.|  
-|FileDataColumnID|Valore intero|Valore che identifica la colonna contenente i dati inseriti in un flusso di dati dalla trasformazione. Nella colonna di dati da inserire, questa proprietà ha un valore pari a 0; Nella colonna che contiene i percorsi dei file di origine, questa proprietà contiene il `LineageID` della colonna di dati da inserire.|  
+|FileDataColumnID|Valore intero|Valore che identifica la colonna contenente i dati inseriti in un flusso di dati dalla trasformazione. Nella colonna di dati da inserire, questa proprietà ha un valore pari a 0. Nella colonna che contiene i percorsi dei file di origine, questa proprietà contiene il `LineageID` della colonna di dati da inserire.|  
   
  L'input, l'output e le colonne di output della trasformazione Importa colonna non includono proprietà personalizzate.  
   
@@ -323,7 +323,7 @@ ms.locfileid: "36062716"
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Ricerca fuzzy. Tutte le proprietà sono di lettura/scrittura.  
   
 > [!NOTE]  
->  Per le colonne di output che contengono valori pass-through dalle colonne di input corrispondente, CopyFromReferenceColumn è vuoto e SourceInputColumnLineageID contiene il `LineageID` della colonna di input corrispondente. Per le colonne di output che contengono risultati di ricerca, CopyFromReferenceColumn contiene il nome della colonna di ricerca, mentre SourceInputColumnLineageID è vuoto.  
+>  Per le colonne di output che contengono valori pass-through dalle colonne di input corrispondenti, CopyFromReferenceColumn è vuoto e SourceInputColumnLineageID contiene la `LineageID` della colonna di input corrispondente. Per le colonne di output che contengono risultati di ricerca, CopyFromReferenceColumn contiene il nome della colonna di ricerca, mentre SourceInputColumnLineageID è vuoto.  
   
 |Proprietà|Tipo di dati|Description|  
 |--------------|---------------|-----------------|  
@@ -346,7 +346,7 @@ ms.locfileid: "36062716"
 |DefaultCodePage|Valore intero|Tabella codici predefinita da utilizzare quando le informazioni sulla tabella codici non sono disponibili dall'origine dati.|  
 |MaxMemoryUsage|Valore intero|Dimensione massima della cache per la tabella di ricerca. Il valore predefinito di questa proprietà è **25**, che indica l'assenza di limiti per la dimensione della cache.|  
 |MaxMemoryUsage64|Valore intero|Dimensioni massime della cache per la tabella di ricerca in un computer a 64 bit.|  
-|NoMatchBehavior|Integer (enumerazione)|Valore che specifica se le righe prive di voci corrispondenti nel set di dati di riferimento devono essere considerate errori.<br /><br /> Quando la proprietà è impostata su `Treat rows with no matching entries as errors` (0), le righe prive di voci corrispondenti vengono considerate errori. È possibile specificare l'azione necessaria quando viene restituito questo tipo di errore usando la pagina **Output degli errori** della finestra di dialogo **Editor trasformazione Ricerca** . Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../../lookup-transformation-editor-error-output-page.md).<br /><br /> Quando la proprietà è impostata su `Send rows with no matching entries to the no match output` (1), le righe non vengono considerate errori.<br /><br /> Il valore predefinito è `Treat rows with no matching entries as errors` (0).|  
+|NoMatchBehavior|Integer (enumerazione)|Valore che specifica se le righe prive di voci corrispondenti nel set di dati di riferimento devono essere considerate errori.<br /><br /> Quando la proprietà è impostata su `Treat rows with no matching entries as errors` (0), le righe prive di voci corrispondenti vengono considerate errori. È possibile specificare l'azione necessaria quando viene restituito questo tipo di errore usando la pagina **Output degli errori** della finestra di dialogo **Editor trasformazione Ricerca** . Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../../lookup-transformation-editor-error-output-page.md).<br /><br /> Quando la proprietà è impostata su `Send rows with no matching entries to the no match output` (1), le righe non sono considerate errori.<br /><br /> Il valore predefinito è `Treat rows with no matching entries as errors` (0).|  
 |ParameterMap|String|Elenco con valori delimitati da punti e virgola di ID di derivazione con mapping ai parametri utilizzati nell'istruzione `SqlCommand`.|  
 |ReferenceMetadataXML|String|Metadati per le colonne nella tabella di ricerca copiati nell'output dalla trasformazione.|  
 |SqlCommand|String|Istruzione SELECT che popola la tabella di ricerca.|  
@@ -377,7 +377,7 @@ ms.locfileid: "36062716"
 |Proprietà|Tipo di dati|Description|  
 |--------------|---------------|-----------------|  
 |JoinType|Integer (enumerazione)|Specifica se il join è un inner join (2), un left outer join (1) o un full join (0).|  
-|MaxBuffersPerInput|Valore intero|Non è necessario configurare il valore di `MaxBuffersPerInput` proprietà poiché Microsoft ha apportato modifiche che riducono il rischio che la trasformazione Merge Join utilizzino memoria eccessiva. Questo problema si verificava in genere quando tramite i diversi input della trasformazione Merge Join venivano prodotti dati con frequenze irregolari.|  
+|MaxBuffersPerInput|Valore intero|Non è più necessario configurare il valore della `MaxBuffersPerInput` proprietà perché Microsoft ha apportato modifiche che riducono il rischio che la trasformazione Merge Join utilizzino memoria eccessiva. Questo problema si verificava in genere quando tramite i diversi input della trasformazione Merge Join venivano prodotti dati con frequenze irregolari.|  
 |NumKeyColumns|Valore intero|Numero di colonne utilizzate nel join.|  
 |TreatNullsAsEqual|Boolean|Valore che specifica se la trasformazione considera i valori Null come valori uguali. Il valore predefinito di questa proprietà è `True`. Se il valore della proprietà è `False`, la trasformazione gestisce i valori Null come in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
@@ -426,7 +426,7 @@ ms.locfileid: "36062716"
   
 |Nome proprietà|Tipo di dati|Description|  
 |-------------------|---------------|-----------------|  
-|Selezionato|Boolean|Definisce l'output a cui vengono indirizzate le righe campionate. Nell'output selezionato, selezionato è impostata su `True`, e nell'output non selezionato, selezionato viene impostato su `False`.|  
+|Selezionato|Boolean|Definisce l'output a cui vengono indirizzate le righe campionate. Nell'output selezionato, selezionato è impostata su `True`, e nella finestra di output non selezionato è impostata su `False`.|  
   
  L'input, le colonne di input e le colonne di output della trasformazione Campionamento percentuale non includono proprietà personalizzate.  
   
@@ -443,7 +443,7 @@ ms.locfileid: "36062716"
   
 |Proprietà|Tipo di dati|Description|  
 |--------------|---------------|-----------------|  
-|PivotUsage|Integer (enumerazione)|Uno dei valori seguenti che specificano il ruolo di una colonna quando viene trasformata tramite pivot il set di dati:<br /><br /> **0**: la colonna non viene trasformata tramite pivot e i valori della colonna vengono passati all'output della trasformazione.<br /><br /> **1**: la colonna fa parte della chiave del set che identifica una o più righe come parte di un set. Tutte le righe di input con la stessa chiave del set vengono combinate in una singola riga di output.<br /><br /> **2**: la colonna è una colonna pivot. Da ogni valore di colonna viene creata almeno una colonna.<br /><br /> **3**: i valori di questa colonna vengono inseriti in colonne create come risultato il pivot.|  
+|PivotUsage|Integer (enumerazione)|Uno dei seguenti valori che specificano il ruolo di una colonna quando viene trasformata tramite pivot il set di dati:<br /><br /> **0**: la colonna non viene trasformata tramite pivot e i valori della colonna vengono passati all'output della trasformazione.<br /><br /> **1**: la colonna fa parte della chiave del set che identifica una o più righe come parte di un set. Tutte le righe di input con la stessa chiave del set vengono combinate in una singola riga di output.<br /><br /> **2**: la colonna è una colonna pivot. Da ogni valore di colonna viene creata almeno una colonna.<br /><br /> **3**: i valori di questa colonna vengono inseriti in colonne create come risultato il pivot.|  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione tramite Pivot. Tutte le proprietà sono di lettura/scrittura.  
   
@@ -481,7 +481,7 @@ ms.locfileid: "36062716"
   
 |Nome proprietà|Tipo di dati|Description|  
 |-------------------|---------------|-----------------|  
-|Selezionato|Boolean|Definisce l'output a cui vengono indirizzate le righe campionate. Nell'output selezionato, selezionato è impostata su `True`, e nell'output non selezionato, selezionato viene impostato su `False`.|  
+|Selezionato|Boolean|Definisce l'output a cui vengono indirizzate le righe campionate. Nell'output selezionato, selezionato è impostata su `True`, e nella finestra di output non selezionato è impostata su `False`.|  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Campionamento righe. Tutte le proprietà sono di lettura/scrittura.  
   
@@ -516,7 +516,7 @@ ms.locfileid: "36062716"
 |--------------|---------------|-----------------|  
 |CurrentRowWhere|String|Clausola WHERE nell'istruzione SELECT che seleziona la riga corrente fra righe con la stessa chiave business.|  
 |EnableInferredMember|Boolean|Valore che specifica se rilevare gli aggiornamenti del membro derivato. Il valore predefinito di questa proprietà è `True`.|  
-|FailOnFixedAttributeChange|Boolean|Valore che specifica se la trasformazione ha esito negativo quando le colonne della riga con attributi fissi contengono modifiche o se la ricerca nella tabella delle dimensioni non riesce. Se si prevede che le righe in ingresso contengano nuovi record, impostare questo valore su `True` per rendere la trasformazione di continuare dopo la ricerca ha esito negativo, perché la trasformazione utilizzerà l'errore per identificare nuovi record. Il valore predefinito di questa proprietà è `False`.|  
+|FailOnFixedAttributeChange|Boolean|Valore che specifica se la trasformazione ha esito negativo quando le colonne della riga con attributi fissi contengono modifiche o se la ricerca nella tabella delle dimensioni non riesce. Se si prevede che le righe in ingresso contengano nuovi record, impostare questo valore su `True` per rendere la trasformazione continui dopo la ricerca ha esito negativo, in quanto la trasformazione utilizzerà l'errore per identificare nuovi record. Il valore predefinito di questa proprietà è `False`.|  
 |FailOnLookupFailure|Boolean|Valore che specifica se la trasformazione ha esito negativo quando la ricerca di un record esistente non riesce. Il valore predefinito di questa proprietà è `False`.|  
 |IncomingRowChangeType|Valore intero|Valore che specifica se tutte le righe in ingresso sono righe nuove o se la trasformazione deve rilevare il tipo di modifica.|  
 |InferredMemberIndicator|String|Nome di colonna per il membro derivato.|  

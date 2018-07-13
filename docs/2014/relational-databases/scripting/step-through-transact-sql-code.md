@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, debugging code
 - Transact-SQL debugger, step over
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6cb9a3f5e0d275e4b7b646401f81b8128546a850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 331dca27a98a9493478ff294a21e5c52e1a1ba97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331281"
 ---
 # <a name="step-through-transact-sql-code"></a>Esecuzione istruzione per istruzione del codice Transact-SQL
   Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] consente di controllare quali istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] vengono eseguite in una finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . È possibile sospendere l'esecuzione del debugger in corrispondenza di singole istruzioni e successivamente visualizzare lo stato degli elementi di codice in quei punti.  
@@ -58,7 +58,7 @@ ms.locfileid: "36063313"
 |Eseguire tutte le istruzioni dall'istruzione corrente al successivo punto di interruzione|Nel **Debug** menu, fare clic su **continua**.<br /><br /> Nel **Debug** sulla barra degli strumenti, fare clic sui **continua** pulsante.|  
 |Eseguire la successiva istruzione o il successivo modulo.|Nel **Debug** menu, fare clic su **Esegui istruzione**.<br /><br /> Nel **Debug** sulla barra degli strumenti, fare clic sui **Esegui istruzione** pulsante.<br /><br /> Premere F11.|  
 |Passare alla successiva istruzione o al successivo modulo.|Nel **Debug** menu, fare clic su **Esegui istruzione/routine**.<br /><br /> Nel **Debug** sulla barra degli strumenti, fare clic sui **Esegui istruzione/routine** pulsante.<br /><br /> Premere F10.|  
-|Uscire da un modulo|Nel **Debug** menu, fare clic su **Esci**.<br /><br /> Nel **Debug** sulla barra degli strumenti, fare clic sul **Esci** pulsante.<br /><br /> Premere MAIUSC+F11.|  
+|Uscire da un modulo|Nel **Debug** menu, fare clic su **Esci da istruzione /**.<br /><br /> Nel **Debug** sulla barra degli strumenti, fare clic sui **Esci da istruzione /** pulsante.<br /><br /> Premere MAIUSC+F11.|  
 |Eseguire il codice fino alla posizione corrente del cursore|Fare clic con il pulsante destro del mouse nella finestra dell'editor di query, quindi fare clic su **Esegui fino al cursore**.<br /><br /> Premere CTRL+F10.|  
   
 ## <a name="see-also"></a>Vedere anche  

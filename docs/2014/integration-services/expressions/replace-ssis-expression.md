@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replacing string expression
 - REPLACE function
@@ -16,13 +16,13 @@ ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7888b72ed7193a1c2910db06a70496ee30761903
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2750412c9024263f4e576a883a23b4ffb430924
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188418"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (espressione SSIS)
   Viene restituita un'espressione di caratteri dopo aver sostituito una stringa di caratteri nell'espressione con un'altra stringa di caratteri o una stringa vuota.  
@@ -50,7 +50,7 @@ REPLACE(character_expression,searchstring,replacementstring)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  La lunghezza di *searchstring* deve essere diversa da zero.  
   
  La lunghezza di *replacementstring* può essere zero.  
@@ -81,7 +81,7 @@ REPLACE((DT_WSTR,8)DaysToManufacture,"6","5")
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SOTTOSTRINGA &#40;espressione SSIS&#41;](substring-ssis-expression.md)   
- [Le funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md)  
+ [SOTTOSTRINGA &#40;espressione di SSIS&#41;](substring-ssis-expression.md)   
+ [Le funzioni &#40;espressione di SSIS&#41;](functions-ssis-expression.md)  
   
   

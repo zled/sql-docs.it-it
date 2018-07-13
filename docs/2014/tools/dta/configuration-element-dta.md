@@ -1,5 +1,5 @@
 ---
-title: Elemento Configuration (DTA) | Documenti Microsoft
+title: Elemento Configuration (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Configuration element
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6cca142282c59539d54d5e1d42d5d2269ac41635
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b0383bc1c8bef5a84b77c8b63fb424995a2181ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241751"
 ---
 # <a name="configuration-element-dta"></a>Elemento Configuration (DTA)
   Definisce una configurazione specificata dall'utente costituita da strutture di progettazione fisica esistenti e ipotetiche da analizzare in Ottimizzazione guidata motore di database durante l'ottimizzazione di un carico di lavoro.  
@@ -54,7 +54,7 @@ ms.locfileid: "36062330"
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|Nessuna.|  
 |**Valore predefinito**|Nessuna.|  
-|**Occorrenza**|Facoltativo. Può utilizzare una sola volta per ogni `DTAInput` elemento.|  
+|**Occorrenza**|Facoltativo. Può usare una sola volta per ogni `DTAInput` elemento.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   

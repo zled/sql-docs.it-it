@@ -1,5 +1,5 @@
 ---
-title: Messaggi personalizzati per la registrazione | Documenti Microsoft
+title: Messaggi personalizzati per la registrazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], custom
 - writing log entries
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80086e7a946ad9d5457e95646bcd9c8bce3e3df3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3929d8c861723c2204214ba66e73ea9268c19cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221841"
 ---
 # <a name="custom-messages-for-logging"></a>Messaggi personalizzati per la registrazione
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornisce un ampio set di eventi personalizzati per la scrittura di voci di log per i pacchetti e per molte attività. È possibile utilizzare tali voci per salvare informazioni dettagliate su stato di esecuzione, risultati e problemi, tramite la registrazione di eventi predefiniti o messaggi definiti dall'utente da analizzare in un secondo momento. È ad esempio possibile registrare la data e l'ora di inizio e di fine di un'operazione di inserimento bulk per identificare problemi di prestazioni durante l'esecuzione del pacchetto.  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornisce un set completo di eventi personalizzati per la scrittura di voci di log per i pacchetti e per molte attività. È possibile utilizzare tali voci per salvare informazioni dettagliate su stato di esecuzione, risultati e problemi, tramite la registrazione di eventi predefiniti o messaggi definiti dall'utente da analizzare in un secondo momento. È ad esempio possibile registrare la data e l'ora di inizio e di fine di un'operazione di inserimento bulk per identificare problemi di prestazioni durante l'esecuzione del pacchetto.  
   
  Le voci di log personalizzate costituiscono un set diverso da quello degli eventi di registrazione standard, disponibili per i pacchetti e per tutti i contenitori e le attività. Le voci di log personalizzate vengono create appositamente per acquisire informazioni utili su specifiche attività di un pacchetto. Per l'attività Esegui SQL è ad esempio disponibile una voce di log personalizzata che registra nel log l'istruzione SQL eseguita dall'attività.  
   
- Tutte le voci di log includono informazioni di data e ora, comprese le voci di log scritte automaticamente all'inizio e alla fine dell'esecuzione di un pacchetto. Per molti eventi vengono scritte più voci nel log. Questo avviene in genere per gli eventi che includono varie fasi. Ad esempio, il `ExecuteSQLExecutingQuery` eventi di log scritte tre voci: una sola voce dopo l'attività acquisisce una connessione al database, una dopo l'attività inizia a preparare l'istruzione SQL e un'altra al termine dell'esecuzione dell'istruzione SQL.  
+ Tutte le voci di log includono informazioni di data e ora, comprese le voci di log scritte automaticamente all'inizio e alla fine dell'esecuzione di un pacchetto. Per molti eventi vengono scritte più voci nel log. Questo avviene in genere per gli eventi che includono varie fasi. Ad esempio, il `ExecuteSQLExecutingQuery` evento di log scritte tre voci: una voce dopo l'attività acquisisce una connessione al database, una dopo l'attività inizia a preparare l'istruzione SQL e un'altra al termine dell'esecuzione dell'istruzione SQL.  
   
  Sono disponibili voci di log personalizzate per gli oggetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] seguenti:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36063647"
 |---------------|-----------------|  
 |`PackageStart`|Indica che l'esecuzione del pacchetto è iniziata.<br /><br /> Nota: questa voce di log viene scritta automaticamente nel log. e non può essere esclusa.|  
 |`PackageEnd`|Indica che l'esecuzione del pacchetto è stata completata.<br /><br /> Nota: questa voce di log viene scritta automaticamente nel log. e non può essere esclusa.|  
-|`Diagnostic`|Offre informazioni sulla configurazione del sistema che influisce sull'esecuzione dei pacchetti, ad esempio il numero di file eseguibili che è possibile eseguire simultaneamente.<br /><br /> Il `Diagnostic` voce di log include anche prima e dopo le voci per le chiamate al provider di dati esterni. Per altre informazioni, vedere [Risoluzione dei problemi relativi alla connettività dei pacchetti degli strumenti](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
+|`Diagnostic`|Offre informazioni sulla configurazione del sistema che influisce sull'esecuzione dei pacchetti, ad esempio il numero di file eseguibili che è possibile eseguire simultaneamente.<br /><br /> Il `Diagnostic` voce del log include anche prima e dopo le voci per le chiamate al provider di dati esterni. Per altre informazioni, vedere [Risoluzione dei problemi relativi alla connettività dei pacchetti degli strumenti](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
   
 ###  <a name="BulkInsert"></a> Attività Inserimento bulk  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Inserimento bulk.  
@@ -103,9 +103,9 @@ ms.locfileid: "36063647"
 |Voce di log|Description|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Indica che l'attività Flusso di dati ha modificato le dimensioni del buffer. In questa voce di log vengono indicati i motivi della modifica delle dimensioni del buffer e le nuove dimensioni temporanee del buffer.|  
-|`OnPipelinePostEndOfRowset`|Indica che un componente è stato assegnato il segnale di fine del set di righe, che viene impostato dall'ultima chiamata di `ProcessInput` metodo. Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
-|`OnPipelinePostPrimeOutput`|Indica che il componente ha completato l'ultima chiamata al `PrimeOutput` metodo. A seconda del flusso di dati, è possibile che vengano scritte più voci di log. Se il componente è un'origine, indica che tale componente ha terminato l'elaborazione delle righe.|  
-|`OnPipelinePreEndOfRowset`|Indica che un componente sta per ricevere il segnale di fine del set di righe, che viene impostato dall'ultima chiamata di `ProcessInput` metodo. Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
+|`OnPipelinePostEndOfRowset`|Indica che un componente è stato inviato il segnale di fine del set di righe, che viene impostato dall'ultima chiamata di `ProcessInput` (metodo). Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
+|`OnPipelinePostPrimeOutput`|Indica che il componente ha completato l'ultima chiamata al `PrimeOutput` (metodo). A seconda del flusso di dati, è possibile che vengano scritte più voci di log. Se il componente è un'origine, indica che tale componente ha terminato l'elaborazione delle righe.|  
+|`OnPipelinePreEndOfRowset`|Indica che un componente sta per ricevere il segnale di fine del set di righe, che viene impostato dall'ultima chiamata di `ProcessInput` (metodo). Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
 |`OnPipelinePrePrimeOutput`|Indica che un componente sta per ricevere una chiamata dal metodo `PrimeOutput`. A seconda del flusso di dati, è possibile che vengano scritte più voci di log.|  
 |`OnPipelineRowsSent`|Specifica il numero delle righe inviate all'input di un componente da una chiamata al metodo `ProcessInput`. La voce di log include il nome del componente.|  
 |`PipelineBufferLeak`|Fornisce informazioni su tutti i componenti che hanno mantenuto attivi i buffer dopo la chiusura di Gestione buffer. Questo significa che le risorse dei buffer non sono state rilasciate e potrebbero verificarsi perdite di memoria. Nella voce di log vengono indicati il nome del componente e l'ID del buffer.|  
@@ -172,7 +172,7 @@ ms.locfileid: "36063647"
   
 |Voce di log|Description|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|Restituisce i risultati dell'implementazione della registrazione nell'ambito dello script. Una voce di log viene scritto per ogni chiamata ai `Log` metodo del `Dts` oggetto. Tale voce viene scritta al momento dell'esecuzione del codice. Per altre informazioni, vedere [Registrazione nell'attività Script](extending-packages-scripting/task/logging-in-the-script-task.md).|  
+|`ScriptTaskLogEntry`|Restituisce i risultati dell'implementazione della registrazione nell'ambito dello script. Viene scritta una voce di log per ogni chiamata ai `Log` metodo del `Dts` oggetto. Tale voce viene scritta al momento dell'esecuzione del codice. Per altre informazioni, vedere [Registrazione nell'attività Script](extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
 ###  <a name="SendMail"></a> Attività Invia messaggi  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Invia messaggi.  

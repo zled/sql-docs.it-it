@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - RestoreEncryptionKey method
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d6ac5da7c9867b7ce84c9f29bfe82f905d5c626a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d4ed1e00dde20d16aa65e88368c0ca6f86b0aa59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222901"
 ---
 # <a name="restoreencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Metodo RestoreEncryptionKey (MSReportServer_ConfigurationSetting WMI)
   Riapplica la chiave di crittografia specificata al database del server di report.  
@@ -64,10 +64,10 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se nel database del server di report esiste già una voce per il server di report , viene eliminata. La nuova voce viene quindi creata utilizzando la chiave di crittografia specificata e la chiave pubblica del server di report.  
   
- Il metodo è particolarmente efficace quando viene chiamato dopo il [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) (metodo), che svuota l'elenco di chiavi di crittografia.  
+ Il metodo è più efficace se viene chiamato dopo il [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) (metodo), che svuota l'elenco delle chiavi di crittografia.  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

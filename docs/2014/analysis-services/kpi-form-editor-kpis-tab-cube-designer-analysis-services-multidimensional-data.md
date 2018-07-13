@@ -1,5 +1,5 @@
 ---
-title: Editor Form KPI (scheda KPI, Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Editor Form KPI (scheda KPI, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpidefinitionpane.f1
 ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: af159d0cdc724af8f0b7e768146527588b4e16fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 284ccc63f98624e1a64b114d31b69215d8e6b1be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224841"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor form KPI (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Editor form KPI** della scheda **KPI** in Progettazione cubi per creare o modificare l'indicatore di prestazioni chiave (KPI) selezionato.  
@@ -53,7 +53,7 @@ ms.locfileid: "36064364"
  **Stato**  
  Espandere questa casella per visualizzare le opzioni **Icona stato** ed **Espressione stato** .  
   
- **Icona di stato**  
+ **Icona stato**  
  Consente di selezionare l'icona che deve essere utilizzata dall'applicazione client per rappresentare graficamente il valore di stato.  
   
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: Visualizzazione di set di dati nascosti per i valori dei parametri di dati multidimensionali (Generatore Report e SSRS) | Documenti Microsoft
+title: Visualizzazione di set di dati nascosti per i valori dei parametri di dati multidimensionali (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 89df13eecdce33869199e0b5a8e82b0395679475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 50da5a57968a7304c206f2aceb2efc24239600b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224681"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>Visualizzare set di dati nascosti per i valori dei parametri di dati multidimensionali (Generatore report e SSRS)
   Il report potrebbe includere set di dati generati automaticamente (noti anche come set di dati nascosti) che per impostazione predefinita non vengono visualizzati nel riquadro dei dati del report. Tali set di dati vengono creati nei modi seguenti:  
@@ -43,6 +43,6 @@ ms.locfileid: "36064199"
  [Finestre di progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)   
  [Strumenti di progettazione query in Reporting Services](../reporting-services-query-designers.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-datasets-ssrs.md)  
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Progettazione (Analysis Services - dati multidimensionali) dimensioni | Documenti Microsoft
+title: Progettazione (Analysis Services - dati multidimensionali) dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Designer
 ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cd1efb474f3e9c70641496fcc023ef0795b579f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7c5920ede56424510e1a6edca52e6de8d56b099
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208111"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Progettazione dimensioni (Analysis Services - Dati multidimensionali)
   Utilizzare Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per esplorare i dati che la dimensione contiene e per modificare le varie proprietà di una dimensione esistente: inclusi gli attributi, le gerarchie, i livelli, le relazioni dell'attributo e le traduzioni.  
@@ -53,7 +53,7 @@ ms.locfileid: "36062997"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Le dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

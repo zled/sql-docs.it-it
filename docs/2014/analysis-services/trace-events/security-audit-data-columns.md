@@ -1,5 +1,5 @@
 ---
-title: Colonne di dati di controllo di sicurezza | Documenti Microsoft
+title: Colonne di dati di controllo di sicurezza | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Security Audit event category [SQL Server]
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cf737330922500f8e9b33c7645fdd5e6b8b6b244
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0decf6588f44b6026608254fa1a196a310e37ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171562"
 ---
 # <a name="security-audit-data-columns"></a>Colonne di dati degli eventi di controllo di sicurezza
   La categoria di eventi Controllo di sicurezza include le classi di eventi seguenti:  
@@ -118,7 +118,7 @@ ms.locfileid: "36064605"
   
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventSubclass|1|1|La sottoclasse di evento fornisce informazioni aggiuntive su ogni classe di evento:<br /><br /> 1: copia di backup<br /><br /> 2: ripristino<br /><br /> 3: sincronizzare<br /><br /> 4: detach<br /><br /> 5: collegamento<br /><br /> 6: imageLoad<br /><br /> 7: ImageSave|  
+|EventSubclass|1|1|La sottoclasse di evento fornisce informazioni aggiuntive su ogni classe di evento:<br /><br /> 1: copia di backup<br /><br /> 2: ripristinare<br /><br /> 3: sincronizzazione<br /><br /> 4: disconnettere<br /><br /> 5: collegare<br /><br /> 6: il comando imageLoad<br /><br /> 7: ImageSave|  
 |Severity|22|1|Livello di gravità di un'eccezione.|  
 |Esito positivo|23|1|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|  
 |Errore|24|1|Numero di errore di un evento specifico.|  

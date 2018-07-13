@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deletedacwizard.introduction.f1
 - sql12.swb.deletedacwizard.deletedac.f1
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c5afc38b9c3864790888a41496261adeed76661
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e3613ce8ccee33accac25dc702d70fea9536587e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166922"
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminazione di un'applicazione livello dati
   È possibile eliminare un'applicazione livello dati utilizzando la procedura guidata Elimina applicazione livello dati o uno script Windows PowerShell. È possibile specificare se il database associato viene mantenuto, scollegato o eliminato.  
@@ -136,7 +136,7 @@ ms.locfileid: "36064265"
   
 1.  Creare un oggetto server SMO e impostarlo sull'istanza contenente l'applicazione livello dati da eliminare.  
   
-2.  Aprire un `ServerConnection` e connetterlo alla stessa istanza.  
+2.  Aprire un `ServerConnection` oggetti e connettersi alla stessa istanza.  
   
 3.  Uso `add_DacActionStarted` e `add_DacActionFinished` per sottoscrivere eventi di aggiornamento dell'applicazione livello dati.  
   
@@ -144,11 +144,11 @@ ms.locfileid: "36064265"
   
 5.  Utilizzare uno dei tre set di codice, in base all'opzione di eliminazione appropriata:  
   
-    -   Per eliminare la registrazione dell'applicazione livello dati ma lasciare intatto il database, utilizzare il `Unmanage()` metodo.  
+    -   Per eliminare la registrazione dell'applicazione livello dati ma lasciare intatto il database, usare il `Unmanage()` (metodo).  
   
     -   Per eliminare la registrazione dell'applicazione livello dati e scollegare il database, utilizzare il metodo `Uninstall()` e specificare `DetachDatabase`.  
   
-    -   Per eliminare la registrazione dell'applicazione livello dati ed eliminare il database, utilizzare il `Uninstall()` metodo e specificare `DropDatabase`.  
+    -   Per eliminare la registrazione dell'applicazione livello dati ed eliminare il database, usare il `Uninstall()` metodo e specificare `DropDatabase`.  
   
 ### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>Esempio di eliminazione dell'applicazione livello dati conservando il database (PowerShell)  
  L'esempio seguente elimina un'applicazione livello dati denominata MyApplication usando il `Unmanage()` metodo per eliminare l'applicazione livello dati ma lasciare intatto il database.  

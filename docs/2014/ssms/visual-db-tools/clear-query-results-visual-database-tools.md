@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [SQL Server], queries
 - results [SQL Server], query
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - clearing query results
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d5b81951dd4a85798952517d7f34d1d9bf33188b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3ce0eaf8e2e0ab319ea040a2c04789fcbc521f68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268117"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Cancella i risultati di una query (Visual Database Tools)
   Dopo l'esecuzione di una query in **Progettazione query e Progettazione viste**, è possibile cancellare il contenuto del riquadro Risultati. Questa procedura è valida per le query create usando le opzioni **Open View** (Apri vista) o **Apri tabella** di Esplora oggetti. In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]dopo l'esecuzione di una query nell'editor di query, è possibile cancellare il contenuto del riquadro Risultati solo chiudendo la finestra dell'editor di query o eseguendo un'altra query.  
@@ -40,7 +40,7 @@ ms.locfileid: "36062790"
      Se è in esecuzione una query quando si cancella il contenuto del riquadro Risultati, l'esecuzione verrà arrestata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di query &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
+ [Eseguire query &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
  [Arrestare una Query &#40;Visual Database Tools&#41;](stop-a-query-visual-database-tools.md)   
  [Usare i dati nel riquadro Risultati &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   

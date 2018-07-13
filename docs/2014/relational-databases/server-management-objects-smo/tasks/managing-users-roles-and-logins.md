@@ -1,5 +1,5 @@
 ---
-title: Gestione di utenti, ruoli e account di accesso | Documenti Microsoft
+title: Gestione di utenti, ruoli e gli account di accesso | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - users [SMO]
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a3619381cb83f4a808af97d1fd94467c2e9dd11b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c14e955bd2f2e0442cde266bb9bf56f4b9caed3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199171"
 ---
 # <a name="managing-users-roles-and-logins"></a>Gestione di utenti, ruoli e account di accesso
   In SMO gli account di accesso sono rappresentati dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login>. Quando l'account di accesso è presente in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], può essere aggiunto a un ruolo del server. Il ruolo del server è rappresentato dal <xref:Microsoft.SqlServer.Management.Smo.ServerRole> oggetto. Il ruolo del database è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole>, mentre il ruolo dell'applicazione è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
@@ -33,10 +33,10 @@ ms.locfileid: "36066022"
   
  Ogni <xref:Microsoft.SqlServer.Management.Smo.Database> oggetto ha un <xref:Microsoft.SqlServer.Management.Smo.UserCollection> oggetto che specifica tutti gli utenti nel database. Ogni utente è associato a un accesso. Un accesso può essere associato agli utenti di più database. Il <xref:Microsoft.SqlServer.Management.Smo.Login> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> metodo può essere utilizzato per elencare tutti gli utenti in ogni database associato con l'account di accesso. In alternativa, la proprietà <xref:Microsoft.SqlServer.Management.Smo.User> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login> specifica l'accesso associato all'utente.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dispongono anche di ruoli che specificano un set di privilegi al livello del database che consentono a un utente di eseguire attività specifiche. A differenza dei ruoli del server, i ruoli del database non sono fissi, ma possono essere creati, modificati e rimossi. Privilegi e utenti possono essere assegnati a un ruolo del database per l'amministrazione bulk.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dispongono anche di ruoli che specificano un set di privilegi a livello di database che consentono a un utente di eseguire attività specifiche. A differenza dei ruoli del server, i ruoli del database non sono fissi, ma possono essere creati, modificati e rimossi. Privilegi e utenti possono essere assegnati a un ruolo del database per l'amministrazione bulk.  
   
 ## <a name="example"></a>Esempio  
- Per l'esempio di codice seguente, è necessario selezionare l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto di Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) e [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per l'esempio di codice seguente, è necessario selezionare l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) e [creare un Visual C#&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-basic"></a>Enumerazione di account di accesso e utenti associati in Visual Basic  
  A ogni utente di un database è associato un account di accesso. L'account di accesso può essere associato a utenti di più database. Nell'esempio di codice viene illustrato come chiamare il metodo <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login> per ottenere un elenco di tutti gli utenti del database associati all'accesso. Nell'esempio viene creato un accesso e un utente di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database per assicurarsi che vi sia informazioni di mapping da enumerare.  

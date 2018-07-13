@@ -1,5 +1,5 @@
 ---
-title: Elemento AllMemberTranslation (ASSL) | Documenti Microsoft
+title: Elemento AllMemberTranslation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllMemberTranslation element
 ms.assetid: 31ec0c44-8f1d-457c-9e8b-61dd5bc468f7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b4124f8e9b8af1d9203e1b9dc877598880da348b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f001f32cae974d8bc22de635e7776ba3b94451e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231851"
 ---
 # <a name="allmembertranslation-element-assl"></a>Elemento AllMemberTranslation (ASSL)
   Contiene una traduzione per la didascalia del membro totale di un [gerarchia](hierarchy-element-assl.md) elemento.  
@@ -49,7 +49,7 @@ ms.locfileid: "36064122"
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|[Conversione](translation-element-assl.md)|  
+|Tipo di dati e lunghezza|[Traduzione](translation-element-assl.md)|  
 |Valore predefinito|None|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36064122"
 |Elemento padre|[AllMemberTranslations](../collections/translations-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L’elemento che corrisponde al padre della raccolta `AllMemberTranslations` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.Hierarchy>.  
   
 ## <a name="see-also"></a>Vedere anche  

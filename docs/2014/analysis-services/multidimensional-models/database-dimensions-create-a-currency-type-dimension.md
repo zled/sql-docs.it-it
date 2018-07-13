@@ -1,5 +1,5 @@
 ---
-title: Creare una dimensione di tipo valuta | Documenti Microsoft
+title: Creare una dimensione di tipo valuta | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], currency
 - currency [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f45683b404e9a33260edda6163aae9f783c8b7f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b9eb36a77501a7195c18138eab0d767fc7aed63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232021"
 ---
 # <a name="create-a-currency-type-dimension"></a>Creare una dimensione di tipo Valuta
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] una dimensione di tipo Valuta è una dimensione i cui attributi rappresentano un elenco di valute per la generazione di report finanziari.  
@@ -67,7 +67,7 @@ ms.locfileid: "36062992"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gli attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Business Intelligence guidata F1 Help](../business-intelligence-wizard-f1-help.md)   
- [Tipi di dimensione](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
+ [Guida F1 di Business Intelligence guidata](../business-intelligence-wizard-f1-help.md)   
+ [Tipi di dimensioni](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

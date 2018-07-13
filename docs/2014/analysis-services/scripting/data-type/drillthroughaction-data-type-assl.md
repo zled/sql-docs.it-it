@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati DrillThroughAction (ASSL) | Documenti Microsoft
+title: Tipo di dati DrillThroughAction (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DrillThroughAction data type
 ms.assetid: e212d575-a0d7-4548-92b4-33542ef59034
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dfdaf05f2e35c41d99ca61f3cac3624ba28cc82d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8142fd9978ae456b03b4a0381e2ab9261cdc8c4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241441"
 ---
 # <a name="drillthroughaction-data-type-assl"></a>Tipo di dati DrillThroughAction (ASSL)
   Definisce un tipo di dati derivato che rappresenta un'azione drill-through.  
@@ -59,9 +59,9 @@ ms.locfileid: "36062760"
 |------------------|-------------|  
 |Elementi padre|None|  
 |Elementi figlio|[Le colonne](../collections/columns-element-assl.md), [predefinito](../properties/default-element-assl.md)|  
-|Elementi derivati|[Azione](../objects/action-element-assl.md) ([azioni](../collections/actions-element-assl.md), raccolta di [cubo](../objects/cube-element-assl.md), o [prospettiva](../objects/perspective-element-assl.md))|  
+|Elementi derivati|[Azione](../objects/action-element-assl.md) ([azioni](../collections/actions-element-assl.md), raccolta di [cubo](../objects/cube-element-assl.md), oppure [prospettiva](../objects/perspective-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.DrillThroughAction>.  
   
 ## <a name="see-also"></a>Vedere anche  

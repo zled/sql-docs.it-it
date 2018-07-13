@@ -1,5 +1,5 @@
 ---
-title: Utilizzo del Provider WMI per eventi del Server | Documenti Microsoft
+title: Uso del Provider WMI per eventi del Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - WMI Provider for Server Events, security
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ec2d4c6fa276c3938de0dc15062d026fe91dc80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f6a9b7733ba7413ded8580648d0d13911fd2ef5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189948"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Utilizzo del provider WMI per eventi del server
   In questo argomento vengono fornite linee guida che è consigliabile tenere presenti prima di programmare tramite il provider WMI per eventi del server.  
@@ -51,7 +51,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
  Per abilitare [!INCLUDE[ssSB](../../includes/sssb-md.md)] in un database, utilizzare l'opzione ENABLE_BROKER SET del [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) istruzione.  
   
 ## <a name="specifying-a-connection-string"></a>Definizione di una stringa di connessione  
- Le applicazioni indirizzano il provider WMI per eventi del server a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connettendosi a uno spazio dei nomi WMI definito dal provider. Il servizio Windows WMI esegue il mapping di questo spazio dei nomi alla DLL del provider, Sqlwep.dll, e lo carica in memoria. Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha il proprio spazio dei nomi WMI, che per impostazione predefinita: \\ \\.\\ *radice*\Microsoft\SqlServer\ServerEvents\\*nome_istanza*. *nome_istanza* è MSSQLSERVER in un'installazione predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Le applicazioni indirizzano il provider WMI per eventi del server a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connettendosi a uno spazio dei nomi WMI definito dal provider. Il servizio Windows WMI esegue il mapping di questo spazio dei nomi alla DLL del provider, Sqlwep.dll, e lo carica in memoria. Ogni istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha un proprio spazio dei nomi WMI, che per impostazione predefinita: \\ \\.\\ *radice*\Microsoft\SqlServer\ServerEvents\\*nome_istanza*. *instance_name* il valore predefinito è MSSQLSERVER in un'installazione predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions-and-server-authentication"></a>Autorizzazioni e autenticazione del server  
  Per accedere al provider WMI per eventi del server, il client in cui ha origine un'applicazione di gestione WMI deve corrispondere all'account di accesso o al gruppo autenticato di Windows nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificata nella stringa di connessione dell'applicazione.  
@@ -81,7 +81,7 @@ WHERE DatabaseName = "AdventureWorks2012"
   
  Il provider WMI converte la query in una notifica degli eventi creata nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Di conseguenza, il chiamante deve disporre delle autorizzazioni necessarie per creare tale notifica degli eventi, in particolare dell'autorizzazione CREATE DATABASE DDL EVENT NOTIFICATION nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
- Se una query WQL specifica una notifica degli eventi con ambito a livello di server, ad esempio eseguendo la query SELECT * FROM ALTER_TABLE, l'applicazione chiamante deve disporre dell'autorizzazione CREATE DDL EVENT NOTIFICATION a livello di server. Si noti che le notifiche degli eventi con ambito server vengono archiviate nel database master. È possibile usare il [server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) vista per visualizzare i metadati del catalogo.  
+ Se una query WQL specifica una notifica degli eventi con ambito a livello di server, ad esempio eseguendo la query SELECT * FROM ALTER_TABLE, l'applicazione chiamante deve disporre dell'autorizzazione CREATE DDL EVENT NOTIFICATION a livello di server. Si noti che le notifiche degli eventi con ambito server vengono archiviate nel database master. È possibile usare la [server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) vista per visualizzare i metadati del catalogo.  
   
 > [!NOTE]  
 >  L'ambito della notifica degli eventi creata dal provider WMI (server, database o oggetto) dipende in definitiva dal risultato del processo di verifica delle autorizzazioni utilizzato dal provider WMI, che dipende a sua volta dal set di autorizzazioni dell'utente che chiama il provider e dalla verifica del database su cui vengono eseguite le query.  
@@ -114,7 +114,7 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY o REVOKE (si applica solo alle autorizzazioni ALTER DATABASE, ALTER ANY DATABASE EVENT NOTIFICATION, CREATE DATABASE DDL EVENT NOTIFICATION, CONTROL SERVER, ALTER ANY EVENT NOTIFICATION, CREATE DDL EVENT NOTIFICATION O CREATE TRACE EVENT NOTIFICATION)  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>Utilizzo dei dati degli eventi sul lato client  
- Quando il Provider WMI per eventi del Server crea la notifica dell'evento richiesta nel database di destinazione, tale notifica invia i dati dell'evento al servizio di destinazione in msdb denominato **SQL/notifiche/ProcessWMIEventProviderNotification /V1.0**. Il servizio di destinazione inserisce l'evento in una coda nel `msdb` denominata **WMIEventProviderNotificationQueue**. Sia il servizio sia la coda vengono creati dinamicamente dal provider quando si connette per la prima volta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il provider legge quindi i dati degli eventi XML dalla coda e li trasforma in dati MOF (Managed Object Format) prima di restituirli all'applicazione client. I dati MOF sono costituiti dalle proprietà dell'evento richiesto dalla query WQL come definizione della classe CIM (Common Information Model). Ogni proprietà dispone di un tipo CIM corrispondente. La proprietà `SPID`, ad esempio, viene restituita come tipo CIM `Sint32`. I tipi CIM per ogni proprietà sono elencati in ogni classe di evento [Provider WMI per le proprietà e le classi di eventi Server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
+ Quando il Provider WMI per eventi del Server crea la notifica dell'evento richiesta nel database di destinazione, tale notifica invia i dati dell'evento al servizio di destinazione in msdb denominato **SQL/notifiche/ProcessWMIEventProviderNotification /V1.0**. Il servizio di destinazione inserisce l'evento in una coda in `msdb` denominata **WMIEventProviderNotificationQueue**. Sia il servizio sia la coda vengono creati dinamicamente dal provider quando si connette per la prima volta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il provider legge quindi i dati degli eventi XML dalla coda e li trasforma in dati MOF (Managed Object Format) prima di restituirli all'applicazione client. I dati MOF sono costituiti dalle proprietà dell'evento richiesto dalla query WQL come definizione della classe CIM (Common Information Model). Ogni proprietà dispone di un tipo CIM corrispondente. La proprietà `SPID`, ad esempio, viene restituita come tipo CIM `Sint32`. I tipi CIM per ogni proprietà sono elencati sotto ogni classe di evento [Provider WMI per la proprietà e le classi di eventi Server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Concetti relativi al provider WMI per eventi del server](http://technet.microsoft.com/library/ms180560.aspx)  

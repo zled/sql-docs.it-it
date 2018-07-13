@@ -1,5 +1,5 @@
 ---
-title: Firmare un pacchetto usando un certificato digitale | Documenti Microsoft
+title: Firmare un pacchetto tramite certificato digitale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - digital signatures [Integration Services]
 - signing packages [Integration Services]
 - signatures [Integration Services]
 ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 caps.latest.revision: 59
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8704b41e27a392225989e10876b27b5dbd402f42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 011b4ee289a55f150d7a800a26db2f9f7f954ad0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326231"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Firma di un pacchetto tramite certificato digitale
   Questo argomento illustra come firmare un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con un certificato digitale. È possibile utilizzare una firma digitale, insieme ad altre impostazioni, per evitare il caricamento e l'esecuzione di pacchetti non validi.  
@@ -71,6 +71,6 @@ ms.locfileid: "36055938"
      Anche se il pacchetto è stato firmato, è necessario configurare [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per controllare o verificare la firma digitale prima del caricamento del pacchetto. Per altre informazioni, vedere [Identificazione dell'origine dei pacchetti con firme digitali](security/identify-the-source-of-packages-with-digital-signatures.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
+ [Panoramica della sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

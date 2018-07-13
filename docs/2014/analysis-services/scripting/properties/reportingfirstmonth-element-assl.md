@@ -1,5 +1,5 @@
 ---
-title: Elemento ReportingFirstMonth (ASSL) | Documenti Microsoft
+title: Elemento ReportingFirstMonth (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportingFirstMonth element
 ms.assetid: cdce83ab-ac22-4f4a-b8f2-1739883be8dd
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 227793bb2de61aa38166ee9cca0d0d01d0f5f6a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 702d7e17e35e334e982ba3a230af5b1506f3d071
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275217"
 ---
 # <a name="reportingfirstmonth-element-assl"></a>Elemento ReportingFirstMonth (ASSL)
   Definisce il primo mese di report per il [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
@@ -61,8 +61,8 @@ ms.locfileid: "36062973"
 |Elemento padre|[TimeBinding](../data-type/binding-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `ReportingFirstMonth` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.TimeBinding>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `ReportingFirstMonth` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

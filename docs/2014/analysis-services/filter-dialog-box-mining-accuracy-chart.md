@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo (grafico accuratezza modello di Data Mining) Filtra | Documenti Microsoft
+title: Filtrare la finestra di dialogo (grafico di accuratezza) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 328ebd3f09037c3288450b75b4acd011481c40a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 04630120106816c4018af0fc23cfdf30f26b15cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272607"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Finestra di dialogo Filtro (Grafico accuratezza modello di data mining)
   La finestra di dialogo **Filtro** consente di compilare condizioni che è possibile applicare a un set di dati. Il set di dati può essere rappresentato da un set di dati esterno utilizzato per eseguire il test oppure da dati del case utilizzati per eseguire il training di un modello di data mining. Questa finestra di dialogo consente di compilare criteri che è possibile salvare come parte di criteri di filtro più complessi nella finestra di dialogo **Filtro dei set di dati** o in **Filtro modello** .  
@@ -50,7 +50,7 @@ ms.locfileid: "36063727"
 |**Value**|Digitare un valore da utilizzare come condizione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Testing e le attività di convalida e procedure relative alla &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Finestra di progettazione grafico accuratezza modello di data mining &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)  
+ [Test e convalida le attività e procedure relative alla &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Finestra di progettazione grafico accuratezza di data mining &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)  
   
   

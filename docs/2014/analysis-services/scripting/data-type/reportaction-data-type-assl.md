@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati ReportAction (ASSL) | Documenti Microsoft
+title: Tipo di dati ReportAction (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportAction data type
 ms.assetid: b22f0d52-ed3a-4239-840e-0eaf172d7276
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c2c5140f3d2723f0456b007bc9228c5f87bbaa6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bacb34e6a57126048253a5292fe19627838d21e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176398"
 ---
 # <a name="reportaction-data-type-assl"></a>Tipo di dati ReportAction (ASSL)
   Definisce un tipo di dati derivato che rappresenta un'azione che genera una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report.  
@@ -60,11 +60,11 @@ ms.locfileid: "36066165"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Percorso](../properties/path-element-assl.md), [Reportformatparameter](../collections/reportformatparameters-element-assl.md), [ReportParameters](../collections/reportparameters-element-assl.md), [ReportServer](../objects/server-element-assl.md)|  
-|Elementi derivati|[Azione](../objects/action-element-assl.md) ([azioni](../collections/actions-element-assl.md) insieme [cubo](../objects/cube-element-assl.md) oppure [prospettiva](../objects/perspective-element-assl.md))|  
+|Elementi figlio|[Percorso](../properties/path-element-assl.md), [ReportFormatParameters](../collections/reportformatparameters-element-assl.md), [ReportParameters](../collections/reportparameters-element-assl.md), [ReportServer](../objects/server-element-assl.md)|  
+|Elementi derivati|[Azione](../objects/action-element-assl.md) ([azioni](../collections/actions-element-assl.md) insieme di [cubo](../objects/cube-element-assl.md) oppure [prospettiva](../objects/perspective-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
- Il server di report risponde alle richieste basate su URL relative ai report. L'azione del report viene definito con un tipo *Report*. Le risorse e i parametri vengono inviati al server quando viene creata l'azione. Il server espone l'azione come un'azione di tipo set di righe.  
+## <a name="remarks"></a>Note  
+ Il server di report risponde alle richieste basate su URL relative ai report. L'azione del report viene definita con un tipo *Report*. Le risorse e i parametri vengono inviati al server quando viene creata l'azione. Il server espone l'azione come un'azione di tipo set di righe.  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.ReportAction>.  
   

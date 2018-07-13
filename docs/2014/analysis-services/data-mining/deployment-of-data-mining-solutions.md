@@ -1,5 +1,5 @@
 ---
-title: Distribuzione di soluzioni di Data Mining | Documenti Microsoft
+title: Distribuzione di soluzioni di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], deploying
 - deploying [Analysis Services], production environments
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32f154993f65fc2e86538ebf5bff8528d2c491bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 73e598996172c6e29e8e6ed14ba863d28a7b3b43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249461"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Distribuzione di soluzioni di data mining
   L'ultimo passaggio del processo di data mining consiste nel distribuire i modelli in un ambiente di produzione. La distribuzione è importante perché rende disponibili i modelli agli utenti in modo da poter eseguire le attività seguenti:  
   
--   Utilizzare i modelli per creare stime e prendere decisioni aziendali. Per informazioni sugli strumenti è possibile utilizzare per creare query, vedere [interfacce di Data Mining Query](data-mining-query-tools.md).  
+-   Utilizzare i modelli per creare stime e prendere decisioni aziendali. Per informazioni sugli strumenti è possibile usare per creare query, vedere [interfacce di Data Mining Query](data-mining-query-tools.md).  
   
 -   Incorporare la funzionalità di data mining direttamente in un'applicazione. È possibile includere la libreria AMO (Analysis Management Objects) o un assembly contenente un set di oggetti utilizzabili dall'applicazione per creare, modificare, elaborare ed eliminare strutture e modelli di data mining.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36062771"
   
 ## <a name="see-also"></a>Vedere anche  
  [Elaborazione degli oggetti modello multidimensionale](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Data nuove interfacce Query di Data Mining](data-mining-query-tools.md)   
- [Considerazioni e requisiti di elaborazione &#40;Data Mining&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Data Mining nuove interfacce Query](data-mining-query-tools.md)   
+ [Requisiti e considerazioni sull'elaborazione &#40;Data Mining&#41;](processing-requirements-and-considerations-data-mining.md)  
   
   

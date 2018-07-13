@@ -1,5 +1,5 @@
 ---
-title: Pagina delle proprietà generale, Report parti (gestione Report) | Documenti Microsoft
+title: Pagina delle proprietà generale, Report parti (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0ce0b1ca08f1d0d97f268f3ec8c145c117d56a60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3823b01bfc318f26ba0135d054d913d3ffe1fd6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238511"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Pagina delle proprietà Generale, Parti di report (Gestione report)
   La pagina delle proprietà consente di visualizzare e gestire le proprietà generali per una parte di report.  
@@ -38,7 +38,7 @@ ms.locfileid: "36062365"
 3.  Nell'elenco a discesa fare clic su **Gestisci**. Verrà visualizzata la pagina delle proprietà Generale.  
   
 ## <a name="options"></a>Opzioni  
- **Data modifica**  
+ **Data ultima modifica**  
  Data e ora dell'ultima modifica apportata alle proprietà della parte di report pubblicato nel server o della pubblicazione di una nuova versione della parte di report pubblicato nel server. Di sola lettura.  
   
  **Modificato da**  
@@ -84,7 +84,7 @@ ms.locfileid: "36062365"
  [Gestione di parti di Report](report-design/managing-report-parts.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Contenuto della pagina &#40;gestione Report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Parti di report &#40;SSRS e Generatore Report&#41;](report-parts-report-builder-and-ssrs.md)   
+ [Parti di report &#40;Report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Parti del report e set di dati in Generatore report](report-data/report-parts-and-datasets-in-report-builder.md)  
   

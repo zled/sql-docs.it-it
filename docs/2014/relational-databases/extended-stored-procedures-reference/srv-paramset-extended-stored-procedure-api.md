@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_paramset
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 13aad0d80eafea32f0d0a7a8d1bc43b1123fd7b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 2caae5a5cc900234cc21dd71659eed27a67c1ad7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274797"
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (API Stored procedure estesa)
     
@@ -93,7 +93,7 @@ len
 |IG = il valore verrà ignorato||  
 |valid = qualsiasi puntatore valido ai dati||  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  I parametri contengono i dati passati tra i client e l'applicazione con stored procedure remote. Il client può specificare determinati parametri come parametri restituiti. Questi parametri restituiti possono contenere valori che l'applicazione del server Open Data Services passa nuovamente al client. L'utilizzo di parametri restituiti è analogo al passaggio di parametri per riferimento.  
   
  Non è possibile impostare il valore restituito per un parametro non richiamato come parametro restituito. È possibile usare **srv_paramstatus** per determinare la modalità di richiamo del parametro.  

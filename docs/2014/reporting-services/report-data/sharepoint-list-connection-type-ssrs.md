@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2c4022d7cfca3a85e6e01618bbf5ee20694a9b88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 129fabab52b2e7b7e59cf832d21e25972cb9b07a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260397"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo di connessione dell'elenco SharePoint (SSRS)
   Per includere dati da un elenco Microsoft SharePoint nel report, è necessario aggiungere o creare un set di dati basato su un'origine dati del report di tipo Elenco Microsoft SharePoint. Si tratta di un tipo di origine dati predefinito basato sull'estensione per i dati dell'Elenco SharePoint di Microsoft SQL Server Reporting Services. Utilizzare questo tipo di origine dati per connettersi e recuperare i dati dell'elenco dai siti [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 e [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
@@ -45,24 +45,24 @@ ms.locfileid: "36064401"
 ||Credenziali supportate|Autenticazione di Windows in modalità classica|<sup>3</sup> autenticazione delle attestazioni|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Sì|  
-||Archiviate, su richiesta, nessuna (con credenziali di Windows<sup>1</sup>)|Sì|no|  
+||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|Sì|no|  
 |Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Non<sup>2</sup>|  
-||Archiviate, su richiesta, nessuna (con credenziali di Windows<sup>1</sup>)|Sì|Non<sup>2</sup>|  
+||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|Sì|Non<sup>2</sup>|  
   
  **tabella 2**  
   
 ||Credenziali supportate|Autenticazione di Windows in modalità classica|<sup>3</sup> autenticazione delle attestazioni|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Sì|  
-||Archiviate, su richiesta, nessuna (con credenziali di Windows<sup>1</sup>)|no|no|  
+||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|no|no|  
 |Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Non<sup>2</sup>|  
-||Archiviate, su richiesta, nessuna (con credenziali di Windows<sup>1</sup>)|no|Non<sup>2</sup>|  
+||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|no|Non<sup>2</sup>|  
   
- <sup>1</sup> credenziali archiviate e credenziali su richiesta con credenziali non Windows non è supportata.  
+ <sup>1</sup> credenziali archiviate e credenziali su richiesta con credenziali non Windows non è supportato.  
   
  <sup>2</sup> l'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.  
   
- <sup>3</sup> l'autenticazione di Windows, autenticazione basata su form (FBA), i token Application Markup Language (SAML Secure), altri provider di identità o una combinazione di più elementi elencati sopra indicato in provider di autenticazione.  
+ <sup>3</sup> l'autenticazione di Windows, autenticazione basata su form (FBA), i token Secure Application Markup Language (SAML), altri provider di identità o una combinazione di più di quanto sopra accennato provider di autenticazione.  
   
  **Autenticazione di Windows**  
  Per una tecnologia SharePoint configurata per essere usata con un server di report in modalità Account attendibile, questa opzione non è supportata. Si applica solo alle versioni precedenti di SQL Server 2012 Reporting Services.  
@@ -163,7 +163,7 @@ ms.locfileid: "36064401"
 ##  <a name="HowTo"></a> Procedure  
  In questa sezione sono contenute istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati.  
   
- [Aggiungere e verificare una connessione dati o un'origine dati &#40;SSRS e Generatore Report&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36064401"
 ##  <a name="Related"></a> Sezioni correlate  
  In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le informazioni necessarie sulle procedure per definire, personalizzare e usare parti di un report correlate ai dati.  
   
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-datasets-ssrs.md)  
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

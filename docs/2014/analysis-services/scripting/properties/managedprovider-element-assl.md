@@ -1,5 +1,5 @@
 ---
-title: Elemento ManagedProvider (ASSL) | Documenti Microsoft
+title: Elemento ManagedProvider (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ManagedProvider element
 ms.assetid: ed5a1077-20a4-40b9-b62d-0db0d53b9624
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe2bb53abd8a528fa9ca5e1b685591bc57f162e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5a4b2d94d0d3abb681be2b288ce3a5ca3b371e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180848"
 ---
 # <a name="managedprovider-element-assl"></a>Elemento ManagedProvider (ASSL)
-  Contiene il nome del provider gestito utilizzato da un elemento derivato dal [DataSource](../data-type/datasource-data-type-assl.md) tipo di dati.  
+  Contiene il nome del provider gestito usato da un elemento derivato dal [DataSource](../data-type/datasource-data-type-assl.md) tipo di dati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,11 +59,11 @@ ms.locfileid: "36065684"
 |Elemento padre|[Origine dati](../data-type/datasource-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se un'origine dati utilizza un provider gestito, l'elemento `ManagedProvider` contiene il nome del provider gestito.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Nome di elemento &#40;ASSL&#41;](name-element-assl.md)   
+ [Denominare l'elemento &#40;ASSL&#41;](name-element-assl.md)   
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  
   
   
