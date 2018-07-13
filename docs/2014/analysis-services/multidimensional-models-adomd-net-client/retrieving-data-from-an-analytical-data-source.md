@@ -1,5 +1,5 @@
 ---
-title: Recupero di dati da un'origine dati analitici | Documenti Microsoft
+title: Recupero di dati da un'origine dati analitici | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], about retrieving data
 ms.assetid: 88358189-28aa-4bc7-8dda-5a92e3a012b8
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e6243a815b399c91a2cd7aaa9eca712c6c569bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e5595bd4e001b006cb1dfe62cba40cee3bbb30c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196421"
 ---
 # <a name="retrieving-data-from-an-analytical-data-source"></a>Recupero di dati da un'origine dati analitici
   Dopo avere creato una connessione e creato la query, è possibile recuperare qualsiasi dato. In ADOMD.NET è possibile recuperare i dati utilizzando tre oggetti diversi, ovvero <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> e <xref:System.Xml.XmlReader> tramite una chiamata a uno dei metodi `Execute` dell'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>.  
   
  Per ognuno di questi tre l'interattività e l'overhead sono bilanciati:  
   
--   *Interattività* si intende la semplicità d'uso e la quantità di informazioni disponibili tramite il modello a oggetti.  
+-   *Interattività* si intende la semplicità d'uso e quantità di informazioni disponibili nel modello a oggetti.  
   
--   *Overhead* si intende la quantità di traffico che un modello a oggetti genera nella connessione di rete al server, la quantità di memoria necessaria per il modello a oggetti e la velocità con cui il modello a oggetti recupera i dati.  
+-   *Overhead* si riferisce alla quantità di traffico che un modello a oggetti genera nella connessione di rete al server, la quantità di memoria necessaria per il modello a oggetti e la velocità con cui il modello a oggetti recupera i dati.  
   
  Per selezionare l'oggetto per il recupero di dati che soddisfa meglio le esigenze dell'applicazione, nella tabella seguente vengono evidenziate le differenze tra interattività e overhead per ogni oggetto.  
   

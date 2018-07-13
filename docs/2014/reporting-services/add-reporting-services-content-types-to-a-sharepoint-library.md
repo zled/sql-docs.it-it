@@ -1,5 +1,5 @@
 ---
-title: Aggiungere i tipi di contenuto di Server di Report a una raccolta (Reporting Services in modalità integrata SharePoint) | Documenti Microsoft
+title: Aggiungere i tipi di contenuto di Server di Report a una raccolta (Reporting Services in modalità integrata SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3a1b9a692b8aa26b2d3d5679866617dd4fcfe51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da7ee6e652442bdd2773a8c669b0d134f1fadc37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177548"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Aggiungere tipi di contenuto del server di report a una raccolta (Reporting Services in modalità integrata SharePoint)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce SharePoint tipi di contenuto predefiniti che consentono di gestire i file di origine (con estensione rsds) dei dati condivise, modelli di report (con estensione SMDL) e file di definizione (con estensione rdl) report di Generatore Report. Se si aggiungono i tipi di contenuto **Report di Generatore report**, **Modello di report**e **Origine dati report** a una raccolta, sarà possibile utilizzare il comando **Nuovo** per creare nuovi documenti del tipo desiderato.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Fornisce tipi del contenuto SharePoint predefiniti usati per gestire i file di origine (con estensione rsds) dei dati condivise, modelli di report (con estensione SMDL) e file di definizione (con estensione rdl) di report di Generatore Report. Se si aggiungono i tipi di contenuto **Report di Generatore report**, **Modello di report**e **Origine dati report** a una raccolta, sarà possibile utilizzare il comando **Nuovo** per creare nuovi documenti del tipo desiderato.  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint  
   
  Per aggiungere tipi di contenuto a una raccolta, è necessario essere un amministratore del sito o disporre del livello di autorizzazione Controllo completo.  
   
- Il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] contenuto tipi e relativa gestione saranno abilitati automaticamente in tutte le raccolte documenti per le raccolte siti esistenti create dalla seguente **centro Business Intelligence** modello di sito.  
+ Il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] contenuti tipi e il tipo di contenuto gestione saranno abilitati automaticamente in tutte le raccolte documenti per le raccolte siti esistenti create dalla seguente **centro Business Intelligence** modello di sito.  
   
  Per i siti creati dopo l'integrazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non saranno abilitati i tipi di contenuto di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 > [!TIP]  
->  Se hai **non** configurata in precedenza i tipi di contenuto per una raccolta, prima di tutto attivare la gestione dei tipi di contenuto, quindi abilitare il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] i tipi di contenuto. Vedere le procedure per abilitare la gestione dei tipi di contenuto in una singola raccolta documenti.  
+>  Se hai **non** configurata in precedenza i tipi di contenuto per una raccolta, prima di tutto consentire la gestione dei tipi di contenuto, quindi abilitare il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] i tipi di contenuto. Vedere le procedure per abilitare la gestione dei tipi di contenuto in una singola raccolta documenti.  
   
  **Breve video:** [(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (Abilitazione dei tipi di contenuto di SSRS in SharePoint2010.wm) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
@@ -110,13 +110,13 @@ ms.locfileid: "36054290"
 8.  Dopo l'aggiunta dei tipi di contenuto, scegliere **OK**.  
   
 9. > [!NOTE]  
-    >  Se il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gruppo dei tipi di contenuto **tipi contenuto di SQL Server Reporting Services** non è visibile sul **Aggiungi tipi di contenuto** pagina, una delle condizioni seguenti è vera:  
+    >  Se il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gruppo dei tipi di contenuto **tipi contenuto di SQL Server Reporting Services** non è visibile nella **Aggiungi tipi di contenuto** pagina, una delle condizioni seguenti è vera:  
   
     -   Il componente aggiuntivo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per prodotti SharePoint non è stato installato. Per altre informazioni, vedere [installare o disinstallare il componente aggiuntivo di Reporting Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Questo argomento include informazioni sull'installazione del componente aggiuntivo e sull'esecuzione passaggio per passaggio di un'installazione di tipo "solo file" del componente aggiuntivo per risolvere i problemi.  
   
     -   Il componente aggiuntivo viene installato ma la funzionalità della raccolta siti **Funzionalità di integrazione Server report** non sarà attiva. Verificare la funzionalità della raccolta siti in **Impostazioni sito**.  
   
-    -   Tutte le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] i tipi di contenuto sono già stati aggiunti alla libreria. Se tutti i tipi di contenuto fanno parte di una raccolta, il gruppo viene rimosso dalla pagina **Aggiungi tipi di contenuto** . Se si elimina uno o più tipi di contenuto di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , il gruppo **Tipi di contenuto SQL Server Reporting Services** sarà visibile nella pagina **Aggiunti tipi di contenuto** .  
+    -   Tutti i [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] i tipi di contenuto sono già stati aggiunti alla libreria. Se tutti i tipi di contenuto fanno parte di una raccolta, il gruppo viene rimosso dalla pagina **Aggiungi tipi di contenuto** . Se si elimina uno o più tipi di contenuto di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , il gruppo **Tipi di contenuto SQL Server Reporting Services** sarà visibile nella pagina **Aggiunti tipi di contenuto** .  
   
 ##  <a name="bkmk_enable_content_management_2010"></a> Per abilitare la gestione dei tipi di contenuto per una singola raccolta documenti (SharePoint 2010)  
   

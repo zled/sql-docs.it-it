@@ -1,5 +1,5 @@
 ---
-title: Distribuzione di soluzioni di modelli multidimensionali | Documenti Microsoft
+title: Distribuzione di soluzioni di modelli multidimensionali | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, planning
 - deploying [Analysis Services]
 - deploying [Analysis Services], planning
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc0a5ef8d41ebc37beee73b83fa27eaa5a7d6358
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 781bbeed98772266d4ea9c228c42426df424fe1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222221"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Distribuzione di soluzioni di modelli multidimensionali
   Dopo aver completato lo sviluppo di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è possibile distribuire il database in un server Analysis Services. In Analysis Services sono disponibili sei possibili metodi di distribuzione che possono essere utilizzati per spostare il database in un server di prova o di produzione. I metodi di distribuzione sono elencati di seguito in ordine di convenienza: automazione AMO, XMLA, Distribuzione guidata, Utilità di distribuzione, Sincronizzazione guidata database, Backup e ripristino.  
@@ -58,7 +58,7 @@ ms.locfileid: "36054641"
 |Si desidera concedere agli utenti l'accesso ai dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite Internet?|[Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |Si desidera fornire accesso continuo ai dati [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per query?|[Requisiti e considerazioni per la distribuzione di Analysis Services](requirements-and-considerations-for-analysis-services-deployment.md)|  
 |Si desidera distribuire oggetti in un ambiente distribuito utilizzando oggetti collegati o partizioni remote?|[Creare e gestire una partizione locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md), [Creare e gestire una partizione remota &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md) e [Gruppi di misure collegati](linked-measure-groups.md).|  
-|Come verranno protetti i dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)|  
+|Come verranno protetti i dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Autorizzare l'accesso a oggetti e operazioni &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)|  
   
 ##  <a name="bkmk_rel"></a> Attività correlate  
  [Requisiti e considerazioni per la distribuzione di Analysis Services](requirements-and-considerations-for-analysis-services-deployment.md)  

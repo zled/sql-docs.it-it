@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10093"
 - sql12.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f99f7baef82824a4af4c9520825043523bb8255d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 05784b220a590166b00605ff921508979e633f64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179538"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Aggiungere un sottoreport e di parametri (Generatore report e SSRS)
   Aggiungere sottoreport a un report quando si desidera creare un report principale in cui è possibile includere più report correlati. Un sottoreport rappresenta un riferimento a un altro report. Per correlare i report tramite valori dei dati, ad esempio per fare in modo che in più report vengano visualizzati i dati relativi allo stesso cliente, è necessario progettare come sottoreport un report con parametri, ovvero un report in cui sono visualizzati i dettagli relativi a un cliente specifico. Quando al report principale si aggiunge un sottoreport, è possibile specificare parametri da passare a quest'ultimo.  
   
  È inoltre possibile aggiungere sottoreport a righe o colonne dinamiche in una tabella oppure in una matrice. Quando il report principale viene elaborato, il sottoreport viene elaborato per ogni riga. In questo caso, è necessario valutare se sia possibile ottenere l'effetto desiderato utilizzando aree dati o aree dati annidate.  
   
- Per aggiungere un sottoreport a un report, è necessario prima creare il report che sarà utilizzato come sottoreport. Per ulteriori informazioni sulla creazione del sottoreport, vedere [sottoreport &#40;Generatore Report e SSRS&#41;](subreports-report-builder-and-ssrs.md).  
+ Per aggiungere un sottoreport a un report, è necessario prima creare il report che sarà utilizzato come sottoreport. Per altre informazioni sulla creazione del sottoreport, vedere [sottoreport &#40;Generatore Report e SSRS&#41;](subreports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -76,7 +76,7 @@ ms.locfileid: "36054113"
      La modifica dell'ordine di un parametro di sottoreport non comporta effetti sull'elaborazione del sottoreport.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sottoreport &#40;SSRS e Generatore Report&#41;](subreports-report-builder-and-ssrs.md)   
+ [Sottoreport &#40;Report e SSRS&#41;](subreports-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], DATEADD
 - dates [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ade2a78dd95ad26f9560bb992a6da3a4811b4583
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 061ded2d69926f07a82e80cf59200a8e0f4245b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223711"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (espressione SSIS)
   Viene restituito un nuovo valore DT_DBTIMESTAMP dopo aver aggiunto alla parte specificata di una data un numero che rappresenta un intervallo di date o di ore. Il parametro number deve restituire un valore integer e il parametro date deve restituire una data valida.  
@@ -48,7 +48,7 @@ DATEADD(datepart, number, date)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_DBTIMESTAMP  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Nella tabella seguente sono elencate le parti della data e le abbreviazioni riconosciute dall'analizzatore di espressioni. Per i nomi delle parti della data non viene fatta distinzione tra maiuscole e minuscole.  
   
 |parte di una data|Abbreviazioni|  
@@ -95,11 +95,11 @@ DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DATEDIFF &#40;espressione SSIS&#41;](datediff-ssis-expression.md)   
+ [DATEDIFF &#40;espressione di SSIS&#41;](datediff-ssis-expression.md)   
  [DATEPART &#40;espressione SSIS&#41;](datepart-ssis-expression.md)   
  [DAY &#40;espressione SSIS&#41;](day-ssis-expression.md)   
  [MONTH &#40;espressione SSIS&#41;](month-ssis-expression.md)   
  [YEAR &#40;espressione SSIS&#41;](year-ssis-expression.md)   
- [Le funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md)  
+ [Le funzioni &#40;espressione di SSIS&#41;](functions-ssis-expression.md)  
   
   

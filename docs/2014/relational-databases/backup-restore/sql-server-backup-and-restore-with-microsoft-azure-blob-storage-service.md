@@ -1,25 +1,24 @@
 ---
-title: Servizio di archiviazione Blob di SQL Server Backup and Restore with Windows Azure | Documenti Microsoft
+title: SQL Server Backup and Restore with Windows Azure Blob Storage Service | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98f774809a3b6bb1d37836c3e7c216f1058a9ec1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 38e20e433b7fed2e34750c300ee7e1489d6df665
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193551"
 ---
 # <a name="sql-server-backup-and-restore-with-windows-azure-blob-storage-service"></a>Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Windows Azure
   In questo argomento vengono illustrati i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel [servizio di archiviazione BLOB di Windows Azure](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)e il ripristino dallo stesso. È inoltre disponibile un riepilogo dei vantaggi dell'utilizzo del servizio BLOB di Windows Azure per archiviare i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -47,7 +46,7 @@ ms.locfileid: "36055035"
   
 -   Vantaggi economici: si paga solo il servizio utilizzato. Questo servizio può essere efficace dal punto di vista economico come soluzione di archiviazione esterna e di backup. Per ulteriori informazioni e per i collegamenti, vedere la sezione [Considerazioni sui costi di Windows Azure](#Billing) .  
   
-##  <a name="Billing"></a> Considerazioni sui costi di Windows Azure:  
+##  <a name="Billing"></a> Considerazioni sui costi di Azure di Windows:  
  Conoscendo i costi correlati all'archiviazione di Windows Azure è possibile prevedere il costo della creazione e dell'archiviazione dei backup in Windows Azure.  
   
  Per stimare i costi è possibile utilizzare il [calcolatore dei costi di Windows Azure](http://go.microsoft.com/fwlink/?LinkId=277060) .  

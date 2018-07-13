@@ -1,5 +1,5 @@
 ---
-title: Dati Unicode e il Server di tabelle codici | Documenti Microsoft
+title: Dati Unicode e il Server le tabelle codici | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd532c5b3d564051c8d32171e861791017e8ab3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: fff43500155bdd6fc4fece74a018dc6dd4f7f0fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199251"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Dati Unicode e tabelle codici del server
     
@@ -33,20 +33,20 @@ ms.locfileid: "36054752"
   
  L'API Stored procedure estesa è abilitata per i dati Unicode ma non lo è per i metadati Unicode. La direttiva Unicode #define non produce alcun effetto sull'API Stored procedure estesa.  
   
- Si suppone che per tutti i metadati restituiti o forniti all'API Stored procedure estesa dall'applicazione delle stored procedure estese in uso venga utilizzata la tabella codici multibyte del server. La tabella codici predefinita di un'applicazione server API Stored Procedure estesa è la tabella codici ANSI del computer in cui è in esecuzione l'applicazione, che può essere ottenuto chiamando **srv_pfield** con il parametro di campo impostato su SRV_ SPROC_CODEPAGE.  
+ Si suppone che per tutti i metadati restituiti o forniti all'API Stored procedure estesa dall'applicazione delle stored procedure estese in uso venga utilizzata la tabella codici multibyte del server. La tabella codici predefinita di un'applicazione server API Stored Procedure estesa è la tabella codici ANSI del computer in cui è in esecuzione l'applicazione, che può essere ottenuto chiamando **srv_pfield** con il parametro di campo impostato su SRV _ SPROC_CODEPAGE.  
   
  Se l'applicazione dell'API Stored procedure estesa è abilitata per l'utilizzo di Unicode, è necessario convertire i nomi delle colonne di metadati Unicode, i messaggi di errore e così via, in dati multibyte prima di passare tali dati all'API Stored procedure estesa.  
   
 ## <a name="example"></a>Esempio  
  Nella stored procedure estesa seguente è fornito un esempio delle conversioni Unicode descritte. Tenere presente quanto segue:  
   
--   Dati di colonna vengono passati come dati Unicode **srv_describe** perché la colonna è descritta come srvnvarchar.  
+-   Dati della colonna viene passati come dati Unicode **srv_describe** perché la colonna è descritta come srvnvarchar.  
   
--   I metadati della colonna nome sono passato a **srv_describe** come dati multibyte.  
+-   I metadati della colonna nome viene passato a **srv_describe** come dati multibyte.  
   
-     Estesa chiamate di stored procedure **srv_pfield** con il parametro di campo impostato su SRV_SPROC_CODEPAGE per ottenere la tabella codici multibyte del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Estesa chiamate alle stored procedure **srv_pfield** con il parametro di campo impostato su SRV_SPROC_CODEPAGE per ottenere la tabella codici multibyte del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   I messaggi di errore vengono passati a **srv_sendmsg** come dati multibyte.  
+-   I messaggi di errore vengono passati al **srv_sendmsg** come dati multibyte.  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  

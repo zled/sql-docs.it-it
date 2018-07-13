@@ -7,22 +7,22 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 27da4f1be0b2a63e74ef64ad5eae63a17275ec9f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 7bafa5e91cbf8237b1e0b20ea40d79a471ca7978
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36886587"
 ---
 # <a name="sysdmpdwexecconnections-transact-sql"></a>sys.dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,15 +31,15 @@ ms.lasthandoff: 05/23/2018
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|session_id|**int**|Identifica la sessione associata alla connessione Utilizzare `SESSION_ID()` per restituire il `session_id` della connessione corrente.|  
+|session_id|**int**|Identifica la sessione associata alla connessione Uso `SESSION_ID()` per restituire il `session_id` della connessione corrente.|  
 |connect_time|**datetime**|Timestamp relativo al momento in cui è stata stabilita la connessione. Non ammette i valori Null.|  
 |encrypt_option|**nvarchar(40)**|Indica TRUE (connessione è crittografata) o FALSE (connessione non è enctypred).|  
 |auth_scheme|**nvarchar(40)**|Specifica lo schema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Autenticazione di Windows utilizzato con questa connessione. Non ammette i valori Null.|  
-|client_id|**varchar(48)**|Indirizzo IP del client che si connette al server. Ammette i valori Null.|  
-|sql_spid|**int**|ID del processo server della connessione. Utilizzare `@@SPID` per restituire il `sql_spid` della connessione corrente. Per più illustrativi, utilizzare il `session_id` invece.|  
+|client_id|**varchar(48)**|Indirizzo IP del client di connettersi a questo server. Ammette i valori Null.|  
+|sql_spid|**int**|ID del processo server della connessione. Uso `@@SPID` per restituire il `sql_spid` della connessione corrente. Per più illustrativi, usare il `session_id` invece.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede **VIEW SERVER STATE** autorizzazione nel server.  
+ È necessario **VIEW SERVER STATE** autorizzazione nel server.  
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
@@ -63,7 +63,7 @@ WHERE c.session_id = SESSION_ID();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e Parallel Data Warehouse, viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse e Parallel Data Warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   
 

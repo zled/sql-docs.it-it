@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 690fcb3380d5ceb3a996ca3f77c926bf16dee9a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96287b68f0d6610beab336bdb3ad3477e5d6ef66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054354"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178328"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni per la **Richiesta profilo Criteri di ricerca colonna** selezionata nel riquadro delle richieste. Un profilo Criteri di ricerca colonna segnala un set di espressioni regolari che analizzano la percentuale specificata di valori in una colonna stringa. Questo profilo consente di identificare eventuali problemi nei dati, ad esempio le stringhe non valide, e può indicare le possibili espressioni regolari da utilizzare in futuro per convalidare nuovi valori. Un profilo di criteri di ricerca di una colonna contenente i codici postali ZIP (Stati Uniti), ad esempio, può produrre le espressioni regolari \d{5}-\d{4}, \d{5} e \d{9}. Se vengono visualizzate altre espressioni regolari, è probabile che i dati contengano valori non validi o in formato non corretto.  
@@ -43,7 +43,7 @@ ms.locfileid: "36054354"
  Tutti i delimitatori vengono normalizzati in un singolo spazio come parte del processo di suddivisione in token, mentre i simboli vengono mantenuti.  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>Informazioni sull'utilizzo della tabella dei tag  
- È facoltativamente possibile raggruppare token correlati con un singolo tag archiviando i tag e i termini correlati in una tabella speciale creata in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La tabella dei tag deve contenere due colonne stringa, denominate "Tag" e "Termine". Tali colonne possono essere di tipo `char`, `nchar`, `varchar`, oppure `nvarchar`, ma non `text` o `ntext`. È possibile combinare più tag e i termini corrispondenti in una singola tabella. Una richiesta di profilo Criteri di ricerca colonna può utilizzare solo una tabella dei tag. È possibile usare una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] distinta per la connessione alla tabella dei tag. Di conseguenza, la tabella dei tag può essere archiviata in un database diverso o un server diverso dalla tabella di origine.  
+ È facoltativamente possibile raggruppare token correlati con un singolo tag archiviando i tag e i termini correlati in una tabella speciale creata in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La tabella dei tag deve contenere due colonne stringa, denominate "Tag" e "Termine". Tali colonne possono essere di tipo `char`, `nchar`, `varchar`, o `nvarchar`, ma non `text` o `ntext`. È possibile combinare più tag e i termini corrispondenti in una singola tabella. Una richiesta di profilo Criteri di ricerca colonna può utilizzare solo una tabella dei tag. È possibile usare una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] distinta per la connessione alla tabella dei tag. Di conseguenza, la tabella dei tag può essere archiviata in un database diverso o un server diverso dalla tabella di origine.  
   
  È possibile, ad esempio, raggruppare i valori "East", "West", "North" e "South" eventualmente visualizzati negli indirizzi stradali statunitensi utilizzando il singolo tag "Direction". La tabella seguente rappresenta un esempio di tale tabella dei tag.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36054354"
  Per ulteriori informazioni, tornare alla sezione "Informazioni sull'utilizzo di delimitatori e simboli" di questo argomento.  
   
  **Symbols**  
- Elenco dei simboli che devono essere mantenuti come parte dei criteri di ricerca. I simboli, ad esempio, possono includere "/" per le date, "." per le ore e " @ " per gli indirizzi di posta elettronica. Per impostazione predefinita, l'elenco dei **simboli** contiene i seguenti caratteri: `,.;:-"'`~ = & / @!? [] <> (){}| #* ^ %'.  
+ Elenco dei simboli che devono essere mantenuti come parte dei criteri di ricerca. I simboli, ad esempio, possono includere "/" per le date, "." per le ore e " @ " per gli indirizzi di posta elettronica. Per impostazione predefinita, l'elenco delle **simboli** contiene i seguenti caratteri: `,.;:-"'`~ = & / @!? [] <> (){}| #* ^ %'.  
   
  Per ulteriori informazioni, tornare alla sezione "Informazioni sull'utilizzo di delimitatori e simboli" di questo argomento.  
   

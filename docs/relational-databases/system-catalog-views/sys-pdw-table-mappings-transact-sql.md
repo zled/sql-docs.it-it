@@ -5,39 +5,37 @@ ms.date: 06/01/2018
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 1af14fe0-e562-4f48-a7f0-783f300a88ac
-caps.latest.revision: 7
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d7b2afc22bc4e6355ca91483b8a97ab3bd2aae5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
-ms.translationtype: MT
+ms.openlocfilehash: 62b2499a1d3b508186f3ca07641364a9e91a1541
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744030"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36833347"
 ---
 # <a name="syspdwtablemappings-transact-sql"></a>sys.pdw_table_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Collega tabelle utente ai nomi di oggetto interno per **object_id**.  
+  Collega tabelle utente per i nomi degli oggetti interni dal **object_id**.  
   
 |Nome colonna|Tipo di dati|Description|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|physical_name|**nvarchar(36)**|Il nome fisico per la tabella.<br /><br /> **physical_name** e **object_id** formano la chiave per la visualizzazione.||  
-|object_id|**int**|L'ID di oggetto per la tabella. Vedere [Sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **physical_name** e **object_id** formano la chiave per la visualizzazione.||  
+|physical_name|**nvarchar(36)**|Il nome fisico per la tabella.<br /><br /> **physical_name** e **object_id** formano la chiave per questa visualizzazione.||  
+|object_id|**int**|L'ID di oggetto per la tabella. Visualizzare [Sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **physical_name** e **object_id** formano la chiave per questa visualizzazione.||  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e viste del catalogo Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [SQL Data Warehouse e Parallel Data Warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.pdw_index_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
  [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   

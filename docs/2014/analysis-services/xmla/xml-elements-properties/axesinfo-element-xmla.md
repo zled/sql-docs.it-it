@@ -1,5 +1,5 @@
 ---
-title: Elemento AxesInfo (XMLA) | Documenti Microsoft
+title: Elemento AxesInfo (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - AxesInfo element
 ms.assetid: 15cfa67d-5acd-4737-8a81-2df34b334d3f
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c5f11dce65c7e3d2c7b87cfed2d29147a5eba70f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 93ad2eb9d35384831cb952d140be267e75a7647d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178408"
 ---
 # <a name="axesinfo-element-xmla"></a>Elemento AxesInfo (XMLA)
   Contiene una raccolta di [AxisInfo](axisinfo-element-xmla.md) elementi, che rappresenta i metadati dell'asse contenuti dall'elemento padre [OlapInfo](olapinfo-element-xmla.md) elemento.  
@@ -65,7 +65,7 @@ ms.locfileid: "36055075"
 |Elementi padre|[OlapInfo](olapinfo-element-xmla.md)|  
 |Elementi figlio|[AxisInfo](axisinfo-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `AxesInfo` contiene un elemento `AxisInfo` per ogni asse all'interno del dataset multidimensionale restituito da un elemento `root` utilizzando il tipo di dati `MDDataSet`.  
   
 ## <a name="see-also"></a>Vedere anche  

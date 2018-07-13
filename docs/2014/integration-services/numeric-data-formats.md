@@ -1,5 +1,5 @@
 ---
-title: Formati di dati numerici | Documenti Microsoft
+title: Formati di dati numerici | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - integer data types [Integration Services]
 - numeric data formats for fast parse
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - fast parse [Integration Services]
 ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
 caps.latest.revision: 33
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9fd075d66ae2f5b5486e6452965230f776787ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ed822a26c5722a249c3fda635288c282f3e2834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180288"
 ---
 # <a name="numeric-data-formats"></a>Formati di dati numerici
   L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dati, indipendenti dalle impostazioni locali. Supporta solo un limitato set di formati per i tipi di dati integer.  

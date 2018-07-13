@@ -22,16 +22,17 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a40f06ca9d012553556c68fca238f6f9a609f04
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: 8eba7e0e1e949883f2af30999b93b290e00e07f2
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957614"
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Restituisce una tabella che esegue il mapping del campo class_type nel log di controllo al campo class_desc in sys.dm_audit_actions. Per ulteriori informazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit, vedere [SQL Server Audit &#40;motore di Database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Restituisce una tabella che esegue il mapping del campo class_type nel log di controllo al campo class_desc in sys.dm_audit_actions. Per altre informazioni sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit, vedere [SQL Server Audit &#40;motore di Database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/23/2018
 |**securable_class_desc**|**nvarchar(120)**|Oggetto a protezione diretta che esegue il mapping al campo class_type controllato. Il valore è Null se class_type non esegue il mapping a un oggetto a protezione diretta. Può essere correlato a class_desc in sys.dm_audit_actions.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Entità deve avere **selezionare** autorizzazione. Per impostazione predefinita, tale autorizzazione è concessa al ruolo public.  
+ Entità deve disporre **seleziona** l'autorizzazione. Per impostazione predefinita, tale autorizzazione è concessa al ruolo public.  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
