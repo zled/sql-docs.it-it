@@ -1,5 +1,5 @@
 ---
-title: 'Nuove assegnazioni di ruolo di sistema: System pagina Modifica assegnazioni ruolo (gestione Report) | Documenti Microsoft'
+title: 'Nuova assegnazione di ruolo di sistema: Modifica pagina Assegnazioni ruolo di sistema (gestione Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4cc3521561aac3e91e2af2dd8f45eea77b74b58e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b580fc8ab1a2558d8c356372d6ccbd4f40ebb95
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331271"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Pagina Nuova assegnazione ruolo a livello di sistema: Modifica assegnazioni ruolo a livello di sistema (Gestione report)
   La pagina Nuova assegnazione ruolo a livello di sistema o Modifica assegnazioni ruolo a livello di sistema consente di impostare la sicurezza per il server di report. Il sistema di sicurezza è interamente basato sulle assegnazioni di ruolo, tramite le quali utenti o gruppi specifici vengono mappati alle attività che possono eseguire. L'elenco di attività è rappresentato in forma di definizione di ruolo selezionabile per la creazione dell'assegnazione di ruolo.  
@@ -55,9 +55,9 @@ ms.locfileid: "36158816"
  **Roles**  
  Fornisce un elenco di ruoli a livello di sistema che è possibile assegnare agli altri utenti. È possibile specificare più ruoli per una singola assegnazione di ruolo.  
   
- Gestione report non consente di visualizzare le attività incluse in ogni ruolo né di aggiungere o modificare le attività. I ruoli devono essere utilizzati come sono definiti. Per creare, modificare o eliminare ruoli, utilizzare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
+ Gestione report non consente di visualizzare le attività incluse in ogni ruolo né di aggiungere o modificare le attività. I ruoli devono essere utilizzati come sono definiti. Per creare, modificare o eliminare ruoli, usare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
- Si noti che se si utilizza [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services, è necessario utilizzare i ruoli predefiniti forniti.  
+ Si noti che se si usa [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services, è necessario usare i ruoli predefiniti forniti.  
   
  **Descrizioni**  
  Visualizza informazioni aggiuntive sul ruolo. La descrizione di un ruolo predefinito, ad esempio Utente sistema o Amministratore sistema, contiene un riassunto delle attività supportate da ciascun ruolo.  

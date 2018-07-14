@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 caps.latest.revision: 21
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 29c42e491c6d36c20073a801051d8861d03ab0f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c77240716811c47f28577577c89647f141fdd53f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329991"
 ---
 # <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Passaggio 4: Aggiunta di un'attività Flusso di dati al pacchetto
   Dopo aver creato le gestioni connessioni per i dati di origine e di destinazione, l'operazione successiva consiste nell'aggiunta di un'attività Flusso di dati al pacchetto. L'attività Flusso di dati incapsula il motore del flusso di dati che gestisce lo spostamento dei dati tra origini e destinazioni, offrendo funzionalità di trasformazione, pulitura e modifica dei dati durante lo spostamento. Nell'attività Flusso di dati avviene gran parte del lavoro di un processo ETL (Extract, Transform and Load).  
@@ -40,10 +40,10 @@ ms.locfileid: "36166445"
   
      È consigliabile fornire nomi univoci a tutti i componenti aggiunti a una superficie di progettazione. Per facilità d'uso e manutenzione, i nomi dovrebbero descrivere la funzione svolta da ogni componente. Se vengono applicate queste linee guida per la denominazione, i pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] avranno un nome descrittivo. Come descrizione dei pacchetti è inoltre possibile utilizzare le annotazioni. Per altre informazioni sulle annotazioni, vedere [Utilizzo di annotazioni nei pacchetti](use-annotations-in-packages.md).  
   
-4.  Fare doppio clic su attività flusso di dati, fare clic su **delle proprietà**e nella finestra Proprietà verificare che il `LocaleID` è impostata su **inglese (Stati Uniti)**.  
+4.  Fare clic su attività flusso di dati, fare clic su **delle proprietà**e nella finestra Proprietà verificare che il `LocaleID` è impostata su **inglese (Stati Uniti)**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Passaggio 5: Aggiunta e configurazione dell'origine File Flat](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+ [Passaggio 5: Aggiunta e configurazione dell'origine file flat](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività Flusso di dati](control-flow/data-flow-task.md)  

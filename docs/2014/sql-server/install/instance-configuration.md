@@ -1,5 +1,5 @@
 ---
-title: Configurazione dell'istanza | Documenti Microsoft
+title: Configurazione dell'istanza | Microsoft Docs
 ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 757b29a54828816de27559715e88b337bd5a06a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bdcfdc34d61b38992c44a220b7b58041cd496200
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274327"
 ---
 # <a name="instance-configuration"></a>Configurazione dell'istanza
   Utilizzare la pagina **Configurazione dell'istanza** dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per specificare se creare un'istanza predefinita oppure un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è già installata, verrà creata un'istanza predefinita a meno che non si specifichi un'istanza denominata.  
@@ -65,7 +65,7 @@ ms.locfileid: "36166310"
   
 -   Se si specifica MSSQLServer per il nome di istanza, verrà creata un'istanza predefinita.  
   
--   Un'installazione di [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] viene sempre installato come istanza denominata di "PowerPivot". Non è possibile specificare un nome di istanza diverso per questo ruolo caratteristica.  
+-   Un'installazione di [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] viene sempre installato come istanza denominata di 'PowerPivot'. Non è possibile specificare un nome di istanza diverso per questo ruolo caratteristica.  
   
 -   I nomi delle istanze devono essere costituiti al massimo da 16 caratteri.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36166310"
   
 -   Nei nomi di istanza non sono consentiti spazi interni o altri caratteri speciali. La barra rovesciata (\\), la virgola (,) i due punti (:), il punto e virgola (;), la virgoletta singola ('), la e commerciale (&), il segno meno (-) e la chiocciola (@) rappresentano altri caratteri non consentiti.  
   
--   **Solo i caratteri vengono per la tabella codici corrente di Windows sono utilizzabili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nomi di istanza. Se viene utilizzato un carattere Unicode non supportato, si verificherà un errore di installazione.**  
+-   **Solo i caratteri vengono per la tabella codici corrente di Windows sono utilizzabili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nomi di istanza. Se viene usato un carattere Unicode non supportato, si verificherà un errore di installazione.**  
   
  **Istanze e funzionalità rilevate**  
  È possibile visualizzare un elenco dei componenti e delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installati sul computer su cui viene eseguito il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

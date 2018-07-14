@@ -20,13 +20,13 @@ ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 660524626e7120f21d5e420526f0634f3155f2b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f63101c71ada32768139c075dd98122bac5ca75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329941"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Creazione di una trasformazione asincrona con il componente script
   Utilizzare un componente di trasformazione nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per modificare e analizzare i dati quando vengono passati dall'origine alla destinazione. Una trasformazione con output sincroni elabora ogni riga di input non appena viene passata attraverso il componente. Una trasformazione con output asincroni potrebbe invece attendere di ricevere tutte le righe di input prima di completare l'elaborazione oppure inviare determinate righe all'output prima di aver ricevuto tutte le righe di input. In questo argomento viene descritta una trasformazione asincrona. Se l'elaborazione richiede una trasformazione sincrona, vedere [Creazione di una trasformazione sincrona con il componente script](../data-flow/transformations/script-component.md). Per altre informazioni sulle differenze tra componenti sincroni e asincroni, vedere [Informazioni sulle trasformazioni sincrone e asincrone](../understanding-synchronous-and-asynchronous-transformations.md).  
@@ -75,7 +75,7 @@ ms.locfileid: "36166663"
 ### <a name="adding-variables"></a>Aggiunta di variabili  
  Se si vuole usare valori di variabili esistenti nello script, è possibile aggiungerli nei campi delle proprietà ReadOnlyVariables e ReadWriteVariables della pagina **Script** di **Editor trasformazione Script**.  
   
- Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È inoltre possibile selezionare più variabili facendo clic sui puntini di sospensione (**...** ) accanto al pulsante il `ReadOnlyVariables` e `ReadWriteVariables` campi delle proprietà e quindi selezionando le variabili nel **Seleziona variabili** finestra di dialogo.  
+ Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È anche possibile selezionare più variabili facendo clic sui puntini di sospensione (**...** ) accanto al pulsante il `ReadOnlyVariables` e `ReadWriteVariables` campi delle proprietà e quindi selezionando le variabili nella **Seleziona variabili** nella finestra di dialogo.  
   
  Per informazioni generali sull'uso delle variabili con il componente script, vedere [Uso di variabili nel componente script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -87,9 +87,9 @@ ms.locfileid: "36166663"
  Per importanti informazioni applicabili a tutti i tipi di componenti creati tramite il componente script, vedere [Codifica e debug del componente script](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
   
 ### <a name="understanding-the-auto-generated-code"></a>Informazioni sul codice generato automaticamente  
- Quando si apre l'IDE di VSTA dopo la creazione e configurazione di un componente di trasformazione, il modificabile `ScriptMain` classe viene visualizzata nell'editor del codice con stub per il ProcessInputRow e i metodi CreateNewOutputRows. La classe ScriptMain è quella in cui si scriverà il codice personalizzato, mentre ProcessInputRow è il metodo più importante in un componente di trasformazione. Il metodo `CreateNewOutputRows` viene in genere utilizzato in un componente di origine, che è simile a una trasformazione asincrona in quanto entrambi i componenti devono creare le rispettive righe di output.  
+ Quando si apre l'IDE di VSTA dopo la creazione e configurazione di un componente di trasformazione, il modificabile `ScriptMain` classe viene visualizzata nell'editor del codice con stub per il ProcessInputRow e CreateNewOutputRows metodi. La classe ScriptMain è quella in cui si scriverà il codice personalizzato, mentre ProcessInputRow è il metodo più importante in un componente di trasformazione. Il metodo `CreateNewOutputRows` viene in genere utilizzato in un componente di origine, che è simile a una trasformazione asincrona in quanto entrambi i componenti devono creare le rispettive righe di output.  
   
- Se si apre VSTA **Project Explorer** finestra, si noterà che il componente Script ha generato anche readonly `BufferWrapper` e `ComponentWrapper` gli elementi del progetto. La classe classe ScriptMain eredita dalla classe UserComponent il `ComponentWrapper` elemento del progetto.  
+ Se si apre VSTA **Esplora progetti** finestra, è possibile vedere che il componente Script ha generato anche sola lettura `BufferWrapper` e `ComponentWrapper` gli elementi del progetto. La classe ScriptMain eredita dalla classe UserComponent il `ComponentWrapper` elemento del progetto.  
   
  In fase di esecuzione, il motore flusso di dati chiama il metodo PrimeOutput `UserComponent` classe, che esegue l'override di <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> metodo del <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> classe padre. Il metodo PrimeOutput chiama a sua volta il metodo CreateNewOutputRows.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36166663"
   
  In una trasformazione asincrona è possibile usare il metodo AddRow per aggiungere righe all'output, se necessario, dall'interno dei metodi ProcessInputRow o ProcessInput. Non è necessario usare il metodo CreateNewOutputRows. Se si scrive una singola riga di risultati, ad esempio i risultati di un'aggregazione, in un determinato output, è possibile creare prima la riga di output usando il metodo CreateNewOutputRows e inserire i valori in seguito dopo l'elaborazione di tutte le righe di input. Tuttavia non è utile creare più righe nel metodo CreateNewOutputRows, perché il componente script consente di usare solo la riga corrente in un input o in un output. Il metodo CreateNewOutputRows è più importante in un componente di origine, in cui non sono presenti righe di input da elaborare.  
   
- È anche possibile eseguire l'override del metodo ProcessInput stesso, in modo da poter eseguire un'elaborazione aggiuntiva preliminare o finale prima o dopo aver eseguito il ciclo del buffer di input e aver chiamato ProcessInputRow per ogni riga. Ad esempio, uno degli esempi di codice in questo argomento esegue l'override ProcessInput per contare il numero di indirizzi in una specifica città come ProcessInputRow scorre righe`.` l'esempio scrive il valore di riepilogo per il secondo output dopo che tutte le righe sono stati elaborati. L'output dell'esempio viene completato in ProcessInput, perché quando viene chiamato PostExecute non sono più disponibili buffer di output.  
+ È anche possibile eseguire l'override del metodo ProcessInput stesso, in modo da poter eseguire un'elaborazione aggiuntiva preliminare o finale prima o dopo aver eseguito il ciclo del buffer di input e aver chiamato ProcessInputRow per ogni riga. Ad esempio, uno degli esempi di codice in questo argomento esegue l'override di ProcessInput per contare il numero di indirizzi in una città specifica mentre ProcessInputRow esegue tramite righe`.` l'esempio scrive il valore di riepilogo nel secondo output dopo che tutte le righe sono stati elaborato. L'output dell'esempio viene completato in ProcessInput, perché quando viene chiamato PostExecute non sono più disponibili buffer di output.  
   
  A seconda delle esigenze è anche possibile creare script nei metodi PreExecute e PostExecute, disponibili nella classe ScriptMain, per eseguire l'elaborazione preliminare o finale.  
   
@@ -234,7 +234,7 @@ public class ScriptMain:
   
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sulle trasformazioni sincrone e asincrone](../understanding-synchronous-and-asynchronous-transformations.md)   

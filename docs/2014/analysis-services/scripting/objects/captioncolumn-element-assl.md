@@ -1,5 +1,5 @@
 ---
-title: Elemento CaptionColumn (ASSL) | Documenti Microsoft
+title: Elemento CaptionColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CaptionColumn element
 ms.assetid: bdb1b9b8-b5d5-4d91-81c7-8de8635bbb83
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58d10ce00adaa3593f50be99383bdfbdbee14441
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c60ac92841ce35e7b4c00c80da4be4eeed6bd96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158076"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273347"
 ---
 # <a name="captioncolumn-element-assl"></a>Elemento CaptionColumn (ASSL)
   Definisce la colonna che fornisce la didascalia per l'attributo.  
@@ -58,13 +58,13 @@ ms.locfileid: "36158076"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[Oggetto AttributeTranslation](../data-type/translation-data-type-assl.md)|  
+|Elementi padre|[AttributeTranslation](../data-type/translation-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Per ulteriori informazioni sul `DataItem` tipo, inclusa una tabella di oggetti di Analysis Services Scripting Language (ASSL) e le proprietà del `DataItem` del tipo, vedere [tipo di dati DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+## <a name="remarks"></a>Note  
+ Per altre informazioni sul `DataItem` tipo, inclusa una tabella di oggetti di Analysis Services Scripting Language (ASSL) e le proprietà del `DataItem` del tipo, vedere [tipo di dati DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- L'elemento che corrisponde al padre di `CaptionColumn` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.AttributeTranslation>.  
+ L'elemento che corrisponde al padre di `CaptionColumn` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.AttributeTranslation>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gli oggetti &#40;ASSL&#41;](objects-assl.md)  

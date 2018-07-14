@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, creating
 - Integration Services packages, creating
@@ -18,13 +18,13 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f28ab22eea6e07cd855e9ff6c8e1ddcbedbbce54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94fddf1871c03bd70f86a61c80a736d2f18a30a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324571"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Creare pacchetti in SQL Server Data Tools
   I pacchetti creati in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] tramite Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] vengono salvati nel file system. Per salvare un pacchetto in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o nell'archivio pacchetti, è necessario salvare una copia del pacchetto. Per altre informazioni, vedere [Salvataggio di una copia di un pacchetto](../../2014/integration-services/save-a-copy-of-a-package.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "36158730"
   
      Se sono disponibili altri pacchetti che includono funzionalità che si desidera riutilizzare, sarà possibile compilare più rapidamente il flusso di controllo e i flussi di dati nel nuovo pacchetto copiando e incollando gli oggetti necessari da tali pacchetti. Per altre informazioni su come copiare e incollare oggetti nei progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vedere [Riutilizzo di oggetti di pacchetto](reuse-of-package-objects.md).  
   
-     Se si crea un nuovo pacchetto copiando un pacchetto esistente oppure utilizzando un pacchetto personalizzato come modello, verranno copiati anche il nome e il GUID del pacchetto esistente. Sarà pertanto necessario modificare il nome e il GUID del nuovo pacchetto per distinguerlo da quello da cui è stato copiato. Se ad esempio sono presenti più pacchetti con lo stesso GUID, sarà più difficile stabilire a quale pacchetto appartengono i dati di un log. È possibile rigenerare il GUID di `ID` proprietà e aggiornare il valore del `Name` proprietà utilizzando la finestra proprietà in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [Impostazione delle proprietà di un pacchetto](set-package-properties.md) e [Utilità dtutil](dtutil-utility.md).  
+     Se si crea un nuovo pacchetto copiando un pacchetto esistente oppure utilizzando un pacchetto personalizzato come modello, verranno copiati anche il nome e il GUID del pacchetto esistente. Sarà pertanto necessario modificare il nome e il GUID del nuovo pacchetto per distinguerlo da quello da cui è stato copiato. Se ad esempio sono presenti più pacchetti con lo stesso GUID, sarà più difficile stabilire a quale pacchetto appartengono i dati di un log. È possibile rigenerare il GUID nella `ID` proprietà e aggiornare il valore della `Name` usando la finestra proprietà in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [Impostazione delle proprietà di un pacchetto](set-package-properties.md) e [Utilità dtutil](dtutil-utility.md).  
   
 -   Utilizzare un pacchetto personalizzato designato come modello.  
   

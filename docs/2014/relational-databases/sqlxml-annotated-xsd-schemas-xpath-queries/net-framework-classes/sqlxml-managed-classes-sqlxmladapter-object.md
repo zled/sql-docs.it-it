@@ -1,5 +1,5 @@
 ---
-title: Oggetto SqlXmlAdapter (classi gestite SQLXML) | Documenti Microsoft
+title: Oggetto SqlXmlAdapter (classi gestite SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - Managed Classes [SQLXML], SqlXmlAdapter object
 ms.assetid: 0a16eddf-fc26-4d92-82d4-359b5fb905d5
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d657ba49f7d4905eef8eaa0bdc3ca4327852df6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 192f356052289725043ae2b3dc748931aedb11fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331411"
 ---
 # <a name="sqlxmladapter-object-sqlxml-managed-classes"></a>Oggetto SqlXmlAdapter (classi gestite SQLXML)
   Questo oggetto fornisce metodi che facilitano l'interazione con il set di dati in [!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework. Per un esempio funzionante, vedere [l'accesso a funzionalità SQLXML nell'ambiente .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  
   
- Oggetto SqlXmlAdapter supporta questi metodi:  
+ L'oggetto SqlXmlAdapter supporta questi metodi:  
   
  void Fill (DataSet ds)  
  Inserisce nel set di dati di .NET Framework i dati XML recuperati da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -39,7 +39,7 @@ ms.locfileid: "36158830"
  void Update (DataSet ds)  
  Applica aggiornamenti ai record in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dai dati del set di dati.  
   
- Oggetto SqlXmlAdapter supporta questi costruttori:  
+ L'oggetto SqlXmlAdapter supporta questi costruttori:  
   
 ```  
 public SqlXmlAdapter(SqlXmlCommand  cmd)   

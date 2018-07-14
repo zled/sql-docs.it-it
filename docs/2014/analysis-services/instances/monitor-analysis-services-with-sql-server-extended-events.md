@@ -1,5 +1,5 @@
 ---
-title: Usare SQL Server (XEvent) eventi estesi per monitorare Analysis Services | Documenti Microsoft
+title: Usare SQL Server (XEvent) di eventi estesi per monitorare Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb67c1eca2b803c01a3716708f73afbb3861476a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4aa591ff08106f7af8946d6725d8894c52149634
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332801"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>Utilizzare eventi estesi di SQL Server (XEvent) per il monitoraggio di Analysis Services
-  Analysis Services fornisce funzionalità di traccia tramite l'utilizzo di [degli eventi estesi](../../relational-databases/extended-events/extended-events.md).  
+  Analysis Services fornisce funzionalità di traccia tramite l'utilizzo delle [eventi estesi](../../relational-databases/extended-events/extended-events.md).  
   
  Eventi estesi è un'infrastruttura evento estremamente scalabile e configurabile per i sistemi server. Si tratta di un sistema di monitoraggio delle prestazioni leggero in cui vengono utilizzate poche risorse per le prestazioni.  
   
- Tutti i servizi di analisi eventi possono essere acquisiti e indirizzare a consumer specifici, come definito in [degli eventi estesi](../../relational-databases/extended-events/extended-events.md), tramite XEvents.  
+ Tutti i servizi di analisi eventi possono essere acquisiti e indirizzare a consumer specifici, come definito in [eventi estesi](../../relational-databases/extended-events/extended-events.md), tramite XEvents.  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>Avvio di eventi estesi in Analysis Services  
  La traccia di eventi estesi viene abilitata utilizzando una specifica XMLA simile per creare un comando script dell'oggetto come illustrato di seguito:  

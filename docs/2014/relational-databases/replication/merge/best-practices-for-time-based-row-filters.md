@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 718615cbe81c5238d6d16cff1806d14a019920e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8dd38a60a64738535d65931d40aac5182e331e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331341"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Procedure consigliate per i filtri di riga basati sul tempo
   Gli utenti delle applicazioni hanno spesso la necessità di recuperare da diverse tabelle determinati subset di dati basati sul tempo. Un venditore potrebbe ad esempio richiedere i dati relativi agli ordini dell'ultima settimana, così come un responsabile della pianificazione di eventi potrebbe aver bisogno di recuperare i dati relativi agli eventi della settimana in arrivo. Per soddisfare queste richieste, le applicazioni utilizzano, in numerosi casi, query contenenti la funzione `GETDATE()`. Si consideri l'istruzione di filtro di riga seguente:  
@@ -30,7 +30,7 @@ ms.locfileid: "36158657"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- Con un filtro di questo tipo, l'esecuzione dell'agente di merge ha in genere due risultati: le righe che soddisfano il filtro vengono replicate nei Sottoscrittori, mentre le righe che non soddisfano più il filtro vengono rimosse dai Sottoscrittori. (Per ulteriori informazioni sui filtri con `HOST_NAME()`, vedere [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).) La replica di tipo merge, tuttavia, consente di replicare e pulire esclusivamente i dati che sono stati modificati dopo l'ultima sincronizzazione, indipendentemente dalla modalità di definizione di un filtro di riga per tali dati.  
+ Con un filtro di questo tipo, l'esecuzione dell'agente di merge ha in genere due risultati: le righe che soddisfano il filtro vengono replicate nei Sottoscrittori, mentre le righe che non soddisfano più il filtro vengono rimosse dai Sottoscrittori. (Per altre informazioni sui filtri con `HOST_NAME()`, vedere [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).) La replica di tipo merge, tuttavia, consente di replicare e pulire esclusivamente i dati che sono stati modificati dopo l'ultima sincronizzazione, indipendentemente dalla modalità di definizione di un filtro di riga per tali dati.  
   
  Affinché la replica di tipo merge elabori una riga, è necessario che i dati contenuti in tale riga soddisfino il filtro di riga e che siano stati modificati dopo l'ultima sincronizzazione. Nel caso della tabella **SalesOrderHeader** , **OrderDate** viene immesso quando si inserisce una riga. Le righe vengono quindi replicate nel Sottoscrittore come previsto poiché l'inserimento rappresenta una modifica ai dati. Se tuttavia nel Sottoscrittore sono presenti righe che non soddisfano più il filtro, ovvero sono relative a ordini immessi da più di sette giorni, queste verranno rimosse dal Sottoscrittore a meno che non siano state aggiornate per altri motivi.  
   

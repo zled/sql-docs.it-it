@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5da4d8cc46e141fb404ee0f63876178f41464b2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 94dd1cc0e96e11eb24e1d7f09665960485f758df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323701"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Utilizzo di report personalizzati con proprietà dei nodi di Esplora oggetti
   I report personalizzati possono essere eseguiti nel contesto di un nodo Esplora oggetti selezionato, a condizione che facciano riferimento ai parametri di report di tale nodo. Un report personalizzato può pertanto utilizzare il contesto corrente, ad esempio il database corrente, oppure un oggetto server o database.  
@@ -1006,7 +1006,7 @@ ms.locfileid: "36166306"
   
 ## <a name="see-also"></a>Vedere anche  
  [Report personalizzati in Management Studio](custom-reports-in-management-studio.md)   
- [Aggiunta di un Report personalizzato a Management Studio](add-a-custom-report-to-management-studio.md)   
+ [Aggiungere un Report personalizzato a Management Studio](add-a-custom-report-to-management-studio.md)   
  [Visualizzare gli avvisi relativi all'esecuzione di report personalizzati](unsuppress-run-custom-report-warnings.md)  
   
   

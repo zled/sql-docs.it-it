@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5dec237a3fadfa3eb4bdac49b5df54428a5ed9fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6e529c7ebba36bc7fb9c482492ba22c05aff4ce5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323651"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Aggiungere o rimuovere un'intestazione o un piè di pagina (Generatore report e SSRS)
   È possibile aggiungere testo statico, immagini, linee, rettangoli e bordi a intestazioni di pagina o piè di pagina. È possibile posizionare espressioni e immagini con associazioni a dati in una casella di testo se si desiderano dati variabili o calcolati in un'intestazione o in un piè di pagina.  
@@ -67,6 +67,6 @@ ms.locfileid: "36158617"
 >  Quando si rimuove un'intestazione o un piè di pagina, l'elemento viene eliminato dal report. Gli elementi aggiunti in precedenza non verranno visualizzati di nuovo se in seguito si decide di reinserire l'intestazione o il piè di pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Intestazioni di pagina e piè di pagina &#40;SSRS e Generatore Report&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Intestazioni di pagina e piè di pagina &#40;Report e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

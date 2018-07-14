@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up filegroups [SQL Server]
 - file backups [SQL Server], how-to topics
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 49e2ba4f8788a60b5d0e00d24539a085c233b446
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f453d2f34713a4a00b1a5d99870f3597ac32262e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332651"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Backup di file e filegroup (SQL Server)
   In questo argomento viene descritto come eseguire il backup di file e filegroup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell. Quando a causa delle dimensioni del database e dei requisiti relativi alle prestazioni non è consigliabile eseguire un backup completo del database, è possibile creare invece un backup del file. Un *backup del file* contiene tutti i dati inclusi in uno o più file o filegroup. Per altre informazioni sul backup dei file, vedere [Backup completi del file &#40;SQL Server&#41;](full-file-backups-sql-server.md) e [Backup differenziali &#40;SQL Server&#41;](differential-backups-sql-server.md).  
@@ -221,9 +220,9 @@ GO
   
 1.  Utilizzare il cmdlet `Backup-SqlDatabase` e specificare `Files` per il valore del parametro `-BackupAction`. Inoltre, specificare uno dei parametri seguenti:  
   
-    -   Per eseguire il backup di un file specifico, specificare il `-DatabaseFile` *stringa* parametro, in cui *stringa* rappresenta uno o più file di database da sottoporre a.  
+    -   Per eseguire il backup di un file specifico, specificare il `-DatabaseFile` *stringa* parametro, in cui *stringa* rappresenta uno o più file di database per eseguire il backup.  
   
-    -   Per eseguire il backup di tutti i file di un determinato filegroup, specificare il `-DatabaseFileGroup` *stringa* parametro, in cui *stringa* rappresenta uno o più filegroup di database da sottoporre a.  
+    -   Per eseguire il backup di tutti i file di un determinato filegroup, specificare il `-DatabaseFileGroup` *stringa* parametro, in cui *stringa* rappresenta uno o più filegroup di database per eseguire il backup.  
   
      Nell'esempio seguente viene creato un backup completo di ogni file presente nei filegroup secondari 'FileGroup1' e 'FileGroup2' nel database `MyDB` . I backup vengono creati nel percorso di backup predefinito dell'istanza del server `Computer\Instance`.  
   

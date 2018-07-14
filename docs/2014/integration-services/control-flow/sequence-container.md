@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sequencecontainer.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d0487ac38c36a8f327df6fbb60a3e084958ec85f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c728fec6573dbcfd36bcc973c1fddbf7ffbe1b45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328181"
 ---
 # <a name="sequence-container"></a>Sequenza - contenitore
   Il contenitore Sequenza definisce un flusso di controllo costituito da un subset del flusso di controllo del pacchetto. I contenitori Sequenza suddividono il pacchetto in più flussi di controllo separati, ognuno dei quali include una o più attività e contenitori che vengono eseguiti nel flusso di controllo globale del pacchetto.  
@@ -60,7 +60,7 @@ ms.locfileid: "36166453"
  Per informazioni su come impostare le proprietà del componente, vedere nel [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vedere [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [Aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Connessione di attività e contenitori tramite un vincolo di precedenza predefinito](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Contenitori in Integration Services](integration-services-containers.md)  
   
