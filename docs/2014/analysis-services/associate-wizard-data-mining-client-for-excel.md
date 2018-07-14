@@ -1,5 +1,5 @@
 ---
-title: Procedura guidata (Client di Data Mining per Excel) associazione | Documenti Microsoft
+title: Associare Wizard (Client di Data Mining per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - nested tables, in association models
 - association [data mining]
 ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fbb7f91279b1f3e6ae642e3acbf2548b7205b563
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed09d260a7db66561af6cf80136c801ea46cc5a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216611"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>Procedura guidata Associazione (client di data mining per Excel)
-  ![Procedura guidata associazione sulla barra multifunzione Data Mining](media/dmc-associate.gif "procedura guidata sulla barra multifunzione Data Mining di associazione")  
+  ![Procedura guidata associazione sulla barra multifunzione Data Mining](media/dmc-associate.gif "procedura guidata nella barra multifunzione Data Mining di associazione")  
   
- La procedura guidata Associazione consente di creare un modello di data mining utilizzando l'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules. Sono particolarmente utili per la creazione di tali modelli di data mining *indicazioni relative al sistema*.  
+ La procedura guidata Associazione consente di creare un modello di data mining utilizzando l'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules. Sono particolarmente utili per la creazione di tali modelli di data mining *i sistemi di raccomandazione*.  
   
  L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules esegue l'analisi di un set di dati costituito da transazioni o eventi e trova le combinazioni che sono di frequente abbinate. Potrebbero esistere molte migliaia di combinazioni, ma l'algoritmo può essere personalizzato per trovarne di più o di meno e conservare solo le combinazioni più probabili.  
   
@@ -41,17 +41,17 @@ ms.locfileid: "36077697"
   
      La cartella di lavoro dei dati di esempio contiene un esempio, nella scheda Associazione, di come i dati delle transazioni vengono in genere disposti se, ad esempio, sono presenti più prodotti in ogni transazione o più record di acquisto per ogni cliente che si desidera analizzare.  
   
-     Se si desidera utilizzare dati esterni per compilare un modello di associazione utilizzando la procedura guidata associazione, è necessario aggiungere i dati in Excel prima di tutto, e *appiattire* i dati. Per ulteriori informazioni sulla preparazione dei dati per la modellazione dell'associazione, vedere [Nested Tables &#40;Analysis Services - Data Mining&#41;](data-mining/nested-tables-analysis-services-data-mining.md), nella documentazione Online di SQL Server.  
+     Se si desidera utilizzare dati esterni per compilare un modello di associazione utilizzando la procedura guidata associazione, è necessario aggiungere prima di tutto i dati di Excel e *appiattire* i dati. Per altre informazioni sulla preparazione dei dati per la modellazione dell'associazione, vedere [tabelle annidate &#40;Analysis Services - Data Mining&#41;](data-mining/nested-tables-analysis-services-data-mining.md), nella documentazione Online di SQL Server.  
   
-3.  Nel **associazione** pagina, scegliere la colonna che identifica la transazione.  
+3.  Nel **Association** pagina, scegliere la colonna che identifica la transazione.  
   
      Per i modelli Market Basket, questo identificatore rappresenta l'unità che si desidera modellare. Si desidera analizzare gli elementi che singoli clienti hanno acquistato nel corso del tempo o si desidera analizzare molte transazioni che interessano più clienti? Nel primo caso, scegliere l'ID cliente; nel secondo caso, scegliere l'ordine di acquisto o un altro ID transazione  
   
-4.  Per **elemento**, selezionare la colonna che contiene gli elementi tra i quali si desidera individuare le associazioni.  
+4.  Per la **elemento**, selezionare la colonna che contiene le operazioni tra i quali è necessario trovare associazioni.  
   
      Ad esempio, in un modello Market Basket, scegliere un campo dei prodotti per analizzare i prodotti acquistati spesso insieme. Se è presente un numero di singoli prodotti troppo elevato per garantire un'efficiente correlazione, è possibile scegliere un campo relativo a una categoria o sottocategoria di prodotto.  
   
-5.  In **soglie**, è possibile impostare i valori che controllano o influiscono sull'output del modello:  
+5.  Nelle **soglie**, è possibile impostare i valori che controllano o influiscono sull'output del modello:  
   
     -   **Supporto minimo.** Specifica il numero di volte che un gruppo di elementi deve essere presente per essere considerato importante. Verranno ignorate dall'algoritmo tutte le eventuali combinazioni di elementi che non soddisfano questo criterio. Ad esempio, potrebbe essere necessario visualizzare solo i set di elementi in cui gli elementi risultavano abbinati almeno 10 volte complessivamente.  
   
@@ -65,19 +65,19 @@ ms.locfileid: "36077697"
   
     -   Diminuendo la probabilità di una regola, si riducono i requisiti che una combinazione deve soddisfare per essere considerata importante nel contesto del set di dati complessivo.  
   
-     **Suggerimento:** è consigliabile creare più modelli di data mining utilizzando combinazioni diverse di supporto e probabilità. Per tenere traccia delle impostazioni utilizzate per ogni modello, è possibile usare il **modello di documento** procedura guidata, disponibile nel Client di Data Mining per Excel e il **Detailed** opzione del report. Per altre informazioni, vedere [la documentazione di modelli di Data Mining &#40;aggiuntivi di Data Mining per Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
+     **Suggerimento:** è una buona idea per creare più modelli di data mining utilizzando combinazioni diverse di supporto e probabilità. Per tenere traccia delle impostazioni utilizzate per ogni modello, è possibile usare la **modello di documento** procedura guidata, disponibile nel Client di Data Mining per Excel e utilizzare il **Detailed** opzione del report. Per altre informazioni, vedere [documentare i modelli di Data Mining &#40;aggiuntivi di Data Mining per Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
   
 6.  Facoltativamente, fare clic su **parametri** per modificare i parametri dell'algoritmo e personalizzare il comportamento del modello di data mining.  
   
-     La finestra di dialogo Parametri algoritmo include tutti i parametri impostati nella procedura guidata, nonché alcuni utilizzati meno di frequente, ad esempio MAXIMUM_SUPPORT. Per informazioni su come usare questi parametri, vedere [riferimento tecnico l'algoritmo Microsoft Association](data-mining/microsoft-association-algorithm-technical-reference.md).  
+     La finestra di dialogo Parametri algoritmo include tutti i parametri impostati nella procedura guidata, nonché alcuni utilizzati meno di frequente, ad esempio MAXIMUM_SUPPORT. Per informazioni su come usare questi parametri, vedere [riferimento tecnico di Microsoft Association Rules algoritmo](data-mining/microsoft-association-algorithm-technical-reference.md).  
   
 7.  Nel **fine** , digitare un nome univoco per il set di dati e il modello.  
   
-8.  In **opzioni**, definire come si desidera utilizzare il modello dopo averlo completato:  
+8.  Nelle **opzioni**, si definisce come si desidera utilizzare il modello dopo il completamento:  
   
     -   **Sfoglia**.  Quando il modello è pronto, tramite la procedura guidata viene aperta una finestra nella quale vengono visualizzati le regole, i set di elementi e un grafico della rete di dipendenze che illustra le associazioni.  
   
-         Per ulteriori informazioni su come interpretare i dati nel visualizzatore modello di associazione, vedere [esplorazione di un modello Association Rules](browsing-an-association-rules-model.md).  
+         Per altre informazioni su come interpretare i dati nel visualizzatore modello di associazione, vedere [esplorazione di un modello Association Rules](browsing-an-association-rules-model.md).  
   
     -   **Consenti drill-through**. Selezionare questa opzione per accedere ai dati sottostanti, tramite il modello.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36077697"
 9. Tramite la procedura guidata vengono analizzate tutte le possibili combinazioni e viene creato un report contenente i set di elementi e le regole.  
   
 ## <a name="more-about-association-models"></a>Ulteriori informazioni sui modelli di associazione  
- L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules esamina il set di dati di training per individuare gli elementi che compaiono insieme in una transazione. Ogni gruppo di elementi costituisce un *set di elementi*. Tramite l'algoritmo viene quindi contato quante volte è presente ogni set di elementi e viene calcolata l'importanza relativa di ogni set di elementi in tutte le transazioni.  
+ L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules esamina il set di dati di training per individuare gli elementi che compaiono insieme in una transazione. Ogni gruppo di elementi costituisce un' *set di elementi*. Tramite l'algoritmo viene quindi contato quante volte è presente ogni set di elementi e viene calcolata l'importanza relativa di ogni set di elementi in tutte le transazioni.  
   
  L'algoritmo utilizza queste informazioni sui set di elementi per generare regole che possono essere utilizzate per stimare associazioni o generare indicazioni. Una regola potrebbe ad esempio indicare che se l'utente ha acquistato un libro di Autore 1 e un libro di Autore 2, è probabile che acquisti anche un libro di Autore 3. A ogni indicazione viene assegnata una probabilità basata sul livello di attendibilità delle associazioni.  
   

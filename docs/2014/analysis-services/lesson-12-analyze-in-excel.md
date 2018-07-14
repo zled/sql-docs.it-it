@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 13: Analizza in Excel | Documenti Microsoft'
+title: 'Lezione 13: Analizza in Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: b1dea62cbd78ca375a52adb7f1e6fd2285ff35e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b9e50bda2a6168d54be78fd178d3d1d9161eff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200361"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>Lezione 13: Analizza in Excel
   In questa lezione verrà utilizzata la funzionalità Analizza in Excel di [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] per aprire Microsoft Excel, creare automaticamente una connessione all'origine dati nell'area di lavoro del modello e aggiungere automaticamente una tabella pivot al foglio di lavoro. La funzionalità Analizza in Excel offre un metodo rapido e semplice per testare l'efficacia della progettazione del modello prima di distribuirlo. Non si eseguirà alcuna analisi dei dati in questa lezione. Lo scopo di questa lezione è acquisire familiarità con gli strumenti che è possibile utilizzare per testare la progettazione del modello. A differenza dell'utilizzo della funzionalità Analizza in Excel, destinata agli autori di modelli, gli utenti finali utilizzeranno applicazioni di creazione report client quali Excel o [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] per connettersi e sfogliare i dati del modello distribuito.  
@@ -42,7 +42,7 @@ ms.locfileid: "36067923"
   
      Verrà aperto Excel con una nuova cartella di lavoro. Viene creata una connessione all'origine dati utilizzando l'account utente corrente e la prospettiva predefinita viene utilizzata per definire campi visualizzabili. Una tabella pivot viene aggiunta automaticamente al foglio di lavoro.  
   
-3.  In Excel, nel **elenco campi tabella pivot**, si noti il **data** e **Internet Sales** le misure vengono visualizzate, nonché il **cliente**,  **Data**, **Geography**, **prodotto**, **Product Category**, **Product Subcategory**e **Vendite Internet** le tabelle con le rispettive colonne vengono visualizzate.  
+3.  In Excel, nelle **elenco campi tabella pivot**, si noti il **data** e **Internet Sales** le misure vengono visualizzate, così come il **cliente**,  **Data**, **geografia**, **prodotto**, **Product Category**, **Product Subcategory**e **Internet Sales** vengono visualizzate le tabelle con tutte le rispettive colonne.  
   
 4.  Chiudere Excel senza salvare la cartella di lavoro.  
   

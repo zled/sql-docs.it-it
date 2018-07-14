@@ -20,13 +20,13 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 62c35066634f291eb8fa3e5bc39425d11afe6a1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba52df081b4f40afc7ad32e80c716d96e7bf0c36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192121"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Uso di file di Excel con l'attività Script
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili la gestione connessione, l'origine e la destinazione Excel per l'utilizzo di dati archiviati in fogli di calcolo nel formato di file di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Per le tecniche descritte in questo argomento si utilizza l'attività Script per ottenere informazioni sui database (file di cartelle di lavoro) e sulle tabelle (fogli di lavoro e intervalli denominati) di Excel disponibili. Questi esempi possono essere facilmente modificati per utilizzare una delle altre origini dati basate su file supportate dal provider OLE DB di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
@@ -92,7 +92,7 @@ ms.locfileid: "36069643"
   
          oppure  
   
-    -   Fare clic sui puntini di sospensione (**...** ) accanto al campo della proprietà, quindi il **Seleziona variabili** della finestra di dialogo selezionare il `ExcelFile` variabile.  
+    -   Fare clic sui puntini di sospensione (**...** ) accanto al campo della proprietà, quindi il **Seleziona variabili** finestra di dialogo, selezionare il `ExcelFile` variabile.  
   
 3.  Fare clic su **ReadWriteVariables** e immettere il valore della proprietà usando uno dei metodi seguenti:  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36069643"
   
          oppure  
   
-    -   Fare clic sui puntini di sospensione (**...** ) accanto al campo della proprietà, quindi il **Seleziona variabili** della finestra di dialogo selezionare il `ExcelFileExists` variabile.  
+    -   Fare clic sui puntini di sospensione (**...** ) accanto al campo della proprietà, quindi il **Seleziona variabili** finestra di dialogo, selezionare il `ExcelFileExists` variabile.  
   
 4.  Fare clic su **Modifica script** per aprire l'editor di script.  
   
@@ -162,7 +162,7 @@ public class ScriptMain
   
          oppure  
   
-    -   Fare clic sui puntini di sospensione (**...** ) accanto al campo della proprietà, quindi il **Seleziona variabili** della finestra di dialogo selezionare il `ExcelTable` e `ExcelFile` variabili.  
+    -   Fare clic sui puntini di sospensione (**...** ) pulsante accanto al campo della proprietà e il **Seleziona variabili** della finestra di dialogo selezionare il `ExcelTable` e `ExcelFile` variabili.  
   
 3.  Fare clic su **ReadWriteVariables** e immettere il valore della proprietà usando uno dei metodi seguenti:  
   
@@ -170,7 +170,7 @@ public class ScriptMain
   
          oppure  
   
-    -   Fare clic sui puntini di sospensione (**...** ) accanto al campo della proprietà, quindi il **Seleziona variabili** della finestra di dialogo selezionare il `ExcelTableExists` variabile.  
+    -   Fare clic sui puntini di sospensione (**...** ) accanto al campo della proprietà, quindi il **Seleziona variabili** finestra di dialogo, selezionare il `ExcelTableExists` variabile.  
   
 4.  Fare clic su **Modifica script** per aprire l'editor di script.  
   
@@ -546,7 +546,7 @@ public class ScriptMain
 }  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione connessione Excel](../connection-manager/excel-connection-manager.md)   

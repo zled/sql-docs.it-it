@@ -1,5 +1,5 @@
 ---
-title: Sul motore di Database di SQL Server | Documenti Microsoft
+title: Sul motore di Database di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], installing
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4316e91e465922ca1f7c428a9f25e781837ec6e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 04a76cd2216b8f19816950c0a86dce9840caca39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184768"
 ---
 # <a name="about-the-sql-server-database-engine"></a>Informazioni sul Motore di database di SQL Server
   Il componente [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rappresenta il servizio principale per l'archiviazione, l'elaborazione e la protezione dei dati. Grazie all'accesso controllato e all'elaborazione rapida delle transazioni, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è in grado di soddisfare i requisiti delle applicazioni che richiedono un maggiore utilizzo di dati nell'organizzazione.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta fino a 50 istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un singolo computer. Per creare una tipica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione, vedere [installare SQL Server 2014 dall'installazione guidata di &#40;programma di installazione&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta fino a 50 istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un singolo computer. Per creare una tipica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione, vedere [installare SQL Server 2014 dall'installazione guidata di &#40;installazione&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
   
  **Importante** Per le installazioni locali, è necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio con autorizzazioni di lettura ed esecuzione relative a tale condivisione.  
   
@@ -67,6 +67,6 @@ ms.locfileid: "36068770"
  [Edizioni e componenti di SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Soluzioni a disponibilità elevata &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [Eseguire l'aggiornamento a SQL Server 2014 tramite l'installazione guidata &#40;programma di installazione&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Eseguire l'aggiornamento a SQL Server 2014 usando l'installazione guidata di &#40;programma di installazione&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

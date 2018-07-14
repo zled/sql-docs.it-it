@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - instances of SQL Server, monitoring performance
 - monitoring server performance [SQL Server]
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - monitoring server performance [SQL Server], about monitoring server performance
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b9865d2c8c4427e72e26212417d1d11f73fc3291
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: cf401890d55cd26240523b141f3ba52272060b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276787"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Monitoraggio e ottimizzazione delle prestazioni
   L'obiettivo del monitoraggio dei database consiste nella valutazione delle prestazioni di un server. Un monitoraggio efficace implica l'esecuzione di snapshot periodici delle prestazioni correnti al fine di isolare i processi che causano problemi, nonché la raccolta continua di dati nel tempo per tenere traccia delle tendenze delle prestazioni.  
@@ -45,7 +45,7 @@ ms.locfileid: "36067581"
  La valutazione continuativa delle prestazioni del database consente di ridurre al minimo i tempi di risposta e di aumentare al massimo la velocità effettiva, ottimizzando pertanto le prestazioni. Traffico di rete, operazioni di I/O su disco e utilizzo della CPU efficienti sono fattori fondamentali per ottenere prestazioni ottimali. È necessario analizzare accuratamente i requisiti delle applicazioni, comprendere la struttura logica e fisica dei dati, valutare l'utilizzo del database e raggiungere compromessi adeguati tra tipi di utilizzo in conflitto, ad esempio elaborazione delle transazioni online (OLTP) e supporto decisionale.  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>Vantaggi del monitoraggio e dell'ottimizzazione del database per le prestazioni  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il sistema operativo Microsoft Windows sono disponibili utilità che consentono di visualizzare la condizione corrente del database e per tenere traccia delle prestazioni quando le condizioni cambiano. Sono disponibili numerosi strumenti e tecniche che possono essere utilizzate per monitorare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di:  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il sistema operativo Microsoft Windows offrono utilità che consentono di visualizzare la condizione corrente del database e per tenere traccia delle prestazioni man mano che cambiano le condizioni. Sono disponibili un'ampia gamma di strumenti e tecniche che possono essere utilizzate per monitorare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di:  
   
 -   Determinare se è possibile migliorare le prestazioni. Il monitoraggio dei tempi di risposta delle query più frequenti consente, ad esempio, di determinare se sono necessarie modifiche alle query o agli indici nelle tabelle.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36067581"
 -   Risolvere eventuali problemi o eseguire il debug dei componenti di applicazione, ad esempio di stored procedure.  
   
 ### <a name="monitoring-in-a-dynamic-environment"></a>Monitoraggio in un ambiente dinamico  
- Il monitoraggio è importante perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un servizio in un ambiente dinamico. I cambiamenti delle condizioni comportano variazioni nelle prestazioni. Nel corso delle valutazioni, è possibile analizzare le variazioni delle prestazioni in relazione ad aumento del numero di utenti, modifica dei metodi di connessione e accesso degli utenti, aumento dei contenuti del database, cambiamento nelle applicazioni client, variazione dei dati nelle applicazioni, aumento della complessità delle query e incremento del traffico di rete. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumenti per monitorare le prestazioni, è possibile associare alcune variazioni nelle prestazioni con cambiamenti nelle condizioni e query complesse. Gli scenari illustrati di seguito offrono alcuni esempi:  
+ Il monitoraggio è importante perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un servizio in un ambiente dinamico. I cambiamenti delle condizioni comportano variazioni nelle prestazioni. Nel corso delle valutazioni, è possibile analizzare le variazioni delle prestazioni in relazione ad aumento del numero di utenti, modifica dei metodi di connessione e accesso degli utenti, aumento dei contenuti del database, cambiamento nelle applicazioni client, variazione dei dati nelle applicazioni, aumento della complessità delle query e incremento del traffico di rete. Usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumenti per monitorare le prestazioni, è possibile associare alcune variazioni nelle prestazioni con cambiamenti nelle condizioni e query complesse. Gli scenari illustrati di seguito offrono alcuni esempi:  
   
 -   Il monitoraggio dei tempi di risposta delle query più frequenti consente di determinare se sono necessarie modifiche alle query o agli indici nelle tabelle in cui le query vengono eseguite.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36067581"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |[Monitorare i componenti di SQL Server](monitor-sql-server-components.md)|Fornisce i passaggi necessari richiesti per esaminare efficacemente qualsiasi componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Strumenti per il monitoraggio e l'ottimizzazione delle prestazioni](performance-monitoring-and-tuning-tools.md)|Elenca il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitoraggio strumenti e l'ottimizzazione.|  
+|[Strumenti per il monitoraggio e l'ottimizzazione delle prestazioni](performance-monitoring-and-tuning-tools.md)|Elenca le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitoraggio e l'ottimizzazione degli strumenti.|  
 |[Definire una base di riferimento delle prestazioni](establish-a-performance-baseline.md)|Fornisce informazioni su come stabilire un riferimento per le prestazioni.|  
 |[Isolare i problemi relativi alle prestazioni](isolate-performance-problems.md)|Viene descritto come isolare problemi di prestazioni del database.|  
 |[Individuare i colli di bottiglia](identify-bottlenecks.md)|Viene descritto come monitorare e tenere traccia delle prestazioni del server per identificare colli di bottiglia.|  

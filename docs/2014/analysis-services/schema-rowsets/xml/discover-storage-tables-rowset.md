@@ -1,5 +1,5 @@
 ---
-title: Set di righe DISCOVER_STORAGE_TABLES | Documenti Microsoft
+title: Set di righe DISCOVER_STORAGE_TABLES | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 13df6f10-8efe-4fe9-83a6-96d108809ed1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae51d176ecef04060c58be629b72fe867cd51960
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f5e645098da53c720d37814b4dc4dbfe6f1c76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169552"
 ---
 # <a name="discoverstoragetables-rowset"></a>Set di righe DISCOVER_STORAGE_TABLES
   Consente al client di determinare le tabelle incluse in un database di Analysis Services in esecuzione in modalità tabulare o SharePoint.  
@@ -30,8 +30,8 @@ ms.locfileid: "36069021"
   
 |**Nome colonna**|**Indicatore del tipo**|**Length**|**Descrizione**|  
 |---------------------|------------------------|----------------|---------------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`||Viene specificato il nome del database contenente le tabelle.<br /><br /> Il `DISCOVER_STORAGE_TABLES` set di righe può essere limitato tramite questa colonna. Se per limitare il set di righe non viene utilizzata questa colonna, viene utilizzato il database corrente.|  
-|`CUBE_NAME`|`DBTYPE_WSTR`||Viene specificato il cubo o il modello contenente le tabelle.<br /><br /> Il `DISCOVER_STORAGE_TABLES` set di righe può essere limitato tramite questa colonna.|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`||Viene specificato il nome del database contenente le tabelle.<br /><br /> Il `DISCOVER_STORAGE_TABLES` righe può essere limitato tramite questa colonna. Se per limitare il set di righe non viene utilizzata questa colonna, viene utilizzato il database corrente.|  
+|`CUBE_NAME`|`DBTYPE_WSTR`||Viene specificato il cubo o il modello contenente le tabelle.<br /><br /> Il `DISCOVER_STORAGE_TABLES` righe può essere limitato tramite questa colonna.|  
 |`MEASURE_GROUP_NAME`|`DBTYPE_WSTR`||Nome del gruppo di misure.|  
 |`PARTITION_NAME`|`DBTYPE_WSTR`||Nome della partizione.|  
 |`DIMENSION_NAME`|`DBTYPE_WSTR`||Nome della dimensione.|  

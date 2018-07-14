@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 caps.latest.revision: 48
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a1c5e302a72e2e810fed16db5b9b3d0fc8527720
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c6a5bbcbc994a3f5cc7e62a3fa80048505f88e26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168254"
 ---
 # <a name="report-server-web-service-methods"></a>Metodi del servizio Web ReportServer
   I servizi Web ReportServer includono diverse categorie di metodi basate sulle caratteristiche dei componenti. Questi metodi vengono forniti tramite diversi endpoint del servizio Web (tre per la gestione e uno per l'esecuzione dei report) esposti come membri delle classi <xref:ReportService2010.ReportingService2010> e <xref:ReportExecution2005.ReportExecutionService>. Queste classi possono essere generate tramite uno strumento della classe proxy, ad esempio wsdl.exe incluso in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK. Per altre informazioni sui servizi Web ReportServer e [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vedere [Compilazione di applicazioni tramite servizio Web e .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "36069333"
 |[Metodi di autorizzazione](authorization-methods.md)|Descrive i metodi che è possibile utilizzare per gestire attività, ruoli e criteri.|  
 |[Origini dati e metodi di connessione](data-sources-and-connection-methods.md)|Descrive i metodi che è possibile utilizzare per impostare e gestire la connessione all'origine dati e le informazioni sulle credenziali per i report.|  
 |[Metodi per i parametri dei report](report-parameters-methods.md)|Descrive i metodi che è possibile utilizzare per impostare e recuperare parametri per i report.|  
-|[Alcuni metodi del modello](../report-server-web-service.md)|Descrive i metodi che è possibile utilizzare per gestire modelli.|  
+|[Metodi per i modelli](../report-server-web-service.md)|Descrive i metodi che è possibile utilizzare per gestire modelli.|  
 |[Metodi di rendering e di esecuzione](rendering-and-execution-methods.md)|Descrive i metodi che è possibile utilizzare per gestire l'esecuzione, il rendering e la memorizzazione nella cache dei report.|  
 |[Metodi relativi alla cronologia dei report](report-history-methods.md)|Descrive i metodi che è possibile utilizzare per creare e gestire gli snapshot della cronologia dei report.|  
 |[Metodi di pianificazione](scheduling-methods.md)|Descrive i metodi che è possibile utilizzare per creare e gestire pianificazioni condivise e piani di aggiornamento della cache utilizzate dal server di report.|  

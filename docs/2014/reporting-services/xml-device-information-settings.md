@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML [Reporting Services], rendering
 - device information settings [Reporting Services], PDF rendering
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 caps.latest.revision: 44
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b60e0abfbd6a0487fbc264a824c80ae8a5db60b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 27fce37572bdfcc8afce8c88c80baa8e8065dc1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268127"
 ---
 # <a name="xml-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo XML
   Nella tabella seguente sono elencate le impostazioni relative alle informazioni sul dispositivo per il rendering nel formato XML.  
@@ -37,11 +37,11 @@ ms.locfileid: "36067120"
 |`OmitSchema`|Indica se omettere la posizione dello schema dai dati XML. Il percorso è l'attributo SchemaLocation. Il valore predefinito di OmitSchema dipende dal valore di OmitNamespace:<br /><br /> Se OmitNamespace = False, OmitSchema = `False` per impostazione predefinita. L'utente può eseguire l'override dell'impostazione predefinita impostando OmitSchema = True.<br /><br /> Se OmitNamespace = True, OmitSchema funzionerà come `True` indipendentemente dal valore configurato in modo esplicito per OmitSchema.|  
 |**Codifica**|Il nome IANA (Internet Assigned Numbers Authority) di una codifica dei caratteri supportata da .NET Framework. Il valore predefinito è `UTF-8`. Esempi di altri valori includono ASCII, UTF-7 e UTF-16.|  
 |**FileExtension**|Estensione di file da utilizzare per il file generato.|  
-|**Schema**|Indica se viene eseguito il rendering di XSD (XML Schema Definition) o dei dati XML effettivi. Il valore `true` indica che viene eseguito il rendering di un elemento XML schema. Il valore predefinito è `false`.|  
+|**Schema**|Indica se viene eseguito il rendering di XSD (XML Schema Definition) o dei dati XML effettivi. Un valore di `true` indica che viene eseguito il rendering di un XML schema. Il valore predefinito è `false`.|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Passaggio Device Information Settings a estensioni per il Rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Il passaggio di impostazioni informazioni dispositivo a estensioni per il Rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizzare i parametri di estensione per il rendering in RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Riferimento tecnico &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   

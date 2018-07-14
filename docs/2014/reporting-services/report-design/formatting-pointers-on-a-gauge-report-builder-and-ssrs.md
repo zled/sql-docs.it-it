@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7aa25d7a3d09fbf3d85b64a43e8caf04759a4336
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: cc0d66393fc649df0720406c40bd07faee93c6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238471"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formattazione degli indicatori di misura su un misuratore (Generatore report e SSRS)
   Un indicatore di misura del misuratore indica il valore corrente del misuratore. Per impostazione predefinita, quando si aggiunge un campo, i valori in esso contenuti vengono aggregati in un unico valore indicato dall'indicatore di misura sul misuratore. È possibile aggiungere più indicatori di misura al misuratore in modo da indicare più valori sulla stessa scala o aggiungere più scale e un indicatore di misura per ogni scala aggiunta. Dopo aver aggiunto un campo a un misuratore, è necessario impostare i valori massimo e minimo sulla scala corrispondente in modo da fornire un contesto per il valore dell'indicatore di misura. È inoltre possibile impostare i valori minimo e massimo su un intervallo per mostrare un'area critica sulla scala.  
@@ -36,7 +36,7 @@ ms.locfileid: "36067541"
 ##  <a name="HowPointer"></a> Connessione dell'indicatore di misura ai dati  
  Per impostazione predefinita, quando si aggiunge un misuratore, in quest'ultimo è contenuto un indicatore di misura senza alcun campo associato, noto anche come indicatore di misura vuoto. Questo consente di visualizzare il valore zero finché non si aggiunge un campo al riquadro dei dati. Quando si esegue questa operazione, l'indicatore di misura viene connesso al campo aggiunto. Se si elimina un campo dal riquadro dei dati, viene eliminato anche l'indicatore di misura a esso associato.  
   
- Dopo aver aggiunto i dati, quando si fa clic con il pulsante destro del mouse sull'indicatore di misura, vengono visualizzate le opzioni **Cancella valore indicatore di misura** ed **Elimina indicatore di misura** . L'opzione **Cancella valore indicatore di misura** consente di rimuovere il campo associato al misuratore lasciando comunque visualizzato l'indicatore di misura. L'opzione **Elimina indicatore di misura** consente di rimuovere il campo dal misuratore eliminando anche l'indicatore di misura. Se si riaggiunge un campo al misuratore, verrà nuovamente visualizzato l'indicatore di misura predefinito. Quando si imposta il puntatore **Hidden** proprietà `True`, il puntatore non viene nascosto nell'area di progettazione, ma è nascosto in fase di esecuzione.  
+ Dopo aver aggiunto i dati, quando si fa clic con il pulsante destro del mouse sull'indicatore di misura, vengono visualizzate le opzioni **Cancella valore indicatore di misura** ed **Elimina indicatore di misura** . L'opzione **Cancella valore indicatore di misura** consente di rimuovere il campo associato al misuratore lasciando comunque visualizzato l'indicatore di misura. L'opzione **Elimina indicatore di misura** consente di rimuovere il campo dal misuratore eliminando anche l'indicatore di misura. Se si riaggiunge un campo al misuratore, verrà nuovamente visualizzato l'indicatore di misura predefinito. Quando si imposta il puntatore **Hidden** proprietà `True`, il puntatore non viene nascosto nell'area di progettazione, ma è nascosta in fase di esecuzione.  
   
   
 ##  <a name="DisplayingMultiple"></a> Visualizzazione di più indicatori di misura sul misuratore  
@@ -46,7 +46,7 @@ ms.locfileid: "36067541"
   
   
 ##  <a name="SettingGradients"></a> Impostazione delle sfumature sull'estremità di una lancetta  
- È possibile specificare un'estremità della lancetta che può essere disegnato al di sopra o al di sotto dell'indicatore di misura solo su un misuratore radiale. Tutti gli stili dell'estremità della lancetta vengono disegnati con sfumature predefinite che non possono essere modificate. L'eccezione è il `RoundedDark` stile, in cui è possibile specificare un colore e uno stile di sfumatura.  
+ È possibile specificare un'estremità della lancetta che può essere disegnato al di sopra o al di sotto dell'indicatore di misura solo su un misuratore radiale. Tutti gli stili dell'estremità della lancetta vengono disegnati con sfumature predefinite che non possono essere modificate. L'eccezione è il `RoundedDark` stile, in cui è possibile specificare un colore e stile della sfumatura.  
   
   
 ##  <a name="SettingSnappingInterval"></a> Impostazione di un intervallo di blocco  
@@ -61,7 +61,7 @@ ms.locfileid: "36067541"
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione di scale su un misuratore &#40;Generatore report e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Formattazione di intervalli su un misuratore &#40;SSRS e Generatore Report&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formattazione di intervalli su un misuratore &#40;Report e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Misuratori &#40;Generatore report e SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

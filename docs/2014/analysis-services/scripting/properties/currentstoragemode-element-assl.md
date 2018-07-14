@@ -1,5 +1,5 @@
 ---
-title: Elemento CurrentStorageMode (ASSL) | Documenti Microsoft
+title: Elemento CurrentStorageMode (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CurrentStorageMode element
 ms.assetid: 050c21e4-368b-4ff0-b0c5-349f93fe9747
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cce7bfd399c0c986a79e919c6227ee604e9ff470
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b26d26138e7752b6b41f147f0cc1fd1051e5afc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233821"
 ---
 # <a name="currentstoragemode-element-assl"></a>Elemento CurrentStorageMode (ASSL)
   Determina la modalità di archiviazione corrente per l'elemento padre.  
@@ -59,7 +59,7 @@ ms.locfileid: "36067473"
 |Elemento padre|[Dimensione](../objects/dimension-element-assl.md), [partizione](../objects/partition-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `CurrentStorageMode` indica la modalità di archiviazione attualmente utilizzata per scopi di memorizzazione nella cache attiva e si applica a tutti gli attributi dell'elemento padre.  
   
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  

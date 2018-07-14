@@ -1,5 +1,5 @@
 ---
-title: Elemento AlgorithmParameter (ASSL) | Documenti Microsoft
+title: Elemento AlgorithmParameter (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AlgorithmParameter element
 ms.assetid: 73211495-065c-43c6-a486-be6044617263
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 70e9e3619eb5f96ff2e64c87855b2bd33063aaf0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd5ee9ceb1c8d2455d7e9c087e12e2f59625b5ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178858"
 ---
 # <a name="algorithmparameter-element-assl"></a>Elemento AlgorithmParameter (ASSL)
   Definisce un parametro per l'algoritmo utilizzato da un [MiningModel](miningmodel-element-assl.md) elemento.  
@@ -62,10 +62,10 @@ ms.locfileid: "36069491"
 |Elementi padre|[AlgorithmParameters](../collections/algorithmparameters-element-assl.md)|  
 |Elementi figlio|[Nome](../properties/name-element-assl.md), [valore](../properties/value-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Un elemento `AlgorithmParameter` è un parametro per un algoritmo del modello di data mining. `AlgorithmParameter` rappresenta il parametro come coppia nome/valore. Il set di parametri applicabili che un elemento `AlgorithmParameter` può rappresentare è dipendente dall'algoritmo. Per ulteriori informazioni sui parametri per un algoritmo specifico, vedere la documentazione appropriata relativa all'algoritmo.  
   
- Parametri dell'algoritmo disponibili, incluse le informazioni di convalida e la visualizzazione, possono essere recuperati dal [DMSCHEMA_MINING_SERVICE_PARAMETERS](../../schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md) set di righe dello schema.  
+ I parametri dell'algoritmo disponibili, incluse le informazioni di convalida e visualizzazione, possono essere recuperati dal [DMSCHEMA_MINING_SERVICE_PARAMETERS](../../schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md) set di righe dello schema.  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.AlgorithmParameter>.  
   

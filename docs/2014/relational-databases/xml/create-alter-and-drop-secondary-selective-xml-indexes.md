@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 805dc8effdbd93ddddb81dde4203fff7e808cd36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a8139c0bbf423354bd89a413b9fe2f4b13486fb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206751"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>Creare, modificare o eliminare indici XML selettivi secondari
   Viene descritto come creare un nuovo indice XML selettivo secondario oppure modificarne o eliminarne uno esistente.  
@@ -28,7 +28,7 @@ ms.locfileid: "36069533"
   
 ### <a name="how-to-create-a-secondary-selective-xml-index"></a>Procedura: Creare un indice XML selettivo secondario  
  **Creare un indice XML selettivo secondario tramite Transact-SQL**  
- Creare un indice XML selettivo secondario chiamando l'istruzione CREATE XML INDEX. Per altre informazioni, vedere [CREATE XML INDEX &#40;gli indici XML selettivi&#41;] (~ / t-sql/statements/create-xml-index-selective-xml-indexes.  
+ Creare un indice XML selettivo secondario chiamando l'istruzione CREATE XML INDEX. Per altre informazioni, vedere [CREATE XML INDEX &#40;indici XML selettivi&#41;] (~ / t-sql/statements/create-xml-index-selective-xml-indexes.  
   
  **Esempio**  
   
@@ -52,7 +52,7 @@ FOR
  **Modificare un indice XML selettivo secondario tramite Transact-SQL**  
  1.  Eliminare l'indice XML selettivo secondario esistente chiamando l'istruzione DROP INDEX. Per altre informazioni, vedere [DROP INDEX &#40;indici XML selettivi&#41;](../indexes/indexes.md).  
   
-2.  Ricreare l'indice con le opzioni desiderate chiamando l'istruzione CREATE XML INDEX. Per altre informazioni, vedere [CREATE XML INDEX &#40;gli indici XML selettivi&#41;] (~ / t-sql/statements/create-xml-index-selective-xml-indexes.  
+2.  Ricreare l'indice con le opzioni desiderate chiamando l'istruzione CREATE XML INDEX. Per altre informazioni, vedere [CREATE XML INDEX &#40;indici XML selettivi&#41;] (~ / t-sql/statements/create-xml-index-selective-xml-indexes.  
   
  **Esempio**  
   

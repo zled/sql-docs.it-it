@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 caps.latest.revision: 16
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 78da740dfbdaa9976b2a518cbb5b12146e1371f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7ba4bd70c21072d77f4972870fbbee7e27b18b18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218931"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Set di dati condivisi e incorporati del report (Generatore report e SSRS)
   Un set di dati consente di specificare i dati che si desidera utilizzare da una connessione dati. È basato su una connessione dati salvata nel report come origine dati incorporata o come riferimento a un'origine dati condivisa su un server di report. Nel set di dati è inclusa una query che specifica un set di campi. Quando si trascinano questi campi nell'area di progettazione, è possibile creare espressioni che restituiscono i dati effettivi quando si esegue il report.  
@@ -60,7 +60,7 @@ ms.locfileid: "36069574"
 ##  <a name="Overview"></a> Informazioni sui set di dati del report e sulle query  
  In un set di dati del report è contenuto un comando di query che viene eseguito sull'origine dati esterna e consente di specificare i dati da recuperare. Per compilare il comando di query, è possibile utilizzare la finestra Progettazione query associata all'estensione per i dati per l'origine dati esterna. In questa finestra è possibile eseguire il comando di query e visualizzare un set di risultati. Il set di risultati è un set di righe rettangolare che dispone di nomi di colonna e di righe con lo stesso numero di valori in ogni riga. I dati gerarchici, noti anche come *gerarchie incomplete*, non sono supportati. I nomi di colonna vengono salvati nella definizione del report come elenco di campi del set di dati.  
   
- Dopo avere aggiunto set di dati al report in uso, i campi dalle raccolte di campi del riquadro dei dati del report vengono trascinati nelle tabelle, nei grafici e in altri elementi del report utilizzati per progettare il layout del report. Per ulteriori informazioni sull'utilizzo dei campi, vedere [raccolta di campi del set di dati &#40;Generatore Report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Dopo avere aggiunto set di dati al report in uso, i campi dalle raccolte di campi del riquadro dei dati del report vengono trascinati nelle tabelle, nei grafici e in altri elementi del report utilizzati per progettare il layout del report. Per altre informazioni sull'utilizzo dei campi, vedere [raccolta di campi del set di dati &#40;Generatore Report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="understanding-data-from-a-report-dataset"></a>Informazioni sui dati da un set di dati del report  
  A seconda dell'estensione per i dati, un set di dati del report può essere costituito dai tipi di dati seguenti:  
@@ -83,7 +83,7 @@ ms.locfileid: "36069574"
   
  Quando il report viene elaborato in fase di esecuzione, il set di risultati effettivi restituito per una query può includere zero o più righe. È anche possibile che le colonne definite nella query non siano presenti nell'origine dati. Vengono eseguito il mapping di valori null dell'origine dati per il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] valore `System.DBNull.Value`.  
   
- Per ulteriori informazioni sui campi di set di dati, vedere [raccolta di campi del set di dati &#40;Generatore Report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Per altre informazioni sui campi del set di dati, vedere [raccolta di campi del set di dati &#40;Generatore Report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="dataset-query"></a>Query del set di dati  
  In fase di progettazione quando si esegue una query del set di dati in Progettazione query, viene visualizzato un set di righe dell'origine dati in cui sono riportati dati di esempio. In fase di esecuzione, quando un utente visualizza il report, la query del set di dati potrebbe produrre valori differenti in quanto i dati dell'origine dati sono stati modificati. Ogni volta che il report viene elaborato, potrebbero essere visualizzati nuovi dati.  
@@ -209,7 +209,7 @@ ms.locfileid: "36069574"
   
 -   Per visualizzare i dati di ogni set di dati è necessario utilizzare un'area dati distinta. Per altre informazioni, vedere [Aree dati e mappe &#40;Generatore report e SSRS&#41;](../report-design/data-regions-and-maps-report-builder-and-ssrs.md).  
   
--   È possibile collegare più aree dati a un set di dati e fornire più viste degli stessi dati. Per altre informazioni, vedere [collegare più aree dati allo stesso set di dati &#40;Generatore Report e SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+-   È possibile collegare più aree dati a un set di dati e fornire più viste degli stessi dati. Per altre informazioni, vedere [collegamento di più aree dati allo stesso set di dati &#40;Generatore Report e SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
 -   È possibile utilizzare i set di dati per fornire un elenco a discesa di valori o di valori predefiniti disponibili per un parametro del report. Per altre informazioni, vedere [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
@@ -226,6 +226,6 @@ ms.locfileid: "36069574"
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Generatore Report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-datasets-ssrs.md)  
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)  
   
   

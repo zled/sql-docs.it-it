@@ -1,5 +1,5 @@
 ---
-title: Metodo SetDisable (classe ServerNetworkProtocolIPAddress) | Documenti Microsoft
+title: Metodo SetDisable (classe ServerNetworkProtocolIPAddress) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetDisable method
 ms.assetid: 7a7cc8cc-9fb8-4bf5-b483-2150d633ee10
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 310660fed0cf74f7fef6367bfee4484a76446d72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 1ee702aad8ef492cb4484590724b04b8d818f4d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246299"
 ---
 # <a name="setdisable-method-servernetworkprotocolipaddress-class"></a>Metodo SetDisable (classe ServerNetworkProtocolIPAddress)
   Disabilita l'indirizzo IP.  
@@ -49,9 +49,9 @@ object
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore uint32 che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete Server e le librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento Error (XMLA) | Documenti Microsoft
+title: Elemento Error (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Error element
 ms.assetid: add670cb-cab2-42be-91a3-d0c385f29d16
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 35c3b1ea4ee852365933d5a95d1f7ca822eff0fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 55b63c016f9f2c61cc83563e697a49a0c4970cae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273737"
 ---
 # <a name="error-element-xmla"></a>Elemento Error (XMLA)
   Contiene informazioni sull'errore restituita da un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -88,13 +88,13 @@ ms.locfileid: "36068117"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|ErrorCode|Richiesto `UnsignedInt` attributo (solo quando `Message` è l'elemento padre.) Contiene il codice restituito numerico dell'errore.|  
-|Severity|Parametro facoltativo `String` attributo (solo quando `Message` è l'elemento padre.) Contiene la gravità dell’errore.|  
-|Description|Parametro facoltativo `String` attributo (solo quando `Message` è l'elemento padre.) Contiene il testo descrittivo dell'errore.|  
-|Origine|Parametro facoltativo `String` attributo (solo quando `Message` è l'elemento padre.) Contiene il nome del componente che ha generato l’errore.|  
-|FileGuida|Parametro facoltativo `String` attributo (solo quando `Message` è l'elemento padre.) Contiene il percorso o URL al file Guida o all’argomento che descrive l'errore.|  
+|ErrorCode|Obbligatorio `UnsignedInt` attributo (solo quando `Message` corrisponde all'elemento padre.) Contiene il codice restituito numerico dell'errore.|  
+|Severity|Facoltativo `String` attributo (solo quando `Message` corrisponde all'elemento padre.) Contiene la gravità dell’errore.|  
+|Description|Facoltativo `String` attributo (solo quando `Message` corrisponde all'elemento padre.) Contiene il testo descrittivo dell'errore.|  
+|Origine|Facoltativo `String` attributo (solo quando `Message` corrisponde all'elemento padre.) Contiene il nome del componente che ha generato l’errore.|  
+|FileGuida|Facoltativo `String` attributo (solo quando `Message` corrisponde all'elemento padre.) Contiene il percorso o URL al file Guida o all’argomento che descrive l'errore.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento warning &#40;XMLA&#41;](warning-element-xmla.md)   

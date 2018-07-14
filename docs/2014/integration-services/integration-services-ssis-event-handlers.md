@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
 - run-time [Integration Services]
@@ -24,13 +24,13 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23a2004083f5d5c5ce2262e5ca1c1286c9cfb2cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0df91ac6e5742a5326b98238ec81b31fddc62854
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227801"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Gestori eventi di Integration Services (SSIS)
   Durante la fase di esecuzione gli eseguibili, costituiti da pacchetti e contenitori Ciclo Foreach, Ciclo For, Sequenza e Host attività, generano eventi. Quando si verifica un errore, ad esempio, viene generato l'evento OnError. È possibile creare gestori di eventi personalizzati per tali eventi, per estendere le funzionalità dei pacchetti e semplificarne la gestione in fase di esecuzione. I gestori di eventi possono eseguire varie attività, ad esempio:  
@@ -49,7 +49,7 @@ ms.locfileid: "36070096"
   
  ![Pacchetto, Ciclo For, host di attività e attività Esegui SQL](media/mw-dts-eventhandlerpkg.gif "Pacchetto, Ciclo For, host di attività e attività Esegui SQL")  
   
- Solo il pacchetto dispone di un gestore di evento per il proprio evento `OnError`. Se si verifica un errore quando viene eseguita l'attività Esegui SQL, il `OnError` gestore eventi per il pacchetto viene eseguito. Il diagramma seguente mostra la sequenza di chiamate che provoca il `OnError` gestore eventi per l'esecuzione del pacchetto.  
+ Solo il pacchetto dispone di un gestore di evento per il proprio evento `OnError`. Se si verifica un errore quando viene eseguita l'attività Esegui SQL, il `OnError` gestore dell'evento per il pacchetto. Il diagramma seguente mostra la sequenza di chiamate che provoca il `OnError` gestore eventi per l'esecuzione del pacchetto.  
   
  ![Flusso del gestore dell'evento](media/mw-dts-eventhandlers.gif "Flusso del gestore dell'evento")  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36070096"
   
 |Gestore di evento|Evento|  
 |-------------------|-----------|  
-|`OnError`|Il gestore dell'evento per il `OnError` evento. Questo evento viene generato da un eseguibile quando si verifica un errore.|  
+|`OnError`|Il gestore eventi per il `OnError` evento. Questo evento viene generato da un eseguibile quando si verifica un errore.|  
 |**OnExecStatusChanged**|Gestore di evento per l'evento **OnExecStatusChanged** . Questo evento viene generato da un eseguibile quando cambia il suo stato di esecuzione.|  
 |**OnInformation**|Gestore di evento per l'evento **OnInformation** . Questo evento viene generato durante la convalida e l'esecuzione di un eseguibile, allo scopo di fornire informazioni. Questo evento fornisce solo informazioni, non errori o avvisi.|  
 |**OnPostExecute**|Gestore di evento per l'evento **OnPostExecute** . Questo evento viene generato da un eseguibile immediatamente dopo la fine dell'esecuzione.|  
@@ -87,7 +87,7 @@ ms.locfileid: "36070096"
 |**OnProgress**|Gestore di evento per l'evento **OnProgress** . Questo evento viene generato da un eseguibile quando compie un avanzamento misurabile.|  
 |**OnQueryCancel**|Gestore di evento per l'evento **OnQueryCancel** . Questo evento viene generato da un eseguibile per determinare se l'esecuzione deve essere arrestata.|  
 |**OnTaskFailed**|Gestore di evento per l'evento **OnTaskFailed** . Questo evento viene generato da un'attività quando non riesce.|  
-|**OnVariableValueChanged**|Gestore di evento per l'evento **OnVariableValueChanged** . Questo evento viene generato da un eseguibile quando il valore di una variabile viene modificato. L'evento viene generato dall'eseguibile in cui è definita la variabile. Questo evento non viene generato se si imposta la **RaiseChangeEvent** proprietà per la variabile su `False`. Per altre informazioni, vedere [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).|  
+|**OnVariableValueChanged**|Gestore di evento per l'evento **OnVariableValueChanged** . Questo evento viene generato da un eseguibile quando il valore di una variabile viene modificato. L'evento viene generato dall'eseguibile in cui è definita la variabile. Questo evento non viene generato se si impostano i **RaiseChangeEvent** proprietà per la variabile a `False`. Per altre informazioni, vedere [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).|  
 |**OnWarning**|Gestore di evento per l'evento **OnWarning** . Questo evento viene generato da un eseguibile quando viene generato un avviso.|  
   
 ## <a name="configuration-of-an-event-handler"></a>Configurazione di un gestore dell'evento  

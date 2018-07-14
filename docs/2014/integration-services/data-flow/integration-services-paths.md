@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], about paths
 - data flow [Integration Services], paths
@@ -19,13 +19,13 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 33ce96096c0675b16d58532a351c20d897afb46a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2775a35efd26f8132ef2b103ad546a92872d915a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248591"
 ---
 # <a name="integration-services-paths"></a>Percorsi in Integration Services
   Un percorso collega due componenti in un flusso di dati connettendo l'output di un componente all'input dell'altro. Un percorso ha un'origine e una destinazione. Se un percorso connette, ad esempio, un'origine OLE DB e una trasformazione Ordinamento, l'origine OLE DB costituirà l'origine del percorso e la trasformazione Ordinamento ne costituirà la destinazione. L'origine è il componente da cui inizia il percorso, mentre la destinazione è il componente in cui termina.  
@@ -47,7 +47,7 @@ ms.locfileid: "36067230"
   
 -   [Editor percorso flusso di dati &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor percorso flusso di dati &#40;pagina metadati&#41;](../data-flow-path-editor-metadata-page.md)  
+-   [Editor percorso flusso di dati &#40;pagina dei metadati&#41;](../data-flow-path-editor-metadata-page.md)  
   
 -   [Editor percorso flusso di dati &#40;pagina visualizzatori dati&#41;](../data-flow-path-editor-data-viewers-page.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36067230"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Visualizzare i metadati di percorso nell'Editor percorso flusso di dati](../view-path-metadata-in-the-data-flow-path-editor.md)  
+-   [Visualizzazione dei metadati dei percorsi nell'Editor percorso flusso di dati](../view-path-metadata-in-the-data-flow-path-editor.md)  
   
 -   [Connettere componenti in un flusso di dati](connect-components-in-a-data-flow.md)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 caps.latest.revision: 24
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 86aeaad34575eec0a411cb84c17950b479a3169b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a076691f045a5e9270a51b3500ea84f6b8756836
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177828"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
   Con OLTP in memoria sono state introdotte le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In questo articolo viene fornita una panoramica sull'elaborazione delle query per le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo.  
@@ -83,7 +83,7 @@ Piano di query per il join di tabelle basate su disco.
   
 -   I dati della tabella Order vengono recuperati utilizzando l'indice non cluster della colonna CustomerID. L'indice contiene sia la colonna CustomerID, utilizzata per il join, sia la colonna chiave primaria OrderID, che viene restituita all'utente. La restituzione di colonne aggiuntive dalla tabella Order richiederebbe ricerche nell'indice cluster della tabella stessa.  
   
--   L'operatore logico `Inner Join` viene implementato dall'operatore fisico `Merge Join`. Gli altri tipi di join fisico sono `Nested Loops` e `Hash Join`. Il `Merge Join` operatore consente di sfruttare il fatto che entrambi gli indici vengono ordinati in base alla colonna di join CustomerID.  
+-   L'operatore logico `Inner Join` viene implementato dall'operatore fisico `Merge Join`. Gli altri tipi di join fisico sono `Nested Loops` e `Hash Join`. Il `Merge Join` operatore consente di sfruttare il fatto che entrambi gli indici sono ordinati in base alla colonna di join CustomerID.  
   
  Si consideri una leggera variazione in questa query, con la restituzione di tutte le righe della tabella Order e non solo di OrderID, come illustrato di seguito:  
   
@@ -96,7 +96,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![Piano di query per il join di tabelle basate su disco.](../../database-engine/media/hekaton-query-plan-2.gif "Piano di query per il join di tabelle basate su disco.")  
 Piano di query per un hash join di tabelle basate su disco.  
   
- In questa query le righe della tabella Order vengono recuperate utilizzando l'indice cluster. Il `Hash Match` operatore fisico viene ora usato per il `Inner Join`. L'indice cluster di Order non è ordinato in CustomerID e pertanto un `Merge Join` richiederebbe un operatore di ordinamento, che influirebbe sulle prestazioni. Si noti il costo relativo dell'operatore `Hash Match` (75%) rispetto al costo dell'operatore `Merge Join` nell'esempio precedente (46%). Query optimizer sarebbe stato preso in considerazione la `Hash Match` operatore anche nell'esempio precedente, ma la conclusione, che il `Merge Join` operatore offerto prestazioni migliori.  
+ In questa query le righe della tabella Order vengono recuperate utilizzando l'indice cluster. Il `Hash Match` operatore fisico viene ora usato per il `Inner Join`. L'indice cluster di Order non è ordinato su CustomerID e pertanto un `Merge Join` richiederebbe un operatore di ordinamento, che influirebbe sulle prestazioni. Si noti il costo relativo dell'operatore `Hash Match` (75%) rispetto al costo dell'operatore `Merge Join` nell'esempio precedente (46%). Query optimizer verrebbe hanno preso in considerazione la `Hash Match` operatore anche nell'esempio precedente, ma concluso che il `Merge Join` operatore offerto prestazioni migliori.  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Elaborazione delle query per tabelle basate su disco  
  Nel diagramma seguente viene illustrato il flusso di elaborazione delle query ad hoc in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -209,7 +209,7 @@ Compilazione nativa delle stored procedure.
   
  Il processo è il seguente:  
   
-1.  L'utente esegue un `CREATE PROCEDURE` istruzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  L'utente esegue un' `CREATE PROCEDURE` dell'istruzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 2.  Il parser e il normalizzatore creano il flusso di elaborazione per la stored procedure, oltre ad alberi per le query [!INCLUDE[tsql](../../../includes/tsql-md.md)] nella stored procedure.  
   
@@ -230,7 +230,7 @@ Esecuzione di stored procedure compilate in modo nativo.
   
 2.  Il parser estrae il nome e i parametri della stored procedure.  
   
-     Se l'istruzione è stata preparata, ad esempio usando `sp_prep_exec`, il parser non è necessario estrarre il nome della stored procedure e parametri in fase di esecuzione.  
+     Se l'istruzione è stata preparata, ad esempio usando `sp_prep_exec`, il parser non è necessario estrarre il nome della routine e i parametri in fase di esecuzione.  
   
 3.  Il runtime di OLTP in memoria individua il punto di ingresso della DLL per la stored procedure.  
   
@@ -240,7 +240,7 @@ Esecuzione di stored procedure compilate in modo nativo.
   
  Le stored procedure [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretate vengono compilate alla prima esecuzione, contrariamente alle stored procedure compilate in modo nativo che vengono compilate al momento della creazione. Quando le stored procedure interpretate vengono compilate al momento della chiamata, i valori dei parametri forniti per la chiamata vengono utilizzati da Query Optimizer durante la generazione del piano di esecuzione. Questo utilizzo dei parametri durante la compilazione viene chiamato sniffing dei parametri.  
   
- Lo sniffing dei parametri non viene utilizzato per la compilazione delle stored procedure compilate in modo nativo. Tutti i parametri della stored procedure vengono considerati con valore UNKNOWN. Analogamente alle stored procedure interpretate, alle stored procedure compilate anche il supporto di `OPTIMIZE FOR` hint. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
+ Lo sniffing dei parametri non viene utilizzato per la compilazione delle stored procedure compilate in modo nativo. Tutti i parametri della stored procedure vengono considerati con valore UNKNOWN. Analogamente alle stored procedure interpretate, in modo nativo stored procedure compilate anche il supporto di `OPTIMIZE FOR` hint. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Recupero di un piano di esecuzione di query per le stored procedure compilate in modo nativo  
  Il piano di esecuzione di query per una stored procedure compilata in modo nativo può essere recuperato usando **Piano di esecuzione stimato** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o tramite l'opzione SHOWPLAN_XML in [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Esempio:  
@@ -304,7 +304,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   L'analisi completa dell'indice su IX_CustomerID è stata sostituita con una ricerca nell'indice. In questo modo sono state analizzate 5 righe, anziché le 830 righe richieste per l'analisi completa dell'indice.  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>Statistiche e cardinalità per le tabelle con ottimizzazione per la memoria  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono mantenute statistiche a livello di colonna per le tabelle con ottimizzazione per la memoria. Inoltre, viene mantenuto il conteggio effettivo delle righe della tabella. Tuttavia, diversamente dalle tabelle basate su disco, le statistiche per le tabelle ottimizzate per la memoria non vengono aggiornate automaticamente. Pertanto, le statistiche devono essere aggiornate manualmente dopo aver effettuato modifiche significative nelle tabelle. Per altre informazioni, vedere [Statistiche per tabelle con ottimizzazione per la memoria](memory-optimized-tables.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantiene statistiche a livello di colonna per le tabelle ottimizzate per la memoria. Inoltre, viene mantenuto il conteggio effettivo delle righe della tabella. Tuttavia, diversamente dalle tabelle basate su disco, le statistiche per le tabelle ottimizzate per la memoria non vengono aggiornate automaticamente. Pertanto, le statistiche devono essere aggiornate manualmente dopo aver effettuato modifiche significative nelle tabelle. Per altre informazioni, vedere [Statistiche per tabelle con ottimizzazione per la memoria](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], creating
 - SQL Server Agent jobs, creating
 ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb9d6f15c9819a9c5653130664b340931a9a5d93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d161129b14da33645c1a9238307c0eefe9539097
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181538"
 ---
 # <a name="create-a-job"></a>Creazione di un processo
   In questo argomento viene descritto come creare un processo di SQL Server Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o SQL Server Management Objects (SMO).  
@@ -75,17 +75,17 @@ ms.locfileid: "36069754"
   
 3.  Fare clic con il pulsante destro del mouse sulla cartella **Processi** , quindi scegliere **Nuovo processo**.  
   
-4.  Nella pagina **Generale** della finestra di dialogo **Nuove processo** modificare le proprietà generali del processo. Per ulteriori informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo e nuovo processo di &#40;pagina Generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+4.  Nella pagina **Generale** della finestra di dialogo **Nuove processo** modificare le proprietà generali del processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo e nuovo processo di &#40;pagina Generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-5.  Nella pagina **Passaggi** , organizzare i passaggi del processo. Per ulteriori informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;pagina passaggi&#41;](job-properties-new-job-steps-page.md)  
+5.  Nella pagina **Passaggi** , organizzare i passaggi del processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;pagina passaggi&#41;](job-properties-new-job-steps-page.md)  
   
-6.  Nella pagina **Pianificazioni** , organizzare le pianificazioni per il processo. Per ulteriori informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;pagina pianificazioni&#41;](job-properties-new-job-schedules-page.md)  
+6.  Nella pagina **Pianificazioni** , organizzare le pianificazioni per il processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;pagina pianificazioni&#41;](job-properties-new-job-schedules-page.md)  
   
-7.  Nella pagina **Avvisi** , organizzare gli avvisi per il processo. Per ulteriori informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;pagina avvisi&#41;](job-properties-new-job-alerts-page.md)  
+7.  Nella pagina **Avvisi** , organizzare gli avvisi per il processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;pagina degli avvisi&#41;](job-properties-new-job-alerts-page.md)  
   
-8.  Nella pagina **Notifiche** impostare le azioni che [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve eseguire al completamento del processo. Per ulteriori informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;notifiche&#41;](job-properties-new-job-notifications-page.md).  
+8.  Nella pagina **Notifiche** impostare le azioni che [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve eseguire al completamento del processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;notifiche&#41;](job-properties-new-job-notifications-page.md).  
   
-9. Nella pagina **Destinazioni** , gestire i server di destinazione per il processo. Per ulteriori informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;pagina server di destinazione&#41;](job-properties-new-job-targets-page.md).  
+9. Nella pagina **Destinazioni** , gestire i server di destinazione per il processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;pagina server di destinazione&#41;](job-properties-new-job-targets-page.md).  
   
 10. Al termine, fare clic su **OK**.  
   

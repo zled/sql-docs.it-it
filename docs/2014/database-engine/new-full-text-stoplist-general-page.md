@@ -1,32 +1,31 @@
 ---
-title: Nuovo oggetto Stoplist Full-Text (pagina generale) | Documenti Microsoft
+title: Nuovo oggetto Stoplist Full-Text (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplist.general.f1
 ms.assetid: 97f8e82d-82ab-4525-91c9-1ee3ae217309
 caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5217bd995855ff33e6b21b883c854cb3db474e03
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2304b2b9a8711210117ffbb2a84abbf167694e71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221971"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>Nuovo elenco di parole non significative full-text (pagina Generale)
   Utilizzare questa finestra di dialogo per creare un elenco di parole non significative full-text. Un *elenco di parole non significative* è un set di parole di uso comune, denominate *parole non significative*, omesse dall'indicizzazione full-text per tabelle che utilizzano l'elenco di parole non significative. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../relational-databases/search/full-text-search.md).  
   
- **Utilizzare SQL Server Management Studio per creare un elenco di parole non significative**  
+ **Usare SQL Server Management Studio per creare un elenco di parole non significative**  
   
 -   [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../relational-databases/search/full-text-search.md)  
   

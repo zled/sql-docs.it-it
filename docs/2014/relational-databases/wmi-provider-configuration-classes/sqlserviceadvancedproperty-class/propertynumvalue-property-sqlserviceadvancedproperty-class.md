@@ -1,5 +1,5 @@
 ---
-title: Proprietà PropertyNumValue (classe SqlServiceAdvancedProperty) | Documenti Microsoft
+title: Proprietà PropertyNumValue (classe SqlServiceAdvancedProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyNumValue property
 ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0056cbedb728bad589ebc348425aef3777865d8b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 172b9b232fad044f96fe244f83bdc9bc7fa23663
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266273"
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>Proprietà PropertyNumValue (classe SqlServiceAdvancedProperty)
   Ottiene il valore numerico della proprietà avanzata.  
@@ -44,7 +44,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore uint32 che specifica il valore numerico della proprietà avanzata.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvio e arresto di servizi](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

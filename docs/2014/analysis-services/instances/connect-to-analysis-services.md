@@ -1,5 +1,5 @@
 ---
-title: Connettersi ad Analysis Services | Documenti Microsoft
+title: Connettersi ad Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - instances of Analysis Services, connections
 ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 564ca915bf24dbdb04829eb6815dbd7fc23135be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5daf8d36d648298343d8989db01aa5fabcf3168d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255733"
 ---
 # <a name="connect-to-analysis-services"></a>Connetti ad Analysis Services
   In questa sezione sono contenute le informazioni sulle proprietà della stringa di connessione, sulle librerie client usate per le connessioni, quali metodi di autenticazione sono supportati da Analysis Services e come impostare o cancellare le connessioni prima di disconnettere un server.  
@@ -42,11 +42,11 @@ ms.locfileid: "36068818"
 |[Registrazione del nome SPN per un'istanza di Analysis Services](spn-registration-for-an-analysis-services-instance.md)|L'autenticazione Kerberos richiede un nome SPN valido per i servizi che rappresentano o delegano le identità utente in soluzioni multiserver. Utilizzare le informazioni contenute in questo argomento per apprendere la costruzione e i passaggi per la registrazione del nome SPN per Analysis Services.|  
 |[Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)|L'autenticazione di base e i limiti tra domini rappresentano due motivi importanti per configurare Analysis Services per l'accesso HTTP.|  
 |[Provider di dati utilizzati per le connessioni di Analysis Services](data-providers-used-for-analysis-services-connections.md)|Analysis Services offre tre librerie client per accedere alle operazioni server o ai dati di Analysis Services. Questo argomento offre una sintetica introduzione ad ADOMD.NET, agli oggetti di gestione di Analysis Services (AMO) e al provider OLE DB di Analysis Services (MSOLAP).|  
-|[Disconnettere utenti e sessioni sul Server Analysis Services](disconnect-users-and-sessions-on-analysis-services-server.md)|Cancellare le connessioni e le sessioni esistenti prima di portare un server offline o eseguire test delle prestazioni di base.|  
+|[Disconnettere utenti e sessioni nel Server Analysis Services](disconnect-users-and-sessions-on-analysis-services-server.md)|Cancellare le connessioni e le sessioni esistenti prima di portare un server offline o eseguire test delle prestazioni di base.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione successiva all'installazione &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)   
  [Configurare le proprietà del Server in Analysis Services](../server-properties/server-properties-in-analysis-services.md)   
- [Script di attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Lo script attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

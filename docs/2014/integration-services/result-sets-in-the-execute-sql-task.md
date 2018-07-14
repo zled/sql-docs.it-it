@@ -1,5 +1,5 @@
 ---
-title: Set di risultati nell'attività Esegui SQL | Documenti Microsoft
+title: Set di risultati nell'attività Esegui SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0be727ad9370a56de710c0528949398c12050299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1ff4dd56ea104d32a2821bc826ad8919712aea1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217561"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Set di risultati nell’attività Esegui SQL
   La restituzione di un set di risultati all'attività Esegui SQL in un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dipende dal tipo di comando SQL utilizzato dall'attività. Se si utilizzano ad esempio le istruzioni SELECT, viene in genere restituito un set di risultati, mentre questo non avviene per le istruzioni INSERT.  
@@ -37,7 +37,7 @@ ms.locfileid: "36070090"
   
 -   [Configurazione dei risultati dei set nell'Editor attività Esegui SQL](#Configure_result_sets)  
   
-##  <a name="Result_set_type"></a> Specifica un risultato di Set di tipo  
+##  <a name="Result_set_type"></a> Specifica un risultato di tipo Set  
  L'attività Esegui SQL supporta i tipi di set di risultati seguenti:  
   
 -   Se la query non restituisce risultati, sarà usato il set di risultati **Nessuno** . Questo set di risultati può essere usato ad esempio per le query che aggiungono, modificano ed eliminano record in una tabella.  
@@ -59,18 +59,18 @@ ms.locfileid: "36070090"
   
  Se il set di risultati è di tipo **Set dei risultati completo** o **XML**, sarà necessario usare 0 come nome del set di risultati.  
   
- Quando si esegue il mapping di una variabile a un set di risultati con il tipo di set di risultati **Riga singola** , la variabile deve avere un tipo di dati compatibile con quello della colonna contenuta nel set di risultati. Non è possibile, ad esempio, eseguire il mapping di un set di risultati che contiene una colonna con un tipo di dati `String` a una variabile con un tipo di dati numerico. Quando si imposta la **TypeConversionMode** proprietà `Allowed`, l'attività Esegui SQL tenterà di convertire il parametro di output e i risultati ai dati di tipo della variabile i risultati della query sono assegnati.  
+ Quando si esegue il mapping di una variabile a un set di risultati con il tipo di set di risultati **Riga singola** , la variabile deve avere un tipo di dati compatibile con quello della colonna contenuta nel set di risultati. Non è possibile, ad esempio, eseguire il mapping di un set di risultati che contiene una colonna con un tipo di dati `String` a una variabile con un tipo di dati numerico. Quando si impostano i **TypeConversionMode** proprietà `Allowed`, l'attività Esegui SQL tenterà di convertire il parametro di output e risultati per i dati di tipo della variabile i risultati della query sono assegnati.  
   
- È possibile eseguire il mapping di un set di risultati XML solo a una variabile con il tipo di dati `String` o `Object`. Se la variabile ha il `String` del tipo di dati, l'attività Esegui SQL restituisce una stringa e l'origine XML può utilizzare i dati XML. Se la variabile ha il `Object` tipo di dati, l'attività Esegui SQL restituisce un oggetto modello DOM (Document Object).  
+ È possibile eseguire il mapping di un set di risultati XML solo a una variabile con il tipo di dati `String` o `Object`. Se la variabile ha il `String` tipo di dati, l'attività Esegui SQL restituisce una stringa e l'origine XML può utilizzare i dati XML. Se la variabile ha il `Object` tipo di dati, l'attività Esegui SQL restituisce un oggetto Strumentazione gestione Windows (DOM, Document Object Model).  
   
- Un **set dei risultati completo** necessario eseguire il mapping a una variabile del `Object` tipo di dati. Il risultato restituito è un oggetto set di righe. È possibile usare un contenitore Ciclo ForEach per estrarre i valori di riga della tabella archiviati nella variabile Object nelle variabili del pacchetto e quindi usare un'attività Script per scrivere in un file i dati archiviati nelle variabili del pacchetto. Per una dimostrazione dell'esecuzione di questa operazione tramite un contenitore Ciclo ForEach e un'attività Script, vedere l'esempio CodePlex, relativo all' [esecuzione di parametri SQL e set di risultati](http://go.microsoft.com/fwlink/?LinkId=157863)sul sito Web msftisprodsamples.codeplex.com.  
+ Oggetto **set dei risultati completo** deve eseguire il mapping a una variabile del `Object` tipo di dati. Il risultato restituito è un oggetto set di righe. È possibile usare un contenitore Ciclo ForEach per estrarre i valori di riga della tabella archiviati nella variabile Object nelle variabili del pacchetto e quindi usare un'attività Script per scrivere in un file i dati archiviati nelle variabili del pacchetto. Per una dimostrazione dell'esecuzione di questa operazione tramite un contenitore Ciclo ForEach e un'attività Script, vedere l'esempio CodePlex, relativo all' [esecuzione di parametri SQL e set di risultati](http://go.microsoft.com/fwlink/?LinkId=157863)sul sito Web msftisprodsamples.codeplex.com.  
   
  Nella tabella seguente è disponibile un riepilogo dei tipi di dati delle variabili di cui è possibile eseguire il mapping a set di risultati.  
   
 |Tipo di set di risultati|Tipo di dati della variabile|Tipo di oggetto|  
 |---------------------|---------------------------|--------------------|  
 |Riga singola|Qualunque tipo compatibile con la colonna del tipo nel set di risultati.|Non applicabile|  
-|Set dei risultati predefinito|`Object`|Se l'attività utilizza una gestione connessione nativa, incluse le gestioni connessioni ADO, OLE DB, Excel e ODBC, l'oggetto restituito è un oggetto ADO `Recordset`.<br /><br /> Se l'attività utilizza una gestione connessione gestita, ad esempio il [!INCLUDE[vstecado](../includes/vstecado-md.md)] gestione connessione, l'oggetto restituito è un `System.Data.DataSet`.<br /><br /> È possibile utilizzare un'attività Script per accedere il `System.Data.DataSet` dell'oggetto, come illustrato nell'esempio seguente.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
+|Set dei risultati predefinito|`Object`|Se l'attività utilizza una gestione connessione nativa, incluse le gestioni connessioni ADO, OLE DB, Excel e ODBC, l'oggetto restituito è un oggetto ADO `Recordset`.<br /><br /> Se l'attività utilizza una gestione connessione gestita, ad esempio la [!INCLUDE[vstecado](../includes/vstecado-md.md)] gestione connessione, l'oggetto restituito è un `System.Data.DataSet`.<br /><br /> È possibile usare un'attività Script per accedere la `System.Data.DataSet` dell'oggetto, come illustrato nell'esempio seguente.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
 |XML|`Object`|Se l'attività utilizza una gestione connessione nativa, incluse le gestioni connessioni ADO, OLE DB, Excel e ODBC, l'oggetto restituito è un `MSXML6.IXMLDOMDocument`.<br /><br /> Se l'attività usa una gestione connessione gestita, ad esempio la gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)], l'oggetto restituito è un oggetto `System.Xml.XmlDocument`.|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36070090"
   
  Per informazioni sul caricamento di un set di risultati in una variabile, vedere [Mapping di set di risultati a variabili in un'attività Esegui SQL](control-flow/execute-sql-task.md).  
   
-##  <a name="Configure_result_sets"></a> Risultato di configurazione dei set nell'attività Esegui SQL  
+##  <a name="Configure_result_sets"></a> Risultato di configurazione dei set attività Esegui SQL  
  Per altre informazioni sulle proprietà dei set di risultati che è possibile impostare in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
 -   [Editor attività Esegui SQL &#40;pagina Set dei risultati&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
@@ -94,7 +94,7 @@ ms.locfileid: "36070090"
 -   [Impostare le proprietà di un'attività o di un contenitore](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Set di risultati della mappa a variabili in un'attività Esegui SQL](control-flow/execute-sql-task.md)  
+ [Mapping di set di risultati a variabili in un'attività Esegui SQL](control-flow/execute-sql-task.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   

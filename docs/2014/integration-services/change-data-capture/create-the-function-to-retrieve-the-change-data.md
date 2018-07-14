@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c9367e4715022afcff7c988cbe877a1565f41cab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c8eec2498cace997c8f67493772c9ac23d374bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217831"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Creazione della funzione per il recupero dei dati delle modifiche
   Dopo avere completato il flusso di controllo per un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un caricamento incrementale dei dati delle modifiche, l'attività successiva consiste nella creazione di una funzione con valori di tabella per il recupero di tali dati. Questa funzione deve essere creata solo una volta, prima del primo caricamento incrementale.  
@@ -145,7 +145,7 @@ deallocate #hfunctions
 ## <a name="writing-your-own-table-value-function"></a>Scrittura della funzione con valori di tabella personalizzata  
  È anche possibile usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per scrivere una funzione wrapper con valori di tabella personalizzata che chiama la funzione di query Change Data Capture e archiviare la funzione wrapper con valori di tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sulla creazione di una funzione Transact-SQL, vedere [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
- Nell'esempio seguente viene definita una funzione con valori di tabella per il recupero delle modifiche da una tabella Customer per l'intervallo di modifiche specificato. Questa funzioni funzione utilizza change data capture per eseguire il mapping di `datetime` valori LSN (numero) usati internamente le tabelle delle modifiche di sequenza di valori nel registro binario. Questa funzione gestisce inoltre diverse condizioni speciali:  
+ Nell'esempio seguente viene definita una funzione con valori di tabella per il recupero delle modifiche da una tabella Customer per l'intervallo di modifiche specificato. Questo funzioni funzione utilizza change data capture per eseguire il mapping di `datetime` valori number (LSN) che utilizzano internamente le tabelle delle modifiche di sequenza di valori nel registro binario. Questa funzione gestisce inoltre diverse condizioni speciali:  
   
 -   Quando viene passato un valore Null per l'ora di inizio, questa funzione utilizza il valore disponibile per primo.  
   

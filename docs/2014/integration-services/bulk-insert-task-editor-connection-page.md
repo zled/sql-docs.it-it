@@ -1,5 +1,5 @@
 ---
-title: Bulk Insert Task Editor (pagina connessione) | Documenti Microsoft
+title: Bulk Insert Task Editor (pagina connessione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.connection.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 04c81b9bd101ec66d0ec1f47fb4c48c2179635ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed6ab27e4c60aa398cafe1be0d4bbcb19ce3bb3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201811"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Editor attività Inserimento bulk (pagina Connessione)
   Usare la pagina **Connessione** della finestra di dialogo **Editor attività Inserimento bulk** per specificare l'origine e la destinazione dell'operazione di inserimento bulk e il formato da usare.  
@@ -73,7 +73,7 @@ ms.locfileid: "36068766"
  Consente di specificare il delimitatore di colonna nel file di origine. Il valore predefinito è **Tabulazione**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività inserimento bulk &#40;pagina Generale&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
  [Editor attività inserimento bulk &#40;pagina di opzioni&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
  [Pagina espressioni](expressions/expressions-page.md)   

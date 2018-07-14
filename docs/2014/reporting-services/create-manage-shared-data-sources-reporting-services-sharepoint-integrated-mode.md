@@ -1,5 +1,5 @@
 ---
-title: Creare e gestire origini dati condivise (Reporting Services in modalità integrata SharePoint) | Documenti Microsoft
+title: Creare e gestire origini dati condivise (Reporting Services in modalità integrata SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cab3d9ce31bff00af668a5a10567919bdd106b36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d75ac29d1136106d88022bb8c5e3fd66e62124c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194773"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>Creare e gestire origini dati condivise (Reporting Services in modalità integrata SharePoint)
   Quando si esegue un report da una raccolta di SharePoint, le informazioni di connessione possono essere definite all'interno del report o in un file esterno collegato al report. Se le informazioni di connessione sono incorporate nel report, si parlerà di origine dati personalizzata. Se le informazioni di connessione sono definite in un file esterno, si parlerà di origine dati condivisa. Il file esterno può essere un file dell'origine dei dati del server di report (con estensione rsds) o un file di connessione dati (con estensione odc).  
@@ -46,7 +46,7 @@ ms.locfileid: "36155941"
   
 4.  Scegliere il tipo di origine dati dall'elenco **Tipo di origine dati**. Per altre informazioni, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
-5.  In **Stringa di connessione**specificare un puntatore all'origine dati e qualsiasi altra impostazione necessaria per stabilire una connessione all'origine dati esterna. La sintassi della stringa di connessione è determinata dal tipo di origine dei dati che si sta utilizzando. Per ulteriori informazioni ed esempi, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+5.  In **Stringa di connessione**specificare un puntatore all'origine dati e qualsiasi altra impostazione necessaria per stabilire una connessione all'origine dati esterna. La sintassi della stringa di connessione è determinata dal tipo di origine dei dati che si sta utilizzando. Per altre informazioni ed esempi, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 6.  In **Credenziali**specificare la modalità con cui il server di report ottiene le credenziali per l'accesso all'origine dati esterna. Le credenziali possono essere archiviate, richieste al momento dell'esecuzione, integrate o configurate per l'elaborazione automatica del report.  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating explicit hierarchies [Master Data Services]
 - explicit hierarchies, creating
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: de4402b3baf2991d8334eec9e679d6fac2390310
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 29d75b956b6d9be23bd17e3df705724d3876d583
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219491"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Creare una gerarchia esplicita (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare una gerarchia esplicita quando è necessaria una gerarchia incompleta nella quale possono esistere membri a qualsiasi livello. Nelle gerarchie esplicite sono inclusi membri da una singola entità.  
@@ -50,15 +50,15 @@ ms.locfileid: "36068544"
   
 5.  Fare clic su **Modifica entità selezionata**.  
   
-6.  Nel **modifica entità** nella pagina di **gerarchie esplicite** riquadro, fare clic su **Aggiungi gerarchia esplicita**.  
+6.  Nel **modifica entità** nella pagina il **gerarchie esplicite** riquadro, fare clic su **Aggiungi gerarchia esplicita**.  
   
-7.  Nel **Aggiungi gerarchia esplicita** nella pagina di **nome gerarchia esplicita** casella, digitare un nome per la gerarchia.  
+7.  Nel **Aggiungi gerarchia esplicita** pagina il **nome gerarchia esplicita** casella, digitare un nome per la gerarchia.  
   
 8.  Facoltativamente, deselezionare la casella di controllo **Gerarchia obbligatoria** per creare una gerarchia come non obbligatoria. Per altre informazioni sui tipi di gerarchia, vedere [Explicit Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md).  
   
 9. Fare clic su **Salva gerarchia**.  
   
-10. Nel **modifica entità** fare clic su **Salva entità**.  
+10. Nel **modifica entità** pagina, fare clic su **Salva entità**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
@@ -69,6 +69,6 @@ ms.locfileid: "36068544"
 ## <a name="see-also"></a>Vedere anche  
  [Gerarchie esplicite &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [Gerarchie derivate con estremità esplicite &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [Modificare un nome di gerarchia esplicita &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
+ [Modificare il nome di una gerarchia esplicita &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
   
   

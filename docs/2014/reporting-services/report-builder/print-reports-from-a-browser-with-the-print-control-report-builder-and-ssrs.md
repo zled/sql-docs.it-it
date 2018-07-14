@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f92d638c07d28f424c0e6338f953cd716205f48b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e120229a41ae80490ab1950113c4de6f37b70c9e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270337"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Stampare i report da un browser con il controllo di stampa (Generatore report e SSRS)
   Benché un browser sia l'applicazione client più comune per visualizzare un report, le funzionalità di stampa dei browser non sono tra le più adatte per la stampa dei report, in quanto sono state progettate per la stampa di pagine Web. Le pagine stampate da un browser includono in genere tutti gli elementi visivi presenti nella pagina Web, più le informazioni dell'intestazione e del piè di pagina che identificano la pagina o il sito Web. Se si avvia la stampa dal browser, viene stampato il contenuto della finestra corrente. Per i report a più pagine, il browser stampa al massimo la prima pagina e, se la pagina del report è più grande delle dimensioni di una pagina stampata, il risultato non risulta completo.  
   
  Per migliorare la qualità della stampa dei report visualizzati in un browser e per consentire la stampa di più pagine, è possibile usare la funzionalità di stampa sul lato client disponibile in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Questa funzionalità consente di visualizzare una finestra di dialogo **Stampa** standard che può essere usata per selezionare una stampante, specificare le pagine e i margini e visualizzare un'anteprima del report prima della stampa. La funzionalità di stampa sul lato client può essere usata in sostituzione del comando **Stampa** del menu **File** del browser. Quando si utilizza la stampa sul lato client, il report viene stampato come è stato progettato, senza gli elementi aggiuntivi presenti nella stampa delle pagine Web.  
   
- Per utilizzare la funzionalità di stampa sul lato client, è necessario installare un controllo [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX. Per altre informazioni, vedere [abilitare e disabilitare la stampa lato Client per Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Per utilizzare la funzionalità di stampa sul lato client, è necessario installare un controllo [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX. Per altre informazioni, vedere [abilitare e disabilitare la stampa sul lato Client per Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -45,6 +45,6 @@ ms.locfileid: "36067538"
   
 ## <a name="see-also"></a>Vedere anche  
  [Stampa di report &#40;Generatore report e SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
- [Stampare un Report &#40;SSRS e Generatore Report&#41;](print-a-report-report-builder-and-ssrs.md)  
+ [Stampare un Report &#40;Report e SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
   
   

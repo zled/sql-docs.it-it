@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
@@ -16,13 +16,13 @@ ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2690d8684bd244ecc671168d9648832a5a2ca9eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ff6878b05138bb1ad4c23e57699dd896ab7b441
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198823"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Creare un database del server di report in modalità nativa (Gestione configurazione SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa viene utilizzato un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione interna. Il database è obbligatorio e viene utilizzato per archiviare report pubblicati, modelli, origini dati condivise, dati di sessione, risorse e metadati del server.  
@@ -36,7 +36,7 @@ ms.locfileid: "36156201"
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>Casi in cui creare o configurare i database del server di report  
  È necessario creare e configurare il database del server di report se il server di report è stato installato in modalità "solo file".  
   
- Se è stato installato [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella configurazione predefinita per la modalità nativa, il database del server di report è stato creato e configurato automaticamente quando l'istanza del server di report è stato installato. È possibile utilizzare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per visualizzare o modificare le impostazioni configurate dal programma di installazione.  
+ Se è stato installato [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella configurazione predefinita per la modalità nativa, il database del server di report è stato creato e configurato automaticamente quando è stata installata l'istanza del server di report. È possibile utilizzare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per visualizzare o modificare le impostazioni configurate dal programma di installazione.  
   
 ##  <a name="rsdbrequirements"></a> Prima di iniziare  
  La creazione o la configurazione di un database del server di report è un processo che comprende diversi passaggi. Prima di creare il database del server di report, determinare il modo in cui effettuare le operazioni seguenti:  

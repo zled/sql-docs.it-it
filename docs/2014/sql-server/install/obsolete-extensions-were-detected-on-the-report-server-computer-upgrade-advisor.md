@@ -1,5 +1,5 @@
 ---
-title: Sono state rilevate estensioni obsolete nel computer del server di report (Upgrade Advisor) | Documenti Microsoft
+title: Sono state rilevate estensioni obsolete nel computer del server di report (Upgrade Advisor) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], upgrade issues
 ms.assetid: 40d245a2-0631-470e-81b3-1feb47e028cb
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f1bbf0f40fd78f7372ee7b332e9eaa89fb97cff2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c29365b40d59d76ab65d8f9f40a3bec86a0b486f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328989"
 ---
 # <a name="obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor"></a>Sono state rilevate estensioni obsolete nel computer del server di report (Upgrade Advisor)
   Sono state rilevate una o più estensioni per il rendering non più disponibili nella versione corrente.  

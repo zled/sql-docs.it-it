@@ -1,5 +1,5 @@
 ---
-title: Origini dati supportate (SSAS tabulare) | Documenti Microsoft
+title: Le origini dati supportate (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 360a0d7d556589947d312deab1f2ff485afb85d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b8aac369dd82f75f251df1195ac29c8ccf3b983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185298"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   In questo argomento vengono descritti i tipi di origini dati che possono essere utilizzati con i modelli tabulari.  
@@ -37,9 +37,9 @@ ms.locfileid: "36069918"
   
 |||||  
 |-|-|-|-|  
-|Origine|Versioni|Tipo di file|Provider <sup>1</sup>|  
+|Origine|Versioni|Tipo di file|I provider <sup>1</sup>|  
 |Database di Access|Microsoft Access 2003, 2007, 2010.|Estensione accdb o mdb|Provider OLE DB per ACE 14|  
-|Database relazionali di SQL Server|Microsoft SQL Server 2005, 2008, 2008 R2; SQL Server 2012, Microsoft SQL Azure Database <sup>2</sup>|(non applicabile)|Provider OLE DB per SQL Server<br /><br /> Provider OLE DB di SQL Server Native Client<br /><br /> Provider OLE DB per SQL Server Native Client 10.0<br /><br /> Provider di dati .NET Framework per SQL Client|  
+|Database relazionali di SQL Server|Microsoft SQL Server 2005, 2008, 2008 R2 SQL Server 2012, Microsoft SQL Azure Database <sup>2</sup>|(non applicabile)|Provider OLE DB per SQL Server<br /><br /> Provider OLE DB di SQL Server Native Client<br /><br /> Provider OLE DB per SQL Server Native Client 10.0<br /><br /> Provider di dati .NET Framework per SQL Client|  
 |SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|2008 R2|(non applicabile)|Provider OLE DB per SQL Server PDW|  
 |Database relazionali Oracle|Oracle 9i, 10g, 11g.|(non applicabile)|Provider OLE DB Oracle<br /><br /> Provider di dati .NET Framework per il client Oracle<br /><br /> Provider di dati .NET Framework per SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Database relazionali di Teradata|Teradata V2R6 e V12|(non applicabile)|Provider OLE DB TDOLEDB<br /><br /> Provider di dati .NET per Teradata|  
@@ -54,13 +54,13 @@ ms.locfileid: "36069918"
 |Feed di dati<br /><br /> (utilizzato per importare dati dai report di Reporting Services, documenti di servizio Atom, Microsoft Azure Marketplace DataMarket e singoli feed di dati)|Formato Atom 1.0<br /><br /> Qualsiasi database o documento esposto come Windows Communication Foundation (WCF) Data Service (precedentemente ADO.NET Data Services).|Con estensione atomsvc per un documento di servizio che consente di definire uno o più feed<br /><br /> Con estensione atom per un documento di feed Web Atom|Provider di feed di dati Microsoft per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Provider di feed di dati .NET Framework per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |File Office Database Connection||Con estensione odc||  
   
- <sup>1</sup> è inoltre possibile utilizzare il Provider OLE DB per ODBC.  
+ <sup>1</sup> è anche possibile usare il Provider OLE DB per ODBC.  
   
- <sup>2</sup> per ulteriori informazioni su SQL Azure, vedere il sito web [SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> per ulteriori informazioni su SQL Azure, visitare il sito web [SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> per ulteriori informazioni su SQL Server PDW, vedere il sito web [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> per altre informazioni su SQL Server PDW, vedere il sito web [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
   
- <sup>4</sup> in alcuni casi, utilizzo del provider OLE DB MSDAORA può determinare errori di connessione, in particolare con le versioni più recenti di Oracle. Se vengono visualizzati degli errori, è consigliabile utilizzare uno dei provider elencati per Oracle.  
+ <sup>4</sup> in alcuni casi, tramite il provider OLE DB MSDAORA può determinare errori di connessione, in particolare con le versioni più recenti di Oracle. Se vengono visualizzati degli errori, è consigliabile utilizzare uno dei provider elencati per Oracle.  
   
 ##  <a name="bkmk_unsupported_ds"></a> Origini non supportate  
  L'origine dati seguente non è attualmente supportata:  

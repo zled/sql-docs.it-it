@@ -1,5 +1,5 @@
 ---
-title: Salva File con la finestra di dialogo (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Salvare File con la finestra di dialogo (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.savefileasdialog.f1
 ms.assetid: 8e2099ba-c5b0-4940-8e48-7d696485fa4c
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dcd986ca7b24c2b6ca2f86036a94d7b8093347a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80e9eea367b1203d75fe5c55034ea1fedc317a70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271737"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Salva file con nome (Analysis Services - Dati multidimensionali)
   La finestra di dialogo **Salva file con nome** visualizza un elenco di file disponibili nelle cartelle dei log e dei dati definiti per un istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È possibile selezionare un file elencato oppure specificare una cartella e un file diversi, se necessario. Per visualizzare la finestra di dialogo **Salva file con nome** è possibile:  

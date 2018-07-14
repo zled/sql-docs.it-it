@@ -1,5 +1,5 @@
 ---
-title: Esportazione dati (Master Data Services) | Documenti Microsoft
+title: Esportazione dei dati (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - exporting data [Master Data Services]
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 656578a35e70b8371056330e0edec69073816687
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2d42511c3e7fecfba3f1a8fd92e9f8633564bf17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332161"
 ---
 # <a name="exporting-data-master-data-services"></a>Esportazione di dati (Master Data Services)
   È possibile esportare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] dati nei sistemi di sottoscrizione creando viste delle sottoscrizioni. Qualsiasi sistema di sottoscrizione può visualizzare quindi i dati pubblicati nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Per altre informazioni sulle viste, vedere [Viste](../relational-databases/views/views.md).  

@@ -1,5 +1,5 @@
 ---
-title: Gerarchia (ASSL) dei tipi di servizi di analisi dei dati XML nel linguaggio di Scripting | Documenti Microsoft
+title: Gerarchia (ASSL) dei tipi di Analysis Services Scripting Language XML Data | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - hierarchies [Analysis Services Scripting Language]
 ms.assetid: f143c9f8-225d-495d-ac8e-ac2d2a7b4c07
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2ebea80cfdecc82a3db5bb1c6cc4b10dcf40b06c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 259b843979c16d47c59bc0b3ab74843cc0015592
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243371"
 ---
 # <a name="analysis-services-scripting-language-xml-data-type-hierarchy-assl"></a>Gerarchia dei tipi di dati XML ASSL (Analysis Services Scripting Language)
   Nella tabella seguente viene visualizzata la gerarchia di ereditarietà di tipi di dati in Analysis Services Scripting Language (ASSL).  

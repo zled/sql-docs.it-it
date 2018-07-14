@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 17
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 06f20a19801b43a25f3622424aa8ce76d2c34df2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a5d6efd6aa45886aa87fdd5db5f51ae3682e45ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273087"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Componente aggiuntivo Master Data Services per Microsoft Excel
   Con il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], elenchi principali di dati di riferimento possono essere distribuiti a ogni persona dell'organizzazione che usa Excel. La sicurezza determina quali utenti dei dati possono eseguire operazioni di visualizzazione e aggiornamento.  
@@ -31,7 +31,7 @@ ms.locfileid: "36067623"
  In [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]è possibile utilizzare Data Quality Services (DQS) per la corrispondenza dei dati prima del caricamento in MDS. In tal modo si impedisce la duplicazione dei dati in MDS.  
   
 > [!IMPORTANT]  
->  È possibile continuare a usare il [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versione SP1 di Master Data Services aggiuntivo per Excel dopo l'aggiornamento di Master Data Services e Data Quality Services per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Tuttavia, una versione precedente del componente aggiuntivo Master Data Services per Excel non funzionerà dopo l'aggiornamento a SQL Server 2014 CTP2. È possibile scaricare il [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versione SP1 di Master Data Services aggiuntivo per Excel da [qui](http://go.microsoft.com/fwlink/?LinkId=328664).  
+>  È possibile continuare a usare il [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versione SP1 di Master Data Services componente aggiuntivo per Excel dopo l'aggiornamento di Master Data Services e Data Quality Services per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Tuttavia, una versione precedente del componente aggiuntivo Master Data Services per Excel non funzionerà dopo l'aggiornamento a SQL Server 2014 CTP2. È possibile scaricare il [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versione SP1 di Master Data Services componente aggiuntivo per Excel dal [qui](http://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ## <a name="terms"></a>Termini  
  Quando si utilizza il componente aggiuntivo, è possibile incontrare i termini seguenti.  
@@ -53,7 +53,7 @@ ms.locfileid: "36067623"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Creare una connessione a un repository [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Connettersi a un repository MDS &#40;componente aggiuntivo MDS per Excel&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
-|Caricare dati gestiti da MDS in Excel.|[Caricare dati da MDS in Excel](export-data-to-excel-from-master-data-services.md)|  
+|Caricare dati gestiti da MDS in Excel.|[Caricare i dati da MDS in Excel](export-data-to-excel-from-master-data-services.md)|  
 |Salvare una query di collegamento che è possibile usare per aprire i dati gestiti da MDS attualmente visualizzati in seguito.|[Salvare un file di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |Condividere collegamenti con gli altri.|[Inviare tramite posta elettronica un file di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |Visualizzare tutte le modifiche apportate a un membro.|[Visualizzare tutte le annotazioni o transazioni per un membro &#40;componente aggiuntivo MDS per Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  

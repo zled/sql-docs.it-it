@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], creating
 - database diagrams [SQL Server], creating
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72d4217370ab913eb094af946fc5870412ea2023
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f4591615a01d43d0fe2aa6f734f854a24119187d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181178"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Creazione di un nuovo diagramma di database (Visual Database Tools)
   È possibile utilizzare Esplora oggetti per creare nuovi diagrammi di database. I diagrammi di database mostrano graficamente la struttura del database. Mediante i diagrammi di database è possibile creare e modificare tabelle, colonne, relazioni e chiavi. È inoltre possibile modificare indici e vincoli.  
@@ -42,7 +42,7 @@ ms.locfileid: "36069964"
  Si può continuare ad aggiungere o eliminare tabelle, modificare le tabelle esistenti e alterare le relazioni tra le tabelle fino al completamento del nuovo diagramma di database.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di diagrammi di Database &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Usare diagrammi di Database &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Informazioni sulla proprietà dei diagrammi di database &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 96eb376791d1b30fb73d834733de07df8a46c64e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a3f19a5c197eb519aa9e78a0d99d7e88132da123
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231431"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>Gestione del completamento alla pressione del tasto TAB (SQL Server PowerShell)
-  Il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snap-in di PowerShell introducono tre variabili (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems`, e `$SqlServerIncludeSystemObjects`) al controllo del codice completamento tramite tab di Windows PowerShell. Il completamento alla pressione del tasto TAB consente di ridurre la digitazione restituendo tabelle di elementi i cui nomi iniziano con la stringa che si sta digitando.  
+  Il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snap-in PowerShell introducono tre variabili (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems`, e `$SqlServerIncludeSystemObjects`) al controllo del completamento tramite tasto tab di Windows PowerShell. Il completamento alla pressione del tasto TAB consente di ridurre la digitazione restituendo tabelle di elementi i cui nomi iniziano con la stringa che si sta digitando.  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Con il completamento alla pressione del tasto TAB di Windows PowerShell, dopo aver digitato parte del nome di un percorso o di un cmdlet, è possibile premere il tasto TAB per ottenere un elenco degli elementi il cui nome corrisponde a quanto già digitato. È quindi possibile selezionare l'elemento desiderato dall'elenco senza digitare il resto del nome.  

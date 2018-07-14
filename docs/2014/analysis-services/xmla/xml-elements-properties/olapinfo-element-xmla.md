@@ -1,5 +1,5 @@
 ---
-title: Elemento OlapInfo (XMLA) | Documenti Microsoft
+title: Elemento OlapInfo (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - OlapInfo element
 ms.assetid: 8828fdd7-c0f7-48ce-a0d0-ab4bc1a995cf
 caps.latest.revision: 27
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 9b183bfa01d2e4060c38fa2768f63b21fff693e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0d1665a174cdff0d4afcd8bea69b9bdca9212d9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178388"
 ---
 # <a name="olapinfo-element-xmla"></a>Elemento OlapInfo (XMLA)
   Contiene i metadati di asse e cella contenuti in un [radice](root-element-xmla.md) elemento che utilizza il [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo di dati.  
@@ -68,7 +68,7 @@ ms.locfileid: "36155846"
 |Elementi padre|[root](root-element-xmla.md)|  
 |Elementi figlio|[AxesInfo](axesinfo-element-xmla.md), [CellInfo](cellinfo-element-xmla.md), [CubeInfo](cubeinfo-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  La sezione `OLAPInfo` di un elemento `root` che utilizza il tipo di dati `MDDataSet` fornisce i metadati sul cubo, gli assi del risultato multidimensionale e le proprietà delle celle incluso il risultato.  
   
 ## <a name="see-also"></a>Vedere anche  

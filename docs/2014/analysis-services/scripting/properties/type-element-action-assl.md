@@ -1,5 +1,5 @@
 ---
-title: Tipo di elemento (Action) (ASSL) | Documenti Microsoft
+title: Tipo di elemento (Action) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 534cdf99-1edf-4490-9eaa-61f189a19434
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d71abdd26cea5fa03c8e70f882f893878a70969a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99147acb4b2a1b467913087f4e4df14469de9a03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249082"
 ---
 # <a name="type-element-action-assl"></a>Elemento Type (Action) (ASSL)
-  Contiene il tipo del [azione](../objects/action-element-assl.md) elemento.  
+  Contiene il tipo dei [azione](../objects/action-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36067883"
 |Elemento padre|[Azione](../objects/action-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
@@ -69,14 +69,14 @@ ms.locfileid: "36067883"
 |*URL*|Visualizza una pagina variabile in un browser Internet.|  
 |*HTML*|Esegue uno script HTML in un browser Internet.|  
 |*Istruzione*|Esegue un comando OLE DB.|  
-|*Drill-through*|Recupera un set di righe per il drill-through.<br /><br /> Questo valore è identico al *set di righe* e identifica le azioni di drill-through. Deve essere utilizzata in azioni il cui [TargetType](targettype-element-assl.md) valore è impostato su *celle*.|  
+|*Drill-through*|Recupera un set di righe per il drill-through.<br /><br /> Questo valore è identico a *set di righe* e identifica le azioni di drill-through. Può solo essere usata in azioni il cui [TargetType](targettype-element-assl.md) è impostato su *celle*.|  
 |*Set di dati*|Consente di recuperare un set di dati.|  
 |*Rowset*|Consente di recuperare un set di righe.|  
 |*Riga di comando*|Esegue un comando a un prompt dei comandi.|  
 |*Proprietario*|Esegue un'operazione utilizzando un'interfaccia diversa da quelle elencate in precedenza in questa tabella.|  
-|*Report*|Visualizza una pagina variabile in un browser Internet.<br /><br /> Questo valore è identico al *Url* e identifica le azioni report.|  
+|*Report*|Visualizza una pagina variabile in un browser Internet.<br /><br /> Questo valore è identico a *Url* e identifica le azioni report.|  
   
- L'elemento che corrisponde al padre di `Type` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Action>.  
+ L'elemento che corrisponde al padre di `Type` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipo di dati DrillThroughAction &#40;ASSL&#41;](../data-type/action-data-type-assl.md)   

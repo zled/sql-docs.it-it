@@ -1,5 +1,5 @@
 ---
-title: 'Modifiche al formato di archiviazione per i tipi xs: DateTime, xs: date e xs: Time | Documenti Microsoft'
+title: 'Modifica del formato di archiviazione per i tipi xs: DateTime, xs: date e xs: Time | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xs:date
 - xs:time
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - DateTime
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56342ff7c7754fb8ef1619fdb1b71e37600192b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1acc25889e693a69e55adc4f5da5ece616bc41a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222521"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Modifiche al formato di archiviazione per i tipi xs:dateTime, xs:date e xs:time
   La regola XMLDATETIME identifica se i database contengono o meno dati XML tipizzati che non saranno più validi dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "36069326"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- Il formato di archiviazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per i tipi xs: DateTime, xs: date e xs: Time è stato modificato per supportare i valori con o senza informazioni sul fuso orario e per consentire il mantenimento del fuso orario.  
+ Il formato di archiviazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per i tipi xs: DateTime, xs: date e xs: Time è stato modificato per supportare valori con o senza informazioni sul fuso orario e consentire il mantenimento del fuso orario.  
   
  Se una raccolta XML Schema fa riferimento a uno di tali tipi, gli indici XML di tutte le colonne associate alla raccolta verranno disabilitati dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Sarà possibile sottoporli a query utilizzando SELECT e/o XQUERIES, ma l'indice XML non verrà utilizzato. Se viene rilevato un valore di anno negativo, verrà generato un errore di runtime.  
   

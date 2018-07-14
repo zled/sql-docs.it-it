@@ -1,5 +1,5 @@
 ---
-title: Esempio Hello World | Documenti Microsoft
+title: Esempio Hello World | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 05ac9594d985766e48fbd5757dca48bdd47c2aa1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 75ac8eafd490dc3a9b7501f7c653bc8aaf99cde4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269927"
 ---
 # <a name="hello-world-sample"></a>Esempio Hello World
   Nell'esempio Hello World vengono illustrate le operazioni di base per la creazione, la distribuzione e il test di una stored procedure semplice basata sull'integrazione con CLR. Nell'esempio viene inoltre illustrato come restituire dati tramite un record, che viene costruito in modo dinamico dalla stored procedure e restituito al chiamante.  

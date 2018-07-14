@@ -1,5 +1,5 @@
 ---
-title: Creare una Query di stima Singleton da un modello | Documenti Microsoft
+title: Creare una Query di stima Singleton da un modello | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - singleton query predictions [DMX]
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91180f533afbbb18472d933891ab607a5ba7f6d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09d7a8b9de92e18646c00b045cb1d55b0eb311d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224591"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Creare una query di stima singleton da un modello
   Una query singleton è utile quando si dispone di un modello che si desidera utilizzare per la stima, ma non si desidera eseguire il mapping a un set di dati di input esterno oppure eseguire stime bulk. Con una query singleton, è possibile fornire uno o più valori al modello e ottenere all'istante il valore stimato.  
@@ -73,15 +73,15 @@ AS [t]
   
 5.  Nella riga del **modello di data mining** digitare il nome del modello di data mining tra quelli presenti nell'elenco dei modelli di data mining visualizzati in **Esplora oggetti**.  
   
-     Per il codice di esempio mostrato all'inizio di questo argomento, la **modello di data mining** riga è stata impostata per il nome, `TM_Decision_Tree`.  
+     Per il codice di esempio mostrato all'inizio di questo argomento, il **modello di data mining** riga è stata impostata sul nome, `TM_Decision_Tree`.  
   
 6.  Nella riga del **valore** digitare il nuovo valore dei dati per il quale si desidera effettuare una stima.  
   
-     Per il codice di esempio mostrato all'inizio di questo argomento, la **valore** riga è stata impostata su `2` per stimare il comportamento in base al numero di figli a carico relativo all'acquisto di biciclette.  
+     Per il codice di esempio mostrato all'inizio di questo argomento, il **valore** riga è stata impostata su `2` per stimare il comportamento in base al numero di figli a carico relativo all'acquisto di biciclette.  
   
 7.  Nella riga della **colonna** digitare il nome della colonna nel modello di data mining su cui deve essere eseguito il mapping dei nuovi dati.  
   
-     Per il codice di esempio mostrato all'inizio di questo argomento, la **colonna** riga è stata impostata su `Number Children at Home`.  
+     Per il codice di esempio mostrato all'inizio di questo argomento, il **colonna** riga è stata impostata su `Number Children at Home`.  
   
     > [!NOTE]  
     >  Quando si usa la finestra di dialogo **Specifica valori per parametri modello** , non è necessario racchiudere il nome della colonna tra parentesi quadre. Le parentesi verranno aggiunte automaticamente.  
@@ -92,7 +92,7 @@ AS [t]
   
 10. Nel riquadro del testo della query cercare la sottolineatura rossa sotto la virgola e i puntini di sospensione che indicano un errore di sintassi. Eliminare i puntini di sospensione e aggiungere le condizioni di query aggiuntive desiderate. Se non si aggiungono altre condizioni, eliminare la virgola.  
   
-     Per il codice di esempio mostrato all'inizio di questo argomento, la condizione aggiuntiva della query è stata impostata su `'45' as [Age]`.  
+     Per il codice di esempio mostrato all'inizio di questo argomento, la condizione di query aggiuntive è stata impostata su `'45' as [Age]`.  
   
 11. Fare clic su **Esegui**.  
   

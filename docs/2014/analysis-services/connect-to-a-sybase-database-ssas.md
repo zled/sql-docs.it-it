@@ -1,5 +1,5 @@
 ---
-title: Connettersi a un Database di Sybase (SSAS) | Documenti Microsoft
+title: Connettersi a un Database di Sybase (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsybasedb.f1
 ms.assetid: b4ebdc57-8b2a-4950-b489-88360e6c82c5
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f14add31b6a0c34f8715ad6bf0c2b86e3e0a3013
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1ca5d291cfdbf4ff62998bba30c6afbed5c7279
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212612"
 ---
 # <a name="connect-to-a-sybase-database-ssas"></a>Connessione a un database di Sybase (SSAS)
   Questa pagina dell'**Importazione guidata tabella** consente di specificare le impostazioni per connettersi a un database di Sybase. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -32,7 +32,7 @@ ms.locfileid: "36068821"
 >  Le credenziali dell'utente corrente vengono utilizzate in caso di selezione di un database in questa pagina. Tuttavia, l'importazione non verrà completata se l'utente specificato nella pagina Impostazioni di rappresentazione non dispone di privilegi sufficienti per leggere dal database selezionato.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Nome descrittivo della connessione**  
+ **Nome descrittivo connessione**  
  Digitare un nome univoco per questa connessione all'origine dati. Questo campo è obbligatorio.  
   
  **Nome server**  

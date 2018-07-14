@@ -1,5 +1,5 @@
 ---
-title: Connettersi a un Server di Report in modalità nativa | Documenti Microsoft
+title: Connettersi a un Server di Report in modalità nativa | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.connectiondialog.F1
 helpviewer_keywords:
@@ -17,16 +17,16 @@ ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 703e25f513fa8482d62d8c454aca1dbe0edea92a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27b2d2d93d83057fd2de408b4a0cb61dd1cd0771
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321781"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>Connettersi a un server di report in modalità nativa
-  Utilizzare questa finestra di dialogo per connettersi a locali o remote [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] istanza del server di report. È possibile utilizzare questo strumento per la connessione a versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server di report. È possibile connettersi a una singola istanza per volta.  
+  Utilizzare questa finestra di dialogo per connettersi a una locale o remota [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] istanza del server di report. È possibile usare questo strumento per la connessione a versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] i server di report. È possibile connettersi a una singola istanza per volta.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -46,11 +46,11 @@ ms.locfileid: "36068643"
  **Nome server**  
  Immettere il nome di rete del computer in cui [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è installato. Digitare solo il nome del computer senza includere barre o un prefisso.  
   
- **Trova**  
+ **Trovare**  
  Consente di trovare il computer specificato in **Nome server**.  
   
  **Istanza del Server di report**  
- Consente di selezionare l'istanza a cui connettersi se sono installate più istanze del server di report. Solo le istanze valide saranno disponibili per la selezione. Se si eseguono le versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] side-by-side un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza, tali istanze non verranno visualizzati nell'elenco.  
+ Consente di selezionare l'istanza a cui connettersi se sono installate più istanze del server di report. Solo le istanze valide saranno disponibili per la selezione. Se si eseguono le versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] side-by-side un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dell'istanza, tali istanze non saranno incluse nell'elenco.  
   
  **Connect**  
  Consente di connettersi al server e all'istanza specificati.  

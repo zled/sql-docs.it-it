@@ -1,5 +1,5 @@
 ---
-title: Utilità SqlLocalDB | Documenti Microsoft
+title: Utilità SqlLocalDB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SqlLocalDB utility [SQL Server]
 - local database runtime utility
 - LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 368c770520725aa83ccb4852881e4d62d487998d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3a3c83dfc8e7282ea67c3aff783ad4ec50826865
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330911"
 ---
 # <a name="sqllocaldb-utility"></a>Utilità SqlLocalDB
   Usare la `SqlLocalDB` utilità per creare un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**. Il `SqlLocalDB` utilità (SqlLocalDB.exe) è uno strumento semplice riga di comando per abilitare gli utenti e sviluppatori di creare e gestire un'istanza di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**. Per informazioni su come usare **LocalDB**, vedere [SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
@@ -48,7 +48,7 @@ SqlLocalDB.exe
   
 ## <a name="arguments"></a>Argomenti  
  [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
- Crea una nuova istanza di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. `SqlLocalDB` Usa la versione di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] i file binari specificati da  *\<istanza-version >* argomento. Il numero di versione viene specificato in formato numerico con almeno un numero decimale. I numeri di versione secondari (Service Pack) sono facoltativi. Ad esempio, i due numeri di versione seguenti sono entrambi accettabili: 11.0 o 11.0.1186. La versione specificata deve essere installata nel computer. Se non specificato, il numero di versione predefinito sarà la versione di `SqlLocalDB` utilità. Aggiungere **-s** per avviare la nuova istanza di **LocalDB**.  
+ Crea una nuova istanza di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. `SqlLocalDB` Usa la versione di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] specificati da file binari  *\<istanza-version >* argomento. Il numero di versione viene specificato in formato numerico con almeno un numero decimale. I numeri di versione secondari (Service Pack) sono facoltativi. Ad esempio, i due numeri di versione seguenti sono entrambi accettabili: 11.0 o 11.0.1186. La versione specificata deve essere installata nel computer. Se non specificato, il numero di versione predefinito per la versione del `SqlLocalDB` utilità. Aggiungere **-s** per avviare la nuova istanza di **LocalDB**.  
   
  [ **share** | **h** ]  
  Condivide l'istanza privata specificata di **LocalDB** tramite il nome condiviso indicato. Se viene omesso il SID dell'utente o il nome dell'account, il valore predefinito è l'utente corrente.  
@@ -63,7 +63,7 @@ SqlLocalDB.exe
  Avvia l'istanza specificata di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Quando ha esito positivo, l'istruzione restituisce l'indirizzo della named pipe del **database locale**.  
   
  [ **stop** | **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
- Arresta l'istanza specificata di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Aggiunta **-i** richiede l'arresto dell'istanza con il `NOWAIT` opzione. Aggiungere **-k** per terminare il processo dell'istanza senza contattarlo.  
+ Arresta l'istanza specificata di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Aggiunta **– i** richiede l'arresto dell'istanza con il `NOWAIT` opzione. Aggiungere **-k** per terminare il processo dell'istanza senza contattarlo.  
   
  [ **info** | **i** ] [ *\<instance-name>* ]  
  Elenca tutte le istanze di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** di proprietà dell'utente corrente.  
@@ -71,12 +71,12 @@ SqlLocalDB.exe
  *\<<instance-name>* restituisce il nome, la versione, lo stato (In esecuzione o Arrestato), l'ultima ora di inizio per l'istanza specificata di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** e il nome della pipe locale di **LocalDB**.  
   
  [ **trace** | **t** ] **on** | **off**  
- **tenere traccia in** abilita la traccia per il `SqlLocalDB` chiamate all'API per l'utente corrente. **trace off** disabilita la traccia.  
+ **traccia sul** abilita la traccia per il `SqlLocalDB` chiamate API per l'utente corrente. **trace off** disabilita la traccia.  
   
  **-?**  
- Restituisce brevi descrizioni di ogni `SqlLocalDB` opzione.  
+ Restituisce brevi descrizioni della ognuno `SqlLocalDB` opzione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'argomento *instance name* deve seguire le regole per gli identificatori di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oppure deve essere incluso tra virgolette.  
   
  L'esecuzione di SqlLocalDB senza argomenti restituisce il testo della Guida.  
@@ -116,6 +116,6 @@ sqlcmd –S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [LocalDB di SQL Server 2014 Express](../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
+ [SQL Server 2014 Express Local DB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
   
   

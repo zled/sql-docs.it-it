@@ -1,5 +1,5 @@
 ---
-title: Definizione ed esplorazione delle prospettive | Documenti Microsoft
+title: Definizione ed esplorazione delle prospettive | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 461c093bb3b946316cfee37cd531d1492176db9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 642d9a0f80f0efb0bc9d26b9a08ab7a6dbd521e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069524"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208191"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definizione ed esplorazione delle prospettive
   Una prospettiva può semplificare la visualizzazione di un cubo a scopi specifici. Per impostazione predefinita, gli utenti possono vedere tutti gli elementi di un cubo per i quali dispongono di autorizzazioni. Quando si visualizza un intero cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , viene visualizzata la prospettiva predefinita del cubo. La navigazione all'interno di una visualizzazione dell'intero cubo può essere molto complessa per gli utenti, soprattutto per coloro che devono solo interagire con una piccola parte del cubo per soddisfare i requisiti di Business Intelligence e di report.  
@@ -45,7 +45,7 @@ ms.locfileid: "36069524"
   
      ![Nuova prospettiva nella colonna nome prospettiva](../../2014/tutorials/media/l9-perspectives-2.gif "nuova prospettiva nella colonna nome prospettiva")  
   
-3.  Modificare il nome di prospettiva in `Internet Sales`.  
+3.  Modificare il nome della prospettiva in `Internet Sales`.  
   
 4.  Nella riga successiva impostare DefaultMeasure su **Internet Sales-Sales Amount**.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36069524"
   
 1.  Fare clic sul pulsante **Nuova prospettiva** sulla barra degli strumenti della scheda **Prospettive** .  
   
-2.  Modificare il nome della nuova prospettiva a `Reseller Sales`.  
+2.  Modificare il nome della nuova prospettiva in `Reseller Sales`.  
   
 3.  Impostare **Reseller Sales-Sales Amount** come misura predefinita.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36069524"
   
 1.  Fare clic sul pulsante **Nuova prospettiva** sulla barra degli strumenti della scheda **Prospettive** .  
   
-2.  Modificare il nome della nuova prospettiva a `Sales Summary`.  
+2.  Modificare il nome della nuova prospettiva in `Sales Summary`.  
   
     > [!NOTE]  
     >  Non è possibile specificare una misura calcolata come misura predefinita.  
@@ -180,13 +180,13 @@ ms.locfileid: "36069524"
   
      ![Connessione guidata dati in Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "connessione guidata dati in Excel")  
   
-6.  Selezionare `Internet Sales` nella **prospettiva** elenco e quindi esaminare le misure e dimensioni nel riquadro dei metadati.  
+6.  Selezionare `Internet Sales` nella **prospettiva** elenco ed esaminare le misure e dimensioni nel riquadro dei metadati.  
   
      Si noti che vengono visualizzati solo gli oggetti specificati per la prospettiva Internet Sales.  
   
 7.  Nel riquadro dei metadati espandere **Misure**.  
   
-     Si noti che solo il `Internet Sales` gruppo di misure viene visualizzata, insieme con il **Internet GPM** e **Internet Sales Ratio to All Products** membri calcolati.  
+     Si noti che solo le `Internet Sales` gruppo di misure viene visualizzata, insieme con il **Internet GPM** e **Internet Sales Ratio to All Products** membri calcolati.  
   
 8.  Nel modello selezionare di nuovo Excel. Selezionare `Sales Summary`.  
   

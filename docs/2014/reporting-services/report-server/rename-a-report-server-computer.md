@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - renaming report servers
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: be5f32d7859d21409930428711c247b208b97e23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6deb9cf058343e5b2a84d90c5ead07776447c355
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321731"
 ---
 # <a name="rename-a-report-server-computer"></a>Rinominare un computer del server di report
   La ridenominazione di un computer provoca una corrispondente modifica del nome del server Web e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se presente sullo stesso computer. In alcuni casi, dopo una modifica del nome del computer potrebbe non essere possibile accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Utilizzare la procedura descritta in questo argomento per riconfigurare un server di report dopo la modifica del nome del computer.  
@@ -42,7 +42,7 @@ ms.locfileid: "36066902"
 ## <a name="renaming-a-report-server-computer"></a>Ridenominazione di un computer server di report  
  Se si rinomina un computer in cui viene eseguito un server di report, eseguire le operazioni seguenti:  
   
-1.  Aprire **RSReportServer. config** in un editor di testo e modificare il `UrlRoot` impostazione in modo da riflettere il nuovo nome del server. L'impostazione `UrlRoot` viene utilizzata nelle estensioni per il recapito per comporre l'URL utilizzato per accedere agli elementi archiviati sul server di report. Modificare l'indirizzo URL server di report richiede l'aggiornamento di `UrlRoot` impostazione in modo che le sottoscrizioni continuino a recapitare i report come previsto.  
+1.  Aprire **RSReportServer. config** in un editor di testo e modificare il `UrlRoot` impostazione in modo da riflettere il nuovo nome del server. L'impostazione `UrlRoot` viene utilizzata nelle estensioni per il recapito per comporre l'URL utilizzato per accedere agli elementi archiviati sul server di report. Modificare l'indirizzo URL server di report è necessario aggiornare il `UrlRoot` impostazione in modo che le sottoscrizioni continuino a recapitare i report come previsto.  
   
 2.  Nello stesso file, se è impostato, modificare il `ReportServerUrl` impostazione in modo da riflettere il nuovo nome del server. Si noti che questa impostazione non viene utilizzata in ogni installazione. Se è vuota, non eseguire alcuna operazione.  
   

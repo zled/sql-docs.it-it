@@ -1,5 +1,5 @@
 ---
-title: Implementazione della ricerca Full-Text | Documenti Microsoft
+title: Implementazione della ricerca Full-Text | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - full-text search [SMO]
 ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6ccf70226b8ace7c9de991e054ad3838c1364e21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f666336ccc3040139042ba65351fe66ea97d90cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219011"
 ---
 # <a name="implementing-full-text-search"></a>Implementazione della ricerca full-text
   La ricerca full-text è disponibile per istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è rappresentata in SMO dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A>. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.FullTextService> si trova sotto l'oggetto `Server`. Viene utilizzato per gestire le opzioni di configurazione per il servizio di ricerca full-text di [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> appartiene all'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> e si tratta di una raccolta di oggetti <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> che rappresentano cataloghi full-text definiti per il database. È possibile disporre di un solo indice full-text definito per ogni tabella, a differenza degli indici normali. Questo indice è rappresentato da un oggetto <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> nell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Table>.  
@@ -32,7 +32,7 @@ ms.locfileid: "36069580"
  Creare innanzitutto un catalogo full-text nel database chiamando il costruttore <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> e specificando il nome del catalogo. Successivamente, creare l'indice full-text chiamando il costruttore e specificando la tabella nella quale deve essere creato. È quindi possibile aggiungere colonne per l'indice full-text tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> e fornendo il nome della colonna all'interno della tabella. Successivamente, impostare la proprietà <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> sul catalogo creato. Infine, chiamare il metodo <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> e creare l'indice full-text nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Esempio  
- Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto di Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C#&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>Creazione di un servizio di ricerca full-text in Visual Basic  
  Nel codice di esempio seguente viene creato un catalogo di ricerca full-text per la tabella `ProductCategory` nel database di esempio [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Successivamente, viene creato un indice di ricerca full-text nella colonna Name della tabella `ProductCategory`. Per l'indice di ricerca full-text è necessario che nella colonna sia già definito un indice univoco.  

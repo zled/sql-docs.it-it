@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
@@ -16,13 +16,13 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b24be62a990b92b522d6bf4d0bb04873b743fa99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef7898589335192022fa83095f19a72ee4549798
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068408"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253913"
 ---
 # <a name="preload-the-cache-report-manager"></a>Precaricare la cache (Gestione report)
   Per precaricare la cache per un set di dati condiviso, è possibile creare un piano di aggiornamento della cache per il set di dati stesso.  
@@ -127,7 +127,7 @@ ms.locfileid: "36068408"
  [Sottoscrizioni guidate dai dati](../subscriptions/data-driven-subscriptions.md)   
  [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Prestazioni, snapshot, memorizzazione nella cache &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
- [Impostare le proprietà di elaborazione di Report](set-report-processing-properties.md)   
- [La memorizzazione nella cache i report &#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [Impostare le proprietà di elaborazione dei Report](set-report-processing-properties.md)   
+ [La memorizzazione dei report &#40;SSRS&#41;](caching-reports-ssrs.md)  
   
   

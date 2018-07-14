@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 caps.latest.revision: 47
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ba7042030a88a616d5d4b23df4475111a63ee76b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9e828696135d13263a68219c1a248325a14676d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196791"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lezione 2: Specifica delle informazioni di connessione (Reporting Services)
   Dopo aver aggiunto un report al progetto Tutorial, è necessario definire un' *origine dati*, vale a dire informazioni di connessione usate dal report per accedere ai dati da un database relazionale, da un database multidimensionale o da un'altra risorsa.  
@@ -33,7 +33,7 @@ ms.locfileid: "36069777"
     > [!NOTE]  
     >  Se il riquadro **Dati report** non è visualizzato, scegliere **Dati report** dal menu **Visualizza**.  
   
-2.  In **nome**, tipo [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)].  
+2.  In **Nome**digitare [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)].  
   
 3.  Accertarsi che sia selezionata l'opzione **Connessione incorporata** .  
   
@@ -52,14 +52,14 @@ ms.locfileid: "36069777"
     >   
     >  `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2012`  
     >   
-    >  Per ulteriori informazioni sulle stringhe di connessione, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md) e [finestra di dialogo Proprietà origine dati, generale](data-source-properties-dialog-box-general.md).  
+    >  Per altre informazioni sulle stringhe di connessione, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md) e [finestra di dialogo Proprietà origine dati, generale](data-source-properties-dialog-box-general.md).  
   
 6.  Fare clic su **Credenziali** nel riquadro sinistro e selezionare **Usa autenticazione di Windows (sicurezza integrata)**.  
   
-7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] origine dati [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] viene aggiunto per il **i dati del Report** riquadro.  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] zdroj dat [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] viene aggiunto per il **i dati del Report** riquadro.  
   
 ## <a name="next-task"></a>Attività successiva  
- È stata definita una connessione per il [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database di esempio. Verrà successivamente creato il report. Vedere [Lezione 3: Definizione di un set di dati per il report tabella &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
+ È stata definita correttamente una connessione per il [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database di esempio. Verrà successivamente creato il report. Vedere [Lezione 3: Definizione di un set di dati per il report tabella &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  

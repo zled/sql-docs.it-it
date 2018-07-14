@@ -1,5 +1,5 @@
 ---
-title: Abilitare connessioni crittografate al motore di Database (Gestione configurazione SQL Server) | Documenti Microsoft
+title: Abilitare connessioni crittografate al motore di Database (Gestione configurazione SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], encrypted
 - SSL [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 87550bc2c29485eaa1f4ad10e6ca82b79af19724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6a75c1657624475467df1a367e1830145ac561a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275447"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>Abilitazione di connessioni crittografate al Motore di database (Gestione configurazione SQL Server)
   In questo argomento viene descritto come abilitare connessioni crittografate per un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] specificando un certificato per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È necessario che sia disponibile un certificato per il computer server e che il computer client sia impostato per considerare attendibile l'autorità radice del certificato. Il processo di provisioning consiste nell'installazione di un certificato tramite l'importazione in Windows.  
@@ -47,7 +47,7 @@ ms.locfileid: "36067660"
   
 -   **Per abilitare connessioni crittografate:**  
   
-     [Eseguire il provisioning (installare) un certificato nel server](#Provision)  
+     [Effettuare il provisioning di un certificato nel server (installazione)](#Provision)  
   
      [Esportare il certificato del server](#Export)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36067660"
   
 ###  <a name="Provision"></a> Per installare e rendere disponibile un certificato nel server  
   
-1.  Nel **avviare** menu, fare clic su **eseguire**e nel **aperta** , digitare `MMC` e fare clic su **OK**.  
+1.  Nel **avviare** menu, fare clic su **eseguire**e nel **Open** , digitare `MMC` e fare clic su **OK**.  
   
 2.  Nella console MMC scegliere **Aggiungi/Rimuovi snap-in** dal menu **File**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Query di Data Mining | Documenti Microsoft
+title: Query di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - queries [DMX], creating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c7d67cd0b51a8bd2a7219558d1488afebf50651b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e735d73e8bad733c330d0d5134f13905c1ef8e15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170202"
 ---
 # <a name="data-mining-queries"></a>Query di data mining
   Le query di data mining sono utili per molti scopi. È possibile effettuare le operazioni seguenti:  
@@ -106,7 +106,7 @@ ms.locfileid: "36069527"
   
 -   **Funzioni di stima personalizzate:** in ogni tipo di modello è disponibile un set di funzioni di stima progettate per essere utilizzate con gli schemi creati da tale algoritmo.  
   
-     Ad esempio, la funzione `Lag` è fornita per i modelli Time Series, per consentire di visualizzare i dati cronologici utilizzati per il modello. Per i modelli di clustering, le funzioni, ad esempio `ClusterDistance` più significativi.  
+     Ad esempio, la funzione `Lag` è fornita per i modelli Time Series, per consentire di visualizzare i dati cronologici utilizzati per il modello. Per i modelli di clustering, le funzioni, ad esempio `ClusterDistance` sono più significative.  
   
      Per ulteriori informazioni sulle funzioni supportate per ogni tipo di modello, vedere i collegamenti seguenti:  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36069527"
   
 -   **Statistiche personalizzate:** vengono fornite funzioni di supporto aggiuntive per ogni tipo di modello per generare statistiche attinenti all'attività analitica specifica.  
   
-     Ad esempio, quando si lavora con un modello di clustering, è possibile utilizzare la funzione `PredictCaseLikelihood`, per restituire il punteggio di probabilità associato a un determinato case e cluster. Tuttavia, se è stato creato un modello di regressione lineare, sarebbe più utile recuperare il coefficiente e intercettarlo utilizzando una query sul contenuto.  
+     Ad esempio, quando si lavora con un modello di clustering, è possibile usare la funzione, `PredictCaseLikelihood`per restituire il punteggio di probabilità associato a un determinato case e cluster. Tuttavia, se è stato creato un modello di regressione lineare, sarebbe più utile recuperare il coefficiente e intercettarlo utilizzando una query sul contenuto.  
   
 -   **Funzioni relative al contenuto del modello:** il *contenuto* di tutti i modelli viene rappresentato in un formato standardizzato che consente di recuperare le informazioni con una query semplice. È possibile creare query sul contenuto del modello tramite DMX. È anche possibile ottenere alcuni tipi di contenuto del modello utilizzando i set di righe dello schema di data mining.  
   
@@ -154,14 +154,14 @@ ms.locfileid: "36069527"
   
  [Query di definizione dei dati &#40;Data Mining&#41;](data-definition-queries-data-mining.md)  
   
- [Data nuove interfacce Query di Data Mining](data-mining-query-tools.md)  
+ [Interfacce di query di data mining](data-mining-query-tools.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Utilizzare questi collegamenti per informazioni sulla creazione e sull'utilizzo di query di data mining.  
   
 |Attività|Collegamenti|  
 |-----------|-----------|  
-|Visualizzare esercitazioni e procedure dettagliate su query di data mining|[Lezione 6: Creazione e utilizzo di stime &#40;esercitazione di base di Data Mining&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)<br /><br /> [Esercitazione su DMX per ora serie stima](../../tutorials/time-series-prediction-dmx-tutorial.md)|  
+|Visualizzare esercitazioni e procedure dettagliate su query di data mining|[Lezione 6: Creazione e utilizzo di stime &#40;esercitazione di base di Data Mining&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)<br /><br /> [Esercitazione su DMX per le stime basate su serie temporali](../../tutorials/time-series-prediction-dmx-tutorial.md)|  
 |Utilizzare strumenti query di data mining in SQL Server Management Studio e [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Creare una query DMX in SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Creare una query di stima usando Generatore di query di stima](create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Applicare le funzioni di stima a un modello](apply-prediction-functions-to-a-model.md)<br /><br /> [Modificare manualmente un query di stima](manually-edit-a-prediction-query.md)|  
 |Utilizzare i dati esterni presenti nelle query di stima|[Scegliere ed eseguire il mapping di dati di input per una query di stima](choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Scegliere ed eseguire il mapping di dati di input per una query di stima](choose-and-map-input-data-for-a-prediction-query.md)|  
 |Utilizzo dei risultati delle query|[Visualizzare e salvare i risultati di una query di stima](view-and-save-the-results-of-a-prediction-query.md)|  
@@ -172,6 +172,6 @@ ms.locfileid: "36069527"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Contenuto del modello di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)  
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)  
   
   

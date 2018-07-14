@@ -1,5 +1,5 @@
 ---
-title: Report Builder in SQL Server 2014 | Documenti Microsoft
+title: Generatore report in SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10428"
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ab3d87e730ee8788f010f776899d3d494887ed96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 911b88bc7b707e837bbd042814a2f8e84a61daa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261927"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Generatore report in SQL Server 2014
   Generatore report è un ambiente per la creazione di report destinato a utenti aziendali che preferiscono lavorare nell'ambiente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office. Quando si progetta un report, si specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, Elaborazione report utilizza tutte le informazioni specificate, recupera i dati e li combina con il layout per generare il report. È possibile visualizzare l'anteprima dei report in Generatore report oppure pubblicare un report in un server di report o in un server di report in modalità integrata SharePoint dove potrà essere eseguito da altri utenti.  
@@ -35,23 +35,23 @@ ms.locfileid: "36068653"
   
 ##  <a name="JumpStartReptCreation"></a> Avvio della creazione del report  
   
--   **Avviare le parti di report withreport** creata da qualcun altro membro del team. Le parti di report sono elementi di report che sono stati pubblicati separatamente in un server di report o in un sito di SharePoint integrato con un server di report e possono essere riutilizzati in altri report. È possibile pubblicare elementi di report quali tabelle, matrici, grafici e immagini come parti di report.  
+-   **Avviare le parti di report withreport** create da qualcun altro membro del team. Le parti di report sono elementi di report che sono stati pubblicati separatamente in un server di report o in un sito di SharePoint integrato con un server di report e possono essere riutilizzati in altri report. È possibile pubblicare elementi di report quali tabelle, matrici, grafici e immagini come parti di report.  
   
--   **Iniziare con un set di dati condiviso** creata da qualcun altro membro del team. I set di dati condivisi sono query basate su un'origine dati condivisa che vengono salvate in un server di report o in un sito di SharePoint integrato con un server di report.  
+-   **Iniziare con un set di dati condiviso** create da qualcun altro membro del team. I set di dati condivisi sono query basate su un'origine dati condivisa che vengono salvate in un server di report o in un sito di SharePoint integrato con un server di report.  
   
 -   **Avviare la procedura guidata di tabella, matrice o grafico**. Scegliere una connessione all'origine dati, trascinare campi per creare una query del set dei dati, selezionare un layout e uno stile e personalizzare il report.  
   
--   **Avviare la creazione guidata della mappa** per creare report di visualizzazione dei dati aggregati su uno sfondo geografico o geometrico. I dati di una mappa possono essere dati spaziali di una query [!INCLUDE[tsql](../../includes/tsql-md.md)] o di un file di forma ESRI (Environmental Systems Research Institute, Inc.) . È inoltre possibile aggiungere un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] sfondo a tessere mappa Bing.  
+-   **Avviare la creazione guidata della mappa** per creare report di visualizzazione dei dati aggregati su uno sfondo geografico o geometrico. I dati di una mappa possono essere dati spaziali di una query [!INCLUDE[tsql](../../includes/tsql-md.md)] o di un file di forma ESRI (Environmental Systems Research Institute, Inc.) . È anche possibile aggiungere un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] sfondo a tessere mappa Bing.  
   
 
   
 ##  <a name="DesignRept"></a> Progettazione del report  
   
--   **Creare report con tabella, matrice, grafico e layout di report in formato libero.** Creare report tabella per dati distribuiti in colonne, report matrice (ad esempio report a campi incrociati o di tabelle pivot) per dati di riepilogo, report grafici per dati grafici e report in formato libero per qualsiasi altra esigenza. Nei report è possibile incorporare altri report e grafici, nonché elenchi, grafica e controlli per le applicazioni Web dinamiche.  
+-   **Creare report con tabelle, matrici, grafici e layout in formato libero.** Creare report tabella per dati distribuiti in colonne, report matrice (ad esempio report a campi incrociati o di tabelle pivot) per dati di riepilogo, report grafici per dati grafici e report in formato libero per qualsiasi altra esigenza. Nei report è possibile incorporare altri report e grafici, nonché elenchi, grafica e controlli per le applicazioni Web dinamiche.  
   
 -   **Report da diverse origini dati.** È possibile compilare report usando dati da qualsiasi tipo di origine dati per cui sia disponibile un provider di dati gestito da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], un provider OLE DB oppure un'origine dati ODBC. È possibile creare report che utilizzano dati relazionali e multidimensionali da database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion e così via. È inoltre possibile utilizzare un'estensione per l'elaborazione dei dati XML per recuperare dati da qualsiasi origine dei dati XML. Per progettare origini dati personalizzate, è possibile utilizzare funzioni con valori di tabella.  
   
--   **Modificare report esistenti.** Utilizzando Generatore Report, è possibile personalizzare e aggiornare i report creati in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]progettazione Report.  
+-   **Modificare report esistenti.** Con Generatore Report, è possibile personalizzare e aggiornare report creati in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]progettazione Report.  
   
 -   **Modificare i dati** da filtrandoli, raggruppandoli e ordinandoli o aggiungendo formule o espressioni.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36068653"
 
   
 ##  <a name="InThisSection"></a> Contenuto della sezione  
- [Che cos'è una novità di Generatore Report per SQL Server 2014](../what-s-new-in-report-builder-for-sql-server-2014.md)  
+ [Novità di Generatore report per SQL Server 2014](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  Vengono illustrate le nuove caratteristiche disponibili in questa versione di Generatore report, incluse le mappe.  
   
  [Esercitazione: Creazione di un Report grafico rapido Offline](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
@@ -88,7 +88,7 @@ ms.locfileid: "36068653"
  [Pianificazione di un Report &#40;Generatore Report&#41;](../report-design/planning-a-report-report-builder.md)  
  Vengono fornite informazioni sugli aspetti che è necessario considerare prima di iniziare a compilare il report.  
   
- [Concetti di creazione di report &#40;SSRS e Generatore Report&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Concetti relativi alla creazione di report &#40;Report e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  Vengono definiti i concetti principali utilizzati in tutta la documentazione relativa a Generatore report.  
   
  [Visualizzazione di progettazione report &#40;Generatore Report&#41;](report-design-view-report-builder.md)  

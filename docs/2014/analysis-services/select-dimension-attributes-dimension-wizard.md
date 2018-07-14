@@ -1,5 +1,5 @@
 ---
-title: Selezione attributi dimensione (Creazione guidata dimensione) | Documenti Microsoft
+title: Selezione attributi dimensione (Creazione guidata dimensione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionattributes.f1
 ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6af0f81a3b356427d4279bfcdcb88f1c7b14ba57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08e54b933094b86c68af60277ff73b701bb5e4f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263447"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Selezione attributi dimensione (Creazione guidata dimensione)
   La pagina **Selezione attributi dimensione** consente di selezionare e modificare gli attributi della dimensione da creare.  
@@ -49,14 +49,14 @@ ms.locfileid: "36067680"
   
  Per modificare il nome di un attributo, fare clic sul nome dell’attributo e digitare un nuovo nome.  
   
- **Abilitare l'esplorazione**  
+ **Consenti esplorazione**  
  Selezionare per rendere disponibile l'attributo all'utente finale per l’esplorazione e l’applicazione di filtri. **Consenti esplorazione** deve essere selezionato per l'attributo chiave. Per gli attributi non chiave, **Consenti esplorazione** non è selezionato per impostazione predefinita. Gli attributi non chiave vengono pertanto visualizzati solo come proprietà del membro.  
   
- Nella maggior parte dei casi, l'attributo è reso disponibile o non disponibile per l'esplorazione impostando la `AttributeHierarchyEnabled` proprietà da `True` o `False`, rispettivamente. Nei tre casi seguenti, la procedura guidata utilizza comunque impostazioni diverse.  
+ Nella maggior parte dei casi, l'attributo è reso disponibile o non disponibile per l'esplorazione impostando la `AttributeHierarchyEnabled` proprietà `True` o `False`, rispettivamente. Nei tre casi seguenti, la procedura guidata utilizza comunque impostazioni diverse.  
   
 |Caso|Impostazioni|  
 |----------|--------------|  
-|Una dimensione contiene una gerarchia padre-figlio e **Consenti esplorazione** non è selezionato.|La procedura guidata lascia la `AttributeHierarchyEnabled` impostata su `True`e imposta il `AttributeHierarchyVisible` attributo `False` per l'attributo chiave.|  
+|Una dimensione contiene una gerarchia padre-figlio e **Consenti esplorazione** non è selezionato.|La procedura guidata lascia la `AttributeHierarchyEnabled` impostata su `True`e imposta la `AttributeHierarchyVisible` attributo `False` per l'attributo chiave.|  
 |Una tabella in una dimensione contiene una chiave esterna a una tabella che non è nella dimensione|La procedura guidata seleziona la chiave esterna come un attributo da includere, ma non selezionerà **Consenti esplorazione**. Se si mantengono queste impostazioni, la proprietà `AttributeHiearchyEnabled` dell’attributo sarà impostata su `True` e la proprietà `AttributeHieararchyVisible` sarà impostata su `False`.|  
 |Una dimensione contiene tabelle con schema snowflake raggiungibili tramite colonne chiavi esterne che ammettono valori Null.<br /><br /> —e—<br /><br /> Consenti esplorazione per l'attributo basato sulla chiave della tabella con schema snowflake non è selezionato|La procedura guidata creerà il nuovo attributo con il `AttributeHiearchyEnabled` impostata su `True`e il `AttributeHieararchyVisible` impostata su `False`.|  
   
@@ -64,8 +64,8 @@ ms.locfileid: "36067680"
  (Facoltativo) Impostare il tipo per l'attributo. Il valore predefinito è **Regolare**. Il tipo di attributo fornisce l’istruzione alle applicazioni client riguardo le informazioni che l'attributo potrebbe contenere.  
   
 ## <a name="see-also"></a>Vedere anche  
- [F1 Guida della procedura guidata di dimensione](dimension-wizard-f1-help.md)   
- [Le dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Guida F1 di creazione guidata dimensione](dimension-wizard-f1-help.md)   
+ [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

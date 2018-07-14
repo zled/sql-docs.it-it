@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerdacwizard.registerdac.f1
 - sql12.swb.registerdacwizard.summary.f1
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7b197a130a1caa9ec467d529b36373b8aa648b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 76cea4cf690481d4253b582f681b29b577d71877
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197201"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrare un database come applicazione livello dati
-  Utilizzare la **registrazione guidata di applicazione livello dati** o uno di Windows PowerShell lo script per creare una definizione di applicazione livello dati che descritta gli oggetti in un database esistente e registrare la definizione DAC nel `msdb` database di sistema (**master** in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
+  Usare la **registrazione guidata dell'applicazione livello dati** o uno PowerShell di Windows script per compilare un livello dati (DAC) che descrive gli oggetti in un database esistente e registrare la definizione DAC nel `msdb` database di sistema (**master** in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
 -   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - earlier versions [SQL Server], import and export data formats
 - -V switch
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - previous versions [SQL Server], import and export data formats
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93407bb4fbca1091fcab4f5e8ce23f6e07c9da09
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 15fad4d86582f2e5b98f24be1ac7e8b807202013
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191851"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importare dati in formato nativo e carattere da versioni precedenti di SQL Server
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è possibile usare **bcp** per importare dati in formato nativo e carattere da [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]o da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] usando l'opzione **-V** . Se si usa l'opzione **-V** , in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vengono usati tipi di dati della versione precedente specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e il formato del file di dati corrisponderà al formato della versione precedente in questione.  
@@ -51,20 +50,20 @@ ms.locfileid: "36157146"
 |XML|`ntext`|`ntext`|`ntext`|  
 |TIPO DEFINITO DALL'UTENTE<sup>1</sup>|`image`|`image`|`image`|  
   
- \* Questo tipo è supportato in modo nativo.  
+ \* Questo tipo in modo nativo è supportato.  
   
  <sup>1</sup> UDT indica un tipo definito dall'utente.  
   
 ## <a name="exporting-using-v-80"></a>Esportazione utilizzando –V 80  
- Quando si esportazione bulk di dati utilizzando il **– V80** passare, `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML, e i dati di tipo definito dall'utente in modalità nativa vengono archiviati con un prefisso a 4 byte, ad esempio `text`, `image`e `ntext`i dati, anziché con un prefisso a 8 byte, ovvero il valore predefinito per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
+ Quando si esportazione bulk dei dati tramite il **– V80** passa, `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML, e i dati di tipo definito dall'utente in modalità nativa vengono archiviati con un prefisso a 4 byte, come `text`, `image`e `ntext`dei dati, anziché con un prefisso a 8 byte che rappresenta il valore predefinito per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
   
 ## <a name="copying-date-values"></a>Copia dei valori di data  
  **bcp** consente di usare l'API della copia bulk ODBC. Quindi, per importare i valori di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** usa il formato di data ODBC (*aaaa-mm-gg hh:mm:ss*[*.f...*]).  
   
- Il **bcp** comando Esporta file di dati in formato carattere usando il formato predefinito ODBC per `datetime` e `smalldatetime` valori. Ad esempio, per una colonna `datetime` contenente la data `12 Aug 1998` verrà eseguita la copia bulk in un file di dati come stringa di caratteri `1998-08-12 00:00:00.000`.  
+ Il **bcp** comando Esporta i file in formato carattere usando il formato predefinito ODBC per `datetime` e `smalldatetime` valori. Ad esempio, per una colonna `datetime` contenente la data `12 Aug 1998` verrà eseguita la copia bulk in un file di dati come stringa di caratteri `1998-08-12 00:00:00.000`.  
   
 > [!IMPORTANT]  
->  Quando si importano i dati in un `smalldatetime` campo usando **bcp**, verificare che il valore dei secondi sia 00.000; in caso contrario, l'operazione avrà esito negativo. Il `smalldatetime` tipo di dati contiene solo valori approssimati al minuto più vicino. In questa istanza, le istruzioni BULK INSERT e INSERT ... SELECT * FROM OPENROWSET(BULK...) verranno eseguite ma il valore dei secondi verrà troncato.  
+>  Quando si importano i dati in un `smalldatetime` campo utilizzando **bcp**, verificare che il valore dei secondi sia 00.000; in caso contrario, l'operazione avrà esito negativo. Il `smalldatetime` tipo di dati contiene solo valori approssimati al minuto più vicino. In questa istanza, le istruzioni BULK INSERT e INSERT ... SELECT * FROM OPENROWSET(BULK...) verranno eseguite ma il valore dei secondi verrà troncato.  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per utilizzare formati di dati per l'importazione o l'esportazione bulk**  

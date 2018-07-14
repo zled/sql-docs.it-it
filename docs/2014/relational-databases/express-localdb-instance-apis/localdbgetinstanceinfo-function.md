@@ -1,5 +1,5 @@
 ---
-title: Funzione LocalDBGetInstanceInfo | Documenti Microsoft
+title: Funzione LocalDBGetInstanceInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ topic_type:
 - apiref
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1f85efa89aae3df4a8875c865d9e83f2d4d9b91d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 8fe636ca60998baa75b71a6d179d20630bac2f8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205311"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Funzione LocalDBGetInstanceInfo
   Vengono restituite le informazioni per l'istanza del database locale di SQL Server Express specificata, se esistente, la versione del database locale utilizzata dall'istanza, se quest'ultima è in esecuzione e così via.  
   
- Vengono restituite le informazioni un `struct` denominato **LocalDBInstanceInfo**, che presenta la definizione seguente.  
+ Vengono restituite le informazioni un `struct` denominate **LocalDBInstanceInfo**, che presenta la seguente definizione.  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -98,7 +98,7 @@ HRESULT LocalDBGetInstanceInfo(
  [Output] Buffer per archiviare le informazioni sull'istanza del database locale.  
   
  *dwInstanceInfoSize*  
- [Input] Contiene le dimensioni del *InstanceInfo* buffer.  
+ [Input] Include le dimensioni dei *InstanceInfo* buffer.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  S_OK  
@@ -132,11 +132,11 @@ HRESULT LocalDBGetInstanceInfo(
  Errore imprevisto. Per informazioni, vedere il registro eventi.  
   
 ## <a name="details"></a>Dettagli  
- La logica alla base dell'introduzione del `struct` argomento delle dimensioni (*lpInstanceInfoSize*) consiste nell'abilitare l'API per versioni diverse di restituire il **LocalDBInstanceInfostruct**, in modo efficace consentendo la compatibilità con le versioni precedenti e successive.  
+ La logica alla base dell'introduzione del `struct` argomento delle dimensioni (*lpInstanceInfoSize*) consiste nell'abilitare l'API per versioni diverse di restituire il **LocalDBInstanceInfostruct**, in modo efficace abilitazione della compatibilità con le versioni precedenti e successive.  
   
  Se il `struct` argomento delle dimensioni (*lpInstanceInfoSize*) corrisponde alle dimensioni di una versione nota del **LocalDBInstanceInfostruct**, che la versione del `struct` viene restituito. In caso contrario, viene restituito LOCALDB_ERROR_INVALID_PARAMETER.  
   
- Un esempio tipico di **LocalDBGetInstanceInfo** utilizzo API simile al seguente:  
+ Un esempio tipico **LocalDBGetInstanceInfo** utilizzo dell'API si presenta come segue:  
   
 ```  
 LocalDBInstanceInfo ii;  

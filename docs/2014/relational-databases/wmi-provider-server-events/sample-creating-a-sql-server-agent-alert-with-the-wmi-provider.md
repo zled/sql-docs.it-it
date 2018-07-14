@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: Creazione di un avviso SQL Server Agent tramite il Provider WMI per eventi del Server | Documenti Microsoft'
+title: 'Esempio: Creazione di un avviso SQL Server Agent tramite il Provider WMI per eventi del Server | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9f109802dccbe7698f713f61ce7ba1f26efb1449
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6c6a8ded031806322961d5f56a1b0ba28fe6dad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186218"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Esempio: Creazione di un avviso di SQL Server Agent tramite il provider WMI per eventi del server
   Un utilizzo comune del provider di eventi WMI consiste nel creare avvisi di SQL Server Agent in risposta a eventi specifici. Nell'esempio seguente viene presentato un avviso semplice che salva eventi Deadlock Graph XML in una tabella per l'analisi successiva. SQL Server Agent invia una richiesta WQL, riceve eventi WMI ed esegue un processo in risposta all'evento. Si noti che benché diversi oggetti di Service Broker siano interessati dall'elaborazione del messaggio di notifica, il provider di eventi WMI gestisce i dettagli della creazione e della gestione di tali oggetti.  
@@ -34,12 +34,12 @@ ms.locfileid: "36156208"
   
  Viene quindi creato l'avviso. Lo script crea innanzitutto il processo eseguito dall'avviso, aggiunge un passaggio del processo al processo e specifica come destinazione del processo l'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lo script crea quindi l'avviso.  
   
- Il passaggio del processo recupera i **TextData** proprietà dell'istanza dell'evento WMI e inserisce tale valore nella **DeadlockGraph** colonna del **DeadlockEvents** tabella. Si noti che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte in modo implicito la stringa in formato XML. Poiché utilizza il sottosistema [!INCLUDE[tsql](../../includes/tsql-md.md)], il passaggio del processo non specifica un proxy.  
+ Il passaggio del processo recupera le **TextData** proprietà dell'istanza dell'evento WMI e inserisce tale valore nel **DeadlockGraph** colonna del **DeadlockEvents** tabella. Si noti che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte in modo implicito la stringa in formato XML. Poiché utilizza il sottosistema [!INCLUDE[tsql](../../includes/tsql-md.md)], il passaggio del processo non specifica un proxy.  
   
  L'avviso esegue il processo ogni volta che viene registrato un evento di traccia Deadlock Graph. Per un avviso WMI, SQL Server Agent crea una query di notifica utilizzando lo spazio dei nomi e l'istruzione WQL specificati. Per questo avviso, SQL Server Agent esegue il monitoraggio dell'istanza predefinita nel computer locale. L'istruzione WQL richiede tutti gli eventi `DEADLOCK_GRAPH` nell'istanza predefinita. Per modificare l'istanza monitorata dall'avviso, sostituire il nome dell'istanza per `MSSQLSERVER` in `@wmi_namespace` per l'avviso.  
   
 > [!NOTE]  
->  Per SQL Server Agent per la ricezione di eventi WMI [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve essere abilitata nel **msdb** e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+>  Per SQL Server Agent riceva eventi WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve essere abilitata nel **msdb** e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
 USE AdventureWorks ;  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>Test dell'esempio  
- Per visualizzare l'esecuzione del processo, provocare un deadlock. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], aprire due **Query SQL** schede e connettere entrambe le query alla stessa istanza. Eseguire lo script seguente in una delle schede delle query. Questo script produce un set di risultati e viene terminato.  
+ Per visualizzare l'esecuzione del processo, provocare un deadlock. Nelle [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], aprire due **Query SQL** schede e connettere entrambe le query alla stessa istanza. Eseguire lo script seguente in una delle schede delle query. Questo script produce un set di risultati e viene terminato.  
   
 ```  
 USE AdventureWorks ;  

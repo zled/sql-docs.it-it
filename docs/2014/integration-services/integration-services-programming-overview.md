@@ -24,13 +24,13 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 246ee644377bf1e0da6e368e9bbb943d333dc992
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5434546f2a6d392cb8eed82704d8164c31620e91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271647"
 ---
 # <a name="integration-services-programming-overview"></a>Panoramica della programmazione di Integration Services
   L'architettura di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] separa lo spostamento e la trasformazione dei dati dal flusso di controllo e dalla gestione dei pacchetti. Due motori distinti definiscono questa architettura, che possono essere automatizzati ed estesi quando si programma [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Il motore di runtime implementa l'infrastruttura del flusso di controllo e di gestione dei pacchetti che consente agli sviluppatori di controllare il flusso di esecuzione e impostare le opzioni per la registrazione, la gestione degli eventi e le variabili. Il motore flusso di dati è un motore speciale, a elevate prestazioni, dedicato esclusivamente all'estrazione, alla trasformazione e al caricamento di dati. Quando si programma [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], si utilizzeranno questi due motori.  
@@ -47,7 +47,7 @@ ms.locfileid: "36067439"
 ## <a name="integration-services-data-flow-engine"></a>Motore flusso di dati di Integration Services  
  Il motore flusso di dati gestisce l'attività Flusso di dati, un'attività speciale a elevate prestazioni dedicata allo spostamento e alla trasformazione di dati da origini disparate. A differenza di altre attività, l'attività Flusso di dati contiene oggetti aggiuntivi, i componenti flusso di dati, che possono essere origini, trasformazioni o destinazioni. Questi componenti costituiscono le parti mobili principali dell'attività. Definiscono lo spostamento e la trasformazione dei dati. Programmando il motore flusso di dati, gli sviluppatori possono automatizzare la creazione e la configurazione dei componenti in un'attività Flusso di dati, nonché creare componenti personalizzati.  
   
- Per altre informazioni, vedere [estendendo il flusso di dati con il componente Script] (extending-packages-scripting/data-flow-script-component/extending-the-dei dati-flow-with-the-script-component.md, [lo sviluppo di un componente del flusso di dati personalizzato ](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md), e [compilazione di pacchetti a livello di programmazione](building-packages-programmatically/building-packages-programmatically.md).  
+ Per altre informazioni, vedere [estensione del flusso di dati con il componente Script] (extending-packages-scripting/data-flow-script-component/extending-the-dei dati-flow-with-the-script-component.md, [lo sviluppo di un componente flusso di dati personalizzato ](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md), e [compilazione di pacchetti a livello di programmazione](building-packages-programmatically/building-packages-programmatically.md).  
   
 ## <a name="supported-languages"></a>Lingue supportate  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta pienamente [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. In questo modo gli sviluppatori possono programmare [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nel linguaggio conforme a .NET che preferiscono. Sebbene il motore di runtime e il motore flusso di dati siano scritti in codice nativo, sono entrambi disponibili tramite un modello a oggetti completamente gestito.  
@@ -79,6 +79,6 @@ ms.locfileid: "36067439"
   
 ||  
 |-|  
-![Icona di Integration Services (piccola)](media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
   

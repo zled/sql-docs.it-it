@@ -1,5 +1,5 @@
 ---
-title: Proprietà intrinseche dei membri (MDX) | Documenti Microsoft
+title: Proprietà intrinseche dei membri (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - intrinsic member properties [MDX]
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ac41e667c11812243aceeb9f6fd71a8a64fc2cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cbfcb8926d8d4b1ae71c5a3b6ed35c3beb7796c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236031"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Proprietà intrinseche dei membri (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] espone proprietà intrinseche sui membri della dimensione che è possibile includere in una query per restituire dati o metadati aggiuntivi da usare in un'applicazione personalizzata o per supportare la costruzione o l'analisi dei modelli. Se si utilizzano gli strumenti client di SQL Server, è possibile visualizzare le proprietà intrinseche in SQL Server Management Studio (SSMS).  
@@ -48,7 +48,7 @@ ms.locfileid: "36068372"
  Proprietà dei membri non sensibili al contesto  
  Queste proprietà del membro non possono essere utilizzate nel contesto di una dimensione o di un livello specifico e restituiscono i valori di tutti i membri su un asse.  
   
- Le proprietà non sensibili al contesto sono autonome e non includono informazioni sul percorso. Si noti come non è specificato per il livello né alcuna dimensione `PARENT_UNIQUE_NAME` nell'esempio seguente: `DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
+ Le proprietà non sensibili al contesto sono autonome e non includono informazioni sul percorso. Si noti che non è specificato per livello né alcuna dimensione `PARENT_UNIQUE_NAME` nell'esempio seguente: `DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
   
  Indipendentemente dal fatto che una proprietà intrinseca di un membro sia sensibile o meno al contesto, valgono le regole di utilizzo seguenti:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36068372"
   
 -   Nelle query relative alla proprietà è necessario utilizzare la parola chiave `PROPERTIES`.  
   
- Nelle sezioni seguenti vengono descritti entrambi i vari sensibile al contesto e il contesto non sensibili proprietà intrinseche dei membri disponibili in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e come utilizzare il `PROPERTIES` (parola chiave) con ogni tipo di proprietà.  
+ Le sezioni seguenti descrivono entrambi vari sensibile al contesto e senza contesto sensibili proprietà intrinseche dei membri disponibili nel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e come usare il `PROPERTIES` (parola chiave) con ogni tipo di proprietà.  
   
 ## <a name="context-sensitive-member-properties"></a>Proprietà dei membri sensibili al contesto  
  Tutti i membri delle dimensioni e dei livelli supportano un elenco di proprietà intrinseche sensibili al contesto. Nella tabella seguente sono elencate tali proprietà sensibili al contesto.  
@@ -91,7 +91,7 @@ ms.locfileid: "36068372"
  Nella tabella seguente sono elencate le proprietà intrinseche non sensibili al contesto supportate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
->  Le colonne nel set di righe dello schema MEMBERS supportano le proprietà intrinseche dei membri elencate nella tabella seguente. Per ulteriori informazioni sul `MEMBERS` set di righe dello schema, vedere [set di righe MDSCHEMA_MEMBERS](../../schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
+>  Le colonne nel set di righe dello schema MEMBERS supportano le proprietà intrinseche dei membri elencate nella tabella seguente. Per altre informazioni sul `MEMBERS` set di righe dello schema, vedere [set di righe MDSCHEMA_MEMBERS](../../schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
   
 |Proprietà|Description|  
 |--------------|-----------------|  
@@ -105,13 +105,13 @@ ms.locfileid: "36068372"
 |`IS_DATAMEMBER`|Valore booleano che indica se il membro è un membro dati.|  
 |`IS_PLACEHOLDERMEMBER`|Valore booleano che indica se il membro è un segnaposto.|  
 |`KEYx`|Chiave del membro, in cui x è il numero ordinale in base zero della chiave. KEY0 è disponibile per le chiavi composte e non composte.<br /><br /> Se la chiave non è composta, KEY0 equivale a `Key`.<br /><br /> Le chiavi KEY0, KEY1, KEY2 e via di seguito formano collettivamente una chiave composta. È possibile fare riferimento a ciascuna chiave in modo indipendente in una query per restituire la parte corrispondente della chiave composta. Se ad esempio si specifica KEY0, viene restituita la prima parte della chiave composta, se si specifica KEY1 viene restituita la parte successiva e così via.<br /><br /> Notare che `KEYx` può essere utilizzata sia in contesto che fuori contesto. Per questo motivo appare in entrambi gli elenchi.<br /><br /> Per un esempio di come usare la proprietà dei membri, vedere [A Simple MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)(Tidbit MDX semplice: Key0, Key1, Key2).|  
-|`LCID` *X*|Conversione della didascalia del membro del valore esadecimale dell'ID impostazioni locali, dove *x* è il valore decimale dell'ID impostazioni locali, ad esempio LCID1009 per Inglese-Canada. È disponibile solo se nella conversione la colonna della didascalia è associata all'origine dei dati.|  
+|`LCID` *x*|Conversione della didascalia del membro del valore esadecimale dell'ID impostazioni locali, dove *x* è il valore decimale dell'ID impostazioni locali, ad esempio LCID1009 per Inglese-Canada. È disponibile solo se nella conversione la colonna della didascalia è associata all'origine dei dati.|  
 |`LEVEL_NUMBER`|Distanza del membro dalla radice della gerarchia. Per il livello radice è zero.|  
 |`LEVEL_UNIQUE_NAME`|Nome univoco del livello a cui appartiene il membro. Per i provider che generano nomi univoci tramite qualificazione, i singoli componenti di tale nome sono delimitati.|  
 |`MEMBER_CAPTION`|Etichetta o didascalia associata al membro. La didascalia viene utilizzata soprattutto a scopo di visualizzazione. Se non esiste una didascalia, la query restituirà `MEMBER_NAME`.|  
 |`MEMBER_KEY`|Valore della chiave del membro nel tipo di dati originale. MEMBER_KEY è disponibile per compatibilità con le versioni precedenti.  MEMBER_KEY ha lo stesso valore di KEY0 per le chiavi non composte e la proprietà MEMBER_KEY è Null per le chiavi composte.|  
 |`MEMBER_NAME`|Nome del membro.|  
-|`MEMBER_TYPE`|Tipo del membro. Di seguito vengono indicati i possibili valori della proprietà. <br />**MDMEMBER_TYPE_REGULAR**<br />**MDMEMBER_TYPE_ALL**<br />**MDMEMBER_TYPE_FORMULA**<br />**MDMEMBER_TYPE_MEASURE**<br />**MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> MDMEMBER_TYPE_FORMULA ha la precedenza rispetto a MDMEMBER_TYPE_MEASURE. Pertanto, se è presente un membro formula (calcolato) nella dimensione Measures, il `MEMBER_TYPE` proprietà per il membro calcolato è MDMEMBER_TYPE_FORMULA.|  
+|`MEMBER_TYPE`|Tipo del membro. Di seguito vengono indicati i possibili valori della proprietà. <br />**MDMEMBER_TYPE_REGULAR**<br />**MDMEMBER_TYPE_ALL**<br />**MDMEMBER_TYPE_FORMULA**<br />**MDMEMBER_TYPE_MEASURE**<br />**MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> MDMEMBER_TYPE_FORMULA ha la precedenza rispetto a MDMEMBER_TYPE_MEASURE. Pertanto, se esiste un membro formula (calcolato) nella dimensione Measures, il `MEMBER_TYPE` è di proprietà per il membro calcolato sarà MDMEMBER_TYPE_FORMULA.|  
 |`MEMBER_UNIQUE_NAME`|Nome univoco del membro. Per i provider che generano nomi univoci tramite qualificazione, i singoli componenti di tale nome sono delimitati.|  
 |`MEMBER_VALUE`|Valore del membro nel tipo originale.|  
 |`PARENT_COUNT`|Numero di elementi padre del membro.|  
@@ -122,7 +122,7 @@ ms.locfileid: "36068372"
 |`UNIQUE_NAME`|Nome completo del membro nel formato: [dimension].[level].[key6].|  
   
 ### <a name="properties-syntax-for-non-context-sensitive-properties"></a>Sintassi della parola chiave PROPERTIES per le proprietà non sensibili al contesto  
- Utilizzare la sintassi seguente per specificare una proprietà intrinseca, senza contesto membro sensibile tramite il `PROPERTIES` (parola chiave):  
+ Usare la sintassi seguente per specificare una proprietà membro sensibile intrinseco, senza contesto tramite il `PROPERTIES` (parola chiave):  
   
  `DIMENSION PROPERTIES Property`  
   
@@ -219,7 +219,7 @@ FROM [Adventure Works]
  [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
  [Proprietà &#40;MDX&#41;](/sql/mdx/properties-mdx)   
  [PrevMember &#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
- [Utilizzando le proprietà del membro &#40;MDX&#41;](mdx-member-properties.md)   
- [Riferimento alla funzione MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [Usando le proprietà dei membri &#40;MDX&#41;](mdx-member-properties.md)   
+ [Riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Web Part Visualizzatore di report in un sito di SharePoint | Documenti Microsoft
+title: Web Part Visualizzatore di report in un sito di SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -18,16 +18,16 @@ ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6be315ce2da4f17ab821a97c3a82f615e84cc181
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87498b7eca136eba037a8454416b875f5690cae3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198481"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Web part Visualizzatore report in un sito di SharePoint
-  La web part Visualizzatore report è una web part personalizzata installata con il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per prodotti SharePoint. È possibile utilizzare questa web part per visualizzare, esplorare, stampare ed esportare report in un server di report configurato per l'esecuzione in modalità integrata SharePoint. La Web Part Visualizzatore Report è associata a file di definizione (con estensione rdl) del report che vengono elaborati da un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report. Non è possibile utilizzarla con altri documenti di report creati con altri prodotti software.  
+  La web part Visualizzatore report è una web part personalizzata installata con il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per prodotti SharePoint. È possibile utilizzare questa web part per visualizzare, esplorare, stampare ed esportare report in un server di report configurato per l'esecuzione in modalità integrata SharePoint. La Web Part Visualizzatore Report è associata ai file di definizione (con estensione rdl) di report che vengono elaborati da un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report. Non è possibile utilizzarla con altri documenti di report creati con altri prodotti software.  
   
  Per installare la web part, è necessario eseguire il programma di installazione per il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. La Web part non deve essere installata in modo indipendente, poiché è inclusa nel componente aggiuntivo e può essere installata solo tramite il programma di installazione di quest'ultimo. Il nome di file della web part Visualizzatore report è ReportViewer.dwp. Il file si trova nella cartella Programmi\File comuni\Microsoft Shared\Web Server Extensions\12\template\features\reportserver. Il file non deve essere spostato in altre cartelle.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36069552"
  Per impostazione predefinita, i report vengono aperti in modalità Pagina intera. In tale modalità viene visualizzata la barra degli strumenti, che fornisce i controlli per navigazione tra le pagine, la ricerca e altre funzionalità. È possibile personalizzare la web part per modificarne l'aspetto o il comportamento predefinito.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installare o disinstallare il componente aggiuntivo di servizi Reporting per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+ [Installare o disinstallare il Reporting aggiuntivo Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [Aggiungere la Web Part Visualizzatore Report a una pagina Web &#40;Reporting Services in SharePoint la modalità integrata&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

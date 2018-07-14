@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load-balancing [Integration Services]
 - parent packages [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3f62b54da56b0fdbd548fd825292db8a39e55a38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2e52b17b84f2032aec6e142dc2b845ff1ae0bd8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068070"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235221"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Bilanciamento del carico dei pacchetti su server remoti tramite SQL Server Agent
   Quando è necessario eseguire numerosi pacchetti, è preferibile utilizzare altri server eventualmente disponibili. L'utilizzo di altri server per l'esecuzione di più pacchetti controllati da un unico pacchetto padre è detto bilanciamento del carico. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]il bilanciamento del carico è una procedura manuale che deve essere definita dai proprietari dei pacchetti. Il bilanciamento del carico non viene infatti eseguito automaticamente dai server. Inoltre, sui server remoti è possibile eseguire esclusivamente pacchetti interi, non singole attività in altri pacchetti.  
@@ -61,8 +61,8 @@ ms.locfileid: "36068070"
 |Argomento|Description|  
 |-----------|-----------------|  
 |[Implementazione di pacchetti figlio](../implementation-of-child-packages.md)|Vengono descritte l'installazione dei pacchetti e la creazione dei processi di SQL Server Agent per l'esecuzione di tali pacchetti.|  
-|[Implementazione di un pacchetto padre](../implementation-of-the-parent-package.md)|Viene descritta la creazione di un pacchetto padre contenente più attività Esegui processo di SQL Server Agent. Ogni attività esegue uno dei pacchetti figlio.|  
-|[La registrazione per il carico bilanciato dei pacchetti su server remoti](../logging-for-load-balanced-packages-on-remote-servers.md)|Viene descritto lo scenario di registrazione per i pacchetti remoti.|  
+|[Implementazione del pacchetto padre](../implementation-of-the-parent-package.md)|Viene descritta la creazione di un pacchetto padre contenente più attività Esegui processo di SQL Server Agent. Ogni attività esegue uno dei pacchetti figlio.|  
+|[Registrazione per pacchetti con bilanciamento del carico in server remoti](../logging-for-load-balanced-packages-on-remote-servers.md)|Viene descritto lo scenario di registrazione per i pacchetti remoti.|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Pianificare un pacchetto tramite SQL Server Agent](../schedule-a-package-by-using-sql-server-agent.md)  

@@ -1,5 +1,5 @@
 ---
-title: Flat File Destination Editor (pagina Mapping) | Documenti Microsoft
+title: Flat File di destinazione Editor (pagina Mapping) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledestadapter.mappings.f1
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d7c94ee04df34919f40a0369d60592fe975b6bc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83d22f24c737a84a55bef27b2150e2032deccb9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213411"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>Editor destinazione file flat (pagina Mapping)
   Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione file flat** per eseguire il mapping tra le colonne di input e quelle di destinazione.  
@@ -44,7 +44,7 @@ ms.locfileid: "36070092"
  Consente di visualizzare tutte le colonne di destinazione disponibili, indipendentemente dal fatto che siano mappate o meno.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione File flat &#40;pagina Gestione connessione&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
   
   

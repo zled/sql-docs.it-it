@@ -8,35 +8,35 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 caps.latest.revision: 61
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4f8b3f60d82a94fa7289054d0028ab539abade64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a5c3560a7aafd3fcf53f9b10d606e1f999bbf063
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196811"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Creare un report tabella semplice (esercitazione su SSRS)
-  Questa esercitazione è progettata per la creazione di un report tabella semplice basato sul [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] del database tramite Progettazione Report. Per creare report è inoltre possibile utilizzare Generatore report o la Creazione guidata report. In questa esercitazione verranno illustrate le procedure per creare un progetto report, impostare le informazioni di connessione, definire una query, aggiungere un'area dati tabella, raggruppare alcuni campi e aggiungere totali, nonché visualizzare il report in anteprima.  
+  Questa esercitazione è progettata per la creazione di un report tabella semplice basato sul [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database tramite Progettazione Report. Per creare report è inoltre possibile utilizzare Generatore report o la Creazione guidata report. In questa esercitazione verranno illustrate le procedure per creare un progetto report, impostare le informazioni di connessione, definire una query, aggiungere un'area dati tabella, raggruppare alcuni campi e aggiungere totali, nonché visualizzare il report in anteprima.  
   
 > [!NOTE]  
->  Per completare l'esercitazione, è necessario eseguire [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità nativa. Se [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è eseguito in modalità di integrazione con SharePoint, i passaggi in cui verranno utilizzati URL di server di report non possono essere completati correttamente. Per ulteriori informazioni [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modalità, vedere [del Server di Report di Reporting Services](reporting-services-report-server.md).  
+>  Per completare l'esercitazione, è necessario eseguire [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità nativa. Se [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è eseguito in modalità di integrazione con SharePoint, i passaggi in cui verranno utilizzati URL di server di report non possono essere completati correttamente. Per altre informazioni sulle [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modalità, vedere [Server di Report di Reporting Services](reporting-services-report-server.md).  
   
 ## <a name="requirements"></a>Requisiti  
  Per utilizzare l'esercitazione è necessario che nel sistema siano installati i componenti seguenti:  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Motore di database  
   
--   Database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  Per altre informazioni, vedere [Adventure Works per SQL Server 2012 (Adventure Works per SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).. Per ulteriori informazioni sul supporto per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database di esempio e codice di esempio per [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], vedere [Databases and Samples Overview](http://go.microsoft.com/fwlink/?LinkId=110391) nel sito CodePlex Web.  
+-   Database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  Per altre informazioni, vedere [Adventure Works per SQL Server 2012 (Adventure Works per SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).. Per altre informazioni sul supporto per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database di esempio e codice di esempio per [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], vedere [Databases and Samples Overview](http://go.microsoft.com/fwlink/?LinkId=110391) sul sito CodePlex Web.  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)](Indici per tabelle con ottimizzazione per la memoria).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36070229"
     > [!NOTE]  
     >  [!INCLUDE[ssNote64Samp](../includes/ssnote64samp-md.md)]  
   
- È inoltre necessario disporre delle autorizzazioni di sola lettura per recuperare dati dal [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
+ È anche necessario avere autorizzazioni di sola lettura per recuperare dati dal [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
 ## <a name="tasks"></a>Attività  
  [Lezione 1: Creazione di un progetto Server di Report &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)  

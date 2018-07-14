@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.querydesigner
 - vdt.pane.diagram
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - View Designer, components
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ec0aafb394d43fa55fa940ca5ce23cca798b3ef4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: df346757d4fca96b17b2287fe614d4db95319e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168119"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>Strumenti di progettazione di query e viste (Visual Database Tools)
   Quando si progetta una query, una vista, una funzione inline o una stored procedure a istruzione singola, la finestra di progettazione utilizzata è costituita da quattro riquadri: Diagramma, Criteri, SQL e Risultati.  

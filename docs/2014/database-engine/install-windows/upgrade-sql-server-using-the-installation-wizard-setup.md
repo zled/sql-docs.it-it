@@ -1,5 +1,5 @@
 ---
-title: Eseguire l'aggiornamento a SQL Server 2014 tramite l'installazione guidata (programma di installazione) | Documenti Microsoft
+title: Eseguire l'aggiornamento a SQL Server 2014 usando l'installazione guidata (programma di installazione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 caps.latest.revision: 62
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b56fc3323fcd29b19f43d63c054a9cd844944bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71f2683e42e6a1af7c971b3e192ad534847896ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219791"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Eseguire l'aggiornamento a SQL Server 2014 utilizzando l'Installazione guidata (programma di installazione)
   Nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un singolo albero delle funzionalità per aggiornare i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È inoltre possibile eseguire l'installazione side-by-side di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a una versione precedente oppure eseguire la migrazione di database e impostazioni di configurazione esistenti da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e applicarli a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -35,12 +35,12 @@ ms.locfileid: "36069464"
   
 -   [Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server &#40;installazione&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)  
   
--   [Installare SQL Server 2014 dal Prompt dei comandi](install-sql-server-from-the-command-prompt.md)  
+-   [Installazione di SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)  
   
 -   [Usare Copia guidata database](../../relational-databases/databases/use-the-copy-database-wizard.md)  
   
 > [!NOTE]  
->  In un computer in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Core SP1 non è supportato l'aggiornamento di una versione precedente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]. Per ulteriori informazioni sulle installazioni Server Core, vedere [installare SQL Server 2014 in Server Core](install-sql-server-on-server-core.md).  
+>  In un computer in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Core SP1 non è supportato l'aggiornamento di una versione precedente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]. Per altre informazioni sulle installazioni Server Core, vedere [installare SQL Server 2014 in Server Core](install-sql-server-on-server-core.md).  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  È necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio che disponga di autorizzazioni di lettura ed esecuzione per questa condivisione remota e che a eseguire l'operazione sia un amministratore locale.  
@@ -49,7 +49,7 @@ ms.locfileid: "36069464"
   
 -   [Aggiornamento a SQL Server 2014](upgrade-sql-server.md)  
   
--   [Requisiti hardware e Software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Requisiti hardware e software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Parametri di controllo di Controllo configurazione sistema](check-parameters-for-the-system-configuration-checker.md)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36069464"
 -   [Compatibilità con le versioni precedenti del motore di database di SQL Server](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
->  Non è possibile modificare le funzionalità da aggiornare, né aggiungere funzionalità durante l'operazione di aggiornamento. Per ulteriori informazioni su come aggiungere funzionalità a un'istanza aggiornata del [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] una volta completata l'operazione di aggiornamento, vedere [aggiungere funzionalità a un'istanza di SQL Server 2014 &#40;programma di installazione&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
+>  Non è possibile modificare le funzionalità da aggiornare, né aggiungere funzionalità durante l'operazione di aggiornamento. Per altre informazioni su come aggiungere funzionalità a un'istanza aggiornata del [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] una volta completata l'operazione di aggiornamento, vedere [aggiunta di caratteristiche a un'istanza di SQL Server 2014 &#40;installazione&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
   
 ## <a name="procedure"></a>Procedura  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36069464"
   
 -   **Registrare i server** : poiché l'operazione di aggiornamento rimuove le impostazioni del Registro di sistema per la precedente istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in seguito all'aggiornamento è necessario registrare nuovamente i server.  
   
--   **Aggiornare le statistiche** : per ottimizzare le prestazioni delle query, in seguito all'aggiornamento è consigliabile aggiornare le statistiche per tutti i database. Usare la `sp_updatestats` stored procedure per aggiornare le statistiche nelle tabelle definite dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+-   **Aggiornare le statistiche** : per ottimizzare le prestazioni delle query, in seguito all'aggiornamento è consigliabile aggiornare le statistiche per tutti i database. Usare la `sp_updatestats` stored procedure per aggiornare le statistiche nelle tabelle definite dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i database.  
   
 -   **Configurare la nuova installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: per ridurre la superficie di attacco di un sistema, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati e abilitati in modo selettivo i servizi e le funzionalità principali. Per ulteriori informazioni sulla configurazione della superficie di attacco, vedere il file Leggimi per questa versione.  
   

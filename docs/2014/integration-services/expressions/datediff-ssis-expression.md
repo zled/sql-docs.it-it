@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DATEDIFF statement
 - dates [Integration Services], DATEDIFF
@@ -16,13 +16,13 @@ ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14ef1c8dce4ce1ed22f8067a5409ec8394bcb66d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03334b761d9c5e9fa479fd939f06089e7aae8c6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162769"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (espressione SSIS)
   Restituisce il numero di unità di data e ora trascorse tra due date specificate. Il parametro *datepart* identifica i limiti di data e ora da confrontare.  
@@ -47,7 +47,7 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Nella tabella seguente sono elencate le parti della data e le abbreviazioni riconosciute dall'analizzatore di espressioni.  
   
 |datepart|Abbreviazioni|  
@@ -85,18 +85,18 @@ DATEDIFF("dd", (DT_DBTIMESTAMP)"8/1/2003", (DT_DBTIMESTAMP)"8/8/2003")
 DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())  
 ```  
   
- In questo esempio viene restituito il numero delle settimane tra la data nella colonna **ModifiedDate** e quella nella variabile **YearEndDate** . Se **YearEndDate** ha un `date` tipo di dati, non è necessario alcun cast esplicito.  
+ In questo esempio viene restituito il numero delle settimane tra la data nella colonna **ModifiedDate** e quella nella variabile **YearEndDate** . Se **YearEndDate** ha una `date` tipo di dati, non è necessario alcun cast esplicito.  
   
 ```  
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DATEADD &#40;espressione SSIS&#41;](dateadd-ssis-expression.md)   
+ [DATEADD &#40;espressione di SSIS&#41;](dateadd-ssis-expression.md)   
  [DATEPART &#40;espressione SSIS&#41;](datepart-ssis-expression.md)   
  [DAY &#40;espressione SSIS&#41;](day-ssis-expression.md)   
  [MONTH &#40;espressione SSIS&#41;](month-ssis-expression.md)   
  [YEAR &#40;espressione SSIS&#41;](year-ssis-expression.md)   
- [Le funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md)  
+ [Le funzioni &#40;espressione di SSIS&#41;](functions-ssis-expression.md)  
   
   

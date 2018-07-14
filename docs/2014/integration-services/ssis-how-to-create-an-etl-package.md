@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione SSIS: Creazione di un pacchetto ETL semplice | Documenti Microsoft'
+title: 'Esercitazione SSIS: Creazione di un pacchetto ETL semplice | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, tutorials
 - packages [Integration Services], tutorials
@@ -20,16 +20,16 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9d5a3522e857f7cb053f181a46e17cb44288a850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b2e8b7f78e7dc64bc3649270e279b740b041abb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263157"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>Esercitazione SSIS: Creazione di un pacchetto ETL semplice
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) è una piattaforma per la compilazione di soluzioni di integrazione di dati, inclusi l'estrazione, trasformazione e caricamento (ETL) di pacchetti per il data warehousing ad alte prestazioni. In SSIS sono disponibili strumenti grafici e procedure guidate per la compilazione e il debug di pacchetti, attività per l'esecuzione di funzioni di flusso di lavoro quali operazioni FTP, esecuzione di istruzioni SQL e invio di messaggi di posta elettronica, origini dei dati e destinazioni per l'estrazione e il caricamento dei dati, trasformazioni per la pulizia, l'aggregazione, l'unione e la copia dei dati, il servizio di gestione [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , per l'amministrazione dell'esecuzione e dell'archiviazione dei pacchetti, nonché API (Application Programming Interface) per la programmazione del modello a oggetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) è una piattaforma per la creazione di soluzioni di integrazione dei dati, ad esempio estrazione, trasformazione e caricamento (ETL) di pacchetti per il data warehousing ad alte prestazioni. In SSIS sono disponibili strumenti grafici e procedure guidate per la compilazione e il debug di pacchetti, attività per l'esecuzione di funzioni di flusso di lavoro quali operazioni FTP, esecuzione di istruzioni SQL e invio di messaggi di posta elettronica, origini dei dati e destinazioni per l'estrazione e il caricamento dei dati, trasformazioni per la pulizia, l'aggregazione, l'unione e la copia dei dati, il servizio di gestione [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , per l'amministrazione dell'esecuzione e dell'archiviazione dei pacchetti, nonché API (Application Programming Interface) per la programmazione del modello a oggetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  In questa esercitazione verrà illustrato come usare Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per creare un pacchetto semplice di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Tale pacchetto preleva i dati da un file flat, li riformatta e quindi li inserisce in una tabella dei fatti. Nelle lezioni successive il pacchetto viene espanso per illustrare i loop, le configurazioni del pacchetto, la registrazione e il flusso degli errori.  
   
@@ -59,19 +59,19 @@ ms.locfileid: "36067631"
     3.  Fare clic sul file SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
 ## <a name="lessons-in-this-tutorial"></a>Lezioni dell'esercitazione  
- [Lezione 1: Creazione del progetto e un pacchetto di base](lesson-1-create-a-project-and-basic-package-with-ssis.md)  
+ [Lezione 1: Creazione del progetto e del pacchetto di base](lesson-1-create-a-project-and-basic-package-with-ssis.md)  
  In questa lezione verrà creato un pacchetto ETL semplice che estrae i dati da un unico file flat, li trasforma utilizzando le trasformazioni Ricerca e infine carica il risultato in una destinazione tabella dei fatti.  
   
  [Lezione 2: Aggiunta di cicli](lesson-2-adding-looping-with-ssis.md)  
  In questa lezione si espanderà il pacchetto creato nella lezione 1 per utilizzare le nuove funzionalità di loop che consentono di estrarre più file flat in un unico processo di flusso di dati.  
   
- [Lezione 3: Aggiunta di registrazione](lesson-3-add-logging-with-ssis.md)  
+ [Lezione 3: Aggiunta delle funzionalità di registrazione](lesson-3-add-logging-with-ssis.md)  
  In questa lezione si espanderà il pacchetto creato nella lezione 2 per utilizzare le nuove funzionalità di registrazione.  
   
- [Lezione 4: Aggiunta del reindirizzamento del flusso di errore](lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [Lezione 4: Aggiunta del reindirizzamento del flusso degli errori](lesson-4-add-error-flow-redirection-with-ssis.md)  
  In questa lezione si espanderà il pacchetto creato nella lezione 3 per utilizzare le nuove configurazioni di output degli errori.  
   
- [Lezione 5: Aggiunta di configurazioni di pacchetto per il modello di distribuzione del pacchetto](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [Lezione 5: Aggiunta di configurazioni del pacchetto per il modello di distribuzione del pacchetto](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
  In questa lezione si espanderà il pacchetto creato nella lezione 4 per utilizzare le nuove opzioni di configurazione del pacchetto.  
   
  [Lezione 6: Uso di parametri con il modello di distribuzione del progetto](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 caps.latest.revision: 52
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f5c7dd02a31a466e5e6e96a815ed27795f62f978
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2900d6cd155faf29dbd3ecb398320c0e5311d747
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242551"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Supporto di Transact-SQL per OLTP in memoria
   È possibile accedere alle tabelle ottimizzate per la memoria usando qualsiasi query Transact-SQL o istruzione DML sta(SELECT, INSERT, UPDATE o DELETE), query ad hoc e modulo SQL, ad esempio stored procedure, funzioni con valori di tabella, funzioni scalari, trigger e visualizzazioni. Per altre informazioni, vedere [accesso tabelle utilizzando Transact-SQL interpretato](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36067603"
   
 -   [DICHIARARE @local_variable &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (vedere `NULL`  |  `NOT NULL`)  
   
- Le tabelle con ottimizzazione per la memoria supportano vincoli `PRIMARY KEY` e `NOT NULL`. Per informazioni sull'implementazione di vincoli non supportati, vedere [la migrazione di controllare e Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md).  
+ Le tabelle con ottimizzazione per la memoria supportano vincoli `PRIMARY KEY` e `NOT NULL`. Per informazioni sull'implementazione di vincoli non supportati, vedere [eseguire la migrazione verificare e Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md).  
   
  Per informazioni su funzionalità non supportate, vedere [Costrutti Transact-SQL non supportati da OLTP in memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36067603"
   
 -   [Accesso alle tabelle con ottimizzazione per la memoria utilizzando codice Transact-SQL interpretato](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)  
   
--   [Viste di sistema, Stored procedure, viste a gestione dinamica e tipi di attesa per OLTP In memoria](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)  
+-   [Viste di sistema, stored procedure, tipi di attesa e DMV per OLTP in memoria](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](in-memory-oltp-in-memory-optimization.md)   

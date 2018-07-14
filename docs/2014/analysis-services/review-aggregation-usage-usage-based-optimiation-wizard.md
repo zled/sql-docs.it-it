@@ -1,5 +1,5 @@
 ---
-title: Controlla utilizzo aggregazioni (basata sull'utilizzo Optimiation guidata) | Documenti Microsoft
+title: Controlla utilizzo aggregazioni (basata sull'utilizzo di creazione guidata basata sulle statistiche) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.reviewaggregationusage.f1
 ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 21618aabe9c7e429c7d78a68c7fcfb9d61a0754c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76140fbc19eaa8beae41c1196143a326dc5c6414
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235681"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>Controlla utilizzo aggregazioni (Ottimizzazione guidata basata sulle statistiche di utilizzo)
   Utilizzare la pagina **Controlla utilizzo aggregazioni** per configurare le impostazioni di utilizzo delle aggregazioni.  
@@ -43,7 +43,7 @@ ms.locfileid: "36069022"
  Selezionare per impostare le impostazioni  di utilizzo delle aggregazioni per tutti gli attributi su Predefinito.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggregazione progettazione guidata F1 Help](aggregation-design-wizard-f1-help.md)   
+ [Guida F1 guidata di progettazione delle aggregazioni](aggregation-design-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQUARE
 - square values
@@ -16,13 +16,13 @@ ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
 caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c2ce0704090a7d80931105aaf798a83b8d7f0b17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4203b4e904161a3acf36b6422bc29d41307a6d77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243121"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (espressione SSIS)
   Restituisce il quadrato di un'espressione numerica.  
@@ -41,7 +41,7 @@ SQUARE(numeric_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se l'argomento è Null, SQUARE restituirà Null.  
   
  Prima del calcolo del quadrato viene eseguito il cast dell'argomento al tipo di dati DT_R8.  
@@ -69,6 +69,6 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 >  Nelle espressioni i nomi delle variabili includono sempre il prefisso @.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md)  
+ [Le funzioni &#40;espressione di SSIS&#41;](functions-ssis-expression.md)  
   
   

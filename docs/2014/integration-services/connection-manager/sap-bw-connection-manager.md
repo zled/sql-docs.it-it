@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 61106ce6c6eca051f6ad762577d0b4ea72d021a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a541988192c0233426a8f08a79743b822d3f3709
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223759"
 ---
 # <a name="sap-bw-connection-manager"></a>Gestione connessione SAP BW
   La gestione connessione SAP BW è il componente per la gestione delle connessioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. La gestione connessione SAP BW offre la connettività a un sistema SAP Netweaver BW versione 7 di cui hanno bisogno i componenti di origine e destinazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. L'origine e la destinazione SAP BW che fanno parte del pacchetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW sono gli unici componenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che usano la gestione connessione SAP BW.  
@@ -27,7 +27,7 @@ ms.locfileid: "36077626"
 > [!IMPORTANT]  
 >  La documentazione per Microsoft Connector 1.1 for SAP BW presuppone la conoscenza dell'ambiente SAP Netweaver BW. Per ulteriori informazioni su SAP Netweaver BW o per informazioni su come configurare oggetti e processi di SAP Netweaver BW, vedere la documentazione SAP.  
   
- Quando si aggiunge una gestione connessione SAP BW a un pacchetto, il `ConnectionManagerType` proprietà della gestione connessione è impostata su `SAPBI`.  
+ Quando si aggiunge una gestione connessione SAP BW a un pacchetto, il `ConnectionManagerType` della gestione connessione viene impostata su `SAPBI`.  
   
 ## <a name="configuring-the-sap-bw-connection-manager"></a>Configurazione della gestione connessione SAP BW  
  Per configurare la gestione connessione SAP BW, procedere nel modo seguente:  
@@ -55,6 +55,6 @@ ms.locfileid: "36077626"
 -   [Editor gestione connessione SAP BW](../sap-bw-connection-manager-editor.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Microsoft Connector 1.1 for SAP BW componenti](../microsoft-connector-for-sap-bw-components.md)  
+ [Componenti di Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-components.md)  
   
   

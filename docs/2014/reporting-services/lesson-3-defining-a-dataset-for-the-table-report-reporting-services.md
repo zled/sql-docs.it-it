@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 caps.latest.revision: 50
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 34595ca07e370bb0a66512c839a6843f8c38f5d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 719776a37cae748516d7a4882ea31e9796d01332
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202651"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lezione 3: Definizione di un set di dati per il report tabella (Reporting Services)
   Dopo aver definito l'origine dati, è necessario definire un set di dati. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]i dati utilizzati nei report sono contenuti in un *set di dati*. Un set di dati contiene un puntatore a un'origine dati e la query utilizzata dal report, nonché le variabili e i campi calcolati.  
   
- Per progettare la query è possibile utilizzare la finestra Progettazione query in Progettazione report. Per questa esercitazione, si creerà una query che recupera le informazioni sugli ordini vendita il [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** database.  
+ Per progettare la query è possibile utilizzare la finestra Progettazione query in Progettazione report. Per questa esercitazione si creerà una query che recupera informazioni sugli ordini di vendita dal [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** database.  
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>Per definire una query Transact-SQL per i dati del report  
   
@@ -34,7 +34,7 @@ ms.locfileid: "36068193"
   
 3.  Fare clic su **Usare un set di dati incorporato nel report**.  
   
-4.  Verificare che il nome dell'origine dati, AdventureWorks2012, sia nella **origine dati** casella di testo e che il **tipo di Query** è **testo**.  
+4.  Assicurarsi che il nome dell'origine dati, AdventureWorks2012, sia nel **zdroj dat** casella di testo e che le **tipo di Query** viene **testo**.  
   
 5.  Digitare oppure copiare e incollare la query Transact-SQL seguente nella casella **Query** .  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36068193"
     HAVING ppc.Name = 'Clothing'  
     ```  
   
-6.  (Facoltativo) Fare clic sul pulsante **Progettazione query** . La query verrà visualizzata nella finestra Progettazione query basata su testo. È possibile passare alla finestra Progettazione query con interfaccia grafica facendo clic su **Modifica come testo**. Visualizzare i risultati della query facendo clic l'esecuzione **(!)**  pulsante sulla barra degli strumenti Progettazione query.  
+6.  (Facoltativo) Fare clic sul pulsante **Progettazione query** . La query verrà visualizzata nella finestra Progettazione query basata su testo. È possibile passare alla finestra Progettazione query con interfaccia grafica facendo clic su **Modifica come testo**. Visualizzare i risultati della query facendo clic su esecuzione **(!)**  pulsante sulla barra degli strumenti Progettazione query.  
   
      Verranno visualizzati i dati in sei campi di quattro tabelle differenti di [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. Nella query vengono utilizzate funzionalità di Transact-SQL come gli alias. La tabella SalesOrderHeader viene ad esempio denominata soh.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36068193"
  In questo modo si è specificata una query che recupera i dati per il report. Il passaggio successivo consiste nella creazione del layout del report. Vedere [Lezione 4: Aggiunta di una tabella al report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti di progettazione di Report della finestra di progettazione di SQL Server Data Tools di query &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [Eseguire query di strumenti di progettazione di Report della finestra di progettazione di SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Tipo di connessione SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
  [Esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   

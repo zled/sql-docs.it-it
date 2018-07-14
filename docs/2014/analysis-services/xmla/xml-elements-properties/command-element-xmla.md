@@ -1,5 +1,5 @@
 ---
-title: Comando elemento (XMLA) | Documenti Microsoft
+title: Comando elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Command element
 ms.assetid: 9abc14df-7cbe-46bc-ba0f-f0691c19afad
 caps.latest.revision: 31
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b054c940ae68c8bc7b252349a538777757283da4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f9b461e0ec565776ead270902cf6c01ebe7409d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332241"
 ---
 # <a name="command-element-xmla"></a>Elemento Command (XMLA)
-  Contiene il comando da eseguire tramite il [Execute](../xml-elements-methods-execute.md) metodo.  
+  Contiene il comando da eseguire tramite il [Execute](../xml-elements-methods-execute.md) (metodo).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -112,10 +112,10 @@ ms.locfileid: "36068332"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Eseguire](../xml-elements-methods-execute.md)|  
-|Elementi figlio|[Alter](../xml-elements-commands/alter-element-xmla.md), [Backup](../xml-elements-commands/backup-element-xmla.md), [Batch](../xml-elements-commands/batch-element-xmla.md), [BeginTransaction](../xml-elements-commands/begintransaction-element-xmla.md), [Cancel](../xml-elements-commands/cancel-element-xmla.md), [ClearCache](../xml-elements-commands/clearcache-element-xmla.md), [CommitTransaction](../xml-elements-commands/committransaction-element-xmla.md), [Create](../xml-elements-commands/create-element-xmla.md), [Delete](../xml-elements-commands/delete-element-xmla.md), [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md), [Drop](../xml-elements-commands/drop-element-xmla.md), [Insert](../xml-elements-commands/insert-element-xmla.md), [Lock](../xml-elements-commands/lock-element-xmla.md), [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md), [NotifyTableChange](../xml-elements-commands/notifytablechange-element-xmla.md), [Process](../xml-elements-commands/process-element-xmla.md), [Restore](../xml-elements-commands/restore-element-xmla.md), [RollbackTransaction](../xml-elements-commands/rollbacktransaction-element-xmla.md), [SetPasswordEncryptionKey](http://msdn.microsoft.com/en-us/fb262737-f0f4-4441-985e-3b2a94d00a9e), [Statement](../xml-elements-commands/statement-element-xmla.md), [Subscribe](../xml-elements-commands/subscribe-element-xmla.md), [Synchronize](../xml-elements-commands/synchronize-element-xmla.md), [Unlock](../xml-elements-commands/unlock-element-xmla.md), [Update](../xml-elements-commands/update-element-xmla.md), [UpdateCells](../xml-elements-commands/drop-element-xmla.md)|  
+|Elementi figlio|[ALTER](../xml-elements-commands/alter-element-xmla.md), [Backup](../xml-elements-commands/backup-element-xmla.md), [Batch](../xml-elements-commands/batch-element-xmla.md), [BeginTransaction](../xml-elements-commands/begintransaction-element-xmla.md), [Annulla](../xml-elements-commands/cancel-element-xmla.md), [ClearCache](../xml-elements-commands/clearcache-element-xmla.md) , [CommitTransaction](../xml-elements-commands/committransaction-element-xmla.md), [creare](../xml-elements-commands/create-element-xmla.md), [Elimina](../xml-elements-commands/delete-element-xmla.md), [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md), [Drop](../xml-elements-commands/drop-element-xmla.md), [Inserire](../xml-elements-commands/insert-element-xmla.md), [Lock](../xml-elements-commands/lock-element-xmla.md), [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md), [NotifyTableChange](../xml-elements-commands/notifytablechange-element-xmla.md), [processo](../xml-elements-commands/process-element-xmla.md), [Ripristinare](../xml-elements-commands/restore-element-xmla.md), [RollbackTransaction](../xml-elements-commands/rollbacktransaction-element-xmla.md), [SetPasswordEncryptionKey](http://msdn.microsoft.com/en-us/fb262737-f0f4-4441-985e-3b2a94d00a9e), [istruzione](../xml-elements-commands/statement-element-xmla.md), [ Sottoscrivere](../xml-elements-commands/subscribe-element-xmla.md), [sincronizzare](../xml-elements-commands/synchronize-element-xmla.md), [sbloccare](../xml-elements-commands/unlock-element-xmla.md), [Update](../xml-elements-commands/update-element-xmla.md), [UpdateCells](../xml-elements-commands/drop-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento `Command` viene utilizzato dal metodo `Execute` per trasmettere comandi a un'origine dati. Mentre il codice XML per specifica Analysis (XMLA) 1.1 supporta solo il `Statement` comando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supporta molti comandi XMLA nuovi. Per ulteriori informazioni sui comandi XMLA supportati da [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], vedere [comandi &#40;XMLA&#41;](../xml-elements-commands/xml-elements-commands.md).  
+## <a name="remarks"></a>Note  
+ L'elemento `Command` viene utilizzato dal metodo `Execute` per trasmettere comandi a un'origine dati. Mentre il codice XML di specifica Analysis (XMLA) 1.1 supporta solo il `Statement` comando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supporta molti comandi XMLA nuovi. Per altre informazioni sui comandi XMLA supportati da [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], vedere [comandi &#40;XMLA&#41;](../xml-elements-commands/xml-elements-commands.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati XML &#40;XMLA&#41;](../xml-data-types/xml-data-types-xmla.md)   

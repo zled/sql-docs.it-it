@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
 - published reports [Reporting Services], managing
@@ -18,13 +18,13 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3428d1e16bf2531c0c339835ed083d2cce272490
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2878a1f12978bfab6f9cd7d0c0d04787ceccfd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212361"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestione contenuto del server di report (modalità nativa SSRS)
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], il concetto di gestione dei contenuti fa riferimento alla gestione degli elementi del server di report. È possibile gestire tutti gli elementi singolarmente tramite impostazioni di sicurezza e proprietà. Ogni elemento può essere spostato in una posizione diversa nello spazio dei nomi delle cartelle del server di report. Per gestire gli elementi in modo efficiente, è necessario conoscere quali attività vengono eseguite da un utente con ruolo Gestione contenuto.  
@@ -129,7 +129,7 @@ ms.locfileid: "36067981"
   
 |Operazione|Tipo di file|  
 |---------------|---------------|  
-|Caricamento|Per caricare una risorsa, utilizzare Gestione report se il server di report è in esecuzione in modalità nativa o una pagina di applicazione su un sito di SharePoint se il server è in esecuzione in modalità integrata SharePoint. Per altre informazioni, vedere [caricare un File o un Report &#40;gestione Report&#41; ](../reports/upload-a-file-or-report-report-manager.md) o [caricare documenti in una raccolta di SharePoint &#40;Reporting Services in modalità SharePoint&#41;]... / upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Caricamento|Per caricare una risorsa, utilizzare Gestione report se il server di report è in esecuzione in modalità nativa o una pagina di applicazione su un sito di SharePoint se il server è in esecuzione in modalità integrata SharePoint. Per altre informazioni, vedere [caricare un File o un Report &#40;gestione Report&#41; ](../reports/upload-a-file-or-report-report-manager.md) oppure [caricare documenti in una raccolta di SharePoint &#40;Reporting Services in modalità SharePoint&#41;]... / upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |Pubblicazione|Tutti i file in un progetto che non sono report, parti del report, origini dati o set di dati, vengono caricati come risorse. Per pubblicare una risorsa, aggiungere un elemento esistente a un progetto in Progettazione report, quindi pubblicare il progetto in un server di report.|  
   
  Tutte le risorse provengono da file presenti nel file system, caricati successivamente in un server di report. Ad eccezione dei limiti per le dimensioni del file predefinite di 4 MB imposte da ASP.NET, non sono presenti restrizioni sui tipi di file che è possibile caricare. Alcuni tipi di file risultano tuttavia più adatti di altri con tipo MIME equivalente per la pubblicazione in un server di report come risorse. Ad esempio, le risorse basate su file HTML e JPG vengono aperte in una finestra del browser quando l'utente fa clic sulla risorsa. In tal modo i file HTML vengono visualizzati come pagine Web e i file JPG come immagini visibili all'utente. Al contrario le risorse con tipi MIME non equivalenti, ad esempio file di applicazioni desktop, non vengono visualizzate in alcun modo nella finestra del browser.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4537b00b59bec4459f7740e49c93a19da0ab08dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2da5ccaf0fe846a26959970bd9bf3e939b5a2558
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256260"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>Inizio della visualizzazione dei valori del grafico a torta dalla parte superiore (Generatore report e SSRS)
   Per impostazione predefinita, nei grafici a torta il primo valore nel set di dati inizia a 90 gradi dalla cima della torta. È possibile scegliere di fare iniziare il primo valore dalla cima.  
@@ -41,6 +41,6 @@ ms.locfileid: "36067966"
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [I grafici a torta &#40;SSRS e Generatore Report&#41;](charts-report-builder-and-ssrs.md)  
+ [I grafici a torta &#40;Report e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

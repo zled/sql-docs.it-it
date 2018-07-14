@@ -1,5 +1,5 @@
 ---
-title: Definire la finestra di dialogo relazione (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Dialogo Definisci relazione (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.f1
 helpviewer_keywords:
 - Define Relationship dialog box
 ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cb46c19a45b85e90a0484a5f0ac33eff0077298
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 93c76ad9d504e9ec6fc1ba417407a16bd93e8adf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165502"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Definisci relazione (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Definisci relazione** per definire una relazione tra una dimensione del cubo e un gruppo di misure in Progettazioni cubi. Per visualizzare la finestra di dialogo **Definisci relazione** , è possibile fare clic su **...** in una cella del riquadro **Griglia** della scheda **Utilizzo dimensioni** in Progettazione cubi.  
@@ -48,10 +48,10 @@ ms.locfileid: "36068819"
 |||**Tabella del gruppo di misure**: visualizza la tabella dei fatti per il gruppo di misure.|  
 |||**Relazione**: Visualizza una griglia delle colonne della dimensione e del gruppo di misure su cui si basa la relazione. La griglia include le colonne seguenti:<br /><br /> **Colonne dimensione**: visualizza le colonne associate all'attributo di granularità selezionato. Nota: se la dimensione non è stata ancora generata, questa opzione è impostata su **Genera**.<br />**Colonne gruppo di misure** :<br />                              Consente di selezionare le colonne nel gruppo di misure correlate alle colonne della dimensione.|  
 |||**Avanzate**:<br />                      Fare clic su questo pulsante per visualizzare la finestra di dialogo **Associazioni gruppo di misure** e modificare le proprietà avanzate, ad esempio l'elaborazione di valori Null, relative alle relazioni tra attributi e colonne di gruppi di misure. Per altre informazioni sulla finestra di dialogo **Associazioni gruppo di misure**, vedere [Finestra di dialogo Associazioni gruppo di misure &#40;Analysis Services - Dati multidimensionali&#41;](measure-group-bindings-dialog-box-analysis-services-multidimensional-data.md).|  
-|**delle tabelle dei fatti**|Consente di impostare una relazione di tipo Fatti per la dimensione. Nel riquadro **Dettaglio** vengono visualizzate le opzioni seguenti:|**Attributo di granularità**: consente di selezionare l'attributo che definisce la granularità del gruppo di misure rispetto alla dimensione. Si tratta in genere di un attributo chiave della dimensione.|  
+|**Fatto**|Consente di impostare una relazione di tipo Fatti per la dimensione. Nel riquadro **Dettaglio** vengono visualizzate le opzioni seguenti:|**Attributo di granularità**: consente di selezionare l'attributo che definisce la granularità del gruppo di misure rispetto alla dimensione. Si tratta in genere di un attributo chiave della dimensione.|  
 |||**Tabella della dimensione**: visualizza la tabella della dimensione principale.|  
 |||**Tabella del gruppo di misure**: <br />                      Consente di visualizzare la tabella su cui si basa il gruppo di misure.|  
-|**Fare riferimento**|Consente di impostare una relazione di tipo Riferimento per la dimensione. Nel riquadro **Dettaglio** vengono visualizzate le opzioni seguenti:|**Dimensione di riferimento**: <br />                      Consente di visualizzare la dimensione selezionata.|  
+|**Fa riferimento**|Consente di impostare una relazione di tipo Riferimento per la dimensione. Nel riquadro **Dettaglio** vengono visualizzate le opzioni seguenti:|**Dimensione di riferimento**: <br />                      Consente di visualizzare la dimensione selezionata.|  
 |||**Dimensione intermedia**: <br />                      Consente di selezionare la dimensione intermedia.|  
 |||**Attributo della dimensione di riferimento**: <br />                      Consente di selezionare l'attributo della dimensione di riferimento correlato all'attributo della dimensione intermedia specificato in **Attributo della dimensione intermedia**.|  
 |||**Attributo della dimensione intermedia**: <br />                      Consente di selezionare l'attributo della dimensione intermedia correlato all'attributo della dimensione di riferimento specificato in **Dimensione di riferimento**.|  

@@ -1,5 +1,5 @@
 ---
-title: Distribuire soluzioni di modelli con l'utilità di distribuzione | Documenti Microsoft
+title: Distribuire soluzioni di modelli con l'utilità di distribuzione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Analysis Services], command prompt
 - command prompt utilities [SQL Server], Microsoft.AnalysisServices.Deployment
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 894a78219e2cd064eb668a92e1efd6d159ce03f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd29d0d9c3a49712cdb14f219070f071a8575eae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330501"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Distribuire soluzioni di modelli con l'utilità di distribuzione
   L'utilità **Microsoft.AnalysisServices.Deployment** consente di avviare il motore di distribuzione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dal prompt dei comandi. Come file di input vengono usati i file di output XML generati dalla compilazione di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. I file di input sono facilmente modificabili in modo da personalizzare la distribuzione di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Lo script di distribuzione generato può quindi essere eseguito subito oppure salvato per essere distribuito in una fase successiva.  
@@ -64,7 +64,7 @@ ms.locfileid: "36067694"
 > [!NOTE]  
 >  L'argomento **/d** viene usato solo nella modalità di output. Questo argomento viene ignorato se specificato in modalità di risposta o automatica. Per altre informazioni sulle modalità, vedere la sezione [Modalità](#Modes)di seguito in questo argomento.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'utilità **Microsoft.AnalysisServices.Deployment** usa un set di file che includono le definizioni degli oggetti, le destinazioni di distribuzione, le opzioni di distribuzione e le impostazioni di configurazione e cerca di distribuire le definizioni degli oggetti alle destinazioni di distribuzione specificate usando le opzioni di distribuzione e le impostazioni di configurazione impostate. Questa utilità può implementare un'interfaccia utente se richiamata in modalità file di risposte o output. Per altre informazioni sull'uso dell'interfaccia utente implementata da questa utilità per creare i file di risposte, vedere [Distribuire soluzioni di modelli tramite la Distribuzione guidata](deploy-model-solutions-using-the-deployment-wizard.md).  
   
  L'utilità di trova nella cartella \Programmi (x86)\Microsoft SQL Server\110\Binn\ManagementStudio.  

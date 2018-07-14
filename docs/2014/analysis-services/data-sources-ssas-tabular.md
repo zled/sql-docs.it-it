@@ -1,5 +1,5 @@
 ---
-title: Origini dati (SSAS tabulare) | Documenti Microsoft
+title: Origini dati (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6908998b-9302-4a90-976e-770106b48d18
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e531a7b6b044a70b9be649b351739d15c5f61ddf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac9efd9de461b6ee605b73ed440233b4a0bea020
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196521"
 ---
 # <a name="data-sources-ssas-tabular"></a>Origini dati (SSAS tabulare)
   Le origini dati forniscono i dati da includere in una soluzione del modello tabulare. È possibile importare dati nel modello da diverse origini quali database relazionali, feed di dati, origini dati multidimensionali come un cubo di Analysis Services, nonché da file di testo quale una cartella di lavoro di Microsoft Excel. Negli argomenti contenuti in questa sezione vengono fornite informazioni sui tipi di origini dati da cui è possibile eseguire un'importazione, sui vari tipi di dati che è possibile importare, nonché sulle attività in cui viene descritto come importare i dati da tali origini.  

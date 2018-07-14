@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
 - roles [Reporting Services], assignments
@@ -19,13 +19,13 @@ ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8c68d1b0375fb8fa565ec3b24c59f8a4eab1b066
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3eb2aa1b151866166e77ea89eda4ba98c2866a53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166092"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>Modificare o eliminare un'assegnazione di ruolo (Gestione report)
   Un'assegnazione di ruolo esegue il mapping di un account utente o di gruppo a una definizione di ruolo predefinita che include le attività che possono essere eseguite e determina i tipi di operazioni che un utente può eseguire in relazione a una cartella, un report, un modello o ad altro tipo di contenuto. Per creare, modificare o eliminare assegnazioni di ruolo, utilizzare Gestione report. Dopo avere creato un'assegnazione di ruolo per un particolare utente o gruppo, è possibile modificarla in un secondo momento selezionando un ruolo diverso. Se si desidera revocare autorizzazioni a un server di report, è possibile eliminare un'assegnazione di ruolo dal server di report stesso.  
@@ -67,7 +67,7 @@ ms.locfileid: "36068188"
 6.  Per eliminare un'assegnazione di ruolo, fare clic sulla casella di controllo accanto al nome dell'utente o del gruppo, quindi fare clic su **Elimina**.  
   
 ## <a name="see-also"></a>Vedere anche  
- (creare-e-gestire-ruolo-assignments.md)   
+ (create-e-Gestisci-ruolo-assignments.md)   
  [Assegnazioni di ruolo](role-assignments.md)   
  [Pagina Impostazioni sito &#40;Gestione report&#41;](../site-settings-page-report-manager.md)   
  [Pagina Nuova assegnazione ruolo a livello di sistema: Modifica assegnazioni ruolo a livello di sistema &#40;Gestione report&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  

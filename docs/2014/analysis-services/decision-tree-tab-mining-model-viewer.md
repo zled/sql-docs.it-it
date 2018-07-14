@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Decision scheda albero (Visualizzatore modello di Data Mining) | Documenti Microsoft
+title: Decision Trees scheda albero (Visualizzatore modello di Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.decisiontree.f1
 ms.assetid: dc88606f-ba7c-4f8d-af65-bfa17ec16e2b
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8ac997463e15b862dafbb5e561e9ab5dd29601b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86c229c4adc57200a2d1867c167aa3d998498765
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276337"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Scheda Albero delle decisioni (Visualizzatore modello di data mining)
   Nel riquadro **Albero delle decisioni** è disponibile una rappresentazione visiva delle regole delle decisioni create in un modello di albero delle decisioni. Nelle regole delle decisioni viene descritto il percorso verso un determinato risultato.  
@@ -50,7 +50,7 @@ ms.locfileid: "36068595"
  **Copia grafico intero**  
  Consente di copiare tutto il diagramma negli Appunti.  
   
- **Scala adatta il diagramma alla finestra**  
+ **Scalabilità adatta il diagramma alla finestra**  
  Consente di eseguire lo zoom indietro del diagramma finché l'intero albero non si adatta alla schermata.  
   
  **Istogrammi**  
@@ -70,7 +70,7 @@ ms.locfileid: "36068595"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori dei modelli di data mining &#40;progettazione modello di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

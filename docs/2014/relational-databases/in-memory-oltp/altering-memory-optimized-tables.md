@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f40638174ebd432a96ce61ea27805ea77fd5a151
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 65d72bac30b1a531d332e88c4b8e59afc73f7afb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193339"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modifica di tabelle con ottimizzazione per la memoria
   L'esecuzione di operazioni ALTER nelle tabelle ottimizzate per la memoria non è supportata. Sono incluse le operazioni come la modifica di bucket_count oppure l'aggiunta e la rimozione di un indice o di una colonna. In questo argomento vengono fornite le linee guida su come aggiornare le tabelle ottimizzate per la memoria.  
@@ -89,7 +89,7 @@ ms.locfileid: "36077586"
   
  <sup>1</sup> si noti che `T_copy` è persistente su disco in questo esempio. Se un backup di `T` è disponibile, l'utilità `T_copy` può essere una tabella temporanea o non durevole.  
   
- <sup>2</sup> deve essere presente memoria insufficiente per `T_copy`. La memoria non viene liberata immediatamente con `DROP TABLE`. Se `T_copy` è con ottimizzazione per la memoria, deve essere disponibile la memoria sufficiente per due copie aggiuntive di `T`. Se `T_copy` è basata su disco, deve essere disponibile la memoria sufficiente per una sola copia aggiuntiva di `T`, perché Garbage Collector richiede l'aggiornamento dopo l'eliminazione della versione precedente di `T`.  
+ <sup>2</sup> deve essere presente memoria sufficiente per `T_copy`. La memoria non viene liberata immediatamente con `DROP TABLE`. Se `T_copy` è con ottimizzazione per la memoria, deve essere disponibile la memoria sufficiente per due copie aggiuntive di `T`. Se `T_copy` è basata su disco, deve essere disponibile la memoria sufficiente per una sola copia aggiuntiva di `T`, perché Garbage Collector richiede l'aggiornamento dopo l'eliminazione della versione precedente di `T`.  
   
 ## <a name="changing-schema-powershell"></a>Modifica dello schema (PowerShell)  
  Gli script di PowerShell seguenti preparano e generano le modifiche dello schema creando lo script della tabella e delle autorizzazioni associate.  

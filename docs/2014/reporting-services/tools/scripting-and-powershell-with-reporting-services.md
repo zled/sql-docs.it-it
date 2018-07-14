@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
 - Reporting Services, scripting
@@ -17,16 +17,16 @@ ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0d76693f37506cd78a7d198520344cb55f9d142f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b69a9713d015db66945a1c096f8896998459406
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212541"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Script e PowerShell con Reporting Services
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supporta un'ampia gamma di scenari di sviluppo e gestione tramite script, tra cui l'utilità della riga di comando rs.exe, i cmdlet di PowerShell per server di report in modalità SharePoint, sfruttando il [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] modello a oggetti da PowerShell per nativo e Modalità SharePoint.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supporta un'ampia gamma di scenari di sviluppo e gestione tramite script, tra cui l'utilità della riga di comando rs.exe, cmdlet di PowerShell per server di report in modalità SharePoint, sfruttando il [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] modello a oggetti da PowerShell per nativi e Modalità SharePoint.  
   
 -   Gli amministratori possono scrivere script in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] per automatizzare le procedure di distribuzione e gestione dell'installazione di un server di report. Gli amministratori possono anche generare ed eseguire script [!INCLUDE[tsql](../../includes/tsql-md.md)] che consentono di creare, configurare e aggiornare un database del server di report. Gli amministratori possono inoltre utilizzare le caratteristiche script di registrazione e riproduzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per automatizzare le attività di manutenzione di routine.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36068845"
 ## <a name="reporting-services-sharepoint-mode-powershell-cmdlets-and-samples"></a>Cmdlet ed esempi di PowerShell in modalità SharePoint di Reporting Services  
  ![Contenuto correlato di PowerShell](../media/rs-powershellicon.jpg "Contenuto correlato di PowerShell")  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] La modalità SharePoint include [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] cmdlet per l'amministrazione di server di report.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] La modalità SharePoint include [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] cmdlet per l'amministrazione del server di report.  
   
 -   [PowerShell cmdlets for Reporting Services SharePoint Mode](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md) Sono inclusi gli esempi seguenti:  
   

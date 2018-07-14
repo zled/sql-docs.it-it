@@ -1,5 +1,5 @@
 ---
-title: Calcolato rappresentazione della misura (tabulare) | Documenti Microsoft
+title: Calcolata (tabulare) rappresentazione della misura | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4cb9fea5-1616-467b-a539-d051e5833aea
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c469e0044faa4295cb100898e8205c3cee7ee4a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16d360e8595b92ab5ff0af56cffdbf59bfdce488
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324811"
 ---
 # <a name="calculated-measure-representation-tabular"></a>Rappresentazione della misura calcolata (tabulare)
   Una misura calcolata è un'espressione DAX denominata che viene valutata ogni volta che viene utilizzata.  
@@ -28,7 +28,7 @@ ms.locfileid: "36069010"
 ## <a name="calculated-measure-representation"></a>Rappresentazione della misura calcolata  
   
 ### <a name="calculated-measure-in-amo"></a>Misure calcolate in AMO  
- Quando si utilizza AMO per gestire una misura calcolata del modello tabulare, è presente una corrispondenza uno-a-uno tra l'oggetto logico di misura calcolata e una misura definita in un oggetto <xref:Microsoft.AnalysisServices.Command> dell'oggetto <xref:Microsoft.AnalysisServices.MdxScript>. Ogni **misura calcolata** viene definito come una `CREATE MEASURE` espressione all'interno di un <xref:Microsoft.AnalysisServices.Command> dell'oggetto e un punto e virgola. Tutte le misure calcolate in un modello tabulare corrispondono alla stringa di raccolta `CREATE MEASURE` in un oggetto comando in un oggetto <xref:Microsoft.AnalysisServices.MdxScript>. Per ogni misura calcolata, è presente un mapping uno-a-uno con <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ Quando si utilizza AMO per gestire una misura calcolata del modello tabulare, è presente una corrispondenza uno-a-uno tra l'oggetto logico di misura calcolata e una misura definita in un oggetto <xref:Microsoft.AnalysisServices.Command> dell'oggetto <xref:Microsoft.AnalysisServices.MdxScript>. Ogni **misure calcolate** viene definito come una `CREATE MEASURE` espressione all'interno di un <xref:Microsoft.AnalysisServices.Command> dell'oggetto e un punto e virgola. Tutte le misure calcolate in un modello tabulare corrispondono alla stringa di raccolta `CREATE MEASURE` in un oggetto comando in un oggetto <xref:Microsoft.AnalysisServices.MdxScript>. Per ogni misura calcolata, è presente un mapping uno-a-uno con <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
  Nel frammento di codice seguente viene illustrato come creare una misura calcolata.  
   

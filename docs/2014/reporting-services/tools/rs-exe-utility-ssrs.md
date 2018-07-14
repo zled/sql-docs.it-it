@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic report server tasks
 - rs utility
@@ -21,13 +21,13 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 26e1dccb1d72ac0a743a545e29b175f5e8bb79fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9889c2a14d48a7c2bccd7087c96567e92e1e4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067741"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255463"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   L'utilità rs.exe elabora lo script fornito in un file di input. Utilizzare questa utilità per automatizzare le attività di amministrazione e distribuzione dei server di report.  
@@ -74,11 +74,11 @@ ms.locfileid: "36067741"
  `-s` *serverURL*  
  (Obbligatorio) Consente di specificare il nome del server Web e il nome della directory virtuale del server di report in cui eseguire il file. Un esempio di URL del server di report è `http://examplewebserver/reportserver`. Il prefisso http:// o https:// all'inizio del nome del server è facoltativo. Se si omette il prefisso, lo script del server di report prima tenta di utilizzare https e, qualora non funzionasse, utilizza http.  
   
- `-u` [*dominio*\\]*username*  
+ `-u` [*domain*\\]*username*  
  (Facoltativo) Consente di specificare l'account utente utilizzato per connettersi al server di report. Se si omettono `-u` e `-p`, verrà utilizzato l'account utente di Windows corrente.  
   
  `-p` *Password*  
- (Obbligatorio se `-u` è specificato) specifica la password da utilizzare con il `-u` argomento. Per questo valore viene applicata la distinzione tra maiuscole e minuscole.  
+ (Obbligatorio se `-u` è specificato) specifica la password da usare con il `-u` argomento. Per questo valore viene applicata la distinzione tra maiuscole e minuscole.  
   
  `-e`  
  (Facoltativo) Specifica l'endpoint SOAP in base al quale eseguire lo script. Di seguito sono riportati i valori validi:  
@@ -91,7 +91,7 @@ ms.locfileid: "36067741"
   
 -   Exec2005  
   
- Se non si specifica alcun valore, viene utilizzato l'endpoint Mgmt2005. Per ulteriori informazioni sugli endpoint SOAP, vedere [endpoint del servizio Web ReportServer](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
+ Se non si specifica alcun valore, viene utilizzato l'endpoint Mgmt2005. Per altre informazioni sugli endpoint SOAP, vedere [endpoint del servizio Web ReportServer](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
   
  `-l` *time_out*  
  (Facoltativo) Consente di specificare quanti secondi devono trascorrere prima del timeout della connessione al server. Il valore predefinito è 60 secondi. Se non si specifica un valore per il timeout, verrà utilizzato il valore predefinito. Se si specifica il valore `0`, non si verificherà mai il timeout della connessione.  
@@ -106,7 +106,7 @@ ms.locfileid: "36067741"
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- Le variabili globali vengono create con i nomi indicati e impostate sui valori specificati. Ad esempio **- v un =**"`1`" **- v b =**"`2`" restituisce una variabile denominata `a` con un valore di "`1`" e una variabile **b**con un valore di "`2`".  
+ Le variabili globali vengono create con i nomi indicati e impostate sui valori specificati. Ad esempio, **- v un =**"`1`" **- v b =**"`2`" restituisce una variabile denominata `a` con un valore di "`1`" e una variabile **b**con il valore "`2`".  
   
  Le variabili globali sono disponibili per qualsiasi funzione nello script. Una barra rovesciata seguita dalle virgolette (**\\"**) viene interpretata come virgolette doppie. Le virgolette sono necessarie solo se la stringa contiene uno spazio. I nomi delle variabili devono essere validi per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], pertanto devono iniziare con un carattere alfabetico o un carattere di sottolineatura e contenere caratteri alfabetici, numerici o di sottolineatura. Le parole riservate non possono essere utilizzate come nomi di variabili. Per altre informazioni sull'uso delle variabili globali, vedere [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -127,8 +127,8 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
   
  Per ulteriori esempi, vedere [Eseguire un file script di Reporting Services](run-a-reporting-services-script-file.md)  
   
-## <a name="remarks"></a>Remarks  
- È possibile definire script per impostare le proprietà di sistema, pubblicare report e così via. Gli script creati possono includere qualsiasi metodo dell'API di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per ulteriori informazioni sui metodi e proprietà disponibili, vedere [servizio Web ReportServer](../report-server-web-service/report-server-web-service.md).  
+## <a name="remarks"></a>Note  
+ È possibile definire script per impostare le proprietà di sistema, pubblicare report e così via. Gli script creati possono includere qualsiasi metodo dell'API di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni sui metodi e proprietà disponibili, vedere [servizio Web ReportServer](../report-server-web-service/report-server-web-service.md).  
   
  Lo script deve essere scritto in codice [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET e archiviato in un file di testo Unicode o UTF-8 con estensione di file rss. Non è possibile eseguire il debug degli script con l'utilità **rs** . Per eseguire il debug di uno script, eseguire il codice in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   

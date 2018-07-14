@@ -1,5 +1,5 @@
 ---
-title: Utilità sqlmaint | Documenti Microsoft
+title: Utilità sqlmaint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
 - sqlmaint utility
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba7788006e5b44ac7ad6c4adf1bf9f9bc43542ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 94181b7b45ee1e1258678bbc4bc3357ebecb0bc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236125"
 ---
 # <a name="sqlmaint-utility"></a>utilità sqlmaint
   L'utilità **sqlmaint** consente di eseguire un set specifico di operazioni di manutenzione in uno o più database. Usare l'utilità **sqlmaint** per eseguire controlli DBCC, backup di un database e del relativo log delle transazioni, aggiornare statistiche e ricompilare indici. Tutte le attività di manutenzione dei database generano un report che può essere inviato a un file di testo, un file HTML o un account di posta elettronica specificato. **sqlmaint** esegue i piani di manutenzione dei database creati con le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per eseguire i piani di manutenzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal prompt dei comandi, usare l' [utilità dtexec](../integration-services/packages/dtexec-utility.md).  
@@ -231,7 +231,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  Se si specifica solo *number* , l'unità di tempo predefinita è **weeks**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'utilità **sqlmaint** consente di eseguire operazioni di manutenzione in uno o più database. Se è specificato **-D** , le operazioni indicate nelle altre opzioni vengono eseguite solo nel database specificato. Se si specifica **-PlanName** o **-PlanID** , **sqlmaint** recupera dal piano di manutenzione solo l'elenco dei database. Tutte le operazioni specificate negli altri parametri di **sqlmaint** vengono eseguite in tutti i database dell'elenco ottenuto dal piano. L'utilità **sqlmaint** di per sé non esegue nessuna delle attività di manutenzione definite nel piano.  
   
  Se l'esecuzione riesce, l'utilità **sqlmaint** restituisce 0, in caso contrario 1. L'esito negativo viene segnalato se:  
@@ -267,7 +267,7 @@ sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 
 sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -CrBkSubDir -DelBkUps 2weeks  
 ```  
   
-### <a name="d-backing-up-a-database-to-the-default-xprogram-filesmicrosoft-sql-servermssql12mssqlservermssqlbackup-directory"></a>D. Backup di database per l'impostazione predefinita x:\Programmi\Microsoft c:\Programmi\Microsoft SQL Server\MSSQL12. Directory MSSQLSERVER\MSSQL\Backup. \  
+### <a name="d-backing-up-a-database-to-the-default-xprogram-filesmicrosoft-sql-servermssql12mssqlservermssqlbackup-directory"></a>D. Backup di un database in x:\Programmi\Microsoft l'impostazione predefinita c:\Programmi\Microsoft SQL Server\MSSQL12. Directory MSSQLSERVER\MSSQL\Backup. \  
   
 ```  
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], status information
 - jobs [Reporting Services]
@@ -30,13 +30,13 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e1c1ff34dde99394f39a9636c6deac3d6c1fbc64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f4571c7e76057339658220075276f7b5a791f4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187718"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di monitorare lo stato dei processi in esecuzione nel server di report. Tramite il server di report viene effettuata un'analisi a intervalli regolari dei processi in corso e vengono scritte informazioni sullo stato nel database del server di report o nei database dell'applicazione di servizio per la modalità SharePoint. Un processo è considerato in corso se è in esecuzione una delle operazioni seguenti, ovvero esecuzione di query su un server di database locale o remoto, elaborazione di report e rendering di report.  
@@ -57,7 +57,7 @@ ms.locfileid: "36155924"
   
 -   Sottoscrizioni standard appartenenti a utenti singoli.  
   
- L'annullamento di un processo comporta l'annullamento solo dei processi in esecuzione nel server di report. Poiché il server di report non gestisce elaborazione di dati su altri computer, è necessario annullare manualmente i processi di query che rimangono di conseguenza isolati su altri sistemi. Per chiudere automaticamente le query con esecuzione eccessivamente prolungata, è possibile specificare valori di timeout delle query. Per altre informazioni, vedere [Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Per ulteriori informazioni sulla sospensione temporanea di un report, vedere [Pause Report and Subscription Processing](disable-or-pause-report-and-subscription-processing.md).  
+ L'annullamento di un processo comporta l'annullamento solo dei processi in esecuzione nel server di report. Poiché il server di report non gestisce elaborazione di dati su altri computer, è necessario annullare manualmente i processi di query che rimangono di conseguenza isolati su altri sistemi. Per chiudere automaticamente le query con esecuzione eccessivamente prolungata, è possibile specificare valori di timeout delle query. Per altre informazioni, vedere [Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Per altre informazioni sulla sospensione temporanea di un report, vedere [Pause Report and Subscription Processing](disable-or-pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
 >  Per annullare un processo, in rare circostanze potrebbe essere necessario riavviare il server. Per la modalità SharePoint, potrebbe essere necessario riavviare il pool di applicazioni in cui viene ospitata l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Avviare e arrestare il servizio del server di report](../report-server/start-and-stop-the-report-server-service.md).  

@@ -1,5 +1,5 @@
 ---
-title: Grafico di accuratezza (SQL Server Data Mining Add-ins) | Documenti Microsoft
+title: Grafico di accuratezza (componenti aggiuntivi Data Mining SQL Server dati) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
 - mining models, validating
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - lift [data mining]
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 16d669001ae0842c91853e28aae587dd5f4ebb51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d331c1acb84b67a19eba2c6aacebfe68b947b217
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222321"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Grafico di accuratezza (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante grafico di accuratezza sulla barra multifunzione Data Mining](media/dmc-accchart.gif "pulsante grafico di accuratezza sulla barra multifunzione Data Mining")  
   
- Un grafico di accuratezza consente di applicare un modello a un nuovo set di dati, quindi di valutare le prestazioni del modello. Il grafico di accuratezza creato da questa procedura guidata è un *grafico di accuratezza*, ovvero un tipo di grafico utilizzato frequentemente per misurare l'accuratezza di un modello di data mining. In questo tipo di grafico di accuratezza viene visualizzata una rappresentazione grafica del miglioramento che si ottiene utilizzando il modello di data mining specificato rispetto alle stime casuali e a uno scenario ideale in cui risulta accurato il 100% delle stime. In un singolo grafico è possibile confrontare più modelli.  
+ Un grafico di accuratezza consente di applicare un modello a un nuovo set di dati, quindi di valutare le prestazioni del modello. Il grafico di accuratezza creato dalla procedura guidata è un *grafico di accuratezza*, ovvero un tipo di grafico utilizzato frequentemente per misurare l'accuratezza del modello di data mining. In questo tipo di grafico di accuratezza viene visualizzata una rappresentazione grafica del miglioramento che si ottiene utilizzando il modello di data mining specificato rispetto alle stime casuali e a uno scenario ideale in cui risulta accurato il 100% delle stime. In un singolo grafico è possibile confrontare più modelli.  
   
 ## <a name="example"></a>Esempio  
  Si supponga che il reparto Marketing di Adventure Works Cycles intenda condurre una campagna di mailing diretto. Dalle campagne precedenti è risultato che la percentuale di risposta tipica è pari al 10%. In una tabella del database è archiviato un elenco di 10.000 potenziali clienti. In base alla percentuale di risposta tipica, è possibile prevedere che risponderanno 1.000 clienti.  
@@ -49,7 +49,7 @@ ms.locfileid: "36156593"
   
 #### <a name="to-create-an-accuracy-chart"></a>Per creare un grafico di accuratezza  
   
-1.  Fare clic sui **Client di Data Mining** della barra multifunzione.  
+1.  Scegliere il **Client di Data Mining** della barra multifunzione.  
   
 2.  Nel **accuratezza e convalida** gruppo, fare clic su **grafico di accuratezza**.  
   
@@ -65,13 +65,13 @@ ms.locfileid: "36156593"
     > [!NOTE]  
     >  Non è possibile stimare un valore continuo. È tuttavia possibile discretizzare la colonna, suddividendo i valori in intervalli discreti. Questa operazione deve essere eseguita prima di creare il modello di data mining.  
   
-5.  Nel **selezione dati di origine** finestra di dialogo, specificare l'origine dei dati che viene passato tramite il modello per creare una stima.  
+5.  Nel **selezione dati di origine** finestra di dialogo, specificare l'origine dei dati che verranno passati tramite il modello per creare una stima.  
   
-6.  Se si utilizza un'origine esterna dei dati e non i dati di test che viene archiviati con il modello, nel **specificare relazioni** della finestra di dialogo mappa le colonne nei nuovi dati di origine alle colonne utilizzate nel modello di data mining.  
+6.  Se si usa un'origine esterna di dati e non i dati di test che viene archiviati con il modello, nei **specificare le relazioni** della finestra di dialogo mappa le colonne nei nuovi dati di origine alle colonne utilizzate nel modello di data mining.  
   
      Viene automaticamente eseguito il mapping delle colonne con nomi simili. Benché alcune colonne dei dati di input risultino irrilevanti per l'analisi e possano essere ignorate, altre sono necessarie per consentire l'elaborazione dell'input da parte del modello di data mining, ad esempio le colonne con ID transazione o con valori di destinazione oppure le colonne utilizzate per la stima. Se non è possibile eseguire il mapping di una colonna richiesta, tramite la procedura guidata viene generato un messaggio di avviso.  
   
-7.  Fare clic su **Fine**.  
+7.  Scegliere **Fine**.  
   
      Tramite la procedura guidata viene creato un report che include il grafico di accuratezza e i dati sottostanti.  
   
@@ -88,6 +88,6 @@ ms.locfileid: "36156593"
  Per ulteriori informazioni sul funzionamento di un grafico di accuratezza e sul calcolo dell'accuratezza in base alle linee di stima casuali e ideali, vedere l'argomento "Grafico di accuratezza" nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Convalida dei modelli e utilizzo dei modelli per la stima &#40;componenti aggiuntivi data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [Convalida dei modelli e utilizzo dei modelli per la stima &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

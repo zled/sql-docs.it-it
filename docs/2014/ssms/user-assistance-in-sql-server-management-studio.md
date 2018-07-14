@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b6c3da6431e278ff05548b0b93e2847335c4e50b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 80c0a03a6eeaa33977e5152a4b4da24b17abf8b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212481"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Documentazione per gli utenti in SQL Server Management Studio
   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] la documentazione per gli utenti è disponibile tramite il menu ? e la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il menu ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre diverse possibilità per ottenere informazioni su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Consente inoltre di accedere alla community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e alle risorse di MSDN Online che in precedenza non erano disponibili dall'ambiente della Guida. Quest'ultimo può essere inoltre configurato per essere avviato all'interno dell'ambiente [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o in una finestra esterna associata.  
@@ -48,7 +48,7 @@ ms.locfileid: "36068380"
   
      In questo elenco sono archiviati i segnalibri degli argomenti inseriti dall'utente per accedervi facilmente in seguito.  
   
- Uso della Guida (Guida di[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer) collega gli utenti alla documentazione relativa al visualizzatore della Guida, ma gli argomenti si trovano in un insieme separato dalla documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per informazioni sul visualizzatore della Guida, selezionare **Uso della Guida** dal menu ? della Documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per informazioni sull'aggiunta dell'insieme uso della Guida alla raccolta di documentazione Online, vedere [aggiungere o rimuovere la documentazione di SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+ Uso della Guida (Guida di[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer) collega gli utenti alla documentazione relativa al visualizzatore della Guida, ma gli argomenti si trovano in un insieme separato dalla documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per informazioni sul visualizzatore della Guida, selezionare **Uso della Guida** dal menu ? della Documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per informazioni sull'aggiunta dell'insieme uso della Guida all'insieme della documentazione Online, vedere [aggiungere o rimuovere la documentazione di prodotto per SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online e community di SQL Server  
  Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre inoltre agli utenti la possibilità di contattare MSDN Online e le community dedicate a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]presenti su Internet. È possibile effettuare le operazioni seguenti:  

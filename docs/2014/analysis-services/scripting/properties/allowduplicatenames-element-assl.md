@@ -1,5 +1,5 @@
 ---
-title: Elemento AllowDuplicateNames (ASSL) | Documenti Microsoft
+title: Elemento AllowDuplicateNames (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllowDuplicateNames element
 ms.assetid: d0a80040-115f-4490-926f-4d64d8977e67
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e6fe55bdf9dde0906a43fa46745e22179dba9e74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9358092125e5be7c7c0ec555cb29db4d7f714c99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180894"
 ---
 # <a name="allowduplicatenames-element-assl"></a>Elemento AllowDuplicateNames (ASSL)
-  Determina se i nomi duplicati sono consentiti un [gerarchia](../objects/hierarchy-element-assl.md) elemento.  
+  Determina se sono consentiti nomi duplicati un [gerarchia](../objects/hierarchy-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,8 +61,8 @@ ms.locfileid: "36155854"
 |Elemento padre|[Hierarchy](../objects/hierarchy-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `AllowDuplicateNames` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Hierarchy>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `AllowDuplicateNames` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Hierarchy>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

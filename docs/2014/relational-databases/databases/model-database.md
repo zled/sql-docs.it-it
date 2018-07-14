@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3f8fd67f968701440b06274bbd40600be94c00b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 729c2d4ea6f89a8b97917d6b22ca885342618018
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242881"
 ---
 # <a name="model-database"></a>Database model
   Il database **model** viene usato come modello per tutti i database creati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché il database **tempdb** viene creato ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato, il database **model** deve essere sempre presente in un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'intero contenuto del database **model** , incluse le opzioni del database, viene copiato nel nuovo database. Alcune impostazioni del database **model** vengono inoltre usate per la creazione di un nuovo database **tempdb** all'avvio, pertanto in un sistema **il database** model [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere sempre presente.  
@@ -39,7 +39,7 @@ ms.locfileid: "36068043"
  Se si modifica il database **model** , le modifiche vengono ereditate da tutti i database creati successivamente. È ad esempio possibile impostare autorizzazioni o opzioni di database oppure aggiungere oggetti, ad esempio tabelle, funzioni o stored procedure. Le proprietà dei file del database **model** rappresentano un'eccezione e vengono ignorate, eccetto le dimensioni iniziali del file di dati.  
   
 ## <a name="physical-properties-of-model"></a>Proprietà fisiche del database model  
- Nella tabella seguente sono illustrati i valori di configurazione iniziali dei file di dati e di log del database **model** . Le dimensioni di questi file possono variare leggermente a seconda dell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nella tabella seguente sono illustrati i valori di configurazione iniziali dei file di dati e di log del database **model** . Le dimensioni di questi file possono variare leggermente per edizioni diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |File|Nome logico|Nome fisico|Aumento di dimensioni del file|  
 |----------|------------------|-------------------|-----------------|  
@@ -82,7 +82,7 @@ ms.locfileid: "36068043"
 |Opzioni relative a Service Broker|DISABLE_BROKER|no|  
 |TRUSTWORTHY|OFF|no|  
   
- <sup>1</sup> per verificare il modello di recupero corrente del database, vedere [consente di visualizzare o modificare il modello di recupero di un Database &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) oppure [Sys. Databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup> per verificare il modello di recupero corrente del database, vedere [visualizzare o modificare il modello di recupero di un Database &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) oppure [Sys. Databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
  Per una descrizione di queste opzioni di database, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   

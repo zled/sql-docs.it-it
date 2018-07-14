@@ -1,5 +1,5 @@
 ---
-title: Risoluzione dei problemi relativi a utilità SQL Server | Documenti Microsoft
+title: Risolvere i problemi di utilità SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0bc94d8644d1a0015829b730d5556b967c6b8c93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 81b35d1af874c97bf2e61e9c1234d7ad7876e229
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328141"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Risoluzione dei problemi relativi a Utilità SQL Server
-  La risoluzione dei problemi relativi a Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe includere la risoluzione di un'operazione non riuscita di registrazione di un'istanza di SQL Server con un punto di controllo dell'utilità, la risoluzione dei problemi relativi a raccolte dati con errori che generano icone grigie nella visualizzazione elenco dell'istanza gestita in un punto di controllo dell'utilità, la riduzione dei colli di bottiglia delle prestazioni o la risoluzione dei problemi di integrità delle risorse. Per ulteriori informazioni sulla riduzione dei problemi di integrità delle risorse identificati da un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dell'utilità, vedere [risolvere i problemi di integrità delle risorse Server SQL &#40;utilità SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
+  La risoluzione dei problemi relativi a Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe includere la risoluzione di un'operazione non riuscita di registrazione di un'istanza di SQL Server con un punto di controllo dell'utilità, la risoluzione dei problemi relativi a raccolte dati con errori che generano icone grigie nella visualizzazione elenco dell'istanza gestita in un punto di controllo dell'utilità, la riduzione dei colli di bottiglia delle prestazioni o la risoluzione dei problemi di integrità delle risorse. Per altre informazioni sulla riduzione dei problemi di integrità delle risorse identificati da un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dell'utilità, vedere [risolvere i problemi di integrità risorse di SQL Server &#40;utilità SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Operazione di registrazione di un'istanza di SQL Server in Utilità SQL Server non riuscita  
- Se ci si connette all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] effettuare la registrazione tramite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] l'autenticazione e si specifica un account proxy che appartiene a un dominio Active Directory diverso dal dominio in cui si trova il punto di controllo utilità Convalida istanza ha esito positivo, ma la operazione di registrazione ha esito negativo con messaggio di errore seguente:  
+ Se ci si connette all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eseguire la registrazione tramite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] l'autenticazione e si specifica un account proxy che appartiene a un dominio di Active Directory diverso rispetto a quello in cui si trova il punto di controllo utilità Convalida istanza ha esito positivo, ma il operazione di registrazione ha esito negativo con messaggio di errore seguente:  
   
  Eccezione durante l'esecuzione di un'istruzione o un batch Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36068774"
  La soluzione alternativa per questo problema, utilizzando l'esempio precedente, è connettersi all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per eseguire la registrazione in Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzando "sa" e fornire un account proxy da "Domain_1".  
   
 ## <a name="failed-wmi-validation"></a>Convalida WMI non riuscita  
- Se WMI non è configurato correttamente in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le operazioni di creazione del punto di controllo dell'utilità e di registrazione dell'istanza gestita visualizzano un avviso, ma l'operazione non viene bloccata. Inoltre, se si modifica il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configurazione dell'account dell'agente in modo che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agente non dispone delle autorizzazioni necessarie per le classi WMI obbligatorie, la raccolta dei dati sull'istanza gestita interessata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non riesce a caricare il punto di controllo utilità. Ciò comporta la visualizzazione di icone grigie nel punto di controllo dell'utilità.  
+ Se WMI non è configurato correttamente in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le operazioni di creazione del punto di controllo dell'utilità e di registrazione dell'istanza gestita visualizzano un avviso, ma l'operazione non viene bloccata. Inoltre, se si modifica il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configurazione dell'account dell'agente in modo che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent non dispone dell'autorizzazione per le classi WMI obbligatorie, la raccolta dei dati nell'istanza gestita interessata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non riesce a caricare il punto di controllo utilità. Ciò comporta la visualizzazione di icone grigie nel punto di controllo dell'utilità.  
   
  La raccolta dati con errori genera icone di stato grigie nella visualizzazione elenco del punto di controllo dell'utilità per le istanze gestite interessate di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La cronologia processo nell'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mostra errori di sysutility_mi_collect_and_upload nel passaggio 2 (dati fase raccolti dallo script di PowerShell).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36068774"
   
  L'esecuzione del comando è stata arrestata perché la variabile della shell "ErrorActionPreference" è impostata sull'arresto: accesso negato.  
   
- Errore: \<data-ora (MM/GG/AAAA hh.mm.ss) >: rilevata eccezione durante la raccolta delle proprietà della cpu.  È probabile che una query WMI non sia riuscita.  AVVISO.  
+ Errore: \<data e ora (MM/GG/AAAA hh.mm.ss) >: eccezione intercettata durante la raccolta delle proprietà della cpu.  È probabile che una query WMI non sia riuscita.  AVVISO.  
   
  Per risolvere questo problema, verificare le impostazioni di configurazione seguenti:  
   
@@ -100,7 +100,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   Convalida WMI non riuscita o non supportata. Per ulteriori informazioni, vedere la sezione Convalida WMI non riuscita in precedenza in questo argomento.  
   
--   Aggiornare i dati in visualizzazione elenco dell'istanza gestita, come i dati in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] i punti di visualizzazione di utilità non vengono aggiornati automaticamente. Per aggiornare i dati, fare doppio clic sul **istanze gestite** nodo il **navigazione di Esplora utilità** riquadro, quindi selezionare **Aggiorna**, oppure fare clic sul [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nome della visualizzazione elenco dell'istanza, quindi selezionare **aggiornare**. Si tenga presente che, dopo la registrazione di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con un punto di controllo dell'utilità, possono essere necessari fino a 30 minuti affinché i dati vengano visualizzati nel dashboard e i punti di visualizzazione nel riquadro del contenuto Esplora utilità.  
+-   Aggiornare i dati in visualizzazione elenco dell'istanza gestita, come i dati in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] punti di visualizzazione di utilità non viene aggiornato automaticamente. Per aggiornare i dati, fare doppio clic sul **istanze gestite** nodo il **navigazione di Esplora utilità** riquadro, quindi selezionare **Aggiorna**, o fare clic sul [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nome della visualizzazione elenco dell'istanza, quindi selezionare **Aggiorna**. Si tenga presente che, dopo la registrazione di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con un punto di controllo dell'utilità, possono essere necessari fino a 30 minuti affinché i dati vengano visualizzati nel dashboard e i punti di visualizzazione nel riquadro del contenuto Esplora utilità.  
   
 -   Utilizzare Gestione configurazione SQL Server per verificare che l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in esecuzione.  
   
@@ -114,17 +114,17 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   Se l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non è di tipo cluster, verificare che il servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent sia in esecuzione e che sia configurato per essere avviato automaticamente nel punto di controllo dell'utilità e nell'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   Verificare che venga utilizzato un account valido per eseguire la raccolta dati sull'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile, ad esempio, che la password sia scaduta. Se la password del proxy è scaduta, aggiornare le credenziali della password in SSMS, come indicato di seguito:  
+-   Verificare che un account valido di cui è in uso per eseguire la raccolta dei dati nell'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile, ad esempio, che la password sia scaduta. Se la password del proxy è scaduta, aggiornare le credenziali della password in SSMS, come indicato di seguito:  
   
     1.  In **Esplora oggetti**di SSMS espandere il nodo **Sicurezza** , quindi espandere il nodo **Credenziali** .  
   
     2.  Fare clic su **UtilityAgentProxyCredential_\<GUID >** e selezionare **proprietà**.  
   
-    3.  Nella finestra di dialogo Proprietà credenziali aggiornare le credenziali necessarie per la **UtilityAgentProxyCredential_\<GUID >** credenziale.  
+    3.  Nella finestra di dialogo Proprietà credenziali aggiornare le credenziali come desiderato per il **UtilityAgentProxyCredential_\<GUID >** credenziale.  
   
     4.  Scegliere **OK** per confermare la modifica.  
   
--   TCP/IP deve essere abilitata nel punto di controllo utilità e nell'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Abilitare TCP/IP tramite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.  
+-   TCP/IP deve essere abilitato nel punto di controllo utilità e nell'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Abilitare TCP/IP tramite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.  
   
 -   È necessario avviare e configurare per l'avvio automatico il servizio SQL Server Browser nel punto di controllo dell'utilità. Se l'organizzazione non consente l'utilizzo del servizio SQL Server Browser, utilizzare i passaggi seguenti per consentire a un'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di connettersi al punto di controllo dell'utilità:  
   
@@ -152,7 +152,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     12. Ripetere questi passaggi per ogni istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che si connette a un punto di controllo utilità in cui il servizio SQL Server Browser non è abilitato.  
   
--   Verificare che le istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono connessi alla rete.  
+-   Assicurarsi che le istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono connessi alla rete.  
   
 -   Se sono presenti database con lo stesso nome ma con impostazioni diverse per la distinzione tra maiuscole e minuscole su un'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'identificazione tra il database e i relativi punti di visualizzazione può risultare errata, causando errori nella raccolta dati. Ad esempio, in un database denominato "MYDATABASE" potrebbero essere visualizzati stati di integrità per un database denominato "MyDatabase". In questo scenario non viene generato alcun errore. La raccolta dati con errori può essere anche il risultato di mancate corrispondenze tra maiuscole e minuscole in altri oggetti visualizzati nel punto di controllo dell'utilità, ad esempio tra i nomi dei file di database e i nomi dei gruppi di file.  
   

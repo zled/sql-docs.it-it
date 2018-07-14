@@ -1,5 +1,5 @@
 ---
-title: Proprietà comuni | Documenti Microsoft
+title: Proprietà comuni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 caps.latest.revision: 45
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3cf48911196d3bb96fa54a6d912fbf5a5646516f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5bc0d0f75f911c27ec8b117653aef978a615f3e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169333"
 ---
 # <a name="common-properties"></a>Proprietà comuni
   Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] hanno proprietà comuni e proprietà personalizzate a livello di componente, input e output, colonne di input e colonne di output. Molte proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -113,7 +113,7 @@ ms.locfileid: "36069685"
 |Description|String|Descrizione dell'input.|  
 |ErrorOrTruncationOperation|String|Stringa facoltativa che specifica i tipi di errori o troncamenti che possono verificarsi durante l'elaborazione di una riga.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che specifica la gestione degli errori. I valori sono `Fail component`, `Ignore failure`, e `Redirect row`.|  
-|HasSideEffects|Boolean|Indica se un componente può essere rimosso dal piano di esecuzione del flusso di dati quando non è connesso a un componente a valle e quando `RunInOptimizedMode` è `true`.|  
+|HasSideEffects|Boolean|Indica se un componente può essere rimosso dal piano di esecuzione del flusso di dati quando non è collegato a un componente a valle e quando `RunInOptimizedMode` è `true`.|  
 |ID|Valore intero|Valore che identifica l'input in modo univoco.|  
 |IdentificationString|String|Stringa che identifica l'input.|  
 |IsSorted|Boolean|Indica se i dati nell'input sono ordinati.|  
@@ -162,12 +162,12 @@ ms.locfileid: "36069685"
 |ID|Valore intero|Valore che identifica l'output in modo univoco.|  
 |IdentificationString|String|Stringa che identifica l'output.|  
 |IsErrorOut|Boolean|Indica se l'output è un output degli errori.|  
-|IsSorted|Boolean|Indica se l'output è ordinato. Il valore predefinito è `False`.<br /><br /> **\*\* Importante \* \***  impostando il valore della `IsSorted` proprietà `True` non consente di ordinare i dati. Questa proprietà fornisce solo un hint ai componenti a valle in relazione all'ordinamento precedente dei dati. Per altre informazioni, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Boolean|Indica se l'output è ordinato. Il valore predefinito è `False`.<br /><br /> **\*\* Importanti \* \***  impostando il valore della `IsSorted` proprietà `True` non consente di ordinare i dati. Questa proprietà fornisce solo un hint ai componenti a valle in relazione all'ordinamento precedente dei dati. Per altre informazioni, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |nome|String|Nome dell'output.|  
 |SynchronousInputID|Valore intero|ID di un input sincrono all'output.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che determina la gestione dei troncamenti da parte del componente durante l'elaborazione delle righe. I valori sono `Fail component`, `Ignore failure`, e `Redirect row`.|  
   
-###  <a name="outputcolumns"></a> Proprietà colonna di output  
+###  <a name="outputcolumns"></a> Proprietà delle colonne di output  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un output contiene una raccolta di colonne di output. Una colonna di output di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
  Nella tabella seguente vengono descritte le proprietà delle colonne di output dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  

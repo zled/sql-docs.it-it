@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo file Database (Analysis Services - dati multidimensionali) individua | Documenti Microsoft
+title: Finestra di dialogo file Database (Analysis Services - dati multidimensionali) individua | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.localdbfilesdialog.f1
 ms.assetid: b38aa670-b8a4-4abb-8b32-c29dc52362f5
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1709d430a92116e3ba5dc1e9be3d33c96eb6bf59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92c2f181638b9c995b01d9a5434e7b004241d6fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192841"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Individua file di database (Analysis Services - Dati multidimensionali)
   Nella finestra di dialogo **Individua file di database** viene visualizzato un elenco di file disponibili nelle cartelle di dati e log definite per un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È possibile selezionare un file elencato oppure specificare una cartella e un file diversi, se necessario. Per visualizzare la finestra di dialogo **Individua file di database** :  

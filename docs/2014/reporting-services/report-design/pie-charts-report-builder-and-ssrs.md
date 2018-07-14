@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3c3a358c9403d6bf14bede017380fbf4872a51b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 578042b4ce8b5892b62916f5d41f271e5081271e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175070"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Grafici a torta (Generatore report e SSRS)
   Nei grafici a torta e in quelli ad anello i dati vengono visualizzati come percentuali rispetto a un valore intero. I grafici a torta vengono utilizzati principalmente per eseguire confronti tra gruppi. I grafici a torta e ad anello, insieme ai grafici a piramide e a imbuto, costituiscono un gruppo di grafici noti come grafici con forme. I grafici con forme non includono assi. Quando un campo numerico viene inserito in un grafico con forme, viene calcolata la percentuale di ogni valore rispetto al totale. Per altre informazioni sui grafici con forme, vedere [Grafici con forme &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "36068415"
   
 -   Un grafico a torta richiede almeno due valori per eseguire un confronto valido tra percentuali. Se il grafico a torta contiene un unico colore, verificare di aver aggiunto un campo categoria in base a cui eseguire il raggruppamento. Se nel grafico a torta non sono contenute categorie, i valori del campo dati vengono aggregati in un unico valore per la visualizzazione.  
   
--   Analogamente a tutti gli altri tipi di grafico, per il grafico a torta i colori vengono generati in base ai valori contenuti nella tavolozza predefinita. Con questo approccio è possibile che, se in un report si utilizzano più grafici a torta, i colori dei punti dati siano diversi da un grafico all'altro. Se il report contiene più grafici a torta, è consigliabile impostare manualmente i colori per ogni gruppo di categorie in modo da mantenere lo stesso colore nei vari grafici. Per ulteriori informazioni su come definire i colori in un grafico, vedere [formattazione dei colori delle serie in un grafico &#40;Generatore Report e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
+-   Analogamente a tutti gli altri tipi di grafico, per il grafico a torta i colori vengono generati in base ai valori contenuti nella tavolozza predefinita. Con questo approccio è possibile che, se in un report si utilizzano più grafici a torta, i colori dei punti dati siano diversi da un grafico all'altro. Se il report contiene più grafici a torta, è consigliabile impostare manualmente i colori per ogni gruppo di categorie in modo da mantenere lo stesso colore nei vari grafici. Per altre informazioni su come definire i colori in un grafico, vedere [formattazione dei colori delle serie in un grafico &#40;Generatore Report e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="applying-drawing-styles-to-a-pie-chart"></a>Applicazione di stili di disegno a un grafico a torta  
  È possibile aggiungere stili di disegno speciali al grafico a torta per aumentarne l'impatto visivo. Gli stili di disegno includono gli effetti smussato e concavo, disponibili solo nei grafici a torta 2D. Nella figura seguente è illustrato un esempio degli stili di disegno smussato e concavo in un grafico a torta.  
@@ -67,7 +67,7 @@ ms.locfileid: "36068415"
  Per altre informazioni, vedere [Aggiungere stili smussato, rilievo e trama a un grafico &#40;Generatore report e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>Visualizzazione di valori in percentuale in un grafico a torta  
- Analogamente ad altri grafici con forme, i grafici a torta rappresentano le percentuali del totale. Di conseguenza, le etichette dei grafici a torta vengono solitamente formattate come percentuali. Per assicurare coerenza con altri tipi di grafico, le etichette di percentuali non vengono visualizzate per impostazione predefinita. Per ulteriori informazioni su come visualizzare i valori come percentuali nel grafico, vedere [visualizzare valori in percentuale in un grafico a torta &#40;Generatore Report e SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md). Per altre informazioni sulla formattazione di numeri come percentuali nel report, vedere [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md).  
+ Analogamente ad altri grafici con forme, i grafici a torta rappresentano le percentuali del totale. Di conseguenza, le etichette dei grafici a torta vengono solitamente formattate come percentuali. Per assicurare coerenza con altri tipi di grafico, le etichette di percentuali non vengono visualizzate per impostazione predefinita. Per altre informazioni su come visualizzare i valori come percentuali nel grafico, vedere [visualizzare i valori in percentuale in un grafico a torta &#40;Generatore Report e SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md). Per altre informazioni sulla formattazione di numeri come percentuali nel report, vedere [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
  ![Grafico a torta con etichette punto dati come percentuali](../media/rs-piechartpercentages.gif "Grafico a torta con etichette punto dati come percentuali")  
   
@@ -90,11 +90,11 @@ ms.locfileid: "36068415"
 -   Raccolta di sezioni piccole in un grafico a torta supplementare. Il secondo grafico a torta non viene visualizzato nella finestra di progettazione. Al contrario, durante l'elaborazione del report, l'opportunità di visualizzarlo viene valutata dal grafico, in base ai valori dei punti dati. In caso affermativo, i valori vengono aggiunti in un altro grafico a torta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le etichette dei punti di dati visualizzato di fuori di un grafico a torta &#40;SSRS e Generatore Report&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Le etichette dei punti di visualizzazione dei dati all'esterno di un grafico a torta &#40;Report e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Raccogliere piccole sezioni in un grafico a torta &#40;Generatore report e SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Visualizzare i valori in percentuale in un grafico a torta &#40;Generatore report e SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Esercitazione: Aggiungere un grafico a torta al report &#40;Generatore report&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Formattazione della legenda in un grafico &#40;SSRS e Generatore Report&#41;](chart-legend-formatting-report-builder.md)   
+ [Formattazione della legenda in un grafico &#40;Report e SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Punti dati vuoti e Null nei grafici &#40;Generatore report e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
   

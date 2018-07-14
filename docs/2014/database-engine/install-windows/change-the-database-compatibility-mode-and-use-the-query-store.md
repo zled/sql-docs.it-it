@@ -1,5 +1,5 @@
 ---
-title: Eseguire la migrazione dei piani di Query | Documenti Microsoft
+title: Eseguire la migrazione di piani di Query | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query plans [SQL Server], migrating
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 66b481ab27af87a20f1a509cb10749c9f2ca1c15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 86396a835b68e9a6028bce45a68110e337ce9131
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324971"
 ---
 # <a name="migrate-query-plans"></a>Migrare piani di query
   Nella maggior parte dei casi, l'aggiornamento di un database alla versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comporta un miglioramento delle prestazioni di esecuzione delle query. Tuttavia, se sono presenti query critiche attentamente ottimizzate per le prestazioni, potrebbe essere necessario mantenere i piani per tali query prima di eseguire l'aggiornamento creando una guida di piano per ciascuna query. Se, dopo aver eseguito l'aggiornamento, Query Optimizer sceglie un piano meno efficiente per una o più query, è possibile abilitare le guide di piano e forzare il Query Optimizer a utilizzare i piani precedenti all'aggiornamento.  
   
  Per creare guide di piano prima di eseguire l'aggiornamento, eseguire la procedura seguente:  
   
-1.  Registrare la pianificazione corrente per ciascuna query critica utilizzando la [sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) stored procedure e specificando il piano di query nell'hint per la query USE PLAN.  
+1.  Registrare il piano corrente per ciascuna query critica utilizzando la [sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) stored procedure e specificando il piano di query nell'hint per la query USE PLAN.  
   
 2.  Verificare che la guida di piano sia applicata alla query.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36068771"
   
 -   [SET STATISTICS XML](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
--   Una query sulla colonna query_plan della [exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) funzione a gestione dinamica.  
+-   Una query sulla colonna query_plan della [DM exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) funzione a gestione dinamica.  
   
 -   Il [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md), e [Showplan XML For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) classi di evento.  
   

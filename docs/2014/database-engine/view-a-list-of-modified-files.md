@@ -1,5 +1,5 @@
 ---
-title: Visualizzare un elenco di file modificati | Documenti Microsoft
+title: Visualizzare un elenco di file modificati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.CheckinWindow
 helpviewer_keywords:
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - checking in files
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: affad7b7830088a955794f4825a68e72f12fca96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 22309ba15a3df2ed65fd27a002000e58f4beca36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228241"
 ---
 # <a name="view-a-list-of-modified-files"></a>Visualizzazione di un elenco di file modificati
-  È possibile usare il **archiviazioni in sospeso** finestra per visualizzare sempre un elenco dei file estratti nella soluzione corrente e per archiviare i file con un solo pulsante fare clic su.  
+  È possibile usare la **archiviazioni in sospeso** finestra per visualizzare sempre un elenco dei file estratti nella soluzione corrente e per archiviare i file con un singolo pulsante fare clic su.  
   
 ### <a name="to-view-a-list-of-modified-files"></a>Per visualizzare un elenco di file modificati  
   
-1.  Nel **vista** menu, fare clic su **archiviazioni in sospeso**.  
+1.  Nel **View** menu, fare clic su **archiviazioni in sospeso**.  
   
-2.  Per archiviare i file selezionati, fare clic su **Archivia**. In alternativa, è possibile ancorare la **archiviazioni in sospeso** sul lato destro della finestra di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ambiente in modo da poter controllare nei file dopo averli completati utilizzo.  
+2.  Per archiviare i file selezionati, fare clic su **Archivia**. In alternativa, è possibile ancorare la **archiviazioni in sospeso** sul lato destro della finestra di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ambiente in modo che è possibile archiviare i file al termine utilizzo.  
   
      **Check-In**  
      Consente di eseguire l'archiviazione della soluzione.  
@@ -43,7 +43,7 @@ ms.locfileid: "36069440"
      Consente di associare un commento in formato testo normale all'archiviazione in sospeso. Viene creato un commento che viene associato a ogni versione di un progetto e memorizzato nel database del controllo del codice sorgente.  
   
      **Opzioni**  
-     Specifica le azioni di controllo del codice sorgente deve intraprendere quando si fa clic sui **Archivia** pulsante.  
+     Specifica le azioni eseguibili in controllo del codice sorgente quando si sceglie la **Archivia** pulsante.  
   
     -   **Mantenere tutte le versioni estratte**  
   
@@ -61,8 +61,8 @@ ms.locfileid: "36069440"
      **Visualizzazione semplice**  
      Consente di visualizzare i file in corso di archiviazione come elenchi semplici sotto la relativa connessione del controllo del codice sorgente.  
   
-     **Confrontare diverse versioni**  
-     Apre Visual SourceSafe **Opzioni differenze** della finestra di dialogo che confronta il file selezionato nel progetto dell'ambiente di sviluppo in qualsiasi altro file selezionato e vengono illustrate le differenze, se presente.  
+     **Confrontare le versioni**  
+     Si apre Visual SourceSafe **opzioni di differenza** nella finestra di dialogo Confronta un file selezionato nel progetto dell'ambiente di sviluppo per qualsiasi altro file selezionato e vengono illustrate le differenze, se presente.  
   
      **Annulla estrazione**  
      Inverte l'estrazione di tutti gli elementi selezionati nel **archiviazioni in sospeso** finestra.  
