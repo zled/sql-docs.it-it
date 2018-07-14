@@ -1,5 +1,5 @@
 ---
-title: Disconnettere utenti e sessioni sul Analysis Services Server | Documenti Microsoft
+title: Disconnettere utenti e sessioni in Analysis Services Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ending user activity [Analysis Services]
 - connections [Analysis Services]
 - sessions [Analysis Services]
 ms.assetid: 3b0145a2-f21d-4dd0-a09e-83afeb2ff4a9
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f9f7979b85f3f1af919e55ef9d20b14d153a3f71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b327f4f6e8e7088704008b128fc410f6d9b6e0eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222231"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Disconnettere utenti e sessioni sul server Analysis Services
   Nell'ambito della gestione del carico di lavoro, un amministratore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può terminare l'attività dell'utente annullando sessioni e connessioni. Le sessioni possono essere create automaticamente durante l'esecuzione di una query (implicite) oppure denominate dall'amministratore al momento della creazione (esplicite). Le connessioni sono circuiti aperti per l'esecuzione delle query. È possibile terminare sia le sessioni che le connessioni mentre sono attive. Ad esempio, un amministratore può terminare l'elaborazione di una sessione se il processo richiede tempi troppo lunghi o non è certo che il comando in esecuzione sia stato registrato correttamente.  
@@ -76,9 +76,9 @@ ms.locfileid: "36166167"
  Per altre informazioni sul codice XMLA a cui si fa riferimento in questo argomento, vedere [Metodo Execute &#40;XMLA&#41;](../xmla/xml-elements-methods-execute.md) ed [Elemento Cancel &#40;XMLA&#41;](../xmla/xml-elements-commands/cancel-element-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione di connessioni e sessioni di &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [Gestione di connessioni e sessioni &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [Elemento BeginSession &#40;XMLA&#41;](../xmla/xml-elements-headers/beginsession-element-xmla.md)   
  [Elemento EndSession &#40;XMLA&#41;](../xmla/xml-elements-headers/endsession-element-xmla.md)   
- [Elemento di sessione &#40;XMLA&#41;](../xmla/xml-elements-headers/session-element-xmla.md)  
+ [Elemento Session &#40;XMLA&#41;](../xmla/xml-elements-headers/session-element-xmla.md)  
   
   

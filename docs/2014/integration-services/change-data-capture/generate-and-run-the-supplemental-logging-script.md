@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - supLog
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 64abc1eed2f37082e07b00daf609a75c09da4beb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45948070acddfd919a30b57fc0bebb88bdedf2aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254673"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>Generare ed eseguire lo script di registrazione supplementare
   Utilizzare la pagina Set up Tables for Capturing Changes per eseguire uno script nel database di origine Oracle per l'impostazione della registrazione supplementare.  
@@ -41,7 +41,7 @@ ms.locfileid: "36158739"
  Scegliere **Next** per [Generate Mirror Tables and CDC Capture Instances](generate-mirror-tables-and-cdc-capture-instances.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come creare l'istanza di Database SQL Server Change](how-to-create-the-sql-server-change-database-instance.md)   
+ [Come creare l'istanza di Database SQL Server Cambia](how-to-create-the-sql-server-change-database-instance.md)   
  [Rivedere e generare script di registrazione supplementare](review-and-generate-supplemental-logging-scripts.md)  
   
   

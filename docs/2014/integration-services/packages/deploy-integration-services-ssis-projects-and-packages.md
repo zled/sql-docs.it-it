@@ -1,5 +1,5 @@
 ---
-title: Distribuzione di progetti e pacchetti | Documenti Microsoft
+title: Distribuzione di progetti e pacchetti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50da655d029228c4fc2339b49245cd11f5967305
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf58e533b46304d4d8833626381e52e86d017404
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221663"
 ---
 # <a name="deployment-of-projects-and-packages"></a>Distribuzione di progetti e pacchetti
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta due modelli di distribuzione, il modello di distribuzione del progetto e il modello di distribuzione del pacchetto. Tramite il modello di distribuzione del progetto è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Per altre informazioni sulla distribuzione di progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Distribuire progetti nel server Integration Services](../deploy-projects-to-integration-services-server.md).  
   
- Per ulteriori informazioni sul modello di distribuzione del pacchetto, vedere [pacchetto di distribuzione &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
+ Per altre informazioni sul modello di distribuzione del pacchetto, vedere [pacchetto di distribuzione &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
   
 ## <a name="compare-project-deployment-and-package-deployment"></a>Eseguire un confronto tra la distribuzione del progetto e quella del pacchetto  
  Il tipo di modello di distribuzione scelto determina le opzioni di sviluppo e amministrazione disponibili per il progetto. Nella tabella seguente vengono illustrate le differenze e le similitudini tra l'utilizzo del modello di distribuzione del progetto e quello del pacchetto.  
@@ -40,7 +40,7 @@ ms.locfileid: "36166656"
 |L'integrazione con CLR è necessaria nel motore di database.|L'integrazione con CLR non è necessaria nel motore di database.|  
 |I valori dei parametri specifici dell'ambiente vengono archiviati nelle variabili di ambiente.|I valori di configurazione specifici dell'ambiente vengono archiviati nei file di configurazione.|  
 |I progetti e i pacchetti nel catalogo possono essere convalidati nel server prima dell'esecuzione. È possibile utilizzare SQL Server Management Studio, le stored procedure o il codice gestito per eseguire la convalida.|I pacchetti vengono convalidati appena prima dell'esecuzione. È anche possibile convalidare un pacchetto con dtExec o codice gestito.|  
-|I pacchetti vengono eseguiti avviando un'esecuzione nel motore di database. L'identificatore di un progetto, i valori di parametri espliciti (facoltativi) e i riferimenti all'ambiente (facoltativi) vengono assegnati a un'esecuzione prima dell'avvio.<br /><br /> I pacchetti possono anche essere eseguiti utilizzando `dtExec`.|I pacchetti vengono eseguiti utilizzando il `dtExec` e `DTExecUI` utilità di esecuzione. Le configurazioni applicabili vengono identificate tramite argomenti del prompt dei comandi (facoltativo).|  
+|I pacchetti vengono eseguiti avviando un'esecuzione nel motore di database. L'identificatore di un progetto, i valori di parametri espliciti (facoltativi) e i riferimenti all'ambiente (facoltativi) vengono assegnati a un'esecuzione prima dell'avvio.<br /><br /> I pacchetti possono anche essere eseguiti utilizzando `dtExec`.|I pacchetti vengono eseguiti usando il `dtExec` e `DTExecUI` utilità di esecuzione. Le configurazioni applicabili vengono identificate tramite argomenti del prompt dei comandi (facoltativo).|  
 |Durante l'esecuzione, gli eventi generati dal pacchetto vengono acquisiti automaticamente e salvati nel catalogo. È possibile eseguire query su questi eventi con le viste Transact-SQL.|Durante l'esecuzione, gli eventi generati da un pacchetto non vengono acquisiti automaticamente. Per acquisire gli eventi, è necessario aggiungere un provider di log al pacchetto.|  
 |I pacchetti vengono eseguiti in un processo di Windows separato.|I pacchetti vengono eseguiti in un processo di Windows separato.|  
 |Per pianificare l'esecuzione dei pacchetti si utilizza SQL Server Agent.|Per pianificare l'esecuzione dei pacchetti si utilizza SQL Server Agent.|  
@@ -61,7 +61,7 @@ ms.locfileid: "36166656"
   
 ## <a name="required-tasks"></a>Attività richieste  
   
--   [Distribuire progetti nel Server Integration Services](../deploy-projects-to-integration-services-server.md)  
+-   [Distribuire progetti nel server Integration Services](../deploy-projects-to-integration-services-server.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Intervento nel blog sulle [opinioni relative alle strategie di diramazione per i progetti SSIS](http://go.microsoft.com/fwlink/?LinkId=245739)sul sito Web mattmasson.com.  

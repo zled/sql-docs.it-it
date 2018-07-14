@@ -1,5 +1,5 @@
 ---
-title: Esempi di Query modello Naive Bayes | Documenti Microsoft
+title: Esempi di Query sul modello Naive Bayes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - naive bayes algorithms [Analysis Services]
 - content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 29267826bd90ef82cdf28ffb99e265ec135d37cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a2fb2a44ff12ef938abc09f7e307841a1b057be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224691"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Esempi di query sul modello Naive Bayes
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che consente di fornire dettagli sui criteri individuati durante l'analisi, o una query di stima, che consente di utilizzare i criteri presenti nel modello di data mining per eseguire stime relative ai nuovi dati. È inoltre possibile recuperare metadati relativi al modello tramite una query sul set di righe dello schema di data mining. In questa sezione viene illustrato come creare entrambi i tipi di query per i modelli basati sull'algoritmo Microsoft Naive Bayes.  
@@ -249,7 +249,7 @@ AS t
 |-|-|  
 |Funzione di stima|Utilizzo|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
-|[Stimare &#40;DMX&#41;](/sql/dmx/predict-dmx)|Viene restituito un valore, o un set di valori, stimato per una colonna specificata.|  
+|[Prevedere &#40;DMX&#41;](/sql/dmx/predict-dmx)|Viene restituito un valore, o un set di valori, stimato per una colonna specificata.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Viene restituita la probabilità ponderata.|  
 |[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Viene stimata l'appartenenza a un set di dati associativo.|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Viene restituito l'oggetto Node_ID per ogni case.|  
@@ -261,6 +261,6 @@ AS t
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento tecnico di Microsoft Naive Bayes algoritmo](microsoft-naive-bayes-algorithm-technical-reference.md)   
  [Algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)   
- [Contenuto del modello per i modelli Naive Bayes di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Contenuto dei modelli per i modelli Naive Bayes di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

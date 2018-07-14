@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6403dd558991a38bfad6e89224ba3b93d60c57eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c12611f98ce2309e2102f2cd8134659a6534ace5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235651"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Backup e ripristino di database DQS
   In questo argomento viene descritto come eseguire il backup e il ripristino dei database DQS.  
@@ -30,7 +30,7 @@ ms.locfileid: "36158521"
   
 -   È necessario conoscere o ricordare la password per la chiave master del database fornita durante l'installazione del server DQS.  
   
--   Assicurarsi che non vi siano attività o processi in esecuzione in DQS. È possibile verificare utilizzando la schermata **Monitoraggio attività** . Per informazioni dettagliate sull'utilizzo di questa schermata, vedere [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
+-   Assicurarsi che non vi siano attività o processi in esecuzione in DQS. È possibile verificare utilizzando la schermata **Monitoraggio attività** . Per informazioni dettagliate su funzionamento di questa schermata, vedere [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   
 -   Assicurarsi che non vi siano utenti connessi al server DQS.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36158521"
   
 6.  Disconnettersi dall'istanza corrente di SQL Server e connettersi all'istanza di SQL Server in cui si desidera ripristinare i database.  
   
-7.  Ripristinare il database DQS_MAIN. Per istruzioni dettagliate ripristinare un database di SQL Server, vedere [ripristinare un Backup del Database &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
+7.  Ripristinare il database DQS_MAIN. Per istruzioni dettagliate ripristinare un database di SQL Server, vedere [Ripristina un Backup del Database &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
   
 8.  Ripristinare il database DQS_PROJECTS.  
   

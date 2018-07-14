@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.newrole.f1
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: eef02e568a484869d083d7d3c305a222d27b9adf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6654b0bef25504737e2f3fb42cdb2b0f8d017506
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251363"
 ---
 # <a name="new-user-role-management-studio"></a>Nuovo ruolo utente (Management Studio)
   Utilizzare questa pagina per creare una definizione di ruolo a livello di elemento. Una definizione di ruolo a livello di elemento è una raccolta denominata di attività che elenca quelle eseguibili dagli utenti in relazione a cartelle, report, modelli, risorse e origini dei dati condivise. Un esempio di definizione di ruolo a livello di elemento è il ruolo predefinito Visualizzazione che identifica il tipo di azioni che un utente finale di un report potrebbe avere la necessità di eseguire per l'esplorazione delle cartelle e la visualizzazione dei report.  

@@ -1,5 +1,5 @@
 ---
-title: Specifica la destinazione di installazione | Documenti Microsoft
+title: Impostazione della destinazione di installazione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input files [Analysis Services]
 - installation targets [Analysis Services]
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - modifying installation targets
 ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3e2f46eeb01baa5f6f208a612ecba5ad61dad004
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a779e6ecbc32316d6d22ef8f270d9d0d2af6738e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254953"
 ---
 # <a name="specifying-the-installation-target"></a>Impostazione della destinazione di installazione
-  Il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distribuzione guidata di legge le informazioni sulla destinazione di installazione dal \< *nome progetto*>. deploymenttargets file. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crea questo file quando si compila il progetto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilizza il database e il server specificato nella **distribuzione** pagina del  *\<nome progetto >* **pagine delle proprietà** finestra di dialogo per creare la \< *nome del progetto*> file con estensione targets.  
+  Il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distribuzione guidata di legge le informazioni sulla destinazione di installazione dal \< *nome del progetto*>. deploymenttargets file. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crea questo file quando si compila il progetto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Usa il database e server specificati nella **distribuzione** pagina della  *\<nome progetto >* **le pagine delle proprietà** finestra di dialogo per creare la \< *nome progetto*> file con estensione targets.  
   
 ## <a name="modifying-the-installation-target-for-deployment"></a>Modifica della destinazione di installazione per la distribuzione  
  In alcuni casi potrebbe essere necessario distribuire un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] su un database o un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] diversi da quelli specificati nella pagina **Distribuzione** . Potrebbe essere utile ad esempio distribuire il progetto su un server di prova prima della distribuzione e successivamente distribuire il progetto su un server di produzione dopo il completamento delle prove. Quando il progetto è completato e testato, potrebbe essere opportuno distribuirlo su più server di produzione in un cluster con bilanciamento del carico di rete o su un server dell'area di gestione temporanea e un server di produzione.  
@@ -46,11 +46,11 @@ ms.locfileid: "36166724"
   
      -oppure-  
   
--   Modificare il \< *nome del progetto*>. deploymenttargets file utilizzando un editor di testo.  
+-   Modificare il \< *nome progetto*> file. deploymenttargets utilizzando un editor di testo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Specifica delle opzioni di distribuzione di ruoli e partizioni](deployment-script-files-partition-and-role-deployment-options.md)   
+ [Impostazione opzioni di distribuzione dei ruoli e delle partizioni](deployment-script-files-partition-and-role-deployment-options.md)   
  [Specificare le impostazioni di configurazione per la distribuzione della soluzione](deployment-script-files-solution-deployment-config-settings.md)   
- [Specifica le opzioni di elaborazione](deployment-script-files-specifying-processing-options.md)  
+ [Impostazione delle opzioni di elaborazione](deployment-script-files-specifying-processing-options.md)  
   
   

@@ -5,24 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data formats [SQL Server], Unicode character
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 19d00a0ecf553798fb37a424a516476cd3eb307d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9124d6807bc4fea19e98fb0f099cd31ba15172bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235341"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati (SQL Server)
   È consigliabile utilizzare il formato carattere Unicode per il trasferimento bulk di dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un file di dati contenente caratteri estesi o DBCS. Questo formato di dati consente di trasferire i dati da un server utilizzando una tabella codici diversa da quella del client che esegue l'operazione. In questi casi, l'utilizzo del formato di dati carattere Unicode offre i vantaggi seguenti:  
@@ -36,7 +35,7 @@ ms.locfileid: "36158456"
 > [!IMPORTANT]  
 >  Affinché un file di formato sia funzionante con un file di dati di formato carattere Unicode, è necessario che tutti i campi di input siano stringhe di testo Unicode, ovvero stringhe Unicode di dimensioni fisse o che terminano con un carattere.  
   
- Il `sql_variant` i dati archiviati in un file di dati in formato carattere Unicode opera nello stesso modo opera in un file di dati in formato carattere, ad eccezione del fatto che i dati vengono archiviati come `nchar` anziché `char` dati. Per altre informazioni sul formato carattere, vedere [Regole di confronto e supporto Unicode](../collations/collation-and-unicode-support.md).  
+ Il `sql_variant` i dati archiviati in un file di dati in formato carattere Unicode funziona nello stesso modo funziona in un file di dati in formato carattere, ad eccezione del fatto che i dati vengono archiviati come `nchar` invece di `char` dati. Per altre informazioni sul formato carattere, vedere [Regole di confronto e supporto Unicode](../collations/collation-and-unicode-support.md).  
   
  Per usare un carattere di terminazione del campo o della riga diverso da quello predefinito del formato carattere Unicode, vedere [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   

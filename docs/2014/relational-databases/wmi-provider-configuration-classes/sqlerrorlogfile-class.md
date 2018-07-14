@@ -1,5 +1,5 @@
 ---
-title: Classe SqlErrorLogFile | Documenti Microsoft
+title: Classe SqlErrorLogFile | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5e23c4512f04370fa24b3eb4ff3b74a072f6a2e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 8f3157554a234017ecf9c6ebd86148412b44f797
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244591"
 ---
 # <a name="sqlerrorlogfile-class"></a>Classe SqlErrorLogFile
   Fornisce proprietà per la visualizzazione delle informazioni relative a un file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -41,7 +41,7 @@ class SQLErrorLogFile
 ```  
   
 ## <a name="properties"></a>Proprietà  
- La classe SQLErrorLogFile definisce le proprietà seguenti.  
+ Classe SQLErrorLogFile definisce le proprietà seguenti.  
   
 |||  
 |-|-|  
@@ -51,7 +51,7 @@ class SQLErrorLogFile
 |LogFileSize|Tipo di dati: `uint32`<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Dimensione del file di log, in byte.|  
 |nome|Tipo di dati: `string`<br /><br /> Tipo di accesso: sola lettura<br /><br /> Qualificatori: chiave<br /><br /> <br /><br /> Nome del file di log.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 |||  
 |-|-|  
@@ -80,25 +80,25 @@ Next
 ```  
   
 ## <a name="comments"></a>Commenti  
- Quando si *InstanceName* non fornito nell'istruzione WQL, la query restituisce informazioni per l'istanza predefinita. L'istruzione WQL seguente restituisce, ad esempio, informazioni su tutti i file di log dall'istanza predefinita (MSSQLSERVER).  
+ Quando *InstanceName* non viene fornito nell'istruzione WQL, la query restituirà le informazioni per l'istanza predefinita. L'istruzione WQL seguente restituisce, ad esempio, informazioni su tutti i file di log dall'istanza predefinita (MSSQLSERVER).  
   
 ```  
 "SELECT * FROM SqlErrorLogFile"  
 ```  
   
 ## <a name="security"></a>Security  
- Per connettersi a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di log tramite WMI, è necessario disporre delle autorizzazioni seguenti nei computer locali e remoti:  
+ Per connettersi a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di log tramite WMI, è necessario disporre delle autorizzazioni seguenti in entrambi i computer locali e remoti:  
   
--   L'accesso in lettura per il **Root\Microsoft\SqlServer\ComputerManagement10** spazio dei nomi WMI. Per impostazione predefinita, chiunque dispone di accesso in lettura tramite l'autorizzazione Abilita account.  
+-   Accesso in lettura per il **Root\Microsoft\SqlServer\ComputerManagement10** dello spazio dei nomi WMI. Per impostazione predefinita, chiunque dispone di accesso in lettura tramite l'autorizzazione Abilita account.  
   
     > [!NOTE]  
-    >  Per informazioni su come verificare autorizzazioni WMI, vedere la sezione sicurezza dell'argomento [visualizzare file di Log Offline](../logs/view-offline-log-files.md).  
+    >  Per informazioni su come verificare autorizzazioni WMI, vedere la sezione sicurezza dell'argomento [visualizzazione file di Log Offline](../logs/view-offline-log-files.md).  
   
--   Autorizzazione di lettura per la cartella che contiene i log degli errori. Per impostazione predefinita l'errore registri si trovano nel percorso seguente (dove \< *unità >* rappresenta l'unità in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \< *InstanceName*> è il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Autorizzazione di lettura per la cartella che contiene i log degli errori. Per impostazione predefinita l'errore log si trovano nel percorso seguente (dove \< *unità >* rappresenta l'unità in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \< *NomeIstanza*> è il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
-     **\<Unità >: \Programmi\Microsoft SQL Server\MSSQL11** **.\< InstanceName > \mssql\log.**  
+     **\<Unità >: \Programmi\Microsoft SQL Server\MSSQL11** **.\< NomeIstanza > \mssql\log.**  
   
- Se si sta eseguendo la connessione attraverso un firewall, assicurarsi che sia impostata un'eccezione nel firewall per WMI nei computer di destinazione remoti. Per altre informazioni, vedere [connessione a WMI con avvio remoto con Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
+ Se si sta eseguendo la connessione attraverso un firewall, assicurarsi che sia impostata un'eccezione nel firewall per WMI nei computer di destinazione remoti. Per altre informazioni, vedere [la connessione a WMI in modalità remota a partire da Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe SqlErrorLogEvent](sqlerrorlogevent-class.md)   

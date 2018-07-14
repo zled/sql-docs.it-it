@@ -1,5 +1,5 @@
 ---
-title: Elemento Action (ASSL) | Documenti Microsoft
+title: Elemento Action (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Action element
 ms.assetid: aaee06a2-91c6-4007-b787-79cb08d63c77
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7dcabe0b31b44b293fe54e24699d25dc340e3302
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfc51d797852e80cf7bf501cf3f1d93f2f52c9d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196011"
 ---
 # <a name="action-element-assl"></a>Elemento Action (ASSL)
-  Contiene informazioni su un'azione disponibile in un [cubo](cube-element-assl.md) elemento o un [prospettiva](perspective-element-assl.md) elemento.  
+  Contiene informazioni su un'azione disponibile in un [cubo](cube-element-assl.md) elemento o una [prospettiva](perspective-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36168402"
 |Predecessore o padre|Tipo di dati|  
 |------------------------|---------------|  
 |[Cubo](../data-type/action-data-type-assl.md), [ReportAction](../data-type/reportaction-data-type-assl.md), [StandardAction](../data-type/standardaction-data-type-assl.md)|  
-|[Prospettiva](../data-type/perspectiveaction-data-type-assl.md)|  
+|[Punto di vista](../data-type/perspectiveaction-data-type-assl.md)|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36168402"
 |Elementi padre|[Azioni](../collections/actions-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Vedere anche  

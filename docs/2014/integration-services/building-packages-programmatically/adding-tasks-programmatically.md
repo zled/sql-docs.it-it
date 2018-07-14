@@ -20,13 +20,13 @@ ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 05a7e110aa3ee91e274684bbfd59a55b91377892
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24cd2e534a5e7a9e4bd6a6fd7bb376721d187a0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225991"
 ---
 # <a name="adding-tasks-programmatically"></a>Aggiunta di attività a livello di programmazione
   È possibile aggiungere attività ai tipi di oggetti seguenti nel motore di runtime:  
@@ -417,7 +417,7 @@ End Module
 ## <a name="external-resources"></a>Risorse esterne  
  Intervento nel blog sull'[aggiornamento di EzAPI per SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) sul sito Web blogs.msdn.com.  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessione di attività a livello di programmazione](../building-packages-programmatically/connecting-tasks-programmatically.md)  

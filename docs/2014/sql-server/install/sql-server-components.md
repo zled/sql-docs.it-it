@@ -1,5 +1,5 @@
 ---
-title: Componenti di SQL Server | Documenti Microsoft
+title: Componenti di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, components
 - listing components to analyze
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - identifying components to analyze
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85a89e2114cd00b28444cf6ee62d12ff1abdec42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99998b5b9e24de92f826a73941bf6b86e5ad4318
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177120"
 ---
 # <a name="sql-server-components"></a>Componenti di SQL Server
-  È possibile eseguire l'analisi guidata Preparazione aggiornamento in un computer locale o remoto con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] installato. Il primo passaggio dell'analisi di pre-aggiornamento consiste nell'identificare il computer e i componenti per l'analisi.  
+  È possibile eseguire l'analisi guidata Preparazione aggiornamento su un computer locale o remoto dotato [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] installato. Il primo passaggio dell'analisi di pre-aggiornamento consiste nell'identificare il computer e i componenti per l'analisi.  
   
 ## <a name="options"></a>Opzioni  
  **Nome del computer**  
- Specifica il nome del computer da analizzare, Upgrade Advisor consente di popolare il **nome del Server** casella con il nome del computer locale. È anche possibile utilizzare "." e "localhost" per connettersi al computer locale.  
+ Specifica il nome del computer da analizzare, Preparazione aggiornamento consente di popolare il **nome Server** casella con il nome del computer locale. È anche possibile utilizzare "." e "localhost" per connettersi al computer locale.  
   
  Per analizzare un computer diverso, utilizzare le linee guida seguenti:  
   

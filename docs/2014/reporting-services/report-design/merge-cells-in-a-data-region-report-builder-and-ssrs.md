@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 31dcb2ef4f2d4881bd2e4ffb94865c9a9d71faad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a05f5b165c72fa57795d22b2dc86d8dac616268b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198531"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>Unire le celle in un'area dati (Generatore report e SSRS)
   È possibile unire celle in un'area dati per combinare più celle, migliorare l'aspetto dell'area dati oppure consentire l'espansione delle etichette per gruppi di colonne e di righe.  
   
 > [!NOTE]  
->  Le celle possono essere unite solo all'interno delle singole aree di un'area dati: angolo, intestazioni di colonna, definizione di gruppo (o intestazioni di riga) e corpo. Non è possibile unire celle che intersecano i limiti dell'area. Non è ad esempio possibile unire una cella nell'area dell'angolo dell'area dati con una presente nell'area del gruppo di righe. Per ulteriori informazioni sulle aree tablix, vedere [sono elencati &#40;Generatore Report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
+>  Le celle possono essere unite solo all'interno delle singole aree di un'area dati: angolo, intestazioni di colonna, definizione di gruppo (o intestazioni di riga) e corpo. Non è possibile unire celle che intersecano i limiti dell'area. Non è ad esempio possibile unire una cella nell'area dell'angolo dell'area dati con una presente nell'area del gruppo di righe. Per altre informazioni sulle aree tablix, vedere [sono elencati &#40;Generatore Report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

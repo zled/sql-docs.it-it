@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttors.login.f1
 helpviewer_keywords:
 - Connect to Server dialog box, Reporting Services
 ms.assetid: d312c740-19d7-4931-84a2-88b805ec8439
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 468a462bac31bc731bab9e3ac815834fc614f57f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f5478cb168d6c30dccdb33c1f40edb2605a13b3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171392"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>Reporting Services - Connetti al server (pagina Account di accesso)
   Usare questa scheda per visualizzare o specificare le opzioni seguenti per la connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "36166233"
  **Nome server**  
  La modalità server dell'istanza del server di report a cui ci si connette determina il valore che è necessario immettere.  
   
- Per un server di report in esecuzione in modalità nativa, specificare l'istanza del server di report a cui connettersi. Se si utilizza l'istanza predefinita, il nome del server corrisponde in genere al nome del computer. Se è installata un'istanza denominata, aggiungere il nome dell'istanza al nome del server nel formato seguente: \<nomeserver >\\< NomeIstanza\>. Reporting Services utilizza il carattere barra rovesciata per delimitare il nome dell'istanza.  
+ Per un server di report in esecuzione in modalità nativa, specificare l'istanza del server di report a cui connettersi. Se si utilizza l'istanza predefinita, il nome del server corrisponde in genere al nome del computer. Se è installata un'istanza denominata, aggiungere il nome dell'istanza al nome del server nel formato seguente: \<servername >\\< NomeIstanza\>. Reporting Services utilizza il carattere barra rovesciata per delimitare il nome dell'istanza.  
   
  Per un server di report in esecuzione in modalità integrata SharePoint, è necessario specificare un sito di SharePoint. È possibile specificare qualsiasi sito di una raccolta siti integrata con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. L'URL specificato deve includere il prefisso HTTP o HTTPS. Per connettersi al sito in Management Studio, è necessario disporre delle autorizzazioni necessarie per accedere al sito di SharePoint. Il livello di autorizzazione assegnato determinerà gli elementi che è possibile visualizzare e gestire. Per altre informazioni, vedere [Connetti al Server di Report in Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   

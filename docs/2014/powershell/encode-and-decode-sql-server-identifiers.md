@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: f7651c43569003862f41a62f5e2a9917f3d534a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c2a997ec2df79b600b73be0bd5a33f7144fe119
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195361"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codificare e decodificare identificatori di SQL Server
   Gli identificatori delimitati di SQL Server possono contenere caratteri non supportati nei percorsi di Windows PowerShell. È possibile specificare questi caratteri codificando i valori esadecimali.  
@@ -66,7 +66,7 @@ Set-Location (Encode-SqlName "Table:Test")
 ##  <a name="DecodeIdent"></a> Decodifica di un identificatore  
  **Per decodificare un identificatore di SQL Server da un percorso di PowerShell**  
   
- Utilizzare il `Decode-Sqlname` cmdlet per sostituire le codifiche esadecimali con i caratteri rappresentati dalla codifica.  
+ Usare il `Decode-Sqlname` cmdlet per sostituire le codifiche esadecimali con i caratteri rappresentati dalla codifica.  
   
 ### <a name="examples-decoding"></a>Esempi (decodifica)  
  In questo esempio viene restituito "Table:Test":  

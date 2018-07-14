@@ -1,5 +1,5 @@
 ---
-title: Elemento ForeignKeyColumn (ASSL) | Documenti Microsoft
+title: Elemento ForeignKeyColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ForeignKeyColumn element
 ms.assetid: 6c00dcc6-8d5b-4293-8b72-c7a22e298c8d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb037ad571884c6bd5cbc6936d3072078f2decc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 824589905f1acf1834e971b8a049005ef1465c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207881"
 ---
 # <a name="foreignkeycolumn-element-assl"></a>Elemento ForeignKeyColumn (ASSL)
   Identifica il join a una tabella padre per un'origine dati relazionale.  
@@ -59,8 +59,8 @@ ms.locfileid: "36166709"
 |Elementi padre|[ForeignKeyColumns](../collections/columns-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Per ulteriori informazioni sul `DataItem` tipo, inclusa una tabella di oggetti di Analysis Services Scripting Language (ASSL) e le proprietà del `DataItem` del tipo, vedere [tipo di dati DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+## <a name="remarks"></a>Note  
+ Per altre informazioni sul `DataItem` tipo, inclusa una tabella di oggetti di Analysis Services Scripting Language (ASSL) e le proprietà del `DataItem` del tipo, vedere [tipo di dati DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
  L’elemento che corrisponde al padre della raccolta `ForeignKeyColumns` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>.  
   

@@ -1,5 +1,5 @@
 ---
-title: Funzionalità SQL Server supportate | Documenti Microsoft
+title: Tutte le funzionalità SQL Server supportate | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 caps.latest.revision: 48
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5233c8ab4eaa9926fe8c058c3f6d410d536306da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 038b429200532796e0fd5a373208af81e2aa82f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205381"
 ---
 # <a name="supported-sql-server-features"></a>Funzionalità di SQL Server supportate
   In questo argomento vengono illustrate le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportate o non supportate per l'utilizzo con oggetti ottimizzati per la memoria.  
@@ -53,7 +53,7 @@ ms.locfileid: "36167117"
   
 -   Più contenitori in un filegroup di dati ottimizzato per la memoria per archiviare oggetti di OLTP in memoria e ridurre il tempo necessario per il pieno recupero dell'operatività (RTO, Recovery Time Objective).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] blocchi dei log delle transazioni calcolo del checksum e convalida.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i blocchi di log delle transazioni calcolo del checksum e convalidano.  
   
 -   Nuovo hint di tabella SNAPSHOT. Per altre informazioni, vedere [Hint di tabella &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
   

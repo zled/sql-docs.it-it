@@ -1,5 +1,5 @@
 ---
-title: Elemento TargetType (ASSL) | Documenti Microsoft
+title: Elemento TargetType (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - TargetType element
 ms.assetid: 2c69ea6e-2af7-435b-9841-86117d5554a7
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e4a36c4ca0e38fe00990f2185685205840eafc66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b21033bb9a7e20923adccfa135475cf93dafb7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237561"
 ---
 # <a name="targettype-element-assl"></a>Elemento TargetType (ASSL)
-  Identifica il tipo di elemento dell'elemento identificato nel [destinazione](target-element-assl.md) elemento.  
+  Identifica il tipo di elemento identificato nell'elemento di [destinazione](target-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36158750"
 |Elemento padre|[Azione](../objects/action-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
@@ -78,7 +78,7 @@ ms.locfileid: "36158750"
   
  L'enumerazione che corrisponde ai valori consentiti di `TargetType` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.ActionTargetType>.  
   
- L'elemento che corrisponde al padre di `TargetType` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Action>.  
+ L'elemento che corrisponde al padre di `TargetType` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

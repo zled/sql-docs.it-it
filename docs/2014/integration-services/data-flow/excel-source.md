@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsource.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c0b27e464fc28ed85d3b3c3b33eaf4b1d05a38e2
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: ed8d16bc5c9d9d653404a5c049ac10cedc9f129a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199681"
 ---
 # <a name="excel-source"></a>Origine Excel
   L'origine Excel consente di estrarre dati da fogli di lavoro o intervalli di una cartella di lavoro di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -55,7 +55,7 @@ ms.locfileid: "36324665"
   
 -   **Origini dei dati**. L'origine dei dati in una cartella di lavoro di Excel può essere un foglio di lavoro, a cui è necessario aggiungere il simbolo $, ad esempio Sheet1$ o un intervallo denominato, ad esempio MyRange. Nelle istruzioni SQL i nomi dei fogli di lavoro devono essere delimitati (ad esempio, [Sheet1$]) per evitare errori di sintassi dovuti alla presenza del simbolo $. In Generatore query tali delimitatori vengono aggiunti automaticamente. Quando si specifica un foglio di lavoro o un intervallo, il driver legge il blocco di celle contigue che inizia con la prima cella non vuota nell'angolo superiore sinistro del foglio di lavoro o dell'intervallo. Non è pertanto possibile utilizzare origini contenenti righe vuote tra i dati oppure tra il titolo o le righe di intestazione e le righe di dati.  
   
--   **Valori mancanti**. Per determinare il tipo di dati di ogni colonna, il driver per Excel legge un determinato numero di righe (8 per impostazione predefinita) nell'origine specificata. Se una colonna contiene tipi di dati diversi, soprattutto se sono presenti sia dati numerici che di testo, il driver adotta il tipo di dati a cui corrisponde il maggior numero di elementi e restituisce valori Null per le celle che contengono dati di tipo diverso. In caso di parità, viene adottato il tipo numerico. La maggior parte delle opzioni di formattazione utilizzate nei fogli di lavoro di Excel non influisce sulla determinazione del tipo di dati. È possibile modificare questo comportamento del driver per Excel specificando la Modalità di importazione. Per specificare la modalità di importazione, aggiungere `IMEX=1` sul valore delle proprietà estese nella stringa di connessione della gestione connessione Excel nel **proprietà** finestra. Per altre informazioni, vedere l'articolo relativo a [PRB sui valori di Excel restituiti come NULL tramite OpenRecordset DAO](http://support.microsoft.com/kb/194124).  
+-   **Valori mancanti**. Per determinare il tipo di dati di ogni colonna, il driver per Excel legge un determinato numero di righe (8 per impostazione predefinita) nell'origine specificata. Se una colonna contiene tipi di dati diversi, soprattutto se sono presenti sia dati numerici che di testo, il driver adotta il tipo di dati a cui corrisponde il maggior numero di elementi e restituisce valori Null per le celle che contengono dati di tipo diverso. In caso di parità, viene adottato il tipo numerico. La maggior parte delle opzioni di formattazione utilizzate nei fogli di lavoro di Excel non influisce sulla determinazione del tipo di dati. È possibile modificare questo comportamento del driver per Excel specificando la Modalità di importazione. Per specificare la modalità di importazione, aggiungere `IMEX=1` sul valore delle proprietà estese nella stringa di connessione della gestione connessione Excel nella **proprietà** finestra. Per altre informazioni, vedere l'articolo relativo a [PRB sui valori di Excel restituiti come NULL tramite OpenRecordset DAO](http://support.microsoft.com/kb/194124).  
   
 -   **Testo troncato**. Se il driver determina che una colonna di Excel contiene dati di tipo text, seleziona il tipo di dati (string o memo), in base al più lungo valore campionato. Se il driver non individua valori contenenti più di 255 caratteri nelle righe campionate, gestirà la colonna come una colonna di stringhe di 255 caratteri, anziché come una colonna con tipo di dati memo. I valori contenenti più di 255 caratteri potrebbero essere pertanto troncati. Per evitare troncamenti durante l'importazione di dati da una colonna di tipo memo, è necessario verificare che almeno una delle righe campionate nella colonna di tipo memo contenga un valore con più di 255 caratteri oppure aumentare il numero delle righe campionate dal driver, in modo da includere una riga di questo tipo. È possibile aumentare il numero di righe campionate incrementando il valore di **TypeGuessRows** sotto la chiave del Registro di sistema **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** . Per altre informazioni, vedere l'articolo relativo a [PRB sul trasferimento di dati dall'origine Jet 4.0 OLEDB che non si effettua con l'errore di buffer di overflow](http://support.microsoft.com/kb/281517).  
   
@@ -88,9 +88,9 @@ ms.locfileid: "36324665"
   
 -   [Editor origine Excel &#40;pagina Gestione connessione&#41;](../excel-source-editor-connection-manager-page.md)  
   
--   [Editor origine Excel &#40;pagina colonne&#41;](../excel-source-editor-columns-page.md)  
+-   [Editor origine Excel &#40;(pagina colonne)&#41;](../excel-source-editor-columns-page.md)  
   
--   [Editor origine Excel &#40;pagina di Output di errore&#41;](../excel-source-editor-error-output-page.md)  
+-   [Editor origine Excel &#40;pagina dell'Output degli errori&#41;](../excel-source-editor-error-output-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -122,6 +122,6 @@ ms.locfileid: "36324665"
   
 -   Intervento nel blog concernente [Excel in Integration Services, parte 3 di 3 relativa a problemi e alternative](http://go.microsoft.com/fwlink/?LinkId=217676)sul sito dougbert.com.  
   
--   Intervento nel blog [utilizzo di file XLSX in SSIS](http://go.microsoft.com/fwlink/?LinkId=233704), sul sito sqlservergeeks.com.  
+-   Intervento nel blog concernente [file con XLSX in SISS](http://go.microsoft.com/fwlink/?LinkId=233704), sul sito sqlservergeeks.com.  
   
   

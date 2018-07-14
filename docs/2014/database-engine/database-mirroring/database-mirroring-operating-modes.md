@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 33e05c5d9e4e400ddc240bfd5bd4630801765164
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b1519c49181be681fa6ced527d1db14f488aaf1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176518"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modalità di funzionamento del mirroring del database
   In questo argomento vengono illustrate le modalità di funzionamento sincrona e asincrona per le sessioni di mirroring del database.  
@@ -46,7 +45,7 @@ ms.locfileid: "36167517"
  Controllo  
  Per l'utilizzo nella sola modalità a sicurezza elevata. Istanza facoltativa di SQL Server che consente al server mirror di stabilire se avviare un failover automatico. A differenza dei due partner di failover, il server di controllo del mirroring non rende disponibile il database. Il supporto del failover automatico è l'unico ruolo del server di controllo del mirroring.  
   
-##  <a name="VisualElement"></a> (Modalità a prestazioni elevate) Mirroring asincrono del Database  
+##  <a name="VisualElement"></a> (Modalità a prestazioni elevate) di Mirroring asincrono del Database  
  In questa sezione vengono descritti il funzionamento del mirroring del database asincrono, i casi in cui è consigliabile utilizzare la modalità a elevate prestazioni e le operazioni da effettuare in caso di errore del server principale.  
   
 > [!NOTE]  
@@ -224,9 +223,9 @@ ms.locfileid: "36167517"
 |Modalità a sicurezza elevata senza failover automatico|FULL|NULL (nessun server di controllo del mirroring)|  
 |Modalità a sicurezza elevata con failover automatico<sup>1</sup>|FULL|CONNECTED|  
   
- <sup>1</sup> se il controllo del mirroring viene disconnesso, è consigliabile impostare WITNESS OFF finché l'istanza del server di controllo diventa disponibile.  
+ <sup>1</sup> se il controllo del mirroring viene disconnesso, è consigliabile impostare WITNESS OFF finché l'istanza del server di controllo non è disponibile.  
   
- <sup>2</sup> se un controllo del mirroring è presente in modalità a prestazioni elevate, il server di controllo non partecipa alla sessione. Tuttavia, per rendere disponibile il database, è necessario che almeno due istanze del server rimangano connesse. È pertanto consigliabile mantenere la proprietà WITNESS impostata su OFF nelle sessioni in modalità a prestazioni elevate. Per altre informazioni, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ <sup>2</sup> se un controllo del mirroring è presente in modalità a prestazioni elevate, il controllo del mirroring non partecipa alla sessione. Tuttavia, per rendere disponibile il database, è necessario che almeno due istanze del server rimangano connesse. È pertanto consigliabile mantenere la proprietà WITNESS impostata su OFF nelle sessioni in modalità a prestazioni elevate. Per altre informazioni, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="ViewWitness"></a> Visualizzazione dell'impostazione di sicurezza e dello stato del server di controllo del mirroring  
  Per visualizzare l'impostazione di sicurezza e lo stato del server di controllo del mirroring per un database, usare la vista del catalogo **sys.database_mirroring** . Le colonne rilevanti sono le seguenti:  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 94b3fda6ed044e6fc77c73802c9a9c85b0ca87d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 237b63e0eda22e1676a7e12ffcc2166c40d2b0ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202011"
 ---
 # <a name="use-the-dqs-speller"></a>Utilizzare il correttore ortografico DQS
   Il correttore ortografico di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consente di controllare la sintassi, l'ortografia e la struttura della frase dei valori stringa in un dominio. Il correttore ortografico è una funzionalità autonoma lato client che non viene integrata con i motori lato server e non influisce sui flussi o gli stati correnti. Il correttore ortografico identifica i valori stringa che considera errori potenziali, quindi li contrassegna con una sottolineatura rossa nella stessa posizione in cui vengono apportate le altre modifiche manuali ai valori del dominio. Queste posizioni includono:  

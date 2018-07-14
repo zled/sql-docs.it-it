@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati MiningModelingFlag (ASSL) | Documenti Microsoft
+title: Tipo di dati MiningModelingFlag (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModelingFlag data type
 ms.assetid: aaa72ba8-051e-4b01-b1e9-9c8d83b8b752
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32ee744bdfcd084c4be88511ecba025ca9a270de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ece92d63c0d66c1ef845ce2d28d3317b2f65d66f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167522"
 ---
 # <a name="miningmodelingflag-data-type-assl"></a>Tipo di dati MiningModelingFlag (ASSL)
   Definisce un tipo di dati primitivo che rappresenta i flag di modellazione disponibili per un [ModelingFlag](../objects/modelingflag-element-assl.md) elemento.  
@@ -57,16 +57,16 @@ ms.locfileid: "36167960"
 |Elementi figlio|None|  
 |Elementi derivati|[ModelingFlag](../objects/modelingflag-element-assl.md) ([ModelingFlags](../collections/modelingflags-element-assl.md) insieme [MiningModelColumn](miningmodelcolumn-data-type-assl.md) oppure [ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il nome del flag può contenere spazi. Nella tabella riportata di seguito viene fornito un elenco dei valori supportati. a livello nativo  
   
 |valore|Description|  
 |-----------|-----------------|  
 |*MODEL_EXISTENCE_ONLY*|La colonna deve essere modellata come se avesse due stati, mancante e non mancante, indipendentemente dai valori nella colonna. Questo è particolarmente utile per le colonne in una tabella nidificata, dove i valori sono sparse tra i casi.|  
 |*NON È NULL*|La colonna non può accettare valori NULL.|  
-|*REGRESSOR*|La colonna fornisce valori del regressore per i casi di test.|  
+|*REGRESSORE*|La colonna fornisce valori del regressore per i casi di test.|  
   
- Flag specifici del provider aggiuntivi possono essere utilizzati se provider di data mining OLE DB o dati di terze parti sono stati aggregati sull'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Flag specifici del provider aggiuntivi possono essere usati se provider di data mining OLE DB o dati di terze parti sono stati aggregati sull'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  L'elemento strettamente correlato nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.MiningModelingFlags>.  
   

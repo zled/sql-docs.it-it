@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - aggregate values [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21f4e4749518036a1c2c40496102617c556f6aec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab590e5016b7230124aa88a4a7fa73b0fcd7f4ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180386"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Aggregazione di valori in un set di dati utilizzando la trasformazione Aggregazione
   È possibile aggiungere e configurare una trasformazione Aggregazione solo se il pacchetto include almeno un'attività Flusso di dati e un'origine.  
@@ -58,7 +58,7 @@ ms.locfileid: "36167711"
     > [!NOTE]  
     >  L'indicazione del numero dei valori distinct, esatto o approssimativo, consente di ottimizzare le prestazioni, perché la trasformazione può preallocare la quantità di memoria appropriata per l'esecuzione delle operazioni necessarie.  
   
-12. Facoltativamente, fare clic su **Avanzate** e aggiornare il nome dell'output della trasformazione Aggregazione. Se le aggregazioni includono un `Group By` operazione, è possibile selezionare un numero approssimativo di valori di chiave di raggruppamento la **scala chiavi** colonna oppure specificare un numero esatto di valori di chiave di raggruppamento la **chiavi** colonna.  
+12. Facoltativamente, fare clic su **Avanzate** e aggiornare il nome dell'output della trasformazione Aggregazione. Se le aggregazioni includono una `Group By` operazione, è possibile selezionare un numero approssimativo di valori di chiave di raggruppamento le **scala chiavi** colonna oppure specificare un numero esatto di valori di chiave di raggruppamento il **chiavi** colonna.  
   
     > [!NOTE]  
     >  L'indicazione del numero dei valori distinct, esatto o approssimativo, consente di ottimizzare le prestazioni, perché la trasformazione può preallocare la quantità di memoria appropriata per l'esecuzione delle operazioni necessarie.  

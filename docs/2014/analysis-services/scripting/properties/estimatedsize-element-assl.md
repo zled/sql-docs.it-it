@@ -1,5 +1,5 @@
 ---
-title: Elemento EstimatedSize (ASSL) | Documenti Microsoft
+title: Elemento EstimatedSize (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - EstimatedSize element
 ms.assetid: a9c63a22-d424-4f27-a186-5372f7b0224d
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b77fb03d387139aa503882c166109ba87c36eb20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3ebc8dbfb1c363da88bcb1faf5431be12064a19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208091"
 ---
 # <a name="estimatedsize-element-assl"></a>Elemento EstimatedSize (ASSL)
   Contiene la dimensione di sola lettura stimata, in byte, dell'elemento padre.  
@@ -61,7 +61,7 @@ ms.locfileid: "36166928"
 |Elementi padre|[Database](../objects/database-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [partizione](../objects/partition-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Gli elementi corrispondenti ai padri nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.MeasureGroup> e <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>Vedere anche  

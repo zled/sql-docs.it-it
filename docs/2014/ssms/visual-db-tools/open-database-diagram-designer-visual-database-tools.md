@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening Database Diagram Designer
 - Database Diagram Designer
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9414f399a469bbd8a04fc0969e4fb0a44b407725
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f0f632aef15291b24057d3a97d68b0517cf128dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166301"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269867"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>Apertura di Progettazione diagrammi di database (Visual Database Tools)
   Progettazione diagrammi di database è uno strumento grafico che consente di progettare e rappresentare graficamente un database a cui si è connessi. Quando si progetta un database, è possibile utilizzare Progettazione database per creare, modificare o eliminare tabelle, colonne, chiavi, indici, relazioni e vincoli. Per rappresentare graficamente un database, è possibile creare uno o più diagrammi che rappresentano alcune o tutte le tabelle, le colonne, le chiavi e le relazioni in esso contenute.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SPNs
 - network connections [SQL Server], SPNs
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 caps.latest.revision: 56
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 356a475186915a222a8480f4b7f1cbdbc7fa8fed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5a4d8948697fb2cc08c57f2e4621c7401e6d44bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211891"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrazione di un nome dell'entità servizio per le connessioni Kerberos
   Per utilizzare l'autenticazione Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario che si verifichino entrambe le seguenti condizioni:  
@@ -75,7 +75,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Istanza denominata**  
   
--   *MSSQLSvc/FQDN*: [*porta***|*** instancename*], dove:  
+-   *MSSQLSvc/FQDN*: [*porta***|*** NomeIstanza*], dove:  
   
     -   *MSSQLSvc* è il servizio da registrare.  
   
@@ -104,12 +104,12 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |-|-|  
 |MSSQLSvc/*fqdn:porta*|Nome SPN predefinito generato dal provider quando si utilizza il protocollo TCP. *port* è un numero di porta TCP.|  
 |MSSQLSvc/*fqdn*|Nome SPN predefinito generato dal provider per un'istanza predefinita quando si utilizza un protocollo diverso da TCP. *fqdn* è un nome di dominio completo.|  
-|MSSQLSvc /*FQDN: NomeIstanza*|Nome SPN predefinito generato dal provider per un'istanza denominata quando si usa un protocollo diverso da TCP. *NomeIstanza* è il nome di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|MSSQLSvc /*fqdn:InstanceName*|Nome SPN predefinito generato dal provider per un'istanza denominata quando si usa un protocollo diverso da TCP. *NomeIstanza* è il nome di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ##  <a name="Auto"></a> Registrazione automatica del nome SPN  
  Quando viene avviata un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di registrare il nome SPN per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando l'istanza viene arrestata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di annullare la registrazione del nome SPN. Per una connessione TCP/IP, il nome SPN viene registrato nel formato *MSSQLSvc/\<FQDN>*:*\<tcpport>*. Sia le istanze denominate che quella predefinita vengono registrate come *MSSQLSvc* e differenziate in base al valore *\<tcpport>*.  
   
- Per altre connessioni che supportano l'autenticazione Kerberos il nome SPN viene registrato nel formato *MSSQLSvc /\<FQDN >*:*\<instancename >* per un'istanza denominata. e nel formato *MSSQLSvc/\<FQDN>* per l'istanza predefinita.  
+ Per altre connessioni che supportano l'autenticazione Kerberos il nome SPN viene registrato nel formato *MSSQLSvc /\<FQDN >*:*\<NomeIstanza >* per un'istanza denominata. e nel formato *MSSQLSvc/\<FQDN>* per l'istanza predefinita.  
   
  Se l'account di servizio non dispone delle autorizzazioni richieste per eseguire queste azioni, potrebbe essere necessario intervenire manualmente per registrare o annullare la registrazione del nome SPN.  
   
@@ -162,8 +162,8 @@ WHERE session_id = @@SPID;
   
 |Scenario|Metodo di autenticazione|  
 |--------------|---------------------------|  
-|Viene eseguito il mapping del nome SPN all'account di dominio, all'account virtuale, all'account dei servizi gestiti (MSA) o all'account predefinito corretto. ad esempio sistema locale o NETWORK SERVICE.<br /><br /> Nota: Termine corretto si intende che l'account che il servizio SQL Server è in esecuzione con l'account per il nome SPN registrato mappato.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
-|Il nome SPN è l'account di dominio, l'account virtuale, l'account dei servizi gestiti (MSA) o l'account predefinito corretto.<br /><br /> Nota: Termine corretto si intende che l'account che il servizio SQL Server è in esecuzione con l'account per il nome SPN registrato mappato.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
+|Viene eseguito il mapping del nome SPN all'account di dominio, all'account virtuale, all'account dei servizi gestiti (MSA) o all'account predefinito corretto. ad esempio sistema locale o NETWORK SERVICE.<br /><br /> Nota: Termine corretto si intende che l'account eseguito il mapping da nome SPN registrato è l'account di cui è in esecuzione il servizio SQL Server.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
+|Il nome SPN è l'account di dominio, l'account virtuale, l'account dei servizi gestiti (MSA) o l'account predefinito corretto.<br /><br /> Nota: Termine corretto si intende che l'account eseguito il mapping da nome SPN registrato è l'account di cui è in esecuzione il servizio SQL Server.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
 |Viene eseguito il mapping del nome SPN a un account di dominio, a un account virtuale, a un account dei servizi gestiti (MSA) o a un account predefinito non corretto.|Errore di autenticazione|  
 |La ricerca del nome SPN ha esito negativo o non viene eseguito il mapping a un account di dominio, a un account virtuale, a un account dei servizi gestiti (MSA) o a un account predefinito non corretto, oppure non è un account di dominio, un account virtuale, un account dei servizi gestiti o un account predefinito corretto.|Le connessioni locali e remote utilizzano l'autenticazione NTLM.|  
   

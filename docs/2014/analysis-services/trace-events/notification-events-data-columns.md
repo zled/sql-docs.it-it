@@ -1,5 +1,5 @@
 ---
-title: Colonne di dati degli eventi di notifica | Documenti Microsoft
+title: Colonne di dati degli eventi di notifica | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d45ee223def50ee90b078cab7274a30901ac5165
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a436f613b39f5beb18a7dea40349ce24ded1bf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204071"
 ---
 # <a name="notification-events-data-columns"></a>Colonne di dati degli eventi di notifica
   Gli eventi di notifica sono eventi non causati direttamente dagli utenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le notifiche, ad esempio, vengono generate in seguito all'aggiornamento da parte degli utenti di tabelle sottostanti per la memorizzazione nella cache attiva.  
@@ -40,7 +40,7 @@ ms.locfileid: "36158763"
 |**Nome colonna**|**ID colonna**|**Tipo di colonna**|**Descrizione colonna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|La classe di evento viene utilizzata per suddividere gli eventi in categorie.|  
-|EventSubclass|1|1|La sottoclasse di evento fornisce informazioni aggiuntive su ogni classe di evento. Le coppie nome / Id sottoclasse/sottoclasse validi sono i seguenti:<br /><br /> 0: Proactive Caching Begin<br />1: Proactive Caching End<br />2: Flight Recorder Started<br />3: Flight Recorder Stopped<br />4: Configuration Properties Updated<br />5: SQL Trace<br />6: Object Created<br />7: Object Deleted<br />8: Object Altered<br />9: Proactive Caching Polling Begin<br />10: Proactive Caching Polling End<br />11: Flight Recorder Snapshot Begin<br />12: Flight Recorder Snapshot End<br />13: Proactive Caching: notifiable object updated<br />14: Lazy Processing: start processing<br />15: Lazy Processing: processing complete<br />16: SessionOpened Event Begin<br />17: SessionOpened Event End<br />18: SessionClosing Event Begin<br />19: SessionClosing Event End<br />20: CubeOpened Event Begin<br />21: CubeOpened Event End<br />22: CubeClosing Event Begin<br />23: CubeClosing Event End<br />24: Transaction abort requested|  
+|EventSubclass|1|1|La sottoclasse di evento fornisce informazioni aggiuntive su ogni classe di evento. Di seguito sono le coppie nome / Id sottoclasse/sottoclasse valido:<br /><br /> 0: Proactive Caching Begin<br />1: Proactive Caching End<br />2: Flight Recorder Started<br />3: Flight Recorder Stopped<br />4: Configuration Properties Updated<br />5: SQL Trace<br />6: Object Created<br />7: Object Deleted<br />8: Object Altered<br />9: Proactive Caching Polling Begin<br />10: Proactive Caching Polling End<br />11: Flight Recorder Snapshot Begin<br />12: Flight Recorder Snapshot End<br />13: Proactive Caching: notifiable object updated<br />14: Lazy Processing: start processing<br />15: Lazy Processing: processing complete<br />16: SessionOpened Event Begin<br />17: SessionOpened Event End<br />18: SessionClosing Event Begin<br />19: SessionClosing Event End<br />20: CubeOpened Event Begin<br />21: CubeOpened Event End<br />22: CubeClosing Event Begin<br />23: CubeClosing Event End<br />24: Transaction abort requested|  
 |CurrentTime|2|5|Contiene l'ora corrente dell'evento di notifica, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene l'ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene l'ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  

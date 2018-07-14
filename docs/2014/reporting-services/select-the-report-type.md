@@ -1,5 +1,5 @@
 ---
-title: Selezionare il tipo di Report | Documenti Microsoft
+title: Selezionare il tipo di Report | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectreporttype.f1
 ms.assetid: 725bf110-31a9-4220-afaa-c56c0a39d458
 caps.latest.revision: 23
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a42c7e0b88b09a1775d9aef3fe370f5f2de3860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b7d904fdf529ee06caa1c11c20978dd8753454a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249611"
 ---
 # <a name="select-the-report-type"></a>Selezione tipo di report
   Utilizzare questa pagina della Creazione guidata report per selezionare un report tabella o un report matrice.  
@@ -40,6 +40,6 @@ ms.locfileid: "36158607"
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle &#40;Generatore report e SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Guida della creazione guidata report](../../2014/reporting-services/report-wizard-help.md)  
+ [Guida della Creazione guidata report](../../2014/reporting-services/report-wizard-help.md)  
   
   

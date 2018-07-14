@@ -1,5 +1,5 @@
 ---
-title: Utilizzare il drill-through dai visualizzatori modello | Documenti Microsoft
+title: Utilizzare il drill-through dai visualizzatori modello | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f18e2efe4a9457e9e7ac320dcf8570d89df0edbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a272b1a86de667087c8a2a583d0fee6fd5584f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265757"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Utilizzare il drill-through dai visualizzatori modello
   A seconda del tipo di modello, è possibile utilizzare il drill-through dai visualizzatori nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining per esplorare i case utilizzati nel modello di data mining o per visualizzare colonne aggiuntive nella struttura di data mining. Sebbene molti tipi di modello non supportino il drill-through perché gli schemi del modello non possono essere collegati direttamente a case specifici, i tipi di modello seguenti supportano il drill-through.  
@@ -75,7 +75,7 @@ ms.locfileid: "36166188"
 5.  Fare clic con il pulsante destro del mouse in qualsiasi punto nei risultati e selezionare **Copia tutto** per salvare i risultati negli Appunti. Se il modello contiene una colonna di una tabella nidificata, verrà incollato solo il nome della colonna della tabella nidificata. Per recuperare i valori dei dati all'interno della colonna della tabella nidificata per ogni case, è necessario creare una query sul contenuto del modello.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e attività del visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
+ [Attività del Visualizzatore modelli e procedure dettagliate di data mining](mining-model-viewer-tasks-and-how-tos.md)   
  [Drill-through sui modelli di Data Mining](drillthrough-on-mining-models.md)   
  [Drill-through sulle strutture di data mining](drillthrough-on-mining-structures.md)  
   

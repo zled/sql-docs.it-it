@@ -1,5 +1,5 @@
 ---
-title: Creare la struttura di Data Mining (Creazione guidata Data Mining) | Documenti Microsoft
+title: Creare la struttura di Data Mining (Creazione guidata di Data Mining dati) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectminingtechnique.f1
 ms.assetid: d1ff17b2-fff3-4ed7-a5d6-42d131e59f93
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7f857256c2c8ab55b3ae35f48dce8ac3448baa3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 638fa1cef33676b35415d29c1ff47602d3e1e56b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241831"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>Crea la struttura di data mining (Creazione guidata modello di data mining)
   Usare la pagina **Crea la struttura di data mining** per creare una struttura di data mining e facoltativamente un modello di data mining associato.  
@@ -47,8 +47,8 @@ ms.locfileid: "36158558"
  Visualizza una descrizione dell'algoritmo selezionato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining della Guida F1 di procedura guidata &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Selezionare una vista origine dati &#40;Creazione guidata di Data Mining&#41;](select-data-source-view-data-mining-wizard.md)   
+ [I dati della Guida F1 di procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Selezione vista origine dati &#40;Creazione guidata di Data Mining&#41;](select-data-source-view-data-mining-wizard.md)   
  [Selezione metodo di definizione &#40;Creazione guidata di Data Mining&#41;](select-the-definition-method-data-mining-wizard.md)  
   
   

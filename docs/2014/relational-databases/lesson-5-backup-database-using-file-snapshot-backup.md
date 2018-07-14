@@ -1,5 +1,5 @@
 ---
-title: "Lezione 6: Eseguire la migrazione di un database da un'origine del computer locale a un computer di destinazione in Microsoft Azure | Documenti Microsoft"
+title: "Lezione 6: Eseguire la migrazione di un database da un'origine del computer locale a una macchina di destinazione in Microsoft Azure | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2f6f0ac359d5358994c0a3a5367c676ca2f83969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0412dad97550d5a9aaf601488559ef7c91e1880a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207061"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lezione 6: Eseguire la migrazione di un database da un computer di origine locale a un computer di destinazione in Microsoft Azure
   In questa lezione si presuppone che si disponga già di un'altra istanza di SQL Server che potrebbe trovarsi in un altro computer locale o in una macchina virtuale in Windows Azure. Per informazioni su come creare una macchina virtuale SQL Server in Windows Azure, vedere la pagina relativa al [provisioning di una macchina virtuale SQL Server in Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Dopo aver eseguito il provisioning di una macchina virtuale SQL Server in Windows Azure, verificare che sia possibile connettersi a un'istanza di SQL Server in questa macchina virtuale tramite SQL Server Management Studio presente in un altro computer.  
@@ -140,7 +140,7 @@ ms.locfileid: "36166619"
   
 5.  Nella finestra di dialogo **Collega database** scegliere **Aggiungi**per specificare il database da collegare. Nella finestra di dialogo **Individua file di database** :  
   
-     Per il percorso di File di dati di Database, digitare: `https://teststorageaccnt.blob.core.windows.net/testcontainer/`.  
+     Per percorso di File di dati di Database, digitare: `https://teststorageaccnt.blob.core.windows.net/testcontainer/`.  
   
      Per il nome di File, digitare: `TestDB1Data.mdf`.  
   
@@ -150,6 +150,6 @@ ms.locfileid: "36166619"
   
  **Lezione successiva:**  
   
- [Lezione 7: Spostare i file di dati in archiviazione di Microsoft Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Lezione 7: spostare i file di dati in Archiviazione di Windows Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
   

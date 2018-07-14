@@ -16,13 +16,13 @@ ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 217cff7d3eb00ab1a71fde49b6fef7c315e44040
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a1e21b2e2cdfee7c77dc69ff8459948fa6e5be11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199691"
 ---
 # <a name="creating-a-custom-connection-manager"></a>Creazione di una gestione connessione personalizzata
   I passaggi che è necessario effettuare per creare una gestione connessione personalizzata sono simili ai passaggi necessari per la creazione di qualsiasi altro oggetto personalizzato per [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
@@ -48,7 +48,7 @@ ms.locfileid: "36166208"
  Configurare entrambi i progetti per firmare gli assembly che verranno generati durante la compilazione utilizzando un file di chiave con nome sicuro.  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>Applicazione dell'attributo DtsConnection  
- Applicare l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> alla classe creata per identificarla come gestione connessione. Questo attributo fornisce informazioni in fase di progettazione, ad esempio il nome, la descrizione e il tipo di connessione della gestione connessione. Il <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> e `Description` le proprietà corrispondenti al **tipo** e `Description` le colonne visualizzate nel **Aggiungi gestione connessione SSIS** della finestra di dialogo che è visualizzato quando configurazione delle connessioni per un pacchetto in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Applicare l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> alla classe creata per identificarla come gestione connessione. Questo attributo fornisce informazioni in fase di progettazione, ad esempio il nome, la descrizione e il tipo di connessione della gestione connessione. Il <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> e `Description` proprietà corrispondono al **tipo** e `Description` le colonne visualizzate nel **Aggiungi gestione connessione SSIS** nella finestra di dialogo viene visualizzata quando configurazione delle connessioni per un pacchetto in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
  Utilizzare la proprietà <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> per collegare la gestione connessione alla relativa interfaccia utente personalizzata. Per ottenere il token di chiave pubblica richiesto per questa proprietà, è possibile usare **sn.exe -t** per visualizzare il token di chiave pubblica dal file della coppia di chiavi (con estensione snk) che si intende usare per firmare l'assembly dell'interfaccia utente.  
   
@@ -78,7 +78,7 @@ ConnectionManagerBase
 ## <a name="building-deploying-and-debugging-a-custom-connection-manager"></a>Compilazione, distribuzione e debug di una gestione connessione personalizzata  
  I passaggi per la compilazione, la distribuzione e il debug di una gestione connessione personalizzata in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono simili a quelli richiesti per altri tipi di oggetti personalizzati. Per altre informazioni, vedere [Compilazione, distribuzione e debug di oggetti personalizzati](../building-deploying-and-debugging-custom-objects.md).  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Scrittura del codice di una gestione connessione personalizzata](coding-a-custom-connection-manager.md)   

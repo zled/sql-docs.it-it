@@ -1,5 +1,5 @@
 ---
-title: Eseguire una query generatore (Creazione guidata Report) | Documenti Microsoft
+title: Eseguire query di generatore (Creazione guidata Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.vdtquerydesigner.f1
 - sql12.rtp.rptwizard.querybuilder.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
 caps.latest.revision: 21
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9d6e087d2df36209c443eb8411e2439fe7400360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8fef45f5ec6c4b9e0682ea625b2cc84bc8aaa089
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253463"
 ---
 # <a name="query-builder-report-wizard"></a>Generatore di query (Creazione guidata report)
   Utilizzare un generatore di query per specificare una query che recuperi un set di risultati da utilizzare in un report. È possibile scegliere tra due generatori di query:  
@@ -44,7 +44,7 @@ ms.locfileid: "36158382"
  **Importa**  
  Consente di aprire la finestra di dialogo **Importa query** e di visualizzare i file con estensione rdl e sql per qualsiasi report disponibile. È possibile utilizzare la query importata così com'è oppure modificarla nel generatore di query.  
   
- **\! (Esecuzione)**  
+ **\! (Esegui)**  
  Consente di eseguire la query e di restituire un set di risultati nel caso in cui la query sia valida. Si noti che non è possibile eseguire la query nel caso in cui questa sia un'espressione. Per verificare una query basata su un'espressione, è necessario visualizzare l'anteprima del report.  
   
  **Tipo di comando**  
@@ -58,6 +58,6 @@ ms.locfileid: "36158382"
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Guida della creazione guidata report](../../2014/reporting-services/report-wizard-help.md)  
+ [Guida della Creazione guidata report](../../2014/reporting-services/report-wizard-help.md)  
   
   

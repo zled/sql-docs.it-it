@@ -17,15 +17,15 @@ helpviewer_keywords:
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
 caps.latest.revision: 48
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b3bbf50ec43b263eedb9a7d1b8805b0575dc3962
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: aaa06d612dc3ed28c442076c96ff4782003a333e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202541"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Utilizzo di un set di dati esterno con Reporting Services
   L'oggetto **DataSet** è fondamentale per il supporto di scenari di dati disconnessi e distribuiti con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. L'oggetto **DataSet** è una rappresentazione di dati residente in memoria che offre un modello di programmazione relazionale coerente indipendentemente dall'origine dati. Questo oggetto può essere utilizzato con più origini dati diverse, con dati XML o per gestire i dati locali dell'applicazione. L'oggetto **DataSet** rappresenta un set di dati completo, che include tabelle correlate, vincoli e relazioni tra le tabelle. Grazie alla versatilità dell'oggetto **DataSet** nell'archiviazione e nell'esposizione dei dati, i dati possono spesso essere elaborati e trasformati in un oggetto **DataSet** prima della creazione di qualsiasi report con tali dati.  

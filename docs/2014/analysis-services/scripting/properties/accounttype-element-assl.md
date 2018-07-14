@@ -1,5 +1,5 @@
 ---
-title: Elemento AccountType (ASSL) | Documenti Microsoft
+title: Elemento AccountType (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AccountType element
 ms.assetid: 4fdf17d3-cd84-4bf6-9baf-21e15d4bf71e
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff7203d2882689b21a6ab3171880c26a8d385f7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b79eec0531cf2ab9451a93df2e5f1bf0eb2adf0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243431"
 ---
 # <a name="accounttype-element-assl"></a>Elemento AccountType (ASSL)
-  Contiene il nome di un tipo di conto definito in un [Database](../objects/database-element-assl.md) elemento.  
+  Contiene il nome del tipo di conto definito in un [Database](../objects/database-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36158540"
 |Elementi padre|[Account](../objects/account-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
 |valore|Description|  
@@ -72,12 +72,12 @@ ms.locfileid: "36158540"
 |*Saldo*|Il conto è di tipo collettivo.|  
 |*Asset*|Il conto è di tipo cespite.|  
 |*Responsabilità*|Il conto è di tipo passività.|  
-|*Statistica*|Il conto è di tipo statistico.|  
+|*Statistiche*|Il conto è di tipo statistico.|  
   
  L'enumerazione che corrisponde ai valori consentiti di `AccountType` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.AccountTypes>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elemento account &#40;ASSL&#41;](../collections/accounts-element-assl.md)   
+ [Account di elemento &#40;ASSL&#41;](../collections/accounts-element-assl.md)   
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  
   
   

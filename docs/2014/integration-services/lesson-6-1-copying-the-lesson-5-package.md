@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 caps.latest.revision: 6
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bed4f06e073d370b10be04e614a18b041f0d1dfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 042dde7beeff33dd988f5d21d0d5975e4ee88aa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190761"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>Passaggio 1: Copia del pacchetto della lezione 5
   In questa attività si procederà alla creazione di una copia del pacchetto della lezione 5, denominato Lesson 5.dtsx. In alternativa, è possibile aggiungere al progetto il pacchetto completo della lezione 5 incluso nell'esercitazione e, successivamente, copiarlo. Questa nuova copia verrà utilizzata per tutto il seguito della lezione 6.  
@@ -42,7 +42,7 @@ ms.locfileid: "36167909"
   
 7.  Nella finestra Proprietà aggiornare la proprietà Name impostandola su Lesson 6.  
   
-8.  Fare clic sulla casella per la proprietà ID, quindi fare clic sulla freccia a discesa e quindi fare clic su \<Genera nuovo ID >.  
+8.  Fare clic sulla casella relativa alla proprietà ID, quindi fare clic sulla freccia a discesa e quindi fare clic su \<Genera nuovo ID >.  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>Per aggiungere il pacchetto della lezione 5 completato  
   
@@ -67,6 +67,6 @@ ms.locfileid: "36167909"
      Dopo la copia del pacchetto della lezione 5, se si dispone dei pacchetti delle lezioni precedenti nella soluzione, fare clic con il pulsante destro del mouse su ogni pacchetto delle lezioni 1-5 e fare clic su Escludi dal progetto. Al termine sarà presente un solo pacchetto Lesson 6.dtsx nella soluzione.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Passaggio 2: Conversione del progetto modello di distribuzione del progetto](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [Passaggio 2: Conversione del progetto nel modello di distribuzione del progetto](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

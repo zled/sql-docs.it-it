@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - results [SQL Server], cursors
 - Transact-SQL cursors, about cursors
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c434dd673362715e8671901ac0af2fa3ead6ba0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 2c4180de87b9004f53c6a4e2391cd3be9ee23b82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271207"
 ---
 # <a name="cursors"></a>Cursori
   Nei database relazionali le operazioni vengono eseguite su set di righe completi. Ad esempio, il set di righe restituito dall'istruzione SELECT include tutte le righe che soddisfano le condizioni specificate nella clausola WHERE dell'istruzione. Il set di righe completo restituito dall'istruzione è noto come set di risultati. Le applicazioni, soprattutto le applicazioni online interattive, non sono sempre in grado di gestire in modo efficiente un intero set di risultati come singola unità. In tali applicazioni deve essere pertanto disponibile un meccanismo per l'elaborazione di una riga singola o di un blocco di righe di dimensioni ridotte. I cursori sono un'estensione dei set di risultati che implementano appunto tale meccanismo.  

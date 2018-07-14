@@ -1,5 +1,5 @@
 ---
-title: Creazione di Query con ambito calcolato membri (MDX) | Documenti Microsoft
+title: Creazione con ambito Query calcolati membri (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - WITH keyword
 - query-scoped calculated members [MDX]
 ms.assetid: c4507149-e67b-4e5d-9192-cc911acd9adc
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc8e7c76061876adeb4e1e5acf9667825a5012d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e5d26eb5ac3e4bb48e16b2ec33fcd2ed98ec60a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257667"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>Creazione di membri calcolati con ambito query (MDX)
   Se un membro calcolato è necessario solo per un'unica query MDX (Multidimensional Expression), è possibile definire tale membro calcolato mediante la parola chiave WITH. Un membro calcolato creato utilizzando la parola chiave WITH non esisterà più al termine dell'esecuzione della query.  
@@ -95,8 +95,8 @@ WHERE [Product].[Category].[Bikes]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [Riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
  [Istruzione SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [Creazione con ambito sessione membri calcolati &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
+ [Membri calcolati per la creazione con ambito sessione &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

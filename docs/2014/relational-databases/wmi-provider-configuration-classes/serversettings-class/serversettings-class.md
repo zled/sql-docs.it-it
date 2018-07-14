@@ -1,5 +1,5 @@
 ---
-title: Classe ServerSettings | Documenti Microsoft
+title: Classe ServerSettings | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - ServerSettings class
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a8d3bdc91c099d78042d4d22e2403772de96565b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: b79be1bd131812b16647e9769e3298af06ad6624
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170232"
 ---
 # <a name="serversettings-class"></a>Classe ServerSettings
-  Il protocollo class.md-[classe ServerSettings] serversettings) rappresenta le impostazioni del server in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Il serversettings [classe ServerSettings]-class.md) rappresenta le impostazioni del server in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Il protocollo class.md-[classe ServerSettings] serversettings) consente di eseguire le attività seguenti:  
+ Il serversettings [classe ServerSettings]-class.md) consente di eseguire le attività seguenti:  
   
 -   Accedere alle impostazioni del flag generale per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -42,6 +42,6 @@ ms.locfileid: "36168263"
 -   Impostare il certificato di sicurezza per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete Server e le librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

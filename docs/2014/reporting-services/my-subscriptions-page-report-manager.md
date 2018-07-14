@@ -1,5 +1,5 @@
 ---
-title: Pagina sottoscrizioni personali (gestione Report) | Documenti Microsoft
+title: Pagina sottoscrizioni personali (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5f75d31ab49d706200ff90d49295d18bc9ba6487
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e973ec6a3c50c43f6ee6bdee4ecfd70f2e2c9b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177618"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Pagina Sottoscrizioni personali (Gestione report)
-  La pagina Sottoscrizioni personali consente di visualizzare tutte le sottoscrizioni personali in un'unica posizione. Da questa pagina è possibile accedere a tutte le proprie sottoscrizioni, nonché modificarle o eliminarle. L'utente è proprietario solo delle sottoscrizioni che ha creato. Non è possibile accedere alle sottoscrizioni di altri utenti o a sottoscrizioni disponibili per l'utilizzo ma create da altri utenti, ad esempio quando il nome di un utente viene aggiunto a una sottoscrizione esistente definita da un altro utente. Non si possono creare sottoscrizioni da questa pagina. Per ulteriori informazioni sulla creazione di sottoscrizioni, vedere la [pagina nuova sottoscrizione o modifica sottoscrizione &#40;gestione Report&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
+  La pagina Sottoscrizioni personali consente di visualizzare tutte le sottoscrizioni personali in un'unica posizione. Da questa pagina è possibile accedere a tutte le proprie sottoscrizioni, nonché modificarle o eliminarle. L'utente è proprietario solo delle sottoscrizioni che ha creato. Non è possibile accedere alle sottoscrizioni di altri utenti o a sottoscrizioni disponibili per l'utilizzo ma create da altri utenti, ad esempio quando il nome di un utente viene aggiunto a una sottoscrizione esistente definita da un altro utente. Non si possono creare sottoscrizioni da questa pagina. Per altre informazioni sulla creazione di sottoscrizioni, vedere la [pagina nuova sottoscrizione o modifica sottoscrizione &#40;gestione Report&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
   
  Per impostazione predefinita, le sottoscrizioni vengono elencate in ordine alfabetico in base al nome del report. È possibile fare clic su una diversa intestazione di colonna per modificare l'ordinamento delle sottoscrizioni. Se non si è proprietari di sottoscrizioni o se l'autorizzazione per la creazione o la gestione di sottoscrizioni è disabilitata, nella pagina non viene visualizzata alcuna sottoscrizione.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36167020"
   
 ## <a name="options"></a>Opzioni  
  **Elimina**  
- Selezionare la casella di controllo accanto a ogni sottoscrizione che si desidera eliminare e fare clic su **eliminare**.  
+ Selezionare la casella di controllo accanto a ogni sottoscrizione che si desidera eliminare e fare clic su **Elimina**.  
   
  **Modifica**  
  Fare clic per visualizzare o modificare la descrizione.  
@@ -72,6 +72,6 @@ ms.locfileid: "36167020"
   
 ## <a name="see-also"></a>Vedere anche  
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

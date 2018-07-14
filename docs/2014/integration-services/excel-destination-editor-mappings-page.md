@@ -1,5 +1,5 @@
 ---
-title: Editor destinazione Excel (pagina Mapping) | Documenti Microsoft
+title: Editor destinazione Excel (pagina Mapping) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.mappings.f1
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
 caps.latest.revision: 13
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8e56a7becbd48bea5dd3d984499534d053380220
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa9d0cd533bfdbf1c0b7dc9baefa40129683b762
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188638"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Editor destinazione Excel (pagina Mapping)
   Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione Excel** per eseguire il mapping tra colonne di input e colonne di destinazione.  
@@ -44,9 +44,9 @@ ms.locfileid: "36167714"
  Consente di visualizzare tutte le colonne di destinazione disponibili, indipendentemente dal fatto che siano mappate o meno.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione Excel &#40;pagina Gestione connessione&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Editor destinazione Excel &#40;pagina di Output di errore&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Editor destinazione Excel &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   
   

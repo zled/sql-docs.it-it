@@ -1,5 +1,5 @@
 ---
-title: Creare l'elaborazione di finestra di dialogo Query (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Finestra di dialogo Query (Analysis Services - dati multidimensionali) Crea elaborazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 01633f8b8ce57d3b8953c1694a250cfdb9a64cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 0744aae90a9d3995d5803bca2ccdff31012b5eeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244101"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Crea query di elaborazione (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Crea query di elaborazione** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare una query di elaborazione nella scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione**. Una query di elaborazione è una query che restituisce un set di righe contenente le modifiche apportate a una tabella associata a un oggetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a partire dall'ultimo polling della tabella eseguito per aggiornare in modo incrementale la cache OLAP multidimensionale (MOLAP) dell'oggetto. Per eseguire il polling di una tabella associata a un oggetto e stabilire se la tabella è stata modificata, Analysis Services utilizza un'altra query, definita query di polling. Le query di elaborazione non sono necessarie quando si aggiorna completamente la cache MOLAP relativa all'oggetto.  
@@ -68,8 +68,8 @@ ms.locfileid: "36158101"
 |**Passa a Generatore Query generico**|Selezionare questo comando per visualizzare solo le opzioni disponibili nella vista Generatore query generico. Verranno visualizzate solo le opzioni seguenti.<br /><br /> **Riquadro SQL**<br /><br /> **Riquadro risultati**<br /><br /> **Barra degli strumenti**, contenente solo **Passa a Generatore query Visual Database Tools** ed **Esegui**<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
 |**Passa a Generatore Query Visual Database Tools**|Selezionare questo comando per visualizzare tutte le opzioni disponibili nella vista Generatore query Visual Database Tools.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query generico** .|  
 |**Mostra/Nascondi riquadro diagramma**|Consente di visualizzare o nascondere il riquadro **diagramma**.<br /><br /> **Nota** Questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Mostra/Nascondi riquadro griglia**|Mostra o nasconde la **riquadro griglia**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Mostra/Nascondi riquadro SQL**|Mostra o nasconde la **riquadro SQL**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
+|**Mostra/Nascondi riquadro griglia**|Mostra o nasconde il **riquadro griglia**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
+|**Mostra/Nascondi riquadro SQL**|Mostra o nasconde il **riquadro SQL**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
 |**Mostra/Nascondi riquadro risultati**|Consente di visualizzare o nascondere il **Riquadro risultati**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
 |**Esegui**|Consente di eseguire la query. I risultati verranno visualizzati nel **riquadro dei risultati**.|  
 |**Verifica istruzione SQL**|Consente di verificare l'istruzione SQL nella query.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  

@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati ComAssembly (ASSL) | Documenti Microsoft
+title: Tipo di dati ComAssembly (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ComAssembly data type
 ms.assetid: 23c0f4b3-b6ac-4ec8-9254-74d2f84f5244
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bfe3a7791d02d97b4283b63a1aedd3b6702fe563
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 824fb508bb392f6ef84ede39645a5bac0da645e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171552"
 ---
 # <a name="comassembly-data-type-assl"></a>Tipo di dati ComAssembly (ASSL)
   Definisce un tipo di dati derivato che rappresenta una libreria COM associata a un [Server](../objects/server-element-assl.md) oppure [Database](../objects/database-element-assl.md) elemento.  
@@ -61,10 +61,10 @@ ms.locfileid: "36167731"
 |------------------|-------------|  
 |Elementi padre|None|  
 |Elementi figlio|[Origine](../properties/source-element-comassembly-assl.md)|  
-|Elementi derivati|Vedere [Assembly](../objects/assembly-element-assl.md) ([assembly](../collections/assemblies-element-assl.md) insieme [Database](../objects/database-element-assl.md) oppure [Server](../objects/server-element-assl.md))|  
+|Elementi derivati|Visualizzare [Assembly](../objects/assembly-element-assl.md) ([assembly](../collections/assemblies-element-assl.md) raccolta di [Database](../objects/database-element-assl.md) oppure [Server](../objects/server-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
- Il `ComAssembly` elemento contiene un riferimento (il nome file completo o l'identificatore programmatico) a una libreria COM associata a un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] o a un database specifico in un'istanza di [!INCLUDE[ssAS](../../../includes/ssas-md.md)].  
+## <a name="remarks"></a>Note  
+ Il `ComAssembly` elemento contiene un riferimento (il nome completo del file o l'identificatore a livello di codice) in una libreria COM associata a un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] o a un database specifico in un'istanza di [!INCLUDE[ssAS](../../../includes/ssas-md.md)].  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.ComAssembly>.  
   

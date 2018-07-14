@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati AggregationInstanceCubeDimension (ASSL) | Documenti Microsoft
+title: Tipo di dati AggregationInstanceCubeDimension (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationInstanceCubeDimension data type
 ms.assetid: b321ad9e-f034-4a7b-b0b7-8ba5fb162e7e
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 73a553a301819d8c71ab3464bbace93c00e59e91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1e6c6cc46c975eb89b1ecde559f87328005eb7a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237521"
 ---
 # <a name="aggregationinstancecubedimension-data-type-assl"></a>Tipo di dati AggregationInstanceCubeDimension (ASSL)
   Definisce un tipo di dati primitivo che rappresenta le informazioni su una dimensione del cubo utilizzata da un'istanza di aggregazione.  
@@ -59,7 +59,7 @@ ms.locfileid: "36166168"
 |Elementi figlio|[Attributes](../collections/attributes-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md), [KeyColumns](../collections/columns-element-assl.md)|  
 |Elementi derivati|[Dimension](../objects/dimension-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi Analysis Services Scripting Language XML dei dati &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

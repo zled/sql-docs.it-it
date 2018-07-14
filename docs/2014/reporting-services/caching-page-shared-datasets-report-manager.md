@@ -1,5 +1,5 @@
 ---
-title: Pagina memorizzazione nella cache, set di dati (gestione Report) condivisi | Documenti Microsoft
+title: Pagina memorizzazione nella cache, condivisi (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 42b50337fe529517d791cf5992e09f3a3f8235b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fdd495e3110deb2cc8c9fc7b8a4848f0252f206
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247991"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>Pagina Memorizzazione nella cache, set di dati condivisi (Gestione report)
   La pagina delle proprietà di memorizzazione nella cache consente di impostare le opzioni di cache per un set di dati condiviso.  
@@ -53,7 +53,7 @@ ms.locfileid: "36158386"
  **Pianificazione in base al set di dati**  
  Consente di specificare una pianificazione utilizzata solo per questo set di dati.  
   
- **pianificazione condivisa**  
+ **Pianificazione condivisa**  
  Consente di specificare una pianificazione condivisa fra report, sottoscrizioni e altri set di dati condivisi.  
   
  **Applica**  

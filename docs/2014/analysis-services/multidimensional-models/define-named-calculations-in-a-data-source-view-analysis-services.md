@@ -1,5 +1,5 @@
 ---
-title: Definire calcoli denominati in una vista origine dati (Analysis Services) | Documenti Microsoft
+title: Definire calcoli denominati in una vista origine dati (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying named calculations
 - data source views [Analysis Services], named calculations
 - named calculations [Analysis Services]
 ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0f69097c4047950823e51e9450e1bfb3114cf1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b22519994be250c7dc435228265685842f258198
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226441"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Definire calcoli denominati in una vista origine dati (Analysis Services)
   Un calcolo denominato è un'espressione SQL rappresentata come colonna calcolata. Tale espressione presenta l'aspetto e il comportamento di una colonna della tabella. Un calcolo denominato consente di estendere lo schema relazionale delle tabelle o delle viste esistenti in una vista origine dati senza modificare le tabelle o le viste nell'origine dei dati sottostante. Si considerino gli esempi seguenti:  
@@ -67,7 +67,7 @@ FROM
   
 3.  Fare clic con il pulsante destro del mouse sulla tabella in cui si desidera definire il calcolo denominato all'interno del riquadro **Tabelle** o **Diagramma** , quindi scegliere **Nuovo calcolo denominato**. Assicurarsi di fare clic con il pulsante destro del mouse sul nome della tabella e non su un attributo. Il menu sarà simile al seguente:  
   
-     ![Schermata dell'area di lavoro di diagramma, menu di scelta rapida](../media/ssas-olapdsv-diagram.gif "schermata dell'area di lavoro di diagramma, menu di scelta rapida")  
+     ![Screenshot dell'area di lavoro di diagramma, menu di scelta rapida](../media/ssas-olapdsv-diagram.gif "Screenshot dell'area di lavoro di diagramma, menu di scelta rapida")  
   
     > [!NOTE]  
     >  Per individuare una tabella o una vista, è possibile usare l'opzione **Trova tabella** scegliendola dal menu **Vista origine dati** o facendo clic con il pulsante destro del mouse su un'area vuota nei riquadri **Tabelle** o **Diagramma** .  

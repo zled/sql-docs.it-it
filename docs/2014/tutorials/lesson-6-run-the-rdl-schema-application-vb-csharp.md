@@ -1,5 +1,5 @@
 ---
-title: "Lezione 6: Eseguire l'applicazione di Schema RDL (VB, c#) | Documenti Microsoft"
+title: "Lezione 6: Eseguire l'applicazione dello Schema RDL (VB, c#) | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a2cd2386-2df8-4b69-ab81-9ad1a31f6d27
 caps.latest.revision: 15
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 95ef194a66d6c5480f8a83cbd0b78547e79804e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a56a29edc9b30577dca3db245d3ace5e4c7814d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169792"
 ---
-# <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>Lezione 6: Eseguire l'applicazione di Schema RDL (VB, c#)
+# <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>Lezione 6: Eseguire l'applicazione dello Schema RDL (VB, c#)
   In [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sono disponibili due metodi per compilare ed eseguire un'applicazione console dall'ambiente di sviluppo integrato (IDE):  
   
 -   Avvia (con debug)  
@@ -50,7 +50,7 @@ ms.locfileid: "36168209"
 3.  Dopo aver eseguito l'applicazione di esempio nel server di report verrà salvata una copia aggiornata del report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'aggiornamento di report mediante le classi generate dallo Schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [Aggiornamento dei report mediante le classi generate dallo Schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

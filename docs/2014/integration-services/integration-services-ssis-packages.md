@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
 - packages [Integration Services], about packages
@@ -23,13 +23,13 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85eeb75badeed90812c657b9dbdc64e261947e20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99a414e27b9fb470d8e7ee07589c42e0184b283e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252383"
 ---
 # <a name="integration-services-ssis-packages"></a>Pacchetti di Integration Services (SSIS)
   Un pacchetto è una raccolta organizzata di connessioni, elementi di flusso di controllo, elementi di flusso di dati, gestori eventi, variabili, parametri e configurazioni che possono essere assemblati usando gli strumenti di progettazione grafica disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], oppure compilati a livello di codice.  Salvare il pacchetto completo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nell'archivio pacchetti di [!INCLUDE[ssIS](../includes/ssis-md.md)] o nel file system oppure distribuire il progetto ssISnoversion nel server [!INCLUDE[ssIS](../includes/ssis-md.md)] . Il pacchetto è l'unità di lavoro che viene recuperata, eseguita e salvata.  
@@ -54,9 +54,9 @@ ms.locfileid: "36158495"
 ## <a name="package-templates"></a>Modelli di pacchetto  
  Molti pacchetti vengono utilizzati come modello per la compilazione di pacchetti con le stesse funzionalità di base. È possibile compilare il pacchetto di base e quindi copiarlo oppure impostare tale pacchetto come modello. Un pacchetto che scarica e copia file e quindi ne estrae i dati, ad esempio, può includere le attività FTP e File system in un ciclo Foreach che enumera i file presenti in una cartella. Può inoltre includere gestioni connessioni file flat per l'accesso ai dati e origini file flat per l'estrazione dei dati. Poiché la destinazione dei dati può variare, viene aggiunta a ogni nuovo pacchetto dopo la copia dal pacchetto di base. È anche possibile creare pacchetti e quindi usarli come modelli per i nuovi pacchetti da aggiungere a un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Creare pacchetti in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md).  
   
- Quando viene innanzitutto creato un pacchetto, a livello di codice o tramite Progettazione SSIS, un GUID viene aggiunto alla relativa `ID` proprietà e un nome per il relativo `Name` proprietà. Se si crea un nuovo pacchetto copiando un pacchetto esistente oppure utilizzando un pacchetto modello, verranno copiati anche il nome e il GUID di tale pacchetto. Quando si utilizza la registrazione questo può costituire un problema, perché il GUID e il nome del pacchetto vengono scritti nei log per identificare il pacchetto a cui appartengono le informazioni registrate. È pertanto necessario modificare il nome e il GUID dei nuovi pacchetti per distinguerli tra loro e da quello da cui sono stati copiati, nei dati dei file di log.  
+ Quando viene innanzitutto creato un pacchetto, a livello di codice o tramite Progettazione SSIS, viene aggiunto un GUID al relativo `ID` e un nome alla relativa `Name` proprietà. Se si crea un nuovo pacchetto copiando un pacchetto esistente oppure utilizzando un pacchetto modello, verranno copiati anche il nome e il GUID di tale pacchetto. Quando si utilizza la registrazione questo può costituire un problema, perché il GUID e il nome del pacchetto vengono scritti nei log per identificare il pacchetto a cui appartengono le informazioni registrate. È pertanto necessario modificare il nome e il GUID dei nuovi pacchetti per distinguerli tra loro e da quello da cui sono stati copiati, nei dati dei file di log.  
   
- Per modificare il GUID del pacchetto, si rigenera un GUID nel `ID` proprietà nella finestra proprietà in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per modificare il nome del pacchetto, è possibile aggiornare il valore di `Name` proprietà nella finestra Proprietà. In alternativa è possibile usare il prompt dei comandi **dtutil** oppure modificare il nome e il GUID a livello di codice. Per altre informazioni, vedere [Impostazione delle proprietà di un pacchetto](set-package-properties.md) e [Utilità dtutil](dtutil-utility.md).  
+ Per modificare il GUID del pacchetto, è necessario rigenerare il GUID nel `ID` proprietà nella finestra proprietà in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per modificare il nome del pacchetto, è possibile aggiornare il valore della `Name` proprietà nella finestra Proprietà. In alternativa è possibile usare il prompt dei comandi **dtutil** oppure modificare il nome e il GUID a livello di codice. Per altre informazioni, vedere [Impostazione delle proprietà di un pacchetto](set-package-properties.md) e [Utilità dtutil](dtutil-utility.md).  
   
 ## <a name="objects-that-extend-package-functionality"></a>Oggetti che estendono le funzionalità dei pacchetti  
  I pacchetti possono includere oggetti quali gestori eventi, configurazioni, funzionalità di registrazione e variabili, che aggiungono funzionalità avanzate o estendono quelle esistenti.  
@@ -111,7 +111,7 @@ ms.locfileid: "36158495"
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili due strumenti grafici per la creazione di pacchetti, Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , oltre al modello a oggetti [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per informazioni dettagliate, vedere gli argomenti seguenti.  
   
--   [Eseguire SQL Server importazione / esportazione guidata](import-export-data/start-the-sql-server-import-and-export-wizard.md)  
+-   [Esecuzione dell'Importazione/Esportazione guidata SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md)  
   
 -   [Creare pacchetti in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)  
   

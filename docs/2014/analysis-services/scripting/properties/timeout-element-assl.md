@@ -1,5 +1,5 @@
 ---
-title: Elemento Timeout (ASSL) | Documenti Microsoft
+title: Elemento Timeout (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Timeout element
 ms.assetid: 7694872b-bd05-459f-b5dc-3cfbd92a9664
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 07aeb620045b3b53bb04369abfd16b0a500f9172
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a9069f5ec57d313b89342533d79e66f8c021604e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269557"
 ---
 # <a name="timeout-element-assl"></a>Elemento Timeout (ASSL)
   Specifica l'ora, in secondi, dopo la quale un tentativo di recuperare i dati restituisce un timeout.  
@@ -61,8 +61,8 @@ ms.locfileid: "36166466"
 |Elemento padre|[Origine dati](../objects/datasource-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `Timeout` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DataSource>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `Timeout` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DataSource>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

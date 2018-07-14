@@ -1,5 +1,5 @@
 ---
-title: Scheda convalida incrociata (vista grafico accuratezza modello di Data Mining) | Documenti Microsoft
+title: Scheda convalida incrociata (vista grafico di accuratezza Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5b39187ddfc3e4ce0fa8ef0fc7e0402ef54b129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a30cf9ce920f7e0416e46dd87044ef7e3d52318c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169822"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Scheda Convalida incrociata (vista Grafico accuratezza modello di data mining)
   La convalida incrociata consente di partizionare una struttura di data mining in sezioni trasversali, eseguire in maniera iterativa il training dei modelli e testarli a fronte di ciascuna sezione trasversale. È possibile specificare un numero di riduzioni in cui suddividere i dati. Ciascuna riduzione viene a sua volta utilizzata come dati di test, mentre i dati rimanenti vengono usati per eseguire il training di un nuovo modello. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] genera quindi un set di metriche di accuratezza standard per ogni modello. Confrontando le misure relative ai modelli generati per ogni sezione trasversale, è possibile valutare l'affidabilità del modello di data mining per l'intero set di dati.  
@@ -86,7 +86,7 @@ ms.locfileid: "36166290"
 > [!NOTE]  
 >  Anche se è possibile impostare 0,0, l'utilizzo di questo valore aumenta il tempo di elaborazione e non produce risultati significativi.  
   
- **Ottenere i risultati**  
+ **Ottieni risultati**  
  Fare clic per avviare la convalida incrociata del modello mediante i parametri specificati.  
   
  Il modello viene partizionato nel numero specificato di riduzioni e viene eseguito il test di un modello distinto per ciascuna riduzione. La restituzione di risultati da parte della convalida incrociata potrebbe pertanto richiedere del tempo.  
@@ -100,7 +100,7 @@ ms.locfileid: "36166290"
   
  Si supponga ad esempio che vengano effettuate tre stime per un particolare stato di destinazione e che le probabilità di ogni stima siano 0,05, 0,15 e 0,8. Se si imposta la soglia su 0,5, solo una stima viene conteggiata come corretta. Se si imposta **Soglia** **di destinazione** su 0,10, due stime vengono conteggiate come corrette.  
   
- Quando si **destinazione** **soglia** è impostato su `null`, vale a dire il valore predefinito, la stima più probabile per ogni case viene conteggiata come corretta. Nell'esempio precedente, 0,05, 0,15 e 0,8 sono le probabilità per le stime nei tre diversi case. Nonostante le probabilità siano molto diverse, ciascuna stima viene conteggiata come corretta, perché ogni case genera una sola stima. Si tratta inoltre delle stime migliori per tali case.  
+ Quando **destinazione** **soglia** è impostato su `null`, che rappresenta il valore predefinito, la stima più probabile per ogni case è conteggiata come corretta. Nell'esempio precedente, 0,05, 0,15 e 0,8 sono le probabilità per le stime nei tre diversi case. Nonostante le probabilità siano molto diverse, ciascuna stima viene conteggiata come corretta, perché ogni case genera una sola stima. Si tratta inoltre delle stime migliori per tali case.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Test e convalida &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)   

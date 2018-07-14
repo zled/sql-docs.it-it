@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Plan Guide Unsuccessful event class
 ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 92a9dc479d3125ef6be5a5232aa231cab2a98dfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 197379f910efef984a16cccb9ddebe3dfe3a8786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246841"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Classe di evento Plan Guide Unsuccessful
   Questa classe di evento indica che in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è stato possibile creare un piano di esecuzione per una query o un batch contenente una guida di piano. Il piano è stato invece compilato senza utilizzare la guida di piano. L'evento viene generato quando vengono soddisfatte le condizioni seguenti:  

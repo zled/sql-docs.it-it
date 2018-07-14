@@ -1,5 +1,5 @@
 ---
-title: Editor attività Trasferisci processi (pagina processi) | Documenti Microsoft
+title: Editor attività Trasferisci processi (pagina processi) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.jobs.f1
 helpviewer_keywords:
 - Transfer Jobs Task Editor
 ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0e9da948ac0c1534dc3bff966102cb5f414710fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 119e9c7828e9ba794e13b484bf0b204e237a6aa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184778"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>Editor attività Trasferisci processi (pagina Processi)
   Utilizzare la pagina **Processi** della finestra di dialogo **Editor attività Trasferisci processi** per specificare le proprietà relative alla copia di uno o più processi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent tra due istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per ulteriori informazioni sull'attività Trasferisci processi, vedere [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  
@@ -78,7 +78,7 @@ ms.locfileid: "36158937"
 |**False**|Disabilita i processi nel server di destinazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Attività di Integration Services](control-flow/integration-services-tasks.md)   
  [Editor attività Trasferisci processi &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Pagina espressioni](expressions/expressions-page.md)   

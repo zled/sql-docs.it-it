@@ -1,5 +1,5 @@
 ---
-title: Novità&#39;presente nei dati di componenti aggiuntivi Data Mining per Office | Documenti Microsoft
+title: Cosa&#39;incluso nei dati di componenti aggiuntivi Data Mining per Office | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 282155ff681830e3b6c1b3f0bc0d4f281a6435e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5630c67926713b997adfe85fe0fd9f8da10e03e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231994"
 ---
-# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Novità&#39;presente nei dati di componenti aggiuntivi Data Mining per Office
+# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Cosa&#39;incluso nei dati di componenti aggiuntivi Data Mining per Office
   Se durante l'installazione dei componenti aggiuntivi Data mining per Office 2013 si selezionano tutte le opzioni di installazione, verranno aggiunti i modelli e le barre degli strumenti seguenti:  
   
 -   [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)  
@@ -38,15 +38,15 @@ ms.locfileid: "36166462"
   
      I data miner più esperti apprezzeranno la possibilità di accedere a tutti gli strumenti disponibili in SQL Server Data Mining, inclusi l'importazione e l'esportazione di modelli, query di stima e query sul contenuto.  
   
--   [Forme di Data Mining per Visio](data-mining-shapes-for-visio.md)  
+-   [Forme di data mining per Visio](data-mining-shapes-for-visio.md)  
   
      Trascinare tali forme in una pagina di Visio per creare diagrammi collegati ai modelli di data mining ma che è possibile personalizzare utilizzando Visio per creare presentazioni interattive più interessanti.  
   
--   [Utilità di configurazione server &#40;componenti aggiuntivi data mining per Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+-   [Utilità di configurazione server &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
-     Per compilare modelli è necessaria una connessione a un server di data mining. Guida alla configurazione, è sufficiente fare clic su **Guida** e seguire le istruzioni in ogni pagina della procedura guidata configurazione. È possibile correggere i problemi personalmente o fare riferimento alla procedura guidata che fornisce informazioni che è possibile inviare all'amministratore di sistema per procedere alla corretta configurazione.  
+     Per compilare modelli è necessaria una connessione a un server di data mining. Guida alla configurazione, è sufficiente fare clic su **aiutare** e seguire le istruzioni in ogni pagina della procedura guidata configurazione. È possibile correggere i problemi personalmente o fare riferimento alla procedura guidata che fornisce informazioni che è possibile inviare all'amministratore di sistema per procedere alla corretta configurazione.  
   
--   [Scelta dei dati e utilizzando i dati di esempio](choosing-data-for-data-mining.md)  
+-   [Scelta dei dati e usando i dati di esempio](choosing-data-for-data-mining.md)  
   
      Ai fini dell'analisi dei dati, è essenziale determinare quali sono i dati da utilizzare e come prepararli. In questo argomento vengono forniti suggerimenti sulla preparazione dei dati per creare il miglior modello possibile.  
   
@@ -65,6 +65,6 @@ ms.locfileid: "36166462"
     -   \<unità >: \Programmi file (x86) \Microsoft componenti aggiuntivi data mining di SQL Server 2014  
   
 ## <a name="see-also"></a>Vedere anche  
- [Introduzione a Data Mining &#40;componenti aggiuntivi data mining per Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
+ [Introduzione a Data Mining &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
   
   

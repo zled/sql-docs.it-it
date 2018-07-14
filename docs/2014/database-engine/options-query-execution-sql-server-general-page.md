@@ -1,5 +1,5 @@
 ---
-title: Opzioni (Query esecuzione SQL Server pagina generale) | Documenti Microsoft
+title: Opzioni (Query esecuzione SQL Server pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
 caps.latest.revision: 33
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 809a3a2d681285a0a0f02e6ca9ac18497ae28804
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c08ee6ab08fe90ffc075ef3f1ee0fe638d1da4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167152"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>Opzioni (Query esecuzione SQL Server pagina generale)
   Utilizzare questa pagina per specificare le opzioni per l'esecuzione di query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Le modifiche apportate a queste opzioni si applicano soltanto alle nuove query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni per una query corrente, scegliere **Opzioni query** dal menu **Query** oppure fare clic con il pulsante destro del mouse nella finestra Query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e scegliere **Opzioni query**.  
@@ -36,7 +36,7 @@ ms.locfileid: "36168139"
  **Timeout esecuzione**  
  Consente di impostare il valore predefinito nella finestra di dialogo **Nuova connessione** . Usare questa casella di selezione per indicare a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] il numero di secondi di attesa prima dell'annullamento della query. Il valore 0 indica un'attesa infinita, ovvero nessun timeout. In una nuova installazione il valore è impostato su 0.  
   
- **Separatore batch**  
+ **Separatore di batch**  
  Consente di digitare una parola che verrà utilizzata per separare le istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] in batch. Il valore predefinito è GO.  
   
  **Per impostazione predefinita, Apri le nuove query in modalità SQLCMD**  

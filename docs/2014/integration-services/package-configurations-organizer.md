@@ -1,5 +1,5 @@
 ---
-title: Libreria configurazioni pacchetto | Documenti Microsoft
+title: Libreria configurazioni pacchetto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.packageconfigurationorganizer.f1
 helpviewer_keywords:
 - Package Configurations Organizer dialog box
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 474a79d94d08aa477bc30241a3309c7b9f5dfed3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83911534bc17b9b453f6b67f92f6bf463ead9037
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217741"
 ---
 # <a name="package-configurations-organizer"></a>Libreria configurazioni pacchetto
   Usare la finestra di dialogo **Libreria configurazioni pacchetto** per abilitare le configurazioni dei pacchetti, visualizzarne un elenco per il pacchetto corrente e specificare l'ordine desiderato in base a cui devono essere caricate.  
@@ -70,6 +70,6 @@ ms.locfileid: "36166665"
  Selezionare una configurazione e utilizzare le frecce in su o in giù per spostarla verso l'alto o il basso nell'elenco. Le configurazioni vengono caricate nella sequenza in base a cui sono ordinate nell'elenco.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare le configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)  
+ [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Confrontare le funzionalità di Business Intelligence In diversi ambienti Microsoft | Documenti Microsoft
+title: Confrontare le funzionalità di Business Intelligence In diversi ambienti Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ae54486aa141880189a012d897251604a292aefe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97ac603e2e043810d468d9c9ada00c11a4f78d15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188088"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Confrontare le funzionalità di Business Intelligence in diversi ambienti Microsoft
-  Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence può essere distribuito in numerosi ambienti diversi, tra cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con SharePoint Server, SharePoint Online e Power BI per Office 365. In questo argomento vengono confrontati i componenti e le funzionalità supportati in ogni ambiente.  
+  Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence può essere distribuita in numerosi ambienti diversi, tra cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con SharePoint Server, SharePoint Online e Power BI per Office 365. In questo argomento vengono confrontati i componenti e le funzionalità supportati in ogni ambiente.  
   
  Per altre informazioni sul confronto tra SharePoint Server e SharePoint Online, vedere [Confrontare piani e opzioni di SharePoint](http://products.office.com/SharePoint/compare-sharepoint-plans).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36168048"
 |Esportazione di dashboard interattivi di Power View nelle presentazioni di PowerPoint|Sì|no|no|  
 |Creazione di dashboard basati su browser|Sì|no|no|  
 |Monitoraggio dell'utilizzo|Sì|no|Sì|  
-|Di sicurezza a livello di riga sfruttano [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubi|Sì|no|no|  
+|Sicurezza del basata su riga sfrutta [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubi|Sì|no|no|  
   
  **<sup>1</sup>**[informazioni sul ruolo degli amministratori dei dati nella gestione dei dati](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) e [Video: gestione delle informazioni di BI e amministrazione dei dati di Power](https://www.youtube.com/watch?v=8dHOj68ts7c).    
   
@@ -57,13 +57,13 @@ ms.locfileid: "36168048"
 |Esplorazione dei dati basati su browser in HTML5|no|no|Sì|  
 |App di Business Intelligence per dispositivi mobili per accedere a report e dashboard in remoto|no|no|Sì  **<sup>1</sup>**|  
 |Cartella di lavoro di Excel con [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] come origine dati  **<sup>2</sup>**|Sì|no|no|  
-|Possibilità di usare le funzionalità in versioni e browser diversi|Sì, per le visualizzazioni a Power View  **<sup>3</sup>**|Sì, per la cartella di lavoro di dimensioni inferiori a 10 MB  **<sup>3</sup>**|Sì  **<sup>3</sup>**|  
+|Possibilità di usare le funzionalità in versioni e browser diversi|Sì, per le visualizzazioni non relative a Power View  **<sup>3</sup>**|Sì, per la cartella di lavoro di dimensioni inferiori a 10 MB  **<sup>3</sup>**|Sì  **<sup>3</sup>**|  
   
  **<sup>1</sup>**[Microsoft Power BI](http://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).    
   
  **<sup>2</sup>**[cartelle di lavoro di PowerPivot come origine dati  ](http://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
   
- **<sup>3</sup>**[supporto mobile negli strumenti di Business Intelligence (BI)](http://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) e [Planning for Reporting Services e supporto Browser per Power View (Reporting Services 2014)](http://msdn.microsoft.com/library/ms156511.aspx).    
+ **<sup>3</sup>**[supporto mobile tra strumenti di Business Intelligence (BI)](http://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) e [Planning for Reporting Services e supporto Browser per Power View (Reporting Services 2014)](http://msdn.microsoft.com/library/ms156511.aspx).    
   
 ## <a name="more-information"></a>Altre informazioni  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36168048"
   
 -   [Confronto tra un sito Centro business intelligence e i siti Power BI per Office 365](http://technet.microsoft.com/library/dn394343\(v=office.15\).aspx)  
   
--   [Introduzione agli strumenti di analisi e creazione di report di Microsoft BI](http://go.microsoft.com/fwlink/p/?LinkId=617093)  
+-   [Introduzione a strumenti di analisi e creazione di report di Microsoft BI](http://go.microsoft.com/fwlink/p/?LinkId=617093)  
   
 ## <a name="community-content"></a>Contenuto della community  
  [Microsoft BI in modalità self-service in locale e nel cloud](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/)  

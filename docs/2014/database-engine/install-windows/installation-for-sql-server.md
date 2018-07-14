@@ -1,5 +1,5 @@
 ---
-title: Installazione di SQL Server 2014 | Documenti Microsoft
+title: Installazione di SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.portal.Installation.f1
 helpviewer_keywords:
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - initial installation [SQL Server]
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c6eb94e86633e5bff588993ac1b71cd52bde3ae3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8c25f5057c6e1cd5b877376e67634946ef489276
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224461"
 ---
 # <a name="installation-for-sql-server-2014"></a>Installazione per SQL Server 2014
- ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ Scaricare SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
-  **Grazie per aver per [Scott Hanselman](http://www.hanselman.com/) per la raccolta di tutti i collegamenti di pacchetto del programma di installazione in un'unica posizione.**
+ ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ Download di SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+  **Grazie per aver preso parte alla [Scott Hanselman](http://www.hanselman.com/) per la raccolta di tutti i collegamenti di pacchetto del programma di installazione in un'unica posizione.**
   
   L'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un singolo albero delle funzionalità per installare tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36167133"
  
  **Per provarlo:**  
   
--   Se si ha un account di Azure,  Quindi andare **[qui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** alla selezione di una macchina virtuale con SQL Server 2014 Service Pack 1 (SP1) già installato. Per ulteriori informazioni su SQL Server 2014 (SP1), vedere [informazioni sulla versione di SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865).  
+-   Se si ha un account di Azure,  Quindi andare **[qui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** creare rapidamente una macchina virtuale con SQL Server 2014 Service Pack 1 (SP1) già installato. Per altre informazioni su SQL Server 2014 (SP1), vedere [informazioni sulla versione di SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865).  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
  Sia che si utilizzi l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il prompt dei comandi per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il processo di installazione prevede i passaggi seguenti.  
@@ -79,14 +79,14 @@ ms.locfileid: "36167133"
  [Installazione del cluster di failover di SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  In questa sezione della documentazione relativa al programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono descritte le modalità di installazione e configurazione del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [Installare funzionalità di Business Intelligence di SQL Server 2014](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
+ [Installare le funzionalità di Business Intelligence di SQL Server 2014](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le funzionalità che fanno parte della piattaforma di Microsoft Business Intelligence includono [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e diverse applicazioni client usate per la creazione o l'uso di dati analitici. In questa sezione della documentazione relativa al programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene descritto come installare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Procedure per l'installazione](../../sql-server/install/installation-how-to-topics.md)  
  Vengono forniti i collegamenti agli argomenti sulle procedure per installare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite l'Installazione guidata, il prompt dei comandi, i file di configurazione e SysPrep.  
   
- [Installare funzionalità di Business Intelligence di SQL Server con SharePoint &#40;PowerPivot e Reporting Services&#41;](../../sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
+ [Installare le funzionalità SQL Server BI con SharePoint &#40;Reporting Services e PowerPivot&#41;](../../sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
  In questa sezione viene illustrato come installare funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ambiente SharePoint. e vengono identificate le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibili in una versione ed edizione specifiche di SharePoint Nella sezione sono inoltre incluse procedure di installazione per PowerPivot per SharePoint e per Reporting Services in modalità SharePoint.  
   
  [Installazione di SQL Server Samples and Sample Databases](http://sqlserversamples.codeplex.com/)  
@@ -94,6 +94,6 @@ ms.locfileid: "36167133"
   
 ## <a name="see-also"></a>Vedere anche  
  [Novità relative all'installazione di SQL Server](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
- [Requisiti hardware e Software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Requisiti hardware e software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
   

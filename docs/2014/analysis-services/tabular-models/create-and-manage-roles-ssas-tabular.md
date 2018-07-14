@@ -1,5 +1,5 @@
 ---
-title: Creare e gestire ruoli (SSAS tabulare) | Documenti Microsoft
+title: Creare e gestire ruoli (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.rolemanager.f1
 - sql12.asvs.bidtoolset.roledb.f1
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b1cc9692f7eb74cadb89b7b3a439600db775913b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 771dc3c7d0da05292c132f2b5460e7d05de1f796
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254893"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>Creare e gestire ruoli (SSAS tabulare)
   I ruoli, nei modelli tabulari, consentono di definire le autorizzazioni dei membri per un modello. I ruoli vengono definiti per un progetto di modello tramite la finestra di dialogo Gestione ruoli di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Quando viene distribuito un modello, gli amministratori del database possono gestire i ruoli tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -68,8 +68,8 @@ ms.locfileid: "36158297"
 9. Scegliere **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)   
- [Prospettive &#40;tabulare di SSAS&#41;](perspectives-ssas-tabular.md)   
+ [I ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)   
+ [Le prospettive &#40;tabulare di SSAS&#41;](perspectives-ssas-tabular.md)   
  [Analizza in Excel &#40;tabulare di SSAS&#41;](analyze-in-excel-ssas-tabular.md)   
  [Funzione USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [Funzione CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  

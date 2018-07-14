@@ -1,5 +1,5 @@
 ---
-title: Elemento OverrideBehavior (ASSL) | Documenti Microsoft
+title: Elemento OverrideBehavior (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - OverrideBehavior element
 ms.assetid: 6a5b361a-6061-4b73-b1a7-1237fb77606c
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e36223c59306b158812d9bdc18fccd3660c54f0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aecabbb04cefa1abf706c5f725c3a7f8e41aad07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241371"
 ---
 # <a name="overridebehavior-element-assl"></a>Elemento OverrideBehavior (ASSL)
   Indica il comportamento di override della relazione descritta da un [AttributeRelationship](../objects/attributerelationship-element-assl.md) elemento.  
@@ -59,7 +59,7 @@ ms.locfileid: "36158537"
 |Elemento padre|[Oggetto AttributeRelationship](../objects/attributerelationship-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `OverrideBehavior` determina in che modo il posizionamento nell'attributo correlato influisce sul posizionamento nell'attributo.  
   
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  

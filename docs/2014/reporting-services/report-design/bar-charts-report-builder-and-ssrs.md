@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1686efc8440a912ec54ab31532f5f4089a61ae7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: eb477d33d1e9f6d10d4c2b89d6fd9472725041ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224761"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Grafici a barre (Generatore report e SSRS)
   Nei grafici a barre le serie vengono visualizzate come set di barre orizzontali. Il grafico a barre semplice è strettamente correlato all'istogramma, in cui le serie vengono visualizzate come set di barre verticali, e al grafico a barre a intervalli, in cui le serie vengono visualizzate come set di barre orizzontali con punti iniziali e finali variabili.  
   
- Il grafico a barre è l'unico tipo di grafico in cui i dati vengono visualizzati in orizzontale. Per questo motivo, viene utilizzato di frequente per rappresentare i dati che si verificano nel corso del tempo, con una data di inizio e una data di fine definite. Viene inoltre utilizzato per mostrare informazioni sotto forma di categorie, in quanto le categorie possono essere visualizzate in orizzontale. Per ulteriori informazioni su come aggiungere dati a un grafico a barre, vedere [grafici &#40;Generatore Report e SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Il grafico a barre è l'unico tipo di grafico in cui i dati vengono visualizzati in orizzontale. Per questo motivo, viene utilizzato di frequente per rappresentare i dati che si verificano nel corso del tempo, con una data di inizio e una data di fine definite. Viene inoltre utilizzato per mostrare informazioni sotto forma di categorie, in quanto le categorie possono essere visualizzate in orizzontale. Per altre informazioni su come aggiungere dati a un grafico a barre, vedere [i grafici &#40;Generatore Report e SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  Nell'immagine seguente è illustrato un grafico a barre. Il grafico a barre è particolarmente indicato per questi dati, perché tutte e tre le serie condividono lo stesso periodo di tempo, consentendo di eseguire confronti validi.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36167026"
   
 -   Se si prevede di aggiungere barre a una tabella o a una matrice nel report, utilizzare un misuratore lineare anziché un grafico a barre. Il misuratore lineare è progettato per visualizzare un unico valore anziché più gruppi, offrendo una maggiore flessibilità per l'utilizzo in un elenco o in un'area dati tabella. Per altre informazioni, vedere [Misuratori &#40;Generatore report e SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
--   È possibile aggiungere stili di disegno speciali alle singole barre di un grafico a barre per aumentarne l'impatto visivo. Tra gli stili di disegno figurano Spicchio, Rilievo, Cilindro e Chiaroscuro. Tali effetti sono progettati per migliorare l'aspetto del grafico 2D. Se si utilizza un grafico 3D, gli stili di disegno vengono comunque applicati, ma non producono lo stesso effetto. Per ulteriori informazioni sull'aggiunta di uno stile di disegno a un grafico a barre, vedere [aggiungere smussato, rilievo e gli stili di trama a un grafico &#40;Generatore Report e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
+-   È possibile aggiungere stili di disegno speciali alle singole barre di un grafico a barre per aumentarne l'impatto visivo. Tra gli stili di disegno figurano Spicchio, Rilievo, Cilindro e Chiaroscuro. Tali effetti sono progettati per migliorare l'aspetto del grafico 2D. Se si utilizza un grafico 3D, gli stili di disegno vengono comunque applicati, ma non producono lo stesso effetto. Per altre informazioni su come aggiungere uno stile di disegno a un grafico a barre, vedere [aggiungere stili smussato, rilievo e trama a un grafico &#40;Generatore Report e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
 -   Nei grafici a barre in pila le serie vengono posizionate una sull'altra in modo da creare una pila a barre. È possibile separare il grafico a barre in pila in più set di pile per ogni categoria. Le pile raggruppate nel grafico vengono visualizzate affiancate. Un grafico può contenere un numero qualsiasi di serie in pila raggruppate.  
   
@@ -66,10 +66,10 @@ ms.locfileid: "36167026"
  [Tipi di grafico &#40;Generatore report e SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Punti dati vuoti e Null nei grafici &#40;Generatore report e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Istogrammi &#40;Generatore report e SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
- [Grafici a intervallo &#40;SSRS e Generatore Report&#41;](range-charts-report-builder-and-ssrs.md)   
+ [Grafici a intervalli &#40;Report e SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
  [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Formattazione della legenda in un grafico &#40;SSRS e Generatore Report&#41;](chart-legend-formatting-report-builder.md)   
+ [Formattazione della legenda in un grafico &#40;Report e SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Aggiungere stili smussato, rilievo e trama a un grafico &#40;Generatore report e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [Esercitazione: Aggiunta di un grafico a barre a un report (Generatore report)](http://go.microsoft.com/fwlink/?LinkId=198052)   
  [Esercitazione: Aggiunta di un grafico a barre a un report](http://go.microsoft.com/fwlink/?LinkId=198042)  

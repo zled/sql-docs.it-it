@@ -1,5 +1,5 @@
 ---
-title: Rimuovere i riferimenti a deprecate stored procedure di sistema | Documenti Microsoft
+title: Rimuovere i riferimenti a procedure di sistema deprecate archiviato | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - undocumented system stored procedures [SQL Server]
 - system stored procedures [SQL Server]
 ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 45f10d9ab7697e84017da43d8767e52be23101bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5a588f8ec25301d3c8a4343e6c7f0d77eebdfe75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187578"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>Rimuovere i riferimenti alle stored procedure di sistema deprecate
   Sono state rilevate istruzioni che fanno riferimento a stored procedure di sistema e stored procedure estese non documentate che non sono più disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le istruzioni che fanno riferimento a tali oggetti non verranno eseguite. Evitare di utilizzare oggetti di sistema o API non documentati, perché la funzionalità potrebbe cambiare oppure potrebbero venire rimossi senza comunicazione in una versione futura.  
@@ -107,6 +107,6 @@ ms.locfileid: "36167003"
   
 ## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;nuovo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

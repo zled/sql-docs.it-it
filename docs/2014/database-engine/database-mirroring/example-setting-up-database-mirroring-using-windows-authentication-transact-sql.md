@@ -1,14 +1,13 @@
 ---
-title: 'Esempio: Impostazione del mirroring utilizzando autenticazione di Windows (Transact-SQL) | Documenti Microsoft'
+title: 'Esempio: Impostazione del mirroring utilizzando autenticazione di Windows (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - Windows authentication [SQL Server]
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], security
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82a122a8301e910ffc628589e475b4940d439e90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 02b26ad89a5ad1d7cb6620a81829d247fa6b483f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273472"
 ---
 # <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Esempio: Impostazione del mirroring del database tramite l'autenticazione di Windows (Transact-SQL)
   In questo esempio vengono illustrate tutte le fasi necessarie per creare una sessione di mirroring del database con un server di controllo del mirroring con l'autenticazione di Windows. Negli esempi di questo argomento viene utilizzato [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si osservi che per impostare il mirroring del database è possibile utilizzare, in alternativa alle procedure di [!INCLUDE[tsql](../../includes/tsql-md.md)], la Configurazione guidata sicurezza mirroring del database. Per altre informazioni, vedere [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md).  
@@ -164,7 +163,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Endpoint del mirroring del database &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [Sicurezza del trasporto per gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Sicurezza del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

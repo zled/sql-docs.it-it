@@ -1,5 +1,5 @@
 ---
-title: Totali visualizzati e totali Non | Documenti Microsoft
+title: Totali visualizzati e totali Non | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae51861e90628621e776b7153b6d23ec0c44a047
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b211305babfee92a85469257795b6124f2ab4b54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253033"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Totali visualizzati e non visualizzati
   I totali visualizzati sono totali alla fine di una colonna o riga in cui vengono sommati tutti gli elementi visibili della colonna o riga. Questo è il comportamento predefinito per la maggior parte delle tabelle visualizzate. Tuttavia, in alcuni casi per l'utente è utile visualizzare solo alcune colonne di una tabella, conservando però i totali per la riga intera, compresi gli elementi non visualizzati. Questi vengono chiamati `Non Visual Totals`, perché il totale è il risultato di valori visualizzati e non visualizzati.  
@@ -105,7 +105,7 @@ ms.locfileid: "36158324"
  [La caratteristica Auto Exist](autoexists.md)   
  [Utilizzo di membri, tuple e set di &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [Nozioni fondamentali sulle Query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [La Query MDX di base &#40;MDX&#41;](mdx-query-the-basic-query.md)   
+ [Query MDX di base &#40;MDX&#41;](mdx-query-the-basic-query.md)   
  [Restrizione della Query con Progettazione Query e assi di sezionamento &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
  [Definizione del contesto di cubo in una Query &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
   

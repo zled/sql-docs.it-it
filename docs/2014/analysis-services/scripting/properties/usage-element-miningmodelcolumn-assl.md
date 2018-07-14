@@ -1,5 +1,5 @@
 ---
-title: Elemento Usage (MiningModelColumn) (ASSL) | Documenti Microsoft
+title: Elemento Usage (MiningModelColumn) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Usage element
 ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a4e4c2b11a9a9281f64062390257bf5ddf3145b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6767c4c5ac535ac603cc6182cbe645088c8ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265300"
 ---
 # <a name="usage-element-miningmodelcolumn-assl"></a>Elemento Usage (MiningModelColumn) (ASSL)
-  Viene descritto come la colonna associata nell'elemento padre [MiningStructure](../objects/miningstructure-element-assl.md) viene utilizzato.  
+  Viene descritto come la colonna associata nell'elemento padre [MiningStructure](../objects/miningstructure-element-assl.md) viene usato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36166152"
 |Elemento padre|[MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
@@ -70,7 +70,7 @@ ms.locfileid: "36166152"
 |*Input*|La colonna è una colonna di input.|  
 |*Predict*|La colonna è una colonna di stima.|  
 |*PredictOnly*|La colonna è solo una colonna di stima.|  
-|*Nessuno*|La colonna non viene utilizzata dal modello. **Avviso:** quando il valore di utilizzo è "None", Analysis Services non invia alcun valore per il server per impostazione predefinita; pertanto, l'attributo Usage non è incluso nella richiesta/risposta.|  
+|*Nessuno*|La colonna non viene utilizzata dal modello. **Avviso:** quando il valore di Usage è "None", Analysis Services non invia alcun valore per il server per impostazione predefinita; di conseguenza, l'attributo Usage non è incluso nella richiesta/risposta.|  
   
  L'enumerazione che corrisponde ai valori consentiti di `Usage` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.MiningModelColumnUsages>.  
   

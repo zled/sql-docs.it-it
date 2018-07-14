@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.ue.navigation.f1
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 15c92a525164cf2c8c2f89f2b3afb45bc47b70d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 456bd7ca29338e2e78b57ffdd8f523e05da7ca1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271187"
 ---
 # <a name="utility-explorer-f1-help"></a>Guida sensibile al contesto di Gestione Utilità
   Negli argomenti seguenti sono incluse informazioni sulle funzionalità di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sulle operazioni associate.  
@@ -29,9 +29,9 @@ ms.locfileid: "36158673"
 ## <a name="in-this-section"></a>Argomenti della sezione  
  [Dashboard utilità &#40;utilità SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)  
   
- [Dettagli dell'applicazione livello dati distribuito &#40;utilità SQL Server&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
+ [I dettagli dell'applicazione livello dati distribuite &#40;utilità SQL Server&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
   
- [Dettagli di istanze gestite &#40;utilità SQL Server&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
+ [Dettagli dell'istanza gestita &#40;utilità SQL Server&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
   
  [Amministrazione utilità &#40;Utilità SQL Server&#41;](../../database-engine/utility-administration-sql-server-utility.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Esempi di Query del modello Decision Trees | Documenti Microsoft
+title: Esempi di Query del modello Decision Trees | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - content queries [DMX]
 - decision trees [Analysis Services]
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56763f6e1b207e0f676c08e5bbca7066b680dcda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 734402a21381ef6bf60eec5860b887ae3e0a73f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261517"
 ---
 # <a name="decision-trees-model-query-examples"></a>Esempi di query sul modello di alberi delle decisioni
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, oppure una query di stima, che utilizza i criteri presenti nel modello di data mining per eseguire stime relative a nuovi dati. Una query sul contenuto per un modello Decision Trees, ad esempio, può fornire statistiche sul numero di case a ogni livello dell'albero o le regole che consentono di distinguere i case. In alternativa, una query di stima esegue il mapping del modello ai nuovi dati per generare indicazioni, classificazioni e così via. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
@@ -70,7 +70,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
  La query restituisce tutti i nodi di tipo 2, ovvero i nodi di livello superiore di un albero che rappresenta un attributo stimabile specifico.  
   
 > [!NOTE]  
->  La colonna `CHILDREN_CARDINALITY`, deve essere racchiuso tra parentesi quadre per distinguerlo dalla parola chiave riservata MDX con lo stesso nome.  
+>  La colonna, `CHILDREN_CARDINALITY`, devono essere racchiusi tra parentesi quadre per distinguerla dalla parola chiave riservata MDX con lo stesso nome.  
   
 ```  
 SELECT MODEL_NAME, NODE_NAME, NODE_CAPTION,   
@@ -87,10 +87,10 @@ WHERE NODE_TYPE = 2
   
  Significato dei risultati In un modello Decision Trees la cardinalità di un nodo specifico indica il numero di figli immediati del nodo. La cardinalità per questo nodo è 5, pertanto il modello ha diviso in cinque sottogruppi la popolazione di destinazione dei potenziali acquirenti di biciclette.  
   
- La query correlata seguente restituisce i figli per questi cinque sottogruppi, insieme alla distribuzione di attributi e valori nei nodi figlio. Poiché le statistiche, ad esempio supporto, probabilità e varianza vengono archiviate nella tabella nidificata, `NODE_DISTRIBUTION`, questo esempio viene utilizzato il `FLATTENED` (parola chiave) per restituire le colonne della tabella nidificata.  
+ La query correlata seguente restituisce i figli per questi cinque sottogruppi, insieme alla distribuzione di attributi e valori nei nodi figlio. Poiché le statistiche, ad esempio supporto, probabilità e varianza vengono archiviate nella tabella nidificata, `NODE_DISTRIBUTION`, questo esempio viene usato il `FLATTENED` (parola chiave) per restituire le colonne della tabella nidificata.  
   
 > [!NOTE]  
->  Colonna della tabella nidificata, `SUPPORT`, deve essere racchiuso tra parentesi quadre per distinguerlo dalla parola chiave riservata con lo stesso nome.  
+>  Colonna della tabella nidificata, `SUPPORT`, deve essere racchiuso tra parentesi quadre per distinguerla dalla parola chiave riservata con lo stesso nome.  
   
 ```  
 SELECT FLATTENED NODE_NAME, NODE_CAPTION,  
@@ -278,7 +278,7 @@ WHERE NODE_TYPE = 25
 ## <a name="see-also"></a>Vedere anche  
  [Query di Data Mining](data-mining-queries.md)   
  [Algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm.md)   
- [Microsoft Decision Trees algoritmo riferimento tecnico](microsoft-decision-trees-algorithm-technical-reference.md)   
- [Contenuto del modello di albero delle decisioni di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Riferimento tecnico algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)   
+ [Contenuto dei modelli di albero delle decisioni di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

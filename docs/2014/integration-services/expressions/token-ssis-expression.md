@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9ce43a5f85ed5680a1775e0e58f34cda5bffd026
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 826eea9ec6160568bf4eb63d5ddf7bf27ca7502d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263211"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (espressione SSIS)
   Restituisce un token (sottostringa) da una stringa in base ai delimitatori specificati che separano i token nella stringa e al numero del token che indica quale token deve essere restituito.  
@@ -43,7 +43,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Questa funzione suddivide la stringa <character_expression> in un set di token separati dai delimitatori specificati nella <delimiter_string>, quindi restituisce l'N token dove N è il numero di occorrenze del token specificato dal parametro \<occurrence>. Per utilizzi di esempio di questa funzione, vedere la sezione Esempi.  
   
  Le osservazioni seguenti riguardano la funzione TOKEN:  
@@ -104,6 +104,6 @@ TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md)  
+ [Le funzioni &#40;espressione di SSIS&#41;](functions-ssis-expression.md)  
   
   

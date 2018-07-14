@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttodtsserver.login.f1
 - sql12.swb.connecttodts.login.f1
 ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e41104462b18f9d236a289dbea0196f981006f44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 703a4f062d327da13b1b75d519c70884a9228978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241261"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>Connetti al server (pagina Nome account di accesso) - Integration Services
   Usare questa scheda per visualizzare o specificare le opzioni seguenti per la connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "36158747"
  Consente di selezionare il server a cui connettersi. Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
   
 > [!NOTE]  
->  Non usare  *\<nomeserver >*\\*\<instancename >*, in quanto [!INCLUDE[ssIS](../includes/ssis-md.md)] non supporta più istanze in un computer.  
+>  Non utilizzare  *\<nomeserver >*\\*\<NomeIstanza >* perché [!INCLUDE[ssIS](../includes/ssis-md.md)] non supporta più istanze in un computer.  
   
  **Autenticazione**  
  Solo l'autenticazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows è disponibile per [!INCLUDE[ssIS](../includes/ssis-md.md)]. Tale modalità consente di connettersi tramite un account utente di Windows.  

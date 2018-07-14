@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a0deaffca9298b29ceb3d22c85bd199fcfc55ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9844fbe92d37a440bda6a165481e00de5a72c2d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212531"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>Aggiungere, modificare o eliminare un parametro di report (Generatore report e SSRS)
   Un parametro di report consente di scegliere i dati del report, connettere report correlati e variare la presentazione del report. È possibile specificare un valore predefinito e un elenco di valori disponibili per consentire all'utente di modificare la selezione.  
   
- Dopo aver pubblicato un report, è possibile modificare i valori predefiniti, i valori disponibili e altre proprietà relative a un parametro di report sul server di report. Per fornire più set di valori predefiniti del parametro, è possibile creare report collegati. Per altre informazioni, vedere "Impostazione parametro proprietà per un Report pubblicato" nella [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella documentazione [documentazione Online di SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Dopo aver pubblicato un report, è possibile modificare i valori predefiniti, i valori disponibili e altre proprietà relative a un parametro di report sul server di report. Per fornire più set di valori predefiniti del parametro, è possibile creare report collegati. Per altre informazioni, vedere "Impostazione parametro delle proprietà per un Report pubblicato" nella [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentazione nella [documentazione Online di SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -62,12 +62,12 @@ ms.locfileid: "36158814"
 2.  Fare clic con il pulsante destro del mouse sul parametro di report, quindi scegliere **Elimina**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere, modificare o eliminare valori disponibili per un parametro di Report &#40;SSRS e Generatore Report&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
+ [Aggiungere, modificare o eliminare valori disponibili per un parametro di Report &#40;Report e SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
  [Aggiungere, modificare o eliminare valori predefiniti per un parametro di report &#40;Generatore report e SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
- [Modificare l'ordine di un parametro di Report &#40;SSRS e Generatore Report&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [Modificare l'ordine di un parametro di Report &#40;Report e SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
  [Parametri report &#40;Generatore report e Progettazione report&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Aggiungere parametri di propagazione a un Report &#40;SSRS e Generatore Report&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Aggiungere parametri di propagazione a un Report &#40;Report e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Esercitazioni su &#40;Generatore Report&#41;](../report-builder-tutorials.md)   
  [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   

@@ -1,5 +1,5 @@
 ---
-title: Collegare un dominio o dominio composito ai dati di riferimento | Documenti Microsoft
+title: Collegare un dominio o un dominio composito ai dati di riferimento | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.refdata.f1
 - sql12.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1629caf5c182ce375c1368800695a5e8f4792208
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d22efa3a5f3c62915527fd4acc756217fe6556f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202481"
 ---
-# <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Collegare un dominio o dominio composito ai dati di riferimento
+# <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Collegare un dominio o un dominio composito ai dati di riferimento
   In questo argomento viene descritto come collegare domini/domini compositi in una Knowledge Base Data Quality a un servizio dati di riferimento in Windows Azure Marketplace per compilare le informazioni rispetto ai dati di alta qualità nei dati di riferimento. Ogni servizio dati di riferimento contiene uno schema (colonne di dati). Dopo aver collegato un dominio o un dominio composito a un servizio dati di riferimento, è necessario eseguire il mapping del dominio collegato o i singoli domini all'interno del dominio composito collegato alle colonne appropriate in uno schema del servizio dati di riferimento. Il collegamento di un dominio composito a un servizio dati di riferimento consente di collegare solo un dominio a un servizio dati di riferimento e quindi di eseguire il mapping dei singoli domini all'interno del dominio composito alle colonne appropriate nello schema del servizio dati di riferimento.  
   
 > [!WARNING]  

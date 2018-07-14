@@ -1,5 +1,5 @@
 ---
-title: Proprietà ProtocolName (classe ClientNetworkProtocol) | Documenti Microsoft
+title: Proprietà ProtocolName (classe ClientNetworkProtocol) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f3f0392aecb7ce6b09f00f448d05cb2c4bf8b5f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 71c1cb6ea19e9bc29308af6150856f57e8866dea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227133"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>Proprietà ProtocolName (classe ClientNetworkProtocol)
-  Ottiene il nome del protocollo di rete corrente specificato per il [configurazione di protocolli Client](http://technet.microsoft.com/library/ms181035.aspx).  
+  Ottiene il nome del protocollo di rete corrente specificato per il [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,9 +48,9 @@ object
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore stringa che specifica il nome del client corrente rete protocollo a cui fanno riferimento le [metodo SetOrderValue (classe ClientNetworkProtocol)](http://technet.microsoft.com/library/ms179295.aspx).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Client e librerie di rete](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurazione di protocolli di rete Client e le librerie di rete](http://technet.microsoft.com/library/ms181035.aspx)  
   
   

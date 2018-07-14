@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoretlog.options.f1
 - sql12.swb.restoretlog.general.f1
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e688a81d1a555efcad659b6b89ef4f21f116191d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 85c4008e1872a48126c67e47cc8d68ed0867828d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237021"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Ripristinare un backup del log delle transazioni (SQL Server)
   In questo argomento viene descritto il ripristino di un backup del log delle transazioni in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -150,9 +149,9 @@ ms.locfileid: "36158929"
   
          Consente di mantenere le impostazioni di replica durante il ripristino di un database pubblicato in un server diverso da quello in cui è stato creato il database.  
   
-         Questa opzione è disponibile solo con il **lascia il database pronto per l'utilizzo eseguendo il rollback delle transazioni non sottoposte a commit...**  opzione (descritta più avanti), che equivale al ripristino di un backup con il `RECOVERY` opzione.  
+         Questa opzione è disponibile solo con il **lascia il database pronto per l'utilizzo eseguendo il rollback di transazioni non sottoposte a commit...**  opzione (descritta più avanti), che equivale al ripristino di un backup con il `RECOVERY` opzione.  
   
-         Si seleziona questa opzione equivale all'utilizzo di `KEEP_REPLICATION` opzione un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
+         Si seleziona questa opzione equivale all'uso di `KEEP_REPLICATION` opzione un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
   
     -   **Chiedi conferma prima del ripristino di ogni backup**  
   
@@ -166,19 +165,19 @@ ms.locfileid: "36158929"
   
          Consente di rendere disponibile il database ripristinato solo per i membri di **db_owner**, **dbcreator**o **sysadmin**.  
   
-         Si seleziona questa opzione equivale all'utilizzo di `RESTRICTED_USER` opzione un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
+         Si seleziona questa opzione equivale all'uso di `RESTRICTED_USER` opzione un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
   
 10. Nel gruppo di opzioni **Stato di recupero** specificare lo stato desiderato per il database dopo l'operazione di ripristino.  
   
     -   **Lascia il database pronto per l'uso eseguendo il rollback delle transazioni di cui non è stato eseguito il commit. I log delle transazioni aggiuntivi non possono essere ripristinati. (RESTORE WITH RECOVERY)**  
   
-         Esegue il recupero del database. Questa opzione equivale ai `RECOVERY` opzione un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
+         Esegue il recupero del database. Questa opzione equivale al `RECOVERY` opzione un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
   
          Selezionare questa opzione solo se non sono disponibili file di log da ripristinare.  
   
     -   **Lascia il database non operativo e non eseguire il rollback delle transazioni di cui non è stato eseguito il commit. I log delle transazioni aggiuntivi possono essere ripristinati. (RESTORE WITH NORECOVERY)**  
   
-         Il database viene lasciato nello stato `RESTORING`. Questa opzione equivale all'utilizzo di `NORECOVERY` opzione un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
+         Il database viene lasciato nello stato `RESTORING`. Questa opzione equivale all'uso di `NORECOVERY` opzione un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
   
          Quando si seleziona questa opzione, l'opzione **Mantieni le impostazioni di replica** non è disponibile.  
   
@@ -187,7 +186,7 @@ ms.locfileid: "36158929"
   
     -   **Lascia il database in modalità sola lettura. Annulla le transazioni di cui non è stato eseguito il commit e salva le azioni di rollback in un file standby in modo che gli effetti del recupero possano essere annullati. (RESTORE WITH STANDBY)**  
   
-         Il database viene lasciato nello stato di standby. Questa opzione equivale all'utilizzo di `STANDBY` opzione un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
+         Il database viene lasciato nello stato di standby. Questa opzione equivale all'uso di `STANDBY` opzione un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
   
          Se si seleziona questa opzione è necessario specificare un file standby.  
   

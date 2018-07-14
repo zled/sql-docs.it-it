@@ -1,5 +1,5 @@
 ---
-title: Esempi di URL per elementi di Report pubblicati in un Server di Report in modalità SharePoint (SSRS) | Documenti Microsoft
+title: Esempi di URL per elementi di Report pubblicati in un Server di Report in modalità SharePoint (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd98a2e64ca72e0e9b39328620b88732606e98af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ce1e34688069063cde47849d00497a056c964431
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214731"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Esempi di URL per elementi di report pubblicati in un server di report in modalità SharePoint (SSRS)
   Per pubblicare report ed elementi correlati in una raccolta di SharePoint, è possibile pubblicare il contenuto mediante gli strumenti di creazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ad esempio Progettazione report, oppure caricare il contenuto tramite le azioni sito di SharePoint.  

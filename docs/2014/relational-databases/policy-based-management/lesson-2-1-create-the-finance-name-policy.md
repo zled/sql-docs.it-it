@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 417bb9c891d4fec3393f94cf9ccbdda0bf9d4bbe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b16fd6b9ce9d89a730f64c5cadd7a67553cb6dd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166908"
 ---
 # <a name="create-the-finance-name-policy"></a>Creazione di criteri Nome Finance
   In questa attività verrà creato un database denominato Finance, quindi una condizione per cui tutti i nomi di tabella devono iniziare con le lettere **fintbl**. Verranno quindi creati i criteri e una categoria di criteri per applicare uno standard di denominazione per le tabelle del database Finance.  
@@ -78,7 +78,7 @@ ms.locfileid: "36168284"
   
 1.  In Esplora oggetti espandere **Gestione**, fare clic con il pulsante destro del mouse su **Gestione criteri**e scegliere **Gestione categorie**.  
   
-2.  Nel **Gestione categorie di criteri** nella finestra di dialogo **nome**, tipo `Finance` nella casella vuota, quindi deselezionare **Imponi sottoscrizioni di Database**. Con**Imponi sottoscrizioni di database** ogni database nell'istanza verrà forzato alla sottoscrizione dei criteri appartenenti alla categoria di criteri. Ai fini di questa lezione, solo il database Finance deve sottoscrivere i criteri Nome Finance.  
+2.  Nel **Gestione categorie di criteri** nella finestra di dialogo **Name**, digitare `Finance` nella casella vuota e quindi deselezionare **Imponi sottoscrizioni di Database**. Con**Imponi sottoscrizioni di database** ogni database nell'istanza verrà forzato alla sottoscrizione dei criteri appartenenti alla categoria di criteri. Ai fini di questa lezione, solo il database Finance deve sottoscrivere i criteri Nome Finance.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

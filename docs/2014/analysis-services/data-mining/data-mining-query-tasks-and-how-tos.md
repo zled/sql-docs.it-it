@@ -1,5 +1,5 @@
 ---
-title: Query di Data Mining, attività e procedure | Documenti Microsoft
+title: Attività e procedure relative alle Query di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], how-to topics
 ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15adaa8227a80d04cbdbdaa379dfccc4f2f03acf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e79d4ee05472de8be071cd47c1868d649f7e247b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257457"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Attività e procedure relative alle query di data mining
   La possibilità di creare query è fondamentale se si utilizzeranno i modelli di data mining. Questa sezione include collegamenti a esempi relativi alla creazione di query rispetto a un modello di data mining mediante gli strumenti disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per altre informazioni sulle query di data mining o sui diversi tipi di query che è possibile creare, vedere [Query di data mining](data-mining-queries.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "36166283"
  Viene illustrato come creare una query sul contenuto del modello di data mining utilizzando i modelli XMLA in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Progettazione query e riferimenti al linguaggio di espressioni &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
+ [Progettazione query e riferimenti al linguaggio di espressione &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
  [Stored procedure di Data Mining &#40;Analysis Services - Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

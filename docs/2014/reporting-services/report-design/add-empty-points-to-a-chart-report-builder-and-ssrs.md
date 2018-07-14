@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di punti vuoti al grafico (Generatore Report e SSRS) | Documenti Microsoft
+title: Aggiungere punti vuoti al grafico (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 942da7aa8b4db6e6f54b80f941856185bc03758d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 317ada15f03de74dc25767a17036623d7479220a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181588"
 ---
 # <a name="add-empty-points-to-the-chart-report-builder-and-ssrs"></a>Aggiunta di punti vuoti al grafico (Generatore report e SSRS)
   Nel grafico i valori Null vengono visualizzati come spazi o intervalli vuoti tra punti dati in una serie. I punti vuoti sono punti dati che possono essere inseriti nello spazio vuoto creato dai valori Null.  
@@ -58,6 +58,6 @@ ms.locfileid: "36168016"
  [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Tipi di grafico &#40;Generatore report e SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Aggiungere cambi di scala a un grafico &#40;Generatore report e SSRS&#41;](add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)   
- [Grafici &#40;SSRS e Generatore Report&#41;](charts-report-builder-and-ssrs.md)  
+ [Grafici &#40;Report e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

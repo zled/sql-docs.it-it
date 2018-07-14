@@ -1,5 +1,5 @@
 ---
-title: Elemento Algorithm (ASSL) | Documenti Microsoft
+title: Elemento Algorithm (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Algorithm element
 ms.assetid: 188bf7ce-c5c9-406a-af75-5a026c92a569
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86e44cf8069d9ed78a414cad5ac5079f8f2faa22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ca7406538a81768e8cab8d0c24142c8105c963
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218491"
 ---
 # <a name="algorithm-element-assl"></a>Elemento Algorithm (ASSL)
   Definisce l'algoritmo utilizzato da un [MiningModel](../objects/miningmodel-element-assl.md) elemento.  
@@ -58,13 +58,13 @@ ms.locfileid: "36166933"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elemento padre|[MiningModel](../objects/miningmodel-element-assl.md)|  
+|Elemento padre|[Elemento MiningModel](../objects/miningmodel-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore dell'elemento `Algorithm` è una stringa che identifica l'algoritmo. Ad esempio, potrebbe essere la stringa *Microsoft_Naive_Bayes*, *Microsoft_Decision_Trees*, o *Microsoft_Clustering.* La stringa identifica gli algoritmi forniti da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e gli algoritmi personalizzati forniti dall'utente. I valori disponibili per il `Algorithm` elemento può essere recuperato dalla colonna SERVICE_NAME del [DMSCHEMA_MINING_SERVICES](../../schema-rowsets/data-mining/dmschema-mining-services-rowset.md) set di righe dello schema.  
   
- L'elemento che corrisponde al padre di `Algorithm` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.MiningModel>. Un elemento strettamente correlato nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.MiningModelAlgorithms>.  
+ L'elemento che corrisponde al padre di `Algorithm` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.MiningModel>. Un elemento strettamente correlato nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.MiningModelAlgorithms>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento AlgorithmParameter &#40;ASSL&#41;](../objects/algorithmparameter-element-assl.md)   

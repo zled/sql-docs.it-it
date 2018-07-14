@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], deleting
 - leaf members [Master Data Services], deleting
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 871a4b76bd3e5b03017ded5ef01b88f8bd9efd27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cbfc5554d70a460d137b0938319f3025e581218c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172932"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Eliminare un membro o una raccolta (Master Data Services)
   In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]eliminare un membro o una raccolta quando non è più necessaria. Se si desidera eliminare i membri in bulk, utilizzare invece il processo di gestione temporanea. Per altre informazioni, vedere [disattivare o eliminare membri tramite il processo di gestione temporanea &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "36167645"
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  
   
--   Per i membri, è necessario disporre di almeno **aggiornamento** delle autorizzazioni necessarie per l'oggetto modello foglia si sta eliminando un membro.  
+-   Per i membri, è necessario disporre almeno **Update** dell'autorizzazione per l'oggetto modello foglia si sta eliminando un membro.  
   
 -   Per le raccolte, è necessario disporre almeno dell'autorizzazione **Aggiornamento** per l'oggetto raccolta foglia in fase di eliminazione.  
   

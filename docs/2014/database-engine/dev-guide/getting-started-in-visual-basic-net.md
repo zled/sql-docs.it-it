@@ -1,5 +1,5 @@
 ---
-title: Guida introduttiva a Visual Basic .NET | Documenti Microsoft
+title: Guida introduttiva a Visual Basic .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Visual Basic [SMO]
 ms.assetid: 1cbb9f35-13d8-40a1-9685-72cb1b589947
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5db9b2a724249849f3dc2b118533bd4281065f01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aca8e62859da23d3a6b4749ae387fb12ee6c9d9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192377"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Guida introduttiva a Visual Basic .NET
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET è uno dei linguaggi di programmazione gestiti supportati dalla libreria di runtime (Common Runtime Library) in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET. Molti degli esempi presenti in questa documentazione sono scritti in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET. È possibile utilizzare [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] e [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] per sviluppare applicazioni SMO.  
@@ -35,6 +35,6 @@ ms.locfileid: "36168860"
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] gli assembly SMO si trovano nella cartella [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un progetto di Visual Basic SMO in Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)  
+ [Creare un progetto SMO per Visual Basic in Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FTP connection manager
 - connections [Integration Services], FTP
@@ -17,20 +17,20 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5e96a1a11651106cd0534ec20a3a35b79a9f1e7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b22fbb63dda4b6e3211a5bb53cfd70e243e6960f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193611"
 ---
 # <a name="ftp-connection-manager"></a>gestione connessione FTP
   Una gestione connessione FTP consente la connessione di un pacchetto a un server FTP (File Transfer Protocol). Questa gestione connessione è usata dall'attività FTP inclusa in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Quando si aggiunge una gestione connessione FTP a un pacchetto, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione FTP, imposta le proprietà della gestione connessione e quindi la aggiunge alla raccolta `Connections` del pacchetto.  
   
- Il `ConnectionManagerType` proprietà della gestione connessione è impostata su `FTP`.  
+ Il `ConnectionManagerType` della gestione connessione viene impostata su `FTP`.  
   
  Per configurare la gestione connessione FTP, procedere nel modo seguente:  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36168853"
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività FTP](../control-flow/ftp-task.md)   
- [Servizi di integrazione &#40;SSIS&#41; le connessioni](integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; le connessioni](integration-services-ssis-connections.md)  
   
   

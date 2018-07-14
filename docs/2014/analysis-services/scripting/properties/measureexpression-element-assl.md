@@ -1,5 +1,5 @@
 ---
-title: Elemento MeasureExpression (ASSL) | Documenti Microsoft
+title: Elemento MeasureExpression (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureExpression element
 ms.assetid: a0b6490d-a793-41be-8c97-41b08e1580a1
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 686bfc84c39c502467089b5957f8320d346e518a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2eee18ad981c45c009350be926432a5a7a23c4a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265407"
 ---
 # <a name="measureexpression-element-assl"></a>Elemento MeasureExpression (ASSL)
   Contiene l’espressione MDX (Multidimensional Expressions) che definisce come vengono ottenuti i valori della misura padre.  
@@ -61,8 +61,8 @@ ms.locfileid: "36166150"
 |Elemento padre|[Misura](../objects/measure-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `MeasureExpression` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Measure>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `MeasureExpression` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Measure>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

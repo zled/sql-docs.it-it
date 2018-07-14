@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], events
 - events [SQL Server], filters
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23d93e00dde20ef9d97fd707dbb938907e9ef7a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 367a9669c11cb1841a4af3801abb98e385571388
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212831"
 ---
 # <a name="filter-a-trace"></a>Filtrare una traccia
   I filtri consentono di limitare gli eventi raccolti in una traccia. Se non si imposta un filtro, tutti gli eventi delle classi di evento selezionate vengono restituiti nell'output di traccia. Ad esempio, se si limitano i nomi utente di Windows in una traccia, consentendo solo utenti specifici, i dati dell'output saranno ridotti solo a tali utenti.  
@@ -141,7 +141,7 @@ ms.locfileid: "36166598"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> se si tracciano eventi il **osql** utilità o le **sqlcmd** utilità, aggiungere sempre **%** ai filtri nella **TextData**  colonna di dati.  
+ <sup>1</sup> se si tracciano eventi dal **osql** utilità o le **sqlcmd** utilità, aggiungere sempre **%** ai filtri nella **TextData**  colonna di dati.  
   
  A titolo di sicurezza, Traccia SQL omette automaticamente dalla traccia le informazioni sulle stored procedure correlate alla sicurezza che coinvolgono le password. Tale meccanismo di sicurezza non è configurabile ed è sempre attivo. In tale modo viene impedito che le password possano essere acquisite dagli utenti, i quali sono autorizzati a tenere traccia di tutte le attività in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -1,5 +1,5 @@
 ---
-title: Calcoli (SSAS tabulare) | Documenti Microsoft
+title: Calcoli (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 738816e3-0e1d-44a5-8d1b-81068dce8ac0
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f17c8ab9ebf08379bf0b989924221995d7eaf891
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0628ad4360199ac1710ac9669e27c214287a0e9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261364"
 ---
 # <a name="calculations-ssas-tabular"></a>Calcoli (SSAS tabulare)
   Dopo aver importato dati nel modello, è possibile aggiungere calcoli per aggregare, filtrare, estendere, combinare e proteggere tali dati. Nei modelli tabulari viene utilizzato DAX (Data Analysis Expressions), un linguaggio delle formule per la creazione di calcoli personalizzati. In un modello tabulare, i calcoli che vengono creati tramite formule DAX vengono usati in *Colonne calcolate*, *Misure*e *Filtri di riga*.  
@@ -28,7 +28,7 @@ ms.locfileid: "36158748"
   
 |Argomento|Description|  
 |-----------|-----------------|  
-|[Capire DAX nei modelli tabulari &#40;tabulare di SSAS&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|Viene descritto il linguaggio delle formule Data Analysis Expressions (DAX) utilizzato per creare calcoli per colonne calcolate, misure e filtri di riga nei modelli tabulari.|  
+|[La comprensione di DAX nei modelli tabulari di &#40;tabulare di SSAS&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|Viene descritto il linguaggio delle formule Data Analysis Expressions (DAX) utilizzato per creare calcoli per colonne calcolate, misure e filtri di riga nei modelli tabulari.|  
 |[Compatibilità delle formule nella modalità DirectQuery](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|Vengono descritte le differenze e vengono elencate le funzioni non supportate nella modalità DirectQuery e quelle supportate, ma che potrebbero restituire risultati diversi.|  
 |[Data Analysis Expressions &#40;DAX&#41; riferimento](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)|In questa sezione vengono fornite descrizioni dettagliate della sintassi, degli operatori e delle funzioni DAX.|  
   

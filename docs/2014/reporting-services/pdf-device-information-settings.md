@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
 - PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 caps.latest.revision: 41
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0c720518b07a0ad22d8308c7ceadfb8d171502ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fc50aeca7098561cc429e9e67df8aa06fa323fda
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186068"
 ---
 # <a name="pdf-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo PDF
   Nella tabella seguente sono elencate le impostazioni relative alle informazioni sul dispositivo per il rendering dei report nel formato PDF.  
@@ -44,7 +44,7 @@ ms.locfileid: "36168019"
 |`StartPage`|Prima pagina del report di cui eseguire il rendering. Il valore `0` indica che viene eseguito il rendering di tutte le pagine. Il valore predefinito è `1`.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Passaggio Device Information Settings a estensioni per il Rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Il passaggio di impostazioni informazioni dispositivo a estensioni per il Rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizzare i parametri di estensione per il rendering in RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Riferimento tecnico &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   

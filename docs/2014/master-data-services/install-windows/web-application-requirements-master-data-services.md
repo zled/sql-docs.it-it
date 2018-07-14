@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 caps.latest.revision: 28
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 762be955372568ad7930611b0216bbb3f1437158
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 25f45f72ddbfc389deb77e6c20588660e599cb19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205681"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisiti dell'applicazione Web (Master Data Services)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] è un'applicazione Web ospitata da Internet Information Services (IIS). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funziona solo in Internet Explorer (IE) 7 o versioni successive. IE 7 e le versioni precedenti, Microsoft Edge e Chrome non sono supportati.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] è un'applicazione Web ospitata da Internet Information Services (IIS). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funziona solo in Internet Explorer (IE) 7 o versione successiva. IE 7 e le versioni precedenti, Microsoft Edge e Chrome non sono supportati.  
   
  Utilizzare [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] per creare e configurare l'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] IIS viene configurato nel computer locale, rappresentando pertanto la soluzione ottimale per le attività di configurazione Web iniziali. Configurare ad esempio un ambiente [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] con una singola applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] oppure configurare la prima applicazione Web in una distribuzione con scalabilità orizzontale di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Utilizzare gli strumenti di IIS per eseguire le attività più complesse, ad esempio la configurazione di più server Web in una distribuzione con scalabilità orizzontale.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "36166418"
 ### <a name="operating-system"></a>Sistema operativo  
  Nei seguenti sistemi operativi Windows sono incluse le funzionalità di Internet Information Services (IIS) necessarie per l'applicazione Web [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] e il servizio Web.  
   
-|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer x64 (64 bit)|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (64 bit) x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence (64 bit) x64|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer (64 bit) x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (64 bit) x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence (64 bit) x64|  
 |-------------------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 Professional, Enterprise e Ultimate<br /><br /> Windows 8.0 Professional, Enterprise e Ultimate|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36166418"
  In Windows Server 2008 R2 è possibile utilizzare **Server Manager**, disponibile in Microsoft Management Console (MMC), per installare il ruolo **Server Web (IIS)** e i seguenti servizi ruolo necessari:  
   
 > [!NOTE]  
->  Nel [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] e sistemi operativi Windows 7, usare **programmi e funzionalità** nel Pannello di controllo per abilitare queste opzioni nel **le funzionalità di Windows** finestra di dialogo.  
+>  Sul [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] e sistemi operativi Windows 7, usare **programmi e funzionalità** nel Pannello di controllo per abilitare queste opzioni nel **funzionalità Windows** nella finestra di dialogo.  
   
 ||  
 |-|  
@@ -64,10 +64,10 @@ ms.locfileid: "36166418"
 |Internet Information Services<br /><br /> Strumenti di gestione Web<br /><br /> Console di gestione IIS<br /><br /> Servizi Web<br /><br /> Sviluppo applicazioni<br /><br /> Estendibilità .NET 3.5<br /><br /> Estendibilità .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Estensioni ISAPI<br /><br /> Filtri ISAPI<br /><br /> Funzionalità HTTP comuni<br /><br /> Documento predefinito<br /><br /> Esplorazione directory<br /><br /> Errori HTTP<br /><br /> Contenuto statico<br /><br /> [Nota: non installare la pubblicazione WebDAV]<br /><br /> Integrità e diagnostica<br /><br /> Registrazione HTTP<br /><br /> Monitoraggio richieste<br /><br /> restazioni<br /><br /> Compressione contenuto statico<br /><br /> Security<br /><br /> Filtro richieste<br /><br /> Autenticazione di Windows|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>Funzionalità (sistemi operativi Windows Server 2008 o Windows Server 2008 R2, Windows 7)  
- Nel [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] o Windows Server 2008 R2, è possibile utilizzare **Server Manager** per installare le seguenti funzionalità necessarie.  
+ Sul [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] o Windows Server 2008 R2, è possibile usare **Server Manager** per installare le seguenti funzionalità necessarie.  
   
 > [!NOTE]  
->  Nel [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] e sistemi operativi Windows 7, usare **programmi e funzionalità** nel Pannello di controllo per abilitare queste opzioni nel **le funzionalità di Windows** finestra di dialogo.  
+>  Sul [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] e sistemi operativi Windows 7, usare **programmi e funzionalità** nel Pannello di controllo per abilitare queste opzioni nel **funzionalità Windows** nella finestra di dialogo.  
   
 ||  
 |-|  
@@ -91,7 +91,7 @@ ms.locfileid: "36166418"
 |Account servizio|Quando si crea l'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], è necessario specificare un'identità per il pool di applicazioni in cui viene eseguita l'applicazione. Questo account può essere diverso dall'account del servizio che è stato specificato durante la creazione del database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .<br /><br /> Questa identità deve essere un account utente di dominio e viene aggiunta al ruolo di database mds_exec nel database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] per consentirne l'accesso. Per altre informazioni, vedere [Account di accesso, utenti e ruoli di database &#40;Master Data Services&#41;](../database-logins-users-and-roles-master-data-services.md). Questo account viene aggiunto anche a un gruppo di Windows [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], **MDS_ServiceAccounts**, a cui viene concessa l'autorizzazione per la directory di compilazione temporanea, **MDSTempDir**, nel file system. Per altre informazioni, vedere [Autorizzazioni per file e cartelle &#40;Master Data Services&#41;](../folder-and-file-permissions-master-data-services.md).<br /><br /> Per evitare errori del server, l'account del pool di applicazioni richiede l'autorizzazione VIEW SERVER STATE. Ad esempio, il comando Convalida versione di MDS avrà esito negativo con un errore del server. Per altre informazioni, vedere [Il comando Convalida versione di MDS ha esito negativo con un errore del server in SQL Server 2012 e SQL Server 2014](http://go.microsoft.com/fwlink/p/?LinkId=526304).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installazione di Master Data Services](install-master-data-services.md)   
+ [Installare Master Data Services](install-master-data-services.md)   
  [Creare un'applicazione Web gestione dati Master &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)   
  [Pagina Configurazione Web &#40;Gestione configurazione Master Data Services&#41;](../web-configuration-page-master-data-services-configuration-manager.md)  
   

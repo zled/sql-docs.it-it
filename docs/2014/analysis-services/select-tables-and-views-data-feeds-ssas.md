@@ -1,5 +1,5 @@
 ---
-title: Selezione tabelle e viste (feed di dati) (SSAS) | Documenti Microsoft
+title: Selezione tabelle e viste (feed di dati) (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.seltablesviewsdf.f1
 ms.assetid: 6c4fafe0-e02e-47d1-b8bc-e70e872690af
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 199e225e6a3a4b63c704606418fae021b1ba3e9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0864ee8b70f104abb02e7064d3f011495f193c3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208101"
 ---
 # <a name="select-tables-and-views-data-feeds-ssas"></a>Selezione tabelle e viste (Feed di dati) (SSAS)
   Questa pagina dell'**Importazione guidata tabella** consente di selezionare le tabelle e le viste da cui importare dati. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -31,7 +31,7 @@ ms.locfileid: "36157607"
  Per origini dati in cui viene utilizzata l'autenticazione di Windows, le credenziali dell'utente corrente vengono utilizzate per recuperare le tabelle e le viste nella finestra di dialogo Selezione tabelle e viste. Per altre origini dati, vengono utilizzate le credenziali fornite nella stringa di connessione per il recupero dei dati.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **URL del feed di dati**  
+ **URL feed di dati**  
  Viene visualizzato l'URL per il feed di dati selezionato.  
   
  **Tabelle e viste**  
@@ -46,7 +46,7 @@ ms.locfileid: "36157607"
  **Dettagli filtro**  
  Visualizza il filtro per l'importazione dei dati nella finestra di dialogo **Dettagli filtro**, se è stato applicato un filtro ai dati importati. Per altre informazioni, vedere [Dettagli filtro &#40;DAX&#41;](filter-details-ssas.md).  
   
- **Anteprima e filtro**  
+ **Anteprima e Applica filtro**  
  Visualizza la finestra di dialogo **Anteprima tabella selezionata** usata per applicare un filtro ai dati importati. Per altre informazioni, vedere [Anteprima tabella selezionata &#40;SSAS&#41;](preview-selected-table-ssas.md).  
   
  **Selezione tabelle correlate**  

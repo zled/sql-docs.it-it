@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 caps.latest.revision: 21
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b0d22fd13abf68cd9eea1c21b135427161fbf8be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a8a8c2fc949755b5cc3fea644a5b08ee3990c541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207101"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria
   Se si crea una nuova tabella ottimizzata per la memoria [!INCLUDE[hek_2](../../includes/hek-2-md.md)] o si esegue la migrazione di una tabella basata su disco esistente a una tabella ottimizzata per la memoria, è importante disporre di un numero ragionevole di requisiti di memoria di ogni tabella in modo da poter fornire memoria sufficiente al server. In questa sezione viene descritto come stimare la quantità di memoria necessaria per contenere i dati di una tabella ottimizzata per la memoria.  
@@ -122,9 +122,9 @@ SELECT COUNT(DISTINCT [Col2])
   
  **Nota:** non è possibile modificare le dimensioni della matrice dell'indice hash in tempo reale. Per modificare queste dimensioni è necessario eliminare la tabella, modificare il valore di bucket_count e ricreare la tabella.  
   
- **Impostare le dimensioni della matrice dell'indice hash**  
+ **Impostare la dimensione della matrice dell'indice hash**  
   
- La dimensione della matrice di hash è l'impostazione `(bucket_count= <value>)` in cui \<valore > è un valore intero maggiore di zero. Se \<valore > non è una potenza di 2, il numero effettivo di bucket_count viene arrotondato per eccesso alla potenza di 2 successiva più vicina.  Nella tabella di esempio, (bucket_count = 5000000), poiché 5.000.000 non è una potenza di 2, il numero effettivo di bucket viene arrotondato fino a 8.388.608 (2<sup>23</sup>).  È necessario utilizzare questo numero, non 5.000.000, quando si calcola la memoria necessaria per la matrice di hash.  
+ La dimensione della matrice di hash è l'impostazione `(bucket_count= <value>)` in cui \<valore > è un valore intero maggiore di zero. Se \<valore > non è una potenza di 2, il numero effettivo di bucket_count viene arrotondato per eccesso alla potenza di 2 più vicina.  Nella tabella di esempio, (bucket_count = 5000000), poiché 5.000.000 non è una potenza di 2, il numero effettivo di bucket viene arrotondato per eccesso a 8.388.608 (2<sup>23</sup>).  È necessario utilizzare questo numero, non 5.000.000, quando si calcola la memoria necessaria per la matrice di hash.  
   
  Pertanto, nell'esempio, la memoria necessaria per ogni matrice di hash è:  
   

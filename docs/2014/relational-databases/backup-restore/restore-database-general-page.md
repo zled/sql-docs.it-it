@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 caps.latest.revision: 85
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f310d762ca8a8d116b3accc618532b772eef8c26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 79929bf3f9bebec61605ad173a460fbdbe2269f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219481"
 ---
 # <a name="restore-database-general-page"></a>Ripristina database (pagina Generale)
   Usare la pagina **Generale** per specificare informazioni sui database di destinazione e di origine per un'operazione di ripristino di un database.  
@@ -33,14 +32,14 @@ ms.locfileid: "36167114"
 -   [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
->  Quando si specifica un'attività di ripristino usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è possibile generare corrispondente [!INCLUDE[tsql](../../includes/tsql-md.md)] [ripristinare](/sql/t-sql/statements/restore-statements-transact-sql) script facendo clic su **Script** e quindi selezionando una destinazione per lo script.  
+>  Quando si specifica un'attività di ripristino usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è possibile generare le corrispondenti [!INCLUDE[tsql](../../includes/tsql-md.md)] [ripristinare](/sql/t-sql/statements/restore-statements-transact-sql) script facendo clic su **Script** e quindi selezionando una destinazione per lo script.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database.  
   
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
   
- Ripristino da un backup crittografato sono `VIEW DEFINITION` delle autorizzazioni per il certificato o chiave asimmetrica utilizzata per crittografare durante il backup.  
+ Il ripristino da un backup crittografato sono `VIEW DEFINITION` delle autorizzazioni per il certificato o chiave asimmetrica usata per crittografare durante il backup.  
   
 ## <a name="options"></a>Opzioni  
   
@@ -65,7 +64,7 @@ ms.locfileid: "36167114"
   
 |Nome|Definizione|  
 |----------|----------------|  
-|**Set di backup da ripristinare**|Visualizza i set di backup disponibili per il percorso specificato. Ogni set di backup è il risultato di una singola operazione di backup e viene distribuito in tutti i dispositivi nel set di supporti. Per impostazione predefinita, viene suggerito un piano di recupero, basato sulla selezione dei set di backup necessari per completare l'operazione di ripristino. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] viene utilizzata la cronologia di backup in **msdb** per identificare i backup necessari per ripristinare un database e creare un piano di ripristino. Per il ripristino di un database, ad esempio, il piano di ripristino seleziona il backup completo di database più recente e quindi l'eventuale backup di database differenziale successivo. Nel modello di recupero con registrazione completa, il piano di ripristino seleziona quindi tutti i successivi backup dei log.<br /><br /> Per ignorare il piano di recupero suggerito, è possibile modificare le selezioni seguenti nella griglia. I backup che dipendono da un backup deselezionato vengono automaticamente deselezionati.<br /><br /> **Ripristino**:<br />                          Le caselle di controllo selezionate indicano i set di backup da ripristinare.<br />**Nome**: il nome del set di backup.<br />**Componente**: il componente di backup: **Database**, **File**, o  **\<vuoto >** (per i log delle transazioni).<br />**Tipo**: tipo di backup eseguito, ovvero **Completo**, **Differenziale**o **Log delle transazioni**.<br />**Server**: nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.<br />**Database**: il nome del database coinvolto nell'operazione di backup.<br />**Posizione**: posizione del set di backup nel volume.<br />**Primo LSN**: il numero di sequenza del log della prima transazione nel set di backup. Vuoto per i backup dei file.<br />**Ultimo LSN**: il numero di sequenza del log dell'ultima transazione nel set di backup. Vuoto per i backup dei file.<br />**LSN checkpoint**: il numero di sequenza del log (LSN) del checkpoint più recente al momento della creazione del backup.<br />**LSN completo**: il numero di sequenza del log del backup completo del database più recente.<br />**Data di inizio**: data e ora di inizio l'operazione di backup, visualizzate in base alle impostazioni internazionali del client.<br />**Data di fine**: la data e ora al termine dell'operazione di backup, visualizzate in base alle impostazioni internazionali del client.<br />**Dimensioni**: dimensioni del backup in byte del set.<br />**Nome utente**: il nome dell'utente che ha eseguito l'operazione di backup.<br /><br /> **Scadenza**: data e ora di scadenza del set di backup.<br /><br /> Le caselle di controllo sono abilitate solo quando la casella **Selezione manuale** è selezionata. In tal caso è possibile scegliere i set di backup da ripristinare.<br /><br /> Quando la casella **Selezione manuale** è selezionata, l'accuratezza del piano di ripristino viene controllata in occasione di ogni modifica. Se la sequenza dei backup è errata, verrà visualizzato un messaggio di errore.|  
+|**Set di backup da ripristinare**|Visualizza i set di backup disponibili per il percorso specificato. Ogni set di backup è il risultato di una singola operazione di backup e viene distribuito in tutti i dispositivi nel set di supporti. Per impostazione predefinita, viene suggerito un piano di recupero, basato sulla selezione dei set di backup necessari per completare l'operazione di ripristino. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] viene utilizzata la cronologia di backup in **msdb** per identificare i backup necessari per ripristinare un database e creare un piano di ripristino. Per il ripristino di un database, ad esempio, il piano di ripristino seleziona il backup completo di database più recente e quindi l'eventuale backup di database differenziale successivo. Nel modello di recupero con registrazione completa, il piano di ripristino seleziona quindi tutti i successivi backup dei log.<br /><br /> Per ignorare il piano di recupero suggerito, è possibile modificare le selezioni seguenti nella griglia. I backup che dipendono da un backup deselezionato vengono automaticamente deselezionati.<br /><br /> **Ripristino**:<br />                          Le caselle di controllo selezionate indicano i set di backup da ripristinare.<br />**Nome**: il nome del set di backup.<br />**Componente**: il componente di backup: **Database**, **File**, oppure  **\<vuoto >** (per i log delle transazioni).<br />**Tipo**: tipo di backup eseguito, ovvero **Completo**, **Differenziale**o **Log delle transazioni**.<br />**Server**: nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.<br />**Database**: il nome del database interessato dall'operazione di backup.<br />**Posizione**: posizione del set di backup nel volume.<br />**Primo LSN**: il numero di sequenza della prima transazione nel set di backup. Vuoto per i backup dei file.<br />**LSN ultimo**: il numero di sequenza dell'ultima transazione nel set di backup. Vuoto per i backup dei file.<br />**LSN checkpoint**: il numero di sequenza del log (LSN) del checkpoint più recente al momento della creazione del backup.<br />**LSN completo**: il numero di sequenza del log del backup completo del database più recente.<br />**Data di inizio**: data e ora di inizio dell'operazione di backup, visualizzate in base alle impostazioni internazionali del client.<br />**Data di fine**: la data e ora al termine dell'operazione di backup, visualizzate in base alle impostazioni internazionali del client.<br />**Dimensioni**: impostare le dimensioni del backup in byte.<br />**Nome utente**: il nome dell'utente che ha eseguito l'operazione di backup.<br /><br /> **Scadenza**: data e ora di scadenza del set di backup.<br /><br /> Le caselle di controllo sono abilitate solo quando la casella **Selezione manuale** è selezionata. In tal caso è possibile scegliere i set di backup da ripristinare.<br /><br /> Quando la casella **Selezione manuale** è selezionata, l'accuratezza del piano di ripristino viene controllata in occasione di ogni modifica. Se la sequenza dei backup è errata, verrà visualizzato un messaggio di errore.|  
 |**Verifica supporti di backup**|Chiama un'istruzione RESTORE VERIFY_ONLY sui set di backup selezionati.<br /><br /> Nota: si tratta di un'operazione con esecuzione prolungata e il relativo stato di avanzamento può essere rilevato e annullato usando il monitoraggio dell'avanzamento nel framework della finestra di dialogo.<br /><br /> Questo pulsante consente di controllare l'integrità dei file di backup selezionati prima di ripristinarli.<br /><br /> Durante il controllo dell'integrità dei set di backup, lo stato di avanzamento visualizzato nella parte inferiore sinistra della finestra di dialogo indicherà che è in corso una verifica anziché un'esecuzione.|  
   
 ## <a name="compatibility-support"></a>Informazioni sulla compatibilità  

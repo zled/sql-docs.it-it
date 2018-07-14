@@ -1,5 +1,5 @@
 ---
-title: Guida introduttiva all'installazione di SQL Server 2014 | Documenti Microsoft
+title: Avvio rapido di installazione di SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - quick start installation [SQL Server]
 - installation [SQL Server]
 - installing SQL Server, quick start installations
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7567675dffc0395da5152a98700f8fd19a1b3e12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b1b7b5a6a8d763c2773e048f2302f874806a8c27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231801"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Guida introduttiva all'installazione di SQL Server 2014
     
@@ -59,31 +59,31 @@ ms.locfileid: "36158760"
   
 -   **Installazione guidata**  
   
-     Vedere [installare SQL Server 2014 dall'installazione guidata di &#40;programma di installazione di&#41; ](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) per informazioni sull'installazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzando l'installazione guidata.  
+     Vedere [installare SQL Server 2014 dall'installazione guidata di &#40;installazione&#41; ](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) per istruzioni sull'installazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando l'installazione guidata.  
   
 -   **Prompt dei comandi**  
   
-     Vedere [installare SQL Server 2014 dal Prompt dei comandi](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) per parametri di installazione e la sintassi di esempio per l'esecuzione dell'installazione automatica.  
+     Visualizzare [installare SQL Server 2014 dal Prompt dei comandi](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) per esempio la sintassi e parametri di installazione per l'esecuzione dell'installazione automatica.  
   
 -   **File di configurazione**  
   
-     Vedere [installare SQL Server 2014 tramite un File di configurazione](../database-engine/install-windows/install-sql-server-using-a-configuration-file.md) per esempio sintassi e parametri di installazione per l'esecuzione del programma di installazione tramite un file di configurazione.  
+     Visualizzare [installare SQL Server 2014 tramite un File di configurazione](../database-engine/install-windows/install-sql-server-using-a-configuration-file.md) per esempio la sintassi e parametri di installazione per l'esecuzione il programma di installazione tramite un file di configurazione.  
   
 -   **SysPrep**  
   
-     Vedere [installare SQL Server 2014 tramite SysPrep](../database-engine/install-windows/install-sql-server-using-sysprep.md) per informazioni sull'installazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzando SysPrep.  
+     Visualizzare [installare SQL Server 2014 tramite SysPrep](../database-engine/install-windows/install-sql-server-using-sysprep.md) per istruzioni sull'installazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando SysPrep.  
   
 -   **Installazione Server Core**  
   
-     Vedere [installare SQL Server 2014 in Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md) per informazioni sull'installazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Windows Server Core.  
+     Visualizzare [installare SQL Server 2014 in Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md) per istruzioni sull'installazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Windows Server Core.  
   
--   **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Installazione di funzionalità di Business Intelligence**  
+-   **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Installazione delle funzionalità di Business Intelligence**  
   
-     Vedere [installare SQL Server 2014, funzionalità di Business Intelligence](../sql-server/install/install-sql-server-business-intelligence-features.md) per informazioni sull'installazione delle funzionalità che fanno parte della piattaforma Microsoft BI, che includono [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]e diversi applicazioni client utilizzate per la creazione o l'utilizzo con i dati analitici.  
+     Visualizzare [le funzionalità di BI di installare SQL Server 2014](../sql-server/install/install-sql-server-business-intelligence-features.md) per informazioni sull'installazione delle funzionalità che fanno parte della piattaforma Microsoft BI, che includono [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]e diversi applicazioni client utilizzate per la creazione o l'utilizzo con i dati analitici.  
   
 -   **Installazione del cluster di failover**  
   
-     Vedere [installazione Cluster di Failover di SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) per informazioni sull'installazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] su un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cluster di failover.  
+     Visualizzare [installazione Cluster di Failover di SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) per istruzioni sull'installazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] su un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cluster di failover.  
   
  Per impostazione predefinita, i database di esempio e il codice di esempio non vengono installati come parte dell'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per installare i database di esempio e il codice di esempio per le edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] diverse da Express, vedere il [sito Web CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). Per informazioni sul supporto per il codice e i database di esempio di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], vedere [Panoramica di database ed esempi](http://go.microsoft.com/fwlink/?LinkId=110391).  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36158760"
   
 -   Eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per installare una nuova istanza di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per altre informazioni, vedere [installazione di SQL Server 2014](#BKMK_Install).  
   
--   Una volta completata l'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], il successivo passaggio principale è la configurazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e dei relativi componenti. Utilizzare le utilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per configurare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [configurazione SQL Server 2014](#BKMK_Configure).  
+-   Una volta completata l'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], il successivo passaggio principale è la configurazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e dei relativi componenti. Utilizzare le utilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per configurare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [configurazione di SQL Server 2014](#BKMK_Configure).  
   
  È possibile trovare spiegazioni dettagliate di queste attività nella sezione successiva.  
   
@@ -119,12 +119,12 @@ ms.locfileid: "36158760"
 |Description|Argomento|  
 |-----------------|-----------|  
 |Vengono indicati i percorsi di aggiornamento supportati da [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|[Aggiornamenti supportati](../database-engine/install-windows/supported-version-and-edition-upgrades.md)|  
-|Viene descritto lo strumento Preparazione aggiornamento, con cui analizzare le istanze di [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] e [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] per identificare i problemi di aggiornamento noti.|[Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)|  
-|Viene descritta l'utilità Riesecuzione distribuita che consente di utilizzare più computer per riprodurre dati di traccia, simulando un carico di lavoro critico. Eseguendo una riproduzione in un server di prova prima e dopo un aggiornamento di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è possibile rilevare le differenze di prestazioni e individuare eventuali incompatibilità dell'applicazione con l'aggiornamento.|[Utilizzare Distributed Replay Utility per preparare gli aggiornamenti](../../2014/sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)|  
+|Viene descritto lo strumento Preparazione aggiornamento, con cui analizzare le istanze di [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] e [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] per identificare i problemi di aggiornamento noti.|[Usare la Preparazione aggiornamento per preparare gli aggiornamenti](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)|  
+|Viene descritta l'utilità Riesecuzione distribuita che consente di utilizzare più computer per riprodurre dati di traccia, simulando un carico di lavoro critico. Eseguendo una riproduzione in un server di prova prima e dopo un aggiornamento di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è possibile rilevare le differenze di prestazioni e individuare eventuali incompatibilità dell'applicazione con l'aggiornamento.|[Usare l'utilità Riesecuzione distribuita per preparare gli aggiornamenti](../../2014/sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)|  
 |Vengono elencate le modifiche significative che potrebbero interessare le applicazioni in seguito all'aggiornamento a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|[Compatibilità con le versioni precedenti](backward-compatibility.md)|  
-|Argomento contenente le procedure per aggiornare un'istanza autonoma di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|[Eseguire l'aggiornamento a SQL Server 2014 tramite l'installazione guidata &#40;programma di installazione&#41;](../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|  
+|Argomento contenente le procedure per aggiornare un'istanza autonoma di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|[Eseguire l'aggiornamento a SQL Server 2014 usando l'installazione guidata di &#40;programma di installazione&#41;](../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|  
 |L'argomento contenente le procedure per aggiornare un'edizione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ad un'altra edizione. Per informazioni sui percorsi di aggiornamento supportati, vedere [Aggiornamenti di versione ed edizione supportati](../database-engine/install-windows/supported-version-and-edition-upgrades.md).|[Eseguire l'aggiornamento a un'edizione diversa di SQL Server 2014 &#40;programma di installazione&#41;](../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta l'aggiornamento separato del [!INCLUDE[ssDE](../includes/ssde-md.md)] e di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dai cluster di failover [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ai cluster di failover di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] su tutti i nodi del cluster di failover. Per ulteriori informazioni, vedere questo argomento.|[Aggiornare un Cluster di Failover SQL Server](../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta l'aggiornamento separato del [!INCLUDE[ssDE](../includes/ssde-md.md)] e di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dai cluster di failover [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ai cluster di failover di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] su tutti i nodi del cluster di failover. Per ulteriori informazioni, vedere questo argomento.|[Aggiornare un cluster di failover di SQL Server](../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
   
 ###  <a name="BKMK_Install"></a> Installazione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  Per informazioni sui vari scenari di installazione per [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vedere gli argomenti seguenti.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 421567faa999f075bb3961b82f23c14aa14334b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 17b03e4ca74b5aa8d9e59d6bcc32eafe4ef1139e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191801"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo di connessione XML (SSRS)
   Per includere dati nel report da un'origine dati XML, è necessario disporre di un set di dati basato su un'origine dati del report di tipo XML. Questo tipo di origine dati incorporato è basato sull'estensione per i dati XML. Utilizzare questo tipo di origine dati per connettersi e recuperare dati da documenti XML, servizi Web o valori XML incorporati nella query.  
@@ -65,9 +65,9 @@ ms.locfileid: "36168459"
   
  I valori possibili di una query del set di dati per un'origine dati di tipo XML sono illustrati di seguito.  
   
--   *Vuoto*: utilizzare una query vuota per creare un set di risultati predefinito. La query predefinita viene creata leggendo l'origine dei dati e attraversando la gerarchia del nodo XML fino alla prima raccolta foglia. Il set di risultati include tutti i nodi con valori di testo e tutti gli attributi dei nodi nel percorso. Sulle colonne del set di risultati viene eseguito il mapping ai campi del set di dati.  
+-   *Vuoto*: usare una query vuota per creare un set di risultati predefinito. La query predefinita viene creata leggendo l'origine dei dati e attraversando la gerarchia del nodo XML fino alla prima raccolta foglia. Il set di risultati include tutti i nodi con valori di testo e tutti gli attributi dei nodi nel percorso. Sulle colonne del set di risultati viene eseguito il mapping ai campi del set di dati.  
   
--   Un percorso di elemento: specifica la sequenza di nodi da utilizzare durante il recupero di dati XML dall'origine dati.  
+-   Un percorso di elemento: specifica la sequenza di nodi da usare durante il recupero dei dati XML dall'origine dati.  
   
 -   Elemento Query XML: specifica di query XML con gli elementi facoltativi seguenti:  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36168459"
 ##  <a name="HowTo"></a> Procedure  
  In questa sezione sono contenute istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati.  
   
- [Aggiungere e verificare una connessione dati o un'origine dati &#40;SSRS e Generatore Report&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -151,7 +151,7 @@ ms.locfileid: "36168459"
 ##  <a name="Related"></a> Sezioni correlate  
  In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le informazioni necessarie sulle procedure per definire, personalizzare e usare parti di un report correlate ai dati.  
   
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-datasets-ssrs.md)  
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

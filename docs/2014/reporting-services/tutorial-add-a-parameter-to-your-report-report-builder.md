@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 230cd7bcbadf9e51ba248ffa34851335977cb0ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 02d7879bab489d92f6c5897406d3dce12b279d96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238241"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Esercitazione: Aggiungere un parametro al report (Generatore report)
   Aggiungere un parametro al report per consentire agli utenti di filtrare i dati del report dall'origine dati o nel report. I parametri di report vengono creati automaticamente per ogni parametro di query incluso in una query del set di dati. Il tipo di dati determina il modo in cui il parametro viene presentato sulla barra degli strumenti della visualizzazione report.  
@@ -29,13 +29,13 @@ ms.locfileid: "36158852"
 ##  <a name="BackToTop"></a> Lezioni dell'esercitazione  
  In questa esercitazione verranno illustrate le operazioni seguenti:  
   
-1.  [Creare un Report matrice e un set di dati della tabella o la creazione guidata matrice](#Setup)  
+1.  [Creare un Report matrice e un set di dati dalla tabella o dalla creazione guidata matrice](#Setup)  
   
-2.  [Organizzare i dati, scegliere il Layout e lo stile dalla tabella o creazione guidata matrice](#CompleteWizard)  
+2.  [Organizzare i dati, scegliere il Layout e lo stile dalla tabella o procedura guidata matrice](#CompleteWizard)  
   
 3.  [Aggiungere un parametro di Query per creare un parametro di Report](#Query)  
   
-4.  [Modificare il tipo di dati predefinito e altre proprietà per un parametro di Report](#ChangeDefaultProperties)  
+4.  [Modificare altre proprietà e tipo di dati predefinito per un parametro di Report](#ChangeDefaultProperties)  
   
     1.  [Aggiungere un set di dati per fornire i valori disponibili e i nomi visualizzati](#AddDataset)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36158852"
   
     3.  [Specificare i valori predefiniti in modo che il Report viene eseguito automaticamente](#DefaultValues)  
   
-    4.  [Cercare un valore in un set di dati contenente coppie nome/valore](#NameValue)  
+    4.  [Cercare un valore da un set di dati con coppie nome/valore](#NameValue)  
   
 5.  [Visualizzare il valore del parametro selezionato nel Report](#Expression)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36158852"
      Verrà visualizzata la finestra di dialogo **Riquadro attività iniziale** .  
   
     > [!NOTE]  
-    >  Se il **Getting Started** finestra di dialogo non viene visualizzata, dal **Generatore Report** pulsante, fare clic su **nuovo**.  
+    >  Se il **Guida introduttiva** non viene visualizzato nella finestra di dialogo, dalle **Generatore Report** pulsante, fare clic su **New**.  
   
 2.  Nel riquadro sinistro, verificare che **Report** sia selezionata.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "36158852"
   
 7.  Nel **scegliere uno stile** pagina, selezionare uno stile nel riquadro stili.  
   
-8.  Fare clic su **Fine**.  
+8.  Scegliere **Fine**.  
   
      La matrice viene aggiunta all'area di progettazione. Nella matrice sono visualizzate tre colonne e tre righe. Il contenuto delle celle nella prima riga è Sottocategoria, [StoreID] e Totale. Nelle celle della seconda riga sono visualizzate le espressioni che rappresentano la sottocategoria, la quantità di articoli venduti per ogni punto vendita e la quantità totale per ogni sottocategoria per tutti i punti vendita. Nelle celle della riga finale è visualizzato il totale complessivo per ogni punto vendita.  
   
@@ -170,13 +170,13 @@ ms.locfileid: "36158852"
   
 2.  Nel riquadro Dati report espandere la cartella **Set di dati** , fare clic con il pulsante destro del mouse su **DataSet1**e quindi fare clic su **Query**.  
   
-3.  Aggiungere il seguente [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` clausola come l'ultima riga nella query:  
+3.  Aggiungere il codice seguente [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` clausola come ultima riga nella query:  
   
     ```  
     WHERE StoreID = (@StoreID)  
     ```  
   
-     Il `WHERE` clausola consente di limitare i dati recuperati all'identificatore del punto vendita specificato dal parametro di query *@StoreID*.  
+     Il `WHERE` clausola limita i dati recuperati all'identificatore del punto vendita specificato dal parametro di query *@StoreID*.  
   
 4.  Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Viene aperta la finestra di dialogo **Definisci parametri query** nella quale viene richiesto un valore per il parametro di query *@StoreID*.  
   
@@ -190,16 +190,16 @@ ms.locfileid: "36158852"
   
 8.  Nel riquadro Dati report espandere la cartella **Parametri** .  
   
- Si noti che è ora disponibile un parametro di report denominato *@StoreID*. Per impostazione predefinita, il parametro con tipo di dati **testo**. Poiché l'identificatore del punto vendita è un intero, nella procedura descritta di seguito il tipo di dati verrà modificato in Integer.  
+ Si noti che è ora disponibile un parametro di report denominato *@StoreID*. Per impostazione predefinita, il parametro contiene dati digitare **testo**. Poiché l'identificatore del punto vendita è un intero, nella procedura descritta di seguito il tipo di dati verrà modificato in Integer.  
   
 ##  <a name="ChangeDefaultProperties"></a> 4. Modificare il tipo di dati e altre proprietà predefiniti per un parametro di report  
  Dopo aver creato un parametro di report, è possibile impostare i valori predefiniti per le proprietà.  
   
 #### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>Per modificare il tipo di dati predefinito per un parametro di report  
   
-1.  Nel riquadro dei dati del Report sotto il **parametri** nodo, fare doppio clic su *@StoreID*, quindi fare clic su **le proprietà dei parametri**.  
+1.  Nel riquadro dati Report nel **parametri** nodo, fare doppio clic su *@StoreID*, quindi fare clic su **le proprietà dei parametri**.  
   
-2.  Nel prompt dei comandi, digitare **identificatore punto vendita?** Questo testo viene visualizzato nella barra degli strumenti del visualizzatore di report quando si esegue il report.  
+2.  Nel prompt dei comandi, digitare **identificatore Store?** Questo testo viene visualizzato nella barra degli strumenti del visualizzatore di report quando si esegue il report.  
   
 3.  In **Tipo di dati**selezionare **Integer**nell'elenco a discesa.  
   
@@ -222,9 +222,9 @@ ms.locfileid: "36158852"
   
 3.  In **Nome**digitare **Punti vendita**.  
   
-4.  Selezionare il **utilizzare un set di dati incorporato nel report** opzione.  
+4.  Selezionare il **usare un set di dati incorporato nel report** opzione.  
   
-5.  In **origine dati**, dall'elenco a discesa, scegliere l'origine dati creata nella prima procedura.  
+5.  Nelle **zdroj dat**, nell'elenco a discesa, scegliere l'origine dati creata nella prima procedura.  
   
 6.  In **Tipo di query**verificare che sia selezionata l'opzione **Testo** .  
   
@@ -246,7 +246,7 @@ ms.locfileid: "36158852"
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Per fornire i valori disponibili per un parametro da un set di dati  
   
-1.  Nel riquadro dati Report, fare doppio clic sul parametro *@StoreID*, quindi fare clic su **delle proprietà dei parametri**.  
+1.  Nel riquadro dati Report fare clic sul parametro *@StoreID*, quindi fare clic su **le proprietà dei parametri**.  
   
 2.  Fare clic su **Valori disponibili**e quindi su **Ottieni valori da una query**.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "36158852"
   
 6.  Fare clic su **Generale**.  
   
-7.  Nel prompt dei comandi, digitare **nome archivio?**  
+7.  Nel prompt dei comandi, digitare **nome Store?**  
   
      L'utente selezionerà ora da un elenco di nomi di punti vendita anziché di identificatori. Si noti che il tipo di dati del parametro rimane **Integer** perché il parametro si basa sull'identificatore del punto vendita, non sul nome.  
   
@@ -268,7 +268,7 @@ ms.locfileid: "36158852"
   
      Sulla barra degli strumenti del Visualizzatore di report, la casella di testo del parametro è ora un elenco di riepilogo a discesa che consente di visualizzare  **\<selezionare un valore >**.  
   
-10. Dall'elenco a discesa, selezionare Contoso Catalog Store e quindi fare clic su **visualizzazione Report**.  
+10. L'elenco a discesa, selezionare Contoso Catalog Store e quindi fare clic su **visualizzazione Report**.  
   
  Nel report viene visualizzata la quantità venduta di accessori, cineprese e fotocamere SLR digitali per l'identificatore del punto vendita **200**.  
   
@@ -291,7 +291,7 @@ ms.locfileid: "36158852"
   
 7.  Visualizzare l'anteprima del report.  
   
- Per *@StoreID*, nel Visualizzatore di report viene visualizzato il valore "Contoso North America Online Store". Questo è il primo valore proveniente dal set di risultati per il set di dati **archivi**. Nel report viene visualizzata la quantità venduta di fotocamere digitali per l'identificatore del punto vendita **199**.  
+ Per la *@StoreID*, il Visualizzatore di report viene visualizzato il valore "Contoso North America Online Store". Questo è il primo valore dal set di risultati per il set di dati **archivi**. Nel report viene visualizzata la quantità venduta di fotocamere digitali per l'identificatore del punto vendita **199**.  
   
 #### <a name="to-specify-a-custom-default-value"></a>Per specificare un valore predefinito personalizzato  
   
@@ -299,7 +299,7 @@ ms.locfileid: "36158852"
   
 2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID*e quindi fare clic su **Proprietà parametri**.  
   
-3.  Fare clic su **valori predefiniti**, fare clic su **specificare i valori**, quindi fare clic su **Aggiungi**. Verrà aggiunta una nuova riga di valori.  
+3.  Fare clic su **valori predefiniti**, fare clic su **specificare i valori**, quindi fare clic su **Add**. Verrà aggiunta una nuova riga di valori.  
   
 4.  In **Valore**digitare **200**.  
   
@@ -307,7 +307,7 @@ ms.locfileid: "36158852"
   
 6.  Visualizzare l'anteprima del report.  
   
- Per *@StoreID*, nel Visualizzatore di report viene visualizzato il valore "Contoso Catalog Store". Si tratta del nome visualizzato per identificatore punto vendita **200**. Nel report viene visualizzata la quantità venduta di accessori, cineprese e fotocamere SLR digitali per l'identificatore del punto vendita **200**.  
+ Per la *@StoreID*, il Visualizzatore di report viene visualizzato il valore "Contoso Catalog Store". Questo è il nome visualizzato per l'identificatore del negozio **200**. Nel report viene visualizzata la quantità venduta di accessori, cineprese e fotocamere SLR digitali per l'identificatore del punto vendita **200**.  
   
 ##  <a name="NameValue"></a> 4D. Cercare un valore da un set di dati che disponga di coppie nome/valore  
  Un set di dati potrebbe contenere sia l'identificatore e che il campo del nome corrispondente. Quando si dispone solo di un identificatore, è possibile cercare il nome corrispondente in un set di dati creato che include coppie nome/valore.  
@@ -330,7 +330,7 @@ ms.locfileid: "36158852"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     L'intestazione di colonna archivio contiene il testo visualizzato per un'espressione complessa:  **< \<Expr >>**.  
+     L'intestazione di colonna store contiene il testo visualizzato per un'espressione complessa:  **< \<Expr >>**.  
   
 8.  Visualizzare l'anteprima del report.  
   
@@ -343,13 +343,13 @@ ms.locfileid: "36158852"
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Destro del mouse sul piè di pagina, scegliere **inserire**, quindi fare clic su **casella di testo**. Trascinare la casella di testo accanto alla casella di testo con il timestamp. Fare clic sul quadratino di ridimensionamento laterale della casella di testo ed espanderla in larghezza.  
+2.  Fare doppio clic il piè di pagina, scegliere **inserire**, quindi fare clic su **casella di testo**. Trascinare la casella di testo accanto alla casella di testo con il timestamp. Fare clic sul quadratino di ridimensionamento laterale della casella di testo ed espanderla in larghezza.  
   
 3.  Trascinare il parametro *@StoreID* dal riquadro Dati report alla casella di testo. Nella casella di testo viene visualizzato `[@StoreID]`.  
   
 4.  Per visualizzare l'etichetta del parametro, fare clic nella casella di testo finché il cursore di inserimento non viene visualizzato dopo l'espressione esistente, immettere uno spazio, quindi trascinare un'altra copia del parametro dal riquadro dei dati del report nella casella di testo. Nella casella di testo viene visualizzato `[@StoreID] [@StoreID]`.  
   
-5.  La prima espressione destro e fare clic su **espressione**. Verrà visualizzata la finestra di dialogo **Espressione** . Sostituire il testo `Value` in base a `Label`.  
+5.  Fare doppio clic la prima espressione e fare clic su **espressione**. Verrà visualizzata la finestra di dialogo **Espressione** . Sostituire il testo `Value` in base a `Label`.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -370,7 +370,7 @@ ms.locfileid: "36158852"
   
 4.  In **Espressione**selezionare il campo del set di dati StoreID nell'elenco a discesa. I dati visualizzati sono di tipo **Integer**. Se il valore dell'espressione è un campo del set di dati, il tipo di dati viene impostato automaticamente.  
   
-5.  In **operatore**, verificare che `equals` (=) sia selezionata.  
+5.  Nelle **Operator**, verificare che `equals` (=) sia selezionata.  
   
 6.  In **Valore**digitare `[@StoreID]`. `[@StoreID]` è la sintassi dell'espressione semplice che rappresenta `=Parameters!StoreID.Value`.  
   
@@ -449,7 +449,7 @@ ms.locfileid: "36158852"
   
 3.  In **Messaggio di richiesta**digitare Mostra selezioni?  
   
-4.  In **tipo di dati**, dall'elenco a discesa, fare clic su **booleano**.  
+4.  Nelle **tipo di dati**, dall'elenco a discesa, scegliere **booleano**.  
   
 5.  Fare clic su **Valori predefiniti**.  
   

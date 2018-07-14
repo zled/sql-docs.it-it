@@ -1,5 +1,5 @@
 ---
-title: Formato elemento (ASSL) | Documenti Microsoft
+title: Formato elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Format element
 ms.assetid: 881ea707-52a7-46f7-ba16-ac2ec44eca22
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7434ba5d6e2db8d2a2e665fa333799b6b2e9eb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8b5fdae50b38c81ad29143887717b412084c2c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169502"
 ---
 # <a name="format-element-assl"></a>Elemento Format (ASSL)
   Contiene il formato richiesto del [DataItem](../data-type/dataitem-data-type-assl.md) elemento.  
@@ -61,8 +61,8 @@ ms.locfileid: "36168405"
 |Elemento padre|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- I valori consentiti per il `Format` elemento sono formati Microsoft Office Excel e le stringhe *TrimRight*, *TrimLeft*, *TrimAll*, e  *TrimNone*. Per il taglio *TrimRight* è l'impostazione predefinita.  
+## <a name="remarks"></a>Note  
+ I valori consentiti per il `Format` elemento sono formati di Microsoft Office Excel e le stringhe *TrimRight*, *TrimLeft*, *TrimAll*, e  *TrimNone*. Per il taglio *TrimRight* è il valore predefinito.  
   
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36168405"
 |*TrimNone*|I dati non vengono tagliati.|  
 |*TrimRight*|I dati vengono tagliati a destra.|  
   
- L'elemento che corrisponde al padre di `Format` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DataItem>.  
+ L'elemento che corrisponde al padre di `Format` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DataItem>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

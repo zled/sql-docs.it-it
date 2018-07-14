@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multivalued parameters [Reporting Services]
 - single-valued parameters [Reporting Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - valid values [Reporting Services]
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d065b7b823ec9a80135997f4dc6cf8cfbff693f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e0c10880dd8557ed7d1a0902b33397e37bd6483c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185756"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>Filtri di uso comune (Generatore report e SSRS)
   Per creare un filtro è necessario specificare una o più equazioni di filtro. Un'equazione di filtro include un'espressione, un tipo di dati, un operatore e un valore. In questo argomento vengono forniti esempi di filtri di uso comune.  
@@ -58,8 +58,8 @@ ms.locfileid: "36167567"
 ## <a name="see-also"></a>Vedere anche  
  [Parametri report &#40;Generatore report e Progettazione report&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Espressione viene utilizzata nei report di &#40;SSRS e Generatore Report&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Tipi di dati nelle espressioni di &#40;SSRS e Generatore Report&#41;](expressions-report-builder-and-ssrs.md)  
+ [I tipi di dati nelle espressioni di &#40;Report e SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
   

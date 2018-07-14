@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Showplan Statistics Profile event class
 ms.assetid: fa9e1330-a217-491c-ad7c-2c1c4015d1bb
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b327098b3a7b0920b49917631bcc26cfd704337d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0a8634750f29c68af569a7c5d7da3803ce47a167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231111"
 ---
 # <a name="showplan-statistics-profile-event-class"></a>Showplan Statistics Profile - classe di evento
   La classe di evento Showplan Statistics Profile viene generata quando in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita un'istruzione SQL. Le informazioni incluse sono tuttavia un sottoinsieme delle informazioni disponibili nelle classi di evento Showplan XML Statistics.  

@@ -1,5 +1,5 @@
 ---
-title: Soluzioni di Data Mining | Documenti Microsoft
+title: Soluzioni di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 - data mining [Analysis Services], development
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 caps.latest.revision: 62
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 78467c48599e9f97cf856be9963ad2e3e5318472
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57c0dcbc62475cd55b827d9104efe8a8c2db249c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263847"
 ---
 # <a name="data-mining-solutions"></a>Soluzioni di data mining
   Una soluzione di data mining è una soluzione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che contiene uno o più progetti di data mining.  
@@ -31,13 +31,13 @@ ms.locfileid: "36158767"
   
  Per altre informazioni su ulteriori tipi di progetti utili per il data mining, vedere [Progetti correlati per soluzioni di data mining](data-mining-solutions.md).  
   
- [Di data mining relazionali. Soluzioni multidimensionali](#bkmk_RelMD)  
+ [Data mining relazionali. Soluzioni multidimensionali](#bkmk_RelMD)  
   
  [Distribuzione di soluzioni di data mining](#bkmk_Deploy)  
   
  [Procedure dettagliate sulla soluzione](#bkmk_Walkthru)  
   
-##  <a name="bkmk_RelMD"></a> Di data mining relazionali. e multidimensionali  
+##  <a name="bkmk_RelMD"></a> Data mining relazionali. e multidimensionali  
  Una soluzione di data mining può essere basata su dati multidimensionali, ovvero un cubo esistente, o su dati puramente relazionali, ad esempio tabelle e viste in un data warehouse, o su file di testo, cartelle di lavoro di Excel o altre origini dati esterne.  
   
 -   È possibile creare oggetti di data mining all'interno di una soluzione di database multidimensionale esistente.  

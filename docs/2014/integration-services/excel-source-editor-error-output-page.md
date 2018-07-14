@@ -1,5 +1,5 @@
 ---
-title: Editor origine Excel (pagina Output degli errori) | Documenti Microsoft
+title: Editor origine Excel (pagina Output degli errori) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 883f2eb28317e0aa4b96f8cd1d76299a2133f1fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 51b10976652d366f1c9016e3e9fb51c47735695b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180358"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Editor origine Excel (pagina Output degli errori)
   Usare la pagina **Output degli errori** della finestra di dialogo **Editor origine Excel** per selezionare le opzioni di gestione degli errori e impostare le proprietà delle colonne di output degli errori.  
@@ -55,9 +55,9 @@ ms.locfileid: "36167102"
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine Excel &#40;pagina Gestione connessione&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
- [Editor origine Excel &#40;pagina colonne&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Editor origine Excel &#40;(pagina colonne)&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
  [Gestione connessione Excel](connection-manager/excel-connection-manager.md)   
  [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Utilità ssbdiagnose (Service Broker) | Documenti Microsoft
+title: ssbdiagnose (Service Broker) utilità | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
 - Service Broker, command prompt utilities
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37b52dd752b04c9aacb6ee49e1dbc2d4c590332a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fc76263bfc2be9d35839444b8fcd2cf8c116bc66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172332"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilità ssbdiagnose (Service Broker)
   L'utilità **ssbdiagnose** segnala la presenza di problemi in conversazioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] o nella configurazione di servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . I controlli della configurazione possono essere eseguiti per due servizi oppure per un unico servizio. I problemi vengono segnalati nella finestra del prompt dei comandi in testo leggibile oppure in un file XML formattato che può essere reindirizzato a un file oppure a un altro programma.  
@@ -187,21 +187,21 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Identificatore univoco di un endpoint di conversazione in un'applicazione. Per un endpoint di una conversazione gli handle di conversazione sono univoci , mentre per gli endpoint dell'Initiator e di destinazione gli handle di conversazione sono diversi.  
   
- Gli handle di conversazione vengono restituiti alle applicazioni per il *@dialog_handle* parametro del **BEGIN DIALOG** istruzione e il `conversation_handle` set di colonne nel risultato di un **ricezione**  istruzione.  
+ Gli handle di conversazione vengono restituiti alle applicazioni dal *@dialog_handle* parametro del **BEGIN DIALOG** istruzione e la `conversation_handle` set di colonne nel risultato di un **ricezione**  istruzione.  
   
- Gli handle di conversazione vengono indicati nel `conversation_handle` colonna del **Sys. transmission_queue** e **Sys. conversation_endpoints** viste del catalogo.  
+ Gli handle di conversazione vengono indicati nel `conversation_handle` della colonna della **Sys. transmission_queue** e **Sys. conversation_endpoints** viste del catalogo.  
   
  *conversation_group_id*  
  Identificatore univoco di un gruppo di conversazioni.  
   
  Gli ID gruppo di conversazioni vengono restituiti alle applicazioni per il *@conversation_group_id* parametro del **GET CONVERSATION GROUP** istruzione e il `conversation_group_id` colonna nel set di risultati di un **Ricezione** istruzione.  
   
- Gli ID gruppo conversazione vengono indicati nel `conversation_group_id` le colonne del **Sys. conversation_groups** e **Sys. conversation_endpoints** viste del catalogo.  
+ Gli ID gruppo conversazione vengono indicati nel `conversation_group_id` colonne del **Sys. conversation_groups** e **Sys. conversation_endpoints** viste del catalogo.  
   
  *conversation_id*  
  Identificatore univoco di una conversazione. Gli ID di conversazione sono gli stessi per sia gli endpoint dell'Initiator che per quelli di destinazione di una conversazione.  
   
- Gli ID di conversazione vengono indicati nel `conversation_id` colonna del **Sys. conversation_endpoints** vista del catalogo.  
+ Gli ID conversazione vengono indicati nel `conversation_id` colonna il **Sys. conversation_endpoints** vista del catalogo.  
   
  **-TIMEOUT** *timeout_interval*  
  Specifica il numero di secondi per l'esecuzione un report **RUNTIME** . Se l'opzione **-TIMEOUT** non viene specificata, il report di runtime viene eseguito per un periodo di tempo illimitato. **- TIMEOUT** viene usata solo nei report **RUNTIME** e non nei report **CONFIGURATION** . Usare CTRL + C per uscire da **ssbdiagnose** se **-TIMEOUT** non è stata specificata oppure per terminare un report di runtime prima che scada l'intervallo di time**-** out. Il valore*timeout_interval* deve essere un numero compreso tra 1 e 2,147,483,647.  
@@ -258,7 +258,7 @@ WHERE database_id = DB_ID();
  **-?**  
  Visualizza la guida della riga di comando.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Usare **ssbdiagnose** per eseguire queste operazioni:  
   
 -   Verificare che non siano presenti errori di configurazione in un'applicazione di [!INCLUDE[ssSB](../../includes/sssb-md.md)] appena configurata.  

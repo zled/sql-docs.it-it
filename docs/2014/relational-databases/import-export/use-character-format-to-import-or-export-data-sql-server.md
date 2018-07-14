@@ -5,24 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2c5efc1697e9911a667872f7293ab971b75a1398
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a4249f87cf7a8361056caf6c49b3775848d7dfe5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250191"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato carattere per l'importazione o l'esportazione di dati (SQL Server)
   È consigliabile adottare il formato carattere per l'esportazione bulk in file di testo utilizzati in altri programmi o per l'importazione bulk da file di testo creati in altri programmi.  
@@ -48,7 +47,7 @@ ms.locfileid: "36158466"
   
 -   I dati `sql_variant` archiviati in un file in formato carattere risultano privi di metadati. Ogni valore viene convertito in `char` formato, in base alle regole di conversione implicita dei dati. I dati importati in colonne `sql_variant` risultano di tipo `char`. Durante l'importazione in una colonna con tipo di dati diverso da `sql_variant`, i dati vengono convertiti da `char` tramite una conversione implicita. Per altre informazioni sulla conversione dei dati, vedere [Conversione del tipo di dati &#40;Motore di database&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
--   Il **bcp** utilità esportazioni `money` valori come file di dati in formato carattere con quattro cifre dopo il separatore decimale e senza alcun simbolo di raggruppamento cifre, ad esempio i separatori delle migliaia. Ad esempio, una colonna `money` contenente il valore 1,234,567.123456 viene copiata in un file di dati come stringa di caratteri 1234567.1235 tramite l'esportazione bulk.  
+-   Il **bcp** esportazioni utilità `money` valori come file di dati in formato carattere con quattro cifre dopo il separatore decimale e senza alcun simbolo di raggruppamento cifre, quali i separatori. Ad esempio, una colonna `money` contenente il valore 1,234,567.123456 viene copiata in un file di dati come stringa di caratteri 1234567.1235 tramite l'esportazione bulk.  
   
 ## <a name="command-options-for-character-format"></a>Opzioni del comando per il formato carattere  
  È possibile importare dati in formato carattere in una tabella con **bcp**, BULK INSERT o INSERT. SELECT \* FROM OPENROWSET(BULK...). Per un comando **bcp** o un'istruzione BULK INSERT, è possibile specificare il formato dati nella riga di comando. Per un'istruzione INSERT ... SELECT * FROM OPENROWSET(BULK...) è necessario specificare il formato dei dati in un file di formato.  
@@ -57,10 +56,10 @@ ms.locfileid: "36158466"
   
 |Comando|Opzione|Description|  
 |-------------|------------|-----------------|  
-|**bcp**|**-c**|Fa sì che il **bcp** utility per utilizzare dati di tipo carattere.<sup> 1</sup>|  
+|**bcp**|**-c**|Fa sì che il **bcp** utilità usare dati di tipo carattere.<sup> 1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|Durante l'importazione bulk dei dati viene applicato il formato carattere.|  
   
- <sup>1</sup> caricare carattere (**- c**) in un formato compatibile con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client, utilizzare il **-V** passare. Per altre informazioni, vedere [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> per caricare il carattere (**- c**) dei dati in un formato compatibile con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client, utilizzare il **-V** passare. Per altre informazioni, vedere [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
  Per altre informazioni, vedere [Utilità bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) o [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
@@ -71,7 +70,7 @@ ms.locfileid: "36158466"
  Gli esempi seguenti illustrano come eseguire l'esportazione bulk dei dati di tipo carattere con l'utilità **bcp** e l'importazione bulk degli stessi dati con l'istruzione BULK INSERT.  
   
 ### <a name="sample-table"></a>Tabella di esempio  
- Negli esempi si presuppone la presenza della tabella **myTestCharData** all'interno dello schema **dbo** del database di esempio **AdventureWorks**. Prima di eseguire le procedure illustrate negli esempi, è necessario creare la tabella. A tale scopo, in SQL [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Editor di Query, eseguire:  
+ Negli esempi si presuppone la presenza della tabella **myTestCharData** all'interno dello schema **dbo** del database di esempio **AdventureWorks**. Prima di eseguire le procedure illustrate negli esempi, è necessario creare la tabella. Per creare questa tabella, in SQL [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Editor di Query eseguire:  
   
 ```  
 USE AdventureWorks;  

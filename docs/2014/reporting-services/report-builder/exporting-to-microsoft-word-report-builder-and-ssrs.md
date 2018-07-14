@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2720d4e3a767a66768909bccad6cf1a7fdf78722
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9aa5b777f8e05b9a3bd8784c15ae8294e9caa8bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264277"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Esportazione in Microsoft Word (Generatore report e SSRS)
-  L'estensione per il rendering in Word il rendering dei report nel formato nativo di [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Il formato è Office Open XML.  
+  Estensione per il rendering Word esegue il rendering dei report nel formato nativo di [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Il formato è Office Open XML.  
   
  Il rendering di Word è compatibile con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 e con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 grazie a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Compatibility Pack per i formati di file Word, Excel e PowerPoint. Per altre informazioni su Compatibility Pack, vedere [Microsoft Office Compatibility Pack per i formati di file Word, Excel e PowerPoint](http://go.microsoft.com/fwlink/?LinkID=205622).  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36158177"
  La versione precedente dell'estensione per il rendering di Word, compatibile con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, è rinominata Word 2003. Per impostazione predefinita, è disponibile solo l'estensione per il rendering di Word. È necessario aggiornare i file di configurazione di Reporting Services per rendere disponibile l'estensione per il rendering di Word 2003. Il tipo di contenuto di file generati dal renderer di Word 2003 è **application/vnd.ms-word** mentre l'estensione di file è doc.  
   
 > [!IMPORTANT]  
->  Il [!INCLUDE[ofprword](../../includes/ofprword-md.md)] estensione per il rendering 2003 è deprecata. Per altre informazioni, vedere [funzionalità deprecate in SQL Server Reporting Services in SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
+>  Il [!INCLUDE[ofprword](../../includes/ofprword-md.md)] estensione per il rendering 2003 è deprecata. Per altre informazioni, vedere [Deprecated Features di SQL Server Reporting Services in SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  Dopo l'esportazione del report in un documento di Word, è possibile modificarne il contenuto e progettare report in formato documento, ad esempio etichette di indirizzi, ordini di acquisto o lettere tipo.  
   
@@ -140,14 +140,14 @@ ms.locfileid: "36158177"
   
 -   Dopo l'esportazione, il report viene rimpaginato in Word. Questo può causare l'aggiunta di altre interruzioni di pagina nel report visualizzabile.  
   
--   Word non Ripeti righe intestazione in pagina 2 e versioni successive, anche se si imposta la proprietà RepeatOnNewPage della riga di intestazione statica in una tablix (tabella, matrice o elenco) `True`. È possibile definire interruzioni di pagina esplicite nel report per forzare la visualizzazione delle righe di intestazione nelle nuove pagine. Poiché tuttavia al report visualizzabile esportato in Word viene applicata la paginazione specifica di Word, i risultati potrebbero variare e la riga di intestazione potrebbe non essere ripetuta in modo prevedibile. La riga di intestazione statica è la riga contenente le intestazioni di colonna.  
+-   Word non Ripeti righe intestazione in pagina 2 e versioni successive, anche se si imposta la proprietà RepeatOnNewPage della riga di intestazione statica di una tablix (tabella, matrice o elenco) `True`. È possibile definire interruzioni di pagina esplicite nel report per forzare la visualizzazione delle righe di intestazione nelle nuove pagine. Poiché tuttavia al report visualizzabile esportato in Word viene applicata la paginazione specifica di Word, i risultati potrebbero variare e la riga di intestazione potrebbe non essere ripetuta in modo prevedibile. La riga di intestazione statica è la riga contenente le intestazioni di colonna.  
   
 -   Le dimensioni delle caselle di testo aumentano quando contengono spazi unificatori.  
   
 -   Quando viene esportato in Word, il testo con effetti carattere in alcuni tipi di carattere può generare glifi imprevisti o mancanti nel report visualizzabile.  
   
 ##  <a name="WordBenefits"></a> Vantaggi dell'utilizzo del renderer di Word  
- Oltre a rendere le funzionalità introdotte in [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 disponibili per esportare i report, file *. docx di report esportati tendono a essere più piccoli. I report esportati tramite il renderer di Word sono in genere notevolmente più piccoli rispetto agli stessi report esportati usando il renderer di Word 2003.  
+ Oltre a rendere le funzionalità che sono nuove in [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 disponibili per esportare i report, file *. docx di report esportati tendono a essere più piccoli. I report esportati tramite il renderer di Word sono in genere notevolmente più piccoli rispetto agli stessi report esportati usando il renderer di Word 2003.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>Compatibilità con le versioni precedenti di report esportati  
  È possibile selezionare una modalità di compatibilità di Word e impostare opzioni di compatibilità. Il renderer di Word consente di creare documenti con la modalità di compatibilità abilitata. L'ulteriore salvataggio di documenti con tale modalità disabilitata potrebbe influire sul layout del documento.  
@@ -155,11 +155,11 @@ ms.locfileid: "36158177"
  Se si disabilita la modalità di compatibilità e si salva di nuovo un report, il relativo layout potrebbe cambiare in modo imprevisto.  
   
 ##  <a name="AvailabilityWord"></a> Disponibilità del Renderer di Word 2003  
- In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il renderer di Word predefinito è la versione che viene eseguito il rendering nel formato nativo di [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Si tratta dell'opzione **Word** elencata nei menu **Esporta** in Gestione report e SharePoint. La versione precedente, compatibile solo con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, è ora denominata Word 2003 ed è elencata nei menu con tale nome. L'opzione di menu **Word 2003** non è visibile per impostazione predefinita, tuttavia un amministratore può renderla tale aggiornando il file di configurazione RSReportServer. Per esportare i report da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando il renderer di Word 2003, è possibile aggiornare il file di configurazione RSReportDesigner. Tuttavia, rendere visibile il renderer di Word 2003 non lo rende disponibile in tutti gli scenari. Poiché il file di configurazione RSReportServer si trova nel server di report, gli strumenti o prodotti da cui si esportano i report devono essere connessi a un server di report per la lettura del file di configurazione. Se si usano strumenti o prodotti in modalità senza connessione o locale, rendere visibile il renderer di Word 2003 non produce alcun effetto. L'opzione di menu **Word 2003** rimane non disponibile. Se si rende visibile il renderer di Word 2003 nel file di configurazione RSReportDesigner, l'opzione di menu **Word 2003** è sempre disponibile nell'anteprima report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
+ Nelle [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il renderer di Word predefinito è la versione che esegue il rendering nel formato nativo di [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Si tratta dell'opzione **Word** elencata nei menu **Esporta** in Gestione report e SharePoint. La versione precedente, compatibile solo con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, è ora denominata Word 2003 ed è elencata nei menu con tale nome. L'opzione di menu **Word 2003** non è visibile per impostazione predefinita, tuttavia un amministratore può renderla tale aggiornando il file di configurazione RSReportServer. Per esportare i report da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando il renderer di Word 2003, è possibile aggiornare il file di configurazione RSReportDesigner. Tuttavia, rendere visibile il renderer di Word 2003 non lo rende disponibile in tutti gli scenari. Poiché il file di configurazione RSReportServer si trova nel server di report, gli strumenti o prodotti da cui si esportano i report devono essere connessi a un server di report per la lettura del file di configurazione. Se si usano strumenti o prodotti in modalità senza connessione o locale, rendere visibile il renderer di Word 2003 non produce alcun effetto. L'opzione di menu **Word 2003** rimane non disponibile. Se si rende visibile il renderer di Word 2003 nel file di configurazione RSReportDesigner, l'opzione di menu **Word 2003** è sempre disponibile nell'anteprima report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  L'opzione di menu **Word 2003** non è mai visibile negli scenari seguenti:  
   
--   Generatore report in modalità senza connessione e anteprima di un report in Generatore report. Questo errore si verifica in entrambe le [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] sia alla versione autonoma di Generatore Report.  
+-   Generatore report in modalità senza connessione e anteprima di un report in Generatore report. Ciò si verifica in entrambi i [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] e nelle versioni autonome di Generatore Report.  
   
 -   Web part di Visualizzatore report in modalità locale e farm di SharePoint non integrata con un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Report in modalità locale e con connessione nel visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36158177"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e anteprima dei report.  
   
--   Generatore report connesso a un server di report. Può trattarsi di un [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] o versione autonoma di Generatore Report.  
+-   Generatore report connesso a un server di report. Può trattarsi di un [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] o la versione autonoma di Generatore Report.  
   
 -   Web part di Visualizzatore report in modalità remota.  
   
@@ -181,9 +181,9 @@ ms.locfileid: "36158177"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- L'estensione WORDOPENXML consente di definire il renderer di Word per [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. L'estensione WORD consente di definire la versione [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` indica che il renderer di Word 2003 è nascosto. Per altre informazioni, vedere [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md) e [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ L'estensione WORDOPENXML consente di definire il renderer di Word per [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. L'estensione WORD consente di definire la versione [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` indica che il renderer di Word 2003 è nascosto. Per altre informazioni, vedere [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) e [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
   
-##  <a name="Differences"></a> Differenze tra il renderer di Word e Word 2003  
+##  <a name="Differences"></a> Differenze tra le parole e i renderer di Word 2003  
  I report, visualizzabili tramite i renderer di Word o Word 2003, tendono a essere non distinguibili da un punto di vista visivo. Tuttavia, è possibile riscontrare piccole differenze tra i due tipi di formati Word o Word 2003.  
   
 ##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
@@ -192,7 +192,7 @@ ms.locfileid: "36158177"
 ## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il Rendering di Report differenti &#40;SSRS e Generatore Report&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

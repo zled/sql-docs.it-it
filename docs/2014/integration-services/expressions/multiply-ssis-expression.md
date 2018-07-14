@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - '* (multiply operator)'
 - multiply operator (*)
@@ -16,13 +16,13 @@ ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
 caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a65d028ec5c9fd739c59b3d4bf5f89c622b4d5f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea47f8957d942e57a6dfda79e263dcbe5600e38c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254873"
 ---
 # <a name="-multiply-ssis-expression"></a>* (moltiplicazione) (espressione SSIS)
   Vengono moltiplicate due espressioni numeriche.  
@@ -42,7 +42,7 @@ numeric_expression1 * numeric_expression2
 ## <a name="result-types"></a>Tipi restituiti  
  Dipendenti dai tipi di dati dei due argomenti. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se uno degli operandi è Null, il risultato sarà Null.  
   
 ## <a name="expression-examples"></a>Esempi di espressione  
@@ -65,7 +65,7 @@ ListPrice - (ListPrice * @[Discount%])
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Associatività e precedenza operatori](operator-precedence-and-associativity.md)   
- [Gli operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md)  
+ [Precedenza e associatività degli operatori](operator-precedence-and-associativity.md)   
+ [Gli operatori &#40;espressione di SSIS&#41;](operators-ssis-expression.md)  
   
   

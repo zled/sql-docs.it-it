@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3cb833636ea987d972ea538ab5d813edbcad22e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 21281fe3b01f8b6ed89042f9abb9f8eb9f1d4edf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192891"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>Formattazione delle etichette degli assi come date o valute (Generatore report e SSRS)
   Quando i valori DateTime sono formattati correttamente su un asse, vengono visualizzati automaticamente in un grafico come giorni. Per specificare un intervallo di data o ora per l'asse X, ad esempio un intervallo di mesi o di ore, è necessario formattare le etichette dell'asse e impostare il tipo di intervallo dell'asse su un intervallo di data o ora valido.  
@@ -65,6 +65,6 @@ ms.locfileid: "36168249"
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Specificare una scala logaritmica &#40;Generatore report e SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Specificare un intervallo dell'asse &#40;SSRS e Generatore Report&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Specificare un intervallo dell'asse &#40;Report e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
   

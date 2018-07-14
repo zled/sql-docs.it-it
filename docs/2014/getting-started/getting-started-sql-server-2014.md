@@ -1,5 +1,5 @@
 ---
-title: Introduzione (SQL Server 2014) | Documenti Microsoft
+title: Introduzione (SQL Server 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
 caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6fdc2a443c0318fc7a40a21034171c5a043fd43d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5dc6314da166a0503f31326dfd562fc42a635f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205871"
 ---
 # <a name="getting-started-sql-server-2014"></a>Introduzione (SQL Server 2014)
   Sono disponibili fonti di informazioni, requisiti di sistema, istruzioni per l'installazione e altro ancora su [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "36166444"
   
  [Novità di SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)  
   
- [Introduzione al Cloud ibrido SQL Server 2014](introduction-to-sql-server-2014-hybrid-cloud.md)  
+ [Introduzione al cloud ibrido di SQL Server 2014](introduction-to-sql-server-2014-hybrid-cloud.md)  
   
  [Guida introduttiva all'installazione di SQL Server 2014](quick-start-installation-of-sql-server-2014.md)  
   
@@ -47,6 +47,6 @@ ms.locfileid: "36166444"
   
  [Informazioni sulle condizioni di licenza di SQL Server](about-the-sql-server-license-terms.md)  
   
- [Informativa sulla Privacy di Microsoft SQL Server](microsoft-sql-server-privacy-statement.md)  
+ [Informativa sulla privacy di Microsoft SQL Server](microsoft-sql-server-privacy-statement.md)  
   
   

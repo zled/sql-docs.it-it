@@ -1,5 +1,5 @@
 ---
-title: Elemento CurrentTimeMember (ASSL) | Documenti Microsoft
+title: Elemento CurrentTimeMember (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CurrentTimeMember element
 ms.assetid: 2e73009c-9f2b-441c-bdf0-ca19b160da4f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48fc08b2d45ed75c2a57154efbc154cd9b1b0496
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 804b68d36d75741869595232fd09cd67959caa70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204101"
 ---
 # <a name="currenttimemember-element-assl"></a>Elemento CurrentTimeMember (ASSL)
   Definisce il membro corrente di una dimensione temporale associata una [Kpi](../objects/kpi-element-assl.md) elemento.  
@@ -61,10 +61,10 @@ ms.locfileid: "36166477"
 |Elemento padre|[Indicatore KPI](../objects/kpi-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è un'istruzione MDX (Multidimensional Expressions) che restituisce un singolo membro in una dimensione temporale, utilizzata per recuperare la cronologia corrente durante la valutazione dell'indicatore di prestazioni chiave (indicatore KPI).  
   
- L'elemento che corrisponde al padre di `CurrentTimeMember` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Kpi>.  
+ L'elemento che corrisponde al padre di `CurrentTimeMember` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Kpi>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Migrazione da ADO MD ad ADOMD.NET | Documenti Microsoft
+title: Migrazione da ADO MD ad ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ADO MD migration [ADOMD.NET]
 ms.assetid: 8c760db3-c475-468e-948d-e5f599d985ad
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca9b4ba7dae762dead880c39c228391898e36e27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc10312f8e4a19c334c0eeba7284d7af0eabd0df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245729"
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>Migrazione da ADO MD ad ADOMD.NET
   La libreria ADOMD.NET è analoga alla libreria ADO MD (ActiveX Data Objects Multidimensional), un'estensione della libreria ADO (ActiveX Data Objects) utilizzata per accedere ai dati multidimensionali nelle applicazioni client basate sul modello COM (Component Object Model). ADO MD consente di accedere in modo semplice ai dati multidimensionali da linguaggi non gestiti, ad esempio C++ e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic, mentre ADOMD.NET consente di accedere facilmente ai dati analitici (sia multidimensionale che di data mining) da linguaggi gestiti, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET. In ADOMD.NET è disponibile inoltre un modello a oggetti per metadati notevolmente migliorato.  
@@ -41,17 +41,17 @@ ms.locfileid: "36157840"
  **Per recuperare i metadati per gli oggetti multidimensionali**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
-|Utilizzare la classe del catalogo.|Utilizzare la proprietà <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A> dell'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.|  
+|Usare la classe di catalogo.|Utilizzare la proprietà <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A> dell'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.|  
   
- **Per eseguire query e restituire oggetti set di celle**  
+ **Per eseguire query e restituire gli oggetti set di celle**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
-|Utilizzare la classe di set di celle.|Utilizzare la classe <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>.|  
+|Usare la classe di set di celle.|Utilizzare la classe <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>.|  
   
  **Per accedere ai metadati che consente di visualizzare un set di celle**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
-|Utilizzare la classe di posizione.|Utilizzare gli oggetti <xref:Microsoft.AnalysisServices.AdomdClient.Set> e <xref:Microsoft.AnalysisServices.AdomdClient.Tuple>.|  
+|Usare la classe di posizione.|Utilizzare gli oggetti <xref:Microsoft.AnalysisServices.AdomdClient.Set> e <xref:Microsoft.AnalysisServices.AdomdClient.Tuple>.|  
   
 > [!NOTE]  
 >  La classe <xref:Microsoft.AnalysisServices.AdomdClient.Position> è supportata per la compatibilità con le versioni precedenti.  
@@ -67,7 +67,7 @@ ms.locfileid: "36157840"
  Sebbene nell'esempio di codice ADO MD esistente e nell'esempio ADOMD.NET equivalente illustrati in questa sezione venga eseguito lo stesso set di azioni, ovvero creazione di una connessione, esecuzione di un'istruzione MDX (Multidimensional Expressions) e recupero di metadati e dati, negli esempi non vengono utilizzati gli stessi oggetti per eseguire tali attività.  
   
 ### <a name="existing-ado-md-code"></a>Codice ADO MD esistente  
- Esempio di codice seguente, creato nella documentazione di ADO MD 2.8, è scritto in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic® 6.0 e viene utilizzato ADO MD per illustrare come connettersi ed eseguire query su un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati. In questo esempio ADO MD vengono utilizzati i seguenti oggetti:  
+ Esempio di codice seguente, disegnata dalla documentazione ADO MD 2.8, è scritto in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic® 6.0 e viene utilizzato ADO MD per illustrare come connettersi ed eseguire query su una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati. Questo esempio ADO MD Usa gli oggetti seguenti:  
   
 -   `Catalog` per la creazione di una connessione.  
   

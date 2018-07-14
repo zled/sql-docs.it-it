@@ -1,5 +1,5 @@
 ---
-title: Drill-through sui modelli di Data Mining | Documenti Microsoft
+title: Drill-through sui modelli di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f5b59e0a921e27bd5bdc62867130e71bbc67ffa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd0bb8838b9b012d1951f6b6fe0bde67ed09842d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192941"
 ---
 # <a name="drillthrough-on-mining-models"></a>Drill-through sui modelli di data mining
   Il termine*drill-through* fa riferimento alla possibilità di eseguire query su un modello o una struttura di data mining e di ottenere dati dettagliati non esposti nel modello.  
@@ -63,7 +63,7 @@ ms.locfileid: "36167541"
 |Utilizzare il drill-through nei visualizzatori dei modelli di data mining|[Usare il drill-through dai visualizzatori modello](use-drillthrough-from-the-model-viewers.md)|  
 |Recuperare dati del case per un modello tramite il drill-through|[Eseguire il drill-through sui dati del case da un modello di data mining](drill-through-to-case-data-from-a-mining-model.md)|  
 |Abilitare il drill-through su un modello di data mining esistente|[Abilitare il drill-through per un modello di data mining](enable-drillthrough-for-a-mining-model.md)|  
-|Per tipi di modelli specifici, vedere gli esempi di query drill-through.|[Query di Data Mining](data-mining-queries.md)|  
+|Per tipi di modelli specifici, vedere gli esempi di query drill-through.|[Query di data mining](data-mining-queries.md)|  
 |Abilitare il drill-through in Creazione guidata modello di data mining|[Completamento procedura guidata &#40;Creazione guidata modello di data mining&#41;](../completing-the-wizard-data-mining-wizard.md).|  
   
 ## <a name="see-also"></a>Vedere anche  

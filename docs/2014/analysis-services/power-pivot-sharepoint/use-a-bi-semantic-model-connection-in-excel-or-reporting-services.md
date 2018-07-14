@@ -1,5 +1,5 @@
 ---
-title: Utilizzare una connessione BI Semantic Model in Excel o Reporting Services | Documenti Microsoft
+title: Usare una connessione BI Semantic Model in Excel o Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00ee95942a8022ee8d299ab400d36676b51467ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b1ff3dfedd5dce6a4db551cc6fdb180e4d723d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219971"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services
   In questo argomento viene illustrato come utilizzare le connessioni BISM create utilizzando le istruzioni in altri argomenti. Se non è stato ancora creato un modello BI Semantic Model, vedere [creare una connessione BI Semantic Model a una cartella di lavoro di PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) e [creare una connessione BI Semantic Model a un Database modello tabulare](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "36167530"
   
 -   Fare clic con il pulsante destro del mouse su una connessione BI Semantic Model in una raccolta e selezionare **Avvia Excel**.  
   
- ![Comando di avvio rapido di schermata di BISM](../media/ssas-bism-quicklaunch.gif "comando di avvio rapido di schermata di BISM")  
+ ![Comando di avvio rapido di screenshot di BISM](../media/ssas-bism-quicklaunch.gif "comando di avvio rapido di Screenshot di BISM")  
   
  Fare clic su **Abilita** quando viene richiesto di abilitare le connessioni dati. In Excel verrà aperta una cartella di lavoro che contiene un elenco dei campi della tabella pivot in cui sono indicati i campi dell'origine dati sottostante.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36167530"
   
 2.  Fare clic su **Da Analysis Services** e usare la Connessione guidata dati per importare i dati.  
   
-3.  Immettere l'URL SharePoint del file di connessione bism (ad esempio  **http://mysharepoint/shared Documents**). Accettare l'opzione predefinita delle credenziali di accesso, **Usa autenticazione di Windows**. Scegliere **Avanti**.  
+3.  Immettere l'URL SharePoint del file di connessione bism (ad esempio,  **http://mysharepoint/shared Documents**). Accettare l'opzione predefinita delle credenziali di accesso, **Usa autenticazione di Windows**. Scegliere **Avanti**.  
   
 4.  Nella pagina successiva fare clic di nuovo su **Avanti** . Anche se viene richiesto di selezionare un database, è possibile utilizzare solo quello specificato nella connessione BISM.  
   
