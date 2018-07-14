@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Add Role event class
 ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2fa21eeede18d34d22d2e9dec242bd6052fec5b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 189197a4eec5c296dfc73606ba28e02e9d662450
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219441"
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role - classe di evento
   La classe di evento **Audit Add Role** viene generata quando un ruolo di database viene aggiunto a o rimosso da un database. Questa classe di evento è usata dalle stored procedure **sp_addrole** e **sp_droprole** .  

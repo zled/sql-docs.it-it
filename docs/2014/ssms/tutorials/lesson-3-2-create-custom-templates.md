@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tql
 - templates [Transact-SQL], creating
 - templates [Transact-SQL]
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2980ff029352e638dc12169e3e0692fcd60b7c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5a679ed1aaf51ff1282976aa7c8c0b509c23a0d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168659"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321701"
 ---
 # <a name="create-custom-templates"></a>Creare modelli personalizzati
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include modelli da usare per molte attività comuni. L'effettivo vantaggio dei modelli, tuttavia, consiste nella possibilità di creare un modello personalizzato per uno script complesso che è necessario creare frequentemente. In questa esercitazione verranno illustrate le procedure per la creazione di uno script semplice con un numero limitato di parametri, ma i modelli risultano utili anche per script complessi e ripetitivi.  
@@ -71,7 +70,7 @@ ms.locfileid: "36168659"
   
 10. Nell'editor di query digitare **EXECUTE dbo.WorkOrdersForBlade**e premere F5 per eseguire la query. Verificare che nel riquadro **Risultati** sia visualizzato l'elenco di ordini di blade richiesto.  
   
-11. Modificare lo script del modello (lo script nel passaggio 7) sostituendo il nome del prodotto Blade con il parametro ***< * product_name**, `nvarchar(50)`, **nome*> * * *, in quattro punti.  
+11. Modificare lo script del modello (lo script nel passaggio 7) sostituendo il nome del prodotto Blade con il parametro ***< * Nome_prodotto**, `nvarchar(50)`, **nome*> * * *, in quattro punti.  
   
     > [!NOTE]  
     >  Per i parametri sono necessari tre elementi, ovvero il nome che si desidera restituire, il tipo di dati e il valore predefinito.  
@@ -107,7 +106,7 @@ ms.locfileid: "36168659"
   
 3.  Scegliere **Imposta valori per parametri modello** dal menu **Query**.  
   
-4.  Nel **Sostituisci parametri modello** della finestra di dialogo per il `product_name` valore, digitare **FreeWheel** (sovrascrivendo il contenuto predefinito) e quindi fare clic su **OK** per chiudere il **Sostituisci parametri modello** finestra di dialogo e modificare lo script nell'Editor di Query.  
+4.  Nel **Sostituisci parametri modello** della finestra di dialogo per il `product_name` di valore, digitare **FreeWheel** (sovrascrivendo il contenuto predefinito) e quindi fare clic su **OK** per chiudere il **Sostituisci parametri modello** dialogo casella e modificare lo script nell'Editor di Query.  
   
 5.  Premere F5 per eseguire la query e creare la procedura.  
   

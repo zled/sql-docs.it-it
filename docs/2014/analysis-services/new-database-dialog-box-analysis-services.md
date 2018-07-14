@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Nuovo Database (Analysis Services) | Documenti Microsoft
+title: Finestra di dialogo Nuovo Database (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.newdatabase.f1
 ms.assetid: ddc7804b-acb0-4ae4-a88f-e8cdf704c341
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 945067a10e871113ce0c434ea6893b24591df4ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df7d3eb279fdde62e97204b17e81420382ca62fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191281"
 ---
 # <a name="new-database-dialog-box-analysis-services"></a>Finestra di dialogo Nuovo database (Analysis Services)
   Utilizzare la finestra di dialogo **Nuovo database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per creare un nuovo database vuoto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per visualizzare la finestra di dialogo **Nuovo database**, fare clic con il pulsante destro del mouse sulla cartella **Database** di un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in **Esplora oggetti** e selezionare **Nuovo database**.  
@@ -36,7 +36,7 @@ ms.locfileid: "36170226"
 |**Password**|Consente di digitare la password per l'account utente specificato in **Nome utente**.|  
 |**Usa account del servizio**|Selezionare questa opzione per impostare il database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in modo che utilizzi le credenziali di sicurezza associate al servizio [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che gestisce il database. Le credenziali dell'account del servizio verranno utilizzate per l'elaborazione, le query ROLAP, le partizioni remote, gli oggetti collegati e la sincronizzazione da un'origine a una destinazione. Per le istruzioni DMX OPENQUERY, i cubi locali e i modelli di data mining, verranno utilizzate le credenziali dell'utente corrente. Questa opzione non è supportata per le associazioni out-of-line.|  
 |**Usa credenziali dell'utente corrente**|Selezionare questa opzione per fare in modo che il database [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizzi le credenziali di sicurezza dell'utente corrente per le associazioni out-of-line, le istruzioni DMX OPENQUERY, i cubi locali e i modelli di data mining. Questa opzione non è supportata per l'elaborazione, le query ROLAP, le partizioni remote, gli oggetti collegati e la sincronizzazione da un'origine a una destinazione.|  
-|**Default**|Selezionare questa opzione per usare le credenziali dell'account utente predefinito per [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Questa opzione comporta l'utilizzo delle impostazioni predefinite del database per l'elaborazione di oggetti, la sincronizzazione dei server e l'esecuzione di istruzioni di data mining **Apri query**. Per altre informazioni su come specificare le impostazioni predefinite a livello di database, vedere [Impostare le proprietà dei database multidimensionali &#40;Analysis Services&#41;](multidimensional-models/set-multidimensional-database-properties-analysis-services.md).<br /><br /> Per impostazione predefinita il `DataSourceImpersonationInfo` database è impostata su **utilizzare l'account del servizio**. Indipendentemente dal valore della proprietà `DataSourceImpersonationInfo`, verranno utilizzate le credenziali dell'utente corrente per le associazioni out-of-line, le query ROLAP, i cubi locali e i modelli di data mining.|  
+|**Default**|Selezionare questa opzione per usare le credenziali dell'account utente predefinito per [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Questa opzione comporta l'utilizzo delle impostazioni predefinite del database per l'elaborazione di oggetti, la sincronizzazione dei server e l'esecuzione di istruzioni di data mining **Apri query**. Per altre informazioni su come specificare le impostazioni predefinite a livello di database, vedere [Impostare le proprietà dei database multidimensionali &#40;Analysis Services&#41;](multidimensional-models/set-multidimensional-database-properties-analysis-services.md).<br /><br /> Per impostazione predefinita il `DataSourceImpersonationInfo` del database è impostata su **utilizzare l'account del servizio**. Indipendentemente dal valore della proprietà `DataSourceImpersonationInfo`, verranno utilizzate le credenziali dell'utente corrente per le associazioni out-of-line, le query ROLAP, i cubi locali e i modelli di data mining.|  
 |**Descrizione**|Consente di digitare la descrizione del nuovo database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Vedere anche  

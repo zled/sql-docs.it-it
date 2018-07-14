@@ -1,5 +1,5 @@
 ---
-title: Partizioni elemento (ASSL) | Documenti Microsoft
+title: Partiziona elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Partitions element
 ms.assetid: e41c97ca-da44-48e9-a454-d25ee74209fd
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 39e719c6ae4e04e1a05abc42f4290bbf0746e55b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f54cab2990fcd5f3679da1c83c997921a59e67ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185209"
 ---
 # <a name="partitions-element-assl"></a>Elemento Partitions (ASSL)
-  Contiene la raccolta di [partizione](../objects/partition-element-assl.md) gli elementi utilizzati da un [MeasureGroup](../objects/group-element-assl.md) elemento o la raccolta di associazioni della partizione che costituiscono un out-of-line [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)elemento.  
+  Contiene la raccolta di [Partition](../objects/partition-element-assl.md) gli elementi utilizzati da un [MeasureGroup](../objects/group-element-assl.md) elemento o la raccolta di associazioni della partizione che costituiscono un out-of-line [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,14 +62,14 @@ ms.locfileid: "36169990"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[MeasureGroup](../objects/group-element-assl.md), [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)|  
+|Elementi padre|[Elemento MeasureGroup](../objects/group-element-assl.md), [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)|  
   
 |Predecessore o padre|Elemento figlio|  
 |------------------------|-------------------|  
 |[Gruppo di misure](../objects/group-element-assl.md)|[Partizione](../objects/partition-element-assl.md)|  
 |[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)|[Partizione](../objects/partition-element-assl.md) di tipo [PartitionBinding](../data-type/binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.PartitionCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: Contenuto della pagina (gestione Report) | Documenti Microsoft
+title: Contenuto della pagina (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 32054fea94b8786fca74ecca9c223d4af9c9d6d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05e7f592527e237798618b8af08cf471759d8786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224821"
 ---
 # <a name="contents-page-report-manager"></a>Pagina Contenuto (Gestione report)
   Utilizzare la pagina Contenuto per visualizzare il contenuto della cartella corrente, selezionare gli elementi da visualizzare oppure esplorare altre cartelle. Questa pagina viene aperta quando si seleziona una cartella e rappresenta inoltre la home page di Gestione report.  
@@ -36,7 +36,7 @@ ms.locfileid: "36170735"
  **Generatore report**  
  Fare clic per avviare Generatore report. Per accedere a Generatore report da Gestione report, è necessario che Generatore report sia abilitato nel server di report e che si disponga delle autorizzazioni per utilizzarlo. Per altre informazioni, vedere [Configurare l'accesso a Generatore report](report-server/configure-report-builder-access.md).  
   
- **Impostazioni delle cartelle**  
+ **Impostazioni cartella**  
  Fare clic per aprire e gestire le proprietà della cartella corrente.  
   
  **Caricare File**  
@@ -61,6 +61,6 @@ ms.locfileid: "36170735"
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Gestione contenuto del Server di report &#40;modalità nativa SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

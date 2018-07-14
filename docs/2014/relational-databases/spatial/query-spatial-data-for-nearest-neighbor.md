@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 46d2c75b69d283d6122255ec9ac4a41c4ccdbc28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 361c4e6fe070170163b5e14f1b061467bab96186
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227138"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Query dei dati spaziali per Nearest Neighbor
   La query Nearest Neighbor è una query comune utilizzata con dati spaziali. Le query Nearest Neighbor vengono utilizzate per trovare gli oggetti spaziali più vicini a un oggetto spaziale specifico. Un localizzatore di archivio per un sito Web, ad esempio, deve spesso trovare i percorsi di archivio più vicini alla posizione di un cliente.  
@@ -65,7 +65,7 @@ SELECT TOP ( number )
   
 3.  La clausola `WHERE` deve contenere un metodo `STDistance()`.  
   
-4.  Se nella clausola `WHERE` sono presenti più predicati, il predicato che contiene il metodo `STDistance()` deve essere connesso mediante una congiunzione `AND` ad altri predicati. Il `STDistance()` metodo non può essere in una parte facoltativa del `WHERE` clausola.  
+4.  Se nella clausola `WHERE` sono presenti più predicati, il predicato che contiene il metodo `STDistance()` deve essere connesso mediante una congiunzione `AND` ad altri predicati. Il `STDistance()` metodo non può trovarsi in una parte facoltativa del `WHERE` clausola.  
   
 5.  La prima espressione nella clausola `ORDER BY` deve utilizzare il metodo `STDistance()`.  
   
@@ -105,7 +105,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
 ```  
   
- Nella query manca una `WHERE` clausola che utilizza `STDistance()` in un formato specificato nella sezione relativa alla sintassi in modo che la query non è possibile utilizzare un indice spaziale.  
+ Nella query manca una `WHERE` clausola che utilizza `STDistance()` in un formato specificato nella sezione relativa alla sintassi in modo che la query non è possibile usare un indice spaziale.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dati spaziali &#40;SQL Server&#41;](spatial-data-sql-server.md)  

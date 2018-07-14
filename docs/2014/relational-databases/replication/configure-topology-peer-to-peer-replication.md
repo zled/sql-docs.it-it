@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 87dba93120a3779a35f7f445427dc48f228cd012
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 55a85b29827973522684820600f3a93b19c58200
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322321"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configura topologia (replica peer-to-peer)
   La pagina **Configura topologia** consente di eseguire attività di configurazione comuni, ad esempio l'aggiunta di nuovi nodi, l'eliminazione di nodi e l'aggiunta di nuove connessioni tra nodi esistenti. Il nodo selezionato nella pagina **Pubblicazione** di questa procedura guidata viene visualizzato nell'area di progettazione. Per specificare le opzioni di configurazione, fare clic con il pulsante destro del mouse su un nodo, su una connessione o sull'area di progettazione.  
@@ -36,8 +36,8 @@ ms.locfileid: "36168987"
 |-----------------------|-----------------|  
 |Area di progettazione|Consente di visualizzare gli altri elementi dell'interfaccia. Per aggiungere elementi, fare clic con il pulsante destro del mouse sull'area di progettazione.|  
 |![Primo nodo in una topologia](media/p2pwizard-firstnode.gif "Primo nodo in una topologia")|Nodo originale nella topologia. I nuovi nodi vengono inizializzati utilizzando una copia del database di pubblicazione dal nodo originale.|  
-|![Un nodo per il quale si dispone di informazioni complete](media/p2pwizard-complete.gif "nodo per il quale si dispone di informazioni complete") o versione successiva, per cui la replica dispone di informazioni complete. Per specificare le opzioni di configurazione, fare clic con il pulsante destro del mouse sul nodo.|  
-|![Nodo per il quale sono disponibili informazioni incomplete](media/p2pwizard-incomplete.gif "Nodo per il quale sono disponibili informazioni incomplete")|Nodo per cui la replica dispone di informazioni incomplete. Per specificare le opzioni di configurazione, fare clic con il pulsante destro del mouse sul nodo. La replica dispone di informazioni incomplete a causa di una delle ragioni seguenti:<br /><br /> Nel nodo viene eseguita un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] che non archivia tutti i metadati richiesti dalla procedura guidata.<br /><br /> Nel nodo viene eseguita una versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma la replica non è in grado di recuperare le informazioni sulla sottoscrizione dal nodo. Per risolvere questa situazione:<br />-Verificare che il database in corrispondenza del nodo sia online e che sia possibile connettersi a esso utilizzando le stesse credenziali come gli agenti di distribuzione che si connettono al nodo.<br />-Verificare che che siano in esecuzione l'agente di lettura Log e tutti gli agenti di distribuzione che si connettono al nodo.<br />-Verificare che il timeout di aggiornamento sia impostata sufficientemente alto da raccogliere tutte le informazioni sulla topologia. Per impostare il timeout, fare clic con il pulsante destro del mouse sull'area di progettazione, quindi scegliere **Imposta timeout aggiornamento**.|  
+|![Un nodo per cui sono disponibili informazioni complete](media/p2pwizard-complete.gif "nodo per il quale si dispone di informazioni complete") o versione successiva, per cui la replica dispone di informazioni complete. Per specificare le opzioni di configurazione, fare clic con il pulsante destro del mouse sul nodo.|  
+|![Nodo per il quale sono disponibili informazioni incomplete](media/p2pwizard-incomplete.gif "Nodo per il quale sono disponibili informazioni incomplete")|Nodo per cui la replica dispone di informazioni incomplete. Per specificare le opzioni di configurazione, fare clic con il pulsante destro del mouse sul nodo. La replica dispone di informazioni incomplete a causa di una delle ragioni seguenti:<br /><br /> Nel nodo viene eseguita un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] che non archivia tutti i metadati richiesti dalla procedura guidata.<br /><br /> Nel nodo viene eseguita una versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma la replica non è in grado di recuperare le informazioni sulla sottoscrizione dal nodo. Per risolvere questa situazione:<br />-Verificare che il database in corrispondenza del nodo sia online e che sia possibile connettersi a esso usando le stesse credenziali come gli agenti di distribuzione che si connettono al nodo.<br />-Verificare che l'agente di lettura Log e tutti gli agenti di distribuzione che si connettono al nodo sono in esecuzione.<br />-Verificare che il timeout di aggiornamento sia impostata sufficientemente elevato per raccogliere tutte le informazioni sulla topologia. Per impostare il timeout, fare clic con il pulsante destro del mouse sull'area di progettazione, quindi scegliere **Imposta timeout aggiornamento**.|  
 |Linea grigia con frecce|Connessione tra due nodi. Per aggiungere una connessione, fare clic con il pulsante destro del mouse su uno dei nodi che si desidera connettere. Per rimuovere una connessione, fare clic con il pulsante destro del mouse sulla connessione.<br /><br /> Se la linea ha una sola freccia, la replica dispone di informazioni incomplete per uno dei nodi.|  
   
 ### <a name="options-for-the-design-surface"></a>Opzioni per l'area di progettazione  

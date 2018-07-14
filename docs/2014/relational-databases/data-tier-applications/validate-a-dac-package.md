@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], validate
 - data-tier application [SQL Server], compare
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 438b0b847df6877ada5ba1278d6cf57648439820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 29496d117c1fde896bcf72cc6e485e6b3a1cef62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322291"
 ---
 # <a name="validate-a-dac-package"></a>Convalida di un pacchetto di applicazioni livello dati
   È consigliabile esaminare il contenuto di un pacchetto di un'applicazione livello dati prima di distribuirlo nella produzione nonché convalidare le azioni di aggiornamento prima di aggiornare un'applicazione livello dati esistente, in particolare nel caso in cui si distribuiscano pacchetti non sviluppati dalla propria organizzazione.  
@@ -82,11 +82,11 @@ ms.locfileid: "36168538"
   
 1.  Creare un oggetto server SMO e impostarlo sull'istanza contenente l'applicazione livello dati da visualizzare.  
   
-2.  Aprire un `ServerConnection` e connetterlo alla stessa istanza.  
+2.  Aprire un `ServerConnection` oggetti e connettersi alla stessa istanza.  
   
 3.  Specificare il nome dell'applicazione livello dati in una variabile.  
   
-4.  Usare la `GetDatabaseChanges()` metodo per recuperare un `ChangeResults` oggetto e reindirizzare l'oggetto a un file di testo per generare un report semplice di nuovi, eliminati e gli oggetti modificati.  
+4.  Usare la `GetDatabaseChanges()` metodo per recuperare un `ChangeResults` oggetto e reindirizzare l'oggetto a un file di testo per generare un report semplice di nuovi, eliminati e modificati oggetti.  
   
 ### <a name="view-database-changes-example-powershell"></a>Visualizzare esempio di modifiche al database (PowerShell)  
  **Visualizzare esempio di modifiche al database (PowerShell)**  
@@ -127,13 +127,13 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 1.  Creare un oggetto server SMO e impostarlo sull'istanza contenente l'applicazione livello dati distribuita.  
   
-2.  Aprire un `ServerConnection` e connetterlo alla stessa istanza.  
+2.  Aprire un `ServerConnection` oggetti e connettersi alla stessa istanza.  
   
-3.  Utilizzare `System.IO.File` per caricare il file di pacchetto di applicazione livello dati.  
+3.  Usare `System.IO.File` per caricare il file del pacchetto dell'applicazione livello dati.  
   
 4.  Specificare il nome dell'applicazione livello dati in una variabile.  
   
-5.  Utilizzare il `GetIncrementalUpgradeScript()` metodo per ottenere un elenco delle istruzioni Transact-SQL di un aggiornamento verrà eseguita e reindirizzare l'elenco a un file di testo.  
+5.  Usare il `GetIncrementalUpgradeScript()` metodo per ottenere un elenco delle istruzioni Transact-SQL un aggiornamento sarebbe eseguire e inviare tramite pipe l'elenco in un file di testo.  
   
 6.  Chiudere il flusso di file usato per leggere il file del pacchetto di applicazione livello dati.  
   

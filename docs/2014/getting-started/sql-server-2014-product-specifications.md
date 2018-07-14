@@ -1,5 +1,5 @@
 ---
-title: Specifiche di prodotto per SQL Server 2014 | Documenti Microsoft
+title: Specifiche di prodotto per SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -15,7 +15,7 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server, product specifications
 - components [SQL Server], product specifications
@@ -23,17 +23,17 @@ helpviewer_keywords:
 - configuration options [SQL Server], product specifications
 ms.assetid: 6445fd53-6844-4170-a86b-7fe76a9f64cb
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8a624ddfdebbe21575e1a79d4e79d7f6404d121f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 753c9d6009217e5af83d724a22c9b3ed9d50fdc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219921"
 ---
-# <a name="sql-server-2014-product-specifications"></a>Specifiche del prodotto SQL Server 2014
+# <a name="sql-server-2014-product-specifications"></a>Specifiche di prodotto SQL Server 2014
   Negli argomenti della tabella seguente vengono fornite informazioni dettagliate sulle specifiche di prodotto per questa versione:  
   
  [Limiti della capacità di calcolo per edizione di SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  

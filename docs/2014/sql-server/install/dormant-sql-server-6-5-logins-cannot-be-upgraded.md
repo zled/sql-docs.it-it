@@ -1,5 +1,5 @@
 ---
-title: Non è possibile aggiornare l'account di accesso di SQL Server 6.5 inattivi | Documenti Microsoft
+title: Non è possibile aggiornare l'account di accesso di SQL Server 6.5 inattivi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - passwords [SQL Server], dormant logins
 - dormant logins
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - password hashes [SQL Server]
 ms.assetid: ebe18a74-0375-4df4-b894-239f8fdabb64
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7bf1bc14deea80f60692b9b25cc1f119ac69d307
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0103f835ddd3e876984a771901e72926de4c4614
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323681"
 ---
 # <a name="dormant-sql-server-65-logins-cannot-be-upgraded"></a>Impossibile aggiornare gli account di accesso di SQL Server 6.5 inattivi
   Preparazione aggiornamento ha rilevato un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la cui password non può essere direttamente aggiornata a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -47,6 +47,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;nuovo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Scenari di globalizzazione per Analysis Services multidimensionale | Documenti Microsoft
+title: Scenari di globalizzazione per Analysis Services multidimensionale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple language support [Analysis Services]
 - languages [Analysis Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Analysis Services, international considerations
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d45b44c6536a7fc95543bebdbc9468c61fdf75b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c8aeb19e6773b3f772ae0a62e7d72f647ee365e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185398"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Scenari di globalizzazione per Analysis Services multidimensionale
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Archivia e gestisce dati e metadati in entrambi i modelli tabulari e multidimensionali dati multilingue. L'archiviazione dei dati è in formato Unicode (UTF-16) nei set di caratteri che usano la codifica Unicode. Se in un modello di dati si caricano dati ANSI, i caratteri vengono archiviati usando elementi di codice Unicode equivalenti.  
@@ -42,13 +42,13 @@ ms.locfileid: "36171126"
   
      Solo per i modelli multidimensionali, le didascalie e i membri dell'attributo possono essere espressi come traduzioni. È possibile definire una o più traduzioni e quindi usare un identificatore delle impostazioni locali per determinare la traduzione che viene restituita al client. Per altre informazioni, vedere la sezione [Funzionalità](#bkmk_features) di seguito.  
   
--   Errore, avviso e messaggi informativi restituiti dal [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] motore (msmdsrv) sono localizzati in 43 lingue supportate da Office e Office 365. Per ricevere i messaggi in una lingua specifica non è necessaria alcuna configurazione. Le impostazioni locali dell'applicazione client determinano quali stringhe vengono restituite.  
+-   Errore, avviso e i messaggi informativi restituiti dal [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] motore (msmdsrv) sono localizzati in 43 lingue supportate da Office e Office 365. Per ricevere i messaggi in una lingua specifica non è necessaria alcuna configurazione. Le impostazioni locali dell'applicazione client determinano quali stringhe vengono restituite.  
   
 -   I file di configurazione (msmdsrv.ini) e PowerShell per AMO sono disponibili solo in lingua inglese.  
   
 -   I file di log conterranno un insieme di messaggi localizzati e in lingua inglese, supponendo che sia stato installato un Language Pack nel server Windows in cui viene eseguito Analysis Services.  
   
--   La documentazione e gli strumenti, ad esempio [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], sono tradotti nelle lingue seguenti: cinese semplificato, cinese tradizionale, francese, tedesco, italiano, giapponese, coreano, portoghese (Brasile), russo e spagnolo. Per utilizzare una versione specifica della lingua degli strumenti, installare una versione specifica della lingua di SQL Server (ad esempio, installare la versione tedesca di SQL Server Management Studio in tedesco) oppure eseguire il programma di installazione autonomo nella lingua di destinazione per [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   La documentazione e gli strumenti, ad esempio [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], sono tradotti nelle lingue seguenti: cinese semplificato, cinese tradizionale, francese, tedesco, italiano, giapponese, coreano, portoghese (Brasile), russo e spagnolo. Per usare una versione specifica del linguaggio degli strumenti, installare una versione specifica del linguaggio di SQL Server (ad esempio, installare la versione tedesca di SQL Server per ottenere Management Studio in tedesco) oppure eseguire il programma di installazione autonomo nella lingua di destinazione per [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
  Analysis Services consente di impostare la lingua, le regole di confronto e le traduzioni in modo indipendente in tutta la gerarchia degli oggetti.  
   
@@ -61,27 +61,27 @@ ms.locfileid: "36171126"
 ##  <a name="bkmk_features"></a> Funzionalità per la creazione di una soluzione multidimensionale globalizzata  
  [!INCLUDE[applies](../includes/applies-md.md)] Solo i modelli di dati multidimensionali  
   
- A livello di client, le applicazioni globalizzate che utilizzano o manipolare [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dati multidimensionali è possono utilizzare le funzionalità multilingue e multiculturali in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
+ A livello di client, le applicazioni globalizzate che utilizzano o manipolano [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dati multidimensionali è possono usare le funzionalità multilingue e multiculturali in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
--   [Le traduzioni &#40;Analysis Services&#41; ](translations-analysis-services.md) consentono di incorporare più didascalie per un singolo oggetto, dove ogni stringa tradotta può coesistere con altre traduzioni. È possibile usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per definire le traduzioni per la didascalia, la descrizione e i tipi di account per cubi, misure, dimensioni e attributi. È possibile recuperare i dati e i metadati dagli oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in cui le traduzioni sono state definite automaticamente fornendo un identificatore delle impostazioni locali quando si esegue la connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+-   [Le traduzioni &#40;Analysis Services&#41; ](translations-analysis-services.md) vengono usate per incorporare più didascalie per un singolo oggetto, dove ogni stringa tradotta può coesistere con altre traduzioni. È possibile usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per definire le traduzioni per la didascalia, la descrizione e i tipi di account per cubi, misure, dimensioni e attributi. È possibile recuperare i dati e i metadati dagli oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in cui le traduzioni sono state definite automaticamente fornendo un identificatore delle impostazioni locali quando si esegue la connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
      Una lezione su come usare questa funzionalità è disponibile nella [Lezione 9: Definizione di prospettive e traduzioni](lesson-9-defining-perspectives-and-translations.md) dell'esercitazione su [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
--   [Conversioni di valuta &#40;Analysis Services&#41; ](currency-conversions-analysis-services.md) viene eseguita tramite script MDX specializzati che convertono le misure contenenti dati di valuta. È possibile usare la Configurazione guidata funzionalità di Business Intelligence in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] per generare uno script MDX che utilizzi una combinazione di dati e metadati di dimensioni, attributi e gruppi di misure per la conversione di misure contenenti dati di valuta.  
+-   [Conversioni di valuta &#40;Analysis Services&#41; ](currency-conversions-analysis-services.md) avviene tramite script MDX specializzati che convertono le misure contenenti dati di valuta. È possibile usare la Configurazione guidata funzionalità di Business Intelligence in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] per generare uno script MDX che utilizzi una combinazione di dati e metadati di dimensioni, attributi e gruppi di misure per la conversione di misure contenenti dati di valuta.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
 |Argomento|Description|  
 |-----------|-----------------|  
 |[Lingue e regole di confronto &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|Specifica la lingua predefinita e le regole di confronto di Windows per un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Le scelte influiscono sui dati e metadati gestiti da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
-|[Le traduzioni &#40;Analysis Services&#41;](translations-analysis-services.md)|Definire le traduzioni per un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database e gli oggetti contenuti nel database. Questo argomento illustra come [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] risolve le richieste di dati e metadati tradotti da parte delle applicazioni client.|  
+|[Le traduzioni &#40;Analysis Services&#41;](translations-analysis-services.md)|Definire le traduzioni per un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database e gli oggetti all'interno del database. Questo argomento illustra come [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] risolve le richieste di dati e metadati tradotti da parte delle applicazioni client.|  
 |[Conversioni di valuta &#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|Definisce una conversione di valuta usando la Configurazione guidata funzionalità di Business Intelligence.|  
-|[Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Analizza diverse procedure di progettazione e codifica che consentono di evitare i problemi correlati ai dati multilingue.|  
+|[Globalizzazione suggerimenti e procedure consigliate &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Analizza diverse procedure di progettazione e codifica che consentono di evitare i problemi correlati ai dati multilingue.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Internazionalizzazione delle applicazioni Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Vai Developer Center sulla globalizzazione](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Scrittura Windows di App Store con progettazione adattiva basata sulle impostazioni locali](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Lo sviluppo di applicazioni Windows universali con c# e XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Internazionalizzazione per le applicazioni di Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
+ [Developer Center sulla globalizzazione](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [App di scrittura Windows Store con progettazione adattiva basata sulle impostazioni locali](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Sviluppo di App Windows universali con c# e XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

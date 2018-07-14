@@ -1,5 +1,5 @@
 ---
-title: Opzioni di elaborazione e le impostazioni (Analysis Services) | Documenti Microsoft
+title: Opzioni di elaborazione e le impostazioni (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - process data option [Analysis Services]
 - processing objects [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 699cdbdc63eea794397e23076345cf082a042601
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9bb9ae4163f139af76b1e746267a9d60c70d026f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220337"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Opzioni e impostazioni di elaborazione (Analysis Services)
   Quando si elaborano oggetti in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile selezionare un'opzione di elaborazione che consente di controllare il tipo di elaborazione eseguita per ogni oggetto. I tipi di elaborazione si differenziano l'uno dall'altro e in base alle modifiche apportate all'oggetto dall'ultima elaborazione. Se si imposta [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la selezione automatica di un metodo di elaborazione, verrà usato il metodo che restituisce l'oggetto in uno stato di elaborazione completa nel minor tempo possibile.  
@@ -49,7 +49,7 @@ ms.locfileid: "36171113"
 |**Elaborazione completa**|Cubi, database, dimensioni, gruppi di misure, modelli di data mining, strutture di data mining e partizioni.|Consente di elaborare un oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e tutti gli oggetti in esso contenuti. Quando viene eseguita l'elaborazione completa di un oggetto che è stato già elaborato, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elimina tutti i dati dell'oggetto e quindi lo elabora. Questo tipo di elaborazione è necessario nel caso in cui sia stata apportata una modifica strutturale a un oggetto, ad esempio se è stata eliminata, aggiunta o rinominata una gerarchia dell'attributo.|  
 |**Elaborazione pulizia**|Cubi, database, dimensioni, gruppi di misure, modelli di data mining, strutture di data mining e partizioni.|Consente di eliminare i dati dell'oggetto specificato e qualsiasi oggetto di livello più basso su cui si basa l'oggetto specificato. Dopo l'eliminazione, i dati non vengono ricaricati.|  
 |**Elaborare dati**|Dimensioni, cubi, gruppi di misure e partizioni.|Elabora solo i dati senza compilare aggregazioni o indici. Se le partizioni includono dati, saranno eliminati prima del ripopolamento della partizione con i dati di origine.|  
-|**Elaborazione aggiunta**|Dimensioni, gruppi di misure e partizioni.<br /><br /> Nota: Elaborazione aggiunta non è disponibile per l'elaborazione dimensioni [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ma è possibile scrivere script XMLA esegue questa azione.|Per le dimensioni, consente di aggiungere nuovi membri e di aggiornare le didascalie e le descrizioni degli attributi delle dimensioni.<br /><br /> Per i gruppi di misure e le partizioni, consente di aggiungere nuovi dati disponibili della tabella dei fatti e di elaborare solo le partizioni rilevanti.|  
+|**Elaborazione aggiunta**|Dimensioni, gruppi di misure e partizioni.<br /><br /> Nota: Elaborazione aggiunta non è disponibile per l'elaborazione di dimensioni [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ma è possibile scrivere script XMLA esegue questa azione.|Per le dimensioni, consente di aggiungere nuovi membri e di aggiornare le didascalie e le descrizioni degli attributi delle dimensioni.<br /><br /> Per i gruppi di misure e le partizioni, consente di aggiungere nuovi dati disponibili della tabella dei fatti e di elaborare solo le partizioni rilevanti.|  
 |**Elaborazione di aggiornamento**|Dimensioni|Forza una rilettura dei dati e un aggiornamento degli attributi della dimensione. Le aggregazioni flessibili e gli indici sulle partizioni correlate saranno eliminati.|  
 |**Elaborazione indice**|Cubi, dimensioni, gruppi di misure e partizioni.|Consente di creare o ricompilare gli indici e le aggregazioni per tutte le partizioni elaborate. Per gli oggetti non elaborati questa opzione genera un errore.<br /><br /> L'elaborazione con questa opzione è necessaria se si disabilita l'elaborazione lenta.|  
 |**Elaborazione struttura**|Cubi e strutture di data mining|Nel caso in cui il cubo non sia stato elaborato, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verranno elaborate, se necessario, tutte le dimensioni del cubo. Successivamente, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] saranno create solo le definizioni del cubo. Se questa opzione è applicata a una struttura di data mining, tale struttura sarà popolata con i dati di origine. La differenza con l'opzione Elaborazione completa consiste nel fatto che questa opzione non ripete l'elaborazione fino ai modelli di data mining stessi.|  

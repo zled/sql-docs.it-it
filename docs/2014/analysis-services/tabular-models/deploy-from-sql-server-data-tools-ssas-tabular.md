@@ -1,5 +1,5 @@
 ---
-title: Distribuire da SQL Server Data Tools (SSAS tabulare) | Documenti Microsoft
+title: Distribuire da SQL Server Data Tools (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deploystatus.f1
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1b6193c57df6e6fa75f55b27402793fec20ca5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1498798cedeab8dacfe923754b02ba394937aff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265332"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Distribuire da SQL Server Data Tools (SSAS tabulare)
   Utilizzare le attività contenute in questo argomento per distribuire una soluzione del modello tabulare utilizzando il comando Distribuisci in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "36168156"
   
 1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]Esplora soluzioni **di**fare clic con il pulsante destro del mouse sul nome del progetto, quindi scegliere **Proprietà**.  
   
-2.  Nel  **\<nome progetto > proprietà** finestra di dialogo, nella **opzioni di distribuzione**, specificare le impostazioni delle proprietà se diverse dalle impostazioni predefinite.  
+2.  Nel  **\<nome progetto > proprietà** finestra di dialogo, nella **le opzioni di distribuzione**, specificare le impostazioni delle proprietà se diverse dalle impostazioni predefinite.  
   
     > [!NOTE]  
     >  Per i modelli in modalità cache, in corrispondenza di **Modalità query** è sempre selezionata l'opzione **In-Memory**.  
@@ -58,7 +58,7 @@ ms.locfileid: "36168156"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>Per distribuire una soluzione del modello tabulare  
   
--   In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]via il **compilare** menu, fare clic su **Distribuisci \<nome progetto >**.  
+-   Nella [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]via il **compilare** menu, fare clic su **Distribuisci \<nome progetto >**.  
   
      Verrà visualizzata la finestra di dialogo **Distribuisci** e verrà fornita l'indicazione dello stato della distribuzione dei metadati e dell'elaborazione di ogni tabella inclusa nel modello, a meno che la proprietà Opzione di elaborazione non sia impostata su Non elaborare. Una volta completato il processo di distribuzione, utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per connettersi all'istanza di Analysis Services e verificare il nuovo oggetto di database modello creato. In alternativa, utilizzare un'applicazione client di creazione report per connettersi al modello distribuito.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36168156"
  Fare clic su questa opzione per arrestare l'operazione di distribuzione. Questa opzione è utile se l'operazione di distribuzione è troppo lunga o se si sono verificati troppi errori.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Distribuzione della soluzione di modello tabulare &#40;tabulare di SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
- [Configurare la modellazione di dati predefinito e le proprietà di distribuzione &#40;tabulare di SSAS&#41;](properties-ssas-tabular.md)  
+ [Distribuzione di soluzioni di modelli tabulari &#40;tabulare di SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
+ [Configurare le proprietà di distribuzione e la modellazione dei dati predefinite &#40;tabulare di SSAS&#41;](properties-ssas-tabular.md)  
   
   

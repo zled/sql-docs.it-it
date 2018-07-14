@@ -1,5 +1,5 @@
 ---
-title: Strumenti di calcolo (scheda calcoli, Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Strumenti di calcolo (scheda calcoli, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.calculationtoolspane.f1
 ms.assetid: b1aa8a1a-6532-45d2-8f53-d3e211d7197a
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 106821212578d341292be4ef5f33bef055d5c1c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1263a4037f42b7546e6f248cfd0c4b75bbede8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257587"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Strumenti di calcolo (scheda Calcoli, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Strumenti di calcolo** della scheda **Calcoli** in Progettazione cubi per analizzare i metadati, le funzioni e i modelli da utilizzare per i calcoli.  
@@ -74,11 +74,11 @@ ms.locfileid: "36169342"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Barra degli strumenti &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Sulla barra degli strumenti &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Libreria script &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [Editor Form membro calcolato &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
  [Editor Form Set denominato &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
  [Editor di script &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [I calcoli &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [Calcoli &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

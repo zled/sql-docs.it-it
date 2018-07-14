@@ -1,5 +1,5 @@
 ---
-title: Editor dei Form delle azioni drill-through (scheda azioni, Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Editor dei Form delle azioni drill-through (scheda azioni, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.drillthroughaction.f1
 ms.assetid: 225fd818-b5ea-494f-b67b-66e09798274a
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81b7cde92983bf16f37b586389c059dfbff639d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6c310afd3535c1e5a7da5bd9f7784bec2a235ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220481"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor dei form delle azioni drill-through (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro dell'**editor dei form delle azioni drill-through** nella scheda **Azioni** di Progettazione cubi per modificare l'azione drill-through selezionata nel riquadro **Libreria azioni**. Per altre informazioni sulle azioni drill-through, vedere [Azioni &#40;Analysis Services - Dati multidimensionali&41#;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "36170013"
 |colonna|Description|  
 |------------|-----------------|  
 |**Dimensions**|Consente di selezionare la dimensione utilizzata per restituire l'attributo. Selezionare MEASURES per eseguire il drill-through sulle misure.|  
-|**Restituire le colonne**|Consente di selezionare l'attributo o la misura dalla dimensione selezionata da restituire all'esecuzione dell'azione.|  
+|**Restituire colonne**|Consente di selezionare l'attributo o la misura dalla dimensione selezionata da restituire all'esecuzione dell'azione.|  
   
  **Proprietà aggiuntive**  
  Espandere questa opzione per visualizzare le opzioni **Impostazione predefinita**, **Numero massimo di righe**, **Chiamata**, **Applicazione**, **Descrizione**, **Didascalia**e **Didascalia MDX** .  
@@ -63,7 +63,7 @@ ms.locfileid: "36170013"
  **Default**  
  Selezionare **True** per includere l'azione drill-through attuale come azione predefinita. In caso contrario selezionare **False**.  
   
- Se il `RETURN` clausola viene omessa dal MDX `DRILLTHROUGH` istruzione eseguita da un'applicazione client, la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza valuta tutte le azioni di drill-through predefiniti e viene eseguito il primo valore predefinito di drill-through azione che restituisce un set non vuoto. Per ulteriori informazioni su MDX `DRILLTHROUGH` istruzione, vedere [drill-through istruzione &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough).  
+ Se il `RETURN` clausola viene omessa dal MDX `DRILLTHROUGH` istruzione eseguita da un'applicazione client, il [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza valuta tutte le azioni di drill-through predefinite ed esegue il drill-through predefinita prima azione che restituisce un set non vuoto. Per altre informazioni su MDX `DRILLTHROUGH` istruzione, vedere [istruzione drill-through &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough).  
   
 > [!NOTE]  
 >  Questa opzione viene utilizzata per garantire la compatibilità con le versioni precedenti.  
@@ -107,9 +107,9 @@ ms.locfileid: "36170013"
  Selezionare **True** per indicare che **Didascalia** contiene un'espressione MDX che restituisce una stringa che rappresenta una didascalia da visualizzare per l'azione nell'applicazione client. L'espressione MDX deve essere risolta prima che l'azione venga restituita all'applicazione client.  
   
 ## <a name="see-also"></a>Vedere anche  
- [(Multidimensional Expressions) &#40;MDX&#41; riferimento](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [Le azioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra degli strumenti &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Espressioni MDX &#40;MDX&#41; riferimento](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Azioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Sulla barra degli strumenti &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Libreria azioni &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [Strumenti di calcolo &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Editor dei Form delle azioni &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   

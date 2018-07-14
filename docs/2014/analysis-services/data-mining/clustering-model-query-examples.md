@@ -1,5 +1,5 @@
 ---
-title: Clustering Model Query Examples | Documenti Microsoft
+title: Clustering Model Query Examples | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cee82332d6098544df5db02a223efc23b19d8820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6420e75c9961a094691a7be05e6e2b26fad45933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200631"
 ---
 # <a name="clustering-model-query-examples"></a>Esempi di query sul modello di clustering
   Quando si crea una query su un modello di data mining, è possibile recuperare i metadati sul modello oppure creare una query contenuto che fornisca dettagli sui modelli individuati nell'analisi. In alternativa, è possibile creare una query di stima che utilizza i modelli nel modello per eseguire stime per i nuovi dati. Ogni tipo di query fornirà informazioni diverse. Ad esempio, tramite una query contenuto potrebbero essere forniti dettagli aggiuntivi sui cluster trovati, mentre tramite una query di stima potrebbe venir indicato a quale cluster è più probabile che appartenga un nuovo punto dati.  
@@ -256,12 +256,12 @@ WHERE IsInNode('001')
 ## <a name="making-predictions-using-the-model"></a>Esecuzione di stime tramite il modello  
  Anche se il clustering viene solitamente usato per descrivere e comprendere i dati, l'implementazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] consente anche di eseguire una stima sull'appartenenza al cluster e di restituire le probabilità associate alla stima. In questa sezione vengono forniti alcuni esempi su come creare query di stima sui modelli di clustering. È possibile eseguire stime per più case, specificando un'origine dati tabulare, oppure fornire nuovi valori contemporaneamente creando una query singleton. Per maggiore chiarezza, negli esempi di questa sezione vengono usate tutte query singleton.  
   
- Per ulteriori informazioni su come creare query di stima utilizzando DMX, vedere [interfacce di Data Mining Query](data-mining-query-tools.md).  
+ Per altre informazioni su come creare query di stima tramite DMX, vedere [interfacce di Data Mining Query](data-mining-query-tools.md).  
   
  [Torna all'inizio](#bkmk_top2)  
   
 ###  <a name="bkmk_Query8"></a> Esempio di query 8: Stima dei risultati da un modello di clustering  
- Se il modello di clustering creato contiene un attributo stimabile, è possibile utilizzarlo per eseguire stime sui risultati. Tuttavia, il modello gestisce l'attributo stimabile in modo diverso a seconda che la colonna stimabile è impostata su `Predict` o `PredictOnly`. Se si imposta l'utilizzo della colonna da `Predict`, i valori per l'attributo vengono aggiunti al modello di clustering e vengono visualizzati come attributi nel modello finito. Se invece si imposta l'utilizzo della colonna su `PredictOnly`, i valori non vengono utilizzati per creare cluster. Al contrario, una volta completata la modalità, l'algoritmo di clustering crea nuovi valori per il `PredictOnly` attributo basato su cluster a cui appartiene ogni case.  
+ Se il modello di clustering creato contiene un attributo stimabile, è possibile utilizzarlo per eseguire stime sui risultati. Tuttavia, il modello gestisce l'attributo stimabile in modo diverso a seconda del fatto che la colonna stimabile venga impostata `Predict` o `PredictOnly`. Se si imposta l'utilizzo della colonna da `Predict`, i valori per tale attributo vengono aggiunti al modello di clustering e vengono visualizzati come attributi nel modello finito. Se invece si imposta l'utilizzo della colonna su `PredictOnly`, i valori non vengono utilizzati per creare cluster. Al contrario, una volta completata la modalità, l'algoritmo di clustering crea nuovi valori per il `PredictOnly` attributo basato su cluster a cui appartiene ogni case.  
   
  Con la query seguente viene fornito un nuovo case singolo al modello, in cui le uniche informazioni sul case sono l'età e il sesso. L'istruzione SELECT specifica la coppia attributo/valore stimabile di interesse, mentre la funzione [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) indica la probabilità che un case con tali attributi genererà il risultato di destinazione.  
   
@@ -275,7 +275,7 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- Esempio di risultati in caso di utilizzo è impostato su `Predict`:  
+ Esempio dei risultati quando l'utilizzo è impostato su `Predict`:  
   
 |Bike Buyer|Espressione|  
 |----------------|----------------|  

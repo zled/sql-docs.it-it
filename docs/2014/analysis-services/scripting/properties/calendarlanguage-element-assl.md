@@ -1,5 +1,5 @@
 ---
-title: Elemento CalendarLanguage (ASSL) | Documenti Microsoft
+title: Elemento CalendarLanguage (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CalendarLanguage element
 ms.assetid: e43a0f48-a583-418b-a0a4-d73a40035573
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d3be256a83ee4ee0d6b1c448699f50076e44e186
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0bcdf5c3f0955a3adb8994217eb10f3fd9447863
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241381"
 ---
 # <a name="calendarlanguage-element-assl"></a>Elemento CalendarLanguage (ASSL)
-  Definisce il linguaggio del calendario utilizzato per il [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
+  Definisce la lingua del calendario usata per il [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,10 +61,10 @@ ms.locfileid: "36168613"
 |Elemento padre|[TimeBinding](../data-type/binding-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Si tratta del linguaggio nel quale sono creati i nomi del membro di dimensione. Il linguaggio delle didascalie deve essere definito utilizzando codici LCID basati su numeri interi. Ad esempio, il valore predefinito rappresenta l'inglese US LCID.  
   
- L'elemento che corrisponde al padre di `CalendarLanguage` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ L'elemento che corrisponde al padre di `CalendarLanguage` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

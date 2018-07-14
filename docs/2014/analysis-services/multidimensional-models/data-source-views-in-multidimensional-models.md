@@ -1,5 +1,5 @@
 ---
-title: Nei modelli multidimensionali viste origine dati | Documenti Microsoft
+title: Nei modelli multidimensionali viste origine dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services]
 - data source views [Analysis Services], about data source views
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7f2ed7c484cae2d70cadc8e2be6e61a74a8d4590
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e11f6d77229b81bd2ccb3fb6eebad16da7731ce8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271867"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Viste origine dati in modelli multidimensionali
   Una vista origine dati è un'astrazione di un'origine dati relazionale che diventa la base dei cubi e delle dimensioni creati in un progetto multidimensionale. Lo scopo di una vista origine dati è fornire il controllo sulle strutture di dati utilizzate nel progetto e funzionare indipendentemente dalle origini dati sottostanti (ad esempio, con la possibilità di rinominare o concatenare colonne senza modificare direttamente l'origine dati originale).  
@@ -37,7 +37,7 @@ ms.locfileid: "36168898"
 ## <a name="related-tasks"></a>Related Tasks  
  [Definizione di un tipo di dati della vista origine &#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
   
- [Aggiungendo o rimuovendo tabelle o viste nei dati di una vista origine &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [Vista di origine aggiungendo o rimuovendo tabelle o viste in una Data &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
  [Modificare le proprietà in una vista origine dati &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   

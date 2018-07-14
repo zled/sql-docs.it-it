@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
@@ -16,13 +16,13 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3147e590c5a7fa7c258b705404d5b9ae5a8c1ea3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c71455bc6f9748cdd31cddfde2f3cfb01f6a9589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325721"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurare l'autenticazione di Windows nel server di report.
   Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accetta richieste che specificano l'autenticazione con negoziazione o NTLM. Se nella distribuzione sono incluse applicazioni client e browser che utilizzano tali provider di sicurezza, è possibile utilizzare i valori predefiniti senza alcuna configurazione aggiuntiva. Se si desidera utilizzare un provider di sicurezza diverso per la sicurezza integrata di Windows, ad esempio se si desidera utilizzare direttamente l'autenticazione Kerberos, o se i valori predefiniti sono stati modificati e si desidera ripristinare le impostazioni originali, è possibile utilizzare le informazioni contenute in questo argomento per specificare le impostazioni di autenticazione nel server di report.  
@@ -31,20 +31,20 @@ ms.locfileid: "36169577"
   
  È necessario inoltre che siano soddisfatti i seguenti requisiti aggiuntivi:  
   
--   I file Rseportserver devono avere `AuthenticationType` impostato su `RSWindowsNegotiate`, `RSWindowsKerberos`, o `RSWindowsNTLM`. Per impostazione predefinita, il file RSReportServer.config include l'impostazione `RSWindowsNegotiate` se l'account del servizio del server di report è NetworkService o LocalSystem; in caso contrario, viene utilizzata l'impostazione `RSWindowsNTLM`. Se sono presenti applicazioni che utilizzano solo l'autenticazione Kerberos, è possibile aggiungere `RSWindowsKerberos`.  
+-   I file RSReportServer devono avere `AuthenticationType` impostata su `RSWindowsNegotiate`, `RSWindowsKerberos`, o `RSWindowsNTLM`. Per impostazione predefinita, il file RSReportServer.config include l'impostazione `RSWindowsNegotiate` se l'account del servizio del server di report è NetworkService o LocalSystem; in caso contrario, viene utilizzata l'impostazione `RSWindowsNTLM`. Se sono presenti applicazioni che utilizzano solo l'autenticazione Kerberos, è possibile aggiungere `RSWindowsKerberos`.  
   
     > [!IMPORTANT]  
-    >  Utilizzando `RSWindowsNegotiate` comporterà un errore di autenticazione Kerberos se è stato configurato il servizio Windows ReportServer per l'esecuzione con un account utente di dominio e non si è stato registrato un nome principale di servizio (SPN) per l'account. Per altre informazioni, vedere [Risoluzione di errori di autenticazione Kerberos durante la connessione a un server di report](#proxyfirewallRSWindowsNegotiate) in questo argomento.  
+    >  Usando `RSWindowsNegotiate` causerà un errore di autenticazione Kerberos se è stato configurato il servizio Server di Report per l'esecuzione con un account utente di dominio e non è stato registrato un nome dell'entità di servizio (SPN) per l'account. Per altre informazioni, vedere [Risoluzione di errori di autenticazione Kerberos durante la connessione a un server di report](#proxyfirewallRSWindowsNegotiate) in questo argomento.  
   
 -   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] deve essere configurato per usare l'autenticazione di Windows. Per impostazione predefinita, i file Web. config per il servizio Web ReportServer e gestione Report includono il \<modalità di autenticazione = "Windows" > impostazione. Se l'impostazione viene modificata in \<authentication mode="Forms">, l'autenticazione di Windows per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avrà esito negativo.  
   
--   I file Web. config per il servizio Web ReportServer e gestione Report deve avere \<identity impersonate = "true" / >.  
+-   Nei file Web. config per il servizio Web ReportServer e gestione Report deve avere \<identity impersonate = "true" / >.  
   
 -   Nell'applicazione client o nel browser deve essere supportata la sicurezza integrata di Windows.  
   
  Per modificare le impostazioni di autenticazione del server di report, modificare gli elementi XML e i valori nel file RSReportServer.config. È possibile copiare e incollare gli esempi disponibili in questo argomento per implementare combinazioni specifiche.  
   
- Le impostazioni predefinite funzionano in modo ottimale se tutti i computer client e server si trovano nello stesso dominio o in un dominio di tipo trusted e se il server di report è distribuito per l'accesso Intranet attraverso un firewall aziendale. I domini singoli e di tipo trusted sono un requisito per il passaggio delle credenziali di Windows. Le credenziali possono essere passate più volte se si abilita il protocollo Kerberos versione 5 per i server. In caso contrario, le credenziali possono essere passate solo una volta prima che scadano. Per ulteriori informazioni sulla configurazione delle credenziali per più connessioni di computer, vedere [specificare le credenziali e informazioni di connessione per origini dati del Report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+ Le impostazioni predefinite funzionano in modo ottimale se tutti i computer client e server si trovano nello stesso dominio o in un dominio di tipo trusted e se il server di report è distribuito per l'accesso Intranet attraverso un firewall aziendale. I domini singoli e di tipo trusted sono un requisito per il passaggio delle credenziali di Windows. Le credenziali possono essere passate più volte se si abilita il protocollo Kerberos versione 5 per i server. In caso contrario, le credenziali possono essere passate solo una volta prima che scadano. Per altre informazioni sulla configurazione delle credenziali per più connessioni di computer, vedere [specificare le credenziali e informazioni di connessione per origini dati del Report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
  Le istruzioni seguenti sono relative a un server di report in modalità nativa. Se il server di report è distribuito in modalità integrata SharePoint, è necessario utilizzare le impostazioni di autenticazione predefinite che specificano la sicurezza integrata di Windows. Per supportare server di report in modalità integrata SharePoint, il server di report utilizza caratteristiche interne nell'estensione di autenticazione di Windows predefinita.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "36169577"
   
 -   Modificare l'account del servizio in modo che venga eseguito con un account predefinito, ad esempio Servizio di rete. Gli account predefiniti eseguono il mapping del nome SPN HTTP al nome SPN dell'host, definito quando un computer viene collegato a una rete. Per altre informazioni, vedere [Configurare un account del servizio &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).  
   
--   Utilizzare NTLM, che in genere funzionerà nei casi in cui l'autenticazione Kerberos ha esito negativo. Per utilizzare NTLM, rimuovere `RSWindowsNegotiate` da RSReportServer. config file e verificare che solo `RSWindowsNTLM` è specificato. Se si sceglie questo approccio, è possibile continuare a utilizzare un account utente di dominio per il servizio del server di report anche se per tale account non si definisce un nome SPN.  
+-   Utilizzare NTLM, che in genere funzionerà nei casi in cui l'autenticazione Kerberos ha esito negativo. Per usare NTLM, rimuovere `RSWindowsNegotiate` da RSReportServer. config file e verificare che solo `RSWindowsNTLM` è specificato. Se si sceglie questo approccio, è possibile continuare a utilizzare un account utente di dominio per il servizio del server di report anche se per tale account non si definisce un nome SPN.  
   
 #### <a name="logging-information"></a>Informazioni di registrazione  
  Esistono diverse origini di informazioni di registrazione che possono consentire la risoluzione dei problemi relativi a Kerberos.  

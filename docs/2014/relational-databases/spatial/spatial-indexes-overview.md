@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 99c12dce1bcab99ae5e4d65bf3ccc6d637b8154c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e21d0142212541ff41bef6ba76f8e274235b86a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194971"
 ---
 # <a name="spatial-indexes-overview"></a>Panoramica degli indici spaziali
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta dati e indici spaziali. Un *indice spaziale* è un tipo di indice esteso che consente di indicizzare una colonna spaziale. Una colonna spaziale è una colonna della tabella che contiene dati spaziali, ad esempio `geometry` o `geography`.  
@@ -63,7 +63,7 @@ ms.locfileid: "36169871"
  È possibile controllare il processo di scomposizione specificando densità della griglia non predefinite. Diverse densità della griglia a livelli diversi, ad esempio, potrebbero essere utili per l'ottimizzazione di un indice in base alle dimensioni dello spazio indicizzato e agli oggetti nella colonna spaziale.  
   
 > [!NOTE]  
->  Le densità della griglia di un indice spaziale sono visibili nelle colonne level_1_grid, level_2_grid, level_3_grid e level_4_grid della vista del catalogo [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) quando il livello di compatibilità del database è impostato su 100 o su un valore inferiore. Il `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` opzioni dello schema a mosaico non popolano queste colonne. vista del catalogo sys. spatial_index_tessellations ha `NULL` valori per queste colonne quando vengono utilizzate le opzioni griglia automatiche.  
+>  Le densità della griglia di un indice spaziale sono visibili nelle colonne level_1_grid, level_2_grid, level_3_grid e level_4_grid della vista del catalogo [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) quando il livello di compatibilità del database è impostato su 100 o su un valore inferiore. Il `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` opzioni dello schema a mosaico non popolano queste colonne. vista del catalogo sys. spatial_index_tessellations ha `NULL` i valori per queste colonne quando si usano le opzioni griglia automatiche.  
   
 ###  <a name="tessellation"></a> Suddivisione a mosaico  
  Dopo la scomposizione di uno spazio indicizzato in una gerarchia di griglie, l'indice spaziale legge i dati dalla colonna spaziale, riga per riga. Al termine della lettura dei dati per un oggetto spaziale (o istanza), l'indice spaziale esegue un *processo di suddivisione a mosaico* per l'oggetto. Il processo di suddivisione a mosaico adatta l'oggetto alla gerarchia di griglie associandolo a un set di celle della griglia interessate dall'oggetto stesso (*celle interessate*). Partendo dal livello 1 della gerarchia di griglie, la suddivisione a mosaico procede *prima in profondità* attraverso il livello. Potenzialmente, il processo può continuare per tutti i quattro livelli, uno dopo l'altro.  
@@ -103,7 +103,7 @@ ms.locfileid: "36169871"
   
  Ad esempio, nell'illustrazione precedente viene mostrato un ottagono che si inserisce perfettamente nella cella 15 della griglia di livello 1. Nella figura, la cella 15 è stata suddivisa a mosaico, sezionando l'ottagono in nove celle di livello 2. In questa illustrazione si presuppone che il limite di celle per oggetto sia 9 o più. Se tuttavia il limite di celle per oggetto è pari o inferiore a 8, la cella 15 non viene suddivisa e viene conteggiata da sola per l'oggetto.  
   
- Per impostazione predefinita il limite di celle per oggetto è pari a 16, una soluzione intermedia soddisfacente tra spazio e precisione per la maggior parte di indici spaziali. Tuttavia, il [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione supporta un CELLS_PER_OBJECT`=`*n* clausola che consente di specificare un limite di celle per oggetto compreso tra 1 e 8192, inclusivo.  
+ Per impostazione predefinita il limite di celle per oggetto è pari a 16, una soluzione intermedia soddisfacente tra spazio e precisione per la maggior parte di indici spaziali. Tuttavia, il [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione supporta un CELLS_PER_OBJECT`=`*n* clausola che consente di specificare un limite di celle per oggetto compreso tra 1 e 8192 inclusivo.  
   
 > [!NOTE]  
 >  L'impostazione **cells_per_object** di un indice spaziale è visibile nella vista del catalogo [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) .  
@@ -132,7 +132,7 @@ ms.locfileid: "36169871"
 >  È possibile specificare in modo esplicito questo schema a mosaico con la clausola USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) dell'istruzione [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
 ##### <a name="the-bounding-box"></a>Riquadro  
- I dati geometrici occupano un piano che può essere infinito. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tuttavia, un indice spaziale richiede uno spazio finito. Per stabilire uno spazio finito per la scomposizione, lo schema a mosaico per la griglia di geometria richiede un *riquadro*rettangolare. Il rettangolo di selezione è definita da quattro coordinate `(` *x-min ***,*** y-min* `)` e `(` *x-max ***,*** y-max*  `)`, che vengono archiviate come proprietà dell'indice spaziale. Queste coordinate rappresentano gli elementi seguenti:  
+ I dati geometrici occupano un piano che può essere infinito. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tuttavia, un indice spaziale richiede uno spazio finito. Per stabilire uno spazio finito per la scomposizione, lo schema a mosaico per la griglia di geometria richiede un *riquadro*rettangolare. Il rettangolo di selezione è definito da quattro coordinate, `(` *x-min ***,*** y-min* `)` e `(` *x-max ***,*** y-max*  `)`, che vengono archiviate come proprietà dell'indice spaziale. Queste coordinate rappresentano gli elementi seguenti:  
   
 -   *x-min* è la coordinata x dell'angolo inferiore sinistro del rettangolo di selezione.  
   
@@ -145,11 +145,11 @@ ms.locfileid: "36169871"
 > [!NOTE]  
 >  Queste coordinate sono specificate dalla clausola BOUNDING_BOX dell'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql).  
   
- Il `(` *x-min ***,*** y-min* `)` e `(` *x-max ***,*** y-max* `)` coordinate determinano la posizione e dimensioni del rettangolo. Lo spazio al di fuori del riquadro viene considerato come una cella unica numerata con 0.  
+ Il `(` *x-min ***,*** y-min* `)` e `(` *x-max ***,*** y-max* `)` le coordinate determinano la posizione e dimensioni del rettangolo. Lo spazio al di fuori del riquadro viene considerato come una cella unica numerata con 0.  
   
  L'indice spaziale scompone lo spazio nel riquadro. che viene riempito dalla griglia di livello 1 della gerarchia di griglie. Per posizionare un oggetto geometrico nella gerarchia di griglie, l'indice spaziale confronta le coordinate dell'oggetto con quelle del riquadro.  
   
- La figura seguente mostra i punti definiti dal `(` *x-min ***,*** y-min* `)` e `(` *x-max ***,*** y-max* `)` coordinate del rettangolo. Il livello superiore della gerarchia di griglie viene mostrato come una griglia 4x4. Ai fini dell'illustrazione, i livelli inferiori sono omessi. Lo spazio al di fuori del riquadro è indicato da uno zero (0). L'oggetto 'A' si estende in parte oltre il riquadro e l'oggetto 'B' si trova completamente al di fuori del riquadro nella cella 0.  
+ La figura seguente mostra i punti definiti dalle `(` *x-min ***,*** y-min* `)` e `(` *x-max ***,*** y-max* `)` coordinate del rettangolo. Il livello superiore della gerarchia di griglie viene mostrato come una griglia 4x4. Ai fini dell'illustrazione, i livelli inferiori sono omessi. Lo spazio al di fuori del riquadro è indicato da uno zero (0). L'oggetto 'A' si estende in parte oltre il riquadro e l'oggetto 'B' si trova completamente al di fuori del riquadro nella cella 0.  
   
  ![Rettangolo di selezione contenente le coordinate e la cella 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Rettangolo di selezione contenente le coordinate e la cella 0.")  
   

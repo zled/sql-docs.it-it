@@ -1,5 +1,5 @@
 ---
-title: Assistenza su SQL Server | Documenti Microsoft
+title: Assistenza su SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - offline resources [SQL Server]
 - Books Online [SQL Server], additional resources
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - SQL Server Solution Center
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac98b9aa879844e1a458e9f9ed59cd14c10804c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171060"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171162"
 ---
 # <a name="getting-sql-server-assistance"></a>Assistenza su SQL Server
   In [!INCLUDE[msCoName](../includes/msconame-md.md)] sono disponibili tre fonti principali di informazioni su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -70,7 +70,7 @@ ms.locfileid: "36171060"
   
 -   Una copia della documentazione online di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] è pubblicata sia in MSDN Library sia nella libreria TechNet disponibile su Internet. Negli argomenti di queste copie della documentazioni online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono inclusi commenti della community, quali esempi di codice e informazioni aggiuntive forniti da altri utenti. È possibile visualizzare la copia di MSDN Library nella [documentazione Online di SQL Server 2014](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx).  
   
--   È possibile utilizzare Gestione librerie della Guida per installare la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in un computer locale. Per altre informazioni, vedere [aggiungere o rimuovere la documentazione di SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+-   È possibile utilizzare Gestione librerie della Guida per installare la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in un computer locale. Per altre informazioni, vedere [aggiungere o rimuovere la documentazione di prodotto per SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
   
  Quando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pubblica un aggiornamento alla documentazione online di [!INCLUDE[msCoName](../includes/msconame-md.md)], vengono aggiornati sia la copia della documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in MSDN Library sia i file della documentazione online disponibili tramite Gestione librerie della Guida.  
   
@@ -95,9 +95,9 @@ ms.locfileid: "36171060"
 |[Microsoft SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)|Informazioni di prevendita per la valutazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come strumento per l'archiviazione dei dati e per soluzioni di Business Intelligence.|  
 |[Della Microsoft Knowledge Base](http://go.microsoft.com/fwlink/?LinkId=42461)|Repository in cui è possibile eseguire la ricerca di articoli relativi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] scritti dai tecnici del Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../includes/msconame-md.md)].|    
   
- I prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)] dispongono di un ciclo di vita del supporto che ne definisce il periodo di disponibilità per ciascuna versione. Nel sito relativo al supporto tecnico [!INCLUDE[msCoName](../includes/msconame-md.md)] è disponibile una pagina in cui viene definito il ciclo di vita del supporto per i prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]. Nella pagina sono presenti collegamenti ad altre pagine che specificano la disponibilità del supporto per i prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]. Per altre informazioni, vedere [ciclo di vita del supporto Microsoft](http://go.microsoft.com/fwlink/?LinkId=98306).  
+ I prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)] dispongono di un ciclo di vita del supporto che ne definisce il periodo di disponibilità per ciascuna versione. Nel sito relativo al supporto tecnico [!INCLUDE[msCoName](../includes/msconame-md.md)] è disponibile una pagina in cui viene definito il ciclo di vita del supporto per i prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]. Nella pagina sono presenti collegamenti ad altre pagine che specificano la disponibilità del supporto per i prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]. Per altre informazioni, vedere [di Microsoft Support Lifecycle](http://go.microsoft.com/fwlink/?LinkId=98306).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzare la documentazione di prodotto per SQL Server](../2014-toc/books-online-for-sql-server-2014.md)  
+ [Utilizzare la documentazione del prodotto per SQL Server](../2014-toc/books-online-for-sql-server-2014.md)  
   
   

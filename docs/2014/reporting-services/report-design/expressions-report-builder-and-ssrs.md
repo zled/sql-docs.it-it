@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c57c783be7740e6cfb9223b70bbb49d4eadbebe4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 669b5d6a8514dce55a2f5fadc0d1c239b5b3ab61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268587"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Espressioni (Generatore report e SSRS)
-  Le espressioni vengono ampiamente utilizzate in un report per recuperare, calcolare, visualizzare, raggruppare, ordinare, filtrare, parametrizzare e formattare i dati. Molte proprietà dell'elemento del report possono essere impostate su un'espressione tramite la quale è possibile controllare il contenuto, la progettazione e l'interattività del report. Le espressioni sono scritte [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], salvate nella definizione del report e valutate dall'elaboratore di report quando si esegue il report.  
+  Le espressioni vengono ampiamente utilizzate in un report per recuperare, calcolare, visualizzare, raggruppare, ordinare, filtrare, parametrizzare e formattare i dati. Molte proprietà dell'elemento del report possono essere impostate su un'espressione tramite la quale è possibile controllare il contenuto, la progettazione e l'interattività del report. Le espressioni sono scritte in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], salvate nella definizione del report e valutate dall'elaboratore di report quando si esegue il report.  
   
- A differenza delle applicazioni, ad esempio [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel dove si lavora con dati direttamente in un foglio di lavoro in un report, è possibile utilizzare espressioni che sono segnaposto per i dati. Per visualizzare i dati effettivi dalle espressioni valutate, è necessario visualizzare in anteprima il report. Durante l'esecuzione del report, tramite l'elaboratore di report è possibile valutare ogni espressione poiché vengono combinati i dati del report con gli elementi di layout del report quali tabelle e grafici.  
+ A differenza delle applicazioni, ad esempio [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel dove si lavora con i dati direttamente in un foglio di lavoro in un report, si utilizzano le espressioni che sono segnaposto per i dati. Per visualizzare i dati effettivi dalle espressioni valutate, è necessario visualizzare in anteprima il report. Durante l'esecuzione del report, tramite l'elaboratore di report è possibile valutare ogni espressione poiché vengono combinati i dati del report con gli elementi di layout del report quali tabelle e grafici.  
   
  Quando si progetta un report, molte espressioni degli elementi del report vengono impostate automaticamente. Ad esempio, quando si trascina un campo dal riquadro dei dati in una cella della tabella nell'area di progettazione del report, il valore della casella di testo viene impostato su un'espressione semplice per il campo. Nel riquadro dei dati riportato nella figura seguente vengono visualizzate le opzioni ID Name, SalesTerritory, Code e Sales dei campi del set di dati. Alla tabella sono stati aggiunti tre campi: [Name], [Code] e [Sales]. La notazione [Name] nell'area di progettazione rappresenta l'espressione `=Fields!Name.Value`sottostante.  
   
@@ -36,13 +36,13 @@ ms.locfileid: "36168947"
   
  Per ulteriori informazioni ed esempi, vedere gli argomenti seguenti:  
   
--   [Espressione viene utilizzata nei report di &#40;SSRS e Generatore Report&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+-   [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
 -   [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [Esempi di equazioni di filtro &#40;SSRS e Generatore Report&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Esempi di equazioni di filtro &#40;Report e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
--   [Esempi di espressioni di gruppo &#40;SSRS e Generatore Report&#41;](group-expression-examples-report-builder-and-ssrs.md)  
+-   [Esempi di espressioni di gruppo &#40;Report e SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
   
 -   [Esercitazioni su &#40;Generatore Report&#41;](../report-builder-tutorials.md)  
   
@@ -103,14 +103,14 @@ ms.locfileid: "36168947"
  Nelle espressioni possono essere inclusi riferimenti a funzioni, operatori, costanti, campi, parametri, elementi di raccolte predefinite nonché a codice personalizzato o assembly personalizzati incorporati.  
   
 > [!NOTE]  
->  Per sviluppare espressioni complesse o espressioni che utilizzano codice personalizzato o assembly personalizzati, si consiglia di utilizzare Progettazione Report in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+>  Per sviluppare espressioni complesse o espressioni che utilizzano codice personalizzato o assembly personalizzati, è consigliabile usare progettazione Report in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
  Nella tabella seguente vengono elencati i tipi di riferimenti che è possibile includere in un'espressione:  
   
 |Riferimenti|Description|Esempio|  
 |----------------|-----------------|-------------|  
 |[Costanti](expressions-report-builder-and-ssrs.md)|Vengono descritte le costanti a cui è possibile accedere in modo interattivo per le proprietà che richiedono valori costanti, ad esempio i colori dei caratteri.|`="Blue"`|  
-|[Operatori](operators-in-expressions-report-builder-and-ssrs.md)|Vengono descritti gli operatori che possono essere utilizzati per la combinazione di riferimenti in un'espressione. Ad esempio, il `&` operatore viene utilizzato per la concatenazione di stringhe.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
+|[Operatori](operators-in-expressions-report-builder-and-ssrs.md)|Vengono descritti gli operatori che possono essere utilizzati per la combinazione di riferimenti in un'espressione. Ad esempio, il `&` operatore viene usato per la concatenazione di stringhe.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
 |[Raccolte predefinite](built-in-collections-in-expressions-report-builder.md)|Vengono descritte le raccolte predefinite che è possibile includere in un'espressione, ad esempio, `Fields`, `Parameters`e `Variables`.|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
 |[Predefinite di Report e le funzioni di aggregazione](report-builder-functions-aggregate-functions-reference.md)|Vengono descritte le funzioni predefinite, ad esempio `Sum` o `Previous`, cui è possibile accedere da un'espressione.|`=Previous(Sum(Fields!Sales.Value))`|  
 |[Codice personalizzato e i riferimenti ad Assembly in espressioni in Progettazione Report &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Viene descritto come accedere alle classi CLR predefinite <xref:System.Math> e <xref:System.Convert>, ad altre classi CLR, a funzioni della libreria di runtime di [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] o a metodi da un assembly esterno.<br /><br /> Viene descritto come accedere a codice personalizzato incorporato nel report o compilato e installato come assembly personalizzato sia nel client che nel server di report.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
@@ -133,11 +133,11 @@ ms.locfileid: "36168947"
 ##  <a name="Section"></a> Argomenti della sezione  
  [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)  
   
- [Espressione viene utilizzata nei report di &#40;SSRS e Generatore Report&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;SSRS e Generatore Report&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [Riferimento dell'espressione &#40;SSRS e Generatore Report&#41;](expression-reference-report-builder-and-ssrs.md)  
+ [Riferimento dell'espressione &#40;Report e SSRS&#41;](expression-reference-report-builder-and-ssrs.md)  
   
 
   

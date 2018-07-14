@@ -1,5 +1,5 @@
 ---
-title: Concessione dell'accesso utente a un Server di Report (gestione Report) | Documenti Microsoft
+title: Concessione dell'accesso utente a un Server di Report (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
 - permissions [Reporting Services], granting report server access
@@ -19,13 +19,13 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d3a3526e9c52dad5c595c9df9fb722abb5f5b288
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b705997e16e2f41fb92ed7a5385a0907db09d99e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256143"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>Concedere l'accesso utente a un server di report (Gestione report)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la sicurezza basata sui ruoli per concedere agli utenti l'accesso a un server di report. In una nuova installazione del server di report, solo gli utenti che appartengono al gruppo Administrators locale dispongono delle autorizzazioni per accedere al contenuto ed eseguire operazioni sul server di report. Per rendere disponibile il server di report agli altri utenti, è necessario creare assegnazioni di ruolo che associano gli account utente o gli account di gruppo a un ruolo predefinito che specifica una raccolta di attività.  
@@ -61,7 +61,7 @@ ms.locfileid: "36170054"
   
 4.  Fare clic su **Nuova assegnazione ruolo**.  
   
-5.  In **nome utente o gruppo**, immettere un utente di dominio Windows o il gruppo di account nel formato seguente: \<dominio >\\< account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.  
+5.  Nelle **nome utente o gruppo**, immettere un utente di dominio Windows o il gruppo di account nel formato seguente: \<dominio >\\< account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.  
   
 6.  Selezionare un ruolo a livello di sistema e quindi fare clic su **OK**.  
   
@@ -82,16 +82,16 @@ ms.locfileid: "36170054"
     > [!NOTE]  
     >  Se un elemento eredita le impostazioni di sicurezza da un elemento padre, fare clic su **Modifica sicurezza elemento** sulla barra degli strumenti per modificare le impostazioni di sicurezza. Fare quindi clic su **Nuova assegnazione ruolo**.  
   
-5.  In **nome utente o gruppo**, immettere un utente di dominio Windows o il gruppo di account nel formato seguente: \<dominio >\\< account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.  
+5.  Nelle **nome utente o gruppo**, immettere un utente di dominio Windows o il gruppo di account nel formato seguente: \<dominio >\\< account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.  
   
 6.  Selezionare una o più definizioni di ruolo per descrivere la modalità di accesso all'elemento consentita all'utente o al gruppo e quindi fare clic su **OK**.  
   
 7.  Ripetere le operazioni per creare assegnazioni per utenti o gruppi aggiuntivi.  
   
 ## <a name="see-also"></a>Vedere anche  
- (creare-e-gestire-ruolo-assignments.md)   
+ (create-e-Gestisci-ruolo-assignments.md)   
  [Nuova assegnazione ruolo: Modifica assegnazione ruolo &#40;gestione Report&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
- [Pagina delle proprietà di sicurezza, gli elementi &#40;gestione Report&#41;](../security-properties-page-items-report-manager.md)   
+ [Pagina delle proprietà sicurezza, gli elementi &#40;gestione Report&#41;](../security-properties-page-items-report-manager.md)   
  [Assegnazioni di ruolo](role-assignments.md)   
  [Definizioni di ruolo](role-definitions.md)  
   

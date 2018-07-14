@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 549ebbb55faa6debf772c654dd3c51fcf6beadf1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0146a68973f7a80c6166e1dd91a0a4852d40f35c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236561"
 ---
 # <a name="optimizing-the-neworg-table"></a>Ottimizzazione della tabella NewOrg
-  Il **NewOrd** tabella creata nel [popolamento di una tabella con dati gerarchici esistenti](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contiene tutte le informazioni sui dipendenti, attività e rappresenta la struttura gerarchica utilizzando un `hierarchyid`tipo di dati. Questa attività aggiunge indici nuovi per supportare ricerche nella colonna `hierarchyid`.  
+  Il **NewOrd** creato nella tabella di [popolamento di una tabella con dati gerarchici esistenti](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) attività contiene tutte le informazioni sul personale e rappresenta la struttura gerarchica usando un `hierarchyid`tipo di dati. Questa attività aggiunge indici nuovi per supportare ricerche nella colonna `hierarchyid`.  
   
 ## <a name="clustered-index"></a>Indice cluster  
- Il `hierarchyid` colonna (**OrgNode**) è la chiave primaria per la **NewOrg** tabella. Quando la tabella è stata creata, conteneva un indice cluster denominato **PK_NewOrg_OrgNode** per applicare l'univocità della colonna **OrgNode** . Questo indice cluster supporta anche una ricerca in profondità nella tabella.  
+ Il `hierarchyid` colonna (**OrgNode**) è la chiave primaria per il **NewOrg** tabella. Quando la tabella è stata creata, conteneva un indice cluster denominato **PK_NewOrg_OrgNode** per applicare l'univocità della colonna **OrgNode** . Questo indice cluster supporta anche una ricerca in profondità nella tabella.  
   
 ## <a name="nonclustered-index"></a>Indice non cluster  
  Questo passaggio crea due indici non cluster per supportare le ricerche tipiche.  

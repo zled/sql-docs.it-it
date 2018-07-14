@@ -1,5 +1,5 @@
 ---
-title: Set di training e set di dati di Testing | Documenti Microsoft
+title: Set di training e set di dati di test | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing mining models
 - holdout [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0789d5f5ae4c141e8b7e53f7cab9938fae488a87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 770a5446b640cb3a2c5f5ce61f222e200f85ae3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173552"
 ---
 # <a name="training-and-testing-data-sets"></a>Set di dati di training e di testing
   La separazione dei dati in set di training e set di testing rappresenta una parte importante della valutazione dei modelli di data mining. In genere, quando si separa un set di dati in un set di training e un set di testing, la maggior parte dei dati viene utilizzata per il training e una parte più piccola per il testing. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue un campionamento casuale dei dati per assicurare che i set di testing e i training set siano simili. Utilizzando dati simili per il training e il testing, è possibile ridurre al minimo gli effetti delle discrepanze di dati e comprendere meglio le caratteristiche del modello.  
@@ -47,7 +47,7 @@ ms.locfileid: "36170484"
   
  È anche possibile configurare la procedura guidata per impostare un numero massimo di case di training oppure combinare i limiti per consentire una percentuale massima di case che rappresenti un numero massimo di case specificato. Quando si specifica sia una percentuale massima che un numero massimo di case, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizza il più piccolo dei due limiti come dimensione del set di test. Ad esempio, se si specifica il 30% di controllo per i case del testing e 1000 come numero massimo di test case, la dimensione del set di test non supererà mai i 1000 case. Questa condizione può essere utile se si desidera assicurare che le dimensioni del set di test rimangano coerenti anche se vengono aggiunti ulteriori dati di training al modello.  
   
- Se si utilizza la stessa vista origine dati per strutture di data mining diverse e si desidera assicurare che i dati vengano divisi approssimativamente nello stesso modo per tutte le strutture di data mining e i relativi modelli, è necessario specificare il valore di inizializzazione utilizzato per inizializzare il campionamento casuale. Quando si specifica un valore per `HoldoutSeed`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tale valore verrà utilizzato per avviare il campionamento. In caso contrario, per creare il valore di inizializzazione viene utilizzato un algoritmo di hash sul nome della struttura di data mining.  
+ Se si utilizza la stessa vista origine dati per strutture di data mining diverse e si desidera assicurare che i dati vengano divisi approssimativamente nello stesso modo per tutte le strutture di data mining e i relativi modelli, è necessario specificare il valore di inizializzazione utilizzato per inizializzare il campionamento casuale. Quando si specifica un valore per `HoldoutSeed`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] userà tale valore per iniziare il campionamento. In caso contrario, per creare il valore di inizializzazione viene utilizzato un algoritmo di hash sul nome della struttura di data mining.  
   
 > [!NOTE]  
 >  Se si crea una copia della struttura di data mining utilizzando le istruzioni `EXPORT` e `IMPORT`, la nuova struttura di data mining avrà gli stessi training set e set di dati di test, in quanto mediante il processo di esportazione viene creato un nuovo ID, ma viene utilizzato lo stesso nome. Tuttavia, se in due strutture di data mining viene utilizzata la stessa origine dati sottostante ma tali strutture hanno nomi diversi, i set creati per ogni struttura di data mining saranno diversi.  
@@ -99,7 +99,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   Nella maggior parte dei casi, il valore di controllo predefinito di 30 fornisce un buon bilanciamento tra dati di training e dati di testing. Non esiste un modo semplice per determinare le dimensioni del set di dati al fine di garantire un training sufficiente o il livello di supporto del tipo sparse da parte del set di training per evitare l'overfitting. Dopo aver compilato un modello, è tuttavia possibile utilizzare la convalida incrociata per stimare il set di dati rispetto a un determinato modello.  
   
--   Oltre alle proprietà elencate nella tabella precedente, in AMO e XML DDL viene fornita una proprietà di sola lettura, `HoldoutActualSize`. Tuttavia, poiché le dimensioni effettive di una partizione non possono essere determinata accuratamente finché non è stata elaborata la struttura, è consigliabile verificare se il modello è stato elaborato prima di recuperare il valore di `HoldoutActualSize` proprietà.  
+-   Oltre alle proprietà elencate nella tabella precedente, in AMO e XML DDL viene fornita una proprietà di sola lettura, `HoldoutActualSize`. Tuttavia, poiché la dimensione effettiva di una partizione non può essere determinata accuratamente finché non dopo che è stata elaborata la struttura, è consigliabile verificare se il modello è stato elaborato prima di recuperare il valore della `HoldoutActualSize` proprietà.  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
@@ -109,7 +109,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |Viene descritto come l'utilizzo dei dati di training e di testing influiscono sulla convalida incrociata.|[La convalida incrociata &#40;Analysis Services - Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
 |Vengono fornite informazioni sulle interfacce di programmazione per l'utilizzo di training set e set di testing in una struttura di data mining.|[Modello a oggetti AMO e concetti relativi](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](../scripting/objects/miningstructure-element-assl.md)|  
 |Viene fornita la sintassi DMX per la creazione di set di dati di controllo.|[CREA STRUTTURA DI DATA MINING &AMP;#40;DMX&AMP;#41;](/sql/dmx/create-mining-structure-dmx)|  
-|Vengono recuperate informazioni sui case nei set di training e di testing.|[Set di righe dello schema di data mining](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [L'esecuzione di query di Data Mining rowset dello Schema &#40;Analysis Services - Data Mining&#41;](data-mining-schema-rowsets-ssas.md)|  
+|Vengono recuperate informazioni sui case nei set di training e di testing.|[Set di righe dello schema di data mining](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [L'esecuzione di query di Data Mining Schema Rowsets &#40;Analysis Services - Data Mining&#41;](data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti di Data Mining](data-mining-tools.md)   

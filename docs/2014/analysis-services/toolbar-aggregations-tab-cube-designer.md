@@ -1,5 +1,5 @@
 ---
-title: Barra degli strumenti (scheda aggregazioni, Progettazione cubi) | Documenti Microsoft
+title: Sulla barra degli strumenti (scheda aggregazioni, Progettazione cubi) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8741ff3e-44c3-4bfa-a56a-de590e01576e
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 099af3b9682da4bda2f999641429f1bb78894170
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ae660a175024a52172475451436a5b2bd055982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325001"
 ---
 # <a name="toolbar-aggregations-tab-cube-designer"></a>Barra degli strumenti (scheda Aggregazioni, Progettazione cubi)
   Utilizzare il riquadro **Barra degli strumenti** per eseguire operazioni frequenti nella scheda **Aggregazioni** di Progettazione cubi.  
@@ -28,8 +28,8 @@ ms.locfileid: "36168608"
   
 |Opzione|Description|  
 |------------|-----------------|  
-|**Progetta aggregazioni**|Fare clic per visualizzare **Progettazione guidata aggregazioni**.<br /><br /> Nota: questa opzione è visualizzata solo nella vista standard di progettazione delle aggregazioni.|  
-|**Ottimizzazione basata sull'utilizzo**|Fare clic per visualizzare la procedura guidata **Ottimizzazione basata sulle statistiche di utilizzo**.<br /><br /> Nota: questa opzione è visualizzata solo nella vista standard di progettazione delle aggregazioni.|  
+|**Progettare le aggregazioni**|Fare clic per visualizzare **Progettazione guidata aggregazioni**.<br /><br /> Nota: questa opzione è visualizzata solo nella vista standard di progettazione delle aggregazioni.|  
+|**Ottimizzazione basata sulle statistiche sull'utilizzo**|Fare clic per visualizzare la procedura guidata **Ottimizzazione basata sulle statistiche di utilizzo**.<br /><br /> Nota: questa opzione è visualizzata solo nella vista standard di progettazione delle aggregazioni.|  
 |**Assegna progettazione aggregazioni**|Fare clic per visualizzare la finestra di dialogo **Assegna progettazione aggregazioni** .|  
 |**Vista standard**|Fare clic per visualizzare la **Vista standard** di progettazione delle aggregazioni in cui è possibile creare e modificare le progettazioni delle aggregazioni mediante **Progettazione guidata aggregazioni** oppure la procedura guidata **Ottimizzazione basata sulle statistiche di utilizzo**.|  
 |**Vista avanzata**|Fare clic per visualizzare la **Vista avanzata** di progettazione delle aggregazioni in cui è possibile creare e modificare manualmente le progettazioni delle aggregazioni e le aggregazioni singole. Questa vista deve essere utilizzata esclusivamente dagli utenti avanzati.<br /><br /> Nota: le procedure guidate **Progettazione guidata aggregazioni** e **Ottimizzazione basata sulle statistiche di utilizzo** non sono disponibili in questa vista.|  

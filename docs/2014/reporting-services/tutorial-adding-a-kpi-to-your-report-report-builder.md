@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 516b61e080c92bd6dc0579b93b829e891068c826
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f06fa546153ef62edda97c173a8c4fb9cc4d9362
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276167"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report (Generatore report)
   Un indicatore di prestazioni di chiave (KPI) è un valore misurabile dotato di significato aziendale. In questa esercitazione verrà illustrato come includere un indicatore KPI in un report. In questo scenario l'indicatore KPI è il riepilogo delle vendite in base alle sottocategorie del prodotto. Lo stato corrente dell'indicatore KPI viene mostrato tramite colori, misuratori e indicatori.  
@@ -33,9 +33,9 @@ ms.locfileid: "36168457"
   
  In questa esercitazione sono disponibili le procedure seguenti:  
   
-1.  [Creare un Report di tabella e un set di dati della tabella o la creazione guidata matrice](#Table)  
+1.  [Creare un Report tabella e un set di dati dalla tabella o dalla creazione guidata matrice](#Table)  
   
-2.  [Organizzare i dati, scegliere il Layout e lo stile dalla tabella o creazione guidata matrice](#CompleteWizard)  
+2.  [Organizzare i dati, scegliere il Layout e lo stile dalla tabella o procedura guidata matrice](#CompleteWizard)  
   
 3.  [Utilizzare i colori di sfondo per visualizzare un indicatore KPI](#BackgroundColors)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36168457"
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Table"></a> 1. Creare un report tabella e un set di dati dalla Creazione guidata tabella o matrice  
- Dal **Getting Started** finestra di dialogo, scegliere un'origine dati condivisa, creare un set di dati incorporato e visualizzare i dati in una tabella.  
+ Dal **introduttiva** finestra di dialogo, scegliere un'origine dati condivisa, creare un set di dati incorporato e visualizzare i dati in una tabella.  
   
 > [!NOTE]  
 >  Nella query di questa esercitazione sono contenuti i valori dei dati in modo che non sia necessaria un'origine dati esterna. Tale condizione rende tuttavia la query piuttosto lunga. In una query di un ambiente aziendale non sarebbe incluso alcun dato. Questo esempio è solo a scopo illustrativo.  
@@ -68,7 +68,7 @@ ms.locfileid: "36168457"
      Verrà visualizzata la finestra di dialogo **Riquadro attività iniziale** .  
   
     > [!NOTE]  
-    >  Se il **Getting Started** finestra di dialogo non viene visualizzata, dal pulsante Generatore Report, fare clic su **New**.  
+    >  Se il **Guida introduttiva** non viene visualizzato nella finestra di dialogo, dal pulsante Generatore Report, fare clic su **New**.  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36168457"
   
      Lo stile utilizzato nell'illustrazione per il record completato è Oceano.  
   
-12. Fare clic su **Fine**.  
+12. Scegliere **Fine**.  
   
      La tabella viene aggiunta all'area di progettazione. Nella tabella sono presenti cinque colonne e altrettante righe. Nel riquadro Gruppi di righe sono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36168457"
   
 1.  Nella tabella, fare doppio clic su due celle verso il basso dal `[Sum(Sales)]` cella (riga del subtotale che visualizza le vendite per una sottocategoria) e quindi fare clic su **proprietà casella di testo**.  
   
-2.  In **riempire**, fare clic sul **fx** accanto al pulsante il **colore riempimento** opzione e immettere l'espressione seguente nella **imposta espressione per: BackgroundColor** campo:  
+2.  In **riempire**, fare clic sul **fx** accanto al **colore di riempimento** l'opzione e immettere l'espressione seguente nella **imposta espressione per: BackgroundColor** campo:  
   
  `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -194,13 +194,13 @@ ms.locfileid: "36168457"
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nella tabella, destro del mouse sul gestore della colonna per la cella modificata nella procedura precedente, scegliere **Inserisci colonna**, quindi fare clic su **destra**. Alla tabella verrà aggiunta una nuova colonna.  
+2.  Nella tabella, fare clic sul gestore della colonna per la cella modificata nella procedura precedente, scegliere **Inserisci colonna**, quindi fare clic su **destra**. Alla tabella verrà aggiunta una nuova colonna.  
   
 3.  Tipo di **KPI** nell'intestazione di colonna.  
   
-4.  Nel **inserire** nella scheda il **aree dati** di gruppo, fare clic su **misuratore**e quindi fare clic nell'area di progettazione all'esterno della tabella. Verrà visualizzata la finestra di dialogo **Seleziona tipo di misuratore** .  
+4.  Nel **inserire** nella scheda il **aree dati** fare clic su **misuratore**e quindi fare clic nell'area di progettazione esterna alla tabella. Verrà visualizzata la finestra di dialogo **Seleziona tipo di misuratore** .  
   
-5.  Fare clic su **lineare**. Il primo tipo di misuratore lineare **orizzontale**, è selezionata.  
+5.  Fare clic su **lineare**. Il primo tipo di misuratore lineare **orizzontale**, sia selezionata.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -212,11 +212,11 @@ ms.locfileid: "36168457"
   
      Quando si rilascia il campo nel misuratore, il campo viene aggregato utilizzando la funzione Sum predefinita.  
   
-9. Il pulsante destro l'indicatore di misura nel misuratore e fare clic su **proprietà indicatore di misura**.  
+9. Fare doppio clic il puntatore nel misuratore e scegliere **proprietà indicatore di misura**.  
   
-10. In **tipo di puntatore**, selezionare **barra**. L'indicatore di misura si trasformerà da marcatore in una barra che risulterà più visibile in seguito all'aggiunta del misuratore alla tabella.  
+10. Nelle **tipo di puntatore**, selezionare **barra**. L'indicatore di misura si trasformerà da marcatore in una barra che risulterà più visibile in seguito all'aggiunta del misuratore alla tabella.  
   
-11. Fare clic su **riempimento indicatore di misura**. In **colore secondario** pick **giallo**. Il modello di riempimento sfumato cambierà da bianco in giallo.  
+11. Fare clic su **riempimento puntatore**. Nelle **colore secondario** prelievo **giallo**. Il modello di riempimento sfumato cambierà da bianco in giallo.  
   
 12. Fare clic con il pulsante destro del mouse sulla scala nel misuratore e selezionare **Proprietà scala**.  
   
@@ -255,7 +255,7 @@ ms.locfileid: "36168457"
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nella tabella, destro del mouse sul gestore della colonna per la cella modificata nella procedura precedente, scegliere **Inserisci colonna**, quindi fare clic su **destra**. Alla tabella verrà aggiunta una nuova colonna.  
+2.  Nella tabella, fare clic sul gestore della colonna per la cella modificata nella procedura precedente, scegliere **Inserisci colonna**, quindi fare clic su **destra**. Alla tabella verrà aggiunta una nuova colonna.  
   
 3.  Tipo di **KPI** nell'intestazione di colonna.  
   
@@ -265,7 +265,7 @@ ms.locfileid: "36168457"
   
      Verrà visualizzata la finestra di dialogo **Seleziona tipo indicatore** .  
   
-6.  Fare clic su **forme**. Il primo tipo, forma **3 semafori (),** sia selezionata.  
+6.  Fare clic su **forme**. Il primo tipo di forma **3 semafori (senza bordo),** sia selezionata.  
   
      Nell'esercitazione verrà utilizzato questo indicatore.  
   
@@ -277,7 +277,7 @@ ms.locfileid: "36168457"
   
 9. Fare clic su **valori e stati**.  
   
-10. Nell'elenco a discesa valore selezionare **[SUM (Sales)]**, ma non modificare eventuali altre opzioni.  
+10. Nell'elenco a discesa dei valori, selezionare **[SUM (Sales)]**, ma non modificare eventuali altre opzioni.  
   
      Per impostazione predefinita, si verifica la sincronizzazione dei dati nell'area dati e il valore **Tablix1**, ovvero il nome dell'area dati della tabella nel report, viene visualizzato nella casella **Ambito sincronizzazione** .  
   

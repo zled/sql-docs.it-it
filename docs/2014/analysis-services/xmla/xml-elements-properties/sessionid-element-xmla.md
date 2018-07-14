@@ -1,5 +1,5 @@
 ---
-title: Elemento SessionID (XMLA) | Documenti Microsoft
+title: Elemento SessionID (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - SessionID element
 ms.assetid: 18220e00-76cf-48f6-9465-200465a0c553
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 50e38174e1db7a86f4f06967110e233fec79353e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c7f0466ac9a175a6e31df235fa11cd4662e46b73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207561"
 ---
 # <a name="sessionid-element-xmla"></a>Elemento SessionID (XMLA)
   Identifica una sessione attiva in cui eseguire l'elemento padre [annullare](../xml-elements-commands/cancel-element-xmla.md) elemento.  
@@ -63,7 +63,7 @@ ms.locfileid: "36170439"
 |Elementi padre|[Annulla](../xml-elements-commands/cancel-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento CancelAssociated &#40;XMLA&#41;](cancelassociated-element-xmla.md)   

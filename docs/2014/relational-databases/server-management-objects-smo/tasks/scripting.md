@@ -1,5 +1,5 @@
 ---
-title: Scripting | Documenti Microsoft
+title: Scripting | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - scripts [SMO]
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1bf854648bc4180ca87d004d43002feb3c1baaac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 375a8f90c4864c8f1f3db12c56db1bf0eda3b0a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262277"
 ---
 # <a name="scripting"></a>Generazione di script
-  In SMO la generazione di script è controllata dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Scripter> e dai relativi oggetti figlio oppure dal metodo `Script` in oggetti singoli. Il <xref:Microsoft.SqlServer.Management.Smo.Scripter> oggetto controlla il mapping all'esterno le relazioni di dipendenza per gli oggetti in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  In SMO la generazione di script è controllata dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Scripter> e dai relativi oggetti figlio oppure dal metodo `Script` in oggetti singoli. Il <xref:Microsoft.SqlServer.Management.Smo.Scripter> oggetto consente di controllare il mapping all'esterno di relazioni di dipendenza per oggetti in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  La generazione di script avanzata tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Scripter> e i relativi oggetti figlio è un processo a tre fasi:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36169856"
   
 3.  Generazione dello script  
   
- Nella fase di individuazione viene utilizzato l'oggetto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>. A partire da un elenco URN di oggetti, il metodo <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> restituisce un oggetto <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> per gli oggetti presenti nell'elenco URN. Valore booleano *fParents* parametro viene utilizzato per indicare se devono essere individuati gli elementi padre o gli elementi figlio dell'oggetto specificato. In questa fase è possibile modificare l'albero delle dipendenze.  
+ Nella fase di individuazione viene utilizzato l'oggetto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>. A partire da un elenco URN di oggetti, il metodo <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> restituisce un oggetto <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> per gli oggetti presenti nell'elenco URN. Il valore booleano *fParents* parametro viene utilizzato per indicare se gli elementi padre o gli elementi figlio dell'oggetto specificato devono essere individuati. In questa fase è possibile modificare l'albero delle dipendenze.  
   
  Nella fase di generazione dell'elenco viene passato l'albero e viene restituito l'elenco risultante. Questo elenco di oggetti è ordinato secondo la generazione di script e può essere modificato.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36169856"
  Nella terza e ultima fase viene generato uno script con l'elenco e le opzioni di generazione script specificate. Il risultato viene restituito come un oggetto di sistema <xref:System.Collections.Specialized.StringCollection>. In questa fase i nomi degli oggetti dipendenti vengono estratti dalla raccolta Elementi dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> e da proprietà come <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> e <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A>.  
   
 ## <a name="example"></a>Esempio  
- Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto di Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C#&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
  Per questo esempio di codice è necessaria un'istruzione `Imports` per lo spazio dei nomi System.Collections.Specialized. Inserire questa istruzione con le altre istruzioni Imports prima di qualsiasi dichiarazione nell'applicazione.  
   

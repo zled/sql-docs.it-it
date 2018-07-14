@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.objectdependencies.f1
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c8b86adcbad71286c29500b2e85da23c4a18d5d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f360b9553c754c5e6fa9ee2bdd5e39d73f9194b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329011"
 ---
 # <a name="object-dependencies"></a>Dipendenze tra oggetti
   Alcuni oggetti di database hanno dipendenze con altri oggetti di database. Le viste e le stored procedure dipendono ad esempio dall'esistenza di tabelle che contengono i dati restituiti dalla vista o dalla procedura. Nella finestra di dialogo **Dipendenze oggetto** della pagina Generale relativa all'oggetto corrente sono elencati sia gli oggetti di database necessari per il corretto funzionamento dell'oggetto in questione, sia gli oggetti che dipendono da tale oggetto. Un oggetto che fa riferimento a un altro oggetto nella propria definizione archiviata nel catalogo del sistema è definito *entità di riferimento*. Un oggetto a cui fa riferimento un altro oggetto è denominato *entità con riferimenti*.  
@@ -34,11 +34,11 @@ ms.locfileid: "36168656"
  **Gli oggetti che dipendono***\<oggetto selezionato >*   
  Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze che dipendono dall'oggetto selezionato.  
   
- **Oggetti su cui***\<oggetto selezionato >***a seconda dei casi**   
+ **Gli oggetti in cui***\<oggetto selezionato >***dipende dal**   
  Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze da cui dipende l'oggetto selezionato.  
   
  **Dipendenze**  
- Se **gli oggetti che dipendono**  *\<oggetto selezionato >* è stato selezionato, consente di visualizzare una visualizzazione gerarchica degli oggetti che dipendono dall'oggetto selezionato. Se **oggetti su cui**  *\<oggetto selezionato >* **a seconda dei casi** è stato selezionato, consente di visualizzare una visualizzazione gerarchica degli oggetti da cui dipende l'oggetto selezionato .  
+ Se **gli oggetti che dipendono**  *\<oggetto selezionato >* è selezionato, verrà visualizzata una visualizzazione gerarchica degli oggetti che dipendono dall'oggetto selezionato. Se **oggetti in cui**  *\<oggetto selezionato >* **dipende** è selezionato, verrà visualizzata una visualizzazione gerarchica degli oggetti da cui dipende l'oggetto selezionato .  
   
  **Nome**  
  Consente di visualizzare il nome dell'oggetto selezionato nella visualizzazione albero **Dipendenze** precedente.  

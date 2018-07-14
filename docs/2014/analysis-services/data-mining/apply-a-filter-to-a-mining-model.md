@@ -1,5 +1,5 @@
 ---
-title: Applicare un filtro a un modello di Data Mining | Documenti Microsoft
+title: Applicare un filtro a un modello di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filters [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - filtering data [Analysis Services]
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb6cdfdf92e5cec0da4e27a78474037e2bd7d70e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f550dde21f45d7850db5cc6a27d2247c565dcee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253203"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Applicare un filtro a un modello di data mining
   Se la struttura di data mining contiene una tabella nidificata, è possibile applicare un filtro alla tabella del case, alla tabella nidificata o a entrambe.  
@@ -70,7 +70,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Fare clic nella casella di testo **Valore** e digitare un valore.  
   
-     Ad esempio, selezionare `Income` come colonna, selezionare il valore maggiore rispetto a (operatore) (>) e quindi digitare `30000`.  
+     Ad esempio, selezionare `Income` come colonna, selezionare il valore maggiore rispetto a operator (>) e quindi digitare `30000`.  
   
 9. Fare clic sulla riga successiva nella griglia.  
   
@@ -82,7 +82,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. Selezionare un operatore e digitare un valore come descritto nei passaggi 7 e 8.  
   
-     Ad esempio, selezionare `Income` come colonna di nuovo, selezionare l'operatore minore di (<) e quindi digitare `40000`.  
+     Ad esempio, selezionare `Income` nuovamente alla colonna, selezionare l'operatore minore di (<) e quindi digitare `40000`.  
   
 12. Fare clic sulla riga successiva nella griglia.  
   
@@ -90,7 +90,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>Per aggiungere un filtro nella tabella nidificata in un modello di data mining  
   
-1.  Nel  **\<nome > filtro modello** finestra di dialogo fare clic su una riga vuota nella griglia in **colonna della struttura di Data Mining**.  
+1.  Nel  **\<nome > filtro modello** finestra di dialogo fare clic su una riga vuota nella griglia sotto **colonna della struttura di Data Mining**.  
   
 2.  Selezionare il nome della tabella nidificata dall'elenco a discesa.  
   
@@ -110,7 +110,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  Fare clic su **Valore** e digitare un valore.  
   
-     Ad esempio, per **colonna struttura di Data Mining** selezionare `Model`. Per **operatore**, selezionare `<>`, quindi digitare il valore `Water Bottle`. Questa condizione crea l'espressione di filtro seguente:  
+     Ad esempio, per **colonna struttura di Data Mining** seleziona `Model`. Per la **Operator**, selezionare `<>`, quindi digitare il valore `Water Bottle`. Questa condizione crea l'espressione di filtro seguente:  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -119,7 +119,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  Poiché il numero di attributi della tabella nidificata è potenzialmente illimitato, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non viene fornito un elenco di valori possibili da cui effettuare una selezione. È necessario digitare il valore esatto. Inoltre, non è possibile utilizzare un operatore LIKE in una tabella nidificata.  
   
-1.  Aggiungere altre condizioni in base alle esigenze, combinare le condizioni, selezionare `AND` o `OR` nel **e/o** sul lato sinistro della finestra di **condizioni** griglia. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  Aggiungere più condizioni in base alle esigenze, combinare le condizioni, selezionare `AND` o `OR` nel **e/o** sul lato sinistro della finestra di **condizioni** griglia. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  Nella finestra di dialogo **Filtro modello** esaminare le condizioni create utilizzando la finestra di dialogo **Filtro** . Le condizioni per la tabella nidificata vengono aggiunte alle condizioni per la tabella del case e il set completo di condizioni di filtro viene visualizzato nella casella di testo **Espressione** .  
   
@@ -131,7 +131,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
   
 ## <a name="see-also"></a>Vedere anche  
  [Filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)   
- [Procedure dettagliate e attività di modello di data mining](mining-model-tasks-and-how-tos.md)   
+ [Procedure dettagliate e le attività del modello di data mining](mining-model-tasks-and-how-tos.md)   
  [Eliminare un filtro da un modello di data mining](delete-a-filter-from-a-mining-model.md)  
   
   

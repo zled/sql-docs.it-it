@@ -1,5 +1,5 @@
 ---
-title: Classi di sicurezza AMO | Documenti Microsoft
+title: Classi di sicurezza AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - AMO, security
 ms.assetid: e3d5012a-8121-40de-9244-1fc824228693
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9562c7aab750f4114ef59c1a7c17f44c8e3b05e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de0adbcc122e87ef95a349b357f0cfd173bd98a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220291"
 ---
 # <a name="amo-security-classes"></a>Classi di sicurezza AMO
   
@@ -43,7 +43,7 @@ ms.locfileid: "36171326"
   
  Per ulteriori informazioni sui metodi e sulle proprietà disponibili per tali oggetti, vedere <xref:Microsoft.AnalysisServices.Role> e <xref:Microsoft.AnalysisServices.RoleMember> in <xref:Microsoft.AnalysisServices>.  
   
-##  <a name="Permissions"></a> Oggetti Permission  
+##  <a name="Permissions"></a> Oggetti di autorizzazione  
  Per creare un oggetto <xref:Microsoft.AnalysisServices.Permission>, aggiungerlo alla raccolta di autorizzazioni dell'oggetto, quindi aggiornare l'oggetto <xref:Microsoft.AnalysisServices.Permission> nel server tramite il metodo Update.  
   
  Per rimuovere un oggetto <xref:Microsoft.AnalysisServices.Permission>, è necessario eliminarlo tramite il metodo Drop dell'oggetto. Il metodo Remove disponibile nella raccolta di autorizzazioni impedisce solo la visualizzazione delle autorizzazioni nell'applicazione, ma non rimuove l'oggetto <xref:Microsoft.AnalysisServices.Permission> dal server. Non è possibile eliminare un ruolo se è presente un'autorizzazione associata al ruolo stesso.  

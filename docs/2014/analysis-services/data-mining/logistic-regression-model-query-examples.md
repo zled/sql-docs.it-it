@@ -1,5 +1,5 @@
 ---
-title: Esempi di Query del modello di regressione logistica | Documenti Microsoft
+title: Esempi di Query del modello di regressione logistica | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b079609e6d2df8d104b3430488ae37ac0e9ea179
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f908b029074e58866f51dbd7deff571763e11b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189598"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Esempi di query sul modello di regressione logistica
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, oppure una query di stima, che utilizza i criteri presenti nel modello di data mining per eseguire stime utilizzando nuovi dati.  
@@ -161,7 +161,7 @@ NATURAL PREDICTION JOIN
   
 6.  Nella scheda **Struttura di data mining** fare clic con il pulsante destro del mouse sulla colonna per il livello di servizio e selezionare **Proprietà**.  
   
-7.  Modifica il `Content` proprietà dal **Continuous** a **Discretized**. Modifica il `DiscretizationMethod` proprietà da **cluster**. Per il conteggio dei bucket di discretizzazione digitare **3**.  
+7.  Modifica il `Content` proprietà dal **continuo** al **Discretized**. Modifica il `DiscretizationMethod` proprietà **cluster**. Per il conteggio dei bucket di discretizzazione digitare **3**.  
   
     > [!NOTE]  
     >  Questi parametri vengono utilizzati solo per illustrare il processo, non producono necessariamente un modello valido.  
@@ -216,6 +216,6 @@ NATURAL PREDICTION JOIN
  [Algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm.md)   
  [Riferimento tecnico l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Contenuto dei modelli di regressione logistica modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)   
- [Lezione 5: Compilazione di modelli di regressione logistica e di rete neurale &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Lezione 5: Creazione di reti neurali e modelli di regressione logistica &#40;esercitazione intermedia sul Data Mining&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

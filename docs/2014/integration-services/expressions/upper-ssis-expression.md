@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - UPPER function
 - converting lowercase to uppercase
@@ -18,13 +18,13 @@ ms.assetid: d33985f7-1048-4023-83e4-274090acda78
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc7b01b83ad0fac1f5da68fcd99ab082cebe89ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3208bd294197a77345a762f8fe08de42678cd585
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248531"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (espressione SSIS)
   Restituisce un'espressione di caratteri dopo aver convertito i caratteri minuscoli in caratteri maiuscoli.  
@@ -43,7 +43,7 @@ UPPER(character_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  È possibile utilizzare UPPER solo con il tipo di dati DT_WSTR. Se l'argomento *character_expression* è un valore letterale stringa o una colonna di dati con tipo di dati DT_STR, prima di eseguire l'operazione prevista da UPPER verrà eseguito il cast implicito al tipo di dati DT_WSTR. Per gli altri tipi di dati è necessario il cast esplicito al tipo di dati DT_WSTR. Per altre informazioni, vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md) e [Cast &#40;espressione SSIS&#41;](cast-ssis-expression.md).  
   
  Se l'argomento è Null, UPPER restituirà Null.  
@@ -68,7 +68,7 @@ UPPER(@PostalCode)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [BASSO &#40;espressione SSIS&#41;](lower-ssis-expression.md)   
- [Le funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md)  
+ [INFERIORE &#40;espressione di SSIS&#41;](lower-ssis-expression.md)   
+ [Le funzioni &#40;espressione di SSIS&#41;](functions-ssis-expression.md)  
   
   

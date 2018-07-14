@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione (scheda aggregazioni) di aggregazione | Documenti Microsoft
+title: Editor di trasformazione (scheda aggregazioni) di aggregazione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.aggregations.f1
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4aba29b60491e5f16bf262f2ae7fc5616c827ecd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4383522d6dd3f829222b0edf119e53bfd298ac43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221851"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor trasformazione Aggregazione (scheda Aggregazioni)
   Usare la scheda **Aggregazioni** della finestra di dialogo **Editor trasformazione Aggregazione** per specificare le colonne per l'aggregazione e le proprietà di aggregazione. È possibile applicare più aggregazioni. Questa trasformazione non genera output degli errori.  
@@ -84,20 +84,20 @@ ms.locfileid: "36170860"
  Se si scegliere **Group By**, usare le caselle di controllo per controllare la modalità con cui la trasformazione esegue il confronto. Per altre informazioni sulle opzioni per il confronto di stringhe, vedere [Confronto di dati stringa](data-flow/comparing-string-data.md).  
   
  **Count Distinct Scale**  
- È possibile specificare il numero approssimativo di valori distinct che l'aggregazione può scrivere. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se entrambi `CountDistinctScale` e **CountDistinctKeys** vengono specificati **CountDistinctKeys** ha la precedenza.  
+ È possibile specificare il numero approssimativo di valori distinct che l'aggregazione può scrivere. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se entrambe `CountDistinctScale` e **CountDistinctKeys** vengono specificati **CountDistinctKeys** ha la precedenza.  
   
 |valore|Description|  
 |-----------|-----------------|  
-|Non specificata|Il `CountDistinctScale` proprietà non viene usata.|  
+|Non specificata|Il `CountDistinctScale` proprietà non viene utilizzata.|  
 |Basso|L'aggregazione può scrivere circa 500.000 valori distinct.|  
 |Media|L'aggregazione può scrivere circa 5.000.000 di valori distinct.|  
 |Alto|L'aggregazione può scrivere oltre 25.000.000 di valori distinct.|  
   
  **Count Distinct Keys**  
- È possibile specificare il numero esatto di valori distinct che l'aggregazione può scrivere. Se entrambi `CountDistinctScale` e **CountDistinctKeys** vengono specificati **CountDistinctKeys** ha la precedenza.  
+ È possibile specificare il numero esatto di valori distinct che l'aggregazione può scrivere. Se entrambe `CountDistinctScale` e **CountDistinctKeys** vengono specificati **CountDistinctKeys** ha la precedenza.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor trasformazione aggregazione &#40;scheda Avanzate&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
  [Aggregare valori in un set di dati tramite la trasformazione Aggregazione](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   

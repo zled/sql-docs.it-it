@@ -1,5 +1,5 @@
 ---
-title: Tipi di dati supportati (SSAS tabulare) | Documenti Microsoft
+title: Tipi di dati supportati (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee05d2f7d3526aafd180e9eda5372668f164cb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57bf1633f05f9692c3e5cc132bce6585734830a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237631"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Tipi di dati supportati (SSAS tabulare)
   In questo articolo vengono descritti i tipi di dati che possono essere utilizzati nei modelli tabulari e viene illustrata la conversione implicita dei tipi di dati quando i dati vengono calcolati o utilizzati in una formula DAX (Data Analysis Expressions).  
@@ -50,11 +50,11 @@ ms.locfileid: "36169760"
 |Currency|Currency|Il tipo di dati currency consente valori compresi tra -922.337.203.685.477,5808 e 922.337.203.685.477,5807 con quattro cifre decimali di precisione fissa.|  
 |N/D|Vuoto|Un tipo di dati blank in DAX rappresenta e sostituisce i valori Null di SQL. È possibile creare un tipo di dati blank utilizzando la funzione BLANK, nonché verificare la presenza di tipi di dati blank utilizzando la funzione logica ISBLANK.|  
   
- <sup>1</sup> le formule DAX non supportano tipi di dati inferiori a quelli elencati nella tabella.  
+ <sup>1</sup> le formule DAX non supportano i tipi di dati inferiori a quelli elencati nella tabella.  
   
- <sup>2</sup> se si tenta di importare i dati con valori numerici molto grandi, importazione potrebbe non riuscire con l'errore seguente:  
+ <sup>2</sup> se si prova a importare dati con valori numerici molto grandi, importazione potrebbe non riuscire con l'errore seguente:  
   
- Errore del database in memoria: il '\<nome colonna >' colonna del '\<nome tabella >' tabella contiene un valore, ' 1.7976931348623157E+308 ', che non è supportato. L'operazione è stata annullata.  
+ Errore del database in memoria: il '\<nome colonna >' della colonna del '\<nome tabella >' tabella contiene un valore, ' 1.7976931348623157E+308 ', che non è supportato. L'operazione è stata annullata.  
   
  Questo errore si verifica perché in Progettazione modelli viene utilizzato questo valore per rappresentare valori Null. I valori nell'elenco seguente sono sinonimi del già menzionato valore Null:  
   

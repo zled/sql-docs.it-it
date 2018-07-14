@@ -1,5 +1,5 @@
 ---
-title: Elemento Original (XMLA) | Documenti Microsoft
+title: Elemento Original (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Original element
 ms.assetid: c98a3700-ac19-4341-85d9-5afedf662601
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 63ee76cd3b476b3a8dbf45a50ad0f9d22a55e0fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e70d0f29f41a687cb0716fbb857ff1b3b59023e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249161"
 ---
 # <a name="original-element-xmla"></a>Elemento Original (XMLA)
-  Contiene il percorso di archiviazione system file originale utilizzato da un [cartella](folder-element-xmla.md) elemento.  
+  Contiene il percorso di archiviazione del sistema file originale utilizzato da un [cartella](folder-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,10 +63,10 @@ ms.locfileid: "36167931"
 |Elementi padre|[Cartella](folder-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il `Original` elemento contiene un percorso UNC da sostituire con il valore della [New](new-element-xmla.md) elemento contenuto nell'elemento padre `Folder` per tutti gli oggetti ripristinati o sincronizzati, rispettivamente, durante un [ripristinare ](../xml-elements-commands/restore-element-xmla.md) oppure [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) comando. Il valore di questo elemento viene confrontato con il valore della [StorageLocation](../../scripting/properties/storagelocation-element-assl.md) elemento per ogni cubo, gruppo di misure o partizione e, se viene trovata una corrispondenza, il valore della `New` elemento viene usato per aggiornare il `StorageLocation` del oggetto durante il ripristino o la sincronizzazione.  
+## <a name="remarks"></a>Note  
+ Il `Original` elemento contiene un percorso UNC da sostituire con il valore della [New](new-element-xmla.md) elemento contenuto nell'elemento padre `Folder` per tutti gli oggetti ripristinati o sincronizzati rispettivamente durante un [ripristinare ](../xml-elements-commands/restore-element-xmla.md) oppure [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) comando. Il valore di questo elemento viene confrontato con il valore della [StorageLocation](../../scripting/properties/storagelocation-element-assl.md) (elemento) per ogni cubo, gruppo di misure o partizione e, se viene trovata una corrispondenza, il valore del `New` elemento viene usato per aggiornare il `StorageLocation` del oggetto durante il ripristino o la sincronizzazione.  
   
- Per ulteriori informazioni sul backup e ripristino degli oggetti, vedere [backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Per altre informazioni sul backup e ripristino degli oggetti, vedere [backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;XMLA&#41;](xml-elements-properties.md)  

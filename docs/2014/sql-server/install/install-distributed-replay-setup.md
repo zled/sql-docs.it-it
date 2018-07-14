@@ -1,5 +1,5 @@
 ---
-title: Installare riesecuzione distribuita (programma di installazione) | Documenti Microsoft
+title: Installare riesecuzione distribuita (programma di installazione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea29de67ee3e94089c63d5310e38a050be614ce3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 82e9df54c797b965409020056faac334a0d60709
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202521"
 ---
 # <a name="install-distributed-replay-setup"></a>Installare i componenti Riesecuzione distribuita (programma di installazione)
   Installare le funzionalità di Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Quando si pianifica il percorso di installazione delle funzionalità, considerare gli aspetti seguenti:  
@@ -127,9 +127,9 @@ ms.locfileid: "36169570"
   
  Negli argomenti aggiuntivi seguenti vengono illustrati altri modi per installare Riesecuzione distribuita:  
   
--   [Installare riesecuzione distribuita dal Prompt dei comandi](../../tools/distributed-replay/install-distributed-replay-overview.md)  
+-   [Installare Riesecuzione distribuita dal prompt dei comandi](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
--   [Installare riesecuzione distribuita tramite un File di configurazione](../../../2014/sql-server/install/install-distributed-replay-using-a-configuration-file.md)  
+-   [Installare i componenti Riesecuzione distribuita tramite un file di configurazione](../../../2014/sql-server/install/install-distributed-replay-using-a-configuration-file.md)  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Per installare qualsiasi funzionalità di Riesecuzione distribuita, è necessario disporre di autorizzazioni di amministratore. Solo un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che dispone di autorizzazioni sysadmin può aggiungere gli account del servizio client al ruolo del server sysadmin del server di prova. Per alcune considerazioni relative alla sicurezza di Riesecuzione distribuita, vedere [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  

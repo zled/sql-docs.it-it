@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - full-text search [SQL Server], stemmers
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 caps.latest.revision: 88
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4c3bfb07ca9730b8c03cb56f07464355c392bda6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 754e9097026fdf1e7a9be5bba6b6115db674a143
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221111"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurazione e gestione di word breaker e stemmer per la ricerca
   Word breaker e stemmer eseguono l'analisi linguistica su tutti i dati con indicizzazione full-text. L'analisi linguistica riguarda la ricerca dell'inizio e della fine delle parole (isolamento delle parole) e la coniugazione dei verbi (flessione). Word breaker e stemmer sono specifici della lingua e le regole per l'analisi linguistica variano a seconda della lingua. Un *word breaker* identifica singole parole determinando i delimitatori di parola in base alle regole lessicali della lingua. Ogni parola ( *token*) viene inserita nell'indice full-text utilizzando una rappresentazione compressa per ridurre le relative dimensioni. Lo *stemmer* genera forme flessive di una particolare parola in base alle regole di quella lingua, ad esempio "running", "ran" e "runner" sono varie forme della parola "run".  
@@ -43,8 +42,8 @@ ms.locfileid: "36171192"
   
  Se si aggiunge, rimuove o modifica un word breaker, è necessario aggiornare l'elenco degli identificatori delle impostazioni locali (LCID) di Microsoft Windows supportati per l'indicizzazione e le query full-text. Per altre informazioni, vedere [Visualizzazione o modifica di word breaker e filtri registrati](view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="default"></a> Impostare l'opzione Default Full-Text Language  
- Per una versione localizzata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set del programma di installazione di `default full-text language` opzione per la lingua del server, se esiste una corrispondenza appropriata. Per le versioni non localizzate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il `default full-text language` opzione è impostata sull'inglese.  
+##  <a name="default"></a> Impostazione dell'opzione Default Full-Text Language  
+ Per una versione localizzata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurare i set di `default full-text language` opzione per la lingua del server, se esiste una corrispondenza appropriata. Per le versioni non localizzate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il `default full-text language` opzione è l'inglese.  
   
  Quando si crea o modifica un indice full-text, è possibile specificare una lingua diversa per ogni colonna di indicizzazione full-text. Se per una colonna non è stata specificata alcuna lingua, il valore predefinito è quello dell'opzione di configurazione `default full-text language`.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "36171192"
   
  **Per visualizzare la lingua del word breaker di una colonna**  
   
--   [Gestire indici Full-Text](../indexes/indexes.md)  
+-   [Gestire indici full-text](../indexes/indexes.md)  
   
 -   [sys.fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)  
   
@@ -67,7 +66,7 @@ ms.locfileid: "36171192"
     ```  
   
 ##  <a name="info"></a> Recupero delle informazioni sui Word breaker  
- **Visualizzazione del risultato della suddivisione in token di una combinazione di word breaker, thesaurus ed elenco di parole significative**  
+ **Visualizzazione del risultato della Tokenizzazione di una combinazione di word breaker, thesaurus ed elenco di parole significative**  
   
 -   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql).  
   
@@ -78,7 +77,7 @@ ms.locfileid: "36171192"
 ##  <a name="tshoot"></a> Risoluzione dei problemi relativi agli errori di timeout di Word Breaking  
  Un errore di timeout del word breaking potrebbe verificarsi in diverse situazioni. Per informazioni su queste situazioni e su come rispondere, vedere [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md).  
   
-##  <a name="impact"></a> La comprensione dell'impatto dei nuovi Word breaker  
+##  <a name="impact"></a> Informazioni sull'impatto dei nuovi Word breaker  
  Ogni versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include in genere nuovi word breaker con regole linguistiche migliori e maggiore accuratezza rispetto alle versioni precedenti. È possibile che il comportamento dei nuovi word breaker sia leggermente diverso da quello dei word breaker negli indici full-text importati da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo aspetto è rilevante se si importa un catalogo full-text al momento dell'aggiornamento di un database alla versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una o più lingue utilizzate dagli indici full-text nel catalogo full-text potrebbero essere associate ai nuovi word breaker. Per altre informazioni, vedere [Aggiornamento della ricerca full-text](upgrade-full-text-search.md).  
   
  Per un elenco completo di tutti i word breaker, vedere [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  

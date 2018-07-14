@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di modelli che contengono query XPath (Provider SQLXMLOLEDB) | Documenti Microsoft
+title: Esecuzione di modelli che contengono query XPath (Provider SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XML templates [SQLXML]
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c51d8b0480a7a6dc86e1b878fef153604405266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: eef3ff7d70d3287d70becd45d73b24d715440c14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202831"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Esecuzione di modelli che contengono query XPath (provider SQLXMLOLEDB)
   In questo esempio viene illustrato come utilizzare le proprietà specifiche del provider SQLXMLOLEDB seguenti:  
@@ -39,11 +39,11 @@ ms.locfileid: "36171188"
   
 -   Schema di mapping  
   
- In questa applicazione ADO di esempio, viene specificato un modello XML costituito da una query XPath (radice) sullo schema di mapping XSD (MySchema. XML) che è descritto nell'argomento [l'esecuzione di query XPath &#40;Provider SQLXMLOLEDB&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
+ In questa applicazione ADO di esempio, viene specificato un modello XML costituito da una query XPath (radice) sullo schema di mapping XSD (MySchema. XML) descritto nel [l'esecuzione di query XPath &#40;Provider SQLXMLOLEDB&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
   
- La proprietà dello Schema di Mapping fornisce lo schema di mapping XSD sul quale viene eseguita la query XPath. La proprietà percorso di Base fornisce il percorso del file per lo schema di mapping.  
+ La proprietà dello Schema di Mapping fornisce lo schema di mapping XSD sul quale viene eseguita la query XPath. La proprietà Path di Base fornisce il percorso del file per lo schema di mapping.  
   
- La proprietà ClientSideXML è impostata su True. pertanto il documento XML viene generato sul client.  
+ Proprietà ClientSideXML è impostata su True. pertanto il documento XML viene generato sul client.  
   
  Nell'applicazione viene specificata direttamente una query XPath È pertanto necessario includere il sottolinguaggio {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   

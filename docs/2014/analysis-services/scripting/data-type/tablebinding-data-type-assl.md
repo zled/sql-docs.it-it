@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati TableBinding (ASSL) | Documenti Microsoft
+title: Tipo di dati TableBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TableBinding data type
 ms.assetid: 3195dca4-82bf-46b7-a31f-5383586e3573
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0790fe5d8567c8ab23e3aaf39430d46675dcbdc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 475044a0bcad3c90ffaffa71eeeb6735a37f96c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220251"
 ---
 # <a name="tablebinding-data-type-assl"></a>Tipo di dati TableBinding (ASSL)
   Definisce un tipo di dati derivato che rappresenta un'associazione a una tabella.  
@@ -59,10 +59,10 @@ ms.locfileid: "36170883"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[DataSourceID](../properties/id-element-assl.md), [DbSchemaName](../properties/name-element-assl.md), [DbTableName](../properties/dbtablename-element-assl.md)|  
+|Elementi figlio|[Elemento DataSourceID](../properties/id-element-assl.md), [DbSchemaName](../properties/name-element-assl.md), [DbTableName](../properties/dbtablename-element-assl.md)|  
 |Elementi derivati|Vedere [associazione](binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se si fa riferimento ad altre tabelle nell'espressione di filtro tramite una selezione secondaria, è possibile che le prestazioni in alcune origini dati risultino ridotte. La finestra di progettazione può tuttavia controllare completamente l'espressione SQL tramite la definizione di una query denominata nella vista origine dati da utilizzare come riferimento.  
   
  Il metodo di definizione delle associazioni per una partizione è indipendente dall'utilizzo di tabelle partizionate nella vista origine dati.  
@@ -77,11 +77,11 @@ SELECT Date, Product ID, Qty, Price, Qty * Price AS Amount
    WHERE Year(Sales.Date) = 97  
 ```  
   
- L'espressione calcolata si applica comunque, anche se l'espressione utilizza nomi di tabella qualificati, ad esempio Sales.Qty. Lo stesso vale se invece la tabella viene sostituita da una query "SELECT..." La clausola FROM precedente diventerebbe "da SELECT... As Sales".  
+ L'espressione calcolata si applica comunque, anche se l'espressione utilizza nomi di tabella qualificati, ad esempio Sales.Qty. Ciò vale anche se la tabella viene sostituita da una query "SELECT...". In questo caso, la clausola FROM indicata in precedenza diverrebbe "FROM SELECT... As Sales".  
   
- Per ulteriori informazioni il `Binding` tipo, incluse le tabelle di oggetti di Analysis Services Scripting Language (ASSL) di tipo `Binding` e la gerarchia di ereditarietà dei `Binding` tipi, vedere [associazione tipo di dati &#40;&#41;](binding-data-type-assl.md).  
+ Per altre informazioni sul `Binding` tipo, incluse le tabelle di oggetti di Analysis Services Scripting Language (ASSL) di tipo `Binding` e la gerarchia di ereditarietà dei `Binding` tipi, vedere [associazione tipo di dati &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Per una panoramica delle associazioni dati in ASSL, vedere [origini dati e le associazioni &#40;multidimensionali SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Per una panoramica delle associazioni di dati in ASSL, vedere [origini dati e associazioni &#40;multidimensionale di SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.TableBinding>.  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento TableID (ASSL) | Documenti Microsoft
+title: Elemento TableID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - TableID element
 ms.assetid: 45fe7e23-b274-4bc2-be63-1a5bb6680f51
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9b8f85ee3fecac1b098a16afe6cf2d0eca61226b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3010d64a5898b16322afca819f54cbcc32f0b867
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190861"
 ---
 # <a name="tableid-element-assl"></a>Elemento TableID (ASSL)
-  Contiene l'identificatore (ID) della tabella (dal [DataSourceView](../objects/datasourceview-element-assl.md) elemento) associati all'elemento padre.  
+  Contiene l'identificatore (ID) della tabella (dal [DataSourceView](../objects/datasourceview-element-assl.md) elemento) associato all'elemento padre.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36171104"
 |Elementi padre|[ColumnBinding](../data-type/binding-data-type-assl.md), [DSVTableBinding](../data-type/tablebinding-data-type-assl.md), [IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md), [RowBinding](../data-type/rowbinding-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  La tabella identificata da `TableID` deve essere all'interno dell'origine dati a cui è associato l'oggetto di appartenenza (dimensione o cubo).  
   
  Gli elementi che corrispondono agli elementi padre di `TableID` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.ColumnBinding>, <xref:Microsoft.AnalysisServices.DSVTableBinding>, <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification> e <xref:Microsoft.AnalysisServices.RowBinding>.  

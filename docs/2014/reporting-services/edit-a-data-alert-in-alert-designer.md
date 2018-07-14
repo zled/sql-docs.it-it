@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
 - updating, data alerts
@@ -18,13 +18,13 @@ ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f5c9314b2dca029341c4ea503e6417a5e9c2507d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8b11052241d66086eb9206978a65527e0df9a93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251703"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>Modificare un avviso dati nella finestra di progettazione di avvisi
   È possibile aprire una definizione di avviso dati da modificare tramite Gestione avvisi dati. La definizione di avviso può essere modificata solo dall'utente che l'ha creata. Per altre informazioni sull'apertura di gestione avvisi dati, vedere [Gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "36168248"
   
      La definizione di avviso viene aperta in Gestione avvisi dati.  
   
-2.  Aggiornare le regole e le impostazioni di pianificazione e di posta elettronica. Per altre informazioni, vedere [finestra di progettazione avviso dati](../../2014/reporting-services/data-alert-designer.md) e [creare un avviso di dati di progettazione avviso dati](create-a-data-alert-in-data-alert-designer.md).  
+2.  Aggiornare le regole e le impostazioni di pianificazione e di posta elettronica. Per altre informazioni, vedere [finestra di progettazione avviso dati](../../2014/reporting-services/data-alert-designer.md) e [creare un avviso nella finestra di progettazione avviso dati](create-a-data-alert-in-data-alert-designer.md).  
   
     > [!NOTE]  
     >  Non è possibile scegliere un feed di dati diverso. Per utilizzare un feed di dati diverso, è necessario creare una nuova definizione di avviso dati.  

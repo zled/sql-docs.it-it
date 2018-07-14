@@ -1,5 +1,5 @@
 ---
-title: Applicare funzioni di stima a un modello | Documenti Microsoft
+title: Applicare funzioni di stima a un modello | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Prediction [Analysis Services], selecting mining models
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: abd75a7a7be7cacc0395af11e02b5dc55828e31d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a512c4e9f288c0e776b7ac6de91604da39d9f4d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270017"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Applicare le funzioni di stima a un modello
   Per creare una query di stima, è innanzitutto necessario selezionare il modello di data mining su cui basare la query. È possibile selezionare qualsiasi modello di data mining esistente nel progetto corrente.  
@@ -72,7 +72,7 @@ ms.locfileid: "36169108"
     |||  
     |-|-|  
     |**\<Nome modello >**|Selezionare questa opzione per includere i valori del modello di data mining nell'output. È possibile aggiungere unicamente colonne stimabili.<br /><br /> Quando si aggiunge una colonna dal modello, il risultato restituito è l'elenco non distinto di valori in quella colonna.<br /><br /> Le colonne che si aggiungono tramite questa opzione sono incluse nella parte SELECT dell'istruzione DMX risultante.|  
-    |**Prediction Function**|Selezionare questa opzione per esplorare un elenco di funzioni di stima.<br /><br /> I valori o le funzioni selezionate vengono aggiunte alla parte SELECT dell'istruzione DMX risultante.<br /><br /> L'elenco di funzioni di stima non è filtrato o vincolato dal tipo di modello selezionato. Pertanto, se non si sa con sicurezza se la funzione è supportata per il tipo di modello corrente, è possibile aggiungerla all'elenco e assicurarsi che non si verifichi alcun errore.<br /><br /> Elementi dell'elenco preceduti da $ (ad esempio $AdjustedProbability) rappresentano le colonne della tabella nidificata che viene restituita quando si utilizza la funzione `PredictHistogram`. Si tratta di collegamenti che è possibile utilizzare per restituire una singola colonna e non una tabella nidificata.|  
+    |**Prediction Function**|Selezionare questa opzione per esplorare un elenco di funzioni di stima.<br /><br /> I valori o le funzioni selezionate vengono aggiunte alla parte SELECT dell'istruzione DMX risultante.<br /><br /> L'elenco di funzioni di stima non è filtrato o vincolato dal tipo di modello selezionato. Pertanto, se non si sa con sicurezza se la funzione è supportata per il tipo di modello corrente, è possibile aggiungerla all'elenco e assicurarsi che non si verifichi alcun errore.<br /><br /> Gli elementi dell'elenco preceduti da $ (ad esempio $AdjustedProbability) rappresentano le colonne della tabella nidificata che viene restituita quando si usa la funzione, `PredictHistogram`. Si tratta di collegamenti che è possibile utilizzare per restituire una singola colonna e non una tabella nidificata.|  
     |**Espressione personalizzata**|Selezionare questa opzione per digitare un'espressione personalizzata e quindi assegnare un alias all'output.<br /><br /> L'espressione personalizzata viene aggiunta alla parte SELECT della query di stima DMX risultante.<br /><br /> Questa opzione è utile se si desidera aggiungere del testo per l'output con ogni riga, per chiamare funzioni VB o stored procedure personalizzate.<br /><br /> Per informazioni sull'uso di funzioni VBA e di Excel da DMX, vedere [Funzioni VBA in MDX e DAX](/sql/mdx/vba-functions-in-mdx-and-dax).|  
   
 3.  Dopo avere aggiunto ogni funzione o espressione, passare alla vista DMX per vedere come la funzione viene aggiunta all'interno dell'istruzione DMX.  
@@ -96,9 +96,9 @@ ms.locfileid: "36169108"
   
 5.  Nella griglia della query per **Origine**selezionare il modello di data mining TM_Clustering e aggiungere la colonna [Bike Buyer].  
   
-6.  Per **origine**, selezionare **funzione di stima**e aggiungere la funzione `Cluster`.  
+6.  Per la **origine**, selezionare **funzione di stima**e aggiungere la funzione `Cluster`.  
   
-7.  Per **origine**, selezionare **funzione di stima**, aggiungere la funzione `PredictSupport`e trascinare la colonna del modello [Bike Buyer] nella **criteri/argomento** casella. Digitare **Supporto** nella colonna **Alias** .  
+7.  Per la **origine**, selezionare **funzione di stima**, aggiungere la funzione `PredictSupport`e trascinare la colonna del modello [Bike Buyer] nella **criteri/argomento** casella. Digitare **Supporto** nella colonna **Alias** .  
   
      Copiare l'espressione che rappresenta la funzione di stima e il riferimento alla colonna dalla casella **Criteri/Argomento** .  
   
@@ -129,6 +129,6 @@ ms.locfileid: "36169108"
  Se si desidera aggiungere altre clausole nell'istruzione, ad esempio una clausola WHERE, non è possibile aggiungerle tramite la griglia, ma è necessario passare prima alla vista DMX.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query di Data Mining](data-mining-queries.md)  
+ [Query di data mining](data-mining-queries.md)  
   
   

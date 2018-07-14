@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 1: Creazione del progetto e un pacchetto di base | Documenti Microsoft'
+title: 'Lezione 1: Creazione del progetto e un pacchetto di base | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 caps.latest.revision: 36
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0d586d6f62db9b4def299a506538b9d729773762
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c429f832ec89abe78b77dd1e8ece10082aeb0026
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331951"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lezione 1: Creazione del progetto e del pacchetto di base
   In questa lezione verrà creato un pacchetto ETL semplice tramite cui vengono estratti i dati da un'unica origine file flat, trasformati i dati usando due componenti di trasformazione Ricerca e scritti i dati in questione nella tabella dei fatti **FactCurrency** di **AdventureWorksDW2012**. In questa lezione si imparerà a creare nuovi pacchetti, aggiungere e configurare connessioni origine e destinazione dati e usare nuovi componenti flusso di controllo e flusso di dati.  
@@ -86,21 +86,21 @@ ms.locfileid: "36170164"
   
 -   [Passaggio 1: Creazione di un nuovo progetto di Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Passaggio 2: Aggiunta e configurazione di una gestione connessione File Flat](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Passaggio 2: Aggiunta e configurazione di una gestione connessione file flat](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
 -   [Passaggio 3: Aggiunta e configurazione di una gestione connessione OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Passaggio 4: Aggiunta di un'attività flusso di dati al pacchetto](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [Passaggio 4: Aggiunta di un'attività Flusso di dati al pacchetto](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [Passaggio 5: Aggiunta e configurazione dell'origine File Flat](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [Passaggio 5: Aggiunta e configurazione dell'origine file flat](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Passaggio 6: Aggiunta e configurazione delle trasformazioni ricerca](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Passaggio 6: Aggiunta e configurazione delle trasformazioni Ricerca](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 -   [Passaggio 7: Aggiunta e configurazione della destinazione OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Passaggio 8: Semplificazione del pacchetto della lezione 1 comprensione](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Passaggio 8: Semplificazione della comprensione del pacchetto della lezione 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Passaggio 9: Test del pacchetto della lezione 1 dell'esercitazione](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Passaggio 9: Test del pacchetto creato nella lezione 1 dell'esercitazione](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Inizio della lezione  
  [Passaggio 1: Creazione di un nuovo progetto di Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  

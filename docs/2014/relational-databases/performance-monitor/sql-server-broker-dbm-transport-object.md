@@ -1,5 +1,5 @@
 ---
-title: Oggetto di trasporto di SQL Server, Service Broker e DBM | Documenti Microsoft
+title: Oggetto di trasporto di SQL Server, Service Broker e mirroring del database | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Broker / DBM Transport object
 - SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac5a560f328de972dc40675d83e93c69447e6938
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 278e3776c19c9220b77347a0360e337184c4fd1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169408"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253923"
 ---
-# <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server, Service Broker e oggetto trasporto DBM
+# <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server, Service Broker e oggetto trasporto mirroring del database
   L'oggetto prestazione **Trasporto Broker/DBM** include contatori delle prestazioni che contengono informazioni di rete per Service Broker e il mirroring del database. Nella tabella seguente sono elencati i contatori inclusi nell'oggetto.  
   
 |Contatore Trasporto Broker/DBM di SQL Server|Description|  
@@ -42,7 +42,7 @@ ms.locfileid: "36169408"
 |**Frammenti messaggi P8 inviati/sec**|Questo contatore indica il numero di frammenti di messaggi con priorità 8 inviati in rete al secondo.|  
 |**Frammenti messaggi P9 inviati/sec**|Questo contatore indica il numero di frammenti di messaggi con priorità 9 inviati in rete al secondo.|  
 |**Frammenti messaggi P10 inviati/sec**|Questo contatore indica il numero di frammenti di messaggi con priorità 10 inviati in rete al secondo.|  
-|**Invia dimensioni medie frammenti messaggi**|Questo contatore indica le dimensioni medie dei frammenti di messaggi inviati in rete.|  
+|**Dimensioni medie invio frammenti di messaggi**|Questo contatore indica le dimensioni medie dei frammenti di messaggi inviati in rete.|  
 |**Frammenti messaggi inviati/sec**|Questo contatore indica il numero di frammenti di messaggi di tutti i livelli di priorità inviati in rete al secondo.|  
 |**Frammenti messaggi ricevuti/sec**|Questo contatore indica il numero di frammenti di messaggi ricevuti in rete al secondo.|  
 |**Dimensioni medie frammenti messaggi ricevuti**|Questo contatore indica le dimensioni medie dei frammenti di messaggi ricevuti in rete.|  
@@ -54,7 +54,7 @@ ms.locfileid: "36169408"
 |**Totale byte I/O ricezione**|Questo contatore indica il numero totale di byte ricevuti in rete dagli endpoint di Service Broker e dagli endpoint del mirroring del database.|  
 |**Byte I/O ricezione/sec**|Questo contatore indica il numero di byte al secondo ricevuti in rete dagli endpoint di Service Broker e dagli endpoint del mirroring del database.|  
 |**Lunghezza media I/O ricezione**|Questo contatore indica il numero medio di byte per un'operazione di ricezione del trasporto.|  
-|**Ricezione i/o/sec**|Questo contatore indica il numero di operazioni di I/O di ricezione del trasporto al secondo completate dal livello di trasporto Service Broker/DBM. Si noti che un'operazione di ricezione del trasporto può includere più frammenti di messaggi.|  
+|**Ricevere i/o al secondo**|Questo contatore indica il numero di operazioni di I/O di ricezione del trasporto al secondo completate dal livello di trasporto Service Broker/DBM. Si noti che un'operazione di ricezione del trasporto può includere più frammenti di messaggi.|  
 |**Totale byte I/O invio**|Questo contatore indica il numero totale di byte inviati in rete dagli endpoint di Service Broker e dagli endpoint del mirroring del database.|  
 |**Byte I/O invio/sec**|Questo contatore indica il numero di byte al secondo inviati in rete dagli endpoint di Service Broker e dagli endpoint del mirroring del database.|  
 |**Lunghezza media I/O invio**|Questo contatore indica le dimensioni medie in byte di ogni operazione di invio del trasporto. Si noti che un'operazione di invio del trasporto può includere più frammenti di messaggi.|  

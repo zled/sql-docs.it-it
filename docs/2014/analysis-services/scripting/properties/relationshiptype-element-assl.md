@@ -1,5 +1,5 @@
 ---
-title: Elemento RelationshipType (ASSL) | Documenti Microsoft
+title: Elemento RelationshipType (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RelationshipType element
 ms.assetid: 72e1ab0e-a95d-4ebe-857d-21de1bf9fe03
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2e5b5ec9e9591a45a80f099397ed6568a986313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21ddd4506a2c2a6168779aa40735eb7177406597
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271597"
 ---
 # <a name="relationshiptype-element-assl"></a>Elemento RelationshipType (ASSL)
   Indica se le relazioni tra membri per un [AttributeRelationship](../objects/attributerelationship-element-assl.md) può essere modificato.  
@@ -61,7 +61,7 @@ ms.locfileid: "36169515"
 |Elemento padre|[Oggetto AttributeRelationship](../objects/attributerelationship-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
@@ -69,7 +69,7 @@ ms.locfileid: "36169515"
 |*Rigida*|Le relazioni dei membri tra un attributo e un attributo correlato non possono essere modificate.|  
 |*Flessibile*|Le relazioni dei membri tra un attributo e un attributo correlato possono essere modificate.|  
   
- Ad esempio, se `ZipCode` non è possibile modificare da uno `City` a un'altra, la relazione dal `ZipCode` a `City` è contrassegnata come *rigida*.  
+ Ad esempio, se `ZipCode` non è possibile passare da uno `City` a un altro, la relazione dal `ZipCode` a `City` è contrassegnato come *rigida*.  
   
  L'enumerazione che corrisponde ai valori consentiti di `RelationshipType` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.RelationshipType>.  
   

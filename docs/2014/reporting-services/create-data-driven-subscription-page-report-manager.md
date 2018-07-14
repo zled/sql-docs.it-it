@@ -1,5 +1,5 @@
 ---
-title: Creare la pagina sottoscrizione guidata dai dati (gestione Report) | Documenti Microsoft
+title: Creare la pagina sottoscrizione guidata dai dati (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bc1a54e462b3f3219c70aa94caf7fc238942d240
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a43e81feb0cd8e0ecfd134468cd37f3cfac92049
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223221"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Pagine Creazione di una sottoscrizione guidata dai dati (Gestione report)
   Le pagine Creazione di una sottoscrizione guidata dai dati consentono di compilare o modificare una sottoscrizione che esegue una query su un database sottoscrittore per ottenere informazioni sulla sottoscrizione ogni volta che la sottoscrizione viene eseguita. Le sottoscrizioni guidate dai dati utilizzano i risultati della query per determinare i destinatari della sottoscrizione, le impostazioni di recapito e i valori dei parametri del report. In fase di esecuzione, il server di report esegue una query per recuperare i valori utilizzati per le impostazioni di sottoscrizione. È possibile utilizzare queste pagine per definire la query e assegnare i valori della query alle impostazioni della sottoscrizione. I valori e le opzioni che è possibile impostare per una sottoscrizione guidata dai dati sono suddivisi in più pagine, in modo simile a una procedura guidata. La procedura è composta da un totale di sette pagine.  
@@ -60,7 +60,7 @@ ms.locfileid: "36169605"
   
 -   Selezionare **Provider recapito Null** per recapitare i report nel database del server di report. Questa opzione consente di creare snapshot del report. Selezionare questa opzione se si desidera precaricare nel server di report snapshot del report specifici degli utenti o con parametri in base a una pianificazione specifica. Per altre informazioni, vedere [Memorizzazione dei report nella cache &#40;SSRS&#41;](report-server/caching-reports-ssrs.md).  
   
- **Specificare un'origine dati che contiene informazioni sui destinatari**  
+ **Specificare un'origine dati che contiene informazioni sul destinatari**  
  Consente di specificare la modalità di impostazione della connessione all'origine dati. È possibile selezionare un'origine dati condivisa se è già disponibile un'origine dati contenente le informazioni di connessione necessarie. Si possono inoltre impostare direttamente le informazioni di connessione per la sottoscrizione.  
   
  L'origine dei dati fornisce i dati del Sottoscrittore. Tali dati possono includere nomi e ID dei dipendenti, indirizzi di posta elettronica e preferenze per i formati di esportazione (come HTML o PDF). Se si utilizza l'estensione per il recapito tramite posta elettronica del server di report, è necessario che l'origine dati includa indirizzi di posta elettronica.  
@@ -113,7 +113,7 @@ ms.locfileid: "36169605"
  Specificare un nome file per il report. L'estensione per il recapito alla condivisione file consente di recapitare un report come file di applicazione statico a una cartella condivisa. Nella maggior parte dei casi, è necessario utilizzare un valore del database per creare il nome file. In base all'impostazione della modalità di scrittura, se viene utilizzato un valore statico ogni nuovo recapito può sovrascrivere il recapito precedente.  
   
  **Percorso**  
- Specificare una cartella condivisa accessibile in una connessione di rete. Per verificare tale cartella è accessibile, fare clic su **eseguiti** nel menu Start e immettere il percorso della cartella nel formato seguente: \\ \\< computername\>\\< nomecartellacondivisa\>.  
+ Specificare una cartella condivisa accessibile in una connessione di rete. Per verificare che la cartella è accessibile, fare clic su **eseguiti** nel menu Start e immettere il percorso della cartella nel formato seguente: \\ \\< computername\>\\< nomecartellacondivisa\>.  
   
  **Formato di rendering**  
  Specificare il formato di output del file. Il file può essere scritto nei formati di applicazione delle estensioni di rendering installate nel server di report.  
@@ -136,7 +136,7 @@ ms.locfileid: "36169605"
 |Opzione|Per|  
 |-----------------|----------------|  
 |**Specificare un valore statico**|Utilizzare un valore costante per il parametro se si desidera utilizzare lo stesso parametro per tutti i sottoscrittori. Se il parametro prevede più valori, è possibile selezionare un valore nell'elenco.|  
-|**Utilizza impostazioni predefinite**|Alcuni report contengono un valore predefinito per tutti i parametri o alcuni di essi. Se il parametro del report dispone di un valore predefinito, fare clic su questa casella di controllo per utilizzarlo.|  
+|**Utilizzare l'impostazione predefinita**|Alcuni report contengono un valore predefinito per tutti i parametri o alcuni di essi. Se il parametro del report dispone di un valore predefinito, fare clic su questa casella di controllo per utilizzarlo.|  
 |**Ottenere il valore dal database**|Utilizzare un valore dal set di risultati. Le colonne del set di risultati possono essere selezionate come origine per il valore di dati da utilizzare con ogni istanza della sottoscrizione.|  
   
 ## <a name="specify-a-trigger-page-6"></a>Impostazione di un trigger (pagina 6)  
@@ -151,7 +151,7 @@ ms.locfileid: "36169605"
 ## <a name="schedule-a-subscription-page-7"></a>Pianificazione di una sottoscrizione (pagina 7)  
  Se si sceglie di pianificare la sottoscrizione, è necessario impostare la frequenza di recapito del report. Il primo set di opzioni consente di specificare la frequenza (oraria, giornaliera, settimanale e così via). Il secondo set di opzioni varia a seconda dell'opzione selezionata nel primo gruppo e consente di impostare ulteriori dettagli della pianificazione.  
   
- **Ogni ora**  
+ **Oraria**  
  Consente di impostare una pianificazione eseguita a intervalli di ore.  
   
  **Giornaliero**  
@@ -178,6 +178,6 @@ ms.locfileid: "36169605"
  [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

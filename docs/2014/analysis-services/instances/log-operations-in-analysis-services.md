@@ -1,5 +1,5 @@
 ---
-title: Registrare le operazioni in Analysis Services | Documenti Microsoft
+title: Log operazioni in Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2748496ead805834f0b6051f159dcca551b0b178
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 332f1ff5bff2379f3d11fa61bf3423a9d8e06347
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169536"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228371"
 ---
 # <a name="log-operations-in-analysis-services"></a>Registrare le operazioni in Analysis Services
   Un'istanza di Analysis Services registrerà le notifiche, gli errori e gli avvisi del server nel file msmdsrv.log: uno per ogni istanza installata. Gli amministratori fanno riferimento a questo log per informazioni sulla routine nonché per eventi straordinari. Nelle versioni recenti la registrazione è stata migliorata per includere altre informazioni. I record di log includono ora informazioni sull'edizione e la versione del prodotto, nonché eventi del processore, della memoria, della connettività e di blocco. È possibile consultare l'elenco completo delle modifiche in [Miglioramenti della registrazione](http://support.microsoft.com/kb/2965035).  
@@ -50,25 +50,25 @@ ms.locfileid: "36169536"
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Log degli errori|Monitoraggio della routine e risoluzione dei problemi di base|Sì|  
 |Tabella OlapQueryLog in un database relazionale|Log di query|Raccolta di input per l'Ottimizzazione guidata basata sulle statistiche di utilizzo|no|  
-|File SQLDmp\<guid >. mdmp|Arresti anomali ed eccezioni|Risoluzione dei problemi completa|no|  
+|File SQLDmp\<guid > i file con estensione mdmp|Arresti anomali ed eccezioni|Risoluzione dei problemi completa|no|  
   
  Per altre risorse di informazioni non incluse nel presente argomento, è consigliabile consultare il collegamento seguente: [Initial data collection tips from Microsoft Support](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Suggerimenti per la raccolta dati iniziale forniti dal supporto tecnico Microsoft).  
   
 ##  <a name="bkmk_general"></a> Informazioni generali sulle impostazioni di configurazione dei file di log  
- È possibile trovare le sezioni per ogni log nel file di configurazione del server msmdsrv.ini, che si trova nella cartella \Programmi\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config. Vedere [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) per istruzioni sulla modifica del file.  
+ È possibile trovare le sezioni per ogni log nel file di configurazione del server msmdsrv.ini, che si trova nella cartella \Programmi\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config. Visualizzare [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) per istruzioni sulla modifica del file.  
   
  Dove possibile, è consigliabile impostare le proprietà di registrazione nella pagina delle proprietà del server di Management Studio. Anche se in alcuni casi sarà necessario modificare il file msmdsrv.ini direttamente per configurare le impostazioni che non sono visibili negli strumenti di amministrazione.  
   
- ![Sezione del file di configurazione che mostra le impostazioni del log](../media/ssas-logfilesettings.png "sezione del file di configurazione che mostra le impostazioni del log")  
+ ![Sezione del file di configurazione con le impostazioni del registro](../media/ssas-logfilesettings.png "sezione del file di configurazione con le impostazioni del log")  
   
 ##  <a name="bkmk_msmdsrv"></a> File di log del servizio MSMDSRV  
  Analysis Services registra le operazioni del server nel file msmdsrv.log, uno per ogni istanza, che si trova in \Programmi\Microsoft SQL Server\\<istanza\>\Olap\Log.  
   
  Questo file di log viene svuotato a ogni riavvio del servizio. Nelle versioni precedenti, gli amministratori a volte riavviavano il servizio al solo scopo di svuotare il file di log prima che diventasse talmente grande da non poter essere usato. Ciò non è più necessario. Le impostazioni di configurazione introdotte in SQL Server 2012 SP2 e versioni successive consentono di controllare le dimensioni del file di log e la relativa cronologia:  
   
--   `MaxFileSizeMB` Specifica una dimensione massima in megabyte. L'impostazione predefinita è 256. Un valore di sostituzione valido deve essere un numero intero positivo. Quando `MaxFileSizeMB` viene raggiunto, Analysis Services Rinomina il file come file di log msmdsrv {timestamp corrente} corrente e avvia un nuovo file msmdsrv.  
+-   `MaxFileSizeMB` Specifica una dimensione massima in megabyte. L'impostazione predefinita è 256. Un valore di sostituzione valido deve essere un numero intero positivo. Quando si `MaxFileSizeMB` viene raggiunto, Analysis Services Rinomina il file corrente come file msmdsrv {timestamp corrente}. log e inizia un nuovo file msmdsrv.  
   
--   `MaxNumberFiles` Specifica la memorizzazione di file di registro meno recenti. Il valore predefinito è 0 (disabilitata). È possibile modificare tale valore con un numero intero positivo per mantenere le versioni del file di log. Quando `MaxNumberFiles` viene raggiunto, Analysis Services elimina il file con il timestamp meno recente nel nome.  
+-   `MaxNumberFiles` Specifica la memorizzazione dei file di log meno recenti. Il valore predefinito è 0 (disabilitata). È possibile modificare tale valore con un numero intero positivo per mantenere le versioni del file di log. Quando si `MaxNumberFiles` viene raggiunto, Analysis Services elimina il file con il timestamp meno recente nel relativo nome.  
   
  Per usare queste impostazioni, eseguire le operazioni seguenti:  
   
@@ -154,7 +154,7 @@ ms.locfileid: "36169536"
   
  Se non diversamente indicato dal supporto tecnico Microsoft, la maggior parte degli amministratori usa le impostazioni predefinite. Questo articolo non recente della Knowledge Base viene ancora usato per fornire istruzioni su come configurare i file di dump: [Come configurare SQL Server 2005 Analysis Services per generare file di dump di memoria](http://support.microsoft.com/kb/919711).  
   
- L'impostazione più soggetti a modifiche di configurazione è il `CreateAndSendCrashReports` usata per determinare se verrà generato un file di dump di memoria.  
+ L'impostazione più soggette a modifiche di configurazione è la `CreateAndSendCrashReports` usata per determinare se verrà generato un file di dump di memoria.  
   
 |Valore|Description|  
 |-----------|-----------------|  
@@ -164,7 +164,7 @@ ms.locfileid: "36169536"
   
  `CrashReportsFolder` è il percorso dei file di dump. Per impostazione predefinita, il file con estensione mdmp e i record di log associati vengono archiviati nella cartella \Olap\Log.  
   
- `SQLDumperFlagsOn` viene utilizzato per generare un dump completo. Per impostazione predefinita, i dump completi non sono abilitati. È possibile impostare questa proprietà `0x34`.  
+ `SQLDumperFlagsOn` Consente di generare un dump completo. Per impostazione predefinita, i dump completi non sono abilitati. È possibile impostare questa proprietà `0x34`.  
   
  Per altre informazioni generiche, vedere i collegamenti seguenti:  
   

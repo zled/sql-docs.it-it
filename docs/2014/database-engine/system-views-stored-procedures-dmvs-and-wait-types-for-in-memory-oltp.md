@@ -1,5 +1,5 @@
 ---
-title: Viste di sistema, Stored procedure, viste a gestione dinamica e tipi di attesa per OLTP In memoria | Documenti Microsoft
+title: Viste di sistema, Stored procedure, viste a gestione dinamica e tipi di attesa per OLTP In memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
 caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a4e50744a716e42e0fd2767ec9cc677b2ccc085f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0a11867eafdcd747da207c2ff6783391ed3485f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245221"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Viste di sistema, Stored procedure, viste a gestione dinamica e tipi di attesa per OLTP In memoria
   Questo argomento fornisce brevi descrizioni e collegamenti ai numerosi oggetti di database che supportano OLTP In memoria.  
@@ -28,8 +28,8 @@ ms.locfileid: "36167915"
   
 |Vista di sistema|Description|Funzionalità OLTP in memoria|  
 |-----------------|-----------------|-----------------------------|  
-|[sys.data_spaces &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|Verifica se un filegroup contiene dati ottimizzati per la memoria.|Le colonne seguenti visualizzati valori aggiuntivi: **tipo** e **type_desc**.|  
-|[sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)|Verifica se un indice è contenuto in una tabella ottimizzata per la memoria.|Le colonne seguenti visualizzati valori aggiuntivi: **tipo** e **type_desc**.|  
+|[sys.data_spaces &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|Verifica se un filegroup contiene dati ottimizzati per la memoria.|Le colonne seguenti indicano valori aggiuntivi: **tipo** e **type_desc**.|  
+|[sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)|Verifica se un indice è contenuto in una tabella ottimizzata per la memoria.|Le colonne seguenti indicano valori aggiuntivi: **tipo** e **type_desc**.|  
 |[sys.parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)|Verifica che un parametro non ammetta i valori Null (per un'esecuzione più efficiente di una stored procedure compilata in modo nativo).|**is_nullable** colonna.|  
 |[Sys.all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Verifica che una stored procedure sia compilata in modo nativo.|**uses_native_compilation** colonna.|  
 |[sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|Verifica che una stored procedure sia compilata in modo nativo.|**uses_native_compilation** colonna.|  
@@ -48,7 +48,7 @@ ms.locfileid: "36167915"
   
 |Stored procedure|Description|  
 |----------------------|-----------------|  
-|[Sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|Associare un database OLTP In memoria a un pool di risorse.|  
+|[sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|Associare un database OLTP In memoria a un pool di risorse.|  
 |[Sys.sp_xtp_checkpoint_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql)|Avviare la procedura di garbage collection in un database OLTP In memoria.|  
 |[Sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)|Abilitare della raccolta di statistiche per stored procedure compilate in modo nativo|  
 |[Sys. sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql)|Abilitare la raccolta di statistiche di query per stored procedure compilate in modo nativo|  
@@ -58,12 +58,12 @@ ms.locfileid: "36167915"
 ## <a name="dynamic-management-views-dmvs"></a>Viste a gestione dinamica (DMV)  
  Sono disponibili diverse viste a gestione dinamica per le tabelle ottimizzate per la memoria.  
   
- Per informazioni dettagliate, vedere [Optimized tabella viste a gestione dinamica &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql).  
+ Per informazioni dettagliate, vedere [viste a gestione dinamica ottimizzati per la memoria nella tabella &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql).  
   
 ## <a name="wait-types"></a>Tipi di attesa  
  Esistono diversi tipi di attesa che supportano OLTP In memoria.  
   
- Per informazioni dettagliate, vedere i tipi sono precedute dal prefisso di attesa **WAIT_XTP**, e **XTPPROC** nel [DM os_wait_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql) argomento.  
+ Per informazioni dettagliate, vedere i tipi che hanno il prefisso di attesa **WAIT_XTP**, e **XTPPROC** nel [DM os_wait_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql) argomento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   

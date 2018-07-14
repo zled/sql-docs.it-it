@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.sorting.f1
 - "10403"
@@ -20,15 +20,15 @@ f1_keywords:
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c6e738ae473636e3fdd0c9d7efa1512a6b5b68f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4ba8d34b6f56bec66ce2fc1a8f0d4024e4a45493
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256350"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtro, raggruppamento e ordinamento di dati (Generatore report e SSRS)
   In un report le espressioni vengono usate per facilitare il controllo, l'organizzazione e l'ordinamento di dati del report. Per impostazione predefinita, mentre si creano set di dati e si progetta il layout del report, le proprietà degli elementi del report vengono impostate automaticamente su espressioni basate su campi del set di dati, parametri e altri elementi visualizzati nel riquadro dei dati del report. È inoltre possibile aggiungere un pulsante di ordinamento interattivo a una tabella o una cella della matrice, in modo da consentire a un utente di modificare in modo interattivo l'ordinamento della riga per gruppi o righe all'interno di gruppi.  
@@ -45,9 +45,9 @@ ms.locfileid: "36169835"
   
  Per ulteriori informazioni ed esempi, vedere gli argomenti seguenti:  
   
--   [Esempi di espressioni di gruppo &#40;SSRS e Generatore Report&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [Esempi di espressioni di gruppo &#40;Report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [Esempi di equazioni di filtro &#40;SSRS e Generatore Report&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Esempi di equazioni di filtro &#40;Report e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
 -   [Esercitazioni su &#40;Generatore Report&#41;](../report-builder-tutorials.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36169835"
   
  Quando è possibile, compilare query del set di dati che restituiscono solo i dati che è necessario visualizzare nel report. Riducendo la quantità di dati da recuperare ed elaborare, si migliorano le prestazioni del report. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
- Dopo avere recuperato i dati dall'origine dati esterna, è possibile aggiungere filtri a set di dati, aree dati e gruppi di aree dati, inclusi gruppi di dettagli. In fase di esecuzione, i filtri vengono applicati prima al set di dati, poi all'area dati e infine al gruppo procedendo dall'alto verso il basso per le gerarchie di gruppi. In una tabella, una matrice o un elenco i filtri per gruppi di righe, gruppi di colonne e gruppi adiacenti vengono applicati in modo indipendente. Anche in un grafico i filtri per gruppi di categorie e gruppi di serie vengono applicati in modo indipendente. Per altre informazioni, vedere [aggiungere i filtri di set di dati, filtri delle aree dati e i filtri di gruppo &#40;Generatore Report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
+ Dopo avere recuperato i dati dall'origine dati esterna, è possibile aggiungere filtri a set di dati, aree dati e gruppi di aree dati, inclusi gruppi di dettagli. In fase di esecuzione, i filtri vengono applicati prima al set di dati, poi all'area dati e infine al gruppo procedendo dall'alto verso il basso per le gerarchie di gruppi. In una tabella, una matrice o un elenco i filtri per gruppi di righe, gruppi di colonne e gruppi adiacenti vengono applicati in modo indipendente. Anche in un grafico i filtri per gruppi di categorie e gruppi di serie vengono applicati in modo indipendente. Per altre informazioni, vedere [aggiungere filtri per set di dati, aree dati e filtri di gruppo &#40;Generatore Report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
   
  Specificare un' *equazione di filtro*per ogni filtro. Un'equazione di filtro include un campo del set di dati o un'espressione che specifica i dati da filtrare, un operatore e un valore da confrontare. Quando l'elemento viene elaborato, vengono inclusi solo i valori dei dati che corrispondono alla condizione di filtro.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36169835"
   
  Il nome del gruppo identifica l'ambito di un'espressione. È possibile specificare il nome di un gruppo come un ambito nel quale calcolare aggregazioni, organizzare gerarchicamente dati e attivare o disattivare la visualizzazione di nodi figlio da nodi padre in un report drill-down, visualizzare viste diverse degli stessi dati in più aree dati e visualizzare dati riepilogativi in una tabella, una matrice, un grafico, un misuratore o una mappa. Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)sottostante.  
   
- Per raggruppare diversi campi del set di dati, aggiungere ogni campo al set di espressioni di raggruppamento. È anche possibile scrivere espressioni di gruppo in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. È possibile ad esempio eseguire il raggruppamento in base a un intervallo di valori oppure usando un parametro del report per consentire all'utente di selezionare la modalità di raggruppamento dei dati in un'area dati. Per altre informazioni, vedere [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
+ Per raggruppare diversi campi del set di dati, aggiungere ogni campo al set di espressioni di raggruppamento. È anche possibile scrivere espressioni di raggruppamento personalizzate [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. È possibile ad esempio eseguire il raggruppamento in base a un intervallo di valori oppure usando un parametro del report per consentire all'utente di selezionare la modalità di raggruppamento dei dati in un'area dati. Per altre informazioni, vedere [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
  Per la presentazione del report è possibile aggiungere interruzioni di pagina prima e dopo ogni gruppo o istanza di un gruppo, in modo da ridurre la quantità di dati presenti in ogni pagina e gestire le prestazioni di rendering del report. Per altre informazioni, vedere [Aggiungere un'interruzione di pagina &#40;Generatore report e SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md).  
   
@@ -101,10 +101,10 @@ ms.locfileid: "36169835"
 ### <a name="defining-group-variables"></a>Definizione delle variabili di gruppo  
  Quando si definisce un gruppo, è possibile creare una variabile di gruppo da usare nelle espressioni che hanno come ambito il gruppo e sono accessibili dai gruppi nidificati. Una variabile di gruppo viene calcolata una volta per istanza di gruppo ed è possibile accedervi da espressioni in gruppo figlio. Ad esempio, per dati raggruppati per area e area secondaria, è possibile calcolare una tassa per ogni area e usare tale tassa nei calcoli dal gruppo di aree secondarie.  
   
- Per altre informazioni, vedere [Report e riferimenti a raccolte di variabili di gruppo &#40;Generatore Report e SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md) e [ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report Generatore e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Per altre informazioni, vedere [riferimenti a raccolte di variabili di gruppo e di Report &#40;Generatore Report e SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md) e [ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report Generatore e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="groups-and-scope-in-data-regions"></a>Gruppi e ambito in aree dati  
- Per fornire più viste dei dati dallo stesso set di dati, è possibile specificare le stesse espressioni di raggruppamento per ogni area dati. È ad esempio possibile visualizzare dati suddivisi in categorie in una tabella per mostrare tutti i dati di dettaglio sotto forma di grafico a torta, in modo da visualizzare le aggregazioni e ogni categoria in relazione all'intero set di dati. Per altre informazioni, vedere [collegare più aree dati allo stesso set di dati &#40;Generatore Report e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+ Per fornire più viste dei dati dallo stesso set di dati, è possibile specificare le stesse espressioni di raggruppamento per ogni area dati. È ad esempio possibile visualizzare dati suddivisi in categorie in una tabella per mostrare tutti i dati di dettaglio sotto forma di grafico a torta, in modo da visualizzare le aggregazioni e ogni categoria in relazione all'intero set di dati. Per altre informazioni, vedere [collegamento di più aree dati allo stesso set di dati &#40;Generatore Report e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
  Quando si nidifica un'area dati in una cella di una tabella, una matrice o un elenco, viene definito automaticamente l'ambito dei dati nelle appartenenze ai gruppi più interni della cella. Si supponga, ad esempio, di aggiungere un grafico a una cella presente sia in un gruppo di righe che in un gruppo di colonne. In fase di esecuzione i dati disponibili per il grafico avranno come ambito l'istanza del gruppo di righe più interno e l'istanza del gruppo di colonne più interno. Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)sottostante.  
   
@@ -175,43 +175,43 @@ FROM Production.Product
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="HowTo"></a> Procedure  
- [Visualizzazione delle intestazioni durante lo scorrimento di un Report &#40;SSRS e Generatore Report&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+ [Mantenere visibili le intestazioni durante lo scorrimento di un Report &#40;Report e SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
- [Visualizzazione di intestazioni e piè di pagina con un gruppo di &#40;SSRS e Generatore Report&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Visualizzare intestazioni e piè di pagina con un gruppo di &#40;Report e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [Aggiunta di un ordinamento interattivo a una tabella o una matrice &#40;SSRS e Generatore Report&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Aggiungere un ordinamento interattivo a una tabella o una matrice &#40;Report e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
- [Impostare una proprietà Nodatamessage per un'area dati &#40;SSRS e Generatore Report&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Impostare una proprietà Nodatamessage per un'area dati &#40;Report e SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Creare un gruppo di gerarchie ricorsive &#40;SSRS e Generatore Report&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+ [Creare un gruppo di gerarchie ricorsive &#40;Report e SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
- [Aggiungere o eliminare un gruppo in un'area dati &#40;SSRS e Generatore Report&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+ [Aggiungere o eliminare un gruppo in un'area dati &#40;Report e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
- [Visualizzazione di intestazioni e piè di pagina con un gruppo di &#40;SSRS e Generatore Report&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Visualizzare intestazioni e piè di pagina con un gruppo di &#40;Report e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [Aggiungere o eliminare un gruppo in un grafico &#40;SSRS e Generatore Report&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [Aggiungere o eliminare un gruppo in un grafico &#40;Report e SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
   
- [Aggiungere un totale a un gruppo o area dati Tablix &#40;SSRS e Generatore Report&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+ [Aggiungere un totale a un gruppo o area dati Tablix &#40;Report e SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
 ##  <a name="Section"></a> Contenuto della sezione  
- [Esempi di espressioni di gruppo &#40;SSRS e Generatore Report&#41;](expression-examples-report-builder-and-ssrs.md)  
+ [Esempi di espressioni di gruppo &#40;Report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
- [Esempi di equazioni di filtro &#40;SSRS e Generatore Report&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+ [Esempi di equazioni di filtro &#40;Report e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
- [Aggiungere filtri di set di dati, filtri delle aree dati e i filtri di gruppo &#40;SSRS e Generatore Report&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
+ [Aggiungere filtri di set di dati, filtri di area dati e i filtri di gruppo &#40;Report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
   
 ##  <a name="Related"></a> Sezioni correlate  
- [Informazioni sui gruppi &#40;SSRS e Generatore Report&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [Informazioni sui gruppi &#40;Report e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
   
- [Creazione di gruppi di gerarchie ricorsive &#40;SSRS e Generatore Report&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [Creazione di gruppi di gerarchie ricorsive &#40;Report e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;SSRS e Generatore Report&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [Report e riferimenti a raccolte di variabili di gruppo &#40;SSRS e Generatore Report&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [Report e di gruppo di riferimenti a raccolte di variabili &#40;Report e SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [Visualizzazione di una serie con più intervalli di dati in un grafico &#40;SSRS e Generatore Report&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [Visualizzazione di una serie con più intervalli di dati in un grafico &#40;Report e SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
   
- [Collegamento più aree dati allo stesso set di dati &#40;SSRS e Generatore Report&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [Collegamento più aree dati allo stesso set di dati &#40;Report e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
@@ -219,7 +219,7 @@ FROM Production.Product
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [I misuratori &#40;SSRS e Generatore Report&#41;](gauges-report-builder-and-ssrs.md)   
+ [I misuratori &#40;Report e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Indicatori &#40;Generatore report e SSRS&#41;](indicators-report-builder-and-ssrs.md)  
   
   

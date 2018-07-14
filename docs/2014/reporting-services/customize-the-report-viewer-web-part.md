@@ -1,5 +1,5 @@
 ---
-title: Personalizzare la Web Part Visualizzatore Report | Documenti Microsoft
+title: Personalizzare la Web Part Visualizzatore Report | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d59a29eef3b45596a99ffeb9dd2bb45d6761357e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a56fdc024d15a24463fb0a7cf593ad23ca85aa34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162252"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizzare la web part Visualizzatore report
   È possibile utilizzare la web part Visualizzatore report per visualizzare report eseguiti in un server di report configurato per l'integrazione con SharePoint. I report che è possibile visualizzare includo file di definizione dei report, con estensione rdl, e report di Generatore report. I report vengono automaticamente aperti nella web part Visualizzatore report in una nuova pagina, tuttavia è possibile aggiungere la web part Visualizzatore report a una pagina Web o a un sito esistente se si desidera che il report risulti sempre visibile all'interno della pagina.  
@@ -79,7 +79,7 @@ ms.locfileid: "36170984"
 |Mostra controllo zoom|Visualizza o nasconde il controllo zoom sulla barra degli strumenti.|  
 |Mostra pulsante feed ATOM|Visualizza o nasconde il pulsante del feed ATOM sulla barra degli strumenti.<br /><br /> ![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
 |Posizione barra degli strumenti|Determina la posizione della barra degli strumenti all'interno del visualizzatore di report. I valori validi includono `Top` e `Bottom`.|  
-|Area dei messaggi di richiesta|I valori validi includono `Displayed`, `Collapsed`, e `Hidden`. `Displayed` Consente di visualizzare l'area dei parametri per i report che includono valori con parametri e richiedono l'input dell'utente prima che il report verrà eseguito. Utilizzare `Hidden` se tutti i parametri del report sono specificati e non si desidera l'area dei parametri per essere visibile agli utenti.|  
+|Area dei messaggi di richiesta|I valori validi includono `Displayed`, `Collapsed`, e `Hidden`. `Displayed` Consente di visualizzare l'area dei parametri per i report che includono valori con parametri e richiedono l'input dell'utente prima dell'esecuzione. Usare `Hidden` se tutti i parametri del report sono specificati e non si desidera l'area dei parametri siano visibili agli utenti.|  
 |Larghezza area parametri|È possibile specificare l'unità di misura e il valore. Il valore predefinito è 200 pixel. L'unico requisito per questa proprietà è che il valore sia maggiore di zero.|  
 |Mappa documento|Controllo per la navigazione del report che viene definito nel report e consente di accedere con un clic a sezioni specifiche del report. È disponibile nei report HTML. La mappa documento è visualizzata in un'area comprimibile accanto all'area di visualizzazione del report. I valori validi includono `Displayed`, `Collapsed`, e `Hidden`. Se per un determinato report è definita una mappa documento, quest'area verrà espansa per impostazione predefinita, a meno che non sia contrassegnata come nascosta o compressa nelle proprietà della web part. Se la mappa documento è compressa, sarà possibile fare clic sulla freccia per espanderla.|  
 |Larghezza area mappa documento|È possibile specificare l'unità di misura e il valore. Il valore predefinito è 200 pixel. L'unico requisito per questa proprietà è che il valore sia maggiore di zero.|  

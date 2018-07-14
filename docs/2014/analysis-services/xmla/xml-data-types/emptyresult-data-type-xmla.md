@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati EmptyResult (XMLA) | Documenti Microsoft
+title: Tipo di dati EmptyResult (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - EmptyResult data type
 ms.assetid: 63818123-acbb-4220-9d60-1aa20a7326a1
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bba727b2d7d612fa59c99665bd16d936da137fb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea04f2f170a61bafed2fa06cdb3260668120899c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257157"
 ---
 # <a name="emptyresult-data-type-xmla"></a>Tipo di dati EmptyResult (XMLA)
   Definisce un tipo di dati derivato che rappresenta un [radice](../xml-elements-properties/root-element-xmla.md) elemento che non restituisce dati da un [Discover](../xml-elements-methods-discover.md) oppure [Execute](../xml-elements-methods-execute.md) chiamata al metodo.  
   
- **Namespace** urn: schemas-microsoft-com: XML-analysis: empty  
+ **Namespace** urn: schemas-microsoft-com: XML-analysis: vuoto  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36169297"
 |Elementi figlio|None|  
 |Elementi derivati|[root](../xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per alcuni comandi XML for Analysis (XMLA) non è previsto che venga restituito un risultato oppure i comandi non sono stati in grado di restituire un risultato a causa di un errore. I comandi XMLA che non restituiscono un risultato restituiscono il tipo di dati `EmptyResult`, un spazio dei nomi nell'elemento `root`.  
   
 ## <a name="example"></a>Esempio  

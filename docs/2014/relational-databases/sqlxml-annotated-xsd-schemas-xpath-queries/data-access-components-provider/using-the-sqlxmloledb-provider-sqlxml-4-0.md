@@ -1,5 +1,5 @@
 ---
-title: Utilizzo del Provider SQLXMLOLEDB (SQLXML 4.0) | Documenti Microsoft
+title: Uso del Provider SQLXMLOLEDB (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ClientSideXML property
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37cfc512f02bef664756bf6d46574479112b7efa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f0ece4bb65c8517f50193f4340ab55cb87df4be5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221081"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Utilizzo del provider SQLXMLOLEDB (SQLXML 4.0)
   Negli argomenti di questa sezione vengono fornite applicazioni ADO di esempio che illustrano l'utilizzo delle proprietà specifiche del provider SQLXMLOLEDB.  
@@ -42,11 +42,11 @@ ms.locfileid: "36170535"
   
 2.  Distribuire e installare SQLXML 4.0 e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-     Per altre informazioni, vedere [concetti relativi alla programmazione SQLXML 4.0](../../sqlxml/sqlxml-4-0-programming-concepts.md) e [installazione di SQL Server Native Client](../../native-client/applications/installing-sql-server-native-client.md).  
+     Per altre informazioni, vedere sul [concetti relativi alla programmazione SQLXML 4.0](../../sqlxml/sqlxml-4-0-programming-concepts.md) e [installazione di SQL Server Native Client](../../native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
  [Esecuzione di query SQL &#40;Provider SQLXMLOLEDB&#41;](executing-sql-queries-sqlxmloledb-provider.md)  
- Viene illustrato l'utilizzo delle proprietà radice ClientSideXML e xml per eseguire le query SQL.  
+ Viene illustrato l'utilizzo delle proprietà radice ClientSideXML e xml per eseguire query SQL.  
   
  [Esecuzione di modelli che contengono query SQL &#40;Provider SQLXMLOLEDB&#41;](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
  Viene illustrato l'utilizzo della proprietà ClientSideXML.  
@@ -58,7 +58,7 @@ ms.locfileid: "36170535"
  Viene illustrato come eseguire una query sugli schemi qualificati con lo spazio dei nomi.  
   
  [Esecuzione di modelli che contengono query XPath &#40;Provider SQLXMLOLEDB&#41;](executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
- Viene illustrato come eseguire modelli con query SQL mediante le proprietà ClientSideXML, il percorso di Base e Mapping dello Schema.  
+ Viene illustrato come eseguire modelli con query SQL usando le proprietà ClientSideXML, il percorso di Base e Mapping dello Schema.  
   
  [Applicare una trasformazione XSL &#40;Provider SQLXMLOLEDB&#41;](applying-an-xsl-transformation-sqlxmloledb-provider.md)  
  Viene illustrato l'utilizzo delle proprietà ClientSideXML e xsl nell'applicazione di una trasformazione XSL.  

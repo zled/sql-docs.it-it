@@ -1,5 +1,5 @@
 ---
-title: Proprietà che possono essere impostate utilizzando espressioni di flusso di dati | Documenti Microsoft
+title: Le proprietà che possono essere impostate utilizzando espressioni del flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,22 +20,22 @@ helpviewer_keywords:
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0dccc1a7bb932ae044f6d1e2491c7521652e9033
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9855c21e19e4e2ef0e9f9d7ab88d6d12fdadda16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173172"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Proprietà del flusso di dati che è possibile impostare tramite espressioni
   I valori di determinate proprietà di oggetti del flusso di dati possono essere specificati utilizzando espressioni di proprietà disponibili nel contenitore dell'attività Flusso di dati.  
   
  Per informazioni sull'utilizzo delle espressioni di proprietà, vedere [utilizzo delle espressioni di proprietà nei pacchetti](expressions/use-property-expressions-in-packages.md).  
   
- È possibile utilizzare espressioni di proprietà per personalizzare la configurazione di ogni istanza di pacchetto distribuita. È anche possibile usare espressioni di proprietà per specificare i vincoli in fase di esecuzione per un pacchetto tramite l'opzione **/set** con l'utilità del prompt dei comandi **dtexec** . Ad esempio, è possibile vincolare il `MaximumThreads` utilizzato per la trasformazione ordinamento, o `MaxMemoryUsage` delle trasformazioni raggruppamento Fuzzy e ricerca Fuzzy. Se non vincolate, queste trasformazioni possono memorizzare nella cache grandi quantità di dati.  
+ È possibile utilizzare espressioni di proprietà per personalizzare la configurazione di ogni istanza di pacchetto distribuita. È anche possibile usare espressioni di proprietà per specificare i vincoli in fase di esecuzione per un pacchetto tramite l'opzione **/set** con l'utilità del prompt dei comandi **dtexec** . Ad esempio, è possibile vincolare il `MaximumThreads` utilizzata dalla trasformazione dell'ordinamento o il `MaxMemoryUsage` delle trasformazioni raggruppamento Fuzzy e ricerca Fuzzy. Se non vincolate, queste trasformazioni possono memorizzare nella cache grandi quantità di dati.  
   
  Per specificare un'espressione di proprietà per una delle proprietà degli oggetti del flusso di dati elencate in questo argomento, visualizzare la finestra **Proprietà** per l'attività flusso di dati selezionando l'attività flusso di dati nell'area di progettazione **Flusso di controllo** o selezionando la scheda **Flusso di dati** della finestra di progettazione senza selezionare componenti o percorsi singoli. Selezionare la proprietà **Espressioni** e fare clic sui puntini di sospensione per visualizzare la finestra di dialogo **Editor espressioni di proprietà** . Visualizzare l'elenco a discesa **Proprietà** per selezionare una proprietà, quindi digitare un'espressione nella casella di testo **Espressione** o fare clic sui puntini di sospensione per visualizzare la finestra di dialogo **Generatore di espressioni** .  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36171059"
  Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](http://pragmaticworks.com/cheatsheet/)sul sito Web pragmaticworks.com  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di espressioni di proprietà nei pacchetti](expressions/use-property-expressions-in-packages.md)   
+ [Utilizzo delle espressioni di proprietà nei pacchetti](expressions/use-property-expressions-in-packages.md)   
  [Proprietà comuni](../../2014/integration-services/common-properties.md)   
  [Proprietà personalizzate della trasformazione](data-flow/transformations/transformation-custom-properties.md)   
  [Proprietà del percorso](../../2014/integration-services/path-properties.md)  

@@ -1,5 +1,5 @@
 ---
-title: Categoria di eventi di stato del Server individuazione | Documenti Microsoft
+title: Individuazione stato del Server-categoria di eventi | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Discover Server State event category
 - server state events [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - event classes [Analysis Services], discover server state
 ms.assetid: b62ebf66-d090-4f74-8c83-11ed518b2018
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1e1ae268d3263fb672a8d0bda85b23774aca4ad2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c55d16650e9ef04ae951a9eb0d7f60fbc6c472a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197851"
 ---
 # <a name="discover-server-state-event-category"></a>Individuazione stato del server - categoria di eventi
   La categoria di eventi Individuazione stato del server include le classi di evento descritte nella tabella seguente.  
@@ -38,6 +38,6 @@ ms.locfileid: "36169969"
  Per informazioni sulle colonne associate a ogni classe di evento degli eventi query, vedere [Colonne di dati degli eventi di individuazione dello stato del server](discover-server-state-events-data-columns.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli eventi di traccia di Analysis Services](analysis-services-trace-events.md)  
+ [Eventi di traccia di Analysis Services](analysis-services-trace-events.md)  
   
   

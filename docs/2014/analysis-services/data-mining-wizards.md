@@ -1,5 +1,5 @@
 ---
-title: Procedure guidate di Data Mining | Documenti Microsoft
+title: Procedure guidate di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Mining Wizard
 - Analysis Services Data Mining Wizard
 ms.assetid: f949a5f0-d8f5-4da1-a9f8-200b918e29ff
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 442e77491d2254c230c60c99c8f1ede91117d171
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d309e9ce8d0ccfd48402be1bf6ce8f3f2ff2c3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263827"
 ---
 # <a name="data-mining-wizards"></a>Procedure guidate di data mining
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sono disponibili procedure guidate per l'utilizzo in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -31,9 +31,9 @@ ms.locfileid: "36168426"
   
 |Argomento|Description|  
 |-----------|-----------------|  
-|[Guida F1 guidata origine dati &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)|Utilizzare la Creazione guidata origine dati per definire una nuova origine dati.|  
-|[Guida F1 del Creazione guidata vista origine dati &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)|Utilizzare la Creazione guidata vista origine dati per definire una nuova vista origine dati.|  
-|[Data Mining della Guida F1 di procedura guidata &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)|Utilizzare la Creazione guidata modello di data mining per definire una nuova struttura di data mining e i modelli di data mining associati.|  
+|[La Guida F1 di creazione guidata dell'origine dati &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)|Utilizzare la Creazione guidata origine dati per definire una nuova origine dati.|  
+|[Guida F1 del guidata vista origine dati &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)|Utilizzare la Creazione guidata vista origine dati per definire una nuova vista origine dati.|  
+|[I dati della Guida F1 di procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)|Utilizzare la Creazione guidata modello di data mining per definire una nuova struttura di data mining e i modelli di data mining associati.|  
   
  Oltre alle procedure guidate, è possibile compilare, modificare ed elaborare gli oggetti di data mining in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] tramite gli strumenti di progettazione grafici forniti.  
   

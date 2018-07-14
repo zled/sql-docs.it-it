@@ -1,5 +1,5 @@
 ---
-title: Implementare la sicurezza dinamica mediante i filtri di riga | Documenti Microsoft
+title: Implementare la sicurezza dinamica mediante i filtri di riga | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 066e628cc40f4ac4745f4b2edaa93ecdbd8d93d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4364b9c18125b5aa4baa479ae92a2dc688d9fe18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257597"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementare la sicurezza dinamica mediante i filtri di riga
   In questa lezione supplementare verrà creato un ruolo aggiuntivo che implementa la sicurezza dinamica. La sicurezza dinamica offre la sicurezza a livello di riga in base al nome o all'ID di accesso dell'utente attualmente connesso. Per altre informazioni, vedere [Ruoli &#40;SSAS tabulare&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
   
  Per implementare la sicurezza dinamica, è necessario aggiungere una tabella al modello contenente i nomi degli utenti di Windows che possono creare una connessione al modello come origine dati ed esplorare oggetti modello e dati. Il modello creato in questa esercitazione è nel contesto di Adventure Works Corp. Tuttavia, per completare questa lezione, è necessario aggiungere una tabella contenente gli utenti del proprio dominio. Non saranno necessarie le password dei nomi utente che verranno aggiunti. Per creare una tabella Sicurezza dipendenti con una piccola parte degli utenti del proprio dominio, è possibile utilizzare la funzionalità Incolla per incollare i dati dei dipendenti da un foglio di calcolo di Excel. In uno scenario realistico la tabella che contiene i nomi utente da aggiungere a un modello utilizza in genere una tabella di un database effettivo come origine dati, ad esempio una tabella dimEmployee reale.  
   
- Per implementare la sicurezza dinamica, si utilizzerà due nuove funzioni DAX: [funzione USERNAME &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) e [funzione LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). Queste funzioni applicate in una formula di filtro di riga vengono definite in un nuovo ruolo. Utilizzando la funzione LOOKUPVALUE, la formula specifica un valore della tabella Sicurezza dipendenti, quindi passa il valore alla funzione USERNAME che specifica il nome dell'utente connesso appartenente a questo ruolo. L'utente può quindi esplorare solo i dati specificati dai filtri di riga del ruolo. In questo scenario verrà specificato che i dipendenti addetti alle vendite possono esplorare solo i dati relativi alle vendite Internet per i territori di vendita in cui sono membri.  
+ Per implementare la sicurezza dinamica, si useranno due nuove funzioni DAX: [funzione USERNAME &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) e [funzione LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). Queste funzioni applicate in una formula di filtro di riga vengono definite in un nuovo ruolo. Utilizzando la funzione LOOKUPVALUE, la formula specifica un valore della tabella Sicurezza dipendenti, quindi passa il valore alla funzione USERNAME che specifica il nome dell'utente connesso appartenente a questo ruolo. L'utente può quindi esplorare solo i dati specificati dai filtri di riga del ruolo. In questo scenario verrà specificato che i dipendenti addetti alle vendite possono esplorare solo i dati relativi alle vendite Internet per i territori di vendita in cui sono membri.  
   
  Per completare questa lezione supplementare, verrà completata una serie di attività. Le attività che sono specifiche di questo scenario di modello tabulare Adventure Works, ma che potrebbero non applicarsi necessariamente a uno scenario realistico, vengono identificate come tali. Ogni attività include informazioni aggiuntive che descrivono lo scopo dell'attività.  
   
@@ -89,10 +89,10 @@ ms.locfileid: "36169808"
   
     |ID dipendente|ID territorio vendita|Nome|Cognome|ID di accesso|  
     |-----------------|------------------------|----------------|---------------|--------------|  
-    |1|2|\<nome utente >|\<cognome dell'utente >|\<dominio omeutente >|  
-    |1|3|\<nome utente >|\<cognome dell'utente >|\<dominio omeutente >|  
-    |2|4|\<nome utente >|\<cognome dell'utente >|\<dominio omeutente >|  
-    |3|5|\<nome utente >|\<cognome dell'utente >|\<dominio omeutente >|  
+    |1|2|\<nome utente >|\<cognome dell'utente >|\<dominio\nome utente >|  
+    |1|3|\<nome utente >|\<cognome dell'utente >|\<dominio\nome utente >|  
+    |2|4|\<nome utente >|\<cognome dell'utente >|\<dominio\nome utente >|  
+    |3|5|\<nome utente >|\<cognome dell'utente >|\<dominio\nome utente >|  
   
 3.  Nel nuovo foglio di lavoro sostituire il nome, il cognome e il dominio\nomeutente con i nomi e gli ID di accesso dei tre utenti dell'organizzazione. Inserire lo stesso utente nelle prime due righe per ID dipendente 1, a indicare che tale utente appartiene a più territori di vendita. Lasciare i campi ID dipendente e ID territorio vendita così come sono.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36169808"
   
      Se Incolla è disattivato, ovvero visualizzato in grigio, fare clic su una colonna di qualsiasi tabella nella finestra Progettazione modelli, quindi scegliere **Incolla** dal menu **Modifica**.  
   
-7.  Nel **anteprima Incolla** della finestra di dialogo **nome della tabella**, tipo `Employee Security`.  
+7.  Nel **anteprima Incolla** nella finestra di dialogo **Table_name**, tipo `Employee Security`.  
   
 8.  In **Dati da incollare**verificare che i dati includano tutti i dati dell'utente e le intestazioni del foglio di lavoro Dipendente di esempio.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36169808"
   
      All'elenco verrà aggiunto un nuovo ruolo con l'autorizzazione Nessuno.  
   
-3.  Fare clic sul nuovo ruolo, quindi il **nome** colonna, rinominare il ruolo in `Sales Employees by Territory`.  
+3.  Fare clic sul nuovo ruolo, quindi nella **Name** colonna, rinominare il ruolo in `Sales Employees by Territory`.  
   
 4.  Nella colonna **Autorizzazioni** fare clic nell'elenco a discesa, quindi selezionare l'autorizzazione **Lettura** .  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36169808"
   
 7.  Fare clic sulla scheda **Filtri di riga** .  
   
-8.  Per il `Employee Security` , tabella di **filtro DAX** colonna, digitare la formula seguente.  
+8.  Per il `Employee Security` tabella di **filtro DAX** colonna, digitare la formula seguente.  
   
      `=FALSE()`  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36169808"
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzione USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [La funzione LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
+ [Funzione LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
  [Funzione CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   
   

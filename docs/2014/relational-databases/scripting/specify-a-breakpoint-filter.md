@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.contraints
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8a55eb14c606348a63072d669db98fe3cae6b3f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9bf7e4f7a162bf172812ed555463c061611237e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191781"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Impostazione di un filtro per un punto di interruzione
   Un filtro per un punto di interruzione limita il punto di interruzione in modo che agisca solo su computer o processi e thread del sistema operativo specificati. I filtri per i punti di interruzione vengono in genere utilizzati per il debug di applicazioni parallele.  
@@ -45,7 +45,7 @@ ms.locfileid: "36170090"
   
     -   `ProcessID`, e `ProcessName` sono relativi al processo di sistema operativo in esecuzione l'istanza del motore di Database.  
   
-    -   `ThreadID` e `ThreadName` sono thread del sistema operativo in esecuzione il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, stored procedure o funzione nell'istanza del motore di Database.  
+    -   `ThreadID` e `ThreadName` sono thread del sistema operativo in esecuzione il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, procedura o funzione nell'istanza del motore di Database.  
   
 3.  Fare clic su **OK** per implementare le modifiche o su **Annulla** per uscire senza applicare le modifiche.  
   

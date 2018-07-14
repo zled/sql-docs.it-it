@@ -1,5 +1,5 @@
 ---
-title: Programmazione di Client ADOMD.NET | Documenti Microsoft
+title: Programmazione di Client ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9faa64cce77c883ed6adb86bca6d50f32f015c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd4884abb345f1254c3987acb06e83ced7bcf392
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168408"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332751"
 ---
 # <a name="adomdnet-client-programming"></a>Programmazione di client ADOMD.NET
-  I componenti client ADOMD.NET si trovano nello spazio dei nomi `Microsoft.AnalysisServices.AdomdClient` (in microsoft.analysisservices.adomdclient.dll). Questi componenti forniscono la funzionalità per client e le applicazioni di livello intermedio a facilmente eseguire query sui dati e metadati da un archivio dati analitici, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  I componenti client ADOMD.NET si trovano nello spazio dei nomi `Microsoft.AnalysisServices.AdomdClient` (in microsoft.analysisservices.adomdclient.dll). Questi componenti forniscono la funzionalità per client e applicazioni di livello intermedio con facilità query sui dati e metadati da un archivio dati analitici, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="using-the-adomdnet-client-objects"></a>Utilizzo di oggetti client ADOMD.NET  
  Nell'esecuzione di query su un'origine dati analitici è necessario eseguire un set di attività comuni. Nella tabella seguente vengono indicate le attività comuni in cui si utilizzano gli oggetti client ADOMD.NET per eseguire una query di questo tipo.  
@@ -43,7 +43,7 @@ ms.locfileid: "36168408"
   
 |Per|Oggetto da utilizzare|  
 |--------|---------------------|  
-|Connessione a un'origine dati analitici|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> L'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> rappresenta una connessione sia a un'origine dati che ai metadati relativi. Ad esempio, è possibile connettersi a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cubo locale (con estensione cub) file e quindi esaminare il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A> proprietà per ottenere i metadati relativi ai cubi presenti nell'origine dati analitici. Tale oggetto rappresenta inoltre l'implementazione dell'interfaccia `IDbConnection`, necessaria per tutti i provider di dati .NET Framework.|  
+|Connessione a un'origine dati analitici|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> L'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> rappresenta una connessione sia a un'origine dati che ai metadati relativi. Ad esempio, è possibile connettersi a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cubi locali (con estensione cub) di file e quindi esaminare il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A> proprietà per ottenere metadati relativi ai cubi presenti nell'origine dati analitici. Tale oggetto rappresenta inoltre l'implementazione dell'interfaccia `IDbConnection`, necessaria per tutti i provider di dati .NET Framework.|  
 |Individuazione delle funzionalità di data mining dell'origine dati|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> L'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> espone numerose raccolte di data mining:<br /><br /> -La <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> contiene un elenco di ogni modello di data mining nell'origine dati.<br />-La <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> fornisce informazioni sugli algoritmi di data mining disponibili.<br />-La <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> espone informazioni sulle strutture di data mining nel server.|  
 |Esecuzione di query sull'origine dati|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand><br /> L'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> rappresenta l'istruzione o la query che verrà inviata al server. Una volta stabilita una connessione a un'origine dati, è possibile utilizzare l'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> per eseguire istruzioni nel linguaggio supportato, ad esempio MDX (Multidimensional Expressions) o DMX (Data Mining Extensions). È inoltre possibile utilizzare un oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> per restituire risultati nel formato di oggetti <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>.|  
 |Recupero di dati in modo rapido ed efficiente|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader><br /> L'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> può essere creato mediante una chiamata al metodo <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.Execute%2A> o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader%2A> di un oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>. Tale oggetto implementa l'interfaccia `IDbDataReader` dello spazio dei nomi `System.Data` della libreria di classi .NET Framework.|  

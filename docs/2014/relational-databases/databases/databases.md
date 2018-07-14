@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data warehouse [SQL Server]
 - OLTP databases [SQL Server]
 - databases [SQL Server], about databases
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: de7f79af288674b5bf2dbb53979071dea505428c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d2d95b8a11ba3d1772bbb108435317e2e55e3c89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250241"
 ---
 # <a name="databases"></a>Database
   Un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è costituito da una raccolta di tabelle in cui è archiviato un set specifico di dati strutturati. Una tabella contiene una raccolta di righe, definite anche record o tuple, e colonne, definite anche attributi. Ogni colonna nella tabella è progettata per contenere un tipo di informazioni specifico, ad esempio date, nomi, importi in valuta e numeri.  
@@ -46,7 +46,7 @@ ms.locfileid: "36167611"
 |-|-|  
 |[Database di sistema.](system-databases.md)|[Eliminare file di dati o file di log da un database](delete-data-or-log-files-from-a-database.md)|  
 |[Database indipendenti](contained-databases.md)|[Visualizzare le informazioni sullo spazio allocato ai dati e ai log per un database](display-data-and-log-space-information-for-a-database.md)|  
-|[File di dati SQL Server in Windows Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentare le dimensioni di un database](increase-the-size-of-a-database.md)|  
+|[File di dati di SQL Server in Windows Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentare le dimensioni di un database](increase-the-size-of-a-database.md)|  
 |[Filegroup e file di database](database-files-and-filegroups.md)|[Rinominare un database](rename-a-database.md)|  
 |[Stati del database](database-states.md)|[Impostare un database in modalità utente singolo](set-a-database-to-single-user-mode.md)|  
 |[Stati dei file](file-states.md)|[Compattare un database](shrink-a-database.md)|  

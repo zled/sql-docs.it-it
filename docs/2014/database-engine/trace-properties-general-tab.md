@@ -1,5 +1,5 @@
 ---
-title: Proprietà traccia (scheda Generale) | Documenti Microsoft
+title: Proprietà traccia (scheda Generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.traceproperties.general.f1
 helpviewer_keywords:
 - Trace Properties dialog box
 ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8d92a51eaca0f98624ea6174a56448b383c1744a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99621b4d142e6d1686c908783ba63628109eae5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221941"
 ---
 # <a name="trace-properties-general-tab"></a>Proprietà traccia (scheda Generale)
   Usare la scheda **Generale** della finestra di dialogo **Proprietà traccia** per visualizzare o specificare le proprietà di una traccia.  
@@ -50,7 +50,7 @@ ms.locfileid: "36169484"
  **Dimensioni massime del file (MB)**  
  Se si sceglie di salvare i dati di traccia in un file, è necessario specificare le dimensioni massime del file di traccia. Il valore predefinito è 5 megabyte (MB). Le dimensioni massime sono limitate solo dal file system (NTFS, FAT) in cui viene salvato il file.  
   
- \<Grafico > **Salva con nome**  
+ \<Graphic > **Salva con nome**  
  Se si è scelto di eseguire il salvataggio, è possibile fare clic su questa icona per modificare il nome del file.  
   
  **Consenti rollover dei file**  
@@ -62,7 +62,7 @@ ms.locfileid: "36169484"
  **Salva nella tabella**  
  Consente di memorizzare i dati di traccia in una tabella di database. Il salvataggio dei dati di traccia risulta utile per eseguire analisi e controlli successivi. Tuttavia il salvataggio dei dati di traccia in una tabella può causare un notevole overhead nel server in cui viene salvata la traccia. Se possibile, non salvare la tabella di traccia sullo stesso server tracciato.  
   
- \<Grafico > **tabella di destinazione**  
+ \<Graphic > **tabella di destinazione**  
  Se si è scelto di eseguire il salvataggio dei dati della traccia in una tabella di database, è possibile fare clic su questa icona per modificare il nome della tabella.  
   
  **Numero massimo di righe (in migliaia)**  

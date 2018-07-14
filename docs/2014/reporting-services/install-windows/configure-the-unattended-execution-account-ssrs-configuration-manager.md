@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - security [Reporting Services], unattended report processing
@@ -21,13 +21,13 @@ ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 063fd32c8b94bc10bc22aea0d117a6d41a0a84fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0cba2bc68d83c2d0b986324e2efa7f882bac6e76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321921"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurare l'account di esecuzione automatica (Gestione configurazione SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre un account speciale da usare per l'elaborazione automatica dei report e per l'invio di richieste di connessione in rete. L'account viene utilizzato nei modi seguenti:  
@@ -81,7 +81,7 @@ ms.locfileid: "36170061"
 ## <a name="how-to-use-the-unattended-report-processing-account"></a>Come utilizzare l'account per l'elaborazione automatica dei report  
  Per recuperare file di immagine, il server di report utilizza automaticamente l'account e non è necessario alcun intervento specifico dell'utente. Per usare l'account per connettersi a origini dati esterne che forniscono dati ai report, è necessario specificare l'opzione **Tipo di credenziali** nella pagina delle proprietà dell'origine dati del report o dell'origine dati condivisa:  
   
--   In Gestione Report o in un sito di SharePoint, selezionare il **non sono necessarie credenziali** opzione.  
+-   In Gestione Report o in un sito di SharePoint, selezionare la **non sono richieste credenziali** opzione.  
   
  L'account per l'elaborazione automatica dei report viene utilizzato principalmente per la connessione a server esterni e non come account di accesso a server di database. Se si desidera utilizzare le credenziali dell'account per accedere a un database, è necessario specificarle nella stringa di connessione. È possibile specificare **Integrated Security=SSPI** se il server di database supporta la sicurezza integrata di Windows e l'account usato per l'elaborazione automatica dei report è autorizzato a leggere il database. In caso contrario, è necessario immettere il nome e la password dell'utente nella stringa di connessione, in cui verranno visualizzati come testo non crittografato da tutti gli utenti che dispongono dell'autorizzazione necessaria per modificare le proprietà di connessione dell'origine dati.  
   
@@ -108,6 +108,6 @@ ms.locfileid: "36170061"
  Le informazioni relative all'account vengono rimosse dal file RSReportServer.config.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione configurazione Reporting Services &#40;CANC&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
+ [Gestione configurazione Reporting Services &#40;/del&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

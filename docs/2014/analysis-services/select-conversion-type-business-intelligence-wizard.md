@@ -1,5 +1,5 @@
 ---
-title: Selezionare il tipo di conversione (configurazione guidata Business Intelligence) | Documenti Microsoft
+title: Selezionare il tipo di conversione (configurazione guidata Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.conversiontype.f1
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba4018a6ce30e4e7de4e0ca3e79ae07007015650
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34fab6780a6c10601b3f5bf31fbb7cffee3fd888
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267347"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>Selezione tipo di conversione (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare la pagina **Selezione tipo di conversione** per definire le relazioni tra le valute locali e le valute report per le transazioni archiviate in più valute. Una valuta locale è la valuta in cui vengono archiviate le transazioni per le misure selezionate nella pagina **Selezione misure** . La valuta report è la valuta in cui vengono convertite le transazioni selezionate nella pagina **Selezione misure** .  
@@ -52,7 +52,7 @@ ms.locfileid: "36169987"
  Se, ad esempio, si imposta la valuta pivot sul dollaro statunitense (USD), le transazioni vengono archiviate nella tabella dei fatti in questa valuta. Selezionando questa opzione le transazioni vengono convertite dalla valuta pivot alle valute report specificate. Di conseguenza le transazioni possono essere archiviate nella valuta pivot specificata e visualizzate sia nella valuta pivot specificata che in una delle valute report specificate nella pagina **Impostazione valute report** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Business Intelligence guidata F1 Help](business-intelligence-wizard-f1-help.md)   
+ [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Eseguire il mapping di colore regole Dialog Box, General | Documenti Microsoft
+title: Eseguire il mapping di finestra di dialogo delle regole colore, generale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10541"
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 103e038b715f07c50d702a659f396f9cdd34ffee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2de58631464b4d96ebde5cac82778f6b365e5b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238521"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Finestra di dialogo Proprietà regole colori mappa, Generale
   Selezionare **Generale** nella finestra di dialogo **Proprietà regole colori mappa** per definire le opzioni relative ai colori per gli elementi mappa di questo livello. Gli elementi della mappa includono poligoni, linee e punti. Le regole colore possono essere applicate quando è stata creata una relazione tra gli elementi della mappa in base ai dati spaziali e analitici di un campo del set di dati o di un campo dell'origine dati spaziali.  
@@ -43,7 +43,7 @@ ms.locfileid: "36168245"
  Selezionare questa opzione per visualizzare i dati analitici specificando il proprio elenco di colori.  
   
  **Campo dati**  
- Questa opzione viene visualizzata quando si seleziona una del **visualizzare i dati** opzioni.  
+ Questa opzione viene visualizzata quando si seleziona una delle **visualizzare i dati** opzioni.  
   
  Selezionare il campo dei dati analitici da utilizzare dall'elenco a discesa. A seconda dell'origine dati spaziali, l'elenco visualizza i campi dall'origine dati spaziali e da un set di dati del report che dispone di una relazione tra i dati spaziali e quelli analitici. Per creare tale relazione, impostare le opzioni dei dati nella pagina Dati analitici per il livello mappa selezionato.  
   
@@ -60,10 +60,10 @@ ms.locfileid: "36168245"
  Specificare il colore da utilizzare per i dati nella parte superiore dell'intervallo di dati.  
   
  **Aggiungi**  
- Fare clic su **Aggiungi** per specificare i propri colori per la regola colore.  
+ Fare clic su **Add** per specificare i colori per la regola colore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mappe &#40;Generatore report e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Modificare legende della mappa, scala dei colori e regole associate &#40;SSRS e Generatore Report&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Modificare legende della mappa, scala dei colori e regole associate &#40;Report e SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

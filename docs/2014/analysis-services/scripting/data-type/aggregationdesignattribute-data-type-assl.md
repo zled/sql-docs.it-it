@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati AggregationDesignAttribute (ASSL) | Documenti Microsoft
+title: Tipo di dati AggregationDesignAttribute (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDesignAttribute data type
 ms.assetid: 03d29d76-e4bd-4035-92cc-35149d83fbf9
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6d65f5cbd6173218b4d33448ec442002290aad6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d723011d0342923e4020ab8655f45abb9a764396
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188918"
 ---
 # <a name="aggregationdesignattribute-data-type-assl"></a>Tipo di dati AggregationDesignAttribute (ASSL)
   Definisce un tipo di dati primitivo che rappresenta l'associazione tra un attributo e un [AggregationDesignDimension](dimension-data-type-assl.md) elemento.  
@@ -57,10 +57,10 @@ ms.locfileid: "36170892"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Oggetto AttributeID](../properties/id-element-assl.md), [EstimatedCount](../properties/estimatedcount-element-assl.md)|  
+|Elementi figlio|[Elemento AttributeID](../properties/id-element-assl.md), [EstimatedCount](../properties/estimatedcount-element-assl.md)|  
 |Elementi derivati|[Attributo](../objects/attribute-element-assl.md) ([attributi](../collections/attributes-element-assl.md) insieme [AggregationDesignDimension](dimension-data-type-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.AggregationDesignAttribute>.  
   
 ## <a name="see-also"></a>Vedere anche  

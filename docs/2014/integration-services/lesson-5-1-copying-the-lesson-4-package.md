@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 caps.latest.revision: 25
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 66c714d7b0e2555a732958b8b23259f6106e8389
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 653782ef61866adfa1a495deca49b563f12ca110
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176148"
 ---
 # <a name="step-1-copying-the-lesson-4-package"></a>Passaggio 1: Copia del pacchetto della lezione 4
   In questa attività si procederà alla creazione di una copia del pacchetto creato nella lezione 4, denominato Lesson 4.dtsx. In alternativa, è possibile aggiungere al progetto il pacchetto completo della lezione 4 incluso nell'esercitazione e, successivamente, copiarlo. Questa nuova copia verrà usata per tutto il seguito della lezione 5.  
@@ -42,7 +42,7 @@ ms.locfileid: "36170382"
   
 7.  Nella finestra Proprietà aggiornare la `Name` proprietà `Lesson 5`.  
   
-8.  Fare clic sulla casella per il **ID** , quindi fare clic sulla freccia a discesa e quindi fare clic su  **\<Genera nuovo ID >**.  
+8.  Fare clic sulla casella per il **ID** proprietà, quindi fare clic sulla freccia a discesa e quindi fare clic su  **\<Genera nuovo ID >**.  
   
 ### <a name="to-add-the-completed-lesson-4-package"></a>Per aggiungere il pacchetto della lezione 4 completato  
   
@@ -65,6 +65,6 @@ ms.locfileid: "36170382"
 5.  Copiare e incollare il pacchetto della lezione 4, come illustrato nei passaggi 3-8 della procedura precedente.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Passaggio 2: Abilitare e configurare le configurazioni dei pacchetti](lesson-5-2-enabling-and-configuring-package-configurations.md)  
+ [Passaggio 2: Abilitazione e impostazione delle configurazioni dei pacchetti](lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
   

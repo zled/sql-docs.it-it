@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati PerspectiveKpi (ASSL) | Documenti Microsoft
+title: Tipo di dati PerspectiveKpi (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveKpi data type
 ms.assetid: e8d19ec8-70d3-4947-904a-fb81fcac9afd
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e4e6c512b0cab76a87b0d39428bfc570680fa42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca2bc8d765e7ffe5a0111a22d8b2e5977a17f010
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215921"
 ---
 # <a name="perspectivekpi-data-type-assl"></a>Tipo di dati PerspectiveKpi (ASSL)
   Definisce un tipo di dati primitivo che rappresenta le informazioni su un indicatore di prestazioni chiave (KPI) in un [prospettiva](../objects/perspective-element-assl.md) elemento.  
@@ -57,10 +57,10 @@ ms.locfileid: "36169517"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Annotazioni](../collections/annotations-element-assl.md), [KpiID](../properties/id-element-assl.md)|  
-|Elementi derivati|[Indicatore KPI](../objects/kpi-element-assl.md) ([KPI](../collections/kpis-element-assl.md) insieme [prospettiva](../objects/perspective-element-assl.md))|  
+|Elementi figlio|[Le annotazioni](../collections/annotations-element-assl.md), [elemento KpiID](../properties/id-element-assl.md)|  
+|Elementi derivati|[Indicatore KPI](../objects/kpi-element-assl.md) ([KPI](../collections/kpis-element-assl.md) insieme di [prospettiva](../objects/perspective-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.PerspectiveKpi>.  
   
 ## <a name="see-also"></a>Vedere anche  

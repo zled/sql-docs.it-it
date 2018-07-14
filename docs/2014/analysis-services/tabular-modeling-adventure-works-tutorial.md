@@ -1,5 +1,5 @@
 ---
-title: Modellazione tabulare (esercitazione Adventure) | Documenti Microsoft
+title: (Esercitazione su Adventure Works) di modellazione tabulare | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3d8b4a492a5da9ae0f709c0ab98189e74ed21269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69522d087dffcebf88b011f27797cafc6c0f947e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247371"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Modellazione tabulare (esercitazione di AdventureWorks)
   In questa esercitazione sono incluse lezioni sulla creazione di un [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]modello tabulare di Analysis Services tramite [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -84,7 +84,7 @@ ms.locfileid: "36167526"
 |[Lezione 11: Creare partizioni](lesson-10-create-partitions.md)|15 minuti|  
 |[Lezione 12: Creare ruoli](lesson-11-create-roles.md)|15 minuti|  
 |[Lezione 13: Analizza in Excel](lesson-12-analyze-in-excel.md)|20 minuti|  
-|[Lezione 14: distribuire](lesson-13-deploy.md)|5 minuti|  
+|[Lezione 14: Distribuire](lesson-13-deploy.md)|5 minuti|  
   
 ## <a name="supplemental-lessons"></a>Lezioni supplementari  
  In questa esercitazione sono incluse [Lezioni supplementari](../tutorials/supplemental-lessons.md). Gli argomenti di questa sezione non sono necessari per completare l'esercitazione, ma possono risultare utili per comprendere meglio le funzionalità avanzate di creazione dei modelli tabulari.  

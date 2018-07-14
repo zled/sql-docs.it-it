@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e002bdd169d03e0db1cd972ac6e1c52adc19946c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b806d01c3cecd4063fdc2ccc3d7095fb3070b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190801"
 ---
 # <a name="create-infocube-for-transaction-data"></a>Crea InfoCube per dati transazione
   Usare la finestra di dialogo **Crea InfoCube per dati transazione** per creare un nuovo InfoCube per i dati della transazione nel sistema SAP Netweaver BW.  
@@ -85,6 +85,6 @@ ms.locfileid: "36171497"
  Rimuovere l'associazione tra l'InfoObject e la colonna del flusso di dati per la riga corrente. Per rimuovere l'associazione, scegliere **Rimuovi**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Microsoft Connector 1.1 for SAP BW F1 Guida in linea](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Guida (F1) di Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

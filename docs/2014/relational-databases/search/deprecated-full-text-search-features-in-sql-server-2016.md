@@ -1,29 +1,28 @@
 ---
-title: Ricerca Full-Text caratteristiche deprecate in SQL Server 2014 | Documenti Microsoft
+title: Deprecate le funzionalità di ricerca Full-Text in SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [full-text search]
 - full-text search [SQL Server], deprecated features
 - full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7f6820edd97ae68872c56bd086e8e981c88f7399
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 140e7262d3cfc66e956ee0fc53ea1009d7afda0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179688"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>Funzionalità deprecate della ricerca full-text in SQL Server 2014
   In questo argomento vengono descritte le funzionalità deprecate della ricerca full-text ancora disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tali funzionalità verranno rimosse a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
@@ -61,8 +60,8 @@ ms.locfileid: "36169868"
  \*L'oggetto **SQL Server:Deprecated Features** non monitora le occorrenze di CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server: Deprecated Features-oggetto](../performance-monitor/sql-server-deprecated-features-object.md)   
+ [SQL Server, oggetto Deprecated Features](../performance-monitor/sql-server-deprecated-features-object.md)   
  [Modifiche di rilievo alla ricerca Full-Text](../../database-engine/breaking-changes-to-full-text-search.md)   
- [Funzionalità del motore di Database deprecate in SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
+ [Funzionalità del Motore di database deprecate in SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

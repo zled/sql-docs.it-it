@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services], creating
 - creating leaf members [Master Data Services]
 - members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8db1358fc13310c56b6486af73eed694e8423cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1fdc032aa6f82ce073720a14a0329764dcfec460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178088"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Creare un membro foglia (Master Data Services)
-  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], creare un membro foglia quando si desidera aggiungere dati master al sistema e non si usano tabelle di gestione temporanea o il [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] per importare i dati.  
+  Nelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], creare un membro foglia quando si desidera aggiungere dati master al sistema e non usa le tabelle di staging o il [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] per importare i dati.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  
   
--   È necessario disporre di almeno **aggiornamento** delle autorizzazioni necessarie per l'oggetto modello foglia per l'entità a cui si desidera aggiungere un membro.  
+-   È necessario disporre almeno **Update** dell'autorizzazione per l'oggetto modello foglia per l'entità a cui si desidera aggiungere un membro.  
   
 ### <a name="to-create-a-leaf-member"></a>Per creare un membro foglia  
   

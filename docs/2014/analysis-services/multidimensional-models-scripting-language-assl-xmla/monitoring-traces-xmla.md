@@ -1,5 +1,5 @@
 ---
-title: Monitoraggio di tracce (XMLA) | Documenti Microsoft
+title: Monitoraggio di tracce (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d605586c915963efc86c4e3197e087b8a5f82dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9df7fd3e22c8e63873584491c7f2051e8897efa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167952"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241621"
 ---
 # <a name="monitoring-traces-xmla"></a>Monitoraggio di tracce (XMLA)
-  È possibile usare il [Sottoscrivi](../xmla/xml-elements-commands/subscribe-element-xmla.md) comando XML for Analysis (XMLA) per monitorare una traccia esistente definita in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Il comando `Subscribe` restituisce i risultati di una traccia come set di righe.  
+  È possibile usare la [Sottoscrivi](../xmla/xml-elements-commands/subscribe-element-xmla.md) comando in XML for Analysis (XMLA) per monitorare una traccia esistente definita in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Il comando `Subscribe` restituisce i risultati di una traccia come set di righe.  
   
 ## <a name="specifying-a-trace"></a>Specifica di una traccia  
- Il [oggetto](../xmla/xml-elements-properties/object-element-xmla.md) proprietà del `Subscribe` comando deve contenere un riferimento a uno oggetto un' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza o una traccia in un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza. Se la proprietà `Object` non viene specificata o se un identificatore di traccia non viene specificato nella proprietà `Object`, il comando `Subscribe` consente di monitorare la traccia della sessione predefinita per la sessione esplicita specificata nell'intestazione SOAP per il comando.  
+ Il [oggetto](../xmla/xml-elements-properties/object-element-xmla.md) proprietà delle `Subscribe` comando deve contenere un riferimento all'oggetto a una delle due un' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza o una traccia in un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza. Se la proprietà `Object` non viene specificata o se un identificatore di traccia non viene specificato nella proprietà `Object`, il comando `Subscribe` consente di monitorare la traccia della sessione predefinita per la sessione esplicita specificata nell'intestazione SOAP per il comando.  
   
 ## <a name="returning-results"></a>Restituzione di risultati  
- Il comando `Subscribe` restituisce un set di righe che contiene gli eventi di traccia acquisiti dalla traccia specificata. Il `Subscribe` comando restituisce i risultati della traccia fino a quando non viene annullato il comando mediante il [Annulla](../xmla/xml-elements-commands/cancel-element-xmla.md) comando.  
+ Il comando `Subscribe` restituisce un set di righe che contiene gli eventi di traccia acquisiti dalla traccia specificata. Il `Subscribe` comando restituisce i risultati della traccia fino a quando non viene annullato per il [annullare](../xmla/xml-elements-commands/cancel-element-xmla.md) comando.  
   
  Nel set di righe sono contenute le colonne elencate nella tabella seguente.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36167952"
 |ObjectReference|String|Rappresentazione XML del riferimento all'oggetto per l'oggetto specificato in ObjectName.|  
 |NestLevel|Valore intero|Livello della transazione per cui si è verificato l'evento.|  
 |NumSegments|Long integer|Numero di segmenti di dati interessati o utilizzati dal comando per cui si è verificato l'evento.|  
-|Severity|Valore intero|Livello di gravità di un'eccezione per l'evento. I possibili valori della colonna sono i seguenti:<br /><br /> Valore: 0 = esito positivo<br /><br /> Valore: 1 = informazioni<br /><br /> Valore: 2 = avviso<br /><br /> Valore: 3 = errore|  
+|Severity|Valore intero|Livello di gravità di un'eccezione per l'evento. I possibili valori della colonna sono i seguenti:<br /><br /> Valore: 0 = esito positivo<br /><br /> Valore: 1 = informazioni<br /><br /> Valore: 2 = avviso<br /><br /> Value: 3 = errore|  
 |Esito positivo|Boolean|Indica se un comando ha avuto esito positivo o negativo.|  
 |Errore|Long integer|Numero di errore di un evento, se applicabile.|  
 |ConnectionID|String|Identificatore della connessione per cui si è verificato l'evento.|  

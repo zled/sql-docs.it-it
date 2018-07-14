@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.reports.f1
 - sql12.dta.sessionmonitor.f1
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7474f3ca2ae832a343c2b356a1bccd7d0947a92a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 83b44addd88b83b424e9cd956dcc4bd7621ee118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167102"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database
   Durante l'ottimizzazione di database tramite Ottimizzazione guidata motore di database, vengono creati automaticamente riepiloghi, indicazioni, report e log di ottimizzazione. È possibile utilizzare l'output del log di ottimizzazione per risolvere gli eventuali problemi verificatisi durante le sessioni di ottimizzazione di Ottimizzazione guidata motore di database. È possibile utilizzare i riepiloghi, le indicazioni e i report per determinare se implementare le indicazioni o continuare l'ottimizzazione fino a migliorare le prestazioni di esecuzione delle query come necessario per l'installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per informazioni sull'utilizzo di Ottimizzazione guidata motore di database per creare carichi di lavoro e ottimizzare un database, vedere [Avvio e utilizzo di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
@@ -152,7 +152,7 @@ ms.locfileid: "36171216"
   
 2.  Scegliere **Esporta risultati sessione** dal menu **File** e salvare i risultati in un file XML.  
   
-3.  Aprire il file XML creato nel passaggio 2 nell'editor XML o nell'editor di testo desiderato oppure in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Scorrere verso il basso il `Configuration` elemento. Copiare e incollare il `Configuration` sezione dell'elemento in un file XML di input il modello di file dopo la `TuningOptions` elemento. Salvare il file di input XML.  
+3.  Aprire il file XML creato nel passaggio 2 nell'editor XML o nell'editor di testo desiderato oppure in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Scorrere verso il basso il `Configuration` elemento. Copiare e incollare il `Configuration` sezione dell'elemento in un file XML di input modello di file dopo la `TuningOptions` elemento. Salvare il file di input XML.  
   
 4.  Nell'elemento `TuningOptions` del file di input XML creato nel passaggio 3 specificare le opzioni di ottimizzazione desiderate, modificare la sezione dell'elemento `Configuration` aggiungendo o eliminando le strutture di progettazione fisica in modo appropriato per l'analisi specifica, salvare il file e convalidarlo in base all'XML Schema di Ottimizzazione guidata motore di database. Per informazioni sulla modifica di questo file XML, vedere [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36171216"
   
 2.  Copiare e incollare l'[Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) in un editor XML o un editor di testo. Utilizzare questo codice di esempio per la creazione di un file di input XML per la sessione di ottimizzazione in corso. Per informazioni sull'esecuzione di questa attività, vedere la sezione "Creare un file di input XML" in [Avvio e utilizzo di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
   
-3.  Modificare il `TuningOptions` e il `Configuration` elementi nel file di input XML di esempio. Nel `TuningOptions` elemento, specificare le strutture di progettazione fisica si desidera che Ottimizzazione guidata motore Database da considerare durante la sessione di ottimizzazione. Nell'elemento `Configuration` specificare le strutture di progettazione fisica corrispondenti alla configurazione ipotetica delle strutture di progettazione fisica del database che si desidera siano analizzate da Ottimizzazione guidata motore di database. Per informazioni sugli attributi e gli elementi figlio è possibile utilizzare con il `TuningOptions` e il `Configuration` gli elementi padre, vedere [riferimento a File di Input XML &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Modificare il `TuningOptions` e il `Configuration` elementi nel file di input XML di esempio. Nel `TuningOptions` elemento, specificare le strutture di progettazione fisica si desidera che Ottimizzazione guidata motore Database prendere in considerazione durante la sessione di ottimizzazione. Nell'elemento `Configuration` specificare le strutture di progettazione fisica corrispondenti alla configurazione ipotetica delle strutture di progettazione fisica del database che si desidera siano analizzate da Ottimizzazione guidata motore di database. Per informazioni sugli attributi e gli elementi figlio è possibile usare con il `TuningOptions` e il `Configuration` gli elementi padre, vedere [riferimento a File di Input XML &#40;Ottimizzazione guidata motore di Database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Salvare il file di input con l'estensione **xml** .  
   
@@ -179,7 +179,7 @@ ms.locfileid: "36171216"
   
      XML Schema di Ottimizzazione guidata motore di database è anche disponibile online all'indirizzo [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta).  
   
-6.  Dopo aver creato un carico di lavoro e un file di input XML, è possibile specificare il file di input nell'utilità della riga di comando **dta** per eseguirne l'analisi. Assicurarsi di specificare un nome di file di output XML nell'argomento **-ox** . Verrà creato un file di output XML con una configurazione indicata specificata nel `Configuration` elemento. Se si desidera eseguire Ottimizzazione motore di Database per verificare un'altra configurazione ipotetica basata sull'output, è possibile copiare e incollare il `Configuration` il contenuto degli elementi dal file di output in un nuovo o del file di input XML originale. Per informazioni sull'uso di un file di input XML con l'utilità **dta** , vedere la sezione "Ottimizzazione di un database tramite l'utilità dta" in [Avvio e utilizzo di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
+6.  Dopo aver creato un carico di lavoro e un file di input XML, è possibile specificare il file di input nell'utilità della riga di comando **dta** per eseguirne l'analisi. Assicurarsi di specificare un nome di file di output XML nell'argomento **-ox** . Ciò consente di creare un file di output XML con una configurazione indicata specificata nel `Configuration` elemento. Se si desidera eseguire l'ottimizzazione motore di Database per verificare un'altra configurazione ipotetica basata sull'output, è possibile copiare e incollare il `Configuration` contenuto dell'elemento dal file di output in un nuovo o il file di input XML originale. Per informazioni sull'uso di un file di input XML con l'utilità **dta** , vedere la sezione "Ottimizzazione di un database tramite l'utilità dta" in [Avvio e utilizzo di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
   
      Dopo il completamento dell'ottimizzazione visualizzare i report dell'operazione nella GUI di Ottimizzazione guidata motore di database oppure aprire il file di output XML ed esaminare le indicazioni di Ottimizzazione guidata motore di database negli elementi `TuningSummary` e `Configuration`. Per informazioni sulla visualizzazione dei risultati della sessione di ottimizzazione, vedere [Visualizzazione output di ottimizzazione](#View) precedentemente in questo argomento. Si noti inoltre che i report di analisi potrebbero essere contenuti anche nel file di output XML.  
   

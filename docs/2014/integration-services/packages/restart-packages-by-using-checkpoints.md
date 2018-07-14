@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
@@ -17,13 +17,13 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b585849d6bb585a2d7008894c874b84d0a87f17e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02aa88c80200ece060204fc339e84560a069cc17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260987"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Riavvio dei pacchetti tramite checkpoint
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] può riavviare i pacchetti non eseguiti correttamente a partire dal punto in cui si è verificato l'errore, invece di eseguire di nuovo l'intero pacchetto. Se un pacchetto è configurato per l'utilizzo di checkpoint, le informazioni sull'esecuzione del pacchetto vengono scritte in un file del checkpoint. Questo file viene quindi utilizzato per il riavvio di un pacchetto dal punto in cui si è verificato l'errore. Se il pacchetto viene eseguito correttamente, il file del checkpoint viene eliminato e quindi creato nuovamente alla successiva esecuzione del pacchetto.  
@@ -36,7 +36,7 @@ ms.locfileid: "36170378"
   
 -   Non è necessario ripetere l'aggregazione di valori. Un pacchetto che calcola numerose aggregazioni, quali medie e somme, utilizzando un'attività Flusso di dati distinta per ogni aggregazione può ad esempio essere riavviato se il calcolo di un'aggregazione ha esito negativo. Verrà quindi ricalcolata solo tale aggregazione.  
   
- Se un pacchetto è stato configurato per l'utilizzo di checkpoint, in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] il punto di riavvio viene acquisito nel file del checkpoint. Il tipo di contenitore che ha esito negativo e l'implementazione di caratteristiche quali le transazioni influiscono sul punto di riavvio registrato nel file del checkpoint. Nel file del checkpoint vengono acquisiti anche i valori correnti delle variabili. Tuttavia, i valori delle variabili che hanno il `Object` tipo di dati non vengono salvate in file di checkpoint.  
+ Se un pacchetto è stato configurato per l'utilizzo di checkpoint, in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] il punto di riavvio viene acquisito nel file del checkpoint. Il tipo di contenitore che ha esito negativo e l'implementazione di caratteristiche quali le transazioni influiscono sul punto di riavvio registrato nel file del checkpoint. Nel file del checkpoint vengono acquisiti anche i valori correnti delle variabili. Tuttavia, i valori delle variabili che hanno il `Object` tipo di dati non vengono salvati nel file di checkpoint.  
   
 ## <a name="defining-restart-points"></a>Definizione dei punti di riavvio  
  Il contenitore host delle attività, che incapsula una sola attività, corrisponde all'unità di lavoro atomica più piccola che può essere riavviata. Anche il contenitore Ciclo Foreach e un contenitore transazionale vengono considerati unità di lavoro atomiche.  
@@ -63,7 +63,7 @@ ms.locfileid: "36170378"
 |CheckpointUsage|Specifica se i checkpoint vengono utilizzati.|  
 |SaveCheckpoints|Indica se il pacchetto salva i checkpoint. Questa proprietà deve essere impostata su True per consentire il riavvio di un pacchetto da un punto di errore.|  
   
- Inoltre, è necessario impostare la proprietà FailPackageOnFailure `true` per tutti i contenitori del pacchetto che si desidera identificare come punti di riavvio.  
+ Inoltre, è necessario impostare la proprietà FailPackageOnFailure `true` per tutti i contenitori nel pacchetto che si desidera identificare come punti di riavvio.  
   
  La proprietà ForceExecutionResult consente di testare l'uso dei checkpoint in un pacchetto. Se si imposta la proprietà ForceExecutionResult di un'attività o di un contenitore su Failure, è possibile riprodurre l'errore in tempo reale. Quando si esegue di nuovo il pacchetto, l'attività e i contenitori che hanno avuto esito negativo vengono eseguiti nuovamente.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36170378"
   
 ### <a name="to-configure-the-checkpoint-properties"></a>Per configurare le proprietà dei checkpoint  
   
--   [Configurazione dei checkpoint per riavviare un pacchetto non riuscito](../configure-checkpoints-for-restarting-a-failed-package.md)  
+-   [Configurazione dei checkpoint per il riavvio di un pacchetto non riuscito](../configure-checkpoints-for-restarting-a-failed-package.md)  
   
 ## <a name="external-resources"></a>Risorse esterne  
   

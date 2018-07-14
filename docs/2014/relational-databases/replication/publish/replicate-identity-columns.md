@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
 - identity values [SQL Server replication]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 caps.latest.revision: 51
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc8039ed5ea331609e14fc5b1b9cb9dae77f9aee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65d72e4cb94a4085829805278b59512a1a0a2801
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271027"
 ---
 # <a name="replicate-identity-columns"></a>Replica di colonne Identity
   In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si assegna la proprietà IDENTITY a una colonna, vengono automaticamente generati numeri sequenziali per le nuove righe inserite nella tabella contenente la colonna Identity. Per altre informazioni, vedere [IDENTITY &#40;proprietà&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Dato che è possibile includere le colonne Identity come parte della chiave primaria, è importante evitare di inserire valori duplicati nelle colonne Identity. Per utilizzare colonne Identity in una topologia di replica con aggiornamenti in più di un nodo, è necessario che ogni nodo presente nella topologia di replica utilizzi un intervallo di valori Identity diverso, in modo da non generare duplicati.  
@@ -55,12 +55,12 @@ ms.locfileid: "36168982"
 ## <a name="assigning-identity-ranges"></a>Assegnazione degli intervalli di valori Identity  
  In questa sezione vengono descritti i diversi metodi di assegnazione degli intervalli utilizzati per la replica di tipo merge e per la replica transazionale.  
   
- Nella replica di colonne Identity è opportuno considerare due tipi di intervalli, ovvero gli intervalli assegnati al server di pubblicazione e ai Sottoscrittori e l'intervallo del tipo di dati della colonna. Nella tabella seguente vengono illustrati gli intervalli disponibili per i tipi di dati utilizzati in genere nelle colonne Identity. L'intervallo è applicato a tutti i nodi presenti in una topologia. Ad esempio, se si utilizza `smallint` a partire da 1 con un incremento di 1, il numero massimo di inserimenti è 32.767 per il server di pubblicazione e tutti i sottoscrittori. Il numero effettivo di inserimenti dipende dal fatto che vi siano o meno gap nei valori utilizzati e che venga utilizzato o meno un valore soglia. Per ulteriori informazioni sulle soglie, vedere le sezioni seguenti relative alla replica di merge e alla replica transazionale con sottoscrizioni ad aggiornamento in coda.  
+ Nella replica di colonne Identity è opportuno considerare due tipi di intervalli, ovvero gli intervalli assegnati al server di pubblicazione e ai Sottoscrittori e l'intervallo del tipo di dati della colonna. Nella tabella seguente vengono illustrati gli intervalli disponibili per i tipi di dati utilizzati in genere nelle colonne Identity. L'intervallo è applicato a tutti i nodi presenti in una topologia. Ad esempio, se si usa `smallint` iniziale di 1 con un incremento di 1, il numero massimo di inserimenti è 32.767 per il server di pubblicazione e tutti i sottoscrittori. Il numero effettivo di inserimenti dipende dal fatto che vi siano o meno gap nei valori utilizzati e che venga utilizzato o meno un valore soglia. Per ulteriori informazioni sulle soglie, vedere le sezioni seguenti relative alla replica di merge e alla replica transazionale con sottoscrizioni ad aggiornamento in coda.  
   
  Se dopo un inserimento il server di pubblicazione esaurisce il proprio intervallo di valori Identity, è possibile assegnare automaticamente un nuovo intervallo a condizione che l'inserimento sia stato eseguito da un membro del ruolo predefinito del database **db_owner** . Se l'inserimento è stato eseguito da un utente che non dispone di quel ruolo, è necessario che l'agente di lettura log, l'agente di merge o l'utente che è membro del ruolo **db_owner** esegua la stored procedure [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql). Nel caso di pubblicazioni transazionali, l'agente di lettura log deve essere in esecuzione per allocare automaticamente un nuovo intervallo di valori (per impostazione predefinita l'agente viene eseguito continuamente).  
   
 > [!WARNING]  
->  Durante l'inserimento di un batch di grandi dimensioni, il trigger di replica viene generato solo una volta, non per ogni riga inserita. Questo può causare un errore nell'istruzione insert se un intervallo di valori identity viene esaurito durante un inserimento di grandi dimensioni, ad esempio un `INSERT INTO` istruzione.  
+>  Durante l'inserimento di un batch di grandi dimensioni, il trigger di replica viene generato solo una volta, non per ogni riga inserita. Questo può causare un errore nell'istruzione di inserimento se un intervallo di valori identity viene esaurito durante un inserimento di grandi dimensioni, ad esempio un `INSERT INTO` istruzione.  
   
 |Tipo di dati|Intervallo|  
 |---------------|-----------|  

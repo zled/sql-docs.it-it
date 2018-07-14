@@ -5,10 +5,9 @@ ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance [SQL Server], full-text search
 - full-text queries [SQL Server], performance
@@ -18,20 +17,20 @@ helpviewer_keywords:
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 caps.latest.revision: 66
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fb10d58c2197f422fe59ff2fa9a165bca5f8bf62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e1f24b14396b5277192ff0a7f7e814e66e40fdc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212771"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
   Le prestazioni di esecuzione dell'indicizzazione e delle query full-text possono dipendere da risorse hardware quali memoria e velocità del disco e della CPU, nonché dall'architettura del computer.  
   
-##  <a name="causes"></a> Cause più comuni di problemi di prestazioni  
+##  <a name="causes"></a> Cause più comuni dei problemi di prestazioni  
  La causa principale del calo delle prestazioni di esecuzione dell'indicizzazione full-text è data dai limiti delle risorse hardware:  
   
 -   Se l'uso della CPU da parte del processo host del daemon di filtri (fdhost.exe) o del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlservr.exe) ha quasi raggiunto il 100%, il collo di bottiglia è rappresentato dalla CPU stessa.  
@@ -62,7 +61,7 @@ ms.locfileid: "36169203"
 ##  <a name="tuning"></a> Ottimizzazione delle prestazioni di indici Full-Text  
  Per ottimizzare le prestazioni degli indici full-text, implementare le procedure consigliate seguenti:  
   
--   Per utilizzare tutti i processori o i core, impostare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' per il numero di CPU nel sistema. Per informazioni su questa opzione di configurazione, vedere [Opzione di configurazione del server max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
+-   Per usare tutti i processori o core, impostare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' per il numero di CPU nel sistema. Per informazioni su questa opzione di configurazione, vedere [Opzione di configurazione del server max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
   
 -   Verificare che la tabella di base includa un indice cluster. Utilizzare un tipo di dati integer per la prima colonna dell'indice cluster. Evitare l'utilizzo di GUID nella prima colonna dell'indice cluster. Un popolamento a più intervalli in un indice cluster garantisce la massima velocità di popolamento. È consigliabile che la colonna utilizzata come chiave full-text sia di un tipo di dati integer.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "36169203"
   
   
 ##  <a name="full"></a> Risoluzione dei problemi di prestazioni di popolamenti completi  
- Per diagnosticare problemi di prestazioni, analizzare i log della ricerca per indicizzazione full-text. Per informazioni sui registri ricerca per indicizzazione, vedere [popolamento degli indici Full-Text](../indexes/indexes.md).  
+ Per diagnosticare problemi di prestazioni, analizzare i log della ricerca per indicizzazione full-text. Per informazioni sui log di ricerca per indicizzazione, vedere [popolamento degli indici Full-Text](../indexes/indexes.md).  
   
  Nel caso in cui le prestazioni dei popolamenti completi non raggiungano livelli soddisfacenti, è consigliabile eseguire la procedura di risoluzione dei problemi illustrata di seguito nell'ordine in cui è riportata.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "36169203"
  Durante un popolamento full-text, è possibile che la memoria disponibile per fdhost.exe o sqlservr.exe diventi insufficiente o si esaurisca. Se il log delle ricerche per indicizzazione full-text indica il riavvio frequente del processo fdhost.exe o la restituzione frequente del codice di errore 8007008, uno di questi processi non dispone di memoria sufficiente. Se fdhost.exe produce dump, in particolare in computer di grandi dimensioni con più CPU, è possibile che la memoria si esaurisca.  
   
 > [!NOTE]  
->  Per ottenere informazioni sui buffer di memoria utilizzati da una ricerca per indicizzazione full-text, vedere [DM fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql).  
+>  Per ottenere informazioni sui buffer di memoria utilizzata da una ricerca per indicizzazione full-text, vedere [DM fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql).  
   
  I motivi possibili sono i seguenti:  
   
@@ -135,7 +134,7 @@ ms.locfileid: "36169203"
 |x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= minimo (** *T* **,** 2000 **) –*`F`*–** 500|  
 |x64|*F* **=** *numero di intervalli di ricerca per indicizzazione* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
   
- <sup>1</sup> se sono in corso più popolamenti completi, calcolare i requisiti di memoria fdhost.exe di ciascuno separatamente, ad esempio *F1*, *F2*e così via. Calcolare quindi *M* come *T***–** sigma **(***F*i**)**.  
+ <sup>1</sup> se è in corso più popolamenti completi, calcolare i requisiti di memoria fdhost.exe della ognuno separatamente, ad esempio *F1*, *F2*e così via. Calcolare quindi *M* come *T***–** sigma **(***F*i**)**.  
   
  <sup>2</sup> 500 MB è una stima della memoria necessaria per altri processi nel sistema. Se nel sistema sono in corso processi aggiuntivi, aumentare questo valore di conseguenza.  
   
@@ -151,9 +150,9 @@ ms.locfileid: "36169203"
   
  `M = 8192-640-500=7052`  
   
- **Esempio: Impostazione max server memory**  
+ **Esempio: Impostazione della memoria massima del server**  
   
- Questo esempio viene utilizzata la [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) e [RICONFIGURARE](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni per impostare `max server memory` sul valore calcolato per *M* nell'esempio precedente , `7052`:  
+ Questo esempio Usa la [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) e [RICONFIGURARE](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni per impostare `max server memory` sul valore calcolato per *M* nell'esempio precedente , `7052`:  
   
 ```  
 USE master;  
@@ -164,7 +163,7 @@ RECONFIGURE;
 GO  
 ```  
   
- **Per impostare il max server memory-opzione di configurazione**  
+ **Per impostare max server memory-opzione configurazione**  
   
 -   [Opzioni di configurazione del server Server Memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
@@ -175,7 +174,7 @@ GO
   
 -   Lunga attesa di pagine  
   
-     Per verificare la disponibilità elevato tempo di attesa delle pagine, eseguire l'istruzione seguente [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione:  
+     Per verificare la disponibilità elevato tempo di attesa delle pagine, eseguire il codice seguente [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione:  
   
     ```  
     Execute SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
@@ -202,12 +201,12 @@ GO
   
   
   
-##  <a name="filters"></a> Risoluzione dei problemi di prestazioni di indicizzazione lenta a causa di filtri  
+##  <a name="filters"></a> Risoluzione dei problemi di rallentamento delle prestazioni di indicizzazione a causa di filtri  
  Durante il popolamento di un indice full-text, il motore di ricerca full-text utilizza due tipi di filtri, a thread singolo e multithread. Alcuni documenti, quali i documenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, vengono filtrati utilizzando un filtro multithread, mentre altri, ad esempio i documenti PDF (Portable Document Format) di Adobe Acrobat, vengono filtrati utilizzando un filtro a thread singolo.  
   
  Ai fini della sicurezza, i filtri vengono caricati dai processi dell'host del daemon di filtri. In un'istanza del server viene utilizzato un processo a thread multipli per tutti i filtri a thread multipli e un processo a thread singolo per tutti i filtri a thread singolo. Quando un documento che utilizza un filtro multithread contiene un documento incorporato che utilizza un filtro a thread singolo, il motore di ricerca full-text avvia un processo a thread singolo per il documento incorporato. Nel caso di un documento di Word che contiene un documento PDF, il motore di ricerca full-text usa il processo multithread per esaminare il contenuto in formato Word e avvia un processo a thread singolo per esaminare il contenuto in formato PDF. Un filtro a thread singolo potrebbe tuttavia non funzionare in modo corretto in questo ambiente e potrebbe destabilizzare il processo di filtraggio. In alcune situazioni in cui i documenti incorporati rappresentano una prassi comune, la destabilizzazione potrebbe provocare errori irreversibili nel processo di filtraggio. In questo caso, il motore di ricerca full-text reindirizza tutti i documenti che hanno provocato l'errore, ad esempio un documento di Word in cui è incorporato contenuto in formato PDF, al processo di filtraggio a thread singolo. Se il reindirizzamento viene eseguito di frequente, le prestazioni del processo di indicizzazione full-text risultano ridotte.  
   
- Per risolvere questo problema, è necessario contrassegnare il filtro per il documento contenitore, in questo caso il documento di Word, come filtro a thread singolo. È possibile modificare il valore del Registro di sistema per il filtro per contrassegnare un filtro specifico come filtro a thread singolo. Per contrassegnare un filtro come filtro a thread singolo, è necessario impostare il **ThreadingModel** il valore del Registro di sistema per il filtro su `Apartment Threaded`. Per informazioni sugli apartment a thread singolo, vedere il white paper [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159).  
+ Per risolvere questo problema, è necessario contrassegnare il filtro per il documento contenitore, in questo caso il documento di Word, come filtro a thread singolo. È possibile modificare il valore del Registro di sistema per il filtro per contrassegnare un filtro specifico come filtro a thread singolo. Per contrassegnare un filtro come filtro a thread singolo, è necessario impostare il **ThreadingModel** valore del Registro di sistema per il filtro su `Apartment Threaded`. Per informazioni sugli apartment a thread singolo, vedere il white paper [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159).  
   
   
   

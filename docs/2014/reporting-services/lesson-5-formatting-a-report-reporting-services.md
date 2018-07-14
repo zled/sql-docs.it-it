@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: db481a9a35cd55ecef08cf86802196d2a1c94b45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 19e238919a00bf022cd924be7a66a4d990d8f7c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227090"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
   Dopo avere aggiunto un'area dati e alcuni campi al report Sales Orders, è possibile formattare i campi relativi a data e valuta e le intestazioni di colonna.  
@@ -30,7 +30,7 @@ ms.locfileid: "36169588"
   
 -   [Formattare la valuta](#bkmk_format_currency)  
   
--   [Modificare lo stile di testo e la larghezza delle colonne](#bkmk_change_textstyle)  
+-   [Modifica dello stile di testo e la larghezza delle colonne](#bkmk_change_textstyle)  
   
 ##  <a name="bkmk_format_date"></a> Formattare la data  
  Nel campo Date vengono visualizzate la data e l'ora per impostazione predefinita. È possibile formattare tale campo in modo da visualizzare solo la data.  
@@ -41,7 +41,7 @@ ms.locfileid: "36169588"
   
 2.  Fare clic con il pulsante destro del mouse nella cella contenente l'espressione per il campo `[Date]` e scegliere **Proprietà casella di testo**.  
   
-3.  Fare clic su **numero**e quindi il **categoria** campi, selezionare `Date`.  
+3.  Fare clic su **numero**e quindi la **categoria** campo selezionare `Date`.  
   
 4.  Nella casella **Tipo** selezionare **31 Gennaio 2000**.  
   
@@ -74,14 +74,14 @@ ms.locfileid: "36169588"
   
 6.  Visualizzare un'anteprima del report per vedere la modifica al campo `[LineTotal]` , quindi tornare alla visualizzazione della struttura.  
   
-##  <a name="bkmk_change_textstyle"></a> Modificare lo stile di testo e la larghezza delle colonne  
+##  <a name="bkmk_change_textstyle"></a> Modifica dello stile di testo e la larghezza delle colonne  
  È possibile modificare anche la formattazione della riga dell'intestazione per differenziarla dalle righe di dati nel report. Come ultima operazione, si potrà regolare la larghezza delle colonne.  
   
 #### <a name="to-format-header-rows-and-table-columns"></a>Per formattare le righe di intestazione e le colonne di tabella  
   
 1.  Fare clic nella tabella in modo che vengano visualizzati gli handle di colonna e riga sopra e accanto alla tabella.  
   
-     ![Progettazione, tabella con riga di intestazione e riga di dettaglio](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "di progettazione, tabella con riga di intestazione e riga di dettaglio")  
+     ![Progettazione, tabella con riga di intestazione e riga di dettaglio](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "progettazione, tabella con riga di intestazione e riga di dettaglio")  
   
      Le barre grigie lungo la parte superiore e laterale della tabella sono gli handle di riga e di colonna.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36169588"
  Sono stati formattati le intestazioni di colonna e i valori di data e valuta. È possibile aggiungere gruppi e totali al report. Vedere [Lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione di numeri e date &#40;SSRS e Generatore Report&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Formattazione di numeri e date di &#40;Report e SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

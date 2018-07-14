@@ -1,5 +1,5 @@
 ---
-title: "Le proprietà dell'operatore: Nuovo operatore (pagina notifiche) | Documenti Microsoft"
+title: 'Proprietà operatore: Nuovo operatore (pagina notifiche) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.operator.notifications.f1
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e0b463ff3c11b038a200fe099397824ac4213c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5f54bf301cf6123799127aa5b3c7e8eec61bf9c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172158"
 ---
-# <a name="operator-properties-new-operator-notifications-page"></a>Le proprietà dell'operatore: Nuovo operatore (pagina notifiche)
+# <a name="operator-properties-new-operator-notifications-page"></a>Proprietà operatore: Nuovo operatore (pagina notifiche)
   Utilizzare questa pagina per impostare gli avvisi e i processi di notifica relativi all'operatore.  
   
 ## <a name="options"></a>Opzioni  

@@ -1,5 +1,5 @@
 ---
-title: Installare SQL Server 2014 in Server Core | Documenti Microsoft
+title: Installare SQL Server 2014 in Server Core | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5a19e13c1f760e83e8a131e30e3878f8659e6116
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b4ca2154a7574ba787fe59737c6165c41bc1d6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193881"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>Installare SQL Server 2014 in Server Core
   È possibile installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'installazione Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 o [!INCLUDE[win8srv](../../includes/win8srv-md.md)]. In questo argomento vengono fornite informazioni dettagliate specifiche dell'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in Server Core.  
   
- L'opzione di installazione Server Core per il sistema operativo [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] o [!INCLUDE[win8srv](../../includes/win8srv-md.md)] offre un ambiente minimo per l'esecuzione di ruoli del server specifici. Ciò consente di ridurre i requisiti di manutenzione e gestione e la superficie di attacco per i ruoli del server in questione. Per ulteriori informazioni sul Server principale come implementato nel [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], vedere [Server Core per Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=202439) (http://go.microsoft.com/fwlink/?LinkId=202439). Per altre informazioni sull'implementazione di Server Core in [!INCLUDE[win8srv](../../includes/win8srv-md.md)], vedere [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx) (Server Core per Windows Server 2012).  
+ L'opzione di installazione Server Core per il sistema operativo [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] o [!INCLUDE[win8srv](../../includes/win8srv-md.md)] offre un ambiente minimo per l'esecuzione di ruoli del server specifici. Ciò consente di ridurre i requisiti di manutenzione e gestione e la superficie di attacco per i ruoli del server in questione. Per altre informazioni sul Server principale come implementato nel [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], vedere [Server Core per Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=202439) (http://go.microsoft.com/fwlink/?LinkId=202439). Per altre informazioni sull'implementazione di Server Core in [!INCLUDE[win8srv](../../includes/win8srv-md.md)], vedere [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx) (Server Core per Windows Server 2012).  
   
 ## <a name="prerequisites"></a>Prerequisiti  
   
 |Requisito|Modalità di installazione|  
 |-----------------|--------------------|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SP2|Incluso in installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 e [!INCLUDE[win8srv](../../includes/win8srv-md.md)]. Se non è abilitato, per impostazione predefinita viene abilitato durante l'installazione.<br /><br /> Non è possibile eseguire le versioni 2.0, 3.0 e 3.5 side-by-side in un computer. Durante l'installazione di .NET Framework 3.5 SP1 si ottengono automaticamente i livelli 2.0 e 3.0.|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 Full Profile|Incluso in installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. Se non è abilitato, per impostazione predefinita viene abilitato durante l'installazione.<br /><br /> In un computer con sistema operativo Windows Server, è necessario scaricare e installare .NET Framework 3.5 SP1 prima di eseguire il programma di installazione per installare i componenti dipendenti da .NET 3.5 SP1.<br /><br /> Per ulteriori informazioni sui requisiti e indicazioni su come acquisire e abilitare .NET Framework 3.5 nel [!INCLUDE[win8srv](../../includes/win8srv-md.md)], vedere [considerazioni sulla distribuzione di Microsoft .NET Framework 3.5](http://msdn.microsoft.com/library/windows/hardware/hh975396) (http://msdn.microsoft.com/library/windows/hardware/hh975396).|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|Per tutte le edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , ad eccezione di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], uno dei prerequisiti di installazione prevede l'installazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile.<br /><br /> Per [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)], scaricare il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile dalla [Microsoft .NET Framework 4 (programma di installazione autonomo) per Server Core](http://go.microsoft.com/fwlink/?LinkId=220467) (http://go.microsoft.com/fwlink/?LinkId=220467)e installarlo prima di procedere con il programma di installazione.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 Full Profile|Incluso in installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. Se non è abilitato, per impostazione predefinita viene abilitato durante l'installazione.<br /><br /> In un computer con sistema operativo Windows Server, è necessario scaricare e installare .NET Framework 3.5 SP1 prima di eseguire il programma di installazione per installare i componenti dipendenti da .NET 3.5 SP1.<br /><br /> Per altre informazioni sui requisiti e indicazioni su come acquisire e abilitare .NET Framework 3.5 nel [!INCLUDE[win8srv](../../includes/win8srv-md.md)], vedere [considerazioni sulla distribuzione di Microsoft .NET Framework 3.5](http://msdn.microsoft.com/library/windows/hardware/hh975396) (http://msdn.microsoft.com/library/windows/hardware/hh975396).|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|Per tutte le edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , ad eccezione di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], uno dei prerequisiti di installazione prevede l'installazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile.<br /><br /> Per la [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)], scaricare il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile dalla [Microsoft.NET Framework 4 (programma di installazione autonomo) per Server Core](http://go.microsoft.com/fwlink/?LinkId=220467) (http://go.microsoft.com/fwlink/?LinkId=220467)e installarlo prima di procedere con il programma di installazione.|  
 |Windows Installer 4.5|Fornito con installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 e [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
 |Windows PowerShell 2.0|Fornito con installazioni Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 e [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
   
@@ -61,11 +61,11 @@ ms.locfileid: "36171077"
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|no|  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|no|  
   
- <sup>[1] </sup>Per ulteriori informazioni sul nuovo Server Integration Services e sulle relative funzionalità in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Integration Services &#40;SSIS&#41; Server](../../integration-services/catalog/integration-services-ssis-server-and-catalog.md).  
+ <sup>[1] </sup>Per altre informazioni sul nuovo Server Integration Services e sulle relative funzionalità in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Integration Services &#40;SSIS&#41; Server](../../integration-services/catalog/integration-services-ssis-server-and-catalog.md).  
   
  <sup>[2] </sup>Installazione di queste funzionalità in Server Core non è supportata. Questi componenti possono essere installati in un server diverso da [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 o [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core e connessi ai servizi del [!INCLUDE[ssDE](../../includes/ssde-md.md)] installati in Server Core.  
   
- <sup>[3] </sup>Microsoft Sync Framework non siano presenti i [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pacchetto di installazione. È possibile scaricare la versione appropriata di Sync Framework da questa [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) e installarla in un computer che esegue l'installazione Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 o [!INCLUDE[win8srv](../../includes/win8srv-md.md)].  
+ <sup>[3] </sup>Microsoft Sync Framework non è incluso nel [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pacchetto di installazione. È possibile scaricare la versione appropriata di Sync Framework da questa [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) e installarla in un computer che esegue l'installazione Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 o [!INCLUDE[win8srv](../../includes/win8srv-md.md)].  
   
 ## <a name="supported-scenario-matrix"></a>Matrice di scenario supportata  
  Nella tabella seguente viene illustrata la matrice di scenario supportata per l'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in un'installazione Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 e [!INCLUDE[win8srv](../../includes/win8srv-md.md)].  

@@ -1,5 +1,5 @@
 ---
-title: Elemento Translation (ASSL) | Documenti Microsoft
+title: Elemento Translation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Translation element
 ms.assetid: fe715bab-050d-49e6-8ba6-801d0fa379a4
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 67d8e5fbf2182abea4dda5bd5aaf5ebb30ba1273
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4214f0fc64e121cecf40f4723d95e8c53d1e38bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204111"
 ---
 # <a name="translation-element-assl"></a>Elemento Translation (ASSL)
-  Fornisce una traduzione localizzata per l'elemento padre del [traduzioni](../collections/translations-element-assl.md) insieme.  
+  Fornisce una traduzione localizzata per l'elemento padre del [traduzioni](../collections/translations-element-assl.md) raccolta.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36171099"
 |Elementi padre|[Traduzioni](../collections/translations-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.Translation>.  
   
 ## <a name="see-also"></a>Vedere anche  

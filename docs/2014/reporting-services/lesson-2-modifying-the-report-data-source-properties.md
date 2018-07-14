@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f2d985681028cf919e1f56d1138863497b931c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 2f7ede1d878eb966ec810098a3a8c1cd6475c4d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175244"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
   In questa lezione verrà utilizzato Gestione report per seleziona un report da recapitare ai destinatari. Con la sottoscrizione guidata dai dati che verrà definita verrà distribuito il report **Ordine vendita** creato nell'esercitazione [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Nei passaggi seguenti verranno modificate le informazioni di connessione all'origine dei dati utilizzate dal report per acquisire i dati. Solo i report in cui vengono usate **credenziali archiviate** per accedere a un'origine dati del report possono essere distribuiti attraverso una sottoscrizione guidata dai dati. Le credenziali archiviate sono necessarie per l'esecuzione automatica dei report.  
@@ -38,7 +38,7 @@ ms.locfileid: "36170723"
   
 ##  <a name="bkmk_modify_datasource"></a> Per modificare le proprietà dell'origine dati  
   
-1.  Avviare [gestione Report &#40;modalità nativa SSRS&#41; ](../../2014/reporting-services/report-manager-ssrs-native-mode.md) con privilegi di amministratore, ad esempio, fare clic sull'icona di Internet Explorer e fare clic su **Esegui come amministratore**.  
+1.  Avviare [gestione Report &#40;modalità nativa SSRS&#41; ](../../2014/reporting-services/report-manager-ssrs-native-mode.md) con privilegi di amministratore, ad esempio, fare doppio clic sull'icona per Internet Explorer e fare clic su **Esegui come amministratore**.  
   
 2.  Selezionare la cartella contenente il report **Ordini vendita** e nel menu di scelta rapida del report fare clic su **Gestisci**.  
   
@@ -56,19 +56,19 @@ ms.locfileid: "36170723"
   
 6.  Fare clic su **Credenziali archiviate in modo protetto nel server di report**.  
   
-7.  Digitare il nome utente nel formato *dominio\utente*e la password. Se non si dispone dell'autorizzazione per accedere il [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] del database, specificare un account di accesso autorizzato.  
+7.  Digitare il nome utente nel formato *dominio\utente*e la password. Se non si dispone dell'autorizzazione per accedere la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] del database, specificare un account di accesso autorizzato.  
   
-8.  Fare clic su **Usa come credenziali di Windows per la connessione all'origine dei dati**e quindi su **OK**. Se non si utilizza un account di dominio (ad esempio, se si utilizza un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] account di accesso), non selezionare questa casella di controllo.  
+8.  Fare clic su **Usa come credenziali di Windows per la connessione all'origine dei dati**e quindi su **OK**. Se non si usa un account di dominio (ad esempio, se si usa un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] account di accesso), non selezionare questa casella di controllo.  
   
 9. Fare clic su **Test connessione** per verificare che sia possibile connettersi all'origine dati.  
   
 10. Fare clic su **Applica**.  
   
-11. Visualizzare il report per verificare che venga eseguito con le credenziali specificate. Per visualizzare il report, fare clic sulla scheda **Visualizza** . Si noti che dopo avere aperto il report, è necessario selezionare un nome di dipendente e quindi fare clic sui **visualizzazione Report** pulsante per visualizzare il report.  
+11. Visualizzare il report per verificare che venga eseguito con le credenziali specificate. Per visualizzare il report, fare clic sulla scheda **Visualizza** . Si noti che dopo aver aperto il report, è necessario selezionare un nome di dipendente e quindi scegliere il **Visualizza Report** pulsante per visualizzare il report.  
   
 ##  <a name="bkmk_modify_dataset"></a> Per modificare AdventureWorksDataset  
   
-1.  Aprire il report Sales Orders in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
+1.  Aprire il report ordini vendita in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
 2.  Fare clic con il pulsante destro del mouse sul set di dati `AdventureWorksDataset` e scegliere **Proprietà set di dati**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36170723"
   
 6.  Fare clic su **OK**. Il parametro verrà aggiunto al **riquadro dei dati del report** e l'immagine sarà simile alla seguente:  
   
-     ![Il nuovo parametro viene aggiunto al riquadro dati Report](../../2014/tutorials/media/ssrs-tutorial-datadriven-parameter.gif "il nuovo parametro viene aggiunto al riquadro dati Report")  
+     ![Il nuovo parametro verrà aggiunto al riquadro dati Report](../../2014/tutorials/media/ssrs-tutorial-datadriven-parameter.gif "il nuovo parametro verrà aggiunto al riquadro dati Report")  
   
 7.  Fare clic sulla scheda **Anteprima** per eseguire il report. Si noti la casella di input del parametro nella parte superiore del report. È possibile effettuare le operazioni seguenti:  
   

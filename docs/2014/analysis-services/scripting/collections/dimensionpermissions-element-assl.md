@@ -1,5 +1,5 @@
 ---
-title: Elemento DimensionPermissions (ASSL) | Documenti Microsoft
+title: Elemento DimensionPermissions (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DimensionPermissions element
 ms.assetid: cb9fdfbf-2118-423b-ba02-fa36813dbea0
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0ce5b6f55d8ed8d14b192de800c62237629195e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 605f5055d4fc3939cb8b30f123281e3d920db6fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246328"
 ---
 # <a name="dimensionpermissions-element-assl"></a>Elemento DimensionPermissions (ASSL)
-  Contiene la raccolta di autorizzazioni applicabili a un [dimensione](../objects/dimension-element-assl.md) elemento o un [CubePermission](../objects/cubepermission-element-assl.md) elemento.  
+  Contiene la raccolta di autorizzazioni applicabili a un [dimensione](../objects/dimension-element-assl.md) elemento o una [CubePermission](../objects/cubepermission-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,9 +63,9 @@ ms.locfileid: "36169764"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[CubePermission](../objects/cubepermission-element-assl.md), [dimensione](../objects/dimension-element-assl.md)|  
-|Elementi figlio|[DimensionPermission](../objects/dimensionpermission-element-assl.md)|  
+|Elementi figlio|[Elemento DimensionPermission](../objects/dimensionpermission-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per gli elementi `CubePermission`, elementi `DimensionPermission` in queste autorizzazioni dell'override della raccolta specificate nella raccolta `DimensionPermissions` di ogni dimensione fatta riferimento in modo esplicito. Se non è fatto riferimento a una dimensione in questa raccolta, l'elemento `CubePermission` eredita le autorizzazioni specificate nella raccolta `DimensionPermissions` della dimensione.  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.DimensionPermissionCollection>.  

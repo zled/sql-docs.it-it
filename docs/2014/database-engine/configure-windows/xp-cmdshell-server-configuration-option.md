@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - xp_cmdshell
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5db62cf5c549d4bfbea98a6584f91171bd93afa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 647516b851ad8d7a6716e49d5589adb2681fe541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252753"
 ---
 # <a name="xpcmdshell-server-configuration-option"></a>Opzione di configurazione del server xp_cmdshell
   L'opzione **xp_cmdshell** è un'opzione di configurazione server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente agli amministratori di sistema di controllare se la stored procedure estesa **xp_cmdshell** può essere eseguita in un sistema. Nelle nuove installazioni l'opzione **xp_cmdshell** è disabilitata per impostazione predefinita e può essere abilitata usando la gestione basata su criteri oppure eseguendo la stored procedure di sistema **sp_configure** , come illustrato nell'esempio di codice seguente:  

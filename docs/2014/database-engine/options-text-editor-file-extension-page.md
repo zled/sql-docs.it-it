@@ -1,5 +1,5 @@
 ---
-title: Opzioni (Editor di testo - pagina estensione File) | Documenti Microsoft
+title: Opzioni (Editor di testo - pagina estensione File) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.File_Extension
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 307d7f6fbf3405d0ff84d1c2672c1de2c90bf092
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4fd0abdb6c1bc93d730ccb502d6eb1c2facf891a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176418"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Opzioni (Editor di testo - pagina Estensione file)
   Usare la finestra di dialogo **Opzioni** per specificare la modalità in cui i file con determinate estensioni vengono gestiti da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per ogni estensione immessa è possibile selezionare un editor. È pertanto possibile scegliere l'editor di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] in cui sarà possibile aprire determinati tipi di documento. Per aprire le opzioni relative all'estensione di file scegliere **Opzioni** dal menu **Strumenti**, espandere **Editor di testo** e quindi fare clic su **Estensione file**.  

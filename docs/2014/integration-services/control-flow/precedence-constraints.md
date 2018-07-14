@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -20,13 +20,13 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cd1a3a39045330283b12aa74acbce64b1420c6ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52729044444db0668870cc9878ee3184f17b49b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163042"
 ---
 # <a name="precedence-constraints"></a>Vincoli di precedenza
   I vincoli di precedenza collegano eseguibili, contenitori e attività di pacchetti in modo da formare un flusso di controllo e specificano le condizioni che determinano se tali eseguibili devono essere eseguiti. Un eseguibile può essere costituito da un gestore di evento o da un contenitore Ciclo For, Ciclo Foreach o Sequenza. Anche nei gestori di eventi vengono utilizzati vincoli di precedenza per collegare gli eseguibili in modo da formare un flusso di controllo.  
@@ -90,9 +90,9 @@ ms.locfileid: "36170845"
 ## <a name="related-tasks"></a>Related Tasks  
  Per informazioni dettagliate sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Impostare le proprietà di un vincolo di precedenza](../set-the-properties-of-a-precedence-constraint.md)  
+-   [Impostazione delle proprietà di un vincolo di precedenza](../set-the-properties-of-a-precedence-constraint.md)  
   
--   [Impostare il valore di un vincolo di precedenza tramite il Menu di scelta rapida](../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)  
+-   [Impostazione del valore di un vincolo di precedenza tramite il menu di scelta rapida](../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)  
   
 -   [Connettere attività e contenitori tramite un vincolo di precedenza predefinito](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36170845"
  Articolo tecnico relativo agli [esempi di espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere espressioni ai vincoli di precedenza](../add-expressions-to-precedence-constraints.md)   
+ [Aggiunta di espressioni ai vincoli di precedenza](../add-expressions-to-precedence-constraints.md)   
  [Più vincoli di precedenza](../multiple-precedence-constraints.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Metodo SetDisable (classe ClientNetworkProtocol) | Documenti Microsoft
+title: Metodo SetDisable (classe ClientNetworkProtocol) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SetDisable method
 ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d25b92c4c88750662a895bac607d26230e6dc602
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 08d291f0272e602538f1a6cceef92e5f26bc6858
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186108"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>Metodo SetDisable (classe ClientNetworkProtocol)
-  Disabilita il protocollo di rete client specificato per il [configurazione di protocolli Client](http://technet.microsoft.com/library/ms181035.aspx).  
+  Disabilita il protocollo di rete client specificato per il [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,9 +49,9 @@ object
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore `uint32` che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Client e librerie di rete](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurazione di protocolli di rete Client e le librerie di rete](http://technet.microsoft.com/library/ms181035.aspx)  
   
   

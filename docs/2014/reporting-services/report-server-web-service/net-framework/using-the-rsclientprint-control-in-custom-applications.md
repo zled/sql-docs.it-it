@@ -17,15 +17,15 @@ helpviewer_keywords:
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: 30
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0c1f08f222fa1d902232373051e8d584b673ba5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5c8d0419dc923fc8fc7e6f2cb58d74ee70d46f68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181558"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilizzo del controllo RSClientPrint in applicazioni personalizzate
   Il controllo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** consente la stampa sul lato client dei report visualizzati nel Visualizzatore HTML. Offre una finestra di dialogo **Stampa** per consentire all'utente di avviare un processo di stampa, visualizzare un'anteprima di un report, specificare le pagine da stampare e modificare i margini. Durante la stampa sul lato client, il server di report esegue il rendering del report con l'estensione per il rendering Immagine (EMF) e utilizza le funzionalità di stampa del sistema operativo per creare il processo di stampa e inviarlo a una stampante.  
@@ -78,7 +78,7 @@ ms.locfileid: "36169757"
 |MarginBottom|Double|LS|Impostazione del report|Recupera o imposta il margine inferiore. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
 |PageWidth|Double|LS|Impostazione del report|Recupera o imposta la larghezza della pagina. Il valore predefinito è di 215,9 mm se non viene specificato un valore diverso dallo sviluppatore o nella definizione del report.|  
 |PageHeight|Double|LS|Impostazione del report|Recupera o imposta l'altezza della pagina. Il valore predefinito è di 279,4 mm se non viene specificato un valore diverso dallo sviluppatore o nella definizione del report.|  
-|Impostazioni cultura|Int32|LS|Impostazioni locali del browser|Specifica l'identificatore delle impostazioni locali (LCID). Questo valore determina l'unità di misura per l'input dell'utente. Se, ad esempio, un utente digita `3`, il valore verrà misurato in millimetri se la lingua francese e in pollici se la lingua inglese (Stati Uniti). I valori validi sono: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|Impostazioni cultura|Int32|LS|Impostazioni locali del browser|Specifica l'identificatore delle impostazioni locali (LCID). Questo valore determina l'unità di misura per l'input dell'utente. Ad esempio, se un utente digita `3`, il valore verrà misurato in millimetri se la lingua è il francese e in pollici se la lingua inglese (Stati Uniti). I valori validi sono: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |UICulture|String|LS|Impostazioni internazionali del client|Specifica la lingua delle stringhe della finestra di dialogo. Per il testo della finestra di dialogo di stampa sono disponibili le lingue seguenti: cinese semplificato, cinese tradizionale, inglese, francese, tedesco, italiano, giapponese, coreano e spagnolo. I valori validi sono: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |Authenticate|Boolean|LS|False|Specifica se il controllo genera un comando GET per il server di report per avviare una sessione per la stampa fuori sessione.|  
   

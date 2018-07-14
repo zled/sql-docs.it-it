@@ -1,5 +1,5 @@
 ---
-title: I report per il Server Integration Services | Documenti Microsoft
+title: I report per il Server Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9809de19a363c94365c0da88655d4e54b81b80cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c035c2d8dacf29f8ca4d81b13c0ace5500a2dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180298"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Report per il server Integration Services
-  Nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], sono disponibili report standard in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] che consentono di monitorare [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] progetti che sono stati distribuiti i [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. I report consentono di visualizzare lo stato e la cronologia dei pacchetti e, se necessario, identificare la causa di eventuali errori.  
+  Nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], sono disponibili report standard [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] che consentono di monitorare [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] progetti che sono stati distribuiti per il [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. I report consentono di visualizzare lo stato e la cronologia dei pacchetti e, se necessario, identificare la causa di eventuali errori.  
   
  All'inizio di ogni pagina dei report sono disponibili l'icona che consente di tornare alla pagina precedentemente visualizzata, l'icona tramite cui viene eseguito l'aggiornamento delle informazioni visualizzate nella pagina e l'icona che consente all'utente di stampare la pagina corrente.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "36169938"
  Per istruzioni su come creare e aggiungere un report personalizzato, vedere [Aggiunta di un report personalizzato a Management Studio](../ssms/object/add-a-custom-report-to-management-studio.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Visualizzare report per il Server Integration Services](../../2014/integration-services/view-reports-for-the-integration-services-server.md)  
+ [Visualizzare i report per il server Integration Services](../../2014/integration-services/view-reports-for-the-integration-services-server.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Il monitoraggio delle esecuzioni dei pacchetti e altre operazioni](performance/monitor-running-packages-and-other-operations.md)  
+ [Monitoraggio per le esecuzioni di pacchetti e altre operazioni](performance/monitor-running-packages-and-other-operations.md)  
   
   

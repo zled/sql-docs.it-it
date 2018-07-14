@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], full
 - troubleshooting [SQL Server], full transaction log
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - full transaction logs [SQL Server]
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0adfc6e8f46a916244ddbaf81383ed8c3c169f1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b3fa89db4f8fb95ca1f2e912c6ee1d131808f42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254033"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Risolvere i problemi relativi a un log delle transazioni completo (Errore di SQL Server 9002)
   In questo argomento vengono illustrate le risposte possibili a un log delle transazioni pieno e viene spiegato come evitare tale situazione in futuro. Quando il log delle transazioni è pieno, in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] viene generato un errore 9002. Il log può riempirsi quando il database è online o in stato di recupero. Se il log si riempie quando il database è online, quest'ultimo rimane online anche se potrà soltanto essere letto, non aggiornato. Se il log si riempie durante il recupero, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] il database viene contrassegnato come RESOURCE PENDING. In entrambi i casi, è richiesto che l'utente intervenga per liberare spazio nel log.  
@@ -36,7 +35,7 @@ ms.locfileid: "36170345"
  La risposta appropriata a un log delle transazioni pieno dipende in parte dalla condizione o dalle condizioni che hanno causato il riempimento del log. Per individuare la condizione che impedisce il troncamento del log in un caso specifico, usare le colonne **log_reuse_wait** e **log_reuse_wait_desc** della vista del catalogo **sys.database**. Per altre informazioni, vedere [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql). Per le descrizioni dei fattori che possono ritardare il troncamento del log, vedere [Log delle transazioni &#40;SQL Server&#41;](the-transaction-log-sql-server.md).  
   
 > [!IMPORTANT]  
->  Se il database di recupero quando si è verificato l'errore 9002, dopo aver risolto il problema, ripristinare il database utilizzando ALTER DATABASE *database_name* SET ONLINE.  
+>  Se il database di ripristino durante l'errore 9002 si è verificato, dopo aver risolto il problema, ripristinare il database utilizzando ALTER DATABASE *database_name* SET ONLINE.  
   
  Per gestire un log delle transazioni pieno sono disponibili le soluzioni alternative seguenti:  
   
@@ -55,7 +54,7 @@ ms.locfileid: "36170345"
  Queste soluzioni alternative verranno illustrate nelle sezioni successive. Scegliere la risposta più appropriata a seconda della situazione.  
   
 ### <a name="backing-up-the-log"></a>Backup del log  
- Nel modello di recupero con registrazione completa o nel modello di recupero con registrazione minima delle operazioni bulk, se non è stato eseguito il backup del log delle transazioni di recente, è possibile che sia il backup a impedire il troncamento del log. Se non è stato eseguito il backup di log, è necessario creare due backup del log per consentire il [!INCLUDE[ssDE](../../includes/ssde-md.md)] per troncare il log fino al momento dell'ultimo backup. Il troncamento del log consente di rendere disponibile spazio per nuovi record del log. Per evitare che il log si riempia di nuovo, eseguire backup del log frequenti.  
+ Nel modello di recupero con registrazione completa o nel modello di recupero con registrazione minima delle operazioni bulk, se non è stato eseguito il backup del log delle transazioni di recente, è possibile che sia il backup a impedire il troncamento del log. Se non è stato eseguito il backup di log, è necessario creare due backup del log per consentire il [!INCLUDE[ssDE](../../includes/ssde-md.md)] per troncare il log per il punto dell'ultimo backup. Il troncamento del log consente di rendere disponibile spazio per nuovi record del log. Per evitare che il log si riempia di nuovo, eseguire backup del log frequenti.  
   
  **Per creare un backup del log delle transazioni**  
   

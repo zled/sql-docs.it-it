@@ -1,5 +1,5 @@
 ---
-title: Contenuto del modello per modelli di regressione lineare di data mining (Analysis Services - Data Mining) | Documenti Microsoft
+title: Contenuto del modello per modelli di regressione lineare di data mining (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - mining model content, linear regression models
 - regression algorithms [Analysis Services]
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 09285ab4c675417c2d00be13cfee771bd31d8faa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 289c9a68e6abce019324945cafd9baed544802a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198251"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di regressione lineare (Analysis Services - Data mining)
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression. Per una spiegazione generale del contenuto del modello di data mining valida per tutti i tipi di modello, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -142,7 +142,7 @@ ms.locfileid: "36171136"
  MSOLAP_NODE_SHORT_CAPTION  
  Etichetta utilizzata a scopo di visualizzazione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Quando si crea un modello tramite l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression, il motore di data mining crea un'istanza speciale di un modello di albero delle decisioni e fornisce i parametri che vincolano l'albero a contenere tutti i dati di training in un singolo nodo. Tutti gli input continui sono contrassegnati e valutati come regressori potenziali, ma solo i regressori che si adattano ai dati vengono mantenuti come regressori nel modello finale. L'analisi produce una sola formula di regressione per ogni regressore oppure non ne produce alcuna.  
   
  È possibile visualizzare la formula di regressione completa in **Legenda data mining**facendo clic sul nodo **Tutti** nel [Visualizzatore Microsoft Decision Trees](browse-a-model-using-the-microsoft-tree-viewer.md).  
@@ -191,7 +191,7 @@ ms.locfileid: "36171136"
  Di conseguenza, presupponendo che l'età media è circa 45 anni, l'intercetta (VALUETYPE = 11) per la formula di regressione indica il reddito medio.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto del modello di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm.md)   
  [Riferimento tecnico l'algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md)   
  [Esempi di query sul modello di regressione lineare](linear-regression-model-query-examples.md)  

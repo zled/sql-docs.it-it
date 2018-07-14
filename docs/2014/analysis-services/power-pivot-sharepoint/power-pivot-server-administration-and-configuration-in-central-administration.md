@@ -1,5 +1,5 @@
 ---
-title: Amministrazione Server PowerPivot e la configurazione in Amministrazione centrale | Documenti Microsoft
+title: Amministrazione Server PowerPivot e la configurazione in Amministrazione centrale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62232430002833de70ecbf1cf76a401324b12174
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17a0dd962b2cd3bf3515df6151e1ce5d2ed9699b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200291"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>Amministrazione e configurazione del server PowerPivot in Amministrazione centrale
   L'amministrazione e la configurazione del server PowerPivot vengono eseguite dagli amministratori dell'applicazione del servizio SharePoint, tramite Amministrazione centrale SharePoint.  
@@ -60,18 +60,18 @@ ms.locfileid: "36169774"
 |[Aggiornamento dati PowerPivot con SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)|Consigliato|L'aggiornamento dei dati è facoltativo, ma consigliato. Consente all'utente di pianificare aggiornamenti automatici dei dati PowerPivot nelle cartelle di lavoro di Excel pubblicate.|  
 |[Configurare PowerPivot Account di aggiornamento dati automatico &#40;PowerPivot per SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)|Consigliato|Tramite questo passaggio viene eseguito il provisioning di un account a scopo speciale che può essere usato per eseguire processi di aggiornamento dati nel server.|  
 |[Configurare la raccolta di dati di utilizzo per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|Facoltativo|La raccolta dei dati di utilizzo è configurata per impostazione predefinita. È possibile usare questi passaggi per modificare le impostazioni predefinite.|  
-|[Configurare l'aggiornamento dei dati dedicato o l'elaborazione di sole Query &#40;PowerPivot per SharePoint&#41;](../configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)|Facoltativo|Un'istanza di PowerPivot può essere dedicata solo ai processi di aggiornamento dati o alle query. Inoltre, è possibile modificare le impostazioni predefinite per i processi di aggiornamento dati paralleli.|  
+|[Configurare l'aggiornamento dati dedicata o l'elaborazione di sole Query &#40;PowerPivot per SharePoint&#41;](../configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)|Facoltativo|Un'istanza di PowerPivot può essere dedicata solo ai processi di aggiornamento dati o alle query. Inoltre, è possibile modificare le impostazioni predefinite per i processi di aggiornamento dati paralleli.|  
 |[Configurare gli account del servizio PowerPivot](configure-power-pivot-service-accounts.md)|Facoltativo|Si illustra come aggiornare le password o modificare gli account di servizio.|  
-|[Connettere un'applicazione di servizio PowerPivot a un'applicazione Web di SharePoint in Amministrazione centrale](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Facoltativo|Si illustra come modificare le associazioni di servizio.|  
+|[Connettere un'applicazione di servizio PowerPivot a un'applicazione Web SharePoint in Amministrazione centrale](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Facoltativo|Si illustra come modificare le associazioni di servizio.|  
 |[Creare un percorso attendibile per siti PowerPivot in Amministrazione centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|Facoltativo|Si illustra come aggiungere la raccolta PowerPivot come percorso attendibile|  
 |[Configurare e visualizzare i file di Log di SharePoint e la registrazione diagnostica &#40;PowerPivot per SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)|Facoltativo|La registrazione eventi è configurata per impostazione predefinita. È possibile usare questi passaggi per modificare le impostazioni predefinite.|  
 |[Configurare regole di integrità di PowerPivot:](configure-power-pivot-health-rules.md)|Facoltativo|Le regole di integrità del server sono configurate per impostazione predefinita. È possibile usare questi passaggi per modificare alcune delle impostazioni predefinite.|  
 |[Creare e personalizzare la raccolta PowerPivot](create-and-customize-power-pivot-gallery.md)|Facoltativo|Per le installazioni configurate manualmente, in questa procedura si illustra come creare una libreria della raccolta PowerPivot in cui sono mostrate anteprime delle immagini delle cartelle di lavoro di PowerPivot che contiene.|  
-|[Aggiungere un tipo di contenuto di Business Intelligence Semantic Model connessione a una raccolta &#40;PowerPivot per SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|Facoltativo|Si illustra come estendere una raccolta documenti per supportare la creazione di file di connessione BISM.|  
+|[Aggiungere un tipo di contenuto connessione Bism BI a una raccolta &#40;PowerPivot per SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|Facoltativo|Si illustra come estendere una raccolta documenti per supportare la creazione di file di connessione BISM.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installazione PowerPivot per SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [Riferimento a impostazioni di configurazione &#40;PowerPivot per SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
+ [Riferimento all'impostazione di configurazione &#40;PowerPivot per SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Ripristino di emergenza per PowerPivot per SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

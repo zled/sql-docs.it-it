@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], expressions
 - data [Reporting Services], expressions
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 76
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9a313408046919de0c3a07739792d36b88eafa4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6a239f80c3b560e60ca0b60b9a9fa7deb68a20a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170524"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220851"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report (SSRS)
   È possibile aggiungere riferimenti a codice personalizzato incorporato in un report o ad assembly personalizzati compilati e salvati nel computer in uso e distribuiti nel server di report. Usare codice incorporato per costanti personalizzate, funzioni complesse o funzioni usate più volte in un singolo report. Usare gli assembly di codice personalizzati per mantenere il codice in un'unica posizione e condividerne l'utilizzo in più report. Il codice personalizzato può includere nuove costanti, variabili, funzioni o subroutine personalizzate. È possibile includere riferimenti di sola lettura a raccolte predefinite come ad esempio Parameters. Non è tuttavia possibile passare alle funzioni personalizzate set di valori di dati. In particolare, non sono supportate le aggregazioni personalizzate.  
@@ -71,7 +71,7 @@ ms.locfileid: "36170524"
 ##  <a name="Embedded"></a> Inclusione di codice incorporato  
  Per aggiungere codice incorporato a un report, usare la scheda Codice della finestra di dialogo **Proprietà report** . Il blocco di codice creato può contenere più metodi. È necessario che i metodi del codice incorporato siano scritti in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e siano basati su istanze. Tramite il componente Elaborazione report, vengono aggiunti automaticamente i riferimenti per gli spazi dei nomi System.Convert e System.Math. Usare la pagina **Riferimenti** della finestra di dialogo **Proprietà report** per aggiungere altri riferimenti ad assembly. Per altre informazioni, vedere [Aggiungere un riferimento a un assembly in un report &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md).  
   
- I metodi nel codice incorporato sono disponibili tramite un membro `Code` definito a livello globale. Accedere ai metodi, fare riferimento al `Code` membro e il nome del metodo. Nell'esempio seguente chiama il metodo `ToUSD`, che consente di convertire il valore di `StandardCost` campo in un valore in dollari:  
+ I metodi nel codice incorporato sono disponibili tramite un membro `Code` definito a livello globale. È possibile accedervi tramite un riferimento al `Code` membro e il nome del metodo. Nell'esempio seguente chiama il metodo `ToUSD`, che converte il valore nel `StandardCost` campo in un valore in dollari:  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
@@ -105,7 +105,7 @@ Public Dim MyDoubleVersion As Double = 123.456
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
- Il codice seguente, se incorporato nel blocco di codice di una definizione del report, indica un'implementazione del metodo `FixSpelling`. In questo esempio viene illustrato come utilizzare un riferimento completo per il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] `StringBuilder` classe.  
+ Il codice seguente, se incorporato nel blocco di codice di una definizione del report, indica un'implementazione del metodo `FixSpelling`. In questo esempio illustra come usare un riferimento completo per il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] `StringBuilder` classe.  
   
 ```vb  
 Public Function FixSpelling(ByVal s As String) As String  
@@ -121,7 +121,7 @@ End Function
  Per altre informazioni sulle raccolte di oggetti predefiniti e sull'inizializzazione, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md) e [Inizializzazione di oggetti assembly personalizzati](../custom-assemblies/initializing-custom-assembly-objects.md).  
   
 ##  <a name="Parameters"></a> Inclusione di riferimenti ai parametri da codice  
- È possibile fare riferimento alla raccolta globale di parametri tramite codice personalizzato in un blocco di codice della definizione del report oppure in un assembly personalizzato specificato dall'utente. La raccolta di parametri è di sola lettura e non include iteratori pubblici. Non è possibile utilizzare un [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `For Each` costruire per esaminare la raccolta. È necessario conoscere il nome del parametro definito nella definizione del report per potervi fare riferimento nel codice personalizzato. È tuttavia possibile scorrere tutti i valori di un parametro multivalore.  
+ È possibile fare riferimento alla raccolta globale di parametri tramite codice personalizzato in un blocco di codice della definizione del report oppure in un assembly personalizzato specificato dall'utente. La raccolta di parametri è di sola lettura e non include iteratori pubblici. Non è possibile usare una [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `For Each` costruire per esaminare la raccolta. È necessario conoscere il nome del parametro definito nella definizione del report per potervi fare riferimento nel codice personalizzato. È tuttavia possibile scorrere tutti i valori di un parametro multivalore.  
   
  Nella tabella seguente sono inclusi esempi di riferimenti alla raccolta predefinita `Parameters` da codice personalizzato:  
   
@@ -133,15 +133,15 @@ End Function
 ##  <a name="Custom"></a> Inclusione di riferimenti al codice da assembly personalizzati  
  Per usare assembly personalizzati in un report, è innanzitutto necessario creare l'assembly, renderlo disponibile in Progettazione report, aggiungere un riferimento all'assembly nel report e quindi usare un'espressione nel report per fare riferimento ai metodi contenuti in tale assembly. Quando il report viene distribuito al server di report, è necessario distribuire anche l'assembly personalizzato al server di report.  
   
- Per informazioni sulla creazione di un assembly personalizzato e renderla disponibile per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [utilizzo di assembly personalizzati con i report](../custom-assemblies/using-custom-assemblies-with-reports.md).  
+ Per informazioni sulla creazione di un assembly personalizzato e messi a disposizione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [uso di assembly personalizzati con i report](../custom-assemblies/using-custom-assemblies-with-reports.md).  
   
- Per fare riferimento al codice personalizzato in un'espressione, è necessario chiamare il membro di una classe nell'assembly. La modalità di esecuzione di tale operazione dipende dal tipo di metodo, ovvero statico o basato su istanze. I metodi statici all'interno di un assembly personalizzato sono disponibili globalmente all'interno del report. È possibile accedere ai metodi statici nelle espressioni specificando lo spazio dei nomi, la classe e il nome del metodo. Nell'esempio seguente chiama il metodo `ToGBP`, che consente di convertire il valore di **StandardCost** valore da dollari a sterline:  
+ Per fare riferimento al codice personalizzato in un'espressione, è necessario chiamare il membro di una classe nell'assembly. La modalità di esecuzione di tale operazione dipende dal tipo di metodo, ovvero statico o basato su istanze. I metodi statici all'interno di un assembly personalizzato sono disponibili globalmente all'interno del report. È possibile accedere ai metodi statici nelle espressioni specificando lo spazio dei nomi, la classe e il nome del metodo. Nell'esempio seguente chiama il metodo `ToGBP`, che consente di convertire il valore della **StandardCost** valore da dollari a sterline:  
   
 ```  
 =CurrencyConversion.DollarCurrencyConversion.ToGBP(Fields!StandardCost.Value)  
 ```  
   
- I metodi basati su istanze sono disponibili tramite un membro `Code` definito a livello globale. Per accedere ai metodi, fare riferimento al membro `Code`, aggiungendo l'istanza e il nome del metodo. Nell'esempio seguente chiama il metodo di istanza `ToEUR`, che consente di convertire il valore di **StandardCost** da dollari a euro:  
+ I metodi basati su istanze sono disponibili tramite un membro `Code` definito a livello globale. Per accedere ai metodi, fare riferimento al membro `Code`, aggiungendo l'istanza e il nome del metodo. L'esempio seguente chiama il metodo di istanza `ToEUR`, che converte il valore del **StandardCost** da dollari a euro:  
   
 ```  
 =Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  
@@ -165,7 +165,7 @@ End Function
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere codice a un Report &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)   
- [Utilizzo di assembly personalizzati con i report](../custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [Uso di assembly personalizzati con i report](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Aggiungere un riferimento a un assembly in un report &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)   
  [Esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

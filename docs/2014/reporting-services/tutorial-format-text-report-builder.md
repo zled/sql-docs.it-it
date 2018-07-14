@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 48164ff35e06c6aa9cd2a8ac0c9ba39fcf37310e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 832034620db797bdbd602cf8f7c99fd51c804bbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175173"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Esercitazione: Formattazione di testo (Generatore report)
   In questa esercitazione sarà possibile applicare una formattazione al testo in modi diversi. Dopo avere impostato l'origine dati e il set di dati per il report vuoto, sarà possibile scegliere i passaggi che si desidera esplorare.  
@@ -30,7 +30,7 @@ ms.locfileid: "36171159"
   
  In un passaggio si introdurrà intenzionalmente un errore, in modo da comprenderne gli effetti. Si correggerà quindi l'errore per ottenere il risultato desiderato.  
   
- Una versione avanzata del report che verrà creato in questa esercitazione è disponibile come report di esempio di Generatore report di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per ulteriori informazioni sul download di questo report di esempio e ad altri utenti, vedere [Report di Generatore report di esempio](http://go.microsoft.com/fwlink/?LinkId=184851).  
+ Una versione avanzata del report che verrà creato in questa esercitazione è disponibile come report di esempio di Generatore report di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per altre informazioni sul download di questo report di esempio e ad altri utenti, vedere [Report di Generatore report di esempio](http://go.microsoft.com/fwlink/?LinkId=184851).  
   
 ##  <a name="BackToTop"></a> Lezioni dell'esercitazione  
   
@@ -46,9 +46,9 @@ ms.locfileid: "36171159"
   
  [Ruotare il testo nel Report](#RotateText)  
   
- [Visualizzazione del testo con formattazione HTML](#FormatHTML)  
+ [Visualizzazione di testo con formattazione HTML](#FormatHTML)  
   
- [Applicare il formato valuta](#FormatCurrency)  
+ [Formattazione della valuta](#FormatCurrency)  
   
  [Salvare il Report](#Save)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36171159"
 4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare **Origine dati = \<nomeserver>**  
   
     > [!NOTE]  
-    >  L'espressione \<nomeserver >, ad esempio Report001, specifica un computer in cui è installata un'istanza del motore di Database di SQL Server. Per questa esercitazione non sono necessari dati specifici. È sufficiente una connessione a un database di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Se in **Connessioni a origini dati** è già disponibile una connessione, è possibile selezionarla e passare alla procedura successiva, ovvero "Per creare un set di dati". Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    >  L'espressione \<servername >, ad esempio Report001, specifica un computer in cui è installata un'istanza del motore di Database SQL Server. Per questa esercitazione non sono necessari dati specifici. È sufficiente una connessione a un database di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Se in **Connessioni a origini dati** è già disponibile una connessione, è possibile selezionarla e passare alla procedura successiva, ovvero "Per creare un set di dati". Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -149,7 +149,7 @@ ms.locfileid: "36171159"
   
 2.  Fare clic su **Esegui**.  
   
-     Si noti che è presente un solo record **Fernando Ross**, ovvero in ordine alfabetico del primo record nella query. Il campo non viene ripetuto per visualizzare gli altri record di tale campo.  
+     Si noti che esiste un solo record, **Fernando Ross**, che rappresenta il primo record nella query in ordine alfabetico. Il campo non viene ripetuto per visualizzare gli altri record di tale campo.  
   
 3.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
@@ -198,15 +198,15 @@ ms.locfileid: "36171159"
   
 #### <a name="to-add-a-table-to-the-report"></a>Per aggiungere una tabella al report  
   
-1.  Nel **inserire** dal menu fare clic su **tabella**, quindi fare clic su **Creazione guidata tabella**.  
+1.  Nel **inserire** menu, fare clic su **tabella**e quindi fare clic su **guidata tabella**.  
   
-2.  Nel **scegliere un set di dati** pagina della procedura guidata nuova tabella o matrice, fare clic su **scegliere un set di dati esistente nel report o un set di dati condiviso**, fare clic su **TextDataset (in questo Report)**, quindi fare clic su **successivo**.  
+2.  Nel **scegliere un set di dati** pagina della procedura guidata nuova tabella o matrice, fare clic su **Scegli un set di dati esistente nel report o un set di dati condiviso**, fare clic su **TextDataset (in questo Report)**, quindi fare clic su **successiva**.  
   
-3.  Nel **Disponi campi** pagina, trascinare il **territorio**, **LinkText**, e **prodotto** campi **gruppirighe**, trascinare il **Sales** campo **valori**, quindi fare clic su **Avanti**.  
+3.  Nel **Disponi campi** pagina, trascinare il **Territory**, **LinkText**, e **prodotto** i campi a **gruppidirighe**, trascinare il **vendite** campo **valori**, quindi fare clic su **successivo**.  
   
-4.  Nel **scegliere il layout** pagina, deseleziona il **Espandi/Comprimi gruppi** casella di controllo in modo da visualizzare l'intera tabella e quindi fare clic su **Avanti**.  
+4.  Nel **scegliere il layout** pagina, deseleziona le **Espandi/Comprimi gruppi** casella di controllo in modo che è possibile visualizzare l'intera tabella e quindi fare clic su **Avanti**.  
   
-5.  Nel **scegliere uno stile** fare clic su **ardesia**e quindi fare clic su **fine**.  
+5.  Nel **scegliere uno stile** pagina, fare clic su **Slate**e quindi fare clic su **fine**.  
   
 6.  Trascinare la tabella in modo da posizionarla sotto il blocco del titolo.  
   
@@ -216,11 +216,11 @@ ms.locfileid: "36171159"
   
 8.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
-9. Fare clic sulla casella di testo che contiene `[LinkText]`, fare clic su **Dividi celle**.  
+9. Fare doppio clic su casella di testo che contiene `[LinkText]`, fare clic su **Dividi celle**.  
   
-10. Selezionare la cella vuota sotto il `[LinkText]` cella, quindi tenere premuto il tasto MAIUSC e selezionare le due celle alla sua destra: il **totale** cella il **prodotto** colonna e il `[Sum(Sales)]` cella il  **Vendite** colonna.  
+10. Selezionare la cella vuota sotto la `[LinkText]` cella, quindi tenere premuto il tasto MAIUSC e selezionare le due celle a destra: il **totale** cella il **prodotto** colonna e il `[Sum(Sales)]` cella il  **Vendite** colonna.  
   
-11. Con queste tre celle selezionate, fare doppio clic su una delle celle e fare clic su **Elimina riga**.  
+11. Con queste tre celle selezionate, fare doppio clic su una delle celle e scegliere **Elimina riga**.  
   
 12. Fare clic su **Esegui**.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "36171159"
   
 7.  Selezionare `[LinkText]`.  
   
-8.  Nel **tipo di carattere** sezione del **Home** , fare clic il **Underline** pulsante e quindi fare clic sulla freccia giù accanto al **colore** pulsante, Fare clic su **blu**.  
+8.  Nel **Font** sezione del **Home** scheda, fare clic sui **sottolineato** pulsante e quindi fare clic sulla freccia giù accanto al **colore** pulsante, Fare clic su **blu**.  
   
 9. Fare clic su **Esegui**.  
   
@@ -271,13 +271,13 @@ ms.locfileid: "36171159"
   
 6.  Nella casella di riepilogo, fare clic su **Rotate270**.  
   
-7.  Nel **Home** nella scheda il **paragrafo** fare clic sul **intermedio** e **Center** pulsanti per posizionare il testo al centro della cella entrambi verticalmente e orizzontalmente.  
+7.  Nel **Home** scheda il **paragrafo** fare clic sul **intermedio** e **Center** pulsanti per posizionare il testo al centro della cella entrambi verticalmente e orizzontalmente.  
   
 8.  Fare clic su Esegui (**!**).  
   
  Il testo incluso nella cella `[Territory]` scorre ora verticalmente dal basso verso l'alto delle celle.  
   
-##  <a name="FormatHTML"></a> Visualizzazione del testo con formattazione HTML  
+##  <a name="FormatHTML"></a> Visualizzazione di testo con formattazione HTML  
   
 #### <a name="to-display-text-formatted-as-html"></a>Per visualizzare testo formattato come HTML  
   
@@ -309,7 +309,7 @@ ms.locfileid: "36171159"
   
 5.  Fare clic con il pulsante destro del mouse su tutto il testo selezionato, quindi scegliere **Proprietà testo**.  
   
-6.  Nel **generali** nella pagina **tipo di Markup**, fare clic su **HTML - interpreta i tag HTML come stili**.  
+6.  Nel **generali** nella pagina **tipo di Markup**, fare clic su **HTML - interpreta tag HTML come stili**.  
   
 7.  Fare clic su **OK**.  
   
@@ -317,7 +317,7 @@ ms.locfileid: "36171159"
   
  Il testo nella casella di testo viene visualizzato come un'intestazione, un paragrafo e un elenco puntato.  
   
-##  <a name="FormatCurrency"></a> Applicare il formato valuta  
+##  <a name="FormatCurrency"></a> Formattazione della valuta  
   
 #### <a name="to-format-numbers-as-currency"></a>Per formattare i numeri come valuta  
   
@@ -327,7 +327,7 @@ ms.locfileid: "36171159"
   
 3.  Nel gruppo **Numero** della scheda **Home** fare clic sul pulsante **Valuta** .  
   
-4.  (Facoltativo) Nel **Home** nella scheda il **numero** di gruppo, fare clic sul **stili segnaposto** pulsante e fare clic su **dei valori di esempio** per vedere come i numeri verranno eseguire la formattazione.  
+4.  (Facoltativo) Nel **Home** nella scheda il **numero** raggruppare, fare clic il **stili segnaposto** pulsante e fare clic su **valori di esempio** per vedere come i numeri verranno da formattare.  
   
 5.  (Facoltativo) Nel gruppo **Numero** della scheda **Home** fare clic due volte sul pulsante **Diminuisci decimali** per visualizzare le cifre in dollari senza centesimi.  
   
@@ -367,7 +367,7 @@ ms.locfileid: "36171159"
 4.  Fare clic su **Salva**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- Esistono diversi modi per formattare il testo in Generatore Report [esercitazione: creazione di un Report in formato libero &#40;Generatore Report&#41; ](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) inclusi altri esempi.  
+ Esistono diversi modi per formattare il testo in Generatore Report [esercitazione: creazione di un Report in formato libero &#40;Generatore Report&#41; ](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) include più esempi.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazioni su &#40;Generatore Report&#41;](report-builder-tutorials.md)   

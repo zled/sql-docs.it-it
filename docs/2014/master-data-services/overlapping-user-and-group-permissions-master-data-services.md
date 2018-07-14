@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], resolving permissions
 - permissions [Master Data Services], user and group overlaps
 - groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6523603f7524af93bc21417f378a41bd907532d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 06b8f48e1f2b7c246c1f5e4559bbbba851ccf128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264937"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Autorizzazioni utenti e gruppi sovrapposte (Master Data Services)
   Le autorizzazioni di un utente si basano su:  
@@ -36,7 +36,7 @@ ms.locfileid: "36169232"
   
 -   **Nega** esegue l'override di tutte le altre autorizzazioni.  
   
--   **Aggiornamento** esegue l'override **Read-only**.  
+-   **Update** esegue l'override **Read-only**.  
   
  Queste regole si applicano a entrambe le schede **Modelli** e **Membri gerarchia** . Le autorizzazioni vengono risolte per ogni scheda e quindi combinate. Per altre informazioni, vedere [How Permissions Are Determined &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md).  
   
@@ -48,11 +48,11 @@ ms.locfileid: "36169232"
   
  L'utente appartiene al Gruppo 1 e al Gruppo 2.  
   
- L'utente disponga **readonly** delle autorizzazioni necessarie per l'entità Product.  
+ L'utente dispone **Read-only** dell'autorizzazione per l'entità Product.  
   
  Il gruppo 1 ha l'autorizzazione **Update** per l'entità Product.  
   
- Gruppo 2 dispone **readonly** delle autorizzazioni necessarie per l'entità Product.  
+ Gruppo 2 dispone **Read-only** dell'autorizzazione per l'entità Product.  
   
  Risultato: l'autorizzazione valida dell'utente è **Update** per l'entità Product.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36169232"
   
  L'utente appartiene al Gruppo 1 e al Gruppo 2.  
   
- L'utente disponga **readonly** delle autorizzazioni necessarie per l'entità Product.  
+ L'utente dispone **Read-only** dell'autorizzazione per l'entità Product.  
   
  Il gruppo 1 ha l'autorizzazione **Update** per l'entità Product.  
   
@@ -76,14 +76,14 @@ ms.locfileid: "36169232"
   
  L'utente dispone dell'autorizzazione **Update** per un gruppo di membri in un nodo gerarchia.  
   
- Gruppo 1 dispone **readonly** dell'autorizzazione per un gruppo di membri in un nodo della gerarchia.  
+ Gruppo 1 dispone **Read-only** dell'autorizzazione per un gruppo di membri in un nodo gerarchia.  
   
- Gruppo 2 dispone **readonly** dell'autorizzazione per un gruppo di membri in un nodo della gerarchia.  
+ Gruppo 2 dispone **Read-only** dell'autorizzazione per un gruppo di membri in un nodo gerarchia.  
   
  Risultato: l'autorizzazione utente valida è **Update** per i membri.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modo in cui vengono determinate le autorizzazioni &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
+ [Come vengono determinate le autorizzazioni &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
  [Autorizzazioni per modelli e membri sovrapposte &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

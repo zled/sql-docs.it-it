@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.administration.activitymonitoring.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 363b1d538c37123c3cc787e7b80c1cf57b693181
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a7458eb1aa76eebeb987ef49f7079634b26e577
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267667"
 ---
 # <a name="monitor-dqs-activities"></a>Monitorare le attività DQS
   In questo argomento viene descritto come monitorare a livello centrale le attività seguenti in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): individuazione delle informazioni, gestione del dominio, criteri di corrispondenza, pulizia dei dati, corrispondenza dei dati e pulizia SSIS.  
@@ -59,7 +59,7 @@ ms.locfileid: "36169288"
     |**È attivo**|Indica se l'attività è attualmente attiva o meno. I valori possibili sono i seguenti:<br /><br /> **Attivo**: l'attività è attualmente in esecuzione.<br /><br /> **Completato**: l'attività è finita.<br /><br /> **Terminato**: l'attività è stata terminata utilizzando la schermata Monitoraggio attività dall'amministratore DQS o l'attività è stata annullata dall'utente durante l'esecuzione nell'area funzionale corrispondente nel [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|  
     |**Tipo**|Indica il tipo di attività. Vengono monitorati i tipi di attività seguenti: **Gestione informazioni**, **Progetto DQ**e **Pulizia SSIS**.|  
     |**Sottotipo**|Indica il flusso di lavoro specifico eseguito per un tipo di attività.<br /><br /> Un tipo di attività **Gestione informazioni** può disporre dei flussi di lavoro o sottotipi seguenti: **Individuazione informazioni**, **Gestione dominio**e **Criteri di corrispondenza**.<br /><br /> Un tipo di attività **Progetto DQ** può disporre dei flussi di lavoro o sottotipi seguenti: **Pulizia** e **Corrispondenza**.<br /><br /> Un tipo di attività **Pulizia SSIS** può disporre solo di un flusso di lavoro o di un sottotipo: **Pulizia** .|  
-    |**Stato corrente**|Indica lo stato corrente di un'attività. Lo stato dell'attività è determinato dall'ultimo processo di calcolo. I valori possibili sono i seguenti:<br /><br /> **In esecuzione**: il processo di calcolo è in esecuzione.<br /><br /> **Riuscito**: prima dell'esecuzione di qualsiasi processo di calcolo, lo stato viene impostato su **Riuscito**. Lo stato viene di nuovo impostato su **Riuscito**dopo la riuscita del processo di calcolo.<br /><br /> **Non riuscito**: il processo di calcolo non è riuscito.<br /><br /> **Arrestato**: il processo di calcolo è stato arrestato.<br /><br /> <br /><br /> Nota: Possono esserci diversi processi di calcolo in un'attività quali l'esecuzione del processo di individuazione diverse volte (all'interno di attività di individuazione delle informazioni). Lo stato può pertanto cambiare diverse volte nel corso dell'attività.|  
+    |**Stato corrente**|Indica lo stato corrente di un'attività. Lo stato dell'attività è determinato dall'ultimo processo di calcolo. I valori possibili sono i seguenti:<br /><br /> **In esecuzione**: il processo di calcolo è in esecuzione.<br /><br /> **Riuscito**: prima dell'esecuzione di qualsiasi processo di calcolo, lo stato viene impostato su **Riuscito**. Lo stato viene di nuovo impostato su **Riuscito**dopo la riuscita del processo di calcolo.<br /><br /> **Non riuscito**: il processo di calcolo non è riuscito.<br /><br /> **Arrestato**: il processo di calcolo è stato arrestato.<br /><br /> <br /><br /> Nota: Possono esserci diversi processi di calcolo in un'attività quali l'esecuzione del processo di individuazione diverse volte (all'interno l'attività individuazione informazioni). Lo stato può pertanto cambiare diverse volte nel corso dell'attività.|  
     |**DQKB**|Nome della Knowledge Base utilizzata per l'attività.|  
     |**Utente**|Nome dell'utente che ha iniziato l'attività oppure dell'ultimo utente che ha utilizzato l'attività, se non corrispondono.|  
     |**Ora di inizio attività**|Data e ora di inizio dell'attività.|  

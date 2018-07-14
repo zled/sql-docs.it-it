@@ -1,5 +1,5 @@
 ---
-title: Query (Data Mining) del contenuto | Documenti Microsoft
+title: Query (Data Mining) del contenuto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5371a5a0198c6f5f2f77fa6891875712f1814cbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 441ad05289df13e34954553db27810406341d77d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222601"
 ---
 # <a name="content-queries-data-mining"></a>Query sul contenuto (Data mining)
   Una query sul contenuto consente di estrarre informazioni sulle statistiche interne e sulla struttura del modello di data mining. Talvolta una query sul contenuto può fornire dettagli che non sono immediatamente disponibili nel visualizzatore. I risultati di una query sul contenuto possono essere utilizzati anche per estrarre a livello di codice informazioni per altri utilizzi.  
@@ -201,6 +201,6 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sull'istruzione DMX Select](/sql/dmx/understanding-the-dmx-select-statement)   
- [Query di Data Mining](data-mining-queries.md)  
+ [Query di data mining](data-mining-queries.md)  
   
   

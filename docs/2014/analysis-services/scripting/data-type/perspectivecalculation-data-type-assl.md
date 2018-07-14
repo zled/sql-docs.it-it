@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati PerspectiveCalculation (ASSL) | Documenti Microsoft
+title: Tipo di dati PerspectiveCalculation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveCalculation data type
 ms.assetid: 5a5173d2-c96d-4a55-a35c-0cbfd5b0e599
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1214bc349c09f02f522569b26dd48e82d5e42b99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bec56d06fe2e2957f9409a43be3502b4e0196427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185148"
 ---
 # <a name="perspectivecalculation-data-type-assl"></a>Tipo di dati PerspectiveCalculation (ASSL)
   Definisce un tipo di dati primitivo che rappresenta la relazione tra un calcolo e un [prospettiva](../objects/perspective-element-assl.md) elemento.  
@@ -58,10 +58,10 @@ ms.locfileid: "36171317"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Annotazioni](../collections/annotations-element-assl.md), [nome](../properties/name-element-assl.md), [tipo](../properties/type-element-perspectivecalculation-assl.md)|  
+|Elementi figlio|[Le annotazioni](../collections/annotations-element-assl.md), [Name](../properties/name-element-assl.md), [tipo](../properties/type-element-perspectivecalculation-assl.md)|  
 |Elementi derivati|[Calcolo](../objects/calculation-element-assl.md) ([calcoli](../collections/calculations-element-assl.md) insieme [prospettiva](../objects/perspective-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
   
 ## <a name="see-also"></a>Vedere anche  

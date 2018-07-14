@@ -1,5 +1,5 @@
 ---
-title: Configurare il servizio Integration Services come risorsa Cluster | Documenti Microsoft
+title: Configurare il servizio Integration Services come risorsa Cluster | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8455d0a43e478cdb05f945269a3999b72fc581ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b524b2c570b3fac16403565716aaea36a31a7f24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223771"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Configurazione del servizio Integration Services come risorsa cluster
   In questa sezione vengono fornite le istruzioni necessarie per la configurazione per i clienti che ritengono che i vantaggi della configurazione del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] come risorsa cluster siano prevalenti rispetto agli svantaggi. [!INCLUDE[msCoName](../includes/msconame-md.md)] non consiglia tuttavia la configurazione del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] come risorsa cluster.  
@@ -104,9 +104,9 @@ ms.locfileid: "36169955"
   
 2.  Nel disco condiviso creare una nuova cartella denominata **Pacchetti** da usare come archivio pacchetti. Concedere le autorizzazioni di visualizzazione delle cartelle e di scrittura per la nuova cartella agli utenti e ai gruppi appropriati.  
   
-3.  Nel disco condiviso aprire il file di configurazione in un editor di testo o XML. Modificare il valore della `ServerName` elemento sul nome del commutatore [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che è dello stesso gruppo di risorse.  
+3.  Nel disco condiviso aprire il file di configurazione in un editor di testo o XML. Modificare il valore della `ServerName` elemento per il nome del commutatore [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è nello stesso gruppo di risorse.  
   
-4.  Modificare il valore della `StorePath` elemento per il percorso completo del **pacchetti** cartella creata nel disco condiviso in un passaggio precedente.  
+4.  Modificare il valore della `StorePath` per il percorso completo dell'elemento il **pacchetti** cartella creata nel disco condiviso in un passaggio precedente.  
   
 5.  Aggiornare il valore di **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** nel Registro di sistema impostando il percorso e il nome completo del file di configurazione del servizio nel disco condiviso.  
   

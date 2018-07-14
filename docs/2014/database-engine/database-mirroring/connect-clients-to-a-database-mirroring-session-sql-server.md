@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
 - database mirroring [SQL Server], connecting clients to
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 caps.latest.revision: 92
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2af439599d16904cf7b66fa78882692ab87c05f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 482b72fac9416918bdee38b74fbc483027b4b345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204044"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connessione di client a una sessione di mirroring del database (SQL Server)
   Per connettersi a una sessione di mirroring del database un client può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se configurati per un database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , questi provider di accesso ai dati supportano entrambi completamente il mirroring del database. Per informazioni relative alle considerazioni di programmazione per l'utilizzo di un database con mirroring, vedere [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). È inoltre necessario che l'istanza del server principale corrente sia disponibile e che l'account di accesso del client sia stato creato nell'istanza del server. Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Le connessioni client a una sessione di mirroring del database non richiedono l'istanza del server di controllo del mirroring, se ne esiste una.  
@@ -87,7 +86,7 @@ Network=dbnmpntw;
 >  Poiché il protocollo Named Pipes non utilizza l'algoritmo per la riesecuzione dei tentativi TCP/IP, in molti casi, per un tentativo di connessione con tale protocollo può verificarsi il timeout prima della connessione a un database con mirroring.  
   
 #### <a name="server-attribute"></a>Attributo Server  
- La stringa di connessione deve contenere un `Server` attributo che fornisce il nome partner iniziale, che dovrebbe identificare l'istanza del server principale corrente.  
+ La stringa di connessione deve contenere un `Server` attributo che fornisce il nome partner iniziale, che identifica l'istanza del server principale corrente.  
   
  Il modo più semplice per identificare l'istanza del server è specificarne il nome, *<nome_server>*[**\\***<nome_istanza_SQL_Server>*]. Esempio:  
   
@@ -102,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Una query SQL Server Browser è necessaria se la stringa di connessione specifica il nome dell'istanza denominata e non la porta.  
   
- Per specificare l'indirizzo IP e porta, il `Server` attributo assume il formato seguente, `Server=` *< Indirizzo_IP >*`,`*\<porta >*, ad esempio:  
+ Per specificare l'indirizzo IP e porta, il `Server` attributo accetta il formato `Server=` *< Indirizzo_IP >*`,`*\<porta >*, ad esempio:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -122,7 +121,7 @@ Server=123.34.45.56,4724;
 >  Le informazioni sull'autenticazione vengono omesse dalla stringa.  
   
 > [!IMPORTANT]  
->  Aggiunta al prefisso del protocollo con il `Server` attributo (`Server=tcp:`*\<nomeserver >*) è incompatibile con il **rete** attributo e si specifica il protocollo nella entrambe le posizioni determinerà probabilmente un errore. Pertanto, è consigliabile che una stringa di connessione specifichi il protocollo utilizzando il **rete** attributo e specificare solo il nome del server nel `Server` attributo (`"Network=dbmssocn; Server=`*\<servername >*`"`).  
+>  Aggiunta al prefisso del protocollo di `Server` attributo (`Server=tcp:`*\<servername >*) è incompatibile con la **rete** attributo e che specifica il protocollo in entrambe le posizioni determinerà probabilmente un errore. Pertanto, è consigliabile che una stringa di connessione specifichi il protocollo utilizzando il **rete** dell'attributo e specificare solo il nome del server nel `Server` attributo (`"Network=dbmssocn; Server=`*\<servername >*`"`).  
   
 #### <a name="failover-partner-attribute"></a>Attributo Failover Partner  
  Oltre al nome partner iniziale, il client può anche specificare il nome partner di failover, che identifica l'istanza del server mirror corrente. Il partner di failover viene specificato dalla parola chiave dell'attributo Failover Partner. La parola chiave per questo attributo dipende dall'API utilizzata. Nella seguente tabella vengono elencate le parole chiave:  

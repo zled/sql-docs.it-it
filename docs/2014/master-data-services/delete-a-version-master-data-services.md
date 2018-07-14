@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], deleting
 - deleting versions [Master Data Services]
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a6a7c9ca0b236fadbd10e0036baaf4759c99d43c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 6891cf7e163c6a6b9a1d324189eddf8ceba9b9c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264887"
 ---
 # <a name="delete-a-version-master-data-services"></a>Eliminare una versione (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eliminare una versione quando si è certi che non sono più necessari i dati master a essa associati. Dopo avere eliminato una versione, non è possibile recuperare i dati master associati.  
@@ -57,7 +57,7 @@ ms.locfileid: "36168341"
     >  Può essere necessario attendere alcuni minuti prima che l'applicazione Web rifletta la modifica.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Versioni di &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
+ [Le versioni &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [Copiare una versione &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)  
   
   

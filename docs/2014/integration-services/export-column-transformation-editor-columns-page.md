@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione Esportazione colonna (pagina colonne) | Documenti Microsoft
+title: Editor trasformazione Esportazione colonna (pagina colonne) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileextractortransformation.columns.f1
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 86f14583351c2ff734ec0cc3e09abaa270c1c9ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b427d8a727f0db31b63d43efbe00378c7ef0f18b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207451"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Editor trasformazione Esportazione colonna (pagina Colonne)
   Utilizzare la pagina **Colonne** della finestra di dialogo **Editor trasformazione Esportazione colonna** per specificare le colonne nel flusso di dati da estrarre in file. È possibile indicare se la trasformazione Esporta colonna deve accodare i dati a un file oppure sovrascrivere un file esistente.  
@@ -44,10 +44,10 @@ ms.locfileid: "36168839"
  Consente di indicare se la trasformazione eliminerà il contenuto di file esistenti prima di scrivere i dati. Il valore predefinito è `false`.  
   
  **Scrivi indicatore ordine byte**  
- Consente di specificare se scrivere un indicatore ordine byte (BOM) nel file. Un indicatore ordine byte viene scritto solo se i dati hanno il `DT_NTEXT` o tipo di dati DT_WSTR e non viene aggiunta a un file di dati esistente.  
+ Consente di specificare se scrivere un indicatore ordine byte (BOM) nel file. Un carattere BOM viene scritto solo se i dati hanno il `DT_NTEXT` o tipo di dati DT_WSTR e non viene aggiunta a un file di dati esistente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor trasformazione Esportazione colonna &#40;pagina di Output di errore&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor trasformazione Esportazione colonna &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
   
   

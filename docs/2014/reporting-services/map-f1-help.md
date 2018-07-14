@@ -1,5 +1,5 @@
 ---
-title: Eseguire il mapping della Guida F1 | Documenti Microsoft
+title: Eseguire il mapping della Guida F1 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c481a170-dc94-424f-a37c-d16003171d29
 caps.latest.revision: 3
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3683cbe42f836bc65dee28a8530baa70dc7349aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9fd0e9b456f1dbd45257b0831ec0096832eb6b47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181598"
 ---
 # <a name="map-f1-help"></a>Eseguire il mapping della Guida
   Negli argomenti di questa sezione vengono fornite informazioni sulle opzioni che è possibile impostare in un elemento di report mappa.  

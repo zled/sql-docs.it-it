@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: a737eb351e6de2160ddf3385dbd3e5448bc2a937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fd5d59a76ae4a9b6ec2bfb7cc811a23037f720ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242761"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Spostarsi all'interno dei percorsi di SQL Server PowerShell
   Il provider [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell espone il set di oggetti in un'istanza di SQL Server in una struttura analoga a un percorso di file. È possibile utilizzare cmdlet di Windows PowerShell per spostarsi all'interno del percorso del provider e creare unità personalizzate per rendere più breve il percorso da digitare.  
@@ -118,7 +118,7 @@ Get-ChildItem -force
 ## <a name="create-a-custom-drive"></a>Creare un'unità personalizzata  
  **Creare e utilizzare un'unità personalizzata**  
   
-1.  Utilizzare `New-PSDrive` per definire un'unità personalizzata. Utilizzare il `Root` parametro per specificare il percorso rappresentato dal nome di unità personalizzato.  
+1.  Utilizzare `New-PSDrive` per definire un'unità personalizzata. Usare il `Root` parametro per specificare il percorso rappresentato dal nome di unità personalizzato.  
   
 2.  Fare riferimento al nome di unità personalizzata nei cmdlet di navigazione, ad esempio `Set-Location`.  
   

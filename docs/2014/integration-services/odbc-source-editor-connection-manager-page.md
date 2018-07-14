@@ -1,5 +1,5 @@
 ---
-title: Editor origine ODBC (pagina Gestione connessione) | Documenti Microsoft
+title: Editor origine ODBC (pagina Gestione connessione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.connection.f1
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3092f4ad0b59797bfcc64299eaa23fbd3459448c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb7a1287ff35449431b94a08fc5b9fca2d16d37b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245051"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>Editor origine ODBC (pagina Gestione connessione)
   Utilizzare la pagina **Gestione connessione** della finestra di dialogo **ODBC Source Editor** per selezionare la gestione connessione ODBC per l'origine. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  
@@ -62,6 +62,6 @@ ms.locfileid: "36168823"
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà personalizzate dell'origine ODBC](data-flow/odbc-source-custom-properties.md)   
  [Editor origine ODBC &#40;pagina Colonne&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
- [Editor origine ODBC &#40;pagina di Output di errore&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
+ [Editor origine ODBC &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

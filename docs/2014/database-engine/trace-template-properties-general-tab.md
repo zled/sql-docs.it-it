@@ -1,5 +1,5 @@
 ---
-title: Modello proprietà traccia (scheda Generale) | Documenti Microsoft
+title: Modello proprietà traccia (scheda Generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetemplateproperties.general.f1
 helpviewer_keywords:
 - Trace Template Properties dialog box
 ms.assetid: a5696c47-5f10-4ab4-bd6a-8eea71d4c020
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab029ce62fde3ec410208582884890e1ff92b47b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6e740d4866797c8d64b8798cd41dea9159f262ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169965"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184758"
 ---
 # <a name="trace-template-properties-general-tab"></a>Proprietà modello di traccia (scheda Generale)
   Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** per creare nuovi modelli di traccia utilizzando le opzioni seguenti. Per accedere a questa finestra di dialogo, scegliere [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **dal menu** File **di**e quindi fare clic su **Nuovo modello**.  

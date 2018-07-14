@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time-outs [Reporting Services]
 - query time-outs [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9066dbbc02149913959c9c1e16ee044f5f3b7a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4794c4a2b6c9207cb48573bb481499fa402f3b29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214571"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi (SSRS)
   È possibile specificare valori di timeout per limitare l'utilizzo delle risorse del sistema. Il server di report supporta due valori di timeout:  
@@ -45,7 +45,7 @@ ms.locfileid: "36170507"
  È inoltre possibile specificare un valore di timeout della query per le sottoscrizioni guidate dai dati. Il valore di timeout della query viene specificato nelle pagine Sottoscrizione guidata dai dati. Il valore specificato dall'utente determina la durata dell'attesa del server di report per il completamento dell'elaborazione della query quando si esegue il recupero dei dati dall'origine dati del sottoscrittore.  
   
 ## <a name="setting-a-query-time-out-for-a-shared-dataset"></a>Impostazione del timeout per la query per un set di dati condiviso  
- I valori di timeout per la query vengono specificati in secondi sul server di report quando si crea o si gestisce un set di dati condiviso. Per impostazione predefinita, questo valore viene impostato su 0 secondi che indica l'assenza del valore di timeout. Per altre informazioni, vedere [gestire set di dati condivisi](../report-data/manage-shared-datasets.md).  
+ I valori di timeout per la query vengono specificati in secondi sul server di report quando si crea o si gestisce un set di dati condiviso. Per impostazione predefinita, questo valore viene impostato su 0 secondi che indica l'assenza del valore di timeout. Per altre informazioni, vedere [gestire set di dati condiviso](../report-data/manage-shared-datasets.md).  
   
 ## <a name="setting-a-report-execution-time-out"></a>Impostazione del timeout dell'esecuzione del report  
  È possibile impostare il valore di timeout dell'esecuzione del report in modo da limitare la quantità di tempo utilizzata da un server di report per elaborare un report. I valori di timeout dell'esecuzione del report possono essere impostati in Gestione report. È possibile impostare un valore predefinito per tutti i report nella pagina Impostazioni sito e quindi modificare tale valore per un determinato report nella pagina per impostare le proprietà di esecuzione. Per impostazione predefinita, il valore è impostato su 1800 secondi. Per altre informazioni, vedere [Impostare proprietà di elaborazione dei report](set-report-processing-properties.md).  

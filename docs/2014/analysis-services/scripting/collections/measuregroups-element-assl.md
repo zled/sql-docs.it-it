@@ -1,5 +1,5 @@
 ---
-title: Elemento MeasureGroups (ASSL) | Documenti Microsoft
+title: Elemento MeasureGroups (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroups element
 ms.assetid: 80e970e9-6ea6-47a9-9e5c-d0f9b01c09c0
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c0162fd018060c767de9b6d7bfa972fc0290d387
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c152701fb8dc59b8d85d0976c4c4f9243a96072d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261447"
 ---
 # <a name="measuregroups-element-assl"></a>Elemento MeasureGroups (ASSL)
   Contiene la raccolta di [MeasureGroup](../objects/group-element-assl.md) elementi associati all'elemento padre.  
@@ -67,10 +67,10 @@ ms.locfileid: "36168178"
 |Predecessore o padre|Elemento figlio|  
 |------------------------|-------------------|  
 |[Cube](../objects/cube-element-assl.md)|[Gruppo di misure](../objects/group-element-assl.md)|  
-|[CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md)|[MeasureGroup](../objects/group-element-assl.md) di tipo [MeasureGroupBinding](../data-type/binding-data-type-assl.md)|  
-|[Prospettiva](../objects/perspective-element-assl.md)|[MeasureGroup](../objects/group-element-assl.md) di tipo [PerspectiveMeasureGroup](../data-type/perspectivemeasuregroup-data-type-assl.md)|  
+|[CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md)|[Elemento MeasureGroup](../objects/group-element-assl.md) di tipo [MeasureGroupBinding](../data-type/binding-data-type-assl.md)|  
+|[Punto di vista](../objects/perspective-element-assl.md)|[Elemento MeasureGroup](../objects/group-element-assl.md) di tipo [PerspectiveMeasureGroup](../data-type/perspectivemeasuregroup-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.MeasureGroupCollection> o <xref:Microsoft.AnalysisServices.PerspectiveMeasureGroupCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

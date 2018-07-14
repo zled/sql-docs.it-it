@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e01b13d7d8f4d7abc5e57a7bb7ebf23457bfe83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 45b6a7ccfb2a6d19fb85fc016cbcf66995976fc2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238481"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Aggiungere un'azione Espandi o Comprimi a un elemento (Generatore report e SSRS)
   È possibile permettere a un utente di espandere o comprimere in modo interattivo elementi del report oppure, per una tabella o una matrice, righe e colonne associate a un gruppo. Per consentire agli utenti di espandere o comprimere un elemento, impostare le proprietà di visibilità per tale elemento. L'impostazione della visibilità può essere usata in un visualizzatore di report HTML ed è a volte definita azione *drill-down* .  
@@ -48,7 +48,7 @@ ms.locfileid: "36169826"
     > [!NOTE]  
     >  Se il riquadro Proprietà non è visualizzato, fare clic su **Visualizza** sulla barra multifunzione e quindi su **Proprietà**.  
   
-4.  In `Hidden`, scegliere una delle opzioni seguenti per impostare la visibilità di questo elemento di report alla prima esecuzione di un report:  
+4.  In `Hidden`, scegliere una delle opzioni seguenti per impostare la visibilità di questo elemento del report la prima volta che si esegue un report:  
   
     -   Selezionare `False` per visualizzare l'elemento del report.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36169826"
      ![Esecuzione di report con tabella di espansione](../media/expandcollapse-runreport-reporttable.png "Esecuzione di report con tabella di espansione")  
   
 ## <a name="see-also"></a>Vedere anche  
- [Azione di drill-down &#40;SSRS e Generatore Report&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [Azione drill-down &#40;Report e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [Nascondere un elemento &#40;Generatore report e SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

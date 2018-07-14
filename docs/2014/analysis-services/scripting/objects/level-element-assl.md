@@ -1,5 +1,5 @@
 ---
-title: Livello di elemento (ASSL) | Documenti Microsoft
+title: Il livello di elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Level element
 ms.assetid: 66ee2c16-d6b8-4dd3-879f-1f2b6923bc43
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 028375d525ec0197aec24a9005fd3f5f0e8fe769
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba9ca10d1d3ad2319e451d6008c6e8ad77078fc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263877"
 ---
 # <a name="level-element-assl"></a>Elemento Level (ASSL)
-  Definisce un livello in un [gerarchia](hierarchy-element-assl.md) elemento.  
+  Definisce un livello in una [gerarchia](hierarchy-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,9 +65,9 @@ ms.locfileid: "36169519"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[Levels](../collections/levels-element-assl.md)|  
-|Elementi figlio|[Annotazioni](../collections/annotations-element-assl.md), [descrizione](../properties/description-element-assl.md), [HideMemberIf](../properties/hidememberif-element-assl.md), [ID](../properties/id-element-assl.md), [nome](../properties/name-element-assl.md), [SourceAttributeID](../properties/attributeid-element-assl.md), [Traduzioni](../collections/translations-element-assl.md)|  
+|Elementi figlio|[Le annotazioni](../collections/annotations-element-assl.md), [Description](../properties/description-element-assl.md), [HideMemberIf](../properties/hidememberif-element-assl.md), [ID](../properties/id-element-assl.md), [nome](../properties/name-element-assl.md), [SourceAttributeID](../properties/attributeid-element-assl.md), [Traduzioni](../collections/translations-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Questo tipo di dati non presenta alcuna restrizione in qualsiasi modalità di distribuzione (1-Multidimensionale e Data Mining, 2-SharePoint e 3-Tabulare).  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.Level>.  

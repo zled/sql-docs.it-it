@@ -1,5 +1,5 @@
 ---
-title: Definizione e utilizzo di un'azione drill-through | Documenti Microsoft
+title: Definizione e uso di un'azione drill-through | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3498bae6136476a92df3c772263f943b54e7d3a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7737ab3d7631440010be2fdb3047d7d021b275b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263727"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definizione e utilizzo di un'azione drill-through
   Il dimensionamento dei dati della tabella dei fatti tramite una dimensione dei fatti senza l'applicazione di un filtro appropriato sui dati restituiti dalla query può causare un rallentamento delle prestazioni. Per evitare questo problema, è possibile definire un'azione drill-through che limita il numero complessivo di righe restituite. In questo modo è possibile migliorare in modo significativo le prestazioni delle query.  
@@ -42,7 +42,7 @@ ms.locfileid: "36170470"
   
      ![Modello azione vuoto nel riquadro di visualizzazione](../../2014/tutorials/media/l8-action2.gif "modello azione vuoto nel riquadro informazioni")  
   
-3.  Nel **nome** casella, modificare il nome dell'azione in `Internet Sales Details Drillthrough Action`.  
+3.  Nel **Name** modificare il nome dell'azione in `Internet Sales Details Drillthrough Action`.  
   
 4.  Selezionare **Internet Sales** dall'elenco **Membri gruppo di misure**.  
   
@@ -108,11 +108,11 @@ ms.locfileid: "36170470"
   
     -   ShipDateKey  
   
-6.  Modifica il **nome** proprietà per il **Order Date Key** attributo `Order Date` , quindi fare clic sul pulsante Sfoglia per la **colonna nome** proprietà e il **Colonna name** nella finestra di dialogo **data** come tabella di origine e selezionare SimpleDate come colonna di origine. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Modifica il **Name** proprietà per il **Order Date Key** dell'attributo `Order Date` , quindi fare clic sul pulsante per il **colonna nome** proprietà e il **Colonna nome** finestra di dialogo **data** come tabella di origine e SimpleDate come colonna di origine. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Modificare il **nome** proprietà per il **Due Date Key** attributo `Due Date`e quindi, usando il metodo stesso come il **Order Date Key** attributo, modificare il  **Nome colonna** proprietà per l'attributo **date. simpledate (WChar)**.  
+7.  Modificare il **Name** proprietà per il **Due Date Key** dell'attributo `Due Date`e quindi, usando il metodo di stesso come il **Order Date Key** modificare il  **Assegnare un nome colonna** proprietà per l'attributo **date. simpledate (WChar)**.  
   
-8.  Modificare il **nome** proprietà per il **Ship Date Key** attributo `Ship Date`, quindi modificare la **colonna nome** proprietà per questo attributo su  **Date. simpledate (WChar)**.  
+8.  Modificare il **nome** proprietà per il **Ship Date Key** dell'attributo `Ship Date`e quindi modificare la **colonna nome** proprietà per questo attributo su  **Date. simpledate (WChar)**.  
   
 9. Passare alla scheda **Azioni[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di Progettazione cubi per il cubo**  Tutorial.  
   
@@ -150,10 +150,10 @@ ms.locfileid: "36170470"
  [Lezione 9: Definizione di prospettive e traduzioni](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le azioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [Azioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Azioni nei modelli multidimensionali](multidimensional-models/actions-in-multidimensional-models.md)   
  [Relazioni tra dimensioni](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Definizione di una relazione di tipo fatti](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)   
+ [La definizione di una relazione di tipo fatti](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)   
  [Definire una relazione di tipo Fatti e le relative proprietà](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

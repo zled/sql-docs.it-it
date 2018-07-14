@@ -1,5 +1,5 @@
 ---
-title: Procedure dettagliate e attività del visualizzatore modello di data mining | Documenti Microsoft
+title: Attività del Visualizzatore modelli e procedure dettagliate di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], viewing
 - displaying mining models
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services]
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6249d4a1c63b58135a1b7585c706496712bf80e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2b463cd9a5cb58c1286d66ce88ab749e408d852
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200391"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Attività e procedure relative al visualizzatore modello di data mining
   Progettazione modelli di data mining di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] include diversi strumenti che è possibile usare per esplorare i modelli di data mining. Gli argomenti seguenti contengono istruzioni dettagliate su come completare le attività correlate all'uso della scheda **Visualizzatore modello di data mining** nella finestra di progettazione.  
@@ -51,6 +51,6 @@ ms.locfileid: "36169338"
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione di base di Data Mining](../../tutorials/basic-data-mining-tutorial.md)   
- [Visualizzatori dei modelli di data mining &#40;progettazione modello di Data Mining&#41;](../mining-model-viewers-data-mining-model-designer.md)  
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

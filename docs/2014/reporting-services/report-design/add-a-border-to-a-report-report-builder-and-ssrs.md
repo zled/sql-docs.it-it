@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4295a712f277047c4e205d83c44bbc0ff444db32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 086ed75848ad4b55178e1b64ad41ca052ef024ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272907"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Aggiungere un bordo a un report (Generatore report e SSRS)
   È possibile aggiungere un bordo a un report aggiungendo bordi alle intestazioni, ai piè di pagina e al corpo del report, senza inserire righe o rettangoli.  
@@ -34,13 +34,13 @@ ms.locfileid: "36169158"
 1.  Fare clic con il pulsante destro del mouse nell'intestazione su uno spazio non occupato da elementi, quindi scegliere **Proprietà intestazione**. Nella scheda **Bordo** aggiungere un bordo sinistro, superiore e destro con lo stile desiderato.  
   
     > [!NOTE]  
-    >  Se non si utilizzano intestazioni nel report, è possibile definire i bordi intorno solo il corpo del report oppure è possibile aggiungere intestazioni dal **inserire** scheda.  
+    >  Se non si usa le intestazioni del report, è possibile definire i bordi intorno solo il corpo del report oppure è possibile aggiungere intestazioni dal **Inserisci** scheda.  
   
 2.  Fare clic con il pulsante destro del mouse nel corpo su uno spazio dell'area di progettazione non occupato da elementi e scegliere **Proprietà corpo**. Nella scheda **Bordo** aggiungere un bordo sinistro e destro con lo stile desiderato.  
   
 3.  Fare clic con il pulsante destro del mouse nel piè di pagina su uno spazio non occupato da elementi, quindi scegliere **Proprietà piè di pagina**. Nella scheda **Bordo** aggiungere un bordo sinistro, inferiore e destro con lo stile desiderato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Rettangoli e linee &#40;SSRS e Generatore Report&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Rettangoli e linee &#40;Report e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

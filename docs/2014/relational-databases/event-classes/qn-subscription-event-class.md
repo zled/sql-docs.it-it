@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Subscription
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7dd4c06a89eeebe5c3b7e83a699ea17ca68bbd18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 79e75ea52d0e1ed2d80dd4e2ef9dcc2d2092e6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188478"
 ---
 # <a name="qnsubscription-event-class"></a>Classe di evento QN:Subscription
   L'evento QN:Subscription fornisce informazioni sulle sottoscrizioni di notifica.  
@@ -38,7 +38,7 @@ ms.locfileid: "36171232"
 |DatabaseName|`nvarchar`|Nome del database in cui viene eseguita l'istruzione dell'utente.|35|Sì|  
 |EventClass|`int`|Tipo di evento = 199.|27|no|  
 |EventSequence|`int`|Numero di sequenza dell'evento.|51|no|  
-|EventSubClass|`nvarchar`|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> Sottoscrizione registrata: indica quando la sottoscrizione di notifica delle query viene registrata correttamente nel database.<br /><br /> Sottoscrizione riavvolto: indica quando il [!INCLUDE[ssDE](../../includes/ssde-md.md)] riceve una richiesta di sottoscrizione che corrisponde esattamente a una sottoscrizione esistente. In tal caso, [!INCLUDE[ssDE](../../includes/ssde-md.md)] imposta il valore di timeout della sottoscrizione esistente sul timeout specificato nella nuova richiesta di sottoscrizione.<br /><br /> Sottoscrizione è stata attivata: indica quando una sottoscrizione di notifica genera un messaggio di notifica.<br /><br /> Generazione dell'evento non è riuscita con errore di Service broker: indica quando un messaggio di notifica ha esito negativo a causa di un [!INCLUDE[ssSB](../../includes/sssb-md.md)] errore.<br /><br /> Generazione dell'evento non è riuscita senza errore Service broker: indica quando un messaggio di notifica ha esito negativo, ma non è causato da un [!INCLUDE[ssSB](../../includes/sssb-md.md)] errore.<br /><br /> Errore intercettato di Service Broker: indica che [!INCLUDE[ssSB](../../includes/sssb-md.md)] recapitato un errore nella conversazione usata dalla notifica delle query.<br /><br /> Tentativo di eliminazione sottoscrizione: indica che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha provato a eliminare una sottoscrizione scaduta per liberare risorse.<br /><br /> L'eliminazione di sottoscrizione non riuscito: indica che non è riuscito il tentativo di eliminare una sottoscrizione scaduta. [!INCLUDE[ssDE](../../includes/ssde-md.md)] ripianificherà automaticamente la sottoscrizione per l'eliminazione allo scopo di liberare risorse.<br /><br /> Sottoscrizione eliminata: indica che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è stata eliminata una sottoscrizione scaduta|21|Sì|  
+|EventSubClass|`nvarchar`|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> Sottoscrizione registrata: indica quando la sottoscrizione di notifica delle query viene registrata correttamente nel database.<br /><br /> Sottoscrizione riavvolto: indica quando il [!INCLUDE[ssDE](../../includes/ssde-md.md)] riceve una richiesta di sottoscrizione che corrisponde esattamente a una sottoscrizione esistente. In tal caso, [!INCLUDE[ssDE](../../includes/ssde-md.md)] imposta il valore di timeout della sottoscrizione esistente sul timeout specificato nella nuova richiesta di sottoscrizione.<br /><br /> Sottoscrizione è stata attivata: indica quando una sottoscrizione di notifica genera un messaggio di notifica.<br /><br /> Generazione dell'evento non è riuscita con errore di Service broker: indica quando un messaggio di notifica ha esito negativo a causa dell'errore una [!INCLUDE[ssSB](../../includes/sssb-md.md)] errore.<br /><br /> Generazione dell'evento non è riuscita senza errore Service broker: indica quando un messaggio di notifica ha esito negativo, ma non a causa un [!INCLUDE[ssSB](../../includes/sssb-md.md)] errore.<br /><br /> Broker l'errore intercettato: indica che [!INCLUDE[ssSB](../../includes/sssb-md.md)] recapitato un errore nella conversazione usata dalla notifica delle query.<br /><br /> Tentativo di eliminazione sottoscrizione: indica che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha tentato di eliminare una sottoscrizione scaduta per liberare risorse.<br /><br /> L'eliminazione di sottoscrizione non è riuscita: indica che il tentativo di eliminare una sottoscrizione scaduta non è riuscito. [!INCLUDE[ssDE](../../includes/ssde-md.md)] ripianificherà automaticamente la sottoscrizione per l'eliminazione allo scopo di liberare risorse.<br /><br /> Sottoscrizione eliminata: indica che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] eliminato correttamente una sottoscrizione scaduta|21|Sì|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|`nvarchar`|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> 0 = utente<br /><br /> 1 = sistema|60|no|  

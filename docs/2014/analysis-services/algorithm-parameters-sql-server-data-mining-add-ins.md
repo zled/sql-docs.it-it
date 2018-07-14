@@ -1,5 +1,5 @@
 ---
-title: I parametri dell'algoritmo (SQL Server Data Mining Add-ins) | Documenti Microsoft
+title: I parametri dell'algoritmo (SQL Server Data Mining Add-ins) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
 - FORCED_REGRESSOR
@@ -48,24 +48,24 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e8856d824e043c5cb68f18d3b34c9a07ea21375
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7f640f259375c48584ee33b72e63b082de0a3e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267677"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Parametri degli algoritmi (componenti aggiuntivi Data mining di SQL Server)
   Quando si esegue il data mining utilizzando Strumenti di analisi tabelle per Excel, non è necessario configurare l'algoritmo o i parametri di data mining. Ogni strumento analizza i dati e seleziona automaticamente i parametri ottimali. Se tuttavia si desidera modificare il modello o creare un modello di data mining da zero, il client di data mining per Excel offre diverse opzioni per la personalizzazione.  
   
--   Creare un modello di data mining manualmente, facendo clic **avanzate** e quindi scegliendo **aggiunta modello a struttura**.  
+-   Creare un modello di data mining manualmente, scegliendo **avanzate** e quindi scegliendo **aggiunta modello a struttura**.  
   
 -   Usare una delle modellazioni guidate in Client di Data Mining e fare clic su **parametri** per controllare il comportamento del [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmi di data mining.  
   
--   Fare clic su **Query** per aprire la procedura guidata Query modello e quindi fare clic su **avanzate** per aprire la **Editor avanzato Data Mining Query**. In questo editor è possibile compilare i modelli utilizzando modelli DMX.  
+-   Fare clic su **Query** per aprire la procedura guidata Query modello e quindi fare clic su **Advanced** per aprire il **Advanced Query Editor di Data Mining**. In questo editor è possibile compilare i modelli utilizzando modelli DMX.  
   
  È inoltre possibile modificare il comportamento dei modelli di data mining già creati o filtrare i risultati impostando i parametri desiderati nel visualizzatore del modello di data mining.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36168910"
 |HISTORICAL_MODEL_GAP|Algoritmo Microsoft Time Series|Specifica l'intervallo di tempo tra due modelli cronologici consecutivi. Se si imposta questo valore su g, ad esempio, verranno generati modelli cronologici per i dati suddivisi in periodi di tempo in corrispondenza degli intervalli g, 2*g, 3\*g e così via.<br /><br /> Il valore predefinito è 10.|  
 |HOLDOUT_PERCENTAGE|Algoritmo Microsoft Logistic Regression<br /><br /> Microsoft Neural Network Algorithm|Specifica la percentuale di case all'interno dei dati di training utilizzata per calcolare l'errore dei dati di controllo nell'ambito dei criteri di interruzione durante l'esecuzione del training del modello di data mining.<br /><br /> Il valore predefinito è 30.<br /><br /> Nota: questo parametro è diverso dal valore della percentuale di controllo che si applica a una struttura di data mining.|  
 |HOLDOUT_SEED|Algoritmo Microsoft Logistic Regression<br /><br /> Microsoft Neural Network Algorithm|Specifica un numero utilizzato come valore di inizializzazione per il generatore pseudocasuale quando l'algoritmo determina in modo casuale i dati di controllo. Se questo parametro è impostato su 0, l'algoritmo genera il valore di inizializzazione in base al nome del modello di data mining, per garantire che il contenuto del modello rimanga invariato durante la rielaborazione.<br /><br /> Il valore predefinito è 0.<br /><br /> Nota: questo parametro è diverso dal valore di inizializzazione di controllo che si applica a una struttura di data mining.|  
-|INSTABILITY_SENSITIVITY|Algoritmo Microsoft Time Series|Controlla il punto in cui la varianza della stima supera una determinata soglia e l'algoritmo ARTxp elimina le stime. Il valore predefinito è 1.<br /><br /> Nota: Questo parametro si applica solo ai modelli misti o ai modelli che utilizzano l'algoritmo ARTxp.|  
+|INSTABILITY_SENSITIVITY|Algoritmo Microsoft Time Series|Controlla il punto in cui la varianza della stima supera una determinata soglia e l'algoritmo ARTxp elimina le stime. Il valore predefinito è 1.<br /><br /> Nota: Questo parametro si applica solo ai modelli misti o modelli che utilizzano l'algoritmo ARTxp.|  
 |MAXIMUM_INPUT_ATTRIBUTES|Algoritmo Microsoft Clustering<br /><br /> Algoritmo Microsoft Decision Trees<br /><br /> Algoritmo Microsoft Linear Regression<br /><br /> Algoritmo Microsoft Naive Bayes<br /><br /> Microsoft Neural Network Algorithm<br /><br /> Algoritmo Microsoft Logistic Regression|Definisce il numero di attributi di input che l'algoritmo è in grado di gestire prima di richiamare la funzionalità di selezione degli attributi. Impostare questo valore su 0 per disabilitare la funzionalità di selezione degli attributi.<br /><br /> Il valore predefinito è 255.|  
 |MAXIMUM_ITEMSET_COUNT|Algoritmo Microsoft Association Rules|Specifica il numero massimo di set di elementi da produrre. Se non viene specificato alcun valore, l'algoritmo genera tutti i set di elementi possibili.<br /><br /> Il valore predefinito è 200000.|  
 |MAXIMUM_ITEMSET_SIZE|Algoritmo Microsoft Association Rules|Specifica il numero massimo di elementi consentiti in un set di elementi. Se si imposta il valore su 0, non esiste alcun limite per le dimensioni del set di elementi.<br /><br /> Il valore predefinito è 3.|  

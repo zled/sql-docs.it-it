@@ -1,5 +1,5 @@
 ---
-title: Elemento CellOrdinal (XMLA) | Documenti Microsoft
+title: Elemento CellOrdinal (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CellOrdinal element
 ms.assetid: 1808c498-e3b4-4e5c-9e22-7f8662d32874
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2fbcf210fa9c1d816ef78c20fe762e7a7b15d636
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0e8e0413afb58ae448a053e9eab20d77a1b36096
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245371"
 ---
 # <a name="cellordinal-element-xmla"></a>Elemento CellOrdinal (XMLA)
   Contiene la posizione ordinale all'interno di un cubo di una cella da aggiornare tramite un [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md) comando.  
@@ -60,10 +60,10 @@ ms.locfileid: "36168153"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[cella](cell-element-xmla.md)|  
+|Elementi padre|[Cella](cell-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `CellOrdinal` identifica la cella da aggiornare tramite il comando `UpdateCells`.  
   
  Per altre informazioni sull'aggiornamento di celle, vedere [Aggiornamento di celle &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  

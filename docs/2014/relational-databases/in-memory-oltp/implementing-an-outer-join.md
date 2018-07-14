@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
 caps.latest.revision: 6
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 246e613d43cceda5cdd87cdbbb30c9e4ddb74724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ae156babe1859686386274c029b2aa34748f2f1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327521"
 ---
 # <a name="implementing-an-outer-join"></a>Implementazione di un outer join
   L'outer join non è supportato in stored procedure compilate in modo nativo. Nell'esempio seguente viene illustrata una modalità per implementare la funzionalità di un left outer join in una stored procedure compilata in modo nativo.  
   
  Negli esempi vengono utilizzate una variabile di tabella per simulare un cursore sul lato sinistro del join e una variabile di tabella per costruire un unico set di risultati, vale a dire l'unico appropriato per l'elaborazione di un numero limitato di righe in quanto comporta la creazione di una copia aggiuntiva delle righe di dati.  
   
- Una variabile (@outer) di tipo t1_type viene utilizzata per scorrere le righe da t1, mediante un po' di tempo ciclo per simulare un cursore. La variabile @result di tipo t1t2_join_type viene quindi utilizzato per costruire il set di risultati.  
+ Una variabile (@outer) di tipo t1_type viene utilizzata per scorrere le righe da t1, mediante un po' di tempo ciclo per simulare un cursore. La variabile @result di tipo t1t2_join_type viene quindi usato per costruire il set di risultati.  
   
  È necessario eseguire il test delle prestazioni di questa soluzione alternativa, per assicurarsi che venga eseguita come previsto nell'applicazione.  
   

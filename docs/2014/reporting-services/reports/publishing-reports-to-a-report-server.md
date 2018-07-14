@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - production environments [Reporting Services]
 - report projects [Reporting Services]
@@ -26,16 +26,16 @@ ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 30571f0eaa50961fd9d96c3e1c13b4c57da774d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98482f6ad6e2f98120603c28cdc40181e37ef9a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273957"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Pubblicazione dei report in un server di report
-  Dopo aver progettato e testato un report o set di report, è possibile utilizzare le funzionalità di distribuzione predefinite [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per pubblicare i report in un server di report. sia singolarmente sia includendoli in un progetto server di report. La pubblicazione di un progetto server report è il modo più semplice per pubblicare più report. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene utilizzato il termine *distribuire*, anziché il termine *pubblicare*. I due termini sono perfettamente equivalenti.  
+  Dopo aver progettato e testato un report o set di report, è possibile usare le funzionalità di distribuzione predefinite [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per pubblicare il report in un server di report. sia singolarmente sia includendoli in un progetto server di report. La pubblicazione di un progetto server report è il modo più semplice per pubblicare più report. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene usato il termine *distribuire*, anziché il termine *pubblicare*. I due termini sono perfettamente equivalenti.  
   
  Per poter pubblicare un report, è necessario disporre delle autorizzazioni appropriate. L'autorizzazione è determinata dalla sicurezza basata sui ruoli definita dall'amministratore del server di report. In genere le operazioni di pubblicazione vengono concesse tramite il ruolo Server di pubblicazione.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36168451"
  Nell'ambiente di gestione dei report potrebbero essere installati più server di report e varie versioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È possibile creare più configurazioni e utilizzarne quindi una diversa in base allo scenario di distribuzione. Per altre informazioni, vedere [distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md) e [impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md).  
   
 ## <a name="publishing-reports"></a>Pubblicazione di report  
- È possibile pubblicare un singolo report o un progetto server di report che ne contenga più di uno. Per istruzioni sulla pubblicazione dei report, vedere [pubblicare report](../publish-reports.md).  
+ È possibile pubblicare un singolo report o un progetto server di report che ne contenga più di uno. Per istruzioni sulla pubblicazione dei report, vedere [pubblicare i report](../publish-reports.md).  
   
 ### <a name="publishing-a-single-report"></a>Pubblicazione di un singolo report  
  Se non si desidera pubblicare tutti i report di un progetto, si può scegliere di pubblicarne anche uno soltanto. A tale scopo selezionare una configurazione che preveda la distribuzione del report, ad esempio la configurazione Release, fare clic con il pulsante destro del mouse sul report, quindi scegliere **Distribuisci**.  

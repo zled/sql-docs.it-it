@@ -1,5 +1,5 @@
 ---
-title: Consenti drill-through per un modello di Data Mining | Documenti Microsoft
+title: Abilitare il drill-through per un modello di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - drillthrough [Analysis Services]
 ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0086339e2f4286257b6236f8caf297ce8cded202
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 93793f4a13d3d590ecf031addb8e11f1d93f11e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273533"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>Abilitare il drill-through per un modello di data mining
   Se è stato abilitato il drill-through per un modello di data mining, quando si esplora il modello è possibile recuperare informazioni dettagliate sui case utilizzati per creare il modello. Per visualizzare queste informazioni sono necessarie le autorizzazioni adeguate e la struttura deve essere stata già elaborata.  
@@ -33,7 +33,7 @@ ms.locfileid: "36170017"
   
 -   Le autorizzazioni di drill-through per la struttura consentono di includere colonne della struttura nelle query di drill-through dal modello tramite la funzione [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx). È anche possibile eseguire query sui test case e sui case di training nella struttura usando la sintassi SELECT… DA \<struttura >. Sintassi di casi.  
   
- **Memorizzazione nella cache di case di training** Il drill-through avviene mediante il recupero di informazioni sui case di training nella struttura di data mining. Queste informazioni vengono memorizzate nella cache quando la struttura viene elaborata. Pertanto, se si sceglie di cancellare tutti i dati memorizzati nella cache modificando il <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> proprietà `ClearAfterProcessing`, drill-through non funzionerà.  
+ **Memorizzazione nella cache di case di training** Il drill-through avviene mediante il recupero di informazioni sui case di training nella struttura di data mining. Queste informazioni vengono memorizzate nella cache quando la struttura viene elaborata. Pertanto, se si sceglie di cancellare tutti i dati memorizzati nella cache modificando la <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> proprietà `ClearAfterProcessing`, drill-through non funzionerà.  
   
 > [!NOTE]  
 >  Se i case di training non sono stati memorizzati nella cache, è necessario impostare la proprietà <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> su **KeepTrainingCases** e rielaborare quindi il modello prima che sia possibile visualizzare i dati dei case.  

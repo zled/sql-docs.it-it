@@ -1,5 +1,5 @@
 ---
-title: Elemento DROP (XMLA) | Documenti Microsoft
+title: Elemento DROP (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Drop element
 ms.assetid: a5d21db3-743a-4958-b16d-b6816a5ee787
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 64f6fd75c3c5032c035ca4af6b9950a0de1e6ddc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 8b77be1023fdc7145a367c200efb1e653e767b7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326491"
 ---
 # <a name="drop-element-xmla"></a>Elemento Drop (XMLA)
   Elimina membri dell'attributo da una dimensione.  
@@ -63,12 +63,12 @@ ms.locfileid: "36169970"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|Elementi figlio|[DeleteWithDescendants](../xml-elements-properties/deletewithdescendants-element-xmla.md), [oggetto](../xml-elements-properties/object-element-dimension-xmla.md), [in](../xml-elements-properties/where-element-xmla.md)|  
+|Elementi figlio|[DeleteWithDescendants](../xml-elements-properties/deletewithdescendants-element-xmla.md), [oggetto](../xml-elements-properties/object-element-dimension-xmla.md), [dove](../xml-elements-properties/where-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il comando `Drop` elimina membri dell'attributo da una dimensione abilitata alla scrittura.  
   
- Per ulteriori informazioni sull'eliminazione di membri, vedere [inserimento, aggiornamento ed eliminazione di membri &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
+ Per altre informazioni sull'eliminazione di membri, vedere [inserimento, aggiornamento ed eliminazione di membri &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Inserire l'elemento &#40;XMLA&#41;](insert-element-xmla.md)   

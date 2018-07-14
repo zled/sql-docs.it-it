@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc5accd969ae0a19d99610edca0023337321f657
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ebc75d5750d77ac4166375f47b1301d7686f1a99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244571"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Amministrare e monitorare Change Data Capture (SQL Server)
   In questo argomento viene descritto come amministrare ed eseguire il monitoraggio dell'acquisizione dati delle modifiche.  
@@ -41,10 +41,10 @@ ms.locfileid: "36168713"
  Il parametro *maxscans* specifica il numero massimo di tentativi di cicli di analisi per svuotare il log prima dell’uscita (parametro continuous = 0) o dell'esecuzione di un'istruzione WAITFOR (parametro continuous = 1).  
   
 #### <a name="continous-parameter"></a>Parametro continous  
- Il *continui* parametro determina se `sp_cdc_scan` cede il controllo in seguito allo svuotamento del log o all'esecuzione del numero massimo di cicli di analisi (modalità di esecuzione singola). È inoltre determina se `sp_cdc_scan` continua a essere eseguito finché arrestata in modo esplicito (modalità continua).  
+ Il *continui* parametro determina se `sp_cdc_scan` cede il controllo in seguito allo svuotamento del log o all'esecuzione del numero massimo di cicli di analisi (modalità di esecuzione singola). Viene inoltre determina se `sp_cdc_scan` continua a essere eseguito fino al arrestata in modo esplicito (modalità continua).  
   
 ##### <a name="one-shot-mode"></a>Modalità di esecuzione singola  
- In modalità di esecuzione singola, il processo di acquisizione richiede `sp_cdc_scan` per eseguire fino a *maxtrans* analisi per tentare di svuotare il log e restituito. Qualsiasi transazione aggiuntiva rispetto al parametro *maxtrans* presente nel log verrà elaborata nelle analisi successive.  
+ In modalità scatto unico, il processo di acquisizione richiede `sp_cdc_scan` per eseguire un numero *maxtrans* le analisi per tentare di svuotare il log e restituire. Qualsiasi transazione aggiuntiva rispetto al parametro *maxtrans* presente nel log verrà elaborata nelle analisi successive.  
   
  La modalità di esecuzione singola viene utilizzata in test controllati, in cui è noto il volume di transazioni da elaborare e in cui la chiusura automatica del processo al suo completamento costituisce un aspetto vantaggioso. L'utilizzo della modalità di esecuzione singola non è consigliabile in un ambiente di produzione, in quanto t si basa sulla pianificazione del processo per gestire la frequenza di esecuzione del ciclo di analisi.  
   
@@ -57,13 +57,13 @@ ms.locfileid: "36168713"
  Se è necessario utilizzare la modalità di esecuzione singola per regolare l'analisi del log, il numero di secondi tra le elaborazioni del log deve essere determinato dalla pianificazione del processo. Se si desidera ottenere questo tipo di comportamento, l'esecuzione del processo di acquisizione in modalità continua rappresenta un metodo migliore per gestire la ripianificazione dell'analisi del log.  
   
 ##### <a name="continuous-mode-and-the-polling-interval"></a>Modalità continua e intervallo di polling  
- In modalità continua, il processo di acquisizione richiede che `sp_cdc_scan` eseguito in modo continuo. In questo modo, la stored procedure può gestire il proprio ciclo di attesa fornendo non solo i valori per maxtrans e maxscans ma anche un valore per il numero di secondi tra le elaborazioni del log (intervallo di polling). Che viene eseguito in questa modalità, il processo di acquisizione rimane attivo, eseguendo un `WAITFOR` tra le analisi del log.  
+ In modalità continua, il processo di acquisizione richiede che `sp_cdc_scan` eseguiti in modo continuo. In questo modo, la stored procedure può gestire il proprio ciclo di attesa fornendo non solo i valori per maxtrans e maxscans ma anche un valore per il numero di secondi tra le elaborazioni del log (intervallo di polling). In esecuzione in questa modalità, il processo di acquisizione rimane attivo, eseguendo un `WAITFOR` tra le analisi del log.  
   
 > [!NOTE]  
 >  Quando il valore dell'intervallo di polling è maggiore di 0, il limite superiore relativo alla velocità effettiva per il processo ricorrente in modalità di esecuzione singola viene applicato anche all'operazione del processo in modalità continua. Di conseguenza, la divisione di (*maxtrans* \* *maxscans*) per un intervallo di polling diverso da zero comporterà l'applicazione di un limite superiore per il numero medio di transazioni che possono essere elaborate dal processo di acquisizione.  
   
 ### <a name="capture-job-customization"></a>Personalizzazione del processo di acquisizione  
- Per il processo di acquisizione è possibile applicare logica aggiuntiva per determinare se una nuova analisi debba iniziare immediatamente o se venga imposta una sospensione prima di avviare una nuova analisi anziché basarsi su un intervallo di polling fisso. La scelta può essere basata solo sull'ora del giorno, applicando eventualmente sospensioni prolungate durante i periodi di attività massima, e prevedere anche il passaggio a un intervallo di polling pari a zero alla fine del giorno quando è importante completare l'elaborazione giornaliera e preparare le esecuzioni notturne. Può inoltre essere necessario monitorare lo stato del processo di acquisizione per determinare il momento in cui tutte le transazioni di cui è stato eseguito il commit entro mezzanotte sono state sottoposte ad analisi e inserite nelle tabelle delle modifiche. Ciò consente il completamento del processo di acquisizione, che verrà riavviato in base a una pianificazione giornaliera. Sostituendo la chiamata di passaggio del processo recapitato `sp_cdc_scan` con una chiamata a un utente wrapper per scritto `sp_cdc_scan`, è possibile ottenere un comportamento altamente personalizzato con un minimo sforzo aggiuntivo.  
+ Per il processo di acquisizione è possibile applicare logica aggiuntiva per determinare se una nuova analisi debba iniziare immediatamente o se venga imposta una sospensione prima di avviare una nuova analisi anziché basarsi su un intervallo di polling fisso. La scelta può essere basata solo sull'ora del giorno, applicando eventualmente sospensioni prolungate durante i periodi di attività massima, e prevedere anche il passaggio a un intervallo di polling pari a zero alla fine del giorno quando è importante completare l'elaborazione giornaliera e preparare le esecuzioni notturne. Può inoltre essere necessario monitorare lo stato del processo di acquisizione per determinare il momento in cui tutte le transazioni di cui è stato eseguito il commit entro mezzanotte sono state sottoposte ad analisi e inserite nelle tabelle delle modifiche. Ciò consente il completamento del processo di acquisizione, che verrà riavviato in base a una pianificazione giornaliera. Sostituendo la chiamata di passaggio del processo recapitato `sp_cdc_scan` con una chiamata a un utente di scrivere wrapper per `sp_cdc_scan`, è possibile ottenere un comportamento altamente personalizzato con un minimo sforzo aggiuntivo.  
   
 ##  <a name="Cleanup"></a> Processo di pulizia  
  In questa sezione vengono fornite informazioni sul funzionamento del processo di pulizia di Change Data Capture.  
@@ -71,15 +71,15 @@ ms.locfileid: "36168713"
 ### <a name="structure-of-the-cleanup-job"></a>Struttura del processo di pulizia  
  Change Data Capture utilizza una strategia di pulizia basata su memorizzazione per gestire le dimensioni delle tabelle delle modifiche. Il meccanismo di pulizia è costituito da un processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent creato durante l'abilitazione della prima tabella di database. Un singolo processo di pulizia gestisce la pulizia per tutte le tabelle delle modifiche del database e applica lo stesso valore di memorizzazione a tutte le istanze di acquisizione definite.  
   
- Il processo di pulizia viene avviato tramite l'esecuzione della stored procedure `sp_MScdc_cleanup_job` senza parametri. Questa stored procedure avvia estraendo i valori di memorizzazione e soglia configurati per il processo di pulizia da `msdb.dbo.cdc_jobs`. Il valore di memorizzazione viene utilizzato per calcolare un nuovo limite minimo per le tabelle delle modifiche. Il numero specificato di minuti viene sottratto dal massimo *tran_end_time* valore il `cdc.lsn_time_mapping` tabella per ottenere il nuovo limite minimo espresso come valore datetime. Viene quindi utilizzata la tabella CDC.lsn_time_mapping per convertire questo valore datetime in un valore `lsn` corrispondente. Se la stessa ora di commit è condiviso da più voci nella tabella, la `lsn` che corrisponde alla voce associata al valore `lsn` viene scelto come nuovo limite minimo. Il valore `lsn` viene passato a `sp_cdc_cleanup_change_tables` per rimuovere le voci dalle tabelle delle modifiche del database.  
+ Il processo di pulizia viene avviato tramite l'esecuzione della stored procedure `sp_MScdc_cleanup_job` senza parametri. Questa stored procedure avvia estraendo i valori di memorizzazione e soglia configurati per il processo di pulizia da `msdb.dbo.cdc_jobs`. Il valore di memorizzazione viene utilizzato per calcolare un nuovo limite minimo per le tabelle delle modifiche. Il numero specificato di minuti viene sottratto dal massimo *tran_end_time* valore il `cdc.lsn_time_mapping` tabella per ottenere il nuovo limite minimo espresso come valore datetime. Viene quindi utilizzata la tabella CDC.lsn_time_mapping per convertire questo valore datetime in un valore `lsn` corrispondente. Se la stessa ora di commit è condiviso da più voci nella tabella, la `lsn` che corrisponde alla voce associata al valore `lsn` come nuovo limite minimo viene scelto. Il valore `lsn` viene passato a `sp_cdc_cleanup_change_tables` per rimuovere le voci dalle tabelle delle modifiche del database.  
   
 > [!NOTE]  
->  L'utilizzo dell'ora di esecuzione del commit della transazione recente come base per il calcolo del nuovo limite minimo offre il vantaggio di poter mantenere le modifiche nelle tabelle delle modifiche per il tempo specificato. Questa situazione si verifica anche quando è in esecuzione il processo di acquisizione sottostante. Tutte le voci associate alla stessa ora di commit del limite minimo corrente continuano a essere rappresentate all'interno di tabelle delle modifiche scegliendo il valore più piccolo `lsn` associato all'ora del commit condivisa per il limite minimo effettivo.  
+>  L'utilizzo dell'ora di esecuzione del commit della transazione recente come base per il calcolo del nuovo limite minimo offre il vantaggio di poter mantenere le modifiche nelle tabelle delle modifiche per il tempo specificato. Questa situazione si verifica anche quando è in esecuzione il processo di acquisizione sottostante. Tutte le voci associate alla stessa ora di commit del limite minimo corrente continuano a essere rappresentate all'interno delle tabelle delle modifiche scegliendo il valore più piccolo `lsn` con l'ora del commit condivisa per il limite minimo effettivo.  
   
  Quando viene eseguita una pulizia, il limite minimo per tutte le istanze di acquisizione viene inizialmente aggiornato in una singola transazione. Viene quindi effettuato il tentativo di rimozione delle voci obsolete dalle tabelle delle modifiche e dalla tabella cdc.lsn_time_mapping. Il valore soglia configurabile limita il numero di voci eliminate in ogni singola istruzione. La mancata esecuzione dell'eliminazione in una singola tabella non impedirà il tentativo di eliminazione nelle altre.  
   
 ### <a name="cleanup-job-customization"></a>Personalizzazione del processo di pulizia  
- Per il processo di pulizia, la possibilità di personalizzazione consiste nella strategia utilizzata per determinare le voci delle tabelle delle modifiche da ignorare. L'unica strategia supportata nel processo di pulizia è basata sul tempo. In questa situazione, il nuovo limite minimo viene calcolato sottraendo il periodo di memorizzazione consentito dall'ora di esecuzione del commit dell'ultima transazione elaborata. Dal momento che le procedure di pulizia sottostanti sono basate sul `lsn` anziché sul tempo, è possibile utilizzare un numero qualsiasi di strategie per determinare quello più piccolo `lsn` da mantenere nelle tabelle delle modifiche. Solo alcuni di questi valori sono rigorosamente basati sul tempo. È possibile, ad esempio, utilizzare le informazioni sui client come valida alternativa in caso di mancata esecuzione dei processi a valle che richiedono l'accesso alle tabelle delle modifiche. Inoltre, anche se la strategia predefinita applica lo stesso `lsn` per pulire le tabelle delle modifiche di tutti i database, la procedura di pulizia sottostante anche per eseguire la pulizia a livello di istanza di acquisizione.  
+ Per il processo di pulizia, la possibilità di personalizzazione consiste nella strategia utilizzata per determinare le voci delle tabelle delle modifiche da ignorare. L'unica strategia supportata nel processo di pulizia è basata sul tempo. In questa situazione, il nuovo limite minimo viene calcolato sottraendo il periodo di memorizzazione consentito dall'ora di esecuzione del commit dell'ultima transazione elaborata. Dal momento che le procedure di pulizia sottostanti sono basate sul `lsn` anziché sul tempo, un numero qualsiasi di strategie può essere utilizzato per determinare il più piccolo `lsn` mantenere nelle tabelle delle modifiche. Solo alcuni di questi valori sono rigorosamente basati sul tempo. È possibile, ad esempio, utilizzare le informazioni sui client come valida alternativa in caso di mancata esecuzione dei processi a valle che richiedono l'accesso alle tabelle delle modifiche. Inoltre, anche se la strategia predefinita applica lo stesso `lsn` per pulire le tabelle delle modifiche di tutti i database, la procedura di pulizia sottostante, può anche essere chiamato per eseguire la pulizia a livello di istanza di acquisizione.  
   
 ##  <a name="Monitor"></a> Monitoraggio del processo Change Data Capture  
  Il monitoraggio del processo Change Data Capture consente di determinare se le modifiche vengono scritte correttamente e con una latenza ragionevole nelle tabelle delle modifiche. L'esecuzione il monitoraggio può consentire anche di identificare gli errori che si potrebbero verificare. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono incluse due DMV per monitorare Change Data Capture: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) e [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  

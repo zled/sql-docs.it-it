@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3f900a871527e85cdc28f47ec3349eeb64f9853c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a4bb95d4280b2bd411ffdadcddcf3ff58274c69b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268167"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Esercitazione: Creazione di un report matrice (Generatore report)
   In questa esercitazione viene illustrato come creare un report matrice semplice basato su dati di vendita di esempio. La matrice presenta gruppi di righe e di colonne annidati, nonché un gruppo di colonne adiacente. Verrà inoltre illustrato come formattare le colonne e ruotare il testo. Nell'immagine seguente viene illustrato un report simile a quello che verrà creato.  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
   
- Una versione avanzata del report che verrà creato in questa esercitazione è disponibile come report di esempio di Generatore report di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per ulteriori informazioni sul download di questo report di esempio e ad altri utenti, vedere [Report di Generatore report di esempio](http://go.microsoft.com/fwlink/?LinkId=184851).  
+ Una versione avanzata del report che verrà creato in questa esercitazione è disponibile come report di esempio di Generatore report di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per altre informazioni sul download di questo report di esempio e ad altri utenti, vedere [Report di Generatore report di esempio](http://go.microsoft.com/fwlink/?LinkId=184851).  
   
 ##  <a name="BackToTop"></a> Lezioni dell'esercitazione  
  In questa esercitazione verranno illustrate le procedure per:  
   
-1.  [Creare un Report matrice e un set di dati dalla creazione guidata tabella o matrice](#CreateMatrix)  
+1.  [Creare un Report matrice e un set di dati dalla nuova tabella o procedura guidata matrice](#CreateMatrix)  
   
-2.  [Organizzare i dati e scegliere Layout e lo stile tramite la creazione guidata tabella o matrice](#Groups)  
+2.  [Organizzare i dati e scegliere il Layout e lo stile dalla nuova tabella o procedura guidata matrice](#Groups)  
   
 3.  [Formattare i dati](#FormatData)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36169156"
   
 ### <a name="other-optional-step"></a>Altro passaggio facoltativo  
   
-1.  [Ruota il testo casella 270 gradi](#RotateTextBox)  
+1.  [Ruotare il testo casella 270 gradi](#RotateTextBox)  
   
  Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36169156"
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="CreateMatrix"></a> 1. Creare un report matrice e un set di dati tramite la Creazione guidata tabella o matrice  
- Dal **Getting Started** finestra di dialogo in Generatore Report scegliere un'origine dati condivisa, creare un set di dati incorporato e visualizzare quindi i dati in una matrice.  
+ Dal **introduttiva** nella finestra di dialogo Generatore Report, scegliere un'origine dati condivisa, creare un set di dati incorporato e visualizzare quindi i dati in una matrice.  
   
 > [!NOTE]  
 >  Per evitare di dover disporre di un'origine dati esterna, nella query di questa esercitazione sono già inclusi i valori dei dati. Tale condizione rende tuttavia la query piuttosto lunga. In una query di un ambiente aziendale non sarebbe incluso alcun dato. Questo esempio è solo a scopo illustrativo.  
@@ -77,7 +77,7 @@ ms.locfileid: "36169156"
   
 5.  Scegliere **Avanti**.  
   
-6.  Nel **scegliere una connessione a un'origine dati** pagina, selezionare un'origine dati esistente o individuare il server di report e quindi selezionare un'origine dati. Se non è disponibile un'origine dati o non si dispone dell'accesso a un server di report, sarà possibile utilizzare un'origine dati incorporata. Per ulteriori informazioni sulla creazione di un'origine dati incorporata, vedere [esercitazione: creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Nel **scegliere una connessione a un'origine dati** pagina, selezionare un'origine dati esistente o individuare il server di report e quindi selezionare un'origine dati. Se non è disponibile un'origine dati o non si dispone dell'accesso a un server di report, sarà possibile utilizzare un'origine dati incorporata. Per altre informazioni sulla creazione di un'origine dati incorporata, vedere [esercitazione: creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Scegliere **Avanti**.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36169156"
   
 4.  Trascinare Product in **gruppi di colonne,** , quindi posizionarlo sotto Subcategory.  
   
-     L'ordine in cui i campi vengono elencati in **gruppi di colonne** definisce la gerarchia dei gruppi.  
+     L'ordine in cui i campi sono racchiusi **gruppi di colonne** definisce la gerarchia dei gruppi.  
   
      I passaggi 3 e 4 consentono di organizzare i valori per i campi prima in base alla sottocategoria, quindi in base al prodotto.  
   
@@ -159,9 +159,9 @@ ms.locfileid: "36169156"
   
 11. Scegliere **Avanti**.  
   
-12. Nella pagina scegliere un stile, nel riquadro stili, selezionare **ardesia**.  
+12. Nella pagina scegliere un stile di visualizzazione, nel riquadro stili, selezionare **Slate**.  
   
-13. Fare clic su **Fine**.  
+13. Scegliere **Fine**.  
   
      La matrice viene aggiunta all'area di progettazione. Nel riquadro Gruppi di righe vengono visualizzati due gruppi di righe, ovvero Territory e SalesDate. Nel riquadro Gruppi di colonne vengono visualizzati due gruppi di colonne, ovvero Subcategory e Product. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
   
@@ -180,11 +180,11 @@ ms.locfileid: "36169156"
   
 3.  Nel gruppo **Numero** della scheda **Home** fare clic su **Valuta**. I numeri nelle celle verranno visualizzati nel formato di valuta.  
   
-     Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [**$12,345.00**]. Se non presente un valore di valuta di esempio, fare clic su **stili segnaposto** nel **numeri** gruppo e quindi fare clic su **dei valori di esempio**.  
+     Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [**$12,345.00**]. Se non è possibile visualizzare un valore di valuta di esempio, fare clic su **stili segnaposto** nel **numeri** gruppo e quindi fare clic su **valori di esempio**.  
   
 4.  Fare clic sulla cella contenente `[SalesDate]`.  
   
-5.  Nel **numero** gruppo, nell'elenco di riepilogo a discesa, selezionare **data**.  
+5.  Nel **numero** gruppo, dall'elenco a discesa, selezionare **data**.  
   
      Nella cella verrà visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
   
@@ -276,11 +276,11 @@ ms.locfileid: "36169156"
   
 4.  Fare doppio clic su celle e quindi fare clic su **Unisci celle**.  
   
-5.  La cella d'angolo destro e quindi fare clic su **proprietà casella di testo**.  
+5.  Fare clic sulla cella d'angolo e quindi fare clic su **proprietà casella di testo**.  
   
 6.  Fare clic sulla scheda **Riempimento** .  
   
-7.  Fare clic su di (***fx***) sul pulsante per **colore riempimento**.  
+7.  Fare clic sui (***fx***) pulsante **colore di riempimento**.  
   
 8.  Copiare e incollare l'espressione seguente nella casella dell'espressione:  
   
@@ -305,7 +305,7 @@ ms.locfileid: "36169156"
   
 2.  Fare clic sulla casella di testo nella parte superiore del corpo del report che contiene **fare clic per aggiungere il titolo**, quindi premere il tasto CANC.  
   
-3.  Nel **inserire** scheda della barra multifunzione, fare clic su **intestazione** e quindi fare clic su **Aggiungi intestazione**.  
+3.  Nel **inserire** della scheda della barra multifunzione, fare clic su **intestazione** e quindi fare clic su **Aggiungi intestazione**.  
   
      Nella parte superiore del corpo del report verrà aggiunta un'intestazione.  
   
@@ -313,14 +313,14 @@ ms.locfileid: "36169156"
   
 5.  Nella casella di testo digitare **Vendite per territorio, sottocategoria e giorno**.  
   
-6.  Selezionare il testo digitato, pulsante destro del mouse e quindi fare clic su **proprietà Text**.  
+6.  Selezionare il testo digitato, pulsante destro del mouse e quindi fare clic su **proprietà testo**.  
   
     > [!NOTE]  
     >  Per applicare contemporaneamente la formattazione, è necessario che i caratteri siano contigui.  
   
-7.  Nel **proprietà di testo** finestra di dialogo, fare clic su **carattere**.  
+7.  Nel **proprietà di testo** della finestra di dialogo fare clic su **Font**.  
   
-8.  Nel **tipo di carattere** elenco, selezionare **Times New Roman**; in **dimensioni** selezionare **24 pt**in **colore** selezionare  **Bordeaux**e nel **stile** seleziona **corsivo**.  
+8.  Nel **Font** elenco, selezionare **Times New Roman**; nella **dimensioni** selezionare **24 pt**nella **colore** selezionare  **Bordeaux**e nella **stile** seleziona **corsivo**.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -374,7 +374,7 @@ ms.locfileid: "36169156"
   
      Se il riquadro Proprietà non viene visualizzato, fare clic sulla scheda **Visualizza** e selezionare **Proprietà**.  
   
-4.  Verificare che la proprietà CanGrow è impostata su `True`.  
+4.  Verificare che la proprietà CanGrow sia impostata su `True`.  
   
 5.  Ridimensionare la colonna Territory assegnandole una larghezza di circa 1 centimetro ed eliminare il titolo della colonna.  
   
@@ -383,7 +383,7 @@ ms.locfileid: "36169156"
  Il nome dell'area risulterà scritto in senso verticale, dal basso verso l'alto. L'altezza del gruppo di righe Territory dipenderà dalla lunghezza del nome del territorio.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- L'esercitazione sulla creazione di un report matrice è terminata. Per ulteriori informazioni sulle matrici, vedere [tabelle, matrici ed elenchi &#40;Generatore Report e SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [matrici &#40;Generatore Report e SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md), [ Aree dell'area dati Tablix &#40;SSRS e Generatore Report&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), e [celle di area dati Tablix, le righe e colonne &#40;Generatore Report&#41; e SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
+ L'esercitazione sulla creazione di un report matrice è terminata. Per altre informazioni sulle matrici, vedere [tabelle, matrici ed elenchi &#40;Generatore Report e SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [matrici &#40;Generatore Report e SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md), [ Aree dell'area dati Tablix &#40;Report e SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), e [celle di regione dati Tablix, le righe e colonne &#40;Generatore Report&#41; e SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazioni su &#40;Generatore Report&#41;](report-builder-tutorials.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Attività 7: Aggiunta della trasformazione DQS Cleansing al flusso di dati | Documenti Microsoft'
+title: 'Attività 7: Aggiunta della trasformazione DQS Cleansing al flusso di dati | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,33 +10,33 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 10b0fb12ace5a113bbde03cecf803a37b49b1974
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3104a1fc5d3c1e4cb81ba9b74f6d3eb33798dc61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196582"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Attività 7: Aggiunta della trasformazione DQS Cleansing al flusso di dati
-  In questa attività viene aggiunta una trasformazione DQS Cleansing al flusso di dati per pulire i dati di input del fornitore tramite DQS. Vedere **[trasformazione DQS Cleansing](http://msdn.microsoft.com/library/ee677619.aspx)** per ulteriori informazioni sulla trasformazione.  
+  In questa attività viene aggiunta una trasformazione DQS Cleansing al flusso di dati per pulire i dati di input del fornitore tramite DQS. Visualizzare **[trasformazione DQS Cleansing](http://msdn.microsoft.com/library/ee677619.aspx)** per altri dettagli sulla trasformazione.  
   
-1.  Fare doppio clic su **DQS Cleansing** nel **del flusso di dati** scheda e fare clic su **rinominare**. Tipo di **Pulisci dati fornitore**, quindi premere **invio**.  
+1.  Fare doppio clic su **DQS Cleansing** nel **flusso di dati** scheda, quindi scegliere **rinominare**. Tipo di **Pulisci dati fornitore**, quindi premere **invio**.  
   
-2.  Selezionare **Leggi dati fornitore dal File di Excel**; trascinare il collegamento blu per **Pulisci dati fornitore**. I componenti sono ora collegati.  
+2.  Selezionare **Leggi dati fornitore dal File di Excel**; trascinare il collegamento blu al **Pulisci dati fornitore**. I componenti sono ora collegati.  
   
      ![Leggi dati fornitore -> Pulisci dati fornitore](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-01.jpg "Leggi dati fornitore -> Pulisci dati fornitore")  
   
 3.  Fare doppio clic su **Pulisci dati fornitore**.  
   
-4.  Nel **Editor trasformazione DQS Cleansing**, fare clic su **New** accanto al **elenco a discesa gestione connessione Data Quality**.  
+4.  Nel **Editor trasformazione DQS Cleansing**, fare clic su **New** accanto al **gestione connessione Data Quality riepilogo**.  
   
-5.  Nel **gestione connessione DQS Cleansing** della finestra di dialogo tipo **(local)** oppure **periodo** (.) per connettersi al server locale. In questa lezione si presuppone che in un server locale sia installato DQS.  
+5.  Nel **gestione connessione DQS Cleansing** finestra di dialogo, digitare **(locale)** oppure **periodo** (.) per connettersi al server locale. In questa lezione si presuppone che in un server locale sia installato DQS.  
   
 6.  Fare clic su **Test connessione** per testare la connessione al server DQS.  
   
@@ -44,15 +44,15 @@ ms.locfileid: "36170253"
   
 8.  Selezionare **Suppliers** per il **Data Quality Knowledge Base**.  
   
-     ![Editor trasformazione - KB fornitori DQS Cleansing](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-02.jpg "Editor trasformazione - KB fornitori DQS Cleansing")  
+     ![Editor di trasformazione - KB fornitori DQS Cleansing](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-02.jpg "Editor di trasformazione - KB fornitori DQS Cleansing")  
   
-9. Passare il **Mapping** scheda nella parte superiore.  
+9. Passare al **Mapping** scheda nella parte superiore.  
   
 10. Dal **colonne di Input disponibili**, selezionare **Supplier Name**, **ContactEmailAddress**, **Address Line**, **Città**, **Stato**, **paese**, e **CAP** selezionando le caselle di controllo.  
   
-     ![Editor trasformazione - mapping DQS Cleansing](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-03.jpg "Editor trasformazione - mapping DQS Cleansing")  
+     ![Editor di trasformazione - mapping di DQS Cleansing](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-03.jpg "Editor di trasformazione - mapping di DQS Cleansing")  
   
-11. Nel riquadro inferiore, eseguire il mapping di queste colonne mediante gli elenchi di elenco a discesa nel **dominio** colonna:  
+11. Nel riquadro inferiore, eseguire il mapping di queste colonne usando elenchi a discesa nel **dominio** colonna:  
   
     |colonna|Dominio|  
     |------------|------------|  
@@ -64,9 +64,9 @@ ms.locfileid: "36170253"
     |Country|Country|  
     |Zip Code|CAP|  
   
-12. Fare clic su **OK** per chiudere la **Editor trasformazione DQS Cleansing** finestra di dialogo.  
+12. Fare clic su **OK** per chiudere la **Editor trasformazione DQS Cleansing** nella finestra di dialogo.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 8: Aggiunta della trasformazione Suddivisione condizionale per l'Output di pulizia della suddivisione](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [Attività 8: Aggiunta della trasformazione Suddivisione condizionale aggiunta dell'output di pulizia della suddivisione](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

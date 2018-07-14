@@ -1,5 +1,5 @@
 ---
-title: Informazioni sulla generazione incrementale | Documenti Microsoft
+title: Informazioni sulla generazione incrementale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental generation [Analysis Services]
 - Schema Generation Wizard, incremental generation
 - relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38116af87dc9fe02232994aac7085945ce695215
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a22eb09d21e1ef63a52ae7248fd6fa2a54832c15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177068"
 ---
 # <a name="understanding-incremental-generation"></a>Informazioni sulla generazione incrementale
   Dopo la generazione iniziale dello schema, è possibile modificare le definizioni dei cubi e delle dimensioni mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e quindi eseguire di nuovo la Generazione guidata schema. La procedura guidata aggiorna lo schema nel database dell'area di interesse e nella vista origine dati associata in base alle modifiche apportate, mantenendo i dati attualmente esistenti nelle tabelle da rigenerare nella misura massima consentita. Se dopo la generazione iniziale le tabelle sono state modificate, la Generazione guidata schema mantiene tali modifiche in base alle regole seguenti:  
@@ -88,7 +88,7 @@ ms.locfileid: "36169330"
  Se invece si modifica la stringa di connessione dell'origine dei dati impostando un database diverso rispetto alla generazione precedente, non verrà generato alcun errore. Verrà utilizzato il nuovo database senza alcuna modifica al database precedente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire le modifiche a viste origine dati e origini dati](manage-changes-to-data-source-views-and-data-sources.md)   
+ [Gestire modifiche a viste origine dati e origini dati](manage-changes-to-data-source-views-and-data-sources.md)   
  [Generazione guidata schema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   
