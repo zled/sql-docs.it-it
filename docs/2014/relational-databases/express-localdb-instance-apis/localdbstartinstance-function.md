@@ -1,5 +1,5 @@
 ---
-title: Funzione LocalDBStartInstance | Documenti Microsoft
+title: Funzione LocalDBStartInstance | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e484d362d5bc25a5aeddd6ed2ad9fee417837f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 4e2ecc8dbf59ddf108b8090bbcb5ad784b09fe67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242821"
 ---
 # <a name="localdbstartinstance-function"></a>Funzione LocalDBStartInstance
   Avvia l'istanza specificata del database locale di SQL Server Express.  
@@ -55,7 +55,7 @@ HRESULT LocalDBStartInstance(
  [Output] Buffer per archiviare la stringa di connessione nell'istanza del database locale.  
   
  *lpcchSqlConnection*  
- [Input/Output] Nell'input contiene la dimensione del *wszSqlConnection* buffer in caratteri, inclusi gli spazi vuoti finali. In fase di output, se le dimensioni del buffer specificate sono troppo piccole, nel parametro sono contenute le dimensioni del buffer richieste in caratteri, inclusi gli spazi vuoti finali.  
+ [Input/Output] Contiene la dimensione di input il *wszSqlConnection* buffer in caratteri, inclusi gli spazi vuoti finali. In fase di output, se le dimensioni del buffer specificate sono troppo piccole, nel parametro sono contenute le dimensioni del buffer richieste in caratteri, inclusi gli spazi vuoti finali.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  S_OK  

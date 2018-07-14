@@ -8,44 +8,44 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6a76fc29f234418e5f44586f4fb7e121c3395264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 629dd979c00c9a40915c94c5bfe79d28b746f44a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238761"
 ---
 # <a name="polygon"></a>Polygon
-  Oggetto `Polygon` è una superficie bidimensionale archiviata come una sequenza di punti che definiscono un anello di delimitazione esterno e zero o più anelli interni.  
+  Oggetto `Polygon` è una superficie bidimensionale archiviata come una sequenza di punti che definiscono un anello di delimitazione esterno e nessuno o più anelli interni.  
   
 ## <a name="polygon-instances"></a>Istanze Polygon  
  Oggetto `Polygon` istanza può essere formata da un anello che ha almeno tre punti distinti. Oggetto `Polygon` istanza può essere anche vuota.  
   
  L'anello esterno e ogni anello interno di un `Polygon` definiscono il limite. Lo spazio all'interno degli anelli definisce l'interno del `Polygon`.  
   
- Nella figura seguente vengono illustrati esempi di `Polygon` istanze.  
+ La figura seguente mostra esempi di `Polygon` istanze.  
   
  ![Esempi di istanze di geometria Polygon](../../database-engine/media/polygon.gif "Esempi di istanze di geometria Polygon")  
   
  Come indicato nell'illustrazione:  
   
-1.  Figura 1 rappresenta un `Polygon` istanza il cui limite è definito da un anello esterno.  
+1.  Figura 1 è un `Polygon` istanza il cui limite è definito da un anello esterno.  
   
 2.  La figura 2 è un'istanza `Polygon` il cui limite è definito da un anello esterno e due anelli interni. L'area negli anelli interni è parte dell'esterno dell'istanza `Polygon`.  
   
 3.  La figura 3 è un'istanza `Polygon` valida perché i suoi anelli interni si intersecano in un solo punto tangente.  
   
 ### <a name="accepted-instances"></a>Istanze accettate  
- Le istanze `Polygon` accettate sono istanze che possono essere archiviate in una variabile `geometry` o `geography` senza generare un'eccezione. Nell'esempio è accettati `Polygon` istanze:  
+ Le istanze `Polygon` accettate sono istanze che possono essere archiviate in una variabile `geometry` o `geography` senza generare un'eccezione. I seguenti vengono accettati `Polygon` istanze:  
   
 -   Un oggetto vuoto `Polygon` istanza  
   
@@ -85,9 +85,9 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
 ```  
   
 ### <a name="valid-instances"></a>Istanze valide  
- Gli anelli interni di un `Polygon` possibilità di toccare stessi e ogni tangenza punto, ma se gli anelli interni di un `Polygon` incrociano, l'istanza non è valido.  
+ Gli anelli interni di un `Polygon` possono toccare se stessi e ognuno tangenza punto, ma se gli anelli interni di un `Polygon` incrociano, l'istanza non è valida.  
   
- Nell'esempio seguente viene illustrato valido `Polygon` istanze.  
+ L'esempio seguente mostra valido `Polygon` istanze.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20))';  

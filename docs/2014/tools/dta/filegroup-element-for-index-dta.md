@@ -1,5 +1,5 @@
 ---
-title: Elemento filegroup per Index (DTA) | Documenti Microsoft
+title: Elemento filegroup per Index (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Filegroup element [DTA]
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3f1fa6dab61b89954624d6ba546e7ab97479e546
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fad6406d6a719ebd33f48a4cd7c0cf7c2c0e7122
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244111"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Elemento Filegroup per Index (DTA)
   Specifica il filegroup in cui creare l'indice per una configurazione specificata dall'utente.  
@@ -45,13 +45,13 @@ ms.locfileid: "36171139"
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|`string`, lunghezza illimitata.|  
 |**Valore predefinito**|Nessuna.|  
-|**Occorrenza**|Facoltativo. Può utilizzare una sola volta per ogni `Index` elemento. Questo elemento non può essere utilizzato se il `PartitionScheme` e `PartitionColumn` gli elementi vengono specificati per il `Index` elemento.|  
+|**Occorrenza**|Facoltativo. Può usare una sola volta per ogni `Index` elemento. Questo elemento non può essere usato se la `PartitionScheme` e `PartitionColumn` gli elementi vengono specificati per il `Index` elemento.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Elemento di indice &#40;DTA&#41;](index-element-dta.md)|  
+|**Elemento padre**|[Indice elemento &#40;DTA&#41;](index-element-dta.md)|  
 |**Elementi figlio**|Nessuna.|  
   
 ## <a name="example"></a>Esempio  

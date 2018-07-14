@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - concurrent installations [SQL Server]
 - versions [SQL Server], multiple
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - editions [SQL Server], side-by-side installations
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abff13ee6139d74dbe0da10d37ff318d10b47f6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 920e7295d56f3b7bfadf91a9532f638911535d44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170702"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246371"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Utilizzare più versioni e istanze di SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)], di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nello stesso computer. È inoltre possibile aggiornare versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer in cui sono già installate versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per gli scenari di aggiornamento supportati, vedere [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
@@ -74,7 +74,7 @@ ms.locfileid: "36170702"
   
  Esempi: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
- Per ulteriori informazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact installazione, vedere [installare SQL Server 2014 dall'installazione guidata di &#40;programma di installazione&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md). Per altre informazioni su come disinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, vedere [Disinstallare un'istanza esistente di SQL Server &#40;programma di installazione&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
+ Per altre informazioni sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact installazione, vedere [installare SQL Server 2014 dall'installazione guidata di &#40;installazione&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md). Per altre informazioni su come disinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, vedere [Disinstallare un'istanza esistente di SQL Server &#40;programma di installazione&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-side-by-side-with-previous-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Utilizzo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insieme a versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  È possibile installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer in cui sono già in esecuzione istanze di una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se nel computer è già presente un'istanza predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere installato come istanza denominata.  
@@ -82,7 +82,7 @@ ms.locfileid: "36170702"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep non supporta l'installazione side-by-side di istanze predisposte di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello stesso computer. Ad esempio, non è possibile preparare un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] side-by-side a un'istanza predisposta di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Tuttavia, nello stesso computer, è possibile installare side-by-side più istanze predisposte della stessa versione principale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Considerazioni sull'installazione di SQL Server tramite SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
 >   
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non può essere installato side-by-side con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer in cui è in esecuzione Windows Server 2008 R2 Server Core SP1. Per ulteriori informazioni sulle installazioni Server Core, vedere [installare SQL Server 2014 in Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non può essere installato side-by-side con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer in cui è in esecuzione Windows Server 2008 R2 Server Core SP1. Per altre informazioni sulle installazioni Server Core, vedere [installare SQL Server 2014 in Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
  Nella tabella seguente viene descritto il supporto per installazioni side-by-side di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
@@ -101,6 +101,6 @@ ms.locfileid: "36170702"
  [Eseguire l'aggiornamento a SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Compatibilità con le versioni precedenti](../../../2014/getting-started/backward-compatibility.md)   
- [Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
+ [Usare la Preparazione aggiornamento per preparare gli aggiornamenti](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
   

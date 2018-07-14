@@ -1,5 +1,5 @@
 ---
-title: Elemento ScriptCacheProcessingMode (ASSL) | Documenti Microsoft
+title: Elemento ScriptCacheProcessingMode (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ScriptCacheProcessingMode element
 ms.assetid: 95c0723c-69a4-43e7-b743-f712180a7681
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0566ea0411eb3f6574d03e738017d8ca6a5bdf2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de4bac4bfbfa0ab7a6471f107c594194023292a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253073"
 ---
 # <a name="scriptcacheprocessingmode-element-assl"></a>Elemento ScriptCacheProcessingMode (ASSL)
   Indica se il server deve compilare la cache script durante o dopo l'elaborazione.  
@@ -61,7 +61,7 @@ ms.locfileid: "36171308"
 |Elemento padre|[Cube](../objects/cube-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
 |valore|Description|  
@@ -71,7 +71,7 @@ ms.locfileid: "36171308"
   
  L'enumerazione che corrisponde ai valori consentiti di `ScriptCacheProcessingMode` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.ScriptCacheProcessingMode>.  
   
- L'elemento che corrisponde al padre di `ScriptCacheProcessingMode` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Cube>.  
+ L'elemento che corrisponde al padre di `ScriptCacheProcessingMode` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Cube>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

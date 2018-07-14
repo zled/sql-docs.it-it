@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Generare classi dallo Schema RDL mediante lo strumento xsd | Documenti Microsoft'
+title: 'Lezione 2: Generare classi dallo Schema RDL mediante lo strumento xsd | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a81c87f1-7977-4b30-b6ac-b38b3e2b6398
 caps.latest.revision: 13
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 67cbc84882683fcb31d6b42f69274d5166556450
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8a9a92d8c56bba953efc80cf40c999887f63e45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253233"
 ---
 # <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lezione 2: Generazione delle classi dallo schema RDL mediante lo strumento xsd
   Dopo aver creato il progetto di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], è necessario recuperare una copia locale dello schema di definizione del report ed eseguire lo strumento per la definizione di XML Schema (Xsd.exe).  
@@ -32,7 +32,7 @@ ms.locfileid: "36170254"
     http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition/ReportDefinition.xsd  
     ```  
   
-2.  Dopo aver aperto lo schema RDL nel browser, passare il **File** dal menu **Salva con nome**.  
+2.  Dopo aver aperto lo schema RDL nel browser, passare al **File** menu e selezionare **Salva con nome**.  
   
 3.  Passare al percorso in cui è stato creato il progetto di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] e salvare lo schema con il nome ReportDefinition.xsd.  
   
@@ -50,16 +50,16 @@ ms.locfileid: "36170254"
   
      `xsd /c /l:VB /n:SampleRDLSchema ReportDefinition.xsd`  
   
-7.  Aggiungere il progetto ReportDefinition.xsd. Dal **Project** menu, fare clic su **Aggiungi elemento esistente**. Selezionare il percorso del file Reportdefinition XSD, selezionare reportdefinition. xsd e fare clic su **Aggiungi**.  
+7.  Aggiungere il progetto ReportDefinition.xsd. Dal **Project** menu, fare clic su **Aggiungi elemento esistente**. Selezionare il percorso del file Reportdefinition XSD, selezionare reportdefinition. xsd e fare clic su **Add**.  
   
     > [!NOTE]  
-    >  Dopo aver aggiunto il file Reportdefinition XSD al progetto si noterà **Esplora soluzioni** che il file ReportDefinition.cs (con estensione vb) non è presente. Per visualizzare il file, fare clic sul pulsante per espandere/comprimere accanto al file ReportDefinition.xsd.  
+    >  Dopo aver aggiunto il file Reportdefinition XSD al progetto si noterà **Esplora soluzioni** che il file ReportDefinition.cs (VB) non è presente. Per visualizzare il file, fare clic sul pulsante per espandere/comprimere accanto al file ReportDefinition.xsd.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- Nella lezione successiva verrà scritto codice per caricare la definizione di un report da un server di report utilizzando le classi generate dallo schema RDL. Vedere [lezione 3: caricare una definizione del Report dal Server di Report](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
+ Nella lezione successiva verrà scritto codice per caricare la definizione di un report da un server di report utilizzando le classi generate dallo schema RDL. Visualizzare [lezione 3: caricare una definizione del Report dal Server di Report](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'aggiornamento di report mediante le classi generate dallo Schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [Aggiornamento dei report mediante le classi generate dallo Schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

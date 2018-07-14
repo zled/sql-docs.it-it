@@ -1,5 +1,5 @@
 ---
-title: Grafico delle finestre di dialogo (Generatore Report e SSRS) | Documenti Microsoft
+title: Grafico delle finestre di dialogo (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3a62e345-d67f-4387-a7ca-e5c4728a7b16
 caps.latest.revision: 4
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: dbecdef835db147b8737a9d2c2d4ea29af4ba6e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 975a6225e4ec863a7fa6ac7697489099fab713ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266317"
 ---
 # <a name="chart-dialog-boxes-report-builder-and-ssrs"></a>Finestre di dialogo relative ai grafici (Generatore report e SSRS)
   In questa sezione sono contenuti argomenti della Guida relativi ad alcune finestre di dialogo dei grafici. In alternativa, è possibile accedere alla Guida premendo F1 o facendo clic sul pulsante ? visualizzato nella finestra di dialogo.  

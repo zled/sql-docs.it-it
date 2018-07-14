@@ -1,5 +1,5 @@
 ---
-title: Riferimento all'interfaccia utente di configurazione guidata del pacchetto | Documenti Microsoft
+title: Riferimento all'interfaccia utente di configurazione guidata del pacchetto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.configwizard.selectobjects.f1
 - sql12.dts.configwizard.selecconfigtype.f1
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e88427ce2a7450e2e03638254da720d0c464fb8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a95f28077a06d52d8b597cae8d6a36d5cd1d502
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322431"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Riferimento all'interfaccia utente della Configurazione guidata pacchetti
   Usare la **Configurazione guidata pacchetto** per creare configurazioni tramite cui è possibile aggiornare le proprietà di un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e i relativi oggetti in fase di esecuzione. Questa procedura guidata viene eseguita quando si aggiunge una nuova configurazione o se ne modifica una esistente nella finestra di dialogo **Libreria configurazioni pacchetto** . Per aprire la finestra di dialogo **Libreria configurazioni pacchetto**, selezionare **Configurazioni pacchetto** nel menu **SSIS** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md).  
@@ -160,6 +160,6 @@ ms.locfileid: "36171062"
  Consente di creare la configurazione e uscire dalla **Configurazione guidata pacchetto**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare le configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)  
+ [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)  
   
   

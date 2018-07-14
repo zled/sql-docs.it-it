@@ -1,5 +1,5 @@
 ---
-title: Dimensioni elemento (ASSL) | Documenti Microsoft
+title: Dimensioni elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Dimensions element
 ms.assetid: 104e3154-92e9-4c6b-9cf3-e3f3fc712b28
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da68ed1367dd1fe2a212b76f5e0261614ca4dc91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ff15cecd5e5d4451a580d8ee73922dc4ab05364
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241611"
 ---
 # <a name="dimensions-element-assl"></a>Elemento Dimensions (ASSL)
   Contiene la raccolta di dimensioni associate all'elemento padre.  
@@ -60,10 +60,10 @@ ms.locfileid: "36170457"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[Aggregazione](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [AggregationInstance](../objects/aggregationinstance-element-assl.md), [cubo](../objects/cube-element-assl.md), [Database](../objects/database-element-assl.md), [ MeasureGroup](../objects/group-element-assl.md), [prospettiva](../objects/perspective-element-assl.md)|  
+|Elementi padre|[Aggregazione](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [AggregationInstance](../objects/aggregationinstance-element-assl.md), [cubo](../objects/cube-element-assl.md), [Database](../objects/database-element-assl.md), [ Elemento MeasureGroup](../objects/group-element-assl.md), [prospettiva](../objects/perspective-element-assl.md)|  
 |Elementi figlio|[Dimension](../objects/dimension-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.DimensionCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

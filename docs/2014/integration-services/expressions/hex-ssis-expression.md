@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hexadecimal data
 - HEX function
@@ -16,13 +16,13 @@ ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9db4903433f6eba83362a510442b0be45d54833
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72e5b5982e8128169cfdc2431227d410be409b23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217771"
 ---
 # <a name="hex-ssis-expression"></a>HEX (espressione SSIS)
   Viene restituita una stringa che rappresenta il valore esadecimale di un valore integer.  
@@ -41,7 +41,7 @@ HEX(integer_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  HEX restituisce Null se *integer_expression* è Null.  
   
  L'argomento *integer_expression* argomento deve valutare un numero intero. Per altre informazioni, vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md).  
@@ -80,6 +80,6 @@ HEX(@LocaleID)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md)  
+ [Le funzioni &#40;espressione di SSIS&#41;](functions-ssis-expression.md)  
   
   

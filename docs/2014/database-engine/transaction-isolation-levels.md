@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b9c9b3cc1259ca1c905cd25e9d8379eb7ecc4f87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7fb341cb36e97fbd06f38363c84d87f975d23eed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329961"
 ---
 # <a name="transaction-isolation-levels"></a>Livelli di isolamento delle transazioni
   Di seguito sono indicati i livelli di isolamento supportati per le transazioni che accedono a tabelle ottimizzate per la memoria.  
@@ -34,15 +34,15 @@ ms.locfileid: "36171508"
   
  Il livello di isolamento della transazione può essere specificato come parte del blocco atomico di una stored procedure compilata in modo nativo. Per altre informazioni, vedere [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql). Quando si accede a tabelle ottimizzate per la memoria da codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato, è possibile specificare il livello di isolamento tramite hint a livello di tabella.  
   
- È necessario specificare il livello di isolamento delle transazioni quando si definisce una stored procedure compilata in modo nativo. È necessario specificare il livello di isolamento in hint di tabella quando si accede alle tabelle ottimizzate per la memoria da transazioni utente in codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato. Per altre informazioni, vedere [linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ È necessario specificare il livello di isolamento delle transazioni quando si definisce una stored procedure compilata in modo nativo. È necessario specificare il livello di isolamento in hint di tabella quando si accede alle tabelle ottimizzate per la memoria da transazioni utente in codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato. Per altre informazioni, vedere [linee guida per i livelli di isolamento delle transazioni con tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
- Il livello di isolamento READ COMMITTED è supportato per le tabelle ottimizzate per la memoria con transazioni in modalità autocommit. READ COMMITTED non è valido nelle transazioni utente o in un blocco atomico. READ COMMITTED non è invece supportato con le transazioni utente implicite o esplicite. Il livello di isolamento READ_COMMITTED_SNAPSHOT è supportato per le tabelle ottimizzate per la memoria con transazioni in modalità autocommit e solo se la query non accede alle tabelle basate su disco. Alle transazioni avviate tramite codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato con isolamento SNAPSHOT non è inoltre consentito accedere alle tabelle ottimizzate per la memoria. Le transazioni che utilizzano codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato con isolamento REPEATABLE READ o SERIALIZABLE devono accedere alle tabelle ottimizzate per la memoria utilizzando il livello di isolamento SNAPSHOT. Per ulteriori informazioni su questo scenario, vedere [transazioni tra contenitori](cross-container-transactions.md).  
+ Il livello di isolamento READ COMMITTED è supportato per le tabelle ottimizzate per la memoria con transazioni in modalità autocommit. READ COMMITTED non è valido nelle transazioni utente o in un blocco atomico. READ COMMITTED non è invece supportato con le transazioni utente implicite o esplicite. Il livello di isolamento READ_COMMITTED_SNAPSHOT è supportato per le tabelle ottimizzate per la memoria con transazioni in modalità autocommit e solo se la query non accede alle tabelle basate su disco. Alle transazioni avviate tramite codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato con isolamento SNAPSHOT non è inoltre consentito accedere alle tabelle ottimizzate per la memoria. Le transazioni che utilizzano codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato con isolamento REPEATABLE READ o SERIALIZABLE devono accedere alle tabelle ottimizzate per la memoria utilizzando il livello di isolamento SNAPSHOT. Per altre informazioni su questo scenario, vedere [transazioni tra contenitori](cross-container-transactions.md).  
   
  READ COMMITTED è il livello di isolamento predefinito in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando il livello di isolamento della sessione è READ COMMITTED o inferiore, è possibile effettuare una delle operazioni seguenti:  
   
 -   Utilizzare in modo esplicito un hint superiore del livello di isolamento per accedere alla tabella ottimizzata per la memoria, ad esempio WITH (SNAPSHOT).  
   
--   Specificare l'opzione del set `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, tramite cui verrà impostato il livello di isolamento per le tabelle ottimizzate per la memoria su SNAPSHOT (come se si includessero hint WITH(SNAPSHOT) in ogni tabella ottimizzata per la memoria). Per ulteriori informazioni `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, vedere [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+-   Specificare l'opzione del set `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, tramite cui verrà impostato il livello di isolamento per le tabelle ottimizzate per la memoria su SNAPSHOT (come se si includessero hint WITH(SNAPSHOT) in ogni tabella ottimizzata per la memoria). Per altre informazioni sulle `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, vedere [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  In alternativa, se il livello di isolamento della sessione è READ COMMITTED, è possibile utilizzare le transazioni in modalità autocommit.  
   
@@ -84,8 +84,8 @@ ms.locfileid: "36171508"
  Errore 41325. Impossibile eseguire il commit della transazione corrente a causa di un errore di convalida serializzabile.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sulle transazioni nelle tabelle con ottimizzazione per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [Linee guida per la logica di riesecuzione per le transazioni nelle tabelle con ottimizzazione per la memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
+ [Informazioni sulle transazioni nelle tabelle ottimizzate per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Linee guida per i livelli di isolamento delle transazioni con tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [Linee guida per la logica di riesecuzione per le transazioni in tabelle con ottimizzazione per la memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

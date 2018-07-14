@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report history [Reporting Services], adding snapshots
 - historical data [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9d7c8723311845f7e9e7ba8cc6ecda6f3a37cbc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fb2c755b95a31c5c7892b6a9dcb192f250a46e93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246341"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>Aggiungere uno snapshot alla cronologia del report (Gestione report)
   La cronologia di un report è una raccolta di snapshot del report creati nel tempo. Uno snapshot del report indica un report che include informazioni sul layout e i risultati di query recuperati in un momento specifico. Diversamente dai report su richiesta, per i quali vengono recuperati risultati di query aggiornati quando si seleziona il report, gli snapshot dei report vengono elaborati in base a una pianificazione e quindi salvati nel server di report. Quando si seleziona uno snapshot per la visualizzazione, il server di report recupera il report archiviato dal database del server di report e visualizza i dati e il layout del report aggiornati al momento della creazione dello snapshot.  
@@ -41,7 +41,7 @@ ms.locfileid: "36170526"
 3.  Fare clic su **Nuovo snapshot**. Verrà creato un nuovo snapshot nella colonna **Data ultima esecuzione** .  
   
     > [!NOTE]  
-    >  A tale scopo la cronologia del report dovrà essere configurata dall'amministratore su **Consenti creazione manuale della cronologia**. Per altre informazioni, vedere [cronologia del Report limite &#40;gestione Report&#41;](../reports/limit-report-history-report-manager.md).  
+    >  A tale scopo la cronologia del report dovrà essere configurata dall'amministratore su **Consenti creazione manuale della cronologia**. Per altre informazioni, vedere [limitare la cronologia dei Report &#40;gestione Report&#41;](../reports/limit-report-history-report-manager.md).  
   
 4.  Fare clic su **Applica**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36170526"
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare le proprietà di esecuzione per un Report &#40;gestione Report&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Apertura e chiusura di un Report &#40;gestione Report&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Aprire e chiudere un Report &#40;gestione Report&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [Limitare la cronologia dei report &#40;Gestione report&#41;](../reports/limit-report-history-report-manager.md)   
  [Pianificazioni](../subscriptions/schedules.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)  

@@ -1,5 +1,5 @@
 ---
-title: Tipo di elemento (Partition) (ASSL) | Documenti Microsoft
+title: Tipo di elemento (Partition) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 61c022fe-8c41-4f62-9808-c386e05eb547
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 29401c702cce49ed46415a1708da5fec9138fa9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f51966789f33cd535ff0322ec2f50caa392f5ccc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332791"
 ---
 # <a name="type-element-partition-assl"></a>Elemento Type (Partition) (ASSL)
-  Contiene il tipo del [partizione](../objects/partition-element-assl.md) elemento.  
+  Contiene il tipo dei [partizione](../objects/partition-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36170877"
 |Elemento padre|[Partizione](../objects/partition-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
@@ -71,7 +71,7 @@ ms.locfileid: "36170877"
   
  L'enumerazione che corrisponde ai valori consentiti di `Type` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.PartitionType>.  
   
- L'elemento che corrisponde al padre di `Type` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Partition>.  
+ L'elemento che corrisponde al padre di `Type` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

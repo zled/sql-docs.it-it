@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 3: Modifica di misure, attributi e gerarchie | Documenti Microsoft'
+title: 'Lezione 3: Modifica di misure, attributi e gerarchie | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: e985dc25323960ccaab5ad9c320bf12bd14bf43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f6d1f397b5950144ed898e4907c7ea30bc582f1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255493"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lezione 3: Modifica di misure, attributi e gerarchie
   Dopo aver definito il cubo iniziale, è possibile rendere il cubo maggiormente utile e semplice. A tale scopo, aggiungere le gerarchie che supportano la navigazione e l'aggregazione a vari livelli, applicare formati a una misura specifica e definire calcoli e relazioni.  
@@ -41,11 +41,11 @@ ms.locfileid: "36171331"
  [Modifica della dimensione Date](lesson-3-4-modifying-the-date-dimension.md)  
  In questa attività verranno illustrate le procedure per definire una gerarchia utente, modificare i nomi dei membri degli attributi e utilizzare chiavi composte per specificare membri degli attributi univoci.  
   
- [Esplorazione del cubo distribuito](lesson-3-5-browsing-the-deployed-cube.md)  
+ [Esplorazione di un cubo distribuito](lesson-3-5-browsing-the-deployed-cube.md)  
  In questa attività verranno illustrate le procedure per esplorare i dati dei cubi tramite l'apposita finestra in Progettazione cubi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)   
+ [Scenario di Analysis Services Tutorial](analysis-services-tutorial-scenario.md)   
  [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

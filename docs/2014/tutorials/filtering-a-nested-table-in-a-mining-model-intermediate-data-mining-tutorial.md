@@ -1,5 +1,5 @@
 ---
-title: Il filtro di una tabella nidificata in un modello di Data Mining (esercitazione intermedia di Data Mining) | Documenti Microsoft
+title: Il filtro di una tabella nidificata in un modello di Data Mining (esercitazione intermedia di Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0a3ae0e5-897b-4898-a60d-5455eec3d305
 caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 9b11971c6e6005c7e1d65a1728e8b8aac818b41c
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: d39ec6f60a9d281f6e1a76f26da585b555066dcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273797"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Applicazione di filtri a una tabella nidificata in un modello di data mining (Esercitazione intermedia sul data mining)
   Dopo avere creato ed esplorato il modello, si decide che si desidera concentrarsi su un subset dei dati sui clienti. Potrebbe ad esempio essere necessario analizzare solo gli acquisti relativi a uno specifico articolo o analizzare i dati demografici dei clienti che non hanno effettuato acquisti in un determinato periodo.  
@@ -33,17 +33,17 @@ ms.locfileid: "36312319"
   
 #### <a name="to-create-and-modify-a-copy-of-the-association-model"></a>Per creare e modificare una copia del modello di associazione  
   
-1.  Nel **modelli di Data Mining** scheda della [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], fare doppio clic sui `Association` del modello e selezionare **nuovo modello di Data Mining**.  
+1.  Nel **modelli di Data Mining** scheda della finestra [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], fare doppio clic sui `Association` del modello e selezionare **nuovo modello di Data Mining**.  
   
-2.  Per **Model Name**, tipo `Association Filtered`. Per **nome dell'algoritmo**, selezionare **Microsoft Association Rules**. Fare clic su **OK**.  
+2.  Per la **Model Name**, tipo `Association Filtered`. Per la **nome dell'algoritmo**, selezionare **Microsoft Association Rules**. Fare clic su **OK**.  
   
-3.  Nella colonna per il modello Association Filtered, fare clic sulla riga IncomeGroup e modificare il valore da **Ignore** alla **Input**.  
+3.  Nella colonna per il modello Association Filtered, fare clic sulla riga IncomeGroup e modificare il valore da **Ignore** al **Input**.  
   
  Il passaggio successivo consiste nella creazione di un filtro sulla tabella del case nel nuovo modello di associazione. Il filtro passerà al modello solo i clienti nell'area di destinazione o con il livello di reddito di destinazione. Si aggiungerà quindi un secondo set di condizioni di filtro per specificare che il modello utilizza solo i clienti i cui acquisti contengono almeno un articolo.  
   
 #### <a name="to-add-a-filter-to-a-mining-model"></a>Per aggiungere un filtro a un modello di data mining  
   
-1.  Nel **modelli di Data Mining** scheda, il modello Association Filtered e scegliere **Imposta filtro modello**.  
+1.  Nel **modelli di Data Mining** scheda, fare clic sul modello Association Filtered, quindi selezionare **Imposta filtro modello**.  
   
 2.  Nella finestra di dialogo **Filtro modello** fare clic sulla riga superiore nella griglia della casella di testo **Colonna struttura di data mining** .  
   
@@ -51,29 +51,29 @@ ms.locfileid: "36312319"
   
      L'icona a sinistra della casella di testo cambia per indicare che l'elemento selezionato è una colonna.  
   
-4.  Fare clic sui **operatore** casella di testo e selezionare il **=** operatore dall'elenco.  
+4.  Fare clic sui **Operator** casella di testo e selezionare il **=** operatore dall'elenco.  
   
-5.  Fare clic sui **valore** casella di testo e digitare `High` nella casella.  
+5.  Scegliere il **valore** casella di testo e digitare `High` nella casella.  
   
 6.  Fare clic sulla riga successiva nella griglia.  
   
-7.  Fare clic sui **e/o** casella di testo nella riga successiva della griglia e selezionare **o**.  
+7.  Scegliere il **e/o** casella di testo nella riga successiva della griglia e selezionare **o**.  
   
 8.  Nel **colonna della struttura di Data Mining** casella di testo, selezionare IncomeGroup. Nel **valore** casella di testo, digitare `Moderate`.  
   
-     La condizione di filtro creata viene automaticamente aggiunto per il **espressione** casella di testo e dovrebbe essere visualizzata come indicato di seguito:  
+     La condizione di filtro creata viene aggiunto automaticamente per il **espressione** casella di testo e dovrebbe essere visualizzata come indicato di seguito:  
   
      `[IncomeGroup] = 'High' OR [IncomeGroup] = 'Moderate'`  
   
 9. Fare clic sulla riga successiva nella griglia, mantenendo l'impostazione predefinita, l'operatore **AND**.  
   
-10. Per **operatore**, lasciare il valore predefinito **Contains**. Fare clic sui **valore** casella di testo.  
+10. Per la **Operator**, il valore predefinito, lasciare **Contains**. Scegliere il **valore** casella di testo.  
   
-11. Nel **filtro** la prima riga nella finestra di dialogo **colonna della struttura di Data Mining**selezionare `Model`.  
+11. Nel **filtro** nella prima riga nella finestra di dialogo **colonna della struttura di Data Mining**, selezionare `Model`.  
   
-12. Per **operatore**, selezionare **IS NOT NULL**. Lasciare il **valore** casella di testo vuota. Fare clic su **OK**.  
+12. Per la **Operator**, selezionare **IS NOT NULL**. Lasciare il **valore** selezionare la casella di testo. Fare clic su **OK**.  
   
-     La condizione di filtro nel **espressione** casella di testo relativa la **filtro modello** finestra di dialogo viene aggiornata automaticamente per includere la nuova condizione nella tabella nidificata. L'espressione completa è la seguente:  
+     La condizione di filtro nel **espressione** casella di testo delle **filtro modello** nella finestra di dialogo viene automaticamente aggiornata per includere la nuova condizione nella tabella nidificata. L'espressione completa è la seguente:  
   
      `[IncomeGroup] = 'High' OR [IncomeGroup] = 'Moderate' AND EXISTS SELECT * FROM [vAssocSeqLineItems] WHERE [Model] <> NULL).`  
   
@@ -81,21 +81,21 @@ ms.locfileid: "36312319"
   
 #### <a name="to-enable-drillthrough-and-to-process-the-filtered-model"></a>Per abilitare il drill-through ed elaborare il modello filtrato  
   
-1.  Nel **modelli di Data Mining** scheda, fare doppio clic sui `Association Filtered` del modello e selezionare **proprietà**.  
+1.  Nel **modelli di Data Mining** scheda, fare doppio clic il `Association Filtered` del modello, quindi selezionare **proprietà**.  
   
 2.  Modifica il **AllowDrillThrough** proprietà **True**.  
   
-3.  Fare doppio clic sui `Association Filtered` modello di data mining e selezionare **modello di processo**.  
+3.  Fare doppio clic il `Association Filtered` modello di data mining e selezionare **modello di processo**.  
   
-4.  Fare clic su **Yes** nel messaggio di errore per distribuire il nuovo modello per il [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
+4.  Fare clic su **Yes** nel messaggio di errore per distribuire il nuovo modello di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
 5.  Nel **Elabora struttura di Data Mining** finestra di dialogo, fare clic su **eseguire**.  
   
-6.  Elaborazione completata fare clic su **Chiudi** per uscire dall'installazione di **stato elaborazione** finestra di dialogo e fare clic su **Chiudi** per uscire dal **Elabora struttura di Data Mining**  finestra di dialogo.  
+6.  Una volta completata l'elaborazione fare clic su **Chiudi** per uscire il **stato elaborazione** la finestra di dialogo e fare clic su **Chiudi** per uscire dal **Elabora struttura di Data Mining**  nella finestra di dialogo.  
   
  È possibile verificare tramite Microsoft Generic Content Tree Viewer e controllando il valore di NODE_SUPPORT che il modello filtrato contenga meno case del modello originale.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il filtro della tabella nidificata che è stato creato controlla solo la presenza di almeno una riga nella tabella nidificata, tuttavia è anche possibile creare condizioni di filtro che verifichino la presenza di prodotti specifici.  È ad esempio possibile creare il filtro seguente:  
   
 ```  
@@ -105,16 +105,16 @@ ms.locfileid: "36312319"
   
  Questa istruzione indica che i clienti della tabella del case devono essere limitati a quelli che hanno acquistato una bottiglia d'acqua (Water Bottle). Tuttavia, poiché il numero di attributi della tabella nidificata è potenzialmente illimitato, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non viene fornito un elenco di valori possibili da cui effettuare una selezione. È invece necessario digitare il valore esatto.  
   
- È possibile fare clic **modifica Query** per modificare manualmente l'espressione di filtro. Se tuttavia si modifica manualmente una parte di un'espressione di filtro, la griglia verrà disabilitata e da allora in poi sarà necessario utilizzare l'espressione di filtro solo in modalità di modifica di testo. Per ripristinare la modalità di modifica della griglia, è necessario cancellare l'espressione di filtro e ricominciare.  
+ È possibile fare clic su **modifica Query** modificare manualmente l'espressione di filtro. Se tuttavia si modifica manualmente una parte di un'espressione di filtro, la griglia verrà disabilitata e da allora in poi sarà necessario utilizzare l'espressione di filtro solo in modalità di modifica di testo. Per ripristinare la modalità di modifica della griglia, è necessario cancellare l'espressione di filtro e ricominciare.  
   
 > [!WARNING]  
 >  Non è possibile utilizzare l'operatore LIKE nel filtro di una tabella nidificata.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Stima delle associazioni &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
+ [Stima delle associazioni &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modello filtro sintassi ed esempi &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Esempi e sintassi del filtro del modello &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
  [Filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
 - properties [Integration Services]
@@ -22,13 +22,13 @@ ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0128e5236f517ba9d466f8517145fa44170d0657
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 760bb125a4406179f785c3714b8c0c2a7cfef3b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322621"
 ---
 # <a name="view-package-objects"></a>Visualizzazione di oggetti di pacchetto
   In Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] è disponibile la scheda **Esplora pacchetti** , che consente di visualizzare i pacchetti in una modalità simile a quella di Esplora risorse. La visualizzazione riflette la gerarchia dei contenitori dell'architettura di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Il contenitore del pacchetto si trova al livello principale della gerarchia. Espandendo il pacchetto è possibile visualizzare le connessioni, gli eseguibili, i gestori di eventi, i provider di log, i vincoli di precedenza e le variabili del pacchetto.  
@@ -45,13 +45,13 @@ ms.locfileid: "36170830"
   
 ### <a name="to-view-package-content"></a>Per visualizzare il contenuto di un pacchetto  
   
--   [Visualizzazione degli oggetti di pacchetto in Esplora pacchetti](../../2014/integration-services/view-package-objects-in-package-explorer.md)  
+-   [Visualizzazione degli oggetti dei pacchetti in Esplora pacchetti](../../2014/integration-services/view-package-objects-in-package-explorer.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di Integration Services](control-flow/integration-services-tasks.md)   
  [Contenitori in Integration Services](control-flow/integration-services-containers.md)   
  [Vincoli di precedenza](control-flow/precedence-constraints.md)   
- [Servizi di integrazione &#40;SSIS&#41; variabili](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; le variabili](integration-services-ssis-variables.md)   
  [Gestori eventi di Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)   
  [Registrazione di Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   

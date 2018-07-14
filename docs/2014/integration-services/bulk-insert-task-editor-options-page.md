@@ -1,5 +1,5 @@
 ---
-title: Bulk Insert Task Editor (pagina Opzioni) | Documenti Microsoft
+title: Bulk Insert Task Editor (pagina Opzioni) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.options.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a1a958108c8b6975c3aa362ba6512b995759ff99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b878f48473e70d61f6de2a02c9268eb4fc91f0ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326211"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Editor attività Inserimento bulk (pagina Opzioni)
   Utilizzare la pagina **Opzioni** della finestra di dialogo **Editor attività Inserimento bulk** per impostare le proprietà relative all'operazione di inserimento bulk. L'attività Inserimento bulk consente di copiare grandi quantità di dati all'interno di una vista o tabella di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -65,7 +65,7 @@ ms.locfileid: "36171493"
 >  Ogni riga che non è possibile importare tramite l'operazione di caricamento bulk viene considerata un errore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività inserimento bulk &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor attività inserimento bulk &#40;pagina di connessione&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [Pagina espressioni](expressions/expressions-page.md)   

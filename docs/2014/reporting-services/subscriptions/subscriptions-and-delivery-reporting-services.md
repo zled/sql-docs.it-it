@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - reports [Reporting Services], distributing
@@ -24,13 +24,13 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 083cadfe123af29861e4bfccd8ed6182705003c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa14730ce105b17e3eb016effd2c409fc4a37851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268607"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   Una sottoscrizione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è una configurazione che recapita un report in un momento specifico o in risposta a un evento e in un formato file specificato. Ad esempio, è possibile salvare il report MonthlySales.rdl ogni mercoledì come documento di Microsoft Word in una condivisione file. Le sottoscrizioni possono essere usate per pianificare e automatizzare il recapito di un report e con un set specifico di valori di parametri di report.  
@@ -42,11 +42,11 @@ ms.locfileid: "36170968"
  Le sottoscrizioni non sono disponibili in tutte le edizioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 > [!NOTE]  
->  A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è possibile trasferire la proprietà di una sottoscrizione a livello di codice. Non è disponibile alcuna interfaccia utente da utilizzare per trasferire la proprietà delle sottoscrizioni. Per altre informazioni, vedere <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>e [utilizzare PowerShell per modifica ed elenco Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
+>  A partire [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è possibile trasferire la proprietà di una sottoscrizione a livello di codice. Non è disponibile alcuna interfaccia utente da utilizzare per trasferire la proprietà delle sottoscrizioni. Per altre informazioni, vedere <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>e [usare PowerShell per modificare ed elenco Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  **Contenuto dell'argomento:**  
   
--   [Scenari di sottoscrizione e recapito](#bkmk_subscription_scenarios)  
+-   [Sottoscrizione e gli scenari di distribuzione](#bkmk_subscription_scenarios)  
   
 -   [Sottoscrizioni standard e guidate dai dati](#bkmk_standard_and_datadriven)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36170968"
   
 -   [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](manage-subscription-owners-and-run-subscription-powershell.md)  
   
-##  <a name="bkmk_subscription_scenarios"></a> Scenari di sottoscrizione e recapito  
+##  <a name="bkmk_subscription_scenarios"></a> Sottoscrizione e gli scenari di distribuzione  
  È possibile configurare le opzioni di recapito per ogni sottoscrizione e le opzioni disponibili sono determinate dall'estensione di recapito scelta. Un'estensione per il recapito è un modulo che supporta alcune modalità di distribuzione. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include alcune estensioni di recapito e terze parti potrebbero mettere a disposizione estensioni aggiuntive.  
   
  Uno sviluppatore può creare estensioni per il recapito personalizzate per supportare scenari aggiuntivi. Per altre informazioni, vedere [Implementing a Delivery Extension](../extensions/delivery-extension/implementing-a-delivery-extension.md).  
@@ -108,7 +108,7 @@ ms.locfileid: "36170968"
 |-----------------|-----------------|  
 |Autorizzazioni|È necessario poter accedere al report. Per poter sottoscrivere un report, è necessario disporre delle autorizzazioni necessarie per visualizzarlo.<br /><br /> L'assegnazione di ruolo deve includere l'attività Gestione di sottoscrizioni individuali.|  
 |Credenziali archiviate.|Per creare una sottoscrizione, è necessario che per il report siano usate credenziali archiviate oppure nessuna credenziale per poter recuperare i dati in fase di esecuzione. Non è possibile sottoscrivere un report configurato per utilizzare credenziali rappresentate o delegate dell'utente corrente per connettersi a un'origine dati esterna. Le credenziali archiviate possono essere un account di Windows o un account utente del database. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> e si dispone delle autorizzazioni necessarie per visualizzare il report e creare sottoscrizioni individuali. È necessario che l'opzione**Eventi pianificati e recapito report** sia abilitata sul server di report. Per altre informazioni, vedere [creare e gestire sottoscrizioni per server di Report in modalità nativa](../create-manage-subscriptions-native-mode-report-servers.md).|  
-|Valori dipendenti dall'utente in un report|Per le sole sottoscrizioni standard è possibile creare sottoscrizioni a report in cui le informazioni sull'account utente sono incluse in un filtro o sono disponibili sotto forma di testo visualizzato nel report. Nel report, viene specificato il nome dell'account utente tramite un `User!UserID` espressione che corrisponde all'utente corrente. Quando si crea una sottoscrizione, l'autore della sottoscrizione viene considerato come utente corrente.|  
+|Valori dipendenti dall'utente in un report|Per le sole sottoscrizioni standard è possibile creare sottoscrizioni a report in cui le informazioni sull'account utente sono incluse in un filtro o sono disponibili sotto forma di testo visualizzato nel report. Nel report, viene specificato il nome dell'account utente tramite un `User!UserID` espressione che viene risolta per l'utente corrente. Quando si crea una sottoscrizione, l'autore della sottoscrizione viene considerato come utente corrente.|  
 |Nessuna sicurezza degli elementi del modello|Non è possibile sottoscrivere un report di Generatore report che utilizza come origine dei dati un modello contenente impostazioni di sicurezza degli elementi del modello. La restrizione riguarda solo i report che utilizzano la sicurezza degli elementi del modello.|  
 |Valori dei parametri|Se il report utilizza parametri, è necessario specificare un valore di parametro con il report stesso oppure nella sottoscrizione che viene definita. Se nel report sono stati specificati valori predefiniti, è possibile impostare il valore di parametro per utilizzare l'impostazione predefinita.|  
   

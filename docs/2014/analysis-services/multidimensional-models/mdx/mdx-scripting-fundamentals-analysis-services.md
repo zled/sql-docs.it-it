@@ -1,5 +1,5 @@
 ---
-title: MDX (Analysis Services) di nozioni fondamentali sullo Scripting | Documenti Microsoft
+title: MDX (Analysis Services) di nozioni fondamentali sullo Scripting | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cubes [Analysis Services], scripts
 - calculations [Analysis Services], scripts
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], scripts
 ms.assetid: fdecb3ce-7c87-4bab-8000-532ba7a29f96
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f4cdd712fff0de36e051f371cae58a3ff8543628
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01f105ab8cd05029ac4dc7d747f5b0c016745962
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325191"
 ---
 # <a name="mdx-scripting-fundamentals-analysis-services"></a>Nozioni fondamentali sullo scripting MDX (Analysis Services)
   In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], uno script MDX è costituito da una o più espressioni o istruzioni MDX che popolano un cubo tramite calcoli.  
@@ -41,13 +41,13 @@ ms.locfileid: "36170467"
   
 |Argomento|Description|  
 |-----------|-----------------|  
-|[Lo Script MDX di base &#40;MDX&#41;](the-basic-mdx-script-mdx.md)|Include informazioni dettagliate sullo script MDX di base, compreso lo script MDX predefinito inserito in ogni cubo, e sui principi generali di funzionamento degli script MDX nei cubi di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Script MDX di base &#40;MDX&#41;](the-basic-mdx-script-mdx.md)|Include informazioni dettagliate sullo script MDX di base, compreso lo script MDX predefinito inserito in ogni cubo, e sui principi generali di funzionamento degli script MDX nei cubi di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Gestione di ambito e contesto &#40;MDX&#41;](managing-scope-and-context-mdx.md)|Descrive come usare l'istruzione [CALCULATE](/sql/mdx/mdx-scripting-calculate), l'istruzione [SCOPE](/sql/mdx/mdx-scripting-scope) e la funzione [This](/sql/mdx/this-mdx) per gestire il contesto e l'ambito in uno script MDX.|  
-|[Utilizzo di variabili e parametri di &#40;MDX&#41;](using-variables-and-parameters-mdx.md)|Descrive come usare le variabili e i parametri in uno script MDX.|  
+|[Utilizzo di variabili e parametri &#40;MDX&#41;](using-variables-and-parameters-mdx.md)|Descrive come usare le variabili e i parametri in uno script MDX.|  
 |[Gestione degli errori &#40;MDX&#41;](error-handling-mdx.md)|Illustra la gestione degli errori in uno script MDX.|  
 |[MDX è supportato &#40;MDX&#41;](supported-mdx-mdx.md)|Include un elenco di istruzioni, funzioni e operatori MDX supportati negli script MDX.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti al linguaggio MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)  
+ [Riferimento al linguaggio MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)  
   
   

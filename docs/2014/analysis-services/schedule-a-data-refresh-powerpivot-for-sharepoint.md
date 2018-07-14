@@ -1,5 +1,5 @@
 ---
-title: Pianificare un aggiornamento di dati (PowerPivot per SharePoint) | Documenti Microsoft
+title: Pianificare un aggiornamento di dati (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 822f4a825e359c2e6e8ed69711bfd95fd3bd4eab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: fbabf680ed67f1b2e144287764d16447d9467a43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325151"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Pianificare un aggiornamento dati (PowerPivot per SharePoint)
   È possibile pianificare aggiornamenti automatici dei dati PowerPivot in una cartella di lavoro di Excel pubblicata in un sito di SharePoint.  
@@ -36,7 +36,7 @@ ms.locfileid: "36170905"
   
  [Panoramica dell'aggiornamento dati](#intro)  
   
- [Abilitare e pianificare l'aggiornamento dei dati](#drenablesched)  
+ [Abilitare e pianificare l'aggiornamento dati](#drenablesched)  
   
  [Verificare l'aggiornamento dati](#drverify)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36170905"
   
  La creazione di pianificazioni granulari per singole origini dati consente di associare la pianificazione dell'aggiornamento alle fluttuazioni nelle origini dati esterne. Ad esempio, se in un'origine dati esterna sono contenuti dati transazionali generati durante il giorno, è possibile creare una singola pianificazione dell'aggiornamento dei dati per tale origine dati per ottenere le informazioni aggiornate di notte.  
   
-##  <a name="drenablesched"></a> Abilitare e pianificare l'aggiornamento dei dati  
+##  <a name="drenablesched"></a> Abilitare e pianificare l'aggiornamento dati  
  Usare le istruzioni seguenti per pianificare l'aggiornamento dei dati PowerPivot in una cartella di lavoro di Excel pubblicata in una raccolta di SharePoint.  
   
 1.  Nella raccolta in cui è contenuta la cartella di lavoro, selezionare la cartella di lavoro, quindi fare clic sulla freccia GIÙ per visualizzare un elenco di comandi.  
@@ -110,7 +110,7 @@ ms.locfileid: "36170905"
   
     3.  Scegliere **Effettua la connessione usando le credenziali salvate nel servizio di archiviazione sicura** se si conosce l'ID di un'applicazione di destinazione in cui sono contenute le credenziali precedentemente archiviate che si desidera usare.  
   
-     Per ulteriori informazioni su queste opzioni, vedere [configurare le credenziali archiviate per l'aggiornamento dati PowerPivot &#40;PowerPivot per SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) e [configurare l'Account di aggiornamento dati PowerPivot automatico &#40;PowerPivot per SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
+     Per altre informazioni su queste opzioni, vedere [configurare le credenziali archiviate per l'aggiornamento dati PowerPivot &#40;PowerPivot per SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) e [configurare l'Account di aggiornamento dati PowerPivot automatico &#40;PowerPivot per SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
   
 9. In Origini dati selezionare la casella di controllo **Tutte le origini dati** se si desidera che tramite l'aggiornamento dati venga di nuovo eseguita una query su tutte le origini dati iniziali.  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento multiplicity (ASSL) | Documenti Microsoft
+title: Elemento multiplicity (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 441e3829-9009-4b32-a8c6-fa580663387f
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91ecb8a8b7ada49666d2b6144d1ba258a7c26b58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98eb9ba8186c395b598bff6a7ad2ea63ed101999
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261317"
 ---
 # <a name="multiplicity-element-assl"></a>Elemento Multiplicity (ASSL)
   Indica se gli attributi in RelationshipEnd si trovano sul lato "uno" o "molti" di una relazione.  
@@ -51,7 +51,7 @@ ms.locfileid: "36170647"
 |Elemento padre|[RelationshipEnd](../data-type/relationshipend-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  

@@ -1,5 +1,5 @@
 ---
-title: XTP Cursors | Documenti Microsoft
+title: XTP Cursors | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b404b5d425fe6116087821a4c51e1f5dd552dd7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c5eab11a0ee57a8545a2d19f8a7472392635e690
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206981"
 ---
 # <a name="xtp-cursors"></a>XTP Cursors
-  L'oggetto prestazione XTP Cursors contiene contatori correlati ai cursori interni del motore XTP. I cursori sono predefiniti di basso livello blocchi utilizzati dal motore XTP per elaborare [!INCLUDE[tsql](../../includes/tsql-md.md)] query. Di conseguenza, in genere non si ha controllo diretto su di essi.  
+  L'oggetto prestazione XTP Cursors contiene contatori correlati ai cursori interni del motore XTP. I cursori sono gli utilizzi del motore XTP per elaborare di blocchi predefiniti di basso livello [!INCLUDE[tsql](../../includes/tsql-md.md)] le query. Di conseguenza, in genere non si ha controllo diretto su di essi.  
   
- La tabella seguente descrive le **XTP Cursors** contatori.  
+ La tabella seguente descrive la **XTP Cursors** contatori.  
   
 |Contatore|Description|  
 |-------------|-----------------|  

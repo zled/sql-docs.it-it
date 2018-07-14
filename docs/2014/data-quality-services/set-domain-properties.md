@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ab449fa419e273b09801b966d01d4b920af451df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5705838a12d5f8f7518cb2726a4151a71c4a067f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226402"
 ---
 # <a name="set-domain-properties"></a>Impostare le proprietà di un dominio
   In questo argomento viene descritto come impostare le proprietà di un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -87,7 +87,7 @@ ms.locfileid: "36170645"
 ###  <a name="Speller"></a> Abilita correttore ortografico  
  Se il tipo di dati è **Stringa**, fare clic per abilitare il correttore ortografico DQS per il dominio. Il correttore ortografico funziona solo sui domini con tipo di dati stringa. La casella di controllo **Abilita correttore ortografico** abilita il correttore ortografico solo per il singolo dominio associato alla casella di controllo. La casella di controllo non è valida per un dominio composito.  
   
- Il correttore ortografico propone le correzioni di sintassi e di convalida per i valori nel dominio. Per altre informazioni, vedere [utilizzare il correttore ortografico DQS](../../2014/data-quality-services/use-the-dqs-speller.md).  
+ Il correttore ortografico propone le correzioni di sintassi e di convalida per i valori nel dominio. Per altre informazioni, vedere [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md).  
   
 ###  <a name="Syntax"></a> Disabilita algoritmi di errore sintassi  
  Se il tipo di dati è **Stringa**, selezionare questa opzione per specificare di non individuare gli errori di sintassi nel dominio durante la pulizia. Selezionare questa casella di controllo quando non è importante identificare gli errori di sintassi per il dominio, ad esempio per un numero di serie. Questo controllo è disponibile solo per il tipo di dati stringa. Il controllo degli errori di sintassi non verrà eseguito nei tipi di dati non stringa.  

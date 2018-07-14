@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà credenziali (Generatore Report) dell'origine dati | Documenti Microsoft
+title: Finestra di dialogo Proprietà credenziali (Generatore Report) dell'origine dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 237e1c9ef26c5dba838fa8071b2dce7293f2077a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b6689c1a75cfc9354f8c47532d0ed773f3c6e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238591"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Finestra di dialogo Proprietà origine dati, Credenziali (Generatore report)
   Selezionare **Credenziali** nella finestra di dialogo **Proprietà origine dati** per visualizzare e modificare le credenziali per la connessione a un'origine dati incorporata nel report. Le credenziali fornite dall'utente vengono utilizzate per accedere all'origine dati per la visualizzazione in anteprima dei report. Per altre informazioni sulle credenziali, vedere [Specificare credenziali in Generatore report](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
   
 ## <a name="options"></a>Opzioni  
- **Utilizzare l'autenticazione di Windows (sicurezza integrata)**  
+ **Usare l'autenticazione di Windows (sicurezza integrata)**  
  Selezionare questa opzione per utilizzare l'autenticazione di Windows.  
   
  **Usare questo nome utente e password**  
@@ -42,7 +42,7 @@ ms.locfileid: "36170733"
  **Richiedi credenziali**  
  Selezionare questa opzione per richiedere le credenziali durante l'esecuzione del report.  
   
- **Immettere stringa di messaggio di richiesta**  
+ **Immettere una stringa di richiesta**  
  Digitare una frase con cui chiedere all'utente di specificare le credenziali di accesso per l'origine dati.  
   
  **Nessuna credenziale**  
@@ -55,7 +55,7 @@ ms.locfileid: "36170733"
 ## <a name="see-also"></a>Vedere anche  
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Finestra di dialogo Proprietà origine dati, Generale &#40;Generatore report&#41;](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md)   
- [Aggiungere e verificare una connessione dati o un'origine dati &#40;SSRS e Generatore Report&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-data/report-datasets-ssrs.md)  
+ [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

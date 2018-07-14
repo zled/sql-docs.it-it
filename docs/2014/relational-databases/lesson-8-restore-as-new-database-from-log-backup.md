@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 9: Ripristinare un database da archiviazione di Microsoft Azure | Documenti Microsoft'
+title: 'Lezione 9: Ripristinare un database da archiviazione di Microsoft Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b8ff5ec90f80262aae76abfb01ef6c737d13369c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 380ceeabb5a91dffafe0624e073856a837a99f14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175918"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>Lezione 9: ripristinare un database da Archiviazione di Windows Azure
   In questa lezione verrà illustrato come ripristinare un file di backup del database da Archiviazione di Windows Azure in un database, localmente o in una macchina virtuale di Windows Azure. È possibile seguire questa lezione anche senza aver completato le lezioni 4, 5, 6, 7 e 8.  
@@ -28,7 +28,7 @@ ms.locfileid: "36170800"
   
 -   È stato creato un database nel computer di origine.  
   
--   È stato creato un backup del database (con estensione bak) in archiviazione di Azure tramite il [SQL Server Backup and Restore with Windows Azure Blob Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) funzionalità. Si noti che è necessario creare un'altra credenziale di SQL Server durante questo passaggio. La credenziale usano le chiavi di account di archiviazione.  
+-   È stato creato un backup del database (con estensione bak) in archiviazione di Azure usando il [SQL Server Backup and Restore with Windows Azure Blob Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) funzionalità. Si noti che è necessario creare un'altra credenziale di SQL Server durante questo passaggio. La credenziale usano le chiavi di account di archiviazione.  
   
 -   Creazione di un account di Archiviazione di Windows Azure.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36170800"
   
 3.  Copiare e incollare il seguente script completo nella finestra Query. Modificare lo script in base alle esigenze.  
   
-     **Nota:** di eseguire il `RESTORE` istruzione per ripristinare il backup del database (con estensione bak) di archiviazione Windows Azure in un'istanza del database in un'altra macchina.  
+     **Nota:** aver eseguito la `RESTORE` istruzione per ripristinare il backup del database (con estensione bak) in archiviazione di Azure a un'istanza di database in un altro computer.  
   
     ```tsql  
   
@@ -99,6 +99,6 @@ ms.locfileid: "36170800"
   
     ```  
   
- **Fine dell'esercitazione: file di dati SQL Server nel servizio di archiviazione Windows Azure**  
+ **Fine dell'esercitazione: file di dati SQL Server nel servizio di archiviazione di Microsoft Azure**  
   
   

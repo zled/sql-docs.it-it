@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d303321941668d5115c3796022f70195b4a0d066
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9265d42cdde8ac528118cb72dead19726f3d3173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228421"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Visualizzazione di avvisi relativi all'esecuzione di report personalizzati
   Per i report personalizzati sono disponibili due finestre di dialogo di avviso. In questo argomento vengono descritte le modalità per consentire la visualizzazione delle caselle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -34,9 +34,9 @@ ms.locfileid: "36170492"
   
 1.  Connettersi al \< *Server*>\\<*condivisione*>|\<*unità*> \ Documents and Settings\\< UserProfile\>Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
   
-2.  Fare doppio clic su `reports.xml`, quindi fare clic su **modificare**.  
+2.  Fare doppio clic su `reports.xml`, quindi fare clic su **modifica**.  
   
-3.  Change**\<SuppressWarning > true\</SuppressWarning > per \<SuppressWarning > false\</SuppressWarning >**.  
+3.  Change**\<SuppressWarning > true\</SuppressWarning > alla \<SuppressWarning > false\</SuppressWarning >**.  
   
 4.  Riavviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -44,15 +44,15 @@ ms.locfileid: "36170492"
   
 1.  Connettersi al \< *Server*>\\<*condivisione*>|\<*unità*> \ Documents and Settings\\< UserProfile\>Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
   
-2.  Fare doppio clic su `reports.xml`, fare clic su **modificare**.  
+2.  Fare doppio clic su `reports.xml`, fare clic su **modifica**.  
   
-3.  Change  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning > per \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >**.  
+3.  Change  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning > alla \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >**.  
   
 4.  Riavviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Report personalizzati in Management Studio](custom-reports-in-management-studio.md)   
- [Aggiunta di un Report personalizzato a Management Studio](add-a-custom-report-to-management-studio.md)   
+ [Aggiungere un Report personalizzato a Management Studio](add-a-custom-report-to-management-studio.md)   
  [Usare report personalizzati con proprietà dei nodi di Esplora oggetti](use-custom-reports-with-object-explorer-node-properties.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bb6cce73d7d49e091f4757c8b03e12cdc2045a86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: df869e1dc331a16d500e95bbc711584ab7482d3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244281"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Aree dell'area dati Tablix (Generatore report e SSRS)
   Un'area dati Tablix può includere quattro aree contenenti le celle della Tablix, ovvero l'angolo, l'area dei gruppi di righe, l'area dei gruppi di colonne e il corpo. Le celle di ogni area presentano una funzione distinta. L'aggiunta di celle all'area del corpo della Tablix consente la visualizzazione di dati dettaglio e dati raggruppati. Quando si crea un gruppo, Progettazione report e Generatore report consentono di aggiungere celle all'area del gruppo di righe o del gruppo di colonne per visualizzare i valori delle istanze del gruppo. Consentono inoltre di creare celle d'angolo della Tablix quando sono presenti gruppi di righe e gruppi di colonne.  
@@ -55,6 +55,6 @@ ms.locfileid: "36170715"
  [Tabelle &#40;Generatore report e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Area dati Tablix &#40;SSRS e Generatore Report&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Un'area dati Tablix &#40;Report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Le colonne (SSAS tabulare) calcolate | Documenti Microsoft
+title: Le colonne (SSAS tabulare) calcolate | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 152030d73951b08e0b987c5114c5bf8661dc418a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b976a83220a501fde422b6f58fea21631c0d3f26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232071"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Colonne calcolate (SSAS tabulare)
   Nei modelli tabulari, le colonne calcolate consentono all'utente di aggiungere nuovi dati al modello. Invece di incollare o importare i valori nella colonna, viene creata una formula DAX che consente di definire i valori a livello di riga della colonna. La colonna calcolata può quindi essere utilizzata in un report, in una tabella pivot o in un grafico pivot come qualsiasi altra colonna.  
@@ -90,6 +90,6 @@ ms.locfileid: "36171105"
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle e colonne &#40;tabulare di SSAS&#41;](tables-and-columns-ssas-tabular.md)   
  [Le misure &#40;tabulare di SSAS&#41;](measures-ssas-tabular.md)   
- [I calcoli &#40;tabulare di SSAS&#41;](calculations-ssas-tabular.md)  
+ [Calcoli &#40;tabulare di SSAS&#41;](calculations-ssas-tabular.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
 - publishing reports [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f656681c39367bc82c4b5f2b548df69e6106fffa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cf985f4f16f60378dd3d866489fc7c64c940928
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276377"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Impostare le proprietà di distribuzione (Reporting Services)
   In[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]è necessario specificare il server di report e facoltativamente le cartelle per i report e le origini dati condivise in modo da poter pubblicare gli elementi di un progetto del server di report in un server di report. Le proprietà e i valori necessari in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per compilare, visualizzare in anteprima e distribuire i report vengono archiviati nelle configurazioni di progetto del progetto server di report. È possibile creare più set denominati per queste proprietà del progetto, in modo da poter passare da un set di proprietà all'altro in base alle esigenze. Ogni set di proprietà è una configurazione. È possibile ad esempio disporre di una configurazione per la pubblicazione di report in un server di prova e di una configurazione diversa per la pubblicazione di report in un server di produzione.  
@@ -46,17 +46,17 @@ ms.locfileid: "36170501"
     > [!NOTE]  
     >  È possibile utilizzare più configurazioni per passare velocemente da un server di report a un altro oppure da un'impostazione a un'altra.  
   
-3.  Nel **OutputPath** casella di testo, digitare o incollare il percorso nel file system locale per archiviare la definizione di report utilizzata nella verifica della compilazione, distribuzione e anteprima dei report. Il percorso deve essere diverso dal percorso utilizzato per il progetto e da un percorso relativo che rappresenta una sottocartella nel percorso del progetto.  
+3.  Nel **OutputPath** casella di testo digitare o incollare il percorso nel file system locale per archiviare la definizione del report utilizzata nella verifica della compilazione, distribuzione e anteprima dei report. Il percorso deve essere diverso dal percorso utilizzato per il progetto e da un percorso relativo che rappresenta una sottocartella nel percorso del progetto.  
   
-4.  Nel **ErrorLevel** casella di testo, digitare la gravità della compilazione problemi vengono segnalati come errori. I livelli di problemi che si verificano durante la creazione di report, origini dati o altre risorse del progetto con gravità minore o uguale al valore del **ErrorLevel** vengono segnalati come errori; in caso contrario, i problemi vengono segnalati come avvisi. Qualsiasi errore comporterà l'interruzione dell'attività di compilazione. I livelli di gravità validi sono compresi tra 0 e 4. Il valore predefinito è 2.  
+4.  Nel **ErrorLevel** casella di testo, digitare la gravità della compilazione problemi vengono segnalati come errori. I livelli di problemi che si verificano durante la creazione di report, origini dati o altre risorse del progetto con gravità minore o uguale al valore di **ErrorLevel** vengono segnalati come errori; in caso contrario, i problemi vengono segnalati come avvisi. Qualsiasi errore comporterà l'interruzione dell'attività di compilazione. I livelli di gravità validi sono compresi tra 0 e 4. Il valore predefinito è 2.  
   
      È possibile usare**ErrorLevel** per aumentare o ridurre la sensibilità della compilazione. Ad esempio, quando viene compilato un report con una mappa durante la distribuzione in un server di report di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , per impostazione predefinita viene visualizzato un errore e la compilazione del report non viene completata. Se si riduce il valore di **ErrorLevel** , la mappa viene rimossa dal report, viene visualizzato un avviso e la compilazione del report prosegue.  
   
-5.  Nel **StartItem** elenco, selezionare un report da visualizzare nella finestra di anteprima o in una finestra del browser quando si esegue il progetto report.  
+5.  Nel **StartItem** elencare, selezionare un report da visualizzare nella finestra di anteprima o in una finestra del browser quando si esegue il progetto report.  
   
 6.  Nell'elenco **OverwriteDataSources** selezionare **True** per sovrascrivere l'origine dati condivisa nel server ogni volta che vengono pubblicate origini dati condivise oppure selezionare **False** per mantenere l'origine dati nel server.  
   
-7.  Nel **TargetServerVersion** elenco, selezionare il [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] versione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oppure selezionare **rileva versione** per determinare automaticamente la versione installata nel il server identificato dal **Targetserverurl** proprietà. Il valore predefinito è **SQL Server 2008 R2**.  
+7.  Nel **TargetServerVersion** elencare, selezionare la [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oppure selezionare **rileva versione** per determinare automaticamente la versione installata nel il server identificato dal **TargetServer URL** proprietà. Il valore predefinito è **SQL Server 2008 R2**.  
   
      Usare **TargetServerVersion** per personalizzare i report compilati, posizionati nel percorso specificato in OutputPath, per la versione del server di report specificata in **TargetServer URL**.  
   

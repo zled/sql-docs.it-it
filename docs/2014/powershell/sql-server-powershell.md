@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e66e94d1b49ecb275ba1422a6c7ee16c1eddc3f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f605305a86295f8b2e91aa7300086c5827e683d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271137"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] supporta Windows PowerShell, ovvero una potente shell di scripting che consente agli amministratori e agli sviluppatori di automatizzare l'amministrazione del server e la distribuzione delle applicazioni. Il linguaggio di Windows PowerShell supporta una logica più complessa rispetto agli script [!INCLUDE[tsql](../includes/tsql-md.md)] , consentendo agli amministratori di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di compilare script di amministrazione affidabili. Gli script di Windows PowerShell possono anche essere utilizzati per amministrare altri prodotti server di [!INCLUDE[msCoName](../includes/msconame-md.md)] , Ciò fornisce agli amministratori un linguaggio di scripting comune in tutti i server.  
@@ -40,10 +40,10 @@ ms.locfileid: "36170824"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Descrive il meccanismo preferito per l'esecuzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dei componenti PowerShell; aprire una sessione di PowerShell e caricare il `sqlps` modulo. Il modulo di `sqlps` viene caricato nel provider PowerShell di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e nei cmdlet e i gruppi SQL Server Management Object (SMO) vengono utilizzati dal provider e dai cmdlets.|[Importare il modulo SQLPS](../database-engine/import-the-sqlps-module.md)|  
+|Descrive il meccanismo preferito per l'esecuzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] i componenti PowerShell; per aprire una sessione di PowerShell e caricare il `sqlps` modulo. Il modulo di `sqlps` viene caricato nel provider PowerShell di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e nei cmdlet e i gruppi SQL Server Management Object (SMO) vengono utilizzati dal provider e dai cmdlets.|[Importare il modulo SQLPS](../database-engine/import-the-sqlps-module.md)|  
 |Descrive come caricare solo i gruppi SMO senza il provider o i cmdlet.|[Caricare gli assembly SMO in Windows PowerShell](load-the-smo-assemblies-in-windows-powershell.md)|  
 |Descrive la modalità di esecuzione della sessione di Windows PowerShell facendo clic con il pulsante destro del mouse su un nodo in **Esplora oggetti**. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Avvia una sessione di Windows PowerShell, carica il `sqlps` modulo e imposta il percorso del provider SQL Server sull'oggetto selezionato.|[Eseguire Windows PowerShell da SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)|  
-|Descrive come creare passaggi di processo SQL Server Agent che eseguano uno script di Windows PowerShell. I processi possono quindi essere programmati per l'esecuzione a ore specifiche o al verificarsi di eventi.|[Eseguire passaggi di Windows PowerShell in SQL Server Agent] (run-windows-powershell-steps-in-sql-server-agent.md
+|Descrive come creare passaggi di processo SQL Server Agent che eseguano uno script di Windows PowerShell. I processi possono quindi essere programmati per l'esecuzione a ore specifiche o al verificarsi di eventi.|[Eseguire i passaggi di Windows PowerShell in SQL Server Agent] (run-windows-powershell-steps-in-sql-server-agent.md
 )|  
 |Descrive la modalità di utilizzo del provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per spostarsi nella gerarchia degli oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[Provider PowerShell per SQL Server](sql-server-powershell-provider.md)|  
 |Descrive come utilizzare i cmdlet di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che specificano le azioni [!INCLUDE[ssDE](../includes/ssde-md.md)] come ad esempio l'esecuzione di uno script [!INCLUDE[tsql](../includes/tsql-md.md)] .|[Usare cmdlet del motore di database](../database-engine/use-the-database-engine-cmdlets.md)|  

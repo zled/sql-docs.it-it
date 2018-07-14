@@ -23,13 +23,13 @@ ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4cc3a8976f0831db5404c722f3d9910d9cb8440f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b4fa549a03fd7f74baf98aa7aa489323da7b1ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254553"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>Estensione del pacchetto con l'attività Script
   L'attività Script estende le funzionalità di runtime dei pacchetti di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] con codice personalizzato scritto in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# che viene compilato ed eseguito in fase di esecuzione del pacchetto. L'attività Script semplifica lo sviluppo di un'attività di runtime personalizzata quando le attività incluse in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] non soddisfano pienamente tutti i requisiti. L'attività Script scrive automaticamente tutto il codice dell'infrastruttura richiesto, consentendo agli sviluppatori di concentrarsi esclusivamente sul codice necessario per l'elaborazione personalizzata.  
@@ -67,7 +67,7 @@ ms.locfileid: "36170835"
  [Esempi di attività Script](../../extending-packages-scripting-task-examples/script-task-examples.md)  
  Vengono forniti esempi che dimostrano diversi utilizzi possibili di un'attività Script.  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per il download più recenti, articoli, esempi e video [!INCLUDE[msCoName](../../../includes/msconame-md.md)], nonché soluzioni selezionate dalla community, visitare il [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] su MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per il download più recenti, articoli, esempi e i video [!INCLUDE[msCoName](../../../includes/msconame-md.md)], nonché soluzioni selezionate dalla community, visitare il [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] pagina su MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività Script](../../control-flow/script-task.md)   

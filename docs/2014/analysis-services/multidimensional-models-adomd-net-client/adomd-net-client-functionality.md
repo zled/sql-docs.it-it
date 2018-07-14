@@ -1,5 +1,5 @@
 ---
-title: Funzionalità Client di ADOMD.NET | Documenti Microsoft
+title: Funzionalità Client di ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,33 +15,33 @@ helpviewer_keywords:
 - ADOMD.NET, functionality
 ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5fa854ebf8a67878d17b6e01b5cf8e70fe869d88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85e9ff2d42c61b97822e4715af7b8be3f87b7d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261537"
 ---
 # <a name="adomdnet-client-functionality"></a>Funzionalità client di ADOMD.NET
   Analogamente agli altri provider di dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, ADOMD.NET funge da ponte tra un'applicazione e un'origine dati. A differenza degli altri provider di dati .NET Framework, tuttavia, in ADOMD.NET vengono utilizzati dati analitici. Per utilizzare dati analitici, ADOMD.NET supporta funzionalità notevolmente diverse da quelle degli altri provider di dati .NET Framework. ADOMD.NET consente non solo di recuperare dati, ma anche di recuperare metadati e di modificare la struttura dell'archivio dati analitici:  
   
  **Il recupero dei metadati**  
- Per ottenere maggiori informazioni sui dati che possono essere recuperati dall'origine dati tramite il recupero di metadati, le applicazioni possono utilizzare set di righe dello schema o il modello a oggetti. È possibile individuare informazioni quali i tipi di ogni indicatore di prestazioni chiave (KPI) disponibile, le dimensioni in un cubo e i parametri necessari per i modelli di data mining. Metadati sono molto importanti *dinamica* le applicazioni che richiedono l'input dell'utente per determinare il tipo, di profondità e ambito dei dati da recuperare. ad esempio Query Analyzer, Microsoft Excel e altri strumenti per l'esecuzione di query. I metadati sono meno importanti ai *statica* applicazioni che eseguono un set predefinito di azioni.  
+ Per ottenere maggiori informazioni sui dati che possono essere recuperati dall'origine dati tramite il recupero di metadati, le applicazioni possono utilizzare set di righe dello schema o il modello a oggetti. È possibile individuare informazioni quali i tipi di ogni indicatore di prestazioni chiave (KPI) disponibile, le dimensioni in un cubo e i parametri necessari per i modelli di data mining. I metadati sono estremamente importanti *dinamica* le applicazioni che richiedono l'input dell'utente per determinare il tipo di profondità e ambito di dati da recuperare. ad esempio Query Analyzer, Microsoft Excel e altri strumenti per l'esecuzione di query. I metadati sono meno importanti ai *statici* le applicazioni che eseguono un set predefinito di azioni.  
   
  Per altre informazioni: [recupero di metadati da un'origine dati analitici](retrieving-metadata-from-an-analytical-data-source.md).  
   
  **Recupero di dati**  
  Per recupero di dati si intende il recupero effettivo delle informazioni archiviate nell'origine dati. Il recupero di dati rappresenta la funzione principale di applicazioni "statiche" cui è nota la struttura dell'origine dati, nonché il risultato finale di applicazioni "dinamiche". Il valore dell'indicatore di prestazioni chiave a un'ora specificata del giorno, il numero di biciclette vendute nell'ultima ora per ogni punto vendita e i fattori che governano le prestazioni annuali dei dipendenti sono tutti esempi di dati che possono essere recuperati. Il recupero di dati è estremamente importante per tutte le applicazioni che eseguono query.  
   
- Per altre informazioni: [recupero dei dati da un'origine dati analitici](retrieving-data-from-an-analytical-data-source.md).  
+ Per altre informazioni: [recupero di dati da un'origine dati analitici](retrieving-data-from-an-analytical-data-source.md).  
   
- **Modifica della struttura di dati analitici**  
+ **La modifica della struttura di dati analitici**  
  ADOMD.NET può essere utilizzato inoltre per modificare la struttura dell'archivio dati analitici. Sebbene questa operazione venga in genere eseguita mediante il modello a oggetti della libreria AMO (Analysis Management Objects), è possibile utilizzare ADOMD.NET per inviare comandi ASSL (Analysis Services Scripting Language) per creare, modificare o eliminare oggetti nel server.  
   
- Per altre informazioni: [l'esecuzione di comandi su un analitici origine dati](executing-commands-against-an-analytical-data-source.md), [allo sviluppo con Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md), [Analysis Services Scripting Lingua &#40;ASSL&#41; riferimento](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ Per altre informazioni: [l'esecuzione di comandi su un analitici Zdroj dat](executing-commands-against-an-analytical-data-source.md), [allo sviluppo con Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md), [Analysis Services Scripting Lingua &#40;ASSL&#41; riferimento](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
  Il recupero di metadati e di dati e la modifica della struttura di dati vengono eseguiti ciascuno in un punto specifico nel flusso di lavoro di un'applicazione ADOMD.NET tipica.  
   

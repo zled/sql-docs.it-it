@@ -1,5 +1,5 @@
 ---
-title: Funzioni definite dall'utente e Stored procedure | Documenti Microsoft
+title: Funzioni definite dall'utente e Stored procedure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - ADOMD.NET, stored procedures
 ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba07911e050fc4b2430957cc45beea55d2f8094d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 719929ec255f29da6477788d4feff1162609f993
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253023"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>Funzioni definite dall'utente e stored procedure
-  Gli oggetti server ADOMD.NET, è possibile creare la funzione definita dall'utente (UDF) o stored procedure per la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che interagiscono con i metadati e dati dal server. Questi metodi in-process vengono chiamati tramite istruzioni MDX (Multidimensional Expressions) o DMX (Data Mining Extensions) per fornire funzionalità aggiunte senza le latenze associate alle comunicazioni di rete.  
+  Gli oggetti server ADOMD.NET, è possibile creare la funzione definita dall'utente (UDF) o stored procedure per la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che interagiscono con i metadati e i dati del server. Questi metodi in-process vengono chiamati tramite istruzioni MDX (Multidimensional Expressions) o DMX (Data Mining Extensions) per fornire funzionalità aggiunte senza le latenze associate alle comunicazioni di rete.  
   
 ## <a name="udf-examples"></a>Esempi di funzioni definite dall'utente  
  Una funzione definita dall'utente è un metodo che può essere chiamato nel contesto di un'istruzione MDX o DMX, accettare un numero qualsiasi di parametri e restituire qualsiasi tipo di dati.  
@@ -86,7 +86,7 @@ public Set RandomSample(Set set, int returnCount)
 }  
 ```  
   
- L'esempio precedente viene chiamato nell'esempio MDX seguente, In questo esempio MDX, cinque casuali stati o province vengono recuperati dal **Adventure Works** database.  
+ L'esempio precedente viene chiamato nell'esempio MDX seguente, In questo esempio MDX cinque casuale stati o province vengono recuperati dal **Adventure Works** database.  
   
 ```  
 SELECT SampleAssembly.RandomSample([Geography].[State-Province].Members, 5) on ROWS,   

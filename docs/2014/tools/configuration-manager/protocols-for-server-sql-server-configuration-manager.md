@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ee30d5f5-7f6a-4101-849e-73dfcc1b2528
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33fe86a8d8238a0684fcac4faa7eda3c25ae0673
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f3b0692aa317e3b06fb26b8a08c858b4239c670b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247781"
 ---
 # <a name="protocols-for-ltservergt-sql-server-configuration-manager"></a>Protocolli per &lt;server&gt; (Gestione configurazione SQL Server)
   Per configurare i protocolli usati da [!INCLUDE[ssDE](../../includes/ssde-md.md)], selezionare **Protocolli** per l'istanza del server desiderata nel riquadro della console, fare clic con il pulsante destro del mouse sul protocollo appropriato nel riquadro dei dettagli e quindi fare clic su **Proprietà**.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [Reporting Services]
 - roles [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d20737ae25412caa7af4c3aa82966a5b384d7126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed057d08c25d1988d4ccf03d1647aa4ef92e4b0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255583"
 ---
 # <a name="role-assignments"></a>Assegnazioni di ruolo
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]le *assegnazioni di ruolo* determinano l'accesso agli elementi archiviati e al server di report. Un'assegnazione di ruolo è composta dalle parti seguenti:  
@@ -62,13 +62,13 @@ Diagramma di assegnazione dei ruoli
 ## <a name="predefined-role-assignments"></a>Assegnazioni di ruolo predefinite  
  Per impostazione predefinita, vengono implementate assegnazioni di ruolo predefinite che consentono agli amministratori locali di gestire il server di report. Per consentire l'accesso ad altri utenti è necessario specificare assegnazioni di ruolo aggiuntive.  
   
- Per ulteriori informazioni sulle assegnazioni di ruolo predefinite che forniscono sicurezza predefinita, vedere [ruoli predefiniti](role-definitions-predefined-roles.md).  
+ Per altre informazioni sulle assegnazioni di ruolo predefinite che forniscono sicurezza predefinita, vedere [ruoli predefiniti](role-definitions-predefined-roles.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md)   
  [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](role-assignments-modify-or-delete.md)   
- [Impostare autorizzazioni per elementi del Server di Report in un sito di SharePoint &#40;Reporting Services in SharePoint la modalità integrata&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Impostare le autorizzazioni per elementi del Server di Report in un sito di SharePoint &#40;Reporting Services in SharePoint la modalità integrata&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)  
   
   

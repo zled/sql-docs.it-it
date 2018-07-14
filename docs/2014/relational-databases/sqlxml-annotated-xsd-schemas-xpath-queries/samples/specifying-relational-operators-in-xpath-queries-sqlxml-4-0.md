@@ -1,5 +1,5 @@
 ---
-title: Specifica gli operatori relazionali nelle query XPath (SQLXML 4.0) | Documenti Microsoft
+title: Specifica di operatori relazionali nelle query XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - operators [SQLXML]
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d8c77a561c4853db9bba036b33661f1a1f760a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a44253e26443288286a935fcaf06815ebcdeb405
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329531"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Specifica di operatori relazionali nelle query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato come specificare gli operatori relazionali nelle query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "36171010"
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- Il predicato specificato tra parentesi quadre filtra il  **\<cliente >** elementi. Solo il  **\<cliente >** gli elementi che hanno almeno uno  **\<OrderDetail >** nipote con un valore dell'attributo OrderQty maggiore di 3 vengono restituiti.  
+ Il predicato specificato tra parentesi quadre Filtra le  **\<cliente >** elementi. Solo le  **\<cliente >** gli elementi che hanno almeno uno  **\<OrderDetail >** nipote con un valore dell'attributo OrderQty maggiore di 3 vengono restituiti.  
   
  L'asse `child` è l'asse predefinito. È pertanto possibile specificare la query nel modo seguente:  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36171010"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [schema codice di esempio](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copia il [esempi di codice schema](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello SpecifyRelationalA.xml seguente e salvarlo nella directory in cui viene salvato il file SampleSchema1.xml.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36171010"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Specificare un operatore relazionale nella query XPath e utilizzare una funzione booleana per confrontare il risultato  
- Questa query restituisce tutti i  **\<ordine >** figli del nodo di contesto che includono un **SalesPersonID** attributo valore inferiore a 270:  
+ Questa query restituisce tutti i  **\<ordine >** figli del nodo di contesto che includono un' **SalesPersonID** attributo valore inferiore a 270:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -101,7 +101,7 @@ ms.locfileid: "36171010"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [schema codice di esempio](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copia il [esempi di codice schema](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello SpecifyRelationalB.xml seguente e salvarlo nella directory in cui viene salvato il file SampleSchema1.xml.  
   

@@ -1,5 +1,5 @@
 ---
-title: Contenuto del modello per i modelli Time Series di data mining (Analysis Services - Data Mining) | Documenti Microsoft
+title: Contenuto dei modelli per i modelli Time Series di data mining (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae3e235b2a80248327a4aa4a69e2b357b36d2a1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0c69583fec1e43ba65ac1da2c321f7b0a5d9599
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214621"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Time Series (Analysis Services - Data mining)
   Tutti i modelli di data mining utilizzano la stessa struttura per archiviare i propri contenuti. Tale struttura viene definita secondo il set di righe dello schema relativo al contenuto di data mining. Tuttavia, all'interno della struttura standard i nodi che contengono informazioni vengono disposti in modi diversi per rappresentare vari tipi di albero. In questo argomento vengono descritti l'organizzazione e il significato dei nodi per i modelli di data mining basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series.  
   
  Per una spiegazione del modello di data mining applicabile a tutti i tipi di modello, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
- Quando si rivede questo argomento, potrebbe risultare utile seguirlo esplorando il contenuto di un modello Time Series. È possibile creare un modello Time Series completando l'esercitazione di base sul data mining. Il modello creato nell'esercitazione è un modello misto mediante il quale viene eseguito il training dei dati utilizzando gli algoritmi ARIMA e ARTXP. Per altre informazioni, vedere [creazione di una struttura di previsione e un modello &#40;esercitazione intermedia sul Data Mining Data&#41;](../../tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md). Per informazioni su come visualizzare il contenuto di un modello di data mining, vedere [Visualizzatori modello di data mining](data-mining-model-viewers.md).  
+ Quando si rivede questo argomento, potrebbe risultare utile seguirlo esplorando il contenuto di un modello Time Series. È possibile creare un modello Time Series completando l'esercitazione di base sul data mining. Il modello creato nell'esercitazione è un modello misto mediante il quale viene eseguito il training dei dati utilizzando gli algoritmi ARIMA e ARTXP. Per altre informazioni, vedere [creazione di una struttura di previsione e un modello &#40;esercitazione intermedia sul Data Mining dei dati&#41;](../../tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md). Per informazioni su come visualizzare il contenuto di un modello di data mining, vedere [Visualizzatori modello di data mining](data-mining-model-viewers.md).  
   
 ## <a name="understanding-the-structure-of-a-time-series-model"></a>Informazioni sulla struttura di un modello Time Series  
  Un modello Time Series include un singolo nodo padre che rappresenta il modello e i relativi metadati. Sotto il nodo padre sono presenti uno o due alberi Time Series, a seconda dell'algoritmo utilizzato per creare il modello.  
@@ -263,13 +263,13 @@ ms.locfileid: "36171358"
   
  Quantity = 21,322  
   
- -0,293 * quantità (Quantity(r250 North America,-7) + 0,069 \* quantità (R250 Europe,-1) + 0,023 \*  
+ -0,293 * quantity (R250 Nord America,-7) + 0,069 \* quantità (R250 Europe,-1) + 0,023 \*  
   
  Quantity(R250 Europe,-3) -0,142 * Quantity(R750 Europe,-8)  
   
  In questo caso, il valore 21,322 rappresenta il valore stimato per Quantity come funzione degli elementi seguenti dell'equazione.  
   
- Ad esempio, un elemento è quantità (Quantity(r250 North America,-7). Questa notazione indica la quantità per l'area del Nord America in corrispondenza di t-7 oppure sette intervalli di tempo prima dell'intervallo di tempo corrente. Il valore della serie di dati viene moltiplicato per il coefficiente -0,293. Il coefficiente per ogni elemento deriva dal processo di training ed è basato sulle tendenze nei dati.  
+ Ad esempio, un elemento è Quantity (Quantity(r250 North America,-7). Questa notazione indica la quantità per l'area del Nord America in corrispondenza di t-7 oppure sette intervalli di tempo prima dell'intervallo di tempo corrente. Il valore della serie di dati viene moltiplicato per il coefficiente -0,293. Il coefficiente per ogni elemento deriva dal processo di training ed è basato sulle tendenze nei dati.  
   
  L'equazione presenta più elementi poiché è stato calcolato che la quantità del modello R250 nell'area relativa all'Europa dipende dai valori di altre serie di dati.  
   
@@ -388,9 +388,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Equazione ARIMA:  
   
- ARIMA ({1,1}, 0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) intersezione:56. 8888888888889  
+ ARIMA ({1,1}, 0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}): 56.8888888888889 Intercept  
   
- L'equazione è il formato ARIMA lungo, in cui sono inclusi i valori dei coefficienti e l'intersezione. Il formato abbreviato per questa equazione sarebbe {1,0,7}, dove 1 indica il periodo come conteggio degli intervalli di tempo, 0 indica l'ordine di differenza termine e 7 indica il numero di coefficienti.  
+ L'equazione è il formato ARIMA lungo, in cui sono inclusi i valori dei coefficienti e l'intersezione. Il formato abbreviato per questa equazione sarebbe {1,0,7}, dove 1 indica il periodo come conteggio di intervalli di tempo, 0 indica l'ordine di differenza di termine e 7 indica il numero di coefficienti.  
   
 > [!NOTE]  
 >  In Analysis Services viene calcolata una costante per il calcolo della varianza, ma la costante non viene visualizzata nell'interfaccia utente. È possibile, tuttavia, visualizzare la varianza per qualsiasi punto della serie come funzione di questa costante selezionando **Mostra deviazioni** nella vista **Grafico** . La descrizione comando per ogni serie di dati mostra la varianza di un punto stimato specifico.  
@@ -441,13 +441,13 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 -   Rappresentazione XML: Utilizzare una query XML.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il recupero di informazioni da un albero ARTXP potrebbe risultare difficile, poiché le informazioni di ciascuna divisione si trovano in un punto diverso dell'albero. Pertanto, con un modello ARTXP è necessario ottenere tutte le parti, quindi procedere alla ricostruzione della formula completa. Il recupero di un'equazione da un modello ARIMA è più facile, poiché la formula è stata resa disponibile in tutto l'albero. Per altre informazioni su come creare una query per recuperare queste informazioni, vedere [Esempi di query sul modello di serie temporale](time-series-model-query-examples.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto del modello di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Time Series](microsoft-time-series-algorithm.md)   
- [Tempo Series Model Query Examples](time-series-model-query-examples.md)   
+ [Time Series Model Query Examples](time-series-model-query-examples.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)  
   
   

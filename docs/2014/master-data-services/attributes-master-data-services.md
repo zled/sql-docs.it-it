@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - free-form attributes [Master Data Services]
 - attributes [Master Data Services], about attributes
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3818434134bc03c335c8811ade391ec61824db35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5c9974eced9ec643c38fd8d3d535800456c1796d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331851"
 ---
 # <a name="attributes-master-data-services"></a>Attributi (Master Data Services)
   Gli attributi sono oggetti contenuti in entità [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . I valori dell'attributo descrivono i membri dell'entità. Un attributo può essere utilizzato per descrivere un membro foglia, un membro consolidato o una raccolta.  
@@ -88,7 +88,7 @@ ms.locfileid: "36171461"
 |Creare un nuovo attributo di file.|[Creare un attributo di File &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
 |Creare un nuovo attributo basato su dominio.|[Creare un attributo basato su dominio &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |Modificare il nome di un attributo esistente.|[Modificare un nome di attributo &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
-|Aggiungere attributi ad un gruppo rilevamento modifiche|[Aggiungere attributi a un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|Aggiungere attributi ad un gruppo rilevamento modifiche|[Aggiungere attributi ad un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
 |Eliminare un attributo esistente.|[Eliminare un attributo &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
 |Modificare l'ordine degli attributi.|[Modificare l'ordine degli attributi](../../2014/master-data-services/change-the-order-of-attributes.md)|  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36171461"
   
 -   [I membri &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [Le autorizzazioni foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [Autorizzazioni per elementi foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
 -   [Consolidare le autorizzazioni &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   

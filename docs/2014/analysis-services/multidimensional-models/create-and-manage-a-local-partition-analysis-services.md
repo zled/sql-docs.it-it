@@ -1,5 +1,5 @@
 ---
-title: Creare e gestire una partizione locale (Analysis Services) | Documenti Microsoft
+title: Creare e gestire una partizione locale (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - local partitions [Analysis Services]
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7aee67c9e63078a0218665fc818381d473e493e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10b6498034ddcd2733501c63601f026b229d616a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321271"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Creare e gestire una partizione locale (Analysis Services)
   Per migliorare le prestazioni di elaborazione è possibile creare partizioni aggiuntive per un gruppo di misure. Con più partizioni è possibile allocare le tabelle dei fatti in un numero corrispondente di file di dati fisici sia su server locali che su server remoti. In Analysis Services le partizioni possono essere elaborate in modo indipendente e in parallelo, offrendo maggiore controllo sull'elaborazione dei carichi di lavoro sul server.  
@@ -31,7 +31,7 @@ ms.locfileid: "36171329"
  È possibile creare le partizioni in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] durante la progettazione dei modelli o dopo la distribuzione della soluzione usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o XMLA. Si consiglia di scegliere un unico approccio. Se si alterna tra gli strumenti, è possibile che le modifiche apportate a un database distribuito in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vengono sovrascritte quando si ridistribuisce successivamente la soluzione da [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ## <a name="before-you-start"></a>Prima di iniziare  
- Verificare di disporre della Business Intelligence Edition o della Enterprise Edition. La Standard Edition non supporta più partizioni. Per controllare l'edizione, fare clic con il pulsante destro del mouse sul nodo server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e selezionare **Report** | **Generale**. Per ulteriori informazioni sulla disponibilità delle funzionalità, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Verificare di disporre della Business Intelligence Edition o della Enterprise Edition. La Standard Edition non supporta più partizioni. Per controllare l'edizione, fare clic con il pulsante destro del mouse sul nodo server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e selezionare **Report** | **Generale**. Per altre informazioni sulla disponibilità delle funzionalità, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  È importante tenere presente che, per poter unire le partizioni in secondo momento, è necessario che queste condividano la stessa progettazione delle aggregazioni. Le partizioni possono essere unite solo se dispongono della stessa modalità di archiviazione e della medesima progettazione delle aggregazioni.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36171329"
   
 7.  Nell'ultima pagina, Completamento procedura guidata, assegnare alla partizione un nome descrittivo.  
   
-8.  Fare clic su **Fine**.  
+8.  Scegliere **Fine**.  
   
 9. Ripetere i passaggi precedenti per creare le partizioni rimanenti, scegliendo di volta in volta una diversa query denominata per selezionare la sezione di dati successiva.  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file system permissions
 - service account [SQL Server], file system permissions
 - permissions [SQL Server], file system
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02a84ea92555c74c0fed76b4f90b2d9c2337f46f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d16d2580775cde3c1b87c934c1bd69133501d3ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260953"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurare le autorizzazioni del file system per l'accesso al motore di database
   In questo argomento viene illustrato come concedere al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]l'accesso al file system nel percorso in cui sono archiviati i file di database. Il servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve disporre dell'autorizzazione del file system di Windows per accedere alla cartella file in cui sono archiviati i file di database. L'autorizzazione per il percorso predefinito viene configurata durante l'installazione. Se si posizionano i file di database in un percorso diverso, potrebbe essere necessario seguire questi passaggi per concedere al [!INCLUDE[ssDE](../../includes/ssde-md.md)] l'autorizzazione di controllo completo per il percorso in questione.  
@@ -38,15 +38,15 @@ ms.locfileid: "36170854"
   
 3.  Nella finestra di dialogo per la **selezione di utenti, computer, account del servizio o gruppi** fare clic su **Percorsi**sopra l'elenco di percorsi, selezionare il nome del computer e quindi fare clic su **OK**.  
   
-4.  Nel **immettere i nomi degli oggetti da selezionare** , digitare il nome del SID per servizio elencato nell'argomento della documentazione in linea **configurare account di servizio Windows e le autorizzazioni**. (Per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] SID per servizio, utilizzare **NT SERVICE\MSSQLSERVER** per un'istanza predefinita, oppure **NT SERVICE\MSSQL$ InstanceName** per un'istanza denominata.)  
+4.  Nel **immettere i nomi degli oggetti da selezionare** , digitare il nome del SID per servizio elencato nell'argomento della documentazione Online **autorizzazioni e configurare gli account del servizio Windows**. (Per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] SID per servizio, utilizzare **NT SERVICE\MSSQLSERVER** per un'istanza predefinita, o **NT SERVICE\MSSQL$ InstanceName** per un'istanza denominata.)  
   
 5.  Fare clic su **Controlla nomi** per convalidare la voce. La convalida spesso non viene completata e potrebbe essere indicato che il nome non è stato trovato. Quando si fa clic su **OK**, viene visualizzata la finestra di dialogo **Trovati più nomi** .  
   
-6.  A questo punto selezionare il SID per servizio, tra **MSSQLSERVER** oppure **NT SERVICE\MSSQL$ InstanceName**, quindi fare clic su **OK**.  
+6.  A questo punto selezionare il SID per servizio, ovvero **MSSQLSERVER** oppure **NT SERVICE\MSSQL$ InstanceName**, quindi fare clic su **OK**.  
   
-7.  Fare clic su **OK** per tornare alla finestra la **autorizzazioni** finestra di dialogo.  
+7.  Fare clic su **OK** per tornare alla finestra la **autorizzazioni** nella finestra di dialogo.  
   
-8.  Nel **utente o gruppo** nomi, selezionare il SID per servizio e quindi il **le autorizzazioni per** \<nome >, quindi selezionare il **Consenti** casella di controllo per  **Controllo completo**.  
+8.  Nel **gruppo o utente** nomi, selezionare il SID per servizio, quindi nel **le autorizzazioni per** \<nome >, quindi selezionare il **Consenti** casella di controllo  **Controllo completo**.  
   
 9. Fare clic su **Applica**quindi due volte su **OK** per uscire.  
   

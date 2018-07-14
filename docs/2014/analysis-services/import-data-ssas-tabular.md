@@ -1,5 +1,5 @@
 ---
-title: Importare dati (SSAS tabulare) | Documenti Microsoft
+title: Importare i dati (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc8728c2a4e023fb03e0e2de8e3c457e0f15fd72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35312647eeb1b452c155c05d7f4392fa540aa156
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253563"
 ---
 # <a name="import-data-ssas-tabular"></a>Importare dati (SSAS tabulare)
   È possibile importare dati in un modello tabulare da diverse origini. Negli argomenti contenuti in questa sezione viene descritto come utilizzare l'Importazione guidata dati in Progettazione modelli per connettersi ai dati e selezionare quelli da importare in un progetto di modello.  
@@ -44,8 +44,8 @@ ms.locfileid: "36170675"
 |-----------|-----------------|  
 |[Importare da un'origine dati relazionale &#40;tabulare di SSAS&#41;](import-from-a-relational-data-source-ssas-tabular.md)|Viene descritto come importare dati da origini dati relazionali quali un database di Microsoft SQL Server, Oracle o Teradata.|  
 |[Importa da un'origine dati multidimensionale &#40;tabulare di SSAS&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|Viene descritto come importare dati da un cubo multidimensionale di SQL Server Analysis Services.|  
-|[Importa da un Feed di dati &#40;tabulare di SSAS&#41;](import-from-a-data-feed-ssas-tabular.md)|Viene descritto come importare dati da un feed di dati quale un report di Microsoft Reporting Services o un set di dati di Azure DataMarket.|  
+|[Importare da un Feed di dati &#40;tabulare di SSAS&#41;](import-from-a-data-feed-ssas-tabular.md)|Viene descritto come importare dati da un feed di dati quale un report di Microsoft Reporting Services o un set di dati di Azure DataMarket.|  
 |[Importa da un File di testo &#40;tabulare di SSAS&#41;](import-from-a-text-file-ssas-tabular.md)|Viene descritto come importare dati da una cartella di lavoro di Microsoft Excel o da un file di testo.|  
-|[Copiare e incollare dati &#40;tabulare di SSAS&#41;](copy-and-paste-data-ssas-tabular.md)|Viene descritto come aggiungere dati a una tabella esistente in Progettazione modelli tramite Incolla e Accoda il contenuto degli Appunti.|  
+|[Copiare e incollare i dati &#40;tabulare di SSAS&#41;](copy-and-paste-data-ssas-tabular.md)|Viene descritto come aggiungere dati a una tabella esistente in Progettazione modelli tramite Incolla e Accoda il contenuto degli Appunti.|  
   
   

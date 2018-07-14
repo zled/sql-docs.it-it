@@ -1,5 +1,5 @@
 ---
-title: Regole di installazione | Documenti Microsoft
+title: Regole di installazione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SCC
 - System Configuration Check, Setup
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - SCC [SQL Server]
 ms.assetid: 168c0445-5651-42fc-91f4-d9f27d9e2281
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7ee52136e3d6c0e68e4a57277e4845acaeaaf321
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: df13e2ac5e6caf247f633e7f59ac397b2c5d22c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251493"
 ---
 # <a name="install-rules"></a>Regole di installazione
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Programma di installazione convalida la configurazione del computer prima di concludere l'installazione. Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita l'analisi del computer in cui verrà installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite Controllo configurazione sistema. Questo strumento consente di verificare le condizioni che impediscono la corretta operazione di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Prima dell'avvio dell'installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], lo strumento recupera le informazioni sullo stato di ciascun elemento. Il risultato viene confrontato con i requisiti, quindi vengono fornite indicazioni per la rimozione di eventuali problemi che impediscono di proseguire.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione convalida la configurazione del computer prima che venga completata l'operazione di installazione. Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita l'analisi del computer in cui verrà installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite Controllo configurazione sistema. Questo strumento consente di verificare le condizioni che impediscono la corretta operazione di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Prima dell'avvio dell'installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], lo strumento recupera le informazioni sullo stato di ciascun elemento. Il risultato viene confrontato con i requisiti, quindi vengono fornite indicazioni per la rimozione di eventuali problemi che impediscono di proseguire.  
   
  Con il controllo della configurazione di sistema viene generato un report con una breve descrizione di ogni regola eseguita, nonché lo stato dell'esecuzione. Il report controllo configurazione sistema si trova nel percorso % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< aaaammgg_hhmm >\\.  
   
  Prima di eseguire l'operazione di installazione, esaminare i seguenti argomenti:  
   
-1.  [Requisiti hardware e Software per l'installazione di SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+1.  [Requisiti hardware e software per l'installazione di SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
 2.  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
@@ -54,9 +54,9 @@ ms.locfileid: "36170957"
   
 -   [Regole di installazione](../../../2014/sql-server/install/installation-rules.md)  
   
--   [Funzionalità regole di &#40;eseguire l'aggiornamento&#41;](../../../2014/sql-server/install/feature-rules-upgrade.md)  
+-   [Le regole di funzionalità &#40;eseguire l'aggiornamento&#41;](../../../2014/sql-server/install/feature-rules-upgrade.md)  
   
--   [Regole di aggiornamento edizione](../../../2014/sql-server/install/edition-upgrade-rules.md)  
+-   [Regole di aggiornamento delle edizioni](../../../2014/sql-server/install/edition-upgrade-rules.md)  
   
 -   [Regole di disinstallazione](../../../2014/sql-server/install/uninstallation-rules.md)  
   

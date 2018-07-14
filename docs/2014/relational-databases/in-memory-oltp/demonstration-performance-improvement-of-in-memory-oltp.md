@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 40bda40f2ed8114f77a28e8a7b0b382107cecdd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 171af425cfa479dcf9be3f555250de9a246daa1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248501"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Dimostrazione: Miglioramento delle prestazioni di OLTP in memoria
   Questo esempio mostra i miglioramenti delle prestazioni che si ottengono quando si utilizza OLTP in memoria, mettendo a confronto le differenze nei tempi di risposta per l'esecuzione di una query Transact-SQL identica su tabelle ottimizzate per la memoria e su tabelle basate su disco tradizionali. Viene anche creata una stored procedure compilata in modo nativo (basata sulla stessa query), che viene quindi eseguita per dimostrare che in genere si ottengono i tempi di risposta migliori eseguendo query su una tabella ottimizzata per la memoria con una stored procedure compilata in modo nativo. Questo esempio illustra solo un aspetto dei miglioramenti delle prestazioni in caso di accesso ai dati in tabelle ottimizzate per la memoria, ovvero l'efficienza dell'accesso ai dati durante l'esecuzione di inserimenti. Questo esempio è a thread singolo e non sfrutta i vantaggi della concorrenza di OLTP in memoria. Un carico di lavoro che utilizza la concorrenza avrà un miglioramento più significativo delle prestazioni.  
   
 > [!NOTE]  
->  Un altro esempio relativo a tabelle con ottimizzazione per la memoria è disponibile all'indirizzo [esempio di OLTP In memoria di SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+>  Un altro esempio che illustra le tabelle ottimizzate per la memoria è disponibile all'indirizzo [esempio di OLTP In memoria di SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Per completare questo esempio, sarà necessario eseguire queste operazioni:  
   
-1.  Creare un database denominato **imoltp** e modificare i dettagli del file da impostare per l'utilizzo di OLTP In memoria.  
+1.  Creare un database denominato **imoltp** e modificare i dettagli del file da impostarlo per l'uso di OLTP In memoria.  
   
 2.  Creare gli oggetti di database per l'esempio, ovvero tre tabelle e una stored procedure compilata in modo nativo.  
   
 3.  Eseguire le diverse query e visualizzare i tempi di risposta per ognuna.  
   
- Per l'installazione di **imoltp** del database per questo esempio, creare innanzitutto una cartella vuota: **c:\imoltp_data**, e quindi eseguire il codice seguente:  
+ Per configurare il **imoltp** del database per questo esempio, creare innanzitutto una cartella vuota: **c:\imoltp_data**, e quindi eseguire il codice seguente:  
   
 ```tsql  
 USE master  
@@ -193,6 +193,6 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  [Requisiti per l'uso di tabelle ottimizzate per la memoria](requirements-for-using-memory-optimized-tables.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
- [CREARE PROCEDURE e tabelle con ottimizzazione per la memoria](/sql/t-sql/statements/create-procedure-transact-sql)  
+ [CREATE PROCEDURE e tabelle ottimizzate per la memoria](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   
