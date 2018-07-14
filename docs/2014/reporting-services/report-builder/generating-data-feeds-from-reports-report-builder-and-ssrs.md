@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7bdab22ae7d649e1915cb31c221bf0f546727513
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9594eca6b955081be5689862d96d1c9d09a6a664
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202661"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generazione di feed di dati dai report (Generatore report e SSRS)
-  Il [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] estensione per il rendering Atom genera un documento di servizio Atom che elenca i feed di dati disponibili in un report e i feed di dati dai dati aree in un report. Questa estensione viene usata per generare feed di dati conformi ad Atom, leggibili e scambiabili con applicazioni che possono usare i feed di dati generati dai report. Ad esempio è possibile usare l'estensione per il rendering Atom per generare feed di dati che, in seguito, possono essere usati nel client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+  Il [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] estensione per il rendering Atom genera un documento di servizio Atom che elenca i feed di dati disponibili in un report e i dati di feed di dati delle aree in un report. Questa estensione viene usata per generare feed di dati conformi ad Atom, leggibili e scambiabili con applicazioni che possono usare i feed di dati generati dai report. Ad esempio è possibile usare l'estensione per il rendering Atom per generare feed di dati che, in seguito, possono essere usati nel client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Il documento di servizio Atom elenca almeno un feed di dati per ogni area dati in un report. A seconda del tipo di area dati e i dati che consente di visualizzare l'area dati, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] potrebbe generare più feed di dati da un'area dati. Ad esempio una matrice o un grafico può fornire più feed di dati. Quando l'estensione per il rendering Atom crea il documento di servizio Atom, viene generato un identificatore univoco per ogni feed di dati che può essere usato nell'URL per accedere al contenuto del feed di dati.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36069781"
 
   
 ##  <a name="DataFeeds"></a> Feed di dati  
- Il feed di dati è un file XML che dispone di un formato tabulare coerente che non cambia nel tempo e di dati variabili che possono essere diversi ogni volta che viene eseguito il report. I feed di dati generati da [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono nello stesso formato dei dati generati da ADO.NET Data Services.  
+ Il feed di dati è un file XML che dispone di un formato tabulare coerente che non cambia nel tempo e di dati variabili che possono essere diversi ogni volta che viene eseguito il report. I feed di dati generati da [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono nello stesso formato di quelli generati da ADO.NET Data Services.  
   
  Un feed di dati contiene due sezioni: intestazione e dati. La specifica Atom definisce gli elementi di ogni sezione. L'intestazione include informazioni quali lo schema di codifica dei caratteri da usare con i feed di dati.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36069781"
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- Il codice XML seguente viene illustrato un <`entry`> elemento del report specifico di un feed di dati. Si noti che il <`entry`> elemento include i totali delle vendite e gli ordini per il gruppo e i totali delle vendite e degli ordini per tutti i gruppi. L'elemento <`entry`> include tutti i valori sul report.  
+ La parte XML seguente mostra un <`entry`> elemento del report specifico di un feed di dati. Si noti che il <`entry`> elemento include i totali delle vendite e degli ordini per il gruppo e i totali delle vendite e degli ordini per tutti i gruppi. L'elemento <`entry`> include tutti i valori sul report.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36069781"
   
  I nomi degli elementi del report vengono impostati in modo predefinito sui nomi degli elementi del linguaggio RDL degli elementi del report e, spesso, non sono intuitivi o facili da ricordare. Ad esempio, il nome predefinito della prima matrice presente in un report è Tablix 1. I feed di dati usano questi nomi.  
   
- Per rendere più semplice l'uso del feed di dati, è possibile sfruttare la proprietà DataElementName dell'area dati per fornire nomi descrittivi. Se si specifica un valore per DataElementName il feed di dati sottoelemento <`d`> verrà utilizzato, anziché il nome dell'area dati predefinito. Se, ad esempio, il nome predefinito di un area dati è Tablix1 e DataElementName impostato SalesByTerritoryYear il <`d`> nei dati feed utilizza SalesByTerritoryYear. Se le aree dati dispongono di due feed di dati come il report matrice descritto in precedenza, i nomi usati nei feed di dati sono SalesByTerritoryYear _Territory e SalesByTerritoryYear _Year.  
+ Per rendere più semplice l'uso del feed di dati, è possibile sfruttare la proprietà DataElementName dell'area dati per fornire nomi descrittivi. Se si specifica un valore per DataElementName sottoelemento del feed di dati <`d`> verrà utilizzare è invece il nome dell'area dati predefinito. Ad esempio, se il nome predefinito di un area dati è Tablix1 e DataElementName impostato SalesByTerritoryYear il <`d`> nei dati del feed userà SalesByTerritoryYear. Se le aree dati dispongono di due feed di dati come il report matrice descritto in precedenza, i nomi usati nei feed di dati sono SalesByTerritoryYear _Territory e SalesByTerritoryYear _Year.  
   
  Se si confrontano i dati mostrati sul report e i dati del feed di dati, è possibile notare alcune differenze. I report spesso mostrano dati numerici formattati e relativi all'ora/data, mentre il feed di dati contiene dati non formattati.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "36069781"
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Esportazione in un File CSV &#40;SSRS e Generatore Report&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
- [Esportazione di report &#40;SSRS e Generatore Report&#41;](export-reports-report-builder-and-ssrs.md)  
+ [Esportazione in un File CSV &#40;Report e SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+ [Esportazione di report &#40;Report e SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

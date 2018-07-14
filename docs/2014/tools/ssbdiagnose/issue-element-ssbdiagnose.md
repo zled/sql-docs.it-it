@@ -1,5 +1,5 @@
 ---
-title: Elemento Issue (ssbdiagnose) | Documenti Microsoft
+title: Elemento Issue (ssbdiagnose) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - issue element
 - XML output file format [ssbdiagnose], issue element
 - ssbdiagnose
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: adff003b1d6b98d7778311b84aca4666dd802d27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 39b279a22da8c75573aa0cad2dc50d7f85e46a74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175203"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Elemento Issue (ssbdiagnose)
   Segnala un problema rilevato dall'utilità **ssbdiagnose** . Nel file di output XML di **ssbdiagnose** è presente un solo elemento Issue per ogni problema segnalato.  

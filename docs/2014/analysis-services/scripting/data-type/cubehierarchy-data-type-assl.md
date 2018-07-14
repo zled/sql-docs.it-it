@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati CubeHierarchy (ASSL) | Documenti Microsoft
+title: Tipo di dati CubeHierarchy (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeHierarchy data type
 ms.assetid: cd633409-0c14-4dd9-97cc-3d30e25df24f
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48176b4096b7fa7ba8e1847750410be0f65da552
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d719b6c841b27df473599514dc12c4e90644610
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176198"
 ---
 # <a name="cubehierarchy-data-type-assl"></a>Tipo di dati CubeHierarchy (ASSL)
   Definisce un tipo di dati primitivo che rappresenta le informazioni su un [gerarchia](../objects/hierarchy-element-assl.md) elemento in un [cubo](../objects/cube-element-assl.md) elemento.  
@@ -53,13 +53,13 @@ ms.locfileid: "36155861"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Annotazioni](../collections/annotations-element-assl.md), [abilitata](../properties/enabled-element-assl.md), [HierarchyID](../properties/id-element-assl.md), [nome](../properties/name-element-assl.md), [OptimizedState](../properties/state-element-assl.md), [visibile](../properties/visible-element-assl.md)|  
+|Elementi figlio|[Le annotazioni](../collections/annotations-element-assl.md), [abilitati](../properties/enabled-element-assl.md), [HierarchyID](../properties/id-element-assl.md), [nome](../properties/name-element-assl.md), [OptimizedState](../properties/state-element-assl.md), [visibili](../properties/visible-element-assl.md)|  
 |Elementi derivati|[Gerarchia](../objects/hierarchy-element-assl.md) ([gerarchie](../collections/hierarchies-element-assl.md) insieme [CubeDimension](dimension-data-type-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Questo tipo di dati non presenta alcuna restrizione e può essere utilizzato in qualsiasi modalità di distribuzione: 0-Multidimensionale e Data Mining, 1-SharePoint e 2-Tabulare.  
   
- In [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)], il *Enabled* proprietà non può essere impostata su `False` per *CubeHierarchy*.  
+ Nelle [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)], il *Enabled* proprietà non può essere impostata su `False` per *CubeHierarchy*.  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.CubeHierarchy>.  
   

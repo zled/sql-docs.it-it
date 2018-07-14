@@ -1,14 +1,13 @@
 ---
-title: Panoramica di gruppi di disponibilità AlwaysOn (SQL Server) | Documenti Microsoft
+title: Panoramica di gruppi di disponibilità AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - secondary databases [SQL Server], in availability group
 - primary databases [SQL Server], in availability group
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 caps.latest.revision: 119
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: f15532899e97ee4862d3e0bb7d5883c8c87f5b2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 05f436ae609f47b6a5dd2ce81adbdf23c4d4115c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192601"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>Panoramica di Gruppi di disponibilità AlwaysOn (SQL Server)
   In questo argomento sono introdotti i concetti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fondamentali per la configurazione e la gestione di uno o più gruppi di disponibilità in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un riepilogo dei vantaggi offerti dai gruppi di disponibilità e per una panoramica della terminologia relativa a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md).  
@@ -153,7 +152,7 @@ ms.locfileid: "36157004"
   
 -   **Blog:**  
   
-     [Su AlwaysON - HADRON serie: Uso del Pool di lavoro per HADRON database abilitati](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Su AlwaysON - HADRON serie: Utilizzo del Pool di lavoro per HADRON database abilitati](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [SQL Server AlwaysOn Team blog: Il Blog ufficiale di SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -161,13 +160,13 @@ ms.locfileid: "36157004"
   
 -   **Video:**  
   
-     [Serie di Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 1: Introduzione della soluzione di disponibilità elevata di prossima generazione](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Serie di Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 1: Presentazione della soluzione di disponibilità elevata di prossima generazione](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Serie di Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 2: Compilazione di una soluzione di disponibilità elevata critica tramite Alwasyon](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Serie di Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 2: Creazione di una soluzione di disponibilità elevata critica tramite Alwasyon](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **White paper:**  
   
-     [Guida alle soluzioni di Microsoft SQL Server AlwaysOn per la disponibilità elevata e ripristino di emergenza](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Pagina relativa ai white paper Microsoft per SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -179,10 +178,10 @@ ms.locfileid: "36157004"
  [Cenni preliminari sulle istruzioni Transact-SQL per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
  [Panoramica dei cmdlet di PowerShell per gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)   
  [Supporto della disponibilità elevata per i database OLTP in memoria](../../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)   
- [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Repliche secondarie attive: Repliche secondarie leggibili &#40;gruppi di disponibilità AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Repliche secondarie attive: Backup su repliche secondarie &#40;gruppi di disponibilità AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
+ [Repliche secondarie attive: Backup in repliche secondarie &#40;gruppi di disponibilità AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)  
   
   

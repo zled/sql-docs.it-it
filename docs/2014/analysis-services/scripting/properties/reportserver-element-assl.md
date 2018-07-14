@@ -1,5 +1,5 @@
 ---
-title: Elemento ReportServer (ASSL) | Documenti Microsoft
+title: Elemento ReportServer (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportServer element
 ms.assetid: 677437aa-9d15-4dcc-a9bc-34f851d9640d
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0da706fd2a2bf80a15ae5c4916e33b0420902d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68d80b432482d5b84db38d43291459c6aff8c758
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208201"
 ---
 # <a name="reportserver-element-assl"></a>Elemento ReportServer (ASSL)
-  Contiene il nome del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] istanza che viene utilizzato il [ReportAction](../data-type/action-data-type-assl.md).  
+  Contiene il nome del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] istanza che viene usato per il [ReportAction](../data-type/action-data-type-assl.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,8 +61,8 @@ ms.locfileid: "36157245"
 |Elemento padre|[ReportAction](../data-type/action-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `ReportServer` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ReportAction>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `ReportServer` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ReportAction>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

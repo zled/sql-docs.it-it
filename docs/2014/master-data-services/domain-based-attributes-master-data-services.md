@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], about domain-based attributes
 - domain-based attributes [Master Data Services]
 - attributes [Master Data Services], domain-based attributes
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 18ee77e09ae711285e6dd640d725f1d57ec23104
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1f85f31f470d82685af660dfb6d7f76d8728263f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233371"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>Attributi basati su dominio [Master Data Services]
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]un attributo basato su dominio è un attributo i cui valori sono popolati da membri di un'entità. È possibile pensare a un attributo basato su dominio come a un elenco vincolato, gli attributi basati su dominio non consentono l'immissione dei valori di attributo non validi da parte degli utenti. Per selezionare un valore di attributo, l'utente deve scegliere da un elenco.  

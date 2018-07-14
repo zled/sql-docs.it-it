@@ -1,5 +1,5 @@
 ---
-title: Configurare gli account del servizio (Analysis Services) | Documenti Microsoft
+title: Configurare gli account del servizio (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services], logon accounts
 - logon accounts [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a5093e78a7f2505588f5362ee0943b3660fc61be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19512299b7eacf0e768ef2a53bd867f05d5cc6d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206541"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurare gli account del servizio (Analysis Services)
   Il provisioning dell'account a livello di prodotto è documentato in [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), un argomento che fornisce informazioni complete sull'account del servizio per tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tra cui [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Fare riferimento a questo argomento per ottenere informazioni sui tipi di account validi, sui privilegi di Windows assegnati dal programma di installazione, sulle autorizzazioni per il file system e il Registro di sistema e altro ancora.  
@@ -42,7 +42,7 @@ ms.locfileid: "36156108"
 ## <a name="logon-account-recommendations"></a>Indicazioni sull'account di accesso  
  In un cluster di failover, tutte le istanze di Analysis Services devono essere configurate per usare un account utente di dominio Windows. Assegnare lo stesso account a tutte le istanze. Per altre informazioni, vedere [Come eseguire il clustering di Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) .  
   
- Istanze autonome devono usare l'account virtuale predefinito, **NT Service\MSSQLServerOLAPService** per l'istanza predefinita, o **NT Service\MSOLAP$ * * *-nome dell'istanza* per un'istanza denominata. Questa indicazione si applica alle istanze di Analysis Services in tutte le modalità del server, presupponendo che venga usato Windows Server 2008 R2 e versioni successive per il sistema operativo e SQL Server 2012 e versioni successive per Analysis Services.  
+ Le istanze autonome devono usare l'account virtuale predefinito, **NT Service\MSSQLServerOLAPService** per l'istanza predefinita o **NT Service\MSOLAP$ * * * nome-istanza* per un'istanza denominata. Questa indicazione si applica alle istanze di Analysis Services in tutte le modalità del server, presupponendo che venga usato Windows Server 2008 R2 e versioni successive per il sistema operativo e SQL Server 2012 e versioni successive per Analysis Services.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Concessione di autorizzazioni ad Analysis Services  
  Questa sezione illustra le autorizzazioni richieste da Analysis Services per le operazioni interne locali come, ad esempio, avviare l'eseguibile, leggere il file di configurazione e caricare i database dalla directory dati. Per le indicazioni sull'impostazione delle autorizzazioni per l'accesso ai dati esterni e l'interoperabilità con altri servizi e applicazioni, vedere invece [Concessione di ulteriori autorizzazioni per operazioni del server specifiche](#bkmk_tasks) più avanti in questo argomento.  
@@ -72,7 +72,7 @@ ms.locfileid: "36156108"
 |-|-|  
 |**Aumento di un working set di processo** (SeIncreaseWorkingSetPrivilege)|Questo privilegio è disponibile per tutti gli utenti per impostazione predefinita tramite il gruppo di sicurezza **Utenti** . Se si blocca un server rimuovendo i privilegi per questo gruppo, Analysis Services potrebbe non avviarsi registrando l'errore seguente: "Il privilegio richiesto non appartiene al client". Quando si verifica questo errore, ripristinare il privilegio in Analysis Services concedendo tale privilegio al gruppo di sicurezza di Analysis Services appropriato.|  
 |**Regolazione limite risorse memoria per un processo** (SeIncreaseQuotaSizePrivilege)|Questo privilegio viene usato per richiedere una quantità maggiore di memoria se un processo non dispone di risorse sufficienti per completare l'esecuzione, in base alle soglie di memoria stabilite per l'istanza.|  
-|**Blocco di pagine in memoria** (SeLockMemoryPrivilege)|Questo privilegio è necessario solo se il paging è completamente disattivato. Per impostazione predefinita, un'istanza del server tabulare Usa il file di paging di Windows, ma è possibile impedirne l'utilizzo del paging di Windows tramite l'impostazione `VertiPaqPagingPolicy` su 0.<br /><br /> `VertiPaqPagingPolicy` su 1 (impostazione predefinita), indica l'istanza del server tabulare per utilizzare il file di paging di Windows. Le allocazioni non vengono bloccate consentendo a Windows di eliminare tramite paging le allocazioni in base alle esigenze. Poiché viene usato il paging, non è necessario bloccare le pagine in memoria. Pertanto, per la configurazione predefinita (in cui `VertiPaqPagingPolicy` = 1), non è necessario concedere il **blocco di pagine in memoria** privilegio a un'istanza tabulare.<br /><br /> `VertiPaqPagingPolicy` impostato su 0. Se si disattiva il paging per Analysis Services, le allocazioni vengono bloccate, supponendo che all'istanza tabulare venga concesso il privilegio **Blocco di pagine in memoria** . Con questa impostazione e il privilegio **Blocco di pagine in memoria** , Windows non può eliminare tramite paging le allocazioni di memoria effettuate per Analysis Services quando la quantità di memoria disponibile nel sistema è insufficiente. Analysis Services si basa sul **blocco di pagine in memoria** autorizzazione come privilegio `VertiPaqPagingPolicy` = 0. Si noti che non è consigliabile disattivare il paging di Windows. Si aumenta la frequenza di errori di memoria insufficiente per le operazioni che altrimenti potrebbero riuscire se il paging fosse consentito. Vedere [Memory Properties](../server-properties/memory-properties.md) per ulteriori informazioni su `VertiPaqPagingPolicy`.|  
+|**Blocco di pagine in memoria** (SeLockMemoryPrivilege)|Questo privilegio è necessario solo se il paging è completamente disattivato. Per impostazione predefinita, un'istanza del server tabulare Usa il file di paging di Windows, ma è possibile impedirne l'utilizzo del paging di Windows tramite l'impostazione `VertiPaqPagingPolicy` su 0.<br /><br /> `VertiPaqPagingPolicy` su 1 (impostazione predefinita) indica l'istanza del server tabulare di usare il file di paging Windows. Le allocazioni non vengono bloccate consentendo a Windows di eliminare tramite paging le allocazioni in base alle esigenze. Poiché viene usato il paging, non è necessario bloccare le pagine in memoria. Pertanto, per la configurazione predefinita (dove `VertiPaqPagingPolicy` = 1), non è necessario concedere il **blocco di pagine in memoria** privilegio a un'istanza tabulare.<br /><br /> `VertiPaqPagingPolicy` impostato su 0. Se si disattiva il paging per Analysis Services, le allocazioni vengono bloccate, supponendo che all'istanza tabulare venga concesso il privilegio **Blocco di pagine in memoria** . Con questa impostazione e il privilegio **Blocco di pagine in memoria** , Windows non può eliminare tramite paging le allocazioni di memoria effettuate per Analysis Services quando la quantità di memoria disponibile nel sistema è insufficiente. Analysis Services si basa sul **blocco di pagine in memoria** autorizzazione come privilegio `VertiPaqPagingPolicy` = 0. Si noti che non è consigliabile disattivare il paging di Windows. Si aumenta la frequenza di errori di memoria insufficiente per le operazioni che altrimenti potrebbero riuscire se il paging fosse consentito. Visualizzare [Memory Properties](../server-properties/memory-properties.md) per altre informazioni sulle `VertiPaqPagingPolicy`.|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>Per visualizzare o aggiungere privilegi di Windows per l'account del servizio  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36156108"
   
  Il proprietario delle autorizzazioni per i file di dati, gli eseguibili dei file di programma, i file di configurazioni, i file di log e i file temporanei è un gruppo di sicurezza locale creato dal programma di installazione di SQL Server.  
   
- Per ogni istanza installata viene creato un solo gruppo di sicurezza. Il gruppo di sicurezza è denominato in base all'istanza **SQLServerMSASUser$ MSSQLSERVER** per l'istanza predefinita, oppure `SQLServerMSASUser$` \<nomeserver >$\<NomeIstanza > per un'istanza denominata. Questo gruppo di sicurezza viene fornito dal programma di installazione con le autorizzazioni per i file necessarie per eseguire le operazioni del server. Se si controllano le autorizzazioni di sicurezza per la directory \MSAS12.MSSQLSERVER\OLAP\BIN, si noterà che il proprietario dell'autorizzazione per la directory in questione è il gruppo di sicurezza, non l'account del servizio né il relativo SID per servizio.  
+ Per ogni istanza installata viene creato un solo gruppo di sicurezza. Il gruppo di sicurezza è denominato in base all'istanza **SQLServerMSASUser$ MSSQLSERVER** per l'istanza predefinita, o `SQLServerMSASUser$` \<nomeserver >$\<NomeIstanza > per un'istanza denominata. Questo gruppo di sicurezza viene fornito dal programma di installazione con le autorizzazioni per i file necessarie per eseguire le operazioni del server. Se si controllano le autorizzazioni di sicurezza per la directory \MSAS12.MSSQLSERVER\OLAP\BIN, si noterà che il proprietario dell'autorizzazione per la directory in questione è il gruppo di sicurezza, non l'account del servizio né il relativo SID per servizio.  
   
  Nel gruppo di sicurezza è incluso solo un membro, vale a dire il SID per servizio dell'account di avvio dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Il programma di installazione aggiunge il SID per servizio al gruppo di sicurezza locale. L'uso di un gruppo di sicurezza locale con l'appartenenza al SID rappresenta una lieve ma percettibile differenza nel modo in cui il programma di installazione di SQL Server esegue il provisioning di Analysis Services rispetto al Motore di database.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36156108"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  Uso **Gestione Computer** | **utenti e gruppi locali** | **gruppi** per controllare l'appartenenza di SQLServerMSASUser$\<nomeserver >$\<instancename > gruppo di sicurezza.  
+2.  Uso **Gestione Computer** | **utenti e gruppi locali** | **gruppi** per controllare l'appartenenza di SQLServerMSASUser$\<nomeserver >$\<NomeIstanza > gruppo di sicurezza.  
   
      Il SID del membro deve corrispondere al SID per servizio del passaggio 1.  
   
@@ -155,9 +155,9 @@ ms.locfileid: "36156108"
 ## <a name="see-also"></a>Vedere anche  
  [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Account del servizio SQL Server e SID Per servizio (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server utilizza un SID del servizio per fornire isolamento dei servizi (articolo della Knowledge Base)](http://support.microsoft.com/kb/2620201)   
+ [SQL Server utilizza un SID del servizio per fornire isolamento dei servizi (articolo KB)](http://support.microsoft.com/kb/2620201)   
  [Token di accesso (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [Identificatori di sicurezza (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [ID di sicurezza (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
  [Token di accesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [Elenchi di controllo di accesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   

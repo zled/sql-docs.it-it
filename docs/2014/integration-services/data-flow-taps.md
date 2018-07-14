@@ -1,5 +1,5 @@
 ---
-title: Le scelte del flusso di dati | Documenti Microsoft
+title: Scelte del flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e51ba64f0c9793b4d3cb0b0485c636de1acee3b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbf61a735450551573d0c3b2f2a6f5542bb7dc97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271477"
 ---
 # <a name="data-flow-taps"></a>Scelte del flusso di dati
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] introduce una nuova funzionalità che consente di aggiungere una scelta dei dati in un percorso del flusso di dati di un pacchetto in fase di esecuzione e indirizzare l'output della scelta dei dati in un file esterno. Per utilizzare questa funzionalità, è necessario distribuire il progetto SSIS utilizzando il modello di distribuzione del progetto in un server SSIS. Al termine della distribuzione del pacchetto nel server, è necessario eseguire script T-SQL nel database SSISDB per aggiungere le scelte dei dati prima dell'esecuzione del pacchetto. Di seguito è riportato uno scenario di esempio:  

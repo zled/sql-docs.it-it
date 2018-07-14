@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati assembly (ASSL) | Documenti Microsoft
+title: Tipo di dati assembly (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Assembly data type
 ms.assetid: 0a381322-9509-4579-a754-c6cdd0a70cc9
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3fd706974b0cb4a897a7ef75e147dcd35ac91481
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 40cafd0d8ef11feaebce5161e97ef3717a9fb943
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233831"
 ---
 # <a name="assembly-data-type-assl"></a>Tipo di dati Assembly (ASSL)
   Definisce un tipo di dati primitivo astratto che rappresenta un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly o libreria a collegamento dinamico (DLL) un COM associata a un [Server](../objects/server-element-assl.md) oppure [Database](../objects/database-element-assl.md) elemento.  
@@ -56,18 +56,18 @@ ms.locfileid: "36156283"
 |Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipi di dati di base|None|  
-|Tipi di dati derivati|[ClrAssembly](assembly-data-type-assl.md), [ComAssembly](comassembly-data-type-assl.md)|  
+|Tipi di dati derivati|[Classe ClrAssembly](assembly-data-type-assl.md), [ComAssembly](comassembly-data-type-assl.md)|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Annotazioni](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [descrizione](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [ImpersonationInfo](../properties/impersonationinfo-element-assl.md), [ LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [nome](../properties/name-element-assl.md)|  
+|Elementi figlio|[Le annotazioni](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [descrizione](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [ImpersonationInfo](../properties/impersonationinfo-element-assl.md), [ LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [nome](../properties/name-element-assl.md)|  
 |Elementi derivati|None|  
   
-## <a name="remarks"></a>Remarks  
- Il tipo di dati `Assembly` funge da tipo di dati di base per l'elemento `ComAssembly`, che rappresenta le librerie COM associate all'istanza o al database, e per l'elemento `ClrAssembly`, che rappresenta gli assembly [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] associati all'istanza o al database. Per altre informazioni sugli assembly, vedere [gestione di assembly del modello multidimensionale](../../multidimensional-models/multidimensional-model-assemblies-management.md).  
+## <a name="remarks"></a>Note  
+ Il tipo di dati `Assembly` funge da tipo di dati di base per l'elemento `ComAssembly`, che rappresenta le librerie COM associate all'istanza o al database, e per l'elemento `ClrAssembly`, che rappresenta gli assembly [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] associati all'istanza o al database. Per altre informazioni sugli assembly, vedere [gestione di assembly di modelli multidimensionali](../../multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.Assembly>.  
   

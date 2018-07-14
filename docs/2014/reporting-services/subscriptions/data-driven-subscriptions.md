@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
@@ -16,13 +16,13 @@ ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 04a5269f5e809a6e17b5b2f50b122abebec17627
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 423a893fc3586334464d50357626c319d9a27ffe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270317"
 ---
 # <a name="data-driven-subscriptions"></a>sottoscrizioni guidate dai dati
   Una sottoscrizione guidata dai dati consente di utilizzare i dati di sottoscrizione dinamici recuperati da un'origine dei dati esterna in fase di esecuzione. In una sottoscrizione guidata dai dati è inoltre possibile utilizzare testo statico e valori predefiniti specificati al momento della definizione della sottoscrizione. È possibile utilizzare le sottoscrizioni guidate dai dati per eseguire le operazioni seguenti:  
@@ -50,17 +50,17 @@ ms.locfileid: "36069328"
   
 -   Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano la funzionalità di sottoscrizione guidata dai dati, vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
--   Per i dati di sottoscrizione, scegliere un'origine dei dati che offra informazioni sullo schema al server di report. I tipi di origini dati supportate possono essere dati relazionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Oracle, database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , dati del pacchetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , origini dati ODBC e OLE DB. Per ulteriori informazioni sui requisiti di origine dei dati del sottoscrittore, vedere [utilizzare un'origine dati esterna per i dati del sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
+-   Per i dati di sottoscrizione, scegliere un'origine dei dati che offra informazioni sullo schema al server di report. I tipi di origini dati supportate possono essere dati relazionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Oracle, database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , dati del pacchetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , origini dati ODBC e OLE DB. Per altre informazioni sui requisiti dell'origine dati sottoscrittore, vedere [Usa un'origine dati esterna per i dati del sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
 ## <a name="working-with-data-driven-subscriptions"></a>Utilizzo di sottoscrizioni guidate dai dati  
  Negli argomenti seguenti vengono fornite ulteriori informazioni sulle sottoscrizioni guidate dai dati.  
   
 |Argomento|Description|  
 |------------|-----------------|  
-|[Creare, modificare ed eliminare una sottoscrizione guidata dai dati](data-driven-subscriptions.md)|Illustra come creare, modificare o eliminare una sottoscrizione guidata dai dati.|  
-|[Utilizzare un'origine dati esterna per i dati del sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Include informazioni sulle origini dei dati che è possibile utilizzare per una sottoscrizione guidata dai dati.|  
+|[Come creare, modificare ed eliminare una sottoscrizione guidata dai dati](data-driven-subscriptions.md)|Illustra come creare, modificare o eliminare una sottoscrizione guidata dai dati.|  
+|[Usare un'origine dati esterna per i dati del sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Include informazioni sulle origini dei dati che è possibile utilizzare per una sottoscrizione guidata dai dati.|  
 |[Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|Include istruzioni dettagliate per la creazione di una sottoscrizione guidata dai dati.|  
-|[La memorizzazione nella cache i report &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)|Descrive come utilizzare Provider recapito Null con una sottoscrizione guidata dai dati per precaricare la cache.|  
+|[La memorizzazione dei report &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)|Descrive come utilizzare Provider recapito Null con una sottoscrizione guidata dai dati per precaricare la cache.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   

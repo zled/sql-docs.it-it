@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f33b889cb9bc409815c6fe8a0501de3bc1388e68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 14010ca375afdf5166f737a27e33f8ed3fc42c49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327342"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Supporto del tipo di dati xml in FOR XML
-  Se una query FOR XML specifica una colonna di `xml` tipo nella clausola SELECT, i valori delle colonne sono mappati come elementi nel codice XML risultante, indipendentemente dal fatto è specificata la direttiva ELEMENTS. Le dichiarazioni XML nella colonna di tipo `xml` non sono serializzate.  
+  Se una query FOR XML specifica una colonna di `xml` tipo nella clausola SELECT, i valori delle colonne vengono eseguito il mapping come elementi nel codice XML risultante, indipendentemente dal fatto che si specifica la direttiva ELEMENTS. Le dichiarazioni XML nella colonna di tipo `xml` non sono serializzate.  
   
  Ad esempio, la query seguente recupera le informazioni di contatto cliente, ad esempio il `BusinessEntityID`, `FirstName`, e `LastName` le colonne e i numeri di telefono dal `AdditionalContactInfo` colonna di `xml` tipo.  
   
@@ -121,7 +121,7 @@ FOR XML AUTO, TYPE;
   
  Se si specifica la direttiva ELEMENTS nella query, BusinessEntityID, LastName e FirstName verranno restituiti come elementi nel codice XML risultante.  
   
- Nell'esempio seguente viene illustrato che la logica di elaborazione di FOR XML non vengono serializzate le dichiarazioni XML contenute nei dati XML da un `xml` colonna di tipo:  
+ L'esempio seguente illustra che la logica di elaborazione di FOR XML non vengono serializzate le dichiarazioni XML contenute nei dati XML da un `xml` colonna di tipo:  
   
 ```  
 create table t(i int, x xml)  
@@ -152,7 +152,7 @@ for xml auto;
   
 -   Un'istanza di `xml` tipo  
   
- Ad esempio, la funzione definita dall'utente seguente restituisce una tabella con una singola colonna `xm`tipo l:  
+ Ad esempio, la funzione definita dall'utente seguente restituisce una tabella con una singola colonna di `xm`tipo l:  
   
 ```  
 USE AdventureWorks2012;  

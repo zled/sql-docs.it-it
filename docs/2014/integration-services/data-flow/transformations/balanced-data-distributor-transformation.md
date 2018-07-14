@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.balanceddatadistributor.f1
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f536f95243ad54c643d1231f301e0747d50b28e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 175f52195a20c965915e1d144f661f53fbb42573
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187108"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Trasformazione del server di distribuzione di dati bilanciati
-  La trasformazione del server di distribuzione di dati bilanciati (BDD) sfrutta le funzionalità di elaborazione simultanea delle CPU più recenti. Vengono distribuiti in modo uniforme i buffer di righe in entrata in output di thread distinti. Tramite i thread distinti di ogni percorso di output, con il componente BDD vengono migliorate le prestazioni di un pacchetto SSIS in computer con più processori e più core. Il componente BDD fa parte del Feature Pack per [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Scaricarlo e installarlo da [qui](http://go.microsoft.com/fwlink/p/?LinkId=391999).  
+  La trasformazione del server di distribuzione di dati bilanciati (BDD) sfrutta le funzionalità di elaborazione simultanea delle CPU più recenti. Vengono distribuiti in modo uniforme i buffer di righe in entrata in output di thread distinti. Tramite i thread distinti di ogni percorso di output, con il componente BDD vengono migliorate le prestazioni di un pacchetto SSIS in computer con più processori e più core. Il componente BDD fa parte del Feature Pack per [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Scaricarlo e installarlo dalla [qui](http://go.microsoft.com/fwlink/p/?LinkId=391999).  
   
  Nel diagramma seguente viene illustrato un esempio semplice di utilizzo della trasformazione BDD. In questo esempio, tramite la trasformazione BDD viene selezionato un buffer della pipeline per volta dai dati di input di un'origine del file flat e viene inviato a uno dei tre percorsi di output in base a un meccanismo round robin. In SQL Server Data Tools è possibile controllare i valori di una proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A>(dimensioni predefinite del buffer della pipeline) e di una proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A>(numero massimo di righe predefinito in un buffer della pipeline) nella finestra **Proprietà** in cui sono visualizzate le proprietà di un'attività Flusso di dati.  
   

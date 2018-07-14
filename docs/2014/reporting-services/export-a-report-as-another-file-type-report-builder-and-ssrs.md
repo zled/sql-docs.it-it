@@ -1,5 +1,5 @@
 ---
-title: Esportare un Report come tipo di un altro File (Generatore Report e SSRS) | Documenti Microsoft
+title: Esportare un Report come tipo di un altro File (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
 caps.latest.revision: 9
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8f37c659b224c2428b99d1f74b3b64c46f5c5cd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 88d0969efabebe3da05ebfce8d666eb78ff4ba2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166199"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Esportare un report in un altro tipo di file (Generatore report e SSRS)
   È possibile eseguire il rendering di un report in un altro formato di file, ad esempio CSV, immagine, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)] o [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)], durante la visualizzazione in anteprima in Generatore report o Progettazione report oppure durante la visualizzazione nel server di report. Il rendering del report in un formato specifico risulta utile quando si desidera salvare immediatamente il report in un altro tipo di file senza pubblicarlo sul server di report oppure quando si desidera visualizzare l'aspetto che avrà il report quando verrà recapitato ai lettori in un formato specifico. Il rendering del report nel server di report risulta utile quando si impostano sottoscrizioni o si recapitano i report tramite posta elettronica oppure se si desidera salvare un report disponibile nel server di report. Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
@@ -89,8 +89,8 @@ ms.locfileid: "36157941"
      **Nota** Se non è possibile aprire il report nel formato selezionato perché non è stato associato alcun programma a questo tipo di file, verrà richiesto di salvare il report esportato o di individuare un programma online con cui aprirlo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esportazione di report &#40;SSRS e Generatore Report&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Esportazione di report &#40;Report e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il Rendering di Report differenti &#40;SSRS e Generatore Report&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
+ [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
   
   

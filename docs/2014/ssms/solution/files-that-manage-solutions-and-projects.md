@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], files
 - .ssmssln files
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - files [SQL Server Management Studio], projects
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67f3047898eb001a3eb5dd8a2f4447e99d726e83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b2e52799292a0272cc31efb6fb6d31ca5285731e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257807"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>File per la gestione di soluzioni e progetti
   In questo argomento vengono descritti i tipi di file specifici per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per impostazione predefinita, tutte le soluzioni e i relativi progetti vengono creati in \Documenti\SQL Server Management Studio Projects.  
@@ -53,7 +53,7 @@ ms.locfileid: "36069528"
  Se la struttura della directory è simile alla struttura logica visualizzata in Esplora soluzioni, è più facile individuare i file del progetto e della soluzione e condividerli con altri sviluppatori di un team.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire i file con codifica](manage-files-with-encoding.md)   
+ [Gestire file con codifica](manage-files-with-encoding.md)   
  [File esterni](miscellaneous-files.md)   
  [Esplora soluzioni](solution-explorer.md)   
  [Soluzioni di &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)   

@@ -1,5 +1,5 @@
 ---
-title: Opzioni (SQL Server oggetto Scripting Explorer) | Documenti Microsoft
+title: Opzioni (pagina generazione script Esplora oggetto SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,35 +8,35 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74dfa7eec9ed7f014e9baf09cf4ddcf30cd12901
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 094fd9d740501fafee8c75eff162a132c01e08ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170222"
 ---
-# <a name="options-sql-server-object-explorer-scripting-page"></a>Opzioni (pagina Esplora script dell'oggetto SQL Server)
+# <a name="options-sql-server-object-explorer-scripting-page"></a>Opzioni (pagina generazione script Esplora oggetto SQL Server)
   Usare questa pagina per impostare le opzioni di scripting valide per i comandi seguenti dei menu di scelta rapida degli oggetti in **Esplora oggetti**:  
   
 -   Comandi**Modifica** per tabelle e viste utente.  
   
--   **Script \<oggetto > come** comandi per gli oggetti creati dall'utente.  
+-   **Lo script \<oggetto > come** comandi per gli oggetti creati dall'utente.  
   
 -   Comandi**Modifica** per oggetti creati dall'utente.  
   
 -   Questa pagina consente inoltre di impostare i valori predefiniti per le opzioni di creazione di script per **Generazione guidata script di SQL Server**.  
   
-## <a name="remarks"></a>Remarks  
- Il **modificare** e **Modify** comandi potrebbero produrre risultati diversi dai **Script \<oggetto > come** comando per la stessa impostazione dell'opzione. I comandi **Modifica** e **Cambia** sono infatti stati creati per modificare oggetti nel database corrente durante una sessione dell'editor di query. Il **Script \<oggetto > come** comando è progettato per generare uno script in modo che possa essere utilizzato successivamente per creare oggetti.  
+## <a name="remarks"></a>Note  
+ Il **modifica** e **Modify** comandi potrebbero produrre risultati diversi rispetto i **Script \<oggetto > come** comando per la stessa impostazione dell'opzione. I comandi **Modifica** e **Cambia** sono infatti stati creati per modificare oggetti nel database corrente durante una sessione dell'editor di query. Il **Script \<oggetto > come** comando è progettato per generare uno script in modo che possa essere utilizzato successivamente per creare oggetti.  
   
 ## <a name="options"></a>Opzioni  
  Specificare le opzioni di scripting selezionando le impostazioni desiderate tra quelle disponibili nell'elenco visualizzato a destra di ciascuna opzione.  
@@ -46,7 +46,7 @@ ms.locfileid: "36158588"
  Consente di separare istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] singole utilizzando un separatore batch. Per modificare il separatore batch predefinito per l' **editor di query**, scegliere **Strumenti**/**Opzioni**/**Esecuzione query**/**SQL Server**/**Generale**/**Separatore batch**. Il valore predefinito è False. Per altre informazioni, vedere [GO &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go).  
   
  **Includi intestazioni descrittive**  
- Consente di aggiungere commenti descrittivi allo script dividendolo in sezioni per ogni oggetto. Il valore predefinito è True. Per altre informazioni, vedere [commento &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql).  
+ Consente di aggiungere commenti descrittivi allo script dividendolo in sezioni per ogni oggetto. Il valore predefinito è True. Per altre informazioni, vedere [Comment &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql).  
   
  **Includi opzioni vardecimal**  
  Consente di includere le opzioni per l'archiviazione vardecimal. Il valore predefinito è False. Per altre informazioni, vedere e [sp_db_vardecimal_storage_format &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
@@ -60,7 +60,7 @@ ms.locfileid: "36158588"
  **Script per cataloghi full-text**  
  Consente di includere uno script per cataloghi full-text. Il valore predefinito è False. Per altre informazioni, vedere [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql).  
   
- **UTILIZZO di script \<database >**  
+ **USO di script \<database >**  
  Aggiunge l'istruzione USE DATABASE allo script per creare oggetti di database nel contesto del database di **Esplora oggetti** corrente. Se si prevede di utilizzare lo script in un database diverso, selezionare False per omettere tale istruzione. Il valore predefinito è True. Per altre informazioni, vedere [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
 ### <a name="object-scripting-options"></a>Opzioni di scripting per gli oggetti  

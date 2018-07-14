@@ -1,5 +1,5 @@
 ---
-title: Proprietà ProtocolDLL (classe ServerNetworkProtocol) | Documenti Microsoft
+title: Proprietà ProtocolDLL (classe ServerNetworkProtocol) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolDLL property
 ms.assetid: ac386558-392e-46f3-97f8-382f267b7fca
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b0daf8b5d2db8ccce3622db5cbfe92643f62261
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 50b726584db8f547007558331f80f9b06f801642
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208571"
 ---
 # <a name="protocoldll-property-servernetworkprotocol-class"></a>Proprietà ProtocolDLL (classe ServerNetworkProtocol)
   Ottiene il nome del file con estensione dll richiesto da un protocollo di rete del server.  
@@ -48,9 +48,9 @@ object
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il file con estensione dll del protocollo richiesto dal protocollo di rete del server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete Server e le librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

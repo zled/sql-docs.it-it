@@ -1,5 +1,5 @@
 ---
-title: Elemento password (XMLA) | Documenti Microsoft
+title: Elemento password (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Password element
 ms.assetid: 8a0603bd-f6a1-4b86-84f1-c83d0b03951b
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cfc62de4ad73888fb95fe179efd0fdaeabbc9dc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9ab15627b4f5cde95ecff8f368d294d4336060cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328451"
 ---
 # <a name="password-element-xmla"></a>Elemento Password (XMLA)
   Determina la password da utilizzare dall'elemento padre [Backup](../xml-elements-commands/backup-element-xmla.md) oppure [ripristinare](../xml-elements-commands/restore-element-xmla.md) comando per la crittografia o decrittografia di un file di backup.  
@@ -60,15 +60,15 @@ ms.locfileid: "36069692"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[Backup](../xml-elements-commands/backup-element-xmla.md), [ripristinare](../xml-elements-commands/restore-element-xmla.md)|  
+|Elementi padre|[Copia di backup](../xml-elements-commands/backup-element-xmla.md), [ripristinare](../xml-elements-commands/restore-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per i comandi `Backup`, se l'elemento `Password` non è incluso o contiene una stringa vuota, il file di backup non viene crittografato.  
   
  Per i comandi `Restore`, se l'elemento `Password` non è incluso o contiene una stringa vuota, durante il tentativo di ripristinare un file di backup crittografato si verifica un errore.  
   
- Se in un comando `Location` o `Backup` sono inclusi elementi `Restore`, lo stesso elemento `Password` viene utilizzato sia per i file di backup che per quelli di backup remoto. Per ulteriori informazioni sui file di backup remoti, vedere [backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Se in un comando `Location` o `Backup` sono inclusi elementi `Restore`, lo stesso elemento `Password` viene utilizzato sia per i file di backup che per quelli di backup remoto. Per altre informazioni sui file di backup remoti, vedere [backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento location &#40;XMLA&#41;](location-element-xmla.md)   

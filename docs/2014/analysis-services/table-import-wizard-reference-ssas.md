@@ -1,5 +1,5 @@
 ---
-title: Tabella di riferimento di procedura guidata di importazione (SSAS) | Documenti Microsoft
+title: Tabella di riferimento di creazione guidata di importazione (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableimportwizard.f1
 ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbd2caf29b53fe6bdb8313dc11645068ff65c64f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 348e92e73e4ca03e995fa17546691dc032f03ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267247"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>Riferimento all'Importazione guidata tabella (SSAS)
   In questa sezione vengono fornite informazioni relative all' **Importazione guidata tabella**. Questa procedura guidata consente di importare dati da diverse origini dati. Per accedere alla procedura guidata da Progettazione modelli, selezionare **Importa da origine dati** nel menu **Modello**.  
@@ -54,7 +54,7 @@ ms.locfileid: "36069481"
   
 -   [Connettersi a Microsoft SQL Server Analysis Services &#40;SSAS&#41;](connect-to-microsoft-sql-server-analysis-services-ssas.md)  
   
--   [Connettersi a un Database di Informix &#40;SSAS&#41;](connect-to-an-informix-database-ssas.md)  
+-   [Connettersi a un Database Informix &#40;SSAS&#41;](connect-to-an-informix-database-ssas.md)  
   
 -   [Connettersi a un Database Oracle &#40;SSAS&#41;](connect-to-an-oracle-database-ssas.md)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36069481"
   
 -   [Dettagli filtro &#40;SSAS&#41;](filter-details-ssas.md)  
   
--   [Finestra di dialogo informazioni di rappresentazione &#40;importazione guidata tabella&#41;](impersonation-information-dialog-box-table-import-wizard.md)  
+-   [Finestra di dialogo di informazioni di rappresentazione &#40;importazione guidata tabella&#41;](impersonation-information-dialog-box-table-import-wizard.md)  
   
 -   [L'importazione di &#40;SSAS&#41;](importing-ssas.md)  
   
@@ -76,11 +76,11 @@ ms.locfileid: "36069481"
   
 -   [Anteprima tabella selezionata &#40;SSAS&#41;](preview-selected-table-ssas.md)  
   
--   [Progettazione Query relazionale &#40;SSAS&#41;](relational-query-designer-ssas.md)  
+-   [Finestra Progettazione Query relazionale &#40;SSAS&#41;](relational-query-designer-ssas.md)  
   
 -   [Selezione tabelle e viste &#40;SSAS&#41;](select-tables-and-views-ssas.md)  
   
--   [Selezione tabelle e viste &#40;i feed di dati&#41; &#40;SSAS&#41;](select-tables-and-views-data-feeds-ssas.md)  
+-   [Selezione tabelle e viste &#40;feed di dati&#41; &#40;SSAS&#41;](select-tables-and-views-data-feeds-ssas.md)  
   
 -   [Impostazione delle proprietà avanzate &#40;SSAS&#41;](set-advanced-properties-ssas.md)  
   

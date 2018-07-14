@@ -1,5 +1,5 @@
 ---
-title: Sostituisci tabella con altri finestra di dialogo tabella | Documenti Microsoft
+title: Sostituisci tabella con un'altra finestra di dialogo tabella | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.replacetable.f1
 helpviewer_keywords:
 - Replace Table with Other Table dialog box
 ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a2738bec003a9b94ef90554a5c21b605436d72b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e442c06763be7c357835a1f82148cbbb61095725
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214031"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Finestra di dialogo Sostituisci tabella con un'altra tabella
   Utilizzare la finestra di dialogo **Sostituisci tabella con un'altra tabella** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per sostituire una tabella esistente in una vista origine dati con una tabella dell'origine dati sottostante che non è ancora stata inclusa nella vista origine dati. Per visualizzare la finestra di dialogo **Sostituisci tabella con un'altra tabella** è possibile fare clic con il pulsante destro del mouse sul nome di una tabella nel riquadro **Diagramma** o **Tabelle** di **Progettazione vista origine dati** e scegliere **Con altra tabella** da **Sostituisci tabella**.  

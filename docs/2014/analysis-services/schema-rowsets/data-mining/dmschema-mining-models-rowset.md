@@ -1,5 +1,5 @@
 ---
-title: Set di righe DMSCHEMA_MINING_MODELS | Documenti Microsoft
+title: Set di righe DMSCHEMA_MINING_MODELS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODELS rowset
 ms.assetid: 1636f4cf-b342-4e2e-93b4-04136e2d41ef
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8296ddb800b7691936236aa0cdb6550c89c34c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9af1a9817ad116561b57b1d04b2e3df1d7313bb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208031"
 ---
 # <a name="dmschemaminingmodels-rowset"></a>Set di righe DMSCHEMA_MINING_MODELS
   Enumera i modelli di data mining nel catalogo corrente. Il set di righe `DMSCHEMA_MINING_MODELS` include informazioni, ad esempio i nomi di modello, la data di elaborazione e l'algoritmo di data mining associato a ogni modello di data mining.  
   
- , Il `DMSCHEMA_MINING_MODELS` set di righe dello schema è molto simile al [DBSCHEMA_TABLES](../ole-db/dbschema-tables-rowset.md) set di righe dello schema e può essere usato nello stesso modo.  
+ , Il `DMSCHEMA_MINING_MODELS` set di righe dello schema è molto simile al [DBSCHEMA_TABLES](../ole-db/dbschema-tables-rowset.md) set di righe dello schema e può essere usato allo stesso modo.  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il `DMSCHEMA_MINING_MODELS` set di righe contiene le colonne seguenti.  
@@ -72,7 +72,7 @@ ms.locfileid: "36156570"
 |`SERVICE_TYPE_ID`|`DBTYPE_UI4`|Facoltativo.|  
 |`MINING_STRUCTURE`|`DBTYPE_WSTR`|Facoltativo.|  
   
- Per esempi di come eseguire una query di questo set di righe, vedere [i parametri utilizzati per creare un modello di Data Mining di Query](../../data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
+ Per esempi di come eseguire una query di questo set di righe, vedere [eseguire query sui parametri usati per creare un modello di Data Mining](../../data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe dello schema di data mining](../../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 

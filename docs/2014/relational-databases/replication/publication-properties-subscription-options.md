@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.subscriptionoptions.f1
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3bea04d4cfc6fe7fe0640a17327a2754a33fdc7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 26f7ceed9a3a936b525ec00c1c826816a83b0030
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179758"
 ---
 # <a name="publication-properties-subscription-options"></a>Proprietà pubblicazione, Opzioni sottoscrizione
   La pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione** consente di visualizzare e impostare le proprietà a livello di pubblicazione associate alle sottoscrizioni. Le proprietà sono raggruppate nelle categorie seguenti:  

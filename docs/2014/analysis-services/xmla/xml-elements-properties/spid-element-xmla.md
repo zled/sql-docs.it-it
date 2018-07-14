@@ -1,5 +1,5 @@
 ---
-title: Elemento SPID (XMLA) | Documenti Microsoft
+title: Elemento SPID (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - SPID element
 ms.assetid: c4a54dcb-a0cd-4255-9e0f-a34eb990854f
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d203225045314115604a8b99d82ab291c5960376
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 27244dab841ac4793d66c6b177d5382ca7cdc7a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167022"
 ---
 # <a name="spid-element-xmla"></a>Elemento SPID (XMLA)
   Identifica un identificatore di processo active server (SPID) in cui eseguire l'elemento padre [annullare](../xml-elements-commands/cancel-element-xmla.md) elemento.  
@@ -63,8 +63,8 @@ ms.locfileid: "36156065"
 |Elementi padre|[Annulla](../xml-elements-commands/cancel-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il `SPID` elemento rappresenta il server ID del processo (SPID) utilizzato per una determinata sessione in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+## <a name="remarks"></a>Note  
+ Il `SPID` elemento rappresenta il processo server ID (SPID) usato per una determinata sessione in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento CancelAssociated &#40;XMLA&#41;](cancelassociated-element-xmla.md)   

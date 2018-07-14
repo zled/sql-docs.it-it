@@ -1,5 +1,5 @@
 ---
-title: Configurare le proprietà del Server in Analysis Services | Documenti Microsoft
+title: Configurare le proprietà del Server in Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, configuration properties
 - Analysis Services, configuration properties
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fbb4d0682f7bb961b17901efc3cf3994fd81a7cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19f6f04dfe165cb5f3af5bd5587232d65c8c4582
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247351"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Configurare le proprietà del server in Analysis Services
   Un amministratore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può modificare le proprietà di configurazione del server predefinite per un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ogni istanza ha proprietà di configurazione proprie che è possibile impostare in modo indipendente rispetto ad altre istanze nello stesso server.  
@@ -38,13 +38,13 @@ ms.locfileid: "36077664"
   
  [Configurare le proprietà del Server (istanza)](#bkmk_config)  
   
- [Riferimento a proprietà di server](#bkmk_ref)  
+ [Riferimento alla proprietà di server](#bkmk_ref)  
   
 ##  <a name="bkmk_config"></a> Configurare le proprietà del Server (istanza)  
  La pagina delle proprietà in SQL Server Management Studio contiene un subset delle proprietà disponibili e consente di visualizzare solo le proprietà la cui modifica è più probabile. Il set completo delle proprietà è disponibile nel file msmdsrv.ini.  
   
 > [!NOTE]  
->  In questo argomento non sono documentate le proprietà di configurazione della distribuzione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per ulteriori informazioni sulla configurazione della distribuzione, vedere [specifica delle impostazioni di configurazione per la distribuzione della soluzione](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
+>  In questo argomento non sono documentate le proprietà di configurazione della distribuzione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per altre informazioni sulla configurazione della distribuzione, vedere [specifica delle impostazioni di configurazione per la distribuzione della soluzione](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>Visualizzare o impostare le proprietà di configurazione in Management Studio  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36077664"
   
 #### <a name="view-or-edit-configuration-properties-in-the-msmdsrvini-file"></a>Visualizzare o modificare manualmente le proprietà di configurazione nel file msmdsrv.ini  
   
-1.  Prima di iniziare, controllare la **DataDir** proprietà nella pagina delle proprietà generale in Management Studio per verificare il percorso dei file di programma di Analysis Services, incluso il file msmdsrv. ini. La verifica del percorso dei file di programma consente di determinare se si stia modificando il file corretto.  
+1.  Prima di iniziare, verificare i **DataDir** proprietà nella pagina delle proprietà generale in Management Studio per verificare il percorso dei file di programma di Analysis Services, incluso il file msmdsrv. ini. La verifica del percorso dei file di programma consente di determinare se si stia modificando il file corretto.  
   
     > [!NOTE]  
     >  In un'installazione predefinita, il file si trova nella cartella \Programmi\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config.  
@@ -79,7 +79,7 @@ ms.locfileid: "36077664"
 ##  <a name="bkmk_ref"></a> Guida di riferimento alle proprietà del server  
  Le proprietà di configurazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono importanti per ottimizzare il proprio sistema. È ad esempio possibile impostare particolari proprietà per fare in modo che il log delle query funzioni in conformità ai propri requisiti.  
   
- Gli argomenti seguenti vengono descritte le varie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proprietà di configurazione:  
+ Gli argomenti seguenti vengono descritte le varie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le proprietà di configurazione:  
   
 |Argomento|Description|  
 |-----------|-----------------|  
@@ -98,6 +98,6 @@ ms.locfileid: "36077664"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di un'istanza di Analysis Services](../instances/analysis-services-instance-management.md)   
- [Specificare le impostazioni di configurazione per la distribuzione della soluzione](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
+ [Definizione delle impostazioni di configurazione per la distribuzione di soluzioni](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 caps.latest.revision: 57
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 10321197563b6a331341854bcff56786b960be34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6594ff2add077ca516cd3f4bf0380cc1af201f6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252613"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Ripristinare un database a uno snapshot del database
   Se i dati in un database online sono danneggiati, in alcuni casi il ripristino del database a un snapshot del database precedente alla data del danno può essere un'alternativa appropriata per ripristinare il database da un backup. Il ripristino di un database può, ad esempio, risultare utile per annullare un errore grave dell'utente verificatosi di recente, come l'eliminazione di una tabella. Tutte le modifiche apportate dopo la creazione dello snapshot verranno tuttavia perse.  

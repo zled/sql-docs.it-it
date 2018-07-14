@@ -1,5 +1,5 @@
 ---
-title: Editor attività Message Queue (pagina invio) | Documenti Microsoft
+title: Editor attività Message Queue (pagina invio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.send.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 152b01a69c462e7d736b5e2aeef7d96af4cf5ac3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc35be8153ec5ebbaa5da4ebe5004deb360f9766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250401"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Editor attività Message Queue (pagina Invio)
   Utilizzare la pagina **Invio** della finestra di dialogo **Editor attività Message Queue** per configurare un'attività Message Queue per l'invio di messaggi da un pacchetto [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -69,7 +69,7 @@ ms.locfileid: "36070084"
  Consente di digitare il messaggio stringa direttamente o nella finestra di dialogo **Immettere il messaggio stringa** visualizzata facendo clic sul pulsante **(…)** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Message Queue &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor attività Message Queue &#40;pagina di ricezione&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  

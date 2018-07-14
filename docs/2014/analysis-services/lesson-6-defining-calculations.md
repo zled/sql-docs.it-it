@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 6: Definizione di calcoli | Documenti Microsoft'
+title: 'Lezione 6: Definizione di calcoli | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 27d54217fe24f18184cacbbdb671f1d7569e350c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dcc6179b4a0cc0a5b5ade735ef7272d265e35c24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326661"
 ---
 # <a name="lesson-6-defining-calculations"></a>Lezione 6: Definizione di calcoli
   In questa lezione verranno descritte le procedure per definire calcoli, che sono espressioni MDX (Multidimensional Expressions) o script. I calcoli consentono di definire membri calcolati e set denominati, nonché di eseguire altri comandi script per estendere le capacità di un cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È ad esempio possibile eseguire un comando script per definire un sottocubo e quindi assegnare un calcolo alle celle incluse nel sottocubo.  
@@ -59,9 +59,9 @@ ms.locfileid: "36155682"
  [Lezione 7: Definizione degli indicatori di prestazioni chiave &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md)   
+ [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)   
  [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
- [Creazione di set denominati](multidimensional-models/create-named-sets.md)   
+ [Creare set denominati](multidimensional-models/create-named-sets.md)   
  [Creare membri calcolati](multidimensional-models/create-calculated-members.md)  
   
   

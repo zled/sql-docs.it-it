@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Bitmap Warning event class
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4989b77f9d551c9c6afacb5e76986c3356a83ee7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cd1026d355e2459e93b1f76d35092db7aa7ec3bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069392"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275267"
 ---
 # <a name="bitmap-warning-event-class"></a>Classe di evento Bitmap Warning
   La classe di evento **Bitmap Warning** può essere usata per monitorare l'utilizzo del filtro bitmap nelle query. La sottoclasse dell'evento può essere utilizzata per segnalare quando i filtri bitmap sono stati disabilitati in una query.  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.ACTIVITYMON.F1
 - sql12.ag.jobactivitymonitor.alljobs.f1
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ed7b4a4efacf7be8431c5de10b2cc9d56a7e3d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4896661e08c340fe9d61861b44f8915332d7b688
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253383"
 ---
 # <a name="job-activity-monitor"></a>Monitoraggio attività processi
   Utilizzare questa pagina per visualizzare l'attività corrente dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Fare clic su **Filtro** per limitare i processi visualizzati. La griglia **Attività processi agente** è di sola lettura. Per ordinare la griglia fare clic sulle intestazioni di colonna. Per modificare un processo, selezionarlo facendo doppio clic per aprire la finestra di dialogo **Proprietà processo** . Fare clic con il pulsante destro del mouse su un processo nella griglia per avviare l'esecuzione di tutti i passaggi di processo, per avviare un particolare passaggio di processo, per disabilitare o abilitare il processo, per aggiornare il processo, per eliminare il processo, per visualizzare la cronologia del processo o per visualizzare le proprietà del processo. Fare clic su **Aggiorna** per aggiornare la griglia con le informazioni correnti.  
@@ -55,7 +55,7 @@ ms.locfileid: "36069746"
  **Pianificato**  
  **Sì** se il processo è assegnato a una programmazione processi, **No** se il processo non ha alcuna programmazione.  
   
- <sup>1</sup>solo i membri del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito sysadmin del ruolo del server e gli amministratori di server gruppo è possibile visualizzare i valori in questa colonna. Membri del ruolo SQLAgentOperatorRole non possono vedere i valori in questa colonna.  
+ <sup>1</sup>solo i membri del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito sysadmin del ruolo del server e gli amministratori di server gruppo possa visualizzare i valori in questa colonna. Membri del ruolo SQLAgentOperatorRole non possono vedere i valori in questa colonna.  
   
 #### <a name="to-open-the-job-activity-monitor"></a>Per aprire Monitoraggio attività processi  
   

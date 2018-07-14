@@ -1,5 +1,5 @@
 ---
-title: Guida F1 di gestione report | Documenti Microsoft
+title: Guida F1 di gestione di report | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: da311acc4787c077fd4ad33637b46507a2979f86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9bb45f51107d9397494e803533c68f90647fb18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069546"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208441"
 ---
 # <a name="report-manager-f1-help"></a>Guida sensibile al contesto di Gestione report
   Negli argomenti seguenti vengono fornite informazioni a livello di pagina per lo strumento Gestione report di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . È disponibile un argomento per ogni pagina dell'applicazione. È possibile che non tutte le pagine siano accessibili in quanto il livello di accesso dipende dalle impostazioni di sicurezza. Per accedere a questi argomenti da Gestione report, fare clic su **Guida** sulla barra degli strumenti principale.  
@@ -32,19 +32,19 @@ ms.locfileid: "36069546"
   
 -   [Pagina Scegli percorso elemento](../../2014/reporting-services/choose-item-location-page-report-manager.md)  
   
--   [Pagina report click-through](../../2014/reporting-services/clickthrough-reports-page-report-manager.md)  
+-   [Pagina Report click-through](../../2014/reporting-services/clickthrough-reports-page-report-manager.md)  
   
--   [Pagina contenuto](../../2014/reporting-services/contents-page-report-manager.md)  
+-   [Pagina Contenuto](../../2014/reporting-services/contents-page-report-manager.md)  
   
--   [Creare una sottoscrizione guidata dai dati](../../2014/reporting-services/create-data-driven-subscription-page-report-manager.md)  
+-   [Pagine Creazione di una sottoscrizione guidata dai dati](../../2014/reporting-services/create-data-driven-subscription-page-report-manager.md)  
   
--   [Selezione dell'origine dati](../../2014/reporting-services/data-source-selection-page-report-manager.md)  
+-   [Pagina di selezione dell'origine dei dati](../../2014/reporting-services/data-source-selection-page-report-manager.md)  
   
--   [Pagina delle proprietà origini dati](../../2014/reporting-services/data-sources-properties-page-report-manager.md)  
+-   [Pagina delle proprietà Origini dati](../../2014/reporting-services/data-sources-properties-page-report-manager.md)  
   
--   [Pagina elementi dipendenti](../../2014/reporting-services/dependent-items-page-report-manager.md)  
+-   [Pagina Elementi dipendenti](../../2014/reporting-services/dependent-items-page-report-manager.md)  
   
--   [Pagina di errore](../../2014/reporting-services/error-page-report-manager.md)  
+-   [Pagina Errore](../../2014/reporting-services/error-page-report-manager.md)  
   
 -   [Pagina delle proprietà Generale (cartelle)](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   
@@ -58,17 +58,17 @@ ms.locfileid: "36069546"
   
 -   [Pagina sicurezza elemento modello](../../2014/reporting-services/model-item-security-page-report-manager.md)  
   
--   [Pagina spostamento elementi](../../2014/reporting-services/move-items-page-report-manager.md)  
+-   [Pagina Spostamento elementi](../../2014/reporting-services/move-items-page-report-manager.md)  
   
--   [Pagina sottoscrizioni personali](../../2014/reporting-services/my-subscriptions-page-report-manager.md)  
+-   [Pagina Sottoscrizioni personali](../../2014/reporting-services/my-subscriptions-page-report-manager.md)  
   
--   [Pagina nuova origine dati](../../2014/reporting-services/new-data-source-page-report-manager.md)  
+-   [Pagina Nuova origine dati](../../2014/reporting-services/new-data-source-page-report-manager.md)  
   
--   [Pagina nuova cartella](../../2014/reporting-services/new-folder-page-report-manager.md)  
+-   [Pagina Nuova cartella](../../2014/reporting-services/new-folder-page-report-manager.md)  
   
--   [Pagina Nuovo Report collegato](../../2014/reporting-services/new-linked-report-page-report-manager.md)  
+-   [Pagina Nuovo report collegato](../../2014/reporting-services/new-linked-report-page-report-manager.md)  
   
--   [Pagina nuovo modello](../../2014/reporting-services/new-model-page-report-manager.md)  
+-   [Pagina Nuovo modello](../../2014/reporting-services/new-model-page-report-manager.md)  
   
 -   [Nuova assegnazione ruolo / modifica assegnazione ruolo](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)  
   
@@ -76,13 +76,13 @@ ms.locfileid: "36069546"
   
 -   [Nuova sottoscrizione / Modifica sottoscrizione](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
   
--   [Nuova assegnazione ruolo / Modifica pagina Assegnazioni ruolo di sistema](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+-   [Nuove assegnazioni di ruolo di sistema / modifica pagina Assegnazioni ruolo di sistema](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
--   [Pagina delle proprietà parametri](../../2014/reporting-services/parameters-properties-page-report-manager.md)  
+-   [Pagina delle proprietà Parametri](../../2014/reporting-services/parameters-properties-page-report-manager.md)  
   
 -   [Pagina delle proprietà opzioni di elaborazione](../../2014/reporting-services/processing-options-properties-page-report-manager.md)  
   
--   [Pagina cronologia report](../../2014/reporting-services/report-history-page-report-manager.md)  
+-   [Pagina Cronologia report](../../2014/reporting-services/report-history-page-report-manager.md)  
   
 -   [Pagina risultati ricerca](../../2014/reporting-services/search-page-report-manager.md)  
   
@@ -90,15 +90,15 @@ ms.locfileid: "36069546"
   
 -   [Pagina delle proprietà sicurezza (elementi)](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
--   [Pagina pianificazioni](../../2014/reporting-services/schedules-page-report-manager.md)  
+-   [Pagina Pianificazioni](../../2014/reporting-services/schedules-page-report-manager.md)  
   
 -   [Pagina Impostazioni sito](../../2014/reporting-services/site-settings-page-report-manager.md)  
   
 -   [Pagina delle proprietà Opzioni snapshot](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
   
--   [Pagina sottoscrizioni](../../2014/reporting-services/subscriptions-page-report-manager.md)  
+-   [Pagina Sottoscrizioni](../../2014/reporting-services/subscriptions-page-report-manager.md)  
   
--   [Pagina Carica File](../../2014/reporting-services/upload-file-page-report-manager.md)  
+-   [Pagina Carica file](../../2014/reporting-services/upload-file-page-report-manager.md)  
   
 -   [Pagina Visualizza (report)](../../2014/reporting-services/view-page-reports-report-manager.md)  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36069546"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione contenuto del Server di report &#40;modalità nativa SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [Riferimento alla funzionalità (Reporting Services)](feature-reference-reporting-services.md)   
+ [Riferimento della funzionalità (Reporting Services)](feature-reference-reporting-services.md)   
  [Gestione contenuto del Server di report &#40;modalità nativa SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Gestione report](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Cenni preliminari sul componente di Reporting Services](tools/reporting-services-tools.md)  

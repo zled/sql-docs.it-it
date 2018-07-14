@@ -1,5 +1,5 @@
 ---
-title: Elemento MiningModel (ASSL) | Documenti Microsoft
+title: Elemento MiningModel (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModel element
 ms.assetid: a61d935f-c8f6-457d-ad0c-44f58bb286f5
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 593421993631e4cffee671a92b343ee9b4b7e30c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ba98443b953f4107b209dd06af74349a81bb2a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224541"
 ---
 # <a name="miningmodel-element-assl"></a>Elemento MiningModel (ASSL)
   Definisce un singolo modello di data mining.  
@@ -75,9 +75,9 @@ ms.locfileid: "36157600"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[MiningModels](../collections/miningmodels-element-assl.md)|  
-|Elementi figlio|[Algorithm](../properties/algorithm-element-assl.md), [AlgorithmParameters](algorithmparameter-element-assl.md), [AllowDrillThrough](../properties/allowdrillthrough-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Collation](../properties/collation-element-assl.md), [Columns](../collections/columns-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [Description](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [Language](../properties/language-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MiningModelPermissions](../collections/miningmodelpermissions-element-assl.md), [Name](../properties/name-element-assl.md), [State](../properties/state-element-assl.md), [Translations](../collections/translations-element-assl.md),<br /><br /> [FoldingParameters](../properties/foldingparameters-element-assl.md)|  
+|Elementi figlio|[Algoritmo](../properties/algorithm-element-assl.md), [AlgorithmParameters](algorithmparameter-element-assl.md), [AllowDrillThrough](../properties/allowdrillthrough-element-assl.md), [annotazioni](../collections/annotations-element-assl.md), [delle regole di confronto](../properties/collation-element-assl.md), [ Le colonne](../collections/columns-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [descrizione](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [linguaggio](../properties/language-element-assl.md), [ LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MiningModelPermissions](../collections/miningmodelpermissions-element-assl.md), [nome](../properties/name-element-assl.md), [stato](../properties/state-element-assl.md), [ Le traduzioni](../collections/translations-element-assl.md),<br /><br /> [FoldingParameters](../properties/foldingparameters-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `FoldingParameters` del modello di data mining è destinato a un uso interno da parte del server e non è supportato per l'utilizzo nelle istruzioni DDL.  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.MiningModel>.  

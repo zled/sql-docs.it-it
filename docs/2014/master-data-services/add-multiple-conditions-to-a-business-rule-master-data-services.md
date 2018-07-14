@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e5ac7bab7712a268e3fe8fd37f1a5ae799ef55dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f7994861c246b31731dbff82069eed091379ad6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275177"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Aggiungere più condizioni a una regola business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]aggiungere più condizioni **AND** o **OR** a una regola di business quando si vuole creare una regola più complessa.  
@@ -56,21 +56,21 @@ ms.locfileid: "36155807"
   
 8.  Fare clic su **Modifica regola business selezionata**.  
   
-9. Nel **componenti** riquadro espandere il **operatori logici** nodo.  
+9. Nel **componenti** riquadro, espandere il **operatori logici** nodo.  
   
-10. Fare clic su **AND** oppure **OR** e trascinarlo il **se** del riquadro **AND** etichetta.  
+10. Fare clic su **AND** oppure **OR** e trascinarlo in modo che il **IF** del riquadro **AND** etichetta.  
   
 11. Nel riquadro **Componenti** espandere il nodo **Condizioni** .  
   
-12. Fare clic su una condizione e trascinarla **IF** riquadro, per il **AND** o **OR** etichetta nel passaggio 10.  
+12. Fare clic su una condizione e trascinarla **IF** riquadro, al **AND** oppure **OR** etichetta nel passaggio 10.  
   
-13. Nel **attributi** riquadro, fare clic su un attributo e trascinarlo il **modifica condizione** del riquadro **attributo Select** etichetta.  
+13. Nel **attributi** riquadro, fare clic su un attributo e trascinarlo in modo che le **modifica condizione** del riquadro **Seleziona attributo** etichetta.  
   
 14. Nel **modifica condizione** riquadro, completare tutti i campi obbligatori.  
   
 15. Nel riquadro **Modifica condizione** fare clic su **Salva elemento**.  
   
-16. Facoltativamente, aggiungere altre condizioni, dal **componenti** riquadro, trascinare **AND** o **OR** a qualsiasi **AND** o **OR**nel **IF** riquadro. Seguire quindi i passaggi da 13 a 15.  
+16. Facoltativamente, aggiungere altre condizioni, dal **componenti** riquadro trascinare **AND** oppure **OR** a qualsiasi **AND** o **OR**nel **IF** riquadro. Seguire quindi i passaggi da 13 a 15.  
   
     > [!TIP]  
     >  Per eliminare una condizione, fare clic sul nome della condizione e nel **modifica condizione** riquadro, fare clic su **l'eliminazione dell'elemento**.  
@@ -78,6 +78,6 @@ ms.locfileid: "36155807"
 ## <a name="see-also"></a>Vedere anche  
  [Le regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
  [Modificare il nome di una regola business &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
- [Configurare le regole di Business per inviare notifiche &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
+ [Configurare le regole di Business per l'invio di notifiche &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

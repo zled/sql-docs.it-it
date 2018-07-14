@@ -1,5 +1,5 @@
 ---
-title: Dettagli dell'istanza (utilità SQL Server) gestita | Documenti Microsoft
+title: Gestito i dettagli dell'istanza (utilità SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 46dfa6e715e1c1b14fcd37d90bbf90a5a50a125e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 042a6c0cb83b0bba4cbf80608dbfa52496e95394
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178473"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Dettagli di istanze gestite (Utilità SQL Server)
   Le informazioni incluse nella vista Istanze gestite di Esplora utilità forniscono dati di utilizzo per singole istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], cronologia di utilizzo della CPU, dettagli sull'utilizzo dello spazio di archiviazione a livello di file e la possibilità di visualizzare e aggiornare le soglie dei criteri. È possibile controllare le soglie dei criteri a livello di volumi di archiviazione e a livello di istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per un computer e per file di database e file di log. È inoltre possibile visualizzare dettagli delle proprietà per singole istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

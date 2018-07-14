@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 caps.latest.revision: 4
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bde345380c4fbf8531a74005d307d0b319183760
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 03edb5eb94194afecb4974604101b1ebaae26be8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204881"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>Preparare i dati per la visualizzazione in un'area dati Tablix (Generatore report e SSRS)
   In un'area dati Tablix vengono visualizzati i dati di un set di dati. È possibile visualizzare tutti i dati recuperati per il set di dati o creare filtri in modo da visualizzare solo un subset dei dati. È inoltre possibile aggiungere espressioni condizionali per inserire valori Null o modificare la query affinché un set di dati includa colonne che definiscono il tipo di ordinamento per una colonna esistente.  
@@ -61,6 +61,6 @@ FROM Production.Product p
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Filtrare, raggruppare e ordinare i dati &#40;SSRS e Generatore Report&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrare, raggruppare e ordinare i dati &#40;Report e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

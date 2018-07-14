@@ -1,5 +1,5 @@
 ---
-title: Pagina delle proprietà parametri (gestione Report) | Documenti Microsoft
+title: Pagina delle proprietà parametri (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dae546d2c07e21c8c930c889f8931b683828b055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0f3b3bf5c8d672be964dcd77453f16e7ac9cbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327561"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Pagina delle proprietà Parametri (Gestione report)
   La pagina delle proprietà Parametri consente di visualizzare o modificare le impostazioni dei parametri per un report con parametri.  
@@ -69,11 +69,11 @@ ms.locfileid: "36070218"
   
  Deselezionare questa casella di controllo se si desidera eseguire il report in modalità automatica (ad esempio per generare snapshot della cronologia dei report o dell'esecuzione del report), se si desidera utilizzare lo stesso valore di parametro per tutti gli utenti oppure se non è necessario l'input dell'utente.  
   
- **Testo visualizzato**  
+ **Testo da visualizzare**  
  Consente di specificare la stringa di testo visualizzata accanto alla casella di testo del parametro. È possibile specificare un'etichetta o testo descrittivo. Non sono previste limitazioni per la lunghezza della stringa. Le stringhe di testo lunghe vengono mandate a capo nello spazio disponibile.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagina delle proprietà Generale, Report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

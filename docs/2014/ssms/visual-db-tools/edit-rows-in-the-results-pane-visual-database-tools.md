@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.pane.results
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 28573e955ff50d32a19ef003c23fc8c68f21e0f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4b695be014eb0576373513fd8f1d176a50b74adf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187594"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Modifica di righe nel riquadro Risultati (Visual Database Tools)
   In molti casi è possibile modificare i dati nel [riquadro Risultati](visual-database-tools.md). Per altre informazioni sulla modifica dei dati, vedere [Regole per l'aggiornamento dei risultati &#40;Visual Database Tools&#41;](rules-for-updating-results-visual-database-tools.md) e [Usare i dati nel riquadro Risultati &#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "36157867"
 4.  Salvare le modifiche uscendo dalla riga.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzare i dati nel riquadro dei risultati &#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)   
+ [Usare i dati nel riquadro dei risultati &#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)   
  [Regole per l'aggiornamento dei risultati &#40;Visual Database Tools&#41;](rules-for-updating-results-visual-database-tools.md)  
   
   

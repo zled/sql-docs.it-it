@@ -1,5 +1,5 @@
 ---
-title: Oggetti (Analysis Services - dati multidimensionali) di database | Documenti Microsoft
+title: Oggetti (Analysis Services - dati multidimensionali) di database | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - objects [Analysis Services]
 ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f92a99eef0513a03d4158c4a30c8cc20210a516
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab12847fc040121bd1af8013f809e925e99f5eee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192361"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>Oggetti di database (Analysis Services - Dati multidimensionali)
-  Un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza contiene oggetti di database e gli assembly per l'utilizzo con elaborazione analitica online (OLAP) e il data mining.  
+  Oggetto [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza contiene oggetti di database e gli assembly da utilizzare con l'elaborazione analitica online (OLAP) e il data mining.  
   
 -   I database contengono oggetti OLAP e di data mining, ad esempio origini dei dati, viste origine dati, cubi, misure, gruppi di misure, dimensioni, attributi, gerarchie, strutture di data mining, modelli di data mining e ruoli.  
   
@@ -64,16 +64,16 @@ ms.locfileid: "36157605"
 |Argomento|Description|  
 |-----------|-----------------|  
 |[Origini dati nei modelli multidimensionali](../data-sources-in-multidimensional-models.md)|Descrive un'origine dei dati in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Viste origine dati nei modelli multidimensionali](../data-source-views-in-multidimensional-models.md)|Descrive un modello di dati logico basato su una o più origini dei dati in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Viste origine dati in modelli multidimensionali](../data-source-views-in-multidimensional-models.md)|Descrive un modello di dati logico basato su una o più origini dei dati in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Cubi nei modelli multidimensionali](../cubes-in-multidimensional-models.md)|Descrive i cubi e gli oggetti dei cubi, inclusi gruppi di misure, misure, relazioni tra l'utilizzo delle dimensioni, calcoli, indicatori di prestazioni chiavi, azioni, traduzioni, partizioni e prospettive.|  
-|[Le dimensioni &#40;Analysis Services - dati multidimensionali&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|Descrive le dimensioni e gli oggetti delle dimensioni, inclusi attributi, relazioni tra attributi, gerarchie, livelli e membri.|  
+|[Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|Descrive le dimensioni e gli oggetti delle dimensioni, inclusi attributi, relazioni tra attributi, gerarchie, livelli e membri.|  
 |[Strutture di data mining &#40;Analysis Services - Data Mining&#41;](../../data-mining/mining-structures-analysis-services-data-mining.md)|Descrive le strutture e gli oggetti di data mining, inclusi i modelli di data mining.|  
 |[I ruoli di sicurezza &#40;Analysis Services - dati multidimensionali&#41;](security-roles-analysis-services-multidimensional-data.md)|Descrive un ruolo, ovvero il meccanismo di sicurezza utilizzato per controllare l'accesso agli oggetti in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Gestione di assembly di modello multidimensionale](../multidimensional-model-assemblies-management.md)|Descrive un assembly, ovvero una raccolta di funzioni definite dall'utente utilizzate per estendere i linguaggi MDX e DMX in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Gestione di assembly di modelli multidimensionali](../multidimensional-model-assemblies-management.md)|Descrive un assembly, ovvero una raccolta di funzioni definite dall'utente utilizzate per estendere i linguaggi MDX e DMX in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Origini dati supportate &#40;multidimensionale di SSAS&#41;](../supported-data-sources-ssas-multidimensional.md)   
  [Soluzioni di modelli multidimensionali &#40;SSAS&#41;](../multidimensional-model-solutions-ssas.md)   
- [Soluzioni di Data Mining](../../data-mining/data-mining-solutions.md)  
+ [Soluzioni di data mining](../../data-mining/data-mining-solutions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Creare una Formula personalizzata membro (dimensione) (configurazione guidata Business Intelligence) | Documenti Microsoft
+title: Creare una Formula personalizzata membro (dimensione) (configurazione guidata Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.enablecustommemberformula.selectdimension.f1
 ms.assetid: 0bea4831-982e-4848-86cd-e6219c860138
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f2a3abcb59e7f5fa82f71209267aa999e7a31e1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09e21a926e306394b30314a885a5fe394fb36b1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228291"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>Creazione formula personalizzata membro (Dimensione) (Configurazione guidata funzionalità di Business Intelligence)
   Usare la pagina **Creazione formula personalizzata membro** per selezionare una dimensione a cui, durante la Configurazione guidata funzionalità di Business Intelligence, verranno associati attributi con colonne formula personalizzata membro, ovvero colonne contenenti istruzioni MDX (Multidimensional Expression) che definiscono i valori del membro per l'attributo.  
@@ -31,7 +31,7 @@ ms.locfileid: "36156382"
  Consente di selezionare la dimensione alla quale, durante la procedura guidata, verranno associati attributi inclusi nella dimensione con formule personalizzate membro.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Business Intelligence guidata F1 Help](business-intelligence-wizard-f1-help.md)   
+ [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

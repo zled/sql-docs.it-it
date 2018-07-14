@@ -1,5 +1,5 @@
 ---
-title: SQL Server caratteristiche deprecate in SQL Server 2014 | Documenti Microsoft
+title: SQL Server funzionalità deprecate in SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fdc0c778-cc8d-42ab-8833-4deb4329f37a
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d0cafd847932ef5f87064defb8e92e7ac4b09784
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b7d47249b2263ea3d5523458fd34770e7c009800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324731"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>Funzionalità di SQL Server deprecate in SQL Server 2014
   In questo argomento vengono descritte le funzionalità deprecate ancora disponibili in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Tali funzionalità verranno rimosse a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
@@ -35,7 +35,7 @@ ms.locfileid: "36156510"
 ### <a name="slipstream-functionality"></a>Funzionalità di integrazione  
  La funzionalità Aggiornamento prodotto sostituisce la funzionalità di integrazione disponibile in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1. I parametri della riga di comando /*PCUSource* e /*CUSource*associati a tale funzionalità non devono pertanto essere più utilizzati. Tali parametri continuano a funzionare, ma potrebbero essere rimossi nelle versioni future del programma di installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il parametro /*UpdateSource* combina la funzionalità dei parametri di integrazione /*PCUSource* e /*CUSource*.  
   
- Per ulteriori informazioni sulla funzionalità di integrazione disponibile in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, vedere [integrare un aggiornamento di SQL Server](http://go.microsoft.com/fwlink/?LinkId=219945) (http://go.microsoft.com/fwlink/?LinkId=219945).  
+ Per altre informazioni sulla funzionalità di integrazione disponibile in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, vedere [integrare un aggiornamento di SQL Server](http://go.microsoft.com/fwlink/?LinkId=219945) (http://go.microsoft.com/fwlink/?LinkId=219945).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compatibilità con le versioni precedenti](../../2014/getting-started/backward-compatibility.md)  

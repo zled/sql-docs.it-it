@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], about witness
 - witness [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 caps.latest.revision: 71
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c415d1bea0b901025762bec04114ec4ba8ef558f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e8d91cd6ff4cd5b96ec95218686101e4427e75c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218121"
 ---
 # <a name="database-mirroring-witness"></a>Server di controllo del mirroring del database
   Per supportare il failover automatico, è necessario configurare una sessione di mirroring del database in modalità a protezione elevata e usare l'istanza di un terzo server, noto come *server di controllo*. Il server di controllo del mirroring è un'istanza facoltativa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente al server mirror in una sessione in modalità a protezione elevata di stabilire se avviare un failover automatico. A differenza dei due partner, il server di controllo del mirroring non serve il database, Il supporto del failover automatico è l'unico ruolo del server di controllo del mirroring.  
@@ -55,7 +54,7 @@ ms.locfileid: "36070110"
 ##  <a name="SwHwRecommendations"></a> Indicazioni relative a software e hardware  
  È fortemente consigliabile che il server di controllo del mirroring si trovi su un computer diverso rispetto ai partner. I partner di mirroring del database sono supportati solo da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition e da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition. I server di controllo, invece, sono supportati anche da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup e da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Eccetto durante un aggiornamento da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le istanze del server in una sessione di mirroring devono essere tutte eseguite con la stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ad esempio, un server di controllo del mirroring [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] è supportato durante l'aggiornamento da una configurazione di mirroring di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , ma non può essere aggiunto a una configurazione di mirroring di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] esistente, nuova o successiva.  
   
- Un server di controllo del mirroring può essere eseguito su qualsiasi computer affidabile che supporti una di queste versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tuttavia è consigliabile che ogni istanza del server usata come server di controllo soddisfi la configurazione minima necessaria per la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard in esecuzione. Per ulteriori informazioni su questi requisiti, vedere [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Un server di controllo del mirroring può essere eseguito su qualsiasi computer affidabile che supporti una di queste versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tuttavia è consigliabile che ogni istanza del server usata come server di controllo soddisfi la configurazione minima necessaria per la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard in esecuzione. Per altre informazioni su questi requisiti, vedere [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 ##  <a name="InAutoFo"></a> Ruolo del server di controllo del mirroring nel failover automatico  
  Nel corso di una sessione di mirroring del database viene eseguito il monitoraggio dello stato di connessione di tutte le istanze del server. Se i partner vengono disconnessi gli uni dagli altri, si basano sul server di controllo del mirroring per assicurare che solo uno di essi stia attualmente rispondendo alle richieste del database. Se un server mirror sincronizzato perde la connessione al server principale ma rimane connesso al server di controllo del mirroring, il server mirror contatta il server di controllo del mirroring per determinare se quest'ultimo ha perso la connessione al server principale:  

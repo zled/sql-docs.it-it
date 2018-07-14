@@ -1,5 +1,5 @@
 ---
-title: Elemento NamingTemplateTranslation (ASSL) | Documenti Microsoft
+title: Elemento NamingTemplateTranslation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NamingTemplateTranslation element
 ms.assetid: 4a97a31d-23bc-4afd-a4dc-bc0ad7121f08
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dc6c6689f4028c0983267a38435c76e7258768a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a2832ae5ffe9d5b834fc03f84154fa398b7a19fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167552"
 ---
 # <a name="namingtemplatetranslation-element-assl"></a>Elemento NamingTemplateTranslation (ASSL)
-  Fornisce una versione localizzata del [NamingTemplate](../properties/namingtemplate-element-assl.md) elemento per un elemento padre [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) tipo di dati.  
+  Fornisce una versione localizzata del [NamingTemplate](../properties/namingtemplate-element-assl.md) (elemento) per un elemento padre [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) tipo di dati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36157238"
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|[Conversione](translation-element-assl.md)|  
+|Tipo di dati e lunghezza|[Traduzione](translation-element-assl.md)|  
 |Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
@@ -59,10 +59,10 @@ ms.locfileid: "36157238"
 |Elementi padre|[NamingTemplateTranslations](../collections/translations-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il valore della `NamingTemplateTranslation` elemento viene utilizzato solo dagli attributi padre (in altre parole, il valore del [utilizzo](../properties/usage-element-dimensionattribute-assl.md) elemento del `DimensionAttribute` padre è impostato su *padre*) per archiviare versione localizzata conversione del `NamingTemplate` valore per una determinata lingua.  
+## <a name="remarks"></a>Note  
+ Il valore del `NamingTemplateTranslation` elemento viene utilizzato solo dagli attributi padre (in altre parole, il valore della [utilizzo](../properties/usage-element-dimensionattribute-assl.md) elemento del `DimensionAttribute` padre è impostato su *padre*) per archiviare versione localizzata conversione del `NamingTemplate` valore per una determinata lingua.  
   
- L'elemento che corrisponde al padre di `NamingTemplateTranslations` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ L'elemento che corrisponde al padre di `NamingTemplateTranslations` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento NamingTemplate &#40;ASSL&#41;](../properties/namingtemplate-element-assl.md)   

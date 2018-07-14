@@ -25,13 +25,13 @@ ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 40ca8f66471a9f5f00e37387055e2aaf24e84a0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 545d4b494dc5214d0fa5b1b25f4687a7263330cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252453"
 ---
 # <a name="validating-a-data-flow-component"></a>Convalida di un componente del flusso di dati
   Il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> della classe di base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> viene fornito per impedire l'esecuzione di un componente che non è configurato correttamente. Utilizzare questo metodo per verificare che un componente includa il numero previsto di oggetti di input e output, che i valori delle proprietà personalizzate del componente siano accettabili e che siano state specificate le eventuali connessioni richieste. Utilizzare questo metodo anche per verificare che le colonne nelle raccolte di input e output includano i tipi di dati corretti e che l'oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> di ogni colonna sia impostato correttamente per il componente. L'implementazione della classe di base assiste nel processo di convalida controllando la raccolta di colonne di input del componente e verificando che ogni colonna della raccolta faccia riferimento a una colonna presente in <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> del componente a monte.  
@@ -194,6 +194,6 @@ Public  Overrides Sub ReinitializeMetaData()
 End Sub  
 ```  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
   

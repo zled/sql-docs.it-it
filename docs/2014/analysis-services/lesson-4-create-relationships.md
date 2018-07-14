@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 5: Creare relazioni | Documenti Microsoft'
+title: 'Lezione 5: Creare relazioni | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: d9428908b712fcda9a016af0825602c62548a691
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f0c32363cd3af495ef17d689bbf8c704e8ba21d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204503"
 ---
 # <a name="lesson-5-create-relationships"></a>Lezione 5: Creare relazioni
   In questa lezione verranno verificate le relazioni create automaticamente al momento dell'importazione dei dati e verranno aggiunte nuove relazioni tra tabelle diverse. Una relazione è una connessione tra due tabelle che stabilisce in che modo devono essere correlati i dati nelle due tabelle. Tra la tabella Product e la tabella Product Subcategory vi è ad esempio una relazione basata sul fatto che ogni prodotto appartiene a una sottocategoria. Per altre informazioni, vedere [Relazioni &#40;SSAS tabulare&#41;](tabular-models/relationships-ssas-tabular.md).  
@@ -52,8 +52,8 @@ ms.locfileid: "36157039"
     |Attiva|Tabella|Tabella di ricerca correlata|  
     |------------|-----------|--------------------------|  
     |Sì|**Cliente [Geography Id]**|**Geography [Geography Id]**|  
-    |Sì|**Prodotto [Product Subcategory Id]**|**Product Subcategory [Product Subcategory Id]**|  
-    |Sì|**Product Subcategory [Id categoria prodotto]**|**Categoria di prodotto [Id categoria prodotto]**|  
+    |Sì|**Prodotto [Product Subcategory Id]**|**Sottocategoria di prodotto [Product Subcategory Id]**|  
+    |Sì|**Sottocategoria di prodotto [Id categoria prodotto]**|**Categoria di prodotto [Id categoria prodotto]**|  
     |Sì|**Vendite Internet [Customer Id]**|**Cliente [Customer Id]**|  
     |Sì|**Vendite Internet [Id prodotto]**|**Prodotto [Id prodotto]**|  
   

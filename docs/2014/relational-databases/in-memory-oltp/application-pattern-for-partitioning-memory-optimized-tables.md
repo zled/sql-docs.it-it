@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ef7be1ca170df9efb0a4b76ab4b7f451b6742dbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ad61c1d762a412d9a314b5e41cc2908c0cca704f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188498"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modello di applicazione per il partizionamento di tabelle con ottimizzazione per la memoria
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] supporta un modello in cui una quantità limitata di dati attivi viene mantenuta in una tabella ottimizzata per la memoria, mentre i dati usati meno di frequente vengono elaborati su disco. In genere, questo sarebbe uno scenario in cui vengono archiviati i dati in base a un `datetime` chiave.  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] supporta un modello in cui una quantità limitata di dati attivi viene mantenuta in una tabella ottimizzata per la memoria, mentre i dati usati meno di frequente vengono elaborati su disco. In genere, ciò sarebbe uno scenario in cui vengono archiviati i dati in base un `datetime` chiave.  
   
  È possibile emulare tabelle partizionate con tabelle ottimizzate per la memoria mantenendo una tabella partizionata e una tabella ottimizzata per la memoria con uno schema comune. I dati correnti verranno inseriti e aggiornati nella tabella ottimizzata per la memoria, mentre i dati utilizzati meno frequentemente verranno gestiti nella tabella partizionata tradizionale.  
   

@@ -1,5 +1,5 @@
 ---
-title: Confronto delle stime per la previsione di modelli (esercitazione intermedia di Data Mining) | Documenti Microsoft
+title: Confronto delle stime per la previsione di modelli (esercitazione intermedia di Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: de7605f1dbb65987e147069e32e19e36b99956a6
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: a8ff27b38e2268ead42a1238250902b6ebf9cf18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165773"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Confronto delle stime per i modelli di previsione (Esercitazione intermedia sul data mining)
   Nei passaggi precedenti di questa esercitazione sono stati creati più modelli Time Series:  
@@ -63,13 +63,13 @@ ms.locfileid: "36313089"
 ##  <a name="bkmk_REPLACE"></a> Confronto tra i risultati di stima incrociata e originali  
  Si tenga presente che il modello di data mining originale ha rivelato notevoli differenze tra le aree e tra le linee di prodotti. Ad esempio, le vendite per il modello M200 sono state particolarmente elevate, mentre quelle per il modello T1000 sono state piuttosto basse in tutte le aree. Alcune serie, inoltre, non disponevano di molti dati. Le serie erano incomplete, ovvero non disponevano dello stesso punto iniziale.  
   
- ![Stima delle quantità M200 e T1000 serie](../../2014/tutorials/media/6series-defaultforecasting.gif "serie stima delle quantità M200 e T1000")  
+ ![Serie di stima delle quantità M200 e T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "serie stima delle quantità M200 e T1000")  
   
  È quindi opportuno verificare in che modo vengono modificate le stime quando si eseguono in base al modello generale, che era basato sulle vendite mondiali, piuttosto che sui set di dati originali. Per assicurarsi di non aver perso alcuna informazione o distorto le stime, è possibile salvare i risultati in una tabella, unire in join la tabella delle stime alla tabella dei dati cronologici, quindi tracciare i due set di dati cronologici e stime.  
   
  Il diagramma seguente è basato su una sola linea di prodotti, M200. Nel grafico vengono confrontate le stime dal modello di data mining iniziale rispetto alle stime tramite il modello di data mining aggregato.  
   
- ![Grafico di Excel confronto delle stime](../../2014/tutorials/media/m200-predictions-compared.gif "grafico di Excel confronto delle stime")  
+ ![Grafico a Excel che confronta stime](../../2014/tutorials/media/m200-predictions-compared.gif "grafico Excel che confronta stime")  
   
  Da questo grafico è possibile osservare che il modello di data mining aggregato mantiene complessivamente l'intervallo e le tendenze dei valori riducendo però al minimo le fluttuazioni nella singola serie di dati.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36313089"
  È stato descritto come creare modelli che possono essere utilizzati per stima incrociata tramite il parametro REPLACE_MODEL_CASES e applicando il modello a una serie di dati diversa.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Intermedi dell'esercitazione sul Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
+ [Esercitazione intermedia sul Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Esempi di query sui modelli Time Series](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   

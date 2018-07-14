@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 57683bf4fe9f4306eecd8bf170510a4b8bd29bb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4b8da17628c94d281168d9956b13a63512167c31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246517"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>Funzione First (Generatore report e SSRS)
   Restituisce il primo valore nell'ambito specificato dell'espressione specificata.  
@@ -44,12 +44,12 @@ First(expression, scope)
 ## <a name="return-type"></a>Tipo restituito  
  Determinato dal tipo di espressione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  La funzione `First` restituisce il primo valore di un set di dati dopo l'applicazione di tutti i criteri di ordinamento e di filtro all'ambito specificato.  
   
- Il `First` funzione non può essere utilizzata nelle espressioni di filtro di gruppo con altri ambiti ad eccezione di ambito corrente (impostazione predefinita).  
+ Il `First` funzione non può essere utilizzata nelle espressioni di filtro di gruppo con altri ambiti ad eccezione dell'ambito corrente (predefinito).  
   
- È anche possibile usare `First` in un'intestazione di pagina per restituire il primo valore dal `ReportItems` raccolta per una pagina in modo da creare intestazioni in formato dizionario che visualizzano la prima e ultima voce in una pagina.  
+ È anche possibile usare `First` in un'intestazione di pagina per restituire il primo valore di `ReportItems` raccolta per una pagina in modo da creare intestazioni in formato dizionario che visualizzano la voce e il cognome in una pagina.  
   
  Il valore di *scope* deve essere una costante di tipo stringa e non può essere un'espressione. Per aggregazioni o aggregazioni esterne che non specificano altre aggregazioni, *scope* deve fare riferimento all'ambito corrente o a un ambito contenitore. Per le aggregazioni di aggregazioni, le aggregazioni nidificate possono specificare un ambito figlio.  
   
@@ -75,9 +75,9 @@ First(expression, scope)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressione viene utilizzata nei report di &#40;SSRS e Generatore Report&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;SSRS e Generatore Report&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

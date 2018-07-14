@@ -5,28 +5,27 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], key phrase queries
 ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 28696617406fd5f3776181a79cd8fb84bec04307
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3a9cb8c4903580c4b5879b431b1be6de1b77f97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234961"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Trovare frasi chiave nei documenti mediante ricerca semantica
   Viene descritto come individuare le frasi chiave nei documenti o nelle colonne di testo configurati per l'indicizzazione semantica statistica.  
   
-##  <a name="BasicsQueryKey"></a> Trovare frasi chiave nei documenti  
+##  <a name="BasicsQueryKey"></a> Ricerca di frasi chiave nei documenti  
   
 ###  <a name="howtofind"></a> Procedura: individuare le frasi chiave nei documenti con SEMANTICKEYPHRASETABLE  
  Per identificare le frasi chiave in documenti specifici o identificare documenti che contengono frasi chiave specifiche, eseguire una query sulla funzione [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql).  
@@ -41,7 +40,7 @@ ms.locfileid: "36077753"
 > [!IMPORTANT]  
 >  Per le colonne di destinazione deve essere abilitata l'indicizzazione full-text e semantica.  
   
-###  <a name="HowToTopPhrases"></a> Esempio 1: Trovare le frasi chiave in un documento specifico  
+###  <a name="HowToTopPhrases"></a> Esempio 1: Trovare le principali frasi chiave in un documento specifico  
  L'esempio seguente recupera le prime 10 frasi chiave dal documento specificato tramite la variabile @DocumentId nella colonna Document della tabella Production.Document del database di esempio AdventureWorks. La variabile @DocumentId rappresenta un valore della colonna chiave dell'indice full-text.  
   
 ```tsql  

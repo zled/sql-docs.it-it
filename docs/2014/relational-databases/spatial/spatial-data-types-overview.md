@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geometry data type [SQL Server], understanding
 - geography data type [SQL Server], spatial data
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e328be1225999a629d93ab16c55b2bc4b7f15d5c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d6dbc52caa183352376ae04887ec02088e8459ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162182"
 ---
 # <a name="spatial-data-types-overview"></a>Panoramica dei tipi di dati spaziali
   Esistono due tipi di dati spaziali. Il tipo di dati `geometry` supporta dati planari o euclidei (terra piatta). Il tipo di dati `geometry` è conforme a Open Geospatial Consortium (OGC) Simple Features for SQL Specification versione 1.1.0 e a SQL MM (standard ISO).  
   
- Inoltre, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta la `geography` tipo di dati, che archivia dati ellissoidali (terra), ad esempio coordinate di latitudine e longitudine GPS.  
+ È inoltre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta la `geography` tipo di dati che archiviare dati ellissoidali (terra rotonda assembly), ad esempio coordinate di latitudine e longitudine GPS.  
   
 > [!IMPORTANT]  
 >  Per una descrizione dettagliata e alcuni esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui i miglioramenti apportati ai tipi di dati spaziali, scaricare il white paper [Nuove funzionalità spaziali di SQL Server, nome in codice "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407).  
@@ -37,11 +37,11 @@ ms.locfileid: "36156209"
 ##  <a name="objects"></a> Oggetti dati spaziali  
  I tipi di dati `geometry` e `geography` supportano sedici oggetti dati spaziali o tipi di istanza. Solo per undici di questi tipi di istanza, tuttavia, è possibile *creare istanze*. È possibile creare e usare queste istanze (o crearne un'istanza) in un database. Queste istanze derivano determinate proprietà dai relativi tipi di dati padre che distinguono come `Points`, **LineStrings, CircularStrings**, `CompoundCurves`, `Polygons`, `CurvePolygons` o come più `geometry`oppure `geography` le istanze in un `GeometryCollection`. Il tipo `Geography` dispone di un tipo di istanza aggiuntivo, `FullGlobe`.  
   
- La figura seguente viene illustrata la `geometry` gerarchia su cui il `geometry` e `geography` si basano i tipi di dati. I tipi istanziabili `geometry` e `geography` sono indicati in blu.  
+ La figura seguente viene illustrata la `geometry` gerarchia su cui il `geometry` e `geography` si basano i tipi di dati. I tipi di istanziabile `geometry` e `geography` sono indicati in blu.  
   
  ![Gerarchia del tipo di geometria](../../database-engine/media/geom-hierarchy.gif "gerarchia del tipo di geometria")  
   
- Come indicato nella figura, i dieci tipi istanziabili del `geometry` e `geography` sono tipi di dati `Point`, `MultiPoint`, `LineString`, `CircularString`, `MultiLineString`, `CompoundCurve`, `Polygon`, `CurvePolygon`, `MultiPolygon`, e `GeometryCollection`. Vi è un tipo aggiuntivo di cui è possibile creare istanze per il tipo di dati geography, ovvero `FullGlobe`. Il `geometry` e `geography` tipi possono riconoscere un'istanza specifica purché si tratta di un'istanza con formato corretto, anche se l'istanza non è definito in modo esplicito. Ad esempio, se si definisce un `Point` dell'istanza in modo esplicito utilizzando il metodo Stpointfromtext `geometry` e `geography` riconoscono l'istanza come un `Point`, purché l'input del metodo sia ben formato. Se si definisce la stessa istanza utilizzando il metodo `STGeomFromText()`, entrambi i tipi di dati `geometry` e `geography` riconoscono l'istanza come `Point`.  
+ Come indicato nella figura, i dieci tipi istanziabili del `geometry` e `geography` sono tipi di dati `Point`, `MultiPoint`, `LineString`, `CircularString`, `MultiLineString`, `CompoundCurve`, `Polygon`, `CurvePolygon`, `MultiPolygon`, e `GeometryCollection`. Vi è un tipo aggiuntivo di cui è possibile creare istanze per il tipo di dati geography, ovvero `FullGlobe`. Il `geometry` e `geography` tipi possono riconoscere un'istanza specifica purché si tratta di un'istanza con formato corretto, anche se l'istanza non è definito in modo esplicito. Ad esempio, se si definisce una `Point` in modo esplicito usando il metodo stpointfromtext (), dell'istanza `geometry` e `geography` riconoscono l'istanza come un `Point`, purché l'input del metodo sia ben formato. Se si definisce la stessa istanza utilizzando il metodo `STGeomFromText()`, entrambi i tipi di dati `geometry` e `geography` riconoscono l'istanza come `Point`.  
   
  I sottotipi per i tipi geometry e geography sono divisi in tipi semplici e di raccolta.  Alcuni metodi come `STNumCurves()` possono essere utilizzati solo con tipi semplici.  
   
@@ -80,22 +80,22 @@ ms.locfileid: "36156209"
  I segmenti di arco circolare per i tipi geometry vengono definiti sul piano delle coordinate cartesiane XY (i valori Z vengono ignorati). I segmenti di arco circolare per i tipi geography vengono definiti da segmenti di curva su una sfera di riferimento. Qualsiasi parallelo sulla sfera di riferimento può essere definito da due archi circolari complementari in cui i punti per entrambi gli archi hanno un angolo di latitudine costante.  
   
 ### <a name="measurements-in-spatial-data-types"></a>Misurazioni nei tipi di dati spaziali  
- Nel sistema planare, o terra piatta, le misurazioni delle distanze e delle aree vengono fornite nella stessa unità di misurazione delle coordinate. Utilizzando il `geometry` tipo di dati, la distanza tra (2, 2) e (5, 6) è 5 unità, indipendentemente dalle unità utilizzate.  
+ Nel sistema planare, o terra piatta, le misurazioni delle distanze e delle aree vengono fornite nella stessa unità di misurazione delle coordinate. Uso di `geometry` tipo di dati, la distanza tra (2, 2) e (5, 6) è 5 unità, indipendentemente dalle unità utilizzate.  
   
  Nel sistema ellissoidale, o terra rotonda, le coordinate sono fornite in gradi di latitudine e longitudine. Tuttavia, le lunghezze e le aree sono misurate generalmente in metri e metri quadrati, sebbene la misurazione possa dipendere l'identificatore di riferimento spaziale (SRID) del `geography` istanza. L'unità di misura per più comune di `geography` tipo di dati è il metro.  
   
 ### <a name="orientation-of-spatial-data"></a>Orientamento dei dati spaziali  
  Nel sistema planare l'orientamento dell'anello di un poligono non è un fattore di particolare rilevanza. Ad esempio, un poligono descritto da ((0, 0), (10, 0), (0, 20), (0, 0)) è identico al poligono descritto da ((0, 0), (0, 20), (10, 0), (0, 0)). OGC Simple Features for SQL Specification non indica un ordinamento dell'anello e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non impone tale ordinamento.  
   
- In un sistema ellissoidale, un poligono non ha significato, o è ambiguo, senza un orientamento. Ad esempio, un anello intorno all'equatore descrive l'emisfero nord o sud? Se si usa il `geography` tipo di dati per archiviare l'istanza spaziale, è necessario specificare l'orientamento dell'anello e descrivere accuratamente la posizione dell'istanza. L'interno del poligono in un sistema ellissoidale è definito dal lato sinistro della regola.  
+ In un sistema ellissoidale, un poligono non ha significato, o è ambiguo, senza un orientamento. Ad esempio, un anello intorno all'equatore descrive l'emisfero nord o sud? Se si utilizza il `geography` tipo di dati per archiviare l'istanza spaziale, è necessario specificare l'orientamento dell'anello e descrivere accuratamente la posizione dell'istanza. L'interno del poligono in un sistema ellissoidale è definito dal lato sinistro della regola.  
   
- Quando il livello di compatibilità è 100 o minore di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] il `geography` tipo di dati presenta le restrizioni seguenti:  
+ Quando il livello di compatibilità è 100 o minore di nel [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] il `geography` tipo di dati presenta le restrizioni seguenti:  
   
 -   Ogni istanza `geography` deve adattarsi all'interno di un singolo emisfero. Non è possibile archiviare oggetti spaziali con dimensioni maggiori di un emisfero.  
   
 -   Qualsiasi istanza `geography` di una rappresentazione Well-Known Text (WKT) o Well-Known Binary (WKB) OCG che produca un oggetto più grande di un emisfero genera una `ArgumentException`.  
   
--   Il `geography` metodi che richiedono l'input di due tipi di dati `geography` istanze, ad esempio stintersection (), stunion (), stdifference () e stsymdifference (), verranno restituito null se i risultati dei metodi non sono sufficiente un singolo emisfero. Anche STBuffer() restituirà Null se l'output supera un singolo emisfero.  
+-   Il `geography` metodi che richiedono l'input di due tipi di dati `geography` istanze, ad esempio stintersection (), stunion (), stdifference () e stsymdifference (), restituiranno null se i risultati dei metodi non rientrano in un singolo emisfero. Anche STBuffer() restituirà Null se l'output supera un singolo emisfero.  
   
  In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] `FullGlobe` è un tipo speciale di Polygon che copre l'intero globo. `FullGlobe` dispone di un'area, ma non ha bordi o vertici.  
   
@@ -157,14 +157,14 @@ LS LengthCS Length
 5.65685…6.28318…  
 ```  
   
- Nella figura seguente viene illustrato come viene archiviato ogni tipo (linea rossa indica `LineString``@g1`blu, riga mostra `CircularString``@g2`):  
+ La figura seguente mostra come viene archiviato ogni tipo (linea rossa indica `LineString``@g1`blu, riga mostra `CircularString``@g2`):  
   
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4A4B-8560-50cdcf905b76")  
   
- Come illustrato nella figura, `CircularString` istanze usare meno punti per archiviare i limiti delle curve con maggiore precisione `LineString` istanze. Le istanze `CircularString` sono ideali per l'archiviazione di limiti circolari come un raggio cercato di venti miglia da un punto specifico. Le istanze `LineString` sono ideali per l'archiviazione di limiti lineari come un blocco urbano quadrato.  
+ Come l'illustrato nella figura precedente, `CircularString` istanze usano meno punti per archiviare i limiti delle curve con maggiore precisione `LineString` istanze. Le istanze `CircularString` sono ideali per l'archiviazione di limiti circolari come un raggio cercato di venti miglia da un punto specifico. Le istanze `LineString` sono ideali per l'archiviazione di limiti lineari come un blocco urbano quadrato.  
   
 ### <a name="linestring-and-compoundcurve-comparison"></a>Confronto tra LineString e CompoundCurve  
- Gli esempi di codice seguente viene illustrato come archiviare la stessa figura utilizzando `LineString` e `CompoundCurve` istanze:  
+ Gli esempi di codice seguenti illustrano come archiviare la stessa figura utilizzando `LineString` e `CompoundCurve` istanze:  
   
 ```tsql  
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');  
@@ -174,13 +174,13 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
   
  o Gestione configurazione  
   
- Negli esempi precedenti un' `LineString` istanza o un `CompoundCurve` istanza potrebbe archiviare la figura.  In questo esempio viene utilizzato un `CompoundCurve` per archiviare una sezione di torta:  
+ Negli esempi precedenti un' `LineString` istanza o un `CompoundCurve` istanza potrebbe archiviare la figura.  Nell'esempio successivo viene utilizzata una `CompoundCurve` per archiviare una sezione a torta:  
   
 ```tsql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
   
- Un `CompoundCurve` istanza consente di archiviare il segmento di arco circolare (2 2, 3 1, 0 2) direttamente mentre un `LineString` istanza sarebbe necessario convertire la curva in diversi segmenti di linea più piccoli.  
+ Oggetto `CompoundCurve` istanza può archiviare il segmento di arco circolare (2 2, 3 1, 0 2) direttamente, mentre un `LineString` istanza dovrà convertire la curva in diversi segmenti di linea più piccoli.  
   
 ### <a name="circularstring-and-compoundcurve-comparison"></a>Confronto tra CircularString e CompoundCurve  
  Nell'esempio di codice seguente viene illustrata l'archiviazione di una sezione di un grafico a torta in un'istanza `CircularString`:  
@@ -197,7 +197,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
- `CompoundCurve` le istanze consentano entrambi `LineString` e `CircularString` componenti in modo che solo due punti nei segmenti di linea della sezione della torta debbano essere noti.  Questo esempio di codice viene illustrato come utilizzare un `CompoundCurve` per archiviare la stessa figura:  
+ `CompoundCurve` le istanze consentono entrambe `LineString` e `CircularString` componenti in modo che solo due punti nei segmenti di linea della sezione a torta debbano essere noti.  Questo esempio di codice viene illustrato come utilizzare un `CompoundCurve` per archiviare la stessa figura:  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -206,7 +206,7 @@ SELECT @g.ToString(), @g.STLength();
 ```  
   
 ### <a name="polygon-and-curvepolygon-comparison"></a>Confronto tra Polygon e CurvePolygon  
- `CurvePolygon` le istanze possono utilizzare `CircularString` e `CompoundCurve` istanze quando si definiscono i relativi anelli esterni e interni.  `Polygon` le istanze non è possibile utilizzare i tipi di segmento di arco circolare: `CircularString` e `CompoundCurve`.  
+ `CurvePolygon` le istanze possono utilizzare `CircularString` e `CompoundCurve` istanze quando si definiscono i relativi anelli esterni e interni.  `Polygon` le istanze non è possibile usare i tipi di segmento di arco circolare: `CircularString` e `CompoundCurve`.  
   
   
 ## <a name="see-also"></a>Vedere anche  

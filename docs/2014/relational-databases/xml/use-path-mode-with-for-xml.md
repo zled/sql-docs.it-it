@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode
 - characters [SQL Server], XML
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XPath queries [SQL Server]
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e184fc7502af6174eef5cac8cd2914737841bb7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c68d8c3488b921f718fae49a5c0284bd72dc7876
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272707"
 ---
 # <a name="use-path-mode-with-for-xml"></a>Utilizzare la modalità PATH con FOR XML
   Come descritto nell'argomento [Costruzione di codice XML tramite la clausola FOR XML](for-xml-sql-server.md), la modalità PATH consente di combinare in modo più semplice elementi e attributi. e di introdurre nidificazione aggiuntiva per la rappresentazione di proprietà complesse. È possibile utilizzare query in modalità FOR XML EXPLICIT per la costruzione di questo tipo di strutture XML da un set di righe, ma la modalità PATH costituisce un'alternativa più semplice alla formulazione di query in modalità EXPLICIT, che può essere un'operazione complessa. La modalità PATH, insieme alla possibilità di scrivere query FOR XML annidate e alla direttiva TYPE per restituire istanze di tipo **xml** , consente di formulare più facilmente le query.  

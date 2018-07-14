@@ -1,5 +1,5 @@
 ---
-title: Flat File Connection Manager Editor (pagina avanzate) | Documenti Microsoft
+title: Flat File Connection Manager Editor (pagina avanzate) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columnproperties.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
 caps.latest.revision: 35
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b2aa339c8f68d65bdb1566ff781facccf927358
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 364328b3ce519b849b4e7a0c6c7a725f1c24a14b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219661"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>Editor gestione connessione file flat (pagina Avanzate)
   Usare la pagina **Avanzate** della finestra di dialogo **Editor gestione connessione file flat** per impostare le proprietà che specificano come Integration Services legge e scrive i dati nei file flat. È possibile modificare i nomi delle colonne del file flat e impostare le proprietà che includono il tipo di dati e i delimitatori per ogni colonna del file.  
@@ -47,7 +47,7 @@ ms.locfileid: "36158019"
 |**ColumnType**|Indica se la colonna è delimitata, a larghezza fissa o non allineata a destra. Questa proprietà è di sola lettura. I file non allineati a destra sono file in cui ogni colonna ha una larghezza fissa, ad eccezione dell'ultima. L'ultima colonna è delimitata dal delimitatore di riga.|  
 |**OutputColumnWidth**|Consente di specificare il valore da archiviare come conteggio di byte. Nel caso dei file Unicode tale valore corrisponde al conteggio di caratteri. Nell'attività Flusso di dati questo valore viene utilizzato per impostare la larghezza della colonna di output per l'origine file flat.<br /><br /> Nota: nel modello a oggetti il nome di questa proprietà è MaximumWidth.|  
 |**DataType**|Consente di selezionare i tipi di dati disponibili nell'apposito elenco. Per altre informazioni, vedere [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md).|  
-|**TextQualified**|Indica se i dati di testo vengono racchiusi tra qualificatori di testo, ad esempio le virgolette. I valori validi sono:<br /><br /> **True**: i dati di tipo testo nel file flat sono qualificati.<br /><br /> **False**: i dati di tipo testo nel file flat non sono qualificati.|  
+|**TextQualified**|Indica se i dati di testo sono delimitati da caratteri di qualificatore di testo, ad esempio le virgolette. I valori validi sono:<br /><br /> **True**: i dati di tipo testo nel file flat sono qualificati.<br /><br /> **False**: i dati di tipo testo nel file flat non sono qualificati.|  
 |**Nome**|Consente di specificare un nome descrittivo per la colonna. Se non si immettere alcun nome, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] crea automaticamente un nome nel formato Colonna 0, Colonna 1 e così via.|  
 |**DataScale**|Consente di specificare la scala dei dati numerici. Per scala si intende il numero di posizioni decimali. Per altre informazioni, vedere [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Consente di selezionare i delimitatori di colonna disponibili nell'apposito elenco. Scegliere come delimitatori caratteri che non siano già presenti nel testo. Questo valore viene ignorato per le colonne a larghezza fissa.<br /><br /> **{CR}{LF}**. Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.<br /><br /> **{CR}**. Le colonne sono delimitate da un ritorno a capo.<br /><br /> **{LF}**. Le colonne sono delimitate da un avanzamento riga.<br /><br /> **Punto e virgola {;}**. Le colonne sono delimitate da un punto e virgola.<br /><br /> **Due punti {:}**. Le colonne sono delimitate da due punti.<br /><br /> **Virgola {,}**. Le colonne sono delimitate da una virgola.<br /><br /> **Tabulazione {t}**. Le colonne sono delimitate da una tabulazione.<br /><br /> **Barra verticale {&#124;}**. Le colonne sono delimitate da una barra verticale.|  
@@ -70,9 +70,9 @@ ms.locfileid: "36158019"
  La finestra di dialogo **Suggerisci tipi di colonne** consente di valutare dati di esempio nel file e ottenere suggerimenti sul tipo di dati e sulla lunghezza di ogni colonna. Per altre informazioni, vedere [Riferimento all'interfaccia utente della finestra di dialogo Suggerisci tipi di colonne](connection-manager/suggest-column-types-dialog-box-ui-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor gestione connessione File flat &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor gestione connessione File flat &#40;pagina colonne&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [Editor gestione connessione File flat &#40;(pagina colonne)&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [Editor gestione connessione file flat &#40;pagina Anteprima&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

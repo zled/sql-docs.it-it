@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingmodeltrainingdest.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 27cea5c0c206774508eacd9b38431e9314400a65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bb23745ab0858cb598fd668d5f066f0e247d817
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171012"
 ---
 # <a name="data-mining-model-training-destination"></a>Training modello di data mining - destinazione
   La destinazione Training modello di data mining consente di eseguire il training dei modelli di data mining passando i dati ricevuti dalla destinazione agli algoritmi dei modelli di data mining. È possibile eseguire il training di più modelli di data mining con una singola destinazione, se i modelli sono compilati in base alla stessa struttura di data mining. Per altre informazioni, vedere [Colonne della struttura di data mining](../../analysis-services/data-mining/mining-structure-columns.md) e [Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md).  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], glossary
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c35c272df21040d3be4155975ae6b74aa8e27e27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fc93b7ec176a9cba7b0c81a91aa3a46e0a78a021
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329511"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Glossario dei termini per la pubblicazione Oracle
   In caso di configurazione e amministrazione della pubblicazione Oracle, è consigliabile avere familiarità con i termini Oracle seguenti. Per un elenco completo dei termini Oracle, vedere la documentazione online Oracle.  

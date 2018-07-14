@@ -1,5 +1,5 @@
 ---
-title: Modificare o eliminare partizioni (Analyisis Services - multidimensionale) | Documenti Microsoft
+title: Modificare o eliminare partizioni (Analyisis Services - multidimensionale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying partitions
 - partitions [Analysis Services], modifying
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 693550400db63b73b29d01a7a9d198d5924893dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 333caebbfff1870341696ee9d5a6d215288459bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180928"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Modificare o eliminare partizioni (Analyisis Services - Multidimensionale)
   Le partizioni dei cubi vengono modificate tramite la scheda **Partizioni** di Progettazione cubi in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]. Nella scheda **Partizioni** sono elencate le partizioni di tutti i gruppi di misure di un cubo. Sono inoltre elencate le partizioni writeback per le quali è abilitata la funzionalità di writeback.  
@@ -52,7 +52,7 @@ ms.locfileid: "36156289"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare e gestire una partizione locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [Progettazione di aggregazioni &#40;di Analysis Services - multidimensionale&#41;](designing-aggregations-analysis-services-multidimensional.md)   
+ [Progettazione di aggregazioni &#40;Analysis Services - multidimensionale&#41;](designing-aggregations-analysis-services-multidimensional.md)   
  [Unire partizioni in Analysis Services &#40;SSAS - multidimensionale&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

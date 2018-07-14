@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], passing parameters
 - passing parameters [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9bdbdfe769d4283bd68807bcc383486795146aa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 73b32f21bddfa676797cfea01d4f82ae3739fb0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187968"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Passare un parametro del report in un URL
   È possibile passare parametri del report a un report includendoli in un URL del report. Questi parametri URL non hanno il prefisso in quanto vengono passati direttamente al motore di elaborazione dei report.  
@@ -110,7 +110,7 @@ http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'accesso con URL &#40;SSRS&#41;](url-access-ssrs.md)   
+ [Accesso con URL &#40;SSRS&#41;](url-access-ssrs.md)   
  [Riferimento ai parametri di accesso con URL](url-access-parameter-reference.md)  
   
   

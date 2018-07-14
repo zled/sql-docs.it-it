@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 5: Pubblicare la definizione del Report nel Server di Report | Documenti Microsoft'
+title: 'Lezione 5: Pubblicare la definizione del Report nel Server di Report | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 57fab70f-4a72-4413-a0ad-d0525caca3f7
 caps.latest.revision: 17
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c7fa1c983ae58fd56450e6182499b105b68a322f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2cf3003b45c30fe785d8e0f2e5cc2562cc35726
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206241"
 ---
 # <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Lezione 5: Pubblicazione della definizione del report nel Server report
   L'ultimo passaggio dell'aggiornamento della definizione del report consiste nella pubblicazione della definizione nel server di report.  
@@ -81,10 +81,10 @@ ms.locfileid: "36156114"
     ```  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- Nella lezione successiva verrà compilata ed eseguire il `SampleRDLSchema` dell'applicazione. Vedere [lezione 6: eseguire l'applicazione dello Schema RDL &#40;Visual Basic-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
+ Nella prossima lezione verrà compilata ed eseguita la `SampleRDLSchema` dell'applicazione. Visualizzare [lezione 6: eseguire l'applicazione dello Schema RDL &#40;Visual Basic-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'aggiornamento di report mediante le classi generate dallo Schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [Aggiornamento dei report mediante le classi generate dallo Schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

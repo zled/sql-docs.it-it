@@ -1,5 +1,5 @@
 ---
-title: Connettersi a Microsoft SQL Server Analysis Services (SSAS) | Documenti Microsoft
+title: Connettersi a Microsoft SQL Server Analysis Services (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlserveras.f1
 ms.assetid: 7f3244ee-b690-471c-893d-68e361c2d416
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 800df54ac7fedcad048ada667376cead7447fd53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43a7dd31c52c81f7a2bfcbf87d1a8df3f6740081
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323661"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>Connessione a Microsoft SQL Server Analysis Services (SSAS)
   Questa pagina della finestra di **importazione guidata tabella** consente di specificare le impostazioni per importare dati da un cubo di Microsoft SQL Server Analysis Services o una cartella di lavoro di PowerPivot ospitata in SharePoint. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -32,7 +32,7 @@ ms.locfileid: "36070166"
 >  Le credenziali dell'utente corrente vengono utilizzate in caso di selezione di un database in questa pagina. Tuttavia, l'importazione non verrà completata se l'utente specificato nella pagina Impostazioni di rappresentazione non dispone di privilegi sufficienti per leggere dal database selezionato.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Nome descrittivo della connessione**  
+ **Nome descrittivo connessione**  
  Digitare un nome univoco per questa connessione all'origine dati. Questo campo è obbligatorio.  
   
  **Nome File o server**  

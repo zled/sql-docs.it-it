@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo visibilità righe | Documenti Microsoft
+title: Finestra di dialogo visibilità righe | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.rowvisibility.f1
 - "10126"
 ms.assetid: 557ecf70-62b1-47f5-9322-0ebdc809d018
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8bcc02cc0e210bf2cbd7ee974ba5d2057658dfe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aac18834e0fffce98ed0f0de508c019a737f6b0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200761"
 ---
 # <a name="row-visibility-dialog-box"></a>Finestra di dialogo Visibilità righe
   Utilizzare la finestra di dialogo **Visibilità righe** per visualizzare o nascondere la riga selezionata quando il report viene eseguito per la prima volta oppure per utilizzare un altro elemento del report per attivare/disattivare la visibilità della riga.  
@@ -40,7 +40,7 @@ ms.locfileid: "36157424"
  **Mostra o Nascondi in base a un'espressione**  
  Selezionare questa opzione per modificare l'impostazione di visibilità iniziale tramite un'espressione.  
   
- Digitare un'espressione che restituisce un `Boolean` pari a `True` per nascondere l'elemento e `False` per visualizzare l'elemento. Fare clic sul pulsante Espressione (**fx**) per modificare l'espressione.  
+ Digitare un'espressione che restituisce un `Boolean` valore del `True` per nascondere l'elemento e `False` per visualizzare l'elemento. Fare clic sul pulsante Espressione (**fx**) per modificare l'espressione.  
   
  **Visualizzazione può essere attivata/disattivata tramite questo elemento del report**  
  Selezionare questa opzione per visualizzare l'immagine dell'elemento Toggle che consente all'utente di visualizzare o nascondere l'elemento del report in un visualizzatore di report HTML.  
@@ -50,7 +50,7 @@ ms.locfileid: "36157424"
 ## <a name="see-also"></a>Vedere anche  
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Aggiungere un'azione Espandi o Comprimi a un elemento &#40;Generatore report e SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Immagini &#40;SSRS e Generatore Report&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Immagini &#40;Report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Guida sensibile al contesto di Progettazione report](tools/report-designer-f1-help.md)  
   
   

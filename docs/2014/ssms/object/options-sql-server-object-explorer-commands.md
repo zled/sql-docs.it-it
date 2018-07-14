@@ -1,5 +1,5 @@
 ---
-title: Opzioni (SQL Server Esplora oggetti-comandi) | Documenti Microsoft
+title: Opzioni (oggetti di SQL Server Explorer-comandi) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: de2441f304aadc34c09fa5c839561634afb62416
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6e3c6b143f352b51f7c5b16a7f29f5165624746f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172012"
 ---
-# <a name="options-sql-server-object-explorer-commands"></a>Opzioni (SQL Server Esplora oggetti-comandi)
+# <a name="options-sql-server-object-explorer-commands"></a>Opzioni (oggetti di SQL Server Explorer-comandi)
   Quando si fa clic con il pulsante destro del mouse in una tabella o una vista di Esplora oggetti, le due opzioni seguenti consentono di impostare la visualizzazione delle righe nella tabella:  
   
 -   **Seleziona le prime 1000 righe**  
@@ -37,7 +37,7 @@ ms.locfileid: "36158577"
  Usare la finestra di dialogo **Opzioni generali di scripting** per modificare il numero delle righe da aprire.  
   
 ## <a name="general-scripting-options"></a>Opzioni generali di scripting  
- **Valore di Select Top \<n > record comando di controllo**  
+ **Valore di Select Top \<n > comando record di controllo**  
  Specifica il numero di righe del controllo da restituire. Il valore predefinito è 1.000 righe.  
   
  **Valore per la modifica le prime \<n > righe di comando**  

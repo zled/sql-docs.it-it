@@ -1,5 +1,5 @@
 ---
-title: Creare una struttura di Data Mining relazionale | Documenti Microsoft
+title: Creare una struttura di Data Mining relazionale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
 - data mining [Analysis Services], structure
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3622989e4dbc5ba8d954f0f92513820829aaea54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 261936c087c109087c9916513acd45468de55a7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237911"
 ---
 # <a name="create-a-relational-mining-structure"></a>Creare una struttura di data mining relazionale
   La maggior parte dei modelli di data mining sono basati su origini dati relazionali. La creazione di un modello di data mining relazionale offre il vantaggio di poter assemblare dati ad hoc e aggiornare ed eseguire il training di un modello evitando la complessità di dover creare un cubo.  
@@ -97,7 +97,7 @@ ms.locfileid: "36077692"
   
  I dati di una struttura di data mining derivano dal contenuto all'interno della vista origine dati esistente. È possibile modificare dati secondo le esigenze all'interno della vista origine dati, aggiungendo relazioni o colonne derivate che potrebbero non essere presenti nei dati relazionali sottostanti. È inoltre possibile creare calcoli o aggregazioni denominati all'interno della vista origine dati. Queste funzionalità sono molto utili se non è possibile controllare la disposizione dei dati nell'origine dati o se si desidera sperimentare diverse aggregazioni di dati per i modelli di data mining.  
   
- Non è necessario utilizzare tutti i dati disponibili; è possibile scegliere quali colonne includere nella struttura di data mining. Tutti i modelli basati su tale struttura quindi possono utilizzare tali colonne, oppure è possibile contrassegnare determinate colonne come `Ignore` per un determinato modello. È inoltre possibile consentire agli utenti di un modello di data mining di eseguire il drill-down a partire dai risultati del modello per visualizzare colonne della struttura di data mining aggiuntive non incluse nel modello di data mining stesso.  
+ Non è necessario utilizzare tutti i dati disponibili; è possibile scegliere quali colonne includere nella struttura di data mining. Tutti i modelli sono basati su tale struttura possono utilizzare tali colonne, oppure è possibile contrassegnare determinate colonne come `Ignore` per un particolare modello. È inoltre possibile consentire agli utenti di un modello di data mining di eseguire il drill-down a partire dai risultati del modello per visualizzare colonne della struttura di data mining aggiuntive non incluse nel modello di data mining stesso.  
   
 ##  <a name="bkmk_ContentDataType"></a> Come specificare il tipo di contenuto e di dati  
  Il tipo di dati è molto simile ai tipi di dati specificati in SQL Server o nelle interfacce di altre applicazioni: date e ore, numeri di dimensioni diverse, valori booleani, testo e altri dati discreti.  
@@ -129,8 +129,8 @@ ms.locfileid: "36077692"
 >  Per utilizzare il drill-through è necessario abilitarlo durante la creazione della struttura di data mining. È possibile abilitare il drill-through sui modelli in un secondo momento, impostando una proprietà sul modello, ma per le strutture di data mining questa opzione deve essere impostata all'inizio. Per altre informazioni, vedere [Query drill-through &#40;Data mining&#41;](drillthrough-queries-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Progettazione di Data Mining](data-mining-designer.md)   
- [Creazione guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-analysis-services-data-mining.md)   
+ [Progettazione modelli di Data Mining](data-mining-designer.md)   
+ [Procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-analysis-services-data-mining.md)   
  [Proprietà modello di data mining](mining-model-properties.md)   
  [Proprietà per la struttura di Data Mining e le colonne della struttura](properties-for-mining-structure-and-structure-columns.md)   
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)  

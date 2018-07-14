@@ -1,5 +1,5 @@
 ---
-title: Cancella la cache di Analysis Services | Documenti Microsoft
+title: Cancella la cache di Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02a7a6620927472b0019cb4d23a3695f02dd7138
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6393e9d52bbe026adcda7db0c451e64a364ecbc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077688"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211851"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Cancellare le cache di Analysis Services
   Analysis Services consente di memorizzare i dati nella cache per migliorare le prestazioni delle query. In questo argomento vengono forniti consigli per l'utilizzo del comando XMLA ClearCache con cui cancellare le cache create in risposta a una query MDX. Gli effetti dell'esecuzione di ClearCache variano a seconda che si utilizzi un modello tabulare o multidimensionale.  
@@ -92,7 +92,7 @@ ms.locfileid: "36077688"
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Script di attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
+ [Lo script attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
  [Monitorare un'istanza di Analysis Services](monitor-an-analysis-services-instance.md)  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10061"
 - sql12.rtp.rptdesigner.rectangleproperties.general.f1
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d1cac8525b9343cc2719cd38d278f55b89839bbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 474fcf999291f9b26c242a8e1685431bd58297f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255773"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Aggiungere un rettangolo o un contenitore (Generatore report e SSRS)
   Aggiungere un rettangolo al report quando si desidera separare le aree del report con un elemento grafico, enfatizzare aree del report o fornire uno sfondo per uno o più elementi del report. I rettangoli sono utilizzati anche come contenitori per consentire di controllare il rendering di aree dati in un report. È possibile personalizzare l'aspetto di un rettangolo modificandone le proprietà quali lo sfondo e i colori del bordo. Per altre informazioni sull'uso di un rettangolo come contenitore, vedere [Rettangoli e linee &#40;Generatore report e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md) e [Visualizzare dati identici in una matrice e in un grafico &#40;Generatore report&#41;](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
@@ -54,10 +54,10 @@ ms.locfileid: "36155926"
 2.  Fare clic sulla freccia accanto al pulsante **Bordo** per determinare i lati del rettangolo da modificare.  
   
     > [!NOTE]  
-    >  Se si imposta lo stile di linea **doppie** e la lunghezza riga è 1 1/2 pt o più ristretto, la riga potrà non venga visualizzata come doppia quando si esegue il report in Generatore Report, progettazione Report o gestione Report. Risulterà doppia quando si esporta il report in altri formati, ad esempio Microsoft Word e Acrobat PDF.  
+    >  Se si imposta lo stile di linea su **doppie** e la lunghezza riga è 1 1/2 pt o più ristretto, la riga potrebbe non visualizzata come doppia quando si esegue il report in Generatore Report, progettazione Report o gestione Report. Risulterà doppia quando si esporta il report in altri formati, ad esempio Microsoft Word e Acrobat PDF.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Rettangoli e linee &#40;SSRS e Generatore Report&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Rettangoli e linee &#40;Report e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

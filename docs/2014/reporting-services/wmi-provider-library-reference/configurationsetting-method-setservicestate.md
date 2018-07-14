@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetServiceState method
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7fdcc309eca07c8fc29fa80934e6929054a59b44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f154e0eb7666fd4c8534e701f42a521b4fb70ff8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222531"
 ---
 # <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>Metodo SetServiceState (MSReportServer_ConfigurationSetting WMI)
   Attiva e disattiva i servizi Windows ReportServer e Web ReportServer.  
@@ -47,7 +47,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="parameters"></a>Parametri  
  *EnableWindowsService*  
- Oggetto `Boolean` valore che indica lo stato del servizio Windows. Il valore `true` avvia il Server di Report Windows service, il valore `false` Arresta il servizio Windows.  
+ Oggetto `Boolean` valore che indica lo stato del servizio Windows. Un valore di `true` avvio di Windows Server di Report del servizio; un valore di `false` Arresta il servizio di Windows.  
   
  *EnableWebService*  
  Valore `Boolean` che indica lo stato del servizio Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Un valore `true` avvia il servizio Web ReportServer; un valore `false` arresta il servizio Web.  
@@ -61,7 +61,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

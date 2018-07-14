@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b999f8537936d22861f46f67ad96bda7beba87f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0a67b2c268aa269356e1620b8bf3fd5f5998810a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199151"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Apertura di un editor (SQL Server Management Studio)
   In questo argomento viene descritto come aprire gli editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , MDX, DMX o XML/A in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ogni finestra dell'editor quando viene aperta viene visualizzata come una scheda nel riquadro centrale di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  

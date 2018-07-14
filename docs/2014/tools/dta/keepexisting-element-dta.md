@@ -1,5 +1,5 @@
 ---
-title: Elemento KeepExisting (DTA) | Documenti Microsoft
+title: Elemento KeepExisting (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - KeepExisting element
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a74552aa4cf5b18273c42250f85bc48a794e1731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 62f81fd7ebdd4cee35c09b685273bba2d14d135b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269877"
 ---
 # <a name="keepexisting-element-dta"></a>Elemento KeepExisting (DTA)
   Specifica le strutture di progettazione fisica (indici, viste indicizzate o partizionamento) che Ottimizzazione guidata motore di database deve mantenere quando genera l'indicazione.  
@@ -45,7 +45,7 @@ ms.locfileid: "36069739"
 |**Tipo di dati e lunghezza**|`string`, limite della lunghezza imposto dal server.|  
 |**Valori consentiti**|**NONE**<br /> Nessuna struttura esistente.<br /><br /> **ALL**<br /> Tutte le strutture esistenti.<br /><br /> **ALIGNED**<br /> Tutte le strutture con partizionamento allineato.<br /><br /> **CL_IDX**<br /> Tutti gli indici cluster nelle tabelle.<br /><br /> **IDX**<br /> Tutti gli indici cluster e non cluster nelle tabelle.<br /><br /> Utilizzare solo uno dei valori seguenti con questo elemento.|  
 |**Valore predefinito**|Nessuna.|  
-|**Occorrenza**|Facoltativo. Può utilizzare una sola volta per ogni `TuningOptions` elemento.|  
+|**Occorrenza**|Facoltativo. Può usare una sola volta per ogni `TuningOptions` elemento.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 03a681cf4ab018d82d991b91c463dfbef3fe8d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 690c7a670ca448c14c984b9fda76098ae7269c4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322711"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Passaggio 3: Test del pacchetto creato nella lezione 3 dell'esercitazione
   In questa attività verrà eseguito il pacchetto Lesson 3.dtsx. Durante l'esecuzione del pacchetto, nella finestra Registra eventi verranno elencate le voci di log scritte nel file di log. Al termine dell'esecuzione del pacchetto sarà possibile verificare il contenuto del file di log generato dal provider di log.  
@@ -47,9 +47,9 @@ ms.locfileid: "36156746"
   
 -   Aprire il file TutorialLog.log in Blocco note o in un altro editor di testo.  
   
--   Sebbene la semantica delle informazioni generate per i `PipelineExecutionPlan` e `PipelineExecutionTrees` eventi esulano dall'ambito di questa esercitazione, è possibile notare che la prima riga sono elencati i campi di informazione specificati nel **dettagli** scheda della finestra il **Configura log SSIS** finestra di dialogo. È inoltre possibile verificare che i due eventi selezionati, PipelineExecutionPlan e PipelineExecutionTrees, sono stati inseriti nel log per ogni iterazione del ciclo Foreach.  
+-   Sebbene la semantica delle informazioni generate per il `PipelineExecutionPlan` e `PipelineExecutionTrees` eventi esulano dall'ambito di questa esercitazione, si può notare che la prima riga sono elencati i campi di informazione specificati nella **dettagli** scheda della finestra il **Configura log SSIS** nella finestra di dialogo. È inoltre possibile verificare che i due eventi selezionati, PipelineExecutionPlan e PipelineExecutionTrees, sono stati inseriti nel log per ogni iterazione del ciclo Foreach.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 4: Aggiunta del reindirizzamento del flusso di errore](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [Lezione 4: Aggiunta del reindirizzamento del flusso degli errori](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   

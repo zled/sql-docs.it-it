@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 14: Distribuire | Documenti Microsoft'
+title: 'Lezione 14: Distribuire | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2b9bf4afde77cc0438e097c14f6b3743c7da427d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2973afd208039534048908ca1403fc8154898fc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181038"
 ---
 # <a name="lesson-14-deploy"></a>Lezione 14: Distribuire
   In questa lezione verranno configurate proprietà di distribuzione, specificando un'istanza del server di distribuzione di Analysis Services in esecuzione in modalità tabulare e un nome per il modello distribuito. Si distribuirà quindi il modello nell'istanza. Dopo la distribuzione, gli utenti possono connettersi al modello utilizzando un'applicazione client di creazione di report. Per altre informazioni, vedere [Distribuzione di una soluzione del modello tabulare &#40;SSAS tabulare&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
@@ -40,12 +40,12 @@ ms.locfileid: "36157839"
     > [!IMPORTANT]  
     >  Per eseguire la distribuzione in un'istanza remota di Analysis Services, è necessario disporre delle autorizzazioni di amministratore.  
   
-3.  Verificare il **modalità di Query** è impostata su **In memoria**.  
+3.  Verificare i **modalità Query** è impostata su **In memoria**.  
   
     > [!NOTE]  
     >  Il modello creato tramite questa esercitazione non è supportato in modalità DirectQuery.  
   
-4.  Nel **Database** proprietà, digitare `Adventure Works Internet Sales Model`.  
+4.  Nel **Database** proprietà, tipo `Adventure Works Internet Sales Model`.  
   
 5.  Nel **cubo** proprietà del nome, tipo `Adventure Works Internet Sales Model`.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36157839"
   
 ## <a name="see-also"></a>Vedere anche  
  [Modalità DirectQuery &#40;SSAS tabulare&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [Configurare la modellazione di dati predefinito e le proprietà di distribuzione &#40;tabulare di SSAS&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Configurare le proprietà di distribuzione e la modellazione dei dati predefinite &#40;tabulare di SSAS&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
  [Database modello tabulare &#40;tabulare di SSAS&#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Esecuzione simultanea di istruzioni su più server (SQL Server Management Studio) | Documenti Microsoft
+title: Eseguire simultaneamente istruzioni su più server (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiserver queries
 - executing queries against multiple servers
 - queries [SQL Server], multiserver
 ms.assetid: 197760f3-0a06-43de-8162-69c27d3fbe56
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 91c0819053860f6ea825890fdafedf05b9041d95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c9880f71d735cfa0c750d56e3dbf6530f0ec1617
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194831"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously-sql-server-management-studio"></a>Esecuzione simultanea di istruzioni su più server (SQL Server Management Studio)
   In questo argomento viene descritto come eseguire una query su più server contemporaneamente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]creando un gruppo di server locali, o un server di gestione centrale e uno o più gruppi di server, e uno o più server registrati all'interno dei gruppi, quindi eseguendo la query sul gruppo completo. I risultati restituiti dalla query possono essere combinati in un singolo riquadro dei risultati oppure possono essere inclusi in riquadri dei risultati distinti. Il set di risultati può includere colonne aggiuntive per il nome del server e l'account di accesso utilizzati dalla query in ciascun server. I server di gestione centrale e i server subordinati possono essere registrati solo tramite l'autenticazione di Windows. I server inclusi nei gruppi di server locali possono essere registrati tramite l'autenticazione di Windows o l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -37,7 +37,7 @@ ms.locfileid: "36158123"
   
      [Security](#Security)  
   
--   **Per eseguire istruzioni su più server tramite:**  
+-   **Per eseguire istruzioni su più server, utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 39633ecaa8c0fbb73e712d1d227c4fe39c8f00dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 70d23d19f2719aaa86ba81617bfb33544279bd2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236241"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a torta al report (Generatore report)
   Nei grafici a torta e in quelli ad anello i dati vengono visualizzati come percentuali rispetto a un valore intero. I grafici a torta vengono utilizzati principalmente per eseguire confronti tra gruppi. I grafici a torta e ad anello, insieme ai grafici a piramide e a imbuto, costituiscono un gruppo di grafici noti come grafici con forme. I grafici con forme non includono assi. Quando un campo numerico viene inserito in un grafico con forme, viene calcolata la percentuale di ogni valore rispetto al totale.  
@@ -105,7 +105,7 @@ ms.locfileid: "36069329"
   
 #### <a name="to-add-a-pie-chart"></a>Per aggiungere un grafico a torta  
   
-1.  Nel **scegliere un tipo di grafico** fare clic su **torta**e quindi fare clic su **Avanti**. Viene visualizzata la pagina **Disponi campi del grafico** .  
+1.  Nel **scegliere un tipo di grafico** pagina, fare clic su **torta**e quindi fare clic su **Avanti**. Viene visualizzata la pagina **Disponi campi del grafico** .  
   
      Nella pagina **Disponi campi del grafico** trascinare il campo Product nel riquadro **Categorie** . Le categorie consentono di definire il numero di sezioni nel grafico a torta. In questo esempio, saranno presenti otto sezioni, una per ogni prodotto.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36069329"
   
      Uno stile specifica lo stile del carattere, il set di colori e uno stile del bordo. Quando si seleziona uno stile, nel riquadro di anteprima viene visualizzato un esempio del grafico con lo stile selezionato.  
   
-5.  Fare clic su **Fine**.  
+5.  Scegliere **Fine**.  
   
      Il grafico verrà aggiunto all'area di progettazione.  
   
@@ -138,11 +138,11 @@ ms.locfileid: "36069329"
   
 3.  Fare doppio clic su un'etichetta e quindi fare clic su **proprietà etichetta serie**.  
   
-4.  In dati etichetta dalla casella di riepilogo a discesa, selezionare **#PERCENT{P0}</USERINPUT&GT**.  
+4.  In dati etichetta casella a discesa selezionare **#PERCENT**.  
   
      Per visualizzare i valori come percentuali, la proprietà UseValueAsLabel deve essere impostata su false. Se viene richiesto di impostare questo valore nella finestra di dialogo **Conferma azione** fare clic su **Sì**.  
   
-5.  (Facoltativo) Per specificare il numero di cifre decimali etichetta, digitare `#PERCENT{Pn}` in cui *n* è il numero di posizioni decimali da visualizzare. Ad esempio, per non visualizzare posizioni decimali, digitare `#PERCENT{P0}`.  
+5.  (Facoltativo) Per specificare il numero di cifre decimali visualizzare nell'etichetta, digitare `#PERCENT{Pn}` in cui *n* è il numero di posizioni decimali da visualizzare. Ad esempio, per non visualizzare posizioni decimali, digitare `#PERCENT{P0}`.  
   
     > [!NOTE]  
     >  L'impostazione di**Formato numeri** nella finestra di dialogo **Proprietà etichetta serie** non produrrà alcun effetto quando si formattano le percentuali. Tale opzione consente solo di formattare le etichette come percentuali, senza tuttavia calcolare la percentuale del grafico a torta rappresentata da ciascuna sezione.  
@@ -160,7 +160,7 @@ ms.locfileid: "36069329"
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Nel **vista** nella scheda il **Mostra/Nascondi** gruppo, selezionare **proprietà**.  
+2.  Nel **View** nella scheda il **Mostra/Nascondi** gruppo, selezionare **proprietà**.  
   
 3.  Nell'area di progettazione fare clic su una sezione del grafico a torta. Le proprietà della serie verranno visualizzate nel riquadro Proprietà.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "36069329"
   
 7.  Verificare che la proprietà **CollectedThresholdUsePercent** sia impostata su **True**.  
   
-8.  Sulla barra multifunzione, nel **Home** scheda, fare clic su **eseguire** per visualizzare in anteprima il report.  
+8.  Sulla barra multifunzione, nella **Home** scheda, fare clic su **eseguire** per visualizzare in anteprima il report.  
   
  Nella legenda, la categoria "Other" ora esiste. La nuova sezione del grafico a torta combina tutte le sezioni inferiori al 5% in una sezione che costituisce il 6% della torta intera.  
   
@@ -183,16 +183,16 @@ ms.locfileid: "36069329"
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Se il riquadro proprietà non è già aperto, scegliere il **vista** , selezionare **proprietà**.  
+2.  Se il riquadro proprietà non è già aperta, scegliere il **View** scheda, seleziona **proprietà**.  
   
 3.  Fare doppio clic sul grafico a torta. Le proprietà della serie per il grafico a torta verranno visualizzate nel riquadro Proprietà.  
   
 4.  Nel riquadro Proprietà espandere il nodo **CustomAttributes** .  
   
-5.  Impostare il **PieDrawingStyle** alla **SoftEdge**.  
+5.  Impostare il **PieDrawingStyle** al **SoftEdge**.  
   
     > [!NOTE]  
-    >  Gli effetti di disegno e gli effetti tridimensionali sono opzioni esclusive. Se un grafico è applicati, gli effetti tridimensionali **PieDrawingStyle** non è disponibile nel riquadro proprietà.  
+    >  Gli effetti di disegno e gli effetti tridimensionali sono opzioni esclusive. Se un grafico è applicati, gli effetti tridimensionali **PieDrawingStyle** non è disponibile nel riquadro delle proprietà.  
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -212,9 +212,9 @@ ms.locfileid: "36069329"
   
      **Come percentuale delle vendite totali**  
   
-3.  Selezionare **vendite di fotocamere e cineprese**, fare clic sul **grassetto** pulsante il **carattere** sezione del **Home** scheda della barra multifunzione.  
+3.  Selezionare **vendite di fotocamere e cineprese**e fare clic sul **grassetto** pulsante la **Font** sezione del **Home** della barra multifunzione.  
   
-4.  Selezionare **come una percentuale delle vendite totali**e il **carattere** sezione il **Home** scheda, impostare le dimensioni del carattere su **10**.  
+4.  Selezionare **come percentuale del totale vendite**e il **Font** sezione il **Home** scheda, impostare la dimensione del carattere su **10**.  
   
 5.  (Facoltativo) Per contenere le due righe del testo potrebbe essere necessario aumentare l'altezza della casella di testo Titolo.  
   

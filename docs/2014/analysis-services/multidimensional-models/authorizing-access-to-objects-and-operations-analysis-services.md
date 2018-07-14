@@ -1,5 +1,5 @@
 ---
-title: Autorizzazione dell'accesso a oggetti e operazioni (Analysis Services) | Documenti Microsoft
+title: Autorizzare l'accesso a oggetti e operazioni (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.membership.f1
 - sql12.asvs.roledesignerdialog.general.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed4336f15c7bb024e9de1d4a4be7928ebf2c89af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43f0606aebac245a3756db1361ea8f1cf6360358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249181"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorizzazione dell'accesso a oggetti e operazioni (Analysis Services)
   L'accesso degli utenti non amministratori a cubi, dimensioni e modelli di data mining all'interno di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene concesso tramite l'appartenenza a uno o più ruoli del database. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gli amministratori creano questi ruoli del database, concedendo le autorizzazioni di Lettura o Lettura/Scrittura sugli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e quindi assegnando utenti e gruppi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows a ciascun ruolo.  
@@ -56,7 +56,7 @@ ms.locfileid: "36156293"
   
  **Passaggio 1: Amministrazione del server**  
   
- Decidere innanzitutto chi dovrà disporre dei diritti di amministratore a livello di server. Durante l'installazione, l'amministratore locale che installa SQL Server deve specificare uno o più account di Windows come amministratore del server di Analysis Services. Gli amministratori del server dispongono di tutte le autorizzazioni possibili in un server, compresa l'autorizzazione per visualizzare, modificare ed eliminare un oggetto nel server o visualizzare i dati associati. Al termine dell'installazione, un amministratore del server può aggiungere o rimuovere gli account per modificare l'appartenenza di questo ruolo. Vedere [concedere le autorizzazioni di amministratore del Server &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) per informazioni dettagliate su questo livello di autorizzazione.  
+ Decidere innanzitutto chi dovrà disporre dei diritti di amministratore a livello di server. Durante l'installazione, l'amministratore locale che installa SQL Server deve specificare uno o più account di Windows come amministratore del server di Analysis Services. Gli amministratori del server dispongono di tutte le autorizzazioni possibili in un server, compresa l'autorizzazione per visualizzare, modificare ed eliminare un oggetto nel server o visualizzare i dati associati. Al termine dell'installazione, un amministratore del server può aggiungere o rimuovere gli account per modificare l'appartenenza di questo ruolo. Visualizzare [Concedi autorizzazioni di amministratore del Server &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) per informazioni dettagliate su questo livello di autorizzazione.  
   
  **Passaggio 2: Amministrazione del database**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36156293"
   
  **Passaggio 3: Abilitazione dell'accesso a un cubo o a un modello per carichi di lavoro di query e di elaborazione**  
   
- Per impostazione predefinita, solo gli amministratori del server e del database dispongono dell'accesso ai cubi e ai modelli tabulari. Rendere disponibili queste strutture di dati ad altre persone dell'organizzazione richiede le assegnazioni di ruolo aggiuntivi che eseguono il mapping utente di Windows e account di gruppo da cubi o modelli, insieme alle autorizzazioni che specificano `Read` privilegi. Per informazioni dettagliate, vedere [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
+ Per impostazione predefinita, solo gli amministratori del server e del database dispongono dell'accesso ai cubi e ai modelli tabulari. Rendere queste strutture di dati disponibili ad altri utenti nell'organizzazione richiede le assegnazioni di ruolo aggiuntive che eseguono il mapping utente Windows e account di gruppo ai cubi o modelli oltre alle autorizzazioni che specificano `Read` privilegi. Per informazioni dettagliate, vedere [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
  Le attività di elaborazione possono essere isolate dalle altre funzioni amministrative consentendo agli amministratori del server e del database di delegare questa attività ad altri utenti o di configurare l'elaborazione automatica specificando gli account del servizio che eseguono il software di pianificazione. Per informazioni dettagliate, vedere [Concedere le autorizzazioni di elaborazione &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md).  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36156293"
  L'uso di un approccio come questo riduce la varianza nelle definizioni dei ruoli e nell'appartenenza ai ruoli all'interno del modello nonché fornisce visibilità nelle assegnazioni dei ruoli semplificando l'implementazione e la gestione delle autorizzazioni dei cubi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concedere le autorizzazioni di amministratore del Server &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+ [Concedere autorizzazioni di amministratore del Server &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Ruoli e autorizzazioni &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [Metodologie di autenticazione supportate da Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetDatabaseConnection method
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 caps.latest.revision: 19
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 006fe47cfa2a994c3acfbd29d8be94a14e60c65e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8808b7ccaf08ecbaad2b124853425c5b1f2792c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181548"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserverconfigurationsetting"></a>Metodo SetDatabaseConnection (MSReportServer_ConfigurationSetting WMI)
   Imposta la connessione al database del server di report su un database del server di report specifico.  
@@ -74,7 +74,7 @@ public void BackupEncryptionKey(string Server,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Quando il parametro *CredentialsType* è impostato su 0 (Windows), è necessario impostare i parametri *UserName* e *Password* . Il parametro *UserName* deve avere il formato "dominio\nomeutente" e il valore deve rappresentare un account di accesso di Windows valido.  
   
  Quando il parametro *CredentialsType* è impostato su 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), il valore passato nel parametro *UserName* deve essere conforme ai requisiti di un nome account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -87,7 +87,7 @@ public void BackupEncryptionKey(string Server,
   
  Quando viene impostata per la prima volta, la proprietà ConnectionPoolSize viene impostata in base ai seguenti processori: ConnectionPoolSize = #Processors * 75.  
   
- Il metodo SetDatabaseConnection non concede autorizzazioni agli account specificati. È necessario chiamare il [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) metodo per ogni account che richiede l'accesso al database del server di report ed eseguire lo script risulta.  
+ Il metodo SetDatabaseConnection non concede autorizzazioni agli account specificati. È necessario chiamare il [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) metodo per ogni account che richiede l'accesso al database del server di report ed eseguire lo script risultante.  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

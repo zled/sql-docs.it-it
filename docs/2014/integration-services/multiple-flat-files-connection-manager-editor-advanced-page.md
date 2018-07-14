@@ -1,5 +1,5 @@
 ---
-title: Editor gestione connessione (pagina avanzate) più file Flat | Documenti Microsoft
+title: Per più file Flat dell'Editor gestione connessione (pagina avanzate) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.advanced.f1
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 caps.latest.revision: 36
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dfbc768285e81c1abfac99430527f2d5dbfe4a81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc475677c9e122776deb58d749f0630b1bf57294
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246741"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>Editor gestione connessione per più file flat (pagina Avanzate)
   Usare la pagina **Avanzate** della finestra di dialogo **Editor gestione connessione per più file flat** per impostare proprietà come il tipo di dati e i delimitatori di ogni colonna nei file di testo a cui si connette la gestione connessione per i file flat.  
@@ -70,9 +70,9 @@ ms.locfileid: "36156249"
  Usare la finestra di dialogo **Suggerisci tipi di colonne** per restituire dati di esempio nel primo file selezionato e ottenere suggerimenti relativi al tipo di dati e alla lunghezza di ogni colonna. Per altre informazioni, vedere [Riferimento all'interfaccia utente della finestra di dialogo Suggerisci tipi di colonne](connection-manager/suggest-column-types-dialog-box-ui-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor gestione connessione file Flat più &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor gestione connessione file Flat più &#40;pagina colonne&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [Editor gestione connessione file Flat più &#40;(pagina colonne)&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
  [Editor gestione connessione file Flat più &#40;pagina di anteprima&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Editor origine ADO NET (pagina Gestione connessione) | Documenti Microsoft
+title: Editor origine ADO NET (pagina Gestione connessione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.connection.f1
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9ef6c300f4954d776dc3ca6bbb5a0504c56b0c3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83204d50049976aa70f3b35a6223abeb6ab07881
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322701"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Editor origine ADO NET (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor origine ADO.NET** per selezionare la gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)] per l'origine. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  
@@ -74,8 +74,8 @@ ms.locfileid: "36069886"
  Usare la finestra di dialogo **Apri** per individuare il file contenente il testo della query SQL.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor origine ADO NET &#40;pagina colonne&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
- [Editor origine ADO NET &#40;pagina di Output di errore&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Editor origine ADO NET &#40;(pagina colonne)&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [Editor origine ADO NET &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Gestione connessione ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

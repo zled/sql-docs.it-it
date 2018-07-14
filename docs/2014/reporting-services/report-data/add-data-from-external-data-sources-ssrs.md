@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 22ec8f6785e33323931c5d1199b1c308285be088
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bb750196b31823e604d86a99aabda508a0a06779
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161972"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Aggiungere dati da origini dati esterne (SSRS)
   Per recuperare dati da un'origine dati esterna, utilizzare una connessione dati. Le informazioni di connessione dati vengono in genere fornite dal proprietario dell'origine dati esterna che è responsabile della concessione delle autorizzazioni e di specificare i tipi di credenziali da utilizzare. Le informazioni di connessione dati vengono salvate come un'origine dati del report. Il tipo di origine dati consente di specificare quale estensione per i dati utilizzare per recuperare i dati.  
@@ -73,7 +73,7 @@ ms.locfileid: "36077736"
 ##  <a name="HowTo"></a> Procedure  
  In questa sezione sono contenute istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati.  
   
- [Aggiungere e verificare una connessione dati o un'origine dati &#40;SSRS e Generatore Report&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36077736"
   
 |Argomento|Description|  
 |-----------|-----------------|  
-|[Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-datasets-ssrs.md)|Viene fornita una panoramica sull'accesso ai dati del report.|  
+|[Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)|Viene fornita una panoramica sull'accesso ai dati del report.|  
 |[Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)|Vengono fornite informazioni sulle connessioni dati e sulle origini dati.|  
 |[Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Vengono fornite informazioni sui set di dati incorporati e condivisi.|  
 |[Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)|Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.|  
@@ -116,7 +116,7 @@ ms.locfileid: "36077736"
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-datasets-ssrs.md)   
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)   
  [Finestre di progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Vista origine dati di aggiornamento | Documenti Microsoft
+title: Finestra di dialogo Vista origine dati di aggiornamento | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.refreshdsv.f1
 helpviewer_keywords:
 - Refresh Data Source View dialog box
 ms.assetid: 56bac170-6777-472a-8a09-549b2ee0d909
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7f585623e7b8de7ac802612fd3c861819a2bb58e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d93a157fa80754d58be242c4fdbe759176cb6f0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204601"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Finestra di dialogo Aggiorna vista origine dati
   Utilizzare la finestra di dialogo **Aggiorna vista origine dati** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per accettare o annullare le modifiche che verranno apportate dall'aggiornamento della vista origine dati. La finestra di dialogo visualizza le modifiche che verranno apportate alla vista origine dati in seguito alle modifiche apportate all'origine dei dati sottostante. Fare clic su **OK** per accettare le modifiche e aggiornare la vista origine dati oppure fare clic su **Annulla** per ignorare le modifiche e lasciare invariata la vista origine dati. Per visualizzare la finestra di dialogo **Aggiorna vista origine dati** eseguire una delle operazioni seguenti:  

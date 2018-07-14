@@ -1,5 +1,5 @@
 ---
-title: Elaborazione degli oggetti modello multidimensionale | Documenti Microsoft
+title: Elaborazione degli oggetti modello multidimensionale | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online mode [Analysis Services]
 - processing objects [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b933c003e840d0ef145159f278b9054b1637956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9f95df4ac7d0bd9e0dd93c1a55189e9e46f747c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156802"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180978"
 ---
 # <a name="multidimensional-model-object-processing"></a>Elaborazione di oggetti del modello multidimensionale
   L'elaborazione è un passaggio, o una serie di passaggi, durante i quali tramite Analysis Services vengono caricati i dati da un'origine dati relazionale in un modello multidimensionale. Per gli oggetti in cui viene utilizzata l'archiviazione MOLAP, i dati vengono salvati su disco nella cartella dei file di database. Per l'archiviazione ROLAP, l'elaborazione avviene su richiesta, in risposta a una query MDX su un oggetto. Per gli oggetti in cui viene utilizzata l'archiviazione ROLAP, l'elaborazione si riferisce all'aggiornamento della cache prima della restituzione dei risultati della query.  
@@ -49,7 +49,7 @@ ms.locfileid: "36156802"
   
 ##  <a name="bkmk_prereq"></a> Prerequisiti  
   
--   L'elaborazione richiede autorizzazioni amministrative sull'istanza di Analysis Services. Se si elabora in modo interattivo da [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è necessario essere un membro del ruolo di amministratore del server sull'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per l'elaborazione che viene eseguita in modalità automatica, ad esempio utilizzando un pacchetto SSIS che si pianifica tramite SQL Server Agent, l'account utilizzato per eseguire il pacchetto deve essere un membro del ruolo di amministratore del server. Per ulteriori informazioni sull'impostazione delle autorizzazioni di amministratore, vedere [concedere le autorizzazioni di amministratore del Server &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+-   L'elaborazione richiede autorizzazioni amministrative sull'istanza di Analysis Services. Se si elabora in modo interattivo da [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è necessario essere un membro del ruolo di amministratore del server sull'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per l'elaborazione che viene eseguita in modalità automatica, ad esempio utilizzando un pacchetto SSIS che si pianifica tramite SQL Server Agent, l'account utilizzato per eseguire il pacchetto deve essere un membro del ruolo di amministratore del server. Per altre informazioni sull'impostazione di autorizzazioni di amministratore, vedere [Concedi autorizzazioni di amministratore del Server &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 -   L'account utilizzato per recuperare i dati viene specificato nell'oggetto origine dati, come opzione di rappresentazione, se si utilizza l'autenticazione di Windows, o come nome utente nella stringa di connessione, in caso di utilizzo dell'autenticazione del database. L'account deve disporre delle autorizzazioni di lettura su origini dati relazionali utilizzate dal modello.  
   

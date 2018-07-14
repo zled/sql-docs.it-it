@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variables.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23a20f733fd9a6fb2ca3c6e00eb4d1e84b7cb654
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59c097bcc9ee8e2e1b6872ab84cf807deec9d9ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162852"
 ---
 # <a name="variables-window"></a>Finestra Variabili
   Usare la finestra **Variabili** per creare e modificare variabili definite dall'utente e visualizzare quelle di sistema.  
@@ -33,7 +33,7 @@ ms.locfileid: "36158698"
  Facoltativamente, è possibile visualizzare la finestra **Variabili** eseguendo il mapping del comando View.Variables a una combinazione di tasti scelta dall'utente nella pagina **Tastiera** della finestra di dialogo **Opzioni** .  
   
 > [!NOTE]  
->  I valori del `Name` e `Namespace` proprietà devono iniziare con una lettera carattere alfabetico, come definito dallo Standard Unicode 2.0, o un carattere di sottolineatura (_). I caratteri successivi possono includere lettere o numeri, come definito dallo standard Unicode 2.0, o il carattere di sottolineatura (\_).  
+>  I valori del `Name` e `Namespace` proprietà devono iniziare con una lettera di carattere alfabetico come definito dallo Standard Unicode 2.0, o un carattere di sottolineatura (_). I caratteri successivi possono includere lettere o numeri, come definito dallo standard Unicode 2.0, o il carattere di sottolineatura (\_).  
   
 ## <a name="options"></a>Opzioni  
  **Aggiungi variabile**  
@@ -82,7 +82,7 @@ ms.locfileid: "36158698"
  Se si assegna un'espressione a una variabile, accanto a quest'ultima viene visualizzato un marcatore icona speciale. Tale marcatore icona speciale viene visualizzato anche accanto alle gestioni connessioni e alle attività in cui sono impostate espressioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Servizi di integrazione &#40;SSIS&#41; variabili](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; le variabili](integration-services-ssis-variables.md)   
  [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)   
  [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
  [Generazione di file di dump per l'esecuzione dei pacchetti](troubleshooting/generating-dump-files-for-package-execution.md)  

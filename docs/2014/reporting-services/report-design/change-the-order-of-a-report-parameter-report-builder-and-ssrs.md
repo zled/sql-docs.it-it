@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: abd61e19-dba3-423c-a26c-e8bc43197d3f
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c79ffad767a3b1cfcf7e5f943ebca679dc7a67aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 199b83364fceb93e59b9a1b32824166448a4c23f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191291"
 ---
 # <a name="change-the-order-of-a-report-parameter-report-builder-and-ssrs"></a>Modificare l'ordine di un parametro del report (Generatore report e SSRS)
   Modificare l'ordine dei parametri del report quando un parametro dipendente è elencato prima del parametro da cui dipende. L'ordine dei parametri è importante quando sono presenti parametri di propagazione o quando si desidera indicare il valore predefinito di un parametro prima che gli utenti scelgano i valori per altri parametri. Un parametro dipendente del report contiene un riferimento, nella query dei valori predefiniti o in quella dei valori validi, a un parametro di query che punta a un parametro del report successivo nell'elenco dei parametri contenuto nel riquadro dei dati del report.  
@@ -40,9 +40,9 @@ ms.locfileid: "36157935"
 ## <a name="see-also"></a>Vedere anche  
  [Parametri report &#40;Generatore report e Progettazione report&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Aggiungere parametri di propagazione a un Report &#40;SSRS e Generatore Report&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Aggiungere parametri di propagazione a un Report &#40;Report e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Riferimenti alla raccolta dei parametri &#40;SSRS e Generatore Report&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
+ [Riferimenti alla raccolta Parameters &#40;Report e SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
   
   

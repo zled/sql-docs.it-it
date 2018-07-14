@@ -1,28 +1,27 @@
 ---
-title: Prerequisiti per la migrazione da Log Shipping ai gruppi di disponibilità AlwaysOn (SQL Server) | Documenti Microsoft
+title: Prerequisiti per la migrazione dal Log Shipping ai gruppi di disponibilità AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 caps.latest.revision: 21
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: e01e7b373318e64370cc48ff79002c130bd0838a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 511a8e6425cf49060be396b0737d72943136842d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178368"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Prerequisiti per la migrazione dal log shipping ai gruppi di disponibilità AlwaysOn (SQL Server)
   In questo argomento vengono descritti i prerequisiti per convertire un database primario per il log shipping insieme a uno o più dei relativi database secondari in un database primario AlwaysOn e nei relativi database secondari.  
@@ -107,7 +106,7 @@ ms.locfileid: "36156275"
   
 -   **White paper:**  
   
-     [Guida alla migrazione: Migrazione a gruppi di disponibilità AlwaysOn da distribuzioni precedenti in cui la combinazione di mirroring del Database e Log Shipping](http://msdn.microsoft.com/library/jj635217)  
+     [Guida alla migrazione: Migrazione a gruppi di disponibilità AlwaysOn da distribuzioni precedenti che combinano mirroring del Database e il Log Shipping](http://msdn.microsoft.com/library/jj635217)  
   
      [Pagina relativa ai white paper Microsoft per SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36156275"
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
- [Panoramica di gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Monitoraggio di Gruppi di disponibilità &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

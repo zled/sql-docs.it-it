@@ -1,5 +1,5 @@
 ---
-title: Specifiche di capacità massima (Analysis Services) | Documenti Microsoft
+title: Specifiche di capacità massima (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - objects [Analysis Services], maximum size
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 52c77297ad9b5db79f235611a4ddf47357445629
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 04307fb9eb5525c9ce4d91af7eda44ea3783b3b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200271"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Specifiche di capacità massima (Analysis Services)
   Nelle tabelle seguenti vengono indicate le dimensioni e le quantità massime dei diversi oggetti definiti nei componenti di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] con diverse modalità di distribuzione del server.  
@@ -37,7 +37,7 @@ ms.locfileid: "36156104"
  [Tabulare (Deploymentmode=2 = 2)](#bkmk_vertipaq)  
   
 ##  <a name="bkmk_OLAP"></a> Multidimensionale e Data Mining (Deploymentmode=0 = 0)  
- La modalità di archiviazione MOLAP, che prevede l'archiviazione sia di dati che di metadati, prevede limiti fisici aggiuntivi relativi alle dimensioni dei file. Per impostazione predefinita, la dimensione massima dei file di archivio delle stringhe è di 4 GB. Se sono necessari file più grandi per gli archivi di stringhe, è possibile specificare un'architettura di archiviazione di stringhe diversa. Per altre informazioni, vedere [configurare l'archivio di stringhe per partizioni e dimensioni](../configure-string-storage-for-dimensions-and-partitions.md).  
+ La modalità di archiviazione MOLAP, che prevede l'archiviazione sia di dati che di metadati, prevede limiti fisici aggiuntivi relativi alle dimensioni dei file. Per impostazione predefinita, la dimensione massima dei file di archivio delle stringhe è di 4 GB. Se sono necessari file più grandi per gli archivi di stringhe, è possibile specificare un'architettura di archiviazione di stringhe diversa. Per altre informazioni, vedere [configurare l'archivio di stringhe per dimensioni e partizioni](../configure-string-storage-for-dimensions-and-partitions.md).  
   
 |Object|Quantità/dimensioni massime|  
 |------------|----------------------------|  
@@ -62,9 +62,9 @@ ms.locfileid: "36156104"
 |Numero massimo di stati distinti in una colonna attributo del modello di data mining|2^31-1 = 2,147,483,647|  
 |Numero massimo di attributi considerati (caratteristica di selezione degli attributi)|2^31-1 = 2,147,483,647|  
   
- Per ulteriori informazioni sulle convenzioni di denominazione di oggetti, vedere [oggetti ASSL e relative caratteristiche](../scripting-language-assl/assl-objects-and-object-characteristics.md).  
+ Per altre informazioni sulle convenzioni di denominazione di oggetti, vedere [oggetti ASSL e relative caratteristiche](../scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
- Per ulteriori informazioni sulle limitazioni di origine dati per l'elaborazione analitica online (OLAP) e il data mining, vedere [origini dati supportate &#40;multidimensionali SSAS&#41;](../supported-data-sources-ssas-multidimensional.md), [origini dati supportate &#40;Multidimensionali SSAS&#41;](../supported-data-sources-ssas-multidimensional.md), e [oggetti ASSL e relative caratteristiche](../scripting-language-assl/assl-objects-and-object-characteristics.md).  
+ Per altre informazioni sulle limitazioni delle origini dati per l'elaborazione analitica online (OLAP) e il data mining, vedere [origini dati supportate &#40;multidimensionale di SSAS&#41;](../supported-data-sources-ssas-multidimensional.md), [origini dati supportate &#40;Multidimensionale di SSAS&#41;](../supported-data-sources-ssas-multidimensional.md), e [oggetti ASSL e relative caratteristiche](../scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint (DeploymentMode = 1)  
   

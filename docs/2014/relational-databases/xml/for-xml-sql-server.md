@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, about FOR XML clause
 - PATH FOR XML mode, construction
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0af2b34b9849ea414f88006c6cab583dba2edee2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d95baeee7248aecda4c0bcbc374f378359bb722e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179548"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   Una query SELECT restituisce i risultati sotto forma di set di righe. È possibile recuperare facoltativamente i risultati di una query SQL come codice XML specificando la clausola FOR XML nella query. È possibile utilizzare la clausola FOR XML nelle query di livello principale e nelle sottoquery. La clausola FOR XML di livello principale può essere utilizzata solo nell'istruzione SELECT. Nelle sottoquery, è possibile utilizzare FOR XML nelle istruzioni INSERT, UPDATE e DELETE. La clausola può inoltre essere utilizzata nelle istruzioni di assegnazione.  

@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati IncrementalProcessingNotification (ASSL) | Documenti Microsoft
+title: Tipo di dati IncrementalProcessingNotification (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IncrementalProcessingNotification data type
 ms.assetid: 66e27f92-65c1-4a34-b9c2-bfbb5aeb7d7c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a913d847e6d328c3fc1289f964170af463a3f5be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ca951d727e32f576e4dc65bc005a5b423e90c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231811"
 ---
 # <a name="incrementalprocessingnotification-data-type-assl"></a>Tipo di dati IncrementalProcessingNotification (ASSL)
   Definisce un tipo di dati derivato che rappresenta le informazioni per il [ProactiveCaching](../objects/proactivecaching-element-assl.md) elemento relative alla query da eseguire per determinare lo stato di avanzamento dell'elaborazione incrementale.  
@@ -59,7 +59,7 @@ ms.locfileid: "36077873"
 |Elementi figlio|[ProcessingQuery](../properties/query-element-assl.md), [TableID](../properties/id-element-assl.md)|  
 |Elementi derivati|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>.  
   
 ## <a name="see-also"></a>Vedere anche  

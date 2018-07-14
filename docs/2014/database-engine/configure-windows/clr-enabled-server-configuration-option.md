@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - assemblies [CLR integration], verifying can run
 - clr enabled option
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1eb4bd97f6e008dbc84e7d7882b80cfff5c88f2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8eee4ca485f4bb48a4f2cb42ec728f20a7848509
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192531"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>Opzione di configurazione del server clr enabled
   Utilizzare l'opzione clr enabled per specificare se gli assembly utente possono essere eseguiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'opzione clr enabled restituisce i valori riportati di seguito.  
@@ -38,7 +38,7 @@ ms.locfileid: "36158517"
 >  Quando si esegue RECONFIGURE e il valore dell'opzione clr enabled viene modificato da 1 a 0, vengono scaricati immediatamente tutti i domini applicazione contenenti assembly utente.  
   
 > [!NOTE]  
->  L'esecuzione di CLR (Common Language Runtime) non è supportata nell'ambito dell'opzione lightweight pooling. Disabilitare una delle due opzioni, "clr enabled" o "lightweight pooling". Le caratteristiche che si basano su CLR e che non funzionano correttamente in modalità fiber includono il `hierarchy` tipo di dati, replica e la gestione basata su criteri.  
+>  L'esecuzione di CLR (Common Language Runtime) non è supportata nell'ambito dell'opzione lightweight pooling. Disabilitare una delle due opzioni, "clr enabled" o "lightweight pooling". Le funzionalità che si basano su CLR e che non funzionano correttamente in modalità fiber includono il `hierarchy` tipo di dati, replica e la gestione basata su criteri.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene prima visualizzata l'impostazione corrente dell'opzione clr enabled, quindi abilitata l'opzione impostandone il valore su 1. Per disabilitare l'opzione, impostare il valore su 0.  

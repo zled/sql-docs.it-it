@@ -1,5 +1,5 @@
 ---
-title: Metodo SetDefaults (classe ClientSettings) | Documenti Microsoft
+title: Metodo SetDefaults (classe ClientSettings) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SetDefaults method
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 58cfbe5b2a53bfdce97037602058466ccd1af187
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 92224fb0d9e8a46702a1bbfdecc6c8cf64d18ecf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216911"
 ---
 # <a name="setdefaults-method-clientsettings-class"></a>Metodo SetDefaults (classe ClientSettings)
-  Imposta tutti i valori predefiniti per l'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client con l'opzione per sovrascrivere dati esistenti.  
+  Imposta tutti i valori predefiniti per l'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client con l'opzione per sovrascrivere dati esistenti.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,5 +57,5 @@ OverwriteAll
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore `uint32` che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   

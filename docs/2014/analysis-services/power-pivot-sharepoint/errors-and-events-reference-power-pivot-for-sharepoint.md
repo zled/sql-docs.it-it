@@ -1,5 +1,5 @@
 ---
-title: Errori di riferimenti a ed eventi (PowerPivot per SharePoint) | Documenti Microsoft
+title: Gli errori e riferimento degli eventi (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 95970bab-aa4d-4e8e-be86-0c96e95a5d0c
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d49047a6332b11c61ed51e2953e3c91fbaaaaed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0eeb235e4edc3cbf4b99657e9997aef65525ae76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218241"
 ---
 # <a name="errors-and-events-reference-powerpivot-for-sharepoint"></a>Riferimenti a errori ed eventi (PowerPivot per SharePoint)
   In questa sezione sono fornite informazioni su errori ed eventi di PowerPivot per SharePoint. Gli errori riportati in questa sezione sono identificati dal testo del messaggio di errore visualizzato in una finestra di errore o log.  

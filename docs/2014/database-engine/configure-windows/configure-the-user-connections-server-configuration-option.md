@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - simultaneous connections [SQL Server]
 - user connections option [SQL Server]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - connections [SQL Server], simultaneous
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4ac585aacfe63de6bddbcaf06f7a36b4df468d0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ce587032e5956e4f86792a60d361e19b4f2a08e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228211"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Configurare l'opzione di configurazione del server user connections
   In questo argomento si illustra come impostare l'opzione di configurazione del server **user connections** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **user connections** è possibile specificare il numero massimo di connessioni utente simultanee permesse in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il numero effettivo di connessioni utente consentite dipende inoltre dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata nonché dai limiti delle applicazioni e dei componenti hardware. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è consentito un massimo di 32.767 connessioni utente. Poiché **user connections** è un'opzione dinamica a configurazione automatica, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] regola automaticamente il numero massimo di connessioni utente come necessario, fino al valore massimo consentito. Se, ad esempio, sono connessi solo 10 utenti, vengono allocati 10 oggetti connessione utente. Nella maggior parte dei casi, non è necessario modificare il valore dell'opzione. Il valore predefinito è 0, che indica che è consentito il numero massimo di connessioni utente (32.767).  

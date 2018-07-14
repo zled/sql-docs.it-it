@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8cd1548cb8fb22a49900cc916dc1fde610993a05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: b05c961fcd9d3a4a64715f6bc96754000969a6ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216881"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo di connessione SAP NetWeaver BI (SSRS)
   Per includere dati da un'origine dati esterna SAP NetWeaver® Business Intelligence nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Questo tipo di origine dati incorporata si basa sull'estensione per i dati per il provider di dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 per [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -75,17 +75,17 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
 ##  <a name="Extended"></a> Proprietà di campo estese  
- L'origine dati [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] supporta le proprietà di campo estese. Proprietà di campo estese sono proprietà a sommarsi `Value` e `IsMissing` che sono definiti per un campo del set di dati, l'estensione per l'elaborazione dati. Le proprietà estese includono proprietà predefinite e proprietà personalizzate. Le proprietà predefinite sono comuni a più origini dei dati, mentre quelle personalizzate sono specifiche di ogni origine dei dati.  
+ L'origine dati [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] supporta le proprietà di campo estese. Proprietà di campo estese sono proprietà oltre alla `Value` e `IsMissing` che vengono definite per un campo del set di dati dall'estensione per l'elaborazione dati. Le proprietà estese includono proprietà predefinite e proprietà personalizzate. Le proprietà predefinite sono comuni a più origini dei dati, mentre quelle personalizzate sono specifiche di ogni origine dei dati.  
   
 ### <a name="working-with-field-properties"></a>Utilizzo delle proprietà di campo  
- Le proprietà di campo estese non vengono visualizzate nel riquadro Dati report come elementi che è possibile trascinare nel layout del report. Invece trascinare il campo padre della proprietà nel report e quindi modificare la proprietà predefinita da `Value` alla proprietà di cui si desidera utilizzare. Se, ad esempio, viene creato il nome campo **Calendar Year/Month Level 01** in Progettazione query MDX trascinando un livello dal riquadro dei metadati al riquadro Query, per fare riferimento alla proprietà estesa personalizzata **Long Name** in un'espressione è possibile usare la sintassi seguente:  
+ Le proprietà di campo estese non vengono visualizzate nel riquadro Dati report come elementi che è possibile trascinare nel layout del report. In alternativa, è trascinare il campo padre della proprietà nel report e quindi modificare la proprietà predefinita da `Value` alla proprietà da usare. Se, ad esempio, viene creato il nome campo **Calendar Year/Month Level 01** in Progettazione query MDX trascinando un livello dal riquadro dei metadati al riquadro Query, per fare riferimento alla proprietà estesa personalizzata **Long Name** in un'espressione è possibile usare la sintassi seguente:  
   
  `=Fields!Calendar_Year_Month_Level_01("Long Name")`  
   
- Il nome di una proprietà di campo estesa viene visualizzato nella descrizione comando quando il puntatore del mouse passa su un campo nel riquadro dei metadati. Per ulteriori informazioni sulle finestre di Progettazione query è possibile utilizzare per esplorare i dati sottostanti, vedere [interfaccia utente progettazione Query SAP NetWeaver BI](sap-netweaver-bi-query-designer-user-interface.md).  
+ Il nome di una proprietà di campo estesa viene visualizzato nella descrizione comando quando il puntatore del mouse passa su un campo nel riquadro dei metadati. Per altre informazioni sulle finestre Progettazione query è possibile usare per esplorare i dati sottostanti, vedere [interfaccia utente progettazione Query SAP NetWeaver BI](sap-netweaver-bi-query-designer-user-interface.md).  
   
 > [!NOTE]  
->  I valori per le proprietà di campo estese sono disponibili solo se vengono forniti dall'origine dati quando il report viene eseguito e vengono recuperati i dati per i relativi set di dati. È possibile fare riferimento a quelli `Field` i valori delle proprietà in qualsiasi espressione utilizzando la sintassi descritta di seguito. Poiché, tuttavia, questi campi sono specifici del provider di dati in uso e non fanno parte del linguaggio RDL, eventuali modifiche apportate a tali valori non vengono salvate con la definizione del report.  
+>  I valori per le proprietà di campo estese sono disponibili solo se vengono forniti dall'origine dati quando il report viene eseguito e vengono recuperati i dati per i relativi set di dati. È quindi possibile fare riferimento a tali `Field` i valori delle proprietà in qualsiasi espressione utilizzando la sintassi descritta di seguito. Poiché, tuttavia, questi campi sono specifici del provider di dati in uso e non fanno parte del linguaggio RDL, eventuali modifiche apportate a tali valori non vengono salvate con la definizione del report.  
   
  Per fare riferimento alle proprietà estese predefinite in un'espressione, utilizzare uno dei due tipi di sintassi seguenti:  
   
@@ -112,7 +112,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |`Key`|`Object`|Restituisce la chiave per un livello.|  
 |`LevelNumber`|`Integer`|Per gerarchie padre-figlio, questa proprietà restituisce il numero del livello o della dimensione.|  
 |`ParentUniqueName`|`String`|Per gerarchie padre-figlio, restituisce un nome completo del livello padre.|  
-|`UniqueName`|`String`|Restituisce il nome completo di un livello. Ad esempio, il `UniqueName` valore per un dipendente potrebbe essere *[0D_Company]. [ 10D_Department]. [11]* .|  
+|`UniqueName`|`String`|Restituisce il nome completo di un livello. Ad esempio, il `UniqueName` valore per un dipendente potrebbe essere *[0d_azienda]. [ 10d_reparto]. [11]* .|  
   
  Per altre informazioni sull'utilizzo di campi e proprietà di campo in un'espressione, vedere [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -128,7 +128,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="HowTo"></a> Procedure  
  In questa sezione sono contenute istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati.  
   
- [Aggiungere e verificare una connessione dati o un'origine dati &#40;SSRS e Generatore Report&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -139,7 +139,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="Related"></a> Sezioni correlate  
  In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le informazioni necessarie sulle procedure per definire, personalizzare e usare parti di un report correlate ai dati.  
   
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-datasets-ssrs.md)  
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

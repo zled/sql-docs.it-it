@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], backing up data
 - backups [SQL Server]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 81
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7df7b8c35327d097e7bbc92bfb1e5cf99c4f4ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b48f8c9bbcb39f68aa0e86957c8713b6044216e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163032"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   In questo argomento viene presentato il componente di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'esecuzione dei backup del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è essenziale per la protezione dei dati. In questa discussione vengono analizzati i tipi di backup e le relative restrizioni. In questo argomento vengono inoltre presentati i dispositivi e i supporti di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -61,7 +60,7 @@ ms.locfileid: "36157171"
   
  **Tipi di backup**  
   
- [Backup di sola copia](copy-only-backups-sql-server.md)  
+ [backup di sola copia](copy-only-backups-sql-server.md)  
  Backup per utilizzo speciale indipendente dalla sequenza di backup convenzionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  backup dei dati  
@@ -89,7 +88,7 @@ ms.locfileid: "36157171"
   
  **Supporti di backup termini e definizioni**  
   
- [Dispositivo di backup](backup-devices-sql-server.md)  
+ [dispositivo di backup](backup-devices-sql-server.md)  
  Dispositivo nastro o disco in cui vengono scritti i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e da cui è possibile eseguirne il ripristino. I backup di SQL Server possono anche essere scritti in un servizio di archiviazione BLOB di Windows Azure e il formato **URL** viene utilizzato per specificare la destinazione e il nome del file di backup. Per altre informazioni, vedere [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [supporti di backup](media-sets-media-families-and-backup-sets-sql-server.md)  
@@ -140,7 +139,7 @@ ms.locfileid: "36157171"
  Se un'operazione di backup si sovrappone a un'operazione di gestione di file o di compattazione, si verifica un conflitto. Indipendentemente dall'operazione in conflitto avviata per prima, la seconda operazione viene rimandata fino al timeout del blocco richiesto dalla prima operazione. Il periodo di timeout è controllato da un'impostazione relativa al timeout di sessione. Se il blocco viene rilasciato entro il periodo di timeout, la seconda operazione continua. Se il periodo di timeout scade, la seconda operazione non viene eseguita.  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
- **Per funzionare con i dispositivi di backup e supporti di backup**  
+ **Per lavorare con i dispositivi di backup e supporti di backup**  
   
 -   [Definizione di un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento NameColumn (ASSL) | Documenti Microsoft
+title: Elemento NameColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NameColumn element
 ms.assetid: 9ff79f2e-26d7-4ab9-a166-14c2c2d1fc07
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41a290275de98b460d16115a2c99774bbf6ede9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b2a0ae2308c14caaf46edaed876a31e04b82e46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213941"
 ---
 # <a name="namecolumn-element-assl"></a>Elemento NameColumn (ASSL)
   Identifica la colonna che fornisce il nome dell'elemento padre.  
@@ -65,10 +65,10 @@ ms.locfileid: "36157019"
 |Elementi padre|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Se il [KeyColumns](../collections/columns-element-assl.md) insieme `DimensionAttribute` contiene un singolo [KeyColumn](column-element-assl.md) elemento che rappresenta una colonna chiave con un tipo di dati stringa, lo stesso `DataItem` valori vengono utilizzati come valori predefiniti per il `NameColumn` elemento.  
+## <a name="remarks"></a>Note  
+ Se il [KeyColumns](../collections/columns-element-assl.md) raccolta di `DimensionAttribute` contiene un singolo [KeyColumn](column-element-assl.md) che rappresenta una colonna chiave con un tipo di dati string, lo stesso elemento `DataItem` valori vengono usati come valori predefiniti per il `NameColumn` elemento.  
   
- Per ulteriori informazioni sul `DataItem` tipo, inclusa una tabella di oggetti di Analysis Services Scripting Language (ASSL) e le proprietà del `DataItem` del tipo, vedere [tipo di dati DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+ Per altre informazioni sul `DataItem` tipo, inclusa una tabella di oggetti di Analysis Services Scripting Language (ASSL) e le proprietà del `DataItem` del tipo, vedere [tipo di dati DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
  Gli elementi che corrispondono ai padri di `NameColumn` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.DimensionAttribute> e <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   

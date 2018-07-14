@@ -1,5 +1,5 @@
 ---
-title: XSL la memorizzazione nella cache (SQLXML 4.0) | Documenti Microsoft
+title: XSL la memorizzazione nella cache (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XSL caching [SQLXML]
 ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b95f2970c7d1d9848d6b58c4feaeb462c084d369
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 64256db5e8cb147c47e28852bb3589e8732bf9c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256013"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>Memorizzazione nella cache file XSL (SQLXML 4.0)
   La memorizzazione nella cache di fogli di stile XSL migliora le prestazioni. Fino alla prima esecuzione, il foglio di stile XSL resta in memoria se la memorizzazione nella cache XSL è impostata su ON. Questa impostazione offre prestazioni migliori per l'elaborazione successiva. L'impostazione predefinita è ON.  
@@ -40,7 +40,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\XSLCacheSize
   
  La cache dei file XSL deve essere impostata in base alla memoria disponibile e al numero di fogli di stile XSL utilizzati. Il valore predefinito **XSLCacheSize** dimensioni sono pari a 31. È possibile aumentare le dimensioni della cache se l'accesso a XSL appare rallentato oppure diminuire le dimensioni della cache se la memoria risulta insufficiente.  
   
- Per ottenere prestazioni migliori, è consigliabile impostare **XSLCacheSize** superiore al numero di fogli di stile XSL utilizzati normalmente. Se **XSLCacheSize** è inferiore al numero di XSL fogli di stile si dispone, le prestazioni diminuiscono in quanto il numero di aumenta i fogli di stile XSL. Il **XSLCacheSize** può essere impostata su un massimo di 128.  
+ Per ottenere prestazioni migliori, è consigliabile impostare **XSLCacheSize** superiore al numero di fogli di stile XSL utilizzati normalmente. Se **XSLCacheSize** è inferiore al numero di XSL fogli di stile si dispone, le prestazioni diminuiscono in quanto il numero di incrementi di fogli di stile XSL. Il **XSLCacheSize** può essere impostato su un massimo di 128.  
   
  Ogni volta che si utilizza il foglio di stile XSL memorizzato nella cache, viene verificata la durata delle modifiche del file XSL per determinare se deve essere aggiornato. Ciò accade in quanto la copia su disco è più recente della copia della cache.  
   

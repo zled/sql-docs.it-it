@@ -1,5 +1,5 @@
 ---
-title: Elemento IntermediateGranularityAttributeID (ASSL) | Documenti Microsoft
+title: Elemento IntermediateGranularityAttributeID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IntermediateGranularityAttributeID element
 ms.assetid: 49895ff0-cb0d-4bcc-ab73-8cb3d5961e12
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 680104347b19e1a7b541ab2eae84f9a6587d1d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 419656660544840ab6bdad9f82d7609f20ec9dee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200101"
 ---
 # <a name="intermediategranularityattributeid-element-assl"></a>Elemento IntermediateGranularityAttributeID (ASSL)
   Contiene l'identificatore (ID) dell'attributo di granularità nella dimensione del cubo intermedia utilizzata per correlare una dimensione di riferimento a una dimensione intermedia.  
@@ -62,8 +62,8 @@ ms.locfileid: "36156795"
 |Elemento padre|[ReferenceMeasureGroupDimension](../data-type/dimension-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `IntermediateGranularityAttributeID` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `IntermediateGranularityAttributeID` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.reindex.f1
 - reindex
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d12d547871d2602249d042ff6e93060f340e9b2a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 603f79bcbbe2ec42b05de28b3685c71f6cca9c69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268977"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Attività Ricompila indice (Piano di manutenzione)
   Usare la finestra di dialogo **Attività Ricompila indice** per ricreare gli indici nelle tabelle del database con un nuovo fattore di riempimento. Il fattore di riempimento determina la quantità di spazio vuoto in ogni pagina dell'indice che potrà essere utilizzato per contenere espansioni future. Poiché il fattore di riempimento non viene gestito, a mano a mano che si aggiungono dati alla tabella lo spazio libero disponibile si riduce. La riorganizzazione delle pagine di dati e di indici consente di ristabilire lo spazio libero.  
@@ -69,13 +69,13 @@ ms.locfileid: "36155762"
  **Riorganizza pagine mantenendo la quantità predefinita di spazio libero**  
  Se si seleziona questa opzione, gli indici delle tabelle del database vengono eliminati e quindi ricreati utilizzando il fattore di riempimento specificato al momento della creazione degli indici.  
   
- **Modifica disponibile percentuale di spazio per pagina**  
+ **Modifica gratuito percentuale di spazio per pagina**  
  Elimina gli indici delle tabelle del database e li ricrea utilizzando un nuovo fattore di riempimento calcolato automaticamente, riservando in tal modo la quantità di spazio disponibile specificata nelle pagine dell'indice. Maggiore è la percentuale, maggiore sarà la quantità di spazio disponibile riservata nelle pagine dell'indice e maggiori saranno le dimensioni dell'indice. I valori validi sono compresi tra 0 e 100.  
   
  **Ordina risultati in tempdb**  
- Utilizzare il `SORT_IN_TEMPDB`opzione che determina dove i risultati intermedi dell'ordinamento, generati durante la creazione dell'indice, vengono memorizzati temporaneamente. Se non è necessario eseguire un'operazione di ordinamento o se l'ordinamento può essere eseguito in memoria, l'opzione `SORT_IN_TEMPDB`viene ignorata.  
+ Usare il `SORT_IN_TEMPDB`opzione che determina dove i risultati intermedi dell'ordinamento, generati durante la creazione dell'indice, vengono memorizzati temporaneamente. Se non è necessario eseguire un'operazione di ordinamento o se l'ordinamento può essere eseguito in memoria, l'opzione `SORT_IN_TEMPDB`viene ignorata.  
   
- **Mantieni indici online durante la reindicizzazione**  
+ **Mantieni indice online durante la reindicizzazione**  
  Utilizzare l'opzione `ONLINE` per consentire agli utenti di accedere alla tabella o ai dati dell'indice cluster sottostanti, nonché agli eventuali indici non cluster associati durante le operazioni sugli indici.  
   
 > [!NOTE]  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.userdefineddatatype.general.f1
 - sql12.swb.new.datatype.properties.general.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d39ce0a1b6d5672ea574f79ef6427ff0d633072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8b3fdf094f1db50860d0f4e29d17463ba1092a9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264828"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Creare un alias del tipo di dati definito dall'utente
   In questo argomento si illustra come creare un nuovo alias del tipo di dati definito dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -96,7 +96,7 @@ ms.locfileid: "36070063"
     |20 – 28|13|  
     |29 – 38|17|  
   
-     Per `nchar` e `nvarchar` tipi di dati, il valore di archiviazione è sempre due volte il valore **lunghezza**.  
+     Per la `nchar` e `nvarchar` tipi di dati, il valore di archiviazione è sempre due volte il valore nella **lunghezza**.  
   
      L'archiviazione non viene visualizzata per tipi di dati `nvarchar(max)`, `varchar(max)` o `varbinary(max)`.  
   

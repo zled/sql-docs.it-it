@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ae4f1bb60dbe467855b43bd4c2408c439e194196
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 671058db0556f58d6bd29b8960212b6e180862be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166904"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Oggetti creati nel server di pubblicazione Oracle
   Con la replica[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono installati oggetti di database nel server di pubblicazione Oracle in modo da abilitare il rilevamento e l'inoltro delle modifiche.[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non determina l'installazione di file binari nel server di pubblicazione Oracle. Nella tabella seguente vengono elencati gli oggetti creati nel server di pubblicazione Oracle quando viene identificato come server di pubblicazione nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Le descrizioni degli oggetti hanno esclusivamente scopo informativo. Non modificare tali oggetti.  

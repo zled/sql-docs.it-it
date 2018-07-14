@@ -1,5 +1,5 @@
 ---
-title: Metodo SetOrderValue (classe ClientNetworkProtocol) | Documenti Microsoft
+title: Metodo SetOrderValue (classe ClientNetworkProtocol) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetOrderValue method
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ff50a3388fd83c23d13bc201c9c27ffc7f43fd44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7dd190efcf5a593017fb9c1bc3dbb3cc3ccd9fc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270367"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>Metodo SetOrderValue (classe ClientNetworkProtocol)
   Seleziona il protocollo con il valore dell'ordine specificato dall'elenco di protocolli del client.  
@@ -57,7 +57,7 @@ OrderValue
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore `uint32` che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà - Protocolli client (scheda Ordine)](http://technet.microsoft.com/library/ms187884.aspx)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
 - UNION queries
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - merged SELECT query [SQL Server]
 ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fbfe0de4422aba4a73a5cabf16c42566c272a7d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3469f186285d5885e1353b5c8a1f8cffe444e3cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263927"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>Creare query UNION (Visual Database Tools)
-  La parola chiave UNION consente di includere i risultati di due istruzioni SELECT in una tabella risultante. Tutte le righe restituite dalle due istruzioni SELECT vengono combinate nel risultato dell'espressione UNION. Per esempi, vedere [esempi selezionare &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql).  
+  La parola chiave UNION consente di includere i risultati di due istruzioni SELECT in una tabella risultante. Tutte le righe restituite dalle due istruzioni SELECT vengono combinate nel risultato dell'espressione UNION. Per esempi, vedere [esempi di istruzioni SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql).  
   
 > [!NOTE]  
 >  Poiché nel riquadro Diagramma è possibile visualizzare solo una clausola SELECT, quando si lavora a una query di unione (query UNION), il Riquadro operazioni tabella verrà nascosto in Progettazione query.  

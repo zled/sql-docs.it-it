@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
 - data types [Integration Services], listed
@@ -21,13 +21,13 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c25bb056540c718c67d5de8ab78f80c3290bc5de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a9c9cb0f668f6484a35be458654bdae26869a2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265345"
 ---
 # <a name="integration-services-data-types"></a>Tipi di dati di Integration Services
   Quando i dati entrano in un flusso di dati di un pacchetto, l'origine che estrae i dati li converte in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ai dati numerici viene assegnato un tipo di dati numeric, ai dati stringa viene assegnato un tipo di dati character e alle date viene assegnato un tipo di dati date. Agli altri dati, ad esempio GUID e BLOB (Binary Large Object), vengono assegnati i tipi dai dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] appropriati. Se i dati sono di un tipo non convertibile in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , verrà generato un errore.  
@@ -66,7 +66,7 @@ ms.locfileid: "36069236"
 |DT_WSTR|Stringa di caratteri Unicode con terminazione Null e lunghezza massima di 4000 caratteri. Se un valore di una colonna contiene ulteriori terminatori Null, la stringa verrà troncata in corrispondenza del primo carattere Null.|  
 |DT_IMAGE|Un valore binario con dimensioni massime di 2<sup>31</sup>-1 (2.147.483.647) byte. ,|  
 |DT_NTEXT|Stringa di caratteri Unicode con lunghezza massima di 2<sup>30</sup> - 1 (1.073.741.823) caratteri.|  
-|DT_TEXT|Un' [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS stringa di caratteri con una lunghezza massima di 2<sup>31</sup>-1 (2.147.483.647) caratteri.|  
+|DT_TEXT|Un' [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS carattere stringa con lunghezza massima pari a 2<sup>31</sup>-1 (2.147.483.647) caratteri.|  
   
 ## <a name="conversion-of-data-types"></a>Conversione di tipi di dati  
  Se i dati in una colonna non richiedono l'intera larghezza allocata dal tipo di dati di origine, sarà possibile modificare il tipo di dati della colonna. Riducendo il più possibile la larghezza delle singole righe di dati è possibile ottimizzare le prestazioni delle operazioni di trasferimento dei dati, perché minore è la larghezza della riga, più rapido sarà lo spostamento dei dati dall'origine alla destinazione.  

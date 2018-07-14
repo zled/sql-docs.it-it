@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, deleting
 - dropping jobs
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - removing jobs
 ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98721e58322867b942703fc245115b497ad79c34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 426bd1d1320b638cba22076d62d99edc008dd728
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170134"
 ---
 # <a name="delete-one-or-more-jobs"></a>Eliminare uno o più processi
   In questo argomento viene descritto come eliminare i processi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o SQL Server Management Objects.  
@@ -89,7 +89,7 @@ ms.locfileid: "36156128"
 ##  <a name="SMO"></a> Utilizzo di SQL Server Management Objects  
  **Per eliminare più processi**  
   
- Utilizzare la `JobCollection` classe utilizzando un linguaggio di programmazione scelto, ad esempio Visual Basic, Visual c# o PowerShell. Per altre informazioni, vedere [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Usare il `JobCollection` classe utilizzando un linguaggio di programmazione desiderato, ad esempio Visual Basic, Visual c# o PowerShell. Per altre informazioni, vedere [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
   
 
   

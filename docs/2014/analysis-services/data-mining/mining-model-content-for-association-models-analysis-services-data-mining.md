@@ -1,5 +1,5 @@
 ---
-title: Contenuto del modello per i modelli di associazione di data mining (Analysis Services - Data Mining) | Documenti Microsoft
+title: Contenuto dei modelli di associazione modelli di data mining (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
 - association algorithms [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c9ea8207778697b10b0be844dbb8ca5d1c8f72fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d65a79697d42d5d91168edfb211ecb57d1e3229
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267603"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di associazione (Analysis Services - Data mining)
   Questo argomento descrive il contenuto dei modelli di data mining specifico dei modelli che usano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules. Per una spiegazione della terminologia generale e statistica relativa al contenuto dei modelli di data mining applicabile a tutti i tipi di modello, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -105,7 +105,7 @@ ms.locfileid: "36069109"
 |RULE_COUNT|Conteggio di tutte le regole nel modello.|  
 |MIN_SUPPORT|Supporto minimo individuato per ogni singolo set di elementi.<br /><br /> **Nota** Questo valore potrebbe essere diverso da quello impostato per il parametro *MINIMUM_SUPPORT* .|  
 |MAX_SUPPORT|Supporto massimo individuato per ogni singolo set di elementi.<br /><br /> **Nota** Questo valore potrebbe essere diverso da quello impostato per il parametro *MAXIMUM_SUPPORT* .|  
-|MIN_ITEMSET_SIZE|Dimensione del set di elementi più piccolo, rappresentata come conteggio di elementi.<br /><br /> Un valore pari a 0 indica che il `Missing` stato sono stato considerato come un elemento indipendente.<br /><br /> **Nota** Il valore predefinito del parametro *MINIMUM_ITEMSET_SIZE* è 1.|  
+|MIN_ITEMSET_SIZE|Dimensione del set di elementi più piccolo, rappresentata come conteggio di elementi.<br /><br /> Un valore pari a 0 indica che il `Missing` stato veniva considerato come un elemento indipendente.<br /><br /> **Nota** Il valore predefinito del parametro *MINIMUM_ITEMSET_SIZE* è 1.|  
 |MAX_ITEMSET_SIZE|Indica la dimensione del set di elementi più grande individuato.<br /><br /> **Nota** Questo valore è vincolato dal valore impostato per il parametro *MAX_ITEMSET_SIZE* durante la creazione del modello. Non può mai superare tale valore, ma può essere minore. Il valore predefinito è 3.|  
 |MIN_PROBABILITY|Probabilità minima individuata per ogni singolo set di elementi o regola nel modello.<br /><br /> Esempio: 0,400390625<br /><br /> **Nota** Per i set di elementi, questo valore è sempre maggiore del valore impostato per il parametro *MINIMUM_PROBABILITY* durante la creazione del modello.|  
 |MAX_PROBABILITY|Probabilità massima individuata per ogni singolo set di elementi o regola nel modello.<br /><br /> Esempio: 1<br /><br /> **Nota** Non esistono parametri che vincolano la probabilità massima dei set di elementi. Per eliminare gli elementi troppo frequenti, usare il parametro *MAXIMUM_SUPPORT* .|  
@@ -197,7 +197,7 @@ ms.locfileid: "36069109"
  Vuoto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto del modello di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Association Rules](microsoft-association-algorithm.md)   
  [Esempi di query sul modello di associazione](association-model-query-examples.md)  
   

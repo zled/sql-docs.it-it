@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico algoritmo Microsoft Sequence Clustering | Documenti Microsoft
+title: Riferimento tecnico algoritmo Microsoft Sequence Clustering | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_SEQUENCE_STATES parameter
 - MINIMUM_SUPPORT parameter
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7e1e11074e74a228be0d49a5d8c76196bf5c4463
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29cb245c65976e517aad12ecae636df264dda9d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242011"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering
   L'algoritmo Microsoft Sequence Clustering è un algoritmo ibrido in cui viene usata l'analisi delle catene di Markov per identificare le sequenze ordinate e consente di combinare i risultati di tale analisi con le tecniche di clustering per generare cluster in base alle sequenze e agli altri attributi del modello. In questo argomento viene illustrato come implementare e personalizzare l'algoritmo e vengono descritti requisiti speciali per i modelli Sequence Clustering.  
@@ -103,7 +103,7 @@ ms.locfileid: "36070165"
  Il valore predefinito è 64.  
   
  MAXIMUM_STATES  
- Specifica il numero massimo di stati per un attributo fuori sequenza supportato dall'algoritmo. Se il numero di stati per un attributo fuori sequenza è maggiore del numero massimo di stati, l'algoritmo utilizza gli stati più frequenti dell'attributo e considera gli stati rimanenti `Missing`.  
+ Specifica il numero massimo di stati per un attributo fuori sequenza supportato dall'algoritmo. Se il numero di stati per un attributo fuori sequenza è maggiore del numero massimo di stati, l'algoritmo utilizza stati più frequenti dell'attributo e considera gli stati rimanenti come `Missing`.  
   
  Il valore predefinito è 100.  
   
@@ -138,9 +138,9 @@ ms.locfileid: "36070165"
 |Attributo di input|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table e Ordered|  
 |Attributo stimabile|Continuous, Cyclical, Discrete, Discretized, Table e Ordered|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
--   Usare la funzione [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) per la stima delle sequenze. Per ulteriori informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supporta la stima basata su sequenze, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Usare la funzione [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) per la stima delle sequenze. Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano la stima delle sequenze, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering non supporta l'uso dello standard PMML (Predictive Model Markup Language) per la creazione dei modelli di data mining.  
   
@@ -149,6 +149,6 @@ ms.locfileid: "36070165"
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
  [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)   
- [Contenuto del modello per Sequence Clustering modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Contenuto dei modelli per i modelli Sequence Clustering di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

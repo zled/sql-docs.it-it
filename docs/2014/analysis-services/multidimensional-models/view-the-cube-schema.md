@@ -1,5 +1,5 @@
 ---
-title: Visualizzare lo Schema del cubo | Documenti Microsoft
+title: Visualizzare lo Schema del cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4ed537c1070c8a2d382f7e883772d44a078ef208
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b5b78b9bd82f9dcade48d653bf5bc2bdb3d6456
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235751"
 ---
 # <a name="view-the-cube-schema"></a>Visualizzare lo schema del cubo
   Lo schema del cubo viene visualizzato nel riquadro **Vista origine dati** della scheda **Struttura cubo** in **Progettazione cubi** . Lo schema è il set di tabelle da cui derivano le misure e le dimensioni per un cubo. Ogni schema del cubo è costituito da una o più tabelle dei fatti e da una o più tabelle delle dimensioni su cui sono basate le misure e le dimensioni nel cubo.  

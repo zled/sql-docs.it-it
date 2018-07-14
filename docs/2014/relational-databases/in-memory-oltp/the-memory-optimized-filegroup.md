@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e68b94ce70e24d16ac1cc94274b9dac05974dbe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6b18989012a733d39dca843f475ec23e99893d0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246906"
 ---
 # <a name="the-memory-optimized-filegroup"></a>Filegroup con ottimizzazione per la memoria
   Per creare tabelle ottimizzate per la memoria, è necessario creare prima un filegroup ottimizzato per la memoria. Nel filegroup ottimizzato per la memoria è presente uno o più contenitori. Ogni contenitore include file di dati o file differenziali o entrambi.  
@@ -61,7 +61,7 @@ ms.locfileid: "36069389"
   
  In uno scenario con più contenitori e più unità, i file di dati e differenziali vengono allocati in contenitori con un meccanismo round robin. Il primo file di dati viene allocato dal primo contenitore e il file differenziale viene allocato dal contenitore successivo e questo modello di allocazione si ripete. Questo schema di allocazione distribuisce i file di dati e differenziali uniformemente nei contenitori se si dispone di un numero dispari di unità, ciascuna con il mapping a un solo contenitore. Tuttavia, se si dispone di un numero pari di unità, ciascuna con il mapping a un contenitore, è possibile che si verifichi un'archiviazione sbilanciata con i file di dati per cui è stato eseguito il mapping alle unità dispari e i file differenziali per cui è stato eseguito il mapping alle unità pari. Per ottenere un flusso bilanciato di IO per il recupero, inserire coppie di file di dati e differenziali negli stessi spindle/archiviazione come descritto nell'esempio seguente.  
   
- **Esempio:** prendere in considerazione un filegroup con ottimizzazione per la memoria con due contenitori: il contenitore 1 nell'unità X e il contenitore 2 nell'unità Y. Dal momento che l'allocazione dei file di dati e differenziali viene eseguita in modo round robin, il contenitore 1 avrà solo file di dati e contenitore 2 avrà solo file differenziali, determinando una persistenza sbilanciata per l'archiviazione, nonché operazioni di input/output al secondo, come file di dati sono significativamente maggiori i file differenziali. Per distribuire i file di dati e differenziali in modo uniforme tra unità X e Y, creare quattro contenitori anziché due ed eseguire il mapping i primi due contenitori all'unità X e i due contenitori successivi all'unità Y. Con allocazione round robin, i dati primo e primo file differenziale verranno allocati dal contenitore 1 e 2 contenitore rispettivamente cui viene eseguito il mapping all'unità X. Analogamente, il file di dati e differenziali successivo verrà allocato dal contenitore 3 e 4 contenitori per cui viene eseguito il mapping all'unità Y. In questo modo la distribuzione di file di dati e differenziali tra due unità in modo uniforme.  
+ **Esempio:** prendere in considerazione un filegroup ottimizzato per la memoria con due contenitori: il contenitore 1 nell'unità X e il contenitore 2 nell'unità Y. Poiché l'allocazione dei file di dati e differenziali viene eseguita in modalità round robin, il contenitore 1 avrà solo file di dati e contenitore 2 avrà solo file differenziali, determinando una persistenza sbilanciata per archiviazione, nonché operazioni di input/output al secondo, come file di dati sono significativamente maggiori i file differenziali. Per distribuire i file di dati e differenziali in modo uniforme tra le unità X e Y, creare quattro contenitori anziché due ed eseguire il mapping i primi due contenitori all'unità X e dei due contenitori successivi all'unità Y. Con allocazione round robin, i dati prima e primo file differenziale verranno allocati dal contenitore 1 e dal contenitore 2 rispettivamente cui viene eseguito il mapping all'unità X. Analogamente, il file di dati e differenziali successivo verrà allocato dal contenitore 3 e dal contenitore 4 per cui viene eseguito il mapping all'unità Y. Ciò consente di distribuire i file di dati e differenziali in due unità in modo uniforme.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](creating-and-managing-storage-for-memory-optimized-objects.md)  

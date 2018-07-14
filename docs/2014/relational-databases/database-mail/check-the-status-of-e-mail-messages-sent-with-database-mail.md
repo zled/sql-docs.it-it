@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - e-mail [SQL Server], status information
 - mail [SQL Server], status information
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - status information [Database Mail]
 ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 08b115604581b1d899e125b2feaf80b65770aaf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f192ac08bf5309f660e2b4a78eeaf748b54cdb3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188508"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Controllare lo stato di messaggi di posta elettronica inviati con Posta elettronica database
   In questo argomento viene illustrato come controllare lo stato del messaggio di posta elettronica inviato utilizzando Posta elettronica database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].  

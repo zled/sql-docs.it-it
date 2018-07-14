@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], database roles
 - database [Master Data Services], users
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - security [Master Data Services], database logins
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ee43a29c5b56a7d6df626b43388ce3b5a3dbfc29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 782f38cbc78ed0eefa1366a3fb17d9c6d0d94c62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195393"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Account di accesso, utenti e ruoli di database (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] sono inclusi account di accesso, utenti e ruoli installati automaticamente nell'istanza del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] in cui è ospitato il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Questi account di accesso, utenti e ruoli non devono essere modificati.  
@@ -57,7 +57,7 @@ ms.locfileid: "36158729"
   
 |Role|Description|  
 |----------|-----------------|  
-|`mds_exec`|Il ruolo contiene l'account impostato in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] quando si crea un'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] e si definisce un account per il pool di applicazioni. Il ruolo mds_exec dispone di:<br /><br /> **EXECUTE** dell'autorizzazione per tutti gli schemi.<br /><br /> **ALTER**, **inserire**, e **selezionare** l'autorizzazione per queste tabelle:<br />mdm.tblStgMember<br />mdm.tblStgMemberAttribute<br />mdm.tbleStgRelationship<br /><br /> **Selezionare** l'autorizzazione per queste tabelle:<br />mdm.tblUser<br />mdm.tblUserGroup<br />mdm.tblUserPreference<br /><br /> **Selezionare** l'autorizzazione per queste viste:<br />mdm.viw_SYSTEM_SECURITY_NAVIGATION<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br />mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
+|`mds_exec`|Il ruolo contiene l'account impostato in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] quando si crea un'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] e si definisce un account per il pool di applicazioni. Il ruolo mds_exec dispone di:<br /><br /> **EXECUTE** l'autorizzazione per tutti gli schemi.<br /><br /> **ALTER**, **inserire**, e **selezionare** l'autorizzazione per queste tabelle:<br />mdm.tblStgMember<br />mdm.tblStgMemberAttribute<br />mdm.tbleStgRelationship<br /><br /> **Selezionare** l'autorizzazione per queste tabelle:<br />mdm.tblUser<br />mdm.tblUserGroup<br />mdm.tblUserPreference<br /><br /> **Selezionare** l'autorizzazione per queste viste:<br />mdm.viw_SYSTEM_SECURITY_NAVIGATION<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br />mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>Schemi  
   
@@ -65,9 +65,9 @@ ms.locfileid: "36158729"
 |----------|-----------------|  
 |`mdm`|Contiene tutti gli oggetti di database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] e Service Broker diversi dalle funzioni contenute nello schema mdq.|  
 |`mdq`|Sono contenute le funzioni del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relative al filtro dei risultati dei membri in base a espressioni regolari o somiglianza e per la formattazione di messaggi di posta elettronica di notifica.|  
-|**stg**|Contiene tabelle di database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , stored procedure e viste correlate al processo di gestione temporanea. Non eliminare alcun oggetto. Per ulteriori informazioni sul processo di gestione temporanea, vedere [importazione di dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).|  
+|**stg**|Contiene tabelle di database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , stored procedure e viste correlate al processo di gestione temporanea. Non eliminare alcun oggetto. Per altre informazioni sul processo di gestione temporanea, vedere [importazione di dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza di oggetti di database &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
+ [La sicurezza degli oggetti di database &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
   
   

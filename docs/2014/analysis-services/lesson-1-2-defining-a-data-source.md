@@ -1,5 +1,5 @@
 ---
-title: Definizione di un'origine dati | Documenti Microsoft
+title: Definizione di un'origine dei dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a564a314e92b683418b2bb3d12291fddeded016c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f764d7e7640fc7549d97402a83f997b63f9105cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179078"
 ---
 # <a name="defining-a-data-source"></a>Definizione di un'origine dei dati
   Dopo aver creato un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la prima operazione consiste nel definire una o più origini dati da usare. Quando si definisce un'origine dei dati si specificano le informazioni sulla stringa di connessione che verrà utilizzata per connettersi all'origine dei dati. Per altre informazioni, vedere [Creare un'origine dati &#40;SSAS - multidimensionale&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "36158774"
   
 1.  In Esplora soluzioni (a destra della finestra di Microsoft Visual Studio) fare clic con il pulsante destro del mouse su **Origini dati**, quindi scegliere **Nuova origine dati**.  
   
-2.  Nel **Creazione guidata origine dati** pagina del **Creazione guidata origine dati**, fare clic su **Avanti** per aprire la **selezionare la modalità di definizione connessione**pagina.  
+2.  Nel **Creazione guidata origine dati** pagina della **Creazione guidata origine dati**, fare clic su **successiva** per aprire il **selezionare la modalità di definizione connessione**pagina.  
   
 3.  Nella pagina **Selezione metodo di definizione connessione** è possibile definire un'origine dati basata su una nuova connessione, su una connessione esistente o su un oggetto origine dati definito in precedenza. In questa esercitazione verranno illustrate le procedure per definire un'origine dati basata su una nuova connessione. Verificare che l'opzione **Crea un'origine dati basata su una connessione nuova o esistente** sia selezionata e fare clic su **Nuova**.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36158774"
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta anche gli altri provider visualizzati nell'elenco **Provider** .  
   
-5.  Nel **nome del Server** casella di testo, digitare `localhost`.  
+5.  Nel **nome Server** casella di testo, digitare `localhost`.  
   
      Per connettersi a un'istanza denominata sul computer locale, digitare **localhost\\< nome istanza\>**. Per connettersi al computer specifico anziché al computer locale, digitare il nome o l'indirizzo IP del computer.  
   

@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb72092ec96c373c05a74a479eaefa47de6d3d35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d3d1bf94e65ffb789204bb774ea502ef824659ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266327"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Creazione e gestione dei cataloghi full-text
   Un catalogo full-text è un oggetto virtuale che non appartiene ad alcun filegroup. Si tratta di un concetto logico che fa riferimento a un gruppo di indici full-text.  
@@ -47,7 +46,7 @@ ms.locfileid: "36156900"
   
   
 ##  <a name="props"></a> Visualizzare le proprietà di un catalogo Full-Text  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Per ottenere il valore di varie proprietà per l'indicizzazione full-text è possano utilizzare funzioni quali FULLTEXTCATALOGPROPERTY. Queste informazioni sono utili per l'amministrazione e la risoluzione dei problemi relativi alla ricerca full-text.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] funzioni quali FULLTEXTCATALOGPROPERTY sono utilizzabile per ottenere il valore di varie proprietà relative all'indicizzazione full-text. Queste informazioni sono utili per l'amministrazione e la risoluzione dei problemi relativi alla ricerca full-text.  
   
  Nella tabella seguente sono elencate le proprietà correlate ai cataloghi full-text.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "36156900"
   
   
   
-##  <a name="rebuildone"></a> Ricompilazione di un catalogo Full-Text  
+##  <a name="rebuildone"></a> La ricompilazione di un catalogo Full-Text  
   
 #### <a name="to-rebuild-a-full-text-catalog"></a>Per ricompilare un catalogo full-text  
   

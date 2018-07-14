@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo oggetti relazionali (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Finestra di dialogo oggetti relazionali (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.relationalobjectsdialog.f1
 ms.assetid: 662ff835-2132-4171-b0d4-649d5873d052
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17e7c07ce8aaef2077ed46f18bc1c28b4de4c199
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc15ef3dbfcaab51bd3e19b7c723c04f49c261b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176968"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Oggetti relazionali (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Oggetti relazionali** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per selezionare tabelle, viste o altri oggetti di un'origine dati in cui si desidera impostare la memorizzazione nella cache attiva. Per visualizzare questa finestra di dialogo di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] è possibile fare clic sul pulsante con i punti di sospensione (**...**) per una delle opzioni disponibili in **Specifica tabelle di rilevamento** della scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione** .  
@@ -38,6 +38,6 @@ ms.locfileid: "36158572"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Le notifiche &#40;finestra di dialogo Opzioni di archiviazione&#41; &#40;Analysis Services - dati multidimensionali&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)  
+ [Notifiche &#40;finestra di dialogo Opzioni di archiviazione&#41; &#40;Analysis Services - dati multidimensionali&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)  
   
   

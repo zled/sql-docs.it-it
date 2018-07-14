@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server]
 - SQL Server Database Engine
 ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8f2ae4ca9ee0dd5c6ac905259581f91b6536ae10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 72b82411378ab2d47b9a9d94c0aad0fe0b8e3f72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190811"
 ---
 # <a name="sql-server-database-engine"></a>Motore di database di SQL Server
   [!INCLUDE[ssDE](../includes/ssde-md.md)] è il servizio principale per l'archiviazione, l'elaborazione e la sicurezza dei dati. [!INCLUDE[ssDE](../includes/ssde-md.md)] assicura l'accesso controllato e l'elaborazione rapida delle transazioni per soddisfare i requisiti delle più complesse applicazioni aziendali di gestione dei dati.  
@@ -30,19 +30,19 @@ ms.locfileid: "36158269"
  Utilizzare [!INCLUDE[ssDE](../includes/ssde-md.md)] per creare database relazionali per i dati relativi all'elaborazione delle transazioni online o all'elaborazione analitica online, inclusa la creazione di tabelle per l'archiviazione di dati e oggetti di database, ad esempio indici, viste e stored procedure per la visualizzazione, la gestione e la protezione dei dati. È possibile utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per gestire gli oggetti di database e [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] per acquisire gli eventi del server.  
   
  **Ricerca di contenuto per area**  
- ![Icona della cartella File di piccole dimensioni](../../2014/integration-services/media/filefolder-small.gif "icona della cartella File piccola") [novità (motore di Database)](whats-new-in-sql-server-2016.md)  
+ ![Icona cartella File piccola](../../2014/integration-services/media/filefolder-small.gif "icona cartella File piccola") [novità (motore di Database)](whats-new-in-sql-server-2016.md)  
   
- ![Icona della cartella File di piccole dimensioni](../../2014/integration-services/media/filefolder-small.gif "icona della cartella File piccola") [compatibilità con le versioni precedenti del motore di Database di SQL Server](sql-server-database-engine-backward-compatibility.md)  
+ ![Icona cartella File piccola](../../2014/integration-services/media/filefolder-small.gif "icona cartella File piccola") [SQL Server Database Engine Backward Compatibility](sql-server-database-engine-backward-compatibility.md)  
   
- ![Icona della cartella File di piccole dimensioni](../../2014/integration-services/media/filefolder-small.gif "icona della cartella File piccola") [compatibilità con le versioni precedenti degli strumenti di gestione di SQL Server](../../2014/database-engine/sql-server-management-tools-backward-compatibility.md)  
+ ![Icona cartella File piccola](../../2014/integration-services/media/filefolder-small.gif "icona cartella File piccola") [compatibilità con le versioni precedenti degli strumenti di gestione di SQL Server](../../2014/database-engine/sql-server-management-tools-backward-compatibility.md)  
   
- ![Icona della cartella File di piccole dimensioni](../../2014/integration-services/media/filefolder-small.gif "icona della cartella File piccola") [caratteristiche e attività del Database](../../2014/database-engine/database-engine-features-and-tasks.md)  
+ ![Icona cartella File piccola](../../2014/integration-services/media/filefolder-small.gif "icona cartella File piccola") [caratteristiche e attività del Database](../../2014/database-engine/database-engine-features-and-tasks.md)  
   
- ![Icona della cartella File di piccole dimensioni](../../2014/integration-services/media/filefolder-small.gif "icona della cartella File piccola") [riferimento tecnico](../../2014/database-engine/technical-reference-database-engine.md)  
+ ![Icona cartella File piccola](../../2014/integration-services/media/filefolder-small.gif "icona cartella File piccola") [riferimento tecnico](../../2014/database-engine/technical-reference-database-engine.md)  
   
- ![Icona della cartella File di piccole dimensioni](../../2014/integration-services/media/filefolder-small.gif "icona della cartella File piccola") [riferimento a Transact-SQL](/sql/t-sql/language-reference)  
+ ![Icona cartella File piccola](../../2014/integration-services/media/filefolder-small.gif "icona cartella File piccola") [riferimento Transact-SQL](/sql/t-sql/language-reference)  
   
- ![Icona della cartella File di piccole dimensioni](../../2014/integration-services/media/filefolder-small.gif "icona della cartella File piccola") [riferimento a XQuery](/sql/xquery/xquery-language-reference-sql-server)  
+ ![Icona cartella File piccola](../../2014/integration-services/media/filefolder-small.gif "icona cartella File piccola") [riferimento a XQuery](/sql/xquery/xquery-language-reference-sql-server)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Centro risorse di SQL Server](http://go.microsoft.com/fwlink/?LinkId=219676)  

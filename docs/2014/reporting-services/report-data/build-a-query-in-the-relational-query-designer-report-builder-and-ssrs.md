@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a52c18dffbe35372fd0cf393cce531a59a7a04b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 98aafe228a4dfe8a2e38667fcf58a61527e103e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212381"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Compilare una query in Progettazione query relazionale (Generatore report e SSRS)
   Una finestra Progettazione query consente di specificare i dati da recuperare da un'origine dati esterna per un set di dati del report. Si utilizza la finestra Progettazione query quando si compila una query in una procedura guidata o si crea una query del set di dati.  
@@ -27,7 +27,7 @@ ms.locfileid: "36157092"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Un set di dati è basato su un'origine dati. Il tipo di origine dati e l'ambiente di creazione determinano la finestra Progettazione query da visualizzare quando si definisce la query del set di dati. Le funzionalità di Progettazione query variano in base all'origine dati sottostante. Per ulteriori informazioni sui livelli di dati, vedere [connessioni dati, origini dati e stringhe di connessione in Generatore Report](../data-connections-data-sources-and-connection-strings-in-report-builder.md) oppure [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) .  
+ Un set di dati è basato su un'origine dati. Il tipo di origine dati e l'ambiente di creazione determinano la finestra Progettazione query da visualizzare quando si definisce la query del set di dati. Le funzionalità di Progettazione query variano in base all'origine dati sottostante. Per altre informazioni sui livelli di dati, vedere [connessioni dati, origini dati e stringhe di connessione in Generatore Report](../data-connections-data-sources-and-connection-strings-in-report-builder.md) oppure [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) .  
   
  È possibile utilizzare una finestra Progettazione query per le attività seguenti:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36157092"
  La query viene eseguita sull'origine dati e i dati di esempio vengono restituiti nel riquadro Risultati query.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-datasets-ssrs.md)   
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)   
  [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
  [Finestre di progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   

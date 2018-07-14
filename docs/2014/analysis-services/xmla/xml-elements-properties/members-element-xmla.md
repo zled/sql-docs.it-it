@@ -1,5 +1,5 @@
 ---
-title: Elemento Members (XMLA) | Documenti Microsoft
+title: Elemento Members (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Members element
 ms.assetid: 55f9ec3a-5a41-4b3a-acd6-c07598868c46
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5d812d0eea48c4f2b54352f61a176462b280071a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 37eb0532f56fd4aff8ca760b843697f30f3c9585
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201961"
 ---
 # <a name="members-element-xmla"></a>Elemento Members (XMLA)
-  Contiene una raccolta di [membro](member-element-xmla.md) elementi contenuti dall'elemento padre [CrossProduct](crossproduct-element-xmla.md) elemento.  
+  Contiene una raccolta di [membro](member-element-xmla.md) gli elementi contenuti dall'elemento padre [CrossProduct](crossproduct-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -68,10 +68,10 @@ ms.locfileid: "36156782"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|Gerarchia|Richiesto `String` attributo. Il nome della gerarchia a cui appartengono i membri contenuti nell'elemento `Members`.|  
+|Gerarchia|Obbligatorio `String` attributo. Il nome della gerarchia a cui appartengono i membri contenuti nell'elemento `Members`.|  
   
-## <a name="remarks"></a>Remarks  
- Quando un'applicazione client imposta la `AxisFormat` proprietà da *ClusterFormat*, i membri su ogni asse sono divisi in cluster in cui ogni cluster rappresenta un prodotto incrociato tra set ordinati di membri da ogni gerarchia. Ogni elemento `Axis` è costituito da uno o più elementi `CrossProduct`. Ogni elemento `CrossProduct` contiene un elemento `Members` per ogni gerarchia sull'asse. L'elemento `Members` contiene a sua volta un elemento `Member` per ogni membro della gerarchia specificata incluso nel prodotto incrociato.  
+## <a name="remarks"></a>Note  
+ Quando un'applicazione client imposta la `AxisFormat` proprietà *ClusterFormat*, i membri su ogni asse sono divisi in cluster in cui ogni cluster rappresenta un prodotto incrociato tra set ordinati di membri da ogni gerarchia. Ogni elemento `Axis` è costituito da uno o più elementi `CrossProduct`. Ogni elemento `CrossProduct` contiene un elemento `Members` per ogni gerarchia sull'asse. L'elemento `Members` contiene a sua volta un elemento `Member` per ogni membro della gerarchia specificata incluso nel prodotto incrociato.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrata la struttura del `Members` elemento quando un client specifica *ClusterFormat* per il `AxisFormat` proprietà XMLA, presupponendo i membri seguenti per l'asse:  

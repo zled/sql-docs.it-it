@@ -1,5 +1,5 @@
 ---
-title: Controllo della visualizzazione dell'area dati Tablix in una pagina del Report (Generatore Report e SSRS) | Documenti Microsoft
+title: Controllare la visualizzazione dell'area dati Tablix in una pagina del Report (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0e0221f8e610b7924c482492f0bc60b86bf8704e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6484cf1a0ed924c740f4235873169c03daacc71e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179238"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Controllo della visualizzazione dell'area dati Tablix in una pagina del report (Generatore report e SSRS)
   In questo argomento vengono descritte le proprietà di un'area dati Tablix che è possibile modificare per cambiare l'aspetto di tale area quando visualizzata in un report.  
@@ -78,8 +78,8 @@ ms.locfileid: "36157639"
 ## <a name="see-also"></a>Vedere anche  
  [Collegamento di più aree dati allo stesso set di dati &#40;Generatore report e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Aree dati annidate &#40;Generatore report e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;SSRS e Generatore Report&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [Controllo pagina si interrompe, intestazioni, colonne e righe &#40;SSRS e Generatore Report&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [Pagina di controllo di interruzioni, intestazioni, colonne e righe &#40;Report e SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabelle &#40;Generatore report e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

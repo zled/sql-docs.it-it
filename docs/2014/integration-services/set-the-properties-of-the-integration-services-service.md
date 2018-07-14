@@ -1,5 +1,5 @@
 ---
-title: Impostare le proprietà del servizio Integration Services | Documenti Microsoft
+title: Impostare le proprietà del servizio Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - Integration Services service, properties
 ms.assetid: 3a8ad546-0f58-4b31-ab56-58d6313b1098
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 70ff196fbaba6f7b104e242d7c4f74afc48f190a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97c935d3182b4c9bec8733a747e4f6167b7eab21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233411"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>Impostare le proprietà del servizio Integration Services
     
@@ -81,6 +81,6 @@ ms.locfileid: "36069182"
 7.  Scegliere **Esci** dal menu **File** per chiudere lo snap-in **Servizi** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire il servizio Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)  
+ [Gestione del servizio Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)  
   
   

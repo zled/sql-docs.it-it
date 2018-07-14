@@ -1,5 +1,5 @@
 ---
-title: Usare feed di dati (PowerPivot per SharePoint) | Documenti Microsoft
+title: Usare feed di dati (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3c8ecd6c4d3cde888559886154c679c0a4f7a5e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e974c81b3f65ef7830362bc80fc7f15df0f1009
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249411"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Utilizzare feed di dati (PowerPivot per SharePoint)
   I feed di dati rappresentano uno o più flussi di dati generati da un'origine dati online e trasmessi a un documento o a un'applicazione di destinazione. Se si utilizza PowerPivot per Excel, i feed di dati consentono di trasferire i dati aziendali esistenti da origini dati arbitrarie in nella finestra di PowerPivot nella cartella di lavoro di Excel 2010. Dopo aver importato un feed di dati in una cartella di lavoro, è possibile farvi riferimento successivamente in qualsiasi operazione pianificata di aggiornamento dati in un server SharePoint.  
   
  La modalità di utilizzo di un feed di dati varia a seconda che si utilizzino funzionalità di esportazione predefinite in applicazioni che supportano feed di dati Atom oppure si creino e si utilizzino servizi di dati personalizzati. Le applicazioni che sono in grado di pubblicare e leggere i dati XML Atom offrono un trasferimento di dati continuo che nasconde agli utenti il metodo dei feed di dati e dei servizi dati. Per gli utenti si verifica un semplice spostamento di dati da un'applicazione a un'altra.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e Microsoft SharePoint 2010 vengono forniti dati feed che possono essere utilizzati nelle cartelle di lavoro di PowerPivot. È possibile utilizzare le informazioni contenute in questo argomento per apprendere le modalità di accesso ai feed di dati da report ed elenchi già disponibili.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e Microsoft SharePoint 2010 forniscono feed utilizzabili nelle cartelle di lavoro di PowerPivot di dati. È possibile utilizzare le informazioni contenute in questo argomento per apprendere le modalità di accesso ai feed di dati da report ed elenchi già disponibili.  
   
  In questo argomento sono incluse le sezioni seguenti:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36155863"
     > [!NOTE]  
     >  Il **Esporta come Feed di dati** pulsante viene aggiunto a SharePoint tramite PowerPivot. Se PowerPivot per SharePoint non è installato o non è stata attivata la funzionalità di PowerPivot, questo pulsante non sarà disponibile.  
   
-4.  Fare clic su **Open** se PowerPivot per Excel è installato localmente oppure fare clic su **salvare** per salvare il documento con estensione atomsvc nell'unità disco rigido per operazioni di importazione in un secondo momento.  
+4.  Fare clic su **aperto** se PowerPivot per Excel è installato in locale o fare clic su **salvare** per salvare il documento con estensione atomsvc nell'unità disco rigido per operazioni di importazione in un secondo momento.  
   
 5.  Se si sceglie **Apri**, utilizzare l'Importazione guidata tabella per importare il feed di dati in un foglio di lavoro. Il feed di dati verrà aggiunto come nuova tabella nella finestra di PowerPivot.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36155863"
  Per istruzioni su come esportare un feed di dati da un report, vedere [Generare i feed di dati da un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) nel [file della Guida di Generatore report](http://go.microsoft.com/fwlink/?LinkId=154494).  
   
 > [!NOTE]  
->  Per impostare una pianificazione di aggiornamento dati ricorrente che consenta di importare nuovamente i dati del report in una cartella di lavoro di PowerPivot pubblicata in una raccolta di SharePoint, è necessario configurare il server di report per l'integrazione con SharePoint. Per ulteriori informazioni sull'uso congiunto di PowerPivot per SharePoint e Reporting Services, vedere [configurazione e amministrazione di un Server di Report &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  
+>  Per impostare una pianificazione di aggiornamento dati ricorrente che consenta di importare nuovamente i dati del report in una cartella di lavoro di PowerPivot pubblicata in una raccolta di SharePoint, è necessario configurare il server di report per l'integrazione con SharePoint. Per altre informazioni sull'uso congiunto di PowerPivot per SharePoint e Reporting Services, vedere [configurazione e amministrazione di un Server di Report &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  
   
 ##  <a name="dsdoc"></a> Creare un feed di dati da un documento di servizio dati  
  Se si dispone di un servizio dati personalizzato che consente di generare feed Atom, è possibile configurare un documento di servizio dati come metodo per rendere i dati disponibili a utenti e applicazioni. Un file *documento di servizio dati* (con estensione atomsvc) consente di specificare una o più connessioni a origini online tramite cui vengono pubblicati dati nel formato wire Atom. È possibile creare documenti di servizio dati in una *libreria feed di dati*, che rappresenta una libreria per scopi specifici che fornisce un punto di accesso comune per esplorare documenti di servizio dati pubblicati in un server di SharePoint. Gli information Worker che dispongono dell'autorizzazione per accedere ai documenti di servizio dati nella libreria feed di dati possono fare riferimento all'URL di SharePoint del documento per importare i feed di dati nelle cartelle di lavoro e nelle applicazioni in uso.  
@@ -86,7 +86,7 @@ ms.locfileid: "36155863"
   
     1.  **URL di base** è facoltativo. È necessario specificare questo valore se un documento di servizio dati fornisce più feed. L'URL di base specifica la parte di URL comune a tutti i feed, ad esempio il nome del server e il sito. Se si crea un documento di servizio dati in un report di Reporting Services, l'URL di base sarà costituito dall'URL e dal report del server di report.  
   
-    2.  **URL servizio Web** è obbligatorio. Se l'URL di base questo valore deve includere http:// o https:// nell'indirizzo. Se è stato specificato un URL di base, l'URL servizio Web è costituito dalla parte che segue l'URL di base. Ad esempio, se è l'URL completo http://adventure-works/inventory/today.aspx, l'URL di Base sarà http://adventure-works/inventory, e l'URL del servizio Web sarà /today.aspx.  
+    2.  **URL servizio Web** è obbligatorio. Se l'URL di base questo valore deve includere http:// o https:// nell'indirizzo. Se è stato specificato un URL di base, l'URL servizio Web è costituito dalla parte che segue l'URL di base. Ad esempio, se l'URL completo è http://adventure-works/inventory/today.aspx, l'URL di Base sarà http://adventure-works/inventory, e l'URL del servizio Web sarà /today.aspx.  
   
          L'URL servizio Web può includere parametri che filtrano o selezionano un subset di dati. L'applicazione o il servizio che fornisce il feed deve supportare i parametri specificati nell'URL.  
   

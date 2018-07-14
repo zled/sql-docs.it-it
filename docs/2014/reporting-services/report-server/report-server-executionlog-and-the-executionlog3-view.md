@@ -1,5 +1,5 @@
 ---
-title: Report Log di esecuzione del Server e la vista ExecutionLog3 | Documenti Microsoft
+title: Report Log di esecuzione del Server e la vista ExecutionLog3 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9059bf91729065342e0013770b7b4b688df6fa17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ffd98216c7943f164ad633603fa51aa717a552
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255693"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Log di esecuzione del server di report e la vista ExecutionLog3
   Nel log di esecuzione del server di report sono incluse informazioni sui report eseguiti in uno o più server in una distribuzione con scalabilità orizzontale in modalità nativa o in una farm di SharePoint. Il log consente di conoscere la frequenza con cui un report viene richiesto, i formati di output più usati e i millisecondi dedicati a ogni fase dell'elaborazione. Nel log, inoltre, sono contenute informazioni sul tempo impiegato per l'esecuzione di una query del set di dati di un report e su quello speso per l'elaborazione dei dati. Se si è un amministratore del server di report, è possibile esaminare le informazioni sul log, identificare le attività con esecuzione prolungata e inviare suggerimenti agli autori del report sulle aree del report, set di dati o elaborazione, che potrebbero essere migliorate.  
@@ -127,7 +127,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Numero di millisecondi impiegati per il recupero dei dati.|  
 |TimeProcessing|Numero di millisecondi impiegati per l'elaborazione del report.|  
 |TimeRendering|Numero di millisecondi impiegati per il rendering del report.|  
-|Origine|Origine dell'esecuzione del report. I valori possibili sono:<br /><br /> **Live**<br /><br /> **Cache**: indica un'esecuzione memorizzata nella cache, ad esempio, set di dati le query non vengono eseguite in tempo reale.<br /><br /> **Snapshot**<br /><br /> **Cronologia**<br /><br /> **Ad hoc** : indica un report generato dinamicamente modello basato su report drill-through o un Report di Generatore report visualizzato in anteprima in un client che utilizzano il server di report per l'elaborazione e rendering.<br /><br /> **Sessione**: indica una richiesta di completamento in una sessione già stabilita.  Ad esempio la richiesta iniziale è di visualizzare la pagina 1 e la richiesta di completamento è di esportare in Excel con lo stato della sessione corrente.<br /><br /> **RDCE**: indica un Report Definition Customization Extension. Un'estensione personalizzata RDCE consente di personalizzare in modo dinamico la definizione di un report prima che venga passata al motore di elaborazione all'esecuzione del report.|  
+|Origine|Origine dell'esecuzione del report. I valori possibili sono:<br /><br /> **Live**<br /><br /> **Cache**: indica un'esecuzione memorizzata nella cache, ad esempio, set di dati di query non vengono eseguite in tempo reale.<br /><br /> **Snapshot**<br /><br /> **Cronologia**<br /><br /> **Ad hoc** : indica un report generato dinamicamente modello basati su report drill-through o un report di Generatore Report visualizzato in anteprima in un client che usa il server di report per l'elaborazione e rendering.<br /><br /> **Sessione**: indica una richiesta di completamento in una sessione già stabilita.  Ad esempio la richiesta iniziale è di visualizzare la pagina 1 e la richiesta di completamento è di esportare in Excel con lo stato della sessione corrente.<br /><br /> **RDCE**: indica un Report Definition Customization Extension. Un'estensione personalizzata RDCE consente di personalizzare in modo dinamico la definizione di un report prima che venga passata al motore di elaborazione all'esecuzione del report.|  
 |Stato|Stato (rsSuccess oppure un codice di errore; in caso di più errori, viene registrato solo il primo).|  
 |ByteCount|Dimensione dei report visualizzabili, in byte.|  
 |RowCount|Numero di righe restituite dalle query.|  
@@ -226,13 +226,13 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 ```  
   
- Di seguito vengono illustrate alcune delle proprietà che verrà visualizzato nel campo AdditionalInfo:  
+ Di seguito vengono descritte alcune delle proprietà che verrà visualizzato nel campo AdditionalInfo:  
   
 -   **ProcessingEngine**: 1 = SQL Server 2005, 2 = il nuovo motore di elaborazione su richiesta. Se nella maggior parte dei report viene ancora mostrato il valore 1, è possibile esaminare come riprogettare questi report in modo che in essi venga utilizzato il motore di elaborazione su richiesta più nuovo e più efficiente.  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**: il numero di millisecondi impiegati per l'esecuzione di operazioni correlate alla scala nel motore di elaborazione. Un valore 0 indica che non è stato impiegato ulteriore tempo per operazioni di scala. Questo valore indica inoltre che la richiesta non ha determinato un utilizzo eccessivo della memoria.  
+-   **ScalabilityTime**: il numero di millisecondi impiegati per eseguire operazioni correlate alla scala nel motore di elaborazione. Un valore 0 indica che non è stato impiegato ulteriore tempo per operazioni di scala. Questo valore indica inoltre che la richiesta non ha determinato un utilizzo eccessivo della memoria.  
   
     ```  
     <ScalabilityTime>  
@@ -240,7 +240,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**: una stima della quantità massima di memoria, espressa in kilobyte, utilizzata da ogni componente durante una particolare richiesta.  
+-   **EstimatedMemoryUsageKB**: una stima della quantità massima di memoria, in KB, usata da ogni componente durante una particolare richiesta.  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -256,7 +256,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**il valore è espresso in millisecondi. Queste informazioni possono essere usate nella diagnosi dei problemi di prestazioni. Il tempo necessario a recuperare le immagini da un webserver esterno può rallentare l'esecuzione del report complessiva. Aggiunto in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **ExternalImages**il valore è espresso in millisecondi. Queste informazioni possono essere usate nella diagnosi dei problemi di prestazioni. Il tempo necessario a recuperare le immagini da un webserver esterno può rallentare l'esecuzione del report complessiva. Componente aggiuntivo in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <ExternalImages>  
@@ -266,7 +266,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **Connessioni**: una struttura multilivello. Aggiunto in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **Le connessioni**: una struttura multilivello. Componente aggiuntivo in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <Connections>  
@@ -362,8 +362,8 @@ select * from ExecutionLog order by TimeStart DESC
 |RowCount|Numero di righe restituite dalle query.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attivare gli eventi di Reporting Services per il log di traccia di SharePoint &#40;servizio di registrazione unificato&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint di &#40;servizio di registrazione unificato&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [File di log e origini di Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Gli errori e riferimento agli eventi &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Gli errori e riferimento degli eventi &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

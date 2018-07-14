@@ -20,16 +20,16 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8a29a37efbfeaa6765b91dc4a345fe316774c3be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c7b0056def4b62d7305fe5ac78db93ba15fb22a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254633"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Caricamento dell'output di un pacchetto locale
-  Le applicazioni client possono leggere l'output dei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando viene salvato nelle destinazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o quando viene salvato in una destinazione file flat usando le classi dello spazio dei nomi **System.IO**. Tuttavia, un'applicazione client può anche leggere l'output di un pacchetto direttamente dalla memoria, senza la necessità di un passaggio intermedio per rendere persistenti i dati. La chiave per questa soluzione è il `Microsoft.SqlServer.Dts.DtsClient` spazio dei nomi, che contiene implementazioni speciali del `IDbConnection`, `IDbCommand`, e **IDbDataParameter** interfacce dal **System. Data** spazio dei nomi. L'assembly Microsoft.SqlServer.Dts.DtsClient.dll è installato per impostazione predefinita in **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
+  Le applicazioni client possono leggere l'output dei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando viene salvato nelle destinazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o quando viene salvato in una destinazione file flat usando le classi dello spazio dei nomi **System.IO**. Tuttavia, un'applicazione client può anche leggere l'output di un pacchetto direttamente dalla memoria, senza la necessità di un passaggio intermedio per rendere persistenti i dati. La chiave per questa soluzione è il `Microsoft.SqlServer.Dts.DtsClient` spazio dei nomi che contiene implementazioni speciali delle `IDbConnection`, `IDbCommand`, e **IDbDataParameter** interfacce dal **System. Data** dello spazio dei nomi. L'assembly Microsoft.SqlServer.Dts.DtsClient.dll è installato per impostazione predefinita in **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
   
 > [!NOTE]  
 >  Per la procedura descritta in questo argomento, è necessario che la proprietà DelayValidation dell'attività Flusso di dati e di eventuali oggetti padre sia impostata sul valore predefinito, ovvero **False**.  
@@ -41,7 +41,7 @@ ms.locfileid: "36156251"
   
 1.  Nel pacchetto configurare una destinazione DataReader in modo da ricevere l'output che si desidera leggere nell'applicazione client. Assegnare alla destinazione DataReader un nome descrittivo, che verrà utilizzato più avanti nell'applicazione client. Prendere nota di tale nome.  
   
-2.  Nel progetto di sviluppo, impostare un riferimento il `Microsoft.SqlServer.Dts.DtsClient` spazio dei nomi individuando l'assembly **Microsoft.SqlServer.Dts.DtsClient.dll**. Per impostazione predefinita, questo assembly è installato in **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Importare lo spazio dei nomi nel codice utilizzando l'istruzione C# `Using` o [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports`.  
+2.  Nel progetto di sviluppo, impostare un riferimento la `Microsoft.SqlServer.Dts.DtsClient` dello spazio dei nomi, individuando l'assembly **Microsoft.SqlServer.Dts.DtsClient.dll**. Per impostazione predefinita, questo assembly è installato in **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Importare lo spazio dei nomi nel codice utilizzando l'istruzione C# `Using` o [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports`.  
   
 3.  Nel codice, creare un oggetto di tipo `DtsClient.DtsConnection` con una stringa di connessione che contiene i parametri della riga di comando richiesti da **dtexec.exe** per eseguire il pacchetto. Per altre informazioni, vedere [dtexec Utility](../packages/dtexec-utility.md). Aprire la connessione con questa stringa di connessione. È anche possibile usare l'utilità **dtexecui** per creare visivamente la stringa di connessione richiesta.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36156251"
   
 4.  Creare un oggetto di tipo `DtsClient.DtsCommand` che utilizza l'oggetto `DtsConnection` creato in precedenza e impostare la relativa proprietà `CommandText` sul nome della destinazione DataReader nel pacchetto. Chiamare quindi il metodo `ExecuteReader` dell'oggetto comando per caricare i risultati del pacchetto in un nuovo DataReader.  
   
-5.  Facoltativamente, è possibile parametrizzare indirettamente l'output del pacchetto utilizzando la raccolta di oggetti `DtsDataParameter` nell'oggetto `DtsCommand` per passare i valori alle variabili definite nel pacchetto. All'interno del pacchetto è possibile utilizzare queste variabili come parametri di query o in espressioni per influire sui risultati restituiti alla destinazione DataReader. È necessario definire queste variabili nel pacchetto nel **DtsClient** dello spazio dei nomi prima di utilizzarli con il `DtsDataParameter` oggetto da un'applicazione client. Può essere necessario fare clic sul pulsante della barra degli strumenti **Selezione colonne finestra Variabili** nella finestra **Variabili** per visualizzare la colonna **Spazio dei nomi**. Nel codice client, quando si aggiunge un oggetto `DtsDataParameter` alla raccolta `Parameters` di `DtsCommand`, omettere il riferimento allo spazio dei nomi DtsClient dal nome della variabile. Esempio:  
+5.  Facoltativamente, è possibile parametrizzare indirettamente l'output del pacchetto utilizzando la raccolta di oggetti `DtsDataParameter` nell'oggetto `DtsCommand` per passare i valori alle variabili definite nel pacchetto. All'interno del pacchetto è possibile utilizzare queste variabili come parametri di query o in espressioni per influire sui risultati restituiti alla destinazione DataReader. È necessario definire queste variabili nel pacchetto nel **DtsClient** dello spazio dei nomi prima di usarli con la `DtsDataParameter` oggetti da un'applicazione client. Può essere necessario fare clic sul pulsante della barra degli strumenti **Selezione colonne finestra Variabili** nella finestra **Variabili** per visualizzare la colonna **Spazio dei nomi**. Nel codice client, quando si aggiunge un oggetto `DtsDataParameter` alla raccolta `Parameters` di `DtsCommand`, omettere il riferimento allo spazio dei nomi DtsClient dal nome della variabile. Esempio:  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
@@ -68,7 +68,7 @@ ms.locfileid: "36156251"
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene eseguito un pacchetto che calcola un singolo valore di aggregazione e lo salva in una destinazione DataReader, quindi legge questo valore dal DataReader e lo visualizza in una casella di testo in un Windows Form.  
   
- L'utilizzo di parametri non è necessario quando si carica l'output di un pacchetto in un'applicazione client. Se non si desidera utilizzare un parametro, è possibile omettere l'utilizzo della variabile nel **DtsClient** dello spazio dei nomi, parametri e omettere il codice che usa il `DtsDataParameter` oggetto.  
+ L'utilizzo di parametri non è necessario quando si carica l'output di un pacchetto in un'applicazione client. Se non vuoi usare un parametro, è possibile omettere l'uso della variabile nel **DtsClient** dello spazio dei nomi e omettere il codice che usa il `DtsDataParameter` oggetto.  
   
 #### <a name="to-create-the-test-package"></a>Per creare un pacchetto di test  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36156251"
     SELECT * FROM Sales.vIndividualCustomer WHERE CountryRegionName = ?  
     ```  
   
-6.  Fare clic su `Parameters` e, nelle **imposta parametri Query** dialogo casella, eseguire il mapping il solo parametro di input nella query, Parameter0, alla variabile dtsclient:: Country.  
+6.  Fare clic su `Parameters` e, nella **imposta parametri Query** dialogo casella, eseguire il mapping dell'unico parametro di input nella query, Parameter0, alla variabile dtsclient:: Country.  
   
 7.  Aggiungere una trasformazione Aggregazione al flusso di dati, quindi connettere l'output dell'origine OLE DB alla trasformazione. Aprire Editor trasformazione Aggregazione e configurarlo per eseguire un'operazione "COUNT ALL" su tutte le colonne di input (*) e per restituire come output il valore aggregato con l'alias CustomerCount.  
   
@@ -98,15 +98,15 @@ ms.locfileid: "36156251"
   
 1.  Creare una nuova applicazione Windows Form.  
   
-2.  Aggiungere un riferimento per il `Microsoft.SqlServer.Dts.DtsClient` spazio dei nomi passando all'assembly con lo stesso nome in **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
+2.  Aggiungere un riferimento per la `Microsoft.SqlServer.Dts.DtsClient` dello spazio dei nomi passando all'assembly con lo stesso nome in **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
   
 3.  Copiare e incollare il codice di esempio seguente nel modulo di codice per il form.  
   
-4.  Modificare il valore di `dtexecArgs` variabile come richiesto in modo che contenga i parametri della riga di comando richiesti da **dtexec.exe** per eseguire il pacchetto. Il codice di esempio carica il pacchetto dal file system.  
+4.  Modificare il valore dei `dtexecArgs` variabile in base alle esigenze in modo che contenga i parametri della riga di comando richiesti da **dtexec.exe** per eseguire il pacchetto. Il codice di esempio carica il pacchetto dal file system.  
   
-5.  Modificare il valore del `dataReaderName` variabile come richiesto in modo che contenga il nome della destinazione DataReader nel pacchetto.  
+5.  Modificare il valore del `dataReaderName` variabile in base alle esigenze in modo che contenga il nome della destinazione DataReader nel pacchetto.  
   
-6.  Inserire un pulsante e una casella di testo nel form. Il codice di esempio utilizza `btnRun` come nome del pulsante e `txtResults` come il nome della casella di testo.  
+6.  Inserire un pulsante e una casella di testo nel form. Il codice di esempio Usa `btnRun` come nome del pulsante e `txtResults` come il nome della casella di testo.  
   
 7.  Eseguire l'applicazione e fare clic sul pulsante. Dopo una breve pausa durante l'esecuzione del pacchetto, nella casella di testo del form dovrebbe essere visualizzato il valore di aggregazione calcolato dal pacchetto, ovvero il conteggio di clienti in Canada.  
   
@@ -298,7 +298,7 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Differenze tra l'esecuzione locale e remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

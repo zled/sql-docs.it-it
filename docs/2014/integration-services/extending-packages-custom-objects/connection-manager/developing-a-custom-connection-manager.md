@@ -22,13 +22,13 @@ ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
 caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f0d1f1c94415556f3d9930f3ef878ae8d0a9498b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 391940609b928d42fc8900902dc897e5d96e0dcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217811"
 ---
 # <a name="developing-a-custom-connection-manager"></a>Sviluppo di una gestione connessione personalizzata
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] le gestioni connessioni vengono utilizzate per incapsulare le informazioni necessarie per la connessione a un'origine dati esterna. In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] è inclusa una varietà di gestioni connessione che supportano connessioni alle origini dati più utilizzate, dai database aziendali a file di testo e fogli di lavoro di Excel. Se le gestioni connessioni e le origini dati esterne supportate da [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] non soddisfano completamente specifici requisiti, è possibile creare una gestione connessione personalizzata.  
@@ -79,6 +79,6 @@ ms.locfileid: "36156041"
  [Sviluppo di un componente flusso di dati personalizzato](../data-flow/developing-a-custom-data-flow-component.md)  
  Viene descritto come programmare origini, trasformazioni e destinazioni personalizzate del flusso di dati.  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
   

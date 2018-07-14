@@ -1,5 +1,5 @@
 ---
-title: Esame delle proprietà di dimensione e cubo | Documenti Microsoft
+title: Esame delle proprietà di dimensione e del cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 092ffbd7242d65d06476e3a22f43252600562520
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30dc761707ec02843bcc296bdb3cc7408c33a554
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241741"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Esame delle proprietà del cubo e delle dimensioni
   Dopo avere definito un cubo, è possibile verificare i risultati tramite Progettazione cubi. Nell'attività seguente si esaminerà la struttura del cubo nel progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  
@@ -38,7 +38,7 @@ ms.locfileid: "36070160"
   
 4.  Nel riquadro **Dimensioni** della scheda **Struttura cubo** espandere **Customer**, quindi fare clic su **Modifica Customer** per aprire la dimensione in Progettazione dimensioni.  
   
-     Progettazione dimensioni contiene le schede seguenti: **Struttura dimensione**, **Relazioni tra attributi**, **Traduzioni**ed **Esplorazione**. Si noti che la scheda **Struttura dimensione** include tre riquadri: **Attributi**, **Gerarchie**e **Vista origine dati**. Gli attributi contenuti nella dimensione vengono visualizzati nel riquadro **Attributi** . Per altre informazioni, vedere [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md), [Create User-Defined gerarchie](multidimensional-models/user-defined-hierarchies-create.md).  
+     Progettazione dimensioni contiene le schede seguenti: **Struttura dimensione**, **Relazioni tra attributi**, **Traduzioni**ed **Esplorazione**. Si noti che la scheda **Struttura dimensione** include tre riquadri: **Attributi**, **Gerarchie**e **Vista origine dati**. Gli attributi contenuti nella dimensione vengono visualizzati nel riquadro **Attributi** . Per altre informazioni, vedere [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md), [gerarchie definite dall'utente](multidimensional-models/user-defined-hierarchies-create.md).  
   
 5.  Per passare a Progettazione cubi, fare clic con il pulsante destro del mouse sul cubo **Analysis Services Tutorial** nel nodo **Cubi** in Esplora soluzioni e fare clic su **Progettazione viste**.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "36070160"
  [Distribuzione di un progetto di Analysis Services](lesson-2-5-deploying-an-analysis-services-project.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esplorazione dei dati in Progettazione dimensioni](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
+ [Esplorare i dati di una dimensione in Progettazione dimensioni](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
   
   

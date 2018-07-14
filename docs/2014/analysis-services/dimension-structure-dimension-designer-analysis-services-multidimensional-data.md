@@ -1,5 +1,5 @@
 ---
-title: Struttura dimensione (Progettazione dimensioni) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Dimensione di struttura (Progettazione dimensioni) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.f1
 ms.assetid: 88409278-4f8a-4f1f-8730-e602866dbb36
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9b6451fb646e84ea373ce1a0fb87c23eee1f49e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 223c50685ed41cb23ddff81e1fded12b9cac5fa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214191"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>Struttura dimensione (Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
   Utilizzare la pagina **Struttura dimensione** in Progettazione dimensioni per modificare gli attributi, le gerarchie e i livelli della dimensione selezionata. La pagina **Struttura dimensione** contiene una barra degli strumenti e tre riquadri.  
@@ -49,7 +49,7 @@ ms.locfileid: "36156813"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
- [Le dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

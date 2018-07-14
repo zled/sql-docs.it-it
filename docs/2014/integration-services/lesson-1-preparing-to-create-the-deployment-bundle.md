@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 caps.latest.revision: 19
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 46e12d7b870e22a63e2138d6466de993c05cf6d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dae41d24d9aa2637b0276e8e13caa5249e069b80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266707"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>Lezione 1: Preparazione alla creazione del pacchetto di distribuzione
   In questa lezione verranno illustrate le procedure per creare le cartelle di lavoro e le variabili di ambiente a supporto dell'esercitazione, per creare un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , per aggiungere diversi pacchetti e i rispettivi file di supporto al progetto, nonché per implementare le configurazioni nei pacchetti.  
@@ -48,6 +48,6 @@ ms.locfileid: "36156491"
 ## <a name="start-the-lesson"></a>Inizio della lezione  
  [Passaggio 1: Creazione di cartelle di lavoro e variabili di ambiente](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
-![Icona di Integration Services (piccola)](media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
   

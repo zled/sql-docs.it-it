@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 8: Definizione di azioni | Documenti Microsoft'
+title: 'Lezione 8: Definizione delle azioni | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a57c6cc8d08d64c8f2498125f7df952c70adfd6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab952dba40b28ed0575b6fdb8da442ea6ebeb770
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274487"
 ---
 # <a name="lesson-8-defining-actions"></a>Lezione 8: Definizione di azioni
   In questa lezione verranno descritte le procedure per definire le azioni del progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Un'azione è semplicemente un'istruzione MDX (Multidimensional Expressions) archiviata in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , che può essere incorporata in applicazioni client e avviata da un utente.  
@@ -48,16 +48,16 @@ ms.locfileid: "36156286"
   
  Questa lezione include gli argomenti seguenti:  
   
- [Definizione e utilizzo di un'azione drill-through](lesson-8-1-defining-and-using-a-drillthrough-action.md)  
+ [Definizione e uso di un'azione drill-through](lesson-8-1-defining-and-using-a-drillthrough-action.md)  
  In questa procedura viene definita, utilizzata e utilizzerà e quindi modificata un'azione drill-through tramite la relazione di tipo Fatti citata precedentemente in questa esercitazione.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md)  
+ [Lezione 9: Definizione di prospettive e traduzioni](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)   
+ [Scenario di Analysis Services Tutorial](analysis-services-tutorial-scenario.md)   
  [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
- [Le azioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [Azioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Azioni nei modelli multidimensionali](multidimensional-models/actions-in-multidimensional-models.md)  
   
   

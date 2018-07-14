@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7cf717edbf16f8f151bbf278d8bd69aa997c141b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b278a5e71b3954e8d296fd9dc7644b33b99aae9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244331"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint (ULS)
   A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], tramite i server [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in modalità SharePoint è possibile scrivere gli eventi di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nel log di traccia del Servizio di registrazione unificato (ULS, Unified Logging Service) di SharePoint. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono disponibili nella pagina di monitoraggio di Amministrazione centrale SharePoint.  
@@ -105,7 +105,7 @@ Get-SPDiagnosticConfig
 |Rendering in modalità locale||  
 |Proxy client SOAP||  
 |Pagine dell'interfaccia utente||  
-|Power View|Voci di log scritte nell'API **LogClientTraceEvents** . Queste voci vengono originate dalle applicazioni client, tra cui [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una funzionalità del [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] aggiuntivo per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Tutte le voci di log dell'API LogClientTraceEvents saranno registrate nella **categoria** di "SQL Server Reporting Services" e nell' **area** di "Power View".<br /><br /> Il contenuto di voci registrate con l'area di "Power View" è determinato dall'applicazione client.|  
+|Power View|Voci di log scritte nell'API **LogClientTraceEvents** . Queste voci vengono originate dalle applicazioni client, incluso [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una funzionalità del [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] aggiuntivo per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Tutte le voci di log dell'API LogClientTraceEvents saranno registrate nella **categoria** di "SQL Server Reporting Services" e nell' **area** di "Power View".<br /><br /> Il contenuto di voci registrate con l'area di "Power View" è determinato dall'applicazione client.|  
 |Runtime avvisi server di report||  
 |Strumento gestione dominio applicazione del server di report||  
 |Risposta nel buffer del server di report||  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitions [SQL Server replication]
 - merge replication partitions [SQL Server replication], SQL Server Management Studio
 - parameterized filters [SQL Server replication], partition management
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b8b9cc6b2328e24758404cae5a88f21656fb7631
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 805bbfaf66f2f24aac284b94952cd6d881d7c832
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191711"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Gestione delle partizioni di una pubblicazione di tipo merge con filtri con parametri
   In questo argomento viene descritto come gestire le partizioni per una pubblicazione di tipo merge con i filtri con parametri in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). È possibile utilizzare i filtri di riga con parametri per generare partizioni non sovrapposte. È possibile limitare tali partizioni in modo che solo una sottoscrizione riceva una determinata partizione. In questi casi, la presenza di un numero elevato di Sottoscrittori comporta un numero elevato di partizioni, che richiedono anche un numero uguale di snapshot partizionati. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../merge/parameterized-filters-parameterized-row-filters.md).  

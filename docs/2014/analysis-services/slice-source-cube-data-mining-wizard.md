@@ -1,5 +1,5 @@
 ---
-title: Sezionare il cubo di origine (Creazione guidata Data Mining) | Documenti Microsoft
+title: Sezionare il cubo di origine (Creazione guidata di Data Mining dati) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.slicesourcecube.f1
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a0e3badd385e654db3b869a197130fde26fbffcc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6024c1e58b48c8661eaa15a0ea85c464103403ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326551"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Sezionamento cubo di origine (Creazione guidata modello di data mining)
   È possibile utilizzare la finestra di dialogo **Sezionamento cubo di origine** per limitare i dati utilizzati per il training del modello. In genere un cubo contiene i dati correlati a molti attributi e dimensioni diversi, ad esempio tutti i negozi, tutte le aree e tutti i prodotti. Poiché non è pratico eseguire il training di un modello su un numero illimitato di combinazioni di attributi, utilizzare questa finestra di dialogo per scegliere un set specifico da utilizzare per il training di un modello.  
@@ -37,9 +37,9 @@ ms.locfileid: "36157008"
 > [!NOTE]  
 >  Si noti che le funzioni MDX dinamiche, ad esempio [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) o [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function) non sono supportate nella proprietà Slice per le partizioni. È necessario definire la sezione usando tuple esplicite o riferimenti ai membri.  
 >   
->  Ad esempio, anziché usare [: &#40;intervallo&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) per definire un intervallo, è necessario enumerare ogni membro in base agli anni specifici.  
+>  Ad esempio, invece di usare [: &#40;intervallo&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) per definire un intervallo, è necessario enumerare ogni membro in base agli anni specifici.  
 >   
->  Se occorre definire una sezione complessa, è consigliabile definire le tuple nella sezione mediante uno script XMLA Alter. Quindi, è possibile utilizzare lo strumento da riga di comando ascmd o SSIS [Services attività Esegui DDL Analysis](../integration-services/control-flow/analysis-services-execute-ddl-task.md) per eseguire lo script e creare il set di membri specificato immediatamente prima dell'elaborazione della partizione.  
+>  Se occorre definire una sezione complessa, è consigliabile definire le tuple nella sezione mediante uno script XMLA Alter. Quindi, è possibile usare lo strumento da riga di comando ascmd o SSIS [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) per eseguire lo script e creare il set di membri specificato immediatamente prima dell'elaborazione della partizione.  
   
  **Per altre informazioni:** [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) e [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36157008"
   
 ## <a name="see-also"></a>Vedere anche  
  [Completamento procedura guidata &#40;Creazione guidata di Data Mining&#41;](completing-the-wizard-data-mining-wizard.md)   
- [Data Mining della Guida F1 di procedura guidata &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [I dati della Guida F1 di procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Specificare l'utilizzo colonne modello di Data Mining &#40;Creazione guidata di Data Mining&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

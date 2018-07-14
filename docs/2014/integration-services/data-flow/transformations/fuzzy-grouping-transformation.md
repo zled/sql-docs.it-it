@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtrans.f1
 helpviewer_keywords:
@@ -28,13 +28,13 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4a50b92570ad8cf28c537ce5fe657223058ac7d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d5c49bcf93c7b80ab60341136dbcae4e16c94a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209381"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Raggruppamento fuzzy - trasformazione
   La trasformazione Raggruppamento fuzzy consente di eseguire attività di pulizia dei dati identificando le righe che con maggiore probabilità sono duplicate e selezionando una riga canonica di dati da utilizzare per la standardizzazione dei dati.  
@@ -73,7 +73,7 @@ ms.locfileid: "36156047"
  Questa trasformazione include un input e un output. Non supporta un output degli errori.  
   
 ## <a name="row-comparison"></a>Confronto tra righe  
- Quando si configura la trasformazione Raggruppamento fuzzy, è possibile specificare l'algoritmo di confronto utilizzato per confrontare le righe dell'input della trasformazione. Se si imposta la proprietà Exhaustive su `true`, la trasformazione confronta ogni riga dell'input da tutte le altre righe nell'input. Questo algoritmo di confronto restituisce in genere risultati più precisi, ma la trasformazione viene eseguita più lentamente, a meno che l'input non includa un numero di righe ridotto. Per evitare problemi di prestazioni, è consigliabile impostare la proprietà Exhaustive `true` solo durante lo sviluppo dei pacchetti.  
+ Quando si configura la trasformazione Raggruppamento fuzzy, è possibile specificare l'algoritmo di confronto utilizzato per confrontare le righe dell'input della trasformazione. Se si imposta la proprietà Exhaustive su `true`, la trasformazione confronta ogni riga dell'input da tutte le altre righe nell'input. Questo algoritmo di confronto restituisce in genere risultati più precisi, ma la trasformazione viene eseguita più lentamente, a meno che l'input non includa un numero di righe ridotto. Per evitare problemi di prestazioni, è consigliabile impostare la proprietà Exhaustive su `true` solo durante lo sviluppo dei pacchetti.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tabelle e indici temporanei  
  In fase di esecuzione, la trasformazione Raggruppamento fuzzy crea oggetti temporanei, quali tabelle e indici, potenzialmente di grandi dimensioni, nel database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a cui la trasformazione si connette. Le dimensioni delle tabelle e degli indici sono proporzionali al numero di righe dell'input della trasformazione Raggruppamento fuzzy e al numero di token creati dalla trasformazione.  

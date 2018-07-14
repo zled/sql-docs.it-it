@@ -1,5 +1,5 @@
 ---
-title: Rinominare un attributo | Documenti Microsoft
+title: Rinominare un attributo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], attributes
 - renaming attributes
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Name property
 ms.assetid: 4094f0a7-2fde-407c-9b36-c8b30537c2da
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b51406da3fd79878d6634fcdde939972400220d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fefecaf82fac294162c3326c6493a7556d435cb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221981"
 ---
 # <a name="rename-an-attribute"></a>Rinominare un attributo
   Il nome di un attributo in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene identificato tramite la proprietà **Name**. Per rinominare un attributo, fare clic con il pulsante destro del mouse su di esso nel riquadro **Attributi** della scheda **Struttura dimensione** di Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], quindi scegliere **Rinomina**. Se nel riquadro **Attributi** è attivata la visualizzazione griglia, fare clic sul nome dell'attributo e modificarlo direttamente nella griglia. È inoltre possibile selezionare un attributo e impostare la proprietà **Name** nella finestra **Proprietà** .  

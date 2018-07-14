@@ -1,5 +1,5 @@
 ---
-title: ISQLServerErrorInfo (OLE DB) | Documenti Microsoft
+title: ISQLServerErrorInfo (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ISQLServerErrorInfo interface
 ms.assetid: a8323b5c-686a-4235-a8d2-bda43617b3a1
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4a694b3049285f0860de88e27fed878c10272d00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e2459de2a21ebf14d2852518468f1748cb13b97c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273107"
 ---
 # <a name="isqlservererrorinfo-ole-db"></a>ISQLServerErrorInfo (OLE DB)
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client definisce le **ISQLServerErrorInfo** interfaccia degli errori. Questa interfaccia restituisce dettagli di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errore, inclusi la gravità e stato.  

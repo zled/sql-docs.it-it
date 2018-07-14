@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 65f8f0bdc7db2e58efd27522a93e4edf6c4e0bf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 95a2dfb8ef3ac1420f243355f732daa246d81d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198541"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Funzione Previous (Generatore report e SSRS)
   Restituisce il valore o il valore di aggregazione specificato per l'istanza precedente di un elemento all'interno dell'ambito specificato.  
@@ -36,27 +36,27 @@ Previous(expression, scope)
   
 #### <a name="parameters"></a>Parametri  
  *expression*  
- (`Variant` oppure `Binary`) l'espressione da utilizzare per identificare i dati e per cui recuperare il valore precedente, ad esempio `Fields!Fieldname.Value` o `Sum(Fields!Fieldname.Value)`.  
+ (`Variant` oppure `Binary`) espressione da utilizzare per identificare i dati e per cui recuperare il valore precedente, ad esempio `Fields!Fieldname.Value` o `Sum(Fields!Fieldname.Value)`.  
   
  *ambito*  
- (`String`) Facoltativo. Il nome di un gruppo o area dati o null (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), che specifica l'ambito da cui recuperare il valore precedente specificato da *espressione*.  
+ (`String`) Facoltativo. Il nome di un gruppo o area dati o null (`Nothing` nelle [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), che specifica l'ambito da cui recuperare il valore precedente specificato da *espressione*.  
   
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un `Variant` o `Binary`.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  La funzione `Previous` restituisce il valore precedente per l'espressione valutata nell'ambito specificato dopo l'applicazione di tutti i criteri di ordinamento e di filtro.  
   
- Se *espressione* non contiene un'aggregazione, il `Previous` funzione i valori predefiniti per l'ambito corrente per l'elemento del report.  
+ Se *espressione* non contiene un'aggregazione, il `Previous` funzionare il valore predefinito è l'ambito corrente per l'elemento del report.  
   
- In un gruppo di dettagli utilizzare `Previous` per specificare il valore di un riferimento di campo nell'istanza precedente della riga di dettaglio.  
+ In un gruppo di dettagli usare `Previous` per specificare il valore di un riferimento di campo nell'istanza precedente della riga di dettaglio.  
   
 > [!NOTE]  
 >  Il `Previous` funzione supporta solo riferimenti a campi nel gruppo di dettagli. Ad esempio, per una casella di testo nel gruppo di dettagli, tramite `=Previous(Fields!Quantity.Value)` vengono restituiti i dati per il campo `Quantity` dalla riga precedente. Nella prima riga tramite questa espressione viene restituito un valore Null (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]).  
   
- Se *espressione* contiene una funzione di aggregazione che usa un ambito predefinito, `Previous` aggrega i dati all'interno dell'istanza precedente dell'ambito specificato nella chiamata di aggregazione (funzione).  
+ Se *espressione* contiene una funzione di aggregazione che usa un ambito predefinito, `Previous` aggregare i dati nell'istanza precedente dell'ambito specificato nell'aggregazione chiamata di funzione.  
   
- Se *espressione* contiene una funzione di aggregazione che specifica un ambito diverso da quello predefinito, la *ambito* parametro per il `Previous` funzione deve essere un ambito contenitore per l'ambito specificato la chiamata di funzione di aggregazione.  
+ Se *espressione* contiene una funzione di aggregazione che specifica un ambito diverso da quello predefinito, il *ambito* parametro per il `Previous` funzione deve essere un ambito contenitore per l'ambito specificato la chiamata di funzione di aggregazione.  
   
  Le funzioni `Level`, `InScope`, `Aggregate` e `Previous` non può essere utilizzato nel *espressione*parametro. Non è possibile specificare il parametro *recursive* per una funzione di aggregazione.  
   
@@ -85,9 +85,9 @@ Previous(expression, scope)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressione viene utilizzata nei report di &#40;SSRS e Generatore Report&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;SSRS e Generatore Report&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

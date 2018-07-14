@@ -1,5 +1,5 @@
 ---
-title: Creare o modificare la finestra di dialogo relazione (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Creare o modificare la finestra di dialogo relazione (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createrelationship.f1
 helpviewer_keywords:
 - Create Relationship dialog box
 ms.assetid: da3c7074-623e-4ddf-a707-d3276a47cf1c
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c205a2f7c78345d77dd3080b9ef33fe87f87ba35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 152f9cb38adcad9a90a393150216fea0f10ecd55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167642"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Crea relazione o Modifica relazione (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Create/Edit Relationship** (Crea/Modifica relazione) in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per definire o modificare una relazione in una vista origine dati. È possibile visualizzare la finestra di dialogo **Create/Edit Relationship** (Crea/Modifica relazione) nei modi seguenti:  
@@ -50,7 +50,7 @@ ms.locfileid: "36157612"
  **Colonne di destinazione**  
  Consente di selezionare le colonne a cui fanno riferimento le colonne nella tabella di origine.  
   
- **Invertire**  
+ **Ordine inverso**  
  Fare clic su questa opzione per invertire la direzione della relazione.  
   
  **Descrizione**  

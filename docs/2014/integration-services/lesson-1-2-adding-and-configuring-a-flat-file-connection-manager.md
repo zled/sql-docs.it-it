@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 caps.latest.revision: 42
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c732e124ca8de59f28f4d5121a85e071d6fda7f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7527bbdd1e66db49851832052c8a9393201b202f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254543"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Passaggio 2: Aggiunta e configurazione di una gestione connessione file flat
   In questa attività si aggiungerà una gestione connessione file flat al pacchetto appena creato. Una gestione connessione file flat abilita un pacchetto all'estrazione di dati da un file flat. Utilizzando tale gestione connessione è possibile specificare il nome file e la posizione, le impostazioni locali e la tabella codici e il formato del file, inclusi i delimitatori di colonna, da applicare quando il pacchetto estrae i dati dal file flat. È anche possibile specificare manualmente il tipo di dati per le singole colonne o usare la finestra di dialogo **Suggerisci tipo di colonne** per eseguire automaticamente il mapping delle colonne di dati estratti ai tipi di dati di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -66,13 +66,13 @@ ms.locfileid: "36156037"
   
 2.  Nel riquadro delle proprietà apportare le seguenti modifiche:  
   
-    -   Modifica il **colonna 0** alla proprietà name `AverageRate`.  
+    -   Modifica il **colonna 0** assegnare un nome proprietà `AverageRate`.  
   
-    -   Modifica il **Column 1** alla proprietà name `CurrencyID`.  
+    -   Modifica il **Column 1** assegnare un nome proprietà `CurrencyID`.  
   
-    -   Modifica il **Column 2** alla proprietà name `CurrencyDate`.  
+    -   Modifica il **Column 2** assegnare un nome proprietà `CurrencyDate`.  
   
-    -   Modifica il **Column 3** alla proprietà name `EndOfDayRate`.  
+    -   Modifica il **Column 3** assegnare un nome proprietà `EndOfDayRate`.  
   
     > [!NOTE]  
     >  Per impostazione predefinita, le quattro colonne sono inizialmente impostate su un tipo di dati stringa [DT_STR] con un valore `OutputColumnWidth` di 50.  
@@ -94,11 +94,11 @@ ms.locfileid: "36156037"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Data|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-     Il tipo di dati suggerito per il `CurrencyID` colonna non è compatibile con il tipo di dati del campo nella tabella di destinazione. Poiché il tipo di dati `DimCurrency.CurrencyAlternateKey` è nchar (3), `CurrencyID` deve essere modificato da stringa [DT_STR] in string [DT_WSTR]. Inoltre, il campo `DimDate.FullDateAlternateKey` è definito come un tipo di dati date; pertanto, `CurrencyDate` deve essere modificato da data [DT_Date] in database date [DT_DBDATE].  
+     Il tipo di dati suggerito per il `CurrencyID` colonna non è compatibile con il tipo di dati del campo nella tabella di destinazione. Poiché il tipo di dati `DimCurrency.CurrencyAlternateKey` è nchar (3), `CurrencyID` deve essere modificato da stringa [DT_STR] in stringa [DT_WSTR]. Inoltre, il campo `DimDate.FullDateAlternateKey` è definito come un tipo di dati date; pertanto, `CurrencyDate` deve essere modificato da date [DT_Date] a database date [DT_DBDATE].  
   
-2.  Nell'elenco, selezionare la colonna CurrencyID e nel riquadro proprietà, modificare il tipo di dati della colonna `CurrencyID` da stringa [DT_STR] in Unicode string [DT_WSTR].  
+2.  Nell'elenco, selezionare la colonna CurrencyID e nel riquadro Proprietà modificare il tipo di dati della colonna `CurrencyID` da stringa [DT_STR] in Unicode string [DT_WSTR].  
   
-3.  Nel riquadro proprietà, modificare il tipo di dati della colonna `CurrencyDate` da data [DT_DATE] in database date [DT_DBDATE].  
+3.  Nel riquadro Proprietà modificare il tipo di dati della colonna `CurrencyDate` da date [DT_DATE] a database date [DT_DBDATE].  
   
 4.  Fare clic su **OK**.  
   

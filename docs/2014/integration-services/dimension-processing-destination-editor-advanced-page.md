@@ -1,5 +1,5 @@
 ---
-title: Editor destinazione elaborazione dimensione (pagina avanzate) | Documenti Microsoft
+title: Editor destinazione elaborazione dimensione (pagina avanzate) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ec2e224cc5f5aefdc0d8b71f99ff227a282b4c58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3947568a5fed3c2a2467741e93928380ba472e0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254653"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>Editor destinazione elaborazione dimensione (pagina Avanzate)
   Usare la pagina **Avanzate** della finestra di dialogo **Editor destinazione elaborazione dimensione** per configurare la gestione degli errori.  
@@ -102,7 +102,7 @@ ms.locfileid: "36156755"
  Consente di selezionare il percorso del log degli errori.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione elaborazione dimensione &#40;pagina Gestione connessione&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
  [Editor destinazione elaborazione dimensione &#40;pagina mapping&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
   

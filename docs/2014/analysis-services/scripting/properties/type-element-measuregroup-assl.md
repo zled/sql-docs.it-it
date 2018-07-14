@@ -1,5 +1,5 @@
 ---
-title: Tipo di elemento (MeasureGroup) (ASSL) | Documenti Microsoft
+title: Tipo di elemento (MeasureGroup) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 3a584baf-36bb-4e1d-9128-c4758c0b8f06
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f1e583e8debf2f8416ac46574e8c4f5dbc8d4453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8e8bab8b822ccb4cf8a17fe4759519eeefb974a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226371"
 ---
 # <a name="type-element-measuregroup-assl"></a>Elemento Type (MeasureGroup) (ASSL)
-  Specifica il tipo di [MeasureGroup](../objects/group-element-assl.md).  
+  Specifica il tipo dei [MeasureGroup](../objects/group-element-assl.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36156280"
 |Elemento padre|[Gruppo di misure](../objects/group-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
@@ -76,7 +76,7 @@ ms.locfileid: "36156280"
   
  L'enumerazione che corrisponde ai valori consentiti di `Type` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.MeasureGroupType>.  
   
- L'elemento che corrisponde al padre di `Type` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+ L'elemento che corrisponde al padre di `Type` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

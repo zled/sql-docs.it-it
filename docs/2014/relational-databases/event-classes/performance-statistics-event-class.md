@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d897047a117d2c715f24bab4884f58a88d03e161
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4d0191085ac2a294d1dce8a30b9292a1cd7cf8ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171172"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics - classe di evento
   La classe di evento Performance Statistics consente di eseguire il monitoraggio delle prestazioni di query, stored prcoedure e trigger in esecuzione. Ciascuna delle sei sottoclassi di evento indica un evento generato nel corso di query, stored procedure e trigger all'interno del sistema. L'utilizzo di tali sottoclassi di evento in combinazione con le viste a gestione dinamica sys.dm_exec_query_stats, sys.dm_exec_procedure_stats e sys.dm_exec_trigger_stats associate consente di ricostituire la cronologia delle prestazioni di qualsiasi query, stored procedure o trigger specifico.  

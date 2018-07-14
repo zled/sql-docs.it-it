@@ -1,5 +1,5 @@
 ---
-title: "Attività 6: Verificare che l'attributo basato su dominio viene creato tramite Gestione dati Master | Documenti Microsoft"
+title: "Attività 6: Verificare che l'attributo basato su dominio viene creato tramite Gestione dati Master | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d12764af6fbebf8c0fa82d38059cc64ea9bbc2c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f607a6faaf8a6891ff2d7191142f11dbaa55f961
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191301"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Attività 6: Verifica della creazione dell'attributo basato su dominio tramite Gestione dati master
   In questa attività si verifica che l'entità **State** venga creata in **MDS** e che l'attributo **State** dell'entità **Supplier** sia un attributo basato su dominio che dipende dall'entità **State** tramite **Gestione dati master**.  
@@ -85,6 +85,6 @@ ms.locfileid: "36158568"
      ![Stato attributo con codici e nomi aggiornati](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "stato attributo con codici e nomi aggiornati")  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 7: Visualizzazione degli aggiornamenti eseguiti tramite Gestione dati Master in Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
+ [Attività 7: Visualizzazione degli aggiornamenti eseguiti tramite Gestione dati master in Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
   
   

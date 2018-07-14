@@ -1,5 +1,5 @@
 ---
-title: Rappresentazione della relazione (tabulare) | Documenti Microsoft
+title: Rappresentazione della relazione (tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b42c3737ce2369fa6e2e349e377efecc462d0280
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 122c09c71985e00792efece956955cd5469562c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187068"
 ---
 # <a name="relationship-representation-tabular"></a>Rappresentazione di una relazione (tabulare)
   Una relazione è una connessione tra due tabelle di dati e consente di stabilire in che modo devono essere correlati i dati nelle due tabelle.  
   
- Vedere [rappresentazione della relazione (tabulare)](relationship-representation-tabular.md) per una spiegazione dettagliata su come creare e modificare la rappresentazione della relazione.  
+ Visualizzare [Relationship Representation (Tabular)](relationship-representation-tabular.md) per una spiegazione dettagliata su come creare e modificare la rappresentazione della relazione.  
   
 ## <a name="relationship-representation"></a>Rappresentazione di una relazione  
  Nei modelli tabulari, più relazioni possono essere definite tra due tabelle. Quando vengono definite più relazioni tra due tabelle, solo una di queste può essere definita come relazione predefinita per il modello e viene denominata come relazione attiva. Tutte le altre relazioni vengono denominate come inattive.  

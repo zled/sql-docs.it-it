@@ -1,5 +1,5 @@
 ---
-title: Elemento member (ASSL) | Documenti Microsoft
+title: Elemento member (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Member element
 ms.assetid: 03b4cfcb-ce87-452f-9e25-8745c0423f56
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d2ababe44f923df08b08c3adeaf81bf84e3938f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2d2937a4a0ec0c3608da6eb2869309ed2d4a296
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330301"
 ---
 # <a name="member-element-assl"></a>Elemento Member (ASSL)
   Contiene il nome di un membro di un [gruppo](group-element-assl.md) elemento o di un [ruolo](role-element-assl.md) elemento.  
@@ -61,7 +61,7 @@ ms.locfileid: "36156077"
 |Elementi padre|[Membri](../collections/members-element-assl.md)|  
 |Elementi figlio|[Nome](../properties/name-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Gli elementi che corrispondono ai padri di `Member` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.Group> e <xref:Microsoft.AnalysisServices.Role>.  
   
 ## <a name="see-also"></a>Vedere anche  

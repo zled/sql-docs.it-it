@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table modifications [SQL Server], multiple users
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df791875016fbe6b999a20ca1d5e40c6ec5ecf18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e1e1b53f7ae933317935eb29f1eb62643495c26c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264187"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Riconciliare le modifiche apportate da più utenti (Visual Database Tools)
   In un ambiente multiutente può accadere che uno stesso oggetto venga modificato contemporaneamente da più utenti. Questo problema può accadere quando si lavora alla struttura dell'oggetto in Progettazione tabelle o in Progettazione diagrammi di database oppure con i valori dei risultati restituiti nel riquadro Risultati di Progettazione query e Progettazione viste. In questo caso possono verificarsi conflitti che è possibile risolvere.  

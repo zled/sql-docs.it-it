@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ef032c021bb8bdf2a64f63aad8d3eb79da044afb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f8890c0ccab740444845180a328f9753c7a50976
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194905"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Raccolta di campi del set di dati (Generatore report e SSRS)
   I campi del set di dati rappresentano i dati provenienti da una connessione dati. Un campo può presentare dati numerici o non numerici. Possono essere inclusi, ad esempio, importi delle vendite, vendite totali, nomi dei clienti, identificatori di database, URL, immagini, dati spaziali e indirizzi di posta elettronica. Nell'area di progettazione i campi vengono visualizzati come espressioni in elementi del report quali caselle di testo, tabelle e grafici.  
@@ -80,7 +80,7 @@ ms.locfileid: "36158625"
 ##  <a name="DataTypes"></a> Tipi di dati dei campi  
  Quando si crea un set di dati, i tipi di dati dei campi nell'origine dati potrebbero non corrispondere esattamente ai tipi di dati utilizzati in un report. Ai tipi di dati possono essere applicati uno o due livelli di mapping. L'estensione per l'elaborazione dati o il provider di dati può eseguire il mapping dei tipi di dati dall'origine dati a tipi di dati CLR (Common Language Runtime). I tipi di dati restituiti dalle estensioni per l'elaborazione dei dati vengono su cui viene eseguito il mapping a un subset di tipi di dati CLR da [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
- Nell'origine dati i dati vengono archiviati in tipi di dati supportati dall'origine stessa. Ad esempio, i dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database deve essere uno dei supportati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati, ad esempio `nvarchar` o `datetime`. Quando vengono recuperati dall'origine dati, i dati vengono passati attraverso un'estensione per l'elaborazione dati o un provider di dati associato al tipo di origine dati. In base all'estensione per l'elaborazione dati, i dati possono essere convertiti dai tipi usati dall'origine dati in tipi di dati supportati dall'estensione per l'elaborazione dati. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i tipi di dati supportati da Common Language Runtime (CLR) installato con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Il provider di dati esegue il mapping di ogni colonna nel set di risultati dal tipo di dati nativo a un tipo di dati CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] :  
+ Nell'origine dati i dati vengono archiviati in tipi di dati supportati dall'origine stessa. Ad esempio, i dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database deve essere uno degli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati, ad esempio `nvarchar` o `datetime`. Quando vengono recuperati dall'origine dati, i dati vengono passati attraverso un'estensione per l'elaborazione dati o un provider di dati associato al tipo di origine dati. In base all'estensione per l'elaborazione dati, i dati possono essere convertiti dai tipi usati dall'origine dati in tipi di dati supportati dall'estensione per l'elaborazione dati. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i tipi di dati supportati da Common Language Runtime (CLR) installato con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Il provider di dati esegue il mapping di ogni colonna nel set di risultati dal tipo di dati nativo a un tipo di dati CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] :  
   
  In ogni fase i dati vengono rappresentati dai tipi di dati in base a quanto descritto nell'elenco seguente.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36158625"
   
 -   **Provider di dati o estensione per l'elaborazione dati** Tipi di dati supportati dalla versione del provider di dati dell'estensione per l'elaborazione dei dati selezionata al momento della connessione all'origine dei dati. I provider di dati basati su [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usano tipi di dati supportati da CLR. Per altre informazioni sui tipi di dati del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vedere [Mapping di tipi di dati (ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) e [Utilizzo dei tipi di base](http://go.microsoft.com/fwlink/?LinkId=112177) su MSDN.  
   
-     Ad esempio, tipi di dati standard supportato per il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] includono `Int32` e `String`. Le date e le ore del calendario sono supportate dalla struttura `DateTime`. Il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 è stato introdotto il supporto per il `DateTimeOffset` struttura per le date con una differenza di fuso orario.  
+     Ad esempio, tipi di dati tipici supportati per il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] includono `Int32` e `String`. Le date e le ore del calendario sono supportate dalla struttura `DateTime`. Il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 è stato introdotto il supporto per il `DateTimeOffset` struttura per le date con una differenza di fuso orario.  
   
     > [!NOTE]  
     >  Nel server di report vengono utilizzati i provider di dati installati e configurati nel server di report stesso. Nei client di creazione dei report in modalità di anteprima vengono utilizzate le estensioni per l'elaborazione dati installate e configurate nel computer client. È necessario eseguire il test del report sia nell'ambiente del client che nell'ambiente del server di report.  
@@ -119,7 +119,7 @@ ms.locfileid: "36158625"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Proprietà set di dati, i campi &#40;Generatore Report&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
- [Le parti del report e set di dati in Generatore Report](report-parts-and-datasets-in-report-builder.md)   
+ [Parti del report e set di dati in Generatore Report](report-parts-and-datasets-in-report-builder.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

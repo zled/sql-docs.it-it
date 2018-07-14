@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cb02d483de02ba4c9cc65a3e9597f5c04e3bb284
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200831"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
   In questa esercitazione verrà illustrato come creare due tipi di report: un report drill-through e un report principale. I dati di vendita di esempio utilizzati in questi report vengono recuperati da un cubo di Analysis Services. Nell'illustrazione seguente vengono mostrati i report creati.  
@@ -33,7 +33,7 @@ ms.locfileid: "36070003"
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
  **Nel report drill-through si apprenderà come:**  
   
-1.  [Creare un Report matrice drill-through e un set di dati della tabella o la creazione guidata matrice](#DMatrixAndDataset)  
+1.  [Creare un Report matrice drill-through e un set di dati dalla tabella o dalla creazione guidata matrice](#DMatrixAndDataset)  
   
     1.  [Specificare una connessione dati](#DConnection)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36070003"
   
 3.  [Aggiungere colonne per presentare i valori vendite in grafici sparkline](#DSparkline)  
   
-4.  [Aggiungere un titolo Report con il nome di categoria di prodotto](#DReportTitle)  
+4.  [Aggiungere un titolo Report con nome Product Category](#DReportTitle)  
   
 5.  [Aggiornare le proprietà dei parametri](#DParameter)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36070003"
   
  **Nel report principale si apprenderà come:**  
   
-1.  [Creare il Report matrice principale e un set di dati della tabella o la creazione guidata matrice](#MMatrixAndDataset)  
+1.  [Creare il Report di matrice principale e il set di dati dalla tabella o dalla creazione guidata matrice](#MMatrixAndDataset)  
   
     1.  [Specificare una connessione dati](#MConnection)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36070003"
   
 7.  [Salvare il Report in una raccolta di SharePoint](#MSave)  
   
-8.  [Esecuzione della serie principale e report drill-through](#MRunReports)  
+8.  [Eseguire i report principali e drill-through](#MRunReports)  
   
  Tempo previsto per il completamento di questa esercitazione: 30 minuti.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36070003"
   
 1.  Fare clic su **avviare**, scegliere **programmi**, scegliere [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Generatore Report**, quindi fare clic su **Generatore Report**.  
   
-     Il **Getting Started** verrà visualizzata la finestra di dialogo. Se non è presente, dal **Generatore Report** pulsante, fare clic su **New**.  
+     Il **introduttiva** verrà visualizzata la finestra di dialogo. Se non viene visualizzato, dal **Generatore Report** e fare clic **New**.  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
@@ -242,7 +242,7 @@ ms.locfileid: "36070003"
   
 6.  Scegliere **Avanti**.  
   
-##  <a name="DTotals"></a> 1D. Aggiungere subtotali e totali  
+##  <a name="DTotals"></a> 1 giorno. Aggiungere subtotali e totali  
  Dopo avere creato i gruppi, è possibile aggiungere e formattare delle righe nelle quali visualizzare i valori di aggregazione per i campi. È anche possibile scegliere se mostrare tutti i dati o lasciare che sia l'utente a espandere e comprimere in modo interattivo i dati raggruppati.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Per aggiungere subtotali e totali  
@@ -258,9 +258,9 @@ ms.locfileid: "36070003"
   
 #### <a name="to-specify-a-style"></a>Per specificare uno stile  
   
-1.  Nel **scegliere uno stile** pagina, nel riquadro Stili selezionare ardesia.  
+1.  Nel **scegliere uno stile** pagina, nel riquadro stili, selezionare ardesia.  
   
-2.  Fare clic su **Fine**.  
+2.  Scegliere **Fine**.  
   
      La tabella viene aggiunta all'area di progettazione.  
   
@@ -558,7 +558,7 @@ ms.locfileid: "36070003"
   
      I passaggi 3 e 4 consentono di specificare i dati da visualizzare nella matrice.  
   
-##  <a name="MTotals"></a> 1D. Aggiungere subtotali e totali  
+##  <a name="MTotals"></a> 1 giorno. Aggiungere subtotali e totali  
  Nei report è possibile mostrare subtotali e totali complessivi. I dati nei report principali sono visualizzati come un indicatore; il totale complessivo verrà rimosso dopo avere completato la procedura guidata.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Per aggiungere subtotali e totali complessivi  
@@ -574,9 +574,9 @@ ms.locfileid: "36070003"
   
 #### <a name="to-specify-a-style"></a>Per specificare uno stile  
   
-1.  Nel **scegliere uno stile** pagina, nel riquadro Stili selezionare ardesia.  
+1.  Nel **scegliere uno stile** pagina, nel riquadro stili, selezionare ardesia.  
   
-2.  Fare clic su **Fine**.  
+2.  Scegliere **Fine**.  
   
 3.  Fare clic su **Esegui**per visualizzare un'anteprima del report.  
   

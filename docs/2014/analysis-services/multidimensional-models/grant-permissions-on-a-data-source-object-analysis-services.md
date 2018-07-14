@@ -1,5 +1,5 @@
 ---
-title: Concedere le autorizzazioni su un oggetto di origine dati (Analysis Services) | Documenti Microsoft
+title: Concedere le autorizzazioni per un oggetto origine dati (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.datasources.f1
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data sources [Analysis Services], security
 ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7df8a1a87b483d5b63641a8a621eb99a45d08c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbe08e5e23b8c40ddeba9efa99c151314d499916
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243721"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Concedere le autorizzazioni per un oggetto origine dati (Analysis Services)
   In genere la maggior parte degli utenti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non necessita dell'accesso alle origini dati sottostanti di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Gli utenti in genere eseguono query solo sui dati inclusi in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In un contesto di data mining, tuttavia, ad esempio per l'esecuzione di stime basate su un modello di data mining, un utente deve unire in join i dati risultanti di un modello di data mining e i dati specificati dall'utente. Per connettersi all'origine dati contenente i dati specificati dall'utente, l'utente usa una query DMX (Data Mining Extensions) che include le clausole [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery) e [OPENROWSET &#40;DMX&#41;](/sql/dmx/source-data-query-openrowset).  
@@ -62,7 +62,7 @@ ms.locfileid: "36156091"
  [Proprietà della stringa di connessione &#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
  [Metodologie di autenticazione supportate da Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Concedere l'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Concedere le autorizzazioni del cubo o modello di &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Concedere le autorizzazioni del cubo o un modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Concedere l'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

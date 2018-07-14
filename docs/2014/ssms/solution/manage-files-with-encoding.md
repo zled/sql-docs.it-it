@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - files [SQL Server Management Studio]
 - encoding [SQL Server Management Studio]
 - files [SQL Server Management Studio], encoding
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7a252e4e766b85c83c97ee55a5204932932ee3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cc038e491f895ad3ee017ff9e06835ad25c48912
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208421"
 ---
 # <a name="manage-files-with-encoding"></a>Gestione di file con codifica
   Per facilitare la visualizzazione del codice in una lingua e in una piattaforma particolari, è possibile associare a un file una particolare codifica dei caratteri.  
@@ -66,7 +66,7 @@ ms.locfileid: "36157419"
 -   Non è possibile utilizzare in sicurezza file UTF8 con Visual SourceSafe perché durante l'archiviazione, l'estrazione, il controllo delle differenze e l'unione vengono apportate modifiche che causano problemi per gli editor di questo tipo di file.  
   
 ## <a name="see-also"></a>Vedere anche  
- [File di gestione di soluzioni e progetti](files-that-manage-solutions-and-projects.md)   
+ [File della gestione di soluzioni e progetti](files-that-manage-solutions-and-projects.md)   
  [Associare estensioni di file a un editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   
   

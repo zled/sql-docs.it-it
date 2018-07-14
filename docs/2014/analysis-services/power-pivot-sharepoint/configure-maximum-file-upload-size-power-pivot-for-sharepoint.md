@@ -1,5 +1,5 @@
 ---
-title: Configurare le dimensioni di caricamento File massime (PowerPivot per SharePoint) | Documenti Microsoft
+title: Configurare dimensioni massime caricamento File (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 39159b13a78bc944acb5922ea77ac5ec416840ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bbe4aa41c05d384a29935d80e39862c1264a254
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332701"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>Configurare le dimensioni massime di caricamento dei file (PowerPivot per SharePoint)
   Nelle cartelle di lavoro di PowerPivot sono spesso contenute grandi quantità di dati che comportano il superamento delle dimensioni massime del file consentite per i caricamenti di SharePoint. Quando si tenta di caricare un file che supera il limite massimo, verrà visualizzato l'errore seguente in SharePoint:  

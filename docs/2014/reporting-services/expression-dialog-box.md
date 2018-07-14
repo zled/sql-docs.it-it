@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo espressione | Documenti Microsoft
+title: Finestra di dialogo espressione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10040"
 - sql12.rtp.rptdesigner.expression.f1
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Expression dialog box [Reporting Services]
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
 caps.latest.revision: 63
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4b7607427c8e47705b51ef9139c4f28d7b73b489
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747943591907b1025250e3554270e9dda14d3e51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325641"
 ---
 # <a name="expression-dialog-box"></a>Finestra di dialogo Espressione
   Usare la **espressione** finestra di dialogo per scrivere [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] le proprietà degli elementi delle espressioni di report. Le espressioni possono essere utilizzate per impostare molte proprietà, ad esempio il colore, il tipo di carattere e i bordi. In fase di esecuzione, il componente Elaborazione report valuta le espressioni e sostituisce il valore della proprietà con il risultato.  
   
- Un'espressione può essere semplice o complessa. È possibile digitare le espressioni semplici direttamente in una casella di testo nell'area di progettazione o in una finestra di dialogo. Per creare espressioni complesse, utilizzare il **espressione** finestra di dialogo. È possibile creare un'espressione alla volta. Per altre informazioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
+ Un'espressione può essere semplice o complessa. È possibile digitare le espressioni semplici direttamente in una casella di testo nell'area di progettazione o in una finestra di dialogo. Per creare espressioni complesse, usare il **espressione** nella finestra di dialogo. È possibile creare un'espressione alla volta. Per altre informazioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
   
- Per aprire la finestra di dialogo **Espressione** , fare clic sul pulsante Espressione (**fx**) disponibile nelle finestre di dialogo oppure scegliere **Espressione** dal menu di scelta rapida o selezionarlo negli elenchi a discesa nel riquadro Proprietà. Per altre informazioni, vedere [espressione viene utilizzata nei report di &#40;Generatore Report e SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
+ Per aprire la finestra di dialogo **Espressione** , fare clic sul pulsante Espressione (**fx**) disponibile nelle finestre di dialogo oppure scegliere **Espressione** dal menu di scelta rapida o selezionarlo negli elenchi a discesa nel riquadro Proprietà. Per altre informazioni, vedere [uso delle espressioni nei report di &#40;Generatore Report e SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
   
  La finestra di dialogo **Espressione** include una finestra del codice, un albero delle categorie, gli elementi delle categorie, un riquadro di descrizione e un riquadro di esempio.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36070230"
  **Parametri**  
  Consente di visualizzare un elenco di parametri del report.  
   
- **Campi (**  *\<selezionato Dataset >* **)**  
+ **Campi (**  *\<set di dati selezionato >* **)**  
  Consente di visualizzare l'elenco di campi per il set di dati selezionato nella categoria Set di dati. Fare doppio clic su un campo per copiarlo nella casella **Espressione** .  
   
  **Set di dati**  
@@ -82,7 +82,7 @@ ms.locfileid: "36070230"
  Quando si digita il nome di una funzione seguito da una parentesi aperta, verrà visualizzata una descrizione comando con informazioni sui parametri e sui valori restituiti della funzione.  
   
  **Category**  
- Consente di visualizzare categorie di espressioni. La scelta di una categoria stabilisce un contesto per la creazione di un'espressione e comporta la modifica dell'elenco di valori validi nel riquadro Elemento. Ad esempio, per un'espressione per un valore della casella di testo, espandere funzioni comuni e selezionare le funzioni di aggregazione per visualizzare `Avg`, `Count`e altre funzioni di **elemento** riquadro.  
+ Consente di visualizzare categorie di espressioni. La scelta di una categoria stabilisce un contesto per la creazione di un'espressione e comporta la modifica dell'elenco di valori validi nel riquadro Elemento. Ad esempio, per un'espressione per il valore di una casella di testo, espandere funzioni comuni e selezionare le funzioni di aggregazione da visualizzare `Avg`, `Count`e altre funzioni il **elemento** riquadro.  
   
  **Elemento**  
  Consente di visualizzare l'elenco di valori validi per la categoria selezionata. Fare doppio clic su un elemento per aggiungere il testo dell'espressione per l'elemento specifico in corrispondenza del punto di inserimento nella finestra del codice.  
@@ -93,13 +93,13 @@ ms.locfileid: "36070230"
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Espressione viene utilizzata nei report di &#40;SSRS e Generatore Report&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Formattazione di numeri e date &#40;SSRS e Generatore Report&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Formattazione di numeri e date di &#40;Report e SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Esempi di equazioni di filtro &#40;SSRS e Generatore Report&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [Esempi di equazioni di filtro &#40;Report e SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Raccolte predefinite nelle espressioni &#40;SSRS e Generatore Report&#41;](report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Raccolte predefinite nelle espressioni &#40;Report e SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md)   
  [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](report-design/add-an-expression-report-builder-and-ssrs.md)  
   
   

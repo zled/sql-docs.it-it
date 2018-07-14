@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, stopping traces
 - pausing traces
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - starting traces
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb735810bcf265076fde9e3834dc7404d1f45079
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 678bf2b9140d5df7d19aa28088d598f4cca450c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224581"
 ---
 # <a name="start-a-trace"></a>Avviare una traccia
   Dopo aver definito una nuova traccia o creato un modello con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è possibile avviare, sospendere o arrestare l'acquisizione dei dati in base alla nuova definizione di traccia o modello.  

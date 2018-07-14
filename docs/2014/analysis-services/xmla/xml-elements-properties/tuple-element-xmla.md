@@ -1,5 +1,5 @@
 ---
-title: Elemento Tuple (XMLA) | Documenti Microsoft
+title: Elemento Tuple (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Tuple element
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fe470d60aa008723034e1bdbf95f3ecf593c8a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e5db226260852207fbcfeb4dc0a071d03d0def7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233691"
 ---
 # <a name="tuple-element-xmla"></a>Elemento Tuple (XMLA)
   Contiene una raccolta di elementi [Member](member-element-xmla.md) contenuti dall'elemento padre [Tuple](tuples-element-xmla.md).  
@@ -64,11 +64,11 @@ ms.locfileid: "36077646"
 |Elementi padre|[Tuple](tuples-element-xmla.md)|  
 |Elementi figlio|[Membro](member-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
- Quando un'applicazione client imposta la `AxisFormat` proprietà da *TupleFormat*, un'asse viene rappresentata come un set di tuple. Ogni elemento `Axis` contiene un elemento `Tuples` che rappresenta il set di tuple su quell’asse. Ogni tupla viene rappresentata utilizzando un elemento `Tuple` che contiene elementi `Member` di ogni gerarchia sull'asse.  
+## <a name="remarks"></a>Note  
+ Quando un'applicazione client imposta la `AxisFormat` proprietà *TupleFormat*, un'asse viene rappresentata come un set di tuple. Ogni elemento `Axis` contiene un elemento `Tuples` che rappresenta il set di tuple su quell’asse. Ogni tupla viene rappresentata utilizzando un elemento `Tuple` che contiene elementi `Member` di ogni gerarchia sull'asse.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata la struttura del `Tuple` elemento quando un client specifica *TupleFormat* o *CustomFormat* per il `AxisFormat` proprietà XMLA, data la seguente membri per l'asse:  
+ Nell'esempio seguente viene illustrata la struttura del `Tuple` elemento quando un client specifica *TupleFormat* oppure *CustomFormat* per il `AxisFormat` proprietà XMLA, data la seguente membri per l'asse:  
   
 |||||  
 |-|-|-|-|  

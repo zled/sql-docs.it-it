@@ -1,5 +1,5 @@
 ---
-title: Utilizzo con il modello a oggetti ADOMD.NET | Documenti Microsoft
+title: Utilizzo con il modello a oggetti ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - retrieving metadata
 ms.assetid: 0183dcdc-f2ea-4246-ad00-6e8ccc9d8217
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de2d73db65d10acdea5ec0c221eb994700ba5f41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ceb363b3911afb3a1ea21d51e6a65eff09cd3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328541"
 ---
 # <a name="working-with-the-adomdnet-object-model"></a>Utilizzo del modello a oggetti ADOMD.NET
   In ADOMD.NET è disponibile un modello a oggetti per la visualizzazione dei cubi e degli oggetti subordinati contenuti in un'origine dati analitica. Tramite il modello a oggetti tuttavia non è possibile utilizzare tutti i metadati per un'origine dati analitici specifica, ma è possibile accedere solo alle informazioni più utili da visualizzare in un'applicazione client in modo da consentire all'utente di creare comandi in modo interattivo. A causa della complessità ridotta dei metadati da presentare, il modello a oggetti ADOMD.NET risulta più facile da utilizzare.  

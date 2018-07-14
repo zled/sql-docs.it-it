@@ -1,5 +1,5 @@
 ---
-title: Definire un nuovo attributo manualmente | Documenti Microsoft
+title: Definire un nuovo attributo manualmente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Analysis Services], creating
 - manual attribute creation [SQL Server]
 ms.assetid: 554ea10e-b0b0-4987-add8-19113d824787
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a092cb424ac9c4793e9a5e973f0cbaed0777c51b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09c67e1ae406994e1cd8b02d759d5a14492a5b38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157408"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191231"
 ---
 # <a name="define-a-new-attribute-manually"></a>Definire manualmente un nuovo attributo
-  Questa procedura viene descritto come creare un nuovo attributo in una dimensione utilizzando la **attributi** riquadro nella finestra di progettazione dimensioni.  
+  Questa procedura descrive come creare un nuovo attributo in una dimensione utilizzando la **attributi** riquadro nella finestra di progettazione dimensioni.  
   
 ### <a name="to-create-a-new-attribute-manually"></a>Per creare un nuovo attributo manualmente  
   
@@ -33,7 +33,7 @@ ms.locfileid: "36157408"
   
 2.  Assicurarsi che il **attributi** riquadro è in formato griglia.  
   
-     Fare doppio clic sui **attributi** riquadro, scegliere **Mostra attributi in**, quindi fare clic su **griglia**.  
+     Fare doppio clic sulla **attributi** riquadro, scegliere **Mostra attributi in**, quindi fare clic su **griglia**.  
   
 3.  Scorrere fino all'ultima riga della griglia e quindi fare clic su  **\<nuovo attributo >**.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36157408"
   
      È possibile accettare i valori predefiniti per l'utilizzo dell'attributo, il tipo, la colonna chiave e la colonna del nome oppure è possibile selezionare nuovi valori nell'elenco a discesa.  
   
-5.  Il pulsante destro l'attributo e quindi fare clic su **proprietà** per configurare le altre proprietà.  
+5.  Fare doppio clic dell'attributo e quindi fare clic su **proprietà** per configurare altre proprietà.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)   

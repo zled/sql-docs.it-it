@@ -1,5 +1,5 @@
 ---
-title: Metodo Discover (XMLA) | Documenti Microsoft
+title: Metodo Discover (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - Discover method
 ms.assetid: 0eb52d88-c081-416e-a229-610e4373b0b3
 caps.latest.revision: 36
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ead875bbe88ea71c8741450f8a3127efcf4b313d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cec0774478c0eb34e9094bd9b6b1663e55339c1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196021"
 ---
 # <a name="discover-method-xmla"></a>Metodo Discover (XMLA)
-  Recupera le informazioni, ad esempio l'elenco dei database disponibili o i dettagli su un oggetto specifico da un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. I dati recuperati con il metodo `Discover` dipendono dai valori dei parametri passati al metodo stesso.  
+  Recupera le informazioni, ad esempio l'elenco dei database disponibili o i dettagli su un oggetto specifico, da un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. I dati recuperati con il metodo `Discover` dipendono dai valori dei parametri passati al metodo stesso.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -69,8 +69,8 @@ ms.locfileid: "36156557"
 |Elemento padre|None|  
 |Elementi figlio|[Le proprietà](xml-elements-properties/properties-element-xmla.md), [RequestType](xml-elements-properties/type-element-xmla.md), [restrizioni](xml-elements-properties/restrictions-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
- Il metodo `Discover` richiede i metadati su istanze e oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. I metadati vengono restituiti utilizzando il codice XMLA [set di righe](xml-data-types/rowset-data-type-xmla.md) tipo di dati.  
+## <a name="remarks"></a>Note  
+ Il metodo `Discover` richiede i metadati su istanze e oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. I metadati vengono restituiti utilizzando XMLA [set di righe](xml-data-types/rowset-data-type-xmla.md) tipo di dati.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio di codice seguente tramite il client viene inviata la chiamata `Discover` per richiedere un elenco di cubi dal database di esempio [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

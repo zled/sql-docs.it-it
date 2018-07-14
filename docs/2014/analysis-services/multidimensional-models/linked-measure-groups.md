@@ -1,5 +1,5 @@
 ---
-title: Gruppi di misure collegato | Documenti Microsoft
+title: Gruppi di misure collegati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked measure groups [Analysis Services]
 - referencing measure groups
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f01313ce33a2dca510846a66d34d972540d72d85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e67d39b1cafa212b2a43b55d9de58e5df918bd11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251473"
 ---
 # <a name="linked-measure-groups"></a>Gruppi di misure collegati
   Un gruppo di misure collegato si basa su un altro gruppo di misure in un cubo diverso all'interno dello stesso database o in un database di Analysis Services diverso. È possibile usare un gruppo di misure collegato se si desidera riusare un set di misure e i valori di dati corrispondenti in più cubi.  
   
- Microsoft consiglia che i gruppi di misure collegati e originali risiedano in soluzioni eseguite sullo stesso server. Collegamento a un gruppo di misure in un server remoto è pianificato per l'eliminazione in una versione futura (vedere [Deprecated Analysis Services Features in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
+ Microsoft consiglia che i gruppi di misure collegati e originali risiedano in soluzioni eseguite sullo stesso server. Collegamento a un gruppo di misure in un server remoto è prevista la deprecazione in una versione futura (vedere [Deprecated Analysis Services Features in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
   
 > [!IMPORTANT]  
 >  I gruppi di misure collegati sono di sola lettura. Per visualizzare le modifiche più recenti, è necessario eliminare e ricreare tutti i gruppi di misure collegati basati sull'oggetto di origine modificato. Per questo motivo, copiare e incollare gruppi di misure tra progetti è un approccio alternativo da prendere in considerazione qualora siano necessarie modifiche future al gruppo di misure.  
@@ -72,7 +72,7 @@ ms.locfileid: "36070150"
 ## <a name="secure-a-linked-measure"></a>Proteggere una misura collegata  
  Dopo avere definito il collegamento, l'accesso alle misure in un gruppo di misure collegato viene gestito così come l'accesso agli altri gruppi di misure. Un oggetto collegato viene visualizzato insieme alle relative controparti non collegate in Progettazione ruoli. Per altre informazioni sulla gestione della sicurezza per un gruppo di misure, vedere [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
- Per definire o usare un gruppo di misure collegato, le finestre di account di servizio per il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza deve appartenere a un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ruolo del database che ha `ReadDefinition` e `Read` diritti sull'origine di accesso [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza per il gruppo di misure e cubo di origine o devono appartenere ai [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ruolo di amministratore per l'origine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza.  
+ Per definire o usare un gruppo di misure collegato, il Windows account del servizio per il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza deve appartenere a un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ruolo del database che ha `ReadDefinition` e `Read` diritti sull'origine di accesso [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dell'istanza per il gruppo di misure e cubo di origine o devono appartenere al [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ruolo di amministratore per l'origine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Definire le dimensioni collegate](define-linked-dimensions.md)  

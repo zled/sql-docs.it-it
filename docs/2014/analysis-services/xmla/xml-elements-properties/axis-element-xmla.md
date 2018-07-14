@@ -1,5 +1,5 @@
 ---
-title: Elemento Axis (XMLA) | Documenti Microsoft
+title: Elemento Axis (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e30ff03b6e1a58a079d35f8e846ed176c42a3a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e3e68903dc828f4b14ac60892d1b6fc2baed2f30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263227"
 ---
 # <a name="axis-element-xmla"></a>Elemento Axis (XMLA)
   Contiene un set di tuple utilizzato per rappresentare un singolo asse in un dataset multidimensionale contenuto in un [assi](axes-element-xmla.md) elemento che utilizza il [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo di dati restituito dal [Execute](../xml-elements-methods-execute.md) metodo.  
@@ -67,22 +67,22 @@ ms.locfileid: "36069446"
 |Elementi padre|[Assi](axes-element-xmla.md)|  
 |Elementi figlio|[CrossProduct](crossproduct-element-xmla.md) o [Tuple](tuples-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il contenuto dell'elemento `Axis` varia a seconda del valore della proprietà XMLA `AxisFormat` utilizzata dal metodo `Execute`.  
   
 ## <a name="tupleformat"></a>TupleFormat  
- Quando un'applicazione client imposta la `AxisFormat` proprietà da *TupleFormat*, un'asse viene rappresentata come un set di tuple. Ogni elemento `Axis` contiene un elemento `Tuples` che rappresenta il set di tuple sull'asse. Ogni tupla viene rappresentata utilizzando un elemento `Tuple` che contiene elementi `Member` di ogni gerarchia sull'asse.  
+ Quando un'applicazione client imposta la `AxisFormat` proprietà *TupleFormat*, un'asse viene rappresentata come un set di tuple. Ogni elemento `Axis` contiene un elemento `Tuples` che rappresenta il set di tuple sull'asse. Ogni tupla viene rappresentata utilizzando un elemento `Tuple` che contiene elementi `Member` di ogni gerarchia sull'asse.  
   
 ## <a name="clusterformat"></a>ClusterFormat  
- Quando un'applicazione client imposta la `AxisFormat` proprietà da *ClusterFormat*, i membri su ogni asse sono divisi in cluster in cui ogni cluster rappresenta un prodotto incrociato tra set ordinati di membri da ogni gerarchia. Ogni elemento `Axis` è costituito da uno o più elementi `CrossProduct`. Ogni elemento `CrossProduct` contiene un elemento `Members` per ogni gerarchia sull'asse.  
+ Quando un'applicazione client imposta la `AxisFormat` proprietà *ClusterFormat*, i membri su ogni asse sono divisi in cluster in cui ogni cluster rappresenta un prodotto incrociato tra set ordinati di membri da ogni gerarchia. Ogni elemento `Axis` è costituito da uno o più elementi `CrossProduct`. Ogni elemento `CrossProduct` contiene un elemento `Members` per ogni gerarchia sull'asse.  
   
 ## <a name="customformat"></a>CustomFormat  
- Quando un'applicazione client imposta il `AxisFormat` proprietà da *CustomFormat*, il valore viene considerato lo stesso come il *TupleFormat* valore da un'istanza di Analysis Services.  
+ Quando un'applicazione client imposta la `AxisFormat` proprietà *CustomFormat*, il valore viene considerato identico il *TupleFormat* valore da un'istanza di Analysis Services.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="description"></a>Description  
- Nell'esempio seguente viene illustrata la struttura del `Axis` elementi quando un client specifica *TupleFormat* o *CustomFormat* per il `AxisFormat` proprietà XMLA, data la seguente membri per l'asse:  
+ Nell'esempio seguente viene illustrata la struttura del `Axis` elementi quando un client specifica *TupleFormat* oppure *CustomFormat* per il `AxisFormat` proprietà XMLA, data la seguente membri per l'asse:  
   
 |||||  
 |-|-|-|-|  

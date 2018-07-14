@@ -1,5 +1,5 @@
 ---
-title: Installazione dal prompt dei comandi di Reporting Services con SharePoint e nativa | Documenti Microsoft
+title: Command Prompt Installation of Reporting Services SharePoint Mode e modalità nativa | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 9699e5eba99b2232bba44238f66b29e936bb56be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08498f8015d1969a091615fc74df61f4b7c9d0d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191581"
 ---
 # <a name="command-prompt-installation-of-reporting-services-sharepoint-mode-and-native-mode"></a>Installazione dal prompt dei comandi delle modalità SharePoint e nativa di Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta l'installazione da riga di comando dal programma di installazione di SQL Server. In questo argomento sono contenuti numerosi esempi di installazioni da riga di comando specifiche di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per una descrizione completa delle opzioni della riga di comando disponibili per tutti i componenti di SQL Server, vedere [installare SQL Server 2014 dal Prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). In questo argomento non vengono descritte le opzioni della riga di comando per il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i prodotti SharePoint. Per informazioni sull'installazione dalla riga di comando del componente aggiuntivo, vedere [Installare il componente aggiuntivo utilizzando il file di installazione rssharepoint.msi](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint).  
@@ -29,7 +29,7 @@ ms.locfileid: "36158621"
 ## <a name="rsinstallmode-native-mode"></a>RSINSTALLMODE (modalità nativa)  
  L'impostazione di input primaria per l'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è **/RSINSTALLMODE** . All'impostazione sono associate due opzioni: **DefaultNativeMode** e **FilesOnlyMode**  
   
- Se l'installazione include il motore di database di SQL Server, l'opzione predefinita di RSINSTALLMODE è DefaultNativeMode. In caso contrario, l'opzione predefinita di RSINSTALLMODE è FilesOnlyMode. Se si sceglie DefaultNativeMode, ma nell'installazione non è incluso il motore di database di SQL Server, RSINSTALLMODE viene impostato automaticamente su FilesOnlyMode. Per ulteriori informazioni sulle impostazioni di input, vedere [installare SQL Server 2014 dal Prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+ Se l'installazione include il motore di database di SQL Server, l'opzione predefinita di RSINSTALLMODE è DefaultNativeMode. In caso contrario, l'opzione predefinita di RSINSTALLMODE è FilesOnlyMode. Se si sceglie DefaultNativeMode, ma nell'installazione non è incluso il motore di database di SQL Server, RSINSTALLMODE viene impostato automaticamente su FilesOnlyMode. Per altre informazioni sulle impostazioni di input, vedere [installare SQL Server 2014 dal Prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="rsshpinstallmode-sharepoint-mode"></a>RSSHPINSTALLMODE (modalità SharePoint)  
  L'impostazione di input per installare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint è **/RSSHPINSTALLMODE**. L'impostazione di input dispone di un'opzione, SharePointFilesOnlyMode che consente di installare tutti i file necessari per la modalità SharePoint. Dopo l'installazione sarà necessario procedere alla configurazione. I passaggi aggiuntivi della configurazione vengono completati utilizzando Amministrazione centrale SharePoint. Per altre informazioni, vedere [installare Reporting Services SharePoint Mode for SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
@@ -80,6 +80,6 @@ Setup.exe /q /ACTION="Install" /INSTANCENAME="MSSQLSERVER" /FEATURES="SQLEngine,
 ## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server 2014 dal Prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Parametri SysPrep](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#SysPrep)   
- [Installare PowerPivot dal Prompt dei comandi](../../sql-server/install/install-powerpivot-from-the-command-prompt.md)  
+ [Installazione di PowerPivot dal prompt dei comandi](../../sql-server/install/install-powerpivot-from-the-command-prompt.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati QueryBinding (ASSL) | Documenti Microsoft
+title: Tipo di dati QueryBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - QueryBinding data type
 ms.assetid: 7b58fc89-0060-4e56-ad99-6f74fe8cfc6d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e13dd3e07975250de1f64c050d36dd276c7c579
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4a268248d730711dc7fb64500445c04fd6146d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169672"
 ---
 # <a name="querybinding-data-type-assl"></a>Tipo di dati QueryBinding (ASSL)
   Definisce un tipo di dati derivato che rappresenta l'associazione di un [DataSource](../objects/datasource-element-assl.md) elemento con un [QueryDefinition](../properties/querydefinition-element-assl.md) elemento.  
@@ -58,13 +58,13 @@ ms.locfileid: "36157015"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[DataSourceID](../properties/id-element-assl.md), [QueryDefinition](../properties/querydefinition-element-assl.md)|  
+|Elementi figlio|[Elemento DataSourceID](../properties/id-element-assl.md), [QueryDefinition](../properties/querydefinition-element-assl.md)|  
 |Elementi derivati|Vedere [associazione](binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
- Per ulteriori informazioni sul `Binding` tipo, incluse le tabelle di oggetti di Analysis Services Scripting Language (ASSL) del `Binding` tipo e la gerarchia di ereditarietà dei `Binding` tipi, vedere [associazione tipo di dati &#40;ASSL &#41;](binding-data-type-assl.md).  
+## <a name="remarks"></a>Note  
+ Per altre informazioni sul `Binding` tipo, incluse le tabelle di oggetti di Analysis Services Scripting Language (ASSL) del `Binding` tipo e la gerarchia di ereditarietà dei `Binding` tipi, vedere [associazione tipo di dati &#40;ASSL &#41;](binding-data-type-assl.md).  
   
- Per una panoramica delle associazioni dati in ASSL, vedere [origini dati e le associazioni &#40;multidimensionali SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Per una panoramica delle associazioni di dati in ASSL, vedere [origini dati e associazioni &#40;multidimensionale di SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.QueryBinding>.  
   

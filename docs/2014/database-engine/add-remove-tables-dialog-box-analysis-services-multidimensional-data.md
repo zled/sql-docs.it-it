@@ -1,5 +1,5 @@
 ---
-title: Aggiungere, rimuovere la finestra di dialogo tabelle (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Aggiungere e rimuovere la finestra di dialogo tabelle (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.addremoveobjects.f1
 helpviewer_keywords:
 - Add/Remove Tables dialog box
 ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 69e54f8696aa69d35fca6bb00d160520107411cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 702d07b93463671335b67f9672f5fff8dcb28c9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235671"
 ---
-# <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Aggiungi / Rimuovi tabelle (Analysis Services - dati multidimensionali)
+# <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo di aggiungere e rimuovere le tabelle (Analysis Services - dati multidimensionali)
   Per aggiungere o rimuovere tabelle di un'origine dati in una vista origine dati usare la finestra di dialogo **Aggiungi/Rimuovi tabelle** di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per visualizzare la finestra di dialogo **Aggiungi/Rimuovi tabelle** è possibile:  
   
 -   Fare clic su **Aggiungi/Rimuovi oggetti** nel riquadro **Barra degli strumenti** della **finestra di progettazione della vista origine dati**.  

@@ -1,5 +1,5 @@
 ---
-title: Tipi di dimensione | Documenti Microsoft
+title: Tipi di dimensione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -29,23 +29,23 @@ helpviewer_keywords:
 - Type property
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1fe0311a992f0f8c067ba6e7096698f96f8bc4bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fe72ba73f73d2c2d87672642e403c5ed0e4f541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189048"
 ---
 # <a name="dimension-types"></a>Tipi di dimensioni
-  L'impostazione della proprietà `Type` offre informazioni sui contenuti di una dimensione alle applicazioni server e client. In alcuni casi, l'impostazione `Type` offre informazioni solo alle applicazioni client ed è facoltativa. In altri casi, ad esempio le dimensioni `Accounts` o `Time`, le impostazioni della proprietà `Type` per la dimensione e i relativi attributi determinano comportamenti specifici basati sul server e possono essere necessarie per implementare determinati comportamenti nel cubo. La proprietà `Type` di una dimensione, ad esempio, può essere impostata su `Accounts` per indicare alle applicazioni client che la dimensione standard contiene attributi Conto. Per ulteriori informazioni sull'ora, l'account e dimensioni di tipo valuta, vedere [creare una dimensione di tipo data](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [creare un conto finanziario della dimensione di tipo padre-figlio](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), e [creare una valuta tipo di dimensione](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
+  L'impostazione della proprietà `Type` offre informazioni sui contenuti di una dimensione alle applicazioni server e client. In alcuni casi, l'impostazione `Type` offre informazioni solo alle applicazioni client ed è facoltativa. In altri casi, ad esempio le dimensioni `Accounts` o `Time`, le impostazioni della proprietà `Type` per la dimensione e i relativi attributi determinano comportamenti specifici basati sul server e possono essere necessarie per implementare determinati comportamenti nel cubo. La proprietà `Type` di una dimensione, ad esempio, può essere impostata su `Accounts` per indicare alle applicazioni client che la dimensione standard contiene attributi Conto. Per altre informazioni sull'ora, l'account e dimensioni di tipo valuta, vedere [creare una dimensione di tipo data](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [creare un conto finanziario della dimensione di tipo padre-figlio](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), e [creare una valuta tipo di dimensione](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
   
  L'impostazione predefinita per il tipo di dimensione è `Regular`, che non indica alcun tipo specifico di contenuto della dimensione. Questa è l'impostazione predefinita per tutte le dimensioni al momento della creazione, a meno che in fase di definizione della dimensione tramite la Creazione guidata dimensione non si specifichi `Time`. È inoltre consigliabile lasciare `Regular` come tipo di dimensione impostato, se nella Creazione guidata dimensione non è elencato alcun tipo di dimensione appropriato.  
   
 ## <a name="available-dimension-types"></a>Tipi di dimensioni disponibili  
- Nella tabella seguente vengono descritti i tipi di dimensioni disponibili in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Nella tabella seguente vengono descritti i tipi di dimensione disponibili nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 |Tipo dimensione|Description|  
 |--------------------|-----------------|  
@@ -67,6 +67,6 @@ ms.locfileid: "36155872"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare una dimensione utilizzando una tabella esistente](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [Le dimensioni &#40;Analysis Services - dati multidimensionali&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

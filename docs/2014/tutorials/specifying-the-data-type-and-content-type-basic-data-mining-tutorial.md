@@ -1,5 +1,5 @@
 ---
-title: Specifica il tipo di dati e il tipo di contenuto (esercitazione di base di Data Mining) | Documenti Microsoft
+title: Specifica il tipo di dati e il tipo di contenuto (esercitazione di base di Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,52 +8,52 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 72484d27-3ef1-4f16-813c-2f43231fc2da
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 8ea7d719e4341ded35a874c1bdc6c9c9ea0892f9
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 578d47783f22e857bb2fb84949e9d22dd6ad0e85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174953"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Impostazione del tipo di dati e contenuto (Esercitazione di base sul data mining)
   Ora che sono state selezionate le colonne da utilizzare per la compilazione della struttura e il training dei modelli, apportare le modifiche necessarie ai tipi di dati e di contenuto predefiniti impostati dalla procedura guidata.  
   
 #### <a name="review-and-modify-content-type-and-data-type-for-each-column"></a>Esaminare e modificare il tipo di contenuto e di dati per ogni colonna  
   
-1.  Nel **di specificare le colonne tipo di contenuto e dati** fare clic su **rileva** per eseguire un algoritmo che determina i dati predefiniti e i tipi di contenuto per ogni colonna.  
+1.  Nel **contenuto e tipo di dati specificare colonne** pagina, fare clic su **rileva** per eseguire un algoritmo che determina i dati predefiniti e i tipi di contenuto per ogni colonna.  
   
-2.  Esaminare le voci nel **tipo di contenuto** e **tipo di dati** colonne e modificarle se necessario, per assicurarsi che le impostazioni siano gli stessi di quelli elencati nella tabella seguente.  
+2.  Esaminare le voci nel **tipo di contenuto** e **tipo di dati** colonne e modificarli se necessario, per assicurarsi che le impostazioni siano identici a quelli elencati nella tabella seguente.  
   
-     In genere, la procedura guidata rileva i numeri e assegna un tipo di dati numerico adatto, ma esistono diversi scenari in cui è invece necessario gestire un numero come testo. Ad esempio, il **GeographyKey** deve essere gestito come testo, perché è corretto eseguire operazioni matematiche su questo identificatore.  
+     In genere, la procedura guidata rileva i numeri e assegna un tipo di dati numerico adatto, ma esistono diversi scenari in cui è invece necessario gestire un numero come testo. Ad esempio, il **GeographyKey** deve essere gestita come testo, perché non è corretto eseguire operazioni matematiche su questo identificatore.  
   
     |colonna|Tipo di contenuto|Tipo di dati|  
     |------------|------------------|---------------|  
-    |**Riga indirizzo 1**|**Discreti**|**Text**|  
-    |**Riga indirizzo 2**|**Discreti**|**Text**|  
+    |**Riga indirizzo 1**|**Discreta**|**Text**|  
+    |**Riga indirizzo 2**|**Discreta**|**Text**|  
     |**Età**|**Continua**|**Long**|  
-    |**Bike Buyer**|**Discreti**|**Long**|  
-    |**Commute Distance**|**Discreti**|**Text**|  
+    |**Bike Buyer**|**Discreta**|**Long**|  
+    |**Commute Distance**|**Discreta**|**Text**|  
     |**CustomerKey**|**Key**|**Long**|  
     |**DateLastPurchase**|**Continua**|**Data**|  
-    |**Email Address**|**Discreti**|**Text**|  
-    |**English Education**|**Discreti**|**Text**|  
-    |**English Occupation**|**Discreti**|**Text**|  
-    |**FirstName**|**Discreti**|**Text**|  
-    |**Gender**|**Discreti**|**Text**|  
-    |**Geography Key**|**Discreti**|**Text**|  
-    |**House Owner Flag**|**Discreti**|**Text**|  
-    |**Last Name**|**Discreti**|**Text**|  
-    |**Marital Status**|**Discreti**|**Text**|  
-    |**Number Cars Owned**|**Discreti**|**Long**|  
-    |**Number Children At Home**|**Discreti**|**Long**|  
-    |**Region**|**Discreti**|**Text**|  
-    |**Total Children**|**Discreti**|**Long**|  
+    |**Email Address**|**Discreta**|**Text**|  
+    |**English Education**|**Discreta**|**Text**|  
+    |**English Occupation**|**Discreta**|**Text**|  
+    |**firstName**|**Discreta**|**Text**|  
+    |**Gender**|**Discreta**|**Text**|  
+    |**Geography Key**|**Discreta**|**Text**|  
+    |**House Owner Flag**|**Discreta**|**Text**|  
+    |**Last Name**|**Discreta**|**Text**|  
+    |**Marital Status**|**Discreta**|**Text**|  
+    |**Number Cars Owned**|**Discreta**|**Long**|  
+    |**Number Children At Home**|**Discreta**|**Long**|  
+    |**Region**|**Discreta**|**Text**|  
+    |**Total Children**|**Discreta**|**Long**|  
     |**Yearly Income**|**Continua**|**Double**|  
   
 3.  Scegliere **Avanti**.  

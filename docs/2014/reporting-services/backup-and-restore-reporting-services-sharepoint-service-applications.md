@@ -1,5 +1,5 @@
 ---
-title: Backup e ripristino di Reporting Services SharePoint Service applicazioni | Documenti Microsoft
+title: Backup e ripristino Services applicazioni di servizio SharePoint di Reporting | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 504afebfbe59ef6717bb60e8220600256419f785
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ad72399371d662ee8842dd7f9bf72ce5a72b6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212571"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Eseguire il backup e il ripristino di applicazioni di servizio SharePoint di Reporting Services
   In questo argomento vengono descritte le procedure di backup e ripristino di un'applicazione di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tramite Amministrazione centrale SharePoint o PowerShell. Contenuto dell'argomento:  
@@ -41,7 +41,7 @@ ms.locfileid: "36077745"
   
 -   Eseguire il backup delle chiavi di crittografia prima di avviare il backup di SharePoint. Se non si esegue il backup delle chiavi di crittografia, non sarà possibile accedere ai dati crittografati in seguito al ripristino dell'applicazione di servizio. Sarà necessario eliminare i dati crittografati.  
   
--   Verificare se il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applicazione di servizio viene utilizzata l'autenticazione di Windows o account di esecuzione automatica per l'accesso al database. In caso affermativo, verificare quali sono le credenziali appropriate, per poter configurare correttamente l'applicazione di servizio dopo il processo di ripristino.  
+-   Verificare se il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applicazione di servizio Usa l'autenticazione di Windows o account di esecuzione automatica per l'accesso al database. In caso affermativo, verificare quali sono le credenziali appropriate, per poter configurare correttamente l'applicazione di servizio dopo il processo di ripristino.  
   
 -   Rivedere il log di backup di SharePoint creato nella stessa cartella del file di backup. Il file è in genere denominato **spbackup.log**  
   

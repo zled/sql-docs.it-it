@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, upgrading
 - Reporting Services, upgrades
@@ -18,13 +18,13 @@ ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 caps.latest.revision: 97
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2f140a9c83562ff86dc1a890f2d5a7e0ce7a272c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 626e7c922eb2b6126bdec0b2f9e53b3ab4f1d22d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204951"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
   In questo argomento viene fornita una panoramica delle opzioni di aggiornamento e migrazione per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Sono disponibili due approcci generali per l'aggiornamento di una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -49,7 +49,7 @@ ms.locfileid: "36155731"
   
 -   [Scenari di migrazione e aggiornamento in modalità nativa](#bkmk_native_scenarios)  
   
--   [Aggiornare una distribuzione con scalabilità orizzontale di Reporting Services in modalità nativa](#bkmk_native_scaleout)  
+-   [Aggiornare una distribuzione di scalabilità orizzontale di Reporting Services in modalità nativa](#bkmk_native_scaleout)  
   
 -   [Scenari di migrazione e aggiornamento in modalità SharePoint](#bkmk_sharePoint_scenarios)  
   
@@ -65,16 +65,16 @@ ms.locfileid: "36155731"
 >   
 >  -   [Note sulla versione di SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
 > -   [Suggerimenti e risoluzione dei problemi su SQL Server 2014 Reporting Services](http://go.microsoft.com/fwlink/?LinkID=391254).  
-> -   Utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Preparazione aggiornamento. Per altre informazioni, vedere [problemi di aggiornamento Reporting Services &#40;Upgrade Advisor&#41; ](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md) e [procedura: installare Upgrade Advisor](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md).  
+> -   Usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Preparazione aggiornamento. Per altre informazioni, vedere [problemi di aggiornamento Reporting Services &#40;Upgrade Advisor&#41; ](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md) e [procedura: installare Upgrade Advisor](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md).  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento:](#bkmk_top)  
+ ![Icona freccia usata con il collegamento superiore](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questo argomento:](#bkmk_top)  
   
 ##  <a name="bkmk_side_by_side"></a> Installazioni side-by-side  
  È possibile eseguire l'installazione side-by-side della modalità nativa di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] e di una distribuzione in modalità nativa di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  Le distribuzioni side-by-side della modalità SharePoint di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] e di qualsiasi versione precedente dei componenti della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non sono supportate.  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento:](#bkmk_top)  
+ ![Icona freccia usata con il collegamento superiore](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questo argomento:](#bkmk_top)  
   
 ##  <a name="bkmk_inplace_upgrade"></a> Aggiornamento sul posto  
  L'aggiornamento viene completato tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per aggiornare uno o tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluso [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Durante l'installazione vengono rilevate le istanze esistenti e viene richiesto di eseguire l'aggiornamento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione offre diverse opzioni di aggiornamento che è possibile specificare come argomento della riga di comando o nell'Installazione guidata.  
@@ -94,10 +94,10 @@ ms.locfileid: "36155731"
 ||  
 |-|  
 |[Aggiornamento a SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)|  
-|[Eseguire l'aggiornamento a SQL Server 2014 tramite l'installazione guidata &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|  
-|[Installare SQL Server 2014 dal Prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|  
+|[Eseguire l'aggiornamento a SQL Server 2014 usando l'installazione guidata di &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|  
+|[Installazione di SQL Server 2014 dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento:](#bkmk_top)  
+ ![Icona freccia usata con il collegamento superiore](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questo argomento:](#bkmk_top)  
   
 ##  <a name="bkmk_upgrade_checklist"></a> Elenco di controllo preliminare all'aggiornamento  
  Prima di effettuare l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere gli argomenti seguenti:  
@@ -108,7 +108,7 @@ ms.locfileid: "36155731"
   
 -   Rivedere le procedure consigliate per la sicurezza e le indicazioni di guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Security Considerations for a SQL Server Installation](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
--   Eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor sul computer del server di report per individuare eventuali problemi che potrebbero impedire il corretto aggiornamento. Per altre informazioni, vedere [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
+-   Eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor sul computer del server di report per individuare eventuali problemi che potrebbero impedire l'aggiornamento. Per altre informazioni, vedere [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
 -   Eseguire il backup della chiave simmetrica. Per altre informazioni, vedere [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36155731"
   
  Prima di aggiornare un ambiente di produzione, eseguire sempre un aggiornamento di prova in un ambiente di pre-produzione che abbia la stessa configurazione dell'ambiente di produzione.  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento:](#bkmk_top)  
+ ![Icona freccia usata con il collegamento superiore](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questo argomento:](#bkmk_top)  
   
 ## <a name="overview-of-migration-scenarios"></a>Panoramica degli scenari di migrazione  
  Se si esegue l'aggiornamento da una versione supportata di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è in genere possibile eseguire l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per aggiornare i file di programma del server di report, il database e tutti i dati dell'applicazione.  
@@ -135,14 +135,14 @@ ms.locfileid: "36155731"
   
 -   Si desidera eseguire la migrazione di una distribuzione di SharePoint 2010 di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a SharePoint 2013. SharePoint 2013 non supporta l'aggiornamento sul posto da SharePoint 2010. Per altre informazioni, vedere [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento:](#bkmk_top)  
+ ![Icona freccia usata con il collegamento superiore](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questo argomento:](#bkmk_top)  
   
 ##  <a name="bkmk_native_scenarios"></a> Scenari di aggiornamento e migrazione della modalità nativa  
  **Aggiornamento** : l'aggiornamento sul posto per la modalità nativa prevede lo stesso processo per ognuna delle versioni supportate elencate in precedenza in questo argomento. Eseguire l'Installazione guidata di SQL Server o l'installazione da riga di comando. Al termine dell'installazione il database del server di report verrà aggiornato automaticamente al nuovo schema del database del server di report. Per altre informazioni, vedere la sezione [In-place upgrade](#bkmk_inplace_upgrade) contenuta in questo argomento.  
   
  Il processo di aggiornamento viene avviato quando si seleziona un'istanza del server di report esistente da aggiornare.  
   
-1.  Se il database del server di report è installato in un computer remoto e non si dispone dell'autorizzazione necessaria per aggiornarlo, verrà richiesto di specificare le credenziali per l'aggiornamento a un database del server di report remoto. Assicurarsi di fornire le credenziali con `sysadmin` o aggiornare le autorizzazioni di database.  
+1.  Se il database del server di report è installato in un computer remoto e non si dispone dell'autorizzazione necessaria per aggiornarlo, verrà richiesto di specificare le credenziali per l'aggiornamento a un database del server di report remoto. Assicurarsi di fornire credenziali che dispongono di `sysadmin` o aggiornare le autorizzazioni di database.  
   
 2.  Il programma di installazione verifica la presenza di eventuali condizioni o impostazioni che impediscono l'aggiornamento e legge le impostazioni di configurazione. Alcuni esempi sono le estensioni personalizzate distribuite nel server di report. Se l'aggiornamento viene bloccato, è necessario modificare l'installazione per evitare il blocco oppure eseguire la migrazione a una nuova istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Per altre informazioni, vedere la documentazione di Preparazione aggiornamento.  
   
@@ -164,13 +164,13 @@ ms.locfileid: "36155731"
   
 7.  Nuovi URL vengono riservati in base alle impostazioni delle directory virtuali esistenti in IIS. Poiché le directory virtuali di IIS potrebbero non essere rimosse dal programma di installazione, assicurarsi di rimuoverle manualmente al termine dell'aggiornamento.  
   
-8.  I database del server di report vengono aggiornati al nuovo schema e `RSExecRole` viene modificato aggiungendo le autorizzazioni del proprietario di database al ruolo. Questo passaggio si verifica solo quando esegue l'aggiornamento da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] precedente a SP1.  
+8.  I database del server di report vengono aggiornati al nuovo schema e `RSExecRole` viene modificato aggiungendo le autorizzazioni del proprietario di database al ruolo. Questo passaggio si verifica solo quando si esegue l'aggiornamento dal [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] precedente a SP1.  
   
 9. Il programma di installazione unisce le impostazioni nei file di configurazione. Usando come base i file di configurazione dell'installazione corrente, vengono aggiunte nuove voci. Le voci obsolete non vengono rimosse, ma non verranno più lette dal server di report al termine dell'aggiornamento. L'aggiornamento non comporta l'eliminazione dei file di log precedenti, del file RSWebApplication.config obsoleto o delle impostazioni delle directory virtuali in IIS. L'aggiornamento non comporta inoltre la rimozione di Progettazione report SQL Server 2005, di Management Studio o degli altri strumenti client. Se non sono più necessari, accertarsi di rimuovere i file e gli strumenti al termine dell'aggiornamento.  
   
  **Migrazione:** la migrazione di una versione precedente di un'installazione in modalità nativa a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prevede gli stessi passaggi per tutte le versioni supportate elencate in precedenza in questo argomento. Per altre informazioni, vedere [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento:](#bkmk_top)  
+ ![Icona freccia usata con il collegamento superiore](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questo argomento:](#bkmk_top)  
   
 ##  <a name="bkmk_native_scaleout"></a> Aggiornare una distribuzione con scalabilità orizzontale in modalità nativa di Reporting Services  
  Di seguito viene illustrato come aggiornare una distribuzione in modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con scalabilità orizzontale a più di un server di report. Questo processo implica tempi di inattività della distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -228,7 +228,7 @@ ms.locfileid: "36155731"
   
      Se si desidera eseguire SharePoint 2013 nell'ambiente finale, è necessario completare un aggiornamento del collegamento di database da SharePoint 2010 a SharePoint 2013.  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento:](#bkmk_top)  
+ ![Icona freccia usata con il collegamento superiore](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questo argomento:](#bkmk_top)  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2 a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  **Ambiente iniziale:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2, SharePoint 2007.  
@@ -248,7 +248,7 @@ ms.locfileid: "36155731"
   
 -   Eseguire l'aggiornamento di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Quando si esegue l'Installazione guidata di SQL Server, viene visualizzata la finestra di dialogo**Autenticazione della modalità SharePoint di SQL Server Reporting Services**. Verrà installato il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e le credenziali della pagina di autenticazione verranno utilizzate per la creazione di un nuovo pool di applicazioni di SharePoint.  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento:](#bkmk_top)  
+ ![Icona freccia usata con il collegamento superiore](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questo argomento:](#bkmk_top)  
   
 ### <a name="sql-server-2005-sp2-to-includesssql14includessssql14-mdmd"></a>SQL Server 2005 SP2 a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  **Ambiente iniziale:** SQL Server 2005 SP2, SharePoint 2007.  
@@ -268,7 +268,7 @@ ms.locfileid: "36155731"
   
 -   Eseguire l'aggiornamento di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Quando si esegue l'Installazione guidata di SQL Server, viene visualizzata la finestra di dialogo Autenticazione della modalità SharePoint di SQL Server Reporting Services. Verrà installato il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e le credenziali della pagina di autenticazione verranno utilizzate per la creazione di un nuovo pool di applicazioni di SharePoint.  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento:](#bkmk_top)  
+ ![Icona freccia usata con il collegamento superiore](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questo argomento:](#bkmk_top)  
   
 ##  <a name="bkmk_migration_considerations"></a> Considerazioni sulla migrazione  
  Quando si spostano dati dell'applicazione, è necessario tenere presente i problemi e le restrizioni seguenti:  
@@ -288,7 +288,7 @@ ms.locfileid: "36155731"
   
 -   Modalità nativa: vedere [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento:](#bkmk_top)  
+ ![Icona freccia usata con il collegamento superiore](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questo argomento:](#bkmk_top)  
   
 ### <a name="fixed-database-name"></a>Nome fisso del database  
  Non è possibile rinominare il database del server di report poiché l'identità del database viene registrata nelle stored procedure del server di report al momento della creazione del database stesso. La ridenominazione dei database primari o temporanei del server di report provocherà errori durante l'esecuzione delle procedure, rendendo non valida l'installazione del server di report.  
@@ -301,7 +301,7 @@ ms.locfileid: "36155731"
   
 -   Se il numero di elementi non è elevato, è possibile ripubblicare report, modelli di report e origini dati condivise da Progettazione report, Progettazione modelli e Generatore report nel nuovo server di report. È necessario ricreare assegnazioni di ruolo, sottoscrizioni, pianificazioni condivise, pianificazioni dello snapshot del report, proprietà personalizzate impostate nei report o in altri elementi, sicurezza degli elementi dei modelli e proprietà impostate nel server di report. La cronologia del report e i dati del log di esecuzione dei report saranno persi.  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento:](#bkmk_top)  
+ ![Icona freccia usata con il collegamento superiore](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questo argomento:](#bkmk_top)  
   
 ##  <a name="bkmk_additional_resources"></a> Risorse aggiuntive  
   
@@ -314,10 +314,10 @@ ms.locfileid: "36155731"
   
 -   [Aggiornare i database da SharePoint 2010 a SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questo argomento:](#bkmk_top)  
+ ![Icona freccia usata con il collegamento superiore](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questo argomento:](#bkmk_top)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiornare i report](../../reporting-services/install-windows/upgrade-reports.md)   
- [Eseguire l'aggiornamento a SQL Server 2014 tramite l'installazione guidata &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Eseguire l'aggiornamento a SQL Server 2014 usando l'installazione guidata di &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], provider
 - PowerShell [SQL Server], SQL Server PowerShell Provider
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, PowerShell
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 caps.latest.revision: 60
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: ddf348be91cd8f3a298d1ef4fcd2711a81a6f275
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ba91dfa8c55585298a08039bc1bfc0e0d6fb24dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272727"
 ---
 # <a name="sql-server-powershell-provider"></a>Provider PowerShell per SQL Server
   Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per Windows PowerShell espone la gerarchia degli oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in percorsi simili ai percorsi del file system. È possibile usare i percorsi per trovare un oggetto e, successivamente, usare i metodi dei modelli SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) per eseguire azioni sugli oggetti.  

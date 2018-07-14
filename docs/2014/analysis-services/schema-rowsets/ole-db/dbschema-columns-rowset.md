@@ -1,5 +1,5 @@
 ---
-title: Set di righe DBSCHEMA_COLUMNS | Documenti Microsoft
+title: Set di righe DBSCHEMA_COLUMNS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DBSCHEMA_COLUMNS rowset
 ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 413e86e156db59e7621c94bdc1c99cd0087a987f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fa933eb153b0d8de4c2fec4ba92b072954be141
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267577"
 ---
 # <a name="dbschemacolumns-rowset"></a>Set di righe DBSCHEMA_COLUMNS
   Fornisce informazioni di colonna per tutte le colonne che soddisfano i criteri di restrizione specificati.  
@@ -45,7 +45,7 @@ ms.locfileid: "36155862"
 |`ORDINAL_POSITION`|`DBTYPE_UI4`||Posizione della colonna a partire da 1.|  
 |`COLUMN_HAS_DEFAULT`|`DBTYPE_BOOL`||Non supportato.|  
 |`COLUMN_DEFAULT`|`DBTYPE_WSTR`||Non supportato.|  
-|`COLUMN_FLAGS`|`DBTYPE_UI4`||Maschera di bit `DBCOLUMNFLAGS` tramite cui vengono indicate le proprietà della colonna. Vedere la sezione 'Tipo enumerato DBCOLUMNFLAGS' in [IColumnsInfo:: GetColumnInfo](http://msdn2.microsoft.com/library/ms722704.aspx)|  
+|`COLUMN_FLAGS`|`DBTYPE_UI4`||Maschera di bit `DBCOLUMNFLAGS` tramite cui vengono indicate le proprietà della colonna. Vedere 'Tipo enumerato DBCOLUMNFLAGS' in [IColumnsInfo:: GetColumnInfo](http://msdn2.microsoft.com/library/ms722704.aspx)|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||Restituisce sempre `false`.|  
 |`DATA_TYPE`|`DBTYPE_WSTR`<br /><br /> `DBTYPE_VARIANT`||Tipo di dati della colonna. Viene restituita una stringa per le colonne della dimensione e un tipo di dati Variant per le misure.|  
 |`TYPE_GUID`|`DBTYPE_GUID`||Non supportato.|  

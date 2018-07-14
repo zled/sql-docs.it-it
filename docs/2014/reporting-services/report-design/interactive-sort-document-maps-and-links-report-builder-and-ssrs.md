@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3646edb01f7bf6e45bbe20c1e6f821b41e9b5969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: aebaa04b6bdf4657f081b6a99b6cb158c144c8d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194861"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Ordinamento interattivo, mappe documento e collegamenti (Generatore report e SSRS)
   In ambienti basati sul Web è possibile aggiungere alcune caratteristiche per consentire agli utenti di interagire con i report. Gli utenti possono inoltre modificare l'ordinamento dei valori nel report, visualizzare o nascondere elementi nel report oppure fare clic sui collegamenti che consentono di passare ad altri report o pagine Web. È inoltre possibile aggiungere un sommario o una mappa documento. Gli utenti del report possono fare clic su elementi nel sommario o mappa documento per passare alle aree all'interno di un report.  
@@ -41,19 +41,19 @@ ms.locfileid: "36157644"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
- [Ordinamento interattivo &#40;SSRS e Generatore Report&#41;](interactive-sort-report-builder-and-ssrs.md)  
+ [Ordinamento interattivo &#40;Report e SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)  
  Viene illustrato come aggiungere pulsanti di ordinamento interattivi alle intestazioni di colonna.  
   
  [Creare una mappa documento &#40;Generatore report e SSRS&#41;](create-a-document-map-report-builder-and-ssrs.md)  
  Viene illustrato come aggiungere un sommario per supportare la navigazione all'interno di un report di grandi dimensioni.  
   
- [Aggiungere un segnalibro a un Report &#40;SSRS e Generatore Report&#41;](add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [Aggiungere un segnalibro a un Report &#40;Report e SSRS&#41;](add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  Viene illustrato come aggiungere segnalibri per creare collegamenti all'interno di un report.  
   
- [Aggiungere un collegamento ipertestuale a un URL &#40;SSRS e Generatore Report&#41;](add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [Aggiungere un collegamento ipertestuale a un URL &#40;Report e SSRS&#41;](add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  Viene illustrato come aggiungere un collegamento dal report a un URL.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;SSRS e Generatore Report&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;Report e SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

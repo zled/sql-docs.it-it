@@ -1,5 +1,5 @@
 ---
-title: Sequence Clustering scheda Analisi discriminante tra Cluster (Visualizzatore modello di Data Mining) | Documenti Microsoft
+title: Sequence Clustering scheda Analisi discriminante tra Cluster (Visualizzatore modello di Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.discrimination.f1
 ms.assetid: 7dd16479-2633-4f4b-83bf-cf55972a2241
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34ae165b87eed53b68ae4e1bd5264f1b500d0f73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4debc43286ffb3fe4f87115ed15e9b4c3f74b06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187148"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>Scheda Analisi discriminante tra cluster di Sequence Clustering (Visualizzatore modello di data mining)
   La scheda **Analisi discriminante tra cluster** in **Visualizzatore Microsoft Sequence Clustering** consente di confrontare i cluster selezionati in un modello Sequence Clustering.  
@@ -57,11 +57,11 @@ ms.locfileid: "36156563"
 |-----------|-----------------|  
 |**Variabili**|Un attributo nel modello di data mining.|  
 |**Valori**|Uno stato dell'attributo contenuto nell'elenco **Variabili**.|  
-|**Predilige \<cluster 1 >**|È contenuta una barra ombreggiata che indica il livello di predilezione dell'attributo e dello stato elencati in **Variabili** e **Valore** per il cluster selezionato in **Cluster 1**.|  
+|**Predilige \<1 del cluster >**|È contenuta una barra ombreggiata che indica il livello di predilezione dell'attributo e dello stato elencati in **Variabili** e **Valore** per il cluster selezionato in **Cluster 1**.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori dei modelli di data mining &#40;progettazione modello di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

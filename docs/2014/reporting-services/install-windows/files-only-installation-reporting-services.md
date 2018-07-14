@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - files-only installation [Reporting Services]
 - installation options [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 0116eb53af183f076199f3e86e92550352184006
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1a1617009f97b889cda7217268fc9a54e41c900c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166272"
 ---
 # <a name="files-only-installation-reporting-services"></a>Installazione di tipo "solo file" (Reporting Services)
   Con*installazione di tipo "solo file"* si intende un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in cui il programma di installazione crea la struttura di cartelle per i file di programma di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , copia i file su disco, registra il servizio del server di report nel computer locale, configura l'account del servizio, concede autorizzazioni file all'account del servizio e registra il provider WMI per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -47,7 +47,7 @@ ms.locfileid: "36158813"
   
  È possibile specificare un'installazione di tipo "solo file" tramite la riga di comando o nell'Installazione guidata. Negli argomenti seguenti vengono fornite istruzioni dettagliate:  
   
--   [Installare SQL Server 2014 dall'installazione guidata di &#40;programma di installazione di&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
+-   [Installare SQL Server 2014 dall'installazione guidata di &#40;installazione&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 -   [Installare SQL Server 2014 dal Prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
@@ -67,7 +67,7 @@ setup /q /ACTION=install /FEATURES=RS /InstanceName=MSSQLSERVER /RSSVCACCOUNT="N
  [Configurare gli URL di Server di Report &#40;Gestione configurazione SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configurare una connessione di Database Server di Report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Installazione in modalità SharePoint di Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](install-reporting-services-sharepoint-mode.md)   
- [Installare un Server di Report di Reporting Services in modalità nativa](install-reporting-services-native-mode-report-server.md)   
+ [Installare Server di Report di Reporting Services in modalità nativa](install-reporting-services-native-mode-report-server.md)   
  [Strumenti di Reporting Services](../tools/reporting-services-tools.md)  
   
   

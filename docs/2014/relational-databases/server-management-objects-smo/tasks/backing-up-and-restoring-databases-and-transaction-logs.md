@@ -1,5 +1,5 @@
 ---
-title: Backup e ripristino dei database e log delle transazioni | Documenti Microsoft
+title: Backup e ripristino dei database e log delle transazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,25 +21,25 @@ helpviewer_keywords:
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a020f5bfe13086aab602d0bcd136d63175cb8bac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b5b5a885ef12294f1d8b755ba72873ffe70e2eb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217011"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Backup e ripristino dei database e dei log delle transazioni
-  In SMO la classe <xref:Microsoft.SqlServer.Management.Smo.Backup> e la classe <xref:Microsoft.SqlServer.Management.Smo.Restore> sono classi di utilità che forniscono gli strumenti necessari per portare a termine le attività specifiche di backup e ripristino. Un <xref:Microsoft.SqlServer.Management.Smo.Backup> oggetto rappresenta un'attività di backup specifica necessaria anziché un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oggetto nell'istanza del server.  
+  In SMO la classe <xref:Microsoft.SqlServer.Management.Smo.Backup> e la classe <xref:Microsoft.SqlServer.Management.Smo.Restore> sono classi di utilità che forniscono gli strumenti necessari per portare a termine le attività specifiche di backup e ripristino. Oggetto <xref:Microsoft.SqlServer.Management.Smo.Backup> oggetto rappresenta un'attività di backup specifica necessaria anziché un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oggetto nell'istanza del server.  
   
  In caso di perdita o danneggiamento di dati, è necessario ripristinare il backup, completamente o parzialmente. Per il ripristino parziale viene utilizzata la raccolta <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> per segmentare i dati da ripristinare. Se il backup riguarda un log delle transazioni, è possibile ripristinare i dati fino a un momento specifico tramite la proprietà <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Restore>. È possibile convalidare i dati anche tramite il metodo <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>. La procedura di backup consigliata prevede il controllo dell'integrità del backup tramite un'operazione di ripristino e il controllo regolare dei dati nel database.  
   
  Analogamente all'oggetto <xref:Microsoft.SqlServer.Management.Smo.Backup>, l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Restore> non deve essere creato tramite un metodo `Create` poiché non rappresenta alcun oggetto nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Restore> è un set di proprietà e metodi utilizzati per ripristinare un database.  
   
 ## <a name="examples"></a>Esempi  
- Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto di Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C#&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Backup di database e log delle transazioni in Visual Basic  
  In questo esempio di codice viene illustrato come eseguire il backup di un database esistente in un file e quindi come ripristinarlo.  

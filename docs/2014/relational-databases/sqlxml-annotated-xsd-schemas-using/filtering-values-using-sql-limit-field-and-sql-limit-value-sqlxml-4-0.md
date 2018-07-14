@@ -1,5 +1,5 @@
 ---
-title: 'Filtrare valori tramite SQL: limit-field e SQL: limit-value (SQLXML 4.0) | Documenti Microsoft'
+title: 'Filtrare valori tramite SQL: limit-field e SQL: limit-value (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6cc802c42db2f688ee7d4cab0876e64ee9becc28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d2ae0fe5a6bc85a9c2535b65f1989a8d5cd72904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260557"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrare valori tramite sql:limit-field e sql:limit-value (SQLXML 4.0)
   È possibile limitare le righe restituite da una query di database in base a un valore di limitazione. Le annotazioni `sql:limit-field` e `sql:limit-value` vengono utilizzate per identificare la colonna di database che contiene valori di limitazione e per specificare un valore di limitazione specifico da utilizzare per filtrare i dati restituiti.  
@@ -58,7 +58,7 @@ ms.locfileid: "36069575"
   
  Un cliente può disporre di un indirizzo di spedizione e/o di un indirizzo di fatturazione. I valori della colonna AddressType sono Shipping e Billing.  
   
- Questo è lo schema di mapping in cui il **ShipTo** attributo dello schema viene mappato alla colonna StreetAddress nella relazione Addresses. I valori restituiti per questo attributo vengono limitati solo agli indirizzi di spedizione specificando le annotazioni `sql:limit-field` e `sql:limit-value`. Analogamente, il **BillTo** attributo dello schema restituisce solo l'indirizzo di fatturazione di un cliente.  
+ Questo è lo schema di mapping in cui il **ShipTo** attributo dello schema viene eseguito il mapping alla colonna StreetAddress nella relazione Addresses. I valori restituiti per questo attributo vengono limitati solo agli indirizzi di spedizione specificando le annotazioni `sql:limit-field` e `sql:limit-value`. Analogamente, il **BillTo** attributo dello schema restituisce solo l'indirizzo di fatturazione di un cliente.  
   
  Lo schema è il seguente:  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36069575"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Questo è lo schema di mapping in cui il **OrderID** attributo sui dettagli dell'ordine viene mappato alla colonna OrderID nella relazione degli ordini. I valori restituiti per questo attributo sono limitati solo a quelli che hanno un valore di 2.0000000e-001 (0,2) come specificato per il **Discount** attributo utilizzando il `sql:limit-field` e `sql:limit-value` annotazioni.  
+ Questo è lo schema di mapping in cui il **OrderID** attributo sui dettagli dell'ordine viene mappato alla colonna OrderID nella relazione degli ordini. I valori restituiti per questo attributo sono limitati solo a quelli che hanno un valore pari a 2.0000000e-001 (0,2) specificato per il **Discount** dell'attributo utilizzando il `sql:limit-field` e `sql:limit-value` annotazioni.  
   
  Lo schema è il seguente:  
   
@@ -313,6 +313,6 @@ ms.locfileid: "36069575"
  [float e real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)   
  [nchar e nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
  [Installazione di SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Utilizzo con annotazioni agli schemi XSD nella query &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Utilizzando schemi XSD nelle query con annotazioni &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

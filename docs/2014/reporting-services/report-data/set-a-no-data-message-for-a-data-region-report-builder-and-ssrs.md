@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e741f590755ebd032b7d26af8fe59772110578cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3c75fe02c7db5857f9f3977c3808df0b61f0ede
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179208"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>Impostare una proprietà NoDataMessage per un'area dati (Generatore report e SSRS)
   Per specificare il testo da visualizzare nel report visualizzabile al posto di un'area dati senza dati, impostare la proprietà NoRowsMessage di un'area dati tabella, matrice o elenco, la proprietà NoDataMessage di un'area dati del grafico e la proprietà NoDataText per la scala dei colori per una mappa. In fase di esecuzione Elaborazione report esegue la query per ogni set di dati in un report. Tale query non può restituire alcun set di risultati. Per un'area dati associata a un set di dati vuoto, è possibile specificare il testo da visualizzare anziché visualizzare un'area dati vuota. È anche possibile impostare la proprietà NoRowsMessage per un sottoreport quando in nessun set di dati del sottoreport sono presenti dati in fase di esecuzione.  
@@ -31,7 +31,7 @@ ms.locfileid: "36158163"
   
 1.  Nella visualizzazione Progettazione fare clic sull'area dati tabella, matrice o elenco o sul sottoreport nell'area di progettazione per selezionare l'elemento desiderato. Nel riquadro Proprietà vengono visualizzate le proprietà relative all'elemento selezionato.  
   
-2.  Nel riquadro proprietà, digitare il testo che si desidera visualizzare come messaggio nel `NoRowsMessage` campo della proprietà.  
+2.  Nel riquadro proprietà, digitare il testo che si desidera visualizzare come messaggio in `NoRowsMessage` campo della proprietà.  
   
      In alternativa, nell'elenco a discesa fare clic su **Espressione** per aprire la finestra di dialogo **Espressione** e creare un'espressione.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36158163"
   
 2.  Nel riquadro Proprietà espandere il nodo per `NoDataMessage`.  
   
-3.  In **didascalia**, digitare il testo che si desidera visualizzare come messaggio nel `NoDataMessage` campo della proprietà.  
+3.  Nelle **didascalia**, digitare il testo che si desidera visualizzare come messaggio in `NoDataMessage` campo della proprietà.  
   
      In alternativa, nell'elenco a discesa fare clic su **Espressione** per aprire la finestra di dialogo **Espressione** e creare un'espressione.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36158163"
   
 1.  Nella visualizzazione Progettazione fare clic sul sottoreport nell'area di progettazione per selezionarlo. Nel riquadro Proprietà vengono visualizzate le proprietà relative all'elemento selezionato.  
   
-2.  Nel riquadro proprietà, digitare il testo che si desidera visualizzare come messaggio nel `NoRowsMessage` campo della proprietà.  
+2.  Nel riquadro proprietà, digitare il testo che si desidera visualizzare come messaggio in `NoRowsMessage` campo della proprietà.  
   
      In alternativa, nell'elenco a discesa fare clic su **Espressione** per aprire la finestra di dialogo **Espressione** e creare un'espressione.  
   
@@ -62,10 +62,10 @@ ms.locfileid: "36158163"
      In alternativa, nell'elenco a discesa fare clic su **Espressione** per aprire la finestra di dialogo **Espressione** e creare un'espressione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sottoreport &#40;SSRS e Generatore Report&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
+ [Sottoreport &#40;Report e SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Grafici &#40;Generatore report e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
  [Mappe &#40;Generatore report e SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md)   
- [Sottoreport &#40;SSRS e Generatore Report&#41;](../report-design/subreports-report-builder-and-ssrs.md)  
+ [Sottoreport &#40;Report e SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)  
   
   

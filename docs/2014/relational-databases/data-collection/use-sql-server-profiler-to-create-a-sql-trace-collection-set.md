@@ -1,5 +1,5 @@
 ---
-title: Utilizzare SQL Server Profiler per creare un Set di raccolta traccia SQL (SQL Server Management Studio) | Documenti Microsoft
+title: Usare SQL Server Profiler per creare un Set di raccolta traccia SQL (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5abf2baf12e8ae265020e9d4a5766506e9bcace3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 50754e92bad8bb6241129b53339b173d6d1d1bf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260857"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Utilizzo di SQL Server Profiler per creare un set di raccolta Traccia SQL (SQL Server Management Studio)
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è possibile sfruttare le funzionalità di traccia sul lato server di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per esportare una definizione della traccia da usare per creare un set di raccolta che usa il tipo di agente di raccolta Traccia SQL generico. Questo processo è costituito da due operazioni:  
@@ -58,7 +58,7 @@ ms.locfileid: "36069870"
   
 6.  Nella scheda **Generale** eseguire queste operazioni:  
   
-    1.  Nella casella **Nome traccia** digitare il nome da usare per la traccia. Per questo esempio, il nome della traccia è `SPgt80`.  
+    1.  Nella casella **Nome traccia** digitare il nome da usare per la traccia. In questo esempio il nome della traccia è `SPgt80`.  
   
     2.  Nell'elenco **Modello**selezionare il modello da usare per la traccia. Per questo esempio, fare clic su **TSQL_SPs**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36069870"
   
     1.  Nell'elenco di filtri fare clic su **Durata**.  
   
-    2.  Nella finestra di operatori booleani, espandere la **maggiore o uguale** nodo, digitare `80` come valore e quindi fare clic su **OK**.  
+    2.  Nella finestra di operatori booleani espandere il **maggiore o uguale** nodo, digitare `80` come valore e quindi fare clic su **OK**.  
   
 9. Fare clic su **Esegui** per avviare la traccia.  
   
@@ -98,9 +98,9 @@ ms.locfileid: "36069870"
   
 3.  Scorrere lo script ed eseguire le sostituzioni seguenti, indicate nel testo di commento dello script:  
   
-    -   Sostituire **SQLTrace Collection Set Name Here** con il nome che si vuole usare per il set di raccolta. Per questo esempio, assegnare un nome al set di raccolta `SPROC_CollectionSet`.  
+    -   Sostituire **SQLTrace Collection Set Name Here** con il nome che si vuole usare per il set di raccolta. Per questo esempio, denominare il set di raccolta `SPROC_CollectionSet`.  
   
-    -   Sostituire **SQLTrace Collection Item Name Here** con il nome che si vuole usare per l'elemento della raccolta. Per questo esempio, l'elemento della raccolta nome `SPROC_Collection_Item`.  
+    -   Sostituire **SQLTrace Collection Item Name Here** con il nome che si vuole usare per l'elemento della raccolta. Per questo esempio, denominare l'elemento della raccolta `SPROC_Collection_Item`.  
   
 4.  Fare clic su **Esegui** per eseguire la query e creare il set di raccolta.  
   

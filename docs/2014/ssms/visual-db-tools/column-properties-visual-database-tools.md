@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
 - vdt.designers.properties.Column
@@ -17,15 +17,15 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2442b50d7c7a6a325013d3a3a808747925391183
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1aed3d78cbc0f9ef44c15310e2ae9085226c3413
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236181"
 ---
 # <a name="column-properties-visual-database-tools"></a>Proprietà colonne (Visual Database Tools)
   Per le colonne sono disponibili due set di proprietà: il set completo, visualizzabile nella scheda **Proprietà colonna** in Progettazione tabelle (disponibile solo per i database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e un subset, visualizzabile nella finestra Proprietà in Esplora server.  
@@ -183,12 +183,12 @@ ms.locfileid: "36156421"
  Indica se questa colonna è replicata in un'altra posizione.  
   
  **RowGuid**  
- Indica se la colonna viene utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come ROWGUID. È possibile impostare questo valore **Yes** solo per una colonna con tipo di dati di `uniqueidentifier`. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
+ Indica se la colonna viene utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come ROWGUID. È possibile impostare questo valore su **Yes** solo per una colonna con tipo di dati di `uniqueidentifier`. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
   
  **Dimensione**  
  Indica la dimensione in byte consentita dal tipo di dati della colonna. Un tipo di dati `nchar`, ad esempio, può avere come lunghezza 10 (numero di caratteri), ma come dimensione 20, in modo da supportare i set di caratteri Unicode.  
   
 > [!NOTE]  
->  La lunghezza di un tipo di dati `varchar(max)` varia per ogni riga. sp_help restituisce (-1) come lunghezza della `varchar(max)` colonna. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] visualizza -1 come dimensione della colonna.  
+>  La lunghezza di un tipo di dati `varchar(max)` varia per ogni riga. sp_help restituisce (-1) come lunghezza delle `varchar(max)` colonna. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] visualizza -1 come dimensione della colonna.  
   
   

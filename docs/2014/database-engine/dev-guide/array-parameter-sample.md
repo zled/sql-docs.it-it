@@ -1,5 +1,5 @@
 ---
-title: Esempio di parametro di matrice | Documenti Microsoft
+title: Esempio di parametro di matrice | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0f550af33b55d7b54a5bc88b69ecf419e07a3116
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9b3675473d52edb767c0aa96fa73e8775430d97e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328191"
 ---
 # <a name="array-parameter-sample"></a>Esempio Array Parameter
   Talvolta può risultare utile creare, aggiornare o eliminare un set di righe in un database. Sono disponibili diversi modi per eseguire queste operazioni. Uno di questi consiste nel passare una matrice di informazioni da un client a una stored procedure basata sull'integrazione con CLR nel server mediante un tipo di dati per l'integrazione con CLR definito dall'utente. La natura di tale tipo di dati limita a 8.000 byte le dimensioni dei dati forniti al server. Questa opzione non è pertanto utile in caso di dati complessi o di grandi dimensioni. Se i dati disponibili sono semplici e di piccole dimensioni, questa opzione risulta più efficace rispetto alla chiamata di una stored procedure per ogni riga. Passando una matrice, l'ordine dei dati viene mantenuto per le applicazioni in cui tale ordine è importante. Nell'esempio sono inclusi gli elementi seguenti:  
@@ -83,7 +83,7 @@ ms.locfileid: "36070104"
   
 5.  In c:\MySample creare `Program.vb` (per l'esempio Visual Basic) o `Program.cs` (per l'esempio C#) e copiare nel file il codice di esempio appropriato, Visual Basic o C#, riportato di seguito.  
   
-6.  Individuare la riga appropriata nel file Program (attorno alla riga 24) e sostituire `XXX` con il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+6.  Individuare la riga appropriata nel file Program (intorno alla riga 24) e sostituire `XXX` con il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
     -   `Dim connection As New SqlConnection("data source=XXX;initial catalog=AdventureWorks;Integrated Security=SSPI")`  
   

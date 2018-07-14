@@ -16,13 +16,13 @@ ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ffa9196260b00e5418286ec23ed52cbaff6b1e57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 341540de4e81423f673db4708ab24172d18e0a19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227791"
 ---
 # <a name="persisting-custom-objects"></a>Persistenza degli oggetti personalizzati
   Non è necessario implementare la persistenza personalizzata per gli oggetti personalizzati creati, purché le relative proprietà utilizzino solo tipi di dati semplici, ad esempio `integer` e `string`. L'implementazione predefinita della persistenza salva i metadati per l'oggetto insieme ai valori di tutte le relative proprietà.  
@@ -157,7 +157,7 @@ public void SaveToXML(System.Xml.XmlDocument doc,
 }  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sviluppo di oggetti personalizzati per Integration Services](developing-custom-objects-for-integration-services.md)   

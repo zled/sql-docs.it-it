@@ -1,5 +1,5 @@
 ---
-title: Riferimento (PowerPivot per SharePoint) dell'impostazione di configurazione | Documenti Microsoft
+title: Configurazione di impostazione di riferimento (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 340800620360ed34ab8bcc2aaee7d71118e451df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c819c7bfee1d028d9eb2795620ec9aa4bdf02150
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173562"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Riferimento all'impostazione della configurazione (PowerPivot per SharePoint)
   In questo argomento viene fornita la documentazione di riferimento per le impostazioni di configurazione utilizzate dalle applicazioni di servizio PowerPivot in una farm SharePoint. Nelle informazioni incluse in questo argomento vengono fornite descrizioni dettagliate per gli utenti che utilizzano uno script di PowerShell per configurare un server o che desiderano cercare informazioni per un'impostazione specifica.  
@@ -67,7 +67,7 @@ ms.locfileid: "36156092"
 |Dimensioni massime pool di connessioni di amministrazione|200|-1, 0 o da 1 a 10000.<br /><br /> -1 indica un numero illimitato di connessioni inattive.|Numero massimo di connessioni server inattive in tutti i pool di connessioni amministrative creati per le connessioni dell'applicazione del servizio PowerPivot in un'istanza del server Analysis Services. Le connessioni server vengono utilizzate per le richieste per caricare i database e salvare nuovamente le modifiche nel database di SharePoint.|  
   
 ##  <a name="AllocationScheme"></a> Bilanciamento del carico  
- Una delle funzioni eseguite tramite il servizio PowerPivot consiste nel determinare dove verranno caricati i dati di Analysis Services tra le istanze del servizio PowerPivot disponibili. Il `AllocationMethod` impostazione specifica i criteri in base a cui è selezionata un'istanza del servizio.  
+ Una delle funzioni eseguite tramite il servizio PowerPivot consiste nel determinare dove verranno caricati i dati di Analysis Services tra le istanze del servizio PowerPivot disponibili. Il `AllocationMethod` impostazione specifica i criteri rispetto alla quale viene selezionata un'istanza del servizio.  
   
 |nome|Default|Valori validi|Description|  
 |----------|-------------|------------------|-----------------|  
@@ -101,6 +101,6 @@ ms.locfileid: "36156092"
  [Aggiornamento dati PowerPivot con SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)   
  [Configurare la raccolta di dati di utilizzo per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [Configurare gli account del servizio PowerPivot](configure-power-pivot-service-accounts.md)   
- [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)  
+ [Dati di utilizzo e dashboard di gestione PowerPivot](power-pivot-management-dashboard-and-usage-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di file modello tramite la proprietà CommandStream | Documenti Microsoft
+title: Esecuzione di file modello tramite la proprietà CommandStream | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CommandStream property
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd2f29f14d4af758581e368986398720dd3b5a0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d149b40acdc7fc81c79f8800787d093636753d39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331291"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Esecuzione di file modello tramite la proprietà CommandStream
   Questo esempio viene illustrato come specificare i file modello costituiti da query SQL o XPath mediante la proprietà CommandStream dell'oggetto SqlXmlCommand. In questa applicazione, un FileStreamobject viene aperto per un file di comando e il flusso di file viene assegnato come CommandStream che viene eseguito.  

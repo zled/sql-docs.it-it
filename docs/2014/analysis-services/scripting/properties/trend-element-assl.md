@@ -1,5 +1,5 @@
 ---
-title: Tendenza elemento (ASSL) | Documenti Microsoft
+title: Elemento (ASSL) di tendenza | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Trend element
 ms.assetid: d1d92d10-a181-4402-aacb-c0b2adc96bba
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac6d8e30d9ff52ded2708f668c8ab4fc05434225
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63bf8353e2ba801fc743fd4d645316c1e8f51eda
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171182"
 ---
 # <a name="trend-element-assl"></a>Elemento Trend (ASSL)
   Contiene un'espressione MDX (Multidimensional Expressions) che restituisce un indicatore di tendenza per un [Kpi](../objects/kpi-element-assl.md) elemento.  
@@ -61,10 +61,10 @@ ms.locfileid: "36157010"
 |Elemento padre|[Indicatore KPI](../objects/kpi-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `Trend` contiene un'espressione MDX che corrisponde a un numero tra -1 e 1.  
   
- L'elemento che corrisponde al padre di `Trend` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Kpi>.  
+ L'elemento che corrisponde al padre di `Trend` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Kpi>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

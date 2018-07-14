@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 907ee3eb093f4b240aef2199b0928dab602341ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 21d48953edad8d454f75fa919f9e0facdfb5280b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069141"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251323"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Utilizzo del controllo Web Form ReportViewer
   Per visualizzare i report distribuiti in un server di report o presenti in un file system locale, è possibile utilizzare il controllo Web Form ReportViewer per eseguirne il rendering in un'applicazione Web.  
@@ -47,7 +47,7 @@ ms.locfileid: "36069141"
   
  Per visualizzare un report in modalità locale, selezionare l'opzione **Progetta nuovo report** per avviare la progettazione del report oppure selezionare un report che fa già parte del progetto esistente. Dopo aver selezionato un report, assicurarsi di immettere il nome del file RDLC del report nella proprietà **ReportPath** del controllo ReportViewer. Questa proprietà viene visualizzata sotto il nodo **LocalReport** nel riquadro **Properties**.  
   
- È possibile nascondere uno o più elementi sulla barra degli strumenti di ReportViewer quando viene eseguito il rendering del report. Ad esempio, è possibile nascondere il pulsante di stampa. Per nascondere gli elementi della barra degli strumenti, impostare le proprietà seguenti di ReportViewer `False` nella **proprietà** riquadro.  
+ È possibile nascondere uno o più elementi sulla barra degli strumenti di ReportViewer quando viene eseguito il rendering del report. Ad esempio, è possibile nascondere il pulsante di stampa. Per nascondere elementi della barra degli strumenti, impostare le proprietà seguenti di ReportViewer `False` nella **proprietà** riquadro.  
   
 -   `ShowBackButton`  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36069141"
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Visualizzazione di report in modalità di elaborazione remota  
  Nell'esempio seguente viene illustrato come eseguire il rendering di un report distribuito in un server di report. In questo esempio viene usato il report Sales Order Detail incluso nel progetto di report di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
- Nell'esempio viene utilizzata l'autenticazione integrata di Windows, pertanto è innanzitutto necessario abilitare la rappresentazione. Per eseguire questo inserire la riga seguente nel `web.config` file:  
+ Nell'esempio viene utilizzata l'autenticazione integrata di Windows, pertanto è innanzitutto necessario abilitare la rappresentazione. A scopo, inserire la riga seguente nel `web.config` file:  
   
 ```  
 <!-- Web.config file. -->  

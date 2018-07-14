@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, application code usage
 - XML [SQL Server], FOR XML clause
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73ca2ee9220b73e329ab829f3533274416b1855b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a8cb0fb56cd1715331c5c3f0e09c4319e0b82335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254113"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utilizzare i risultati di query FOR XML nel codice di un'applicazione
   L'utilizzo delle clausole FOR XML nelle query SQL consente di recuperare e inoltre di eseguire il cast dei risultati delle query come dati XML. Se i risultati di una query FOR XML possono essere utilizzati nel codice XML dell'applicazione, è possibile eseguire le operazioni seguenti:  
@@ -39,9 +39,9 @@ ms.locfileid: "36077528"
  In questo argomento vengono forniti esempi di questi approcci.  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Recupero dei dati di query FOR XML con ADO e isole di dati XML  
- ADO `Stream` oggetto o altri oggetti che supportano il modello COM `IStream` interfaccia, ad esempio le pagine ASP (Active Server) `Request` e `Response` oggetti, possono essere utilizzati per contenere i risultati quando si lavora con query FOR XML.  
+ L'oggetto ADO `Stream` oggetto o altri oggetti che supportano il modello COM `IStream` interfaccia, ad esempio le pagine ASP (Active Server) `Request` e `Response` oggetti, possono essere utilizzati per contenere i risultati quando si lavora con query FOR XML.  
   
- Ad esempio, il codice ASP seguente mostra i risultati di query su un `xml` colonna tipo di dati, i dati demografici, Demographics della tabella di database di esempio AdventureWorks. La query cerca specificatamente il valore dell'istanza della colonna relativo alla riga in cui CustomerID è uguale a 3.  
+ Ad esempio, il codice ASP seguente mostra i risultati di una query su un `xml` colonna tipo di dati, dati demografici, nella tabella Sales. Store del database di esempio AdventureWorks. La query cerca specificatamente il valore dell'istanza della colonna relativo alla riga in cui CustomerID è uguale a 3.  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -211,7 +211,7 @@ ms.locfileid: "36077528"
   
 3.  Dopo aver eseguito la query, il `SqlDataAdapter.Fill` metodo viene quindi chiamato e passato a un'istanza di un `DataSet,` MyDataSet per riempire il set di dati con l'output della query FOR XML.  
   
-4.  Il `DataSet.GetXml` viene quindi chiamato il metodo per restituire i risultati della query sotto forma di stringa che può essere visualizzato nella pagina HTML generata dal server.  
+4.  Il `DataSet.GetXml` viene quindi chiamato il metodo per restituire i risultati della query sotto forma di stringa che può essere visualizzato nella pagina HTML generati dal server.  
   
     ```  
     <%@ Page Language="VB" %>  

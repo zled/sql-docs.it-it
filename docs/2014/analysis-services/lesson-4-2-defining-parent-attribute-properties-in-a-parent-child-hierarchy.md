@@ -1,5 +1,5 @@
 ---
-title: Definizione di proprietà dell'attributo padre in una gerarchia padre-figlio | Documenti Microsoft
+title: Definizione delle proprietà degli attributo padre in una gerarchia padre-figlio | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a167d70ba2041a3b40da242e51b6fb99aa14e900
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34e32c84044b1ba709ef893949ef83a612d7e4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328581"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definizione delle proprietà degli attributi padre in una gerarchia padre-figlio
   Una gerarchia padre-figlio è una gerarchia in una dimensione basata su due colonne di tabella. Nell'insieme, queste colonne definiscono le relazioni gerarchiche tra i membri della dimensione. La prima colonna, denominata *colonna chiave membro*, identifica ogni membro della dimensione. L'altra colonna, denominata *colonna padre*, identifica l'elemento padre di ogni membro della dimensione. La proprietà **NamingTemplate** di un attributo padre consente di determinare il nome di ogni livello nella gerarchia padre-figlio e la proprietà **MembersWithData** consente di determinare se i dati del membro padre devono essere visualizzati.  
@@ -61,7 +61,7 @@ ms.locfileid: "36077690"
   
      Nell'immagine seguente viene illustrata la gerarchia Employees espansa.  
   
-10. ![Tabella pivot che mostra la gerarchia Employees](../../2014/tutorials/media/l4-employee-1.gif "tabella pivot che mostra la gerarchia di dipendenti")  
+10. ![Tabella pivot che mostra gerarchia Employees](../../2014/tutorials/media/l4-employee-1.gif "tabella pivot che mostra gerarchia Employees")  
   
      Si noti che le vendite di ogni responsabile nel Livello 03 vengono visualizzate anche nel Livello 04. dal momento che ogni responsabile è anche un dipendente di altri responsabili. Nell'attività successiva gli importi delle vendite verranno nascosti.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36077690"
   
      La figura seguente illustrale modifiche apportate nella finestra di dialogo **Modello denominazione livelli** .  
   
-     ![Finestra di dialogo Modello denominazione livello](../../2014/tutorials/media/l4-namingtemplate.gif "finestra di dialogo Modello denominazione livelli")  
+     ![Finestra di dialogo Modello denominazione livello](../../2014/tutorials/media/l4-namingtemplate.gif "nella finestra di dialogo Modello denominazione livelli")  
   
 5.  Fare clic su **OK**.  
   
@@ -112,6 +112,6 @@ ms.locfileid: "36077690"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gerarchia padre-figlio](multidimensional-models/parent-child-dimension.md)   
- [Attributi in gerarchie padre-figlio](multidimensional-models/parent-child-dimension-attributes.md)  
+ [Attributi nelle gerarchie padre-figlio](multidimensional-models/parent-child-dimension-attributes.md)  
   
   

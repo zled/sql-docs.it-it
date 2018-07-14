@@ -1,5 +1,5 @@
 ---
-title: Chiamata di metodi | Documenti Microsoft
+title: Chiamata di metodi | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - SMO [SQL Server], method calling
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 345e3b217933f544239c849e5a279d8fcc3623e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b2d2cce4fa8bf38e8403af1a783c9b1d85eb14aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264307"
 ---
 # <a name="calling-methods"></a>Chiamata di metodi
-  I metodi eseguono attività specifiche correlate all'oggetto, ad esempio l'emissione di un `Checkpoint` in un database o la richiesta di un elenco enumerato di accessi per l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Metodi di eseguono attività specifiche correlate all'oggetto, ad esempio emissione di un `Checkpoint` in un database o la richiesta di un elenco enumerato di account di accesso per l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  I metodi eseguono un'operazione su un oggetto. I metodi possono accettare parametri e spesso restituiscono un valore. Il valore restituito può essere un tipo di dati semplice, un oggetto complesso o una struttura che contiene molti membri.  
   
@@ -84,7 +84,7 @@ tb.RebuildIndexes(70);
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-basic"></a>Utilizzo di un metodo di enumerazione che restituisce un oggetto DataTable in Visual Basic  
- In questa sezione viene descritto come chiamare un metodo di enumerazione e come gestire i dati nell'oggetto restituito <xref:System.Data.DataTable> oggetto.  
+ Questa sezione descrive come chiamare un metodo di enumerazione e come gestire i dati nell'oggetto restituito <xref:System.Data.DataTable> oggetto.  
   
  Il metodo <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> restituisce un oggetto <xref:System.Data.DataTable>, che richiede ulteriore navigazione per accedere a tutte le informazioni sulle regole di confronto disponibili relative all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -108,9 +108,9 @@ Next
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>Utilizzo di un metodo di enumerazione che restituisce un oggetto DataTable in Visual C#  
- In questa sezione viene descritto come chiamare un metodo di enumerazione e come gestire i dati nell'oggetto restituito <xref:System.Data.DataTable> oggetto.  
+ Questa sezione descrive come chiamare un metodo di enumerazione e come gestire i dati nell'oggetto restituito <xref:System.Data.DataTable> oggetto.  
   
- Il <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> metodo restituisce un sistema <xref:System.Data.DataTable> oggetto. Il <xref:System.Data.DataTable> oggetto richiede ulteriore navigazione per accedere a tutte le regole di confronto disponibili informazioni sull'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Il <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> metodo viene restituito un sistema <xref:System.Data.DataTable> oggetto. Il <xref:System.Data.DataTable> oggetto richiede ulteriore navigazione per accedere a tutte le regole di confronto disponibili informazioni sull'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```  
 //Connect to the local, default instance of SQL Server.   
@@ -161,12 +161,12 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>Copia di un oggetto SMO in Visual Basic  
- Esempio di codice Usa il <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> metodo per creare una copia del <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto. Il <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto rappresenta una connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Questo esempio di codice Usa il <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> metodo per creare una copia del <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto. Il <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto rappresenta una connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VCMethods6](SMO How to#SMO_VCMethods6)]  -->  
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>Copia di un oggetto SMO in Visual C#  
- Esempio di codice Usa il <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> metodo per creare una copia del <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto. Il <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto rappresenta una connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Questo esempio di codice Usa il <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> metodo per creare una copia del <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto. Il <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto rappresenta una connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```  
 {   

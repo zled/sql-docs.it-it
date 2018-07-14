@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di connessioni e sessioni in ADOMD.NET | Documenti Microsoft
+title: Uso di connessioni e sessioni in ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - connections [ADOMD.NET]
 ms.assetid: 72b43c06-f3e4-42c3-a696-4a3419c3b884
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 07c17333b58d34a99e8d393a1dbc8ec00d75f60e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ef7c679aa0f295c486836763158a89a1f593ff8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176958"
 ---
 # <a name="working-with-connections-and-sessions-in-adomdnet"></a>Utilizzo di connessioni e sessioni in ADOMD.NET
   In XML for Analysis (XMLA) le sessioni forniscono supporto per le operazioni con stato durante l'accesso ai dati analitici. Le sessioni costituiscono l'ambito e il contesto di comandi e transazioni per un'origine dati analitici. Gli elementi XMLA utilizzati per gestire le sessioni vengono [BeginSession](../xmla/xml-elements-headers/beginsession-element-xmla.md), [sessione](../xmla/xml-elements-headers/session-element-xmla.md), e [EndSession](../xmla/xml-elements-headers/endsession-element-xmla.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "36156586"
  Un ID di sessione non garantisce che una sessione rimanga valida. Se la sessione scade (ad esempio se si verifica un timeout o se la connessione si interrompe), il provider può scegliere di terminare le azioni di tale sessione e di eseguirne il rollback. In questo caso, tutte le chiamate successive al metodo dall'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> genereranno un'eccezione. Poiché le eccezioni vengono generate solo quando la successiva richiesta viene inviata al provider e non quando la sessione scade, l'applicazione deve essere in grado di gestire tali eccezioni in qualsiasi momento l'applicazione recuperi dati o metadati dal provider.  
   
 ## <a name="closing-a-session"></a>Chiusura di una sessione  
- Se il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A> viene chiamato senza specificare il valore della *endSession* parametro, o se il *endSession* parametro è impostato su True, la connessione della sessione e la sessione associata con il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto vengono chiusi. Per chiudere una sessione, ADOMD.NET invia un'intestazione XMLA `EndSession` al provider, con l'ID di sessione impostato sul valore della proprietà <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.SessionID%2A>.  
+ Se il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A> viene chiamato senza specificare il valore della *endSession* parametro, o se il *endSession* parametro è impostato su True, sia la connessione alla sessione che la sessione associato il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto vengono chiusi. Per chiudere una sessione, ADOMD.NET invia un'intestazione XMLA `EndSession` al provider, con l'ID di sessione impostato sul valore della proprietà <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.SessionID%2A>.  
   
  Se il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A> metodo viene chiamato con il *endSession* parametro impostato su False, la sessione associata la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto rimane attivo, ma la connessione alla sessione viene chiusa.  
   

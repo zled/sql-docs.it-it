@@ -1,5 +1,5 @@
 ---
-title: Elemento KeyErrorLimitAction (ASSL) | Documenti Microsoft
+title: Elemento KeyErrorLimitAction (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyErrorLimitAction element
 ms.assetid: a2a01aae-0571-499f-9025-b61c741f3ddb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 73c903190a0cc982a75227be6ff1adeb5081c0c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6001901e7613099eff2856905b88452870f7f2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247271"
 ---
 # <a name="keyerrorlimitaction-element-assl"></a>Elemento KeyErrorLimitAction (ASSL)
   Specifica l'azione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] intraprende quando l'errore di chiave specificato nella [KeyErrorLimit](keyerrorlimit-element-assl.md) raggiungimento dell'elemento.  
@@ -61,7 +61,7 @@ ms.locfileid: "36068780"
 |Elemento padre|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
 |valore|Description|  

@@ -1,5 +1,5 @@
 ---
-title: Installare o disinstallare il componente aggiuntivo di servizi Reporting per SharePoint (SharePoint 2010 e SharePoint 2013) | Documenti Microsoft
+title: Installare o disinstallare il Reporting aggiuntivo Services per SharePoint (SharePoint 2010 e SharePoint 2013) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: b1f412ef2d381a7ef005f56172e902fa63c5527b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb82a321cc6110211a0c4e5f84fd049323b3aa7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224871"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint (SharePoint 2010 e SharePoint 2013)
   Eseguire il pacchetto di installazione del componente aggiuntivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint (rsSharePoint.msi) in server SharePoint per abilitare le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una distribuzione di SharePoint. In queste funzionalità sono inclusi Power View, una Web part Visualizzatore report, un endpoint proxy per URL, tipi di contenuto e pagine di applicazione che consentono di creare, visualizzare e gestire report, modelli di report, origini dati e altri contenuti del server di report in un sito di SharePoint. Il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint 2010 è un componente obbligatorio per un server di report eseguito in modalità SharePoint. È possibile installare il componente aggiuntivo mediante l'installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o scaricando rsSharePoint.msi dal Feature Pack di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Per un elenco delle versioni del componente aggiuntivo e le pagine di download, vedere [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "36070220"
   
 -   [Prerequisiti](#bkmk_prereq)  
   
--   [Cosa è l'installazione del componente aggiuntivo?](#bkmk_whatinstalled)  
+-   [A cosa serve l'installazione del componente aggiuntivo?](#bkmk_whatinstalled)  
   
 -   [Panoramica dei metodi di installazione](#bkmk_3ways_to_install)  
   
@@ -40,18 +40,18 @@ ms.locfileid: "36070220"
   
     -   [Installazione "solo file"](#bkmk_files_only_installation)  
   
--   [Componente aggiuntivo come rimuovere Reporting Services](#bkmk_remove_addin)  
+-   [Componente aggiuntivo come rimuovere il Reporting Services](#bkmk_remove_addin)  
   
--   [Procedura: ripristino di rssharepoint. msi dalla riga di comando](#bkmk_repair)  
+-   [Come ripristinare rssharepoint. msi dalla riga di comando](#bkmk_repair)  
   
--   [I file di Log del programma di installazione](#bkmk_logfiles)  
+-   [File di Log di installazione](#bkmk_logfiles)  
   
 -   [Aggiornamento](#bkmk_upgrade)  
   
 -   [RsCustomAction.exe](#bkmk_rscustomaction)  
   
 ##  <a name="bkmk_prereq"></a> Prerequisiti  
- L'installazione del componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rappresenta uno dei diversi passaggi necessari per l'integrazione di un server di report in un'istanza di un prodotto SharePoint. Per ulteriori informazioni sul set completo di requisiti per l'utilizzo della modalità SharePoint, vedere [requisiti Hardware e Software per Reporting Services in modalità SharePoint](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md). Per ulteriori informazioni sull'installazione e configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [installare Reporting Services SharePoint Mode for SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).  
+ L'installazione del componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rappresenta uno dei diversi passaggi necessari per l'integrazione di un server di report in un'istanza di un prodotto SharePoint. Per altre informazioni sul set completo di requisiti per l'utilizzo della modalità SharePoint, vedere [requisiti Hardware e Software per Reporting Services in modalità SharePoint](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md). Per altre informazioni sull'installazione e configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [installare Reporting Services SharePoint Mode for SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).  
   
 -   Se si integra [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una farm di SharePoint in cui sono presenti più applicazioni front-end Web, installare il componente aggiuntivo in ogni computer nella farm in cui è presente un server front-end Web. Eseguire questa operazione solo per i front-end Web che verranno utilizzati per accedere al contenuto del server di report.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36070220"
   
 -   È necessario essere un amministratore della raccolta siti per attivare la funzionalità di integrazione con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   Per i diagrammi delle distribuzioni di esempio con il componente aggiuntivo, vedere [topologie di distribuzione per SQL Server BI Features in SharePoint](../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
+-   Per i diagrammi delle distribuzioni di esempio con il componente aggiuntivo, vedere [topologie di distribuzione per le funzionalità di SQL Server BI in SharePoint](../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
   
 ##  <a name="bkmk_whatinstalled"></a> Informazioni sull'installazione del componente aggiuntivo  
  Il processo di installazione del componente aggiuntivo è costituito da due fasi. Entrambe vengono completate automaticamente al termine di un'installazione standard:  
@@ -80,20 +80,20 @@ ms.locfileid: "36070220"
   
 -   Lo strumento di preparazione prodotti SharePoint 2010 installa la versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è inclusa una nuova versione di questo componente aggiuntivo richiesta per le funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-     Se si esegue l'utilità preparazione prodotti SharePoint, è necessario installare il [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versione il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiuntivo.  
+     Se si esegue l'utilità preparazione prodotti SharePoint, è necessario installare il [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versione del [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiuntivo.  
   
--   Se si installa [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versione il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiuntivi prima di tutto, quando si esegue l'utilità preparazione prodotti SharePoint verrà visualizzato il seguente finestra di dialogo che indica la preparazione non è stata installata la versione precedente del componente aggiuntivo come la versione più recente è stata rilevata una versione. Tale comportamento è previsto.  
+-   Se si installano [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versione del [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiuntivo prima di tutto, quando si esegue l'utilità preparazione prodotti SharePoint verrà visualizzato la finestra di dialogo seguente che indica lo strumento di preparazione non è stato installato la versione precedente del componente aggiuntivo come la versione più recente è stata rilevata una versione. Tale comportamento è previsto.  
   
      ![Componente aggiuntivo SSRS è già installato. ] (../../../2014/sql-server/install/media/rs-sharepointprereq-complete.gif "Componente aggiuntivo SSRS è già installato.")  
   
  **SharePoint 2013**  
   
- Lo strumento di preparazione dei prodotti SharePoint 20103 **non** installare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiuntivo per prodotti SharePoint.  
+ Lo strumento di preparazione dei prodotti di SharePoint 20103 **non** installare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiuntivo per prodotti SharePoint.  
   
 ##  <a name="bkmk_3ways_to_install"></a> Panoramica sui metodi di installazione  
  È possibile installare il componente aggiuntivo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint mediante uno dei due metodi seguenti:  
   
--   **L'installazione guidata:** ![nota](../../../2014/reporting-services/media/rs-fyinote.png "nota")nuovo con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il componente aggiuntivo può essere installato per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione guidata. Scegliere **Componente aggiuntivo Reporting Services per prodotti SharePoint** nella pagina **Selezione funzionalità** della procedura guidata.  
+-   **L'installazione guidata:** ![nota](../../../2014/reporting-services/media/rs-fyinote.png "nota")New con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il componente aggiuntivo può essere installato per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione guidata. Scegliere **Componente aggiuntivo Reporting Services per prodotti SharePoint** nella pagina **Selezione funzionalità** della procedura guidata.  
   
 -   **rsSharepoint.msi:** il file del componente aggiuntivo può essere installato direttamente dal supporto di installazione o scaricato e installato. Il file rsSharepoint.msi supporta sia l'installazione tramite interfaccia utente grafica che quella da riga di comando. È necessario eseguire il file con estensione msi con privilegi di amministratore aprendo innanzitutto una finestra del prompt dei comandi con autorizzazioni elevate ed eseguendo quindi rsSharepoint.msi dalla riga di comando. Per altre informazioni, vedere [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
@@ -119,7 +119,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\`  
   
-3.  Nell'Amministrazione centrale SharePoint configurare le impostazioni e l'attivazione delle funzionalità del server di report. , Per ulteriori informazioni sull'installazione e configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint, vedere [installare Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
+3.  Nell'Amministrazione centrale SharePoint configurare le impostazioni e l'attivazione delle funzionalità del server di report. , Per altre informazioni sull'installazione e configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint, vedere [installare Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
 ###  <a name="bkmk_files_only_installation"></a> Installazione di tipo "solo file"  
  Per installare i file ignorando la fase di installazione delle azioni personalizzate, eseguire rssharepoint.msi dalla riga di comando con l'opzione SKIPCA:  
@@ -141,7 +141,7 @@ Rssharepoint.msi /?
   
 2.  Eseguire il file eseguibile di azioni personalizzate:  
   
-    1.  Passare alla cartella che contiene il file `rsCustomAction.exe`. Questo file viene copiato nel computer dal programma di installazione di tipo " solo file " del componente aggiuntivo. `rsCustomAction.exe` si trova nella **% Temp %** directory. Per passare al file, al prompt dei comandi digitare:  
+    1.  Passare alla cartella che contiene il file `rsCustomAction.exe`. Questo file viene copiato nel computer dal programma di installazione di tipo " solo file " del componente aggiuntivo. `rsCustomAction.exe` all'interno di **% Temp %** directory. Per passare al file, al prompt dei comandi digitare:  
   
          **CD %temp%**.  
   
@@ -311,6 +311,6 @@ Rssharepoint.msi /?
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)   
- [Server Reporting Services Report &#40;modalità SharePoint&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)  
+ [Reporting Services Report Server &#40;modalità SharePoint&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)  
   
   

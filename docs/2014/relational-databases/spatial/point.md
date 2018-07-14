@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Point geometry subtype [SQL Server]
 - geometry data type [SQL Server], spatial data
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e0bc6a80c1ce2fc6e9646114d5d5f856d89bdd04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6581a93e30e058e909b4e7df2bec7be6b52e4926
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331252"
 ---
 # <a name="point"></a>Punto
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati spaziali, un `Point` è un oggetto 0-dimensionale che rappresenta un'unica posizione e può contenere valori Z (innalzamento) e M (misura).  
+  Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati spaziali, un `Point` è un oggetto 0-dimensionale che rappresenta un'unica posizione e può contenere valore Z (innalzamento) e M (misura).  
   
 ## <a name="geography-data-type"></a>Tipo di dati geography  
  Il tipo Punto del tipo di dati geography rappresenta una singola posizione in cui *Lat* indica la latitudine e *Long* la longitudine. I valori di latitudine e longitudine vengono misurati in gradi. I valori della latitudine sono compresi sempre nell'intervallo [-90, 90], quelli al di fuori genereranno un'eccezione. I valori della longitudine sono compresi sempre nell'intervallo [-180, 180], quelli al fuori, per rientrare in tale intervallo, vengono arrotondati. Ad esempio, se il valore immesso per la longitudine è 190, verrà arrotondato a -170. *SRID* rappresenta l'ID di riferimento spaziale dell'istanza **geography** da restituire.  

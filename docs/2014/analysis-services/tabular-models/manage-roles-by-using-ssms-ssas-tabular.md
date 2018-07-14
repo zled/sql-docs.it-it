@@ -1,5 +1,5 @@
 ---
-title: Gestire ruoli tramite (SSAS TABULARE) | Documenti Microsoft
+title: Gestire ruoli tramite (SSAS TABULARE) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 907b1ea2b655c9da1b9754441be5a933ac8380af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5c1aa9fc419c80bed7ca38e6d0174fb723ca648
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226421"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Gestire ruoli tramite (SSAS tabulare)
   È possibile creare, modificare e gestire ruoli per un modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -62,12 +62,12 @@ ms.locfileid: "36069251"
   
 6.  Nella finestra delle impostazioni di appartenenza fare clic su **Aggiungi**e quindi, nella finestra di dialogo **Seleziona utenti o gruppi** , aggiungere gli utenti o i gruppi di Windows che si vuole aggiungere come membri.  
   
-7.  Se il ruolo in fase di creazione dispone dell'autorizzazione Lettura, è possibile aggiungere filtri di riga per qualsiasi tabella utilizzando una formula DAX. Per aggiungere filtri di riga, il **proprietà ruolo - \<rolename >** della finestra di dialogo **selezione pagina**, fare clic su **i filtri di riga**.  
+7.  Se il ruolo in fase di creazione dispone dell'autorizzazione Lettura, è possibile aggiungere filtri di riga per qualsiasi tabella utilizzando una formula DAX. Per aggiungere filtri di riga, il **proprietà ruolo - \<rolename >** nella finestra di dialogo **seleziona una pagina**, fare clic su **filtri di riga**.  
   
-8.  Nella finestra filtri di riga, selezionare una tabella, quindi fare clic sui **filtro DAX** campo e quindi il **filtro DAX - \<tablename >** digitare una formula DAX.  
+8.  Nella finestra filtri di riga, selezionare una tabella, quindi fare clic sul **filtro DAX** campo, quindi nel **filtro DAX - \<NomeTabella >** digitare una formula DAX.  
   
     > [!NOTE]  
-    >  Filtro DAX - \<tablename > campo non contiene un editor di query di completamento automatico o Inserisci funzione. Per usare il completamento automatico quando si scrive una formula DAX, è necessario usare un editor di formule DAX in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+    >  Filtro DAX - \<NomeTabella > campo non contiene un editor di query di completamento automatico o funzione caratteristica di inserimento. Per usare il completamento automatico quando si scrive una formula DAX, è necessario usare un editor di formule DAX in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 9. Fare clic su **OK** per salvare il ruolo.  
   
@@ -79,13 +79,13 @@ ms.locfileid: "36069251"
   
 -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il database del modello tabulare che contiene il ruolo da modificare, espandere **Ruoli**, quindi fare clic con il pulsante destro del mouse sul ruolo e fare clic su **Proprietà**.  
   
-     Nel **le proprietà del ruolo** \<rolename > finestra di dialogo, è possibile modificare le autorizzazioni, aggiungere o rimuovere membri e filtri di riga aggiunta/modifica.  
+     Nel **le proprietà del ruolo** \<rolename > finestra di dialogo, è possibile modificare le autorizzazioni, aggiungere o rimuovere membri e i filtri di riga aggiunta/modifica.  
   
 ###  <a name="bkmk_deletet_role"></a> Per eliminare un ruolo  
   
 -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il database del modello tabulare che contiene il ruolo da eliminare, espandere **Ruoli**, quindi fare clic con il pulsante destro del mouse sul ruolo e fare clic su **Elimina**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)  
+ [I ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)  
   
   

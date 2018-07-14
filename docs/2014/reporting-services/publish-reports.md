@@ -1,5 +1,5 @@
 ---
-title: Pubblicare i report | Documenti Microsoft
+title: Pubblicare i report | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], publishing
 - publishing reports [Reporting Services]
@@ -16,18 +16,18 @@ ms.assetid: ef5a514e-e818-4041-a8b0-15835f9a046b
 caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ff9106915fb683583b800688548703833c5ba0e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fec14c2f0d051259b45125c50c008f9850d02ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204981"
 ---
 # <a name="publish-reports"></a>Pubblicazione di report
-  Da[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], è possibile pubblicare in tutti i report e origini dati condivise di un progetto Server di Report in un server di report distribuendo il progetto oppure è possibile pubblicare un singolo report. Prima di pubblicare un report è necessario specificare l'URL del server di report di destinazione. Per altre informazioni, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md).  
+  Da[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], è possibile pubblicare tutti i i report e origini dati condivise in un progetto Server di Report in un server di report distribuendo il progetto o è possibile pubblicare un singolo report. Prima di pubblicare un report è necessario specificare l'URL del server di report di destinazione. Per altre informazioni, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md).  
   
- È possibile usare il [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] versione [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per aprire, modificare, visualizzare in anteprima, salvare e pubblicare i [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] e [!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)] i report. Per altre informazioni, vedere [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+ È possibile usare la [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] versione di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per aprire, modificare, visualizzare in anteprima, salvare e pubblicare entrambi [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] e [!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)] report. Per altre informazioni, vedere [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ### <a name="to-publish-all-reports-in-a-project"></a>Per pubblicare tutti i report di un progetto  
   
@@ -48,6 +48,6 @@ ms.locfileid: "36156866"
  [Anteprima dei report](reports/previewing-reports.md)   
  [Pubblicazione dei report in un server di report](reports/publishing-reports-to-a-report-server.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Esportazione di report &#40;SSRS e Generatore Report&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Esportazione di report &#40;Report e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

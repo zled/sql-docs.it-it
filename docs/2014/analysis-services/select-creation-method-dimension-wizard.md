@@ -1,5 +1,5 @@
 ---
-title: Seleziona metodo di creazione (Creazione guidata dimensione) | Documenti Microsoft
+title: Selezione metodo di creazione (Creazione guidata dimensione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensiondefinition.f1
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10d52966956d39f7a495e353bdf6acd595cc51ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d10005b2b689078eb7677547ebfc905fbdcc996
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267157"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>Seleziona metodo di creazione (Creazione guidata dimensione)
   Usare la pagina **Seleziona metodo di creazione** per scegliere la modalità di creazione della dimensione.  
@@ -31,7 +31,7 @@ ms.locfileid: "36069284"
 -   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare clic con il pulsante destro del mouse sulla cartella **Dimensioni**in **Esplora soluzioni** per scegliere un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , quindi fare clic su **Nuova dimensione**.  
   
 ## <a name="options"></a>Opzioni  
- **Utilizzare una tabella esistente**  
+ **Usare una tabella esistente**  
  Creare una dimensione da una o più tabelle in un'origine dati. Gli attributi disponibili per la dimensione dipenderanno dalla struttura dei dati nella tabella.  
   
  Per altre informazioni, vedere [Creare una dimensione utilizzando una tabella esistente](multidimensional-models/create-a-dimension-by-using-an-existing-table.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "36069284"
   
  Per altre informazioni, vedere [Create a Time Dimension by Generating a Time Table](multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)(Creare una dimensione temporale generando una tabella dei tempi).  
   
- **Genera una tabella non temporale nell'origine dei dati**  
+ **Genera una tabella non temporale nell'origine dati**  
  Progetta la dimensione senza un'origine dati relazionale sottostante, quindi genera lo schema necessario per l'origine dati. Questo approccio è noto come modellizzazione dall'alto in basso.  
   
 > [!NOTE]  
@@ -66,8 +66,8 @@ ms.locfileid: "36069284"
 >  Questa opzione è disponibile solo quando l'opzione **Genera una tabella diversa dalla tabella dei tempi nell'origine dati** è stata selezionata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [F1 Guida della procedura guidata di dimensione](dimension-wizard-f1-help.md)   
- [Le dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Guida F1 di creazione guidata dimensione](dimension-wizard-f1-help.md)   
+ [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

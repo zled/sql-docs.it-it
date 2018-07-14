@@ -24,13 +24,13 @@ ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 544f0e2a231c2f98e848f2450f1d04f16342083d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db35f89f79f6dcd5aeb4416dde78fa6308ceef7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264927"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Piano di esecuzione e allocazione di buffer
   Prima dell'esecuzione, l'attività Flusso di dati esamina i propri componenti e genera un piano di esecuzione per ogni sequenza di componenti. In questa sezione vengono fornite informazioni sul piano di esecuzione, su come visualizzarlo e su come influisce sull'allocazione dei buffer di input e output.  
@@ -89,6 +89,6 @@ End WorkThread1
   
  Poiché il buffer fornito a un componente contiene probabilmente più colonne di quelle presenti nelle raccolte di colonne di output o di input del componente, gli sviluppatori di componenti possono chiamare il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> per individuare una colonna nel buffer specificando `LineageID`.  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
   

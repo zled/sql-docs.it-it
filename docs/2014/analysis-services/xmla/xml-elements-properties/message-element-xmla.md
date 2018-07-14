@@ -1,5 +1,5 @@
 ---
-title: Elemento (XMLA) del messaggio | Documenti Microsoft
+title: Elemento (XMLA) del messaggio | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Message element
 ms.assetid: 028911e2-9779-43b1-824d-6d7fb2295885
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b88f9304c8d05863844c171f4c1efe5bcaf8073d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1fbeb2085c41e239e764621a89f34b4f17661584
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241271"
 ---
 # <a name="message-element-xmla"></a>Elemento Message (XMLA)
-  Contiene un messaggio restituito da un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] da un [Discover](../xml-elements-methods-discover.md) oppure [Execute](../xml-elements-methods-execute.md) chiamata al metodo.  
+  Contiene un messaggio restituito da un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] da una [Discover](../xml-elements-methods-discover.md) oppure [Execute](../xml-elements-methods-execute.md) chiamata al metodo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -67,8 +67,8 @@ ms.locfileid: "36070116"
 |Elementi padre|[Messaggi](messages-element-xmla.md)|  
 |Elementi figlio|[Errore](error-element-xmla.md), [avviso](warning-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
- Questo elemento viene utilizzato nei casi in cui una chiamata al metodo `Discover` o un singolo comando XMLA all'interno di una chiamata al metodo `Execute` viene completato correttamente, ma con errori o avvisi. In tali casi, all'elemento radice, dopo tutti gli altri elementi, viene aggiunto un elemento `Messages`, che contiene a sua volta uno o più elementi `Message`. Ogni `Message` elemento rappresenta un singolo messaggio, un errore o avviso, restituito dal [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza.  
+## <a name="remarks"></a>Note  
+ Questo elemento viene utilizzato nei casi in cui una chiamata al metodo `Discover` o un singolo comando XMLA all'interno di una chiamata al metodo `Execute` viene completato correttamente, ma con errori o avvisi. In tali casi, all'elemento radice, dopo tutti gli altri elementi, viene aggiunto un elemento `Messages`, che contiene a sua volta uno o più elementi `Message`. Ciascuna `Message` elemento rappresenta un singolo messaggio, un errore o avviso, restituito dalla [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;XMLA&#41;](xml-elements-properties.md)  

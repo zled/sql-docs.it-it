@@ -1,5 +1,5 @@
 ---
-title: Gli indicatori KPI (SSAS tabulare) | Documenti Microsoft
+title: Gli indicatori KPI (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3415f10896313e14b531489eb9c15ddf20ca1b04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2082afaf4928ffd563b064ac7aba84c973edb2c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233791"
 ---
 # <a name="kpis-ssas-tabular"></a>Indicatori KPI (SSAS tabulare)
   In un modello tabulare un indicatore di prestazioni chiave (*KPI*) viene usato per misurare le prestazioni di un valore, definito da una misura di *base*, rispetto a un valore di *destinazione*, definito anch'esso da una misura o da un valore assoluto. In questo argomento vengono fornite ai creatori di modelli tabulari informazioni di base sugli indicatori KPI in un modello tabulare.  
@@ -91,6 +91,6 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 ## <a name="see-also"></a>Vedere anche  
  [Le misure &#40;tabulare di SSAS&#41;](measures-ssas-tabular.md)   
- [Prospettive &#40;tabulare di SSAS&#41;](perspectives-ssas-tabular.md)  
+ [Le prospettive &#40;tabulare di SSAS&#41;](perspectives-ssas-tabular.md)  
   
   

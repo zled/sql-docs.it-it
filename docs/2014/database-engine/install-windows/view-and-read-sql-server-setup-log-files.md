@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing logs
 - displaying log files
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 464719261c375f01b2831f37481c330e9b00a246
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 365c5dca84514169082859900a1a3e065770f358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163352"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Visualizzare e leggere i file di log del programma di installazione di SQL Server
-  Ogni esecuzione del programma di installazione crea file di log con una nuova cartella dei log impostati i timestamp nel percorso % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\. Il formato del nome della cartella dei log con indicazione di data e ora è AAAAMMGG_hhmmss. L'esecuzione del programma di installazione in modalità automatica determina la creazione dei file di log nel percorso % temp%\sqlsetup*.log. Tutti i file inclusi nella cartella dei log vengono archiviati nel file Log\*.cab nella rispettiva cartella dei log.  
+  Ogni esecuzione del programma di installazione crea file di log con una nuova cartella dei log con timestamp nel percorso % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\. Il formato del nome della cartella dei log con indicazione di data e ora è AAAAMMGG_hhmmss. L'esecuzione del programma di installazione in modalità automatica determina la creazione dei file di log nel percorso % temp%\sqlsetup*.log. Tutti i file inclusi nella cartella dei log vengono archiviati nel file Log\*.cab nella rispettiva cartella dei log.  
   
  Una richiesta di installazione tipica viene eseguita in tre fasi:  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36156515"
 -   \<Funzionalità>_\<Architettura>\_\<Interazione>\_\<flusso di lavoro.log  
   
 ### <a name="location"></a>Percorso  
- I file di log MSI si trovano nel percorso % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< aaaammgg_hhmm >\\< nome\>. log.  
+ I file di log MSI si trovano nel percorso % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< aaaammgg_hhmm > \\\< nome\>. log.  
   
  Nella parte finale del file è incluso un riepilogo dell'esecuzione in cui sono indicati lo stato riuscito o non riuscito e le proprietà. Per individuare l'errore nel file MSI, eseguire la ricerca di "value 3", poiché gli errori si trovano in genere in prossimità di tale stringa.  
   

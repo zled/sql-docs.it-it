@@ -1,5 +1,5 @@
 ---
-title: Modifica delle misure | Documenti Microsoft
+title: Modifica delle misure | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: f95003c329dc121c3a743f1f4447a3aa8a9a506a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 447032ab32e222f3827c34020aef612e8125a518
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232381"
 ---
 # <a name="modifying-measures"></a>Modifica delle misure
   È possibile usare la proprietà **FormatString** per definire impostazioni di formattazione che controllano la modalità di visualizzazione delle misure agli utenti. In questa attività vengono impostate le proprietà di formattazione per le misure di valuta e di percentuale nel cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  
@@ -60,7 +60,7 @@ ms.locfileid: "36156107"
   
 7.  Nell'elenco a discesa nella parte superiore della finestra Proprietà sotto la barra del titolo selezionare la misura **Unit Price Discount Pct**, quindi selezionare **Percent** nell'elenco **FormatString** .  
   
-8.  Nella finestra Proprietà modificare il **nome** proprietà per il **Unit Price Discount Pct** misura `Unit Price Discount Percentage`.  
+8.  Nella finestra Proprietà modificare il **Name** proprietà per il **Unit Price Discount Pct** misura `Unit Price Discount Percentage`.  
   
 9. Nel **misure** riquadro, fare clic su **Tax Amt** e modificare il nome della misura in `Tax Amount`.  
   

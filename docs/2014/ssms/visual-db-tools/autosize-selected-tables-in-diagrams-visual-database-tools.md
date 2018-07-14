@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic database diagram table sizing
 - size [SQL Server], tables
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - autosizing objects in database diagrams
 ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4b7a7a234c29d44e2b1a1e08e54acda4e0f0b45c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 838243359ed637ae983254b8203314ed906c2f13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194451"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>Ridimensionamento automatico di tabelle selezionate nei diagrammi (Visual Database Tools)
   È possibile portare rapidamente le tabelle del diagramma alla minima dimensione che consente di visualizzare tutti i campi.  

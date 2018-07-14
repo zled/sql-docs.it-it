@@ -1,5 +1,5 @@
 ---
-title: Flat File Connection Manager Editor (pagina generale) | Documenti Microsoft
+title: Flat File Connection Manager Editor (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.general.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5109aee94d7f566da2f3cf3d61b1a9569d6a44e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09e0d8813ccb444bdbc2713a6a18d028f5f8d21b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209311"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>Editor gestione connessione file flat (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor gestione connessione file flat** per selezionare un file e un formato di dati. Una connessione file flat consente a un pacchetto di connettersi a un file di testo.  
@@ -88,8 +88,8 @@ ms.locfileid: "36156036"
  Consente di indicare se prevedere o fornire nomi di colonne nella prima riga di dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor gestione connessione File flat &#40;pagina colonne&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor gestione connessione File flat &#40;(pagina colonne)&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [Editor gestione connessione File flat &#40;pagina avanzate&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
  [Editor gestione connessione file flat &#40;pagina Anteprima&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   

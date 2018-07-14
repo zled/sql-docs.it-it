@@ -1,5 +1,5 @@
 ---
-title: Controllare l'elemento (ASSL) | Documenti Microsoft
+title: Elemento (ASSL) di controllo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Audit element
 ms.assetid: 26488119-6490-426d-a4e4-274b5bdffbc2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc059cfde938bebe2503108faf835271786c3150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d87e0c58dd944c140e57f89894cb98a32d9230d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163322"
 ---
 # <a name="audit-element-assl"></a>Elemento Audit (ASSL)
-  Specifica che un [traccia](../objects/trace-element-assl.md) elemento non è possibile eliminare qualsiasi evento, anche se ciò comporterà una riduzione delle prestazioni nel server.  
+  Specifica che un [traccia](../objects/trace-element-assl.md) elemento non possa eliminare eventi, anche se con conseguente riduzione delle prestazioni nel server.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,8 +61,8 @@ ms.locfileid: "36156569"
 |Elemento padre|[Traccia](../objects/trace-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `Audit` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Trace>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `Audit` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Analizza l'elemento &#40;ASSL&#41;](../collections/traces-element-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: Report pagina Cronologia (gestione Report) | Documenti Microsoft
+title: Report pagina della cronologia (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c9a696c8b095281633e0d3b631aa773dad9fdb77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e0a3cc0ce4cb29b34ac67d3becfc966217dfb1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196741"
 ---
 # <a name="report-history-page-report-manager"></a>Pagina Cronologia report (Gestione report)
   La pagina Cronologia report consente di visualizzare gli snapshot del report generati e archiviati nel corso del tempo. A seconda delle opzioni impostate nel server di report, è possibile che la cronologia del report includa solo gli snapshot più recenti.  

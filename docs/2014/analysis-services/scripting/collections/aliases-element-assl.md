@@ -1,5 +1,5 @@
 ---
-title: Elemento alias (ASSL) | Documenti Microsoft
+title: Elemento alias (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Aliases element
 ms.assetid: 9de9e683-d30d-4d61-b32d-c5a946825742
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60673c26bf4a430c842da0fb61c98de7242ccd1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 677434b5ea6383e5905a703225edb5e56e3fb4e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267687"
 ---
 # <a name="aliases-element-assl"></a>Elemento Alias (ASSL)
   Contiene la raccolta di [Alias](../properties/alias-element-assl.md) gli elementi associati a un [Account](../objects/account-element-assl.md) elemento  
@@ -63,11 +63,11 @@ ms.locfileid: "36156572"
 |Elementi padre|[Account](../objects/account-element-assl.md)|  
 |Elementi figlio|[Alias](../properties/alias-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento corrispondente dell'elemento padre del `Aliases` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Account>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `Aliases` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Account>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elemento account &#40;ASSL&#41;](accounts-element-assl.md)   
+ [Account di elemento &#40;ASSL&#41;](accounts-element-assl.md)   
  [Elemento database &#40;ASSL&#41;](../objects/database-element-assl.md)   
  [Le raccolte &#40;ASSL&#41;](collections-assl.md)  
   

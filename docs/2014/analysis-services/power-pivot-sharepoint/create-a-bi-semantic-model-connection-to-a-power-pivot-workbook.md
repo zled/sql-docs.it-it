@@ -1,5 +1,5 @@
 ---
-title: Creare una connessione BI Semantic Model a una cartella di lavoro di PowerPivot | Documenti Microsoft
+title: Creare una connessione BI Semantic Model a una cartella di lavoro di PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34e81c0f6023b6dee0c9770fdfde89a92eb2afc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab47a88ef1bda109cca1abbe27a975d9df9290ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328481"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Creare una connessione BISM (BI Semantic Model) a una cartella di lavoro di PowerPivot
   Utilizzare le informazioni di questo argomento per impostare una connessione BISM che reindirizza a una cartella di lavoro di PowerPivot nella stessa farm.  
@@ -41,9 +41,9 @@ ms.locfileid: "36156290"
 ##  <a name="bkmk_prereq"></a> Verificare i prerequisiti  
  Per creare un file di connessione BISM, è necessario disporre delle autorizzazioni di collaborazione.  
   
- È necessario disporre di una raccolta che supporta il tipo di contenuto della connessione BISM. Per altre informazioni, vedere [aggiungere un BI Semantic Model tipo di contenuto connessione a una raccolta &#40;PowerPivot per SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
+ È necessario disporre di una raccolta che supporta il tipo di contenuto della connessione BISM. Per altre informazioni, vedere [aggiungere una BI Semantic Model tipo di contenuto connessione a una raccolta &#40;PowerPivot per SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
- È necessario conoscere l'URL della cartella di lavoro di PowerPivot per cui si intende configurare una connessione BI semantic model (ad esempio, http://adventure-works/shared myworkbook). La cartella di lavoro deve essere nella stessa farm.  
+ È necessario conoscere l'URL della cartella di lavoro di PowerPivot per cui si imposta una connessione BI semantic model (ad esempio, http://adventure-works/shared myworkbook). La cartella di lavoro deve essere nella stessa farm.  
   
  Tutti i computer e gli utenti che partecipano nella sequenza di connessione devono essere nello stesso dominio o nel dominio attendibile (attendibilità bidirezionale).  
   
@@ -53,13 +53,13 @@ ms.locfileid: "36156290"
   
      ![Sottomenu nuovo documento in una raccolta di SharePoint](../media/ssas-bismconnection-new.gif "sottomenu nuovo documento in una raccolta di SharePoint")  
   
-2.  Impostare il **Server** proprietà all'URL di SharePoint della cartella di lavoro PowerPivot (ad esempio  **http://mysharepoint/shared myworkbook**. In una distribuzione di PowerPivot per SharePoint i dati possono essere caricati in qualsiasi server nella farm. Per questo motivo, le connessioni alle origine dati ai dati PowerPivot consentono di specificare solo il percorso alla cartella di lavoro. Il servizio di sistema PowerPivot consente di determinare il server tramite cui vengono caricati i dati.  
+2.  Impostare il **Server** proprietà all'URL di SharePoint della cartella di lavoro di PowerPivot (ad esempio  **http://mysharepoint/shared myworkbook**. In una distribuzione di PowerPivot per SharePoint i dati possono essere caricati in qualsiasi server nella farm. Per questo motivo, le connessioni alle origine dati ai dati PowerPivot consentono di specificare solo il percorso alla cartella di lavoro. Il servizio di sistema PowerPivot consente di determinare il server tramite cui vengono caricati i dati.  
   
-     Non usare la **Database** proprietà; non viene utilizzato quando si specifica il percorso di una cartella di lavoro di PowerPivot.  
+     Non usare la **Database** proprietà; non viene usato quando si specifica il percorso di una cartella di lavoro di PowerPivot.  
   
      La pagina dovrebbe essere simile a quanto illustrato nella figura seguente.  
   
-     ![Pagina di connessione BISM con URL alla cartella di lavoro](../media/ssas-bismconnection-ppvtds.gif "pagina di connessione BISM con URL alla cartella di lavoro")  
+     ![Pagina di connessione BISM con URL alla cartella di lavoro](../media/ssas-bismconnection-ppvtds.gif "pagina della connessione BISM che mostra URL alla cartella di lavoro")  
   
      Facoltativamente, se si dispone di autorizzazioni di SharePoint per la cartella di lavoro, viene eseguito un passaggio di convalida aggiuntivo, per verificare la validità del percorso. Se non si dispone dell'autorizzazione per accedere ai dati, è possibile salvare la connessione BISM senza la risposta della convalida.  
   
@@ -101,8 +101,8 @@ ms.locfileid: "36156290"
  Dopo avere creato e protetto una connessione BISM è possibile specificarla come origine dati. Per altre informazioni, vedere [Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Connessione BI Semantic Model PowerPivot &#40;con estensione bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
- [Utilizzare una connessione BI Semantic Model in Excel o Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [Connessione BI Semantic Model di PowerPivot &#40;con estensione bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
+ [Usare una connessione BI Semantic Model in Excel o Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [Creare una connessione BISM a un database modello tabulare](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

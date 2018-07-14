@@ -1,5 +1,5 @@
 ---
-title: Misurare gruppi (scheda partizioni, Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Misurare i gruppi (scheda partizioni, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitions.partitionspane.measuregroupdetail.f1
 ms.assetid: 58e44b24-cfcd-4908-b445-d4374b961b98
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 205b5260d67421cffe8b05abb4c27243d1dc8386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a372e8418692c0db98332b7fa67d8563265d1de4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249441"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Gruppi di misure (scheda Partizioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Gruppi di misure** della scheda **Partizioni** di Progettazione cubi per gestire le partizioni associate a ogni gruppo di misure nel cubo.  
@@ -70,10 +70,10 @@ ms.locfileid: "36069930"
 |**Nuova partizione**|Fare clic per visualizzare la **Creazione guidata partizione** e creare una nuova partizione nel gruppo di misure selezionato.|  
 |**Rinomina partizione**|Selezionare questa opzione per rinominare la partizione selezionata.|  
 |**Elimina**|Fare clic per visualizzare la finestra di dialogo **Elimina oggetti** ed eliminare l'azione selezionata.<br /><br /> Nota: questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
-|**Progetta aggregazioni**|Fare clic per visualizzare la **Progettazione guidata aggregazioni** e creare una progettazione delle aggregazioni per la partizione selezionata.<br /><br /> Nota: questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
+|**Progettare le aggregazioni**|Fare clic per visualizzare la **Progettazione guidata aggregazioni** e creare una progettazione delle aggregazioni per la partizione selezionata.<br /><br /> Nota: questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
 |**Impostazioni di archiviazione**|Fare clic per visualizzare la finestra di dialogo **Impostazioni di archiviazione** e specificare la modalità di archiviazione, la memorizzazione nella cache attiva e le impostazioni di notifica per la partizione selezionata.|  
 |**Impostazioni writeback**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Abilita/Disabilita writeback** e specificare le impostazioni writeback per il gruppo di misure contenente la partizione selezionata.|  
-|**Ottimizzazione basata sull'utilizzo**|Fare clic per visualizzare l' **Ottimizzazione guidata basata sulle statistiche di utilizzo** e creare una progettazione delle aggregazioni basata su modelli di utilizzo esistenti per la partizione selezionata.<br /><br /> Nota: questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
+|**Ottimizzazione basata sulle statistiche sull'utilizzo**|Fare clic per visualizzare l' **Ottimizzazione guidata basata sulle statistiche di utilizzo** e creare una progettazione delle aggregazioni basata su modelli di utilizzo esistenti per la partizione selezionata.<br /><br /> Nota: questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
 |**Process**|Fare clic per visualizzare la finestra di dialogo **Elabora** ed elaborare la partizione selezionata.|  
 |**Copia**|Questa opzione è disabilitata.|  
 |**Incolla**|Questa opzione è disabilitata.|  

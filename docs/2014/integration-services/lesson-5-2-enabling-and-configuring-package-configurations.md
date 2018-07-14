@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 caps.latest.revision: 39
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd88de02a035e041c887d7505cc8b2f35805e577
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 380676537e0035077e0fd37afda058a98c75c741
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274847"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Passaggio 2: Abilitazione e impostazione delle configurazioni dei pacchetti
   In questa attività si convertirà il progetto nel modello di distribuzione del pacchetto e si abiliteranno le configurazioni di pacchetto utilizzando la Configurazione guidata pacchetto. Questa procedura guidata consente di generare un file di configurazione XML contenente le impostazioni di configurazione per la proprietà `Directory` del contenitore Ciclo Foreach. Il valore della proprietà Directory è specificato da una variabile a livello di pacchetto che è possibile aggiornare in fase di esecuzione. Verrà inoltre popolata una cartella di dati di esempio da utilizzare durante il test.  
@@ -45,7 +45,7 @@ ms.locfileid: "36069415"
   
 8.  Nella pagina **Raccolta** di **Editor ciclo Foreach**fare clic su **Espressioni**e quindi sul pulsante con i puntini di sospensione **(…)**.  
   
-9. Nel **Editor espressioni di proprietà**, fare clic nella **proprietà** elenco e selezionare `Directory`.  
+9. Nel **Editor espressioni di proprietà**, fare clic nella **proprietà** elencare e selezionare `Directory`.  
   
 10. Nella casella **Espressione** fare clic sul pulsante con i puntini di sospensione **(…)**.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36069415"
   
 14. Nella pagina **Completamento procedura guidata** digitare un nome per la configurazione, ad esempio **SSIS Tutorial Directory configuration**. Si tratta del nome della configurazione visualizzato nella finestra di dialogo **Libreria configurazioni pacchetto** .  
   
-15. Fare clic su **Fine**.  
+15. Scegliere **Fine**.  
   
 16. Scegliere **Chiudi**.  
   
@@ -102,13 +102,13 @@ ms.locfileid: "36069415"
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>Per creare e popolare una nuova cartella di dati di esempio  
   
-1.  In Esplora risorse, al livello radice dell'unità (ad esempio c:.\\), creare una nuova cartella denominata `New Sample Data`.  
+1.  In Windows Explorer, a livello di radice dell'unità (ad esempio, c\\), creare una nuova cartella denominata `New Sample Data`.  
   
 2.  Individuare i file di esempio nel computer e copiare tre dei file nella cartella.  
   
 3.  Nel `New Sample Data` cartella, incollare i file copiati.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Passaggio 3: Modifica il valore di configurazione di proprietà Directory](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [Passaggio 3: Modifica del valore di configurazione della proprietà Directory](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   

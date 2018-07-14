@@ -1,5 +1,5 @@
 ---
-title: Configurare le proprietà comportamento tabella per i report di Power View (SSAS tabulare) | Documenti Microsoft
+title: Configurare le proprietà comportamento tabella per i report di Power View (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cae146a14e85ed1e41a771f6ad97a9589f0fe272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6ca5036b2e3355ba4866096206296538f07bbae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267198"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurare le proprietà Comportamento tabella per i report Power View (SSAS tabulare)
   Se si usa un modello tabulare come modello di dati per [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], è possibile impostare le proprietà del comportamento delle tabelle che espongono righe di dettaglio a un livello più granulare. L'impostazione delle proprietà del comportamento delle tabelle comporta la modifica del comportamento di raggruppamento delle righe di dettaglio e offre una posizione predefinita migliore per le informazioni di identificazione quali nomi, ID foto o immagini del logo nei layout di sezioni, schede e grafici.  
@@ -109,7 +109,7 @@ ms.locfileid: "36155692"
   
  Per modificare il comportamento di raggruppamento predefinito, impostare le proprietà **Identificatore di riga** e **Mantieni righe univoche** . In **Mantieni righe univoche**scegliere la colonna Cognome in modo che questo valore venga ripetuto per una riga, anche se è già visualizzato in un'altra. Dopo aver modificato le proprietà e aver ripubblicato la cartella di lavoro, è possibile creare lo stesso report, ma questa volta verranno visualizzati entrambi i clienti con nome **Jon Yang**, con il valore di **Annual Income** allocato correttamente a ognuno di loro.  
   
- ![Riga di dati contenenti duplicati basati sull'ID di riga](../media/ssas-jonyang.gif "riga contenenti duplicati basati sull'ID della riga di dati")  
+ ![Riga di dati contenenti duplicati basati sull'ID di riga](../media/ssas-jonyang.gif "riga contenenti duplicati basati sull'ID di riga di dati")  
   
 ### <a name="matrix-layout-is-too-crowded"></a>Il layout della matrice contiene troppi valori  
  Quando si presenta una tabella di dettagli in una matrice, il raggruppamento predefinito fornisce un valore riepilogato per ogni colonna. A seconda degli obiettivi è anche possibile che il livello di riepilogo sia eccessivo. Per modificare questo comportamento, è possibile impostare **Identificatore di riga**. Non è necessario impostare altre proprietà. L'impostazione della proprietà Identificatore di riga è sufficiente per modificare il raggruppamento in modo che i riepiloghi vengano calcolati per ogni riga in base al relativo identificatore di riga univoco.  

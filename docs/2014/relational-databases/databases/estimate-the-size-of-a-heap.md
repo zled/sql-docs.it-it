@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - disk space [SQL Server], indexes
 - estimating heap size
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - heaps
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 49e8f426443784cd84a226fd1bce79f9042b87ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cd6d7c46c1f1aed62f0196640175bb566bca7471
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203333"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Stima delle dimensioni di un heap
   I seguenti passaggi sono utilizzabili per valutare la quantità di spazio necessaria per l'archiviazione dei dati in un heap:  
@@ -61,7 +61,7 @@ ms.locfileid: "36077812"
      I byte aggiunti a ***Max_Var_Size*** servono a tenere traccia di ogni colonna a lunghezza variabile. Questa formula si basa sul presupposto che tutte le colonne a lunghezza variabile siano piene al 100%. Se si prevede una percentuale inferiore di utilizzo dello spazio di archiviazione delle colonne a lunghezza variabile, è possibile modificare il valore di ***Max_Var_Size*** in base a tale percentuale per ottenere una stima più accurata delle dimensioni complessive della tabella.  
   
     > [!NOTE]  
-    >  È possibile combinare `varchar`, `nvarchar`, `varbinary`, o `sql_variant` colonne che determinano la larghezza totale definita della tabella superano gli 8.060 byte. La lunghezza di ognuna di queste colonne deve comunque rientrare nel limite di 8.000 byte per un `varchar`, `nvarchar,``varbinary`, o `sql_variant` colonna. Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella.  
+    >  È possibile combinare `varchar`, `nvarchar`, `varbinary`, o `sql_variant` colonne che determinano la larghezza totale definita della tabella superano gli 8.060 byte. La lunghezza della ognuno di tali colonne deve comunque rientrare nel limite di 8.000 byte per un `varchar`, `nvarchar,``varbinary`, o `sql_variant` colonna. Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella.  
   
      Se non sono disponibili colonne di lunghezza variabile, impostare ***Variable_Data_Size*** su 0.  
   

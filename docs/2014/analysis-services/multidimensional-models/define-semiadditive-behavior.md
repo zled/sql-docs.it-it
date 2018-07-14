@@ -1,5 +1,5 @@
 ---
-title: Definisci funzioni semiadditive | Documenti Microsoft
+title: Definisci funzioni semiadditive | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8aa76cf01672dec4edde7ded1049efbd2035839f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a96921b37affe35fcb4344a66ef36aaf26cadeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265417"
 ---
 # <a name="define-semiadditive-behavior"></a>Definire una funzione semiadditiva
   Le misure semiadditive, che non aggregano in modo uniforme di tutte le dimensioni, sono molto comuni in numerosi scenari aziendali. Ogni cubo basato su snapshot di saldi nel tempo sono caratterizzati da questo problema. Questi snapshot si trovano in applicazioni per la gestione di titoli, saldi contabili, budget, risorse umane, polizze e risarcimenti assicurativi e numerosi altri scenari aziendali.  
@@ -38,7 +38,7 @@ ms.locfileid: "36069929"
  Nella pagina **Definizione funzioni semiadditive** della procedura guidata selezionare la modalità di definizione delle funzioni semiadditive selezionando una delle opzioni seguenti:  
   
  **Disabilita funzioni semiadditive**  
- Consente di rimuovere le funzioni semiadditive da un cubo in cui tali funzioni sono state precedentemente definite. Questa selezione reimposta una misura per `SUM` se è impostata su uno qualsiasi dei tipi di funzione di aggregazione seguenti:  
+ Consente di rimuovere le funzioni semiadditive da un cubo in cui tali funzioni sono state precedentemente definite. Questa selezione consente di reimpostare una misura a `SUM` se è impostata su uno qualsiasi dei tipi di funzione di aggregazione seguenti:  
   
 -   By Account  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36069929"
   
  Questa opzione non modifica le misure con una funzione di aggregazione regolare: `Sum`, `Min`, `Max`, `Count`, o `Distinct``Count`.  
   
- **È stata rilevata la dimensione di tipo Conti, "Conto", che contiene membri semiadditivi. Il server aggregherà i membri di questa dimensione in base a semiadditive specificate per ogni tipo di conto.**  
+ **È stata rilevata la dimensione di tipo Conti, "Conto", che contiene membri semiadditivi. Il server aggregherà i membri di questa dimensione in base alle funzioni semiadditive specificate per ogni tipo di account.**  
  Tutte le misure di un gruppo di misure dimensionate in base a una dimensione di tipo Conti verranno impostate dal sistema sulla funzione di aggregazione By Account e i membri della dimensione verranno aggregati dal server in base alle funzioni semiadditive specificate per ogni tipo di conto.  
   
 > [!NOTE]  

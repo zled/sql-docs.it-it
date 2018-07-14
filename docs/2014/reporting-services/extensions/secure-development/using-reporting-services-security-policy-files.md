@@ -20,15 +20,15 @@ helpviewer_keywords:
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 caps.latest.revision: 31
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 01ec71af4094dd67d93dc49b881bb7ca22b2a580
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6cce76e0d7ae2aaec45c851fa0ab7ee4e65dedff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222991"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Utilizzo di file di criteri di sicurezza di Reporting Services
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] le informazioni sui criteri di sicurezza dei componenti sono archiviate in tre file di configurazione che vengono copiati nel file system durante l'installazione. Questi file possono contenere una combinazione di criteri di sicurezza per uso interno e definiti dall'utente per gli assembly del codice in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. I tre file di configurazione corrispondono a tre componenti a sicurezza diretta in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ovvero il server di report e il servizio Windows, l'applicazione Web Gestione report e la finestra di anteprima Progettazione report.  

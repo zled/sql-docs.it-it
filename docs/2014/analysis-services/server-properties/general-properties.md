@@ -1,5 +1,5 @@
 ---
-title: Proprietà generali | Documenti Microsoft
+title: Proprietà generali | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IdleConnectionTimeout property
 - InstanceVisible property
@@ -39,15 +39,15 @@ helpviewer_keywords:
 - RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 42b6dcdd7407faff8dace8ac7d63bd8bce50c337
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80c01a4282dbdc0e212068bd3f6d2da41b96d069
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216031"
 ---
 # <a name="general-properties"></a>Proprietà generali
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server elencate nelle tabelle seguenti. In questo argomento vengono documentate le proprietà del server disponibili nel file msmdsrv.ini che non sono incluse in una sezione specifica, ad esempio Sicurezza, Rete o Pool di thread. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -135,7 +135,7 @@ ms.locfileid: "36156277"
  Per altre informazioni su questa proprietà, vedere [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(Guida operativa di SQL Server 2008 R2 Analysis Services).  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` si applica ai comandi di elaborazione del cubo e alle operazioni di writeback.  
+>  `ForceCommitTimeout` si applica ai comandi di elaborazione di cubi e alle operazioni di writeback.  
   
  `IdleConnectionTimeout`  
  Proprietà Integer che specifica un timeout, espresso in secondi, per le connessioni inattive.  

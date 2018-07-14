@@ -1,39 +1,38 @@
 ---
-title: Editor dell'elenco proprietà di ricerca | Documenti Microsoft
+title: Editor elenco proprietà di ricerca | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.searchpropertylisteditor.f1
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 caps.latest.revision: 26
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e34bcf522675e13e9b1fa987f0f3bfc6aba36efb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f55070e129328e8b876a97382bfca4462a4cf70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231531"
 ---
 # <a name="search-property-list-editor"></a>Editor dell'elenco delle proprietà di ricerca
   Utilizzare questa finestra di dialogo per aggiungere o eliminare proprietà di ricerca in un elenco di proprietà di ricerca.  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>Per utilizzare SQL Server Management Studio per gestire gli elenchi di proprietà di ricerca  
- Per informazioni su come creare, visualizzare o eliminare un elenco di proprietà di ricerca e su come configurare un indice full-text per la ricerca di proprietà, vedere [le proprietà di documento di ricerca con elenchi di proprietà di ricerca](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Per informazioni su come creare, visualizzare o eliminare un elenco di proprietà di ricerca e su come configurare un indice full-text per la ricerca di proprietà, vedere [proprietà del documento di ricerca con elenchi delle proprietà di ricerca](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="options"></a>Opzioni  
  **Nome della proprietà**  
  Specificare il nome da utilizzare per identificare la proprietà nelle query full-text. Un nome di proprietà può contenere spazi interni. La lunghezza massima consentita per **Nome proprietà** è 256 caratteri. Questo nome può essere un nome descrittivo, ad esempio "Autore" o "Indirizzo abitazione" oppure il nome canonico Windows della proprietà, ad esempio `System.Author` o `System.Contact.HomeAddress`. **Nome proprietà** deve identificare in modo univoco la proprietà all'interno del set di proprietà.  
   
- Gli sviluppatori di utilizzano il nome della proprietà per identificare la proprietà nel [CONTAINS](/sql/t-sql/queries/contains-transact-sql) predicato. Quando si aggiunge una proprietà è pertanto importante specificare un valore che la rappresenti in modo significativo.  
+ Gli sviluppatori di usano il nome della proprietà per identificare la proprietà nel [CONTAINS](/sql/t-sql/queries/contains-transact-sql) predicato. Quando si aggiunge una proprietà è pertanto importante specificare un valore che la rappresenti in modo significativo.  
   
  **GUID del Set di proprietà**  
  Consente di specificare l'identificatore del set di proprietà a cui appartiene la proprietà. Si tratta di un identificatore univoco globale (GUID, Globally Unique Identifier). Un set di proprietà è un gruppo di proprietà correlate logicamente. Per informazioni sull'acquisizione di questo valore, vedere la sezione "Osservazioni" più avanti in questo argomento.  
@@ -47,7 +46,7 @@ ms.locfileid: "36156258"
  **Descrizione della proprietà**  
  Se lo si desidera, è possibile specificare una descrizione per la proprietà. Si tratta di una stringa composta da un massimo di 512 caratteri. Una descrizione può ad esempio contenere informazioni sul set di proprietà della proprietà stessa oppure informazioni su una proprietà che non è possibile dedurre dal nome.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per aggiungere una proprietà di ricerca a un elenco di proprietà di ricerca, è necessario specificare l'identificatore univoco globale (GUID) del set di proprietà a cui appartiene la proprietà e l'identificatore di tipo integer della proprietà. Una combinazione specifica di questi elementi deve essere univoca in un determinato elenco di proprietà di ricerca. Se si tenta di aggiungere una combinazione esistente, l'operazione ha esito negativo e viene restituito un errore. Ciò significa che è possibile configurare un solo nome per una proprietà specifica.  
   
  La descrizione della proprietà è facoltativa.  
@@ -57,7 +56,7 @@ ms.locfileid: "36156258"
 -   [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Vedere [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
+ Visualizzare [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)   

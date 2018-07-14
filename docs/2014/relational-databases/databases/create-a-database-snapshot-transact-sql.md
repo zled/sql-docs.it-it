@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95c50d2f0859b6da42788d53493c1d49f7900a13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 97b460cf5508c1b95c9d9acedd02d68e5e0acd79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191941"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Creare uno snapshot del database (Transact-SQL)
   L'unico modo per creare uno snapshot del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non supporta la creazione di snapshot del database.  
@@ -34,7 +34,7 @@ ms.locfileid: "36157996"
   
      [Procedura consigliata: Denominazione degli snapshot del database](#Naming)  
   
--   **Per creare un snapshot del database utilizzando:**[Transact-SQL  ](#TsqlProcedure)  
+-   **Per creare un snapshot del database usando:**[Transact-SQL  ](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -154,7 +154,7 @@ GO
 ```  
   
 ####  <a name="Creating_on_Sales"></a> B. Creazione di uno snapshot del database Sales  
- In questo esempio viene creato uno snapshot, `sales_snapshot1200`, del database `Sales` . Questo database è stato creato nell'esempio "Creazione di un database con filegroup" in [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
+ In questo esempio viene creato uno snapshot, `sales_snapshot1200`, del database `Sales` . Questo database è stato creato nell'esempio, "Creazione di un database con filegroup" nella [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  

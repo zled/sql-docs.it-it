@@ -1,5 +1,5 @@
 ---
-title: Analizza in Excel (scheda esplorazione, Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Analizza in Excel (scheda esplorazione, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.datapane.f1
 - sql12.asvs.ssms.analyzeinexcel.f1
 ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6e20d95fc7d1a097f50eb5cca4937cc62580ef3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4717a4430cb7f9b266acf73b637987995ffe932
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196701"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Analizza in Excel (scheda Esplorazione, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   La funzionalità**Analizza in Excel** offre allo sviluppatore del cubo un modo per verificare rapidamente come apparirebbe un progetto all'utente finale. La funzionalità **Analizza in Excel** consente di aprire Microsoft Excel, creare una connessione origine dati al database dell'area di lavoro modello e di aggiungere automaticamente una tabella pivot al foglio di lavoro. Questa funzionalità sostituisce il controllo Web di Office che nelle versioni precedenti forniva una tabella pivot incorporata nella scheda Esplorazione.  
@@ -56,8 +56,8 @@ ms.locfileid: "36156394"
   
 ## <a name="see-also"></a>Vedere anche  
  [Browser &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra degli strumenti &#40;scheda esplorazione, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [I metadati &#40;scheda esplorazione, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Sulla barra degli strumenti &#40;scheda esplorazione, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Metadati &#40;scheda esplorazione, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Progettazione query e filtro &#40;scheda esplorazione, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

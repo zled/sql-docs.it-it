@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - IsWebServiceEnabled
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - IsWebServiceEnabled property
 ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 801730452440b2cf14af60020946471a9d9ea763
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bac5aa00d0ef03c842a0189988994c8efe24be08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166289"
 ---
 # <a name="iswebserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>Proprietà IsWebServiceEnabled (MSReportServer_ConfigurationSetting WMI)
   Indica se il servizio Web ReportServer è abilitato. Di sola lettura.  
@@ -43,7 +43,7 @@ public boolean IsWebServiceEnabled;
 ```  
   
 ## <a name="property-values"></a>Valori della proprietà  
- Sola lettura `Boolean` valore. Il valore `true` indica che il servizio Web ReportServer è abilitato.  
+ Sola lettura `Boolean` valore. Un valore di `true` indica che il servizio Web ReportServer è abilitato.  
   
 ## <a name="example-code"></a>Codice di esempio  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e3b250b955028e3f0843699688713cb731f00fee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a5048132c50460475ffe9c04f0f03a75cf6368b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166302"
 ---
 # <a name="load-xml-data"></a>Caricamento dati XML
   È possibile trasferire dati XML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in diversi modi. Esempio:  
@@ -31,7 +31,7 @@ ms.locfileid: "36158389"
   
 -   È possibile eseguire una copia bulk dei dati da un altro database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando bcp out e quindi eseguire un inserimento bulk dei dati nel database di una versione successiva usando bcp in.  
   
--   Se i dati si trovano in colonne relazionali in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , creare una nuova tabella con una colonna di tipo [n]text e, facoltativamente, una colonna chiave primaria per un identificatore di riga. Utilizzo di programmazione per recuperare i dati XML generati nel server con FOR XML sul lato client e scriverli nella `[n]text` colonna. Usare quindi le tecniche illustrate in precedenza per trasferire i dati in un database di una versione successiva. È possibile scegliere di scrivere i dati XML direttamente in una colonna XML nel database di una versione successiva.  
+-   Se i dati si trovano in colonne relazionali in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , creare una nuova tabella con una colonna di tipo [n]text e, facoltativamente, una colonna chiave primaria per un identificatore di riga. Uso di programmazione per recuperare il XML generato nel server con FOR XML sul lato client e scriverli nella `[n]text` colonna. Usare quindi le tecniche illustrate in precedenza per trasferire i dati in un database di una versione successiva. È possibile scegliere di scrivere i dati XML direttamente in una colonna XML nel database di una versione successiva.  
   
 ## <a name="bulk-loading-xml-data"></a>Caricamento bulk di dati XML  
  È possibile eseguire un caricamento bulk dei dati XML nel server utilizzando le funzionalità per il caricamento bulk disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio bcp. OPENROWSET consente di caricare dati in una colonna XML da uno o più file, come illustrato nell'esempio seguente.  
@@ -54,10 +54,10 @@ FROM    (SELECT *
   
 -   Se viene utilizzata una codifica implicita diversa da Unicode, a causa della tabella codici di origine, la tabella codici per le stringhe nel database dovrà essere uguale o compatibile con i punti di codice da caricare. Se necessario, utilizzare COLLATE. Se tale tabella codici non esiste sul server, sarà necessario aggiungere una dichiarazione XML esplicita con la codifica appropriata.  
   
--   Per usare una codifica esplicita, utilizzare il `varbinary()` digitare, che non ha alcuna interazione con le tabelle codici, oppure utilizzare un tipo stringa della tabella codici appropriata. Assegnare quindi i dati a una colonna, a una variabile o a un parametro XML.  
+-   Per usare una codifica esplicita, usare il `varbinary()` digitare, che non ha alcuna interazione con le tabelle codici, oppure utilizzare un tipo di stringa della tabella codici appropriata. Assegnare quindi i dati a una colonna, a una variabile o a un parametro XML.  
   
 ### <a name="example-explicitly-specifying-an-encoding"></a>Esempio: impostazione di una codifica in modo esplicito  
- Si consideri un documento XML di nome vcdoc, archiviato come `varchar(max)` e che non include una dichiarazione XML esplicita. L'istruzione seguente aggiunge una dichiarazione XML con codifica "iso8859-1", concatena il documento XML, esegue il cast del risultato a `varbinary(max)` in modo che la rappresentazione dei byte viene mantenuta e infine esegue il cast in formato XML. Questo consente al processore XML di analizzare i dati in base alla codifica specificata, "iso8859-1", e di generare la rappresentazione UTF-16 corrispondente per i valori stringa.  
+ Si consideri un documento XML di nome vcdoc, archiviato come `varchar(max)` e che non include una dichiarazione XML esplicita. L'istruzione seguente aggiunge una dichiarazione XML con codifica "iso8859-1", concatena il documento XML, viene eseguito il cast del risultato a `varbinary(max)` in modo che la rappresentazione dei byte viene mantenuta e infine esegue il cast in formato XML. Questo consente al processore XML di analizzare i dati in base alla codifica specificata, "iso8859-1", e di generare la rappresentazione UTF-16 corrispondente per i valori stringa.  
   
 ```  
 SELECT CAST(   

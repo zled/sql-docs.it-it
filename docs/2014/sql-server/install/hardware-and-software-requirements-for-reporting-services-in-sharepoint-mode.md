@@ -1,5 +1,5 @@
 ---
-title: Requisiti hardware e Software per Reporting Services in modalità SharePoint | Documenti Microsoft
+title: Requisiti hardware e Software per Reporting Services in modalità SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 6b02fd6592ce8b57900bf3c8e5558a6b3cfacc86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27e25103ae362a664a4432ee62befd0efbc9681a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166142"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Requisiti hardware e software per Reporting Services in modalità SharePoint
   In questo argomento vengono descritti i prerequisiti, i requisiti hardware e le considerazioni sull'installazione per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in esecuzione in modalità SharePoint. Dal momento la modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede un server SharePoint, la maggior parte dei requisiti sono basati sull'ambiente SharePoint. Per i server di report in modalità nativa è consigliabile soddisfare i requisiti hardware e software minimi per l'esecuzione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per ulteriori informazioni, vedere [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "36157079"
  Esaminare la [documentazione di Power View](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) più aggiornata su Office.Microsoft.com. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] è ora una funzionalità di Microsoft Excel 2013 ed è incluso nel componente aggiuntivo di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services per Microsoft SharePoint Server 2010 e 2013 Enterprise Edition.  
   
 ##  <a name="bkmk_more_information"></a> Ulteriori informazioni  
- Per informazioni sulle modifiche di SharePoint, vedere [cambia da SharePoint 2010 a SharePoint 2013](http://technet.microsoft.com/library/ff607742\(office.15\).aspx) (http://technet.microsoft.com/en-us/library/ff607742(office.15).aspx).  
+ Per informazioni sulle modifiche di SharePoint, vedere [modifiche da SharePoint 2010 a SharePoint 2013](http://technet.microsoft.com/library/ff607742\(office.15\).aspx) (http://technet.microsoft.com/en-us/library/ff607742(office.15).aspx).  
   
  [Note sulla versione di SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
   

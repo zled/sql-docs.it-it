@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring file state [SQL Server]
 - verifying file states
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - defunct file state
 ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 45e3ba1a08866143c89f07c5e3f475fe7dc284f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 81bf032af5451464cafcbadf04834fd7f247396a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329855"
 ---
 # <a name="file-states"></a>Stati dei file
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lo stato di un file di database viene gestito in modo indipendente dallo stato del database. Lo stato di un file è sempre specifico, ad esempio ONLINE o OFFLINE. Per visualizzare lo stato corrente di un file, usare la vista del catalogo [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) o [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) . Se il database è offline, lo stato dei file è indicato nella vista del catalogo [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) .  

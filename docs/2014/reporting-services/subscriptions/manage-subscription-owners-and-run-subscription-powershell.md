@@ -1,5 +1,5 @@
 ---
-title: Usare PowerShell per modificare ed elenco Reporting Services Subscription Owners and Run a Subscription | Documenti Microsoft
+title: Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: daed1f77d5e1470f39e8ad2d7afe52e66db7e219
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31bf54cf103a269900ce9edc6caf9ec192a4f4b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323821"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione
-  A partire da [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] a livello di codice è possibile trasferire la proprietà di un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sottoscrizione da un utente a un altro. In questo argomento sono disponibili alcuni script di Windows PowerShell che possono essere usati per modificare o semplicemente elencare la proprietà delle sottoscrizioni. Ogni esempio include sintassi di esempio per la modalità nativa e la modalità SharePoint. Dopo la modifica del proprietario, la sottoscrizione sarà eseguita nel contesto di protezione del nuovo proprietario e nel campo User!UserID nel report sarà visualizzato il valore relativo al nuovo proprietario. Per altre informazioni sul modello a oggetti chiamato dagli esempi di PowerShell, vedere <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+  A partire [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] a livello di codice è possibile trasferire la proprietà di un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sottoscrizione da un utente a un altro. In questo argomento sono disponibili alcuni script di Windows PowerShell che possono essere usati per modificare o semplicemente elencare la proprietà delle sottoscrizioni. Ogni esempio include sintassi di esempio per la modalità nativa e la modalità SharePoint. Dopo la modifica del proprietario, la sottoscrizione sarà eseguita nel contesto di protezione del nuovo proprietario e nel campo User!UserID nel report sarà visualizzato il valore relativo al nuovo proprietario. Per altre informazioni sul modello a oggetti chiamato dagli esempi di PowerShell, vedere <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  ![Contenuto correlato di PowerShell](../media/rs-powershellicon.jpg "Contenuto correlato di PowerShell")  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36069978"
   
  **Modalità nativa:**  
   
--   Elencare le sottoscrizioni: (HYPERLINK "http://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription sul report e l'utente sia il proprietario della sottoscrizione) o ReadAnySubscription  
+-   List Subscriptions: (HYPERLINK "http://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription sul report e l'utente è proprietario della sottoscrizione) o ReadAnySubscription  
   
 -   Change Subscriptions: The user must be a member of the BUILTIN\Administrators group  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36069978"
   
  **Modalità SharePoint:**  
   
--   Elencare le sottoscrizioni: ManageAlerts o (HYPERLINK "http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts sul report e l'utente è proprietario della sottoscrizione e la sottoscrizione è una sottoscrizione).  
+-   List Subscriptions: ManageAlerts o (HYPERLINK "http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts sul report e l'utente è proprietario della sottoscrizione e la sottoscrizione è una sottoscrizione pianificata).  
   
 -   Change Subscriptions: ManageWeb  
   
@@ -339,7 +339,7 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  `</Event>`  
   
- Per ulteriori informazioni sul file di configurazione, vedere [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md).  
+ Per altre informazioni sul file di configurazione, vedere [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
  Lo script include logica di ritardo di tipo "`Start-Sleep -s 6`". Dopo l'attivazione dell'evento è quindi disponibile tempo per rendere disponibile lo stato aggiornato con il metodo ListSubscription.  
   

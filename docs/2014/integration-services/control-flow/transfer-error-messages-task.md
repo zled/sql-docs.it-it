@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6d8bc72c3c713dc1a113490431f4dba81c2a11a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d7a40c86c0dba2a4b2db08305f7fea379a97b1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201851"
 ---
 # <a name="transfer-error-messages-task"></a>Attività Trasferisci messaggi di errore
   L'attività Trasferisci messaggi di errore trasferisce uno o più messaggi di errore definiti dall'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I messaggi definiti dall'utente sono messaggi con un identificatore che è uguale o maggiore di 50000. I messaggi con identificatore minore di 50000 sono messaggi di errore di sistema e non possono essere trasferiti utilizzando l'attività Trasferisci messaggi di errore.  
@@ -50,7 +50,7 @@ ms.locfileid: "36156049"
  Non viene riportato lo stato incrementale del trasferimento, ma solo il completamento 0% e 100%.  
   
 ## <a name="execution-value"></a>Valore di esecuzione  
- Il valore di esecuzione, definito nella proprietà `ExecutionValue` dell'attività, restituisce il numero di messaggi di errore trasferiti. Tramite l'assegnazione di una variabile definita dall'utente per il `ExecValueVariable` proprietà dell'attività messaggio di errore di trasferimento, informazioni sul trasferimento dei messaggi di errore possono essere rese disponibili ad altri oggetti nel pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
+ Il valore di esecuzione, definito nella proprietà `ExecutionValue` dell'attività, restituisce il numero di messaggi di errore trasferiti. Tramite l'assegnazione di una variabile definita dall'utente per il `ExecValueVariable` proprietà del messaggio di errore di trasferimento attività, informazioni sul trasferimento di messaggio di errore possono essere rese disponibili ad altri oggetti nel pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Voci di log  
  L'attività Trasferisci messaggi di errore include le voci di log personalizzate seguenti:  
@@ -59,7 +59,7 @@ ms.locfileid: "36156049"
   
 -   TransferErrorMessagesTaskFinishedTransferringObjects    Indica che il trasferimento è stato completato. La voce di log include l'ora di fine.  
   
- Inoltre, una voce di log per il `OnInformation` evento riporta il numero di messaggi di errore che sono stati trasferiti e una voce di log per il `OnWarning event` viene scritto per ogni messaggio di errore nella destinazione viene sovrascritto.  
+ Inoltre, una voce di log per il `OnInformation` indica il numero di messaggi di errore che sono stati trasferiti e una voce di log per il `OnWarning event` è stata scritta per ogni messaggio di errore nella destinazione viene sovrascritto.  
   
 ## <a name="security-and-permissions"></a>Sicurezza e autorizzazioni  
  Per poter creare messaggi di errore, l'utente che esegue il pacchetto deve essere un membro del ruolo del server sysadmin o serveradmin nel server di destinazione.  
@@ -69,9 +69,9 @@ ms.locfileid: "36156049"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Errore Editor attività Trasferisci messaggi &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Errore di Editor attività Trasferisci messaggi &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Errore Editor attività Trasferisci messaggi &#40;i messaggi di pagina&#41;](../transfer-error-messages-task-editor-messages-page.md)  
+-   [Errore di Editor attività Trasferisci messaggi &#40;pagina di messaggi&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   

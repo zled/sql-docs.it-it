@@ -1,5 +1,5 @@
 ---
-title: Tabulare (SSAS tabulare) di modellazione | Documenti Microsoft
+title: Tabulare (SSAS tabulare) di modellazione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80027288-c203-4667-a3e1-40fa572b4975
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df693d141f3a91c1c0b9b023a89d39c5f2c171ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fe54f13fb065b099983ae58934851af1a3f49a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257217"
 ---
 # <a name="tabular-modeling-ssas-tabular"></a>Modellazione tabulare (SSAS tabulare)
   I modelli tabulari sono database in memoria in Analysis Services. Utilizzando un processore di query multithreading e algoritmi di compressione all'avanguardia, il motore di analisi in memoria xVelocity (VertiPaq) offre accesso rapido ai dati e agli oggetti del modello tabulare mediante applicazioni client di creazione di report quali Microsoft Excel e Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  

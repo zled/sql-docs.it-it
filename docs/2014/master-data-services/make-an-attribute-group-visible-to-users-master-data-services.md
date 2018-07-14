@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 70dcc1e8f35f288b4693bd87308d7f2abcff0136
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 94507eb6cae0db3206a02b43062871140d5f21c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223643"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Rendere visibile un gruppo di attributi per gli utenti (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]rendere visibile un gruppo di attributi a utenti o gruppi quando si vuole che gli utenti dispongano di schede sopra alla griglia nell'area funzionale **Visualizzatore** .  
@@ -45,7 +45,7 @@ ms.locfileid: "36155797"
   
 4.  Dall'elenco **Entità** selezionare un'entità.  
   
-5.  Fare clic sul segno più per espandere **gruppi di foglie**, **gruppi consolidati**, o **raccolta gruppi**, a seconda del tipo di gruppo che si desidera rendere visibile.  
+5.  Fare clic sul segno più per espandere **gruppi di foglie**, **gruppi consolidati**, o **gruppi di raccolte**, a seconda del tipo di gruppo si desidera rendere visibile.  
   
 6.  Fare clic sul segno più per espandere il gruppo che si desidera rendere visibile.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36155797"
   
 8.  Fare clic su **Modifica elemento selezionato**.  
   
-9. Fare clic su utenti o gruppi il **disponibile** casella e fare clic sui **Add** freccia. Per aggiungere tutto, fare clic sulla freccia **Aggiungi tutto** .  
+9. Fare clic su utenti o gruppi nel **Available** casella e fare clic sul **Add** freccia. Per aggiungere tutto, fare clic sulla freccia **Aggiungi tutto** .  
   
 10. Fare clic su **Salva**.  
   

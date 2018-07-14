@@ -1,5 +1,5 @@
 ---
-title: Riprodurre dati di traccia | Documenti Microsoft
+title: Riprodurre dati di traccia | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a53224c1618434ff9a7db2dda4ffc8a71f2ad1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8be27c06c27688ad38339ea911bbe0f165658e9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220513"
 ---
 # <a name="replay-trace-data"></a>Riproduzione di dati di traccia
   È possibile avviare una riproduzione distribuita usando la Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dopo aver preparato i dati di traccia di input. Per altre informazioni, vedere [Preparazione dei dati di traccia di input](prepare-the-input-trace-data.md).  
   
  Usare l'opzione **replay** dello strumento di amministrazione per avviare la fase di riproduzione dell'evento della riesecuzione distribuita. Questa fase è costituita da due parti: il recapito dei dati di traccia e l'avvio e la sincronizzazione della riproduzione distribuita.  
   
- ![Evento riesecuzione distribuita](../../database-engine/media/eventreplay.gif "evento riesecuzione distribuita")  
+ ![Distributed Replay di eventi](../../database-engine/media/eventreplay.gif "della funzionalità Distributed Replay di evento")  
   
  È possibile riprodurre i dati di traccia in una delle due modalità di sequenza disponibili, ovvero la modalità di stress o la modalità di sincronizzazione. Il comportamento predefinito consiste nel riprodurre i dati di traccia in modalità di stress. Per altre informazioni sulla fase di riproduzione dell'evento e sulle modalità di sequenza, vedere [SQL Server Distributed Replay](sql-server-distributed-replay.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36156612"
   
 ## <a name="see-also"></a>Vedere anche  
  [Requisiti relativi a riesecuzione distribuita](distributed-replay-requirements.md)   
- [Le opzioni della riga di comando dello strumento di amministrazione &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Opzioni della riga di comando dello strumento di amministrazione &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurare Riesecuzione distribuita](configure-distributed-replay.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Configurare un Server per l'attesa su una Pipe alternativa (Gestione configurazione SQL Server) | Documenti Microsoft
+title: Configurare un Server per l'ascolto su una Pipe alternativa (Gestione configurazione SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
 - listening [SQL Server], pipes
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - alternate pipes [SQL Server]
 ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 495f91088627399e207adaecf9a5d0dc27a02944
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5e28b2007e81ae257b6095d32fde93aecea5d082
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176508"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe-sql-server-configuration-manager"></a>Configurazione di un server per l'attesa su una pipe alternativa (Gestione configurazione SQL Server)
   In questo argomento viene illustrato come configurare un server per l'ascolto su una pipe alternativa in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando Gestione configurazione SQL Server. Per impostazione predefinita, l'istanza predefinita di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] è in attesa sulla named pipe \\\\.\pipe\sql\query. Le istanze denominate del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e [!INCLUDE[ssEW](../../includes/ssew-md.md)] sono in attesa su altre pipe.  

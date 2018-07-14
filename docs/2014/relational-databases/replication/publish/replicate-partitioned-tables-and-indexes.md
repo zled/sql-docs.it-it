@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitioned indexes [SQL Server], replicating
 - partitioned tables [SQL Server], replicating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - transactional replication, partitioned tables
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d38ef8cb96408db96a04184a30d7a803b00a0239
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9764adf620688c4fa5335a65d9cba5d70480ed8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253883"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replica di tabelle e indici partizionati
   Il partizionamento semplifica la gestione di indici e tabelle di grandi dimensioni, in quanto consente di gestire e accedere in modo rapido ed efficace a subset di dati, preservando al contempo l'integrità di una raccolta dati. Per altre informazioni, vedere [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). La replica supporta il partizionamento fornendo un set di proprietà che specificano la modalità di gestione di tabelle e indici partizionati.  
@@ -74,7 +74,7 @@ ms.locfileid: "36077547"
 ### <a name="enabling-partition-switching"></a>Abilitazione del cambio della partizione  
  Le proprietà seguenti per le pubblicazioni transazionali consentono agli utenti di controllare il comportamento del cambio della partizione in un ambiente replicato:  
   
--   **@allow_partition_switch**, se impostato su `true`, SWITCH PARTITION possono essere eseguite sul database di pubblicazione.  
+-   **@allow_partition_switch**, se impostato su `true`, è possibile eseguire SWITCH PARTITION sul database di pubblicazione.  
   
 -   **@replicate_partition_switch** : determina se l'istruzione SWITCH PARTITION DDL deve essere replicata ai Sottoscrittori. Questa opzione è valida solo quando **@allow_partition_switch** è impostata su `true`.  
   

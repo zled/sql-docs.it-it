@@ -1,5 +1,5 @@
 ---
-title: Progettazione di Data Mining | Documenti Microsoft
+title: Progettazione modelli di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], structure
 - mining structures [Analysis Services], modifying
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - data mining [Analysis Services], modifying
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91e69ba979d4b17c1d5197e444d8cc4fed9834b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07f6d732e2c22bd33b6d5df3c6c68a2703f8acfc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247751"
 ---
 # <a name="data-mining-designer"></a>Data Mining Designer
   Progettazione modelli di data mining rappresenta l'ambiente principale per l'utilizzo di modelli di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. È possibile accedere alla finestra di progettazione selezionando una struttura di data mining esistente o utilizzando la Creazione guidata modello di data mining per creare una nuova struttura e un nuovo modello di data mining. Progettazione modelli di data mining consente di eseguire le attività seguenti:  
@@ -74,7 +74,7 @@ ms.locfileid: "36069731"
   
  [Test e convalida &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
   
- [Testing e le attività di convalida e procedure relative alla &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Test e convalida le attività e procedure relative alla &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>Scheda Stima modello di data mining  
  La scheda **Stima modello di data mining** include il generatore delle query di stima, che consente di creare query di stima DMX (Data Mining Extensions). La scheda contiene strumenti per l'impostazione dei modelli di data mining e delle tabelle di input, il mapping tra le colonne del modello di data mining e le colonne della tabella di input, l'aggiunta di funzioni a una query e l'impostazione di criteri per ogni colonna.  
@@ -83,11 +83,11 @@ ms.locfileid: "36069731"
   
  Per ulteriori informazioni sulla creazione di query di data mining, vedere gli argomenti seguenti:  
   
- [Query di Data Mining](data-mining-queries.md)  
+ [Query di data mining](data-mining-queries.md)  
   
  [Attività e procedure relative alle query di data mining](data-mining-query-tasks-and-how-tos.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Soluzioni di Data Mining](data-mining-solutions.md)  
+ [Soluzioni di data mining](data-mining-solutions.md)  
   
   

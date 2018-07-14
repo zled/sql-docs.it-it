@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10020"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b0d5e7c55b8040496e0714acd98bb81d37c602bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e0fc786c5cf35dda0beec0800b1515c9e0a44ca0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255793"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Finestra di dialogo Proprietà set di dati, Opzioni (Generatore report)
   Selezionare **Opzioni** nella finestra di dialogo **Proprietà set di dati** per modificare le opzioni relative ai dati, ad esempio le regole di confronto e la gestione dei subtotali come dati dettaglio, per la query. Per altre informazioni sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md) nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
@@ -49,7 +49,7 @@ ms.locfileid: "36155933"
  Consente di selezionare un valore per indicare la modalità di applicazione della distinzione della larghezza. Questa opzione indica se per i dati viene applicata la distinzione della larghezza e può essere impostata su **True**, **False**o **Auto**. Il valore predefinito **Auto** indica che il server di report eseguirà un tentativo di recupero del valore dal provider di dati quando si esegue il report. Se il provider di dati non supporta il tipo di distinzione della larghezza, il report viene eseguito come se il valore fosse **False**. Se si conosce il valore e si è certi che sia supportato, scegliere **True**.  
   
  **Interpretare i subtotali come righe di dettaglio**  
- Selezionare un valore per indicare se si desidera che le righe di subtotali vengano interpretate come righe di dettaglio anziché come righe di aggregazione. Il valore predefinito **Auto**, indica che le righe di subtotali devono essere gestite come righe di dettaglio se il report non utilizza il `Aggregate`funzione () per accedere ai campi nel set di dati. Se si vuole che le righe di subtotali vengano interpretate come righe di aggregazione, scegliere **False**. Se si desidera che le righe di subtotali vengano interpretate come righe di dettaglio e si è certi che non usano il `Aggregate`() di funzione, scegliere **True**.  
+ Selezionare un valore per indicare se si desidera che le righe di subtotali vengano interpretate come righe di dettaglio anziché come righe di aggregazione. Il valore predefinito **automatica**, indica che le righe di subtotali devono essere considerate le righe di dettaglio se il report non utilizza il `Aggregate`funzione () per accedere ai campi nel set di dati. Se si vuole che le righe di subtotali vengano interpretate come righe di aggregazione, scegliere **False**. Se si desidera che le righe di subtotali vengano interpretati come righe di dettaglio e si è certi che non usano i `Aggregate`() di funzione, scegliere **True**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   

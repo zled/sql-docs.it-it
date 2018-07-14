@@ -1,5 +1,5 @@
 ---
-title: Proprietà PropertyType (classe ServerNetworkProtocolProperty) | Documenti Microsoft
+title: Proprietà PropertyType (classe ServerNetworkProtocolProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyType property
 ms.assetid: d4932eaf-da7c-4b09-8298-ffb6333dfba2
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b9abb0c20817172b01f48bc83a7ef6b353143cd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f57b2404724a13505130dbc0d328e4a7823c55cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266097"
 ---
 # <a name="propertytype-property-servernetworkprotocolproperty-class"></a>Proprietà PropertyType (classe ServerNetworkProtocolProperty)
   Ottiene il tipo di proprietà.  
@@ -48,9 +48,9 @@ object
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore `uint32` che specifica il tipo di proprietà.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete Server e le librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

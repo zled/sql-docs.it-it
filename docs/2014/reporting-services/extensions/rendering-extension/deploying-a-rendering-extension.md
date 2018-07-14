@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cd6fb05217c0bde25dcc00e5f520dfd126385ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4847340ab6bb40a4a5c6e247a4b9f2e33034ca8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181678"
 ---
 # <a name="deploying-a-rendering-extension"></a>Distribuzione di un'estensione per il rendering
   Dopo avere scritto e compilato l'estensione per il rendering del report [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in una libreria di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è necessario renderla individuabile dal server di report e da Progettazione report. A tale scopo, copiare l'estensione nella directory appropriata e aggiungere voci ai file di configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriati.  
@@ -31,7 +31,7 @@ ms.locfileid: "36157439"
 ## <a name="configuration-file-rendering-extension-element"></a>Elemento di estensione del rendering del file di configurazione  
  Dopo avere compilato un'estensione per il rendering in una DLL, è necessario aggiungere una voce al file rsreportserver.config. Per impostazione predefinita, il percorso è %Programmi%\Microsoft SQL Server\MSRS10_50.\<nomeistanza>\Reporting Services\ReportServer. L'elemento padre è \<Render>. Sotto l'elemento Render è presente un elemento Extension per ogni estensione per il rendering. Il `Extension` elemento contiene due attributi, Name e Type.  
   
- Nella tabella seguente vengono descritti gli attributi per il `Extension` elemento per le estensioni per il rendering:  
+ Nella tabella seguente vengono descritti gli attributi per il `Extension` (elemento) per estensioni per il rendering:  
   
 |attribute|Description|  
 |---------------|-----------------|  
@@ -69,7 +69,7 @@ ms.locfileid: "36157439"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     Il valore per **Name** è il nome univoco dell'estensione per il rendering. Il valore per **Type** è un elenco con valori delimitati da virgole che include una voce per lo spazio dei nomi completo dell'implementazione di <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, seguito dal nome dell'assembly, senza l'estensione dll. Per impostazione predefinita, le estensioni per il rendering sono visibili. Per nascondere un'estensione dalle interfacce utente, ad esempio Gestione Report, aggiungere un **Visible** attributo per il `Extension` elemento e impostarlo su `false`.  
+     Il valore per **Name** è il nome univoco dell'estensione per il rendering. Il valore per **Type** è un elenco con valori delimitati da virgole che include una voce per lo spazio dei nomi completo dell'implementazione di <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, seguito dal nome dell'assembly, senza l'estensione dll. Per impostazione predefinita, le estensioni per il rendering sono visibili. Per nascondere un'estensione dalle interfacce utente, ad esempio Gestione Report, aggiungere un **Visible** attributo il `Extension` elemento e impostarlo su `false`.  
   
 ## <a name="verifying-the-deployment"></a>Verifica della distribuzione  
  È inoltre possibile aprire Gestione report e verificare che l'estensione sia inclusa nell'elenco dei tipi di esportazione disponibili per un report.  

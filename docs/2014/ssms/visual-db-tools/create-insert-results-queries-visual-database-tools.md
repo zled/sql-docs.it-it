@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
 - result sets [SQL Server], queries
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 033e1e1f49a8d08b782e1a349ea43e388b9073b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 34e1fb7b3744cd07f58f47dd68b8055908bdeb3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216491"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Creazione di query di accodamento (Visual Database Tools)
   Le query di accodamento consentono di copiare righe da una tabella a un'altra oppure all'interno di una stessa tabella. Ad esempio, in una tabella `titles` è possibile utilizzare una query di accodamento per copiare le informazioni riguardanti tutti i titoli di un editore in una seconda tabella da presentare all'editore stesso. La query di accodamento è analoga alla query di creazione tabella, con la differenza che le righe vengono copiate in una tabella esistente.  
@@ -84,7 +84,7 @@ WHERE (pub_id = '0766')
   
      Le colonne selezionate verranno aggiunte alla colonna **Colonna** del riquadro Criteri.  
   
-5.  Nella colonna **Aggiungi** del riquadro Criteri selezionare una colonna di destinazione nella tabella di destinazione per ogni colonna da copiare. Scegliere *tablename.\**  se si desidera copiare righe intere. I tipi di dati nelle colonne della tabella di destinazione devono essere uguali o compatibili con quelli delle colonne nella tabella di origine.  
+5.  Nella colonna **Aggiungi** del riquadro Criteri selezionare una colonna di destinazione nella tabella di destinazione per ogni colonna da copiare. Scegli *tablename.\**  se si desidera copiare righe intere. I tipi di dati nelle colonne della tabella di destinazione devono essere uguali o compatibili con quelli delle colonne nella tabella di origine.  
   
 6.  Se si desidera copiare le righe in un particolare ordine, specificare il criterio di ordinamento. Per informazioni dettagliate, vedere [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md).  
   

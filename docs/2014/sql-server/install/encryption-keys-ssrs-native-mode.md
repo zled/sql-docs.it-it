@@ -1,5 +1,5 @@
 ---
-title: Le chiavi di crittografia (modalità nativa SSRS) | Documenti Microsoft
+title: Le chiavi di crittografia (modalità nativa SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 43c1935debbb7ef5f26579c2a526b177d14d38d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a494ca4f59abb618c9cbfbffd36bc57e481a71e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328911"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Chiavi di crittografia (modalità nativa SSRS)
   Utilizzare la pagina Chiave di crittografia per gestire la chiave simmetrica utilizzata per crittografare e decrittografare i dati in un server di report. La gestione delle chiavi di crittografia rappresenta una parte fondamentale della configurazione del server di report. La chiave simmetrica viene creata e applicata automaticamente quando si crea il database del server di report. Creare una copia di backup della chiave simmetrica in modo da poter eseguire le operazioni di manutenzione periodiche. Per le attività di manutenzione indicate di seguito, è necessario disporre di una copia valida della chiave simmetrica:  
@@ -49,13 +49,13 @@ ms.locfileid: "36156616"
  Per aprire questa pagina, avviare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager e selezionare il collegamento nel riquadro di spostamento. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opzioni  
- **Backup**  
+ **Copia di backup**  
  Consente di copiare la chiave simmetrica in un file specificato. La chiave simmetrica non viene mai archiviata in testo non crittografato. Per la protezione del file, è necessario digitare una password.  
   
  **Restore**  
  Consente di applicare una copia della chiave simmetrica salvata in precedenza al database del server di report. Per sbloccare il file, è necessario specificare la password.  
   
- La copia della chiave simmetrica eseguita in precedenza per l'istanza del server di report a cui si è attualmente connessi viene sovrascritta dalla versione ripristinata. Dopo avere ripristinato la chiave simmetrica, è necessario inizializzare tutti i server di report che utilizzano il database del server di report. Per ulteriori informazioni sull'inizializzazione server di report, vedere [inizializzare un Server di Report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ La copia della chiave simmetrica eseguita in precedenza per l'istanza del server di report a cui si è attualmente connessi viene sovrascritta dalla versione ripristinata. Dopo avere ripristinato la chiave simmetrica, è necessario inizializzare tutti i server di report che utilizzano il database del server di report. Per altre informazioni sull'inizializzazione server di report, vedere [inizializzare un Server di Report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
  **Modifica**  
  Consente di ricreare la chiave simmetrica e di crittografare di nuovo tutti i valori crittografati nel database del server di report. Accertarsi di arrestare il servizio del server di report prima di ricreare la chiave simmetrica.  
@@ -72,7 +72,7 @@ ms.locfileid: "36156616"
  Non esiste alcun modo per aggiornare automaticamente queste informazioni. Ogni report, sottoscrizione e origine dei dati condivisa che fa uso di credenziali archiviate e stringhe di connessione deve essere aggiornato uno alla volta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Argomenti della Guida F1 di Gestione configurazione di Reporting Services &#40;modalità nativa SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Gli argomenti della Guida F1 di Gestione configurazione di Reporting Services &#40;modalità nativa SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Eliminare e ricreare chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Security [SQL Server]
 helpviewer_keywords:
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - applications [SQL Server], security
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 89342bf3f94c2ed56e2040a1fa29b7c74bcf8c7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 4b3b01893519137c5fb707e9cd6b9dad7366c3bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250091"
 ---
 # <a name="securing-sql-server"></a>Sicurezza di SQL Server
   E possibile considerare la sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come una serie di passaggi che interessano quattro aree: la piattaforma, l'autenticazione, gli oggetti (inclusi i dati) e le applicazioni che accedono al sistema. Gli argomenti seguenti guideranno l'utente nella creazione e implementazione di un piano di sicurezza efficace.  
@@ -54,7 +53,7 @@ ms.locfileid: "36077544"
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
 |Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
-|Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Configurare Windows Firewall per l'accesso al servizio SSIS](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
+|Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Configurare un Windows Firewall per l'accesso al servizio SSIS](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
 |Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
 |Apertura di porte specifiche su un firewall per consentire l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Configurazione del supporto per la protezione estesa per l'autenticazione tramite associazione di canale e associazione al servizio|[Connessione al motore di database mediante la protezione estesa](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  

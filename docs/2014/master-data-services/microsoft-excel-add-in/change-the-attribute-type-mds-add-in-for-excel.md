@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: db45c51e597f739a443027e2e3390656d0820710
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c1e087cb853e6517c0977b2db33c31312631c1ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195431"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Modificare il tipo di attributo (componente aggiuntivo MDS per Excel)
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]gli amministratori possono modificare il tipo di attributo quando il tipo di dati o il numero di caratteri consentiti non è corretto.  
@@ -55,7 +55,7 @@ ms.locfileid: "36158692"
   
 -   Modificare il tipo di dati dell'attributo.  
   
--   Generare una copia dell'attributo con suffisso "_old" che non contiene alcun valore. Si tratta di un **deprecato** attributo.  
+-   Generare una copia dell'attributo con suffisso "_old" che non contiene alcun valore. Questa operazione viene definita un' **deprecato** attributo.  
   
  Tutte le dipendenze esistenti dall'attributo originale faranno tuttavia riferimento all'attributo deprecato e non a quello modificato.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36158692"
   
 -   È necessario aggiornare le regole business in modo che facciano riferimento all'attributo modificato, in quanto la logica potrebbe non essere la stessa applicata al nuovo tipo di dati dell'attributo. Sarà necessario modificare ogni regola interessata, quindi rielaborare le espressioni in modo che vengano rimossi i riferimenti dall'attributo deprecato (_old) e venga fatto riferimento all'attributo aggiornato.  
   
--   È necessario aprire tutte le viste sottoscrizioni nella selezione di Gestione integrazione, selezionare la riga della vista, aprirlo e modificarlo facendo clic sull'icona a forma di matita e quindi fare clic sui **Salva disco** icona per aggiornare la definizione della vista. Non sono necessarie altre modifiche per rigenerare la sintassi della vista.  
+-   È necessario aprire tutte le viste sottoscrizioni nella selezione di Gestione integrazione, selezionare la riga della vista, aprirlo e modificarlo facendo clic sull'icona a forma di matita e quindi fare clic sui **salvataggio disco** icona per aggiornare la definizione della vista. Non sono necessarie altre modifiche per rigenerare la sintassi della vista.  
   
 -   Alle tabelle di gestione temporanea che includono l'attributo verrà una colonna per l'attributo deprecato e ciò influirà sul codice di gestione temporanea. Per eliminare l'attributo deprecato, è possibile eliminarlo dopo avere aggiornato regole business e le viste sottoscrizioni.  
   

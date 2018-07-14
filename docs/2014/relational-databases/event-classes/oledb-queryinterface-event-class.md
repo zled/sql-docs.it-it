@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB QueryInterface event class
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0ec866dba3009e9c660710ce65b9d3a202b6bc19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a6fcacac48a6f32cbdd7744566400936decc51e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223441"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface - classe di evento
   La classe di evento **OLEDB QueryInterface** viene generata quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue una chiamata OLE DB **QueryInterface** per query distribuite e stored procedure remote. Includere questa classe di evento nelle tracce che eseguono il monitoraggio dei problemi associati a query distribuite e stored procedure remote.  
@@ -55,7 +55,7 @@ ms.locfileid: "36157988"
 |NTUserName|`nvarchar`|Nome utente di Windows.|6|Sì|  
 |ProviderName|`nvarchar`|Nome del provider OLE DB.|46|Sì|  
 |RequestID|`int`|ID della richiesta contenente l'istruzione.|49|Sì|  
-|SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Ad esempio, se ci si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Login1 e si esegue un'istruzione come Account2, `SessionLoginName` indica Login1 e `LoginName` indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
+|SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Ad esempio, se ci si connette al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Account1 e si esegue un'istruzione come Login2, `SessionLoginName` indica Login1 e `LoginName` indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |SPID|`int`|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |StartTime|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |TextData|`nvarchar`|Parametri inviati e ricevuti nella chiamata OLE DB.|1|no|  

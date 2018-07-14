@@ -1,5 +1,5 @@
 ---
-title: Assi elemento (XMLA) | Documenti Microsoft
+title: Assi elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Axes element
 ms.assetid: 2005d06a-f8a2-4b4f-8c0d-2f7f73eb6f5c
 caps.latest.revision: 21
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f508a92ca7ab8aca224c299723adddf3654c167c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b8ac4baded4dd516e12c31ffd701e1c4668d769e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237401"
 ---
 # <a name="axes-element-xmla"></a>Elemento Axes (XMLA)
   Contiene una raccolta di [asse](axis-element-xmla.md) gli elementi che rappresentano i dati dell'asse contenuti in un [radice](root-element-xmla.md) elemento che utilizza il [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo di dati.  
@@ -66,8 +66,8 @@ ms.locfileid: "36155848"
 |Elementi padre|[root](root-element-xmla.md)|  
 |Elementi figlio|[Axis](axis-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
- All'interno dell'elemento `Axes` gli elementi `Axis` sono elencati nell'ordine in cui sono presenti nel set di dati, a partire da zero. L'impostazione della proprietà XMLA `AxisFormat` determina la formattazione degli elementi `Axis`. Per ulteriori informazioni sul `AxisFormat` proprietà, vedere [proprietà XMLA supportate &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md).  
+## <a name="remarks"></a>Note  
+ All'interno dell'elemento `Axes` gli elementi `Axis` sono elencati nell'ordine in cui sono presenti nel set di dati, a partire da zero. L'impostazione della proprietà XMLA `AxisFormat` determina la formattazione degli elementi `Axis`. Per altre informazioni sul `AxisFormat` proprietà, vedere [proprietà XMLA supportate &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md).  
   
  Un asse rappresenta un set di tuple in cui tutte le tuple hanno la stessa dimensionalità. Un set può essere rappresentato in modi diversi per scopi diversi. Il set di quattro tuple seguente, ad esempio, può essere rappresentato come raccolta di tuple bidimensionali o come prodotto cartesiano di due set unidimensionali.  
   

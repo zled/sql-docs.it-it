@@ -1,5 +1,5 @@
 ---
-title: Elemento AllMemberAggregationUsage (ASSL) | Documenti Microsoft
+title: Elemento AllMemberAggregationUsage (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllMemberAggregationUsage element
 ms.assetid: 264fe9d8-8e9a-4642-8cee-7c2804126926
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1da20a067a1f293bafbca858623ab477aacac6b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35d13952ed0cc77405f1c0518562a67749d1521f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252953"
 ---
 # <a name="allmemberaggregationusage-element-assl"></a>Elemento AllMemberAggregationUsage (ASSL)
-  I controlli come la finestra di progettazione delle aggregazioni in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] progettare aggregazioni.  
+  Controlli come la finestra di progettazione delle aggregazioni nella [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] progettare aggregazioni.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36156074"
 |Elementi padre|[CubeDimension](../data-type/dimension-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
 |valore|Description|  
@@ -71,8 +71,8 @@ ms.locfileid: "36156074"
 |*Senza restrizioni*|Non esistono restrizioni in Progettazione aggregazioni.|  
 |*Valore predefinito*|Come per *Unrestricted*.|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `AllMemberAggregationUsage` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.CubeDimension>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `AllMemberAggregationUsage` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.CubeDimension>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento del cubo &#40;ASSL&#41;](../objects/cube-element-assl.md)   

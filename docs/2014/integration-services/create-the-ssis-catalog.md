@@ -1,5 +1,5 @@
 ---
-title: Creare il catalogo SSIS | Documenti Microsoft
+title: Creare il catalogo SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8565d4957688349253b0074174dd379ba284a231
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 82965dd45ba5152aea9d6ec5751de9dfbf7cf232
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178498"
 ---
 # <a name="create-the-ssis-catalog"></a>Creare il catalogo SSIS
-  Dopo avere progettato e testato i pacchetti in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], è possibile distribuire i progetti che contengono i pacchetti in un server di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Prima di poter distribuire i progetti per il [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, il server deve contenere il `SSISDB` catalogo. Tramite il programma di installazione per [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] non viene creato automaticamente il catalogo. Sarà necessario crearlo manualmente usando le istruzioni seguenti.  
+  Dopo avere progettato e testato i pacchetti in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], è possibile distribuire i progetti che contengono i pacchetti in un server di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Prima di poter distribuire i progetti in cui il [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, il server deve contenere il `SSISDB` catalogo. Tramite il programma di installazione per [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] non viene creato automaticamente il catalogo. Sarà necessario crearlo manualmente usando le istruzioni seguenti.  
   
  Il catalogo SSISDB può essere creato in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Il catalogo può essere creato anche a livello di programmazione utilizzando Windows PowerShell.  
   

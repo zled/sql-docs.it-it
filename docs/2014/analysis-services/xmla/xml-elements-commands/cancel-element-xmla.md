@@ -1,5 +1,5 @@
 ---
-title: Elemento Cancel (XMLA) | Documenti Microsoft
+title: Elemento Cancel (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Cancel command
 ms.assetid: de4062c1-7434-44dc-9f01-29fcf78963bd
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cd0fdd50a1dcddb51d167ab76cd5408b631bb3ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fb71b55e514a2e058d50cd1c923a3e0b794ac8f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173272"
 ---
 # <a name="cancel-element-xmla"></a>Elemento Cancel (XMLA)
   Annulla un comando attualmente in esecuzione un' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza.  
@@ -66,14 +66,14 @@ ms.locfileid: "36166163"
 |Elementi padre|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |Elementi figlio|[CancelAssociated](../xml-elements-properties/cancelassociated-element-xmla.md), [ConnectionID](../xml-elements-properties/id-element-xmla.md), [SessionID](../xml-elements-properties/sessionid-element-xmla.md), [SPID](../xml-elements-properties/spid-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il comando `Cancel` annulla comandi attualmente in esecuzione all'interno del contesto di una sessione. Se l'applicazione client non ha richiesto una sessione, un comando non può essere annullato.  
   
  Se il comando `Cancel` viene eseguito durante l'esecuzione di un comando `Batch`, l'intero comando `Batch` viene annullato. Se il comando `Batch` è transazionale, per tutti i comandi contenuti dal comando `Batch` viene eseguito il. Se il comando `Batch` non è transazionale, il rollback viene eseguito solo per i comandi contenuti dal comando `Batch` in esecuzione nel momento in cui il comando `Cancel` viene eseguito. Il rollback non viene eseguito per i comandi in un comando `Batch` non transazionale che era già stato eseguito.  
   
  In genere, il comando `Cancel` viene utilizzato per annullare l'esecuzione di comandi nella sessione attualmente attiva. In quel caso, nessuno degli elementi figlio per il comando `Cancel` deve essere specificato. Il comando `Cancel` può essere utilizzato anche dagli amministratori per annullare comandi eseguiti in connessioni o sessioni diverse dalla sessione attualmente attiva. Membri di un ruolo che ha autorizzazioni di amministratore per un database specificato possono annullare comandi per connessioni e sessioni applicabili a quel database, mentre gli amministratori del server possono annullare comandi per connessioni e sessioni per un'istanza di Analysis Services specificata.  
   
- Per recuperare informazioni su connessioni e sessioni correnti per un'istanza [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] può essere eseguito il metodo `Discover` per richiedere, rispettivamente, i set di righe dello schema di DISCOVER_CONNECTIONS e di DISCOVER_SESSIONS. Membri di un ruolo che ha autorizzazioni di amministratore per un database specificato possono restituire sessioni solo per un database specificato, riportando tale database nella colonna restrizione SESSION_CURRENT_DATABASE per il set di righe dello schema di DISCOVER_SESSIONS. Per ulteriori informazioni sul `Discover` metodo, vedere [individuare metodo &#40;XMLA&#41;](../xml-elements-methods-discover.md).  
+ Per recuperare informazioni su connessioni e sessioni correnti per un'istanza [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] può essere eseguito il metodo `Discover` per richiedere, rispettivamente, i set di righe dello schema di DISCOVER_CONNECTIONS e di DISCOVER_SESSIONS. Membri di un ruolo che ha autorizzazioni di amministratore per un database specificato possono restituire sessioni solo per un database specificato, riportando tale database nella colonna restrizione SESSION_CURRENT_DATABASE per il set di righe dello schema di DISCOVER_SESSIONS. Per altre informazioni sul `Discover` metodo, vedere [metodo Discover &#40;XMLA&#41;](../xml-elements-methods-discover.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento batch &#40;XMLA&#41;](batch-element-xmla.md)   

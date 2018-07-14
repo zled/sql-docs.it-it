@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e22249985710ebc3ab63aafe99779602ccffe4ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7bb389ff9f94a60607f30355ec5cf8ff5872b5ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266307"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Spostare un database protetto da TDE in un'altra istanza di SQL Server
   In questo argomento viene descritto come proteggere un database tramite TDE (Transparent Data Encryption) e spostare il database in un'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE consente di eseguire la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per la crittografia viene usata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. La chiave di decrittografia è una chiave simmetrica protetta tramite un certificato archiviato nel database `master` del server o una chiave asimmetrica protetta da un modulo EKM.  
@@ -61,11 +60,11 @@ ms.locfileid: "36156226"
   
 ####  <a name="Permissions"></a> Permissions  
   
--   È necessario `CONTROL DATABASE` l'autorizzazione per la `master` database per creare la chiave master del database.  
+-   È necessario `CONTROL DATABASE` l'autorizzazione per il `master` database per creare la chiave master del database.  
   
--   È necessario `CREATE CERTIFICATE` l'autorizzazione per la `master` database per creare il certificato che protegge la chiave DEK.  
+-   È necessario `CREATE CERTIFICATE` l'autorizzazione per il `master` database per creare il certificato che protegge la chiave DEK.  
   
--   È necessario `CONTROL DATABASE` l'autorizzazione per il database crittografato e `VIEW DEFINITION` l'autorizzazione per il certificato o chiave asimmetrica utilizzata per crittografare la chiave di crittografia del database.  
+-   È necessario `CONTROL DATABASE` l'autorizzazione per il database crittografato e `VIEW DEFINITION` dell'autorizzazione per il certificato o chiave asimmetrica a cui viene utilizzata per crittografare la chiave di crittografia del database.  
   
 ##  <a name="SSMSProcedure"></a> Per creare un database protetto con TDE  
   

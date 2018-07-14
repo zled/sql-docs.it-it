@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - BusinessLogicModule class
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b94705cc21951287df954e74ad322d2efc754052
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a0404175f22e6edcb80e4179083555d23acf7db1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169061"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementazione di un gestore della logica di business per un articolo di merge
   In questo argomento viene descritto come implementare un gestore della logica di business per un articolo di tipo merge in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite la programmazione della replica o RMO (Replication Management Objects).  
@@ -103,7 +103,7 @@ ms.locfileid: "36158427"
   
 1.  Nel server di pubblicazione eseguire [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) per verificare che l'assembly non sia già stato registrato come gestore della logica di business.  
   
-2.  Nel server di distribuzione, eseguire [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), specificando un nome descrittivo per il gestore della logica di business per **@article_resolver**, il valore `true`per **@is_dotnet_assembly**, il nome dell'assembly per **@dotnet_assembly_name**e il nome completo della classe che esegue l'override <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per  **@dotnet_class_name**.  
+2.  Nel server di distribuzione, eseguire [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), specificando un nome descrittivo per il gestore della logica di business per **@article_resolver**, un valore di `true`per la **@is_dotnet_assembly**, il nome dell'assembly per **@dotnet_assembly_name**e il nome completo della classe che esegue l'override <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per  **@dotnet_class_name**.  
   
     > [!NOTE]  
     >  Se l'assembly non viene distribuito nella stessa directory dell'eseguibile dell'agente di merge, nella stessa directory dell'applicazione che avvia in modo sincrono l'agente di merge o nella Global Assembly Cache (GAC), è necessario specificare il percorso completo con il nome dell'assembly per **@dotnet_assembly_name**. Quando si utilizza la sincronizzazione tramite il Web, è necessario specificare il percorso dell'assembly nel server Web.  
@@ -186,7 +186,7 @@ ms.locfileid: "36158427"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> : nome descrittivo utilizzato per l'accesso al gestore della logica di business.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> -il valore `true`.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> -valore `true`.  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>Per distribuire un gestore della logica di business  
   
@@ -218,7 +218,7 @@ ms.locfileid: "36158427"
   
 4.  Impostare la connessione del passaggio 1 per la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce `false`, sono state definite in modo corretto le proprietà dell'articolo nel passaggio 3 oppure l'articolo non esiste. Per altre informazioni, vedere [View and Modify Article Properties](publish/view-and-modify-article-properties.md).  
+5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce `false`, le proprietà dell'articolo nel passaggio 3 sono state definite in modo non corretto o l'articolo non esiste. Per altre informazioni, vedere [View and Modify Article Properties](publish/view-and-modify-article-properties.md).  
   
 6.  Impostare il nome descrittivo del gestore della logica di business per <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>. Si tratta del valore della proprietà <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> specificato durante la registrazione del gestore della logica di business.  
   

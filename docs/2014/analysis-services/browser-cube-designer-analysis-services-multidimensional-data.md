@@ -1,5 +1,5 @@
 ---
-title: Esplorazione (Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Esplorazione (Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.view.f1
 ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f431abab7f69c957b64d83f2f06c7675c566b2b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfa10bce2a4cd6462d1555b6b45fe375c6c68e04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236171"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Esplorazione (Progettazione cubi) (Analysis Services - Dati multidimensionali)
   La scheda **Esplorazione** di Progettazione cubi consente di esplorare dimensioni, misure e indicatori KPI in un cubo. In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]il Visualizzatore cubi di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è stato integrato con Progettazione query MDX e fornisce interfacce utente grafiche per creare query MDX, filtrare e sezionare cubi ed eseguire il drill-down nelle gerarchie.  
@@ -34,11 +34,11 @@ ms.locfileid: "36155695"
   
  ![Progettazione query MDX di Analysis Services in visualizzazione Progettazione](media/rsqd-dsawas-mdx-designmode.gif "Progettazione query MDX di Analysis Services in visualizzazione Progettazione")  
   
- Mentre si lavora in modalità progettazione grafica, se il **esecuzione automatica** (![esecuzione automatica query](media/rsqdicon-autoexecute.gif "esecuzione automatica query")) interruttore nella barra degli strumenti è selezionata, il **Browser** esegue una query ogni volta che si trascina un oggetto di metadati nel riquadro dati. È possibile eseguire manualmente la query utilizzando il **Esegui Query** (![eseguire la query](media/rsqdicon-run.gif "eseguire la query")) sulla barra degli strumenti.  
+ Mentre si lavora in modalità progettazione grafica, se il **interruttore** (![esecuzione automatica della query](media/rsqdicon-autoexecute.gif "esecuzione automatica della query")) sulla barra degli strumenti è selezionato, il **Browser** esegue una query ogni volta che si trascina un oggetto metadati nel riquadro dei dati. È possibile eseguire manualmente la query usando il **Esegui Query** (![eseguire la query](media/rsqdicon-run.gif "eseguire la query")) sulla barra degli strumenti.  
   
  Per modificare la finestra Progettazione query con interfaccia grafica attivando la modalità **Query** e usare il testo delle istruzioni MDX, fare clic sul pulsante **Modalità progettazione** sulla barra degli strumenti.  
   
- **Esplorare ed eseguire Query utilizza la modalità testo MDX**  
+ **Esplorazione e Query utilizza la modalità testo MDX**  
   
  Mentre è attiva la modalità di progettazione testo MDX, è possibile utilizzare direttamente MDX. Il riquadro **Metadati** è ancora disponibile, quindi è possibile aggiungere oggetti all'area di progettazione della query e trascinare funzioni e operatori MDX dall'elenco nel riquadro **Funzioni** .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36155695"
   
  Nel riquadro **Metadati** vengono visualizzate le schede relative a **Metadati** e **Funzioni**. Dalla scheda **Metadati** è possibile trascinare dimensioni, gerarchie, indicatori KPI e misure nell'area di progettazione della query. È possibile trascinare funzioni dalla scheda **Funzioni** nell'area di progettazione della query. Quando si esegue la query, nell'area di progettazione della query vengono visualizzati i risultati per la query MDX. È possibile anche fare clic su **Analizza in Excel** nella **barra degli strumenti** per esportare i dati in Microsoft Office Excel e visualizzare i risultati in una Tabella pivot come farebbero gli utenti in un PivotTable. Le sezioni seguenti descrivono più dettagliatamente la barra degli strumenti e tutti i riquadri per ogni modalità disponibile in **Esplorazione** .  
   
- Si noti che, mentre si lavora in modalità testo, il **esecuzione automatica** (![esecuzione automatica query](media/rsqdicon-autoexecute.gif "esecuzione automatica query")) interruttore nella barra degli strumenti non è disponibile. Tuttavia, è possibile eseguire manualmente le query utilizzando il **Esegui Query** (![eseguire la query](media/rsqdicon-run.gif "eseguire la query")) sulla barra degli strumenti.  
+ Si noti che, quando lavora in modalità testo, il **interruttore** (![esecuzione automatica della query](media/rsqdicon-autoexecute.gif "esecuzione automatica della query")) interruttore nella barra degli strumenti non è disponibile. Tuttavia, è possibile eseguire manualmente le query usando il **Esegui Query** (![eseguire la query](media/rsqdicon-run.gif "eseguire la query")) sulla barra degli strumenti.  
   
 ## <a name="sections"></a>Sezioni  
  **Barra degli strumenti**  

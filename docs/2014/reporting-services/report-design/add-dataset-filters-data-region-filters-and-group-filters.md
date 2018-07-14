@@ -1,5 +1,5 @@
 ---
-title: Aggiungere i filtri di set di dati, filtri delle aree dati e i filtri di gruppo (Generatore Report e SSRS) | Documenti Microsoft
+title: Aggiungere i filtri di set di dati, area dati e filtri di gruppo (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4c92a62b97f4f0af7985afbc20c5dd1e9c6a85ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7f133be198e7a141d13f0fded3ec17388308d44c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200811"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Aggiungere filtri per set di dati, aree dati e gruppi (Generatore report e SSRS)
   In un report un filtro è una parte di un set di dati, di un'area dati o di un gruppo di aree dati che viene creato per limitare i dati utilizzati nel report. I filtri consentono di controllare i dati del report se non è possibile modificare la query del set di dati, ad esempio se si utilizza un set di dati condiviso.  
@@ -60,12 +60,12 @@ ms.locfileid: "36070208"
   
 -   **Operatore** Definisce la modalità di confronto delle due parti dell'equazione di filtro.  
   
--   `Value` Definisce l'espressione da utilizzare nel confronto.  
+-   `Value` Definisce l'espressione da usare nel confronto.  
   
  Nelle sezioni seguenti sono descritte le singole parti dell'equazione di filtro.  
   
 ### <a name="expression"></a>Espressione  
- Quando l'equazione di filtro viene valutata dal componente Elaborazione report in fase di esecuzione, i tipi di dati per l'espressione e il valore devono essere identici. Il tipo di dati del campo selezionato per **Espressione** viene determinato dall'estensione per l'elaborazione dati o dal provider di dati usato per recuperare i dati dall'origine dati. Il tipo di dati dell'espressione immessa per `Value` è determinato dal [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] i valori predefiniti. Le opzioni disponibili per il tipo di dati sono determinate dai tipi di dati supportati per una definizione del report. I valori del database potrebbero essere convertiti dal provider di dati in un tipo CLR.  
+ Quando l'equazione di filtro viene valutata dal componente Elaborazione report in fase di esecuzione, i tipi di dati per l'espressione e il valore devono essere identici. Il tipo di dati del campo selezionato per **Espressione** viene determinato dall'estensione per l'elaborazione dati o dal provider di dati usato per recuperare i dati dall'origine dati. Il tipo di dati dell'espressione immessa per `Value` è determinato dal [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] valori predefiniti. Le opzioni disponibili per il tipo di dati sono determinate dai tipi di dati supportati per una definizione del report. I valori del database potrebbero essere convertiti dal provider di dati in un tipo CLR.  
   
 ### <a name="data-type"></a>Tipo di dati  
  Perché il componente Elaborazione report possa confrontare due valori, è necessario che i tipi di dati siano identici. Nella tabella seguente è elencato il mapping tra tipi di dati CLR e tipi di dati della definizione del report. I dati recuperati da un'origine dati potrebbero essere convertiti in un tipo di dati diverso da quello dei dati del report.  
@@ -99,7 +99,7 @@ ms.locfileid: "36070208"
  Questo valore può inoltre includere un riferimento di parametro per consentire la selezione interattiva di un valore in base al quale applicare un filtro.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressione viene utilizzata nei report di &#40;SSRS e Generatore Report&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Parametri report &#40;Generatore report e Progettazione report&#41;](report-parameters-report-builder-and-report-designer.md)  
   
   

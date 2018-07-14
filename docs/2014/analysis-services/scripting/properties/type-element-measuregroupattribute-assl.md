@@ -1,5 +1,5 @@
 ---
-title: Tipo di elemento (MeasureGroupAttribute) (ASSL) | Documenti Microsoft
+title: Tipo di elemento (MeasureGroupAttribute) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 93740504-297a-4a06-ab3e-b598e466eebb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d06b5df3ba99e54ec62de5c6f274874289cbbc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49155b00ca70c613ffec01e898e7c6f071e24c84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254853"
 ---
 # <a name="type-element-measuregroupattribute-assl"></a>Elemento tipo (MeasureGroupAttribute) (ASSL)
   Contiene il tipo di un [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md) elemento.  
@@ -61,7 +61,7 @@ ms.locfileid: "36069015"
 |Elemento padre|[MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
@@ -71,10 +71,10 @@ ms.locfileid: "36069015"
   
  L'enumerazione che corrisponde ai valori consentiti di `Type` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.MeasureGroupAttributeType>.  
   
- L'elemento che corrisponde al padre di `Type` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>.  
+ L'elemento che corrisponde al padre di `Type` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attributi elemento &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
+ [Elemento Attributes &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
  [Tipo di dati RegularMeasureGroupDimension &#40;ASSL&#41;](../data-type/dimension-data-type-assl.md)   
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  
   

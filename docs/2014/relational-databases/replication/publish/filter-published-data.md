@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication]
 - filters [SQL Server replication], about filtering
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 caps.latest.revision: 49
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03f3d439b4ef4c8d5ea4eb18d634a608ba1ecab6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d1f99411e4cdfceebab0d612f45aa8256719281e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193370"
 ---
 # <a name="filter-published-data"></a>Filtro dei dati pubblicati
   L'applicazione di filtri agli articoli di una tabella consente di creare partizioni di dati da pubblicare. Tramite l'applicazione di filtri ai dati pubblicati è possibile:  

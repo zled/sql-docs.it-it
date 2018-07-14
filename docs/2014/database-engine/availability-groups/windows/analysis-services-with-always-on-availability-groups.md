@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 13
-author: HeidiSteen
-ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 12a3b3cb6bc31060857a86481a7a952cc19679b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fa5c34ec3c794cf87b96feefbf15c323fbc43e27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261370"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con i gruppi di disponibilità AlwaysOn
   Un gruppo di disponibilità AlwaysOn è una raccolta predefinita di database relazionali di SQL Server per cui è previsto un failover reciproco quando le condizioni attivano un failover in uno dei database, reindirizzando le richieste a un database con mirroring su un'altra istanza nello stesso gruppo di disponibilità. Se i gruppi di disponibilità vengono utilizzati come soluzione di disponibilità elevata, è possibile utilizzare un database di questo gruppo come origine dati in una soluzione multidimensionale o tabulare di Analysis Services. Tutte le operazioni di Analysis Services elencate di seguito funzionano nel modo previsto quando si utilizza un database di disponibilità: elaborazione o importazione di dati, query dirette su dati relazionali (utilizzando la modalità DirectQuery o l'archiviazione ROLAP) e writeback.  
@@ -159,7 +158,7 @@ ms.locfileid: "36069478"
   
 1.  Avviare SQL Server Profiler e connettersi all'istanza di SQL Server che ospita la replica secondaria.  
   
-     Come l'esecuzione della traccia, il `SQL:BatchStarting` e `SQL:BatchCompleting` gli eventi di verranno mostrate le query emesse da Analysis Services eseguite sull'istanza del motore di database. Questi eventi sono selezionati per impostazione predefinita, pertanto è sufficiente avviare la traccia.  
+     Come l'esecuzione della traccia, il `SQL:BatchStarting` e `SQL:BatchCompleting` eventi indicheranno le query emesse da Analysis Services eseguite sull'istanza del motore di database. Questi eventi sono selezionati per impostazione predefinita, pertanto è sufficiente avviare la traccia.  
   
 2.  In [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]aprire il progetto o la soluzione di Analysis Services contenente la connessione all'origine dati che si desidera testare. Assicurarsi che l'origine dati specifichi il listener del gruppo di disponibilità e non un'istanza nel gruppo.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "36069478"
   
 4.  Distribuire la soluzione, e al termine, arrestare la traccia.  
   
-     Nella finestra di traccia vengono visualizzati gli eventi correlati all'applicazione **Microsoft SQL Server Analysis Services**. Dovrebbe essere `SELECT` istruzioni che recuperano dati da un database nell'istanza del server che ospita la replica secondaria, prova che la connessione è stata effettuata attraverso il listener alla replica secondaria.  
+     Nella finestra di traccia vengono visualizzati gli eventi correlati all'applicazione **Microsoft SQL Server Analysis Services**. Dovrebbe essere `SELECT` istruzioni che recuperano dati da un database nell'istanza del server che ospita la replica secondaria, dimostrando che la connessione è stata effettuata attraverso il listener alla replica secondaria.  
   
 #### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Passaggio 2: Eseguire un failover pianificato per testare la configurazione  
   
@@ -223,7 +222,7 @@ ms.locfileid: "36069478"
 ## <a name="see-also"></a>Vedere anche  
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Repliche secondarie attive: Repliche secondarie leggibili &#40;gruppi di disponibilità AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [I criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [Criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [Creare un'origine dati &#40;SSAS multidimensionale&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Abilitare il writeback della dimensione](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   

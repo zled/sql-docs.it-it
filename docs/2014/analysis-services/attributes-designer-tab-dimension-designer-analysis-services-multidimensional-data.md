@@ -1,5 +1,5 @@
 ---
-title: Attributi (scheda relazione tra attributi, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Attributi (scheda relazione tra attributi, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.attributes.f1
 ms.assetid: 850a68aa-1d70-4f0f-ba39-aeca834596c1
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f0324d78dd64db1a135a878809a90a8056b95ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff6836db1f179da6c1151d576af20fb210713980
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200601"
 ---
 # <a name="attributes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Attributi (scheda Relazione tra attributi, Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
   Utilizzare l'elenco **Attributi** per trovare un attributo specifico nel diagramma delle relazioni tra attributi o per definire una nuova relazione tra attributi. Questo riquadro appare immediatamente sotto il riquadro che contiene il diagramma delle relazioni tra attributi.  
@@ -56,7 +56,7 @@ ms.locfileid: "36156818"
   
 ## <a name="see-also"></a>Vedere anche  
  [Relazioni tra attributi &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
- [Barra degli strumenti &#40;scheda relazione tra attributi, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Sulla barra degli strumenti &#40;scheda relazione tra attributi, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
  [Diagramma di relazione attributi &#40;scheda relazione tra attributi, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](attribute-relationship-diagram-analysis-services-multidimensional-data.md)   
  [Relazioni tra attributi &#40;scheda relazione tra attributi, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
   

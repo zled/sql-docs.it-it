@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - audit
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 55
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7b56892d08db64ee49dd31eeb46359d523d1fca2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: d684a808a2bb6c8c9aa23c6dce969acb933c44db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238781"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
   Il*controllo* di un'istanza del [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o di un database individuale comporta il rilevamento e la registrazione di eventi che si verificano nel [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di creare controlli del server che possono contenere specifiche del controllo del server per gli eventi a livello di server e specifiche del controllo del database per gli eventi a livello di database. Gli eventi controllati possono essere scritti nei registri eventi o nei file di controllo.  
@@ -65,7 +64,7 @@ ms.locfileid: "36069155"
 > [!IMPORTANT]  
 >  Qualsiasi utente autenticato può leggere e scrivere nel registro eventi applicazioni di Windows, per cui sono necessarie autorizzazioni inferiori rispetto al registro eventi di sicurezza di Windows e risulta pertanto meno sicuro di quest'ultimo.  
   
- Per scrivere nel registro eventi di sicurezza di Windows, è necessario che l'account di servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] venga aggiunto ai criteri **Generazione controlli di sicurezza** . Per impostazione predefinita, gli account di sistema locale, Servizio Locale e Servizio di rete appartengono a tali criteri. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) È inoltre necessario che i criteri di sicurezza **Controlla accesso agli oggetti** siano abilitati sia per **Esito positivo** che per **Esito negativo**. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o Windows Server 2008, è possibile impostare più granulare **applicazione generata** criterio dalla riga di comando tramite il programma criteri di controllo (`AuditPol.exe)`. Per altre informazioni sulla procedura per abilitare la scrittura nel registro di protezione di Windows, vedere [Scrittura di eventi di controllo di SQL Server nel registro di sicurezza](write-sql-server-audit-events-to-the-security-log.md). Per ulteriori informazioni sul programma Auditpol.exe, vedere l'articolo 921469 della Microsoft Knowledge Base, [Utilizzo dei Criteri di gruppo per configurare impostazioni di controllo della sicurezza dettagliate](http://support.microsoft.com/kb/921469/). I registri eventi di Windows sono globali nel sistema operativo Windows. Per ulteriori informazioni sui registri eventi di Windows, vedere la pagina relativa ai [cenni preliminari sul Visualizzatore eventi](http://go.microsoft.com/fwlink/?LinkId=101455). Se sono necessarie autorizzazioni più specifiche sul controllo, utilizzare la destinazione del file binario.  
+ Per scrivere nel registro eventi di sicurezza di Windows, è necessario che l'account di servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] venga aggiunto ai criteri **Generazione controlli di sicurezza** . Per impostazione predefinita, gli account di sistema locale, Servizio Locale e Servizio di rete appartengono a tali criteri. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) È inoltre necessario che i criteri di sicurezza **Controlla accesso agli oggetti** siano abilitati sia per **Esito positivo** che per **Esito negativo**. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) Nelle [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o Windows Server 2008, è possibile impostare più granulare **applicazione generata** criterio dalla riga di comando usando il programma criteri di controllo (`AuditPol.exe)`. Per altre informazioni sulla procedura per abilitare la scrittura nel registro di protezione di Windows, vedere [Scrittura di eventi di controllo di SQL Server nel registro di sicurezza](write-sql-server-audit-events-to-the-security-log.md). Per ulteriori informazioni sul programma Auditpol.exe, vedere l'articolo 921469 della Microsoft Knowledge Base, [Utilizzo dei Criteri di gruppo per configurare impostazioni di controllo della sicurezza dettagliate](http://support.microsoft.com/kb/921469/). I registri eventi di Windows sono globali nel sistema operativo Windows. Per ulteriori informazioni sui registri eventi di Windows, vedere la pagina relativa ai [cenni preliminari sul Visualizzatore eventi](http://go.microsoft.com/fwlink/?LinkId=101455). Se sono necessarie autorizzazioni più specifiche sul controllo, utilizzare la destinazione del file binario.  
   
  Quando si salvano informazioni di controllo in un file, per contribuire a impedirne l'alterazione, è possibile limitare l'accesso al percorso del file nei modi seguenti:  
   
@@ -123,7 +122,7 @@ ms.locfileid: "36069155"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Mirroring del database e SQL Server Audit  
  Un database che dispone di una specifica del controllo del database definita e che utilizza il mirroring del database includerà la specifica del controllo del database. Per funzionare correttamente sull'istanza SQL Server con mirroring, è necessario che siano configurati gli elementi seguenti:  
   
--   Il server mirror deve disporre di un controllo con lo stesso GUID per consentire alla specifica del controllo del database di scrivere i record di controllo. Questa configurazione può essere eseguita tramite il comando CREATE AUDIT WITH GUID`=`*\<GUID dal controllo del Server di origine*>.  
+-   Il server mirror deve disporre di un controllo con lo stesso GUID per consentire alla specifica del controllo del database di scrivere i record di controllo. Questa impostazione può essere configurata usando il comando CREATE AUDIT WITH GUID`=`*\<GUID controllo del Server di origine*>.  
   
 -   Per le destinazioni del file binario, l'account di servizio del server mirror deve disporre delle autorizzazioni appropriate per il percorso in cui verrà scritto l'itinerario di controllo.  
   

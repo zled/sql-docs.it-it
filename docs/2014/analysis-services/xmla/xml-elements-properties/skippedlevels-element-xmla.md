@@ -1,5 +1,5 @@
 ---
-title: Elemento SkippedLevels (XMLA) | Documenti Microsoft
+title: Elemento SkippedLevels (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - SkippedLevels element
 ms.assetid: 4887b557-0ffc-4f42-b6b9-c98ad1208ca5
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1033b7227e9617b4d4617c2a101a1e6a95ae4a82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d9293098996c927b0327f2718eba7d39e9b8b826
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169492"
 ---
 # <a name="skippedlevels-element-xmla"></a>Elemento SkippedLevels (XMLA)
   Contiene il numero di livelli ignorati da un membro dell'attributo rappresentato dall'elemento padre [attributo](attribute-element-xmla.md) elemento.  
@@ -63,7 +63,7 @@ ms.locfileid: "36156997"
 |Elementi padre|[Attribute](attribute-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `SkippedLevels` determina il numero di livelli ignorati da un membro di un attributo definito dall'elemento padre `Attribute`.  
   
 ## <a name="see-also"></a>Vedere anche  

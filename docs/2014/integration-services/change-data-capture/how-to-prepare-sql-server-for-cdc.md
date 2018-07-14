@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d63447649592d45c664df9bd726256d908c5941a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 061fbc80b705b03e1bfa399d6362fbc1536ae15d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252633"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>Procedura di preparazione di SQL Server per CDC
   Il servizio Oracle CDC richiede che tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione contengano il database MSXDBCDC. Questo database viene creato utilizzando l'azione Prepare SQL Server in CDC Service Configuration Console. Questa attività viene effettuata una sola volta per ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione.  
   
  Di seguito viene illustrato come preparare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Change Data Capture Oracle utilizzando CDC Service Configuration Console. Tramite questo processo viene creato il database MSXDBCDC e vengono definite le tabelle, le stored procedure e altri artefatti obbligatori.  
   
- La preparazione di SQL Server per Oracle CDC viene effettuata dall'amministratore del servizio Oracle CDC. Per ulteriori informazioni sul ruolo di amministratore del servizio CDC, vedere [ruoli utente per Change Data Capture Service per Oracle di attunity](user-roles.md).  
+ La preparazione di SQL Server per Oracle CDC viene effettuata dall'amministratore del servizio Oracle CDC. Per altre informazioni relative al ruolo di amministratore del servizio CDC, vedere [ruoli utente per Change Data Capture Service per Oracle di attunity](user-roles.md).  
   
 ### <a name="to-enable-sql-server-for-cdc"></a>Per abilitare SQL Server per CDC  
   

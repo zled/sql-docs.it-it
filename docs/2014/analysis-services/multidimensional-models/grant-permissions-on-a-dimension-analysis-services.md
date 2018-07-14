@@ -1,5 +1,5 @@
 ---
-title: Concedere le autorizzazioni su una dimensione (Analysis Services) | Documenti Microsoft
+title: Concedere le autorizzazioni su una dimensione (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensions.f1
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - permissions [Analysis Services], dimensions
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 212f89372b510b7a3a1d73702ee231d641fd465b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 553416d7dd8395e53ca5bbf4be5cdfa9b9d2fc5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177048"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Concedere le autorizzazioni per una dimensione (Analysis Services)
   La sicurezza delle dimensioni viene usata per impostare le autorizzazioni su un oggetto dimensione e non sui relativi dati. In genere, consentire o negare l'accesso alle operazioni di elaborazione rappresenta l'obiettivo principale quando si impostano le autorizzazioni su una dimensione.  
@@ -55,7 +55,7 @@ ms.locfileid: "36156291"
   
      Per impostazione predefinita, le autorizzazioni sono impostate su **Lettura**.  
   
-     Sebbene sia disponibile l'autorizzazione **Lettura/Scrittura** , è consigliabile non usarla. L'autorizzazione**Lettura/Scrittura** viene usata per gli scenari di writeback delle dimensioni, che sono stati deprecati. Vedere [Analysis Services deprecate in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
+     Sebbene sia disponibile l'autorizzazione **Lettura/Scrittura** , è consigliabile non usarla. L'autorizzazione**Lettura/Scrittura** viene usata per gli scenari di writeback delle dimensioni, che sono stati deprecati. Visualizzare [Analysis Services deprecate in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
   
      Facoltativamente, è possibile impostare le autorizzazioni **Lettura definizione** ed **Elaborazione** per i singoli oggetti dimensione, a condizione che tali autorizzazioni non siano già impostate a livello di database. Vedere [Concedere le autorizzazioni di elaborazione &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) e [Concedere le autorizzazioni di lettura definizione per i metadati degli oggetti &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) per informazioni dettagliate.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36156291"
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], espandere il nodo **Ruoli** relativo al database appropriato in Esplora oggetti, quindi fare clic su un ruolo del database o creare un nuovo ruolo del database.  
   
-2.  Nel **dimensioni** riquadro, modificare la dimensione è impostata su \<nome-cubo > **le dimensioni del cubo**.  
+2.  Nel **quote** riquadro modificare la dimensione del set \<nome-cubo > **dimensioni cubo**.  
   
      Per impostazione predefinita, le autorizzazioni vengono ereditate da una dimensione del database corrispondente. Deselezionare la casella di controllo **Eredita** per modificare le autorizzazioni da **Lettura** a **Lettura/Scrittura**. Prima di usare l'autorizzazione **Lettura/Scrittura**, leggere la nota nella sezione precedente.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36156291"
   
 ## <a name="see-also"></a>Vedere anche  
  [Ruoli e autorizzazioni &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
- [Concedere le autorizzazioni del cubo o modello di &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Concedere le autorizzazioni del cubo o un modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Concedere le autorizzazioni per modelli e strutture di data mining &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Concedere l'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
  [Concedere l'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  

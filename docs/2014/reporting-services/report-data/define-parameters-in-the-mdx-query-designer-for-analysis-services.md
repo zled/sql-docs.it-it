@@ -1,5 +1,5 @@
 ---
-title: Definizione dei parametri in Progettazione Query MDX per Analysis Services (Generatore Report e SSRS) | Documenti Microsoft
+title: Definizione dei parametri in Progettazione Query MDX per Analysis Services (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], MDX
 - Multidimensional Expressions [Reporting Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0ed9044a9d9719ec67cff1f79d21882a7578129f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c46a722ce7f06e816a6625297ab35c9f5548c236
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179578"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definizione dei parametri in Progettazione query MDX per Analysis Services (Generatore report e SSRS)
   Per parametrizzare una query MDX per un'origine dati di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , è necessario aggiungere un parametro di query alla query. In Progettazione query MDX, è possibile aggiungere un parametro di query sia in modalità progettazione sia in modalità query specificando un filtro. Dopo avere definito la query tramite un parametro di query, in Reporting Services vengono creati automaticamente un parametro di report e un set di dati per l'elenco dei valori validi. In questo modo un utente può specificare un valore che viene passato direttamente alla query.  
@@ -35,7 +35,7 @@ ms.locfileid: "36156868"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>Per definire un parametro di query MDX in modalità progettazione  
   
-1.  Nel riquadro dati Report, fare clic su un set di dati creato da un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo di origine dati e quindi fare clic su **Query**. La finestra Progettazione query MDX verrà aperta in modalità progettazione.  
+1.  Nel riquadro dati Report fare clic su un set di dati creato da un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo di origine dati e quindi fare clic su **Query**. La finestra Progettazione query MDX verrà aperta in modalità progettazione.  
   
 2.  Trascinare una dimensione nell'area filtro e rilasciarla nella prima cella della colonna **Dimensione** .  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36156868"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>Per definire un parametro di query MDX in modalità query  
   
-1.  Nel riquadro dati Report, fare clic su un set di dati creato da un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo di origine dati e quindi fare clic su **Query**. La finestra Progettazione query MDX verrà aperta in modalità progettazione.  
+1.  Nel riquadro dati Report fare clic su un set di dati creato da un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo di origine dati e quindi fare clic su **Query**. La finestra Progettazione query MDX verrà aperta in modalità progettazione.  
   
 2.  Fare clic su **Progettazione** nella barra degli strumenti per passare alla modalità query.  
   
