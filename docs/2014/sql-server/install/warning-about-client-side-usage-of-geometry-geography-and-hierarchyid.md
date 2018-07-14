@@ -1,5 +1,5 @@
 ---
-title: Avviso relativo all'utilizzo lato client di GEOMETRY, GEOGRAPHY e HIERARCHYID | Documenti Microsoft
+title: Avviso relativo all'utilizzo lato client di GEOMETRY, GEOGRAPHY e HIERARCHYID | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 02748f9dca8e4f9f29c7c94658d2a4068b1ba65e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 46e4f63ef0909ca07eeac5d09b8233fb509f87a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169356"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166112"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Avviso relativo all'utilizzo sul lato client di GEOMETRY, GEOGRAPHY e HIERARCHYID
   L'assembly **Microsoft.SqlServer.Types.dll**, che contiene i tipi di dati spaziali, è stato aggiornato dalla versione 10.0 alla versione 11.0. È possibile che le applicazioni personalizzate che fanno riferimento a questo assembly abbiano esito negativo quando sussistono determinate condizioni.  
@@ -30,11 +30,11 @@ ms.locfileid: "36169356"
 ## <a name="description"></a>Description  
  L'assembly **Microsoft.SqlServer.Types.dll**, che contiene i tipi di dati spaziali, è stato aggiornato dalla versione 10.0 alla versione 11.0. È possibile che le applicazioni personalizzate che fanno riferimento a questo assembly abbiano esito negativo quando sussistono le condizioni seguenti.  
   
--   Quando si sposta un'applicazione personalizzata da un computer in cui [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] è stato installato in un computer in cui solo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è installato, l'applicazione avrà esito negativo perché il riferimento versione 10.0 il **SqlTypes** assembly non è presente. È possibile che venga visualizzato questo messaggio di errore: `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
+-   Quando si sposta un'applicazione personalizzata da un computer in cui [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] era stato installato in un computer in cui solo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è installato, l'applicazione avrà esito negativo perché la versione di cui viene fatto riferimento 10.0 del **SqlTypes** assembly non è presente. È possibile che venga visualizzato questo messaggio di errore: `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
   
 -   Quando si fa riferimento il **SqlTypes** assembly versione 11.0 e viene installata anche la versione 10.0, è possibile visualizzare questo messaggio di errore: `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
   
--   Quando si fa riferimento il **SqlTypes** assembly versione 11.0 da un'applicazione personalizzata destinata a .NET 3.5, 4 o 4.5, l'applicazione avrà esito negativo perché per motivi strutturali SqlClient carica la versione 10.0 dell'assembly. Questo errore si verifica quando l'applicazione chiama uno dei metodi seguenti:  
+-   Quando si fa riferimento il **SqlTypes** assembly versione 11.0 da un'applicazione personalizzata destinata a .NET 3.5, 4 o 4.5, l'applicazione avrà esito negativo perché SqlClient in base alla progettazione carica la versione 10.0 dell'assembly. Questo errore si verifica quando l'applicazione chiama uno dei metodi seguenti:  
   
     -   Metodo `GetValue` della classe `SqlDataReader`  
   
@@ -88,6 +88,6 @@ ms.locfileid: "36169356"
   
 ## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;nuovo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

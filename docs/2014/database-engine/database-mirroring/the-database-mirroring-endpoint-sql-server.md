@@ -5,10 +5,9 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - database mirroring [SQL Server], endpoint
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 060ab17ca1f86e2b5b1da0c900bd7e49a7103ab0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e9250860dbdc750bda53e28e52a31bcbe0e038b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185169"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Endpoint del mirroring del database (SQL Server)
   Per fare parte del mirroring del database e di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , un'istanza del server richiede un *endpoint del mirroring del database*dedicato. Si tratta di un endpoint speciale utilizzato solo per ricevere connessioni da altre istanze del server. In un'istanza del server specificata, ogni connessione del mirroring del database o di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a qualsiasi altra istanza del server utilizza un solo endpoint del mirroring di database.  
@@ -51,7 +50,7 @@ ms.locfileid: "36168583"
 > [!IMPORTANT]  
 >  Se nel computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è presente un firewall, esso dovrà essere configurato in modo da consentire sia le connessioni in ingresso che quelle in uscita per la porta specificata nell'endpoint.  
   
- Per il mirroring del database e [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], l'autenticazione e la crittografia devono essere configurate nell'endpoint. Per altre informazioni, vedere [sicurezza trasporto per il mirroring del Database e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
+ Per il mirroring del database e [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], l'autenticazione e la crittografia devono essere configurate nell'endpoint. Per altre informazioni, vedere [protezione del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
 > [!IMPORTANT]  
 >  Non riconfigurare un endpoint del mirroring del database in uso. Le istanze del server utilizzano reciprocamente i propri endpoint per apprendere lo stato degli altri sistemi. La riconfigurazione dell'endpoint potrebbe determinarne il riavvio, situazione che alle altre istanze del server potrebbe apparire come un errore. Questa indicazione è particolarmente importante per la modalità con failover automatico, nella quale la riconfigurazione dell'endpoint in un partner potrebbe causare il verificarsi di un failover.  
@@ -62,7 +61,7 @@ ms.locfileid: "36168583"
   
 -   Se ogni istanza del server è in esecuzione con un account di servizio del dominio, è possibile utilizzare l'autenticazione di Windows per gli endpoint del mirroring del database. Se tutte le istanze del server vengono eseguite con lo stesso account utente di dominio, gli account di accesso utente corretti saranno disponibili automaticamente in entrambi i database **master** . Questa scelta semplifica la configurazione della sicurezza per i database di disponibilità ed è quella consigliata.  
   
-     Se ogni istanza del server che ospita le repliche di disponibilità per un gruppo di disponibilità viene eseguita con account diversi, è necessario creare l'accesso per ogni account nel database **master** dell'altra istanza del server. È necessario che l'account di accesso disponga dell'autorizzazione CONNECT per connettersi all'endpoint del mirroring del database dell'istanza del server. Per ulteriori informazioni [impostare degli account di accesso per gruppi di disponibilità AlwaysOn o mirroring del Database &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
+     Se ogni istanza del server che ospita le repliche di disponibilità per un gruppo di disponibilità viene eseguita con account diversi, è necessario creare l'accesso per ogni account nel database **master** dell'altra istanza del server. È necessario che l'account di accesso disponga dell'autorizzazione CONNECT per connettersi all'endpoint del mirroring del database dell'istanza del server. Per altre informazioni, [Set di account di accesso per gruppi di disponibilità AlwaysOn o mirroring del Database &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
   
      Se le istanze del server utilizzano l'autenticazione di Windows, è possibile creare gli endpoint del mirroring di database tramite [!INCLUDE[tsql](../../includes/tsql-md.md)], PowerShell o la Creazione guidata Gruppo di disponibilità.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "36168583"
   
 -   Se un'istanza del server viene eseguita con un account predefinito, ad esempio Sistema locale, Servizio locale o Servizio di rete, oppure con un account non di dominio, è necessario utilizzare certificati per l'autenticazione dell'endpoint. Se si utilizzano certificati per gli endpoint del mirroring del database, l'amministratore di sistema deve configurare ogni istanza del server per l'utilizzo dei certificati sia nelle connessioni in uscita che in quelle in ingresso.  
   
-     Non è disponibile alcun metodo automatico per la configurazione della sicurezza del mirroring del database tramite certificati. È necessario utilizzare degli ENDPOINT creare [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il `New-SqlHadrEndpoint` cmdlet di PowerShell. Per altre informazioni, vedere [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Per informazioni su come abilitare l'autenticazione del certificato in un'istanza del server, vedere [utilizzo di certificati per un Endpoint di mirroring del Database &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+     Non è disponibile alcun metodo automatico per la configurazione della sicurezza del mirroring del database tramite certificati. È necessario usare degli ENDPOINT CREATE [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il `New-SqlHadrEndpoint` cmdlet di PowerShell. Per altre informazioni, vedere [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Per informazioni su come abilitare l'autenticazione del certificato in un'istanza del server, vedere [uso di certificati per un Endpoint del mirroring del Database &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
@@ -97,9 +96,9 @@ ms.locfileid: "36168583"
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza del trasporto per gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Sicurezza del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [Sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [DM db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
   
   

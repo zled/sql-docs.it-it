@@ -1,5 +1,5 @@
 ---
-title: Elemento trimming (ASSL) | Documenti Microsoft
+title: Elemento trimming (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Trimming element
 ms.assetid: 8b3bbf89-8309-4d00-9aea-a5918f0c7027
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a7346e9ae91ca3d70ab2f6cf311ea3b7a8b8a06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d34a2b559dfcace0a8334916f66031b130763182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326541"
 ---
 # <a name="trimming-element-assl"></a>Elemento Trimming (ASSL)
   Specifica come i dati vengono rimossi dall'origine dati.  
@@ -61,7 +61,7 @@ ms.locfileid: "36167528"
 |Elemento padre|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
@@ -73,7 +73,7 @@ ms.locfileid: "36167528"
   
  L'enumerazione che corrisponde ai valori consentiti di `Trimming` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.Trimming>.  
   
- L'elemento che corrisponde al padre di `Trimming` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DataItem>.  
+ L'elemento che corrisponde al padre di `Trimming` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DataItem>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

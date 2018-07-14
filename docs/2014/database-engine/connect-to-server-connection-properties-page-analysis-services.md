@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttoas.connectionproperties.f1
 ms.assetid: 26cf53e3-3bcb-4697-8a88-53e93bc68b56
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1a757ba43fe2a90f532fde71c9bbc0bbf0e902ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a50e63ecd929581f9ae9c185c714fd21dc171c6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225861"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>Connetti al server (pagina Proprietà connessione) - Analysis Services
   Usare questa scheda per visualizzare o specificare le opzioni relative alla connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o alla registrazione di [!INCLUDE[ssAS](../includes/ssas-md.md)] in **Server registrati**. Le opzioni**Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solamente durante la connessione. Le opzioni**Test** e **Salva** vengono visualizzate in questa finestra di dialogo solamente durante la registrazione del [!INCLUDE[ssAS](../includes/ssas-md.md)].  
   
 ## <a name="options"></a>Opzioni  
  **Connetti al database**  
- Selezionare dall'elenco un database al quale connettersi. Se si seleziona  **\<predefinito >**, si verrà connessi al database predefinito per il server. Se si seleziona  **\<Sfoglia server >**, è possibile esplorare il server per il database si desidera connettersi.  
+ Selezionare dall'elenco un database al quale connettersi. Se si seleziona  **\<predefinito >**, si verrà connessi al database predefinito per il server. Se si seleziona  **\<Esplora server >**, è possibile esplorare il server per il database desiderato a cui connettersi.  
   
  **Timeout connessione**  
  Immettere il numero di secondi di attesa dell'attivazione di una connessione prima del timeout. Il valore predefinito è 15 secondi.  

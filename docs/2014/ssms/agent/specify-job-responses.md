@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], responses
 - SQL Server Agent jobs, responses
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - responding to jobs
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5365b0210fda978cd4425d4e621d9dcf7aefb928
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ef60a02b437ed6a66a5db0db4e07938d2a70c4e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323711"
 ---
 # <a name="specify-job-responses"></a>Specifica delle risposte ai processi
   Le risposte ai processi specificano azioni che verranno eseguite dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent al termine di un processo. Tramite le risposte ai processi gli amministratori del database vengono informati in merito al completamento e alla frequenza di esecuzione dei processi. Le risposte ai processi tipiche includono:  
@@ -47,7 +47,7 @@ ms.locfileid: "36167552"
 |-|-|  
 |**Descrizione**|**Argomento**|  
 |Viene descritto come notificare lo stato del processo a un operatore.|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
-|Viene descritto come scrivere lo stato del processo nel registro applicazioni di Windows.|[Scrittura dello stato del processo nel registro applicazioni di Windows](../../reporting-services/report-server/windows-application-log.md)|  
+|Viene descritto come scrivere lo stato del processo nel registro applicazioni di Windows.|[Registrare lo stato del processo nel registro applicazioni di Windows](../../reporting-services/report-server/windows-application-log.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio e risposta agli eventi](monitor-and-respond-to-events.md)  

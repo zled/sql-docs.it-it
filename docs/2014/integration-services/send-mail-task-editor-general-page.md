@@ -1,5 +1,5 @@
 ---
-title: Editor attività Invia messaggi (pagina generale) | Documenti Microsoft
+title: Editor attività Invia messaggi (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sendmailtask.general.f1
 helpviewer_keywords:
 - Send Mail Task Editor
 ms.assetid: 5e60ebbf-8f2d-4d77-a859-e47e0f605cb2
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 959502ba0da952cc77e544a633bbe0afd0ef1200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ffe3ac894f42a953bcf279e5a3162285c6f5db4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199591"
 ---
 # <a name="send-mail-task-editor-general-page"></a>Editor attività Invia messaggi (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Invia messaggi** per assegnare un nome all'attività Invia messaggi e descriverla.  
@@ -40,7 +40,7 @@ ms.locfileid: "36168343"
  Consente di digitare una descrizione dell'attività Invia messaggi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Invia messaggi &#40;pagina di posta elettronica&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   

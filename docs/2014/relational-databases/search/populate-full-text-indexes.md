@@ -5,10 +5,9 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index populations [full-text search]
 - incremental populations [full-text search]
@@ -25,21 +24,21 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 caps.latest.revision: 74
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ce7d4774b40f43cc6a88c414cc18f7005a137e0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: cbe50e41fb353e092edddf2eacc2f189d635aa5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162262"
 ---
 # <a name="populate-full-text-indexes"></a>Popolamento degli indici full-text
   La creazione e la gestione di un indice full-text comporta il popolamento dell'indice con un processo denominato *popolamento* , noto anche con il termine *ricerca per indicizzazione*.  
   
 ##  <a name="types"></a> Tipi di popolamento  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i tipi seguenti di popolamento: popolamento completo, basato sul rilevamento automatico o manuale popolamento modifiche e popolamento incrementale basato su timestamp.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i tipi seguenti di popolamento: popolamento completo, modifica basato sul rilevamento delle popolamento automatico o manuale e popolamento incrementale basato su timestamp.  
   
 ### <a name="full-population"></a>Popolamento completo  
  Durante un popolamento completo, vengono compilate voci di indice per tutte le righe di una tabella o di una vista indicizzata. Durante un popolamento completo di un indice full-text, vengono compilate voci di indice per tutte le righe di una tabella di base o di una vista indicizzata.  
@@ -93,11 +92,11 @@ ms.locfileid: "36169395"
 ### <a name="incremental-timestamp-based-population"></a>Popolamento incrementale basato su timestamp  
  Un popolamento incrementale è un meccanismo alternativo per il popolamento manuale di un indice full-text. È possibile eseguire un popolamento incrementale per un indice full-text per il quale CHANGE_TRACKING è impostato su MANUAL o OFF. Se il primo popolamento di un indice full-text è incrementale, vengono indicizzate tutte le righe e il risultato è equivalente a un popolamento completo.  
   
- Il requisito per popolamento incrementale è che è necessario che la tabella indicizzata contenga una colonna del `timestamp` tipo di dati. Se non è disponibile una colonna `timestamp`, il popolamento incrementale non può essere eseguito. Richiesto un popolamento incrementale per una tabella senza un `timestamp` colonna comporta un popolamento completo. Se alcuni metadati che interessano l'indice full-text della tabella sono stati modificati dopo l'ultimo popolamento, le richieste di popolamento vengono implementate come popolamenti completi. Sono incluse le modifiche ai metadati causate dall'alterazione di qualsiasi definizione di colonna, indice o indice full-text.  
+ Il requisito per il popolamento incrementale è che è necessario che la tabella indicizzata contenga una colonna del `timestamp` tipo di dati. Se non è disponibile una colonna `timestamp`, il popolamento incrementale non può essere eseguito. Una richiesta di popolamento incrementale per una tabella senza un `timestamp` colonna comporta un popolamento completo. Se alcuni metadati che interessano l'indice full-text della tabella sono stati modificati dopo l'ultimo popolamento, le richieste di popolamento vengono implementate come popolamenti completi. Sono incluse le modifiche ai metadati causate dall'alterazione di qualsiasi definizione di colonna, indice o indice full-text.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzata la colonna `timestamp` per identificare le righe che sono state modificate dopo l'ultimo popolamento. Il popolamento incrementale aggiorna l'indice full-text per le righe aggiunte, eliminate o modificate dopo l'ultimo popolamento o durante la sua esecuzione. Se in una tabella vengono eseguiti molti inserimenti, l'utilizzo del popolamento incrementale può rivelarsi più efficiente dell'utilizzo del popolamento manuale.  
   
- Al termine di un popolamento, il motore di ricerca full-text registra un nuovo valore `timestamp`, Questo valore è il più grande `timestamp` valore che ha rilevato SQL Gatherer. Questo valore verrà utilizzato all'avvio del successivo popolamento incrementale.  
+ Al termine di un popolamento, il motore di ricerca full-text registra un nuovo valore `timestamp`, Questo valore è il più grande `timestamp` valore cui è stato rilevato SQL Gatherer. Questo valore verrà utilizzato all'avvio del successivo popolamento incrementale.  
   
  Per eseguire un popolamento incrementale, eseguire un'istruzione ALTER FULLTEXT INDEX utilizzando la clausola START INCREMENTAL POPULATION.  
   
@@ -171,7 +170,7 @@ GO
   
 
   
-##  <a name="create"></a> Creazione o modifica una pianificazione per popolamento incrementale  
+##  <a name="create"></a> La creazione o modifica una pianificazione per popolamento incrementale  
   
 #### <a name="to-create-or-change-a-schedule-for-incremental-population-in-management-studio"></a>Per creare o modificare una pianificazione per popolamento incrementale in Management Studio  
   
@@ -188,7 +187,7 @@ GO
      Utilizzare questa pagina per creare o gestire le pianificazioni per un processo di SQL Server Agent che consente di avviare un popolamento incrementale della tabella di base o della vista indicizzata dell'indice full-text.  
   
     > [!IMPORTANT]  
-    >  Se la tabella di base o la vista non contiene una colonna del `timestamp` del tipo di dati, viene eseguito un popolamento completo.  
+    >  Se la tabella di base o la vista non contiene una colonna del `timestamp` tipo di dati viene eseguito un popolamento completo.  
   
      Sono disponibili le opzioni seguenti:  
   
@@ -213,15 +212,15 @@ GO
 
   
 ##  <a name="crawl"></a> Risoluzione degli errori in un popolamento Full-Text (ricerca per indicizzazione)  
- Quando si verifica un errore durante una ricerca per indicizzazione, la funzionalità di registrazione corrispondente per la ricerca full-text crea e gestisce un log di tipo ricerca per indicizzazione in formato testo normale. Ogni log di tipo ricerca per indicizzazione corrisponde a un catalogo full-text specifico. Per i log di ricerca per indicizzazione predefinito per un'istanza specifica, in questo caso, la prima istanza si trovano in %ProgramFiles%\Microsoft SQL Server\MSSQL12. Cartella MSSQLSERVER\MSSQL\LOG. Il file del log di tipo ricerca per indicizzazione segue lo schema di denominazione seguente:  
+ Quando si verifica un errore durante una ricerca per indicizzazione, la funzionalità di registrazione corrispondente per la ricerca full-text crea e gestisce un log di tipo ricerca per indicizzazione in formato testo normale. Ogni log di tipo ricerca per indicizzazione corrisponde a un catalogo full-text specifico. Per i log di ricerca per indicizzazione predefinita per una determinata istanza, in questo caso, la prima istanza, si trovano in %ProgramFiles%\Microsoft SQL Server\MSSQL12. Cartella MSSQLSERVER\MSSQL\LOG. Il file del log di tipo ricerca per indicizzazione segue lo schema di denominazione seguente:  
   
- SQLFT\<DatabaseID >\<Idcatalogofulltext >. LOG [\<n >]  
+ SQLFT\<DatabaseID >\<FullTextCatalogID >. LOG [\<n >]  
   
  <`DatabaseID`>  
- ID di un database. <`dbid`> è una a cinque cifre numero con zeri iniziali.  
+ ID di un database. <`dbid`> è una cifra cinque numeri con zeri iniziali.  
   
  <`FullTextCatalogID`>  
- ID del catalogo full-text. <`catid`> è una a cinque cifre numero con zeri iniziali.  
+ ID del catalogo full-text. <`catid`> è una cifra cinque numeri con zeri iniziali.  
   
  <`n`>  
  È un numero intero che indica l'esistenza di uno o più log di tipo ricerca per indicizzazione per lo stesso catalogo full-text.  

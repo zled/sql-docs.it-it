@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a772fba6776195e914d9e4109a7973f355f3a270
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1989f166f519ddf732cca8cd47e32a14c414cae1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268647"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   Un'istanza `CurvePolygon` è una superficie topologicamente chiusa definita da un anello di delimitazione esterno e nessuno o più anelli interni  
@@ -33,13 +33,13 @@ ms.locfileid: "36167836"
   
 -   L'interno dell'istanza `CurvePolygon` è lo spazio tra l'anello esterno e tutti gli anelli interni.  
   
- Un `CurvePolygon` differisce da un `Polygon` istanza in cui un `CurvePolygon` istanza può contenere i segmenti di arco circolare seguenti: `CircularString` e `CompoundCurve`.  
+ Oggetto `CurvePolygon` istanza differisce da un `Polygon` istanza in cui un `CurvePolygon` istanza può contenere i segmenti di arco circolare seguenti: `CircularString` e `CompoundCurve`.  
   
 ## <a name="compoundcurve-instances"></a>Istanze CompoundCurve  
- Nella figura seguente mostra valida `CurvePolygon` cifre:  
+ Figura seguente vengono illustrati valida `CurvePolygon` cifre:  
   
 ### <a name="accepted-instances"></a>Istanze accettate  
- Per un `CurvePolygon` essere accettata, deve essere vuoto o contenere solo anelli di arco circolare accettati. Un anello di arco circolare accettato soddisfa i requisiti seguenti.  
+ Per un `CurvePolygon` istanza poter essere accettata, deve essere vuoto o contenere solo anelli di arco circolare accettati. Un anello di arco circolare accettato soddisfa i requisiti seguenti.  
   
 1.  È un'istanza `LineString`, `CircularString` o `CompoundCurve` accettata. Per altre informazioni sulle istanze accettate, vedere [LineString](linestring.md), [CircularString](circularstring.md)e [CompoundCurve](compoundcurve.md).  
   
@@ -72,7 +72,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
  `@g1` non viene accettata perché i punti iniziale e finale non hanno lo stesso valore Y. `@g2` non viene accettata perché l'anello non dispone di un numero di punti sufficiente.  
   
 ### <a name="valid-instances"></a>Istanze valide  
- Per un `CurvePolygon` istanza sia valido sia anello interno e devono soddisfare i criteri seguenti:  
+ Per un `CurvePolygon` istanza valido sia anello interno e devono soddisfare i criteri seguenti:  
   
 1.  Possono toccarsi solo in corrispondenza di singoli punti tangenti.  
   
@@ -82,7 +82,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
 4.  Ogni anello deve essere un tipo di curva accettabile.  
   
- `CurvePolygon` le istanze devono inoltre soddisfare criteri specifici a seconda del fatto che siano `geometry` o `geography` tipi di dati.  
+ `CurvePolygon` le istanze devono inoltre soddisfare criteri specifici a seconda che si trovino `geometry` o `geography` i tipi di dati.  
   
 #### <a name="geometry-data-type"></a>Tipo di dati geometry  
  Un'istanza **geometryCurvePolygon** valida deve avere gli attributi seguenti:  
@@ -159,7 +159,7 @@ SELECT @g.STArea() AS Area;
 ```  
   
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. Archiviazione di un'istanza CurvePolygon contenente anelli interni  
- In questo esempio viene creato un anello in un `CurvePolygon` istanza (entrambi un anello di delimitazione esterno anello un anello interno viene utilizzato per definire l'anello):  
+ In questo esempio viene creato un anello in un `CurvePolygon` istanza (per definire l'anello vengono utilizzati entrambi un delimitazione anello e da un anello interno esterno):  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -167,7 +167,7 @@ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), 
 SELECT @g.STArea() AS Area;  
 ```  
   
- Questo esempio illustra sia un valido `CurvePolygon` istanza e un'istanza non valida quando si utilizza anelli interni:  
+ Questo esempio illustra sia valido `CurvePolygon` istanza e un'istanza non valida quando si usano gli anelli interni:  
   
 ```tsql  
 DECLARE @g1 geometry, @g2 geometry;  

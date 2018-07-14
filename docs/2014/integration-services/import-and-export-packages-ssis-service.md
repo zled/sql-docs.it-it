@@ -1,5 +1,5 @@
 ---
-title: Importare ed esportare pacchetti (servizio SSIS) | Documenti Microsoft
+title: Importare ed esportare pacchetti (servizio SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], importing
 - packages [Integration Services], exporting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - exporting packages
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 caps.latest.revision: 50
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8ee81709bb8f0c9b30ab528d78a21b4ff72c1eed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96f87aedbadd6535fc6e82feb92a822a85b49f0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322691"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Importare ed esportare pacchetti (servizio SSIS)
     
@@ -43,7 +43,7 @@ ms.locfileid: "36167304"
   
 -   Il database msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] offre la possibilità di importare ed esportare pacchetti, e questo modo per modificare il formato di archiviazione e la posizione dei pacchetti. Tramite le caratteristiche di importazione ed esportazione è possibile aggiungere pacchetti al file system, all'archivio pacchetti o al database msdb e copiarli quindi con un formato di archiviazione diverso. I pacchetti salvati in msdb, ad esempio, possono essere copiati nel file system e viceversa.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] offre la possibilità di importare ed esportare pacchetti e questa operazione per modificare il formato di archiviazione e la posizione dei pacchetti. Tramite le caratteristiche di importazione ed esportazione è possibile aggiungere pacchetti al file system, all'archivio pacchetti o al database msdb e copiarli quindi con un formato di archiviazione diverso. I pacchetti salvati in msdb, ad esempio, possono essere copiati nel file system e viceversa.  
   
  È inoltre possibile copiare un pacchetto in un formato diverso tramite l'utilità del prompt dei comandi **dtutil** (dtutil.exe). Per altre informazioni, vedere [dtutil Utility](dtutil-utility.md).  
   
@@ -137,6 +137,6 @@ ms.locfileid: "36167304"
 8.  Scegliere **OK** per completare l'esportazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione del pacchetto &#40;servizio SSIS&#41;](service/package-management-ssis-service.md)  
+ [Gestione dei pacchetti &#40;servizio SSIS&#41;](service/package-management-ssis-service.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ReservedURL method
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1cd5ef5a1e4a29b70d742e858a30ab9912cce6bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f3f7ee5edc3c9deb73e19f97421c7a0da7206082
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166072"
 ---
 # <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>Metodo ReserveURL (MSReportServer_ConfigurationSetting WMI)
   Aggiunge una prenotazione URL per un'applicazione specifica.  
@@ -58,8 +58,8 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Il valore 0 indica l'esito positivo della chiamata al metodo, mentre un codice di errore ne indica l'esito negativo.  
   
-## <a name="remarks"></a>Remarks  
- *UrlString* non include il nome della directory virtuale. Il [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) metodo è fornito a tale scopo.  
+## <a name="remarks"></a>Note  
+ *UrlString* non include il nome della directory virtuale. Il [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) metodo viene fornito a tale scopo.  
   
  Le prenotazioni URL vengono create per l'account del servizio Windows corrente. La modifica dell'account del servizio Windows richiede l'aggiornamento manuale di tutte le prenotazioni URL.  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento StatusGraphic (ASSL) | Documenti Microsoft
+title: Elemento StatusGraphic (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StatusGraphic element
 ms.assetid: 14b365bc-924d-4791-ad4a-a38155fec42e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c551e084d833dff17b7d6c1ab46b398cf6f62313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12d175d20c562fd9c0df30941ded999988fed976
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215961"
 ---
 # <a name="statusgraphic-element-assl"></a>Elemento StatusGraphic (ASSL)
   Contiene la rappresentazione grafica consigliata dello stato del [Kpi](../objects/kpi-element-assl.md) elemento.  
@@ -61,21 +61,21 @@ ms.locfileid: "36168159"
 |Elemento padre|[Indicatore KPI](../objects/kpi-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
 |-----------|-----------------|  
-|*Segnalazione del traffico - singolo*|Semaforo (singolo)|  
-|*Segnalazione del traffico - multiplo*|Semaforo (più di uno)|  
+|*Semaforo - singolo*|Semaforo (singolo)|  
+|*Semaforo - multiplo*|Semaforo (più di uno)|  
 |*Segnali stradali*|Segnali stradali|  
 |*Misuratore - crescente*|Misuratore|  
 |*Misuratore - decrescente*|Misuratore capovolto|  
 |*Termometro*|Termometro|  
 |*Cilindro*|Cilindro|  
-|*Smile*|Smile|  
+|*Faccina sorridente*|Smile|  
   
- L'elemento che corrisponde al padre di `StatusGraphic` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Kpi>.  
+ L'elemento che corrisponde al padre di `StatusGraphic` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Kpi>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

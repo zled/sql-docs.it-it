@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - enterprise automatic administration [SQL Server]
 - multiserver administration [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - target servers [SQL Server]
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95ed4df18cfb4bcf433d08bbe9decacf35977c0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9c4cd4b54ef4659434f7b73b81c72f79c2cba4e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257857"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Amministrazione automatizzata in un'organizzazione
   L'automazione dell'amministrazione in più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene definita *amministrazione multiserver*. Utilizzare l'amministrazione multiserver per eseguire le operazioni seguenti:  
@@ -39,7 +39,7 @@ ms.locfileid: "36167181"
 -   Pianificazione dei flussi di informazioni tra server aziendali per il data warehousing.  
   
 > [!NOTE]  
->  Come parte dell'impegno costante di [!INCLUDE[msCoName](../../includes/msconame-md.md)] nel ridurre il costo totale di proprietà, in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono incluse due nuove caratteristiche: un metodo di gestione dei server denominato gestione basata su criteri e query multiserver che utilizzano server di configurazione e gruppi di server. Tali caratteristiche possono essere utilizzate con, o al posto di, alcune delle caratteristiche descritte in questo argomento. Per altre informazioni, vedere [amministrare server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) e [amministrare più server tramite server di gestione centrale](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
+>  Come parte dell'impegno costante di [!INCLUDE[msCoName](../../includes/msconame-md.md)] nel ridurre il costo totale di proprietà, in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono incluse due nuove caratteristiche: un metodo di gestione dei server denominato gestione basata su criteri e query multiserver che utilizzano server di configurazione e gruppi di server. Tali caratteristiche possono essere utilizzate con, o al posto di, alcune delle caratteristiche descritte in questo argomento. Per altre informazioni, vedere [amministrare server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) e [amministrare più server usando server di gestione centrale](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
   
  Una soddisfacente configurazione di amministrazione multiserver è costituita da almeno un server master e almeno un server di destinazione. Il server master distribuisce processi ai server di destinazione e riceve eventi da tali server. Nel server master è inoltre archiviata la copia centrale delle definizioni di processo per i processi eseguiti nei server di destinazione. I server di destinazione stabiliscono connessioni periodiche al server master per aggiornare l'elenco dei processi pianificati. Se nel server master è presente un nuovo processo, questo viene scaricato dal server di destinazione. Dopo il completamento del processo, il server di destinazione stabilisce una nuova connessione al server master e trasmette lo stato del processo.  
   

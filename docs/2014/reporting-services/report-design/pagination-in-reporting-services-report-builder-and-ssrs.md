@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f17620dc2fc58b033bef928035b4f5f40816214e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 37bbe195179a13d00961f3f33149e3d25b9476e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188038"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginazione in Reporting Services (Generatore report e SSRS)
-  Il termine paginazione si riferisce al numero di pagine all'interno di un report e alla disposizione degli elementi del report in tali pagine. Paginazione in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] varia a seconda dell'estensione per il rendering usata per visualizzare e recapitare il report. Quando si esegue un report sul server di report, viene usato il renderer HTML. Tale renderer si attiene a un set specifico di regole di paginazione. Se ad esempio si esporta lo stesso report in formato PDF, viene usato il renderer PDF e viene applicato un set di regole differente, pertanto il report viene impaginato in modo diverso. Per progettare correttamente un report di facile lettura per gli utenti che è ottimizzato per il renderer che si intende utilizzare per recapitare il report, è necessario comprendere le regole utilizzate per controllare la paginazione in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  Il termine paginazione si riferisce al numero di pagine all'interno di un report e alla disposizione degli elementi del report in tali pagine. Paginazione in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] varia a seconda dell'estensione per il rendering che consente di visualizzare e recapitare il report. Quando si esegue un report sul server di report, viene usato il renderer HTML. Tale renderer si attiene a un set specifico di regole di paginazione. Se ad esempio si esporta lo stesso report in formato PDF, viene usato il renderer PDF e viene applicato un set di regole differente, pertanto il report viene impaginato in modo diverso. Per progettare correttamente un report di facile lettura per gli utenti che è ottimizzato per il renderer che si intende usare per recapitare il report, è necessario comprendere le regole utilizzate per controllare la paginazione in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  In questo argomento viene illustrato l'impatto delle dimensioni della pagina fisica e del layout del report sul rendering del report eseguito mediante renderer di interruzioni di pagina manuali. È possibile impostare le proprietà per modificare le dimensioni e i margini delle pagine fisiche e dividere il report in colonne nei riquadri **Proprietà report** e **Proprietà** o nella finestra di dialogo **Imposta pagina** . Per accedere al riquadro **Proprietà report** , fare clic sull'area blu all'esterno del corpo del report. Per accedere alla finestra di dialogo **Imposta pagina** , fare clic su **Esegui** nella scheda Home, quindi fare clic su **Imposta pagina** nella scheda Esegui.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36168678"
   
  È possibile usare costanti ed espressioni semplici o complesse per impostare il valore delle proprietà Disabled e ResetPageNumber. Non è tuttavia possibile usare espressioni con la proprietà BreakLocation. Per altre informazioni sulla creazione e l'uso delle espressioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
- Nel report è possibile scrivere espressioni che fanno riferimento i nomi di pagina corrente o i numeri di pagina utilizzando la `Globals` insieme. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+ Nel report è possibile scrivere espressioni che fanno riferimento i nomi di pagina correnti o numeri di pagina utilizzando la `Globals` raccolta. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ### <a name="naming-excel-worksheet-tabs"></a>Denominazione delle schede del foglio di lavoro di Excel  
  Queste proprietà risultano utili quando si esportano report nelle cartelle di lavoro di Excel. Usare la proprietà InitialPage per specificare un nome predefinito per la scheda del foglio di lavoro quando si esporta il report e usare le interruzioni di pagina e la proprietà PageName per fornire nomi diversi per ogni foglio di lavoro. Ogni nuova pagina del report, definita da un'interruzione di pagina, viene esportata in un foglio di lavoro diverso denominato in base al valore della proprietà PageName. Se PageName è vuoto, ma il report dispone di un nome di pagina iniziale, quest'ultimo verrà usato per tutti i fogli di lavoro nella cartella di lavoro di Excel.  
@@ -87,6 +87,6 @@ ms.locfileid: "36168678"
  Per altre informazioni sul funzionamento di queste proprietà in caso di esportazione dei report in Excel, vedere [Esportazione in Microsoft Excel &#40;Generatore report e SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina Layout e Rendering della &#40;SSRS e Generatore Report&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Pagina Layout e Rendering della &#40;Report e SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

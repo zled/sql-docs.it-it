@@ -1,5 +1,5 @@
 ---
-title: Definizione di una relazione di tipo fatti | Documenti Microsoft
+title: La definizione di una relazione di tipo fatti | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 28beac3f919350de1bf030dd9d4478146c28b2a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0dbd387f5b98f5547487df7d3fdba9724e10d0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330791"
 ---
 # <a name="defining-a-fact-relationship"></a>Definizione di una relazione di tipo Fatti
   Talvolta può essere necessario dimensionare le misure in base ai dati contenuti nella tabella dei fatti o eseguire query per trovare informazioni correlate specifiche aggiuntive, come ad esempio i numeri delle fatture o degli ordini di acquisto collegati a operazioni di vendita specifiche. Quando viene definita una dimensione basata su un elemento della tabella dei fatti di questo tipo, la dimensione viene denominata *dimensione dei fatti*. Le dimensioni dei fatti sono inoltre note come dimensioni degeneri. Le dimensioni dei fatti sono utili per raggruppare righe di tabelle dei fatti collegate, come ad esempio tutte le righe collegate a un particolare numero di fattura. Sebbene sia possibile inserire queste informazioni in una tabella della dimensione separata del database relazionale, la creazione di una tale tabella non si rivela vantaggiosa in quanto la tabella della dimensione aumenterebbe allo stesso modo della tabella dei fatti determinando un'inutile duplicazione dei dati nonché un'inutile complessità.  
@@ -67,15 +67,15 @@ ms.locfileid: "36166954"
   
 13. Scegliere **Salva tutti** dal menu **File**.  
   
-14. Nel **attributi** riquadro di progettazione dimensioni per il **Internet Sales Order Details** dimensione, selezionare **Sales Order Number**, quindi modificare il  **Nome** proprietà nella finestra proprietà per `Item Description.`  
+14. Nel **attributi** riquadro della finestra di progettazione dimensioni per il **Internet Sales Order Details** dimensione, selezionare **Sales Order Number**e quindi modificare il  **Nome** proprietà nella finestra proprietà in `Item Description.`  
   
 15. Nella cella della proprietà **NameColumn** fare clic sul pulsante Sfoglia **(…)**. Nella finestra di dialogo **Colonna nome** selezionare **Product** dall'elenco **Tabella di origine** , selezionare **EnglishProductName** per **Colonna di origine**e quindi fare clic su **OK**.  
   
 16. Aggiungere l'attributo **Sales Order Number** alla dimensione trascinando la colonna **SalesOrderNumber** dalla tabella **InternetSales** del riquadro **Vista origine dati** al riquadro **Attributi** .  
   
-17. Modificare il **nome** proprietà del nuovo **Sales Order Number** attributo `Order Number`e modificare il **OrderBy** proprietà **chiave**.  
+17. Modificare il **Name** proprietà del nuovo **Sales Order Number** dell'attributo `Order Number`e modificare il **OrderBy** proprietà **chiave**.  
   
-18. Nel **gerarchie** riquadro, creare un **Internet Sales Orders** gerarchia utente che contiene la `Order Number` e **descrizione** livelli, nell'ordine specificato.  
+18. Nel **gerarchie** riquadro, creare un **Internet Sales Orders** gerarchia utente che contiene la `Order Number` e **Item Description** livelli, nell'ordine indicato.  
   
 19. Nel riquadro **Attributi** selezionare **Internet Sales Order Details**e quindi controllare il valore della proprietà **StorageMode** nella finestra Proprietà.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36166954"
   
      L'immagine seguente illustra le proprietà della relazione di tipo Fatti nella finestra di dialogo **Definisci relazione** .  
   
-     ![Finestra di dialogo Definisci relazione](../../2014/tutorials/media/l5-factrelationship-2.gif "finestra di dialogo Definisci relazione")  
+     ![Finestra di dialogo Definisci relazione](../../2014/tutorials/media/l5-factrelationship-2.gif "nella finestra di dialogo Definisci relazione")  
   
 3.  Fare clic su **Annulla**.  
   

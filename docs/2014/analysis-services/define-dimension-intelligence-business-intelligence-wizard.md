@@ -1,5 +1,5 @@
 ---
-title: Definizione funzionalità di Business Intelligence (configurazione guidata Business Intelligence) | Documenti Microsoft
+title: Definizione funzionalità di Business Intelligence (configurazione guidata Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.dimensionintelligence.adddimensionintelligence.f1
 ms.assetid: 1089a788-763f-4c3e-80e3-b625e0728343
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdb8d119a787d6444dcaa4eef1bc70ec612dc742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96f90e84bdd66d4b301193a4b3974964a6a7301e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169334"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171722"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>Definizione funzionalità di Business Intelligence per le dimensioni (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare la pagina **Definizione funzionalità di Business Intelligence per le dimensioni** per eseguire il mapping tra attributi delle dimensioni esistenti e tipi di attributi per il tipo di dimensione specificato.  
@@ -43,7 +43,7 @@ ms.locfileid: "36169334"
  Consente di selezionare l'attributo della dimensione esistente a cui verrà mappato il tipo di attributo corrispondente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Business Intelligence guidata F1 Help](business-intelligence-wizard-f1-help.md)   
+ [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

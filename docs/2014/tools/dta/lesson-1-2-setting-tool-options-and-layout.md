@@ -1,5 +1,5 @@
 ---
-title: Impostazione delle opzioni dello strumento e Layout | Documenti Microsoft
+title: Impostazione delle opzioni dello strumento e Layout | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 067e9cfe54b06a226e103c41aeb3a9f41f058954
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e209d9047dce2ec1452a36d702abc2da4afeedd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274257"
 ---
 # <a name="setting-tool-options-and-layout"></a>Impostazione del layout e delle opzioni dello strumento
   All'avvio è possibile impostare nella maniera più appropriata alla modalità di utilizzo le opzioni che configurano l'interfaccia utente grafica (GUI) dello strumento Ottimizzazione guidata motore di database, il carattere utilizzato e altre funzionalità. Le procedure contenute in questa pagina illustrano le opzioni che è possibile impostare e in che modo impostarle.  

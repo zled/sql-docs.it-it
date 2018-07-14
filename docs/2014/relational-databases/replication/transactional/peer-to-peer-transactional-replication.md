@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
 - transactional replication, bidirectional replication
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 299b9968d9daebc61c9625a661125d45f33a3dfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 838d3fa3190e592c0b46529ea45b7e1a7b91c8be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236651"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Replica transazionale peer-to-peer
   La replica peer-to-peer rappresenta una soluzione per la scalabilità orizzontale ad elevata disponibilità in quanto consente di gestire copie dei dati in più istanze del server, definite *nodi*. Compilata sulle basi della replica transazionale, la replica peer-to-peer propaga quasi in tempo reale modifiche coerenti dal punto di vista transazionale. In tal modo le applicazioni che richiedono la scalabilità orizzontale delle operazioni di lettura possono distribuire le operazioni di lettura dei client in più nodi. Perché i dati vengono gestiti nei nodi quasi in tempo reale, la replica peer-to-peer offre quella funzionalità di ridondanza dei dati che consente di aumentare la disponibilità dei dati.  
@@ -147,9 +147,9 @@ ms.locfileid: "36167041"
   
  Per le proprietà indicate di seguito sono presenti considerazioni speciali:  
   
--   La proprietà di pubblicazione **@allow_initialize_from_backup** richiede un valore di `true`.  
+-   La proprietà di pubblicazione **@allow_initialize_from_backup** richiede il valore `true`.  
   
--   La proprietà di articolo **@replicate_ddl** richiede un valore di `true`; **@identityrangemanagementoption** richiede il valore `manual`; e **@status** richiede che l'opzione **24** è impostata.  
+-   La proprietà di articolo **@replicate_ddl** richiede il valore `true`; **@identityrangemanagementoption** richiede il valore `manual`; e **@status** richiede che l'opzione **24** è impostata.  
   
 -   Il valore delle proprietà di articolo **@ins_cmd**, **@del_cmd**, e **@upd_cmd** non può essere impostata su `SQL`.  
   

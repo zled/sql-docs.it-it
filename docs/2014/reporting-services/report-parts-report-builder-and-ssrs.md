@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fe79b6a9cd0e3c25caa2e3a1bccc67f0ac3e9be5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3fd8f519abce87b224d062cb245365b42d5ffc79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262077"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Parti del report (Generatore report e SSRS)
   È possibile pubblicare come *parti di report*elementi quali tabelle, matrici, grafici e immagini. Le parti di report sono elementi pubblicati separatamente in un server di report e che possono essere riutilizzati in altri report. Le parti di report hanno un'estensione di file rsc.  
@@ -30,7 +30,7 @@ ms.locfileid: "36167101"
   
  La parte di report aggiunta al report in uso consente di gestire una relazione con l'istanza della parte di report sul sito o sul server tramite un ID univoco. Dopo aver aggiunto delle parti a un report da un sito o un server, è possibile modificarle indipendentemente dalla parte di report originale sul sito o sul server. È possibile accettare aggiornamenti che altri utenti hanno apportato alla parte di report sul sito o sul server e salvare di nuovo la parte di report modificata nel sito o nel server, aggiungendone una nuova o scrivendo sull'originale, se si dispone delle autorizzazioni sufficienti.  
   
- Per iniziare rapidamente con parti di report, vedere i video [Report Builder 3 parti di Report in SQL Server 2008 R2](http://technet.microsoft.com/edge/Video/ff711300) e [modo in cui si ricerca per categorie: creare parti di Report riutilizzabili con Generatore Report di SQL Server](http://technet.microsoft.com/sqlserver/ff634166.aspx).  
+ Per iniziare rapidamente con parti di report, vedere i video [3 di parti di Report in SQL Server 2008 R2 Report Builder](http://technet.microsoft.com/edge/Video/ff711300) e [come tale ricerca per categorie: creazione di parti di Report riutilizzabili con Generatore Report di SQL Server](http://technet.microsoft.com/sqlserver/ff634166.aspx).  
   
 ##  <a name="ComponentWorkflow"></a> Ciclo di vita di una parte di report  
  ![rs_ComponentCreation](media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -78,7 +78,7 @@ ms.locfileid: "36167101"
   
  Alcune parti del report possono contenere altri elementi del report. Ad esempio, una tabella può contenere un grafico e un rettangolo può contenere una matrice e un grafico. Quando si pubblica un elemento del report che contiene altri elementi del report, questi ultimi vengono salvati come un'unità. Gli altri elementi del report vengono salvati incorporati nella parte di report contenitore. Non è possibile aggiornarli separatamente e non è possibile salvare gli elementi nel contenitore come parti di report separate.  
   
- Per ulteriori informazioni sulla pubblicazione di parti del report, vedere [pubblica e ripubblicare parti del Report &#40;Generatore Report e SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
+ Per altre informazioni sulla pubblicazione di parti del report, vedere [pubblica e ripubblicare parti del Report &#40;Generatore Report e SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
   
 ### <a name="modifying-report-part-metadata"></a>Modifica dei metadati della parte di report  
  È possibile pubblicare parti di report con le impostazioni predefinite in un percorso predefinito o salvare ogni parte di report in un percorso diverso e modificare i metadati, ad esempio il titolo e la descrizione.  
@@ -102,7 +102,7 @@ ms.locfileid: "36167101"
 ### <a name="what-comes-with-a-report-part"></a>Elementi forniti con una parte di report  
  Quando una parte di report viene aggiunta al report in uso, vengono aggiunti anche tutti gli elementi necessari affinché funzioni. Ad esempio, un qualsiasi oggetto che consente la visualizzazione dei dati dipende da un set di dati, ovvero una query e una connessione a un'origine dati. È possibile che disponga anche di più parametri. Tutti gli elementi dai quali dipende sono le relative *dipendenze*e tutti questi elementi o i relativi puntatori sono inclusi nella parte di report quando quest'ultima viene aggiunta al report in uso. I set di dati e i parametri sono elencati nel riquadro dei dati del report del report.  
   
- Il set di dati per la parte di report può essere incorporato nella parte di report o è possibile che sia un set di dati separato, condiviso a cui punta la parte di report. Se è incorporato nella parte di report, è possibile modificarlo. Se è un set di dati condiviso, è un oggetto separato per il quale sono necessarie autorizzazioni. Per ulteriori informazioni sulle condivisi e incorporati, vedere [aggiungere dati a un Report &#40;Generatore Report e SSRS&#41;](report-data/report-datasets-ssrs.md).  
+ Il set di dati per la parte di report può essere incorporato nella parte di report o è possibile che sia un set di dati separato, condiviso a cui punta la parte di report. Se è incorporato nella parte di report, è possibile modificarlo. Se è un set di dati condiviso, è un oggetto separato per il quale sono necessarie autorizzazioni. Per altre informazioni sulle condivisi e incorporati, vedere [aggiungere dati a un Report &#40;Generatore Report e SSRS&#41;](report-data/report-datasets-ssrs.md).  
   
 ### <a name="resolving-naming-conflicts"></a>Risoluzione dei conflitti dei nomi  
  Quando si aggiunge una parte di report, è possibile risolvere qualsiasi conflitto di nome mediante Generatore report. Ad esempio, se si dispone già di un elemento Chart1 nel report e si aggiunge una parte di report denominata Chart1, mediante Generatore report la nuova parte di report viene rinominata automaticamente Chart2. Se si dispone già di un elemento Dataset1 nel report e si aggiunge una parte di report che fa riferimento a un set di dati diverso denominato anch'esso Dataset1, Generatore report consente di rinominare il nuovo set di dati Dataset2 e di aggiornare i riferimenti.  
@@ -118,7 +118,7 @@ ms.locfileid: "36167101"
  Ogni volta che si apre un report in Generatore report, viene eseguita la verifica dello stato di aggiornamento delle istanze del server delle parti di report in quel report. Consente di verificare inoltre le modifiche negli elementi dipendenti delle parti di report, ad esempio nel set di dati e nei parametri. Se eventuali parti di report pubblicate o le relative dipendenze sono state aggiornate sul server, in una barra informazioni del report in uso viene visualizzato il numero di quelle interessate dall'aggiornamento. È possibile scegliere di visualizzare e accettare, o rifiutare, gli aggiornamenti oppure di ignorare la barra informazioni. Se si sceglie di visualizzare gli aggiornamenti, viene visualizzata un'anteprima della parte di report con la data e il nome dell'autore dell'ultima modifica. È quindi possibile accettare alcuni o tutti gli elementi aggiornati.  
   
 > [!NOTE]  
->  La barra può essere disabilitata ed è quindi possibile non venire informati di eventuali modifiche a una parte del report. Questa opzione può essere impostata quando si aggiunge la parte di report al report. Anche se la barra informazioni è stata disabilitata, è ancora possibile verificare gli aggiornamenti. Per altre informazioni, vedere [verificare la presenza di aggiornamenti o disattiva gli aggiornamenti &#40;Generatore Report e SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md).  
+>  La barra può essere disabilitata ed è quindi possibile non venire informati di eventuali modifiche a una parte del report. Questa opzione può essere impostata quando si aggiunge la parte di report al report. Anche se la barra informazioni è stata disabilitata, è ancora possibile verificare gli aggiornamenti. Per altre informazioni, vedere [verificare la presenza di aggiornamenti o disattivare gli aggiornamenti &#40;Generatore Report e SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md).  
   
  Generatore report consente di verificare le differenze tra la data dell'ultimo aggiornamento apportato alla parte di report nel server e la data dell'ultima sincronizzazione della parte di report con il server. Non consente di controllare la data di modifica della parte di report nel report. Pertanto, la parte di report nel report in uso e la parte di report sul server potrebbero essere completamente diverse, tuttavia quando si esegue la verifica degli aggiornamenti mediante Generatore report, non ne verrà rilevato alcuno.  
   
@@ -145,17 +145,17 @@ ms.locfileid: "36167101"
  Le parti di report funzionano in modo diverso in Progettazione report in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In Progettazione report la pubblicazione è unidirezionale: è possibile pubblicare una parte di report, ma non è possibile riutilizzare una parte di report esistente. Per altre informazioni, vedere [Parti del report in Progettazione report &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   
 ##  <a name="HowTo"></a> Procedure  
- [Pubblicazione e ripubblicazione di parti del Report &#40;SSRS e Generatore Report&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Pubblicare e ripubblicare parti del Report &#40;Report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [Ricerca di parti del Report e impostare una cartella predefinita &#40;SSRS e Generatore Report&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [Ricerca di parti del Report e impostazione di una cartella predefinita &#40;Report e SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [Cercare gli aggiornamenti o Turn Off &#40;SSRS e Generatore Report&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
+ [Verificare o gli aggiornamenti Turn Off &#40;Report e SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le parti del report e set di dati in Generatore Report](report-data/report-parts-and-datasets-in-report-builder.md)   
- [Risoluzione dei problemi relativi a parti del Report &#40;SSRS e Generatore Report&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Parti del report e set di dati in Generatore Report](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Risolvere i problemi di parti del Report &#40;Report e SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Gestione di parti di Report](report-design/managing-report-parts.md)   
  [Report Builder 3 parti di Report in SQL Server 2008 R2 (video)](http://technet.microsoft.com/edge/Video/ff711300)   
- [Ricerca per categorie Crea le parti di Report riutilizzabili con Generatore Report di SQL Server (video)](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
+ [Ricerca per categorie Delle parti di Report crea con Generatore Report di SQL Server (video)](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
   
   

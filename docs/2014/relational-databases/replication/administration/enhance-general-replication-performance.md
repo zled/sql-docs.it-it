@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
 - designing databases [SQL Server], replication performance
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8c16d70220050578fc810735f76465806a895d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71afdf1b34056089c767ed021c0e14006f400850
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172872"
 ---
 # <a name="enhance-general-replication-performance"></a>Miglioramento delle prestazioni generali della replica
   È possibile migliorare le prestazioni generali di tutti i tipi di replica nell'applicazione e nella rete attenendosi alle istruzioni riportate in questo argomento.  
@@ -84,7 +84,7 @@ ms.locfileid: "36169884"
   
 -   Limitare l'utilizzo dei tipi di dati LOB (Large Object).  
   
-     Tali dati richiedono uno spazio di archiviazione e un'elaborazione maggiori rispetto ad altri tipi di dati di colonna. Non includere queste colonne negli articoli a meno che non sia necessario per l'applicazione in uso. I tipi di dati `text`, `ntext`, e `image` sono deprecati. Se è necessario includere dati LOB, è consigliabile utilizzare i tipi di dati `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, rispettivamente.  
+     Tali dati richiedono uno spazio di archiviazione e un'elaborazione maggiori rispetto ad altri tipi di dati di colonna. Non includere queste colonne negli articoli a meno che non sia necessario per l'applicazione in uso. I tipi di dati `text`, `ntext`, e `image` sono deprecati. Se è necessario includere dati LOB, è consigliabile usare i tipi di dati `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, rispettivamente.  
   
      Per la replica transazionale, provare a utilizzare il profilo dell'agente di distribuzione denominato **Profilo di distribuzione per flussi OLEDB**. Per altre informazioni, vedere [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Connettersi a un Server Integration Services remoto (servizio SSIS) | Documenti Microsoft
+title: Connettersi a un Server di servizi di integrazione remota (servizio SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - service [Integration Services], remote instance
 - Integration Services service, connecting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - service [Integration Services], connecting
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6bc9a067991e0b9833b1f5edb71c3204be8cb242
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: dfe4822aeb7746926dc2ea558ea78aa136e6e991
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199731"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Eseguire una connessione a un server Integration Services remoto (servizio SSIS)
     
@@ -110,6 +110,6 @@ Per impostazione predefinita, il servizio [!INCLUDE[ssNoVersion](../includes/ssn
 Per altre informazioni, vedere [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(Supporto di Kerberos e della delega tra domini con il pacchetto SSIS).
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare Windows Firewall per l'accesso al servizio SSIS](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  
+ [Configurare un Windows Firewall per l'accesso al servizio SSIS](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  
   
   

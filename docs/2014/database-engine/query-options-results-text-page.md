@@ -1,5 +1,5 @@
 ---
-title: Opzioni query-risultati (pagina testo) | Documenti Microsoft
+title: Opzioni query-risultati (pagina testo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 51e1a98f00bc4d33e0609f1b03ceca928bded049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6c4fb6fe50f20bcac8d4f16644a35466a7b2f2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168368"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205751"
 ---
 # <a name="query-options-results-text-page"></a>Opzioni query - Risultati (pagina Testo)
   Utilizzare questa pagina per specificare le opzioni di visualizzazione di un set di risultati di una query in formato testo. Le impostazioni disponibili in questa pagina si applicano inoltre quando è selezionata l'opzione **Risultati in un file** .  
@@ -41,13 +41,13 @@ ms.locfileid: "36168368"
  **Allinea a destra i valori numerici**  
  Selezionare questa casella di controllo per allineare i valori numeri a destra nella colonna in modo da semplificare l'esame delle cifre con un numero di posizioni decimali predefinito.  
   
- **Elimina risultati dopo l'esecuzione della query**  
+ **Elimina risultati dopo l'esecuzione di query**  
  Libera la memoria eliminando i risultati della query dopo che sono stati visualizzati.  
   
  **Visualizzare i risultati in una scheda separata**  
  Selezionare questa casella di controllo per visualizzare il set di risultati in una nuova finestra del documento invece che nella parte inferiore della finestra della query.  
   
- **Passare alla scheda risultati dopo l'esecuzione della query**  
+ **Passare alla scheda risultati dopo l'esecuzione di query**  
  Selezionare questa casella per impostare lo stato attivo dello schermo sul set di risultati.  
   
  **Numero massimo di caratteri visualizzati in ogni colonna**  
