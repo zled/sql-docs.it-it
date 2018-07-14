@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 402927baa685e906e7f6669147f0e1c3be2d2918
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eaafdee895b1fe86fb5646b35dd3cdb2b30070d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207601"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Selezionare tabelle e colonne Oracle
   Utilizzare la pagina Seleziona tabelle e colonne Oracle per selezionare le tabelle dal database di origine Oracle in cui vengono acquisite le modifiche. Nella pagina sono presenti gli elementi seguenti:  
@@ -54,7 +54,7 @@ ms.locfileid: "36156761"
  Dopo aver [selezionato le tabelle Oracle per l'acquisizione delle modifiche](select-oracle-tables-for-capturing-changes.md) e/o [apportato modifiche alle tabelle selezionate per l'acquisizione di modifiche](make-changes-to-the-tables-selected-for-capturing-changes.md) usando le finestre di dialogo corrette, fare clic su **Avanti** e passare a [Generare ed eseguire lo script di registrazione supplementare](generate-and-run-the-supplemental-logging-script.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come creare l'istanza di Database SQL Server Change](how-to-create-the-sql-server-change-database-instance.md)   
+ [Come creare l'istanza di Database SQL Server Cambia](how-to-create-the-sql-server-change-database-instance.md)   
  [Modificare le tabelle](edit-tables.md)   
  [Aggiungere tabelle a un'istanza di CDC](add-tables-to-a-cdc-instance.md)   
  [Modificare le proprietà delle tabelle](edit-the-table-properties.md)  

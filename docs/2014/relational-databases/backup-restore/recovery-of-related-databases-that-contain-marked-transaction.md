@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], marks
 - STOPBEFOREMARK option [RESTORE statement]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ca2529a4dbe6e237b3d8e833659a7c3df1fc941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8fc37a9704dde533ae9d626a9853ccfb147cb06a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188608"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recupero di database correlati che contengono transazioni contrassegnate
   Le informazioni contenute in questo argomento sono rilevanti solo per i database che includono transazioni contrassegnate e utilizzano il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  
@@ -58,18 +57,18 @@ ms.locfileid: "36166407"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- Il log delle transazioni registra il nome del contrassegno (nome della transazione), descrizione, database, l'utente, `datetime` informazioni e il numero di sequenza del log (LSN). Il `datetime` informazioni vengono utilizzate con il nome del contrassegno per identificare in modo univoco il contrassegno.  
+ Il log delle transazioni registra il nome del contrassegno (nome della transazione), descrizione, database, utente, `datetime` informazioni e il numero di sequenza del log (LSN). Il `datetime` informazioni vengono utilizzate con il nome del contrassegno per identificare in modo univoco il contrassegno.  
   
  Per informazioni sull'inserimento di un contrassegno in una transazione che si estende su più database, vedere [Usare transazioni contrassegnate per recuperare coerentemente i database correlati &#40;modello di recupero con registrazione completa&#41;](use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Sintassi Transact-SQL per il recupero fino a un contrassegno  
  Quando si specifica una transazione contrassegnata come destinazione usando un'istruzione [RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql), è possibile usare una delle clausole seguenti per arrestare l'operazione in corrispondenza del contrassegno o immediatamente prima di esso:  
   
--   Utilizzare la clausola WITH STOPATMARK = **'*`<mark_name>`*'** clausola per specificare che la transazione contrassegnata è il punto di ripristino.  
+-   Usare la clausola WITH STOPATMARK = **»*`<mark_name>`*'** clausola per specificare che la transazione contrassegnata è il punto di ripristino.  
   
      STOPATMARK esegue il rollforward fino al contrassegno, includendovi la transazione contrassegnata.  
   
--   Utilizzare la clausola WITH STOPBEFOREMARK = **'*`<mark_name>`*'** clausola per specificare che il record del log è immediatamente precedente al contrassegno il punto di ripristino.  
+-   Usare la clausola WITH STOPBEFOREMARK = **»*`<mark_name>`*'** clausola per specificare che il record del log viene immediatamente precedente al contrassegno il punto di ripristino.  
   
      STOPBEFOREMARK esegue il rollforward fino al contrassegno, escludendo la transazione contrassegnata.  
   

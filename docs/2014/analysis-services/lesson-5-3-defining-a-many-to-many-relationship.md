@@ -1,5 +1,5 @@
 ---
-title: Definizione di una relazione molti-a-molti | Documenti Microsoft
+title: Definizione di una relazione molti-a-molti | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 89ec38cf3bd3b197c6a58a5d51758ee6c6f29269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 868c814c1031f9ffb499f80da2d7e9314d80e3bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189238"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definizione di una relazione molti-a-molti
   Quando si definisce una dimensione, generalmente ogni fatto viene unito in join a un solo membro della dimensione, mentre un singolo membro della dimensione può essere associato a molti fatti. A ogni cliente possono essere ad esempio associati più ordini, ma ogni ordine appartiene a un unico cliente. Nella terminologia dei database relazionali, questa viene definita una *relazione uno-a-molti*. A volte, tuttavia, è possibile che un singolo fatto venga unito in join a più membri della dimensione. Nella terminologia dei database relazionali, questa viene definita una *relazione molti-a-molti*. Ad esempio, i motivi che determinano un acquisto da parte di un cliente possono essere diversi e un motivo per l'acquisto può essere associato a più acquisti. Una tabella di join viene utilizzata per definire i motivi di vendita correlati a ogni acquisto. Una dimensione Sales Reason creata a partire da relazioni di questo tipo può disporre quindi di più membri che corrispondono a una singola transazione di vendita. Le dimensioni molti-a-molti consentono di espandere la modellazione dimensionale oltre lo schema star classico e supportano analisi complesse quando le dimensioni non sono direttamente associate a una tabella dei fatti.  
@@ -39,7 +39,7 @@ ms.locfileid: "36166483"
   
 1.  Aprire Progettazione vista origine dati per la vista origine dati **Adventure Works DW 2012** .  
   
-2.  Fare doppio clic in un punto qualsiasi nella **diagrammi** riquadro, fare clic su **nuovo diagramma**e specificare `Internet Sales Order Reasons` come nome per il nuovo diagramma.  
+2.  Pulsante destro del mouse in qualsiasi punto nel **diagrammi** riquadro, fare clic su **nuovo diagramma**e specificare `Internet Sales Order Reasons` come nome per il nuovo diagramma.  
   
 3.  Trascinare la tabella **InternetSales** dal riquadro **Tabelle** al riquadro **Diagramma** .  
   
@@ -51,13 +51,13 @@ ms.locfileid: "36166483"
   
 6.  Scegliere **Layout automatico** dal menu **Formato**e quindi fare clic su **Diagramma**.  
   
-7.  Nella finestra Proprietà modificare il **FriendlyName** proprietà del **DimSalesReason** tabella alla `SalesReason`, quindi modificare il **FriendlyName** proprietà del **FactInternetSalesReason** tabella alla `InternetSalesReason`.  
+7.  Nella finestra Proprietà modificare il **FriendlyName** proprietà delle **DimSalesReason** alla tabella `SalesReason`e quindi modificare la **FriendlyName** proprietà del **FactInternetSalesReason** alla tabella `InternetSalesReason`.  
   
 8.  Nel riquadro **Tabelle** espandere **InternetSalesReason (dbo.FactInternetSalesReason)**, fare clic su **SalesOrderNumber**e quindi controllare la proprietà **DataType** per questa colonna dati nella finestra Proprietà.  
   
      Si noti che la colonna **SalesOrderNumber** è di tipo stringa.  
   
-9. Esaminare i tipi di dati per le altre colonne di `InternetSalesReason` tabella.  
+9. Controllare i tipi di dati delle altre colonne di `InternetSalesReason` tabella.  
   
      Si noti che i tipi di dati delle altre due colonne della tabella sono tipi di dati numerici.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36166483"
   
      Si noti che per ogni numero di riga all'interno di ogni ordine un valore chiave identifica il motivo della vendita per l'acquisto di quell'elemento di riga, come illustrato nella figura seguente.  
   
-     ![Chiave per identificare il motivo delle vendite per gli acquisti](../../2014/tutorials/media/l5-many-to-many-1.gif "valore per identificare il motivo delle vendite per gli acquisti della chiave")  
+     ![Chiave per identificare motivo di vendita per gli acquisti](../../2014/tutorials/media/l5-many-to-many-1.gif "chiave per identificare motivo di vendita per gli acquisti")  
   
 ## <a name="defining-the-intermediate-measure-group"></a>Definizione del gruppo di misure intermedio  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36166483"
   
      Nella figura successiva vengono illustrate le proprietà della misura **Internet Sales Reason Count** .  
   
-     ![Le proprietà per la misura Internet Sales Reason Count](../../2014/tutorials/media/l5-many-to-many-2.gif "proprietà per la misura Internet Sales Reason Count")  
+     ![Le proprietà della misura Internet Sales Reason Count](../../2014/tutorials/media/l5-many-to-many-2.gif "le proprietà della misura Internet Sales Reason Count")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>Definizione della dimensione molti-a-molti  
   
@@ -111,15 +111,15 @@ ms.locfileid: "36166483"
   
 8.  Scegliere **Avanti**.  
   
-9. Nella pagina **Selezione attributi dimensione** l'attributo **Sales Reason Key** è selezionato automaticamente perché è l'attributo chiave. Selezionare la casella di controllo accanto ai **Sales Reason Reason Type** attributo, impostarne il nome su `Sales Reason Type`, quindi fare clic su **successivo**.  
+9. Nella pagina **Selezione attributi dimensione** l'attributo **Sales Reason Key** è selezionato automaticamente perché è l'attributo chiave. Selezionare la casella di controllo accanto al **Sales Reason Reason Type** dell'attributo, modificarne il nome in `Sales Reason Type`, quindi fare clic su **successivo**.  
   
 10. Nella pagina **Completamento procedura guidata** fare clic su **Fine** per creare la dimensione Sales Reason.  
   
 11. Scegliere **Salva tutti** dal menu **File**.  
   
-12. Nel **attributi** riquadro di progettazione dimensioni per il **Sales Reason** dimensione, selezionare **Sales Reason Key**, quindi modificare il **nome**proprietà nella finestra proprietà per `Sales Reason.`  
+12. Nel **attributi** riquadro della finestra di progettazione dimensioni per il **Sales Reason** dimensione, selezionare **Sales Reason Key**e quindi modificare il **nome**nella finestra proprietà per proprietà `Sales Reason.`  
   
-13. Nel **gerarchie** riquadro di progettazione dimensioni, creare un **Sales Reasons** gerarchia utente che contiene la `Sales Reason Type` livello e la **Sales Reason** livello, tale ordine.  
+13. Nel **gerarchie** riquadro della finestra di progettazione dimensioni, creare un **Sales Reasons** gerarchia utente che contiene il `Sales Reason Type` livello e il **Sales Reason** livello, in tale ordine.  
   
 14. Nella finestra Proprietà, definire `All Sales Reasons` come valore per il **AllMemberName** proprietà della gerarchia Sales Reasons.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36166483"
   
      Nella figura seguente vengono illustrate le modifiche apportate alla finestra di dialogo **Definisci relazione** .  
   
-     ![Finestra di dialogo Definisci relazione](../../2014/tutorials/media/l5-many-to-many-3.gif "finestra di dialogo Definisci relazione")  
+     ![Finestra di dialogo Definisci relazione](../../2014/tutorials/media/l5-many-to-many-3.gif "nella finestra di dialogo Definisci relazione")  
   
 5.  Fare clic su **OK**.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "36166483"
   
 5.  Nel riquadro Metadati espandere **Customer**, **Location**, **Customer Geography**, **Members**, **All Customers**e **Australia**, fare clic con il pulsante destro del mouse su **Queensland**, quindi scegliere **Aggiungi a filtro**.  
   
-6.  Espandere ogni membro del `Sales Reason Type` livello per esaminare i valori in dollari associati a ogni motivo assegnato dal cliente in Queensland per l'acquisto di un [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] prodotto tramite Internet.  
+6.  Espandere ogni membro del `Sales Reason Type` livello per esaminare i valori in dollari associati a ogni motivo dato dal cliente in Queensland per l'acquisto di un [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] prodotto tramite Internet.  
   
      Si noti che la somma dei totali associati a ciascun motivo di vendita risulta maggiore delle vendite totali. Ciò si spiega con il fatto che alcuni clienti danno più motivi per i loro acquisti.  
   

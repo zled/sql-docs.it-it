@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
 - data truncation [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e735659fb2898c2ab6bc428d7ad6fc0f5759f17c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5f80a51df610040e18dbdae7b1552c56d81cb084
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328091"
 ---
 # <a name="data-truncation-ssis"></a>Troncamento dei dati (SSIS)
   Un'espressione può causare il troncamento accidentale dei dati. Il troncamento può verificarsi nelle circostanze seguenti:  
@@ -38,6 +38,6 @@ ms.locfileid: "36158496"
  L'analizzatore di espressioni identifica i cast espliciti che possono causare troncamenti e genera un avviso durante l'analisi dell'espressione. L'analizzatore di espressioni genera un avviso ad esempio quando viene eseguito il cast di una stringa di 30 caratteri in una stringa di 20 caratteri.  
   
 > [!NOTE]  
->  In fase di esecuzione il troncamento non viene verificato e i dati vengono troncati senza generare avvisi. La maggior parte degli adattatori e delle trasformazioni supporta tuttavia output degli errori in grado di gestire la disposizione delle righe con errori. Per ulteriori informazioni sulla gestione del troncamento dei dati, vedere [Error Handling in Data](../data-flow/error-handling-in-data.md).  
+>  In fase di esecuzione il troncamento non viene verificato e i dati vengono troncati senza generare avvisi. La maggior parte degli adattatori e delle trasformazioni supporta tuttavia output degli errori in grado di gestire la disposizione delle righe con errori. Per altre informazioni sulla gestione del troncamento dei dati, vedere [gestione degli errori nei dati](../data-flow/error-handling-in-data.md).  
   
   

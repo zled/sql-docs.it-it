@@ -1,5 +1,5 @@
 ---
-title: Visualizzatore KPI (scheda KPI, Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Visualizzatore KPI (scheda KPI, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpibrowserpane.f1
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32373127f72dae058a80712cec564af7dffca45e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 520024140f0406f897e897cd2d41eff065923aa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257377"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Visualizzatore KPI (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Visualizzatore KPI** della scheda **KPI** in Progettazione cubi per visualizzare e testare i risultati degli indicatori di prestazioni chiave (KPI). Prima dell'esplorazione è necessario distribuire gli indicatori KPI a un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -60,10 +60,10 @@ ms.locfileid: "36157409"
 > [!NOTE]  
 >  Questo campo rappresenta un elemento dinamico per l'immissione di dati, che cambia aspetto per riflettere i tipi di dati necessari per l'operatore selezionato.  
   
- **Griglia dei risultati**  
+ **Griglia risultati**  
  Consente di visualizzare il valore valutato, l'obiettivo, lo stato e la tendenza per gli indicatori KPI, in base al filtro definito nella **Griglia filtri**. La griglia include le colonne seguenti:  
   
- **Visualizzare la struttura**  
+ **Visualizza struttura**  
  Consente di visualizzare gli indicatori KPI contenuti nel cubo, organizzati gerarchicamente in base ai valori di **Cartella di visualizzazione** o di **KPI padre** per ogni indicatore KPI.  
   
  **Value**  

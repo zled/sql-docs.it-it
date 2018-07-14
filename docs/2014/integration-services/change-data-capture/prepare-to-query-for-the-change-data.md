@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6fc278beec749f8698977a153c30b5c584ea8424
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88f2dd6e5caf6cf5b601f07ca826d85808f9e6f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248811"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Preparazione dell'esecuzione di una query per i dati delle modifiche
   Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per l'esecuzione di un caricamento incrementale dei dati delle modifiche, la terza e ultima attività consiste nel preparare l'esecuzione di una query per i dati delle modifiche e nell'aggiungere un'attività Flusso di dati.  
@@ -128,7 +128,7 @@ ms.locfileid: "36077632"
   
         ```  
   
-5.  Lasciare la riga predefinita del codice che restituisce `DtsExecResult.Success` dall'esecuzione dello script.  
+5.  Lasciare la riga predefinita di codice che restituisce `DtsExecResult.Success` dall'esecuzione dello script.  
   
 6.  Chiudere l'ambiente di sviluppo dello script ed **Editor attività Script**.  
   

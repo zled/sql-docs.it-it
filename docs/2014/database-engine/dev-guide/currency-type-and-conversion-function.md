@@ -1,5 +1,5 @@
 ---
-title: Tipo Currency e funzione di conversione | Documenti Microsoft
+title: Tipo Currency e funzione di conversione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e0c0adda9b9c1e39e599d33fd0d6462fd675cc9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5f4c3aae27950cdaa6ff2244abdc2de501c0b1f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332481"
 ---
 # <a name="currency-type-and-conversion-function"></a>Tipo Currency e funzione di conversione
   In questo esempio viene definito un tipo di dati Currency definito dall'utente mediante C#. Questo tipo di dati definito dall'utente incapsula un importo e impostazioni cultura che consentono di determinare il modo corretto per rappresentare l'importo come valuta del paese delle impostazioni cultura in oggetto. Nell'esempio viene inoltre fornita una funzione di conversione di valuta che restituisce un'istanza del tipo di dati Currency definito dall'utente. Se il database AdventureWorks prevede un tasso di conversione da dollari US (USD) nella valuta associata alle impostazioni cultura specificate, la funzione di conversione restituisce un tipo di dati Currency definito dall'utente con conversione e impostazioni cultura corrispondenti alle impostazioni cultura specificate. In caso contrario, viene restituito un tipo di dati Currency definito dall'utente con l'importo originale in dollari USA e con le impostazioni cultura `en-us`. Nell'esempio viene illustrato come registrare assembly e metodi CLR (Common Language Runtime) e annullarne la registrazione mediante Transact-SQL.  

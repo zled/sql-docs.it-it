@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 387db446f8fc0f3c5ac90ab31466ae8c8597ce1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 874137b75fbade0468a284f28397b30334936bd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249751"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Visualizzazione di progettazione set di dati condivisi (Generatore report)
   La finestra di progettazione del set di dati condiviso consente di creare una query del set di dati che può essere condivisa con altri utenti. Nella finestra è possibile selezionare un'origine dati condivisa, specificare proprietà per il set di dati condiviso e creare una query in Progettazione query.  
   
  ![rs_SharedDatasetDesignMode](../media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- Per ulteriori informazioni sull'utilizzo di dati in un report, vedere [aggiungere dati a un Report &#40;Generatore Report e SSRS&#41;](../report-data/report-datasets-ssrs.md).  
+ Per altre informazioni sull'utilizzo di dati in un report, vedere [aggiungere dati a un Report &#40;Generatore Report e SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> Barra multifunzione  
  La barra multifunzione consente la rapida individuazione dei comandi necessari per completare un'attività. I comandi sono organizzati nei seguenti gruppi logici: Connessione, Set di dati e Progettazione query.  
@@ -35,7 +35,7 @@ ms.locfileid: "36068432"
  Usare il pulsante **Seleziona** nel gruppo Connessione per selezionare un'origine dati condivisa o individuare e selezionare l'origine dati condivisa nel server di report.  
   
 > [!NOTE]  
->  Un set di dati condiviso deve essere basato su un'origine dati condivisa. Se l'origine dati richiesta non è disponibile, è necessario crearne una nel server di report. Per altre informazioni, vedere [creare, eliminare o modificare un'origine dati condivisa &#40;gestione Report&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md) nella documentazione di Reporting Services in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [documentazione in linea](http://go.microsoft.com/fwlink/?linkid=121312).  
+>  Un set di dati condiviso deve essere basato su un'origine dati condivisa. Se l'origine dati richiesta non è disponibile, è necessario crearne una nel server di report. Per altre informazioni, vedere [creare, eliminare o modificare un'origine dati condivisa &#40;gestione Report&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md) nella documentazione di Reporting Services in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [documentazione Online di](http://go.microsoft.com/fwlink/?linkid=121312).  
   
  Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione in Generatore Report](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
@@ -56,12 +56,12 @@ ms.locfileid: "36068432"
   
  Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
- Per ulteriori informazioni sui piani di aggiornamento della cache, vedere [Cache set di dati condivisi &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) nella documentazione di Reporting Services in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [documentazione in linea](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Per altre informazioni sui piani di aggiornamento della cache, vedere [Cache set di dati condivisi &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) nella documentazione di Reporting Services in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [documentazione Online di](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 ### <a name="query-designer"></a>Progettazione query  
  Utilizzare la barra degli strumenti di Progettazione query per compilare una query che specifichi quali dati recuperare dalla connessione dati. La barra degli strumenti visualizzata dipende dalla finestra Progettazione query associata al tipo di origine dati della connessione dati.  
   
- Per altre informazioni, vedere l'argomento corrispondente al tipo di origine dati in [aggiungere i dati da origini dati esterne &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) e [finestre Progettazione Query &#40;Generatore Report&#41; ](../query-designers-report-builder.md) .  
+ Per altre informazioni, vedere l'argomento corrispondente al tipo di origine dati in [aggiungere dati da origini dati esterne &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) e [finestre Progettazione Query &#40;Generatore Report&#41; ](../query-designers-report-builder.md) .  
   
 
   
@@ -72,7 +72,7 @@ ms.locfileid: "36068432"
   
  Alcuni tipi di origine dati supportano una finestra Progettazione query basata su testo che è possibile usare per incollare query create in altri strumenti, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- A ogni tipo di origine dati sono associati requisiti specifici per la query che funzioneranno con l'origine dati esterna. Per altre informazioni, vedere l'argomento corrispondente al tipo di origine dati in [aggiungere i dati da origini dati esterne &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) e [origini dati supportate da Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione di Reporting Services in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [documentazione Online di](http://go.microsoft.com/fwlink/?linkid=121312).  
+ A ogni tipo di origine dati sono associati requisiti specifici per la query che funzioneranno con l'origine dati esterna. Per altre informazioni, vedere l'argomento corrispondente al tipo di origine dati in [aggiungere dati da origini dati esterne &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) e [origini dati supportate da Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione di Reporting Services in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [documentazione Online di](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 
   
@@ -100,7 +100,7 @@ ms.locfileid: "36068432"
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](../report-data/report-datasets-ssrs.md)   
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   

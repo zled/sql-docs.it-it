@@ -1,5 +1,5 @@
 ---
-title: Configurare le proprietà generali per un Report (gestione Report) | Documenti Microsoft
+title: Configurare le proprietà generali per un Report (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], properties
 - properties [Reporting Services], general
 ms.assetid: 10b941b2-28e6-4408-9ee4-acebc63c8496
 caps.latest.revision: 43
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1e7b6a865c3b709601e2e483c584b97c53db214f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2346534cb415c40a145c65bde3f117d5d802dc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166334"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191611"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>Configurare le proprietà generali per un report (Gestione report)
     
@@ -38,13 +38,13 @@ ms.locfileid: "36166334"
   
      ![Icona della pagina proprietà](media/prop.gif "icona della pagina proprietà")  
   
-4.  Il **generale** viene visualizzata la pagina delle proprietà ed è possibile configurare le proprietà come indicato di seguito:  
+4.  Il **generale** viene visualizzata la pagina delle proprietà, ed è possibile configurare le proprietà come indicato di seguito:  
   
     -   Nel **proprietà** sezione, è possibile modificare il nome del report e la descrizione.  
   
-    -   È possibile selezionare il **Nascondi in visualizzazione elenco** casella di controllo per nascondere l'elemento quando la pagina è aperta nel layout di pagina predefinito (visualizzazione elenco) che dispone gli elementi in orizzontale e verticale della pagina.  
+    -   È possibile selezionare i **Nascondi in visualizzazione elenco** casella di controllo per nascondere l'elemento quando viene aperta la pagina nel layout di pagina predefinito (visualizzazione elenco) che dispone gli elementi in orizzontale e verticale della pagina.  
   
-    -   Nel **definizione di Report** fare clic su **modificare** per estrarre una copia della definizione del report. Le modifiche apportate localmente alla definizione del report non vengono salvate nel server di report.  
+    -   Nel **definizione del Report** fare clic su **modificare** per estrarre una copia della definizione del report. Le modifiche apportate localmente alla definizione del report non vengono salvate nel server di report.  
   
          Oppure, per aggiornare la definizione del report da un file con estensione RDL, fare clic su **aggiornare**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36166334"
   
     -   È inoltre possibile creare un report collegato.  
   
-5.  Al termine della configurazione delle proprietà generale per il report, fare clic su **applica**.  
+5.  Dopo aver completato la configurazione delle proprietà generale per il report, fare clic su **applica**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spostare o eliminare un elemento &#40;gestione Report&#41;](report-server/move-or-delete-an-item-report-manager.md)   

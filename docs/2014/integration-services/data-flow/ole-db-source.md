@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 077ccf4ad3793db7bbf067460f42cf8c8e98b427
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: b9ff94d28a55da5d199647af200c6179ccadc2d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271317"
 ---
 # <a name="ole-db-source"></a>Origine OLE DB
   L'origine OLE DB consente di estrarre dati da un'ampia gamma di database relazionali conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB consente ad esempio di estrarre dati dalle tabelle nei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -96,9 +96,9 @@ ms.locfileid: "36324675"
   
 -   [Editor origine OLE DB &#40;pagina Gestione connessione&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [Editor origine OLE DB &#40;pagina colonne&#41;](../ole-db-source-editor-columns-page.md)  
+-   [Editor origine OLE DB &#40;(pagina colonne)&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [Editor origine OLE DB &#40;pagina di Output di errore&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [Editor origine OLE DB &#40;pagina dell'Output degli errori&#41;](../ole-db-source-editor-error-output-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36324675"
   
 ## <a name="see-also"></a>Vedere anche  
  [Destinazione OLE DB](ole-db-destination.md)   
- [Servizi di integrazione &#40;SSIS&#41; variabili](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; le variabili](../integration-services-ssis-variables.md)   
  [Flusso di dati](data-flow.md)  
   
   

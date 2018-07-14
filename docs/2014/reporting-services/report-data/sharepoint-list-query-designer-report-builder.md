@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 48fed7d15bf32ccaa91ce86b5b20442b194c004f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ca9e1fcd805fb2148219b469a1230b10019497cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202711"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>Progettazione query di elenco di SharePoint (Generatore report)
   In Generatore report sono disponibili due finestre Progettazione query, una con interfaccia grafica e una basata su testo, per la creazione di query in cui vengono specificati i dati da recuperare da un sito di SharePoint per un set di dati del report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati dell'elenco SharePoint, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica, modificare una query o digitare i comandi della query. È inoltre possibile importare una query esistente da un file o un report.  

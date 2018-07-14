@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
@@ -16,13 +16,13 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4c59de8a12276c2660cc3f1b8c06a4f9d4168a37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 36514b86afc211f9ef699300c93e1652749b5b1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264997"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (condizionale) (espressione SSIS)
   Viene restituita una di due espressioni in base alla valutazione di un'espressione booleana. Se l'espressione booleana restituisce TRUE, verrà valutata la prima espressione e il risultato sarà il risultato di tale espressione. Se l'espressione booleana restituisce FALSE, verrà valutata la seconda espressione e il risultato sarà il risultato di tale espressione.  
@@ -48,7 +48,7 @@ boolean_expression?expression1:expression2
 ## <a name="result-types"></a>Tipi restituiti  
  Il tipo di dati *expression1* o *expression2*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se *boolean_expression* restituisce NULL, il risultato dell'espressione sarà NULL. Se un'espressione selezionata, *expression1* o *expression2* è NULL, il risultato sarà NULL. Se l'espressione selezionata non è NULL, ma quella non selezionata è NULL, il risultato sarà il valore dell'espressione selezionata.  
   
  Se *expression1* e *expression2* hanno lo stesso tipo di dati, anche il risultato sarà di tale tipo. Ai tipi di risultato si applicano le seguenti ulteriori regole:  
@@ -102,7 +102,7 @@ ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Associatività e precedenza operatori](operator-precedence-and-associativity.md)   
- [Gli operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md)  
+ [Precedenza e associatività degli operatori](operator-precedence-and-associativity.md)   
+ [Gli operatori &#40;espressione di SSIS&#41;](operators-ssis-expression.md)  
   
   

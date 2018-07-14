@@ -1,5 +1,5 @@
 ---
-title: Visualizzare il Log degli errori SQL Server | Documenti Microsoft
+title: Visualizzare il Log degli errori SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cycling SQL Server error log
 - viewing SQL Server error log
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - logs [SQL Server], SQL Server error logs
 ms.assetid: 6908c21a-65e3-458f-a272-fee256d86448
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 35b79987f178e7f1d1764da9204e316b93ce32ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b052500749f5e1ea6c4bcc22b5fc76da2e3407a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218431"
 ---
 # <a name="viewing-the-sql-server-error-log"></a>Visualizzazione del log degli errori di SQL Server
   È possibile visualizzare il contenuto del log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare il corretto completamento dei processi, ad esempio le operazioni di backup e ripristino, i comandi batch e altri script e processi. La possibilità di esaminare il contenuto del log degli errori può risultare utile per individuare problemi correnti o potenziali, inclusi i messaggi di recupero automatico, in caso di arresto e riavvio di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , i messaggi del kernel e altri messaggi di errore a livello di server.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], SOAP
 ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f6f0dc2d099912b9d24c2f72fe6743eb87a92d0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7e05a1656395828181f8622f82a4127107fa8ecc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238321"
 ---
 # <a name="using-secure-web-service-methods"></a>Utilizzo di metodi del servizio Web protetti
   Alcuni metodi del servizio Web ReportServer possono richiedere una connessione protetta per essere richiamati. I metodi che richiedono una connessione protetta sono determinati dall'impostazione `SecureConnectionLevel` nel file RSReportServer.config. Il valore dell'impostazione è un valore intero con un intervallo valido compreso tra 0 e un numero superiore. Nella tabella seguente vengono descritti questi valori.  

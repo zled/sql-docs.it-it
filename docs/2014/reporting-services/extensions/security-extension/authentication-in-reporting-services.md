@@ -17,15 +17,15 @@ helpviewer_keywords:
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: df847dc70d13d61a43b6ba3554280cece774b49a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 18ea77b885dd7aed809eb1ebda04bbfddad11137
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235021"
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticazione in Reporting Services
   L'autenticazione è il processo di determinazione del diritto di un utente a un'identità. Per autenticare un utente sono disponibili numerose tecniche. La più comune consiste nell'utilizzo di password. Quando si implementa l'autenticazione basata su form, ad esempio, si sceglie un'implementazione che richiede le credenziali agli utenti (generalmente tramite un'interfaccia in cui vengono richiesti un nome di accesso e una password), quindi si convalidano gli utenti in base a un archivio dati, ad esempio una tabella di database o un file di configurazione. Se non è possibile convalidare le credenziali, il processo di autenticazione non riesce e all'utente viene assegnata un'identità anonima.  
@@ -33,7 +33,7 @@ ms.locfileid: "36068882"
 ## <a name="custom-authentication-in-reporting-services"></a>Autenticazione personalizzata in Reporting Services  
  In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] l'autenticazione degli utenti viene gestita dal sistema operativo Windows tramite la sicurezza integrata o tramite operazioni esplicite di ricezione e convalida delle credenziali utente. L'autenticazione personalizzata può essere sviluppata in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per supportare schemi di autenticazione aggiuntivi. Ciò è possibile tramite l'interfaccia dell'estensione di sicurezza <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>. Tutte le estensioni ereditano dall'interfaccia di base <xref:Microsoft.ReportingServices.Interfaces.IExtension> per qualsiasi estensione distribuita e utilizzata dal server di report. <xref:Microsoft.ReportingServices.Interfaces.IExtension> e <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> sono membri dello spazio dei nomi <xref:Microsoft.ReportingServices.Interfaces>.  
   
- La principale modalità di autenticazione in un server di report in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è costituita dal metodo <xref:ReportService2010.ReportingService2010.LogonUser%2A>. Questo membro del servizio Web Reporting Services può essere utilizzato per passare le credenziali utente a un server di report per la convalida. Il sottostante implementa di estensione di sicurezza **Iauthenticationextension** che contiene il codice di autenticazione personalizzato. Nell'esempio di autenticazione basata su form, **LogonUser**, che esegue un controllo di autenticazione in base alle credenziali fornite e a un archivio utente personalizzato in un database. Un esempio di implementazione di **LogonUser** è simile al seguente:  
+ La principale modalità di autenticazione in un server di report in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è costituita dal metodo <xref:ReportService2010.ReportingService2010.LogonUser%2A>. Questo membro del servizio Web Reporting Services può essere utilizzato per passare le credenziali utente a un server di report per la convalida. L'estensione di sicurezza sottostante implementa **Iauthenticationextension** che contiene il codice di autenticazione personalizzato. Nell'esempio di autenticazione basata su form, **LogonUser**, che esegue un controllo di autenticazione in base alle credenziali fornite e a un archivio utente personalizzato in un database. Un esempio di implementazione di **LogonUser** è simile al seguente:  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -113,7 +113,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 1.  Un'applicazione client chiama il metodo <xref:ReportService2010.ReportingService2010.LogonUser%2A> del servizio Web per autenticare un utente.  
   
-2.  Il servizio Web effettua una chiamata ai <xref:ReportService2010.ReportingService2010.LogonUser%2A> metodo di estensione di sicurezza, in particolare, la classe che implementa **IAuthenticationExtension**.  
+2.  Il servizio Web effettua una chiamata per il <xref:ReportService2010.ReportingService2010.LogonUser%2A> metodo di estensione di sicurezza, in particolare, la classe che implementa **IAuthenticationExtension**.  
   
 3.  L'implementazione di <xref:ReportService2010.ReportingService2010.LogonUser%2A> convalida il nome utente e la password nell'archivio utente o nell'autorità di sicurezza.  
   

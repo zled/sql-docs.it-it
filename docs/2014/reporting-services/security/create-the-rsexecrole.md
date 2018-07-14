@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b683b9778275f07b791df1881da6d7213e1d1d26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 560b889359a428625131ff69d8aab5589834a39e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225291"
 ---
 # <a name="create-the-rsexecrole"></a>Creare RSExecRole
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene utilizzato un ruolo di database predefinito denominato `RSExecRole` consente di concedere autorizzazioni server al database del server di report di report. Il `RSExecRole` ruolo viene creato automaticamente con il database del server di report. Si consiglia di non modificare mai né di assegnare utenti a tale ruolo. Quando si sposta un database del server di report in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di [!INCLUDE[ssDE](../../../includes/ssde-md.md)] nuovo o diverso, è necessario tuttavia creare nuovamente il ruolo nei database di sistema master e MSDB.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Usa un ruolo del database predefinito denominato `RSExecRole` per concedere autorizzazioni server al database del server di report di report. Il `RSExecRole` ruolo viene creato automaticamente con il database del server di report. Si consiglia di non modificare mai né di assegnare utenti a tale ruolo. Quando si sposta un database del server di report in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di [!INCLUDE[ssDE](../../../includes/ssde-md.md)] nuovo o diverso, è necessario tuttavia creare nuovamente il ruolo nei database di sistema master e MSDB.  
   
  Utilizzando le istruzioni indicate di seguito, verranno effettuate le operazioni seguenti:  
   
@@ -37,9 +37,9 @@ ms.locfileid: "36157645"
   
 ## <a name="before-you-start"></a>Prima di iniziare  
   
--   Eseguire il backup delle chiavi di crittografia in modo che sia possibile ripristinarle dopo che il database è stato spostato. In questo passaggio non influisce direttamente sulla possibilità di creare ed eseguire il provisioning di `RSExecRole`, ma è necessario eseguire il backup delle chiavi per verificare il proprio lavoro. Per altre informazioni, vedere [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
+-   Eseguire il backup delle chiavi di crittografia in modo che sia possibile ripristinarle dopo che il database è stato spostato. In questo passaggio non influisce direttamente sulla possibilità di creare ed effettuare il provisioning di `RSExecRole`, ma è necessario avere un backup delle chiavi per verificare il proprio lavoro. Per altre informazioni, vedere [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
--   Verificare che si è connessi con un account utente che ha `sysadmin` le autorizzazioni per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza.  
+-   Verificare che si è connessi con un account utente che dispone `sysadmin` le autorizzazioni per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza.  
   
 -   Verificare che il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent sia installato e che sia in esecuzione nell'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] che si intende utilizzare.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "36157645"
  Le istruzioni per la creazione manuale di `RSExecRole` devono essere utilizzate nel contesto dell'esecuzione della migrazione di un'installazione del server di report. Attività importanti come l'esecuzione del backup e lo spostamento del database del server di report non vengono descritte in questo argomento, ma nella documentazione del Motore di database.  
   
 ## <a name="create-rsexecrole-in-master"></a>Creazione di RSExecRole nel database master  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Usa stored procedure estese [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servizio agente per supportare operazioni pianificate. I passaggi seguenti illustrano come concedere autorizzazioni di esecuzione per le procedure al ruolo `RSExecRole`.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Usa stored procedure estese [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporti operazioni pianificate. I passaggi seguenti illustrano come concedere autorizzazioni di esecuzione per le procedure al ruolo `RSExecRole`.  
   
 #### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Per creare RSExecRole nel database di sistema master mediante Management Studio  
   
-1.  Avviare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e connettere il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] istanza che ospita il database del server di report.  
+1.  Avviare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e connettersi al [!INCLUDE[ssDE](../../../includes/ssde-md.md)] istanza che ospita il database del server di report.  
   
 2.  Aprire **Database**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36157645"
   
 7.  Fare clic con il pulsante destro del mouse su **Ruoli del database**, quindi scegliere **Nuovo ruolo database**. Verrà visualizzata la pagina Generale.  
   
-8.  In **nome del ruolo**, tipo `RSExecRole`.  
+8.  Nelle **nome del ruolo**, tipo `RSExecRole`.  
   
 9. In **Proprietario**digitare **DBO**.  
   
@@ -232,7 +232,7 @@ ms.locfileid: "36157645"
 15. Fare clic sul collegamento per aprire Gestione report. Gli elementi del server di report dovrebbero essere visualizzati dal database del server di report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Spostare i database del Server di Report in un altro Computer &#40;modalità nativa SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
+ [Lo spostamento di database Server di Report in un altro Computer &#40;modalità nativa SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Creare un database del Server di Report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  

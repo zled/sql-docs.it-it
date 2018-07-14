@@ -1,5 +1,5 @@
 ---
-title: Editor attività FTP (pagina trasferimento File) | Documenti Microsoft
+title: Editor attività FTP (pagina trasferimento File) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.filetransfer.f1
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fabdd29720e5fec009a72cd19f10996ac3370095
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 718a10c3b0036dd18623589789c2da37de22e9e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199771"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>Editor attività FTP (pagina Trasferimento file)
   Usare la pagina **Trasferimento file** della finestra di dialogo **Editor attività FTP** per configurare l'operazione FTP eseguita dall'attività.  
@@ -96,7 +96,7 @@ ms.locfileid: "36069031"
  **Argomenti correlati:** [Gestione connessione file flat](connection-manager/file-connection-manager.md), [Editor gestione connessione file flat](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività FTP &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   

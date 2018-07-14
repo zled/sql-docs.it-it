@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], about conflict resolution
 - default conflict resolver
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 45f7d8c56370dac9acb215545454cf2d7f537e6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f1e980a6574a9beff16c9b9e00dddc55a026b6ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172712"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge
   Se un server di pubblicazione e un Sottoscrittore sono connessi e viene eseguita la sincronizzazione, l'agente di merge rileva l'eventuale presenza di conflitti. Se vengono rilevati dei conflitti, l'agente utilizza un sistema di risoluzione dei conflitti, specificato al momento dell'aggiunta di un articolo a una pubblicazione, per determinare quali dati vengono accettati e propagati agli altri siti.  

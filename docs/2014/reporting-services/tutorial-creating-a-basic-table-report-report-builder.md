@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c197e6f13497b82655f8c20872637d8bc8e7ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5a3831372791023edb9f83064aa77878dcf41dfd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186058"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Esercitazione: Creazione di un report tabella semplice (Generatore report)
   In questa esercitazione viene illustrato come creare un report tabella semplice basato sui dati di vendita di esempio. Nell'illustrazione seguente viene mostrato il report che verrà creato.  
@@ -59,16 +59,16 @@ ms.locfileid: "36070213"
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="CreateTable"></a> 1. Creare un nuovo report dal Riquadro attività iniziale  
- Creare un report di tabella dal **Getting Started** finestra di dialogo. Sono disponibili due modalità: progettazione report e progettazione del set di dati condivisa. Nella modalità progettazione report si specificano i dati nel riquadro dei dati del report e il layout del report nell'area di progettazione. Nella modalità progettazione del set di dati condivisa, si creano query del set di dati da condividere con altri. In questa esercitazione si utilizzerà modalità progettazione report.  
+ Creare un report di tabella dal **introduttiva** nella finestra di dialogo. Sono disponibili due modalità: progettazione report e progettazione del set di dati condivisa. Nella modalità progettazione report si specificano i dati nel riquadro dei dati del report e il layout del report nell'area di progettazione. Nella modalità progettazione del set di dati condivisa, si creano query del set di dati da condividere con altri. In questa esercitazione si utilizzerà modalità progettazione report.  
   
 #### <a name="to-create-a-new-report"></a>Per creare un nuovo report  
   
 1.  Fare clic sul menu **Start**, scegliere **Programmi**, **Generatore report per Microsoft SQL Server 2012**e quindi fare clic su **Generatore report**.  
   
-     Il **Getting Started** verrà visualizzata la finestra di dialogo.  
+     Il **introduttiva** verrà visualizzata la finestra di dialogo.  
   
     > [!NOTE]  
-    >  Se il **Getting Started** finestra di dialogo non viene visualizzata, dal **Generatore Report** pulsante, fare clic su **nuovo**.  
+    >  Se il **Guida introduttiva** non viene visualizzato nella finestra di dialogo, dalle **Generatore Report** pulsante, fare clic su **New**.  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
@@ -85,11 +85,11 @@ ms.locfileid: "36070213"
   
 2.  Fare clic su **Nuovo**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
   
-3.  In **nome**, tipo **vendite prodotto** un nome per l'origine dati.  
+3.  Nelle **Name**, digitare **Product Sales** un nome per l'origine dati.  
   
 4.  In **Select a connection type**(Seleziona un tipo di connessione), verificare che sia selezionato **Microsoft SQL Server** .  
   
-5.  In **stringa di connessione**, digitare il testo seguente, dove  *\<nomeserver >* è il nome di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+5.  Nelle **stringa di connessione**, digitare il testo seguente, dove  *\<servername >* è il nome di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
     ```  
     Data Source=<servername>  
@@ -194,7 +194,7 @@ ms.locfileid: "36070213"
   
 6.  Scegliere **Avanti**.  
   
-##  <a name="Subtotals"></a> 1D. Aggiungere le righe Subtotale e Totale in Creazione guidata tabella  
+##  <a name="Subtotals"></a> 1 giorno. Aggiungere le righe Subtotale e Totale in Creazione guidata tabella  
  Dopo avere creato dei gruppi, è possibile aggiungere e formattare delle righe nelle quali visualizzare valori di aggregazione per i campi. È possibile scegliere se mostrare tutti i dati o lasciare che sia l'utente a espandere e comprimere in modo interattivo i dati raggruppati.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Per aggiungere subtotali e totali  
@@ -230,7 +230,7 @@ ms.locfileid: "36070213"
   
 2.  Facoltativamente, fare clic sugli altri stili per vederli applicati all'esempio.  
   
-3.  Fare clic su **Fine**.  
+3.  Scegliere **Fine**.  
   
  La tabella viene aggiunta all'area di progettazione. La tabella dispone di 5 colonne e 5 righe. Nel riquadro Gruppi di righe sono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
   
@@ -245,7 +245,7 @@ ms.locfileid: "36070213"
   
 3.  Nel gruppo **Numero** della scheda **Home** fare clic sul pulsante **Valuta** . Nelle celle i numeri vengono visualizzati nel formato di valuta.  
   
-     Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [**$12,345.00**]. Se non presente un valore di valuta di esempio, fare clic su **stili segnaposto** nel **numeri** gruppo e quindi fare clic su **dei valori di esempio**.  
+     Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [**$12,345.00**]. Se non è possibile visualizzare un valore di valuta di esempio, fare clic su **stili segnaposto** nel **numeri** gruppo e quindi fare clic su **valori di esempio**.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "36070213"
   
 2.  Fare clic sulla cella contenente `[SalesDate]`.  
   
-3.  Sulla barra multifunzione, nel **Home** nella scheda il **numero** gruppo, nell'elenco di riepilogo a discesa, selezionare **data**.  
+3.  Sulla barra multifunzione, nella **Home** nella scheda il **numero** gruppo dall'elenco a discesa, selezionare **data**.  
   
      Nella cella verrà visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "36070213"
   
 2.  Fare clic sulla cella contenente `[SalesDate]`.  
   
-3.  Nel **Home** nella scheda il **numero** gruppo, fare clic sul pulsante di visualizzazione della finestra di dialogo.  
+3.  Nel **Home** nella scheda il **numero** raggruppare, fare clic sul pulsante di visualizzazione della finestra di dialogo.  
   
      Il pulsante di avvio è la piccola freccia visualizzata nell'angolo a destra del gruppo. Viene aperta la finestra di dialogo **Proprietà casella di testo** .  
   
@@ -383,9 +383,9 @@ ms.locfileid: "36070213"
   
      Verrà visualizzata la finestra di dialogo **Salva con nome** .  
   
-3.  Individuare il **documenti** cartella.  
+3.  Selezionare il **documenti** cartella.  
   
-4.  Nel **nome del File** casella di testo, digitare **vendite prodotto Excel**.  
+4.  Nel **nomefile** casella di testo, digitare **vendite prodotto Excel**.  
   
 5.  Verificare che il tipo di file sia **cartella di lavoro di Excel**.  
   
@@ -393,7 +393,7 @@ ms.locfileid: "36070213"
   
 #### <a name="to-view-the-report-in-excel"></a>Per visualizzare il report in Excel  
   
-1.  Aprire la **documenti** cartella e fare doppio clic su **Product Sales xlsx**.  
+1.  Aprire il **documenti** cartella e fare doppio clic su **Product Sales xlsx**.  
   
 2.  Verificare che il nome della scheda della cartella di lavoro sia **Vendite prodotto Excel**.  
   

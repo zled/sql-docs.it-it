@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 106eee996bf361f706279aa81c8d15b08aaef5b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 65ca9a01ebcf2289c8f40fc5afdc2d5e918df413
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169522"
 ---
 # <a name="managing-a-composite-domain"></a>Gestione di un dominio composito
   In questo argomento viene descritto l'utilizzo dei domini composti in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Talvolta un singolo dominio non è sufficiente per rappresentare i dati in un campo ed è possibile rappresentare i dati solo raggruppando i singoli domini. A tale scopo, è possibile creare un dominio composito. Un dominio composito è costituito da due o più singoli domini di cui viene eseguito il mapping a un campo dati costituito da più termini correlati che non vengono analizzati, ma inclusi in un singolo valore composito. Ogni termine nel valore sarà rappresentato da un singolo dominio diverso. Dopo avere incluso i singoli domini in domini compositi e quindi eseguito il mapping del dominio composito al campo dati, è possibile compilare le informazioni nella Knowledge Base sui dati del campo compilando le informazioni nei singoli domini. Un dominio composito, analogamente a un singolo dominio, è una rappresentazione semantica dei dati in un singolo campo dati.  
@@ -35,7 +35,7 @@ ms.locfileid: "36166694"
 |-|-|  
 |Creare una rappresentazione semantica per un campo dati costituito da più termini correlati non analizzati.|[Creare un dominio composito](../../2014/data-quality-services/create-a-composite-domain.md)|  
 |Quando si esegue il mapping di dati complessi a un dominio composito, è possibile analizzare i dati in base alle informazioni oltre che in base a un delimitatore. Verranno innanzitutto utilizzate le informazioni sui singoli domini per determinare come le parti della stringa complessa appartengano ai singoli domini.|[Creare un dominio composito](../../2014/data-quality-services/create-a-composite-domain.md)|  
-|Associare un servizio dati di riferimento, ad esempio un servizio di gestione dei dati di indirizzo, a un dominio composito.|[Collegare un dominio o dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
+|Associare un servizio dati di riferimento, ad esempio un servizio di gestione dei dati di indirizzo, a un dominio composito.|[Collegare un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
 |Creare una regola tra domini quando il valore di un dominio in un dominio composito influisce sul valore di un altro dominio.|[Creare una regola tra domini](../../2014/data-quality-services/create-a-cross-domain-rule.md)|  
 |Identificare le combinazioni di valori in modo da indicarne la frequenza.|[Usare le relazioni di valori in un dominio composito](../../2014/data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   

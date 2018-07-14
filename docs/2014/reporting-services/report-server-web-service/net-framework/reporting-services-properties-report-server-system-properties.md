@@ -15,15 +15,15 @@ helpviewer_keywords:
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 caps.latest.revision: 55
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 79fb5e55f54a07f8b3a770f39b3c738a59dab16e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cc749db6d8eee973ef4c146d62ce5ebebda230e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276597"
 ---
 # <a name="report-server-system-properties"></a>Proprietà di sistema del server di report
   I nomi di proprietà di sistema seguenti sono riservati. Non è possibile creare proprietà definite dall'utente con lo stesso nome. È possibile leggere o modificare numerose di queste proprietà utilizzando i metodi del servizio Web.  
@@ -37,7 +37,7 @@ ms.locfileid: "36157927"
 |SystemReportTimeout|Valore di timeout  predefinito per l'elaborazione dei report, espresso in secondi, per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono `-1` attraverso `2`,`147`,`483`,`647`. Se il valore è `-1` durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è `1800`.|  
 |UseSessionCookies|Indica se il server di report deve utilizzare cookie di sessione per le comunicazioni con i browser dei client. Il valore predefinito è `true`.|  
 |SessionTimeout|Intervallo, in secondi, durante il quale una sessione rimane attiva. Il valore predefinito è `600`.|  
-|EnableMyReports|Indica se la caratteristica Report personali è abilitata. Il valore `true` indica che la funzionalità è abilitata.|  
+|EnableMyReports|Indica se la caratteristica Report personali è abilitata. Un valore di `true` indica che la funzionalità è abilitata.|  
 |MyReportsRole|Nome del ruolo utilizzato durante la creazione dei criteri di sicurezza nelle cartelle Report personali dell'utente. Il valore predefinito è `My Reports Role`.|  
 |EnableExecutionLogging|Indica se la registrazione per l'esecuzione di report è attivata. Il valore predefinito è `true`.|  
 |ExecutionLogDaysKept|Numero di giorni durante i quali le informazioni sulle esecuzioni dei report vengono conservate nel log di esecuzione. I valori validi per questa proprietà includono `0` attraverso `2`,`147`,`483`,`647`. Se il valore è `0` le voci non vengono eliminate dalla tabella del log di esecuzione. Il valore predefinito è `60`.|  

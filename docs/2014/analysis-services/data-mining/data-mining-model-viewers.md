@@ -1,5 +1,5 @@
 ---
-title: Visualizzatori dei modelli di data mining | Documenti Microsoft
+title: Visualizzatori modello di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying data mining models
 - mining models [Analysis Services], viewing
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - exploring data mining models [Analysis Services]
 ms.assetid: 14c8e656-f63c-4e8a-a3af-1d580e823d28
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 63ac3ddb345718e21a30592d17df4a4aff8dd30e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87713f6c83c11ee6bc9d0f3a0445e8c6fe108a15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255063"
 ---
 # <a name="data-mining-model-viewers"></a>Visualizzatori modello di data mining
   Dopo aver eseguito il training di un modello di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile esplorare tale modello per cercare tendenze interessanti. Poiché i risultati dei modelli di data mining sono complessi e disponibili in un formato non elaborato di difficile interpretazione, l'esame visivo dei dati rappresenta spesso il modo più semplice per comprendere le regole e le relazioni individuate dall'algoritmo all'interno dei dati.  
@@ -49,7 +49,7 @@ ms.locfileid: "36157619"
   
      A sinistra il visualizzatore generico mostra un elenco dei nodi nel modello. È possibile fare clic su un nodo per visualizzarne il contenuto nel riquadro di destra.  
   
- ![Panoramica di progettazione modelli di data mining](../media/generic-mining-model-tab1.gif "Panoramica di progettazione modelli di data mining")  
+ ![Panoramica di progettazione modelli di data mining](../media/generic-mining-model-tab1.gif "Panoramica della progettazione di modelli di data mining")  
   
 ## <a name="more-about-the-microsoft-generic-content-tree-viewer"></a>Ulteriori informazioni su Microsoft Generic Content Tree Viewer  
  È possibile visualizzare ciascun modello anche mediante [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md). Questo visualizzatore presenta il contenuto del modello di data mining in base a un formato di tabella HTML standard. Tuttavia, la disposizione dei nodi e il contenuto di ciascun nodo varia notevolmente a seconda dell'algoritmo utilizzato per generare i risultati.  

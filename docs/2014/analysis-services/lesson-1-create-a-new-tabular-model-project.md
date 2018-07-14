@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 1: Creare un nuovo progetto di modello tabulare | Documenti Microsoft'
+title: 'Lezione 1: Creare un nuovo progetto di modello tabulare | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 6a5f5c938289963373d09891f20c3a87495a33a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ffb0804ab6edd3afbbf3a3e618ca7c417744b21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226631"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lezione 1: Creare un nuovo modello di progetto tabulare
   In questa lezione verrà creato un nuovo progetto di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Una volta creato il nuovo progetto, è possibile iniziare ad aggiungere dati tramite l'Importazione guidata tabella. Oltre alla creazione di un nuovo progetto, questa lezione include anche una breve introduzione all'ambiente di creazione di modelli tabulari in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
- Per altre informazioni sui diversi tipi di progetti di modelli tabulari, vedere [Progetti di modello tabulare &#40;SSAS tabulare&#41;](tabular-models/tabular-model-projects-ssas-tabular.md). Per ulteriori informazioni sull'ambiente di creazione di modelli tabulari, vedere [Progettazione modelli tabulari &#40;modello tabulare di SSAS&#41;](tabular-model-designer-ssas-tabular.md).  
+ Per altre informazioni sui diversi tipi di progetti di modelli tabulari, vedere [Progetti di modello tabulare &#40;SSAS tabulare&#41;](tabular-models/tabular-model-projects-ssas-tabular.md). Per altre informazioni sull'ambiente di creazione di modelli tabulari, vedere [progettazione di modelli tabulari &#40;modello tabulare di SSAS&#41;](tabular-model-designer-ssas-tabular.md).  
   
  Tempo stimato per il completamento della lezione: **10 minuti**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36156587"
   
 2.  Nel **nuovo progetto** nella finestra di dialogo **modelli installati**, fare clic su **Business Intelligence**, quindi fare clic su **Analysis Services**, e quindi fare clic su **progetto tabulare di Analysis Services**.  
   
-3.  In **nome**, tipo `AW Internet Sales Tabular Model`, quindi specificare un percorso per i file di progetto.  
+3.  Nelle **Name**, tipo `AW Internet Sales Tabular Model`, quindi specificare un percorso per i file di progetto.  
   
      Per impostazione predefinita, **Nome soluzione** corrisponde al nome del progetto. È tuttavia possibile digitare un nome diverso per la soluzione.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "36156587"
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>Informazioni sull'ambiente di creazione di modelli tabulari per SQL Server Data Tools  
  Dopo avere creato un nuovo progetto di modello tabulare, verrà analizzato l'ambiente di creazione di modelli tabulari in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 o versioni successive).  
   
- Dopo essere stato creato, il progetto verrà visualizzato in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. In Progettazione modelli verrà visualizzato un modello vuoto e il file **Model.bim** verrà selezionato nella finestra **Esplora soluzioni** . Quando si aggiungono dati, nella finestra di progettazione vengono visualizzate tabelle e colonne. Se non viene visualizzata la finestra di progettazione (finestra vuota con la scheda Model. bim), in **Esplora soluzioni**, in `AW Internet Sales Tabular Model`, fare doppio clic il **Model. bim** file.  
+ Dopo essere stato creato, il progetto verrà visualizzato in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. In Progettazione modelli verrà visualizzato un modello vuoto e il file **Model.bim** verrà selezionato nella finestra **Esplora soluzioni** . Quando si aggiungono dati, nella finestra di progettazione vengono visualizzate tabelle e colonne. Se non viene visualizzata la finestra di progettazione (la finestra vuota con la scheda Model. bim), in **Esplora soluzioni**, in `AW Internet Sales Tabular Model`, fare doppio clic il **Model. bim** file.  
   
- Nella finestra **Proprietà** è possibile visualizzare le proprietà di base del progetto. In **Esplora soluzioni**, fare clic su `AW Internet Sales Tabular Model`. Si noti che nella finestra **Proprietà** , in **File di progetto**, viene visualizzato **AW Internet Sales Tabular Model.smproj**. Si tratta del nome del file di progetto, mentre in **Cartella di progetto**viene visualizzato il percorso specifico del file di progetto.  
+ Nella finestra **Proprietà** è possibile visualizzare le proprietà di base del progetto. Nelle **Esplora soluzioni**, fare clic su `AW Internet Sales Tabular Model`. Si noti che nella finestra **Proprietà** , in **File di progetto**, viene visualizzato **AW Internet Sales Tabular Model.smproj**. Si tratta del nome del file di progetto, mentre in **Cartella di progetto**viene visualizzato il percorso specifico del file di progetto.  
   
- In **Esplora soluzioni**, fare doppio clic sui `AW Internet Sales Tabular Model` del progetto e quindi fare clic su **proprietà**. Verrà visualizzata la finestra di dialogo **Pagine delle proprietà di AW Internet Sales Tabular Model** (Pagine delle proprietà di AW Internet Sales Tabular Model). Si tratta delle proprietà avanzate del progetto. Più avanti, prima di distribuire il modello, verranno impostate alcune di queste proprietà.  
+ Nella **Esplora soluzioni**, fare doppio clic il `AW Internet Sales Tabular Model` del progetto e quindi fare clic su **proprietà**. Verrà visualizzata la finestra di dialogo **Pagine delle proprietà di AW Internet Sales Tabular Model** (Pagine delle proprietà di AW Internet Sales Tabular Model). Si tratta delle proprietà avanzate del progetto. Più avanti, prima di distribuire il modello, verranno impostate alcune di queste proprietà.  
   
  Verranno ora analizzate le proprietà del modello. In **Esplora soluzioni**fare clic su **Model.bim**. Nella finestra **Proprietà** verranno visualizzate le proprietà del modello, la più importante delle quali è la proprietà **Modalità DirectQuery** . Questa proprietà specifica se il modello verrà distribuito o meno nella modalità In-Memory (disattivata) o nella modalità DirectQuery (attivata). Per questa esercitazione il modello verrà creato e distribuito nella modalità In-Memory.  
   

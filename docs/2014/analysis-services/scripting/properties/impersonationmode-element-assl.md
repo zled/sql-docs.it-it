@@ -1,5 +1,5 @@
 ---
-title: Elemento ImpersonationMode (ASSL) | Documenti Microsoft
+title: Elemento ImpersonationMode (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ImpersonateMode element
 ms.assetid: 160fdcb2-ac9f-4c5a-a0eb-a5f7669166b9
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e41e5b5fef7759f6ad310a7f04dc012a7b7cb54f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dad131322f27cee48fa2fe1dd1ed593477afbe42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216231"
 ---
 # <a name="impersonationmode-element-assl"></a>Elemento ImpersonationMode (ASSL)
-  Contiene un valore che indica il metodo di rappresentazione per gli elementi derivati dal [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) tipo di dati.  
+  Contiene un valore che indica il metodo di rappresentazione per gli elementi che derivano dal [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) tipo di dati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,16 +61,16 @@ ms.locfileid: "36157598"
 |Elemento padre|[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
 |valore|Description|  
 |-----------|-----------------|  
 |*Valore predefinito*|Il padre utilizza il metodo di rappresentazione più appropriato per il contesto in cui viene utilizzata la rappresentazione.|  
-|*Account di rappresentazione*|Il padre utilizza le credenziali dell'account utente specificate nell'elemento padre.|  
+|*ImpersonateAccount*|Il padre utilizza le credenziali dell'account utente specificate nell'elemento padre.|  
 |*ImpersonateAnonymous*|Il padre utilizza le credenziali di un utente anonimo.|  
 |*ImpersonateCurrentUser*|Il padre utilizza le credenziali dell'utente corrente.|  
-|*ImpersonateServiceAccount*|L'elemento padre utilizza le credenziali dell'account del servizio che viene associato all'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|*ImpersonateServiceAccount*|L'elemento padre utilizza le credenziali dell'account del servizio associato con l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
  L'enumerazione che corrisponde ai valori consentiti di `ImpersonationMode` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.ImpersonationLevel>.  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento dati (ASSL) | Documenti Microsoft
+title: Elemento data (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Data element
 ms.assetid: e52b1961-7e11-4029-8ab1-84d275845067
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a3ff1b93efe374b9ddc8b080de143550aae8388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b31922593446e7d8aafd88cdb5667bef8b109ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218281"
 ---
 # <a name="data-element-assl"></a>Elemento Data (ASSL)
-  Contiene (nella raccolta dell'elemento figlio [elemento di blocco &#40;ASSL&#41; ](block-element-assl.md) elementi) del contenuto binario di una [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) elemento.  
+  Contiene (nell'insieme di figlio [elemento Block &#40;ASSL&#41; ](block-element-assl.md) elementi) il contenuto binario di un [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,8 +61,8 @@ ms.locfileid: "36069924"
 |Elementi padre|[File](file-element-assl.md) di tipo [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `Data` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `Data` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento assembly &#40;ASSL&#41;](assembly-element-assl.md)   

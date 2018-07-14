@@ -1,5 +1,5 @@
 ---
-title: Creazione di set denominati | Documenti Microsoft
+title: Creare set denominati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - calculations [Analysis Services], named sets
 - named sets [Analysis Services]
 - members [Analysis Services], named sets
 ms.assetid: 03cf97a4-1a18-45f3-acb0-35123bd619be
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf758860212adbd100a8385802d769f031b2bf64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7aaf4fa92bf471c06c606028431dae33c07b2c3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200321"
 ---
 # <a name="create-named-sets"></a>Creare set denominati
   Un set denominato è un set di membri delle dimensioni oppure un'espressione set creata per successivi utilizzi, ad esempio all'interno di query MDX (MultiDimensional Expressions). Per creare set denominati è possibile combinare dati di cubi, operatori aritmetici, numeri e funzioni. Ad esempio, è possibile creare un set denominato Top Ten Factories contenente i dieci membri della dimensione Factories con i valori più alti per la misura Production. Il set denominato Top Ten Factories può quindi essere utilizzato nelle query dagli utenti finali. Ad esempio, un utente finale può inserire Top Ten Factories su un asse e la dimensione Measures, che include la misura Production, su un altro asse. Per altre informazioni, vedere [Calcoli nei modelli multidimensionali](calculations-in-multidimensional-models.md) e [Compilazione di set denominati in MDX &#40;MDX&#41;](mdx/mdx-named-sets-building-named-sets.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "36069049"
  È possibile copiare o trascinare componenti del cubo dalla scheda **Metadati** del riquadro **Strumenti di calcolo** nella casella **Espressione** del riquadro **Editor Form set denominato** . È possibile copiare o trascinare funzioni dalla scheda **Funzioni** del riquadro **Strumenti di calcolo** nella casella **Espressione** del riquadro **Editor Form set denominato** .  
   
 > [!IMPORTANT]  
->  Se si crea l'espressione set denominando in modo esplicito i membri nel set, racchiudere l'elenco dei membri in una coppia di parentesi graffe ({}).  
+>  Se si crea l'espressione set denominando in modo esplicito i membri del set, racchiudere l'elenco dei membri in una coppia di parentesi graffe ({}).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Calcoli nei modelli multidimensionali](calculations-in-multidimensional-models.md)  

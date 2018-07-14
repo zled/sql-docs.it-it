@@ -1,5 +1,5 @@
 ---
-title: Gli indici e chiavi di finestra di dialogo (Visual Database Tools) | Documenti Microsoft
+title: Gli indici e le chiavi di finestra di dialogo (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65539
 - vdt.ppg.indexeskeys
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e6743bf4c39d92df79f68b98b4d8c40a70a79e64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 77d81f3bb0e0d923bdf9fd8bd6a8ae88c14afa60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168274"
 ---
-# <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Gli indici e finestra di dialogo chiavi (Visual Database Tools)
+# <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Gli indici e finestra di dialogo delle chiavi (Visual Database Tools)
   Questa finestra di dialogo consente di creare o modificare indici, chiavi primarie e chiavi univoche. Per accedere a questa finestra di dialogo, aprire la definizione della tabella con l'indice o la chiave, fare clic con il pulsante destro del mouse sulla griglia della definizione della tabella e quindi scegliere **Indici/chiavi**.  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ ms.locfileid: "36166752"
  Specifica se per l'indice è consentito il blocco a livello delle righe. L'attivazione o la disattivazione di tale blocco incide sulle prestazioni del database. L'impostazione consigliata è **Sì**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [I vincoli UNIQUE e vincoli Check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+ [I vincoli UNIQUE e Check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Vincoli di chiavi primarie ed esterne](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
   
   

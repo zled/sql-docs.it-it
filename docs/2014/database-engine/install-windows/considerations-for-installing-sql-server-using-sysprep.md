@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 09ada3ef426e365ec6ff734cb35da7bb2e394b14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 140fac99176fc41f5e3967c158c7929fe9554989
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180418"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considerazioni sull'installazione di SQL Server tramite SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep consente di preparare un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer e di completare la configurazione in un secondo momento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep comporta un processo costituito da due passaggi per ottenere un'istanza autonoma configurata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I passaggi necessari sono i seguenti:  
@@ -32,7 +32,7 @@ ms.locfileid: "36166132"
   
      Questo passaggio consente di completare la configurazione di un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Durante questo passaggio, è possibile fornire informazioni specifiche del computer, della rete e dell'account.  
   
- Per ulteriori informazioni su come installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite SysPrep, vedere [installare SQL Server 2014 tramite SysPrep](install-sql-server-using-sysprep.md).  
+ Per altre informazioni su come installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite SysPrep, vedere [installare SQL Server 2014 tramite SysPrep](install-sql-server-using-sysprep.md).  
   
 ## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>Utilizzi comuni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
  La funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep può essere utilizzata nei modi seguenti:  

@@ -1,5 +1,5 @@
 ---
-title: Pagina delle proprietà generale, report (gestione Report) | Documenti Microsoft
+title: Pagina delle proprietà generale, report (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 21ffa295452a4f025eb15600e48f0e99906ac2fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 607d50e68cef49fef5940b2729bea8156d7bf2f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189898"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Pagina delle proprietà Generale, Report (Gestione report)
   La pagina delle proprietà Generale per i report consente di rinominare, eliminare, spostare o sostituire la definizione del report. È inoltre possibile utilizzare questa pagina per creare un report collegato. Nella parte superiore della pagina vengono visualizzati il nome dell'utente che ha creato o modificato il report e la data e ora di modifica.  
@@ -57,7 +57,7 @@ ms.locfileid: "36166331"
  Fare clic per spostare un report nella gerarchia di cartelle del server di report. Verrà visualizzata la pagina di spostamento degli elementi nella quale è possibile esplorare le cartelle per selezionare un nuovo percorso. Per altre informazioni, vedere [pagina spostamento elementi &#40;gestione Report&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
  **Crea Report collegato**  
- Fare clic per aprire la pagina Nuovo report collegato. Per ulteriori informazioni su questa pagina e i report collegati, vedere [nuova pagina del Report collegato &#40;gestione Report&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md).  
+ Fare clic per aprire la pagina Nuovo report collegato. Per altre informazioni su questa pagina e report collegati, vedere [nuova pagina del Report collegato &#40;gestione Report&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md).  
   
  **Salvare**  
  Fare clic per estrarre una copia di sola lettura della definizione del report. In base alle associazioni di file definite nel computer, il file verrà aperto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o in un'altra applicazione. Nella maggior parte dei casi, il report viene aperto come file XML.  
@@ -74,6 +74,6 @@ ms.locfileid: "36166331"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

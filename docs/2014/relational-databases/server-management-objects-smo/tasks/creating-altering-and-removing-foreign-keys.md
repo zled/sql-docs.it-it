@@ -1,5 +1,5 @@
 ---
-title: Creazione, modifica e rimozione di chiavi esterne | Documenti Microsoft
+title: Creazione, modifica e rimozione di chiavi esterne | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - foreign keys [SMO]
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e4523fc03ea6b0749c8818671c26403eeef243a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 173383d491d80bfe6f685f2ed6ea7ca83027fe77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197251"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Creazione, modifica e rimozione di chiavi esterne
   In SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) le chiavi esterne sono rappresentate dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>.  
@@ -32,7 +32,7 @@ ms.locfileid: "36167214"
  Le colonne che rappresentano la chiave esterna sono elencate nella proprietà dell'oggetto `Columns` dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. La chiave primaria che fa riferimento la chiave esterna è rappresentata dal <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> presente nella tabella specificata nella proprietà il <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> proprietà.  
   
 ## <a name="example"></a>Esempio  
- Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto di Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C#&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Creazione, modifica e rimozione di una chiave esterna in Visual Basic  
  In questo esempio di codice viene illustrato come creare una relazione di chiave esterna tra una o più colonne in una tabella e una colonna chiave primaria in un'altra tabella.  

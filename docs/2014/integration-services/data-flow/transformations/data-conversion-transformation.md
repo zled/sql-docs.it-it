@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataconversiontrans.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8ba2e554136b01190adfc6fd95cb6b7927553f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b9bc5c7e4845adbc15d2e73d45ea85ff851084d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207541"
 ---
 # <a name="data-conversion-transformation"></a>Conversione dati - trasformazione
   La trasformazione Conversione dati converte i dati in una colonna di input in un tipo di dati diverso e quindi li copia in una nuova colonna di output. Un pacchetto può ad esempio estrarre dati da più origini e quindi utilizzare questa trasformazione per convertire le colonne nel tipo di dati richiesto dall'archivio dati di destinazione. È possibile applicare più conversioni a una singola colonna di input.  

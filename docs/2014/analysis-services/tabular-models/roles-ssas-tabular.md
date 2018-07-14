@@ -1,5 +1,5 @@
 ---
-title: Ruoli (SSAS tabulare) | Documenti Microsoft
+title: Ruoli (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3748f99899990bd46379928b3d524e43e48d277a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ac88882120b588599af625852675e9be95031ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235691"
 ---
 # <a name="roles-ssas-tabular"></a>Ruoli (SSAS tabulare)
   I ruoli, nei modelli tabulari, consentono di definire le autorizzazioni dei membri per un modello. In ogni ruolo sono contenuti membri, in base al nome utente o gruppo di Windows, e autorizzazioni, ad esempio per la lettura, l'elaborazione e l'amministratore. I membri del ruolo possono eseguire azioni sul modello, come definito dall'autorizzazione del ruolo. I ruoli definiti con autorizzazioni di lettura possono garantire inoltre sicurezza aggiuntiva a livello di riga tramite i relativi filtri.  
@@ -142,10 +142,10 @@ ms.locfileid: "36068820"
 |[Creare e gestire i ruoli &#40;tabulare di SSAS&#41;](create-and-manage-roles-ssas-tabular.md)|Nelle attività di questo argomento viene descritto come creare e gestire ruoli tramite la finestra di dialogo **Gestione ruoli** .|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Prospettive &#40;tabulare di SSAS&#41;](perspectives-ssas-tabular.md)   
+ [Le prospettive &#40;tabulare di SSAS&#41;](perspectives-ssas-tabular.md)   
  [Analizza in Excel &#40;tabulare di SSAS&#41;](analyze-in-excel-ssas-tabular.md)   
  [Funzione USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [La funzione LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
+ [Funzione LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
  [Funzione CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   
   

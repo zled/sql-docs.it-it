@@ -1,5 +1,5 @@
 ---
-title: Installazione di preparazione aggiornamento dal Prompt dei comandi | Documenti Microsoft
+title: Installazione di preparazione aggiornamento dal Prompt dei comandi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
 - command prompt [Upgrade Advisor]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Upgrade Advisor [SQL Server], installing
 ms.assetid: a6841cc2-ca13-4b1c-9343-9e4d54312c3a
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8433aa58002095568a79013ec398f96f87abd22b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 83d6e2fce7d4a9f2f5066aa568ecda57fd313efd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270267"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Installazione di Preparazione aggiornamento dal prompt dei comandi
   È possibile installare Preparazione aggiornamento utilizzando l'Installazione guidata o dal prompt dei comandi. Il prompt dei comandi consente di eseguire installazioni automatiche e automatizzate.  
@@ -73,6 +73,6 @@ Msiexec.exe /i C:\Downloads\SQLUA.msi /qn REMOVE=ALL
   
 ## <a name="see-also"></a>Vedere anche  
  [Installazione di preparazione aggiornamento](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
- [Prerequisiti di preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
+ [Prerequisiti di Preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
   
   

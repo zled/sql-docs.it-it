@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 486c0e39c34c706128fc5191ecb15394eb584247
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0ece1fccdfc4fab42bd2b5cd2913dfcd238e9b40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167012"
 ---
 # <a name="programmatically-monitor-replication"></a>Monitoraggio della replica a livello di programmazione
   Monitoraggio replica è uno strumento grafico che consente di monitorare una topologia di replica. È possibile accedere agli stessi dati di monitoraggio a livello di programmazione utilizzando le stored procedure di replica [!INCLUDE[tsql](../../../includes/tsql-md.md)] o gli oggetti RMO (Replication Management Objects). Tali oggetti consentono di programmare le attività seguenti:  
@@ -132,7 +132,7 @@ ms.locfileid: "36157980"
   
 5.  Utilizzando l'ID sessione ottenuto nel passaggio 3, chiamare uno dei metodi indicati di seguito per ottenere informazioni sui dettagli di una determinata sessione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -Restituisce una matrice di <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> gli oggetti per l'oggetto fornito *sessionID*.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> : restituisce una matrice di <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> gli oggetti per l'oggetto fornito *sessionID*.  
   
     -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -Restituisce un <xref:System.Data.DataSet> oggetto con le informazioni per l'oggetto specificato *sessionID*.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36157980"
   
 2.  Recuperare un oggetto <xref:Microsoft.SqlServer.Replication.PublisherMonitor> mediante uno dei modi indicati di seguito.  
   
-    -   Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Impostare la proprietà <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> per il server di pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1. Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce `false`, il nome del server di pubblicazione è stato definito in modo non corretto o la pubblicazione non esiste.  
+    -   Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Impostare la proprietà <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> per il server di pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1. Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce `false`, il nome dell'autore è stato definito in modo non corretto o la pubblicazione non esiste.  
   
     -   Utilizzare l'oggetto <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> a cui si accede mediante la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> di un oggetto <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> esistente.  
   
@@ -272,13 +272,13 @@ ms.locfileid: "36157980"
   
         |valore|Description|  
         |-----------|-----------------|  
-        |1|`expiration` -monitoraggi delle scadenze imminenti delle sottoscrizioni di pubblicazioni transazionali.|  
+        |1|`expiration` -esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni a pubblicazioni transazionali.|  
         |2|`latency` -esegue il monitoraggio delle prestazioni delle sottoscrizioni di pubblicazioni transazionali.|  
-        |4|`mergeexpiration` -monitoraggi delle scadenze imminenti delle sottoscrizioni a pubblicazioni di tipo merge.|  
-        |5|`mergeslowrunduration` -Consente di monitorare la durata delle sincronizzazioni di tipo merge attraverso connessioni a larghezza di banda ridotta (remoto).|  
-        |6|`mergefastrunduration` -Consente di monitorare la durata delle sincronizzazioni di tipo merge su connessioni a banda larga (LAN).|  
+        |4|`mergeexpiration` -esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni di pubblicazioni di tipo merge.|  
+        |5|`mergeslowrunduration` -Consente di monitorare la durata delle sincronizzazioni di tipo merge attraverso connessioni a larghezza di banda ridotta (accesso remoto).|  
+        |6|`mergefastrunduration` -Consente di monitorare la durata delle sincronizzazioni di tipo merge attraverso connessioni a banda larga (LAN).|  
         |7|`mergefastrunspeed` - esegue il monitoraggio della frequenza delle sincronizzazioni di tipo merge su connessioni tramite rete locale (LAN) a larghezza di banda elevata.|  
-        |8|`mergeslowrunspeed` -Controlla la frequenza di sincronizzazione delle sincronizzazioni di tipo merge attraverso connessioni a larghezza di banda ridotta (remoto).|  
+        |8|`mergeslowrunspeed` -Consente di monitorare la frequenza di sincronizzazione delle sincronizzazioni di tipo merge attraverso connessioni a larghezza di banda ridotta (accesso remoto).|  
   
     -   *enable* - <xref:System.Boolean> che indica se la misurazione è attivata per la pubblicazione.  
   

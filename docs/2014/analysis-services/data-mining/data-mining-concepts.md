@@ -1,5 +1,5 @@
 ---
-title: Concetti di Data Mining | Documenti Microsoft
+title: Concetti di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data mining
 - cleaning data
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 296ef0bf077c7d28e7288e1c7cae999de592b8e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1236bc9b0c7e18331d2a3dea660f38d81408176b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212011"
 ---
 # <a name="data-mining-concepts"></a>Concetti di data mining
   Il data mining è il processo di individuazione di informazioni utilizzabili da grandi set di dati. Nel data mining viene usata l'analisi matematica per dedurre modelli e tendenze esistenti nei dati. In genere, questi modelli non possono essere individuati tramite l'esplorazione tradizionale dei dati perché le relazioni sono troppo complesse o perché sono presenti troppi dati.  
@@ -108,11 +108,11 @@ ms.locfileid: "36157855"
   
  Pertanto, prima di avviare la compilazione di modelli di data mining, è necessario identificare questi problemi e stabilire come risolverli. Per il data mining si usano in genere un set di dati di grandi dimensioni e non è possibile esaminare la qualità dei dati di ogni transazione. Pertanto, per esplorare i dati e individuare le incoerenze, potrebbe essere necessario usare una forma di profiling dei dati, nonché strumenti di pulizia e filtro dei dati automatizzati come quelli forniti in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSlong](../../includes/ssmdslong-md.md)]o [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] . Per altre informazioni, vedere le risorse seguenti:  
   
--   [Panoramica di master Data Services](../../master-data-services/master-data-services-overview-mds.md)  
+-   [Panoramica di Master Data Services](../../master-data-services/master-data-services-overview-mds.md)  
   
 -   [Data Quality Services](../../data-quality-services/data-quality-services.md)  
   
- È importante notare che i dati usati per il processo di data mining non devono essere archiviati in un cubo OLAP (Online Analytical Processing) o in un database relazionale, anche se è possibile usare entrambi come origini dati. È possibile eseguire il processo di data mining usando qualsiasi origine dati definita come un'origine dati [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Sono inclusi file di testo, cartelle di lavoro di Excel o dati da altri provider esterni. Per altre informazioni, vedere [origini dati supportate &#40;multidimensionali SSAS&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
+ È importante notare che i dati usati per il processo di data mining non devono essere archiviati in un cubo OLAP (Online Analytical Processing) o in un database relazionale, anche se è possibile usare entrambi come origini dati. È possibile eseguire il processo di data mining usando qualsiasi origine dati definita come un'origine dati [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Sono inclusi file di testo, cartelle di lavoro di Excel o dati da altri provider esterni. Per altre informazioni, vedere [origini dati supportate &#40;multidimensionale di SSAS&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
 ##  <a name="ExploringData"></a> Esplorazione dei dati  
  Il terzo passaggio del processo di data mining, illustrato nel diagramma seguente, consiste nell'esplorazione dei dati preparati.  
@@ -160,7 +160,7 @@ ms.locfileid: "36157855"
 ##  <a name="DeployingandUpdatingModels"></a> Distribuzione e aggiornamento dei modelli  
  L'ultimo passaggio del processo di data mining, illustrato nel diagramma seguente, consiste nella distribuzione dei modelli più efficaci in un ambiente di produzione.  
   
- ![Sesto passaggio di data mining: distribuzione di modelli di data mining](../media/dmprocess-deploying.gif "sesto passaggio di Data mining: distribuzione di modelli di data mining")  
+ ![Sesto passaggio del data mining: distribuzione di modelli di data mining](../media/dmprocess-deploying.gif "sesto passaggio del Data mining: distribuzione di modelli di data mining")  
   
  Dopo la distribuzione dei modelli di data mining in un ambiente di produzione, è possibile eseguire numerose attività, a seconda delle esigenze. Tra le attività che è possibile eseguire sono incluse le seguenti:  
   
@@ -180,6 +180,6 @@ ms.locfileid: "36157855"
   
 ## <a name="see-also"></a>Vedere anche  
  [Soluzioni di Data Mining](data-mining-solutions.md)   
- [Strumenti di Data Mining](data-mining-tools.md)  
+ [Strumenti di data mining](data-mining-tools.md)  
   
   

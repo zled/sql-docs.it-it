@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -19,12 +19,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f1ca2ba60abf7c4384c9e294442dfb1dc3ba37eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.openlocfilehash: 75838c8eb38e21eb82f6a57278ebe13310a3f53a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168676"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Classe di evento Broker:Message Undeliverable
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Message Undeliverable** quando Service Broker non è in grado di trattenere un messaggio ricevuto che avrebbe dovuto essere recapitato a un servizio dell'istanza. Per i messaggi che avrebbero dovuto essere inoltrati, vedere [Classe di evento Broker:Forwarded Message Dropped](broker-forwarded-message-dropped-event-class.md).  

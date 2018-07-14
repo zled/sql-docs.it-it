@@ -1,5 +1,5 @@
 ---
-title: Configurazione nodi del cluster | Documenti Microsoft
+title: Configurazione del nodo del cluster | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cluster node configuration
 - cluster node configuration, Setup
 ms.assetid: cc960cf3-3b55-44f3-961a-eac4ad05d3d9
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 511f5f489693e166accb1a21c28932c369a983a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 740771813ee953aa57106dc07e1b446ea71f494a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327091"
 ---
 # <a name="cluster-node-configuration"></a>Configurazione nodi cluster
   Utilizzare la pagina Configurazione nodi cluster per aggiungere o rimuovere nodi da un'istanza del cluster di failover. Per installare o aggiornare un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario eseguire il programma di installazione su ogni nodo del cluster di failover. Per aggiungere un nodo a un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistente, è necessario eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel nodo che deve essere aggiunto all'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.advancedtuningoptions.f1
 - sql12.dta.general.f1
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a64863d6d36d7eb5d934b08db7c7ed8fdb2638e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 536c0a6a1a730fcf74d084fbef2d9f1debb347a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182078"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
   In questo argomento viene descritto come avviare e utilizzare Ottimizzazione guidata motore di database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni su come visualizzare e usare i risultati dopo l'ottimizzazione di un database, vedere [Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Inizializzare Ottimizzazione guidata motore di database  
- Al primo utilizzo, è necessario che lo strumento Ottimizzazione guidata motore di database sia avviato da un utente membro del ruolo predefinito del server **sysadmin** . Infatti, è necessario creare diverse tabelle di sistema nel `msdb` database per supportare operazioni di ottimizzazione. L'inizializzazione consente anche agli utenti membri del ruolo predefinito del database **db_owner** di ottimizzare carichi di lavoro nelle tabelle dei database di cui sono proprietari.  
+ Al primo utilizzo, è necessario che lo strumento Ottimizzazione guidata motore di database sia avviato da un utente membro del ruolo predefinito del server **sysadmin** . Infatti, devono essere create in diverse tabelle di sistema di `msdb` database per supportare le operazioni di ottimizzazione. L'inizializzazione consente anche agli utenti membri del ruolo predefinito del database **db_owner** di ottimizzare carichi di lavoro nelle tabelle dei database di cui sono proprietari.  
   
  Un utente con le autorizzazioni di amministratore di sistema deve eseguire una delle azioni seguenti.  
   

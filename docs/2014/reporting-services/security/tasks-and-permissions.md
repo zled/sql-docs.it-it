@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], tasks
 - role-based security [Reporting Services], permissions
@@ -21,13 +21,13 @@ ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0740292a3aefe1a9570bd614014c81bc58e11fd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38e0063f336ef7c2cb7a7bcfc33c0026259b4c83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177198"
 ---
 # <a name="tasks-and-permissions"></a>Attività e autorizzazioni
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]il termine *attività* indica tutte le azioni che un utente o un amministratore può eseguire. Le attività sono predefinite. Non è possibile creare attività personalizzate né modificare le attività predefinite a livello di programmazione o tramite altri strumenti. Sono disponibili complessivamente venticinque attività che comprendono l'intero set di operazioni disponibili nella sicurezza basata sui ruoli. I seguenti sono alcuni esempi di attività: "Visualizzazione di report", "Gestione di report" e "Gestione delle proprietà del server di report".  

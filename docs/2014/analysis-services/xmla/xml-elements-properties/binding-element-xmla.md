@@ -1,5 +1,5 @@
 ---
-title: Elemento binding (XMLA) | Documenti Microsoft
+title: Elemento binding (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Binding element
 ms.assetid: d5acd8d4-8551-449a-ae30-d0ba828cc02d
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fe6f67a91ac410596601ffd2d5e440a0de727d0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec223f5a56ea32388a3485f39db0bbbc494fda85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203971"
 ---
 # <a name="binding-element-xmla"></a>Elemento Binding (XMLA)
   Definisce un'associazione out-of-line per un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dell'oggetto, ad esempio un attributo in una dimensione, per il [associazioni](bindings-element-xmla.md) raccolta di un [Batch](../xml-elements-commands/batch-element-xmla.md) o [ Processo](../xml-elements-commands/process-element-xmla.md) comando.  
@@ -65,10 +65,10 @@ ms.locfileid: "36157594"
 |Elementi padre|[Associazioni](bindings-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Gli elementi `Binding` definiscono associazioni out-of-line, diverse da origini dati e viste origine dati, affinché gli oggetti [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] vengano elaborati da un comando `Batch` o `Process`. Per ulteriori informazioni sull'elaborazione degli oggetti, vedere [l'elaborazione di oggetti &#40;XMLA&#41;](../xml-elements-objects.md).  
+## <a name="remarks"></a>Note  
+ Gli elementi `Binding` definiscono associazioni out-of-line, diverse da origini dati e viste origine dati, affinché gli oggetti [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] vengano elaborati da un comando `Batch` o `Process`. Per altre informazioni sull'elaborazione degli oggetti, vedere [elaborazione di oggetti &#40;XMLA&#41;](../xml-elements-objects.md).  
   
- Per ulteriori informazioni sulle associazioni out-of-line, vedere [origini dati e le associazioni &#40;multidimensionali SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Per altre informazioni sulle associazioni out-of-line, vedere [origini dati e associazioni &#40;multidimensionale di SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;XMLA&#41;](xml-elements-properties.md)  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f49bf89391a0863a54cc57858cd5fb9c05fba90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9d3ac48037a5a61bd70179927b3c6de0eba90c9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244022"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Scenario: Aggiunta e modifica di un diagramma di database
   In questo scenario viene illustrato come creare e modificare un diagramma di database e apportare modifiche al database tramite il componente per i diagrammi di database. Verrà descritto come aggiungere tabelle ai diagrammi, creare relazioni tra le tabelle, creare vincoli e indici su colonne e modificare il livello delle informazioni visualizzate per ogni tabella.  
@@ -78,7 +78,7 @@ ms.locfileid: "36068622"
   
      Verrà visualizzata una nuova griglia della tabella con tre colonne: **Nome colonna**, **Tipo di dati**e **Consenti valori Null**.  
   
-3.  Aggiungere le seguenti informazioni per `Table1`:  
+3.  Aggiungere le informazioni seguenti per `Table1`:  
   
     |**Nome colonna**|**Tipo di dati**|**Consenti valori NULL**|  
     |---------------------|-------------------|---------------------|  
@@ -213,10 +213,10 @@ ms.locfileid: "36068622"
 ## <a name="see-also"></a>Vedere anche  
  [Personalizzazione della quantità di informazioni visualizzate nei diagrammi &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Impostare Progettazione diagrammi di Database &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
- [Aggiungere tabelle ai diagrammi &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
- [Creare relazioni tra tabelle in un diagramma di &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
+ [Aggiungere tabelle a diagrammi &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
+ [Creare relazioni tra tabelle in un diagramma &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
  [Creare indici XML](../../relational-databases/xml/create-xml-indexes.md)   
- [Copia un'immagine di un diagramma di Database negli Appunti &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
+ [Copiare negli Appunti un'immagine di un diagramma di Database &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [Utilizzare il layout di un diagramma &#40;Visual Database Tools&#41;](work-with-diagram-layout-visual-database-tools.md)  
   
   

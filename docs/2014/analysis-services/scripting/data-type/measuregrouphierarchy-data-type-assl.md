@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati MeasureGroupHierarchy (ASSL) | Documenti Microsoft
+title: Tipo di dati MeasureGroupHierarchy (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupHierarchy data type
 ms.assetid: 63c2fd97-d7ad-4715-8c49-24d684bc92d7
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2a6270d9480241ff996f60631ae9a849f45cf98
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e34d9c7983ea1a94c8c303e746e28191318f2c58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245642"
 ---
 # <a name="measuregrouphierarchy-data-type-assl"></a>Tipo di dati MeasureGroupHierarchy (ASSL)
   Definisce un tipo di dati primitivo che rappresenta le informazioni su una gerarchia in un gruppo di misure.  
@@ -57,7 +57,7 @@ ms.locfileid: "36068575"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Annotazioni](../collections/annotations-element-assl.md), [HierarchyID](../properties/id-element-assl.md)|  
+|Elementi figlio|[Le annotazioni](../collections/annotations-element-assl.md), [HierarchyID](../properties/id-element-assl.md)|  
 |Elementi derivati|[Gerarchia](../objects/hierarchy-element-assl.md) ([gerarchie](../collections/hierarchies-element-assl.md) insieme [RegularMeasureGroupDimension](dimension-data-type-assl.md))|  
   
 ## <a name="see-also"></a>Vedere anche  

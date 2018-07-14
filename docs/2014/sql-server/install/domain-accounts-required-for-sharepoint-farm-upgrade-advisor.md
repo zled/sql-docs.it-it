@@ -1,5 +1,5 @@
 ---
-title: Gli account di dominio richiesti per la farm di SharePoint (Upgrade Advisor) | Documenti Microsoft
+title: Gli account di dominio richiesti per la farm di SharePoint (Upgrade Advisor) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: fd013ae4f7266604dde798aa76393612cd578bad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 122f0209e7254d558ac5cc3db806d8bb648a849c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251213"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>Account di dominio richiesti per la farm di SharePoint (Upgrade Advisor)
   I prodotti SharePoint configurati per un ambiente della farm richiedono l'utilizzo di account di dominio.  
@@ -39,7 +39,7 @@ ms.locfileid: "36156845"
  "Il server di report è in esecuzione con l'account NT AUTHORITY\NETWORK SERVICE predefinito, condizione non supportata dall'installazione di una farm di SharePoint. Riconfigurare il server di report affinché venga eseguito con un account di dominio".  
   
 ## <a name="corrective-action"></a>Azione correttiva  
- Per [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versioni precedenti, utilizzare Gestione configurazione Reporting Services per modificare l'account assegnato come account di servizio del server di report.  
+ Per la [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versioni precedenti, utilizzare Gestione configurazione Reporting Services per modificare l'account assegnato come account di servizio del server di report.  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>Per modificare l'account del servizio da Gestione configurazione  
   
@@ -47,9 +47,9 @@ ms.locfileid: "36156845"
   
 2.  Selezionare **strumenti di configurazione**, quindi fare clic su **Gestione configurazione Reporting Services**.  
   
-3.  In Configuration Manager, selezionare il **Account del servizio** scheda.  
+3.  In Configuration Manager, selezionare la **Account del servizio** scheda.  
   
-4.  Selezionare **utilizza un altro account** e immettere le credenziali per un account di dominio.  
+4.  Selezionare **Usa un altro account** e immettere le credenziali per un account di dominio.  
   
 5.  Fare clic su **Applica**.  
   

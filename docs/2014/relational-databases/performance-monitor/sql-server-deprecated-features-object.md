@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
 - performance counters [SQL Server], deprecated features
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e093deb7505ecd6bf7b5afd0b66da2791f34cc51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227411"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Oggetto SQL Server:Deprecated Features
   L'oggetto SQLServer:Caratteristiche deprecate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un contatore per monitorare le caratteristiche definite deprecate. In ognuno dei casi il contatore fornisce un conteggio dell'utilizzo indicante il numero di volte in cui è stata rilevata la funzionalità deprecata dall'ultimo avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "36157490"
 |CREATE TRIGGER WITH APPEND|È stata rilevata un'istruzione CREATE TRIGGER con la clausola WITH APPEND. Ricreare l'intero trigger. Si verifica una volta per ogni utilizzo in un'istruzione DDL.|  
 |CREATE_DROP_DEFAULT|È stata rilevata la sintassi CREATE DEFAULT o DROP DEFAULT. Riscrivere il comando usando l'opzione DEFAULT di CREATE TABLE o ALTER TABLE. Si verifica una volta per ogni compilazione.|  
 |CREATE_DROP_RULE|È stata rilevata la sintassi CREATE RULE. Riscrivere il comando usando vincoli. Si verifica una volta per ogni compilazione.|  
-|Tipi di dati: text, ntext o image|È stato rilevato un tipo di dati `text`, `ntext` o `image`. Riscrivere le applicazioni di utilizzare il `varchar(max)` tipo di dati e rimuovere `text`, `ntext`, e `image` sintassi dei tipi di dati. Si verifica una volta per ogni query.|  
+|Tipi di dati: text, ntext o image|È stato rilevato un tipo di dati `text`, `ntext` o `image`. Riscrivere le applicazioni di utilizzare il `varchar(max)` tipo di dati e rimosso `text`, `ntext`, e `image` sintassi dei tipi di dati. Si verifica una volta per ogni query.|  
 |Livello di compatibilità 80 del database|Numero totale di volte in cui il livello di compatibilità di un database è stato modificato in 80. Pianificare l'aggiornamento del database e dell'applicazione prima della versione successiva. Si verifica anche quando viene avviato un database con livello di compatibilità 80.|  
 |Livello di compatibilità 90 del database|Numero totale di volte in cui il livello di compatibilità di un database è stato modificato in 90. Pianificare l'aggiornamento del database e dell'applicazione per una versione successiva. Si verifica anche quando viene avviato un database con livello di compatibilità 90.|  
 |DATABASE_MIRRORING|Rilevamento di riferimenti alla funzionalità di mirroring del database. Pianificare l'aggiornamento dei gruppi di disponibilità AlwaysOn oppure, se si esegue un'edizione di SQL Server che non supporta questi gruppi, pianificare la migrazione al log shipping.|  
@@ -165,7 +165,7 @@ ms.locfileid: "36157490"
 |sp_configure 'set working set size'|È stata rilevata l'opzione set working set size di sp_configure Le dimensioni del working set non sono più configurabili. Non usare. Si verifica una volta per ogni query.|  
 |sp_control_dbmasterkey_password|La stored procedure sp_control_dbmasterkey_password non controlla se una chiave master è esistente. Questo è consentito solo per la compatibilità con le versioni precedenti, ma viene visualizzato un avviso. Questo comportamento è deprecato. In una versione futura la chiave master deve esistere e la password usata nella stored procedure sp_control_dbmasterkey_password deve essere una delle password usate per crittografare la chiave master del database.|  
 |sp_create_removable|È stata rilevata la procedura sp_create_removable. In alternativa, usare CREATE DATABASE. Si verifica una volta per ogni query.|  
-|sp_db_vardecimal_storage_format|Utilizzo di `vardecimal` il formato di archiviazione è stato rilevato. Usare la compressione dei dati.|  
+|sp_db_vardecimal_storage_format|Uso di `vardecimal` il formato di archiviazione è stato rilevato. Usare la compressione dei dati.|  
 |sp_dbcmptlevel|È stata rilevata la procedura sp_dbcmptlevel. In alternativa, usare ALTER DATABASE … SET COMPATIBILITY_LEVEL. Si verifica una volta per ogni query.|  
 |sp_dbfixedrolepermission|È stata rilevata la procedura sp_dbfixedrolepermission. Non usare. Si verifica una volta per ogni query.|  
 |sp_dboption|È stata rilevata la procedura sp_dboption. In alternativa, usare ALTER DATABASE e DATABASEPROPERTYEX. Si verifica una volta per ogni compilazione.|  
@@ -183,7 +183,7 @@ ms.locfileid: "36157490"
 |sp_droprole|È stata rilevata la procedura sp_droprole. In alternativa, usare DROP ROLE. Si verifica una volta per ogni query.|  
 |sp_droptype|È stata rilevata la procedura sp_droptype. In alternativa, usare DROP TYPE.|  
 |sp_dropuser|È stata rilevata la procedura sp_dropuser. In alternativa, usare DROP USER. Si verifica una volta per ogni query.|  
-|sp_estimated_rowsize_reduction_for_vardecimal|Utilizzo di `vardecimal` il formato di archiviazione è stato rilevato. Utilizzare la compressione dati e sp_estimate_data_compression_savings.|  
+|sp_estimated_rowsize_reduction_for_vardecimal|Uso di `vardecimal` il formato di archiviazione è stato rilevato. Utilizzare la compressione dati e sp_estimate_data_compression_savings.|  
 |sp_fulltext_catalog|È stata rilevata la procedura sp_fulltext_catalog. In alternativa, usare CREATE/ALTER/DROP FULLTEXT CATALOG. Si verifica una volta per ogni compilazione.|  
 |sp_fulltext_column|È stata rilevata la procedura sp_fulltext_column. In alternativa, usare ALTER FULLTEXT INDEX. Si verifica una volta per ogni compilazione.|  
 |sp_fulltext_database|È stata rilevata la procedura sp_fulltext_database. In alternativa, usare ALTER DATABASE. Si verifica una volta per ogni compilazione.|  
@@ -253,13 +253,13 @@ ms.locfileid: "36157490"
 |sysusers|Sono stati rilevati riferimenti a sysusers. Utilizzare sys.database_principals. Si verifica una volta per ogni compilazione.|  
 |Hint di tabella senza WITH|È stata rilevata un'istruzione che usano hint di tabella ma non la parola chiave WITH. Modificare le istruzioni in modo che includano la parola WITH. Si verifica una volta per ogni compilazione.|  
 |Opzione di tabella text in row|Sono stati rilevati riferimenti all'opzione di tabella 'text in row'. Utilizzare sp_tableoption 'large value types out of row'. Si verifica una volta per ogni query.|  
-|TEXTPTR|Sono stati rilevati riferimenti alla funzione TEXTPTR. Riscrivere le applicazioni di utilizzare il `varchar(max)` tipo di dati e rimuovere `text`, `ntext`, e `image` sintassi dei tipi di dati. Si verifica una volta per ogni query.|  
-|TEXTVALID|Sono stati rilevati riferimenti alla funzione TEXTVALID. Riscrivere le applicazioni di utilizzare il `varchar(max)` tipo di dati e rimuovere `text`, `ntext`, e `image` sintassi dei tipi di dati. Si verifica una volta per ogni query.|  
-|timestamp|Numero totale di esecuzioni deprecate `timestamp` è stato rilevato il tipo di dati in un'istruzione DDL. Utilizzare il `rowversion` invece del tipo di dati.|  
-|UPDATETEXT o WRITETEXT|È stata rilevata l'istruzione UPDATETEXT o WRITETEXT. Riscrivere le applicazioni di utilizzare il `varchar(max)` tipo di dati e rimuovere `text`, `ntext`, e `image` sintassi dei tipi di dati. Si verifica una volta per ogni query.|  
+|TEXTPTR|Sono stati rilevati riferimenti alla funzione TEXTPTR. Riscrivere le applicazioni di utilizzare il `varchar(max)` tipo di dati e rimosso `text`, `ntext`, e `image` sintassi dei tipi di dati. Si verifica una volta per ogni query.|  
+|TEXTVALID|Sono stati rilevati riferimenti alla funzione TEXTVALID. Riscrivere le applicazioni di utilizzare il `varchar(max)` tipo di dati e rimosso `text`, `ntext`, e `image` sintassi dei tipi di dati. Si verifica una volta per ogni query.|  
+|timestamp|Numero totale di esecuzioni deprecate `timestamp` è stato rilevato il tipo di dati in un'istruzione DDL. Usare il `rowversion` invece del tipo di dati.|  
+|UPDATETEXT o WRITETEXT|È stata rilevata l'istruzione UPDATETEXT o WRITETEXT. Riscrivere le applicazioni di utilizzare il `varchar(max)` tipo di dati e rimosso `text`, `ntext`, e `image` sintassi dei tipi di dati. Si verifica una volta per ogni query.|  
 |USER_ID|Sono stati rilevati riferimenti alla funzione USER_ID. Usare la funzione DATABASE_PRINCIPAL_ID. Si verifica una volta per ogni compilazione.|  
 |Utilizzo di OLEDB per server collegati||  
-|Formato di archiviazione vardecimal|Utilizzo di `vardecimal` il formato di archiviazione è stato rilevato. Usare la compressione dei dati.|  
+|Formato di archiviazione vardecimal|Uso di `vardecimal` il formato di archiviazione è stato rilevato. Usare la compressione dei dati.|  
 |XMLDATA|È stata rilevata la sintassi FOR XML. Usare la generazione XSD per le modalità RAW e AUTO. Non sono disponibili sostituzioni per la modalità esplicita. Si verifica una volta per ogni compilazione.|  
 |XP_API|È stata rilevata un'istruzione di una stored procedure estesa. Non usare.|  
 |xp_grantlogin|È stata rilevata la procedura xp_grantlogin. In alternativa, usare CREATE LOGIN. Si verifica una volta per ogni compilazione.|  
@@ -271,7 +271,7 @@ ms.locfileid: "36157490"
  [Funzionalità deprecate della ricerca Full-Text in SQL Server 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Classe di evento Deprecation Announcement](../event-classes/deprecation-announcement-event-class.md)   
  [Classe di evento Deprecation Final Support](../event-classes/deprecation-final-support-event-class.md)   
- [Funzionalità del motore di Database non più usate in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Funzionalità del motore di Database non più utilizzate in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Funzionalità di ricerca Full-Text in SQL Server 2014 non più supportate](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
  [Usare oggetti di SQL Server](use-sql-server-objects.md)  
   

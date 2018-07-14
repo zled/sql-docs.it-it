@@ -1,5 +1,5 @@
 ---
-title: Risoluzione dei problemi di aggiornamento | Documenti Microsoft
+title: Risoluzione dei problemi di aggiornamento | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
 - Upgrade Advisor [SQL Server], reference
@@ -31,15 +31,15 @@ helpviewer_keywords:
 - fixing upgrade issues [Upgrade Advisor]
 ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6072fb3c1d52048832bd6d07f34828c84eb2d491
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a428ddc49d047e9aac42f506917176eee977d0d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244071"
 ---
 # <a name="resolving-upgrade-issues"></a>Risoluzione dei problemi di aggiornamento
   Negli argomenti di questa sezione vengono descritti i problemi relativi all'aggiornamento rilevabili e quelli non rilevabili che possono tuttavia influire sull'esecuzione dell'aggiornamento o del post-aggiornamento. I problemi sono organizzati per componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "36068395"
   
 -   [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
--   [Problemi di aggiornamento della ricerca full-Text](../../../2014/sql-server/install/full-text-search-upgrade-issues.md)  
+-   [Problemi di aggiornamento della ricerca full-text](../../../2014/sql-server/install/full-text-search-upgrade-issues.md)  
   
 -   [Problemi di aggiornamento della replica](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
@@ -66,13 +66,13 @@ ms.locfileid: "36068395"
   
 -   [Scollegare il database con ID 32767](../../../2014/sql-server/install/detach-database-id-32767.md)  
   
--   [Rinominare gli account di accesso corrispondenti i nomi dei ruoli predefiniti del server](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
+-   [Rinominare gli account di accesso con nomi uguali a quelli dei ruoli predefiniti del server](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
   
 -   [Rinominare l'utente sys](../../../2014/sql-server/install/rename-user-sys.md)  
   
--   [Utilizzare sp_rename per rinominare il nome di indice duplicati](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
+-   [Usare sp_rename per rinominare gli indici duplicati](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server 2014 Upgrade Advisor &#91;nuovo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Esempio di tipo definito dall'utente con supporto del calendario data e ora | Documenti Microsoft
+title: Esempio di tipo definito dall'utente con supporto del calendario data e ora | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a324a9b0f5ce90c7990bdc44c352df1e7a48c206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 161395e5c57e8355c75f952f0ea0998feb487c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330461"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>Esempio di tipo definito dall'utente con supporto del calendario data e ora
   L'archiviazione di date sotto forma di stringhe può provocare confusione in quanto le date non hanno alcun significato se non si conosce il sistema di calendario utilizzato. Nell'esempio `CADatetime` vengono illustrati due tipi di dati definiti dall'utente, `CADatetime` e `CADate`, che consentono la gestione di data e ora con supporto del calendario.  

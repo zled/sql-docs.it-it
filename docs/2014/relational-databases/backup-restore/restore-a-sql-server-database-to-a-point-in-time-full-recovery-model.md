@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - STOPAT clause [RESTORE LOG statement]
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 62676ecbbe57529a2f1eeec4448ef91a4ebf6d4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 504810285ca79879e2442526747d40bbf0ed50bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203561"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup (modello di recupero con registrazione completa)
   In questo argomento viene descritto il ripristino temporizzato di un database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante l'utilizzo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le informazioni contenute in questo argomento sono rilevanti solo per i database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene utilizzato il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  
@@ -138,7 +137,7 @@ ms.locfileid: "36069033"
   
  RESTORE LOG *database_name* FROM < dispositivo_backup > WITH STOPAT  **= *`time`*,** ripristino...  
   
- Il punto di ripristino è l'ultimo commit delle transazioni che si sono verificati in corrispondenza o prima la `datetime` valore specificato da *tempo*.  
+ Il punto di ripristino è l'ultimo commit delle transazioni che si sono verificati in corrispondenza o prima la `datetime` valore specificato da *ora*.  
   
  Per ripristinare solo le modifiche apportate prima di un punto nel tempo specifico, specificare WITH STOPAT **=** *time* per ogni backup da ripristinare. Questo garantisce che il momento nel tempo desiderato non venga superato.  
   
@@ -156,7 +155,7 @@ ms.locfileid: "36069033"
   
 3.  Ripristinare l'ultimo backup del database differenziale, se presente, senza recuperare il database (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Applicare ogni backup del log delle transazioni nella stessa sequenza in cui sono stati creati, specificando l'ora in cui si intende arrestare il ripristino del log (RESTORE DATABASE *database_name* FROM < dispositivo_backup > WITH STOPAT **= *`time`*,** Ripristino).  
+4.  Applicare ogni backup del log delle transazioni nella stessa sequenza in cui sono stati creati, specificando l'ora in cui si intende arrestare il ripristino del log (RESTORE DATABASE *database_name* FROM < dispositivo_backup > WITH STOPAT **= *`time`*,** RECOVERY).  
   
     > [!NOTE]  
     >  Le opzioni RECOVERY e STOPAT. Se il backup del log delle transazioni non contiene i dati corrispondenti all'ora richiesta, ad esempio se l'ora specificata è successiva al periodo di tempo gestito dal log delle transazioni, viene generato un messaggio di avviso e il database non viene recuperato.  

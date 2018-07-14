@@ -1,5 +1,5 @@
 ---
-title: Creare tracce del Profiler per la riproduzione (Analysis Services) | Documenti Microsoft
+title: Creare tracce del Profiler per la riproduzione (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - traces [Analysis Services]
 ms.assetid: 93b2fc46-7cfb-4ab5-abeb-1475a7d6f0f2
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19b7277c52294d88743af5bf99d099a8df4f2f19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03745df066851279d45d5d6dbd8a536e32025cf4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169712"
 ---
 # <a name="create-profiler-traces-for-replay-analysis-services"></a>Creare tracce del profiler per la riproduzione (Analysis Services)
   Per riprodurre query, richieste di individuazione e comandi inviati dagli utenti a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] raccolga gli eventi richiesti. Per avviare la raccolta di questi eventi, è necessario selezionare opportune classi di evento nella scheda **Selezione eventi** della finestra di dialogo **Proprietà traccia** . Se ad esempio viene selezionata la classe di evento Query Begin, verranno raccolti gli eventi contenenti query e questi eventi verranno utilizzati per la riproduzione. In questo caso il file di traccia conterrà informazioni sufficienti a supportare la riproduzione di transazioni di server nella sequenza originale e in un ambiente distribuito.  
@@ -48,7 +48,7 @@ ms.locfileid: "36069729"
   
 -   Classe di evento Audit Login con tutte le colonne di dati. Questa classe di evento contiene informazioni sugli utenti connessi e sulle impostazioni della sessione. L'ID di processo server (SPID) contiene il riferimento alla sessione utente. Per altre informazioni, vedere [Colonne di dati degli eventi di controllo di sicurezza](../trace-events/security-audit-data-columns.md).  
   
--   Classe di evento Discover Begin con tutte le colonne di dati. La colonna TextData fornisce le \<RequestType > parte della richiesta di individuazione e la colonna RequestProperties fornisce il \<proprietà > parte della richiesta di individuazione. La colonna EventSubclass contiene il tipo di richiesta di individuazione. Per altre informazioni, vedere [Colonne di dati degli eventi di individuazione](../trace-events/discover-events-data-columns.md).  
+-   Classe di evento Discover Begin con tutte le colonne di dati. La colonna TextData viene fornita il \<RequestType > parte della richiesta di individuazione e la colonna RequestProperties fornisce il \<proprietà > parte della richiesta di individuazione. La colonna EventSubclass contiene il tipo di richiesta di individuazione. Per altre informazioni, vedere [Colonne di dati degli eventi di individuazione](../trace-events/discover-events-data-columns.md).  
   
 -   Classe di evento Discover End con tutte le colonne di dati. Questa classe di evento verifica lo stato della richiesta di individuazione. Per altre informazioni, vedere [Colonne di dati degli eventi di individuazione](../trace-events/discover-events-data-columns.md).  
   

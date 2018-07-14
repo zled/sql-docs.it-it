@@ -1,5 +1,5 @@
 ---
-title: Proprietà tabella | Documenti Microsoft
+title: Proprietà tabella | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
 - sql12.SWB.SELECTCOLUMNS.F1
@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.swb.tableproperties.changetracking.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e5b9ecfeafbb989f5baae832225475e65137a9ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 858be4ef2443a92f2a2999535714084fe60a67f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181768"
 ---
 # <a name="table-properties"></a>Table Properties
   In questo argomento vengono descritte le proprietà della tabella visualizzate nella finestra di dialogo Proprietà tabella in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni su come visualizzare queste proprietà, vedere [Visualizzare la definizione di una tabella](view-the-table-definition.md).  
@@ -139,13 +139,13 @@ ms.locfileid: "36158844"
  I valori possibili sono `True` e `False`.  
   
  **Filegroup FILESTREAM**  
- Specificare il nome del filegroup di dati FILESTREAM se la tabella include un `varbinary(max)` colonna con l'attributo FILESTREAM. Il filegroup di dati FILESTREAM predefinito è indicato per impostazione predefinita.  
+ Specificare il nome del filegroup di dati FILESTREAM se la tabella include un `varbinary(max)` colonna che ha l'attributo FILESTREAM. Il filegroup di dati FILESTREAM predefinito è indicato per impostazione predefinita.  
   
  Se la tabella non contiene dati FILESTREAM, il campo è vuoto.  
   
 ### <a name="general"></a>Generale  
  **Formato di archiviazione vardecimal abilitato**  
- Quando si `True`, questo valore di sola lettura indica che `decimal` e `numeric` tipi di dati vengono archiviati utilizzando il formato di archiviazione vardecimal. Per modificare questa opzione, usare il `vardecimal storage format` opzione di [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Il formato di archiviazione vardecimal è deprecato. ed è necessario usare il tipo di compressione ROW.  
+ Quando `True`, questo valore di sola lettura indica che `decimal` e `numeric` tipi di dati vengono archiviati usando il formato di archiviazione vardecimal. Per modificare questa opzione, usare il `vardecimal storage format` opzione della [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Il formato di archiviazione vardecimal è deprecato. ed è necessario usare il tipo di compressione ROW.  
   
  **Spazio degli indici**  
  Quantità di spazio occupata dagli indici nella tabella, espresso in megabyte. Questo valore non include lo spazio usato dagli indici XML per la tabella. Se gli indici XML appartengono alla tabella, usare in alternativa [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) .  

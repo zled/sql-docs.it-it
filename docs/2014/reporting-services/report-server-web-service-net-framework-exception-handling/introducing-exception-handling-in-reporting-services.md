@@ -18,15 +18,15 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], exception handling
 ms.assetid: 54381870-ce67-482b-aa83-6a838cdbf9b9
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: de3d63926b2dfde735403b21f5c986d5b4241198
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3c4ff1e27ada53361879335d90daeac5fc4f21be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185838"
 ---
 # <a name="introducing-exception-handling-in-reporting-services"></a>Introduzione alla gestione delle eccezioni in Reporting Services
   Se l'applicazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] invia al servizio Web ReportServer una richiesta che non può essere elaborata, viene restituita al client un'eccezione SOAP. La gestione delle eccezioni generate dal servizio Web ReportServer costituisce una parte importante dello sviluppo delle applicazioni, in quanto quando si verificano gli errori è possibile restituire agli utenti informazioni utili.  

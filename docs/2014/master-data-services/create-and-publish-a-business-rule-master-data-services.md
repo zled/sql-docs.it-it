@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ea043eaf389aa87e1162c2321220c4fd7878923a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5cdcdb6edb146393a9daee7221d0a0d979989046
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322381"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Creare e pubblicare una regola business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare una regola business per garantire l'accuratezza dei dati master. Dopo avere creato una regola, è necessario pubblicarla prima di poterla applicare ai dati.  
@@ -54,12 +54,12 @@ ms.locfileid: "36156479"
   
 9. Nel riquadro **Componenti** espandere il nodo **Condizioni** .  
   
-10. Fare clic su una condizione e trascinarla il **IF** del riquadro **condizioni** etichetta.  
+10. Fare clic su una condizione e trascinarlo in modo che il **IF** del riquadro **condizioni** etichetta.  
   
     > [!TIP]  
-    >  È possibile eliminare elementi dalla regola business facendo clic e scegliendo **eliminare**.  
+    >  È possibile eliminare elementi dalla regola business facendo clic e scegliendo **Elimina**.  
   
-11. Nel **attributi** riquadro, fare clic su un attributo e trascinarlo il **modifica condizione** del riquadro **attributo Select** etichetta.  
+11. Nel **attributi** riquadro, fare clic su un attributo e trascinarlo in modo che le **modifica condizione** del riquadro **Seleziona attributo** etichetta.  
   
 12. Nel **modifica condizione** riquadro, completare tutti i campi obbligatori.  
   
@@ -92,12 +92,12 @@ ms.locfileid: "36156479"
   
 -   Applicare regole business ai dati eseguendo una delle procedure riportate di seguito:  
   
-    -   [Convalidare membri specifici rispetto alle regole Business &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [Convalidare membri specifici rispetto a regole Business &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
     -   [Convalidare una versione rispetto alle regole Business &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare le regole di Business per inviare notifiche &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
+ [Configurare le regole di Business per l'invio di notifiche &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [Modificare il nome di una regola business &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Aggiungere più condizioni a una regola business &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   

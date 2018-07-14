@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
 - data types [SQL Server replication], Oracle publishing
 - mapping data types [SQL Server replication]
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03a774a08e2817edd0f46e5c17f31824c38ed404
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 452017edefdc468be204e2cc06a56be4ae4738c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272757"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Specifica dei mapping tra i tipi di dati di un server di pubblicazione Oracle
   In questo argomento viene descritto come specificare i mapping dei tipi di dati per un server di pubblicazione Oracle in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Anche se per i server di pubblicazione Oracle è disponibile un set di mapping predefiniti di tipi di dati, può essere necessario specificare mapping diversi per una determinata pubblicazione.  

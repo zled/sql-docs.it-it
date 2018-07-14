@@ -1,5 +1,5 @@
 ---
-title: Impossibile caricare il file o l'assembly &#39;Microsoft.Data.Services, Version = 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089&#39; o una delle sue dipendenze. Impossibile trovare il file specificato. | Microsoft Docs
+title: Impossibile caricare il file o l'assembly &#39;Microsoft.Data.Services, Version = 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089&#39; o una delle relative dipendenze. Impossibile trovare il file specificato. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b0330867bb1ffc9d7715d285b6c2c4c5143fb40c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63c549d310d283743d17632b814b4a621eee0286
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226391"
 ---
-# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>Impossibile caricare il file o l'assembly &#39;Microsoft.Data.Services, Version = 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089&#39; o una delle sue dipendenze. Impossibile trovare il file specificato.
+# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>Impossibile caricare il file o l'assembly &#39;Microsoft.Data.Services, Version = 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089&#39; o una delle relative dipendenze. Impossibile trovare il file specificato.
   Negli ambienti di SharePoint 2010 in cui è disponibile PowerPivot per SharePoint, questo errore si verificherà se si tenta un'esportazione del feed di dati e nel sistema non è presente la versione richiesta di Microsoft ADO.NET Data Services.  
   
 ## <a name="details"></a>Dettagli  
@@ -40,7 +40,7 @@ ms.locfileid: "36157622"
   
 ## <a name="user-action"></a>Azione dell'utente  
   
-1.  Andare alla documentazione di requisiti hardware e software per SharePoint 2010 [determinare requisiti Hardware e Software (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734).  
+1.  La documentazione di requisiti hardware e software per SharePoint 2010, andare [determinare requisiti Hardware e Software (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734).  
   
 2.  Nella sezione relativa ai **prerequisiti software di installazione**cercare il collegamento per ADO.NET Data Services 3.5 che corrisponde al sistema operativo in uso.  
   

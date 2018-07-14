@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rowcounttrans.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 035ba7e1777dac88efb59265ea61ab6181bada1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 966f42cf41f93c162ef3aac7be17fce920edbceb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209531"
 ---
 # <a name="row-count-transformation"></a>Conteggio righe - trasformazione
   La trasformazione Conteggio righe consente di contare le righe che passano attraverso un flusso di dati e di memorizzare il totale in una variabile.  
@@ -51,7 +51,7 @@ ms.locfileid: "36069211"
  Per informazioni su come impostare le proprietà del componente, vedere [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Servizi di integrazione &#40;SSIS&#41; variabili](../../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; le variabili](../../integration-services-ssis-variables.md)   
  [Flusso di dati](../data-flow.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)  
   

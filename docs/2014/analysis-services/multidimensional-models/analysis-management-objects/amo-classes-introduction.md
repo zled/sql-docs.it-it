@@ -1,5 +1,5 @@
 ---
-title: Introduzione a classi AMO | Documenti Microsoft
+title: Introduzione a classi AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3e525dec6972d68ce8695bc7fab6aa6ab177e0a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb4e3761642f8b03e5853ae99e00cc4bc2f4a46f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328531"
 ---
 # <a name="introducing-amo-classes"></a>Introduzione alle classi di AMO
   Analysis Management Objects (AMO) è una libreria di classi progettata per gestire un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] da un'applicazione client. Le classi AMO verranno utilizzate per amministrare gli oggetti di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], ad esempio database, dimensioni, cubi, strutture e modelli di data mining, ruoli e autorizzazioni, eccezioni e così via.  

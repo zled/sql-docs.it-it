@@ -1,5 +1,5 @@
 ---
-title: Ambito di espressioni per totali, aggregazioni e raccolte predefinite (Generatore Report e SSRS) | Documenti Microsoft
+title: Ambito di espressioni per totali, aggregazioni e raccolte predefinite (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7d5121675cb7448ae939b0442752b33af19dde5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b3347d17fd115e0d9eb8b8d71e672a63f4c0fa5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253513"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>Ambito di espressioni per totali, aggregazioni e raccolte predefinite (Generatore report e SSRS)
   Quando si scrivono espressioni, si noterà che il termine *ambito* viene utilizzato in molti contesti. Può infatti specificare i dati da utilizzare per la valutazione di un'espressione, il set di caselle di testo in una pagina di cui è stato eseguito il rendering, il set di elementi del report che possono essere mostrati o nascosti in base a un elemento Toggle. Il termine *ambito* verrà utilizzato in argomenti correlati alla valutazione di un'espressione, alla sintassi della funzione di aggregazione, alla visibilità condizionale nonché nei messaggi di errore relativi a queste aree. Per comprendere il significato di *ambito* in un contesto specifico, utilizzare le descrizioni seguenti:  
@@ -173,8 +173,8 @@ ms.locfileid: "36067986"
 ## <a name="see-also"></a>Vedere anche  
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)   
- [Creazione di gruppi di gerarchie ricorsive &#40;SSRS e Generatore Report&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Creazione di gruppi di gerarchie ricorsive &#40;Report e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Formattazione di testo e segnaposto &#40;SSRS e Generatore Report&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Formattazione di testo e segnaposto &#40;Report e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

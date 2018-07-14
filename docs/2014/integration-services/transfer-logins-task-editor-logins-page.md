@@ -1,5 +1,5 @@
 ---
-title: Editor attività gli account di accesso (pagina account di accesso) Trasferisci | Documenti Microsoft
+title: Trasferire gli account di accesso attività Editor (pagina account di accesso) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferloginstask.logins.f1
 helpviewer_keywords:
 - Transfer Logins Task Editor
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 794dbafef58e466a2591b396f101e6cdb68364da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da54f048e74810566aa596b5b900ca5ba1246b57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254583"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>Editor attività Trasferisci account di accesso (pagina Account di accesso)
   Usare la pagina **Account di accesso** della finestra di dialogo **Editor attività Trasferisci account di accesso** per impostare le proprietà per la copia di uno o più account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] da un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a un altra. Per altre informazioni su questa attività, vedere [Attività Trasferisci account di accesso](control-flow/transfer-logins-task.md).  
@@ -68,9 +68,9 @@ ms.locfileid: "36067838"
  Consente di indicare se gli identificatori di sicurezza associati agli account di accesso devono essere copiati sul server di destinazione. L'opzione**CopySids** deve essere impostata su **True** se l'attività Trasferisci account di accesso viene usata contestualmente all'attività Trasferisci database. In caso contrario, gli account di accesso copiati non verranno riconosciuti dal database trasferito.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Attività di Integration Services](control-flow/integration-services-tasks.md)   
- [Trasferire l'Editor attività gli account di accesso &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Trasferire gli account di accesso attività Editor &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Pagina espressioni](expressions/expressions-page.md)   
  [Gestione connessione SMO](connection-manager/smo-connection-manager.md)   
  [Password complesse](../relational-databases/security/strong-passwords.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
 helpviewer_keywords:
@@ -33,13 +33,13 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47afae752c8e9f82e5904346de21613509499673
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f73bbc60cfcc59cc53252239da9acc4ecf05919d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185188"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Ricerca fuzzy - trasformazione
   La trasformazione Ricerca fuzzy esegue attività di pulitura dei dati, ad esempio standardizzazione, correzione e inserimento di valori mancanti.  
@@ -113,12 +113,12 @@ ms.locfileid: "36166115"
 >  Considerato che l'opzione **Manutenzione indice archiviato** richiede l'integrazione con CLR, questa funzionalità può essere usata solo se si seleziona una tabella di riferimento in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è abilitata l'integrazione con CLR.  
   
 ## <a name="row-comparison"></a>Confronto tra righe  
- Quando si configura la trasformazione Ricerca fuzzy è possibile specificare l'algoritmo di confronto utilizzato per individuare i record corrispondenti nella tabella di riferimento. Se si imposta la proprietà Exhaustive su `True`, la trasformazione confronta ogni riga dell'input da ogni riga nella tabella di riferimento. Questo algoritmo di confronto restituisce in genere risultati più precisi, ma la trasformazione viene eseguita più lentamente, a meno che la tabella di riferimento non includa un numero di righe ridotto. Se la proprietà Exhaustive è impostata su `True`, l'intera tabella di riferimento viene caricata in memoria. Per evitare problemi di prestazioni, è consigliabile impostare la proprietà Exhaustive `True` durante lo sviluppo dei pacchetti solo.  
+ Quando si configura la trasformazione Ricerca fuzzy è possibile specificare l'algoritmo di confronto utilizzato per individuare i record corrispondenti nella tabella di riferimento. Se si imposta la proprietà Exhaustive su `True`, la trasformazione confronta ogni riga dell'input per ogni riga nella tabella di riferimento. Questo algoritmo di confronto restituisce in genere risultati più precisi, ma la trasformazione viene eseguita più lentamente, a meno che la tabella di riferimento non includa un numero di righe ridotto. Se la proprietà Exhaustive è impostata su `True`, l'intera tabella di riferimento viene caricata in memoria. Per evitare problemi di prestazioni, è consigliabile impostare la proprietà Exhaustive su `True` pacchetto solo durante lo sviluppo.  
   
- Se la proprietà Exhaustive è impostata su `False`, la trasformazione Ricerca Fuzzy restituirà solo le corrispondenze che hanno almeno un token indicizzato o una sottostringa (detta un *q-gramma*) in comune con il record di input. Per ottimizzare l'efficienza delle ricerche, viene indicizzato solo un subset dei token in ogni riga della tabella nella struttura con indice invertito utilizzata dalla trasformazione Ricerca fuzzy per individuare le corrispondenze. Quando il set di dati di input è ridotta, è possibile impostare la proprietà Exhaustive `True` per evitare la mancanza di corrispondenze per i quali non esistono token comuni nella tabella dell'indice.  
+ Se la proprietà Exhaustive è impostata su `False`, la trasformazione Ricerca Fuzzy restituirà solo le corrispondenze che hanno almeno una sottostringa o un token indicizzato (la sottostringa viene chiamata un *q-gramma*) in comune con il record di input. Per ottimizzare l'efficienza delle ricerche, viene indicizzato solo un subset dei token in ogni riga della tabella nella struttura con indice invertito utilizzata dalla trasformazione Ricerca fuzzy per individuare le corrispondenze. Se il set di dati di input è ridotto, è possibile impostare la proprietà Exhaustive su `True` per evitare di ignorare le corrispondenze per cui non esistono token comuni nella tabella dell'indice.  
   
 ## <a name="caching-of-indexes-and-reference-tables"></a>Memorizzazione nella cache di indici e tabelle di riferimento  
- Quando si configura la trasformazione Ricerca fuzzy, è possibile specificare se l'indice e la tabella di riferimento devono prima essere inseriti parzialmente nella memoria cache. Se si imposta la proprietà WarmCaches su `True`, la tabella di riferimento e indice vengono caricati in memoria. Se l'input include molte righe, imposta la proprietà WarmCaches `True` può migliorare le prestazioni della trasformazione. Quando il numero di righe di input è ridotto, impostare la proprietà WarmCaches su `False` può rendere più veloce il riutilizzo di un indice di grandi dimensioni.  
+ Quando si configura la trasformazione Ricerca fuzzy, è possibile specificare se l'indice e la tabella di riferimento devono prima essere inseriti parzialmente nella memoria cache. Se si imposta la proprietà WarmCaches su `True`, la tabella dell'indice e di riferimento vengono caricati in memoria. Se l'input include molte righe, l'impostazione della proprietà WarmCaches su `True` può migliorare le prestazioni della trasformazione. Se il numero di righe di input è ridotto, impostare la proprietà WarmCaches su `False` può rendere più veloce il riutilizzo di un indice di grandi dimensioni.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tabelle e indici temporanei  
  In fase di esecuzione la trasformazione Ricerca fuzzy crea oggetti temporanei, ad esempio tabelle e indici, nel database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a cui la trasformazione si connette. Le dimensioni delle tabelle e degli indici temporanei sono proporzionali al numero di righe e token della tabella di riferimento e al numero di token creati dalla trasformazione Ricerca fuzzy. Questi oggetti temporanei pertanto possono utilizzare potenzialmente una quantità di spazio su disco considerevole. La trasformazione esegue inoltre query sulle tabelle temporanee. È pertanto consigliabile connettere la trasformazione Ricerca fuzzy a un'istanza di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non di produzione, soprattutto se lo spazio su disco disponibile nel server di produzione è ridotto.  

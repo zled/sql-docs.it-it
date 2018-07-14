@@ -1,14 +1,13 @@
 ---
-title: 'Repliche secondarie attive: Backup su repliche secondarie (gruppi di disponibilità) Always On | Documenti Microsoft'
+title: 'Repliche secondarie attive: Backup in repliche secondarie (gruppi di disponibilità) Always On | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup priority
 - backup on secondary replicas
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 caps.latest.revision: 33
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: b85c5ed853ce0ab4782e131bc215ac17def61a9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9ee4d93fb0bbc2d5f4db66fc960cecd26a61d79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323121"
 ---
 # <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>Repliche secondarie attive: Backup in repliche secondarie (gruppi di disponibilità Always On)
   Nelle funzionalità secondarie attive di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] è incluso il supporto per l'esecuzione di operazioni di backup nelle repliche secondarie. Le operazioni di backup possono richiedere considerevoli risorse a livello di I/O e di CPU (con compressione dei backup). La ripartizione dei backup su una replica secondaria sincronizzata o in sincronizzazione consente di utilizzare le risorse sull'istanza del server che ospita la replica primaria per i carichi di lavoro di livello 1.  
@@ -73,7 +72,7 @@ ms.locfileid: "36158519"
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Backup di sola copia &#40;SQL Server&#41;](../../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)  

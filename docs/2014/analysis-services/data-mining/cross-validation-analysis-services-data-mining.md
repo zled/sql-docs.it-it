@@ -1,5 +1,5 @@
 ---
-title: La convalida incrociata (Analysis Services - Data Mining) | Documenti Microsoft
+title: La convalida incrociata (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86d7c0aeec81133a2bfdc8e5d30bd962a5c7cce6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ff61a92995d65e66a1115b70681585eb643a7ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236011"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Convalida incrociata (Analysis Services - Data mining)
   *Convalida incrociata* è un strumento standard di analisi e costituisce un'importante funzionalità per lo sviluppo e l'ottimizzazione dei modelli di data mining. Viene utilizzata dopo la creazione di una struttura di data mining e dei relativi modelli per determinare la validità del modello e  prevede le applicazioni seguenti:  
@@ -64,7 +64,7 @@ ms.locfileid: "36068832"
   
  Nell'esempio nel diagramma viene illustrato l'utilizzo dei dati se vengono specificate tre riduzioni.  
   
- ![Segmenti di dati come la convalida incrociata](../media/xvoverviewmain.gif "come la convalida incrociata segmenti dati")  
+ ![La modalità di segmentazione dei dati tramite la convalida incrociata](../media/xvoverviewmain.gif "come di segmentazione dei dati tramite la convalida incrociata")  
   
  Nello scenario nel diagramma, la struttura di data mining contiene un set di dati di controllo utilizzato per il testing, ma il set di dati di test non è stato incluso per la convalida incrociata. Di conseguenza, per la convalida incrociata vengono utilizzati tutti i dati nel set di dati di training, ovvero il 70% dei dati nella struttura di data mining. Il report della convalida incrociata mostra il numero totale di case utilizzato in ogni partizione.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36068832"
 ### <a name="choosing-models-and-columns-to-validate"></a>Scelta di modelli e colonne da convalidare  
  Quando si usa la scheda **Convalida incrociata** in Progettazione modelli di data mining, è necessario innanzitutto selezionare la colonna stimabile da un elenco. In genere, una struttura di data mining può supportare numerosi modelli di data mining, che non utilizzano tutti la stessa colonna stimabile. Quando si esegue la convalida incrociata, solo i modelli che utilizzano la stessa colonna stimabile possono essere inclusi nel report.  
   
- Per scegliere un attributo stimabile, fare clic su **Attributo di destinazione** e selezionare la colonna dall'elenco. Se l'attributo di destinazione è una colonna nidificata o una colonna in una tabella nidificata, è necessario digitare il nome della colonna nidificata utilizzando il formato \<nome tabella nidificata > (chiave).\< Annidati colonna >. Se l'unica colonna utilizzata della tabella nidificata è la colonna chiave, è possibile utilizzare \<nome tabella nidificata > (chiave).  
+ Per scegliere un attributo stimabile, fare clic su **Attributo di destinazione** e selezionare la colonna dall'elenco. Se l'attributo di destinazione è una colonna nidificata o una colonna in una tabella nidificata, è necessario digitare il nome della colonna nidificata utilizzando il formato \<nome tabella nidificata > (chiave).\< Annidati colonna >. Se l'unica colonna utilizzata della tabella nidificata è la colonna chiave, è possibile usare \<nome tabella nidificata > (chiave).  
   
  Dopo che l'attributo stimabile è stato selezionato, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono testati automaticamente tutti i modelli che utilizzano lo stesso attributo. Se l'attributo di destinazione contiene valori discreti, dopo avere selezionato la colonna stimabile è possibile digitare uno stato di destinazione nel caso sia presente un valore specifico da stimare.  
   
@@ -185,14 +185,14 @@ ms.locfileid: "36068832"
   
 |Argomento|Collegamenti|  
 |------------|-----------|  
-|Viene descritto come impostare i parametri di convalida incrociata in SQL Server Sviluppo Studio.|[Scheda convalida incrociata &#40;visualizzazione Grafico accuratezza modello di Data Mining&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
+|Viene descritto come impostare i parametri di convalida incrociata in SQL Server Sviluppo Studio.|[Scheda convalida incrociata &#40;visualizzazione Grafico accuratezza di Data Mining&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
 |Viene descritta la metrica fornita dalla convalida incrociata.|[Formule per la convalida incrociata](cross-validation-formulas.md)|  
 |Viene illustrato il formato del report di convalida incrociata e vengono definite le misure statistiche fornite per ogni tipo di modello.|[Misure nel report di convalida incrociata](measures-in-the-cross-validation-report.md)|  
 |Vengono elencate le stored procedure per il calcolo delle statistiche di convalida incrociata.|[Stored procedure di Data Mining &#40;Analysis Services - Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)|  
 |||  
 |Viene descritto come creare un set di dati di testing per le strutture di data mining e i modelli correlati.|[Set di dati di training e di testing](training-and-testing-data-sets.md)|  
 |Vedere gli esempi di altri tipi di grafici di accuratezza.|[Matrice di classificazione &#40;Analysis Services - Data Mining&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Grafico di accuratezza &#40;Analysis Services - Data Mining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico profitti &#40;Analysis Services - Data Mining&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione &#40;Analysis Services - Data Mining&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Vengono descritti i passaggi per la creazione di vari grafici di accuratezza.|[Testing e le attività di convalida e procedure relative alla &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Vengono descritti i passaggi per la creazione di vari grafici di accuratezza.|[Test e convalida le attività e procedure relative alla &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Test e convalida &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  

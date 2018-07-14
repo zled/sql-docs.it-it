@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - + (add)
 - add operator (+)
@@ -17,13 +17,13 @@ ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b96a6e5c659925ea5eed876e1f7505997ea02b71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b7b971521991be68d69efd2519b423958ef4fbf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248861"
 ---
 # <a name="-add-ssis"></a>+ (addizione) (SSIS)
   Vengono aggiunte due espressioni numeriche.  
@@ -43,7 +43,7 @@ numeric_expression1 + numeric_expression2
 ## <a name="result-types"></a>Tipi restituiti  
  Dipendenti dai tipi di dati dei due argomenti. Per altre informazioni, vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se uno degli operandi è Null, il risultato sarà Null.  
   
 ## <a name="expression-examples"></a>Esempi di espressione  
@@ -66,7 +66,7 @@ StandardCost + (StandardCost * @[Profit%])
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Associatività e precedenza operatori](operator-precedence-and-associativity.md)   
- [Gli operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md)  
+ [Precedenza e associatività degli operatori](operator-precedence-and-associativity.md)   
+ [Gli operatori &#40;espressione di SSIS&#41;](operators-ssis-expression.md)  
   
   

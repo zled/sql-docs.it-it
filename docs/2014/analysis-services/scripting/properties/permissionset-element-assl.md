@@ -1,5 +1,5 @@
 ---
-title: Elemento PermissionSet (ASSL) | Documenti Microsoft
+title: Elemento PermissionSet (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PermissionSet element
 ms.assetid: da5a9175-48e4-4b5e-a780-3e0077939974
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6246058af826a73b589f1854b0236de946a4d65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 471ef43aea9fadcca7ab8a4a36870a3bdddee22f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263467"
 ---
 # <a name="permissionset-element-assl"></a>Elemento PermissionSet (ASSL)
-  Identifica il set di autorizzazioni associato un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] assembly .NET Framework.  
+  Identifica il set di autorizzazioni associato a un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] assembly .NET Framework.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,14 +61,14 @@ ms.locfileid: "36157826"
 |Elemento padre|[ClrAssembly](../data-type/assembly-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
 |-----------|-----------------|  
 |*Safe*|È consentito solo il calcolo interno e l'accesso locale ai dati. *Safe* è il set di autorizzazioni più restrittivo. Il codice eseguito da un assembly con autorizzazioni *Safe* non può accedere alle risorse di sistema esterne, ad esempio i file, la rete, le variabili di ambiente o il registro di sistema.|  
 |*ExternalAccess*|*Safe*, con la possibilità aggiuntiva di accedere a risorse di sistema esterne, ad esempio i file, la rete, le variabili di ambiente e il registro di sistema.|  
-|*Senza restrizioni*|Senza restrizioni concede agli assembly libero accesso alle risorse interne ed esterne [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il codice eseguito all'interno di un assembly *Unrestricted* può chiamare il codice non gestito.|  
+|*Senza restrizioni*|Senza restrizioni concede agli assembly libero accesso alle risorse, interne ed esterne [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il codice eseguito all'interno di un assembly *Unrestricted* può chiamare il codice non gestito.|  
   
  L'enumerazione che corrisponde ai valori consentiti di `PermissionSet` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.PermissionSet>.  
   

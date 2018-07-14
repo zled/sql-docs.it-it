@@ -1,5 +1,5 @@
 ---
-title: Elemento CalculationReference (ASSL) | Documenti Microsoft
+title: Elemento CalculationReference (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CalculationReference element
 ms.assetid: 4dd18b1f-55c3-4673-afbe-736d1bce8331
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19d96e9f589a9a83d4d31c5b7b1dfb9c37f29633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aace0256c454505e07b4226efc63da0d5d3581c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224061"
 ---
 # <a name="calculationreference-element-assl"></a>Elemento CalculationReference (ASSL)
   Contiene il nome del set denominato o della cella calcolata cui fa riferimento il [CalculationProperty](../objects/calculationproperty-element-assl.md).  
@@ -61,10 +61,10 @@ ms.locfileid: "36069917"
 |Elemento padre|[CalculationProperty](../objects/calculationproperty-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se il valore di `CalculationReference` non corrisponde al nome di un set denominato o della definizione di una cella calcolata esistente, `CalculationReference` viene ignorato.  
   
- L'elemento che corrisponde al padre di `CalculationReference` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ L'elemento che corrisponde al padre di `CalculationReference` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento Calculationproperty &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interval for polling [SQL Server]
 - target servers [SQL Server], polling interval
 - polling interval [SQL Server]
 ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db2913badf1b5ecf8bda10a810f7d2f604354cf9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c6ec96e9b728d5b00b15b5258895e1f17b119e18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165782"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Impostare l'intervallo di polling per i server di destinazione
   In questo argomento viene illustrato come impostare la frequenza utilizzata da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'aggiornamento delle informazioni dal server master ai server di destinazione. Un processo è una serie specificata di azioni eseguite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Un processo multiserver è un processo eseguito da un server master in uno o più server di destinazione.  
@@ -67,7 +67,7 @@ ms.locfileid: "36166302"
   
 2.  Sulla barra degli strumenti fare clic su **Nuova query**.  
   
-3.  Nella finestra query utilizzare la [sp_post_msx_operation &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) stored procedure per impostare l'intervallo di polling per i server di destinazione di sistema.  
+3.  Nella finestra di query, usare il [sp_post_msx_operation &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) stored procedure per impostare l'intervallo di polling per i server di destinazione di sistema.  
   
 ## <a name="see-also"></a>Vedere anche  
  [dbo.sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  

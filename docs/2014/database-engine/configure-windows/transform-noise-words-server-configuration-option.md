@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text queries [SQL Server], performance
 - transform noise words option
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - stopwords [full-text search]
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 36f615f09fa20c2d5d07853d0a9ef07fdc445704
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 708333809439bcada782b72ce67890dc7b3d5799
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231941"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>Opzione di configurazione del server transform noise words Server
-  Usare la `transform noise words` opzione di configurazione server per eliminare un messaggio di errore se parole non significative, vale a dire [parole non significative](../../relational-databases/search/full-text-search.md), causa un'operazione booleana su una query full-text restituisca zero righe. Questa opzione è utile per le query full-text in cui viene utilizzato il predicato CONTAINS e con operazioni booleane o operazioni NEAR che includono parole non significative. I valori possibili sono illustrati nella tabella seguente.  
+  Usare la `transform noise words` opzione di configurazione server per eliminare un messaggio di errore se parole non significative, vale a dire [parole non significative](../../relational-databases/search/full-text-search.md), esecuzione di un'operazione booleana su una query full-text restituisce zero righe. Questa opzione è utile per le query full-text in cui viene utilizzato il predicato CONTAINS e con operazioni booleane o operazioni NEAR che includono parole non significative. I valori possibili sono illustrati nella tabella seguente.  
   
 |valore|Description|  
 |-----------|-----------------|  
@@ -36,7 +36,7 @@ ms.locfileid: "36156057"
 |1|Le parole non significative vengono trasformate. Tali parole vengono ignorate e viene valutato e il resto della query.<br /><br /> Se vengono specificate parole non significative in un termine di prossimità, queste vengono rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La parola non significativa `is` viene ad esempio rimossa da `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`, trasformando la query di ricerca in `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`. Si noti che la query `CONTAINS(<column_name>, 'NEAR(hello,is)')` verrebbe trasformata semplicemente in `CONTAINS(<column_name>, hello)` in quanto vi è un solo termine di ricerca valido.|  
   
 ## <a name="effects-of-the-transform-noise-words-setting"></a>Effetti dell'impostazione transform noise words  
- In questa sezione viene illustrato il comportamento delle query che contengono una parola non significativa, "`the`", con le impostazioni alternative di `transform noise words`.  Si presuppone che le stringhe di query full-text di esempio vengano eseguite su una riga di tabella che contiene i dati seguenti: `[1, "The black cat"]`.  
+ In questa sezione viene illustrato il comportamento delle query che contengono una parola non significativa, "`the`", le impostazioni alternative di `transform noise words`.  Si presuppone che le stringhe di query full-text di esempio vengano eseguite su una riga di tabella che contiene i dati seguenti: `[1, "The black cat"]`.  
   
 > [!NOTE]  
 >  In tutti gli scenari di questo tipo può venire generato un avviso di parola non significativa.  

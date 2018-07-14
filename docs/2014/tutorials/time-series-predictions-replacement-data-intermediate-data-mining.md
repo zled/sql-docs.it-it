@@ -1,5 +1,5 @@
 ---
-title: Stime basate su serie utilizzando dati di sostituzione (esercitazione intermedia sul Data Mining) temporali | Documenti Microsoft
+title: Tempo di stime basate su serie utilizzando dati di sostituzione (esercitazione intermedia sul Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: d5639aa63affadcdf79acc6029840e7025081245
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: c170fab7f4f6711e81e07603302839430404aa3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267757"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Stime basate su serie temporali utilizzando dati di sostituzione (Esercitazione intermedia sul data mining)
   In questa attività verrà compilato un nuovo modello basato sui dati di vendita mondiali. Verrà quindi creata una query di stima che applica il modello delle vendite mondiali a una delle singole aree.  
@@ -27,7 +27,7 @@ ms.locfileid: "36312469"
 ## <a name="building-a-general-model"></a>Compilazione di un modello generale  
  L'analisi dei risultati del modello di data mining originale ha rivelato differenze rilevanti tra aree e linee di prodotti. Ad esempio, le vendite in America del nord sono state elevate per il modello M200, mentre le vendite del modello T1000 non sono andate altrettanto bene. Tuttavia, l'analisi è complicata dal fatto che alcune serie non contenevano molti dati o che i dati sono stati avviati in una data e un'ora diverse. Alcuni dati erano inoltre mancanti.  
   
- ![Stima delle quantità M200 e T1000 serie](../../2014/tutorials/media/6series-defaultforecasting.gif "serie stima delle quantità M200 e T1000")  
+ ![Serie di stima delle quantità M200 e T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "serie stima delle quantità M200 e T1000")  
   
  Per risolvere alcuni dei problemi di qualità dei dati, si uniranno i dati dalle vendite di tutto il mondo e si utilizzerà tale set di tendenze di vendita generali per compilare un modello che possa essere applicato per stimare le vendite future in tutte le aree.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36312469"
 ## <a name="performing-cross-prediction-with-a-time-series-model"></a>Esecuzione di stime incrociate con un modello Time Series  
  Il processo che prevede l'utilizzo dei dati di una serie per stimare le tendenze in un'altra serie è detto stima incrociata. È possibile utilizzare la stima incrociata in molti scenari, ad esempio, decidere che le vendite di televisori costituiscono una buona stima dell'attività economica complessiva e applicare un modello di cui è stato eseguito il training sulle vendite di televisori ai dati economici generali.  
   
- In SQL Server Data Mining, eseguire una stima incrociata tramite il parametro REPLACE_MODEL_CASES all'interno di argomenti della funzione [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
+ In SQL Server Data Mining, eseguire una stima incrociata usando il parametro REPLACE_MODEL_CASES all'interno di argomenti della funzione [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
  Nell'attività successiva verrà illustrato come utilizzare REPLACE_MODEL_CASES. Si utilizzeranno i dati delle vendite mondiali uniti per compilare un modello, quindi si creerà una query di stima che esegue il mapping del modello generale ai dati di sostituzione.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "36312469"
   
 #### <a name="to-build-a-mining-structure-and-mining-model-using-the-aggregated-data"></a>Per compilare una struttura e un modello di data mining utilizzando i dati aggregati  
   
-1.  In **Esplora soluzioni**, fare doppio clic su **strutture di Data Mining**, quindi selezionare **nuova struttura di Data Mining** per avviare Creazione guidata di Data Mining.  
+1.  Nelle **Esplora soluzioni**, fare doppio clic su **strutture di Data Mining**, quindi selezionare **nuova struttura di Data Mining** per avviare Creazione guidata di Data Mining.  
   
 2.  Nella Creazione guidata modello di data mining effettuare le seguenti selezioni:  
   
     -   Algoritmo: Microsoft Time Series  
   
-    -   Utilizzare l'origine dati compilata precedentemente in questa lezione avanzata come origine per il modello. Vedere [avanzate stime basate su serie temporali &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md).  
+    -   Utilizzare l'origine dati compilata precedentemente in questa lezione avanzata come origine per il modello. Visualizzare [stime basate su serie temporali avanzate &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md).  
   
          Vista origine dati: `AllRegions`  
   
@@ -70,31 +70,31 @@ ms.locfileid: "36312469"
   
          AvgQty  
   
-    -   Per **nome della struttura di Data Mining**, tipo: `All Regions`  
+    -   Per la **nome della struttura di Data Mining**, tipo: `All Regions`  
   
-    -   Per **nome del modello di Data Mining**, tipo: `All Regions`  
+    -   Per la **nome del modello di Data Mining**, tipo: `All Regions`  
   
 3.  Elaborare la nuova struttura e il nuovo modello.  
   
 #### <a name="to-build-the-prediction-query-and-map-the-replacement-data"></a>Per compilare la query di stima ed eseguire il mapping dei dati di sostituzione  
   
-1.  Se il modello non è già aperto, fare doppio clic sulla struttura AllRegions e Progettazione modelli di Data Mining, fare clic sui **stima modello di Data Mining** scheda.  
+1.  Se il modello non è già aperto, fare doppio clic sulla struttura AllRegions e Progettazione modelli di Data Mining, scegliere il **stima modello di Data Mining** scheda.  
   
-2.  Nel **modello di Data Mining** riquadro, il modello AllRegions dovrebbe essere già selezionato. Se non è selezionato, fare clic su **Seleziona modello**, quindi selezionare il modello AllRegions.  
+2.  Nel **modello di Data Mining** riquadro, il modello AllRegions dovrebbe essere già selezionato. Se non è selezionato, fare clic su **Seleziona modello**e quindi selezionare il modello AllRegions.  
   
-3.  Nel **Seleziona tabella/e di Input** riquadro, fare clic su **Seleziona tabella del Case**.  
+3.  Nel **Seleziona tabelle di Input** riquadro, fare clic su **Seleziona tabella del Case**.  
   
-4.  Nel **Seleziona tabella del** della finestra di dialogo Modifica i dati di origine su T1000 Pacific Region e quindi fare clic su **OK**.  
+4.  Nel **Seleziona tabella del** finestra di dialogo, modificare i dati di origine su T1000 Pacific Region e quindi fare clic su **OK**.  
   
 5.  Fare clic sulla linea di join tra il modello di data mining e i dati di input e selezionare **Modifica connessioni**. Eseguire il mapping dei dati nella vista origine dati al modello come segue:  
   
-    1.  Verificare che la colonna ReportingDate nel modello di data mining è stato eseguito il mapping alla colonna ReportingDate nei dati di input.  
+    1.  Verificare che la colonna ReportingDate nel modello di data mining viene eseguito il mapping alla colonna ReportingDate nei dati di input.  
   
-    2.  Nel **modifica Mapping** finestra di dialogo, nella riga per la colonna del modello AvgQty, fare clic sotto **colonna della tabella** e quindi selezionare T1000 Pacific. Fare clic su **OK**.  
+    2.  Nel **modifica Mapping** finestra di dialogo, nella riga per la colonna del modello AvgQty, fare clic sotto **colonna della tabella** e selezionare T1000 Pacific. Fare clic su **OK**.  
   
          Con questo passaggio viene eseguito il mapping della colonna creata nel modello per stimare la quantità media in base ai dati effettivi dalla serie T1000 per la quantità delle vendite.  
   
-    3.  Non eseguire il mapping di colonna area nel modello a qualsiasi colonna di input.  
+    3.  L'area colonna del modello non vengono mappati a qualsiasi colonna di input.  
   
          Poiché il modello ha aggregato i dati in tutte le serie, non è presente alcuna corrispondenza per i valori della serie come T1000 Pacific e viene generato un errore quando viene eseguita la query di stima.  
   
@@ -102,11 +102,11 @@ ms.locfileid: "36312469"
   
      Aggiungere innanzitutto una colonna ai risultati in cui viene restituita l'etichetta AllRegions dal modello insieme alle stime. In questo modo si saprà che i risultati sono basati sul modello generale.  
   
-    1.  Nella griglia, fare clic sulla prima riga vuota sotto **origine**, quindi selezionare il modello di data mining AllRegions.  
+    1.  Nella griglia, fare clic sulla prima riga vuota, sotto **origine**e quindi selezionare il modello di data mining AllRegions.  
   
-    2.  Per **campo**, selezionare l'area.  
+    2.  Per la **campo**, selezionare l'area.  
   
-    3.  Per **Alias**, tipo **modello usato**.  
+    3.  Per la **Alias**, digitare **modello usato**.  
   
 7.  Aggiungere quindi un'altra etichetta ai risultati in modo da visualizzare le serie a cui si riferisce la stima.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "36312469"
   
     2.  Nel **campo** colonna, selezionare **PredictTimeSeries**.  
   
-    3.  Per **Alias**, tipo **Predicted Values**.  
+    3.  Per la **Alias**, digitare **Predicted Values**.  
   
-    4.  Trascinare il campo AvgQty dal **modello di Data Mining** riquadro il **criteri/argomento** colonna mediante un'operazione di trascinamento della selezione.  
+    4.  Trascinare il campo AvgQty dal **modello di Data Mining** riquadro le **criteri/argomento** colonna mediante un'operazione di trascinamento della selezione.  
   
     5.  Nel **criteri/argomento** colonna, dopo il nome del campo, digitare il testo seguente: `,5, REPLACE_MODEL_CASES`  
   
@@ -162,10 +162,10 @@ AND
  Se ad esempio si modificano le condizioni di filtro e le etichette delle colonne sostituendo "Pacific" con "North America", si otterranno stime per il prodotto T1000 in Nord America, sulla base degli schemi nel modello generale.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Confronto delle stime per i modelli di previsione &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
+ [Confronto delle stime per i modelli di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tempo Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

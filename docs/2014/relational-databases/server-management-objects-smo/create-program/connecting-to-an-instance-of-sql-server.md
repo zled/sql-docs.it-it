@@ -1,5 +1,5 @@
 ---
-title: La connessione a un'istanza di SQL Server | Documenti Microsoft
+title: La connessione a un'istanza di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - SMO [SQL Server], connections
 ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d502fa0dd2af5f4a9114f61bec3faea87d919af6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6b20b4c1f45e6c2032ef8ae7fe980103344c42c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253643"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Connessione a un'istanza di SQL Server
-  La prima fase di programmazione un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applicazione Management Objects (SMO) consiste nel creare un'istanza del <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto e per stabilire la connessione a un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  La prima fase di programmazione un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] application Management Objects (SMO) consiste nel creare un'istanza del <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto e per stabilire la connessione a un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  È possibile creare un'istanza dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server> e stabilire una connessione all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tre modi diversi. Il primo metodo consiste nell'utilizzare una variabile oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> per fornire le informazioni di connessione. Il secondo consiste nel fornire le informazioni di connessione impostando in modo esplicito le proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>. Il terzo consiste infine nel passare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel costruttore dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>.  
   
- **Utilizzo di un oggetto ServerConnection**  
+ **Uso di un oggetto ServerConnection**  
   
  Il vantaggio dell'utilizzo della variabile oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> è costituito dal fatto che consente di riutilizzare le informazioni di connessione. Dichiarare una variabile oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>. Dichiarare quindi un oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> e impostare proprietà con le informazioni di connessione, quali il nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e la modalità di autenticazione. Passare quindi la variabile oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> come parametro al costruttore dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>. Non è consigliabile condividere connessioni tra diversi oggetti server contemporaneamente. Utilizzare il metodo <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> per ottenere una copia delle impostazioni di connessione esistenti.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36157677"
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Connessione all'istanza locale di SQL Server tramite l'autenticazione di Windows in Visual Basic  
  La connessione all'istanza locale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non richiede molto codice, ma si basa al contrario sulle impostazioni predefinite per il metodo di autenticazione e per il server. La prima operazione che richiede il recupero di dati comporterà la creazione di una connessione.  
   
- Questo esempio si trova [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] codice .NET che si connette all'istanza locale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di Windows.  
+ In questo esempio viene [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] codice .NET che si connette all'istanza locale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite l'autenticazione di Windows.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VB1](SMO How to#SMO_VB1)]  -->  
   
@@ -94,7 +94,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Connessione a un'istanza remota di SQL Server tramite l'autenticazione di Windows in Visual Basic  
  Quando ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite l'autenticazione di Windows, non è necessario specificare il tipo di autenticazione. L'autenticazione di Windows rappresenta l'impostazione predefinita.  
   
- Questo esempio si trova [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] codice .NET che si connette all'istanza remota di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di Windows. La variabile di tipo stringa *strServer* contiene il nome dell'istanza remota.  
+ In questo esempio viene [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] codice .NET che si connette all'istanza remota di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite l'autenticazione di Windows. La variabile di tipo stringa *strServer* contiene il nome dell'istanza remota.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VB2](SMO How to#SMO_VB2)]  -->  
   
@@ -118,7 +118,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-basic"></a>Connessione a un'istanza di SQL Server tramite l'autenticazione di SQL Server in Visual Basic  
  Quando ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario specificare il tipo di autenticazione. In questo esempio viene illustrato il metodo alternativo per dichiarare una variabile oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> che consente il riutilizzo delle informazioni di connessione.  
   
- Nell'esempio viene [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] codice .NET che illustra come connettersi all'istanza remota e *vPassword* contiene l'accesso e una password.  
+ Nell'esempio viene [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] codice .NET che illustra come connettersi all'istanza remota e *vPassword* contengono l'accesso e la password.  
   
 ```  
 ' compile with:   
@@ -166,7 +166,7 @@ End Class
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-c"></a>Connessione a un'istanza di SQL Server tramite l'autenticazione di SQL Server in Visual C#  
  Quando ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario specificare il tipo di autenticazione. In questo esempio viene illustrato il metodo alternativo per dichiarare una variabile oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> che consente il riutilizzo delle informazioni di connessione.  
   
- L'esempio è il codice Visual c# .NET che illustra come connettersi all'istanza remota e *vPassword* contiene l'accesso e una password.  
+ L'esempio è il codice Visual c# .NET che illustra come connettersi all'istanza remota e *vPassword* contengono l'accesso e la password.  
   
 ```  
 // compile with:   

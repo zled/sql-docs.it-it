@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73a61c2af9d178911f206e2e5006dabd8620329e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ded697f41f68e26e677fe5054e7e4f59955fc74c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166802"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186118"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Popolamento di una tabella con dati gerarchici esistenti
   Questa attività consente di creare una nuova tabella e popolarla con i dati della tabella **EmployeeDemo**. Questa attività prevede i passaggi seguenti:  
@@ -117,7 +117,7 @@ ms.locfileid: "36166802"
   
      `10        4         2`  
   
-3.  Popolare la tabella **NewOrg** . Utilizzare i metodi di GetRoot e ToString per concatenare i **Num** dei valori nel `hierarchyid` formattare e quindi aggiornare il **OrgNode** colonna con i valori gerarchici risultanti:  
+3.  Popolare la tabella **NewOrg** . Usare i metodi GetRoot e ToString per concatenare le **Num** i valori nel `hierarchyid` formattare e quindi aggiornare il **OrgNode** colonna con i valori gerarchici risultanti:  
   
     ```  
     WITH paths(path, EmployeeID)   
@@ -155,7 +155,7 @@ ms.locfileid: "36166802"
   
     ```  
   
-     Il **LogicalNode** converte il `hierarchyid` colonna in un formato di testo più leggibile che rappresenta la gerarchia. Nelle attività rimanenti, si utilizzerà il metodo `ToString()` per mostrare il formato logico delle colonne `hierarchyid`.  
+     Il **LogicalNode** Converte la `hierarchyid` colonna in un formato di testo più leggibile che rappresenta la gerarchia. Nelle attività rimanenti, si utilizzerà il metodo `ToString()` per mostrare il formato logico delle colonne `hierarchyid`.  
   
 5.  Eliminare la tabella temporanea che non risulta più essere necessaria:  
   

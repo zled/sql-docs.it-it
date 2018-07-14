@@ -1,5 +1,5 @@
 ---
-title: Set di righe DMSCHEMA_MINING_COLUMNS | Documenti Microsoft
+title: Set di righe DMSCHEMA_MINING_COLUMNS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_COLUMNS rowset
 ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d53285b088b471ad7a5fca87536cc897db8126d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60dc2e773b93f27fe96489bcb55fdfe22c3168d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232061"
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>Set di righe DMSCHEMA_MINING_COLUMNS
   Vengono descritte le singole colonne di tutti i modelli di data mining in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Questo set di righe è limitato al catalogo corrente.  

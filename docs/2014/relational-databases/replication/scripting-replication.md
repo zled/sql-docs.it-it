@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server replication], replication objects
 - merge replication scripting [SQL Server replication]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - transactional replication, scripting
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 81bbad35d79d00777e34759aef89b0ae9d356046
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 42fce20cb355610763054bff2a43bd2b99c1745d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199101"
 ---
 # <a name="scripting-replication"></a>Creazione di script di replica
   Gli script di tutti i componenti di replica inclusi in una topologia devono essere creati come parte di un piano di ripristino di emergenza. Gli script possono inoltre essere utilizzati per automatizzare attività ripetitive. Uno script contiene le stored procedure di sistema Transact-SQL necessarie per l'implementazione dei componenti di replica, ad esempio una pubblicazione o una sottoscrizione. Gli script possono essere creati mediante una procedura guidata, quale Creazione guidata nuova pubblicazione, o in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dopo aver creato un componente. È possibile visualizzare, modificare ed eseguire lo script utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o **sqlcmd**. Gli script possono essere memorizzati con file di backup da utilizzare nel caso in cui sia necessario riconfigurare una topologia di replica.  

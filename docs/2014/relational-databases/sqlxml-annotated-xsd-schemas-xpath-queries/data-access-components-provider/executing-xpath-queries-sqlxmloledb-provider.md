@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di query XPath (Provider SQLXMLOLEDB) | Documenti Microsoft
+title: Esecuzione di query XPath (Provider SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Mapping Schema property
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da43bc10ea80c1019e9cd7ae785024bb78fcbe9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 34acdfc5c7957476534b2d637077a401144fc29e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181656"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Esecuzione di query XPath (provider SQLXMLOLEDB)
   In questo esempio viene illustrato l'utilizzo delle proprietà specifiche del provider SQLXMLOLEDB seguenti:  
@@ -59,9 +59,9 @@ ms.locfileid: "36166795"
 </xsd:schema>  
 ```  
   
- La proprietà dello Schema di Mapping fornisce lo schema di mapping sul quale viene eseguita la query XPath. Tale schema può essere XSD o XDR. La proprietà percorso di Base fornisce il percorso del file per lo schema di mapping.  
+ La proprietà dello Schema di Mapping fornisce lo schema di mapping sul quale viene eseguita la query XPath. Tale schema può essere XSD o XDR. La proprietà Path di Base fornisce il percorso del file per lo schema di mapping.  
   
- La proprietà ClientSideXML è impostata su True. pertanto il documento XML viene generato sul client.  
+ Proprietà ClientSideXML è impostata su True. pertanto il documento XML viene generato sul client.  
   
  Nell'applicazione viene specificata direttamente una query XPath e pertanto è necessario includere il sottolinguaggio XPath {ec2a4293-e898-11d2-b1b7-00c04f680c56}.  
   

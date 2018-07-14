@@ -1,5 +1,5 @@
 ---
-title: Aggiungere funzionalità di Business Intelligence a una dimensione | Documenti Microsoft
+title: Aggiungere funzionalità di Business Intelligence a una dimensione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], dimension intelligence
 - dimensions [Analysis Services], Business Intelligence enhancements
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Type property
 ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de910ec8c845c67346c8a31b8d372efa0d3390c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcd7ea323857e0db796b6e4a17bf8c2dde21e199
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208131"
 ---
 # <a name="add-dimension-intelligence-to-a-dimension"></a>Aggiungere funzionalità di Business Intelligence per le dimensioni a una dimensione
   L'aggiunta delle funzionalità avanzate di Business Intelligence per le dimensioni a un cubo o una dimensione consente di specificare un tipo di attività standard per una dimensione. Queste funzionalità avanzate specificano inoltre i tipi corrispondenti per gli attributi dimensione. Queste specifiche del tipo possono essere utilizzate dalle applicazioni client per l'analisi dei dati.  
@@ -38,7 +38,7 @@ ms.locfileid: "36158104"
 >  Se come dimensione si seleziona **Conto** , verrà specificata la funzionalità di Business Intelligence per la contabilità per la dimensione. Per altre informazioni, vedere [Aggiungere funzionalità di Business Intelligence per la contabilità a una dimensione](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## <a name="specifying-dimension-attributes"></a>Definizione degli attributi dimensione  
- Nel **definire funzionalità di Business Intelligence** nella pagina **tipo di dimensione** elenco, la selezione effettuata imposta la dimensione `Type` proprietà. Il `Type` impostazione della proprietà fornisce informazioni al client e server applicazioni sul contenuto di una dimensione. Alcune impostazioni forniscono solo indicazioni per le applicazioni client e pertanto queste impostazioni sono facoltative. Altre impostazioni, ad esempio Conti o Ora, determinano funzionalità specifiche e possono essere obbligatorie per l'implementazione di particolari funzionalità avanzate di Business Intelligence. Ad esempio, SQL Server Management Studio utilizza il tipo di dimensione per identificare una dimensione di tipo Valuta e impostare le regole di conversione appropriate per la valuta. L'impostazione predefinita per **Tipo dimensione** è **Regolare**, ovvero non viene usato alcun contenuto specifico della dimensione.  
+ Nel **definiscono funzionalità di Business Intelligence** nella pagina **tipo di dimensione** dall'elenco di selezione effettuata imposta la dimensione `Type` proprietà. Il `Type` l'impostazione della proprietà fornisce informazioni per i server e client delle applicazioni sul contenuto di una dimensione. Alcune impostazioni forniscono solo indicazioni per le applicazioni client e pertanto queste impostazioni sono facoltative. Altre impostazioni, ad esempio Conti o Ora, determinano funzionalità specifiche e possono essere obbligatorie per l'implementazione di particolari funzionalità avanzate di Business Intelligence. Ad esempio, SQL Server Management Studio utilizza il tipo di dimensione per identificare una dimensione di tipo Valuta e impostare le regole di conversione appropriate per la valuta. L'impostazione predefinita per **Tipo dimensione** è **Regolare**, ovvero non viene usato alcun contenuto specifico della dimensione.  
   
  Dopo aver selezionato il tipo di dimensione, in **Attributi dimensione**nella colonna **Includi** selezionare la casella di controllo accanto a ogni tipo di attributo standard per il quale esiste un attributo corrispondente nella dimensione. Nella colonna **Attributo dimensione** espandere l'elenco a discesa e selezionare l'attributo nella dimensione corrispondente al tipo di attributo selezionato. La selezione dell'attributo dall'elenco comporta l'impostazione della proprietà `Type` degli attributi.  
   

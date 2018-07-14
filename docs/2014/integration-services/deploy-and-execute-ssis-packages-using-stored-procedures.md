@@ -1,5 +1,5 @@
 ---
-title: Distribuire ed eseguire pacchetti SSIS utilizzando Stored procedure | Documenti Microsoft
+title: Distribuire ed eseguire pacchetti SSIS usando Stored procedure | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 273525c7bba0afb3424a394dec758471aaf082d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c9a86fd007501c3c8fa742f55057852d222f358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266636"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Distribuire ed eseguire pacchetti SSIS utilizzando le stored procedure
   Quando un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] viene configurato in modo da utilizzare il relativo modello di distribuzione, è possibile utilizzare le stored procedure nel catalogo di [!INCLUDE[ssIS](../includes/ssis-md.md)] per distribuire il progetto ed eseguire i pacchetti. Per informazioni sui modelli di distribuzione di progetti, vedere [Distribuzione di progetti e pacchetti](packages/deploy-integration-services-ssis-projects-and-packages.md).  

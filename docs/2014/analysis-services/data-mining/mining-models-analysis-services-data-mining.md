@@ -1,5 +1,5 @@
 ---
-title: Modelli di data mining (Analysis Services - Data Mining) | Documenti Microsoft
+title: Modelli di data mining (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - mining models [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 203295e2c3c45c5e9d67228e5009bc130d0d49eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ea9bf0ccedda65e75928aa4cca94e65e3901d4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228381"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Modelli di data mining (Analysis Services - Data mining)
   Un *modello di data mining* viene creato applicando un algoritmo ai dati, ma è molto più di un algoritmo o di un contenitore di metadati: è un set di dati, statistiche e modelli che possono essere applicati a nuovi dati per generare stime ed eseguire inferenze sulle relazioni.  
@@ -50,7 +50,7 @@ ms.locfileid: "36157861"
   
  Un modello di data mining rimane vuoto finché i dati forniti dalla struttura di data mining non vengono elaborati e analizzati. Dopo essere stato elaborato, un modello di data mining contiene metadati, risultati e associazioni alla struttura di data mining.  
   
- ![modello contiene i metadati, i modelli e associazioni](../media/dmcon-modelarch2.gif "modello contiene i metadati, i modelli e associazioni")  
+ ![modello contiene i metadati, modelli e associazioni](../media/dmcon-modelarch2.gif "modello contiene i metadati, modelli e associazioni")  
   
  I metadati consentono di specificare il nome del modello e il server in cui è archiviato, nonché una definizione del modello contenente le colonne della struttura di data mining utilizzate per la compilazione del modello, le definizioni dei filtri applicati durante l'elaborazione del modello e l'algoritmo utilizzato per analizzare i dati. Tutte queste scelte, ovvero le colonne dei dati e i relativi tipi di dati, i filtri e gli algoritmi, influiscono in maniera rilevante sui risultati dell'analisi.  
   
@@ -130,11 +130,11 @@ ms.locfileid: "36157861"
 |Argomento|Collegamenti|  
 |------------|-----------|  
 |Informazioni sulla compilazione di strutture di data mining che possono supportare più modelli di data mining. Informazioni sull'utilizzo di colonne nei modelli.|[Colonne della struttura di data mining](mining-structure-columns.md)<br /><br /> [Colonne del modello di data mining](mining-model-columns.md)<br /><br /> [I tipi di contenuto &#40;Data Mining&#41;](content-types-data-mining.md)|  
-|Informazioni sui diversi algoritmi e sul modo in cui la scelta dell'algoritmo influisce sul contenuto del modello.|[Contenuto del modello di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
-|Informazioni sull'impostazione delle proprietà nel modello che influisce sulla composizione e sul comportamento.|[Proprietà dei modelli di data mining](mining-model-properties.md)<br /><br /> [I flag di modellazione &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
-|Informazioni sulle interfacce programmabili per il data mining.|[Sviluppo con Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [Estensioni Data Mining &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)|  
+|Informazioni sui diversi algoritmi e sul modo in cui la scelta dell'algoritmo influisce sul contenuto del modello.|[Contenuto dei modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
+|Informazioni sull'impostazione delle proprietà nel modello che influisce sulla composizione e sul comportamento.|[Proprietà dei modelli di data mining](mining-model-properties.md)<br /><br /> [Flag di modellazione &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
+|Informazioni sulle interfacce programmabili per il data mining.|[Sviluppo con Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)|  
 |Informazioni sull'utilizzo dei visualizzatori di data mining personalizzati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Visualizzatori modello di data mining](data-mining-model-viewers.md)|  
-|Esempi di diversi tipi di query che è possibile utilizzare rispetto ai modelli di data mining.|[Query di Data Mining](data-mining-queries.md)|  
+|Esempi di diversi tipi di query che è possibile utilizzare rispetto ai modelli di data mining.|[Query di data mining](data-mining-queries.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Utilizzare i collegamenti seguenti per ottenere informazioni più specifiche sull'utilizzo dei modelli di data mining  

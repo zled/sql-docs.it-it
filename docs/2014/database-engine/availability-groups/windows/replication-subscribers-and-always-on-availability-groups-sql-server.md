@@ -1,29 +1,28 @@
 ---
-title: Sottoscrittori della replica e gruppi di disponibilità AlwaysOn (SQL Server) | Documenti Microsoft
+title: Sottoscrittori della replica e gruppi di disponibilità AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - failover subscribers with AlwaysOn
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 caps.latest.revision: 18
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c74ebdfb93f26ce91ddb678a2b56651bf96156f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5b61d999215af224e626929d4b2766e045571715
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176468"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>Sottoscrittori della replica e gruppi di disponibilità AlwaysOn (SQL Server)
   Quando viene eseguito il failover di un gruppo di disponibilità AlwaysOn contenente un database che opera come sottoscrittore di replica, la sottoscrizione di replica potrebbe non venire completata. Per i sottoscrittori transazionali, l'agente di distribuzione continuerà a replicare automaticamente se la sottoscrizione utilizza il nome del listener del gruppo di disponibilità del sottoscrittore. Per i sottoscrittori di merge, un amministratore di replica deve riconfigurare manualmente il sottoscrittore ricreando la sottoscrizione.  

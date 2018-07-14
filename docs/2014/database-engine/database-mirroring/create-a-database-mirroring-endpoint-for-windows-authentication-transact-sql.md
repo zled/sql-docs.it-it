@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - database mirroring [SQL Server], endpoint
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], security
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efb3386935bd8f3b1f3b359b0eeb40613709e9b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 561c02100785ba1b56b6498fdd0f8fd3b3b6241f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197931"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Creare un endpoint del mirroring del database per l'autenticazione Windows (Transact-SQL)
   In questo argomento si illustra come creare un endpoint del mirroring del database in cui si utilizza l'autenticazione di Windows in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per supportare il mirroring del database o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , per ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario un endpoint del mirroring del database. In un'istanza del server può essere incluso uno solo di questo tipo di endpoint, che a sua volta dispone di una sola porta. Un endpoint del mirroring del database può utilizzare qualsiasi porta disponibile nel sistema locale al momento della creazione dell'endpoint. Tutte le sessioni di mirroring del database in un'istanza del server sono in attesa su quella porta, che viene utilizzata anche per tutte le connessioni in ingresso per il mirroring del database.  
@@ -134,7 +133,7 @@ ms.locfileid: "36077644"
          Per consentire a un'istanza del server di utilizzare un ruolo per una sessione di mirroring del database e un altro ruolo per un'altra sessione, specificare ROLE=ALL. Per limitare un'istanza del server in modo che funga da partner o da server di controllo del mirroring, specificare rispettivamente ROLE=PARTNER o ROLE=WITNESS.  
   
         > [!NOTE]  
-        >  Per ulteriori informazioni sulle opzioni di mirroring del Database per le diverse edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+        >  Per altre informazioni sulle opzioni di mirroring del Database per diverse edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
      Per una descrizione completa della sintassi di CREATE ENDPOINT, vedere [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql).  
   
@@ -184,7 +183,7 @@ GO
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per configurare un endpoint del mirroring del database**  
   
--   [Creare un Endpoint del mirroring per i gruppi di disponibilità AlwaysOn &#40;PowerShell per SQL Server&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Creare un Endpoint del mirroring per i gruppi di disponibilità AlwaysOn &#40;SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   

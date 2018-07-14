@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico di Microsoft Neural Network algoritmo | Documenti Microsoft
+title: Riferimento tecnico l'algoritmo Microsoft Neural Network | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HIDDEN_NODE_RATIO parameter
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e34d664a9eb2338f1a686c8a37303c03c8451ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18c5395a8da571a0c131cc6138a9eb499b3ef786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276507"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network usa una rete *perceptron multistrato* , chiamata anche *rete Delta Rule con retropropagazione*, costituita da un massimo di tre livelli neurali o *perceptron*. Tali livelli rappresentano rispettivamente un livello di input, un livello nascosto facoltativo e un livello di output.  
@@ -106,15 +106,15 @@ ms.locfileid: "36156122"
   
  **Valori discreti**  
   
- Μ = p – la probabilità precedente di uno stato  
+ Μg = p: probabilità precedente di uno stato  
   
  StdDev = sqrt(p(1-p))  
   
  **Valori continui**  
   
- Valore attuale = 1 - μ/σ  
+ Valore attuale = 1 - μg/σ  
   
- Nessun valore esistente = - μ/σ  
+ Nessun valore esistente = - μg/σ  
   
  Dopo che i valori sono stati codificati, gli input vengono sottoposti alla somma ponderata, in cui i pesi sono rappresentati dai bordi delle reti.  
   

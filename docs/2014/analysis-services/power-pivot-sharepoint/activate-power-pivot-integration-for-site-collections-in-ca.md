@@ -1,5 +1,5 @@
 ---
-title: Attivare integrazione delle funzionalità di PowerPivot per le raccolte siti in Amministrazione centrale | Documenti Microsoft
+title: Attivare integrazione delle funzionalità di PowerPivot per le raccolte siti in Amministrazione centrale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 62a27e53-446a-42d7-b5db-c009e02d4904
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00e8f0336c075c14feb8c4e3b4a8b43e0ebdaf9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 65de843b178d965be7cef17cace971275abba8e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330481"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>Attivare l'integrazione delle funzionalità di PowerPivot per le raccolte siti in Amministrazione centrale
   L'attivazione dell'integrazione della caratteristica PowerPivot per raccolte siti specifiche è obbligatoria se è stata utilizzata l'opzione di installazione Farm esistente per installare SQL Server PowerPivot per SharePoint. Se PowerPivot per SharePoint è stato installato utilizzando l'opzione Nuovo server, è possibile ignorare questa attività perché il programma di installazione di SQL Server ha già attivato l'integrazione della caratteristica PowerPivot per la raccolta siti radice durante la configurazione della distribuzione.  
@@ -35,13 +35,13 @@ ms.locfileid: "36158084"
   
 1.  Da un sito di SharePoint scegliere **Azioni sito**.  
   
-     Per impostazione predefinita, l'accesso alle applicazioni Web SharePoint viene effettuato tramite la porta 80. Ciò significa che è possibile accedere spesso un sito di SharePoint immettendo http://\<nome computer > per aprire la raccolta siti radice.  
+     Per impostazione predefinita, l'accesso alle applicazioni Web SharePoint viene effettuato tramite la porta 80. Ciò significa che è possibile accedere spesso a un sito di SharePoint immettendo http://\<nome computer > per aprire la raccolta siti radice.  
   
 2.  Fare clic su **Impostazioni sito**.  
   
 3.  In Amministrazione raccolta siti selezionare **Caratteristiche raccolta siti**.  
   
-4.  Scorrere verso il basso la pagina fino a individuare **funzionalità di raccolta siti di integrazione PowerPivot**.  
+4.  Scorrere verso il basso la pagina fino a individuare **caratteristica della raccolta siti PowerPivot integrazione**.  
   
 5.  Fare clic su **Attiva**.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "36158084"
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione Server PowerPivot e la configurazione in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Configurazione iniziale &#40;PowerPivot per SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)   
- [Installazione PowerPivot per SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [Installazione di PowerPivot per SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

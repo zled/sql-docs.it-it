@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 caps.latest.revision: 23
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80961e5899162575ae832d5d6a8dd35824b43a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd40a67ecd13dde8c78b38ba0f37d4928b86dd0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324551"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Passaggio 2: Creazione di un file danneggiato
   Per illustrare la configurazione e la gestione degli errori di trasformazione, è necessario creare un file flat di esempio che nel corso dell'elaborazione generi l'errore di un componente.  
@@ -38,12 +38,12 @@ ms.locfileid: "36069188"
   
     3.  Fare clic sul file SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
-2.  Usare la ricerca dell'editor di testo e sostituire funzionalità che consente di trovare tutte le istanze di `VEB` e sostituirli con `BAD`.  
+2.  Usare la ricerca dell'editor di testo e sostituire funzionalità per trovare tutte le istanze del `VEB` e sostituirle con `BAD`.  
   
 3.  Nella stessa cartella degli altri file di dati di esempio, salvare il file modificato come `Currency_BAD.txt`.  
   
     > [!IMPORTANT]  
-    >  Assicurarsi che `Currency_BAD.txt` viene salvato nella stessa cartella degli altri file di dati di esempio.  
+    >  Verificare che l'opzione `Currency_BAD.txt` viene salvato nella stessa cartella degli altri file di dati di esempio.  
   
 4.  Chiudere l'editor di testo.  
   
@@ -65,6 +65,6 @@ ms.locfileid: "36069188"
     >  Il numero 27 è l'ID del componente. Questo valore viene assegnato quando si compila il flusso di dati e può essere diverso da quello nel pacchetto.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Passaggio 3: Aggiunta del reindirizzamento del flusso di errore](lesson-4-3-adding-error-flow-redirection.md)  
+ [Passaggio 3: Aggiunta del reindirizzamento del flusso degli errori](lesson-4-3-adding-error-flow-redirection.md)  
   
   

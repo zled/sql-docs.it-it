@@ -1,5 +1,5 @@
 ---
-title: Elemento DataSourceID (XMLA) | Documenti Microsoft
+title: Elemento DataSourceID (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DataSourceID element
 ms.assetid: 695522c7-acca-420a-a5fb-f01f3fd9a96b
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2adec20f28e51639352dc89c70b6682e4df240fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e96d9386319fa9d850a755519fad7360da8ec3b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231821"
 ---
 # <a name="datasourceid-element-xmla"></a>Elemento DataSourceID (XMLA)
-  Identifica un'origine dati utilizzata da un [percorso](location-element-xmla.md) elemento durante un [Backup](../xml-elements-commands/backup-element-xmla.md), [ripristinare](../xml-elements-commands/restore-element-xmla.md), oppure [Sincronizza](../xml-elements-commands/synchronize-element-xmla.md) comando.  
+  Identifica un'origine dati utilizzata da un [posizione](location-element-xmla.md) elemento durante una [Backup](../xml-elements-commands/backup-element-xmla.md), [Restore](../xml-elements-commands/restore-element-xmla.md), o [Sincronizza](../xml-elements-commands/synchronize-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,10 +63,10 @@ ms.locfileid: "36156068"
 |Elementi padre|[Percorso](location-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `DataSourceID` contiene il nome dell'origine dati nell'istanza di origine che identifica l'istanza remota in cui deve essere eseguito il backup, il ripristino o la sincronizzazione delle informazioni della partizione remota.  
   
- Per ulteriori informazioni sul backup e ripristino di partizioni remote, vedere [backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Per altre informazioni sul backup e ripristino di partizioni remote, vedere [backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento ConnectionString &#40;XMLA&#41;](connectionstring-element-xmla.md)   

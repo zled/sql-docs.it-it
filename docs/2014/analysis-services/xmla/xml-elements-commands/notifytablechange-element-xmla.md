@@ -1,5 +1,5 @@
 ---
-title: Elemento NotifyTableChange (XMLA) | Documenti Microsoft
+title: Elemento NotifyTableChange (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - NotifyTableChange command
 ms.assetid: b76898eb-20d3-48c8-9eb8-1fd5df638bcc
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 64779ceab6d83365755ed212a93685ee3f31837f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 612738591115a2e7af964ba4ee5d9950587e45bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203901"
 ---
 # <a name="notifytablechange-element-xmla"></a>Elemento NotifyTableChange (XMLA)
-  Notifica a un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] che alle tabelle in un'origine dati specificata è stata modificata.  
+  Notifica a un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] una modifica apportata alle tabelle in un'origine dati specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36158522"
 |Elementi padre|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |Elementi figlio|[Oggetto](../xml-elements-properties/object-element-xmla.md), [TableNotifications](../xml-elements-properties/tablenotifications-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il comando `NotifyTableChange` consente a un'applicazione client di notificare in modo esplicito un'istanza [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] che una o più tabelle contenute in un'origine dati sono state modificate. Per la memorizzazione nella cache attiva, questa notifica indica che gli oggetti OLAP (ROLAP) relazionali basati su quelle tabelle devono essere rivisti e aggiornati.  
   
  Questo metodo di notifica viene utilizzato meglio per oggetti ROLAP basati su viste o query denominate definite in una vista origine dati per la quale è difficile rilevare e registrare le modifiche.  

@@ -1,5 +1,5 @@
 ---
-title: La caratteristica Auto Exist | Documenti Microsoft
+title: La caratteristica Auto Exist | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8fdb4d1cf175d88a6437f2efab269b4ecbf2e236
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5587d26a8c5df5f343f43b64b692d477ea07a015
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194371"
 ---
 # <a name="autoexists"></a>Auto Exist
   Il concetto di *Auto Exist* limita lo spazio del cubo a quelle celle che esistono effettivamente nel cubo, in contrapposizione con quelle che potrebbero esistere come risultato della creazione di tutte le possibili combinazioni di membri delle gerarchie di attributi dalla medesima gerarchia. La distinzione è necessaria perché i membri di una gerarchia di attributi non possono coesistere con membri di un'altra gerarchia di attributi nella stessa dimensione. Quando in un'istruzione SELECT si utilizzano due o più gerarchie di attributi della medesima dimensione, Analysis Services valuta le espressioni degli attributi per verificare che i relativi membri siano correttamente limitati per soddisfare i criteri di tutti gli altri attributi.  
@@ -66,7 +66,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Si noti che per designare l'asse delle colonne viene utilizzato 0, la forma abbreviata per Axis(0), indicante l'asse delle colonne.  
   
- La query precedente restituisce solo le celle dei membri di ogni gerarchia dell'attributo della query che esistono in ogni livello superiore. La query precedente può essere scritta anche utilizzando la nuova * valore variant del [Crossjoin (MDX)](/sql/mdx/crossjoin-mdx) (funzione).  
+ La query precedente restituisce solo le celle dei membri di ogni gerarchia dell'attributo della query che esistono in ogni livello superiore. La query precedente può anche essere scritta usando la nuova * valore variant di tipo i [Crossjoin (MDX)](/sql/mdx/crossjoin-mdx) (funzione).  
   
 ```  
 SELECT   
@@ -92,7 +92,7 @@ WHERE (Measures.[Internet Sales Amount],
  Ognuna delle tre query precedenti dimostra l'effetto del comportamento di Auto Exist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="deep-and-shallow-autoexists"></a>Auto Exist completo e superficiale  
- La caratteristica Auto Exist può essere applicata in modo completo o superficiale alle espressioni. `Deep Autoexists` significa che tutte le espressioni verranno valutate per soddisfare lo spazio più completo possibile dopo l'applicazione delle espressioni di sezionamento, delle espressioni sub-SELECT nell'asse e così via. `Shallow Autoexists` indica che le espressioni esterne vengono valutate prima dell'espressione corrente e i risultati vengono passati all'espressione corrente. Per impostazione predefinita la caratteristica Auto Exist viene applicata in modo completo.  
+ La caratteristica Auto Exist può essere applicata in modo completo o superficiale alle espressioni. `Deep Autoexists` significa che tutte le espressioni verranno valutate per soddisfare lo spazio più completo possibile dopo l'applicazione delle espressioni di sezionamento, delle espressioni sub-SELECT nell'asse e così via. `Shallow Autoexists` significa che espressioni esterne vengono valutate prima dell'espressione corrente e i risultati vengono passati all'espressione corrente. Per impostazione predefinita la caratteristica Auto Exist viene applicata in modo completo.  
   
  Lo scenario e gli esempi riportati di seguito consentiranno di illustrare i tipi diversi di Auto Exist. Negli esempi riportati di seguito verranno creati due set, uno come espressione calcolata e l'altro come espressione costante.  
   
@@ -312,15 +312,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Comportamento di Auto Exist può essere modificato tramite la caratteristica Auto Exist = [1 | 2 | 3]. parametro nella stringa di connessione; vedere [proprietà XMLA supportate &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> per l'uso del parametro.  
+ Comportamento di Auto Exist può essere modificato tramite la caratteristica Auto Exist = [1 | 2 | 3] parametro nella stringa di connessione. visualizzare [proprietà XMLA supportate &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> per l'utilizzo dei parametri.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Concetti chiave per MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Spazio del cubo](cube-space.md)   
  [Tuple](tuples.md)   
  [Utilizzo di membri, tuple e set di &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Totali visualizzati e Non totali](visual-totals-and-non-visual-totals.md)   
- [Riferimenti al linguaggio MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [(Multidimensional Expressions) &#40;MDX&#41; riferimento](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Consenti totali visualizzati e Non visualizzati](visual-totals-and-non-visual-totals.md)   
+ [Riferimento al linguaggio MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [Espressioni MDX &#40;MDX&#41; riferimento](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

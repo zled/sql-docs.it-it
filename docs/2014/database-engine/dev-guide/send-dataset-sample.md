@@ -1,5 +1,5 @@
 ---
-title: Esempio Send DataSet | Documenti Microsoft
+title: Esempio Send DataSet | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ffe7f23a8f20a325f84fe68df90778ec321e0885
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 03552b94c8a50bea83d1d5e69f589379baf81697
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171362"
 ---
 # <a name="send-dataset-sample"></a>Esempio Send DataSet
   Nell'esempio Send `DataSet` viene illustrato come restituire un oggetto `DataSet` basato su ADO.NET all'interno di una stored procedure sul lato server basata su Common Language Runtime (CLR) come set di risultati al client. Questa operazione è utile, ad esempio, quando tramite una stored procedure di questo tipo vengono inseriti dati in un oggetto `DataSet` utilizzando i risultati di una query e vengono modificati i dati contenuti in tale oggetto `DataSet`. In alternativa, è utile se tramite la stored procedure viene creato e popolato un oggetto `DataSet` da zero. L'esempio è composto da due classi, `DataSetUtilities` e `TestSendDataSet`. Il metodo `SendDataSet` sulla classe `DataSetUtilities` implementa un modo generico per trasmettere il contenuto di un'istanza di un oggetto `DataSet` al client. Il metodo `DoTest` definito sulla classe `TestSendDataSet` consente di verificare che il metodo `SendDataSet` funzioni, creando un oggetto `DataSet` e inserendovi dati dalla stored procedure Transact-SQL `uspGetTwoBOMTestData`. La stored procedure `uspGetTwoBOMTestData` consente di eseguire la stored procedure `uspGetBillOfMaterials` Transact-SQL due volte per eseguire in modo ricorsivo la query per la distinta base di due prodotti specificati come parametri della stored procedure `usp_GetTwoBOMTestData`. Generalmente, dopo essere stati inseriti nel set di dati, i dati vengono modificati prima di richiamare `SendDataSet` per recapitare i dati del set di dati come set di risultati al client. Per motivi di semplicità, nell'esempio vengono restituiti i dati senza apportare modifiche.  

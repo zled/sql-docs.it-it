@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, managing
 - packages [Integration Services], managing
@@ -27,13 +27,13 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e792b995e73ba4a964bd5076134af8c9817642ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e41b4df0064343cadf6a7da042c243191c0561d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172962"
 ---
 # <a name="package-management-ssis-service"></a>Gestione dei pacchetti (servizio SSIS)
   La gestione dei pacchetti implica attività come le seguenti:  
@@ -48,7 +48,7 @@ ms.locfileid: "36069875"
 >  In questo argomento viene illustrato il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un servizio Windows per la gestione dei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] supporta il servizio per la compatibilità con le versioni precedenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], è possibile gestire oggetti come i pacchetti del server Integration Services.  
   
 ## <a name="package-store"></a>Archivio pacchetti  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornisce due cartelle di livello principale per accedere [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetti: **esecuzione di pacchetti** e **pacchetti archiviati**. La cartella **Pacchetti in esecuzione** include i pacchetti in esecuzione nel server. La cartella **Pacchetti archiviati** include i pacchetti che vengono salvati nell'archivio pacchetti. Questi sono gli unici pacchetti gestiti dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L'archivio pacchetti può includere sia il database msdb sia le cartelle del file system elencate nel file di configurazione per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Il file di configurazione specifica le cartelle msdb e del file system da gestire. Possono inoltre essere presenti pacchetti archiviati in un'altra posizione nel file system non gestiti dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include due cartelle di primo livello per l'accesso a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetti: **pacchetti in esecuzione** e **pacchetti archiviati**. La cartella **Pacchetti in esecuzione** include i pacchetti in esecuzione nel server. La cartella **Pacchetti archiviati** include i pacchetti che vengono salvati nell'archivio pacchetti. Questi sono gli unici pacchetti gestiti dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L'archivio pacchetti può includere sia il database msdb sia le cartelle del file system elencate nel file di configurazione per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Il file di configurazione specifica le cartelle msdb e del file system da gestire. Possono inoltre essere presenti pacchetti archiviati in un'altra posizione nel file system non gestiti dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  I pacchetti salvati in msdb sono archiviati in una tabella denominata sysssispackages. Quando si salvano i pacchetti in msdb, è inoltre possibile raggrupparli in cartelle logiche. L'uso di cartelle logiche può essere utile per organizzare i pacchetti in base allo scopo o per filtrarli nella tabella sysssispackages. È possibile creare nuove cartelle logiche usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per impostazione predefinita, le cartelle logiche aggiunte a msdb vengono incluse automaticamente nell'archivio pacchetti.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36069875"
   
 -   [Importare ed esportare pacchetti &#40;servizio SSIS&#41;](../import-and-export-packages-ssis-service.md)  
   
--   [Visualizzazione di pacchetti in SQL Server Management Studio di Integration Services &#40;servizio SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
+-   [Visualizza pacchetti in SQL Server Management Studio di Integration Services &#40;servizio SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Servizio Integration Services &#40;servizio SSIS&#41;](integration-services-service-ssis-service.md)  

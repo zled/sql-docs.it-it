@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - worker threads [SQL Server]
 - max worker threads option
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: af50ecbf67612ca0402c5cb9328df5d898aa5e0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: afa80c202cffd9bea99a21db237c879b379d1c0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225977"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurare l'opzione di configurazione del server max worker threads
   In questo argomento si illustra come configurare l'opzione di configurazione del server **max worker threads** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **max worker threads** è possibile configurare il numero di thread di lavoro disponibili per i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono utilizzati i servizi thread nativi dei sistemi operativi in modo che uno o più thread supportino ogni rete supportata simultaneamente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , che tramite un altro thread vengano gestiti i checkpoint di database e che tutti gli utenti siano gestiti da un pool di thread. Il valore predefinito per **max worker threads** è 0. In questo modo, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile configurare automaticamente il numero di thread di lavoro all'avvio. L'impostazione predefinita è la migliore per la maggior parte dei sistemi. A seconda della configurazione del sistema, tuttavia, l'impostazione di **max worker thread** su un valore specifico determina talvolta un miglioramento delle prestazioni.  

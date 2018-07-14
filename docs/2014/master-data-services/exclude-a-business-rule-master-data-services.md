@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], excluding
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d64a01cf9df6865790b39510ad5c6222d8d6fd87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a51bf291ebdf7904fbce836cfaddb3cceb5e17cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172944"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>Escludere una regola business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]escludere una regola di business quando non si vuole eliminarla in modo permanente, ma non si vuole convalidare i dati rispetto a essa.  
@@ -47,11 +47,11 @@ ms.locfileid: "36167275"
   
 6.  Dall'elenco **Attributo** selezionare un attributo o lasciare inalterata l'impostazione predefinita **Tutti**.  
   
-7.  Nella griglia, nella riga relativa alla regola di business, selezionare la casella di controllo di **escludere** colonna. Il valore di **stato** colonna **esclusione in sospeso**.  
+7.  Nella griglia, nella riga relativa alla regola di business, selezionare la casella di controllo di **escludere** colonna. Il valore di **lo stato** colonna è **esclusione in sospeso**.  
   
 8.  Fare clic su **Pubblica regole business**.  
   
-9. Nella finestra di dialogo di conferma fare clic su **OK**. Il valore di **stato** colonna è **escluso**.  
+9. Nella finestra di dialogo di conferma fare clic su **OK**. Il valore di **lo stato** colonna è **escluso**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eliminare una regola Business &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)   

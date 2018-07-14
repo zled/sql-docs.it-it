@@ -1,5 +1,5 @@
 ---
-title: Filtrare il cubo di origine per una struttura di Data Mining | Documenti Microsoft
+title: Filtrare il cubo di origine per una struttura di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - slice cubes [Analysis Services]
 - mining structures [Analysis Services], filtering source cube
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - filtering data [Analysis Services]
 ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed1ff70d4bb0f0ebd20da468c91f2603318ec217
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10ad6c295f61de1f50688bb8f52b12268756860a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226651"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>Filtrare il cubo di origine per una struttura di data mining
-  Quando si crea una struttura di data mining che si basa sui dati in un modello multidimensionale (cubo OLAP), è possibile *slice* cubo che dipende dalla struttura di data mining. Il sezionamento consente di creare subset di dati, come un filtro da applicare ai dati utilizzati per il training del modello di data mining.  
+  Quando si crea una struttura di data mining che si basa sui dati in un modello multidimensionale (cubo OLAP), è possibile *slice* del cubo che dipende dalla struttura di data mining. Il sezionamento consente di creare subset di dati, come un filtro da applicare ai dati utilizzati per il training del modello di data mining.  
   
 ### <a name="to-slice-a-cube"></a>Per sezionare un cubo  
   
@@ -37,13 +37,13 @@ ms.locfileid: "36157037"
   
      Il **seziona cubo** verrà visualizzata la finestra di dialogo.  
   
-3.  Nel **dimensione** colonna del **seziona cubo** finestra di dialogo, selezionare la dimensione che si desidera filtrare.  
+3.  Nel **dimensione** della colonna della **seziona cubo** finestra di dialogo, selezionare la dimensione che si desidera filtrare.  
   
-4.  Selezionare il livello di una gerarchia, tramite l'elenco nel **gerarchia** colonna.  
+4.  Selezionare un livello di una gerarchia, tramite l'elenco nella **gerarchia** colonna.  
   
-5.  Selezionare un operatore nell'elenco secondo il **operatore** colonna, da utilizzare nella compilazione della condizione di filtro.  
+5.  Selezionare un operatore dall'elenco nella **operatore** colonna, da utilizzare nella compilazione della condizione di filtro.  
   
-6.  Fare clic sulla casella il **filtro** colonna.  
+6.  Fare clic sulla casella di **filtro** colonna.  
   
      Verrà visualizzata una finestra di dialogo contenente tutti i membri al livello specificato della gerarchia.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36157037"
   
 8.  Fare clic su **OK** nella finestra di dialogo di membro.  
   
-9. Fare clic su **OK** nel **seziona cubo** finestra di dialogo.  
+9. Fare clic su **OK** nel **seziona cubo** nella finestra di dialogo.  
   
      A questo punto, il cubo di origine è filtrato come definito dalla sezione del cubo.  
   

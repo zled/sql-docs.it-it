@@ -1,30 +1,29 @@
 ---
-title: Aggiornamento e aggiornamento del server del gruppo di disponibilità con tempi di inattività minimi e perdita di dati | Documenti Microsoft
+title: Aggiornamento e aggiornamento dei server di gruppo di disponibilità con tempi di inattività minimi e la perdita di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: 7
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a0e2c87919337ebfec117e4696185b4fe8705218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: db74916aa24c1dcd3f94fa163ae0ef87697a8fa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247027"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Aggiornamento dei server dei gruppi di disponibilità con tempi di inattività e perdita dei dati minimi
   Quando si aggiornano istanze del server da SQL Server 2012 a un Service Pack o a una versione più recente, è possibile ridurre i tempi di inattività per un gruppo di disponibilità alla durata di un singolo failover manuale eseguendo un aggiornamento in sequenza. L'aggiornamento in sequenza può essere effettuato sia per passare a versioni successive di SQL Server sia per aggiornare la versione corrente con hotfix o Service Pack.  
   
- In questo argomento vengono illustrate esclusivamente le modalità di aggiornamento di SQL Server. Per relative al sistema operativo di aggiornamento che eseguono istanze di SQL Server a disponibilità elevata, vedere [tra cluster migrazione di gruppi di disponibilità AlwaysOn per gli aggiornamenti del sistema operativo](http://msdn.microsoft.com/library/jj873730.aspx)  
+ In questo argomento vengono illustrate esclusivamente le modalità di aggiornamento di SQL Server. Per relative al sistema operativo aggiornamenti eseguiti su istanze di SQL Server a disponibilità elevata, vedere [tra cluster la migrazione dei gruppi di disponibilità AlwaysOn per gli aggiornamenti del sistema operativo](http://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>Procedure consigliate relative all'aggiornamento in sequenza per i gruppi di disponibilità AlwaysOn  
  Quando si eseguono aggiornamenti dei server, è consigliabile attenersi alle procedure consigliate illustrate di seguito allo scopo di ridurre al minimo i tempi di inattività e la perdita di dati per i gruppi di disponibilità:  

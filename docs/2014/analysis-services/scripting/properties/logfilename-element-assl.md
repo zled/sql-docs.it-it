@@ -1,5 +1,5 @@
 ---
-title: Elemento LogFileName (ASSL) | Documenti Microsoft
+title: Elemento LogFileName (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - LogFileName element
 ms.assetid: 80c7530d-ef73-44c3-88b5-c11c0f290946
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3038ae45e740b52662f6e580808096541b7b386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78f8a9cfa6462f7932e69323b0f7622d0f12064a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171342"
 ---
 # <a name="logfilename-element-assl"></a>Elemento LogFileName (ASSL)
-  Contiene il nome del file del file di log per il [traccia](../objects/trace-element-assl.md) elemento.  
+  Contiene il nome del file di log per il [traccia](../objects/trace-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,10 +61,10 @@ ms.locfileid: "36166703"
 |Elemento padre|[Traccia](../objects/trace-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il file di log viene salvato nella cartella di Log dell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+## <a name="remarks"></a>Note  
+ Il file di log viene salvato nella cartella Log dell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- L'elemento che corrisponde al padre di `LogFileName` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Trace>.  
+ L'elemento che corrisponde al padre di `LogFileName` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Analizza l'elemento &#40;ASSL&#41;](../collections/traces-element-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: Analysis Services Editor attività Esegui DDL (pagina DDL) | Documenti Microsoft
+title: Analysis Services Execute DDL Task Editor (pagina DDL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.ddl.f1
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9499537bdb59778ab4dc5d511c16e3fb4cb9be08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8693bb66bb848301a739a16f6989537d203eca25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269429"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor attività Esegui DDL Analysis Services (pagina DDL)
   La pagina **DDL** della finestra di dialogo **Editor attività Esegui DDL Analysis Services** consente di specificare una connessione a un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o a un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per offrire informazioni sull'origine delle istruzioni DDL (Data Definition Language).  
@@ -64,7 +64,7 @@ ms.locfileid: "36068313"
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Analysis Services Editor attività Esegui DDL &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Pagina espressioni](expressions/expressions-page.md)   
  [Flusso di controllo](control-flow/control-flow.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 caps.latest.revision: 20
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a48d451248e28f8c9e0fd623c96022f558b80ca8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0428ffb21563c214c362d88801f79ecb5c7ed5de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328011"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Passaggio 5: Aggiunta e configurazione dell'origine file flat
   In questa attività verrà aggiunta e configurata l'origine file flat al pacchetto. Un'origine file flat è un componente del flusso di dati che utilizza i metadati definiti dalla gestione connessione file flat per specificare il formato e la struttura dei dati da estrarre dal file flat tramite un processo di trasformazione. È possibile configurare l'origine file flat per estrarre dati da un singolo file flat utilizzando la definizione del formato del file specificata dalla gestione connessione file flat.  
@@ -28,7 +28,7 @@ ms.locfileid: "36068968"
   
 ### <a name="to-add-a-flat-file-source-component"></a>Per aggiungere un componente origine file flat  
   
-1.  Aprire il **flusso di dati** finestra di progettazione facendo doppio clic sui `Extract Sample Currency Data` attività flusso di dati o fare clic sul **scheda flusso di dati**.  
+1.  Aprire il **flusso di dati** finestra di progettazione facendo doppio clic sul `Extract Sample Currency Data` attività flusso di dati o facendo clic la **scheda flusso di dati**.  
   
 2.  Nella **Casella degli strumenti SSIS**espandere **OtherSources**, quindi trascinare un' **Origine file flat** sull'area di progettazione della scheda **Flusso di dati** .  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36068968"
 9. Nella finestra Proprietà verificare che il `LocaleID` è impostata su **inglese (Stati Uniti)**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Passaggio 6: Aggiunta e configurazione delle trasformazioni ricerca](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+ [Passaggio 6: Aggiunta e configurazione delle trasformazioni Ricerca](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Origine File flat](data-flow/flat-file-source.md)   

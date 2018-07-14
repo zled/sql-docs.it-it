@@ -23,13 +23,13 @@ ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c865a20b01824e21f37d5fcc84c6c9d1975ff1c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5662a410ef85dc5df64abfd5d84c13bc7a37264c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331841"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>Creazione di un componente flusso di dati personalizzato
   In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] l'attività Flusso di dati espone un modello a oggetti che consente agli sviluppatori di creare componenti flusso di dati personalizzati, ovvero origini, trasformazioni e destinazioni, tramite [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] e codice gestito.  
@@ -87,7 +87,7 @@ Public Class BasicComponent
 End Class  
 ```  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sviluppo di un'interfaccia utente per un componente flusso di dati](developing-a-user-interface-for-a-data-flow-component.md)  

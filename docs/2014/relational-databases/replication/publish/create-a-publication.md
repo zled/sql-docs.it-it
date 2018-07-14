@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], creating
 - articles [SQL Server replication], defining
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dbfa449e19f77b7537232e0fc8689a47f30ea1fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dee016784a438de226877d94d7271048749a859c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170322"
 ---
 # <a name="create-a-publication"></a>Create a Publication
   In questo argomento viene descritto come creare una pubblicazione in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
@@ -114,7 +114,7 @@ ms.locfileid: "36069589"
   
     -   Se il set di risultati è vuoto, creare un processo dell'agente di lettura log. Nel server di pubblicazione eseguire [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Specificare le credenziali di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows utilizzate per l'esecuzione dell'agente per **@job_name** e **@password**. Se l'agente utilizza l'autenticazione di SQL Server per la connessione al server di pubblicazione, è inoltre necessario specificare il valore **0** per **@publisher_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per **@publisher_login** e **@publisher_password**. Procedere al passaggio 3.  
   
-3.  Nel server di pubblicazione eseguire [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Specificare un nome della pubblicazione per **@publication**e, per il **@repl_freq** parametro, specificare il valore `snapshot` per una pubblicazione snapshot o un valore di `continuous` per un pubblicazione transazionale. Specificare eventuali altre opzioni della pubblicazione. In questo modo viene definita la pubblicazione.  
+3.  Nel server di pubblicazione eseguire [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Specificare un nome della pubblicazione per **@publication**e, per il **@repl_freq** parametri, specificare il valore `snapshot` per una pubblicazione snapshot o il valore di `continuous` per un pubblicazione transazionale. Specificare eventuali altre opzioni della pubblicazione. In questo modo viene definita la pubblicazione.  
   
     > [!NOTE]  
     >  I nomi delle pubblicazioni non possono includere i caratteri seguenti:  
@@ -170,12 +170,12 @@ ms.locfileid: "36069589"
   
 3.  Se la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> è impostata su `false`, impostarla su `true`.  
   
-4.  Per una pubblicazione transazionale, verificare il valore della proprietà <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> . Se questa proprietà è `true`, per il database esiste già un processo dell'agente di lettura Log. Se questa proprietà è `false`, eseguire le operazioni seguenti:  
+4.  Per una pubblicazione transazionale, verificare il valore della proprietà <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> . Se questa proprietà è `true`, un processo dell'agente di lettura Log esiste già per questo database. Se questa proprietà è `false`, eseguire le operazioni seguenti:  
   
-    -   Impostare il <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> o <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> i campi di <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> per fornire le credenziali per il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] account Windows con cui viene eseguito l'agente di lettura Log.  
+    -   Impostare il <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> o <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> campi del <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> per fornire le credenziali per il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows dell'account con cui verrà eseguito l'agente di lettura Log.  
   
         > [!NOTE]  
-        >  L'impostazione <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> non è necessaria quando viene creata la pubblicazione da un membro del `sysadmin` ruolo predefinito del server. In questo caso l'agente rappresenterà l'account di SQL Server Agent. Per altre informazioni, vedere [Modello di sicurezza dell'agente di replica](../security/replication-agent-security-model.md).  
+        >  L'impostazione <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> non è obbligatorio quando la pubblicazione viene creata da un membro del `sysadmin` ruolo predefinito del server. In questo caso l'agente rappresenterà l'account di SQL Server Agent. Per altre informazioni, vedere [Modello di sicurezza dell'agente di replica](../security/replication-agent-security-model.md).  
   
     -   (Facoltativo) Impostare i campi <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> di <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> quando si utilizza l'autenticazione di SQL Server per la connessione al server di pubblicazione.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "36069589"
     -   Campi <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> di <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> per fornire le credenziali per l'account di Windows con cui verrà eseguito il processo dell'agente snapshot. Questo account viene utilizzato anche quando l'agente snapshot stabilisce connessioni al server di distribuzione locale e per qualsiasi connessione remota quando si utilizza l'autenticazione di Windows.  
   
         > [!NOTE]  
-        >  L'impostazione <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> non è necessaria quando viene creata la pubblicazione da un membro del `sysadmin` ruolo predefinito del server. In questo caso l'agente rappresenterà l'account di SQL Server Agent. Per altre informazioni, vedere [Modello di sicurezza dell'agente di replica](../security/replication-agent-security-model.md).  
+        >  L'impostazione <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> non è obbligatorio quando la pubblicazione viene creata da un membro del `sysadmin` ruolo predefinito del server. In questo caso l'agente rappresenterà l'account di SQL Server Agent. Per altre informazioni, vedere [Modello di sicurezza dell'agente di replica](../security/replication-agent-security-model.md).  
   
     -   (Facoltativo) Campi <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> di <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> quando si utilizza l'autenticazione di SQL Server per la connessione al server di pubblicazione.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "36069589"
   
 2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> per il database di pubblicazione, impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'istanza di <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del passaggio 1, quindi chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> restituisce `false`, verificare che il database esista.  
   
-3.  Se <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> proprietà è `false`, impostarla su `true`e chiamare <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
+3.  Se <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> proprietà viene `false`, impostarla su `true`e chiamare <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
   
 4.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication> e impostare le proprietà seguenti per questo oggetto:  
   
@@ -228,7 +228,7 @@ ms.locfileid: "36069589"
     -   Campi <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> di <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> per fornire le credenziali per l'account di Windows con cui verrà eseguito il processo dell'agente snapshot. Questo account viene utilizzato anche quando l'agente snapshot stabilisce connessioni al server di distribuzione locale e per qualsiasi connessione remota quando si utilizza l'autenticazione di Windows.  
   
         > [!NOTE]  
-        >  L'impostazione <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> non è necessaria quando viene creata la pubblicazione da un membro del `sysadmin` ruolo predefinito del server. Per altre informazioni, vedere [Modello di sicurezza dell'agente di replica](../security/replication-agent-security-model.md).  
+        >  L'impostazione <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> non è obbligatorio quando la pubblicazione viene creata da un membro del `sysadmin` ruolo predefinito del server. Per altre informazioni, vedere [Modello di sicurezza dell'agente di replica](../security/replication-agent-security-model.md).  
   
     -   (Facoltativo) Utilizzare l'operatore logico OR inclusivo (`|` in Visual C# e `Or` in Visual Basic) e l'operatore logico OR esclusivo (`^` in Visual C# e `Xor` in Visual Basic) per impostare i valori di <xref:Microsoft.SqlServer.Replication.PublicationAttributes> per la proprietà <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   

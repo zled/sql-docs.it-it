@@ -20,13 +20,13 @@ ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 298de53535be79f452d3f1a70cd399cb66595abb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2b4f1f659bd118827a13c774a8727ea6541d59b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236971"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Invio di un messaggio di posta HTML con l'attività Script
   L'attività SendMail di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta solo messaggi di posta in formato di testo normale. Tuttavia è possibile inviare facilmente messaggi di posta HTML tramite l'attività Script e le funzionalità di posta di .NET Framework.  
@@ -155,7 +155,7 @@ public void Main()
         }  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività Invia messaggi](../control-flow/send-mail-task.md)  

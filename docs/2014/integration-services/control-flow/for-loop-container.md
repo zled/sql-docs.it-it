@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainerdetails.f1
 helpviewer_keywords:
@@ -19,16 +19,16 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47b5fffebd2ce4eba41aceb88725e4dc4c867348
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15e2239a7285e4d460e4fa5a85add8445f797ede
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157801"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227851"
 ---
 # <a name="for-loop-container"></a>Contenitore Ciclo For
-  Il contenitore Ciclo For definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **For** nei linguaggi di programmazione. In ogni ripetizione del ciclo, il contenitore ciclo For valuta un'espressione e ripete il flusso di lavoro fino a quando l'espressione restituisce `False`.  
+  Il contenitore Ciclo For definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **For** nei linguaggi di programmazione. Ogni ripetizione del ciclo, il contenitore ciclo For valuta un'espressione e ne ripete il flusso di lavoro fino a quando l'espressione restituisce `False`.  
   
  Per definire il ciclo, il contenitore Ciclo For usa gli elementi seguenti:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36157801"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor ciclo for](../for-loop-editor.md)  
+-   [Editor ciclo For](../for-loop-editor.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36157801"
 ## <a name="related-tasks"></a>Related Tasks  
  Per informazioni sulla configurazione di un contenitore Ciclo For, vedere gli argomenti seguenti.  
   
--   [Configurare un contenitore ciclo For](for-loop-container.md)  
+-   [Configurazione di un contenitore Ciclo For](for-loop-container.md)  
   
 -   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   

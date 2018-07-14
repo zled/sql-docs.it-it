@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Reporting Services, RDL
 - Reporting Services, RDL
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: 52
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cb0ac41fef9a28a5023e122963f59fa6d9720a19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 93fa1ac42172b4750db5e5dd385925f657fdfdd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262047"
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
   Report Definition Language (RDL) è una rappresentazione XML di una definizione di un report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una definizione del report contiene informazioni sul layout e sul recupero dei dati per un report. RDL è costituito da elementi XML che corrispondono a una grammatica XML creata per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È possibile aggiungere funzioni personalizzate per il controllo dei valori degli elementi del report, degli stili e della formattazione mediante l'accesso agli assembly di codice all'interno dei file di definizione dei report.  
@@ -47,7 +47,7 @@ ms.locfileid: "36158152"
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> XML Schema Definition RDL  
  Un file RDL (Report Definition Language) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene convalidato tramite un file XSD (XML Schema Definition). Lo schema definisce le regole relative alla posizione degli elementi RDL in un file rdl. Un elemento include il tipo di dati e la cardinalità, ovvero il numero di occorrenze consentite. Un elemento può essere semplice o complesso. Un elemento semplice non dispone di attributi o elementi figlio. Un elemento complesso dispone di elementi figlio e, facoltativamente, di attributi.  
   
- Ad esempio, lo schema include l'elemento RDL `ReportParameters`, ovvero il tipo complesso `ReportParametersType`. Per convenzione, un tipo complesso per un elemento è il nome dell'elemento seguito dalla parola `Type`. Un `ReportParameters` elemento può essere contenuto nel `Report` elemento (un tipo complesso) e possono contenere `ReportParameter` elementi. Un `ReportParameterType` è un tipo semplice che può essere solo uno dei seguenti valori: `Boolean`, `DateTime`, `Integer`, `Float` o `String`. Per altre informazioni sui tipi di dati dell'elemento XML Schema, vedere [XML Schema Parte 2: Tipi di dati Seconda edizione](http://go.microsoft.com/fwlink/?linkid=4871).  
+ Ad esempio, lo schema include l'elemento RDL `ReportParameters`, ovvero il tipo complesso `ReportParametersType`. Per convenzione, un tipo complesso per un elemento è il nome dell'elemento seguito dalla parola `Type`. Oggetto `ReportParameters` elemento può essere contenuto nel `Report` elemento (un tipo complesso) e può contenere `ReportParameter` elementi. Un `ReportParameterType` è un tipo semplice che può essere solo uno dei seguenti valori: `Boolean`, `DateTime`, `Integer`, `Float` o `String`. Per altre informazioni sui tipi di dati dell'elemento XML Schema, vedere [XML Schema Parte 2: Tipi di dati Seconda edizione](http://go.microsoft.com/fwlink/?linkid=4871).  
   
  L'XSD RDL è disponibile nel file ReportDefinition.xsd, contenuto nella cartella Extras nel CD-ROM del prodotto. È anche disponibile nel server di report tramite l'URL seguente: http://servername/reportserver/reportdefinition.xsd.  
   
@@ -91,8 +91,8 @@ ms.locfileid: "36158152"
 |String, Char, GUID, Timespan|String|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Trovare la versione dello Schema di definizione Report &#40;SSRS&#41;](find-the-report-definition-schema-version-ssrs.md)   
- [Utilizzo di assembly personalizzati con i report](../custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [Individuare la versione dello Schema di definizione Report &#40;SSRS&#41;](find-the-report-definition-schema-version-ssrs.md)   
+ [Uso di assembly personalizzati con i report](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Elementi dei report personalizzati](../custom-report-items/custom-report-items.md)  
   
   

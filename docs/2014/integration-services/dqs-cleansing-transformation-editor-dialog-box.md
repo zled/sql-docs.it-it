@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Editor trasformazione di pulizia di DQS | Documenti Microsoft
+title: DQS Cleansing nella finestra di dialogo Editor trasformazione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssdqs.designer.cleansing.f1
 - SQL12.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f723e04c13dd16c6f872950652dba759f611cbf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0034984a58971af442ab7154bbba50820dfe1a16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219671"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Finestra di dialogo Editor trasformazione DQS Cleansing
   Usare la finestra di dialogo **Editor trasformazione DQS Cleansing** per correggere dati usando Data Quality Services (DQS). Per altre informazioni, vedere [Concetti di Data Quality Services](../../2014/data-quality-services/data-quality-services-concepts.md).  
@@ -115,7 +115,7 @@ ms.locfileid: "36158742"
  Consente di specificare se restituire dati aggiuntivi ricevuti da un provider di dati di riferimento esistente. Per altre informazioni, vedere [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
  **Schema dati accodati**  
- Consente di specificare se restituire lo schema dati. Per altre informazioni, vedere [collegare un dominio o dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+ Consente di specificare se restituire lo schema dati. Per altre informazioni, vedere [collegare un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
 ##  <a name="manager"></a> Impostare le opzioni nella finestra di dialogo Gestione connessione DQS Cleansing  
  **Nome server**  

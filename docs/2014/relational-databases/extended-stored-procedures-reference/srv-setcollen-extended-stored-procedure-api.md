@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_setcollen
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cc059a5cc2b27213915491cebc87f9d16b549a0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 668e6e0af87ac1a2c240c5b6a636b0529d23615c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272697"
 ---
 # <a name="srvsetcollen-extended-stored-procedure-api"></a>srv_setcollen (API Stored procedure estesa)
     
@@ -69,7 +69,7 @@ len
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Ogni colonna della riga deve essere definita prima con **srv_describe**. La lunghezza della colonna dei dati viene impostata dall'ultima chiamata a **srv_describe** o **srv_setcollen**. Se viene modificata una riga dei dati a lunghezza variabile (dati con terminazione null), è necessario usare **srv_setcollen** per impostarli sulla nuova lunghezza prima di chiamare **srv_sendrow**. Per una colonna che consente valori Null è necessario che sia stato chiamato **srv_describe** con *desttype* impostato su un tipo di dati che consente valori Null (ad esempio SRVINTN) e che i dati Null siano stati specificati chiamando **srv_setcollen** con *len* impostato su 0. Quando si utilizza l'API Stored procedure estesa, non è possibile specificare dati di lunghezza zero.  
   
  Quando il tipo di dati della colonna è a lunghezza variabile, *len* non viene controllato. Questa funzione restituisce FAIL se chiamata per una colonna a lunghezza fissa.  

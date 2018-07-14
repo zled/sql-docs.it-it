@@ -1,5 +1,5 @@
 ---
-title: Visualizzare e risolvere i conflitti di dati per le pubblicazioni di tipo Merge (SQL Server Management Studio) | Documenti Microsoft
+title: Visualizzare e risolvere i conflitti di dati per pubblicazioni di tipo Merge (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], viewing conflicts
 - viewing conflict information
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 75c7cab378171c3791cdca63b072698e6bf81330
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 95df6108930543ce728b76c304578aab21927fde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209021"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>Visualizzazione e risoluzione di conflitti di dati per le pubblicazioni di tipo merge (SQL Server Management Studio)
   I conflitti nella replica di tipo merge vengono risolti in base al sistema di risoluzione specificato per ogni articolo. Per impostazione predefinita, i conflitti vengono risolti senza che sia necessario l'intervento dell'utente. È tuttavia possibile visualizzare i conflitti e modificare il risultato della risoluzione nel Visualizzatore conflitti di replica [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  

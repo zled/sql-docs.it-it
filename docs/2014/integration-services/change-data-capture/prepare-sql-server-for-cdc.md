@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - prepSqlSrv
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 35be623fb49787d51c9445ca8a5e5bb9d8c518e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 359f48b4f0177b1e17d0fdb8a0a81cb5759d1b84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269457"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>Preparare SQL Server per CDC
   Il servizio Oracle CDC richiede che tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione contengano il database MSXDBCDC. Per creare questo database utilizzare l'azione Prepare SQL Server in CDC Service Configuration Console. Verrà creato uno script speciale eseguito per creare le tabelle, le stored procedure e altri artefatti obbligatori per il database. Questa attività viene eseguita una volta sola per ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione.  
@@ -59,7 +59,7 @@ ms.locfileid: "36158026"
  Fare clic su **Visualizza script** per visualizzare una versione di sola lettura dello script di impostazione. Se necessario, un amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può copiare questo script nella console di gestione di SQL Server per modificarlo. Per altre informazioni sulla preparazione di SQL Server per lo script, vedere [Preparare SQL Server per lo script di visualizzazione di Oracle CDC](prepare-sql-server-for-oracle-cdc-view-script.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come utilizzare i servizi CDC](work-with-cdc-services.md)   
+ [Come usare i servizi CDC](work-with-cdc-services.md)   
  [Procedura di preparazione di SQL Server per CDC](prepare-sql-server-for-cdc.md)  
   
   

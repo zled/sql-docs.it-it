@@ -1,27 +1,26 @@
 ---
-title: Stabilire una sessione utilizzando l'autenticazione di Windows (SQL Server Management Studio) di mirroring del Database | Documenti Microsoft
+title: Stabilire una sessione utilizzando l'autenticazione di Windows (SQL Server Management Studio) di mirroring del Database | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], sessions
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 caps.latest.revision: 57
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 635177c6ffac113221677ad81510ba595bc78d0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d212f5f1dda7ebe0e596808d56fb2060af467a04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235661"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>Stabilire una sessione di mirroring del database tramite autenticazione di Windows (SQL Server Management Studio)
     
@@ -65,7 +64,7 @@ ms.locfileid: "36156062"
     |------------|--------------|-----------------|  
     |**Prestazioni elevate (asincrona)**|Null (se presente, non usato ma la sessione richiede un quorum)|Per massimizzare le prestazioni, il database mirror rimane sempre un passo indietro rispetto al database principale. La distanza tra i database è tuttavia solitamente ridotta. La perdita di un partner produce l'effetto seguente:<br /><br /> Se l'istanza del server mirror diventa non disponibile, le attività continuano nel server principale.<br /><br /> Se l'istanza del server principale diventa non disponibile, il server mirror si arresta, ma se la sezione non dispone di un server di controllo del mirroring (come consigliato) o se il server di controllo del mirroring è connesso al server mirror, il server mirror sarà accessibile come server di standby a caldo (warm standby). Il proprietario del database potrà quindi forzare il servizio nell'istanza del server mirror, con possibile perdita di dati.<br /><br /> <br /><br /> Per altre informazioni, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)(Mirroring del database e log shipping).|  
     |**Protezione elevata senza failover automatico (sincrona)**|no|Tutte le transazioni di cui è stato eseguito il commit vengono scritte nel disco del server mirror.<br /><br /> Il failover manuale è possibile quando i partner sono connessi tra loro e il database è sincronizzato. La perdita di un partner produce l'effetto seguente:<br /><br /> Se l'istanza del server mirror diventa non disponibile, le attività continuano nel server principale.<br /><br /> Se l'istanza del server principale diventa non disponibile, il server mirror si arresta, ma rimane accessibile come server di standby a caldo (warm standby). Il proprietario del database potrà quindi forzare il servizio nell'istanza del server mirror, con possibile perdita di dati.<br /><br /> Per altre informazioni, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)(Mirroring del database e log shipping).|  
-    |**Protezione elevata con failover automatico (sincrona)**|Sì (obbligatorio)|Tutte le transazioni di cui è stato eseguito il commit vengono scritte nel disco del server mirror. La disponibilità viene ottimizzata mediante l'utilizzo di un'istanza del server di controllo del mirroring per supportare il failover automatico. Si noti che è possibile selezionare l'opzione **Protezione elevata con failover automatico (sincrona)** solo se è già stato specificato un indirizzo del server di controllo del mirroring. Il failover manuale è possibile quando i partner sono connessi tra loro e il database è sincronizzato.<br /><br /> In presenza di un server di controllo del mirroring, la perdita di un partner produce l'effetto seguente:<br /><br /> -Se l'istanza del server principale diventa non disponibile, si verifica il failover automatico. L'istanza del server mirror passa al ruolo del server principale e il database del server mirror viene considerato come database principale.<br /><br /> -Se l'istanza del server mirror diventa non disponibile, l'entità continua.<br /><br /> Per altre informazioni, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)(Mirroring del database e log shipping).<br /><br /> **\*\* Importante \*\*** Se il server di controllo del mirroring viene disconnesso, è necessario che i partner siano connessi tra loro affinché il database sia disponibile. Per altre informazioni, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
+    |**Protezione elevata con failover automatico (sincrona)**|Sì (obbligatorio)|Tutte le transazioni di cui è stato eseguito il commit vengono scritte nel disco del server mirror. La disponibilità viene ottimizzata mediante l'utilizzo di un'istanza del server di controllo del mirroring per supportare il failover automatico. Si noti che è possibile selezionare l'opzione **Protezione elevata con failover automatico (sincrona)** solo se è già stato specificato un indirizzo del server di controllo del mirroring. Il failover manuale è possibile quando i partner sono connessi tra loro e il database è sincronizzato.<br /><br /> In presenza di un server di controllo del mirroring, la perdita di un partner produce l'effetto seguente:<br /><br /> -Se l'istanza del server principale diventa non disponibile, si verifica il failover automatico. L'istanza del server mirror passa al ruolo del server principale e il database del server mirror viene considerato come database principale.<br /><br /> -Se l'istanza del server mirror diventa non disponibile, il principale continuerà.<br /><br /> Per altre informazioni, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)(Mirroring del database e log shipping).<br /><br /> **\*\* Importante \*\*** Se il server di controllo del mirroring viene disconnesso, è necessario che i partner siano connessi tra loro affinché il database sia disponibile. Per altre informazioni, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
   
 7.  Se sussistono tutte le condizioni seguenti, fare clic su **Avvia mirroring** per avviare il mirroring:  
   

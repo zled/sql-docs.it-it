@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati ColumnBinding (ASSL) | Documenti Microsoft
+title: Tipo di dati ColumnBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ColumnBinding data type
 ms.assetid: 3ab1bac1-6716-4b17-a107-d5f9c744c5e6
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1ad7cea5041f8d65964b85e36a0b992f9f5afdae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 227801af8b66d66ebeba50d2713267720adffa9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200111"
 ---
 # <a name="columnbinding-data-type-assl"></a>Tipo di dati ColumnBinding (ASSL)
   Definisce un tipo di dati derivato che rappresenta l'associazione di una colonna in una vista origine dati a un [DataItem](dataitem-data-type-assl.md) elemento.  
@@ -61,8 +61,8 @@ ms.locfileid: "36156807"
 |Elementi figlio|[ColumnID](../properties/columnid-element-eventcolumn-assl.md), [TableID](../properties/id-element-assl.md)|  
 |Elementi derivati|Vedere [associazione](binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
- Per creare nomi di elemento XML validi, [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] `DataSet` oggetti codificano i nomi di tabella Analogamente alla serializzazione in XML Schema Definition (XSD); ad esempio, il nome "Order Details" diventa "Order_x0020_Details". Allo stesso modo, gli elementi `ColumnID` e `TableID` contenuti nell'elemento `ColumnBinding` e che fanno riferimento a oggetti nella vista origine dati devono codificare anch'essi i nomi durante la serializzazione, per garantire che tali nomi corrispondano direttamente al testo nella vista origine dati. L'istanza di Analysis Services decodificherà tali nomi operando analogamente al modello a oggetti `DataSet`.  
+## <a name="remarks"></a>Note  
+ Per creare nomi di elemento XML validi, [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] `DataSet` oggetti codificano i nomi di tabella Analogamente alla serializzazione di XML Schema Definition (XSD); ad esempio, il nome "Order Details" diventa "Order_x0020_Details". Allo stesso modo, gli elementi `ColumnID` e `TableID` contenuti nell'elemento `ColumnBinding` e che fanno riferimento a oggetti nella vista origine dati devono codificare anch'essi i nomi durante la serializzazione, per garantire che tali nomi corrispondano direttamente al testo nella vista origine dati. L'istanza di Analysis Services decodificherà tali nomi operando analogamente al modello a oggetti `DataSet`.  
   
  Un elemento `TableDefinitions` contenuto in un elemento che utilizza il tipo di dati `TableBinding` e che fa riferimento a tabelle nella vista origine dati deve inoltre codificare i nomi in base alla serializzazione nella vista origine dati. I nomi di tabella nelle associazioni `Partition`, tuttavia, non devono essere codificati, in quanto tali nomi sono nomi di tabella presenti nel database e non devono essere inclusi nella vista origine dati. La mancata codifica dei nomi di tabella nelle associazioni `Partition` consente inoltre di ottenere i seguenti risultati:  
   
@@ -72,9 +72,9 @@ ms.locfileid: "36156807"
   
  I nomi di tabella e di colonna non includono delimitatori, ad esempio " [" per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Per ulteriori informazioni sul `Binding` tipo, incluse le tabelle di oggetti di Analysis Services Scripting Language (ASSL) del `Binding` tipo e la gerarchia di ereditarietà dei `Binding` tipi, vedere [tipo di dati Binding &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Per altre informazioni sul `Binding` tipo, incluse le tabelle di oggetti di Analysis Services Scripting Language (ASSL) del `Binding` tipo e la gerarchia di ereditarietà dei `Binding` tipi, vedere [associazione tipo di dati &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Per una panoramica delle associazioni dati in ASSL, vedere [origini dati e le associazioni &#40;multidimensionali SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Per una panoramica delle associazioni di dati in ASSL, vedere [origini dati e associazioni &#40;multidimensionale di SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  L'elemento corrispondente nel modello a oggetti AMO è <xref:Microsoft.AnalysisServices.ColumnBinding>.  
   

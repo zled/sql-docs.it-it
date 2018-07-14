@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -21,18 +20,18 @@ helpviewer_keywords:
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 caps.latest.revision: 64
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c64662a9bbfa8a4d36ed406b6fb7529961b693da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 260183c80e3efaa53ba5c0e7000c54a1102425e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179728"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Ricerca di parole vicine a un'altra parola con NEAR
-  Per cercare parole o frasi vicine, è possibile usare un termine di prossimità (NEAR) in un predicato [CONTAINS](/sql/t-sql/queries/contains-transact-sql) o in una funzione [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql). È inoltre possibile specificare il numero massimo di termini non di ricerca che separano il primo e l'ultimo termine di ricerca. È inoltre possibile cercare parole o frasi in qualsiasi ordine o parole e frasi nell'ordine in cui sono state specificate. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta sia il precedente [termine di prossimità generico](#Generic_NEAR), che è ora deprecato e il [termine di prossimità personalizzato](#Custom_NEAR), che è stato introdotto in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+  Per cercare parole o frasi vicine, è possibile usare un termine di prossimità (NEAR) in un predicato [CONTAINS](/sql/t-sql/queries/contains-transact-sql) o in una funzione [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql). È inoltre possibile specificare il numero massimo di termini non di ricerca che separano il primo e l'ultimo termine di ricerca. È inoltre possibile cercare parole o frasi in qualsiasi ordine o parole e frasi nell'ordine in cui sono state specificate. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta sia la precedente [termine di prossimità generico](#Generic_NEAR), che è ora deprecato e il [termine di prossimità personalizzato](#Custom_NEAR), che è una novità [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ##  <a name="Custom_NEAR"></a> Il termine di prossimità personalizzato  
  Con il termine di prossimità personalizzato vengono introdotte le seguenti nuove funzionalità:  
@@ -129,7 +128,7 @@ GO
   
 
   
-##  <a name="Additional_Considerations"></a> Considerazioni aggiuntive per le ricerche per prossimità  
+##  <a name="Additional_Considerations"></a> Considerazioni aggiuntive per ricerche per prossimità  
  In questa sezione vengono illustrate alcune considerazioni riguardanti le ricerche per prossimità sia generiche che personalizzate:  
   
 -   Occorrenze di termini di ricerca sovrapposte  
@@ -160,7 +159,7 @@ GO
 ##  <a name="Generic_NEAR"></a> Il termine di prossimità generico deprecato  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] È consigliabile utilizzare il [termine di prossimità personalizzato](#Custom_NEAR).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] È consigliabile usare la [termine di prossimità personalizzato](#Custom_NEAR).  
   
  Un termine di prossimità generico indica che i termini di ricerca specificati devono essere tutti presenti in un documento perché venga restituita una corrispondenza, indipendentemente dal numero di termini non di ricerca, ovvero la *distanza*, tra i termini di ricerca. La sintassi di base è la seguente:  
   

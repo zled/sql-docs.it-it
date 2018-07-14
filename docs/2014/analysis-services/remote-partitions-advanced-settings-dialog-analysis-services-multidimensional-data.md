@@ -1,5 +1,5 @@
 ---
-title: Le partizioni remote - finestra di dialogo Impostazioni (Analysis Services - dati multidimensionali) avanzate | Documenti Microsoft
+title: Le partizioni remote - finestra di dialogo Impostazioni (Analysis Services - dati multidimensionali) avanzate | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.advancedrestoresettings.f1
 ms.assetid: a03bb7e1-efaf-47c8-b0ee-f3e4438311cb
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a07f3885475c207301942729f70c172a237c227
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21550167b2850d8e76daa74c0fdb860ca4e98cc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241661"
 ---
 # <a name="remote-partitions---advanced-settings-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Partizioni remote – Impostazioni avanzate (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Partizioni remote - Impostazioni avanzate** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per modificare le impostazioni avanzate, quali la stringa di connessione dell'origine dati che rappresenta il database remoto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che gestisce le partizioni remote, durante il ripristino di partizioni remote da un file di backup remoto in un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tramite la finestra di dialogo **Ripristina database**. Per visualizzare la finestra di dialogo **Partizioni remote - Impostazioni avanzate** dalla pagina **Partizioni** della finestra di dialogo **Ripristina database** , è possibile fare clic sul pulsante con i puntini di sospensione (**...**) per una partizione remota dopo aver selezionato l'opzione **Ripristina partizioni remote** .  
@@ -31,10 +31,10 @@ ms.locfileid: "36157017"
 |Nome|Definizione|  
 |----------|----------------|  
 |**Nome origine dati**|Consente di visualizzare il nome dell'origine dei dati che rappresenta il database remoto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che gestisce le partizioni remote elencate.|  
-|**File di backup**|Consente di visualizzare il nome del file di backup remoto che contiene i dati da ripristinare per le partizioni remote elencate.<br /><br /> Nota: Viene visualizzato alcun file di backup se è stato specificato un file di backup remoto nella **file di Backup** colonna sul **partizioni** pagina del **Restore Database** finestra di dialogo.|  
+|**File di backup**|Consente di visualizzare il nome del file di backup remoto che contiene i dati da ripristinare per le partizioni remote elencate.<br /><br /> Nota: non viene visualizzato alcun file di backup se è stato specificato un file di backup remoto nel **file di Backup** colonna sul **partizioni** pagina del **Restore Database** nella finestra di dialogo.|  
 |**Stringa di connessione**|Consente di visualizzare la stringa di connessione per l'origine dati visualizzata in **Nome origine dati**.|  
 |**Modifica**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Proprietà di Data Link** e modificare le proprietà contenute nella stringa di connessione.|  
-|**Elenco partizioni**|Selezionare questa opzione per specificare percorsi diversi in cui ripristinare le partizioni remote. Si noti che è possibile modificare solo la cartella di ripristino di una partizione remota nel caso in cui sia stato specificato un percorso diverso dal percorso predefinito per tale partizione remota nel cubo. Quando si seleziona questa opzione, viene attivata la griglia seguente che consente di specificare una cartella di ripristino per ogni partizione remota:<br /><br /> **Cubo**: Visualizza il nome del cubo contenente la partizione remota.<br /><br /> **MeasureGroup**: Visualizza il nome del gruppo di misure contenente la partizione remota.<br /><br /> **Partizione**: Visualizza il nome della partizione remota.<br /><br /> **Dimensioni (MB)**: Visualizza le dimensioni in megabyte, della partizione remota.<br /><br /> **Cartella originale**: Visualizza il nome della cartella originale in cui è stata archiviata la partizione remota.<br /><br /> **Cartella di ripristino**: digitare il nome della cartella di ripristino per la partizione remota oppure fare clic sul pulsante con puntini di sospensione (**...** ) per visualizzare i **Cerca cartella remota** finestra di dialogo e selezionare il percorso della cartella da utilizzare. Per altre informazioni sulla finestra di dialogo **Cerca cartella remota**, vedere [Finestra di dialogo Cerca cartella remota &#40;Analysis Services - Dati multidimensionali&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Elenco partizioni**|Selezionare questa opzione per specificare percorsi diversi in cui ripristinare le partizioni remote. Si noti che è possibile modificare solo la cartella di ripristino di una partizione remota nel caso in cui sia stato specificato un percorso diverso dal percorso predefinito per tale partizione remota nel cubo. Quando si seleziona questa opzione, viene attivata la griglia seguente che consente di specificare una cartella di ripristino per ogni partizione remota:<br /><br /> **Cubo**: Visualizza il nome del cubo contenente la partizione remota.<br /><br /> **Elemento MeasureGroup**: Visualizza il nome del gruppo di misure contenente la partizione remota.<br /><br /> **Partizione**: Visualizza il nome della partizione remota.<br /><br /> **Dimensioni (MB)**: Visualizza le dimensioni in megabyte, della partizione remota.<br /><br /> **Cartella originale**: Visualizza il nome della cartella originale in cui è stata archiviata la partizione remota.<br /><br /> **Cartella di ripristino**: digitare il nome della cartella di ripristino per la partizione remota oppure fare clic sul pulsante con puntini di sospensione (**...** ) per visualizzare il **Cerca cartella remota** nella finestra di dialogo e selezionare il percorso della cartella da usare. Per altre informazioni sulla finestra di dialogo **Cerca cartella remota**, vedere [Finestra di dialogo Cerca cartella remota &#40;Analysis Services - Dati multidimensionali&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

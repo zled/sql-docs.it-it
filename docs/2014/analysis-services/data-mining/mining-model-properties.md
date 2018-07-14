@@ -1,5 +1,5 @@
 ---
-title: Le proprietà dei modelli di data mining | Documenti Microsoft
+title: Le proprietà del modello di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - data mining [Analysis Services], properties
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b0d00f10bd4ab4ac5f11b0af3e798c873cc5493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 731ce6e077040767fd5f1bd4eec05242977097a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330901"
 ---
 # <a name="mining-model-properties"></a>Proprietà dei modelli di data mining
   I modelli di data mining dispongono dei tipi seguenti di proprietà:  
@@ -65,7 +65,7 @@ ms.locfileid: "36157621"
 ## <a name="see-also"></a>Vedere anche  
  [Colonne del modello di data mining](mining-model-columns.md)   
  [Strutture di data mining &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Procedure dettagliate e attività di modello di data mining](mining-model-tasks-and-how-tos.md)   
+ [Procedure dettagliate e le attività del modello di data mining](mining-model-tasks-and-how-tos.md)   
  [Modificare le proprietà di un modello di Data Mining](change-the-properties-of-a-mining-model.md)   
  [Strumenti di Data Mining](data-mining-tools.md)   
  [Creare una struttura di Data Mining relazionale](create-a-relational-mining-structure.md)   

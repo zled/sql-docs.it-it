@@ -1,5 +1,5 @@
 ---
-title: Elemento PartitionID (ASSL) | Documenti Microsoft
+title: Elemento PartitionID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PartitionID element
 ms.assetid: 95e59c73-5ca4-478e-898d-50ffa4bbe794
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d75bc87e5c6546e57c9cf3e3d67053117edffd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6acc27bd3d60a5768a331a117e18ebc7cde2abe3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233761"
 ---
 # <a name="partitionid-element-assl"></a>Elemento PartitionID (ASSL)
   Associa un [partizione](../objects/partition-element-assl.md) elemento con un elemento padre, associazione o associazione out-of-line.  
@@ -59,8 +59,8 @@ ms.locfileid: "36068781"
 |Elemento padre|[PartitionBinding](../data-type/binding-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Per ulteriori informazioni sulle associazioni e le associazioni out-of-line, vedere [origini dati e le associazioni &#40;multidimensionali SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+## <a name="remarks"></a>Note  
+ Per altre informazioni sulle associazioni e le associazioni out-of-line, vedere [origini dati e associazioni &#40;multidimensionale di SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

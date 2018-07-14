@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 18858eb2c692be3bfe4c987dd365ae267d097d43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 91dd0d2aefa6128dfdac0a948efe61f0a9334fb4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236361"
 ---
 # <a name="create-xml-indexes"></a>Creazione di indici XML
   Questo argomento descrive come creare, modificare e utilizzare indici XML primari e secondari.  
@@ -48,9 +48,9 @@ ms.locfileid: "36068886"
   
 -   Per i nomi degli indici XML primari vengono applicate le stesse restrizioni valide per i nomi delle viste.  
   
- Non è possibile creare un indice XML in un `xml` colonna in una vista, di tipo in un **tabella** variabile valutati con `xml` colonne di tipo o `xml` variabili di tipo.  
+ Non è possibile creare un indice XML in un' `xml` colonna in una vista, di tipo in un **tabella** variabile valutata a livello con `xml` colonne di tipo o `xml` variabili di tipo.  
   
--   Per modificare un `xml` colonna del tipo da non tipizzato a XML tipizzato o viceversa, tramite l'opzione ALTER TABLE ALTER COLUMN, deve esistere alcun indice XML sulla colonna. In caso contrario, è necessario eliminarlo prima di provare a modificare il tipo della colonna.  
+-   Per modificare un `xml` colonna del tipo da non tipizzato a XML tipizzato o viceversa, usando l'opzione ALTER TABLE ALTER COLUMN, deve esistere alcun indice XML sulla colonna. In caso contrario, è necessario eliminarlo prima di provare a modificare il tipo della colonna.  
   
 -   Dopo la creazione di un indice XML, è necessario impostare l'opzione ARITHABORT su ON. Per eseguire operazioni di query, inserimento, eliminazione o aggiornamento sui valori della colonna XML utilizzando i metodi con tipo di dati XML, è necessario impostare la stessa opzione nella connessione. In caso contrario, i metodi con tipo di dati XML avranno esito negativo.  
   

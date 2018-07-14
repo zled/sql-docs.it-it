@@ -1,5 +1,5 @@
 ---
-title: Classi di Data Mining AMO | Documenti Microsoft
+title: Classi di Data Mining AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 091d68fedffc16d57834a02cfcbd8ef3a6c2d087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbea4d55066e2de5061d75c2b40092b84e8008ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171642"
 ---
 # <a name="amo-data-mining-classes"></a>Classi di data mining AMO
   Le classi di data mining consentono di creare, modificare, eliminare ed elaborare oggetti di dati mining. L'utilizzo di oggetti di data mining include la creazione di strutture e di modelli di data mining e l'elaborazione di tali modelli.  
   
- Per ulteriori informazioni su come configurare l'ambiente e sugli <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, e <xref:Microsoft.AnalysisServices.DataSourceView> degli oggetti, vedere [le classi fondamentali AMO](amo-fundamental-classes.md).  
+ Per altre informazioni su come configurare l'ambiente e sugli <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, e <xref:Microsoft.AnalysisServices.DataSourceView> degli oggetti, vedere [classi fondamentali AMO](amo-fundamental-classes.md).  
   
  Per la definizione degli oggetti nella libreria AMO (Analysis Management Objects), è necessario impostare alcune proprietà per ciascun oggetto in modo da configurare il contesto corretto. Per oggetti complessi, ad esempio oggetti OLAP e di data mining, è necessaria una codifica lunga e dettagliata.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36166950"
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices>   
  [Classi fondamentali AMO](amo-fundamental-classes.md)   
- [Oggetti di programmazione AMO Data Mining](programming-amo-data-mining-objects.md)   
+ [Programmazione di oggetti di Data Mining AMO dati](programming-amo-data-mining-objects.md)   
  [Introduzione a classi AMO](amo-classes-introduction.md)   
  [Architettura logica &#40;Analysis Services - dati multidimensionali&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Gli oggetti di database &#40;Analysis Services - dati multidimensionali&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  

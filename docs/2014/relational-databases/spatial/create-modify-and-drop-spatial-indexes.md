@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
 - spatial indexes [SQL Server], dropping
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 188c001672c31b4fdf4b72490553b7f65ccf0cb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 595a45a89413359861dc9298068622a076c693e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181630"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Creazione, modifica ed eliminazione di indici spaziali
   Un indice spaziale può eseguire in modo più efficiente determinate operazioni su una colonna del `geometry` oppure `geography` tipo di dati (un *colonna spaziale*). In una colonna spaziale è possibile specificare più di un indice spaziale. Ciò è utile, ad esempio, per indicizzare diversi parametri della suddivisione a mosaico in una sola colonna.  
@@ -67,7 +67,7 @@ ms.locfileid: "36166358"
   
 11. Nella pagina **Spaziale** specificare i valori che si vogliono usare per le proprietà spaziali dell'indice.  
   
-     Quando si crea un indice in una `geometry` colonna di tipo, è necessario specificare il **(*`X-min`*,*`Y-min`*)** e **(*`X-max`*,*`Y-max`*)** coordinate del rettangolo. Per un indice in una `geography` colonna di tipo, i campi del riquadro diventano sola lettura dopo avere specificato le **griglia geografica** lo schema a mosaico, mosaico per griglia di geografia utilizza un rettangolo.  
+     Quando si crea un indice in una `geometry` colonna del tipo, è necessario specificare il **(*`X-min`*,*`Y-min`*)** e **(*`X-max`*,*`Y-max`*)** coordinate del rettangolo. Per un indice in una `geography` colonna del tipo, il riquadro campi diventa sola lettura dopo aver specificato le **griglia geografica** lo schema a mosaico, mosaico per griglia di geografia utilizza un rettangolo di selezione.  
   
      È eventualmente possibile specificare valori non predefiniti per il campo **Celle per oggetto** e per la densità griglia a qualsiasi livello dello schema a mosaico. Il numero predefinito di celle per oggetto è 16 per [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o 8 per [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o versione successiva, mentre la densità della griglia predefinita è **Media** per [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36166358"
   
      La tabella verrà visualizzata in Progettazione tabelle.  
   
-2.  Selezionare un `geometry` o `geography` colonna per l'indice.  
+2.  Selezionare una `geometry` o `geography` colonna per l'indice.  
   
 3.  Scegliere **Indice spaziale** dal menu **Progettazione tabelle**.  
   

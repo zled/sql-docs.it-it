@@ -1,5 +1,5 @@
 ---
-title: Elemento MoveWithDescendants (XMLA) | Documenti Microsoft
+title: Elemento MoveWithDescendants (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - MoveWithDescendants element
 ms.assetid: d02285b6-1801-4da9-8e2b-9ab008e25558
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 975044359f2855f8cced46ca2045c2c397e4234b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b75fffd4d923b7593f403ae2268b980a5ab6de6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332571"
 ---
 # <a name="movewithdescendants-element-xmla"></a>Elemento MoveWithDescendants (XMLA)
-  Indica se i discendenti di membri dell'attributo vengono aggiornati anche dall'elemento padre [aggiornamento](../xml-elements-commands/update-element-xmla.md) comando.  
+  Indica se i discendenti di membri dell'attributo vengono aggiornati anche dall'elemento padre [Update](../xml-elements-commands/update-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,13 +63,13 @@ ms.locfileid: "36069450"
 |Elementi padre|[Update](../xml-elements-commands/update-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il `MoveWithDescendants` elemento determina se il `Update` comando non deve aggiornare solo i membri dell'attributo identificati dal [attributi](attributes-element-xmla.md) elemento, ma anche che i discendenti di quei membri dell'attributo devono essere anch'esso aggiornato.  
+## <a name="remarks"></a>Note  
+ Il `MoveWithDescendants` elemento determina se il `Update` comando non deve aggiornare solo i membri dell'attributo identificati dalle [attributi](attributes-element-xmla.md) elemento, ma anche che i discendenti di quei membri dell'attributo devono essere anch'esso aggiornato.  
   
 > [!NOTE]  
 >  Questo elemento si applica solo a membri attributo nelle gerarchie padre-figlio.  
   
- Per ulteriori informazioni sull'aggiornamento di membri, vedere [inserimento, aggiornamento ed eliminazione di membri &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
+ Per altre informazioni sull'aggiornamento di membri, vedere [inserimento, aggiornamento ed eliminazione di membri &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;XMLA&#41;](xml-elements-properties.md)  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.joindbs.f1
 helpviewer_keywords:
@@ -19,18 +18,18 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 caps.latest.revision: 37
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 63a6421ede7afbae66b80fda01e50223e732a27a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 21218bdd04922de0da35511c0d93f4770d5d6b30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269497"
 ---
 # <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>Creare un join di un database secondario a un gruppo di disponibilità (SQL Server)
-  In questo argomento viene illustrato come aggiungere un database secondario al gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Dopo aver preparato un database secondario per una replica di secondaria, è necessario creare un join del database al gruppo di disponibilità non appena possibile. In questo modo verrà avviato lo spostamento di dati dal database primario corrispondente al database secondario.  
+  In questo argomento illustra come aggiungere un database secondario a un gruppo di disponibilità AlwaysOn usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Dopo aver preparato un database secondario per una replica di secondaria, è necessario creare un join del database al gruppo di disponibilità non appena possibile. In questo modo verrà avviato lo spostamento di dati dal database primario corrispondente al database secondario.  
   
 -   **Prima di iniziare:**  
   
@@ -47,7 +46,7 @@ ms.locfileid: "36068325"
      [PowerShell](#PowerShellProcedure)  
   
 > [!NOTE]  
->  Per informazioni su cosa accade dopo un database secondario viene aggiunta al gruppo, vedere [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
+>  Per informazioni su cosa accade dopo il join di un database secondario al gruppo, vedere [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -100,9 +99,9 @@ ms.locfileid: "36068325"
 ##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
  **Per creare un join di un database secondario a un gruppo di disponibilità**  
   
-1.  Spostarsi nella directory (`cd`) all'istanza del server che ospita la replica secondaria.  
+1.  Passare alla directory (`cd`) all'istanza del server che ospita la replica secondaria.  
   
-2.  Utilizzare il `Add-SqlAvailabilityDatabase` cmdlet per aggiungere uno o più database secondari al gruppo di disponibilità.  
+2.  Usare il `Add-SqlAvailabilityDatabase` cmdlet per aggiungere uno o più database secondari al gruppo di disponibilità.  
   
      Ad esempio, il seguente comando crea un join di un database secondario, `Db1`, al gruppo di disponibilità `MyAG` in una delle istanze del server che ospita una replica secondaria.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "36068325"
     ```  
   
     > [!NOTE]  
-    >  Per visualizzare la sintassi di un cmdlet, usare il `Get-Help` cmdlet nel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ambiente PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Per visualizzare la sintassi di un cmdlet, usare il `Get-Help` cmdlet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ambiente PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Per impostare e utilizzare il provider PowerShell per SQL Server**  
   
@@ -127,7 +126,7 @@ ms.locfileid: "36068325"
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
- [Panoramica di gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Risolvere i problemi di configurazione dei gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;eliminato](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Risolvere i problemi di configurazione dei gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;eliminati](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

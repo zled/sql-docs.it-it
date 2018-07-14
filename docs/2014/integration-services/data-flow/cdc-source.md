@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f81e48f4466bf4f5765273df7c4fa58fbb447f8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff8eccaf0e1c13c63d73eff20e7415c6872c967b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269517"
 ---
 # <a name="cdc-source"></a>Origine CDC
   Tramite l'origine CDC viene letto un intervallo di dati delle modifiche da tabelle delle modifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ; queste vengono poi recapitate a valle ad altri componenti SSIS.  
@@ -103,9 +103,9 @@ use <cdc-enabled-database-name>
   
 -   [Editor origine CDC &#40;pagina Gestione connessione&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [Editor origine CDC &#40;pagina colonne&#41;](../cdc-source-editor-columns-page.md)  
+-   [Editor origine CDC &#40;(pagina colonne)&#41;](../cdc-source-editor-columns-page.md)  
   
--   [Editor origine CDC &#40;pagina di Output di errore&#41;](../cdc-source-editor-error-output-page.md)  
+-   [Editor origine CDC &#40;pagina dell'Output degli errori&#41;](../cdc-source-editor-error-output-page.md)  
   
  La finestra di dialogo **Editor avanzato** contiene le proprietà che è possibile impostare a livello di codice.  
   
@@ -119,9 +119,9 @@ use <cdc-enabled-database-name>
   
 -   [Editor origine CDC &#40;pagina Gestione connessione&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [Editor origine CDC &#40;pagina colonne&#41;](../cdc-source-editor-columns-page.md)  
+-   [Editor origine CDC &#40;(pagina colonne)&#41;](../cdc-source-editor-columns-page.md)  
   
--   [Editor origine CDC &#40;pagina di Output di errore&#41;](../cdc-source-editor-error-output-page.md)  
+-   [Editor origine CDC &#40;pagina dell'Output degli errori&#41;](../cdc-source-editor-error-output-page.md)  
   
 -   [Proprietà personalizzate dell'origine CDC](cdc-source-custom-properties.md)  
   

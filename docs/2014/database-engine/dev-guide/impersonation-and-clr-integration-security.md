@@ -1,5 +1,5 @@
 ---
-title: Rappresentazione e la sicurezza dell'integrazione con CLR | Documenti Microsoft
+title: Rappresentazione e sicurezza dell'integrazione CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - context [CLR integration]
 ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8e5863ed19f306fbaf88cffd02903a958c63cfe0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 05b117f27d0c27ca9288f94aade079df876fafad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243201"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Rappresentazione e sicurezza per l'integrazione con CLR
   Quando il codice gestito accede alle risorse esterne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non rappresenta automaticamente il contesto di esecuzione corrente nel quale viene eseguita la routine. Il contesto di esecuzione corrente può essere rappresentato in modo esplicito dal codice degli assembly `EXTERNAL_ACCESS` e `UNSAFE`.  
@@ -47,7 +47,7 @@ ms.locfileid: "36157207"
  Gli assembly `EXTERNAL_ACCESS` e `UNSAFE` accedono alle risorse del sistema operativo con l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a meno che non rappresentino volontariamente il contesto di sicurezza corrente come descritto in precedenza. Per questo motivo, gli autori degli assembly `EXTERNAL_ACCESS` richiedono un livello di attendibilità superiore rispetto a quello degli assembly `SAFE`, specificato dall'autorizzazione a livello di accesso `EXTERNAL ACCESS`. L'autorizzazione `EXTERNAL ACCESS` dovrebbe, pertanto, essere concessa solo agli accessi attendibili per l'esecuzione del codice nell'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza dell'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
+ [Sicurezza dell'integrazione CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Rappresentazione e credenziali per le connessioni](../../relational-databases/clr-integration/data-access/impersonation-and-credentials-for-connections.md)  
   
   

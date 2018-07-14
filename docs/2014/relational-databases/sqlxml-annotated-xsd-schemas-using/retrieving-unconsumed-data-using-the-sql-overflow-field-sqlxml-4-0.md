@@ -1,5 +1,5 @@
 ---
-title: 'Il recupero dei dati non utilizzati tramite SQL: overflow-field (SQLXML 4.0) | Documenti Microsoft'
+title: 'Recupero di dati non utilizzati mediante SQL: overflow-field (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sql:overflow-field
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d0787be7f62ae4a3fc593d750bb6fc6f2b949cc6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9b22aca6d379a4670cc44de1b07f6e18c8a26d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189998"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recupero di dati non utilizzati mediante sql:overflow-field (SQLXML 4.0)
   Quando i record vengono inseriti in un database da un documento XML tramite la funzione OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)], tutti i dati non utilizzati dal documento XML di origine possono essere archiviati in una colonna. Quando si recuperano dati da un database tramite schemi con annotazioni, è possibile specificare l'attributo `sql:overflow-field` per identificare la colonna nella tabella nella quale vengono archiviati i dati di overflow. Il `sql:overflow-field` attributo può essere specificato in  **\<elemento >**.  
@@ -39,7 +39,7 @@ ms.locfileid: "36167207"
 -   Gli elementi figlio e i relativi discendenti, archiviati nella colonna di overflow nel database, vengono aggiunti come elementi figlio dopo il contenuto specificato in modo esplicito nello schema. Non viene rispettato alcun ordine.  
   
 ## <a name="examples"></a>Esempi  
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per esecuzione esempi SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per l'esecuzione di esempi di SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. Specifica di sql:overflow-field per un elemento  
  In questo esempio si presuppone che sia stato eseguito lo script seguente per far sì che una tabella denominata Customers2 esista nel database tempdb:  

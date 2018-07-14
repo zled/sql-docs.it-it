@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.xmlindexes
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 43ca55ebaa5504fb385eb83f4220fb483c0e98d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c03be9c524a2e542dfa4e144a659aee2342719b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172182"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici XML (Visual Database Tools)
   Usare la finestra di dialogo **Indici XML** per creare indici per le colonne con tipo di dati XML, le quali non possono essere indicizzate usando la finestra di dialogo **Indici/chiavi** . Ogni colonna XML può avere più indici XML, ma il primo indice creato (primario) verrà utilizzato come base degli altri (secondari). Eliminando l'indice XML primario, verranno eliminati anche gli indici secondari.  

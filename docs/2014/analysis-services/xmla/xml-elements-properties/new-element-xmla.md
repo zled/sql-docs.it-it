@@ -1,5 +1,5 @@
 ---
-title: Elemento New (XMLA) | Documenti Microsoft
+title: Elemento New (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - New element
 ms.assetid: 1321adcb-67f7-40f0-8f20-b17c1d3e3f17
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 983c32cc19ebbc876d53d46865f81b0d37e10d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f93da2c5c9dab8b8d7542db68e70df67a87afbe8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203981"
 ---
 # <a name="new-element-xmla"></a>Elemento New (XMLA)
-  Contiene il nuovo percorso archiviazione di file system utilizzato da un [cartella](folder-element-xmla.md) elemento.  
+  Contiene il nuovo percorso archiviazione di file system usato da un [cartella](folder-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,10 +63,10 @@ ms.locfileid: "36156548"
 |Elementi padre|[Cartella](folder-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `New` contiene un percorso UNC che sostituisce il valore dell'elemento `Original` contenuto nell'elemento padre `Folder` per tutti gli oggetti ripristinati o sincronizzati rispettivamente durante un comando `Restore` o `Synchronize`. Il valore dell'elemento `Original` viene confrontato con il valore dell'elemento `StorageLocation` per ogni cubo, gruppo di misure o partizione e, se viene rilevata una corrispondenza, il valore di tale elemento viene utilizzato per aggiornare l'elemento `StorageLocation` dell'oggetto durante il ripristino o la sincronizzazione.  
   
- Per ulteriori informazioni sul backup e ripristino degli oggetti, vedere [backup e ripristino di oggetti (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Per altre informazioni sul backup e ripristino degli oggetti, vedere [backup e ripristino di oggetti (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento originale &#40;XMLA&#41;](original-element-xmla.md)   

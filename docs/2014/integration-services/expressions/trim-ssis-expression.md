@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - leading blanks
 - TRIM function
@@ -17,13 +17,13 @@ ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef5a948e4734c1965217702f600605666c385c01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f6ebc237ccedbde4cc2b7a9cabc848846eef511
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184608"
 ---
 # <a name="trim-ssis-expression"></a>TRIM (espressione SSIS)
   Restituisce un'espressione di caratteri dopo aver rimosso gli spazi iniziali e finali.  
@@ -45,7 +45,7 @@ TRIM(character_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se l'argomento è Null, TRIM restituirà Null.  
   
  È possibile utilizzare TRIM solo con il tipo di dati DT_WSTR. Se l'argomento *character_expression* è un valore letterale stringa o una colonna di dati con tipo di dati DT_STR, prima di eseguire l'operazione prevista da TRIM verrà eseguito il cast implicito al tipo di dati DT_WSTR. Per gli altri tipi di dati è necessario il cast esplicito al tipo di dati DT_WSTR. Per altre informazioni, vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md) e [Cast &#40;espressione SSIS&#41;](cast-ssis-expression.md).  
@@ -64,8 +64,8 @@ TRIM(FirstName + " "+ LastName)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [LTRIM &#40;espressione SSIS&#41;](trim-ssis-expression.md)   
- [RTRIM &#40;espressione SSIS&#41;](rtrim-ssis-expression.md)   
- [Le funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md)  
+ [LTRIM &#40;espressione di SSIS&#41;](trim-ssis-expression.md)   
+ [RTRIM &#40;espressione di SSIS&#41;](rtrim-ssis-expression.md)   
+ [Le funzioni &#40;espressione di SSIS&#41;](functions-ssis-expression.md)  
   
   

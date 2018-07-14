@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.POINTINTIMERESTORE.F1
 - sql12.swb.backuptimeline.f1
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Backup Timeline
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1092560dc3ef1310adfcb5eec02bcf7ed124973
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5e0e93e56e0ba2dc2f6b6c435085ee8d370d2cd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322361"
 ---
 # <a name="backup-timeline"></a>Sequenza temporale backup
   Usare la finestra di dialogo **Cronologia di backup** per trovare e specificare backup ed eseguire il ripristino temporizzato di un database. Per accedere alla finestra di dialogo **Cronologia di backup** , fare clic su **Cronologia** nel riquadro **Ripristina database (pagina Generale)** . In questa finestra di dialogo è possibile visualizzare una cronologia delle operazioni di ripristino effettuate nel database.  

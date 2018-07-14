@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Web applications [Reporting Services]
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0c3ecc7a4a8b11c09695111c8a99d33c057b99d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: befd0c7215ac2b765e898c440aab8a184626aaa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170122"
 ---
 # <a name="using-the-soap-api-in-a-web-application"></a>Utilizzo dell'API SOAP in un'applicazione Web
   È possibile accedere alle funzionalità complete del server di report tramite l'API SOAP di Reporting Services. L'API SOAP è un servizio Web e, in quanto tale, è possibile accedervi in modo semplice per fornire caratteristiche di creazione di report aziendali alle applicazioni aziendali personalizzate. È possibile accedere al servizio Web ReportServer da un'applicazione Web nello stesso modo in cui si accede all'API SOAP da un'applicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], è possibile generare una classe proxy che espone le proprietà e i metodi del servizio Web ReportServer e consente di utilizzare un'infrastruttura e strumenti familiari per compilare applicazioni aziendali in tecnologia [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -47,7 +47,7 @@ ms.locfileid: "36069782"
  Per altre informazioni sulla rappresentazione in [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)], vedere la documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
   
 ## <a name="managing-the-report-server-using-soap-api"></a>Gestione del server di report tramite l'API SOAP  
- È inoltre possibile utilizzare l'applicazione Web per gestire un server di report e i relativi contenuti. Gestione report, disponibile con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è un esempio di applicazione Web compilata completamente utilizzando [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] e l'API SOAP di Reporting Services. È possibile aggiungere le funzionalità di Gestione report alle applicazioni Web personalizzate. Ad esempio, è possibile restituire un elenco di report disponibili nel database del server di report e visualizzarli in un [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] `Listbox` controllo per gli utenti da selezionare. Nel codice seguente viene eseguita la connessione al database del server di report e viene restituito un elenco di elementi disponibili nel database del server di report. I report disponibili vengono aggiunti quindi a un controllo ListBox, in cui viene visualizzato il percorso di ogni report.  
+ È inoltre possibile utilizzare l'applicazione Web per gestire un server di report e i relativi contenuti. Gestione report, disponibile con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è un esempio di applicazione Web compilata completamente utilizzando [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] e l'API SOAP di Reporting Services. È possibile aggiungere le funzionalità di Gestione report alle applicazioni Web personalizzate. Ad esempio, è possibile restituire un elenco di report disponibili nel database del server di report e visualizzarli in un [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] `Listbox` controllo per gli utenti cui scegliere. Nel codice seguente viene eseguita la connessione al database del server di report e viene restituito un elenco di elementi disponibili nel database del server di report. I report disponibili vengono aggiunti quindi a un controllo ListBox, in cui viene visualizzato il percorso di ogni report.  
   
 ```vb  
 Private Sub Page_Load(sender As Object, e As System.EventArgs)  

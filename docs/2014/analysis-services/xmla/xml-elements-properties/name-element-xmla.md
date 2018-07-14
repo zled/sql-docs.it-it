@@ -1,5 +1,5 @@
 ---
-title: Nome di elemento (XMLA) | Documenti Microsoft
+title: Nome elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Name element
 ms.assetid: cc1a93df-0b1b-4c38-9183-4f11c26fea6a
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d3ae469cc1a02a02dc2bdb2ff7d6db7f75a46a69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 088dd6aa9ce8d9ecae3e3a8f293f64b3ddc93c70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194231"
 ---
 # <a name="name-element-xmla"></a>Elemento Name (XMLA)
   Contiene il nome di un membro dell'attributo per l'elemento padre [attributo](attribute-element-xmla.md) oppure [traduzione](translation-element-xmla.md) elemento.  
@@ -56,7 +56,7 @@ ms.locfileid: "36167122"
 |Valore predefinito|None|  
 |Predecessore o padre:|Cardinalità|  
 |[Attribute](attribute-element-xmla.md)|1-1: elemento obbligatorio visualizzato una sola volta.|  
-|[Conversione](translation-element-xmla.md)|0-1: elemento facoltativo che può ricorrere una sola volta.|  
+|[Traduzione](translation-element-xmla.md)|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36167122"
 |Elementi padre|[Attributo](attribute-element-xmla.md), [traduzione](translation-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per gli elementi `Attribute`, l'elemento `Name` contiene il nome del membro dell'attributo da inserire o aggiornare durante, rispettivamente, il comando `Insert` o `Update`.  
   
  Per gli elementi `Translation`, l'elemento `Name` contiene la didascalia del membro dell'attributo, nel linguaggio specificato dall'elemento `Language` dell'oggetto `Translation` padre. Se l’elemento `Name` non viene specificato o contiene una stringa vuota, viene utilizzato il valore dell’elemento `Name` per l’elemento `Attribute` che contiene l’elemento `Translation`.  

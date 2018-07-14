@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione script (pagina Script) | Documenti Microsoft
+title: Editor trasformazione script (pagina Script) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.script.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a2f5e41abd5d54aa54a2fbff0bcd8e57720a163e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f620afb4ab4e32776d36ad5a1f37fd6ad28f3644
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217651"
 ---
 # <a name="script-transformation-editor-script-page"></a>Editor trasformazione Script (pagina Script)
   Usare la scheda **Script** della finestra di dialogo **Editor trasformazione Script** per specificare uno script e le proprietà correlate.  
@@ -39,7 +39,7 @@ ms.locfileid: "36158294"
 |**Descrizione**|Consente di descrivere gli scopi della trasformazione Script.|  
 |**LocaleID**|Consente di stabilire le impostazioni locali per specificare informazioni sul paese/area geografica relative all'ordinamento e alla conversione di data e ora.|  
 |**Nome**|Consente di digitare un nome descrittivo per il componente.|  
-|**ValidateExternalMetadata**|Consente di specificare se la trasformazione Script convalida i metadati delle colonne in fase di progettazione utilizzando origini dei dati esterne. Il valore `false` ritardare la convalida fino al momento dell'esecuzione.|  
+|**ValidateExternalMetadata**|Consente di specificare se la trasformazione Script convalida i metadati delle colonne in fase di progettazione utilizzando origini dei dati esterne. Un valore di `false` ritardare la convalida fino al momento dell'esecuzione.|  
 |**ReadOnlyVariables**|Consente di digitare un elenco delimitato da virgole delle variabili per l'accesso di sola lettura da parte della trasformazione Script.<br /><br /> Nota: per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.|  
 |**ReadWriteVariables**|Consente di digitare un elenco delimitato da virgole delle variabili per l'accesso di lettura/scrittura da parte della trasformazione Script.<br /><br /> Nota: per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.|  
 |**ScriptLanguage**|Selezionare il linguaggio di scripting che deve essere utilizzato dal componente Script.<br /><br /> Per impostare il linguaggio di scripting predefinito per componenti Script e attività Script, usare l'opzione **Linguaggio di scripting** nella pagina **Generale** della finestra di dialogo **Opzioni** . Per ulteriori informazioni, vedere [General Page](general-page-of-integration-services-designers-options.md).|  
@@ -49,10 +49,10 @@ ms.locfileid: "36158294"
  Usare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) per creare o modificare uno script.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Seleziona tipo componente Script](../../2014/integration-services/select-script-component-type.md)   
- [Editor trasformazione script &#40;pagina colonne di Input&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [Editor trasformazione script &#40;valori di input e output pagina&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Editor trasformazione script &#40;Input (pagina colonne)&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [Editor trasformazione script &#40;di input e output di pagina&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
  [Editor trasformazione script &#40;pagina gestioni connessioni&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [Ulteriori esempi di componente script](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Partizioni (finestra di dialogo Ripristina Database) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Partizioni (finestra di dialogo Ripristina Database) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.partitions.f1
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24e07fc2d8374af6f4bf0b6de5f73bc0df4a3bfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca646ca62f0e91f026c2917325ca6c8c75b63d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269987"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partizioni (finestra di dialogo Ripristina Database) (Analysis Services - Dati multidimensionali)
   Usare la pagina **Partizioni** della finestra di dialogo **Ripristina database** di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per specificare il percorso di ripristino delle partizioni locali, nel caso in cui debbano essere ripristinate partizioni remote e i file di backup remoto da usare per eseguire questa operazione.  
@@ -70,7 +70,7 @@ ms.locfileid: "36157604"
 |**Partizione**|Visualizza il nome della partizione locale.|  
 |**Dimensioni (MB)**|Visualizza le dimensioni (in megabyte) della partizione locale.|  
 |**Cartella originale**|Visualizza il nome della cartella originale in cui era archiviata la partizione locale.|  
-|**Cartella di ripristino**|Consente di digitare il nome della cartella di ripristino per la partizione locale. È inoltre possibile fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Cerca cartella remota** e selezionare il percorso della cartella da usare. Per altre informazioni sulla finestra di dialogo **Cerca cartella remota**, vedere [Finestra di dialogo Cerca cartella remota &#40;Analysis Services - Dati multidimensionali&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Cartella ripristino**|Consente di digitare il nome della cartella di ripristino per la partizione locale. È inoltre possibile fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Cerca cartella remota** e selezionare il percorso della cartella da usare. Per altre informazioni sulla finestra di dialogo **Cerca cartella remota**, vedere [Finestra di dialogo Cerca cartella remota &#40;Analysis Services - Dati multidimensionali&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
   
  **Ripristinare le partizioni remote**  
  Selezionare questa opzione per ripristinare partizioni remote archiviate in file di backup remoti.  
@@ -88,7 +88,7 @@ ms.locfileid: "36157604"
 |**...**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Partizioni remote - Impostazioni avanzate** e modificare le opzioni avanzate, ad esempio la stringa di connessione all'origine dati, per il ripristino della partizione remota. Per altre informazioni sulla finestra di dialogo **Partizioni remote - Impostazioni avanzate**, vedere [Finestra di dialogo Partizioni remote – Impostazioni avanzate &#40;Analysis Services - Dati multidimensionali&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Database Ripristina &#40;Analysis Services - dati multidimensionali&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Ripristinare Database, finestra di dialogo &#40;Analysis Services - dati multidimensionali&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Generale &#40;dialogo Ripristina Database&#41; &#40;Analysis Services - dati multidimensionali&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Backup e ripristino di database di Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

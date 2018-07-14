@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 37f778e52088df89a12b46b636aa1948623b9ac9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5f3ad348ebfc89706eb57dea34f91342550189b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236301"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services Concepts (SSRS)
   In questo argomento viene fornito un breve riepilogo dei concetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -70,7 +70,7 @@ ms.locfileid: "36157675"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce un'architettura estensibile che è possibile usare per personalizzare soluzioni del report. Il server di report supporta estensioni di autenticazione personalizzate, estensioni per l'elaborazione dati, estensioni dell'elaborazione di report, estensioni per il rendering ed estensioni per il recapito e estensioni disponibili per gli utenti sono configurabili nel file di configurazione RSReportServer.config. Ad esempio, è possibile limitare i formati di esportazione che il visualizzatore di report può usare. Le estensioni personalizzate di elaborazione dei report e di recapito sono facoltative. Sono tuttavia necessarie se si desidera supportare la distribuzione dei report o i controlli personalizzati. Per altre informazioni, vedere [Estensioni &#40;SSRS&#41;](extensions-ssrs.md).  
   
  **Accesso al report**  
- L'accesso su richiesta consente agli utenti di selezionare i report da uno strumento per la visualizzazione dei report. A seconda della configurazione del server di report, è possibile utilizzare Gestione Report, una [!INCLUDE[msCoName](../includes/msconame-md.md)] 2.0 Web part di SharePoint, una raccolta di SharePoint quando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene installato in modalità integrata SharePoint, un controllo ReportViewer incorporato o un browser tramite URL accesso. Per altre informazioni sull'accesso ai report su richiesta, vedere [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ L'accesso su richiesta consente agli utenti di selezionare i report da uno strumento per la visualizzazione dei report. A seconda della configurazione di server di report, è possibile utilizzare Gestione Report, un [!INCLUDE[msCoName](../includes/msconame-md.md)] 2.0 Web part di SharePoint, una raccolta di SharePoint quando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene installato in modalità integrata SharePoint, un controllo ReportViewer incorporato o un browser tramite URL accesso. Per altre informazioni sull'accesso ai report su richiesta, vedere [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
  Le sottoscrizioni rappresentano un'alternativa all'esecuzione di un report su richiesta. Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -170,7 +170,7 @@ ms.locfileid: "36157675"
   
  Per altre informazioni, vedere [Creare un report collegato](reports/create-a-linked-report.md).  
   
- **Report Cronologia**  
+ **Report sulla cronologia**  
  La cronologia dei report è una raccolta di snapshot dei report. È pertanto possibile usare la cronologia di un report per mantenere una registrazione dei diversi risultati dell'esecuzione del report ottenuti durante un determinato periodo di tempo. Non è consigliabile usare la cronologia del report per i report contenenti informazioni riservate e personali. Per questo motivo, la cronologia del report può includere solo quei report che eseguono una query su un'origine dati usando un solo set di credenziali. In alternativa, è possibile creare una cronologia di un report definendo una pianificazione e una sottoscrizione per recapitare il report in un formato di file esportato a una condivisione file. Per altre informazioni, vedere [Prestazioni, snapshot, memorizzazione nella cache &#40;Reporting Services&#41;](report-server/performance-snapshots-caching-reporting-services.md).  
   
  **Report memorizzati nella cache**  
@@ -181,12 +181,12 @@ ms.locfileid: "36157675"
  **Snapshot**  
  Uno snapshot del report indica un report che include informazioni sul layout e i risultati di query recuperati in un momento specifico. Diversamente dai report su richiesta, per i quali vengono recuperati risultati di query aggiornati quando si visualizza il report, il server di report recupera il report compilato e i dati di report aggiornati al momento della creazione dello snapshot. Gli snapshot dei report non vengono salvati in un formato di rendering specifico, ma ne viene eseguito il rendering nel formato di visualizzazione finale, ad esempio HTML, solo quando vengono richiesti da un utente o un'applicazione. Per altre informazioni, vedere [Prestazioni, snapshot, memorizzazione nella cache &#40;Reporting Services&#41;](report-server/performance-snapshots-caching-reporting-services.md).  
   
- **Report modello e report click-through**  
+ **Report modello e i report click-through**  
  -   **Modello di report.** Un modello di report è una descrizione intuitiva di un database sottostante, con relazioni tra i dati prestabilite e query generate automaticamente. I modelli di report possono essere usati come origini dati per i report creati in Progettazione report e Generatore report.  
   
 -   **Report click-through.** Un report click-through è un report nel quale vengono visualizzati dati correlati tratti da un modello di report quando si fa clic sui dati interattivi contenuti nel report basato sul modello. I report click-through vengono generati automaticamente. Per altre informazioni, vedere [Report click-through &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md).  
   
- Per ulteriori informazioni sui modelli SMDL, vedere [Breaking Changes in SQL Server Reporting Services in SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
+ Per altre informazioni sui modelli SMDL, vedere [modifiche di rilievo di SQL Server Reporting Services in SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
  **Report salvati**  
  Un report salvato è un file di definizione del report (con estensione rdl). Una definizione del report può essere salvata in locale o può essere caricata in un server di report. Se si carica una definizione del report anziché pubblicarla, non viene eseguita alcuna convalida della versione o convalida dell'espressione. Non verranno visualizzati errori fino a che il report è in esecuzione. Per altre informazioni, vedere [Save and Deploy](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy).  
@@ -203,7 +203,7 @@ ms.locfileid: "36157675"
  ![diagramma relativo all'elaborazione dei report](media/report-execution.gif "diagramma relativo all'elaborazione dei report")  
 Diagramma relativo all'elaborazione dei report  
   
- **definizione del report**  
+ **Definizione del report**  
  Il file di definizione del report (con estensione rdl) archiviato su un server di report. Per altre informazioni, vedere [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
  **Report compilato e formato report intermedio**  
@@ -215,7 +215,7 @@ Diagramma relativo all'elaborazione dei report
  **Report elaborato**  
  Un report completamente elaborato che contiene dati e informazioni sul layout.  
   
- **report visualizzabile**  
+ **Report sottoposto a rendering**  
  Un report elaborato completamente viene inviato a un renderer di report per combinare i dati e il layout in ogni pagina del formato di rendering di destinazione. Le estensioni per il rendering sono personalizzabili ed estendibili. Il formato di rendering predefinito per un report è HTML 4.0. Per altre informazioni, vedere [Layout e rendering della pagina &#40;Generatore report e SSRS&#41;](report-design/page-layout-and-rendering-report-builder-and-ssrs.md) ed [Estensioni &#40;SSRS&#41;](extensions-ssrs.md).  
   
  **Report esportato**  

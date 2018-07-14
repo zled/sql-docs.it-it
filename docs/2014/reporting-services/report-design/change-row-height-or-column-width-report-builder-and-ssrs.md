@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5d56262f6ea03782f3e739b4b81d4070b9987f74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 56d77bdcfe43fd793cf81a91bad007cc300eb7ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227041"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Modificare l'altezza di riga o la larghezza di colonna (Generatore report e SSRS)
   Quando si imposta un'altezza di riga, si specifica l'altezza massima della riga nel report visualizzabile. Per impostazione predefinita, tuttavia, le caselle di testo nella riga sono impostate in modo da ingrandirsi verticalmente per poter contenere i dati immessi in fase di esecuzione. Per questo motivo, può verificarsi che una riga si espanda oltre l'altezza specificata dall'utente. Per impostare un'altezza di riga fissa è necessario modificare le proprietà della casella di testo in modo che non venga espansa automaticamente.  
@@ -70,7 +70,7 @@ ms.locfileid: "36157429"
   
 ## <a name="see-also"></a>Vedere anche  
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
- [Le celle di area dati Tablix, le righe e colonne &#40;Generatore Report&#41; e SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Celle di regione dati Tablix, le righe e colonne &#40;Generatore Report&#41; e SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
  [Tabelle &#40;Generatore report e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

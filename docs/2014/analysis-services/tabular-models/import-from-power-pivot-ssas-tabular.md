@@ -1,5 +1,5 @@
 ---
-title: Importare da PowerPivot (SSAS tabulare) | Documenti Microsoft
+title: Importare da PowerPivot (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4636578c435ac158f92ef4968072e374af7fb4f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f6480cf0b577a0faa48691a85248efb77a84531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245741"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Importare da PowerPivot (SSAS tabulare)
   In questo argomento viene descritto come creare un nuovo progetto di modello tabulare importando i metadati e i dati da una cartella di lavoro di PowerPivot tramite il modello di progetto Importa da PowerPivot disponibile in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -52,6 +52,6 @@ ms.locfileid: "36068340"
   
 ## <a name="see-also"></a>Vedere anche  
  [Database dell'area di lavoro &#40;tabulare di SSAS&#41;](workspace-database-ssas-tabular.md)   
- [Copiare e incollare dati &#40;tabulare di SSAS&#41;](../copy-and-paste-data-ssas-tabular.md)  
+ [Copiare e incollare i dati &#40;tabulare di SSAS&#41;](../copy-and-paste-data-ssas-tabular.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.webconfigpg.f1
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8669ed96e5fbe5d34f673375cdc1269db24932c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 23702f53f7e34d7f0bfc11e2248383fc6a3d76f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193363"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Pagina Configurazione Web (Gestione configurazione Master Data Services)
   Usare la pagina **Configurazione Web** per creare un nuovo sito Web o una nuova applicazione Web. Dopo avere selezionato un'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , è possibile specificare il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] dell'applicazione e abilitare Data Quality Services.  
@@ -49,7 +49,7 @@ ms.locfileid: "36166851"
 |**Abilitare l'integrazione con Data Quality Services**|Selezionare questa opzione per abilitare le funzionalità di Data Quality Services disponibili nel [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. Per altre informazioni, vedere [Abilitare l'integrazione di Data Quality Services con Master Data Services](install-windows/enable-data-quality-services-integration-with-master-data-services.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare il Database e il sito Web per Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Configurare il Database e il sito Web per Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Requisiti dell'applicazione Web &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [Creare un'applicazione Web gestione dati Master &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
  [MDS 2014 ed errore "Servizio non disponibile"](http://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  

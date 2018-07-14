@@ -1,5 +1,5 @@
 ---
-title: Editor destinazione Excel (pagina Gestione connessione) | Documenti Microsoft
+title: Editor destinazione Excel (pagina Gestione connessione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.connection.f1
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14b06c895b60f3965d7b7ccd0bea5c3d6f8b447b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af5336747676827b054d34ce2c4aa616fb383813
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330001"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Editor destinazione Excel (pagina Gestione connessione)
   Utilizzare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione Excel** per specificare le informazioni sull'origine dei dati e visualizzare un'anteprima dei risultati. La destinazione Excel carica i dati in un foglio di lavoro oppure in un intervallo denominato in una cartella di lavoro di [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
@@ -85,9 +85,9 @@ ms.locfileid: "36157197"
  Consente di verificare la sintassi del testo della query.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione Excel &#40;pagina mapping&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
- [Editor destinazione Excel &#40;pagina di Output di errore&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Editor destinazione Excel &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   
   

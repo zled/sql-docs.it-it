@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpblobuptask.f1
 - sql11.dts.designer.afpblobuptask.f1
@@ -16,16 +16,16 @@ ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: df2e6673be9e257c71784211c53ba86309dc16de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0f0e4123a16eb82000c6506dc7bcb62b353a268
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188558"
 ---
 # <a name="azure-blob-upload-task"></a>Attività di caricamento BLOB di Azure
-  L'attività di caricamento Blob di Azure consente a un pacchetto SSIS caricare file in una risorsa di archiviazione blob di Azure.   
+  L'attività di caricamento Blob di Azure consente a un pacchetto SSIS di caricare i file in un archivio blob di Azure.   
 Per aggiungere un' **attività di caricamento BLOB di Azure**, trascinare l'attività in Progettazione SSIS e fare doppio clic oppure clic con il pulsante destro del mouse e quindi scegliere **Modifica** per visualizzare la finestra di dialogo seguente relativa all' **editor dell'attività di caricamento BLOB di Azure** .  
   
  La tabella seguente fornisce le descrizioni dei campi della finestra di dialogo.  

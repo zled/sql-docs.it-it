@@ -1,5 +1,5 @@
 ---
-title: Esplorazione di un modello di previsione | Documenti Microsoft
+title: Esplorazione di un modello di previsione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - forecasting [data mining]
@@ -17,27 +17,27 @@ helpviewer_keywords:
 - time series [data mining]
 ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7718c83d56b1ab9351ebb59205c04e0dd779ca75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d23900aac442e72e89daea72fc0c2e07df9bd934
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224631"
 ---
 # <a name="browsing-a-forecasting-model"></a>Esplorazione di un modello di previsione
   Quando si apre un modello di previsione utilizzando **esplorare**, il modello viene visualizzato in un visualizzatore interattivo, simile al visualizzatore modello time series in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Il visualizzatore consente di esplorare le tendenze, confrontare le serie, creare stime e ottenere informazioni sul modello e sui dati sottostanti.  
   
 ##  <a name="bkmk_Top"></a> Esplorare il modello  
- Il **Sfoglia** visualizzatore per i modelli di previsione fornisce una visualizzazione grafico, che mostra le tendenze nel tempo e consente di creare stime e un modello, che rappresenta la serie temporale come albero delle decisioni o un albero di regressione.  
+ Il **esplorare** visualizzatore per i modelli di previsione fornisce una visualizzazione del grafico che mostra le tendenze nel tempo e consente di creare stime e una visualizzazione del modello che rappresenta la serie temporale come albero delle decisioni o albero di regressione.  
   
 -   [Visualizzazione grafico](#bkmk_charts)  
   
 -   [Visualizzazione del modello](#bkmk_Model)  
   
- Per provare un modello di previsione, è possibile utilizzare i dati di esempio nella scheda previsione della cartella di lavoro di dati di esempio e compilare un modello di serie ora utilizzando il [procedura guidata previsione &#40;aggiuntivi di Data Mining per Excel&#41; ](forecast-wizard-data-mining-add-ins-for-excel.md) nel  **Data Mining** della barra multifunzione, o [previsione &#40;strumenti di analisi tabelle per Excel&#41; ](forecast-table-analysis-tools-for-excel.md) nel **Analizza** della barra multifunzione.  
+ Per provare un modello di previsione, è possibile usare i dati di esempio nella scheda previsione della cartella di lavoro di dati di esempio e compilare un modello di serie ora utilizzando il [prevedere la procedura guidata &#40;aggiuntivi di Data Mining per Excel&#41; ](forecast-wizard-data-mining-add-ins-for-excel.md) nel  **Data Mining** della barra multifunzione, oppure [previsione &#40;strumenti di analisi tabelle per Excel&#41; ](forecast-table-analysis-tools-for-excel.md) nel **Analizza** della barra multifunzione.  
   
 ###  <a name="bkmk_charts"></a> Grafico  
  Il **grafico** scheda viene visualizzata la tendenza nella serie di dati nel corso del tempo, insieme ai valori stimati. L'asse verticale del grafico rappresenta i valori della serie, mentre l'asse orizzontale rappresenta il tempo.  
@@ -46,23 +46,23 @@ ms.locfileid: "36158571"
   
 1.  Questo modello contiene più serie temporali, ma per semplificare il grafico, è possibile visualizzare una singola serie o solo alcune serie correlate.  
   
-     ![stime cronologiche nel modello di previsione](media/dm13-forecast-chart-historicpredictions.gif "stime cronologiche nel modello di previsione")  
+     ![stime cronologiche in un modello di previsione](media/dm13-forecast-chart-historicpredictions.gif "stime cronologiche in un modello di previsione")  
   
      Utilizzare le caselle di controllo per selezionare la previsione solo per l'America del nord e solo per l'importo delle vendite.  
   
-2.  Fare clic su **intervalli per la stima** e digitare un nuovo valore per controllare quanti intervalli temporali valori si desidera visualizzare nel grafico.  
+2.  Fare clic su **stime** e digitare un nuovo valore per controllare i valori di ora futuri quanti si desidera visualizzare nel grafico.  
   
      Il valore predefinito è 5.  
   
-3.  Fare clic su qualsiasi punto della linea, cronologia o futura, per visualizzare i valori esatti per quel punto nel tempo, visualizzato nel **legenda Data Mining**.  
+3.  Fare clic su qualsiasi punto della linea, cronologica o futura, per visualizzare i valori esatti per quel punto nel tempo, visualizzato nei **legenda Data Mining**.  
   
 4.  Nel grafico vengono visualizzati sia i dati cronologici che i dati futuri. Si noti la linea punteggiata con uno sfondo ombreggiato. Questi valori sono stime future, basate sul modello.  
   
      I dati cronologici (utilizzati per compilare il modello) vengono mostrati sul lato sinistro del grafico.  
   
-5.  Selezionare il **Mostra stime cronologiche** opzione per farsi un'idea per la stabilità della serie temporale.  
+5.  Selezionare il **Mostra stime cronologiche** possibilità di farsi un'idea per la stabilità della serie temporale.  
   
-     ![previsioni per una singola serie nel modello](media/dm13-forecast-chart-singleseries.gif "previsioni per una singola serie nel modello")  
+     ![per una singola serie nel modello di previsioni](media/dm13-forecast-chart-singleseries.gif "previsioni per una singola serie nel modello")  
   
      Le stime cronologiche sono valori stimati basati sulla serie a quel determinato punto che vengono confrontati con i valori cronologici effettivi. Se la linea punteggiata (contenente i valori stimati) si differenzia dalla linea continua (i valori effettivi), significa che la prima parte della serie forse non rappresenta una stima accurata dei valori successivi. Potrebbero essere necessari più dati o potrebbe semplicemente essere un indicatore di volatilità nel ciclo.  
   
@@ -72,15 +72,15 @@ ms.locfileid: "36158571"
   
  **Suggerimenti**  
   
--   Per attivare visualizzazione del **legenda Data Mining**, fare doppio clic su qualsiasi punto nel grafico.  
+-   Per attivare/disattivare visualizzazione delle **legenda Data Mining**, fare doppio clic su qualsiasi punto nel grafico.  
   
      È possibile visualizzare un intervallo di tempo specifico facendo clic sul grafico, trascinando una selezione temporale all'interno del grafico, quindi facendo di nuovo clic per ingrandire l'intervallo selezionato.  
   
--   Per ottenere una copia del grafico corrente, fare clic su **copia in Excel**, quindi fare clic su un foglio di lavoro in Excel. Viene inserito un elemento grafico nel foglio tramite tutte le opzioni che erano state impostate, inclusa una legenda.  
+-   Per ottenere una copia del grafico corrente, fare clic su **copia in Excel**, quindi fare clic su un foglio di lavoro di Excel. Viene inserito un elemento grafico nel foglio tramite tutte le opzioni che erano state impostate, inclusa una legenda.  
   
-     Tuttavia, nel grafico è statico e pertanto non è possibile modificare la legenda o visualizzare i dati sottostanti; Se occorre una vista del grafico più interattiva, utilizzare il [visualizzatori di Visio](viewing-data-mining-models-in-visio-data-mining-add-ins.md).  
+     Tuttavia, questo grafico è statico e pertanto non è possibile modificare la legenda o visualizzare i dati sottostanti; Se occorre una vista del grafico più interattiva, usare il [visualizzatori di Visio](viewing-data-mining-models-in-visio-data-mining-add-ins.md).  
   
--   Fare clic su **Abs** nella barra dei menu del visualizzatore per selezionare una delle curve relative e assolute.  
+-   Fare clic su **Abs** nella barra dei menu del visualizzatore per alternare le curve relative e assolute.  
   
      Questa opzione è utile se il grafico contiene più modelli, ma la scala dei dati di ogni modello è molto diversa.  
   
@@ -99,17 +99,17 @@ ms.locfileid: "36158571"
   
 ##### <a name="explore-the-forecasting-model-as-a-tree"></a>Esplorare il modello di previsione come un albero  
   
-1.  Fare clic sul **albero** elenco a discesa e scegliere un modello da visualizzare.  
+1.  Fare clic sui **albero** elenco a discesa elenco e scegliere un modello da visualizzare.  
   
      Per ogni attributo stimabile viene visualizzato un nodo di regressione o un albero separato. Ad esempio, se i dati contengono le vendite per l'Europa, l'America del nord e il Pacifico, sono presenti tre modelli diversi, uno per ogni serie di dati.  
   
-2.  Trascinare il **Mostra livello** dispositivo di scorrimento per filtrare i livelli inferiori dell'albero e concentrarsi sulle divisioni più importanti.  
+2.  Trascinare il **Mostra il livello** dispositivo di scorrimento per filtrare i livelli inferiori dell'albero e concentrare le divisioni più importanti.  
   
 3.  Fare clic su ogni nodo per visualizzare alcune statistiche descrittive nella **legenda Data Mining**.  
   
      Quando si posiziona il mouse su un nodo, vengono visualizzate anche le stesse statistiche nella descrizione comando e la formula completa che descrive tale nodo.  
   
-4.  Se si desidera copiare le informazioni contenute nel **legenda Data Mining**, fare doppio clic sui **legenda Data Mining**, selezionare **copia**e fare clic all'interno del foglio di lavoro di Excel. Il **copia in Excel** opzione consente di copiare il grafico, non le statistiche.  
+4.  Se si desidera copiare le informazioni contenute nel **legenda Data Mining**, fare doppio clic il **legenda Data Mining**, selezionare **copia**e fare clic all'interno del foglio di lavoro di Excel. Il **copia in Excel** opzione consente di copiare il grafico, non le statistiche.  
   
  [Esplorare il modello](#bkmk_Top)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.toolboxcommon.F1
 - sql12.dts.designer.toolbox.F1
@@ -17,13 +17,13 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b34cd549a8a8debf43121f8b401d16c41acde66a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 779b710f06a32a7e5add974281d9cd5c2e6eed93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248731"
 ---
 # <a name="ssis-toolbox"></a>Casella degli strumenti SSIS
   Tutti i componenti installati nel computer locale, inclusi i componenti di terze parti compilati per SQL Server 2008 e 2008 R2 vengono visualizzati automaticamente nella nuova **Casella degli strumenti SSIS**. Quando si installano componenti aggiuntivi, fare clic con il pulsante destro del mouse all'interno della casella degli strumenti, quindi fare clic su **Aggiorna casella degli strumenti** per aggiungere i componenti.  

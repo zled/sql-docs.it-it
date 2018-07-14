@@ -1,5 +1,5 @@
 ---
-title: Opzioni (pagina generale di Editor di testo - XML -) | Documenti Microsoft
+title: Opzioni (pagina Editor di testo - XML - generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.General
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 caps.latest.revision: 20
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e5d686db29cd4fe7db3c76be22c67a2aacbec3d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7a6a5f53bbccbd0d30aaada30366d01af23a3a5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322781"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Opzioni (Editor di testo - XML - pagina Generale)
   Utilizzare questa finestra di dialogo per cambiare il comportamento di modifica generale dell'editor XML utilizzato per modificare i documenti XML. Per visualizzare le impostazioni scegliere **Opzioni** dal menu **Strumenti** , espandere la sottocartella **XML** e quindi fare clic su **Generale**.  
@@ -30,7 +30,7 @@ ms.locfileid: "36069224"
  Opzioni per l'Editor XML possono essere impostata anche il **tutti i linguaggi generale** finestra di dialogo. Se si utilizza la finestra di dialogo **Tutti i linguaggi** per impostare opzioni diverse per gli altri editor di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , ad esempio DMX o MDX, è necessario reimpostare le opzioni dell'editor XML tramite questa finestra di dialogo.  
   
 ## <a name="statement-completion"></a>Completamento istruzioni  
- **Elenco automatico membri**  
+ **Elenco membri automatico**  
  Quando questa casella di controllo è selezionata, durante la digitazione nell'editor viene visualizzato un elenco di membri, proprietà, valori o metodi disponibili. Scegliere l'elemento desiderato nell'elenco popup per inserirlo nel codice.  
   
  **Nascondi membri avanzati**  
@@ -40,19 +40,19 @@ ms.locfileid: "36069224"
  Se questa casella di controllo è selezionata, la sintassi completa della procedura o dichiarazione corrente viene visualizzata a sinistra del punto di inserimento nell'editor, insieme a tutti i relativi parametri disponibili. Il parametro successivo che può essere assegnato è evidenziato in grassetto.  
   
 ## <a name="settings"></a>Impostazioni  
- **Abilita spazio virtuale**  
+ **Attiva spazio virtuale**  
  Se questa casella di testo è selezionata, alla fine di ogni riga del codice verranno inseriti alcuni spazi. Selezionare la casella di controllo per inserire i commenti sempre nel medesimo punto accanto al codice.  
   
  **Ritorno a capo automatico**  
  Se questa casella di controllo è selezionata, le parti di una riga che si estendono orizzontalmente oltre l'area visibile dell'editor vengono visualizzate automaticamente nella riga successiva. Se si seleziona questa casella di controllo, viene abilitata automaticamente la casella di controllo **Mostra glifi per ritorno a capo automatico** .  
   
- **Mostra glifi per ritorno a capo automatico**  
+ **Mostra icone per ritorno a capo automatico**  
  Se questa casella di controllo è selezionata, viene visualizzato un simbolo di ritorno a capo nel punto in cui una riga lunga va a capo sulla riga successiva. Per non visualizzare questi indicatori, deselezionare la casella di controllo.  
   
 > [!NOTE]  
 >  I simboli di ritorno a capo non vengono aggiunti al codice, né stampati. Si tratta esclusivamente di elementi di riferimento.  
   
- **Applica comandi Taglia o copia a righe vuote quando assenza di selezione**  
+ **Applica comandi Taglia o copia a righe vuote quando è presente nessuna selezione**  
  Questa casella di controllo consente di impostare il comportamento dell'editor nei casi in cui si posiziona il punto di inserimento in una riga vuota senza selezionare alcun elemento e quindi si fa clic su **Copia** o **Taglia**.  
   
  Se la casella di controllo è selezionata, la riga vuota viene copiata o incollata. Se quindi si fa clic su **Incolla**, viene inserita una nuova riga vuota.  

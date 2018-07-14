@@ -1,5 +1,5 @@
 ---
-title: Configurazione avanzata più siti Web (modalità nativa SSRS) | Documenti Microsoft
+title: Configurazione avanzata più siti Web (modalità nativa SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 880a5a496df597e929be8063323fa833696eabc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eafcc3b69916ba253b430a61fb5b510eb3480d91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220731"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configurazione avanzata più siti Web (modalità nativa SSRS)
   Questa finestra di dialogo consente di creare e gestire gli URL utilizzati per accedere a un server di report o a Gestione report. La finestra di dialogo **Configurazione avanzata più siti Web** viene utilizzata per creare URL aggiuntivi, URL personalizzati che includono un nome di intestazione host o per specificare un indirizzo IP in formato IPv4 o IPv6.  
@@ -30,7 +30,7 @@ ms.locfileid: "36158367"
   
  La creazione di più URL è utile se si desidera configurare modalità di accesso diverse a un server di report. L'accesso al server di report tramite connessioni Intranet ed Extranet, ad esempio, richiede in genere che siano presenti più URL per ogni tipo di connessione.  
   
- Per aprire la **configurazione avanzata più siti Web** della finestra di dialogo fare clic su **avanzate** sul **URL servizio Web** o **URL gestione Report**pagina di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Quando la finestra di dialogo **Configurazione avanzata più siti Web** viene visualizzata, è possibile fare clic su **Aggiungi** o **Modifica** per definire nuovi URL o modificare o eliminare URL esistenti.  
+ Per aprire la **configurazione avanzata più siti Web** della finestra di dialogo fare clic su **avanzate** sul **URL servizio Web** o la **URL gestione Report**nella pagina di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Quando la finestra di dialogo **Configurazione avanzata più siti Web** viene visualizzata, è possibile fare clic su **Aggiungi** o **Modifica** per definire nuovi URL o modificare o eliminare URL esistenti.  
   
  Scegliere **OK** per salvare le modifiche. Se dopo avere aggiunto o rimosso URL si chiude la finestra di dialogo senza prima avere scelto **OK**, le modifiche andranno perdute.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36158367"
      Se si dispone di più schede, verrà visualizzato un indirizzo IP per ognuna. Se si seleziona solo questo valore, l'accesso all'applicazione sarà limitato all'indirizzo IP specificato e a qualsiasi nome host di cui il DNS esegue il mapping all'indirizzo. Non è possibile utilizzare localhost per accedere a un server di report, né utilizzare gli indirizzi IP di altre schede di rete installate nel computer server di report.  
   
  **Porta**  
- Consente di specificare la porta monitorata dal server di report per le richieste. Il numero di porta predefinito è 80. Se si utilizza la porta 80, non è necessario includerla nell'URL. Se si utilizza qualsiasi altro numero di porta, è sempre necessario includerlo nell'URL (ad esempio, http://localhost:8181/reports).  
+ Consente di specificare la porta monitorata dal server di report per le richieste. Il numero di porta predefinito è 80. Se si utilizza la porta 80, non è necessario includerla nell'URL. Se si usa qualsiasi altro numero di porta, è sempre necessario includerlo nell'URL (ad esempio, http://localhost:8181/reports).  
   
  **Intestazione host**  
  Se è già stata definita un'intestazione host in un DNS risolto nel computer, è possibile specificare tale intestazione host in un URL configurato per l'accesso al server di report.  

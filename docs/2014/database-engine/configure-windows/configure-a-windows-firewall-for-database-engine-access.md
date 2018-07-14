@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], firewall systems
 - firewall systems, [Database Engine]
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 caps.latest.revision: 55
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dceef388586398fbeb5129f7859d1245f3f86ef9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ad31b37014261e3545a206cfbd546113afd8c51a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188988"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurazione di Windows Firewall per l'accesso al Motore di database
   In questo argomento viene descritto come configurare Windows Firewall per l'accesso al Motore di database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite Gestione configurazione SQL Server. I sistemi firewall contribuiscono a impedire l'accesso non autorizzato alle risorse del computer. Per accedere a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] attraverso un firewall, è necessario configurare il firewall nel computer in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo che consenta l'accesso.  

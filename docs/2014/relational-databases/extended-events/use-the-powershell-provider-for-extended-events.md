@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
 - extended events [SQL Server], PowerShell
 - PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f3a1e5ed2aa8ee73ceefd0d58ddc3c1f06869be5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 52db8610999add505d5aa5e524a2d68b72886ce0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271067"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Utilizzare il provider PowerShell per eventi estesi
   È possibile gestire eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite il provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La sottocartella XEvent è disponibile all'interno dell'unità SQLSERVER. È possibile accedere alla cartella utilizzando uno dei metodi seguenti:  
   
--   Al prompt dei comandi, digitare `sqlps`, quindi premere INVIO. Tipo `cd xevent`, quindi premere INVIO. Da qui, è possibile usare il **cd** e `dir` comandi (o **Set-Location** e **Get-Childitem** cmdlet) a cui passare il nome del server e il nome di istanza.  
+-   Un prompt dei comandi, digitare `sqlps`, quindi premere INVIO. Tipo `cd xevent`, quindi premere INVIO. Da qui, è possibile usare la **cd** e `dir` comandi (o **Set-Location** e **Get-Childitem** cmdlet) per passare al nome del server e al nome di istanza.  
   
 -   In Esplora oggetti espandere il nome dell'istanza, espandere **Gestione**, fare clic con il pulsante destro del mouse su **Eventi estesi**, quindi scegliere **Avvia PowerShell**. Verrà avviato PowerShell nel percorso seguente:  
   
@@ -37,22 +37,22 @@ ms.locfileid: "36068032"
     > [!NOTE]  
     >  È possibile avviare PowerShell da qualsiasi nodo all'interno di **Eventi estesi**. È possibile, ad esempio, fare clic con il pulsante destro del mouse su **Sessioni**e quindi scegliere **Avvia PowerShell**. Verrà avviato PowerShell a un livello più interno, nella cartella Sessioni.  
   
- È possibile esplorare l'albero delle cartelle XEvent per visualizzare sessioni di eventi estesi esistenti e i relativi eventi, database di destinazione e predicati associati. Ad esempio da SQLServer: \ XEvent di PS\\*ServerName*\\*InstanceName*> percorso, se si digita `cd sessions`, premere INVIO, digitare `dir`e quindi premere INVIO, è possibile visualizzare l'elenco di sessioni memorizzate su quell'istanza. È inoltre possibile visualizzare se la sessione è in esecuzione, e in tal caso per quanto tempo, e se la sessione è configurata per l'avvio all'avvio dell'istanza.  
+ È possibile esplorare l'albero delle cartelle XEvent per visualizzare sessioni di eventi estesi esistenti e i relativi eventi, database di destinazione e predicati associati. Ad esempio, da SQLServer: \ XEvent di PS\\*ServerName*\\*NomeIstanza*> percorso, se si digita `cd sessions`, premere INVIO, digitare `dir`e quindi premere INVIO, è possibile visualizzare l'elenco di sessioni memorizzate su quell'istanza. È inoltre possibile visualizzare se la sessione è in esecuzione, e in tal caso per quanto tempo, e se la sessione è configurata per l'avvio all'avvio dell'istanza.  
   
- Per visualizzare gli eventi, i relativi predicati e i database di destinazione associati a una sessione, è possibile passare alla directory con il nome della sessione e quindi visualizzare la cartella degli eventi o dei database di destinazione. Ad esempio, per visualizzare gli eventi e i relativi predicati associati con la sessione di integrità del sistema predefinito, da SQLServer: \ XEvent di PS\\*ServerName*\\*InstanceName*\Sessions> >, digitare `cd system_health\events,` premere INVIO, digitare `dir`, quindi premere INVIO.  
+ Per visualizzare gli eventi, i relativi predicati e i database di destinazione associati a una sessione, è possibile passare alla directory con il nome della sessione e quindi visualizzare la cartella degli eventi o dei database di destinazione. Ad esempio, per visualizzare gli eventi e i relativi predicati associati con la sessione di integrità del sistema predefinito, da SQLServer: \ XEvent di PS\\*ServerName*\\*NomeIstanza*\Sessions> > digitare `cd system_health\events,` premere INVIO, digitare `dir`, quindi premere INVIO.  
   
  Il provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è uno strumento potente che consente di creare, modificare e gestire sessioni di eventi estesi. Nella sezione seguente vengono forniti alcuni esempi di base dell'utilizzo di script di PowerShell con eventi estesi.  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti notare quanto segue:  
   
--   Gli script devono essere eseguiti da PS SQLSERVER:\\> prompt dei comandi (disponibile digitando `sqlps` un prompt dei comandi).  
+-   Gli script devono essere eseguiti da PS SQLSERVER:\\> prompt (disponibile digitando `sqlps` un prompt dei comandi).  
   
 -   Gli script utilizzano l'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   È necessario salvare gli script con estensione ps1.  
   
--   I criteri di esecuzione di PowerShell devono consentire l'esecuzione dello script. Per impostare i criteri di esecuzione, usare il cmdlet **Set-Executionpolicy** (Per ulteriori informazioni, digitare `get-help set-executionpolicy -detailed`, quindi premere INVIO.)  
+-   I criteri di esecuzione di PowerShell devono consentire l'esecuzione dello script. Per impostare i criteri di esecuzione, usare il cmdlet **Set-Executionpolicy** (Per altre informazioni, digitare `get-help set-executionpolicy -detailed`, quindi premere INVIO.)  
   
  Nello script seguente viene creata una nuova sessione denominata 'TestSession'.  
   

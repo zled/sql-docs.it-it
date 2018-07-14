@@ -1,5 +1,5 @@
 ---
-title: Installare Reporting Services e Internet informazioni Services Side-by-Side (modalità nativa SSRS) | Documenti Microsoft
+title: Installare Reporting Services e Internet informazioni Services Side-by-Side (modalità nativa SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2111d9ceda6e38f4abc079b94d678d981b075a91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3db5a0da0050541b0adec9b726184a959ac59001
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274657"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Installare side-by-side Reporting Services e Internet Information Services (modalità nativa SSRS)
   È possibile installare ed eseguire [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) e Internet Information Services (IIS) nello stesso computer. La versione di IIS utilizzata determina i problemi di interoperabilità che è necessario risolvere.  
@@ -47,9 +47,9 @@ ms.locfileid: "36156879"
   
 |Esempio|Richiesta|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|Riceve tutte le richieste inviate a http://123.234.345.456/reports o http://\<computername > / reports se un servizio può risolvere l'indirizzo IP in tale nome host.|  
+|http://123.234.345.456:80/reports|Riceve tutte le richieste inviate ai http://123.234.345.456/reports o http://\<nomecomputer > / reports se un DNS può risolvere l'indirizzo IP in tale nome host.|  
 |http://+:80/reports|Riceve tutte le richieste inviate a qualsiasi indirizzo IP o nome host valido per tale computer finché l'URL contiene il nome della directory virtuale "reports".|  
-|http://123.234.345.456:80|Riceve qualsiasi richiesta che specifica http://123.234.345.456 o http://\<nomecomputer > Se un servizio può risolvere l'indirizzo IP in tale nome host.|  
+|http://123.234.345.456:80|Riceve qualsiasi richiesta che specifica http://123.234.345.456 o http://\<nomecomputer > Se un DNS può risolvere l'indirizzo IP in tale nome host.|  
 |http://+:80|Riceve le richieste che non sono già state ricevute da altre applicazioni, per qualsiasi endpoint dell'applicazione di cui è stato eseguito il mapping all'opzione **Tutti assegnati**.|  
 |http://*:80|Riceve le richieste che non sono già state ricevute da altre applicazioni, per gli endpoint dell'applicazione di cui è stato eseguito il mapping all'opzione **Non assegnati**.|  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36156879"
 |Applicazione|Prenotazione URL|Description|Ricezione richiesta|  
 |-----------------|---------------------|-----------------|---------------------|  
 |Server di report|http://+:80/ReportServer|Carattere jolly complesso sulla porta 80, con directory virtuale del server di report.|Riceve sulla porta 80 tutte le richieste che specificano la directory virtuale del server di report. Il servizio Web ReportServer riceve tutte le richieste all'indirizzo http://\<nomecomputer>/reportserver.|  
-|Gestione report|http://+:80/Reports|Carattere jolly complesso sulla porta 80, con directory virtuale Reports.|Riceve sulla porta 80 tutte le richieste che specificano la directory virtuale reports. Gestione report riceve tutte le richieste a http://\<computername > / reports.|  
+|Gestione report|http://+:80/Reports|Carattere jolly complesso sulla porta 80, con directory virtuale Reports.|Riceve sulla porta 80 tutte le richieste che specificano la directory virtuale reports. Gestione report riceve tutte le richieste a http://\<nomecomputer > / reports.|  
 |IIS|http://*:80/|Carattere jolly vulnerabile sulla porta 80.|Riceve sulla porta 80 tutte le richieste rimanenti che non vengono ricevute da un'altra applicazione.|  
   
 ## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>Distribuzioni side-by-side di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e SQL Server 2005 Reporting Services in IIS 6.0, 7.0, 8.0, 8.5  
@@ -69,9 +69,9 @@ ms.locfileid: "36156879"
   
 -   Un sito Web in IIS assegnato alla porta 80 e una directory virtuale denominata "Reports".  
   
--   Oggetto [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] istanza server di report installato nella configurazione predefinita, in cui anche la prenotazione URL specifica la porta 80 e l'applicazione Gestione Report per il nome della directory virtuale Usa "Reports".  
+-   Oggetto [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] istanza server di report installata nella configurazione predefinita, in cui anche la prenotazione URL specifica la porta 80 e l'applicazione Gestione Report Usa "Reports" come nome della directory virtuale.  
   
- Configurazione di questo, una richiesta che viene inviata a http://\<nomecomputer >: 80 o i report verranno ricevuti da Gestione Report. L'applicazione cui si accede con la directory virtuale Reports in IIS non riceverà più richieste dopo l'installazione dell'istanza del server di report di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+ Questa configurazione di una richiesta che viene inviata a http://\<nomecomputer >: 80/Reports verranno ricevuti da Gestione Report. L'applicazione cui si accede con la directory virtuale Reports in IIS non riceverà più richieste dopo l'installazione dell'istanza del server di report di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  Se si eseguono distribuzioni side-by-side di versioni meno recenti e più recenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è possibile che si verifichi il problema di routing descritto in precedenza, poiché tutte le versioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilizzano "ReportServer" e "Reports" come nomi delle directory virtuali per le applicazioni di server di report e Gestione report, aumentando la probabilità della presenza di directory virtuali "reports" e "reportserver" in IIS.  
   
@@ -84,6 +84,6 @@ ms.locfileid: "36156879"
 ## <a name="see-also"></a>Vedere anche  
  [Configurare gli URL di Server di Report &#40;Gestione configurazione SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configurare un URL &#40;Gestione configurazione SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
- [Installare un Server di Report di Reporting Services in modalità nativa](install-reporting-services-native-mode-report-server.md)  
+ [Installare Server di Report di Reporting Services in modalità nativa](install-reporting-services-native-mode-report-server.md)  
   
   

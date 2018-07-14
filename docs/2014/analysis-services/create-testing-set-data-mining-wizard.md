@@ -1,5 +1,5 @@
 ---
-title: Creare Set di Testing (Creazione guidata Data Mining) | Documenti Microsoft
+title: Creare Set di Testing (Creazione guidata di Data Mining dati) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.holdout.f1
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ced530beaaa09954e94c851069ca76d01f3023d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f9f671a0980d979436e4780579d99122cb9e669
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326881"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Crea set di testing (Creazione guidata modello di data mining)
   Usare la pagina **Crea set di testing** per specificare la quantità di dati da usare per il training e la quantità di dati da riservare per l'uso come set di test. La separazione dei dati in set di training e set di testing durante la creazione di una struttura di data mining rende molto più facile la determinazione dell'accuratezza dei modelli di data mining che vengono creati successivamente.  
@@ -41,7 +41,7 @@ ms.locfileid: "36158319"
  **Per altre informazioni:** [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md), [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md), [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>Opzioni  
- **Percentuale di dati per il testing**  
+ **Percentuale di dati per i test**  
  Fare clic sulle frecce verso l'alto e verso il basso per aumentare o ridurre la percentuale di dati da utilizzare come set di training oppure digitare un valore compreso tra 0 e 100 nella casella di testo.  
   
  **Numero massimo di case nel set di dati**  
@@ -52,9 +52,9 @@ ms.locfileid: "36158319"
  Il valore predefinito è NULL. Ciò significa che non sono presenti limiti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining della Guida F1 di procedura guidata &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [I dati della Guida F1 di procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Suggerisci colonne correlate &#40;Creazione guidata di Data Mining&#41;](suggest-related-columns-data-mining-wizard.md)   
  [Specificare i tipi di tabella &#40;Creazione guidata di Data Mining&#41;](specify-table-types-data-mining-wizard.md)   
- [Specificare il contenuto e tipo di dati della colonna &#40;Creazione guidata di Data Mining&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [Specificare il contenuto e il tipo di dati della colonna &#40;Creazione guidata di Data Mining&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

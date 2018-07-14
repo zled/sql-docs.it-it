@@ -1,5 +1,5 @@
 ---
-title: Modellazione multidimensionale (esercitazione di Adventure Works) | Documenti Microsoft
+title: Modellazione multidimensionale (esercitazione Adventure) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Analysis Services]
 - Analysis Services, tutorials
 ms.assetid: db55e226-601a-4026-8651-573195555a59
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 4bb0d6712b6da853c5fffc360d0d072beb7bd2ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 206105b0dda4da406abf46f70f27b511dee99e0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220351"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Modellazione multidimensionale (esercitazione di AdventureWorks)
   Introduzione all'esercitazione [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. In questa esercitazione viene descritto come utilizzare [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] per sviluppare e distribuire un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizzando la società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] per tutti gli esempi.  
@@ -54,15 +54,15 @@ ms.locfileid: "36158098"
   
 |Lezione|Tempo stimato per il completamento|  
 |------------|--------------------------------|  
-|[Lezione 1: Definizione di una vista origine dati all'interno di un'analisi di progetto di servizi](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minuti|  
+|[Lezione 1: Definizione di una vista origine dati in un progetto di Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minuti|  
 |[Lezione 2: Definizione e distribuzione di un cubo](lesson-2-defining-and-deploying-a-cube.md)|30 minuti|  
 |[Lezione 3: Modifica di misure, attributi e gerarchie](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minuti|  
-|[Lezione 4: Definizione di attributo avanzato e proprietà delle dimensioni](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minuti|  
-|[Lezione 5: Definizione delle relazioni tra le dimensioni e gruppi di misure](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minuti|  
+|[Lezione 4: Definizione di attributo avanzato e proprietà dimensione](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minuti|  
+|[Lezione 5: Definizione delle relazioni tra dimensioni e gruppi di misure](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minuti|  
 |[Lezione 6: Definizione di calcoli](lesson-6-defining-calculations.md)|45 minuti|  
-|[Lezione 7: Definizione di indicatori di prestazioni chiave &#40;indicatori KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 minuti|  
+|[Lezione 7: Definizione degli indicatori di prestazioni chiave &#40;indicatori KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 minuti|  
 |[Lezione 8: Definizione di azioni](lesson-8-defining-actions.md)|30 minuti|  
-|[Lezione 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md)|30 minuti|  
+|[Lezione 9: Definizione di prospettive e traduzioni](lesson-9-defining-perspectives-and-translations.md)|30 minuti|  
 |[Lezione 10: Definizione dei ruoli amministrativi](lesson-10-defining-administrative-roles.md)|15 minuti|  
   
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: Panoramica della documentazione di installazione SQL Server | Documenti Microsoft
+title: Panoramica della documentazione di installazione SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2620439a-f9d3-4b3c-9968-48f60b4bb9a5
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ff6c201df28ed49922d54e0cb04c7ebff813bbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c289b1355418d7c611536600f34e5e2d70255bc6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275879"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>Panoramica sulla documentazione del programma di installazione di SQL Server
   La documentazione per il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile sui supporti di installazione e online.  
@@ -38,7 +38,7 @@ ms.locfileid: "36156847"
   
      Descrive le opzioni di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [Installare funzionalità di Business Intelligence di SQL Server 2014](install-sql-server-business-intelligence-features.md)  
+-   [Installare le funzionalità di Business Intelligence di SQL Server 2014](install-sql-server-business-intelligence-features.md)  
   
      Descrive le opzioni di installazione delle funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che fanno parte della piattaforma di Business Intelligence di Microsoft, che include [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], e diverse applicazioni client utilizzate per la creazione o l'utilizzo di dati analitici.  
   

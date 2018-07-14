@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Query (Analysis Services - dati multidimensionali) Crea Polling | Documenti Microsoft
+title: Finestra di dialogo Query (Analysis Services - dati multidimensionali) Crea Polling | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createpollingquerydialog.f1
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d7f46fbd895f1b9e9bce29674999a3e710a1a33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: f1c7ca8d5c2594668283887c23f7d976a1fc3359
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236231"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Crea query di polling (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Crea query di polling** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare una query di polling nella scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione**. Una query di polling è in genere una query singleton che restituisce un valore utilizzabile da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per determinare se sono state apportate modifiche a una tabella o a un altro oggetto relazionale. Per visualizzare la finestra di dialogo **Crea query di polling**, è possibile fare clic sul pulsante con i puntini di sospensione (**...**) nella colonna **Query di polling** della griglia relativa all'opzione **Polling pianificato** nella scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione**. Per altre informazioni sulla scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione** vedere [Notifiche &#40;finestra di dialogo Opzioni di archiviazione&#41; &#40;Analysis Services - dati multidimensionali&41#;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
@@ -66,8 +66,8 @@ ms.locfileid: "36157851"
 |**Passa a Generatore Query generico**|Selezionare questo comando per visualizzare solo le opzioni disponibili nella vista Generatore query generico. Verranno visualizzate solo le opzioni seguenti.<br /><br /> **Riquadro SQL**<br /><br /> **Riquadro risultati**<br /><br /> **Barra degli strumenti**, contenente solo **Passa a Generatore query Visual Database Tools** ed **Esegui**<br /><br /> <br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
 |**Passa a Generatore Query Visual Database Tools**|Selezionare questo comando per visualizzare tutte le opzioni disponibili nella vista Generatore query Visual Database Tools.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query generico** .|  
 |**Mostra/Nascondi riquadro diagramma**|Consente di visualizzare o nascondere il riquadro **diagramma**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Mostra/Nascondi riquadro griglia**|Mostra o nasconde la **riquadro griglia**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Mostra/Nascondi riquadro SQL**|Mostra o nasconde la **riquadro SQL**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
+|**Mostra/Nascondi riquadro griglia**|Mostra o nasconde il **riquadro griglia**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
+|**Mostra/Nascondi riquadro SQL**|Mostra o nasconde il **riquadro SQL**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
 |**Mostra/Nascondi riquadro risultati**|Consente di visualizzare o nascondere il **Riquadro risultati**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
 |**Esegui**|Consente di eseguire la query. I risultati verranno visualizzati nel **riquadro dei risultati**.|  
 |**Verifica istruzione SQL**|Consente di verificare l'istruzione SQL nella query.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  

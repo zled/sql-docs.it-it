@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
 - designing databases [SQL Server], replication performance
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4fd41d63d0086ac582cf0ca033453bf0d9bc7776
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 78221050ed5832f76843a57d20ed3a518b1ebea9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256330"
 ---
 # <a name="enhance-merge-replication-performance"></a>Miglioramento delle prestazioni della replica di tipo merge
   Dopo aver valutato i suggerimenti relativi alle prestazioni generali descritti in [Miglioramento delle prestazioni generali della replica](enhance-general-replication-performance.md), è opportuno considerare questi ulteriori aspetti specifici della replica di tipo merge.  
@@ -45,7 +45,7 @@ ms.locfileid: "36068015"
   
 -   ‏Si considerino le tabelle in fase di sovranormalizzazione che includono tipi di dati LOB (Large Object).  
   
-     Quando viene eseguita la sincronizzazione, è possibile che l'agente di merge debba leggere e trasferire l'intera riga di dati da un server di pubblicazione o un Sottoscrittore. Se la riga include colonne con dati LOB, questo processo può richiedere l'allocazione di memoria aggiuntiva e influire negativamente sulle prestazioni anche se tali colonne non sono state aggiornate. Per ridurre la probabilità di tale impatto negativo sulle prestazioni, è possibile inserire le colonne LOB in una tabella distinta utilizzando una relazione uno-a-uno con la parte rimanente della riga di dati. I tipi di dati `text`, `ntext`, e `image` sono deprecati. Se è necessario includere dati LOB, è consigliabile utilizzare i tipi di dati `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, rispettivamente.  
+     Quando viene eseguita la sincronizzazione, è possibile che l'agente di merge debba leggere e trasferire l'intera riga di dati da un server di pubblicazione o un Sottoscrittore. Se la riga include colonne con dati LOB, questo processo può richiedere l'allocazione di memoria aggiuntiva e influire negativamente sulle prestazioni anche se tali colonne non sono state aggiornate. Per ridurre la probabilità di tale impatto negativo sulle prestazioni, è possibile inserire le colonne LOB in una tabella distinta utilizzando una relazione uno-a-uno con la parte rimanente della riga di dati. I tipi di dati `text`, `ntext`, e `image` sono deprecati. Se è necessario includere dati LOB, è consigliabile usare i tipi di dati `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, rispettivamente.  
   
 ## <a name="publication-design"></a>Progettazione della pubblicazione  
   

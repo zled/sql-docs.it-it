@@ -1,5 +1,5 @@
 ---
-title: Parametri e codici restituiti nell'attività Esegui SQL | Documenti Microsoft
+title: I parametri e codici restituiti nell'attività Esegui SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - return codes [Integration Services]
 - parameters [Integration Services]
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - Execute SQL task [Integration Services]
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 949fefc6beb432eaee882b3a842279a9531f3fbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12739be23eb0a2104f73d9ad1c1240b3c235259c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068551"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252333"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Parametri e codici restituiti nell’attività Esegui SQL
-  Istruzioni SQL e stored procedure utilizzano spesso `input` parametri, `output` parametri e codici restituiti. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] l'attività Esegui SQL supporta parametri di tipo `Input`, `Output` e `ReturnValue`. Utilizzare la `Input` tipo per i parametri di input, `Output` per i parametri di output e `ReturnValue` per codici restituiti.  
+  Le istruzioni SQL e stored procedure utilizzano spesso `input` parametri, `output` parametri e codici restituiti. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] l'attività Esegui SQL supporta parametri di tipo `Input`, `Output` e `ReturnValue`. Si utilizza il `Input` tipo per i parametri di input `Output` per i parametri di output e `ReturnValue` per i codici restituiti.  
   
 > [!NOTE]  
 >  È possibile utilizzare parametri in un'attività Esegui SQL solo se il provider di dati li supporta.  
@@ -48,7 +48,7 @@ ms.locfileid: "36068551"
   
 -   [Configurazione di parametri e codici restituiti nell'Editor attività Esegui SQL](#Configure_parameters_and_return_codes)  
   
-##  <a name="Parameter_names_and_markers"></a> Utilizzo di indicatori e i nomi dei parametri  
+##  <a name="Parameter_names_and_markers"></a> Utilizzo di nomi di parametro e marcatori  
  Nella sintassi del comando SQL possono essere utilizzati marcatori di parametro diversi, a seconda del tipo di connessione utilizzato dall'attività Esegui SQL. Per il tipo di gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)], ad esempio, il marcatore di parametro usato nel comando SQL deve avere il formato **@varParameter**, mentre per il tipo di connessione OLE DB tale marcatore deve essere costituito da un punto interrogativo (?).  
   
  Anche i nomi che è possibile utilizzare come nomi di parametro nei mapping tra variabili e parametri variano a seconda del tipo di gestione connessione. Il tipo di gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)] utilizza ad esempio un nome definito dall'utente con prefisso @, mentre il tipo di gestione connessione OLE DB richiede nomi di parametro costituiti dal valore numerico di un ordinale in base 0.  
@@ -86,22 +86,22 @@ ms.locfileid: "36068551"
 ##  <a name="Date_and_time_data_types"></a> Utilizzo di parametri con tipi data e ora dei dati  
   
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Utilizzo di parametri di data e ora con le gestioni connessioni ADO.NET e ADO  
- Durante la lettura di dati del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , i tipi `time` e `datetimeoffset`, un'attività Esegui SQL che utilizza il un [!INCLUDE[vstecado](../includes/vstecado-md.md)] o gestione connessione ADO prevede i requisiti aggiuntivi seguenti:  
+ Durante la lettura dei dati del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tipi `time` e `datetimeoffset`, un'attività Esegui SQL che utilizza un [!INCLUDE[vstecado](../includes/vstecado-md.md)] o gestione connessione ADO prevede i seguenti requisiti aggiuntivi:  
   
 -   Per i dati `time`, una gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)] richiede che i dati vengano archiviati in un parametro con tipo di parametro `Input` o `Output` e con tipo di dati `string`.  
   
--   Per `datetimeoffset` dati, un [!INCLUDE[vstecado](../includes/vstecado-md.md)] gestione connessione richiede che i dati da archiviare in uno dei parametri seguenti:  
+-   Per la `datetimeoffset` dei dati, un [!INCLUDE[vstecado](../includes/vstecado-md.md)] gestione connessione richiede che i dati vengano archiviati in uno dei parametri seguenti:  
   
     -   Un parametro il cui tipo di parametro è `Input` e il cui tipo di dati è `string`.  
   
-    -   Un parametro il cui tipo di parametro è `Output` oppure `ReturnValue`, e con tipo di dati `datetimeoffset`, `string`, o `datetime2`. Se si seleziona un parametro il cui tipo di dati è `string` oppure `datetime2`, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] converte i dati string o datetime2.  
+    -   Un parametro di tipo parametro `Output` oppure `ReturnValue`, e con tipo di dati `datetimeoffset`, `string`, o `datetime2`. Se si seleziona un parametro il cui tipo di dati è `string` oppure `datetime2`, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] converte i dati in string o datetime2.  
   
 -   Una gestione connessione ADO richiede che i dati `time` o `datetimeoffset` vengano archiviati in un parametro con tipo di parametro `Input` o `Output` e con tipo di dati `adVarWchar`.  
   
  Per altre informazioni sui tipi di dati [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e sul relativo mapping nei tipi di dati [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vedere [Tipi di dati &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) e [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md).  
   
 ### <a name="using-date-and-time-parameters-with-ole-db-connection-managers"></a>Utilizzo di parametri di data e ora con le gestioni connessioni OLE DB  
- Quando si utilizza una gestione connessione OLE DB, un'attività Esegui SQL prevede requisiti di archiviazione specifici per i dati del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tipi di dati `date`, `time`, `datetime`, `datetime2`, e `datetimeoffset`. È necessario archiviare questi dati in uno dei seguenti tipi di parametro:  
+ Quando si utilizza una gestione connessione OLE DB, un'attività Esegui SQL prevede requisiti di archiviazione specifici per i dati del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] i tipi di dati `date`, `time`, `datetime`, `datetime2`, e `datetimeoffset`. È necessario archiviare questi dati in uno dei seguenti tipi di parametro:  
   
 -   Un parametro di input del tipo di dati NVARCHAR.  
   
@@ -117,11 +117,11 @@ ms.locfileid: "36068551"
  Se i dati non vengono archiviati nel parametro di input o di output appropriato, il pacchetto non viene eseguito correttamente.  
   
 ### <a name="using-date-and-time-parameters-with-odbc-connection-managers"></a>Utilizzo di parametri di data e ora con le gestioni connessioni ODBC  
- Quando si utilizza una gestione connessione ODBC, un'attività Esegui SQL prevede requisiti di archiviazione specifici per i dati con uno del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tipi di dati `date`, `time`, `datetime`, `datetime2`, o `datetimeoffset`. È necessario archiviare questi dati in uno dei seguenti tipi di parametro:  
+ Quando si utilizza una gestione connessione ODBC, un'attività Esegui SQL prevede requisiti di archiviazione specifici per i dati con uno dei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] i tipi di dati `date`, `time`, `datetime`, `datetime2`, o `datetimeoffset`. È necessario archiviare questi dati in uno dei seguenti tipi di parametro:  
   
 -   Un parametro di `input` del tipo di dati SQL_WVARCHAR.  
   
--   Un `output` parametro con tipo di dati appropriato, come elencato nella tabella seguente.  
+-   Un `output` parametro con tipo di dati appropriato, come indicato nella tabella seguente.  
   
     |Tipo di parametro `Output`|Tipo di dati date|  
     |-------------------------------|--------------------|  
@@ -132,7 +132,7 @@ ms.locfileid: "36068551"
   
  Se i dati non vengono archiviati nel parametro di input o di output appropriato, il pacchetto non viene eseguito correttamente.  
   
-##  <a name="WHERE_clauses"></a> Utilizzo di parametri in posizione in cui le clausole  
+##  <a name="WHERE_clauses"></a> Utilizzo di parametri nella posizione in cui le clausole  
  I comandi SELECT, INSERT, UPDATE e DELETE includono spesso la clausola WHERE per specificare filtri che definiscono le condizioni che ogni riga nelle tabelle di origine deve soddisfare per essere qualificata per un comando SQL. I parametri specificano i valori del filtro per la clausola WHERE.  
   
  È possibile utilizzare marcatori di parametro per specificare dinamicamente i valori dei parametri. Le regole che determinano se è possibile utilizzare marcatori di parametro e nomi di parametro in un'istruzione SQL dipendono dal tipo di gestione connessione utilizzato dall'attività Esegui SQL.  
@@ -162,17 +162,17 @@ ms.locfileid: "36068551"
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
 |ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462)(Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
-|ADO|Se è impostata su IsQueryStoredProcedure `False`, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Se è impostata su IsQueryStoredProcedure `True`, `uspGetBillOfMaterials`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Se è impostata su IsQueryStoredProcedure `False`, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Se è impostata su IsQueryStoredProcedure `True`, `uspGetBillOfMaterials`|  
+|ADO|Se IsQueryStoredProcedure è impostato su `False`, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Se IsQueryStoredProcedure è impostato su `True`, `uspGetBillOfMaterials`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Se IsQueryStoredProcedure è impostato su `False`, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Se IsQueryStoredProcedure è impostato su `True`, `uspGetBillOfMaterials`|  
   
  La sintassi per l'utilizzo dei parametri di output richiede che dopo ogni marcatore di parametro venga specificata la parola chiave OUTPUT. Ad esempio, la sintassi del parametro di output seguente è corretta: `EXEC myStoredProcedure ? OUTPUT`.  
   
  Per altre informazioni sull'utilizzo di parametri di input e di output con le stored procedure Transact-SQL, vedere [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
 ##  <a name="Return_codes"></a> Recupero dei valori dei codici restituiti  
- Una stored procedure può restituire un valore intero, denominato codice restituito, per indicare lo stato di esecuzione di una procedura. Per implementare codici restituiti nell'attività Esegui SQL, utilizzare i parametri del `ReturnValue` tipo.  
+ Una stored procedure può restituire un valore intero, denominato codice restituito, per indicare lo stato di esecuzione di una procedura. Per implementare codici restituiti nell'attività Esegui SQL, si usano i parametri del `ReturnValue` tipo.  
   
- Nella tabella seguente sono elencati, per tipo di gestione connessione, esempi di comandi EXEC che implementano codici restituiti. In tutti gli esempi viene utilizzato un parametro di `input`. Le regole per come utilizzare gli indicatori di parametro e i nomi dei parametri sono gli stessi per tutti i tipi di parametro, ovvero`Input`, `Output`, e `ReturnValue`.  
+ Nella tabella seguente sono elencati, per tipo di gestione connessione, esempi di comandi EXEC che implementano codici restituiti. In tutti gli esempi viene utilizzato un parametro di `input`. Le regole per l'uso di marcatori di parametro e i nomi dei parametri sono gli stessi per tutti i tipi di parametro, ovvero`Input`, `Output`, e `ReturnValue`.  
   
  In alcune sintassi non è supportato l'utilizzo di valori letterali come parametri. In tali casi è necessario specificare il valore del parametro utilizzando una variabile.  
   
@@ -180,14 +180,14 @@ ms.locfileid: "36068551"
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC ? = myStoredProcedure 1`|  
 |ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462)(Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
-|ADO|Se è impostata su IsQueryStoreProcedure `False`, `EXEC ? = myStoredProcedure 1`<br /><br /> Se è impostata su IsQueryStoreProcedure `True`, `myStoredProcedure`|  
+|ADO|Se IsQueryStoreProcedure è impostato su `False`, `EXEC ? = myStoredProcedure 1`<br /><br /> Se IsQueryStoreProcedure è impostato su `True`, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure è impostato su `True`.<br /><br /> `myStoredProcedure`|  
   
- Nella sintassi illustrata nella tabella precedente, l'attività Esegui SQL usa il tipo di origine **Input diretto** per eseguire la stored procedure. L'attività Esegui SQL può usare anche il tipo di origine **Connessione file** per eseguire una stored procedure. Indipendentemente dal fatto l'attività Esegui SQL utilizza il **Input diretto** oppure **connessione File** tipo di origine, utilizzare un parametro del `ReturnValue` tipo per implementare il codice restituito. Per altre informazioni sulla configurazione del tipo di origine dell'istruzione SQL eseguita dall'attività Esegui SQL, vedere [Editor attività Esegui SQL &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md).  
+ Nella sintassi illustrata nella tabella precedente, l'attività Esegui SQL usa il tipo di origine **Input diretto** per eseguire la stored procedure. L'attività Esegui SQL può usare anche il tipo di origine **Connessione file** per eseguire una stored procedure. Indipendentemente dal fatto che l'attività Esegui SQL utilizzi il **Input diretto** oppure **connessione File** tipo di origine, utilizzare un parametro del `ReturnValue` tipo per implementare il codice restituito. Per altre informazioni sulla configurazione del tipo di origine dell'istruzione SQL eseguita dall'attività Esegui SQL, vedere [Editor attività Esegui SQL &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md).  
   
  Per altre informazioni sull'utilizzo di codici restituiti con le stored procedure Transact-SQL, vedere [RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql).  
   
-##  <a name="Configure_parameters_and_return_codes"></a> Configurazione di parametri e codici restituiti nell'attività Esegui SQL  
+##  <a name="Configure_parameters_and_return_codes"></a> Configurazione dei parametri e codici restituiti nell'attività Esegui SQL  
  Per altre informazioni sulle proprietà dei parametri e dei codici restituiti che è possibile impostare in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)], fare clic sull'argomento seguente:  
   
 -   [Editor attività Esegui SQL &#40;pagina Mapping parametri&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)  

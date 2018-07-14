@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], preparing for mirroring
 - logins [SQL Server], database mirroring
 - mirror database [SQL Server]
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 49b882cc0cf9d64fdaaf0a1120d0afe92a3c0bfb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5bf92adf724f92c22d2d4b7232048136943593b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167242"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Preparazione di un database mirror per il mirroring (SQL Server)
   Prima di avviare una sessione di mirroring del database, è necessario che il proprietario del database o l'amministratore del sistema verifichi che il database mirror sia stato creato e sia pronto per il mirroring. La creazione di un nuovo database mirror richiede l'esecuzione di un backup completo del database principale e di un backup del log successivo. Entrambi i backup devono quindi essere ripristinati sull'istanza del server mirror tramite WITH NORECOVERY.  
@@ -53,7 +52,7 @@ ms.locfileid: "36167118"
   
 -   Non è possibile eseguire il mirroring del database di sistema **master**, **msdb**, **temp**o **model** .  
   
--   Non è possibile eseguire il mirroring di un database appartenente a un [gruppi di disponibilità AlwaysOn (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md).  
+-   È possibile eseguire il mirroring un database appartenente a un [gruppi di disponibilità AlwaysOn (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
 ###  <a name="Recommendations"></a> Indicazioni  
   
@@ -248,7 +247,7 @@ ms.locfileid: "36167118"
   
 ## <a name="see-also"></a>Vedere anche  
  [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Sicurezza del trasporto per gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Sicurezza del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Impostazione del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Backup e ripristino di indici e cataloghi full-text](../../relational-databases/indexes/indexes.md)   
  [Mirroring di database e cataloghi full-text &#40;SQL Server&#41;](database-mirroring-and-full-text-catalogs-sql-server.md)   

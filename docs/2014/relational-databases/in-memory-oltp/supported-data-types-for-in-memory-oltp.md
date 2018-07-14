@@ -1,5 +1,5 @@
 ---
-title: Tipi di dati supportati | Documenti Microsoft
+title: Tipi di dati supportati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 93c6555c1a8400306d40b2d3a719f280104ef582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3f967b7cf4c20492f7e7d46ad9b8f9a2556042e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166392"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195311"
 ---
 # <a name="supported-data-types"></a>Tipi di dati supportati
-  I seguenti tipi di dati sono **supportato** nelle tabelle con ottimizzazione per la memoria e stored procedure compilate in modo nativo:  
+  I seguenti tipi di dati sono **supportato** nelle tabelle ottimizzate per la memoria e stored procedure compilate in modo nativo:  
   
  **Tipi di dati numerici**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36166392"
 |nvarchar (n) <sup>1</sup>|[nchar e nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |sysname|[nchar e nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
- <sup>1</sup> limite è di 8060 byte per totale di riga, conteggiando (n) in tipi a lunghezza variabile.  
+ <sup>1</sup> limitazione è 8060 byte per totale di riga, conteggiando (n) in tipi a lunghezza variabile.  
   
  Per informazioni sulle regole di confronto supportate, vedere [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36166392"
 |binary(n)|[binary e varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
 |varbinary (n) <sup>1</sup>|[binary e varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
   
- <sup>1</sup> limite è di 8060 byte per totale di riga, conteggiando (n) in tipi a lunghezza variabile.  
+ <sup>1</sup> limitazione è 8060 byte per totale di riga, conteggiando (n) in tipi a lunghezza variabile.  
   
  **Altri tipi di dati**  
   

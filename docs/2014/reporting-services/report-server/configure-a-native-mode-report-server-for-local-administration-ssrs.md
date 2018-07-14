@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - UAC
 - installing Reporting Services
@@ -20,16 +20,16 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 80cdb989ed49604f2b860cf8d01ae15ae799f432
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 660a96d968410c2035ff194d83abb3e00c78d35d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273967"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurare un server di report in modalità nativa per gli amministratori locali (SSRS)
-  Per la distribuzione di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in uno dei seguenti sistemi operativi sono necessarie ulteriori operazioni di configurazione se si desidera amministrare localmente un'istanza del server di report. Questo argomento spiega come configurare il server di report per l'amministrazione locale. Se non si ancora installato o configurato il server di report, vedere [installare SQL Server 2014 dall'installazione guidata di &#40;programma di installazione di&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) e [gestire un Reporting Services in modalità Server di Report nativa](manage-a-reporting-services-native-mode-report-server.md).  
+  Per la distribuzione di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in uno dei seguenti sistemi operativi sono necessarie ulteriori operazioni di configurazione se si desidera amministrare localmente un'istanza del server di report. Questo argomento spiega come configurare il server di report per l'amministrazione locale. Se non si è ancora installato o configurato il server di report, vedere [installare SQL Server 2014 dall'installazione guidata di &#40;installazione&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) e [gestire un Reporting Services in modalità Server di Report nativa](manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -187,7 +187,7 @@ ms.locfileid: "36157903"
 -   Vedere le sezioni [Impostazioni cartella Gestione report)](#bkmk_configure_folder_settings) e [Impostazioni sito Gestione report](#bkmk_configure_site_settings) più indietro in questo argomento.  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> Informazioni aggiuntive  
- Un passaggio di configurazione aggiuntivo e comune correlato all'amministrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste nell'aprire la porta 80 in Windows Firewall per consentire l'accesso al computer del server di report. Per istruzioni, vedere [configurare un Firewall per l'accesso al Server di Report](configure-a-firewall-for-report-server-access.md).  
+ Un passaggio di configurazione aggiuntivo e comune correlato all'amministrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste nell'aprire la porta 80 in Windows Firewall per consentire l'accesso al computer del server di report. Per istruzioni, vedere [configurare un Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestire un server di report in modalità nativa di Reporting Services](manage-a-reporting-services-native-mode-report-server.md)  

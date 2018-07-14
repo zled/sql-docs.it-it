@@ -1,5 +1,5 @@
 ---
-title: Esplorazione del modello Decision Trees (esercitazione di base di Data Mining) | Documenti Microsoft
+title: Esplorazione del modello di albero delle decisioni (esercitazione di base di Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
 caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 7760bde2165a351876bb0ac84f26f59b1196bf2e
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: acc02a144a507ee90fb311cb44445816097b1c16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204447"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Esplorazione del modello Decision Trees (Esercitazione di base sul data mining)
   L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees consente di stimare quali colonne influiscono sulla decisione di acquistare una bicicletta in base alle colonne restanti nel set di training.  
@@ -29,7 +29,7 @@ ms.locfileid: "36312879"
 ##  <a name="Decision_Tree_Tab"></a> Scheda albero delle decisioni  
  Nel **albero delle decisioni** scheda, è possibile visualizzare gli alberi delle decisioni per ogni attributo stimabile nel set di dati.  
   
- In questo caso, il modello stima una sola colonna Bike Buyer, pertanto non c'è un solo albero da visualizzare. Se ci sono più alberi, è possibile usare il **albero** casella per scegliere un altro albero.  
+ In questo caso, il modello stima una sola colonna, ovvero Bike Buyer, pertanto non c'è un solo albero da visualizzare. Se si sono verificati più alberi, è possibile usare la **albero** casella per scegliere un altro albero.  
   
  Quando si visualizza il `TM_Decision_Tree` modello nel Visualizzatore albero delle decisioni, è possibile visualizzare gli attributi più importanti sul lato sinistro del grafico. "Più importanti" significa che questi attributi hanno la maggiore influenza sul risultato. Gli attributi nelle posizioni più basse dell'albero (a destra del grafico) hanno un minor effetto.  
   
@@ -37,21 +37,21 @@ ms.locfileid: "36312879"
   
 #### <a name="to-explore-the-model-in-the-decision-tree-tab"></a>Per esplorare il modello nella scheda Albero delle decisioni  
   
-1.  Selezionare il **visualizzatore modello di Data Mining** nella scheda **Progettazione modelli di Data Mining**.  
+1.  Selezionare il **visualizzatore modello di Data Mining** scheda **progettazione Data Mining**.  
   
-     Per impostazione predefinita, verrà visualizzata la finestra di progettazione per il primo modello è stato aggiunto alla struttura, in questo caso, `TM_Decision_Tree`.  
+     Per impostazione predefinita, verrà visualizzata la finestra di progettazione per il primo modello aggiunto alla struttura, in questo caso, `TM_Decision_Tree`.  
   
 2.  Utilizzare i pulsanti a forma di lente di ingrandimento per regolare le dimensioni della visualizzazione dell'albero.  
   
-     Per impostazione predefinita, nel Visualizzatore [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees vengono visualizzati solo i primi tre livelli dell'albero. Se l'albero contiene meno di tre livelli, il visualizzatore visualizza solo i livelli esistenti. È possibile visualizzare più livelli utilizzando il **Mostra livello** dispositivo di scorrimento o il **espansione predefinita** elenco.  
+     Per impostazione predefinita, nel Visualizzatore [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees vengono visualizzati solo i primi tre livelli dell'albero. Se l'albero contiene meno di tre livelli, il visualizzatore visualizza solo i livelli esistenti. È possibile visualizzare più livelli utilizzando il **Mostra il livello** dispositivo di scorrimento o il **espansione predefinita** elenco.  
   
-3.  Diapositiva **Mostra livello** fino alla quarta barra.  
+3.  Diapositiva **Mostra il livello** fino alla quarta barra.  
   
 4.  Modifica il **sfondo** valore `1`.  
   
-     Modificando il **sfondo** impostazione, è possibile visualizzare rapidamente il numero di case in ogni nodo che hanno il valore di destinazione di `1` per [Bike Buyer]. In questo particolare scenario ogni case rappresenta un cliente. Il valore `1` indica che il cliente ha precedentemente acquistato una bicicletta; il valore **0** indica che il cliente non ha acquistato una bicicletta. Quanto più scura appare l'ombreggiatura del nodo, tanto più alta sarà la percentuale di case nel nodo che presentano il valore di destinazione.  
+     Modificando la **sfondo** impostazione, è possibile visualizzare rapidamente il numero di case in ogni nodo che presenta il valore di destinazione `1` per [Bike Buyer]. In questo particolare scenario ogni case rappresenta un cliente. Il valore `1` indica che il cliente ha già acquistato una bicicletta; il valore **0** indica che il cliente non ha acquistato una bicicletta. Quanto più scura appare l'ombreggiatura del nodo, tanto più alta sarà la percentuale di case nel nodo che presentano il valore di destinazione.  
   
-5.  Posizionare il cursore sul nodo identificato dall'etichetta **tutti**. Nella descrizione comando corrispondente verranno visualizzate le seguenti informazioni:  
+5.  Posizionare il cursore sul nodo con l'etichetta **tutti**. Nella descrizione comando corrispondente verranno visualizzate le seguenti informazioni:  
   
     -   Numero totale di case  
   
@@ -61,9 +61,9 @@ ms.locfileid: "36312879"
   
     -   Numero di case con valori mancanti per [Bike Buyer]  
   
-     In alternativa, posizionare il cursore su un nodo qualsiasi dell'albero per visualizzare la condizione necessaria per raggiungere tale nodo dal nodo precedente. È inoltre possibile visualizzare queste stesse informazioni nel **legenda Data Mining**.  
+     In alternativa, posizionare il cursore su un nodo qualsiasi dell'albero per visualizzare la condizione necessaria per raggiungere tale nodo dal nodo precedente. È anche possibile visualizzare queste stesse informazioni nel **legenda Data Mining**.  
   
-6.  Fare clic sul nodo relativo **Age > = 34 e < 41**. L'istogramma viene visualizzato come una barra orizzontale sottile sul nodo e rappresenta la distribuzione dei clienti in questa fascia di età che hanno (rosa) e non hanno acquistato (blu) una bicicletta. Il visualizzatore indica che i clienti di età compresa tra 34 e 40 anni non automuniti o proprietari di una sola auto acquisteranno probabilmente una bicicletta. È inoltre possibile constatare che la probabilità di acquistare una bicicletta aumenta se il cliente è di età compresa tra 38 e 40 anni.  
+6.  Fare clic sul nodo relativo **età > = 34 e < 41**. L'istogramma viene visualizzato come una barra orizzontale sottile sul nodo e rappresenta la distribuzione dei clienti in questa fascia di età che hanno (rosa) e non hanno acquistato (blu) una bicicletta. Il visualizzatore indica che i clienti di età compresa tra 34 e 40 anni non automuniti o proprietari di una sola auto acquisteranno probabilmente una bicicletta. È inoltre possibile constatare che la probabilità di acquistare una bicicletta aumenta se il cliente è di età compresa tra 38 e 40 anni.  
   
  Poiché al momento della creazione della struttura e del modello è stato abilitato il drill-through, è possibile recuperare informazioni dettagliate dai case del modello e dalla struttura di data mining, comprese le colonne non incluse nel modello di data mining (ad esempio emailAddress, FirstName).  
   
@@ -85,9 +85,9 @@ ms.locfileid: "36312879"
   
 ##### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>Per esplorare il modello nella scheda Rete di dipendenze  
   
-1.  Fare clic sul `Bike Buyer` nodo per identificare le relative dipendenze.  
+1.  Fare clic su di `Bike Buyer` nodo per identificarne le dipendenze.  
   
-     Il nodo del centro della rete di dipendenze, `Bike Buyer`, rappresenta l'attributo stimabile nel modello di data mining. Il grafico evidenzia tutti i nodi collegati che hanno un effetto sull'attributo stimabile.  
+     Il nodo centrale per la rete di dipendenze, `Bike Buyer`, rappresenta l'attributo stimabile nel modello di data mining. Il grafico evidenzia tutti i nodi collegati che hanno un effetto sull'attributo stimabile.  
   
 2.  Modificare il **tutti i collegamenti** dispositivo di scorrimento per identificare l'attributo più influente.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36312879"
  [Esplorazione del modello di Clustering &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e attività del visualizzatore modello di data mining](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Attività del Visualizzatore modelli e procedure dettagliate di data mining](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Scheda albero decisionale &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)   
  [Scheda rete di dipendenze &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)   
  [Visualizzare un modello usando il Visualizzatore Microsoft Decision Trees](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
