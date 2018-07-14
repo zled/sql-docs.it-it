@@ -1,5 +1,5 @@
 ---
-title: Elaborare una struttura di Data Mining | Documenti Microsoft
+title: Elaborare una struttura di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], processing
 ms.assetid: 4162f33e-c23f-4293-8905-271781e45fa4
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99bb84e9af06ddb6238f4d2283734a0b18f13bdd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da6309109cfdc29a2000f0a30f84c910c71d12ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247321"
 ---
 # <a name="process-a-mining-structure"></a>Elaborare una struttura di data mining
   Per poter esplorare o utilizzare i modelli di data mining associati a una struttura di data mining, è necessario distribuire il progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ed elaborare la struttura e i modelli di data mining. Inoltre, se si apporta una modifica alla struttura o ai modelli di data mining, verrà richiesto di eseguire di nuovo la distribuzione e l'elaborazione. L'elaborazione della struttura nella scheda **Struttura di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] comporta l'elaborazione di tutti i modelli associati.  
@@ -42,13 +42,13 @@ ms.locfileid: "36158768"
   
      Se sono state apportate modifiche alla struttura, prima di elaborare i modelli verrà richiesto di ridistribuire la struttura. Scegliere **Sì**.  
   
-2.  Fare clic su **eseguiti** nel **struttura di Data Mining elaborazione - \<struttura >** finestra di dialogo.  
+2.  Fare clic su **eseguiti** nel **Processing Mining Structure - \<struttura >** nella finestra di dialogo.  
   
      Verrà aperta la finestra di dialogo **Stato elaborazione** in cui vengono visualizzate informazioni sull'elaborazione dei modelli.  
   
 3.  Fare clic su **Chiudi** nella finestra di dialogo **Stato elaborazione** dopo che l'elaborazione dei modelli è stata completata.  
   
-4.  Fare clic su **Close** nel **struttura di Data Mining elaborazione - \<struttura >** finestra di dialogo.  
+4.  Fare clic su **Close** nel **Processing Mining Structure - \<struttura >** nella finestra di dialogo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65536
 - vdt.DatabaseDesigner
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - diagrams [SQL Server], designing
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f4b54da69923a73d5c73647683fd9136c970e81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 00f9386b6940d24f3ce7a063a58fb76c436221f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255393"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Progettare diagrammi di database (Visual Database Tools)
   Progettazione database è uno strumento grafico che consente di progettare e rappresentare graficamente un database a cui si è connessi. Quando si progetta un database, è possibile utilizzare Progettazione database per creare, modificare o eliminare tabelle, colonne, chiavi, indici, relazioni e vincoli. Per rappresentare graficamente un database, è possibile creare uno o più diagrammi che rappresentano alcune o tutte le tabelle, le colonne, le chiavi e le relazioni in esso contenute.  
@@ -72,8 +72,8 @@ ms.locfileid: "36166753"
  [Apertura di Progettazione diagrammi di database &#40;Visual Database Tools&#41;](open-database-diagram-designer-visual-database-tools.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di diagrammi di Database &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Utilizzare le tabelle nel diagramma di Database di &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)   
+ [Usare diagrammi di Database &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Usare le tabelle in diagrammi di Database &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)   
  [Utilizzare il layout di un diagramma &#40;Visual Database Tools&#41;](work-with-diagram-layout-visual-database-tools.md)  
   
   

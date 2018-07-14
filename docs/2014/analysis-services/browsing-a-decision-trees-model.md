@@ -1,5 +1,5 @@
 ---
-title: Esplorazione di una decisione modello Decision | Documenti Microsoft
+title: Esplorazione di una decisione di modello di albero delle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - mining models, viewing
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c95552e6d6cad3fc7574a8a74551d936cf9aa721
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 077a392ff2374c89c5056e71c24fc6969b742a18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255093"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Esplorazione di un modello Decision Trees
-  Quando si apre un modello di classificazione utilizzando **esplorare**, il modello viene visualizzato in un visualizzatore di albero delle decisioni interattivo, simile al [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Decision Trees in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Nell visualizzatore vengono visualizzati i risultati di classificazione come grafico progettato per evidenziare i criteri che differenziano un gruppo di dati da un altro. È inoltre possibile eseguire il drill-down in singoli subset dell'albero e recuperare i dati sottostanti.  
+  Quando si apre un modello di classificazione utilizzando **esplorare**, il modello viene visualizzato in un visualizzatore di struttura ad albero delle decisioni interattivo, simile al [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore alberi delle decisioni in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Nell visualizzatore vengono visualizzati i risultati di classificazione come grafico progettato per evidenziare i criteri che differenziano un gruppo di dati da un altro. È inoltre possibile eseguire il drill-down in singoli subset dell'albero e recuperare i dati sottostanti.  
   
 ##  <a name="bkmk_Top"></a> Esplorare il modello  
- I modelli basati sull'algoritmo Decision Trees contengono molte informazioni interessanti da esplorare. Il **Sfoglia** finestra include le schede e riquadri per conoscere gli schemi e stimare i risultati utilizzando il grafico seguente:  
+ I modelli basati sull'algoritmo Decision Trees contengono molte informazioni interessanti da esplorare. Il **esplorare** finestra include le schede e riquadri che consentono di apprendere gli schemi e stimare i risultati utilizzando il grafico seguenti:  
   
 -   [Albero delle decisioni](#BKMK_DecisionTree)  
   
@@ -45,11 +45,11 @@ ms.locfileid: "36166974"
   
  Il grafico dell'albero delle decisioni può essere letto da sinistra a destra nel modo seguente:  
   
--   I rettangoli, sono detti *nodi*, contengono subset di dati. L'etichetta del nodo indica le caratteristiche di definizione di tale subset.  
+-   I rettangoli, che sono detti *nodi*, contengono subset di dati. L'etichetta del nodo indica le caratteristiche di definizione di tale subset.  
   
 -   Il nodo più a sinistra, con l'etichetta **tutti**, rappresenta il set di dati completo. Tutti i nodi successivi rappresentano i subset di dati.  
   
--   Un albero delle decisioni contiene molte *suddivide*, o decimali in cui i dati divergono in più set in base agli attributi.  
+-   Un albero delle decisioni contiene molte *suddivide*, o posizioni in cui i dati divergono in più set basati sugli attributi.  
   
      Ad esempio, nella prima divisione nel modello di esempio il set di dati viene suddiviso in tre gruppi per età.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36166974"
   
 ##### <a name="explore-the-decision-tree"></a>Esplorazione dell'albero delle decisioni  
   
-1.  Fare clic sui **tutti** nodo ed esaminare i **legenda Data Mining**.  
+1.  Fare clic sui **tutte** nodo ed esaminare le **legenda Data Mining**.  
   
      Viene visualizzato il conteggio esatto di case nel training set e una descrizione dettagliata dei risultati.  
   
@@ -71,39 +71,39 @@ ms.locfileid: "36166974"
   
 2.  Fare clic sui segni più e meno accanto a ogni nodo per espandere o comprimere l'albero.  
   
-     È anche possibile usare il **Mostra livello** dispositivo di scorrimento per espandere o comprimere l'albero.  
+     È anche possibile usare la **Mostra il livello** dispositivo di scorrimento per espandere o comprimere l'albero.  
   
 3.  Si noti che alcuni nodi sono più scuri di altri.  
   
-     Per impostazione predefinita **popolamento** viene utilizzato come variabile ombreggiatura, il che significa che l'intensità del colore Mostra quali nodi dispongono di maggiore supporto.  
+     Per impostazione predefinita **popolamento** viene usato come variabile ombreggiatura, il che significa che l'intensità del colore Mostra quali nodi dispongono di maggiore supporto.  
   
      Pertanto il nodo più a sinistra è il più scuro perché contiene l'intero set di dati.  
   
-4.  Modificare il valore per **sfondo** da **tutti i casi** al **Sì**.  
+4.  Modificare il valore per **sfondo** dalla **tutti i casi** al **Sì**.  
   
      ![Modifica grafico dell'albero delle decisioni per evidenziare gli acquirenti](media/dm13-dectreeshadedbuyer.gif "Modifica grafico dell'albero delle decisioni per evidenziare gli acquirenti")  
   
 5.  Ora l'intensità del colore indica quanti clienti in ogni nodo hanno acquistato una bicicletta, che rappresenta il comportamento di interesse.  
   
-     Si notino le barre colorate all'interno di ogni nodo. Si tratta di un istogramma in cui è illustrata la distribuzione dei risultati all'interno di questo subset di dati. Ad esempio, nell'albero delle decisioni Bike Buyer di esempio, la barra colorata indica la proporzione di clienti che hanno acquistato biciclette (valori Sì) rispetto a quelli che non l'hanno acquistata (valori No). Per ottenere i valori esatti, è possibile fare clic sul nodo e visualizzare il **legenda Data Mining**.  
+     Si notino le barre colorate all'interno di ogni nodo. Si tratta di un istogramma in cui è illustrata la distribuzione dei risultati all'interno di questo subset di dati. Ad esempio, nell'albero delle decisioni Bike Buyer di esempio, la barra colorata indica la proporzione di clienti che hanno acquistato biciclette (valori Sì) e gli utenti che non è stato eseguito (nessun valore). Per ottenere i valori esatti, è possibile fare clic sul nodo e visualizzare il **legenda Data Mining**.  
   
 6.  Seguendo il grafico, è possibile vedere come ogni subset di dati è ulteriormente scomposto in gruppi più piccoli e quali attributi sono più utili per la stima di un risultato.  
   
      Esaminando solo l'intensità dell'ombreggiatura, è possibile concentrarsi su un paio di gruppi di interesse e ottenere dati più dettagliati su di essi per il confronto. Ad esempio, questi gruppi hanno una probabilità piuttosto elevata di acquistare biciclette:  
   
-    -   Age > = 32 e \< 53 e Yearly Income > = 26000 e gli elementi figlio = 0  
+    -   Età > = 32 e \< 53 e Yearly Income > = 26000 e gli elementi figlio = 0  
   
-         Totale dei case: 1150  
+         Case totali: 1150  
   
          Probabilità bike buyer: % 18  
   
-    -   Age > = 32 e \< 53 e Yearly Income > = 26000 e gli elementi figlio non = stato civile e 0 = 'Single'  
+    -   Età > = 32 e \< 53 e Yearly Income > = 26000 e gli elementi figlio non = stato civile e 0 = 'Single'  
   
          Totale dei case: 402  
   
          Probabilità Bike Buyer: 16%  
   
-7.  Modificare il valore per **sfondo** da **Sì** al **No** e vedere come il grafico cambia.  
+7.  Modificare il valore per **sfondo** da **Yes** a **No** e vedere come cambia il grafico.  
   
      ![Grafico della rete di dipendenze per un modello di associazione](media/dm13-dec-tree-background-no.gif "grafico della rete di dipendenze per un modello di associazione")  
   
@@ -113,9 +113,9 @@ ms.locfileid: "36166974"
   
 -   Nel modello di dati di esempio, è presente un solo risultato stimabile, Bike Buyer, ma si supponga di disporre di informazioni relative al fatto se il cliente ha acquistato un piano di servizio e di volere stimare anche questo. In questo caso si disporrebbe di tali dati in una colonna separata e si includerebbero due attributi stimabili nel modello.  
   
-     Fare clic sui **istogramma** opzione nell'angolo superiore sinistro del riquadro dell'albero delle decisioni, per modificare il numero massimo di stati che possono essere visualizzati negli istogrammi dell'albero. Tale opzione è utile se l'attributo stimabile include molti stati. Gli stati vengono visualizzati in un istogramma in ordine di diffusione da sinistra a destra.  
+     Scegliere il **istogramma** opzione, nell'angolo superiore sinistro del riquadro dell'albero delle decisioni per modificare il numero massimo di stati che possono essere visualizzati negli istogrammi dell'albero. Tale opzione è utile se l'attributo stimabile include molti stati. Gli stati vengono visualizzati in un istogramma in ordine di diffusione da sinistra a destra.  
   
--   È anche possibile utilizzare le opzioni sul **albero delle decisioni** scheda influenzano il modo in cui la struttura ad albero, dall'esecuzione dello zoom avanti o indietro o ridimensionando il grafico per adattarlo alla finestra.  
+-   È anche possibile usare le opzioni sul **albero delle decisioni** pressione di tab per influire sulla modalità di visualizzazione albero, lo zoom avanti o indietro o ridimensionando il grafico per adattarlo alla finestra.  
   
 -   Per impostare il numero predefinito di livelli visualizzati per tutti gli alberi del modello, usare **Espansione predefinita** .  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36166974"
   
 2.  Fare quindi clic sul nodo Bike Buyer.  
   
-     ![Visualizzazione di rete di dipendenze per gli alberi delle decisioni](media/dm13-dectree-depnet.gif "visualizzazione rete di dipendenze per gli alberi delle decisioni")  
+     ![Vista della rete di dipendenze per gli alberi delle decisioni](media/dm13-dectree-depnet.gif "vista della rete di dipendenze per gli alberi delle decisioni")  
   
      Quando si seleziona un nodo, nel visualizzatore vengono evidenziate le dipendenze specifiche del nodo. In questo caso, nel visualizzatore viene evidenziato ogni nodo che consente di stimare il risultato.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "36166974"
   
     -   **Drill-Through modello**. Questa opzione consente di ottenere i case che appartengono al nodo selezionato e di salvarli in una tabella in Excel. È possibile tornare solo alle colonne dei dati utilizzati effettivamente nella compilazione del modello.  
   
-    -   **Drill-Through delle colonne della struttura**. Questa opzione consente di ottenere i case che appartengono al nodo selezionato e di salvarli in una tabella in Excel. Si ottengono tutte le informazioni disponibili nei dati sottostanti quando sono stati compilati, anche se una colonna non è stata utilizzata nel modello. Ad esempio, si potrebbe aver escluso l'indirizzo e il CAP del cliente in quanto tali campi non sono utili con l'analisi, ma sono stati lasciati nella struttura.  
+    -   **Drill-Through le colonne della struttura**. Questa opzione consente di ottenere i case che appartengono al nodo selezionato e di salvarli in una tabella in Excel. Si ottengono tutte le informazioni disponibili nei dati sottostanti quando sono stati compilati, anche se una colonna non è stata utilizzata nel modello. Ad esempio, si potrebbe aver escluso l'indirizzo e il CAP del cliente in quanto tali campi non sono utili con l'analisi, ma sono stati lasciati nella struttura.  
   
      Tornare a Excel per visualizzare i dati. Nel visualizzatore Sfoglia viene eseguita una query, vengono salvati i dati in una tabella in un nuovo foglio di lavoro e vengono etichettati i risultati.  
   

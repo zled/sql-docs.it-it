@@ -1,5 +1,5 @@
 ---
-title: Elemento Unlock (XMLA) | Documenti Microsoft
+title: Elemento Unlock (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Unlock command
 ms.assetid: 46425b33-baa2-41ad-803a-34d2fb4b2cab
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ce0b1512c32ddffd029e9a4704e9afcd5ad7a388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5703789c49d77dc6f95cfdc590f8a8d3586dc000
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328512"
 ---
 # <a name="unlock-element-xmla"></a>Elemento Unlock (XMLA)
   Sblocca un blocco specificato in un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza.  
@@ -63,7 +63,7 @@ ms.locfileid: "36167934"
 |Elementi padre|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |Elementi figlio|[ID](../xml-elements-properties/id-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il comando `Unlock` rimuove un blocco applicato all'interno del contesto della transazione attualmente attiva. Solo gli amministratori del database o gli amministratori del server possono eseguire in modo esplicito un comando `Unlock`.  
   
  Tutti i blocchi sono contenuti nel contesto della transazione corrente. Quando viene eseguito il commit oppure il rollback della transazione corrente, tutti i blocchi definiti all'interno della transazione vengono rilasciati automaticamente.  

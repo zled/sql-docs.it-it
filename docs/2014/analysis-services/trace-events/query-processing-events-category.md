@@ -1,5 +1,5 @@
 ---
-title: Categoria di eventi di elaborazione delle query | Documenti Microsoft
+title: Categoria di eventi di elaborazione delle query | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ddcdd85807e9b77c5baf91cc7bb6fd4418f8316b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ee6ef696f26397c3b4ca7656710d666d6e1941d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261487"
 ---
 # <a name="query-processing-events-category"></a>Categoria degli eventi di elaborazione delle query
   Nella categoria di eventi relativa all'elaborazione di query sono incluse le classi di eventi descritte nella tabella seguente.  
@@ -48,6 +48,6 @@ ms.locfileid: "36167738"
  Per informazioni sulle colonne associate a ogni classe di evento di elaborazione query, vedere [Query Processing Events Data Columns](query-processing-events-data-columns.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli eventi di traccia di Analysis Services](analysis-services-trace-events.md)  
+ [Eventi di traccia di Analysis Services](analysis-services-trace-events.md)  
   
   

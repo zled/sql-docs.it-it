@@ -1,5 +1,5 @@
 ---
-title: Elemento UpdateCells (XMLA) | Documenti Microsoft
+title: Elemento UpdateCells (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - UpdateCells command
 ms.assetid: 18336a35-8a46-4532-9ee7-71828b2982af
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fd96a8652bb5537cfb4f4f116aa86450a34acbe3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 05b3b1dae8f409f367a88b696accb77484304b4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219981"
 ---
 # <a name="updatecells-element-xmla"></a>Elemento UpdateCells (XMLA)
   Aggiorna le celle in un cubo abilitato per la scrittura.  
@@ -61,9 +61,9 @@ ms.locfileid: "36167734"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|Elementi figlio|[cella](../xml-elements-properties/cell-element-xmla.md)|  
+|Elementi figlio|[Cella](../xml-elements-properties/cell-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il comando `UpdateCells` aggiorna le celle in un cubo che supporta il writeback delle celle.  
   
  Per altre informazioni sull'aggiornamento di celle, vedere [Aggiornamento di celle &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  

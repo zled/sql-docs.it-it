@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 89652118eba8d67edb1a0dab59a3300c14b2a50f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b92b7371a93212a29a3219ec0240702ba3ad1d92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178338"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (espressione SSIS)
   Viene restituita un'espressione di caratteri ripetuta per il numero di volte specificato. L'argomento *numero di volte* deve restituire un Integer.  
@@ -46,7 +46,7 @@ REPLICATE(character_expression,times)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se il *numero di volte* ha valore zero, la funzione restituirà una stringa di lunghezza zero.  
   
  Se il *numero di volte* è un numero negativo, la funzione restituirà un errore.  
@@ -77,6 +77,6 @@ REPLICATE(@Name, (DT_I4(Times))
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md)  
+ [Le funzioni &#40;espressione di SSIS&#41;](functions-ssis-expression.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Set di righe MDSCHEMA_CUBES | Documenti Microsoft
+title: Set di righe MDSCHEMA_CUBES | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_CUBES rowset
 ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0044c9943b2f2819ea216c735f298b7e30de7a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 441f83b4b5bec1a2340fbf6e8a3b14da77363162
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243401"
 ---
 # <a name="mdschemacubes-rowset"></a>Set di righe MDSCHEMA_CUBES
   Descrive la struttura dei cubi all'interno di un database.  
@@ -38,7 +38,7 @@ ms.locfileid: "36166158"
 |-----------------|--------------------|------------|-----------------|  
 |`CATALOG_NAME`|`DBTYPE_WSTR`||Nome del database.|  
 |`SCHEMA_NAME`|`DBTYPE_WSTR`||Non supportato.|  
-|`CUBE_NAME`|`DBTYPE_WSTR`||Nome del cubo o della dimensione. I nomi delle dimensioni sono preceduti da un simbolo di dollaro ($). **Nota:** solo server e gli amministratori di database dispongono delle autorizzazioni per vedere i cubi creati da una dimensione.|  
+|`CUBE_NAME`|`DBTYPE_WSTR`||Nome del cubo o della dimensione. I nomi delle dimensioni sono preceduti da un simbolo di dollaro ($). **Nota:** solo server e gli amministratori del database dispongono delle autorizzazioni per visualizzare i cubi creati da una dimensione.|  
 |`CUBE_TYPE`|`DBTYPE_WSTR`||Tipo del cubo. I valori validi sono:<br /><br /> -   `CUBE`<br />-   `DIMENSION`|  
 |`CUBE_GUID`|`DBTYPE_GUID`||Non supportato.|  
 |`CREATED_ON`|`DBTYPE_DBTIMESTAMP`||Non supportato.|  
@@ -65,7 +65,7 @@ ms.locfileid: "36166158"
 |`CATALOG_NAME`|`DBTYPE_WSTR`|Facoltativo.|  
 |`SCHEMA_NAME`|`DBTYPE_WSTR`|Facoltativo.|  
 |`CUBE_NAME`|`DBTYPE_WSTR`|Facoltativo.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno di questi valori validi:<br /><br /> -1 CUBO<br />-QUOTA 2<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno di questi valori validi:<br /><br /> -1 CUBO<br />-DIMENSIONE DI 2<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
 |`Base Cube_Name`|`DBTYPE_WSTR`|Facoltativo.|  
   
 ## <a name="see-also"></a>Vedere anche  

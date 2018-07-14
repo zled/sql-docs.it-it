@@ -1,5 +1,5 @@
 ---
-title: Editor attività servizio Web (pagina Input) | Documenti Microsoft
+title: Editor attività servizio Web (pagina Input) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.input.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8f458f4a2898915102ab2a05b04fb7ba223c5e30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6322a234ea1653f578f60b36a84b7e2c71af169
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264957"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor attività Servizio Web (pagina Input)
   Utilizzare la pagina **Input** della finestra di dialogo **Editor attività Servizio Web** per specificare il servizio Web, il metodo Web e i valori da fornire come input al metodo Web. I valori possono essere immessi digitando direttamente le stringhe nella colonna Valore o selezionando le variabili nella colonna Valore.  
@@ -56,7 +56,7 @@ ms.locfileid: "36166869"
  Se le caselle di controllo Variabile sono selezionate, selezionare le variabili nell'elenco per l'invio degli input. In caso contrario, digitare i valori da utilizzare negli input.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività servizio Web &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor attività servizio Web &#40;pagina di Output&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  

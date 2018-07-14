@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 caps.latest.revision: 42
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 238db7511e34992dfb8d2ca510e2080db4ce138a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bcb0036fbf6d0c3f5af18d044d389bc8673cd5ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238502"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintassi del percorso di elemento per i dati del report XML (SSRS)
   In Progettazione report è possibile specificare i dati da utilizzare per un report da un'origine dati XML definendo un percorso di elemento con distinzione tra maiuscole e minuscole. Un percorso di elemento indica come attraversare i nodi gerarchici XML e i relativi attributi nell'origine dei dati XML. Per utilizzare il percorso di elemento predefinito, lasciare vuota la query del set di dati o il nodo `ElementPath` XML dell'elemento `Query` XML. Quando vengono recuperati i dati dall'origine dei dati XML, i nodi elemento con valori di testo e gli attributi dei nodi elemento diventano colonne del set di risultati. Quando si esegue la query, i valori dei nodi e degli attributi diventano i dati delle righe. Le colonne sono visualizzate come raccolta di campi di set di dati nel riquadro Dati report. In questo argomento viene descritta la sintassi del percorso di elemento.  
   
 > [!NOTE]  
->  La sintassi del percorso di elemento è indipendente dallo spazio dei nomi. Per usare gli spazi dei nomi in un percorso di elemento, usare la sintassi di query XML che include un file XML `ElementPath` elemento descritto in [sintassi di Query XML per dati del Report XML &#40;SSRS&#41;](report-data-ssrs.md).  
+>  La sintassi del percorso di elemento è indipendente dallo spazio dei nomi. Per usare gli spazi dei nomi in un percorso di elemento, usare la sintassi di query XML che include un file XML `ElementPath` descritto in [sintassi di Query XML per dati del Report XML &#40;SSRS&#41;](report-data-ssrs.md).  
   
  Nella tabella seguente vengono descritte le convenzioni utilizzate per definire un percorso di elemento.  
   
@@ -70,7 +70,7 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Nella tabella seguente sono riepilogati i termini del percorso di elemento. Gli esempi della tabella si riferiscono al documento XML di esempio Customers.xml, incluso nella sezione relativa agli esempi di questo argomento.  
   
 > [!NOTE]  
@@ -81,19 +81,19 @@ XMLLocalName :: =
 |Element path|Definisce la sequenza di nodi da attraversare nel documento XML per recuperare i dati del campo di un set di dati con un'origine dei dati XML.|  
 |`ElementNode`|Nodo XML nel documento XML. I nodi sono designati da tag e sono correlati agli altri nodi in base a una relazione gerarchica. Customers>\<, ad esempio, è il nodo elemento radice. Customer>\< è un sottoelemento di Customers>\<.|  
 |`XMLName`|Nome del nodo. Il nome del nodo Customers, ad esempio, è Customers. Un `XMLName` possono essere preceduti da un identificatore dello spazio dei nomi per assegnare un nome in modo univoco ogni nodo.|  
-|`Encoding`|Indica che il `Value` per questo elemento è con codifica XML e deve essere decodificato e incluso come un sottoelemento dell'elemento.|  
-|`FieldList`|Definisce il set di elementi e attributi da utilizzare per recuperare i dati.<br /><br /> Se non specificato, vengono utilizzati come campi tutti gli attributi e i sottoelementi. Se viene specificato l'elenco dei campi vuoto (**{}**), non verrà usato alcun campo di questo nodo.<br /><br /> Un `FieldList` potrebbe non contenere sia una `Value` e una `Element` o `ElementNode`.|  
+|`Encoding`|Indica che il `Value` per questo elemento è con codifica XML e deve essere decodificato e incluso come sottoelemento dell'elemento.|  
+|`FieldList`|Definisce il set di elementi e attributi da utilizzare per recuperare i dati.<br /><br /> Se non specificato, vengono utilizzati come campi tutti gli attributi e i sottoelementi. Se viene specificato l'elenco dei campi vuoto (**{}**), non verrà usato alcun campo di questo nodo.<br /><br /> Oggetto `FieldList` non può contenere un `Value` e un `Element` o `ElementNode`.|  
 |`Field`|Specifica i dati recuperati come campo del set di dati.|  
 |`Attribute`|Una coppia nome-valore all'interno di `ElementNode`. Ad esempio, nel nodo dell'elemento \<Customer ID = "1" >, `ID` è un attributo e `@ID(Integer)` restituisce "1" come tipo integer nel campo dati corrispondente `ID`.|  
-|`Value`|Valore dell'elemento. `Value` può essere utilizzato solo nell'ultimo `ElementNode` del percorso di elemento. Ad esempio, poiché \<restituire > è un nodo foglia, se si include alla fine di un percorso di elemento, il valore di `Return {@}` è `Chair`.|  
+|`Value`|Valore dell'elemento. `Value` può essere utilizzato solo nell'ultimo `ElementNode` del percorso di elemento. Ad esempio, in quanto \<restituire > è un nodo foglia, se lo si include alla fine di un percorso di elemento, il valore di `Return {@}` è `Chair`.|  
 |`Element`|Valore del sottoelemento denominato. Customers {}/Customer {}/LastName recupera, ad esempio, i valori solo per l'elemento LastName.|  
 |`Type`|Tipo di dati facoltativo da utilizzare per il campo creato da questo elemento.|  
-|`NamespacePrefix`|`NamespacePrefix` è definito nell'elemento Query XML. Se nessun elemento Query XML è presente, gli spazi dei nomi nel codice XML `ElementPath` vengono ignorati. Se è presente un elemento Query XML, il nodo `ElementPath` XML include un attributo `IgnoreNamespaces` facoltativo. Se è IgnoreNamespaces `true`, gli spazi dei nomi nel codice XML `ElementPath` e il documento XML vengono ignorati. Per altre informazioni, vedere [Sintassi di XML Query per i dati del report XML &#40;SSRS&#41;](report-data-ssrs.md).|  
+|`NamespacePrefix`|`NamespacePrefix` è definito nell'elemento Query XML. Se nessun elemento Query XML esiste, gli spazi dei nomi nel codice XML `ElementPath` vengono ignorati. Se è presente un elemento Query XML, il nodo `ElementPath` XML include un attributo `IgnoreNamespaces` facoltativo. Se IgnoreNamespaces `true`, gli spazi dei nomi nel codice XML `ElementPath` e il documento XML vengono ignorati. Per altre informazioni, vedere [Sintassi di XML Query per i dati del report XML &#40;SSRS&#41;](report-data-ssrs.md).|  
   
 ## <a name="example---no-namespaces"></a>Esempio - Nessuno spazio dei nomi  
  Negli esempi seguenti viene utilizzato il documento XML Customers.xml. In questa tabella sono illustrati esempi di sintassi del percorso di elemento e i risultati dell'utilizzo del percorso di elemento in una query per la definizione di un set di dati, basata sul documento XML come origine dati.  
   
- Si noti che quando il percorso di elemento è vuoto, la query Usa il percorso di elemento predefinito: il primo percorso da una raccolta di nodi foglia. Nel primo esempio l'utilizzo di un percorso di elemento vuoto corrisponde alla definizione del percorso di elemento /Customers/Customer/Orders/Order. Tutti gli attributi e i valori del nodo nel percorso vengono restituiti nel set di risultati, mentre i nomi degli attributi e del nodo vengono visualizzati come campi del set di dati.  
+ Si noti che quando il percorso dell'elemento è vuoto, la query Usa il percorso di elemento predefinito: il primo percorso di una raccolta di nodi foglia. Nel primo esempio l'utilizzo di un percorso di elemento vuoto corrisponde alla definizione del percorso di elemento /Customers/Customer/Orders/Order. Tutti gli attributi e i valori del nodo nel percorso vengono restituiti nel set di risultati, mentre i nomi degli attributi e del nodo vengono visualizzati come campi del set di dati.  
   
 -   *Vuoto*  
   

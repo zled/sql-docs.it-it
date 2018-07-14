@@ -1,5 +1,5 @@
 ---
-title: Elemento create (XMLA) | Documenti Microsoft
+title: Elemento create (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Create command (XMLA)
 ms.assetid: a623d362-a1ac-40e4-8816-65fac89cb391
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 19e7673c63d7e305d706efb910222f8ba0da7215
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a3679fd48885b3538996b38286709e14b665bef0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247732"
 ---
 # <a name="create-element-xmla"></a>Elemento Create (XMLA)
-  Contiene gli elementi di Analysis Services Scripting Language (ASSL) utilizzati per il `Execute` metodo per creare oggetti in un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza.  
+  Contiene gli elementi di Analysis Services Scripting Language (ASSL) usati per il `Execute` metodo per creare oggetti in un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -68,10 +68,10 @@ ms.locfileid: "36167522"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|AllowOverwrite|Parametro facoltativo `Boolean` attributo. Se è impostato a Vero, gli oggetti definiti nell'elemento `ObjectDefinition` possono sovrascrivere oggetti esistenti sull'istanza [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Se questo attributo è omesso o impostato a Falso, la presenza di un oggetto esistente genera un errore.|  
-|Ambito|Parametro facoltativo `Enum` attributo. Definisce la durata degli oggetti definiti nell'elemento `ObjectDefinition`. Se questo attributo viene omesso, gli oggetti definiti nell'elemento `ObjectDefinition` vengono salvati in modo permanente sull'istanza [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Sono disponibili i valori seguenti.<br /><br /> -   *Sessione*<br />     Gli oggetti definiti nell'elemento `ObjectDefinition` esistono solo per la durata della sessione di XML for Analysis (XMLA). **Nota:** quando si usa la *sessione* impostazione, il `ObjectDefinition` elemento può contenere solo [dimensione](../../scripting/objects/dimension-element-assl.md), [cubo](../../scripting/objects/cube-element-assl.md), o [MiningModel ](../../scripting/objects/miningmodel-element-assl.md) Elementi ASSL.|  
+|AllowOverwrite|Facoltativo `Boolean` attributo. Se è impostato a Vero, gli oggetti definiti nell'elemento `ObjectDefinition` possono sovrascrivere oggetti esistenti sull'istanza [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Se questo attributo è omesso o impostato a Falso, la presenza di un oggetto esistente genera un errore.|  
+|Ambito|Facoltativo `Enum` attributo. Definisce la durata degli oggetti definiti nell'elemento `ObjectDefinition`. Se questo attributo viene omesso, gli oggetti definiti nell'elemento `ObjectDefinition` vengono salvati in modo permanente sull'istanza [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Sono disponibili i valori seguenti.<br /><br /> -   *Sessione*<br />     Gli oggetti definiti nell'elemento `ObjectDefinition` esistono solo per la durata della sessione di XML for Analysis (XMLA). **Nota:** quando si usano i *sessione* impostazione, il `ObjectDefinition` elemento può contenere solo [dimensione](../../scripting/objects/dimension-element-assl.md), [cubo](../../scripting/objects/cube-element-assl.md), o [MiningModel ](../../scripting/objects/miningmodel-element-assl.md) Gli elementi ASSL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Ogni operazione `Create` crea un oggetto principale sotto un padre fornito dall'elemento `ParentObject`. Se l'oggetto padre viene omesso, si presuppone che sia l'istanza [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] di destinazione. Questo genera un errore se il padre di un oggetto principale non è l'istanza di destinazione.  
   
 ## <a name="example"></a>Esempio  

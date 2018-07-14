@@ -1,5 +1,5 @@
 ---
-title: Connettere un'applicazione di servizio PowerPivot a un'applicazione Web di SharePoint in Amministrazione centrale | Documenti Microsoft
+title: Connettere un'applicazione di servizio PowerPivot a un'applicazione Web SharePoint in Amministrazione centrale | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e2f65e97eaff15057b5d427a09f015b7bcdd218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0e206306e959df9e61e2f07d842fad7900cabb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272027"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Connettere un'applicazione del servizio PowerPivot a un'applicazione Web SharePoint in Amministrazione centrale
   Un'applicazione di servizio PowerPivot può essere utilizzata da un numero qualsiasi di applicazioni Web SharePoint nella farm. Per rendere disponibile un'applicazione di servizio PowerPivot, aggiungerla a un elenco di associazioni al servizio.  
@@ -31,7 +31,7 @@ ms.locfileid: "36167160"
   
  [Aggiungere l'applicazione di servizio PowerPivot al gruppo predefinito](#default)  
   
- [Aggiungere l'applicazione di servizio PowerPivot un elenco di associazioni del servizio personalizzato](#custom)  
+ [Aggiungere l'applicazione di servizio PowerPivot un elenco di associazioni del servizio personalizzate](#custom)  
   
 ##  <a name="default"></a> Aggiungere l'applicazione di servizio PowerPivot al gruppo predefinito  
  Un elenco di associazioni al servizio è un elenco di servizi condivisi che forniscono risorse ad altre applicazioni Web SharePoint nella farm. Per la farm è disponibile un gruppo predefinito di associazioni al servizio.  
@@ -46,7 +46,7 @@ ms.locfileid: "36167160"
   
 4.  Fare clic su **OK**.  
   
-##  <a name="custom"></a> Aggiungere l'applicazione di servizio PowerPivot un elenco di associazioni del servizio personalizzato  
+##  <a name="custom"></a> Aggiungere l'applicazione di servizio PowerPivot un elenco di associazioni del servizio personalizzate  
  Il gruppo predefinito può essere sostituito da un elenco personalizzato. Un elenco personalizzato viene creato in modo specifico per una sola applicazione Web SharePoint. Il gruppo predefinito viene sostituito solo dalle associazioni al servizio specificate da un amministratore di farm o del servizio. Se sono state create più applicazioni di servizio PowerPivot, è necessario utilizzare un elenco personalizzato per specificare quale utilizzare. Un elenco personalizzato non può essere riutilizzato da altre applicazioni Web. Si applica solo all'applicazione Web per cui è stato creato.  
   
 1.  In **Gestione applicazioni**di Amministrazione centrale fare clic su **Gestisci applicazioni Web**.  

@@ -1,5 +1,5 @@
 ---
-title: Configurazione server - account di servizio | Documenti Microsoft
+title: Configurazione server - account di servizio | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - service account configuration, SQL Server
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e390c18563b092fd0460da5b9aed90828921d10b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2debf9c1754b81741e25f535b1cf05dce2ce2233
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212371"
 ---
 # <a name="server-configuration---service-accounts"></a>Configurazione Server - Account di servizio
   Utilizzare la pagina Configurazione del server dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per assegnare account di accesso ai servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I servizi effettivamente configurati in questa pagina dipendono dalle caratteristiche selezionate per l'installazione.  
   
- Gli account di avvio usati per avviare ed eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere account utente di dominio di un collegamento ipertestuale "ms-help://SQL11_I1033/s11sq_GetStart_I/html/309b9dac-0b3a-4617-85ef-c4519ce9d014.htm" \l "Domain_User", gli account utente locali, account del servizio gestiti, gli account virtuali oppure account di sistema predefiniti.  
+ Gli account di avvio usati per avviare ed eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere account utente di dominio di collegamento ipertestuale "ms-help://SQL11_I1033/s11sq_GetStart_I/html/309b9dac-0b3a-4617-85ef-c4519ce9d014.htm" \l "Domain_User", gli account utente locali, account del servizio gestiti, gli account virtuali o account di sistema predefiniti.  
   
 ## <a name="options"></a>Opzioni  
  È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. È inoltre possibile specificare se i servizi verranno avviati automaticamente, manualmente o se sono disabilitati. Per la maggior parte delle installazioni l'account consigliato è quello predefinito.  
@@ -50,7 +50,7 @@ ms.locfileid: "36168670"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|Account di servizio utilizzato per il servizio client Riesecuzione distribuita.<br /><br /> Specificare un account con cui eseguire il servizio client Riesecuzione distribuita. Questo account dovrebbe essere diverso dall'account utilizzato per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Il tipo di avvio predefinito è Manuale.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|Account di servizio utilizzato per il servizio controller di Riesecuzione distribuita.<br /><br /> Specificare un account con cui eseguire il servizio controller di Riesecuzione distribuita. Questo account dovrebbe essere diverso dall'account utilizzato per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Il tipo di avvio predefinito è Manuale.|  
 |Utilità di avvio del daemon di filtri full-text di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Servizio che crea i processi fdhost.exe. È necessario per ospitare i filtri e i word breaker che elaborano i dati testuali per l'indicizzazione full-text.<br /><br /> Se si specifica un account di dominio in cui eseguire il servizio per l'utilità di avvio di FDHOST, è consigliabile utilizzare un account con privilegi limitati. Questo account dovrebbe essere diverso dall'account utilizzato per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser è il servizio di risoluzione dei nomi che fornisce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le informazioni di connessione ai computer client. Questo servizio viene condiviso da più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. L'account di accesso predefinito è NT Authority\Local service e non può essere modificato durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile modificare l'account dopo che l'installazione è stata completata. Se non specificato durante l'installazione, il tipo di avvio viene determinato nel modo seguente:<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser è impostato su automatico e viene eseguito negli scenari di installazione descritti di seguito.<br />-<br />                            Istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br />-<br />                            Istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è abilitato TCP o NP<br />-<br />                            Istanza denominata di Analysis Server senza cluster<br /><br /> Se lo scenario di installazione non è uno di quelli descritti in precedenza e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser è già installato, verrà mantenuto lo stato corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser.<br /><br /> Il tipo di avvio è impostato su disabilitato e arrestato se non è presente un'istanza esistente di un precedente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione prima dell'installazione.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser è il servizio di risoluzione dei nomi che fornisce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni sulla connessione ai computer client. Questo servizio viene condiviso da più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. L'account di accesso predefinito è NT Authority\Local service e non può essere modificato durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile modificare l'account dopo che l'installazione è stata completata. Se non specificato durante l'installazione, il tipo di avvio viene determinato nel modo seguente:<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser viene impostato su automatico e viene eseguito negli scenari di installazione descritti di seguito.<br />-<br />                            Istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br />-<br />                            Istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è abilitato TCP o NP<br />-<br />                            Istanza denominata di Analysis Server senza cluster<br /><br /> Se lo scenario di installazione non è uno di quelli descritti in precedenza e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser è già installato, verrà mantenuto lo stato corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser.<br /><br /> Il tipo di avvio è impostato su disabilitato e arrestato se non esiste un'istanza esistente di una versione meno recente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione precedente all'installazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  

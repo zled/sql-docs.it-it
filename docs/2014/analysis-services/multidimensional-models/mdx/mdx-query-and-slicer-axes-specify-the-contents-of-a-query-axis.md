@@ -1,5 +1,5 @@
 ---
-title: Impostazione del contenuto di un asse della Query (MDX) | Documenti Microsoft
+title: Impostazione del contenuto di un asse della Query (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cellsets [MDX]
 - query axis [MDX]
 ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e540d77db8b6834df4a0cdc00a3b9aad54d9970e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74b091d87c78f27cc6141f076dd4eab4924f0e89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267617"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>Impostazione del contenuto di un asse della query (MDX)
   Gli assi della query specificano i bordi di un set di celle restituito dall'istruzione SELECT di MDX (Multidimensional Expression). L'impostazione dei bordi di un set di celle consente di limitare i dati restituiti visibili al client.  

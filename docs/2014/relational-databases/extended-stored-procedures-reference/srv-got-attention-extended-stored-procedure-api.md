@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_got_attention
 ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9553592c01e318de3e090900d2f6b4260301146f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: d7d6f026b9c851c7fb8636442cfda27a870be861
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201401"
 ---
 # <a name="srvgotattention-extended-stored-procedure-api"></a>srv_got_attention (API Stored procedure estesa)
     
@@ -57,7 +57,7 @@ srvproc
 ## <a name="return-value"></a>Valore restituito  
  TRUE se la connessione viene terminata o il batch interrotto. FALSE se la connessione o il batch è attivo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Una stored procedure estesa con esecuzione prolungata deve controllare l'attenzione del server chiamando periodicamente **srv_got_attention** in modo che la procedura possa terminare se stessa se la connessione viene terminata o il batch viene interrotto.  
   
 > [!IMPORTANT]  

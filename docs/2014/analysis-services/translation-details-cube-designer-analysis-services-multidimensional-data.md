@@ -1,5 +1,5 @@
 ---
-title: Dettagli di traduzione (scheda traduzioni, Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Dettagli di traduzione (scheda traduzioni, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.translations.translationspane.translationdetails.f1
 ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7f6c03a5a9f656bc32752c2dfacb242d0b9fac9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 401c69274fad3e88b29d06bcb3446dd0c1e3bf59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185278"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Dettagli traduzione (scheda Traduzioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Dettagli della transizione** della scheda **Transazioni** di Progettazione cubi per definire e gestire le traduzioni per il cubo attualmente selezionato.  
@@ -73,7 +73,7 @@ ms.locfileid: "36168152"
   
 |Nome|Definizione|  
 |----------|----------------|  
-|**Nuova traduzione**|Selezionare questa opzione per visualizzare la finestra di dialogo **Seleziona lingua** e creare una nuova traduzione. La traduzione verrà visualizzata sotto forma di nuova colonna all'interno della griglia relativa ai dettagli di traduzione. ****|  
+|**Nuova traduzione**|Selezionare questa opzione per visualizzare la finestra di dialogo **Seleziona lingua** e creare una nuova traduzione. La traduzione verrà visualizzata sotto forma di nuova colonna all'interno della griglia relativa ai **dettagli di traduzione**.|  
 |**Elimina traduzione**|Selezionare questa opzione per eliminare la traduzione selezionata.|  
   
   

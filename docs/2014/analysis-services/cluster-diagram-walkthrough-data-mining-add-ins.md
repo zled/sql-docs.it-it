@@ -1,5 +1,5 @@
 ---
-title: Descrizione dettagliata del diagramma (Data Mining Add-ins) del cluster | Documenti Microsoft
+title: Descrizione dettagliata del diagramma (componenti aggiuntivi Data Mining dei dati) del cluster | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, cluster
 - diagram, cluster
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - data mining layout toolbar
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a8ab399dcc59873cc507e260eec82582a69f8ba6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 808accf81389f97d2dff9383fe4c3fbe9d86068d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177258"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Descrizione dettagliata del diagramma cluster (componenti aggiuntivi Data mining)
-  Dopo aver creato un modello di clustering, è possibile importarlo in Visio utilizzando la **Cluster** il data shaping e quindi continuare a personalizzare e migliorare il layout. Il **forme di Data Mining per Visio** includono i seguenti controlli personalizzati per l'utilizzo di diagrammi di data mining:  
+  Dopo aver creato un modello di clustering, è possibile importarlo in Visio utilizzando la **Cluster** il data shaping e quindi continuare a personalizzare e migliorare il layout. Il **forme di Data Mining per Visio** includono i seguenti controlli personalizzati per l'uso di diagrammi di data mining:  
   
 -   Controlli di rendering per il diagramma dei cluster  
   
-     Queste opzioni fanno parte della **Creazione guidata Cluster** che viene avviata quando si rilascia una forma nell'area di lavoro di Visio.  
+     Queste opzioni fanno parte del **Creazione guidata Cluster** che viene avviata quando si rilascia una forma nell'area di lavoro di Visio.  
   
 -   **Layout Data Mining** sulla barra degli strumenti  
   
@@ -41,25 +41,25 @@ ms.locfileid: "36168432"
 ## <a name="build-a-cluster-diagram"></a>Creazione del diagramma di un cluster  
  In questa procedura dettagliata viene illustrato come creare e personalizzare un diagramma di clustering in Visio.  
   
- Per proseguire, è necessario avere un modello di clustering già disponibile. Se non si dispone di un modello, utilizzare il [Creazione guidata Cluster di &#40;aggiuntivi di Data Mining per Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) procedura guidata e creare un modello utilizzando il set di dati di Training nella cartella di lavoro di esempio, utilizzando tutte le impostazioni predefinite.  
+ Per proseguire, è necessario avere un modello di clustering già disponibile. Se non è un modello, usare il [Creazione guidata Cluster &#40;aggiuntivi di Data Mining per Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) guidata e creare un modello usando il set di dati di Training nella cartella di lavoro di esempio, usando tutte le impostazioni predefinite.  
   
 #### <a name="use-the-cluster-visio-shape-wizard"></a>Utilizzo della Procedura guidata Forma di Visio per cluster  
   
-1.  Se non viene visualizzato **forme Microsoft Data Mining** nel **forme** elenco, fare clic su **più forme**, selezionare **Apri Stencil**e aprire la modello dal percorso di installazione predefinito.  
+1.  Se non viene visualizzata **forme Microsoft Data Mining** nel **forme** fare clic su **più forme**, selezionare **Apri Stencil**e aprire la modello dal percorso di installazione predefinito.  
   
      \<unità >: \Programmi\Microsoft SQL Server 2012 DM Add-Ins  
   
 2.  Trascinare il **Cluster** la forma nella pagina.  
   
-3.  Nella pagina iniziale del **procedura guidata forma di Visio Cluster**, fare clic su **successivo**.  
+3.  Nella pagina di benvenuto del **procedura guidata forma di Visio Cluster**, fare clic su **successivo**.  
   
-4.  Nel **selezionare un'origine dati** pagina del **Creazione guidata Cluster**, scegliere una connessione a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server che contiene modelli di data mining da visualizzare.  
+4.  Nel **Vybrat Zdroj** pagina del **guidata Cluster**, scegliere una connessione a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server che contiene i modelli di data mining da visualizzare.  
   
 5.  Selezionare un modello di data mining appropriato e fare clic su **successivo**.  
   
-     Per assicurarsi di scegliere un modello di clustering, rivedere la descrizione nel **proprietà** riquadro.  
+     Per assicurarsi di scegliere un modello di clustering, esaminare la descrizione nella finestra di **proprietà** riquadro.  
   
-6.  Se la connessione ha esito positivo, nella pagina **le opzioni per diagramma dei cluster**, si decide quale tipo di diagramma dei cluster da includere nella presentazione di Visio:  
+6.  Se la connessione ha esito positivo, nella pagina **opzioni per il diagramma cluster**, si decide quale tipo di diagramma dei cluster da includere nella presentazione di Visio:  
   
      **Mostra solo forme del cluster**  
      Questa opzione consente di creare un semplice diagramma dei cluster, dove ogni cluster è rappresentato da un rettangolo o un'altra forma scelta.  
@@ -82,13 +82,13 @@ ms.locfileid: "36168432"
   
 8.  Fare clic su **Avanzate**.  
   
-     Il **opzioni Cluster** è la finestra di dialogo in cui è possibile personalizzare l'aspetto visivo delle forme utilizzate nel diagramma. È possibile modificare i colori utilizzati nel grafico e la forma utilizzata per i cluster.  
+     Il **opzioni Cluster** nella finestra di dialogo è possibile personalizzare l'aspetto visivo delle forme utilizzate nel diagramma. È possibile modificare i colori utilizzati nel grafico e la forma utilizzata per i cluster.  
   
      Il **variabile ombreggiatura** controllo non funziona in Office 2013.  
   
      ![Fare clic su Avanzate per scegliere i colori delle forme](media/dm13-visio-clusteroptions-advanced.gif "fare clic su Avanzate per scegliere i colori delle forme")  
   
-     **Suggerimento:** alcuni colori possono essere modificati successivamente tramite i temi di Visio e i controlli di modifica della forma. Tuttavia, i temi di Visio sostituiranno anche alcune di queste selezioni dei colori, pertanto è consigliabile iniziare con colori predefiniti e gradualmente applicare le modifiche.  
+     **Suggerimento:** alcuni colori possono essere modificati in un secondo momento usando i temi di Visio e i controlli di modifica della forma. Tuttavia, i temi di Visio sostituiranno anche alcune di queste selezioni dei colori, pertanto è consigliabile iniziare con colori predefiniti e gradualmente applicare le modifiche.  
   
 9. Fare clic su **fine** per creare il grafico.  
   
@@ -107,9 +107,9 @@ ms.locfileid: "36168432"
   
 2.  Utilizzare Visio **nuovo Layout pagina** opzione per provare layout di cluster diverso.  
   
-3.  Usare la **connettori** opzione il **progettazione** scheda per modificare lo stile del connettore per evitare che le righe di incrociare i cluster.  
+3.  Usare la **connettori** opzione il **progettazione** pressione di tab per modificare lo stile del connettore per impedire alle righe di incrociare i cluster.  
   
-4.  Fare clic sui **Add-Ins** della barra multifunzione e quindi visualizzata una delle barre degli strumenti personalizzate utilizzate per l'utilizzo di diagrammi di data mining:  
+4.  Scegliere il **Add-Ins** della barra multifunzione e quindi visualizzare una delle barre degli strumenti personalizzate utilizzate per l'uso di diagrammi di data mining:  
   
      **Layout**  
      Consente di ottimizzare la disposizione dei cluster da adattare nella pagina corrente.  
@@ -120,7 +120,7 @@ ms.locfileid: "36168432"
      **Descrizione**  
      Se viene selezionato un cluster, fare clic su questa opzione per visualizzare i dettagli sul cluster.  
   
-     ![Fare clic sulla descrizione per ottenere i dettagli relativi al cluster](media/dm13-visio-cluster-description-control.gif "fare clic sulla descrizione per ottenere i dettagli relativi al cluster")  
+     ![Fare clic su descrizione per ottenere i dettagli relativi al cluster](media/dm13-visio-cluster-description-control.gif "fare clic su descrizione per informazioni dettagliate sul cluster")  
   
      **Livello attendibilità bordo**  
      Consente di visualizzare i punteggi di confidenza sulle linee che connettono i cluster.  
@@ -133,7 +133,7 @@ ms.locfileid: "36168432"
      **Ombreggiatura**  
      Questo controllo non funziona in Office 2013.  
   
-5.  Utilizzare la **panoramica e Zoom** , controllare il **riquadro** area di Visio **visualizzazione** della barra multifunzione, per concentrarsi su un set di cluster e spostarsi nel diagramma.  
+5.  Usare la **panoramica e Zoom** controllo la **riquadro attività** area di Visio **visualizzazione** della barra multifunzione, per concentrarsi su un set di cluster e spostarsi nel diagramma.  
   
 6.  Fare clic con il pulsante destro del mouse su un qualsiasi cluster per visualizzare le opzioni specifiche della forma del cluster:  
   

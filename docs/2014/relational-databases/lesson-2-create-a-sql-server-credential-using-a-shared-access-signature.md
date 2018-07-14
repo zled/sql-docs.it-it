@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 3: Creare una credenziale di SQL Server | Documenti Microsoft'
+title: 'Lezione 3: Creare una credenziale di SQL Server | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 201863a1df64cdc85ef41a55170948dbf4eba419
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 486917c0cd6a36bbf2004e17ffaf0607e04ecbb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219251"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>Lezione 3: Creare le credenziali di SQL Server
   In questa lezione verranno create le credenziali per archiviare le informazioni di sicurezza utilizzate per accedere all'account di Archiviazione di Windows Azure.  
   
  Una credenziale di SQL Server è un oggetto utilizzato per archiviare le informazioni di autenticazione necessarie per connettersi a una risorsa all'esterno di SQL Server. Nelle credenziali vengono archiviati il percorso URI del contenitore di archiviazione e i valori della chiave della firma di accesso condivisa. Per ogni contenitore di archiviazione utilizzato da un file di dati o di log, è necessario creare una credenziale di SQL Server il cui nome corrisponda al percorso del contenitore.  
   
- Per informazioni generali sulle credenziali, vedere [credenziali &#40;motore di Database&#41;](security/authentication-access/credentials-database-engine.md).  
+ Per informazioni generali sulle credenziali, vedere [credenziali di &#40;motore di Database&#41;](security/authentication-access/credentials-database-engine.md).  
   
 > [!IMPORTANT]  
->  I requisiti per la creazione di una credenziale di SQL Server descritta di seguito sono specifici per il [file di dati di SQL Server in Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md) funzionalità. Per informazioni sulla creazione delle credenziali per i processi di backup nell'archiviazione di Azure, vedere [lezione 2: creare una credenziale di SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md).  
+>  I requisiti per la creazione di una credenziale di SQL Server descritta di seguito sono specifici per il [file di dati di SQL Server in Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md) funzionalità. Per informazioni sulla creazione delle credenziali per i processi di backup in archiviazione di Azure, vedere [lezione 2: creare una credenziale di SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md).  
   
  Per creare le credenziali di SQL Server, effettuare i passaggi riportati di seguito:  
   
@@ -59,10 +59,10 @@ ms.locfileid: "36168078"
     SELECT * from sys.credentials  
     ```  
   
-     Per ulteriori informazioni su Sys. Credentials, vedere [Sys. Credentials &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) nella documentazione Online di SQL Server.  
+     Per altre informazioni su Sys. Credentials, vedere [Sys. Credentials &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) nella documentazione Online di SQL Server.  
   
  **Lezione successiva:**  
   
- [Lezione 4: Creare un database in archiviazione di Azure](lesson-3-database-backup-to-url.md)  
+ [Lezione 4: creare un database in Archiviazione di Windows Azure](lesson-3-database-backup-to-url.md)  
   
   

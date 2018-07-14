@@ -1,5 +1,5 @@
 ---
-title: Combinazioni supportate di SharePoint e Server Reporting Services e componente aggiuntivo (SQL Server 2014) | Documenti Microsoft
+title: Combinazioni supportate di SharePoint e Server Reporting Services e componente aggiuntivo (SQL Server 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint mode
 - add-in for sharepoint
@@ -16,13 +16,13 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4aaaa578f438beabd9c9c661eaaf852971545695
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49b19aaf7d34b052eac0e53c44814a961d6c4b74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194802"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server-and-add-in-sql-server-2014"></a>Combinazioni supportate di SharePoint, server Reporting Services e componente aggiuntivo (SQL Server 2014)
   È possibile installare i server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint e integrarli con una distribuzione di SharePoint. Non tutte le funzionalità sono supportate in tutte le combinazioni di server di report, componente aggiuntivo di Reporting Services per SharePoint e prodotti SharePoint. In questo argomento vengono riepilogate le combinazioni supportate. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] l'integrazione è il risultato della combinazione degli elementi seguenti:  
@@ -56,7 +56,7 @@ ms.locfileid: "36169173"
 |10|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] R2|SharePoint 2010|Sì|  
 |11|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|SharePoint 2007|Sì|  
   
- Per ulteriori informazioni sul [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le funzionalità e le modalità server di report, vedere [del Server di Report di Reporting Services](../reporting-services-report-server.md).  
+ Per ulteriori informazioni sul [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le funzionalità e le modalità server di report, vedere [Server di Report di Reporting Services](../reporting-services-report-server.md).  
   
  **Note aggiuntive:**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36169173"
   
 -   Il componente aggiuntivo di SQL Server 2008 R2 non è supportato dai server di report SQL Server 2012 o versione successiva. Tramite il programma di installazione essenziale di SharePoint 2010 viene installato automaticamente il componente aggiuntivo di SQL Server 2008 R2. È necessario disinstallarlo prima di installare le versioni più recenti del componente aggiuntivo. L'aggiornamento sul posto del componente aggiuntivo non è supportato.  
   
--   **Aggiornamento:** non è possibile eseguire l'aggiornamento sul posto di SharePoint 2010 con il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a SharePoint 2013. Per SharePoint 2013 è necessario [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] o versioni successive del componente aggiuntivo e del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per ulteriori informazioni sull'aggiornamento, vedere [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md).  
+-   **Aggiornamento:** non è possibile eseguire l'aggiornamento sul posto di SharePoint 2010 con il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a SharePoint 2013. Per SharePoint 2013 è necessario [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] o versioni successive del componente aggiuntivo e del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni sull'aggiornamento, vedere [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dove trovare il componente aggiuntivo di Reporting Services per prodotti SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   

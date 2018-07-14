@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 95647eaf64c59078aeda48ec0dc7281d8af27d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 259de5dd91dfdc50958b25589b90fdadde4ac005
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174957"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Creare una mappa documento (Generatore report e SSRS)
   Una mappa documento offre un set di collegamenti a elementi di report in un report visualizzabile. Quando si visualizza un report che include una mappa documento, accanto al report viene visualizzato un riquadro distinto. Gli utenti possono fare clic sui collegamenti della mappa documento per passare alla pagina del report in cui viene visualizzato l'elemento specifico. Le sezioni del report e i gruppi sono disposti in una gerarchia di collegamenti. Se si fa clic sugli elementi nella mappa documento, il report viene aggiornato e viene visualizzata l'area del report corrispondente all'elemento nella mappa documento.  
   
- Per aggiungere collegamenti alla mappa documento, impostare il `DocumentMapLabel` proprietà dell'elemento del report sul testo creato o a un'espressione che restituisce il testo da visualizzare nella mappa documento. A quest'ultima è possibile inoltre aggiungere i valori univoci per una tabella o un gruppo di matrici. Per un gruppo basato su un colore, ad esempio, ogni colore univoco rappresenta un collegamento alla pagina del report in cui viene visualizzata l'istanza del gruppo per il colore specifico.  
+ Per aggiungere collegamenti alla mappa documento, impostare il `DocumentMapLabel` proprietà dell'elemento del report sul testo creato o su un'espressione che restituisce il testo da visualizzare nella mappa documento. A quest'ultima è possibile inoltre aggiungere i valori univoci per una tabella o un gruppo di matrici. Per un gruppo basato su un colore, ad esempio, ogni colore univoco rappresenta un collegamento alla pagina del report in cui viene visualizzata l'istanza del gruppo per il colore specifico.  
   
  È inoltre possibile creare un URL di un report in cui viene ignorata la visualizzazione della mappa documento, in modo che sia possibile eseguire il report senza visualizzare la mappa documento e successivamente fare clic sul pulsante **Mostra/Nascondi mappa documento** sulla barra degli strumenti del visualizzatore di report per attivare e disattivare la visualizzazione.  
   
@@ -123,6 +123,6 @@ ms.locfileid: "36169587"
  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca e visualizzazione dei report in Gestione Report &#40;SSRS e Generatore Report&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Ricerca e visualizzazione dei report in Gestione Report &#40;Report e SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

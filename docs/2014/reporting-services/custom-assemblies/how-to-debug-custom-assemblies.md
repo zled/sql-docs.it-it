@@ -16,15 +16,15 @@ helpviewer_keywords:
 - troubleshooting [Reporting Services], custom assemblies
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 25cbacb0ae751bb942e07aa53b1387e40cefb8d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: a810f5fd5296a109b266fdafc6033f9cb371032a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218861"
 ---
 # <a name="how-to-debug-custom-assemblies"></a>Procedura: Debug di assembly personalizzati
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] offre diversi strumenti di debug che consentono di analizzare il codice assembly personalizzato e individuare eventuali errori. Per ogni attività specifica è disponibile uno strumento appropriato. In questo esempio viene utilizzato [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  

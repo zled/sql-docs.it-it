@@ -1,5 +1,5 @@
 ---
-title: Elemento SolveOrder (ASSL) | Documenti Microsoft
+title: Elemento SolveOrder (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - SolveOrder element
 ms.assetid: ec43e055-97dd-4f2a-9a7c-2df2e1119e56
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed5092f93494162179dc2ee142a6769eddd5d6da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: defbaca134f92df4cf765dda68ad2fb30c848800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173292"
 ---
 # <a name="solveorder-element-assl"></a>Elemento SolveOrder (ASSL)
-  Indica l'ordine di valutazione in cui il [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento viene applicato a un membro calcolato o una definizione della cella calcolata.  
+  Indica l'ordine di valutazione in cui il [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento viene applicato a un membro calcolato o definizione della cella calcolata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,10 +61,10 @@ ms.locfileid: "36168611"
 |Elemento padre|[CalculationProperty](../objects/calculationproperty-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il `SolveOrder` proprietà si applica alle `CalculationProperty` gli elementi con un [CalculationType](calculationtype-element-assl.md) dei *membro* o *celle*.  
+## <a name="remarks"></a>Note  
+ Il `SolveOrder` proprietà si applica a `CalculationProperty` gli elementi con un [CalculationType](calculationtype-element-assl.md) di *membro* oppure *celle*.  
   
- L'elemento che corrisponde al padre di `SolveOrder` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ L'elemento che corrisponde al padre di `SolveOrder` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento Calculationproperty &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

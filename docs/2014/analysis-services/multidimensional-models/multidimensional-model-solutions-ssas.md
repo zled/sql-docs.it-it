@@ -1,5 +1,5 @@
 ---
-title: Soluzioni di modelli multidimensionali (SSAS) | Documenti Microsoft
+title: Soluzioni di modelli multidimensionali (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - objects [Analysis Services], defining objects
 - multidimensional data [Analysis Services], designing objects
 ms.assetid: fbc0698f-93d3-4292-86cd-afe3a2ec5b0a
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c85555caa6ef6ef832e7e01613bd636e59ccdca5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 566c9a2b53f58629148e28b57dfe9d98a55fd39b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330371"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>Soluzioni di modelli multidimensionali (SSAS)
     
@@ -35,7 +35,7 @@ ms.locfileid: "36166715"
  [Origini dati supportate &#40;multidimensionale di SSAS&#41;](supported-data-sources-ssas-multidimensional.md)  
  Descrive come definire oggetti origine dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- [Viste origine dati nei modelli multidimensionali](data-source-views-in-multidimensional-models.md)  
+ [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)  
  Descrive come progettare viste origini dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  [Dimensioni nei modelli multidimensionali](dimensions-in-multidimensional-models.md)  

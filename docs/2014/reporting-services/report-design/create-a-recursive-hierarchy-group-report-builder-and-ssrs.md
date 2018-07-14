@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a82a52b230564b81261cece8f61ea56cdb21da8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3c4144787ac5085c4713781569d7e6d364ff7951
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172172"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Creare un gruppo di gerarchie ricorsive (Generatore report e SSRS)
   In un gruppo di gerarchie ricorsive è possibile organizzare dati da un unico set di dati di un report in cui sono inclusi più livelli gerarchici, ad esempio il report per definire la struttura di relazioni tra dipendenti in una gerarchia organizzativa.  
@@ -54,22 +54,22 @@ ms.locfileid: "36170288"
     > [!NOTE]  
     >  Se il riquadro Proprietà non è visualizzato, fare clic su **Proprietà** nella scheda **Visualizza** .  
   
-2.  Nel riquadro Proprietà espandere la `Padding` nodo, fare clic su **sinistra**e dall'elenco a discesa, selezionare  **\<Expression... >**.  
+2.  Nel riquadro Proprietà espandere la `Padding` nodo, fare clic su **a sinistra**e nell'elenco a discesa, selezionare  **\<espressione... >**.  
   
 3.  Nel riquadro Espressione digitare l'espressione seguente:  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Per tutte le proprietà relative a Riempimento è necessario usare una stringa con il formato *nnyy*, dove *nn* è un numero e *yy* è l'unità di misura. L'espressione di esempio consente di compilare una stringa che utilizza il `Level` funzione per aumentare le dimensioni del riempimento in base a livello di ricorsione. A una riga di livello 1, ad esempio, verrà applicato un riempimento di (2 + (1\*10))=12pt e a una riga di livello 3 verrà applicato un riempimento di (2 + (3\*10))=32pt. Per informazioni sul `Level` function, vedere [livello](report-builder-functions-level-function.md).  
+     Per tutte le proprietà relative a Riempimento è necessario usare una stringa con il formato *nnyy*, dove *nn* è un numero e *yy* è l'unità di misura. L'espressione di esempio compila una stringa che utilizza il `Level` funzione per aumentare le dimensioni del riempimento in base a livello di ricorsione. A una riga di livello 1, ad esempio, verrà applicato un riempimento di (2 + (1\*10))=12pt e a una riga di livello 3 verrà applicato un riempimento di (2 + (3\*10))=32pt. Per informazioni sul `Level` funzione, vedere [livello](report-builder-functions-level-function.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      Eseguire il report. Nel report viene visualizzata una vista gerarchica dei dati raggruppati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di gruppi di gerarchie ricorsive &#40;SSRS e Generatore Report&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Creazione di gruppi di gerarchie ricorsive &#40;Report e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Riferimento a funzioni di aggregazione &#40;SSRS e Generatore Report&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Riferimento a funzioni di aggregazione &#40;Report e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Tabelle &#40;Generatore report e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - result sets [SQL Server], queries
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1a0923c3c8fd27764e01e1656f95fef0a9deaf4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 911f9eaa294b88ce9c773493f3eed9824a12ae7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321681"
 ---
 # <a name="results-pane-visual-database-tools"></a>Results Pane (Visual Database Tools)
   Nel riquadro Risultati vengono visualizzati i risultati dell'ultima query di selezione (SELECT) eseguita. I risultati di altri tipi di query vengono visualizzati in finestre di messaggio. Il riquadro Risultati viene visualizzato automaticamente quando si apre o si crea una query o una vista oppure quando vengono restituiti i dati di una tabella. Se il riquadro Risultati non viene visualizzato per impostazione predefinita, scegliere **Pannello** dal menu **Progettazione query**, quindi **Risultati**.  
@@ -68,7 +68,7 @@ ms.locfileid: "36167556"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di query &#40;Visual Database Tools&#41;](create-queries-visual-database-tools.md)   
- [Esecuzione di query &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
+ [Eseguire query &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
  [Procedure per le query e visualizzazioni di progettazione &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Riquadro Diagramma &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
  [Riquadro Criteri &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   

@@ -1,5 +1,5 @@
 ---
-title: Progettare la Query | Documenti Microsoft
+title: Progettazione Query | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designquery.f1
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
 caps.latest.revision: 39
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2ca850de7e8f09f704434910ccf0fa45cbfca726
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be1faf198c38ee9445602aa0e0bcc8ae66b5461a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270307"
 ---
 # <a name="design-the-query"></a>Progettazione query
   Utilizzare questa pagina della Creazione guidata report per creare una query immettendola manualmente, utilizzando Generatore query per compilare una query in modo interattivo o importando la query da un altro report.  
@@ -38,7 +38,7 @@ ms.locfileid: "36168470"
  Per ulteriori informazioni sugli strumenti di progettazione query, vedere [Reporting Services Query Designers](../../2014/reporting-services/reporting-services-query-designers.md).  
   
 ## <a name="example"></a>Esempio  
- Per il tipo di origine dati **Microsoft SQL Server**, la query seguente recupera un elenco dei cognomi dal [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database `Person` tabella.  
+ Per il tipo di origine dati **Microsoft SQL Server**, la query seguente recupera un elenco di cognomi dalle [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database `Person` tabella.  
   
 ```  
 SELECT LastName FROM Person.Person;  
@@ -53,6 +53,6 @@ EXEC uspgetEmployeeManagers '1';
 ## <a name="see-also"></a>Vedere anche  
  [Guida della creazione guidata report](../../2014/reporting-services/report-wizard-help.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-data/report-datasets-ssrs.md)  
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

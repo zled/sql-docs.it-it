@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 caps.latest.revision: 47
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 51b4ec577596fde0923f1d446ed282db1cd3eb17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bb0063ac9887d12b8ebeaf329c044f4974e49607
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177223"
 ---
 # <a name="html-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo HTML
   Nella tabella seguente si elencano le impostazioni relative alle informazioni sul dispositivo per il rendering nel formato HTML.  
   
 > [!IMPORTANT]  
->  Le impostazioni relative alle informazioni sui dispositivi elencate nella tabella di seguito con un **(\*)** sono deprecate, pertanto è consigliabile non usarle nelle nuove applicazioni. Per altre informazioni, vedere [funzionalità deprecate in SQL Server Reporting Services in SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md).  
+>  Le impostazioni relative alle informazioni sui dispositivi elencate nella tabella di seguito con un **(\*)** sono deprecate, pertanto è consigliabile non usarle nelle nuove applicazioni. Per altre informazioni, vedere [Deprecated Features di SQL Server Reporting Services in SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
 |Impostazione|valore|  
 |-------------|-----------|  
@@ -39,26 +39,26 @@ ms.locfileid: "36168251"
 |`ExpandContent`|Indica se il report deve essere incluso in una struttura di tabella per limitarne la dimensione orizzontale.|  
 |**FindString**|Testo da cercare nel report. Il valore predefinito di questo parametro è una stringa vuota.|  
 |**GetImage (\*)**|Ottiene una determinata icona per l'interfaccia utente del visualizzatore HTML.|  
-|`HTMLFragment`|Indica se viene creato un frammento HTML al posto di un documento HTML completo. In un frammento HTML il contenuto del report viene inserito in un elemento TABLE e gli elementi HTML e BODY vengono omessi. Il valore predefinito è `false`. Il rendering tramite SOAP con il `HTMLFragment` impostata su `true` creati URL contenenti informazioni sulla sessione che può essere utilizzati per richiedere correttamente le immagini. Le immagini devono essere risorse caricate nel database del server di report.|  
-|`ImageConsolidation`|Indica se consolidare il grafico, la mappa, il misuratore e le immagini dell'indicatore di cui è stato eseguito il rendering in un'unica grande immagine. Il consolidamento di immagini consente di migliorare le prestazioni del report nel browser del client quando il report contiene molti elementi di visualizzazione dei dati. Il valore predefinito è `true` per i browser più recenti.|  
+|`HTMLFragment`|Indica se viene creato un frammento HTML al posto di un documento HTML completo. In un frammento HTML il contenuto del report viene inserito in un elemento TABLE e gli elementi HTML e BODY vengono omessi. Il valore predefinito è `false`. Il rendering tramite SOAP con la `HTMLFragment` impostata su `true` creati URL contenenti informazioni sulla sessione che può essere utilizzati per richiedere correttamente le immagini. Le immagini devono essere risorse caricate nel database del server di report.|  
+|`ImageConsolidation`|Indica se consolidare il grafico, la mappa, il misuratore e le immagini dell'indicatore di cui è stato eseguito il rendering in un'unica grande immagine. Il consolidamento di immagini consente di migliorare le prestazioni del report nel browser del client quando il report contiene molti elementi di visualizzazione dei dati. Il valore predefinito è `true` per i browser più moderni.|  
 |**JavaScript**|Indica se JavaScript è supportato nel report visualizzabile. Il valore predefinito è `true`.|  
-|`LinkTarget`|Destinazione dei collegamenti ipertestuali nel report. È possibile assegnare una finestra o frame fornendo il nome della finestra, ad esempio `LinkTarget` = *nome_finestra*, o si può avere come destinazione una finestra nuova usando `LinkTarget`= blank. Altri nomi di destinazione validi includono _self, _parent e _top.|  
+|`LinkTarget`|Destinazione dei collegamenti ipertestuali nel report. È possibile assegnare una finestra o frame fornendo il nome della finestra, ad esempio `LinkTarget` = *window_name*, o è possibile scegliere come destinazione una finestra nuova usando `LinkTarget`= blank. Altri nomi di destinazione validi includono _self, _parent e _top.|  
 |**OnlyVisibleStyles(\*)**|Indica che vengono generati solo gli stili condivisi per la pagina di cui è stato attualmente eseguito il rendering.|  
 |`OutlookCompat`|Indica se eseguire il rendering con metadati aggiuntivi che comportano una visualizzazione migliore del report in Outlook, Per altri utenti, il valore predefinito è `false`.|  
 |**Parametri**|Indica se mostrare o nascondere l'area dei parametri della barra degli strumenti. Se si imposta questo parametro su un valore di `true`, viene visualizzata l'area dei parametri della barra degli strumenti. Il valore predefinito di questo parametro è `true`.|  
-|`PrefixId`|Se usato con `HTMLFragment`, aggiunge il prefisso specificato a tutti i `ID` attributi nel frammento HTML creato.|  
+|`PrefixId`|Quando abbinata `HTMLFragment`, aggiunge il prefisso specificato a tutti `ID` attributi nel frammento HTML creato.|  
 |**ReplacementRoot(\*)**|Stringa da anteporre a tutti i collegamenti di drill-through, attivazione/disattivazione e segnalibro nel report quando viene eseguito il rendering al di fuori del controllo ReportViewer. Ad esempio, viene usata per il reindirizzamento della selezione di un utente a una pagina personalizzata.|  
 |**ResourceStreamRoot(\*)**|Stringa da anteporre all'URL per tutte le risorse dell'immagine, ad esempio le immagini per l'attivazione o la disattivazione oppure l'ordinamento.|  
 |**Sezione**|Numero di pagina del report di cui eseguire il rendering. Un valore `0` indica che viene eseguito il rendering di tutte le sezioni del report. Il valore predefinito è `1`.|  
 |**StreamRoot (\*)**|Percorso usato per anteporre un prefisso al valore dell'attributo **src** dell'elemento IMG nel report HTML restituito dal server di report. Per impostazione predefinita, il percorso viene fornito dal server di report. È possibile usare questa impostazione per specificare un percorso radice per le immagini in un report, ad esempio **http://\<nomeserver>/risorse/immaginiazienda**.|  
 |**StyleStream**|Indica se stili e script vengono creati come flusso separato anziché nel documento. Il valore predefinito è `false`.|  
-|`Toolbar`|Indica se mostrare o nascondere la barra degli strumenti. Il valore predefinito di questo parametro è `true`. Se il valore di questo parametro è `false`, tutte le opzioni rimanenti (ad eccezione della mappa documento) vengono ignorate. Se si omette questo parametro, la barra degli strumenti viene visualizzata automaticamente nei formati di rendering che la supportano.<br /><br /> Il rendering della barra degli strumenti del Visualizzatore report viene eseguito quando si usano l'accesso con URL per il rendering di un report, ma non quando si usano l'API SOAP. Tuttavia, il `Toolbar` le informazioni sul dispositivo impostazione influisce sulla modalità di visualizzazione report quando si utilizza SOAP `Render` metodo. Se il valore di questo parametro è `true` quando si utilizza SOAP per eseguire il rendering in HTML, viene eseguito il rendering solo della prima sezione del report. Se il valore è `false`, viene eseguito il rendering dell'intero report HTML come singola pagina HTML.|  
+|`Toolbar`|Indica se mostrare o nascondere la barra degli strumenti. Il valore predefinito di questo parametro è `true`. Se il valore di questo parametro è `false`, tutte le opzioni rimanenti (ad eccezione della mappa documento) vengono ignorate. Se si omette questo parametro, la barra degli strumenti viene visualizzata automaticamente nei formati di rendering che la supportano.<br /><br /> Il rendering della barra degli strumenti del Visualizzatore report viene eseguito quando si usano l'accesso con URL per il rendering di un report, ma non quando si usano l'API SOAP. Tuttavia, il `Toolbar` le informazioni sul dispositivo impostazione influisce sulle modalità che il report viene visualizzato quando si utilizza SOAP `Render` (metodo). Se il valore di questo parametro è `true` quando si usano SOAP per eseguire il rendering in formato HTML, viene eseguito il rendering solo della prima sezione del report. Se il valore è `false`, viene eseguito il rendering dell'intero report HTML come singola pagina HTML.|  
 |`UserAgent`|Il `user-agent` stringa del browser che effettua la richiesta, situata nella richiesta HTTP.|  
 |**Zoom (\*)**|Valore di zoom del report come percentuale di un valore intero o come costante stringa. I valori stringa standard comprendono `Page Width` e `Whole Page`. Questo parametro viene ignorato dalle versioni di [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer precedenti a Internet Explorer 5.0 e da tutti i browser non[!INCLUDE[msCoName](../includes/msconame-md.md)] . Il valore predefinito di questo parametro è `100`.|  
 |**DataVisualizationFitSizing**|Indica il comportamento di adattamento della visualizzazione dei dati all'interno di una tablix. Sono inclusi grafici, misuratori e mappe.<br /><br /> I valori possibili sono **Approssimato** ed **Esatto**.<br /><br /> Il valore predefinito è **Approssimato**. Se l'impostazione viene rimossa dal file **rsreportserver.config** il comportamento predefinito è **Esatto**.<br /><br /> L'abilitazione del ridimensionamento **Esatto** può avere impatto sulle prestazioni perché l'elaborazione per determinare la dimensione esatta potrebbe impiegare più molto tempo di un adattamento approssimativo.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Passaggio Device Information Settings a estensioni per il Rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Il passaggio di impostazioni informazioni dispositivo a estensioni per il Rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizzare i parametri di estensione per il rendering in RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Riferimento tecnico &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   

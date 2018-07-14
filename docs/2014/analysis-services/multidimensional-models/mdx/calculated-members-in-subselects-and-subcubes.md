@@ -1,5 +1,5 @@
 ---
-title: Membri calcolati in sub-SELECT e sottocubi | Documenti Microsoft
+title: Membri calcolati in sub-SELECT e sottocubi | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a073fe9578a877aa840e6a607ca6ae081f97052b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e5681806fd4b7530f3d83d54b21aafb3eeb07b09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323191"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Membri calcolati in sub-SELECT e sottocubi
   Nelle versioni precedenti i membri calcolati non erano consentiti nelle sub-SELECT o nei sottocubi. A partire da SQL Server 2008 sono invece consentiti e abilitati da una proprietà di connessione. Inoltre, con SQL Server 2008 R2 è stato introdotto un nuovo comportamento per i membri calcolati in sub-SELECT e sottocubi.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>Membri calcolati in sub-SELECT e sottocubi  
- Il `SubQueries` proprietà della stringa di connessione nel <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o il `DBPROPMSMDSUBQUERIES` proprietà [proprietà XMLA supportate &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) definisce il comportamento o la tolleranza di membri calcolati o calcolati Imposta su sub-SELECT o sottocubi. Nel contesto di questo documento con il termine sub-SELECT si fa riferimento a sub-SELECT e sottocubi, se non diversamente specificato.  
+ Il `SubQueries` proprietà stringa di connessione <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o il `DBPROPMSMDSUBQUERIES` proprietà nel [proprietà XMLA supportate &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) definisce il comportamento o dei membri calcolati o calcolati Imposta su sub-SELECT o sottocubi. Nel contesto di questo documento con il termine sub-SELECT si fa riferimento a sub-SELECT e sottocubi, se non diversamente specificato.  
   
  La proprietà SubQueries consente i valori riportati di seguito.  
   
@@ -122,7 +122,7 @@ Where [Measures].[Reseller Sales Amount]
   
  Nei risultati sopra riportati i valori aggregati per [All Geographies], [United States], [Oregon] e [Washington] provengono dall'aggregazione sui discendenti di &[Portland]&[OR] e &[Spokane]&[WA]. Nulla proviene dal membro calcolato.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Note  
  Solo i membri calcolati globali o della sessione sono consentiti nelle espressioni di sub-SELECT o sottocubi. La presenza di membri calcolati di query nell'espressione MDX genererà un errore durante la valutazione dell'espressione di sub-SELECT o sottocubo.  
   
 ## <a name="see-also"></a>Vedere anche  

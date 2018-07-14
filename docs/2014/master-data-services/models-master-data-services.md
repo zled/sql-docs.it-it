@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], about models
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17d84c1656e90c4fc00e4b3474bc986ae84f8404
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4b7d295a5f9eac9c6a333618dc62d53cbf8294f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178105"
 ---
 # <a name="models-master-data-services"></a>Modelli (Master Data Services)
   I modelli rappresentano il livello più elevato di organizzazione dei dati in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Un modello definisce la struttura di dati nella soluzione di gestione dati master. Un modello contiene gli oggetti seguenti:  
@@ -80,7 +80,7 @@ ms.locfileid: "36169027"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Panoramica di master Data Services](master-data-services-overview-mds.md)  
+-   [Panoramica di Master Data Services](master-data-services-overview-mds.md)  
   
 -   [Entità &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   

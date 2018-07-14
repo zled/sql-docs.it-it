@@ -1,5 +1,5 @@
 ---
-title: Scheda Analisi discriminante tra (Visualizzatore modello di Data Mining) del cluster | Documenti Microsoft
+title: Scheda Analisi discriminante (Visualizzatore modello di Data Mining) del cluster | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.discrimination.f1
 ms.assetid: ae7cfff7-ab1c-4cf5-9a91-97b21d15d85f
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8c23aeea11db212ce065baa04d5fc38280fe26a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 992ef4a9145a3137975220ac2febdab3028507c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179038"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>Scheda Analisi discriminante tra cluster (Visualizzatore modello di data mining)
   Usare la scheda **Analisi discriminante tra cluster** per confrontare due cluster esistenti in un modello di clustering. È possibile vedere la modalità di rappresentazione di combinazioni diverse di attributi e valori all'interno dei cluster.  
@@ -51,12 +51,12 @@ ms.locfileid: "36169116"
 |-|-|  
 |**Variabili**|Un attributo nel modello di data mining.|  
 |**Valori**|Un valore dell'attributo selezionato in **Variabili**.|  
-|**Predilige \<cluster 1 >**|Il grafico a barre a sinistra rappresenta la probabilità che la coppia attributo-valore selezionata sia rappresentativa del cluster selezionato in **Cluster 1**. È possibile posizionare il mouse sulla barra per vedere il valore rappresentato in percentuale. Si noti che anche se il valore è zero non significa che nel cluster manchi necessariamente la coppia attributo-valore, ma solo che per la distribuzione viene prediletto fortemente un cluster rispetto a un altro.|  
+|**Predilige \<1 del cluster >**|Il grafico a barre a sinistra rappresenta la probabilità che la coppia attributo-valore selezionata sia rappresentativa del cluster selezionato in **Cluster 1**. È possibile posizionare il mouse sulla barra per vedere il valore rappresentato in percentuale. Si noti che anche se il valore è zero non significa che nel cluster manchi necessariamente la coppia attributo-valore, ma solo che per la distribuzione viene prediletto fortemente un cluster rispetto a un altro.|  
 |**Predilige \<2 del cluster >**|Il grafico a barre a destra rappresenta la probabilità che la coppia attributo-valore selezionata sia rappresentativa del cluster selezionato in **Cluster 2**.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori dei modelli di data mining &#40;progettazione modello di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

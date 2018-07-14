@@ -1,5 +1,5 @@
 ---
-title: Creare un progetto di Visual Basic SMO in Visual Studio .NET | Documenti Microsoft
+title: Creare un progetto Visual Basic SMO in Visual Studio .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Visual Basic [SMO]
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a3f3db2487a60c80d9fdb933298784b69db8718
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a3cacc04d8ce4afd863c7ef3cc8d21e1446c319
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213791"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Creare un progetto SMO per Visual Basic in Visual Studio .NET
   In questa sezione viene descritto come compilare un'applicazione console SMO semplice.  
@@ -37,11 +37,11 @@ ms.locfileid: "36167925"
   
 2.  Scegliere **Nuovo progetto** dal menu **File**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-3.  In **tipi di progetto** finestra di dialogo **Visual Basic**, quindi selezionare **Windows**. Nel [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] riquadro Modelli installati, selezionare **applicazione Console.**  
+3.  Nelle **tipi di progetto** finestra di dialogo **Visual Basic**, quindi selezionare **Windows**. Nel [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] riquadro Modelli installati, selezionare **applicazione Console.**  
   
-4.  (Facoltativo) Nel **nome** , digitare il nome della nuova applicazione.  
+4.  (Facoltativo) Nel **nome** digitare il nome della nuova applicazione.  
   
-5.  Fare clic su **OK** per caricare il [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] modello di applicazione console.  
+5.  Fare clic su **OK** caricare il [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] modello di applicazione console.  
   
 6.  Scegliere **Aggiungi riferimento** dal menu **Progetto**. Verrà visualizzata la finestra di dialogo **Aggiungi riferimento**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36167925"
   
 9. Fare clic su **Apri**.  
   
-10. Nel **vista** menu, fare clic su **codice**. oppure selezionare la finestra Module1.vb per visualizzare la finestra del codice.  
+10. Nel **View** menu, fare clic su **codice**. oppure selezionare la finestra Module1.vb per visualizzare la finestra del codice.  
   
 11. Nel codice, prima di qualsiasi dichiarazione, digitare quanto segue **importazioni** istruzioni per qualificare i tipi nello spazio dei nomi SMO.  
   

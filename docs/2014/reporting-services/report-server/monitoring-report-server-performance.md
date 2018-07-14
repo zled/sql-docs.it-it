@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - report servers [Reporting Services], performance
@@ -21,13 +21,13 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 caps.latest.revision: 64
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c672255a822313437682e0dc9e91c73d38a7563f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: facca3a93bb3681903ff6bb9ee7b6cf219c9ffcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244341"
 ---
 # <a name="monitoring-report-server-performance"></a>Monitoraggio delle prestazioni del server di report
   Con gli strumenti di monitoraggio delle prestazioni è possibile valutare l'attività del server di report, osservare le tendenze, diagnosticare i colli di bottiglia a livello di sistema e raccogliere dati che consentono di determinare più facilmente se la configurazione del sistema corrente è sufficiente. Per ottimizzare le prestazioni del server, è possibile specificare la frequenza di riciclo del dominio dell'applicazione del server di report. Per altre informazioni, vedere [Configurare la memoria disponibile per applicazioni del server di report](../report-server/configure-available-memory-for-report-server-applications.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "36167017"
   
  In Gestione attività sono disponibili informazioni sui programmi e sui processi in esecuzione nel computer. È possibile utilizzare Gestione attività per monitorare i principali indicatori delle prestazioni del server di report nonché per valutare l'attività dei processi in esecuzione e visualizzare grafici e dati sull'utilizzo della CPU e della memoria. Per informazioni sull'utilizzo di Gestione attività, vedere la documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- È possibile utilizzare la console Performance e il Visualizzatore eventi per creare avvisi e log relativi all'elaborazione dei report e all'utilizzo di risorse. Per informazioni sugli eventi di Windows che vengono generati da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [registro applicazioni di Windows](windows-application-log.md). Per informazioni sulla console Performance, vedere "Contatori delle prestazioni di Windows" più avanti in questo argomento.  
+ È possibile utilizzare la console Performance e il Visualizzatore eventi per creare avvisi e log relativi all'elaborazione dei report e all'utilizzo di risorse. Per informazioni sugli eventi di Windows generati da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [registro applicazioni di Windows](windows-application-log.md). Per informazioni sulla console Performance, vedere "Contatori delle prestazioni di Windows" più avanti in questo argomento.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - Le utilità forniscono anche informazioni sul database del server di report e sui database temporanei usati per la gestione della memorizzazione nella cache e delle sessioni.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36167017"
   
 -   `MSRS 2011 Windows Service` e `MSRS 2011 Windows Service SharePoint Mode` per monitorare le operazioni pianificate e il recapito dei report. In questi oggetti prestazione è inclusa una raccolta di contatori che consentono di tenere traccia delle elaborazioni di report avviate tramite operazioni pianificate, nelle quali sono incluse sottoscrizioni e recapiti, snapshot delle esecuzioni dei report e cronologie dei report.  
   
--   `ReportServer:Service` e `ReportServerSharePoint:Service` per monitorare gli eventi correlati a HTTP e la gestione della memoria. Tali contatori sono specifici di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e consentono di tenere traccia degli eventi correlati ad HTTP per il server di report, ad esempio richieste, connessioni e tentativi di accesso. Questo oggetto prestazione, inoltre, include contatori correlati alla gestione della memoria.  
+-   `ReportServer:Service` e `ReportServerSharePoint:Service` monitorare gli eventi correlati ad HTTP e la gestione della memoria. Tali contatori sono specifici di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e consentono di tenere traccia degli eventi correlati ad HTTP per il server di report, ad esempio richieste, connessioni e tentativi di accesso. Questo oggetto prestazione, inoltre, include contatori correlati alla gestione della memoria.  
   
  Se sono presenti più istanze del server di report in uno stesso computer, è possibile scegliere se monitorare le istanze insieme o separatamente. Scegliere quali istanze includere quando si aggiunge un contatore. Per altre informazioni sull'uso della console Performance (perfmon.msc) e sull'aggiunta di contatori, vedere la documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
@@ -83,10 +83,10 @@ ms.locfileid: "36167017"
  Oltre agli oggetti relativi alle prestazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] può essere necessario configurare eventi di SharePoint se si esegue un server di report in modalità integrata SharePoint e l'ambiente di report è stato configurato per l'uso di un prodotto SharePoint. In questa sezione utilizzare Eventi per un server di report in modalità integrata SharePoint per esaminare gli eventi di diagnostica che potrebbero fornire informazioni utili se l'ambiente di report è integrato con SharePoint.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
- [Contatori delle prestazioni per l'oggetto prestazione MSRS 2014 Web Service e oggetti delle prestazioni MSRS 2014 Windows Service &#40;modalità nativa&#41;](performance-counters-msrs-2011-web-service-performance-objects.md)  
+ [Contatori delle prestazioni per il MSRS 2014 Web Service e MSRS 2014 Windows Service prestazioni oggetti &#40;modalità nativa&#41;](performance-counters-msrs-2011-web-service-performance-objects.md)  
  Descrive i contatori delle prestazioni utilizzati dal servizio Web ReportServer.  
   
- [Contatori delle prestazioni per l'oggetto prestazione MSRS 2014 Web Service SharePoint Mode e oggetti prestazioni MSRS 2014 Windows Service SharePoint in modalità &#40;modalità SharePoint&#41;](performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [Contatori delle prestazioni per il MSRS 2014 Web Service SharePoint Mode e oggetti prestazioni MSRS 2014 Windows Service SharePoint in modalità &#40;modalità SharePoint&#41;](performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  Descrive i contatori delle prestazioni utilizzati dal servizio Windows ReportServer.  
   
  [Contatori delle prestazioni per gli oggetti prestazioni ReportServer:Service e ReportServerSharePoint:Service](performance-counters-reportserver-service-performance-objects.md)  

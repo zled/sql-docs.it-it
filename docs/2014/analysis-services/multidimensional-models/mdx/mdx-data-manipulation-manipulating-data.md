@@ -1,5 +1,5 @@
 ---
-title: La modifica dei dati (MDX) | Documenti Microsoft
+title: La modifica dei dati (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], data manipulation
 - data manipulation [MDX]
 - Multidimensional Expressions [Analysis Services], data manipulation
 ms.assetid: 4865192e-f46b-4ce5-b51c-9e08dbad5b85
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c013b64b8c2c85d13e821ee2909c20d805c96b52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ed85590cfc766b1db7eb97a3c373c0cf967f2a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208011"
 ---
 # <a name="manipulating-data-mdx"></a>Manipolazione dei dati (MDX)
   Le espressioni MDX (Multidimensional Expressions) consentono di eseguire un'ampia gamma di operazioni di manipolazione dei dati. Negli argomenti seguenti vengono illustrati alcuni dei concetti più avanzati sulla manipolazione dei dati nel linguaggio MDX.  

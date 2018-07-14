@@ -1,5 +1,5 @@
 ---
-title: Percorso Editor (pagina visualizzatori dati) del flusso di dati | Documenti Microsoft
+title: Percorso Editor (pagina visualizzatori dati) del flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.visualizers.f1
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 38b5f077-9083-406a-a9a4-8bc39972dda2
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b292b8589af99aaccc896bcb92c6b73c7096b7c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1815402b13ad8ba1550472a7a2dc1cb70374a4d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231541"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>Editor percorso flusso di dati (pagina Visualizzatori dati)
   Utilizzare la pagina **Visualizzatori dati** della finestra di dialogo **Editor percorso flusso di dati** per gestire i visualizzatori di dati associati al percorso.  
@@ -46,7 +46,7 @@ ms.locfileid: "36168120"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor percorso flusso di dati &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor percorso flusso di dati &#40;pagina metadati&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
+ [Editor percorso flusso di dati &#40;pagina dei metadati&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
  [Flusso di dati](data-flow/data-flow.md)   
  [Usare le annotazioni nei pacchetti](use-annotations-in-packages.md)  
   

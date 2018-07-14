@@ -1,5 +1,5 @@
 ---
-title: Metodi di discretizzazione (Data Mining) | Documenti Microsoft
+title: Metodi di discretizzazione (Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
 - discretization [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2cedf4996536560ff415746c7948cc62a86de77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29ef2a25704911e1feb31f20a048952d45966925
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206251"
 ---
 # <a name="discretization-methods-data-mining"></a>Metodi di discretizzazione (data mining)
   Per il corretto funzionamento di alcuni algoritmi usati per la creazione dei modelli di data mining in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono necessari tipi di contenuto specifici. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes, ad esempio, non può utilizzare colonne continue come input, né stimare valori continui. Alcune colonne, inoltre, possono contenere un numero talmente elevato di valori da impedire all'algoritmo di identificare con facilità schemi significativi nei dati, in base ai quali creare un modello.  
@@ -52,13 +52,13 @@ ms.locfileid: "36168628"
 |`CLUSTERS`|L'algoritmo suddivide i dati in gruppi eseguendo il campionamento dei dati di training, l'inizializzazione su un numero di punti casuali e quindi diverse iterazioni dell'algoritmo Microsoft Clustering tramite il metodo di clustering EM (Expectation Maximization). Il metodo `CLUSTERS` è utile in quanto è valido per qualsiasi curva di distribuzione, ma richiede tempi di elaborazione più lunghi rispetto agli altri metodi di discretizzazione.<br /><br /> È possibile utilizzare tale metodo solo per le colonne numeriche.|  
 |`EQUAL_AREAS`|L'algoritmo suddivide i dati in gruppi che contengono lo stesso numero di valori. Questo metodo è particolarmente appropriato per le curve di distribuzione normali, ma non consente di ottenere risultati attendibili se la distribuzione include un numero elevato di valori che appartengono a un gruppo ristretto all'interno dei dati continui. Se ad esempio metà degli elementi ha un costo 0, metà dei dati corrisponderà a un singolo punto della curva. In tale distribuzione, questo metodo suddivide i dati in modo da stabilire una discretizzazione uguale in più aree, generando una rappresentazione non corretta dei dati.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
--   È possibile utilizzare il `EQUAL_AREAS` metodo per discretizzare le stringhe.  
+-   È possibile usare il `EQUAL_AREAS` metodo per discretizzare le stringhe.  
   
 -   Il `CLUSTERS` metodo utilizza un campione casuale di 1000 record per discretizzare i dati. Se si desidera evitare che l'algoritmo esegua il campionamento dei dati, utilizzare il metodo `EQUAL_AREAS`.  
   
--   Nell'esercitazione relativa al modello di data mining di rete neurale viene descritto il modo in cui la discretizzazione può essere personalizzata. Per altre informazioni, vedere [lezione 5: compilazione rete neurale e modelli di regressione logistica &#40;esercitazione intermedia sul Data Mining Data&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+-   Nell'esercitazione relativa al modello di data mining di rete neurale viene descritto il modo in cui la discretizzazione può essere personalizzata. Per altre informazioni, vedere [lezione 5: compilazione rete neurale e modelli di regressione logistica &#40;esercitazione intermedia sul Data Mining dei dati&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [I tipi di contenuto &#40;Data Mining&#41;](content-types-data-mining.md)   

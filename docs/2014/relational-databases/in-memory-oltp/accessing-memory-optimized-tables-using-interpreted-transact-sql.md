@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 030b8563ac272b0594697048169ade487c2321bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: afcc00e0f6bcc3341f7aafc23aeddfee5e8e8dff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170762"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Accesso alle tabelle con ottimizzazione per la memoria utilizzando codice Transact-SQL interpretato
   Salvo poche eccezioni, è possibile accedere alle tabelle ottimizzate per la memoria usando qualsiasi query [!INCLUDE[tsql](../../includes/tsql-md.md)] o operazione DML (SELECT, INSERT, UPDATE o DELETE), batch ad hoc e moduli SQL quali stored procedure, funzioni con valori di tabella, trigger e viste.  
@@ -57,7 +57,7 @@ ms.locfileid: "36169212"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- Quando si accede a una tabella ottimizzata per la memoria da una transazione esplicita o implicita usando [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato, è necessario includere un hint di tabella del livello di isolamento quale SNAPSHOT, REPEATABLEREAD, o SERIALIZABLE oppure usare MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. Per altre informazioni, vedere [linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria](memory-optimized-tables.md) e [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+ Quando si accede a una tabella ottimizzata per la memoria da una transazione esplicita o implicita usando [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato, è necessario includere un hint di tabella del livello di isolamento quale SNAPSHOT, REPEATABLEREAD, o SERIALIZABLE oppure usare MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. Per altre informazioni, vedere [linee guida per i livelli di isolamento delle transazioni con tabelle ottimizzate per la memoria](memory-optimized-tables.md) e [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
 > [!NOTE]  
 >  Un hint del livello di isolamento non è necessario per le tabelle ottimizzate per la memoria accessibili dalle query in esecuzione in modalità autocommit.  

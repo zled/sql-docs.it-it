@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], previewing reports
 - previewing reports [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0c1d7b819f181d8a4b2de8c448a80a5ef24a64cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: afcfb2cf31526f4e8898fafbe72f9492a1848886
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202531"
 ---
 # <a name="previewing-reports"></a>Anteprima dei report
   Durante la progettazione di un report, potrebbe essere necessario visualizzarlo prima di pubblicarlo in un ambiente di produzione. Tale operazione può essere eseguita passando alla modalità di anteprima in Progettazione report, utilizzando la finestra di anteprima in Progettazione report e pubblicando il report in un server di report in un ambiente di prova.  
@@ -33,18 +33,18 @@ ms.locfileid: "36168944"
 >  Quando un report viene visualizzato in anteprima, i dati per il report vengono memorizzati nella cache in un file nel computer locale. Quando lo stesso report viene visualizzato di nuovo in anteprima utilizzando la stessa query, gli stessi parametri e le stesse credenziali, in Progettazione report viene recuperata la copia memorizzata nella cache anziché rieseguire la query. Il file di dati viene salvato come *\<nomereport>*.rdl.data nella stessa directory del file di definizione del report. e non viene eliminato alla chiusura di Progettazione report.  
   
 ## <a name="preview-mode"></a>Modalità di anteprima  
- È possibile visualizzare in anteprima un report in Progettazione Report facendo clic **anteprima**. Il report verrà eseguito localmente, utilizzando le stesse funzionalità di elaborazione e rendering del report offerte dal server di report. Il report visualizzato è un'immagine interattiva. È quindi possibile selezionare parametri, fare clic sui collegamenti, visualizzare la mappa documento ed espandere e comprimere le aree nascoste del report. È inoltre possibile esportare il report in uno dei formati di rendering installati.  
+ È possibile visualizzare in anteprima un report in Progettazione Report facendo clic **Preview**. Il report verrà eseguito localmente, utilizzando le stesse funzionalità di elaborazione e rendering del report offerte dal server di report. Il report visualizzato è un'immagine interattiva. È quindi possibile selezionare parametri, fare clic sui collegamenti, visualizzare la mappa documento ed espandere e comprimere le aree nascoste del report. È inoltre possibile esportare il report in uno dei formati di rendering installati.  
   
 ## <a name="standalone-preview"></a>Anteprima autonoma  
  Per visualizzare in anteprima un report è possibile inoltre eseguire il progetto report in una configurazione per il debug, ad esempio per eseguire il debug degli assembly personalizzati scritti. Per eseguire un progetto sono disponibili tre modi:  
   
--   Facendo clic **avviare** sul **Debug** menu.  
+-   Facendo clic **avviare** nel **Debug** menu.  
   
--   Facendo clic il **avviare** pulsante della barra di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] barra degli strumenti standard.  
+-   Facendo clic la **avviare** pulsante la [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] barra degli strumenti standard.  
   
 -   Premere F5.  
   
- Se si utilizza una configurazione di progetto che compila il report senza distribuirlo, il report specificato nella `StartItem` proprietà della configurazione corrente viene aperto in una finestra di anteprima distinta. La visualizzazione e la funzionalità del report nella finestra di anteprima sono uguali a quelle della modalità di anteprima.  
+ Se si usa una configurazione di progetto che compila il report senza distribuirlo, il report specificato nella `StartItem` proprietà della configurazione corrente viene aperto in una finestra di anteprima distinta. La visualizzazione e la funzionalità del report nella finestra di anteprima sono uguali a quelle della modalità di anteprima.  
   
 > [!NOTE]  
 >  Prima di eseguire il debug di un report è necessario impostare un elemento iniziale. Per impostare un elemento iniziale, in Esplora soluzioni, fare clic sul progetto report, fare clic su **delle proprietà**, quindi nel `StartItem`, selezionare il nome del report da visualizzare.  

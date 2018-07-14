@@ -1,5 +1,5 @@
 ---
-title: Impostare le proprietà di una variabile definita dall'utente | Documenti Microsoft
+title: Impostare le proprietà di una variabile definita dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying variables
 - variables [Integration Services], properties
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1d05e9fc6b6c4f1e5e29a4bff9c163305d977202
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 526a5fef8883d34c281ee6c1cec51d29a6b9508c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331877"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>Impostazione delle proprietà di una variabile definita dall'utente
   Per impostare le proprietà di una variabile definita dall'utente in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è possibile utilizzare una delle funzionalità seguenti:  
@@ -38,25 +38,25 @@ ms.locfileid: "36166877"
   
  Quando si usa la finestra **Proprietà** per impostare le espressioni in una variabile definita dall'utente:  
   
--   Il valore di una variabile può essere impostato tramite la proprietà Value o Expression. Per impostazione predefinita, la proprietà EvaluateAsExpression è impostata su `False` e il valore della variabile viene impostato dalla proprietà Value. Per utilizzare un'espressione per impostare il valore, è innanzitutto necessario impostare EvaluateAsExpression su `True`e quindi specificare un'espressione nella proprietà espressione. La proprietà Value viene impostata automaticamente sul risultato restituito dall'espressione.  
+-   Il valore di una variabile può essere impostato tramite la proprietà Value o Expression. Per impostazione predefinita, la proprietà EvaluateAsExpression è impostata su `False` e il valore della variabile è impostato dalla proprietà Value. Per usare un'espressione per impostare il valore, è necessario prima impostare EvaluateAsExpression su `True`e quindi specificare un'espressione nella proprietà Expression. La proprietà Value viene impostata automaticamente sul risultato restituito dall'espressione.  
   
--   La proprietà ValueType contiene il tipo di dati del valore della proprietà Value. Quando la proprietà Value viene impostata tramite un'espressione, la proprietà ValueType viene automaticamente aggiornata a un tipo di dati compatibile con il risultato restituito dall'espressione. Ad esempio, se il valore contiene 0 e proprietà ValueType contiene **Int32** espressione è quindi impostata su GETDATE (), il valore contiene la data e ora correnti e ValueType è impostato su `DateTime`.  
+-   La proprietà ValueType contiene il tipo di dati del valore della proprietà Value. Quando la proprietà Value viene impostata tramite un'espressione, la proprietà ValueType viene automaticamente aggiornata a un tipo di dati compatibile con il risultato restituito dall'espressione. Ad esempio, se il valore contiene 0 e la proprietà ValueType contiene **Int32** e si imposta Expression su GETDATE (), valore contiene la data e ora correnti e ValueType verrà impostata su `DateTime`.  
   
 -   Tramite la finestra **Proprietà** della variabile è possibile accedere alla finestra di dialogo **Generatore di espressioni** , che consente di compilare, convalidare e valutare le espressioni. Per altre informazioni, vedere [Generatore di espressioni](expressions/expression-builder.md) e [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
  Quando si usa la finestra **Variabili** per impostare le espressioni in una variabile definita dall'utente:  
   
--   Per usare un'espressione per impostare il valore della variabile, verificare innanzitutto che il tipo di dati della variabile sia compatibile con il risultato della valutazione dell'espressione e quindi specificare un'espressione nella `Expression` colonna del **variabili** finestra. La proprietà EvaluateAsExpression nel **delle proprietà** finestra viene impostata automaticamente su `True`.  
+-   Per usare un'espressione per impostare il valore della variabile, verificare che il tipo di dati della variabile sia compatibile con il risultato della valutazione dell'espressione e quindi specificare un'espressione nel `Expression` della colonna della **variabili** finestra. La proprietà EvaluateAsExpression nella **delle proprietà** finestra viene impostata automaticamente su `True`.  
   
 -   Quando si assegna un'espressione a una variabile, accanto a quest'ultima viene visualizzato un marcatore icona speciale. Tale marcatore icona speciale viene visualizzato anche accanto alle gestioni connessioni e alle attività in cui sono impostate espressioni.  
   
 -   Tramite la finestra **Variabili** della variabile è possibile accedere alla finestra di dialogo **Generatore di espressioni** , che consente di compilare, convalidare e valutare le espressioni. Per altre informazioni, vedere [Generatore di espressioni](expressions/expression-builder.md) e [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
- In entrambi i **variabili** e **delle proprietà** finestra, se si assegna un'espressione alla variabile, e `EvaluateAsExpression` è impostata su `True`, non è possibile modificare il tipo di dati della variabile.  
+ In entrambi i **variabili** e **proprietà** finestra, se si assegna un'espressione alla variabile, e `EvaluateAsExpression` è impostata su `True`, non è possibile modificare il tipo di dati della variabile.  
   
- **Impostazione delle proprietà di nome e Namespace**  
+ **Impostazione delle proprietà di Name e Namespace**  
   
- I valori del `Name` e `Namespace` proprietà devono iniziare con una lettera carattere alfabetico, come definito dallo Standard Unicode 2.0, o un carattere di sottolineatura (_). I caratteri successivi possono includere lettere o numeri, come definito dallo standard Unicode 2.0, o il carattere di sottolineatura (\_).  
+ I valori del `Name` e `Namespace` proprietà devono iniziare con una lettera di carattere alfabetico come definito dallo Standard Unicode 2.0, o un carattere di sottolineatura (_). I caratteri successivi possono includere lettere o numeri, come definito dallo standard Unicode 2.0, o il carattere di sottolineatura (\_).  
   
 ## <a name="using-the-variables-window-to-set-properties"></a>Utilizzo della finestra Variabili per impostare le proprietà  
   
@@ -101,8 +101,8 @@ ms.locfileid: "36166877"
 8.  Per salvare il pacchetto aggiornato, dal menu **File** scegliere **Salva elementi selezionati**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Servizi di integrazione &#40;SSIS&#41; variabili](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; le variabili](integration-services-ssis-variables.md)   
  [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)   
- [Aggiungere, eliminare o modificare l'ambito della variabile definita dall'utente in un pacchetto](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
+ [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

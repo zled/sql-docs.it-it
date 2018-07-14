@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default affinity mask option
 - reloading processor cache
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6c0c94785452841642edac541d9c120bfbd7ad14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 41fad115e39068b60f9d1a08b4fcf08b2c3d392a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168384"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271967"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>Opzione di configurazione del server affinity mask
     
@@ -63,7 +63,7 @@ ms.locfileid: "36168384"
   
  Se si specifica una maschera di affinità che tenta di eseguire il mapping a una CPU non esistente, il comando RECONFIGURE visualizza un messaggio di errore nella sessione client e nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In questo caso, l'utilizzo dell'opzione RECONFIGURE WITH OVERRIDE non avrà alcun effetto e verrà visualizzato di nuovo lo stesso errore di configurazione.  
   
- È inoltre possibile escludere l'attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da processori ai quali sono stati assegnati carichi di lavoro specifici nei sistemi operativi Windows 2000 o Windows Server 2003. Se si imposta su 1 un bit corrispondente a un processore, il processore viene selezionato dal Motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'assegnazione di thread. Quando si imposta `affinity mask` su 0 (impostazione predefinita), di Microsoft Windows 2000 o Windows Server 2003 dagli algoritmi di pianificazione impostata l'affinità del thread. Se l'opzione `affinity mask` viene impostata su un valore diverso da zero, l'affinità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta il valore come maschera di bit indicante i processori selezionabili.  
+ È inoltre possibile escludere l'attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da processori ai quali sono stati assegnati carichi di lavoro specifici nei sistemi operativi Windows 2000 o Windows Server 2003. Se si imposta su 1 un bit corrispondente a un processore, il processore viene selezionato dal Motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'assegnazione di thread. Quando si imposta `affinity mask` su 0 (impostazione predefinita), il Microsoft Windows 2000 o Windows Server 2003 dagli algoritmi di pianificazione impostata l'affinità del thread. Se l'opzione `affinity mask` viene impostata su un valore diverso da zero, l'affinità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta il valore come maschera di bit indicante i processori selezionabili.  
   
  L'esclusione dei thread [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da processori specifici consente a Microsoft Windows 2000 o Windows Server 2003 di valutare adeguatamente la gestione dei processi specifici di Windows. Ad esempio, per un server con 8 CPU nel quale sono in esecuzione due istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (istanza A e B), l'amministratore di sistema può utilizzare l'opzione affinity mask per assegnare il primo set di 4 CPU all'istanza A e il secondo set di 4 CPU all'istanza B. Per configurare più di 32 processori, impostare entrambe le opzioni affinity mask e affinity64 mask. I valori per l'opzione `affinity mask` sono i seguenti:  
   
@@ -118,7 +118,7 @@ GO
 |127|01111111|0, 1, 2, 3, 4, 5 e 6|  
 |255|11111111|0, 1, 2, 3, 4, 5, 6 e 7|  
   
- affinity mask è un'opzione avanzata. Se si utilizza la stored procedure sp_configure per modificare l'impostazione, è possibile modificare `affinity mask` solo quando **Visualizza le opzioni avanzate** è impostato su 1. Dopo aver eseguito il comando [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE, la nuova impostazione viene applicata immediatamente senza che sia necessario riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ affinity mask è un'opzione avanzata. Se si utilizza la stored procedure sp_configure per modificare l'impostazione, è possibile modificare `affinity mask` solo quando **Mostra opzioni avanzate** è impostato su 1. Dopo aver eseguito il comando [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE, la nuova impostazione viene applicata immediatamente senza che sia necessario riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="non-uniform-memory-access-numa"></a>Configurazione NUMA (Non-Uniform Memory Access)  
  Quando si utilizza hardware basato sulla configurazione NUMA ed è impostata l'opzione affinity mask, verrà creata un'affinità fra tutte le utilità di pianificazione di un nodo e la rispettiva CPU. Quando l'opzione affinity mask non è impostata, viene creata un'affinità tra le utilità di pianificazione e il gruppo di CPU contenute nel nodo NUMA. Un'utilità di pianificazione di cui viene eseguito il mapping al nodo NUMA N1 potrà pianificare operazioni in qualsiasi CPU del nodo, ma non nelle CPU associate a un altro nodo.  

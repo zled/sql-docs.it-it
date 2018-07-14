@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Neural Network | Documenti Microsoft
+title: Algoritmo Microsoft Neural Network | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
 - output neurons [Analysis Services]
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc557e9a063b5f3031d6a817b0bf85325b94e086
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8845e1bee588c8f79046e12015b6a9bed021ba4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202051"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Neural Network consente di combinare ogni possibile stato dell'attributo di input con ogni possibile stato dell'attributo stimabile e utilizza i dati di training per calcolare le probabilità. Queste probabilità potranno quindi essere utilizzate a scopo di classificazione o regressione o per stimare un risultato dell'attributo stimato, sulla base degli attributi di input.  
+  Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Neural Network combinare ogni possibile stato dell'attributo di input con ogni possibile stato dell'attributo stimabile e Usa i dati di training per calcolare le probabilità. Queste probabilità potranno quindi essere utilizzate a scopo di classificazione o regressione o per stimare un risultato dell'attributo stimato, sulla base degli attributi di input.  
   
  Un modello di data mining costruito con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network può includere più reti, a seconda del numero di colonne utilizzate sia per l'input che per la stima o solo per la stima. Il numero di reti incluse in un singolo modello di data mining dipende dal numero di stati contenuti nelle colonne di input e stimabili utilizzate dal modello.  
   
@@ -55,13 +55,13 @@ ms.locfileid: "36167958"
 -   Qualsiasi modello di stima che analizza le relazioni complesse tra molti input e un numero relativamente basso di output.  
   
 ## <a name="how-the-algorithm-works"></a>Funzionamento dell'algoritmo  
- Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Neural Network crea una rete che si compone di fino a tre livelli di neuroni. Tali livelli rappresentano rispettivamente un livello di input, un livello nascosto facoltativo e un livello di output.  
+ Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Neural Network crea una rete composta fino a tre livelli di neuroni. Tali livelli rappresentano rispettivamente un livello di input, un livello nascosto facoltativo e un livello di output.  
   
  **Livello di input:** i neuroni di Input definiscono tutti i valori di attributo di input per il modello di data mining e le relative probabilità.  
   
- **Livello nascosto:** i neuroni nascosti ricevono gli input dai neuroni di input e forniscono output ai neuroni di output. Alle diverse probabilità degli input vengono assegnati pesi sul livello nascosto. Un peso descrive la pertinenza o l'importanza di un particolare input rispetto al neurone nascosto. Maggiore è il peso assegnato a un input, più importante è il valore di quell'input. Quando i pesi sono negativi, l'input può inibire, anziché favorire, un risultato specifico.  
+ **Livello nascosto:** i neuroni nascosti ricevono input dai neuroni di input e forniscono output ai neuroni di output. Alle diverse probabilità degli input vengono assegnati pesi sul livello nascosto. Un peso descrive la pertinenza o l'importanza di un particolare input rispetto al neurone nascosto. Maggiore è il peso assegnato a un input, più importante è il valore di quell'input. Quando i pesi sono negativi, l'input può inibire, anziché favorire, un risultato specifico.  
   
- **Livello di output:** neuroni di Output rappresentano i valori di attributo stimabile per il modello di data mining.  
+ **Livello di output:** neuroni di Output rappresentano valori dell'attributo stimabile per il modello di data mining.  
   
  Per una spiegazione dettagliata della creazione dei livelli di output, input e nascosti e dell'assegnazione dei punteggi a tali livelli, vedere [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md).  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36167958"
   
  Per informazioni generali sulla creazione di query su un modello di data mining, vedere [Query di data mining](data-mining-queries.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 -   Non supporta il drill-through di dimensioni di data mining. Questo perché la struttura dei nodi nel modello di data mining non corrisponde necessariamente in modo diretto ai dati sottostanti.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36167958"
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento tecnico l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)   
  [Contenuto dei modelli di rete neurale modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Esempi di Query del modello di rete neurale](neural-network-model-query-examples.md)   
+ [Neural Network Model Query Examples](neural-network-model-query-examples.md)   
  [Algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm.md)  
   
   

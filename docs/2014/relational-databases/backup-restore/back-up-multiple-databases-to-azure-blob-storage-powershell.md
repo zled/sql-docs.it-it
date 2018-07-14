@@ -1,25 +1,24 @@
 ---
-title: Utilizzare PowerShell per eseguire il Backup più database di Windows Azure Blob Storage Service | Documenti Microsoft
+title: Usare PowerShell per eseguire il Backup più database per il servizio di archiviazione Blob di Azure di Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: acc1410256b89f3501ab261921d32c582ed2c80e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c53e405bad7e81b4ea0344eea857f5dd2e067151
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269117"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-windows-azure-blob-storage-service"></a>Utilizzare PowerShell per il backup di più database nel servizio di archiviazione BLOB di Windows Azure
   In questo argomento vengono forniti alcuni script di esempio che possono essere utilizzati per automatizzare i backup nel servizio di archiviazione BLOB di Windows Azure mediante i cmdlet di PowerShell.  

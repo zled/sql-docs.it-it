@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, technical reference
 - technical reference [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9f749612e65681ec7daf2f556ada02e9f84b5fd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87b75fe08c201d7aace1d2465351300447e5ae7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255913"
 ---
 # <a name="technical-reference-ssrs"></a>Guida di riferimento tecnico (SSRS)
   Individuare gli strumenti e la documentazione di riferimento di PowerShell per l'uso o l'amministrazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -36,11 +36,11 @@ ms.locfileid: "36167560"
  ![Icona della cartella file piccola](../../2014/integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **Guida di riferimento alle funzionalità**  
  [Guida sensibile al contesto di Progettazione report](tools/report-designer-f1-help.md)  
   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
- [Guida della creazione guidata report](../../2014/reporting-services/report-wizard-help.md)  
+ [Guida della Creazione guidata report](../../2014/reporting-services/report-wizard-help.md)  
   
  [Visualizzatore HTML e barra degli strumenti dei report](html-viewer-and-the-report-toolbar.md)  
   

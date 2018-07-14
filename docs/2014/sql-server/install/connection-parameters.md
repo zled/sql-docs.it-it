@@ -1,5 +1,5 @@
 ---
-title: I parametri di connessione | Documenti Microsoft
+title: I parametri di connessione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], connections
 - authentication [Upgrade Advisor]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], connections
 ms.assetid: f754d038-637a-4d8e-85b0-b242e6499d26
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc99f9fc26f0e46f0f5ea0d717614bf5935f4814
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ba6652a172e06c64018243acd01a6d60dcced47b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181618"
 ---
 # <a name="connection-parameters"></a>Parametri di connessione
   Per analizzare determinati tipi di server, ad esempio il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], è necessario selezionare un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Viene automaticamente selezionata l'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile modificare questa selezione, selezionando però solo un'istanza alla volta per l'analisi da Preparazione aggiornamento. Se è stato incluso un tipo di server che richiede l'autenticazione, è necessario immettere la modalità di autenticazione e le credenziali.  
@@ -36,7 +36,7 @@ ms.locfileid: "36168938"
  **Nome server**  
  Questo campo viene prepopolato con il nome del computer immesso nel riquadro Componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **nome dell'istanza**  
+ **Nome dell'istanza**  
  Selezionare una delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibili nel computer. Se l'elenco di istanze non viene visualizzato, utilizzare MSSQLSERVER per analizzare l'istanza predefinita. Ciò riguarda soprattutto i computer remoti. È anche possibile utilizzare l'espressione "valore predefinito" per analizzare l'istanza predefinita.  
   
  **Autenticazione**  

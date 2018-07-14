@@ -1,5 +1,5 @@
 ---
-title: Progettazione (Analysis Services - dati multidimensionali) del cubo | Documenti Microsoft
+title: Finestra di progettazione (Analysis Services - dati multidimensionali) del cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cube Designer
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00720caa0c9bcae9e04cc542864ab99e14eb0f86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc6972d90683de658dd0d8104cff138d59960904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246281"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Progettazione cubi (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Progettazione cubi** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per modificare diverse proprietà di un cubo esistente, tra cui i gruppi di misure e le misure, le dimensioni del cubo e le relazioni tra le dimensioni, i calcoli, gli indicatori di prestazioni chiave (KPI), le azioni, le partizioni, le prospettive e le traduzioni inclusi nel cubo e visualizzare i dati contenuti nel cubo. Per visualizzare la finestra di dialogo **Progettazione cubi** è possibile:  
@@ -36,7 +36,7 @@ ms.locfileid: "36166510"
   
 |Scheda|Definizione|  
 |---------|----------------|  
-|**Struttura cubo**|Utilizzare questa scheda per creare e modificare gruppi di misure e misure, aggiungere dimensioni del cubo e visualizzare gli oggetti inclusi nel cubo nella vista origine  dati associata. Per altre informazioni su questa scheda, vedere [Struttura cubo &#40;Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Struttura del cubo**|Utilizzare questa scheda per creare e modificare gruppi di misure e misure, aggiungere dimensioni del cubo e visualizzare gli oggetti inclusi nel cubo nella vista origine  dati associata. Per altre informazioni su questa scheda, vedere [Struttura cubo &#40;Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Utilizzo delle dimensioni**|Utilizzare questa scheda per creare e modificare le relazioni tra le dimensioni del cubo e i gruppi di misure inclusi nel cubo. Per altre informazioni su questa scheda, vedere [Utilizzo dimensioni &#40;Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Calcoli**|Utilizzare questa scheda per creare e modificare calcoli, inclusi i membri calcolati, i set denominati e gli script MDX (Multidimensional Expressions) contenuti nel cubo. Per altre informazioni su questa scheda, vedere [Calcoli &#40;Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Indicatori KPI**|Utilizzare questa scheda per creare e modificare gli indicatori di prestazioni chiave (KPI) inclusi nel cubo. Per altre informazioni su questa scheda, vedere [KPI &#40;Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md).|  

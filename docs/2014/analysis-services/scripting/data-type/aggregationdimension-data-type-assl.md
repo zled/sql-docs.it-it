@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati AggregationDimension (ASSL) | Documenti Microsoft
+title: Tipo di dati AggregationDimension (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDimension data type
 ms.assetid: 697e0e09-3210-4a56-882f-80726abc4c68
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2e289e1ea6f5c91fc362f309eb73cf5586d6295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b67d679a9ade4986f2c9aab11ff3c758c3b7c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251433"
 ---
 # <a name="aggregationdimension-data-type-assl"></a>Tipo di dati AggregationDimension (ASSL)
   Definisce un tipo di dati primitivo che rappresenta la relazione tra una dimensione e un [aggregazione](../objects/aggregation-element-assl.md) elemento.  
@@ -58,10 +58,10 @@ ms.locfileid: "36158755"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Annotazioni](../collections/annotations-element-assl.md), [attributi](../collections/attributes-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md)|  
-|Elementi derivati|[Dimensione](../objects/dimension-element-assl.md) ([dimensioni](../collections/dimensions-element-assl.md) insieme [aggregazione](../objects/aggregation-element-assl.md))|  
+|Elementi figlio|[Le annotazioni](../collections/annotations-element-assl.md), [attributi](../collections/attributes-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md)|  
+|Elementi derivati|[Dimensione](../objects/dimension-element-assl.md) ([quote](../collections/dimensions-element-assl.md) insieme [aggregazione](../objects/aggregation-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è [AggregationDimension](dimension-data-type-assl.md).  
   
 ## <a name="see-also"></a>Vedere anche  

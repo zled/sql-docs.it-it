@@ -1,5 +1,5 @@
 ---
-title: Server Reporting Services Report | Documenti Microsoft
+title: Server Reporting Services Report | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2015
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -29,22 +29,22 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a1f0a11c1443126487ed49bd1489655e4e69368b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9aff1bba090ec29cad3eef94453858e1f2b0029
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189838"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   In questo argomento viene fornita una panoramica del server di report di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , il componente centrale di un'installazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . È costituito da una coppia di componenti di elaborazione oltre a una raccolta di estensioni speciali che gestiscono le operazioni di autenticazione, elaborazione dati, rendering e recapito. Un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene eseguito in una delle due modalità di distribuzione: nativa o SharePoint. Vedere la sezione [Confronto tra le funzionalità delle modalità SharePoint e nativa](#bkmk_featuresupport) per un confronto delle funzionalità.  
   
  **Installazione:** per informazioni sull'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , vedere quanto riportato di seguito:  
   
--   [Installare un Server di Report di Reporting Services in modalità nativa](install-windows/install-reporting-services-native-mode-report-server.md)  
+-   [Installare Server di Report di Reporting Services in modalità nativa](install-windows/install-reporting-services-native-mode-report-server.md)  
   
--   [Installare funzionalità di Business Intelligence di SQL Server con SharePoint &#40;PowerPivot e Reporting Services&#41;](../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
+-   [Installare le funzionalità SQL Server BI con SharePoint &#40;Reporting Services e PowerPivot&#41;](../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
   
  **Windows Azure**. Per informazioni sull'utilizzo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con Macchine Virtuali di Windows Azure, vedere quanto segue:  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36169381"
   
 -   [Modalità SharePoint](#bkmk_sharepointmode)  
   
--   [Processo di report e pianificazione e recapito](#bkmk_reportprocessor)  
+-   [Elaborazione di report e pianificazione e recapito](#bkmk_reportprocessor)  
   
 -   [Database del server di report](#bkmk_reportdatabase)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36169381"
 |**Report personali**|Sì|no|  
 |**Sottoscrizioni personali** e metodi di invio in batch|Sì|no|  
 |**Avvisi dati**|no|Sì|  
-|**Power View**|no|Sì<br /><br /> È necessario disporre di Silverlight nel browser del client. Per ulteriori informazioni sui requisiti del browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**Power View**|no|Sì<br /><br /> È necessario disporre di Silverlight nel browser del client. Per altre informazioni sui requisiti del browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**Report RDL**|Sì|Sì<br /><br /> I report RDL possono essere eseguiti nei server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità nativa o SharePoint.|  
 |**Report RDLX**|no|Sì<br /><br /> I report RDLX di Power View possono essere eseguiti solo nei server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint.|  
 |**Credenziali del token utente di SharePoint per l'estensione dell'elenco SharePoint**|no|Sì|  
@@ -110,7 +110,7 @@ ms.locfileid: "36169381"
 ##  <a name="bkmk_nativemode"></a> Modalità nativa  
  In modalità nativa un server di report è un server applicazioni autonomo che fornisce tutte le funzionalità necessarie per la visualizzazione, la gestione, l'elaborazione e il recapito di report e modelli di report. Questa è la modalità predefinita per le istanze del server di report. È possibile installare un server di report in modalità nativa configurato durante l'installazione oppure configurarlo per le operazioni in modalità nativa al termine dell'installazione.  
   
- Il diagramma seguente illustra l'architettura a tre livelli di una [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] distribuzione in modalità nativa. Vengono mostrati il database del server di report e le origini dati nel livello dati, i componenti del server di report nel livello intermedio e le applicazioni client e gli strumenti predefiniti o personalizzati nel livello di presentazione. Viene inoltre illustrato il flusso delle richieste e dei dati tra i componenti server, indicando quali componenti gestiscono l'invio e il recupero di contenuto da un archivio dati.  
+ Il diagramma seguente mostra l'architettura a tre livelli di una [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] distribuzione in modalità nativa. Vengono mostrati il database del server di report e le origini dati nel livello dati, i componenti del server di report nel livello intermedio e le applicazioni client e gli strumenti predefiniti o personalizzati nel livello di presentazione. Viene inoltre illustrato il flusso delle richieste e dei dati tra i componenti server, indicando quali componenti gestiscono l'invio e il recupero di contenuto da un archivio dati.  
   
  ![Architettura di Reporting Services](media/reporting-serv-arch.gif "Architettura di Reporting Services")  
   
@@ -143,9 +143,9 @@ ms.locfileid: "36169381"
 |**(3)**|Server applicazioni in cui è in esecuzione il servizio condiviso [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . La distribuzione con scalabilità orizzontale dell'elaborazione del report viene gestita come parte della farm SharePoint e aggiungendo il servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] a ulteriori server applicazioni.|  
 |**(4)**|È possibile creare più applicazioni di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con configurazioni diverse, inclusi autorizzazioni, messaggi di posta elettronica, proxy e sottoscrizioni.|  
 |**(5)**|Report, origini dati e altri elementi vengono archiviati nei database del contenuto di SharePoint.|  
-|**(6)**|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] le applicazioni di servizio creano tre database per server di report, temp e funzionalità di avvisi dati. Le impostazioni di configurazione che si applicano a tutte le applicazioni di servizio SSRS vengono archiviate nel file **RSReportserver.config** .|  
+|**(6)**|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è possibile creare tre database per server di report, temporanee e di caratteristiche di avviso dati. Le impostazioni di configurazione che si applicano a tutte le applicazioni di servizio SSRS vengono archiviate nel file **RSReportserver.config** .|  
   
-##  <a name="bkmk_reportprocessor"></a> Processo di report e pianificazione e recapito  
+##  <a name="bkmk_reportprocessor"></a> Elaborazione di report e pianificazione e recapito  
  Nel server di report sono disponibili due motori di elaborazione tramite cui vengono eseguite l'elaborazione preliminare e intermedia dei report e le operazioni pianificate e di recapito. Il componente Elaborazione report gestisce il recupero della definizione o del modello del report e l'integrazione delle informazioni sul layout con i dati provenienti dall'estensione per l'elaborazione dati e ne esegue il rendering nel formato richiesto. Con il componente Elaborazione pianificazione e recapito è possibile elaborare i report generati da una pianificazione e recapitarli alle destinazioni.  
   
 ##  <a name="bkmk_reportdatabase"></a> Database del Server di report  
@@ -173,12 +173,12 @@ ms.locfileid: "36169381"
 |----------|----------|  
 |Verificare i requisiti hardware e software.|[Requisiti hardware e Software per Reporting Services in modalità SharePoint](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md).|  
 |Installare [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint.|[Installare la modalità SharePoint di Reporting Services per SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
-|Gli sviluppatori Web o gli utenti con esperienza nella creazione di fogli di stile CSS possono modificare gli stili predefiniti a loro rischio per modificare i colori, i tipi di carattere e il layout della barra degli strumenti di Gestione report. Né i fogli di stile predefiniti né le istruzioni relative alla loro modifica sono documentati in questa versione.|[Personalizzare i fogli di stile per il visualizzatore HTML e gestione Report](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
+|Gli sviluppatori Web o gli utenti con esperienza nella creazione di fogli di stile CSS possono modificare gli stili predefiniti a loro rischio per modificare i colori, i tipi di carattere e il layout della barra degli strumenti di Gestione report. Né i fogli di stile predefiniti né le istruzioni relative alla loro modifica sono documentati in questa versione.|[Personalizzare i fogli di stile per il visualizzatore HTML e Gestione report](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
 |Gli sviluppatori Web che hanno familiarità con gli stili HTML e fogli di stile CSS possono utilizzare le informazioni in questo argomento per determinare i file che è possibile modificare per personalizzare l'aspetto di Gestione report.|[Configurare Gestione report per il passaggio di cookie di autenticazione personalizzati](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 |Illustra come ottimizzare le impostazioni di memoria per il servizio Web ReportServer e il servizio Windows.|[Configurare la memoria disponibile per applicazioni del server di report](report-server/configure-available-memory-for-report-server-applications.md)|  
 |Vengono illustrati i passaggi consigliati per configurare il server di report per l'amministrazione remota.|[Configurare un server di report per l'amministrazione remota](report-server/configure-a-report-server-for-remote-administration.md)|  
 |Vengono fornite istruzioni per la configurazione della disponibilità della funzionalità **Report personali** in un'istanza del server di report nativa.|[Abilitare e disabilitare la funzionalità Report personali](report-server/enable-and-disable-my-reports.md)|  
-|Vengono fornite istruzioni per la configurazione del controllo RSClientPrint tramite cui viene fornita la funzionalità di stampa nei browser supportati. Per ulteriori informazioni sui requisiti del browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Abilitare e disabilitare la stampa sul lato client per Reporting Services](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
+|Vengono fornite istruzioni per la configurazione del controllo RSClientPrint tramite cui viene fornita la funzionalità di stampa nei browser supportati. Per altre informazioni sui requisiti del browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Abilitare e disabilitare la stampa sul lato client per Reporting Services](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni di Reporting Services](extensions/reporting-services-extensions.md)   

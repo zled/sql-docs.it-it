@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
@@ -16,13 +16,13 @@ ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ead89e675f08ca9ff5014ae8a03bfd39eabf798f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbceb06967d0bbfb305bd46673c8bbbcb9e1bfcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324621"
 ---
 # <a name="--subtract-ssis-expression"></a>- (sottrazione) (espressione SSIS)
   Viene sottratta la seconda espressione numerica dalla prima.  
@@ -42,10 +42,10 @@ numeric_expression1 – numeric_expression2
 ## <a name="result-types"></a>Tipi restituiti  
  Dipendenti dai tipi di dati dei due argomenti. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Racchiudere l'espressione con il meno unario tra parentesi per assicurarsi che l'espressione venga valutata nell'ordine corretto  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se uno degli operandi è Null, il risultato sarà Null.  
   
 ## <a name="expression-examples"></a>Esempi di espressione  
@@ -68,7 +68,7 @@ ListPrice - (ListPrice * @[Discount%])
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Associatività e precedenza operatori](operator-precedence-and-associativity.md)   
- [Gli operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md)  
+ [Precedenza e associatività degli operatori](operator-precedence-and-associativity.md)   
+ [Gli operatori &#40;espressione di SSIS&#41;](operators-ssis-expression.md)  
   
   

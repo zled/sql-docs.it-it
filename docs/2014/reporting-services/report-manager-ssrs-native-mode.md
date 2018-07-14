@@ -1,5 +1,5 @@
 ---
-title: Gestione report (modalità nativa SSRS) | Documenti Microsoft
+title: Gestione report (modalità nativa SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], managing
 - Report Manager [Reporting Services], about Report Manager
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 caps.latest.revision: 69
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 012b0a7d775050108305d44a1eb595a9f8b7b789
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8fc0febe87f937e8ad301bb070e22dcd44b788c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327071"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Gestione report (modalità nativa SSRS)
   Gestione report è uno strumento di gestione e accesso ai report basato sul Web che consente di amministrare una singola istanza del server di report da una postazione remota su una connessione HTTP. e offre funzionalità di visualizzatore di report e di navigazione. Contenuto dell'argomento:  
@@ -88,7 +88,7 @@ ms.locfileid: "36168028"
   
 #### <a name="to-start-report-manager-from-a-browser"></a>Per avviare Gestione report da un browser  
   
-1.  Apri [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 7.0 o versioni successive.  
+1.  Apri [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 7.0 o versione successiva.  
   
 2.  Nella barra degli indirizzi del browser digitare l'URL di Gestione report.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36168028"
  Non esistono molti modi per personalizzare Gestione report. Ad esempio, è possibile modificare il titolo dell'applicazione nella pagina Impostazioni sito. Gli sviluppatori Web possono modificare i fogli di stile che contengono le informazioni sullo stile utilizzate da Gestione report. Poiché Gestione report non è progettato specificamente per supportare la personalizzazione, è necessario testare accuratamente tutte le modifiche apportate. Se Gestione report non soddisfa le proprie esigenze, è possibile sviluppare un visualizzatore di report personalizzato oppure configurare web part di SharePoint per individuare e visualizzare i report in un sito di SharePoint. Per altre informazioni, vedere [Configurare Gestione report &#40;modalità nativa&#41;](report-server/configure-web-portal.md).  
   
 ##  <a name="bkmk_icon_descriptions"></a> Descrizioni delle icone  
- Nella tabella seguente vengono descritte le icone utilizzate in Gestione report. Per ulteriori informazioni sulle icone visualizzate nella barra degli strumenti report, vedere [visualizzatore HTML e barra degli strumenti Report](html-viewer-and-the-report-toolbar.md).  
+ Nella tabella seguente vengono descritte le icone utilizzate in Gestione report. Per altre informazioni sulle icone visualizzate sulla barra degli strumenti di report, vedere [visualizzatore HTML e barra degli strumenti Report](html-viewer-and-the-report-toolbar.md).  
   
 |Icona|Description|Azione|  
 |----------|-----------------|------------|  
@@ -110,8 +110,8 @@ ms.locfileid: "36168028"
 |![Icona di modello](media/model-icon.gif "Icona di modello")|Modello di report|Fare clic sull'icona del modello di report per aprire la pagina delle proprietà del modello.|  
 |![Icona di report collegato](media/hlp-16linked.gif "Icona di report collegato")|Report collegato|Fare clic sull'icona o sul nome del report collegato per aprirlo. Il report viene aperto in una finestra separata.|  
 |![Icona di cartella](media/hlp-16folder.gif "Icona di cartella")|Cartella|Fare clic sull'icona o sul nome della cartella per aprirla.|  
-|![Icona di sottoscrizione](media/hlp-16subscription.gif "icona di sottoscrizione")|Sottoscrizione|Fare clic sull'icona o sulla descrizione della sottoscrizione per modificarla.|  
-|![Icona di sottoscrizione guidata dai dati](media/hlp-16subscriptiondd.gif "icona sottoscrizione guidata dai dati")|Sottoscrizione guidata dai dati|Fare clic sull'icona o sulla descrizione della sottoscrizione guidata dai dati per modificarla.|  
+|![Icona della sottoscrizione](media/hlp-16subscription.gif "icona della sottoscrizione")|Sottoscrizione|Fare clic sull'icona o sulla descrizione della sottoscrizione per modificarla.|  
+|![Icona della sottoscrizione guidata dai dati](media/hlp-16subscriptiondd.gif "icona della sottoscrizione guidata dai dati")|Sottoscrizione guidata dai dati|Fare clic sull'icona o sulla descrizione della sottoscrizione guidata dai dati per modificarla.|  
 |![Icona di risorsa generica](media/hlp-16file.gif "Icona di risorsa generica")|Risorsa|Fare clic sull'icona o sul nome della risorsa per aprirla. La risorsa viene aperta in una finestra separata.|  
 |![Icona di origine dati condivisa](media/hlp-16datasource.png "Icona di origine dati condivisa")|Origine dei dati condivisa|Fare clic sull'icona di un'origine dei dati condivisa per aprire le pagine delle proprietà, l'elenco dei report e l'elenco delle sottoscrizioni per l'origine dei dati.|  
 |![Icona della pagina proprietà](media/hlp-16prop.gif "icona pagina delle proprietà")|Pagina delle proprietà|Fare clic sull'icona della pagina delle proprietà per accedere a pagine aggiuntive per l'impostazione di proprietà e opzioni di sicurezza.|  
@@ -123,6 +123,6 @@ ms.locfileid: "36168028"
  [Strumenti di Reporting Services](tools/reporting-services-tools.md)   
  [Gestione contenuto del Server di report &#40;modalità nativa SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Visualizzare ed esplorare i report in modalità nativa con Web part di SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   
