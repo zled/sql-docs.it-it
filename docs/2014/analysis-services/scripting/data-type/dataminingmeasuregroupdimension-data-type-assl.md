@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati DataMiningMeasureGroupDimension (ASSL) | Documenti Microsoft
+title: Tipo di dati DataMiningMeasureGroupDimension (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataMiningMeasureGroupDimension data type
 ms.assetid: 56d5c2ec-7e03-4dc7-a668-c8d598d59e55
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f25a5e72e185085479be12ea6eddd3cdf890020b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c50bf707f105ba40b023e2f1970dda875b0570b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314601"
 ---
 # <a name="dataminingmeasuregroupdimension-data-type-assl"></a>Tipo di dati DataMiningMeasureGroupDimension (ASSL)
   Definisce un tipo di dati derivato che rappresenta la relazione tra un gruppo di misure e una dimensione di data mining.  
@@ -49,7 +49,7 @@ ms.locfileid: "36062979"
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipi di dati di base|[MeasureGroupDimension](dimension-data-type-assl.md)|  
+|Tipi di dati di base|[Elemento MeasureGroupDimension](dimension-data-type-assl.md)|  
 |Tipi di dati derivati|None|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  
@@ -58,9 +58,9 @@ ms.locfileid: "36062979"
 |------------------|-------------|  
 |Elementi padre|None|  
 |Elementi figlio|[CaseCubeDimensionID](../properties/id-element-assl.md)|  
-|Elementi derivati|Vedere [dimensione](../objects/dimension-element-assl.md) ([dimensioni](../collections/dimensions-element-assl.md) insieme [MeasureGroup](../objects/group-element-assl.md))|  
+|Elementi derivati|Visualizzare [dimensione](../objects/dimension-element-assl.md) ([quote](../collections/dimensions-element-assl.md) raccolta di [MeasureGroup](../objects/group-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Vedere anche  

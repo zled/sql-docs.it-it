@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93418f885f5c14d2d6ad43b7892f64906a43a2be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 6ab4e0486cfcac8eaf4d5ed9d4a0456d4bb6d9dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290897"
 ---
 # <a name="database-engine-tutorials"></a>Esercitazioni del motore di database
   In questa sezione sono disponibili le esercitazioni per il [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
@@ -54,7 +54,7 @@ ms.locfileid: "36054769"
  [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Windows Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  In questa esercitazione viene illustrato come effettuare un backup di SQL Server e il ripristino nel servizio di archiviazione BLOB di Windows Azure.  
   
- [Esercitazione: File di dati SQL Server nel servizio di archiviazione Windows Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [Esercitazione: File di dati di SQL Server nel servizio Archiviazione di Microsoft Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
  In questa esercitazione sono incluse informazioni sull'archiviazione di file di dati di SQL Server direttamente nel servizio di archiviazione BLOB di Windows Azure.  
   
 ## <a name="see-also"></a>Vedere anche  

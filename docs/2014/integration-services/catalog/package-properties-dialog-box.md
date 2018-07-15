@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.ispackageprop.general.f1
 - sql12.ssis.ssms.packageproperties.f1
@@ -16,13 +16,13 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 66e98b169091b40ff24926ffef55f3687275b007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a85a05d5a0b18701ed9b8a480ef0bb7c05e873d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304211"
 ---
 # <a name="package-properties-dialog-box"></a>Finestra di dialogo Proprietà pacchetto
   Utilizzare la finestra di dialogo **Proprietà pacchetto** per visualizzare le proprietà dei pacchetti archiviati nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -61,7 +61,7 @@ ms.locfileid: "36065637"
  Viene elencato l'ID del pacchetto.  
   
  **Punto di ingresso**  
- Il valore di `True` indica che il pacchetto è stato avviato direttamente. Il valore di `False` indica che il pacchetto è stato avviato da un altro pacchetto utilizzando l'attività Esegui pacchetto. Il valore predefinito è `True`.  
+ Il valore di `True` indica che il pacchetto viene avviato direttamente. Il valore di `False` indica che il pacchetto viene avviato da un altro pacchetto tramite l'attività Esegui pacchetto. Il valore predefinito è `True`.  
   
  Questa proprietà si imposta in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sia per il pacchetto padre che per i pacchetti figlio facendo clic con il pulsante destro del mouse sul pacchetto in Esplora soluzioni e selezionando **Pacchetto punto di ingresso**.  
   

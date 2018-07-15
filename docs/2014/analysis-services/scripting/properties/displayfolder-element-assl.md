@@ -1,5 +1,5 @@
 ---
-title: Elemento DisplayFolder (ASSL) | Documenti Microsoft
+title: Elemento DisplayFolder (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DisplayFolder element
 ms.assetid: 55184c02-03e7-4d6c-b87a-d4d34bc11d0e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c959f1c2fe298217b46849c6a13d3e0f313f6803
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 646a98170e24c36841ab445bf87897a0b4e9686f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293201"
 ---
 # <a name="displayfolder-element-assl"></a>Elemento DisplayFolder (ASSL)
   Specifica la cartella nella quale elencare l'elemento padre. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] le applicazioni per sviluppatori e amministratori possono supportare l'utilizzo di cartelle di visualizzazione per suddividere più elementi.  
@@ -61,7 +61,7 @@ ms.locfileid: "36067275"
 |Elementi padre|[CalculationProperty](../objects/calculationproperty-element-assl.md), [gerarchia](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [misura](../objects/measure-element-assl.md), [traduzione](../objects/translation-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Nei cubi di dimensioni maggiori possono essere presenti centinaia di misure e gerarchie. La proprietà `DisplayFolder` definisce l'aspetto utente nel client. Il valore della proprietà `DisplayFolder` può contenere una delle opzioni seguenti:  
   
 -   Può essere vuoto, per indicare che la misura non appartiene a una cartella.  
@@ -70,7 +70,7 @@ ms.locfileid: "36067275"
   
 -   Contiene più nomi di cartella separati da una barra rovesciata (\\), che indica una gerarchia di cartelle incorporata.  
   
- Il `DisplayFolder` proprietà si applica alle `CalculationProperty` solo se gli elementi il valore di [CalculationType](calculationtype-element-assl.md) è impostato su *membro*.  
+ Il `DisplayFolder` proprietà si applica a `CalculationProperty` solo se gli elementi il valore di [CalculationType](calculationtype-element-assl.md) è impostata su *membro*.  
   
  Gli elementi che corrispondono agli elementi padre di `DisplayFolder` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.CalculationProperty>, <xref:Microsoft.AnalysisServices.Hierarchy>, <xref:Microsoft.AnalysisServices.Kpi>, <xref:Microsoft.AnalysisServices.Measure> e <xref:Microsoft.AnalysisServices.Translation>.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.chooseitems.maintenance_tasks
 - VS.ToolboxPages.Maintenance_Tasks
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Customize Toolbox dialog box
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b35d7e5bc36dec9dce01cbd22d07d5f4a46676d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 58b44f220715654a3a9d37271aeb7ff017355ffa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286567"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Scegli elementi Casella degli strumenti (pagina Attività di manutenzione)
   Questa scheda della finestra di dialogo **Personalizza Casella degli strumenti** visualizza un elenco di tutti i componenti delle attività di manutenzione registrati nel computer e offre la possibilità di modificare quelli visualizzati nella Casella degli strumenti. È possibile aprire la finestra di dialogo **Personalizza Casella degli strumenti** dal menu **Strumenti** . Per ordinare l'elenco di componenti selezionare un'intestazione di colonna.  

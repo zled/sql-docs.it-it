@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, monitoring
 - SQL Server Agent service, monitoring
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - counters [SQL Server], SQL Server Agent
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0cbb49b9c96d09027adcee1573168df6ba661d4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 724d921aaabafbe17adb96f48e679485247f8e92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301431"
 ---
 # <a name="use-performance-objects"></a>Utilizzo degli oggetti prestazioni
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent include oggetti e contatori delle prestazioni che consentono di monitorare lo stato del servizio. Tramite gli oggetti prestazione è possibile utilizzare Performance Monitor, uno strumento Windows che consente di identificare le attività eseguite in background dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È possibile ad esempio identificare il numero dei processi attivi attualmente in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e individuare quelli bloccati.  
@@ -41,7 +41,7 @@ ms.locfileid: "36066893"
 |Tipo di istanza|Nome oggetto|  
 |-------------------|-----------------|  
 |Default|**SQLAgent:** *oggetto*:*contatore*|  
-|Denominato|**SQLAgent$**<br /> ***nome_istanza* :** *oggetto*:*contatore*|  
+|Denominato|**SQLAgent$**<br /> ***instance_name* :** *oggetto*:*contatore*|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include gli oggetti prestazione seguenti per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   

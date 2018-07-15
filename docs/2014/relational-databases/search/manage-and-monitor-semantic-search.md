@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], managing
 - semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 366a8e3047cdba872fa9cb004c2a1d8a1892d22b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4dc25a584e7e883ce07040e0d5d0d567995533f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311461"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Gestire e monitorare la ricerca semantica
   Vengono illustrati il processo di indicizzazione semantica e le attività correlate alla gestione e al monitoraggio degli indici.  
@@ -41,7 +40,7 @@ SELECT * FROM sys.dm_fts_index_population WHERE table_id = OBJECT_ID('table_name
 GO  
 ```  
   
- **La seconda fase dell'indicizzazione semantica è stata completata?**  
+ **È la seconda fase dell'indicizzazione semantica completa?**  
  Eseguire una query sulla DMV [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql) e verificare lo **stato** e le colonne **status_description**.  
   
  La seconda fase dell'indicizzazione include il popolamento dell'indice di somiglianza dei documenti semantico.  
@@ -68,7 +67,7 @@ SELECT * FROM sys.dm_db_fts_index_physical_stats WHERE object_id = OBJECT_ID('ta
 GO  
 ```  
   
- **Che cos'è la dimensione totale degli indici full-text e semantici per un catalogo full-text?**  
+ **Che cos'è la dimensione totale degli indici full-text e semantiche per un catalogo full-text?**  
  Eseguire una query sulla proprietà **IndexSize** della funzione per i metadati [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql).  
   
 ```tsql  
@@ -76,7 +75,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')
 GO  
 ```  
   
- **Il numero di elementi indicizzato negli indici full-text e semantici per un catalogo full-text?**  
+ **Quanti elementi vengono indicizzati negli indici full-text e semantici per un catalogo full-text?**  
  Eseguire una query sulla proprietà **ItemCount** della funzione per i metadati [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql).  
   
 ```tsql  
@@ -138,13 +137,13 @@ GO
   
 ##  <a name="BestPracticeUnderstand"></a>   
 ##  <a name="ProblemNotPopulated"></a> Problema: Gli indici semantici non vengono popolati  
- **Gli indici full-text associati sono stati popolati.**  
+ **Gli indici full-text associati vengono popolati?**  
  Poiché l'indicizzazione semantica dipende dall'indicizzazione full-text, gli indici semantici vengono popolati solo al popolamento degli indici full-text associati.  
   
- **Ricerca full-text e ricerca semantica installato e configurato correttamente vengono?**  
+ **Sono la ricerca full-text e ricerca semantica installate e configurate correttamente?**  
  Per altre informazioni, vedere [Installazione e configurazione della ricerca semantica](install-and-configure-semantic-search.md).  
   
- **Se il servizio FDHOST non è disponibile, o si è verificata un'altra condizione che provoca la mancata indicizzazione full-text eseguire il failover?**  
+ **Il servizio FDHOST non è disponibile o è presente un'altra condizione che potrebbe causare l'indicizzazione full-text avere esito negativo?**  
  Per altre informazioni, vedere [Risoluzione dei problemi nell'indicizzazione full-text](troubleshoot-full-text-indexing.md).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo Merge (programmazione Transact-SQL della replica) | Documenti Microsoft
+title: Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo Merge (programmazione Transact-SQL della replica) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpmergearticleconflicts
 ms.assetid: 4907fe35-10ee-4f81-b924-fc419b1864d2
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e94a8d9fdccf19668a09917aecea84e645ac2601
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 48225870d89fc6bf39355957187fac84a704093d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316101"
 ---
 # <a name="view-conflict-information-for-merge-publications-replication-transact-sql-programming"></a>Visualizzazione delle informazioni sui conflitti per le pubblicazioni di tipo merge (programmazione Transact-SQL della replica)
   Quando si risolve un conflitto in una replica di tipo merge, i dati della riga non confermata vengono scritti in una tabella di conflitti. I dati relativi al conflitto possono essere visualizzati a livello di programmazione tramite le stored procedure di replica. Per altre informazioni, vedere [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  

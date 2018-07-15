@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CSV [Reporting Services]
 - device information settings [Reporting Services], CSV rendering
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 caps.latest.revision: 42
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 205d1ac37c78001d4f34f4f1cbc92731b88cfd1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5e2183790fcc7af3f173d7f674173f3dd49857fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307501"
 ---
 # <a name="csv-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo CSV
   Le impostazioni relative alle informazioni sul dispositivo per l'estensione per il rendering CSV consentono di modificare i delimitatori e i qualificatori e di specificare il tipo di gestione delle interruzioni di riga. È anche possibile specificare l'estensione di file, nonché la codifica e l'inclusione delle righe di intestazione nell'output. Poiché in genere i delimitatori sono caratteri speciali, è necessario codificarli in una sezione CDATA, se le impostazioni sono scritte in formato XML.  
@@ -38,12 +38,12 @@ ms.locfileid: "36065776"
 |**NoHeader**|Indica se la riga di intestazione è esclusa dall'output. Il valore predefinito è `false`.|  
 |`Qualifier`|Qualificatore da inserire prima e dopo i risultati che contengono il delimitatore di campo o di record. Se i risultati contengono il qualificatore, il qualificatore viene ripetuto. L'impostazione `Qualifier` deve essere diversa dalle impostazioni `FieldDelimiter` e `RecordDelimiter`. Il valore predefinito è costituito dalle virgolette (").|  
 |`RecordDelimiter`|Delimitatore di record da inserire alla fine di ogni record. Il valore predefinito è \<cr>\<lf>.|  
-|**SuppressLineBreaks**|Indica se le interruzioni di riga vengono rimosse dai dati inclusi nell'output. Il valore predefinito è `false`. Se il valore è `true`, il `FieldDelimiter`, `RecordDelimiter`, e `Qualifier` impostazioni non può essere un carattere di spazio.|  
-|`UseFormattedValues`|Indica se le stringhe formattate vengono inserite nell'output CSV. Il valore predefinito è `true` quando `ExcelMode` viene `true`; in caso contrario è `false`.|  
+|**SuppressLineBreaks**|Indica se le interruzioni di riga vengono rimosse dai dati inclusi nell'output. Il valore predefinito è `false`. Se il valore è `true`, il `FieldDelimiter`, `RecordDelimiter`, e `Qualifier` impostazioni non possono essere un carattere di spazio.|  
+|`UseFormattedValues`|Indica se le stringhe formattate vengono inserite nell'output CSV. Il valore predefinito è `true` quando si `ExcelMode` viene `true`; in caso contrario è `false`.|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Passaggio Device Information Settings a estensioni per il Rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Il passaggio di impostazioni informazioni dispositivo a estensioni per il Rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizzare i parametri di estensione per il rendering in RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Riferimento tecnico &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   

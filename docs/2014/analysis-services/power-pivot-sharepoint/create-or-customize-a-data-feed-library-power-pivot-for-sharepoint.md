@@ -1,5 +1,5 @@
 ---
-title: Creare o personalizzare una libreria di Feed di dati (PowerPivot per SharePoint) | Documenti Microsoft
+title: Creare o personalizzare una libreria di Feed di dati (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa955fd27e0edde1da50fe608034a98b2107eca4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 865bb5cc87364b4d5240f0365cedb854038fb460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308503"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>Creare o personalizzare una libreria di feed di dati (PowerPivot per SharePoint)
   Una *libreria feed di dati* è una raccolta di SharePoint speciale che consente di registrare e condividere documenti di servizio dati Atom (atomsvc). Questi documenti forniscono feed di dati XML alle cartelle di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o ad altre applicazioni client che supportano il formato di feed di dati Atom. Una libreria di feed di dati è diversa dalle altre raccolte di SharePoint poiché consente di:  
@@ -65,7 +65,7 @@ ms.locfileid: "36062987"
   
  Verrà visualizzato un collegamento alla libreria di feed di dati nel riquadro di navigazione Avvio Veloce per il sito corrente.  
   
- Dopo avere creato una libreria, è possibile utilizzarla per creare documenti di servizio dati. Per altre informazioni, vedere [utilizzare feed di dati &#40;PowerPivot per SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
+ Dopo avere creato una libreria, è possibile utilizzarla per creare documenti di servizio dati. Per altre informazioni, vedere [usare feed di dati &#40;PowerPivot per SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
 ##  <a name="addtolib"></a> Aggiungere il tipo di contenuto del feed di dati a qualsiasi libreria  
  Se non si desidera creare una libreria di feed di dati dedicata, ma si desidera creare e gestire documenti di servizio dati da un sito di SharePoint, è possibile aggiungere e configurare manualmente il tipo di contenuto del documento di servizio dati per qualsiasi libreria che si utilizzerà per condividere i file del documento di servizio dati (con estensione atomsvc).  

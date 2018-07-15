@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati Permission (ASSL) | Documenti Microsoft
+title: Tipo di dati Permission (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Permission data type
 ms.assetid: 5f309544-59f8-4432-b1eb-b7c1a049f8df
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff5fb67e4f7989fb329e60a106ea8e6d0c734c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c570ae1b3f2e2dbf65a4037f96e515d6667863a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233951"
 ---
 # <a name="permission-data-type-assl"></a>Tipo di dati Permission (ASSL)
   Definisce un tipo di dati primitivo astratto che rappresenta le informazioni su una singola autorizzazione.  
@@ -66,21 +66,21 @@ ms.locfileid: "36055082"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Annotazioni](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [descrizione](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [nome](../properties/name-element-assl.md), [Processo](../properties/process-element-assl.md), [lettura](../properties/read-element-assl.md), [ReadDefinition](../properties/readdefinition-element-assl.md), [RoleID](../properties/roleid-element-assl.md), [scrivere](../properties/write-element-assl.md)|  
+|Elementi figlio|[Le annotazioni](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [descrizione](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [nome](../properties/name-element-assl.md), [Processo](../properties/process-element-assl.md), [lettura](../properties/read-element-assl.md), [ReadDefinition](../properties/readdefinition-element-assl.md), [RoleID](../properties/roleid-element-assl.md), [scrivere](../properties/write-element-assl.md)|  
 |Elementi derivati|None|  
   
-## <a name="remarks"></a>Remarks  
- `Permission` serve come il tipo di base astratto per una serie di tipi di autorizzazione derivati utilizzati in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+## <a name="remarks"></a>Note  
+ `Permission` viene usato come tipo di base astratto per numerosi tipi di autorizzazione derivati utilizzati in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  Questo tipo di dati presenta le convalide seguenti in DeploymentMode, valore 2 (modalità server tabulare).  
   
--   *Processo* valore predefinito dell'attributo è impostata su `False`, salvo quando l'utente dispone di **aggiornare** l'autorizzazione. Per gli utenti con il **Refresh** autorizzazione il *processo* valore di attributo è impostato su `True`.  
+-   *Processo* valore predefinito dell'attributo è impostato su `False`, tranne quando l'utente dispone di **aggiornare** l'autorizzazione. Per gli utenti con il **Refresh** autorizzazione il *processo* valore dell'attributo è impostato su `True`.  
   
--   *ReadDefinition* valore di attributo è impostato su `None`; qualsiasi altro valore viene generato un errore.  
+-   *ReadDefinition* valore dell'attributo è impostato su `None`; qualsiasi altro valore viene generato un errore.  
   
--   *Lettura* valore di attributo è impostato su `Allowed` per gli utenti con il **utente** autorizzazione e al `None` quando gli utenti assegnati al **aggiornare** autorizzazione; se un utente dispone di entrambi **Utente** e **aggiornare** autorizzazioni, quindi l'attributo è impostato su `Allowed`. Per utenti con privilegi amministrativi il valore dell'attributo è impostato su `Allowed`.  
+-   *Lettura* valore dell'attributo è impostato su `Allowed` per gli utenti con il **utente** autorizzazione e di ottenere `None` quando gli utenti vengono assegnati al **Aggiorna** autorizzazione; se un utente dispone di entrambi **Utente** e **aggiornare** autorizzazioni, quindi l'attributo è impostato su `Allowed`. Per utenti con privilegi amministrativi il valore dell'attributo è impostato su `Allowed`.  
   
--   *Scrivere* valore di attributo è impostato su `None`; qualsiasi altro valore viene generato un errore.  
+-   *Scrivere* valore dell'attributo è impostato su `None`; qualsiasi altro valore viene generato un errore.  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.Permission>.  
   

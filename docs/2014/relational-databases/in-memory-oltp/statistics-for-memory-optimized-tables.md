@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: d4f9da688927d7e96ac2162eb504e0bc15f27526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4722b2eb26f86537deb0283df0df384a4b565101
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292712"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Statistiche per tabelle con ottimizzazione per la memoria
   In Query Optimizer vengono utilizzate le statistiche sulle colonne per creare piani di query che consentono di migliorare le prestazioni di esecuzione delle query. Le statistiche vengono raccolte dalle tabelle del database e archiviate nei metadati del database.  
@@ -30,11 +30,11 @@ ms.locfileid: "36062863"
   
  Le statistiche sulle tabelle ottimizzate per la memoria non vengono aggiornate per impostazione predefinita. È necessario quindi aggiornarle manualmente. Uso [UPDATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/update-statistics-transact-sql) per le singole colonne, indici o tabelle. Uso [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) per aggiornare le statistiche per tutti gli utenti e le tabelle interne nel database.  
   
- Quando si utilizza [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) o [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), è necessario specificare `NORECOMPUTE` per disabilitare le statistiche automatiche aggiornamento per le tabelle con ottimizzazione per la memoria. Per le tabelle basate su disco, [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) Aggiorna le statistiche solo se la tabella è stata modificata dopo l'ultimo [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). Per le tabelle con ottimizzazione per la memoria, [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) genera sempre statistiche aggiornate. [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) è uno strumento utile per le tabelle con ottimizzazione per la memoria; in caso contrario, è necessario sapere quali tabelle presentano modifiche significative in modo è possibile aggiornare le statistiche singolarmente.  
+ Quando si usa [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) oppure [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), è necessario specificare `NORECOMPUTE` per disabilitare le statistiche automatiche aggiornamento per le tabelle ottimizzate per la memoria. Per le tabelle basate su disco [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) Aggiorna le statistiche solo se la tabella è stata modificata dall'ultima [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). Per le tabelle ottimizzate per la memoria [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) genera sempre statistiche aggiornate. [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) è uno strumento utile per le tabelle ottimizzate per la memoria; in caso contrario, è necessario sapere quali tabelle presentano modifiche significative in modo che è possibile aggiornare le statistiche singolarmente.  
   
  Le statistiche possono essere generate eseguendo il campionamento dei dati oppure un'analisi completa. Le statistiche campionate utilizzano solo un campione di dati della tabella per stimare la distribuzione dei dati. Le statistiche fullscan eseguono l'analisi dell'intera tabella per determinare la distribuzione dei dati. Le statistiche fullscan sono in genere più accurate, ma richiedono tempi di calcolo più lunghi. Le statistiche campionate possono essere raccolte più velocemente.  
   
- Le tabelle basate su disco utilizzano per impostazione predefinita le statistiche campionate. Le tabelle con ottimizzazione per la memoria supportano solo statistiche fullscan. Quando si utilizza [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) o [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), è necessario specificare il `FULLSCAN` opzione di ottimizzazione della memoria tabelle.  
+ Le tabelle basate su disco utilizzano per impostazione predefinita le statistiche campionate. Le tabelle con ottimizzazione per la memoria supportano solo statistiche fullscan. Quando si usa [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) oppure [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), è necessario specificare il `FULLSCAN` opzione ottimizzate per la memoria tabelle.  
   
  Considerazioni aggiuntive per le statistiche delle tabelle ottimizzate per la memoria:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36062863"
   
 4.  Creare stored procedure che accedono alle tabelle.  
   
-5.  Eseguire il carico di lavoro, che può contenere una combinazione di compilate in modo nativo e interpretate [!INCLUDE[tsql](../../../includes/tsql-md.md)] stored procedure, come batch ad hoc.  
+5.  Eseguire il carico di lavoro, che può contenere una combinazione di compilate in modo nativo e interpretate [!INCLUDE[tsql](../../../includes/tsql-md.md)] stored procedure, nonché i batch ad hoc.  
   
  La creazione delle stored procedure compilate in modo nativo dopo il caricamento dei dati e l'aggiornamento delle statistiche garantisce la presenza delle statistiche disponibili per le tabelle ottimizzate per la memoria in Query Optimizer. In questo modo si ottengono piani di query efficienti quando la procedura viene compilata.  
   

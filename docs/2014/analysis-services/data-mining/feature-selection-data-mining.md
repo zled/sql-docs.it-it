@@ -1,5 +1,5 @@
 ---
-title: Funzionalità di selezione (Data Mining) | Documenti Microsoft
+title: Funzionalità di selezione (Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
 - attributes [data mining]
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 35afd46d2956cd61669e9a4ea8168e3e3759ec47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb4a3282137aa76db08b1d6084db27d1a476140f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296001"
 ---
 # <a name="feature-selection-data-mining"></a>Selezione delle caratteristiche (Data mining)
-  *Selezione delle caratteristiche* è un termine di uso comune nel data mining per descrivere gli strumenti e tecniche disponibili per ridurre gli input a un numero gestibile per l'elaborazione e l'analisi. Selezione funzionalità implica non solo *riduzione della cardinalità*, il che significa che impone un limite arbitraria o predefinita per il numero di attributi che possono essere considerate quando si compila un modello, ma anche la scelta degli attributi, vale a dire che l'analista o lo strumento di modellazione attivamente seleziona o Elimina gli attributi in base all'utilità per l'analisi.  
+  *Selezione delle caratteristiche* è un termine comunemente usato nel data mining per descrivere gli strumenti e tecniche disponibili per ridurre gli input a una dimensione gestibile per l'elaborazione e analisi. Selezione delle caratteristiche implica non solo *riduzione della cardinalità*, il che significa che impone un limite arbitraria o predefinita per il numero di attributi che possono essere considerati durante la creazione di un modello, ma anche la scelta degli attributi, vale a dire che l'analista o lo strumento di modellazione attivamente seleziona o Elimina gli attributi in base all'utilità per l'analisi.  
   
  La possibilità di applicare la selezione delle caratteristiche è essenziale per un'analisi efficace, poiché nei set di dati sono spesso contenute molte più informazioni rispetto a quelle necessarie per compilare il modello. Ad esempio, in un set di dati potrebbero essere contenute 500 colonne in cui vengono descritte le caratteristiche dei clienti; tuttavia, se i dati di alcune colonne sono di tipo sparse, non sarebbe molto vantaggioso aggiungerli al modello. Se si mantengono le colonne non necessarie durante la compilazione del modello, la quantità di CPU e memoria necessaria per il processo di training sarà maggiore, così come lo spazio di archiviazione richiesto per il modello completato.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "36067098"
  Se solo in 50 delle 500 colonne dell'origine dati sono presenti informazioni utili per la compilazione di un modello, è possibile semplicemente non includerle nel modello oppure utilizzare le tecniche di selezione delle caratteristiche per individuare automaticamente le caratteristiche migliori ed escludere i valori che sono statisticamente insignificanti. La selezione delle caratteristiche consente di risolvere i problemi relativi alla presenza di una quantità eccessiva di dati di scarso valore o di una quantità ridotta di dati di valore elevato.  
   
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Selezione delle caratteristiche nel data mining in Analysis Services  
- In genere, selezione funzionalità viene eseguita automaticamente in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], e ogni algoritmo prevede un set di tecniche predefinite per applicare in modo intelligente riduzione delle caratteristiche. La selezione delle caratteristiche viene sempre eseguita prima del training del modello per scegliere automaticamente gli attributi di un set di dati che hanno maggiori probabilità di essere utilizzati nel modello. Tuttavia, è anche possibile impostare manualmente i parametri per influire sul comportamento della selezione delle caratteristiche.  
+ In genere, selezione delle caratteristiche viene eseguita automaticamente nelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], e ogni algoritmo dispone di un set di tecniche predefinite per applicare in modo intelligente la riduzione delle funzionalità. La selezione delle caratteristiche viene sempre eseguita prima del training del modello per scegliere automaticamente gli attributi di un set di dati che hanno maggiori probabilità di essere utilizzati nel modello. Tuttavia, è anche possibile impostare manualmente i parametri per influire sul comportamento della selezione delle caratteristiche.  
   
- In genere, la selezione delle caratteristiche consente di calcolare un punteggio per ogni attributo, quindi di selezionare solo gli attributi con i punteggi migliori. Inoltre, è possibile regolare la soglia per i punteggi massimi. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce diversi metodi per calcolare questi punteggi e il metodo esatto applicato in qualsiasi modello dipende da questi fattori:  
+ In genere, la selezione delle caratteristiche consente di calcolare un punteggio per ogni attributo, quindi di selezionare solo gli attributi con i punteggi migliori. Inoltre, è possibile regolare la soglia per i punteggi massimi. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre più metodi per calcolare questi punteggi e il metodo esatto applicato in qualsiasi modello dipende da fattori seguenti:  
   
 -   Algoritmo utilizzato nel modello  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36067098"
  Nella sezione seguente viene descritto ogni metodo relativo alla selezione delle caratteristiche.  
   
 #### <a name="interestingness-score"></a>Punteggio di interesse  
- Una caratteristica è interessante se indica informazioni utili. Poiché la definizione di ciò che è utile varia a seconda dello scenario, il settore del data mining ha sviluppato vari modi per misurare *interesse*. Ad esempio *originalità* potrebbe essere interessante nell'individuazione di outlier, ma la possibilità di discriminare tra elementi strettamente correlati, o *peso discriminante*, potrebbe essere più interessante per classificazione.  
+ Una caratteristica è interessante se indica informazioni utili. Poiché la definizione di ciò che è utile varia a seconda dello scenario, il settore del data mining ha sviluppato i vari modi per misurare *interesse*. Ad esempio, *originalità* potrebbe essere interessante nell'individuazione degli outlier, ma la possibilità di discriminare tra elementi strettamente correlati, o *peso discriminante*, potrebbe essere più interessante per classificazione.  
   
- La misura dell'interesse utilizzata in SQL Server Analysis Services viene *basati sull'entropia*, ovvero che gli attributi con distribuzioni casuali hanno un'entropia maggiore e un information gain; pertanto, tali attributi sono minori interessanti. L'entropia di un determinato attributo viene confrontata con quella di tutti gli altri attributi, come segue:  
+ La misura dell'interesse utilizzata in SQL Server Analysis Services viene *basata sull'entropia*, che indica che gli attributi con distribuzioni casuali hanno un'entropia maggiore e un information gain, tali attributi pertanto sono meno interessante. L'entropia di un determinato attributo viene confrontata con quella di tutti gli altri attributi, come segue:  
   
  Interesse(Attributo) = - (m - Entropia(Attributo)) * (m - Entropia(Attributo))  
   

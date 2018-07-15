@@ -1,5 +1,5 @@
 ---
-title: Definizione di un tipo di dati della vista origine | Documenti Microsoft
+title: Definizione di un tipo di dati della vista origine | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 54cce390a82259430abf9820804cb5c9ca556532
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 556c860f3714de07e2b0f0242b9c73b731af2f4b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286148"
 ---
 # <a name="defining-a-data-source-view"></a>Definizione di una vista origine dati
   Dopo aver definito le origini dati che si utilizzeranno in un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], il passaggio successivo consiste in genere nella definizione di una vista origine dati per il progetto. Una vista origine dati è una vista singola unificata dei metadati delle tabelle e delle viste specificate definite dall'origine dati nel progetto. L'archiviazione dei metadati nella vista origine dati consente di lavorare con i metadati durante lo sviluppo senza una connessione aperta con un'origine dati sottostante. Per altre informazioni, vedere [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -81,9 +81,9 @@ ms.locfileid: "36063199"
      A questo punto è possibile visualizzare tutte le tabelle e le relative relazioni nel riquadro **Diagramma** . Si noti che tra la tabella FactInternetSales e la tabella DimDate esistono tre relazioni. A ogni vendita sono associate tre date: data di ordine, di scadenza e di spedizione. Per visualizzare i dettagli di una relazione, fare doppio clic sulla relativa freccia nel riquadro **Diagramma** .  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Modifica di nomi di tabella predefinito](lesson-1-4-modifying-default-table-names.md)  
+ [Modifica dei nomi predefiniti delle tabelle](lesson-1-4-modifying-default-table-names.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati nei modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Dynamics
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0187f27bd7375b22cd703c6e7caa818cc3a7dd38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 83a51fb2449bce6f671ad8ba73d4c6dd4cd79714
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300471"
 ---
 # <a name="qndynamics-event-class"></a>Classe di evento QN:Dynamics
   La classe di evento QN:Dynamics fornisce informazioni sull'attività in background eseguita dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per supportare le notifiche delle query. All'interno di [!INCLUDE[ssDE](../../includes/ssde-md.md)], un thread in background esegue il monitoraggio dei timeout di sottoscrizione, delle sottoscrizioni in attesa di attivazione e dell'eliminazione delle tabelle di parametri.  
@@ -38,7 +38,7 @@ ms.locfileid: "36066749"
 |DatabaseName|`nvarchar`|Nome del database in cui viene eseguita l'istruzione dell'utente.|35|Sì|  
 |EventClass|`int`|Tipo di evento = 202.|27|no|  
 |EventSequence|`int`|Numero di sequenza dell'evento.|51|no|  
-|EventSubClass|`nvarchar`|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> Clock eseguire avviata: indica che il thread in background nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] che le pianificazioni scadute tabelle di parametri per l'avvio della pulizia.<br /><br /> Clock eseguire finito: indica che il thread in background nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] che le pianificazioni tabelle di parametri scadute per la pulizia è terminato.<br /><br /> Attività di pulizia master avviata: indica quando viene avviata la pulizia (garbage collection) per rimuovere i dati di sottoscrizione di notifica query scaduti.<br /><br /> Completamento dell'attività di pulizia master: indica quando termina la pulizia (garbage collection) per rimuovere i dati di sottoscrizione di notifica query scaduti.<br /><br /> Attività di pulizia master ignorato: indica che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non ha eseguito la pulizia (garbage collection) per rimuovere i dati di sottoscrizione di notifica query scaduti.|21|Sì|  
+|EventSubClass|`nvarchar`|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> Clock esecuzione avviata: indica che il thread in background nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] che le pianificazioni scadute tabelle di parametri per la pulizia è stata avviata.<br /><br /> Clock eseguire finito: indica che il thread in background nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] che le pianificazioni tabelle di parametri scadute per la pulizia è terminato.<br /><br /> Attività pulizia file master avviata: indica quando viene avviata la pulizia (garbage collection) per rimuovere i dati di sottoscrizione di notifica query scaduti.<br /><br /> Attività pulizia file master terminata: indica quando termina la pulizia (garbage collection) per rimuovere i dati di sottoscrizione di notifica query scaduti.<br /><br /> Attività pulizia file master ignorata: indica che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non ha eseguito la pulizia (garbage collection) per rimuovere i dati di sottoscrizione di notifica query scaduti.|21|Sì|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|`nvarchar`|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> 0 = utente<br /><br /> 1 = sistema|60|no|  

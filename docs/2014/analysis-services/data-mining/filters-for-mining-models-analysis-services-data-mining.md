@@ -1,5 +1,5 @@
 ---
-title: Filtri per i modelli di Data Mining (Analysis Services - Data Mining) | Documenti Microsoft
+title: Filtri per i modelli di Data Mining (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - filter syntax [data mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: feefadeab6d4cde4a202b767223939edac63106f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c92fc27326167977f5fcab323e3b885f9ede635
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312711"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtri per i modelli di data mining (Analysis Services - Data mining)
   I filtri dei modelli basati sui dati consentono di creare modelli di data mining che utilizzano subset di dati in una struttura di data mining. I filtri garantiscono grande flessibilità per la progettazione di strutture di data mining e origini dati, poiché è possibile creare una sola struttura di data mining sulla base di una vista origine dati completa. Sarà quindi possibile creare filtri per utilizzare solo una parte dei dati per il training e il testing di una varietà di modelli, anziché compilare una struttura diversa e i relativi modelli per ciascun subset di dati.  
@@ -47,17 +47,17 @@ ms.locfileid: "36066886"
   
 -   Usando la scheda **Modelli di data mining** nella Progettazione modelli di data mining per compilare condizioni con l'aiuto delle finestre di dialogo dell'editor filtri.  
   
--   Digitare un'espressione di filtro direttamente nella `Filter` proprietà del modello di data mining.  
+-   Digitando un'espressione di filtro direttamente nella `Filter` proprietà del modello di data mining.  
   
 -   Impostando a livello di codice delle condizioni di filtro in un modello tramite AMO.  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Creazione di filtri dei modelli utilizzando la Progettazione modelli di data mining  
  Filtrare un modello nella Progettazione modelli di data mining modificando la proprietà `Filter` del modello di data mining. È possibile digitare direttamente un'espressione di filtro nel riquadro **Proprietà** oppure è possibile aprire una finestra di dialogo del filtro per compilare le condizioni.  
   
- Sono disponibili due finestre di dialogo del filtro. La prima consente di creare le condizioni applicate alla tabella del case. Se l'origine dati contiene più tabelle, selezionare in primo luogo una tabella, quindi selezionare una colonna e specificare gli operatori e le condizioni applicabili alla colonna. È possibile collegare più condizioni utilizzando `AND` / `OR` operatori. Gli operatori disponibili per la definizione dei valori variano a seconda che la colonna contenga valori discreti o continui. Ad esempio, con valori continui, è possibile utilizzare `greater than` e `less than` operatori. mentre con i valori discreti è possibile utilizzare solo gli operatori `= (equal to)`, `!= (not equal to)`e `is null`.  
+ Sono disponibili due finestre di dialogo del filtro. La prima consente di creare le condizioni applicate alla tabella del case. Se l'origine dati contiene più tabelle, selezionare in primo luogo una tabella, quindi selezionare una colonna e specificare gli operatori e le condizioni applicabili alla colonna. È possibile collegare più condizioni usando `AND` / `OR` operatori. Gli operatori disponibili per la definizione dei valori variano a seconda che la colonna contenga valori discreti o continui. Con i valori continui, ad esempio, è possibile usare `greater than` e `less than` operatori. mentre con i valori discreti è possibile utilizzare solo gli operatori `= (equal to)`, `!= (not equal to)`e `is null`.  
   
 > [!NOTE]  
->  Il `LIKE` (parola chiave) non è supportata. Se si desidera includere più attributi discreti, è necessario creare condizioni distinte e collegarle utilizzando l'operatore `OR`.  
+>  Il `LIKE` parola chiave non è supportato. Se si desidera includere più attributi discreti, è necessario creare condizioni distinte e collegarle utilizzando l'operatore `OR`.  
   
  Se le condizioni sono complesse, è possibile aprire la seconda finestra di dialogo del filtro per utilizzare una tabella alla volta. Quando si chiude la seconda finestra di dialogo del filtro, l'espressione viene valutata e quindi combinata con le condizioni di filtro impostate nelle altre colonne nella tabella del case.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36066886"
   
  Se, ad esempio, la tabella del case è riferita ai clienti e nella tabella nidificata vengono indicati i prodotti acquistati da un cliente, è possibile creare un filtro per i clienti che hanno acquistato determinati articoli usando la sintassi seguente nel filtro della tabella nidificata: `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`.  
   
- È anche possibile filtrare l'esistenza di un valore specifico nella tabella nidificata utilizzando il `EXISTS` o `NOT EXISTS` le parole chiave e una sottoquery. Questo consente di creare condizioni come `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`. `EXISTS SELECT(<subquery>)` restituisce `true` se la tabella nidificata contiene almeno una riga che include il valore `Water Bottle`.  
+ È anche possibile filtrare l'esistenza di un valore specifico nella tabella nidificata utilizzando il `EXISTS` o `NOT EXISTS` parole chiave e una sottoquery. Questo consente di creare condizioni come `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`. `EXISTS SELECT(<subquery>)` restituisce `true` se la tabella nidificata contiene almeno una riga che include il valore `Water Bottle`.  
   
  È possibile combinare condizioni nella tabella del case con le condizioni nella tabella nidificata. Ad esempio, nella sintassi seguente è inclusa una condizione nella tabella del case (`Age > 30` ), una sottoquery nella tabella nidificata (`EXISTS (SELECT * FROM Products)`) e più condizioni nella tabella nidificata (`WHERE ProductName=’Milk’  AND Quantity>2`)).  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36066886"
  Per informazioni sull'uso di filtri dei modelli quando si esegue il test di un modello di data mining, vedere [Scegliere un tipo di grafico di accuratezza e impostare le opzioni del grafico](choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modello filtro sintassi ed esempi &#40;Analysis Services - Data Mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Esempi e sintassi del filtro del modello &#40;Analysis Services - Data Mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
  [Test e convalida &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
   
   

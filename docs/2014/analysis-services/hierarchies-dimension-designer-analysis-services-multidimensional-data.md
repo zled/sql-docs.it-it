@@ -1,5 +1,5 @@
 ---
-title: Gerarchie (scheda struttura dimensione, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Gerarchie (scheda struttura dimensione, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.hierarchieslevelspane.f1
 ms.assetid: c37db6c1-b5a5-44e1-ae6d-a96fb9769e68
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08b33cd4979076bc33604d1adaef5efaa6209266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0bb71e3340fad2c94f844265b313cf8e533f4db5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234311"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Gerarchie (scheda Struttura dimensione, Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Gerarchie** per gestire le gerarchie e i livelli relativi alla dimensione attualmente selezionata. Per altre informazioni, vedere [Creare gerarchie definite dall’utente](multidimensional-models/user-defined-hierarchies-create.md).  
@@ -48,6 +48,6 @@ ms.locfileid: "36062308"
  [Struttura dimensione &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
  [Gli attributi &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
  [Vista origine dati &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [Barra degli strumenti &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
+ [Sulla barra degli strumenti &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
   
   

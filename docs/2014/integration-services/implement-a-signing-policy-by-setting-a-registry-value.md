@@ -1,5 +1,5 @@
 ---
-title: Implementare criteri per le firme impostando un valore del Registro di sistema | Documenti Microsoft
+title: Implementare criteri per le firme impostando un valore del Registro di sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c101b66398d7259d97bdf4a828830764138df09c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7c1259e38a50ad11d3a0f074dd3c911f89f776d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320641"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementazione di criteri per le firme impostando un valore del Registro di sistema
   È possibile utilizzare un valore facoltativo del Registro di sistema per gestire i criteri dell'organizzazione per il caricamento dei pacchetti firmati o non firmati. Se si utilizza questo valore del Registro di sistema, è necessario crearlo in ogni computer in cui verranno eseguiti i pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e in cui si desidera applicare i criteri. Dopo l'impostazione del valore del Registro di sistema, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] controllerà o verificherà le firme prima di caricare i pacchetti.  
@@ -52,15 +52,15 @@ ms.locfileid: "36055740"
   
 1.  Fare clic sul menu **Start** e scegliere **Esegui**.  
   
-2.  Nella finestra di dialogo Esegui digitare `Regedit`, quindi fare clic su **OK**.  
+2.  Nella finestra di dialogo Esegui, digitare `Regedit`, quindi fare clic su **OK**.  
   
 3.  Individuare la chiave del Registro di sistema: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS  
   
 4.  Fare clic con il pulsante destro del mouse su **MSDTS**, scegliere **Nuovo**e quindi **Valore DWORD**.  
   
-5.  Aggiornare il nome del nuovo valore per `BlockedSignatureStates`.  
+5.  Aggiornare il nome del nuovo valore da `BlockedSignatureStates`.  
   
-6.  Fare doppio clic su `BlockedSignatureStates` e fare clic su **modifica**.  
+6.  Fare doppio clic su `BlockedSignatureStates` e fare clic su **Modify**.  
   
 7.  Nella finestra di dialogo **Modifica valore DWORD** digitare il valore 0, 1, 2 o 3.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36055740"
 9. Scegliere **Esci** dal menu **File**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
+ [Panoramica della sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Identificazione dell'origine dei pacchetti con firme digitali](security/identify-the-source-of-packages-with-digital-signatures.md)  
   
   

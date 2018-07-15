@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: bd5da35233834eb0f57482e7f7faef11f977debe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f13a9693615fd55d1cd9fed60398ab78374963e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282767"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurare l'account del servizio del server di report (Gestione configurazione SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene implementato come singolo servizio contenente un servizio Web ReportServer, Gestione report e un'applicazione di elaborazione in background utilizzata per l'elaborazione pianificata di report e il recapito di sottoscrizioni. In questo argomento vengono illustrate la configurazione iniziale dell'account del servizio e la modifica dell'account o della password tramite lo strumento di configurazione di Reporting Services.  
   
 ## <a name="initial-configuration"></a>Configurazione iniziale  
- L'account del servizio del server di report viene definito durante l'installazione. È possibile eseguire il servizio utilizzando un account utente di dominio o incorporato, ad esempio `NetworkService` account. Non è disponibile alcun account predefinito; qualsiasi account specificato nella [configurazione Server - account di servizio](../../sql-server/install/server-configuration-service-accounts.md) pagina dell'installazione guidata diventerà l'account iniziale del servizio Server di Report.  
+ L'account del servizio del server di report viene definito durante l'installazione. È possibile eseguire il servizio con un account utente di dominio o un oggetto incorporato, ad esempio `NetworkService` account. Nessun account predefinito; qualunque sia l'account specificato nella [configurazione Server - account di servizio](../../sql-server/install/server-configuration-service-accounts.md) pagina dell'installazione guidata diventerà l'account iniziale del servizio Server di Report.  
   
 > [!IMPORTANT]  
->  Sebbene il servizio Web ReportServer e gestione Report siano [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] le applicazioni, essi non vengono eseguiti il [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] account. L'architettura del servizio esegue entrambe le applicazioni ASP.NET all'interno della stessa identità di processo del server di report. Si tratta di un'importante differenza rispetto alle versioni precedenti, in cui sia il servizio Web ReportServer sia Gestione report vengono eseguite utilizzando la stessa identità del processo di lavoro [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] specificata in IIS.  
+>  Anche se il servizio Web ReportServer e gestione Report siano [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] le applicazioni, non vengono eseguite con la [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] account. L'architettura del servizio esegue entrambe le applicazioni ASP.NET all'interno della stessa identità di processo del server di report. Si tratta di un'importante differenza rispetto alle versioni precedenti, in cui sia il servizio Web ReportServer sia Gestione report vengono eseguite utilizzando la stessa identità del processo di lavoro [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] specificata in IIS.  
   
 ## <a name="changing-the-service-account"></a>Modifica dell'account del servizio  
  Per visualizzare e riconfigurare le informazioni sull'account del servizio, utilizzare sempre lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le informazioni sull'identità del servizio sono archiviate internamente in più percorsi. L'utilizzo dello strumento garantisce che tutti i riferimenti vengano aggiornati di conseguenza ogni volta che si modifica l'account o la password. Lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] effettua le operazioni supplementari seguenti per garantire la disponibilità del server di report:  
@@ -59,7 +59,7 @@ ms.locfileid: "36066437"
   
 -   LocalService  
   
- Non esiste un approccio ottimale per la scelta del tipo di account. Ogni account presenta vantaggi e svantaggi di cui è necessario tenere conto. Se si sta distribuendo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in un server di produzione, le procedure consigliate indicano di configurare il servizio venga eseguito con un account utente di dominio in modo che è possibile evitare danni estesi se un account condiviso risulta compromesso da un utente malintenzionato. In questo modo, viene inoltre semplificato il controllo dell'attività di accesso per l'account. È un compromesso relativo all'utilizzo di un account utente Windows che se si sta distribuendo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una rete che utilizza l'autenticazione Kerberos, è necessario registrare il servizio con l'account utente. Per altre informazioni, vedere [Registrare un nome dell'entità servizio &#40;SPN&#41; per un server di report](../report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
+ Non esiste un approccio ottimale per la scelta del tipo di account. Ogni account presenta vantaggi e svantaggi di cui è necessario tenere conto. Se si sta distribuendo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in un server di produzione, le procedure consigliate indicano di configurare il servizio venga eseguito con un account utente di dominio in modo che è possibile evitare danni estesi se un account condiviso risulta compromesso da un utente malintenzionato. In questo modo, viene inoltre semplificato il controllo dell'attività di accesso per l'account. Un compromesso relativo all'utilizzo di un account utente di Windows è che, se si sta distribuendo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una rete che utilizza l'autenticazione Kerberos, è necessario registrare il servizio con l'account utente. Per altre informazioni, vedere [Registrare un nome dell'entità servizio &#40;SPN&#41; per un server di report](../report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
  Per la scelta dell'approccio ottimale per la propria distribuzione, è possibile utilizzare le linee guida e i collegamenti seguenti.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "36066437"
 ## <a name="configuring-the-report-server-service-for-a-sharepoint-integrated-report-server"></a>Configurazione del servizio del server di report per un server di report integrato con SharePoint  
  Se si esegue un server di report in modalità integrata SharePoint, è necessario aggiornare le informazioni sull'account del servizio archiviate nel database di configurazione di SharePoint nei casi seguenti.  
   
--   Modifica il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] account (ad esempio, il passaggio da NetworkService a un account utente di dominio) del servizio.  
+-   Modifica il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service account (ad esempio, il passaggio da NetworkService a un account utente di dominio).  
   
 -   Estensione di una farm di SharePoint per includere un'applicazione Web di SharePoint aggiuntiva. Se la server farm è configurata per l'integrazione del server di report e la nuova applicazione aggiunta è configurata per l'esecuzione di un account utente diverso rispetto alle altre applicazioni nella farm, è necessario aggiornare le informazioni di accesso al database.  
   
  Dopo avere reimpostato le informazioni di accesso al database, è consigliabile riavviare il servizio [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] per garantire che la connessione precedente non venga più utilizzata.  
   
-1.  In **strumenti di amministrazione**, fare clic su **Amministrazione centrale SharePoint 2010**.  
+1.  Nelle **strumenti di amministrazione**, fare clic su **Amministrazione centrale SharePoint 2010**.  
   
 2.  Fare clic su **Gestione applicazioni**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36066437"
   
 7.  In topologia e servizi, fare clic su **servizi nel Server**.  
   
-8.  Per applicazione Web di Windows SharePoint Services, fare clic su **arrestare**.  
+8.  Per l'applicazione Web di Windows SharePoint Services, fare clic su **arrestare**.  
   
 9. Attendere l'arresto del servizio.  
   

@@ -1,5 +1,5 @@
 ---
-title: Informazioni sui Power View per modelli multidimensionali | Documenti Microsoft
+title: La comprensione di Power View per modelli multidimensionali | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a252c89adfe34f849e6fe2bd538ddf22b044c7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df50d1ac785e58bf3136f6d8777a01c98a81d568
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288057"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Informazioni su Power View per modelli multidimensionali
   Questo articolo descrive la funzionalità Power View per modelli multidimensionali di Microsoft SQL Server 2014 e fornisce importanti informazioni destinate agli amministratori e ai professionisti di business intelligence che intendono implementare Power View per modelli multidimensionali nelle relative organizzazioni.  
@@ -112,7 +112,7 @@ ms.locfileid: "36055604"
   
  **Tipi geography dell'attributo dimensione in SSDT e nell'elenco campi di Power View**  
   
- ![Tipi geography dell'attributo della dimensione](../media/daxmd-ssdt-attribute-geog-types.gif "tipi geography dell'attributo della dimensione")  
+ ![Tipi geography dell'attributo dimensione](../media/daxmd-ssdt-attribute-geog-types.gif "tipi geography dell'attributo dimensione")  
   
 ### <a name="dimension-calculated-members"></a>Membri calcolati della dimensione  
  I modelli multidimensionali supportano i membri calcolati per l'elemento figlio di All con un membro reale singolo. Di seguito sono riportati vincoli aggiuntivi riguardanti l'esposizione di questo tipo di membro calcolato:  
@@ -129,7 +129,7 @@ ms.locfileid: "36055604"
   
  **Report di Power View con membri calcolati**  
   
- ![Membri calcolati in Power View](../media/daxmd-calcmembersinpowerview.gif "di membri calcolati in Power View")  
+ ![Membri calcolati in Power View](../media/daxmd-calcmembersinpowerview.gif "membri calcolati in Power View")  
   
 ### <a name="default-members"></a>Membri predefiniti  
  I modelli multidimensionali supportano i membri predefiniti per gli attributi dimensione. Il membro predefinito viene utilizzato da Analysis Services nel corso dell'aggregazione di dati per una query. Il membro predefinito di un attributo dimensione viene esposto come filtro o valore predefinito per la colonna corrispondente nei metadati tabulari.  
@@ -151,7 +151,7 @@ ms.locfileid: "36055604"
   
  **Tipo di attributo dimensione ImageURL in SSDT**  
   
- ![Le proprietà dell'attributo della dimensione](../media/daxmd-dimattribute-properties.gif "le proprietà dell'attributo della dimensione")  
+ ![Proprietà degli attributi della dimensione](../media/daxmd-dimattribute-properties.gif "delle proprietà degli attributi della dimensione")  
   
 ## <a name="parent-child-hierarchies"></a>Gerarchie padre-figlio  
  I modelli multidimensionali supportano le gerarchie padre-figlio, esposte come gerarchia nei metadati tabulari. Ogni livello della gerarchia padre-figlio viene esposto come colonna nascosta. L'attributo chiave della dimensione padre-figlio non viene esposto nei metadati tabulari.  
@@ -178,7 +178,7 @@ ms.locfileid: "36055604"
   
  **Filtri bloccati**  
   
- ![Filtro bloccato](../media/daxmd-pinnedfilterinpowerview.gif "bloccato filtro")  
+ ![Aggiunta filtro](../media/daxmd-pinnedfilterinpowerview.gif "Aggiunta filtro")  
   
 ## <a name="unsupported-features"></a>Funzionalità non supportate  
  **Power View in Excel 2013** : non supporta la connessione a report per modelli multidimensionali né la loro creazione. In Power View per i modelli multidimensionali sono supportati solo i client Power View basati su browser.  
@@ -234,7 +234,7 @@ ms.locfileid: "36055604"
 ## <a name="client-help-on-officecom"></a>Guida del client su Office.com  
  Negli articoli seguenti, disponibili su Office.com, vengono fornite ulteriori informazioni sulla modalità di visualizzazione degli oggetti del modello multidimensionale in Power View e sulla creazione di un report di esempio:  
   
- [Comprendere gli oggetti modello multidimensionale in Power View](http://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
+ [Oggetti del modello multidimensionale in Power View](http://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
   
  [Esplorare il modello multidimensionale di Adventure Works tramite Power View](http://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   

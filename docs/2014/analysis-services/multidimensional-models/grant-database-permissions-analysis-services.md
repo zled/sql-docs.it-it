@@ -1,5 +1,5 @@
 ---
-title: Concedere le autorizzazioni di database (Analysis Services) | Documenti Microsoft
+title: Concedere le autorizzazioni di database (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], full control
 - full control permissions [Analysis Services]
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 37022a42bc8e5347551a49c24ffc0ae9f8b8dbf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49e677c7c0a452b5b465d2a82c0bd3477dcc3b5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286167"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Concedere le autorizzazioni per il database (Analysis Services)
   Se si affronta l'amministrazione del database di Analysis Services avendo già esperienza con i database relazionali, il primo aspetto da comprendere è che, per quanto riguarda l'accesso ai dati, il database non è l'oggetto principale a protezione diretta in Analysis Services.  
@@ -33,7 +33,7 @@ ms.locfileid: "36062491"
   
  In Analysis Services non ci sono account di accesso. È sufficiente creare i ruoli e assegnare gli account di Windows nel riquadro **Appartenenza** . Tutti gli utenti, compresi gli amministratori, si connettono ad Analysis Services con un account di Windows.  
   
- ![Ruolo di finestra di dialogo che mostra autorizzazioni create database](../media/ssas-permsdbrole.png "ruolo finestra di dialogo che mostra autorizzazioni Create database")  
+ ![Crea ruolo le autorizzazioni del database che Visualizza finestra di dialogo](../media/ssas-permsdbrole.png "creare ruolo le autorizzazioni del database che Visualizza finestra di dialogo")  
   
  Esistono tre tipi di autorizzazioni specificate a livello di database.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "36062491"
 > [!NOTE]  
 >  Agli amministratori del server (membri del ruolo di amministratore del server) viene assegnata implicitamente l'autorizzazione Controllo completo per ogni database del server.  
   
- `Process Database` Sono quindi questa autorizzazione viene usata per delegare l'elaborazione a livello di database. L'amministratore può ripartire questa attività creando un ruolo che consenta a un'altra persona o servizio di richiamare le operazioni di elaborazione per un oggetto del database. In alternativa, è anche possibile creare i ruoli che consentono l'elaborazione in oggetti specifici. Per altre informazioni, vedere [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) .  
+ `Process Database` : Questa autorizzazione viene usata per delegare l'elaborazione a livello di database. L'amministratore può ripartire questa attività creando un ruolo che consenta a un'altra persona o servizio di richiamare le operazioni di elaborazione per un oggetto del database. In alternativa, è anche possibile creare i ruoli che consentono l'elaborazione in oggetti specifici. Per altre informazioni, vedere [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) .  
   
- `Read Definition` Questa autorizzazione concede la possibilità di leggere i metadati degli oggetti, sono quindi meno la possibilità di visualizzare i dati associati. In genere, questa autorizzazione viene usata nei ruoli creati per un'elaborazione dedicata, offrendo la possibilità di usare strumenti quali [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per elaborare un database in modo interattivo. Senza `Read Definition`, l'autorizzazione `Process Database` è valida sono negli scenari con script. Se si prevede di automatizzare l'elaborazione, ad esempio tramite SSIS o un'altra utilità di pianificazione, è possibile creare un ruolo che dispone `Process Database` senza `Read Definition`. In caso contrario, provare a usare insieme le due proprietà nello stesso ruolo per supportare sia l'elaborazione automatica che interattiva tramite gli strumenti di SQL Server che visualizzano il modello di dati in un'interfaccia utente.  
+ `Read Definition` Base di questa autorizzazione concede la possibilità di leggere i metadati degli oggetti, meno la possibilità di visualizzare i dati associati. In genere, questa autorizzazione viene usata nei ruoli creati per un'elaborazione dedicata, offrendo la possibilità di usare strumenti quali [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per elaborare un database in modo interattivo. Senza `Read Definition`, l'autorizzazione `Process Database` è valida sono negli scenari con script. Se si prevede di automatizzare l'elaborazione, ad esempio tramite SSIS o un'altra utilità di pianificazione, è possibile creare un ruolo che disponga `Process Database` senza `Read Definition`. In caso contrario, provare a usare insieme le due proprietà nello stesso ruolo per supportare sia l'elaborazione automatica che interattiva tramite gli strumenti di SQL Server che visualizzano il modello di dati in un'interfaccia utente.  
   
 ## <a name="full-control-administrator-permissions"></a>Autorizzazioni Controllo completo (amministratore)  
  In [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], per amministratore di database si intende un'identità utente di Windows assegnata a un ruolo che include le autorizzazioni Controllo completo (amministratore). Un amministratore di database può eseguire qualsiasi attività all'interno del database, tra cui:  
@@ -59,7 +59,7 @@ ms.locfileid: "36062491"
   
 -   Registrazione di assembly (o stored procedure) per il database  
   
- Si noti che un amministratore di database non può aggiungere o eliminare database dal server né concedere diritti di amministratore ad altri database sullo stesso server. Tale privilegio appartiene solo agli amministratori del server. Vedere [concedere le autorizzazioni di amministratore del Server &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) per ulteriori informazioni su questo livello di autorizzazione.  
+ Si noti che un amministratore di database non può aggiungere o eliminare database dal server né concedere diritti di amministratore ad altri database sullo stesso server. Tale privilegio appartiene solo agli amministratori del server. Visualizzare [Concedi autorizzazioni di amministratore del Server &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) per altre informazioni su questo livello di autorizzazione.  
   
  Poiché tutti i ruoli sono definiti dall'utente, è consigliabile creare un ruolo dedicato a tale scopo, ad esempio un ruolo denominato "dbadmin", e quindi assegnare in modo appropriato gli account utente e di gruppo di Windows.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36062491"
  Ad esempio `Process Database`, l'impostazione `Read Definition` autorizzazioni a livello di database ha un effetto a catena sugli altri oggetti all'interno del database. Se si vogliono impostare le autorizzazioni Lettura definizione a un livello più granulare, è necessario deselezionare Lettura definizione come proprietà del database nel riquadro Generale. Per altre informazioni, vedere [Concedere le autorizzazioni di lettura definizione per i metadati degli oggetti &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concedere le autorizzazioni di amministratore del Server &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+ [Concedere autorizzazioni di amministratore del Server &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Concedere le autorizzazioni di elaborazione &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

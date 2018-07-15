@@ -1,5 +1,5 @@
 ---
-title: Supporto del tipo di dati in SQLXML 4.0 XML | Documenti Microsoft
+title: Supporto del tipo di dati in SQLXML 4.0 XML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,25 +15,25 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3f0c3589b34087c5615179d2e7b6449372bea54d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 639dbfab6191b7266c367997396fa0d127031e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296361"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Supporto del tipo di dati xml in SQLXML 4.0
-  A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta XML tipizzati con dati la `xml` tipo di dati. In questo argomento viene descritto il modo in cui SQLXML 4.0 riconosce istanze del tipo di dati `xml` e ne implementa il supporto.  
+  A partire [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta XML tipizzati con dati di `xml` tipo di dati. In questo argomento viene descritto il modo in cui SQLXML 4.0 riconosce istanze del tipo di dati `xml` e ne implementa il supporto.  
   
 ## <a name="working-with-xml-data-types"></a>Utilizzo dei tipi di dati xml  
  Per una migliore comprensione dell'utilizzo di tabelle SQL che implementano colonne con tipo di dati `xml`, vengono forniti gli esempi seguenti:  
   
 |Attività|Esempio|Argomento|  
 |----------|-------------|-----------|  
-|Come eseguire il mapping e includere una colonna `xml` in una vista XML|"Mapping di un elemento XML a una colonna con tipo di dati XML"|[Mapping predefinito di attributi ed elementi XSD a tabelle e colonne &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
+|Come eseguire il mapping e includere una colonna `xml` in una vista XML|"Mapping di un elemento XML a una colonna con tipo di dati XML"|[Mapping predefinito degli attributi ed elementi XSD a tabelle e colonne &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
 |Come inserire dati in una colonna `xml` con updategram|"Inserimento di dati in una colonna con tipo di dati XML"|[Inserimento di dati mediante Updategram XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
 |Caricamento bulk di dati XML in una colonna `xml`|"Caricamento bulk in colonne con tipo di dati xml"|[Esempi di caricamento Bulk XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
   

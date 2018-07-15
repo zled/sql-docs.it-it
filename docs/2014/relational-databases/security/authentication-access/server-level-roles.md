@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.Security.BUILTIN.administrators
 - sql12.Security.NT_AUTHORITY.SYSTEM
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ffccb6ce3fcf80441a953f86fc74ec71aac9ab40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 8c2878ee1142dfb7069febb652dac6a3aceaba97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301901"
 ---
 # <a name="server-level-roles"></a>Ruoli a livello di server
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce ruoli a livello di server per semplificare la gestione delle autorizzazioni in un server. Questi ruoli sono entità di sicurezza che raggruppano altre entità. L'ambito delle autorizzazioni dei ruoli a livello di server è l'intero server. I*ruoli* equivalgono ai *gruppi* nel sistema operativo Windows.  
@@ -61,7 +60,7 @@ ms.locfileid: "36062615"
  A ogni ruolo predefinito del server vengono assegnate autorizzazioni specifiche. Per un grafico delle autorizzazioni assegnate ai ruoli del server, vedere la pagina relativa ai [ruoli predefiniti del server e del database del motore di database](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
   
 > [!IMPORTANT]  
->  Il `CONTROL SERVER` autorizzazione è simile ma non identica al `sysadmin` ruolo predefinito del server. Le autorizzazioni non implicano le appartenenze ai ruoli e le appartenenze ai ruoli non concedono autorizzazioni. Ad esempio, `CONTROL SERVER` non implica l'appartenenza al ruolo predefinito del server `sysadmin`. Talvolta, tuttavia, è possibile equiparare ruoli e autorizzazioni equivalenti. La maggior parte dei comandi `DBCC` e molte stored procedure di sistema richiedono l'appartenenza al ruolo predefinito del server `sysadmin`. Per un elenco di sistema 171 stored procedure che richiedono `sysadmin` appartenenza, vedere il blog seguente post Andreas Wolter [CONTROL SERVER e sysadmin/sa: le autorizzazioni, procedure di sistema, DBCC, creazione automatica dello schema e dei privilegi escalation - avvertenze](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  Il `CONTROL SERVER` l'autorizzazione è simile ma non identica al `sysadmin` ruolo predefinito del server. Le autorizzazioni non implicano le appartenenze ai ruoli e le appartenenze ai ruoli non concedono autorizzazioni. Ad esempio, `CONTROL SERVER` non implica l'appartenenza al ruolo predefinito del server `sysadmin`. Talvolta, tuttavia, è possibile equiparare ruoli e autorizzazioni equivalenti. La maggior parte dei comandi `DBCC` e molte stored procedure di sistema richiedono l'appartenenza al ruolo predefinito del server `sysadmin`. Per un elenco di sistema 171 stored procedure che richiedono `sysadmin` appartenenza, vedere il blog di Andreas Wolter relativo a post [CONTROL SERVER e sysadmin/sa: le autorizzazioni, procedure di sistema, DBCC, creazione automatica dello schema e dei privilegi escalation - avvertenze](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
   
 ## <a name="server-level-permissions"></a>Autorizzazioni a livello di server  
  Ai ruoli del server definiti dall'utente è possibile aggiungere solo autorizzazioni a livello di server. Per elencare le autorizzazioni a livello di server, eseguire la seguente istruzione. Di seguito sono elencate le autorizzazioni a livello di server:  

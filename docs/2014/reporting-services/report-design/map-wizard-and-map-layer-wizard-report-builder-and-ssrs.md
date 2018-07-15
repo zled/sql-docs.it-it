@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapandlayerwizard.f1
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a840b5b3cc60e10a95f1cf7b2c4a473ee8fd0c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7232850d053d238b81b8db9ef6f5eaeec581ab72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299821"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Creazione guidata mappa e Creazione guidata livello mappa (Generatore report e SSRS)
   La Creazione guidata mappa e la Creazione guidata livello mappa consentono di automatizzare l'attività di creazione di una mappa, di aggiunta di un livello mappa o di modifica delle opzioni di livello mappa in un livello esistente.  
@@ -33,7 +33,7 @@ ms.locfileid: "36055203"
   
  Prima di aggiungere una mappa a un report o un livello mappa a una mappa, è necessario disporre delle informazioni seguenti:  
   
--   **Origine dati spaziali.** Il percorso o connessione a un'origine che fornisce dati spaziali, ad esempio, il nome di un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza e un database che contiene i dati spaziali o il nome di un file di forma Environmental Systems Research Institute, Inc. (ESRI).  
+-   **Origine dati spaziali.** Percorso o connessione a un'origine che fornisce dati spaziali, ad esempio, il nome di un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza e un database che contiene dati spaziali o il nome di un file di forma Environmental Systems Research Institute, Inc. (ESRI).  
   
 -   **.** Dall'origine dati spaziali, un campo che contiene set di coordinate che specificano le posizioni.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "36055203"
   
  Per altre informazioni sulle sezioni, vedere [Bing Maps Tiles System](http://go.microsoft.com/fwlink/?LinkId=147315). Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](http://go.microsoft.com/fwlink/?LinkId=151371) e [Informativa sulla privacy](http://go.microsoft.com/fwlink/?LinkId=151372).  
   
- Per vedere uno sfondo a sezioni in visualizzazione della struttura, è necessario poter accedere a Internet. Per vedere in anteprima lo sfondo a sezioni di un report in un server di report, quest'ultimo deve essere configurato in modo da supportare le tessere mappa di Bing. Per altre informazioni, vedere [risolvere i report: report mappa &#40;Generatore Report e SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e "Pianificazione per le mappe" nel [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nella documentazione Online di SQL Server .  
+ Per vedere uno sfondo a sezioni in visualizzazione della struttura, è necessario poter accedere a Internet. Per vedere in anteprima lo sfondo a sezioni di un report in un server di report, quest'ultimo deve essere configurato in modo da supportare le tessere mappa di Bing. Per altre informazioni, vedere [risolvere i problemi di report: report mappa &#40;Generatore Report e SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e "Pianificazione per le mappe" nella [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nella documentazione Online di SQL Server .  
   
  Per altre informazioni su come personalizzare un livello sezione, vedere [Aggiungere, modificare o eliminare una mappa o livello mappa &#40;Generatore report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

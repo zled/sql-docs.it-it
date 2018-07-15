@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati TableMiningStructureColumn (ASSL) | Documenti Microsoft
+title: Tipo di dati TableMiningStructureColumn (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - TableMiningStructureColumn data type
 ms.assetid: 350358b0-f2fc-43c3-957d-884c59fa879e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a57859ca60ae7fa83ec4bb4ea8f6a4e742a74f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e03fec81f796ccf87f19df9b2e43fe29b0e318e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319401"
 ---
 # <a name="tableminingstructurecolumn-data-type-assl"></a>Tipo di dati TableMiningStructureColumn (ASSL)
-  Definisce un tipo di dati derivato che rappresenta un [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) elemento che contiene tabelle nidificate, a differenza dei valori scalari associati con il [ScalarMiningStructureColumn](scalarminingstructurecolumn-data-type-assl.md) elemento che contiene valori scalari.  
+  Definisce un tipo di dati derivato che rappresenta un [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) elemento che contiene tabelle nidificate, a differenza dei valori scalari associati con la [ScalarMiningStructureColumn](scalarminingstructurecolumn-data-type-assl.md) elemento che contiene valori scalari.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,9 +61,9 @@ ms.locfileid: "36054619"
 |------------------|-------------|  
 |Elementi padre|None|  
 |Elementi figlio|[Le colonne](../collections/columns-element-assl.md), [ForeignKeyColumn](../objects/column-element-assl.md), [SourceMeasureGroup](../objects/group-element-assl.md), [traduzioni](../collections/translations-element-assl.md)|  
-|Elementi derivati|[Colonna](../objects/column-element-assl.md) ([le colonne](../collections/columns-element-assl.md) insieme [MiningStructure](../objects/miningstructure-element-assl.md))|  
+|Elementi derivati|[Colonna](../objects/column-element-assl.md) ([colonne](../collections/columns-element-assl.md) insieme [MiningStructure](../objects/miningstructure-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>.  
   
 ## <a name="see-also"></a>Vedere anche  

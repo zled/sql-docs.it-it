@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di query SQL (classi gestite SQLXML) | Documenti Microsoft
+title: Esecuzione di query SQL (classi gestite SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - SQL queries [SQLXML]
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2da4e8f0757dad1fb052ec890be695ee957a9df3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 72e16fe5cc17e48b110c70f03a6e900be3b76c2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288297"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>Esecuzione di query SQL (classi gestite SQLXML)
   In questo esempio vengono illustrate le operazioni seguenti:  
   
 -   Creazione di parametri (oggetti SqlXmlParameter).  
   
--   Assegnazione di valori per le proprietà degli oggetti di SqlXmlParameter (nome e valore).  
+-   Assegnazione di valori alle proprietà degli oggetti SqlXmlParameter (nome e valore).  
   
- In questo esempio viene eseguita una query SQL semplice per recuperare il nome, il cognome e la data di nascita del dipendente il cui valore di cognome viene passato come parametro. Nello specificare il parametro (*LastName*), solo la proprietà Value è impostata. La proprietà nome non è impostata, perché in questa query il parametro è posizionale e nessun nome è obbligatorio.  
+ In questo esempio viene eseguita una query SQL semplice per recuperare il nome, il cognome e la data di nascita del dipendente il cui valore di cognome viene passato come parametro. Nello specificare il parametro (*LastName*), solo la proprietà Value viene impostata. La proprietà Name non è impostata, perché in questa query il parametro è posizionale ed è necessario alcun nome.  
   
  La proprietà CommandType dell'oggetto SqlXmlCommand per impostazione predefinita è **Sql**. La proprietà, pertanto, non viene impostata in modo esplicito.  
   
@@ -125,7 +125,7 @@ cmd = null;
 ```  
   
 ## <a name="using-executetostream"></a>Utilizzo di ExecuteToStream  
- Se si dispone di un flusso esistente, è possibile utilizzare il metodo ExecuteToStream invece di creare un oggetto Stream e utilizzando il metodo Execute. Il codice dell'esempio precedente è stato modificato per utilizzare il metodo ExecuteToStream:  
+ Se si dispone di un flusso esistente, è possibile utilizzare il metodo ExecuteToStream invece di creare un oggetto Stream e utilizzando il metodo Execute. Il codice dell'esempio precedente è stato modificato per usare il metodo ExecuteToStream:  
   
 ```  
 using System;  
@@ -158,6 +158,6 @@ class Test
 ```  
   
 > [!NOTE]  
->  È inoltre possibile utilizzare ExecuteXMLReadermethod che restituisce un oggetto XmlReader. Per altre informazioni, vedere [l'esecuzione di query SQL tramite il metodo ExecuteXMLReader](executing-sql-queries-by-using-the-executexmlreader-method.md).  
+>  È anche possibile usare il ExecuteXMLReadermethod che restituisce un oggetto XmlReader. Per altre informazioni, vedere [l'esecuzione di query SQL usando il metodo ExecuteXMLReader](executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
   

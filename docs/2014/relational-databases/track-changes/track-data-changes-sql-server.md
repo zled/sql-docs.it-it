@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CHANGE_TRACKING_CLEANUP_VERSION
 - change_tracking_databases
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fd525b56e4fcd793fbf0d4ae3f63b5670a5d1e64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: af4d06242048038bd73429a2f10e517e30d77e9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063301"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307551"
 ---
 # <a name="track-data-changes-sql-server"></a>Rilevare le modifiche ai dati (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre due funzionalità che consentono di tener traccia delle modifiche ai dati in un database: [Change Data Capture](#Capture) e [Rilevamento modifiche](#Tracking). Tali funzionalità consentono alle applicazioni di determinare le modifiche DML (operazioni di inserimento, aggiornamento ed eliminazione) apportate alle tabelle utente in un database. Change Data Capture e Rilevamento modifiche possono essere abilitati sullo stesso database, non sono richieste considerazioni speciali. Per le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano change data capture e rilevamento delle modifiche, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "36063301"
   
 -   Overhead basso per le operazioni DML. Al rilevamento delle modifiche sincrono è sempre associato un livello di overhead. L'utilizzo del rilevamento delle modifiche può consentire la riduzione dell'overhead, che risulterà in genere minore rispetto a quello relativo all'utilizzo di soluzioni alternative, soprattutto soluzioni per cui è necessario utilizzare i trigger.  
   
--   Utilizzo delle transazioni di cui è stato eseguito il commit come base per il rilevamento delle modifiche. L'ordine delle modifiche si basa sull'ora in cui è stato eseguito il commit della transazione. In questo modo è possibile ottenere risultati affidabili quando sono presenti transazioni sovrapposte e con tempi di esecuzione prolungati. Soluzioni personalizzate che utilizzano `timestamp` i valori devono essere progettati specificamente per gestire questi scenari.  
+-   Utilizzo delle transazioni di cui è stato eseguito il commit come base per il rilevamento delle modifiche. L'ordine delle modifiche si basa sull'ora in cui è stato eseguito il commit della transazione. In questo modo è possibile ottenere risultati affidabili quando sono presenti transazioni sovrapposte e con tempi di esecuzione prolungati. Soluzioni personalizzate che utilizzano `timestamp` valori devono essere progettati specificamente per gestire questi scenari.  
   
 -   Sono disponibili strumenti standard che possono essere utilizzati per configurare e gestire. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre istruzioni DDL standard, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], viste del catalogo e autorizzazioni di sicurezza.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36063301"
  In questa sezione viene descritto il modello di sicurezza di Change Data Capture.  
   
  **Configurazione e amministrazione**  
- Per abilitare o disabilitare change data capture per un database, il chiamante di [Sys. sp_cdc_enable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) o [sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)deve essere un membro del predefinito del server `sysadmin` ruolo. Abilitazione e disabilitazione di change data capture a livello di tabella richiede che il chiamante di [sp_cdc_enable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) e [sp_cdc_disable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) sia un membro del ruolo sysadmin o del database `database db_owner` ruolo.  
+ Per abilitare o disabilitare la funzionalità change data capture per un database, il chiamante [Sys. sp_cdc_enable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) oppure [Sys. sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)deve essere un membro del server fisso `sysadmin` ruolo. Abilitazione e disabilitazione di change data capture a livello di tabella è necessario che il chiamante di [Sys. sp_cdc_enable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) e [Sys. sp_cdc_disable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) sia un membro del ruolo sysadmin o del database `database db_owner` ruolo.  
   
  Utilizzo delle stored procedure per supportare l'amministrazione dei processi change data capture è limitato ai membri del server `sysadmin` ruolo e i membri del `database db_owner` ruolo.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "36063301"
   
 -   Se un database viene ripristinato in un altro server, per impostazione predefinita la funzionalità Change Data Capture viene disabilitata e tutti i metadati correlati vengono eliminati.  
   
-     Per mantenere funzionalità change data capture, utilizzare il `KEEP_CDC` opzione quando si ripristina il database. Per ulteriori informazioni su questa opzione, vedere [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
+     Per mantenere l'acquisizione dei dati, usare il `KEEP_CDC` durante il ripristino del database. Per ulteriori informazioni su questa opzione, vedere [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 -   Se un database viene scollegato e collegato allo stesso o a un altro server, la funzionalità Change Data Capture rimane abilitata.  
   

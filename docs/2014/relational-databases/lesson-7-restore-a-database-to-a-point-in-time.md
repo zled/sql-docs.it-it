@@ -1,5 +1,5 @@
 ---
-title: Lezione 8. Ripristinare un database in archiviazione di Microsoft Azure | Documenti Microsoft
+title: Lezione 8. Ripristinare un database in archiviazione di Microsoft Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea9ec20e60fb879b17434e8fe4581d28b3d7a551
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 98d44755a26519dd63701ba8e5eebb1cf4ef7e7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311783"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>Lezione 8. ripristinare un database in Archiviazione di Windows Azure
   In questa lezione, verrà illustrato come creare un file di backup in locale e quindi ripristinarlo in Archiviazione di Windows Azure. Si noti che è possibile impostare il database localmente o in una macchina virtuale in Windows Azure. È possibile seguire questa lezione anche senza aver completato le lezioni 4, 5, 6 e 7.  
@@ -73,23 +73,23 @@ ms.locfileid: "36062176"
   
  Per ripristinare un database con file di dati e di log che puntano ad Archiviazione di Windows Azure utilizzando l'interfaccia utente di SQL Server Management Studio, eseguire i passaggi indicati di seguito:  
   
-1.  In **Esplora oggetti**, fare clic sul nome del server per espanderne l'albero.  
+1.  Nelle **Esplora oggetti**, fare clic sul nome del server per espanderne l'albero.  
   
 2.  Espandere **database**e selezionare il database.  
   
 3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Ripristina**.  
   
-4.  Nel **generali** nella pagina di **ripristinare** sezione del codice sorgente, fare clic su **origine** dispositivo.  
+4.  Nel **generali** nella pagina il **ripristinare** sezione di origine, fare clic su **origine** dispositivo.  
   
-5.  Fare clic sul pulsante Sfoglia per la **origine** casella di testo dispositivo, che consente di aprire la **Seleziona dispositivi di Backup** finestra di dialogo.  
+5.  Fare clic sul pulsante per la **origine** dispositivo casella di testo che consente di aprire il **Seleziona dispositivi di Backup** nella finestra di dialogo.  
   
 6.  Nella casella di testo supporti di Backup, selezionare **File**, fare clic sui **Add** pulsante per individuare il file di backup (bak). Fare clic su **OK**.  
   
 7.  Fare clic su **file** nella prima pagina.  
   
-8.  Nel **Ripristina file di Database** come sezione **Ripristina come** campo, digitare quanto segue:  
+8.  Nel **Ripristina file di Database** come sezione **Ripristina come** digitare quanto segue:  
   
-     File di dati, digitare: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`. File di log, digitare: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`.  
+     Per file di dati, digitare: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`. File di log, digitare: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`.  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   
@@ -101,6 +101,6 @@ ms.locfileid: "36062176"
   
  **Lezione successiva:**  
   
- [Lezione 9. Ripristinare un database da archiviazione di Microsoft Azure](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
+ [Lezione 9: Ripristinare un database da Archiviazione di Windows Azure](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
   
   

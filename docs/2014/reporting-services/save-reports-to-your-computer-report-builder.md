@@ -1,5 +1,5 @@
 ---
-title: Salvare i report nel Computer (Generatore Report) | Documenti Microsoft
+title: Salvare i report nel Computer (Generatore Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 caps.latest.revision: 5
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 367fcdacc7172a79155b1865464e92d0596a38ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 765dbc5fc274146cfc6cd660acb2278c8e46b4ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309231"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Salvare i report nel computer in uso (Generatore report)
   In Generatore report è possibile salvare le definizioni di un report nel computer. Tuttavia, quando vengono salvati nel computer in uso, gli altri utenti non possono visualizzare i report; inoltre i report che fanno riferimento alle origini dati condivise o che consentono di archiviare esternamente gli elementi del report, ad esempio immagini e sottoreport, potrebbero non essere eseguiti esternamente. È consigliabile salvare i report in un server di report o in un sito di SharePoint.  
@@ -49,7 +49,7 @@ ms.locfileid: "36054927"
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Esportazione di report &#40;SSRS e Generatore Report&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Esportazione di report &#40;Report e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Salvataggio di report &#40;Generatore Report&#41;](report-builder/saving-reports-report-builder.md)   
  [Esportare un report in un altro tipo di file &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   

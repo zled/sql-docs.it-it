@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bffff032f51c1a349db6ab384c8f6b49e66ed206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b9dfb573605f8e859f8db4b991e2eb19a73d4606
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319951"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
   I tipi di dati rappresentano tipologie di dati diversi che possono essere archiviati ed elaborati in modo efficiente. I tipi di dati standard includono testo, noto anche come stringhe, numeri con e senza posizioni decimali, date e ore e immagini. I valori in un report devono essere costituiti da un tipo di dati RDL (Report Definition Language). È possibile formattare un valore in base alle proprie preferenze quando si lo visualizza in un report. Un campo che rappresenta la valuta, ad esempio, viene archiviato nella definizione del report come numero a virgola mobile, ma può essere visualizzato in diversi formati a seconda della proprietà di formattazione scelta.  
@@ -108,7 +108,7 @@ ms.locfileid: "36062806"
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- In questo esempio viene mostrata la data (1 luglio 2008), seguita dall'ora espressa con una precisione di 7 cifre (06:05:07.9999999 AM), seguita da una differenza di fuso orario dall'ora UTC espressa in ore e minuti (più 8 ore e 0 minuti). Per gli esempi seguenti, questo valore è stato inserito un `String` campo denominato `MyDateTime.Value`.  
+ In questo esempio viene mostrata la data (1 luglio 2008), seguita dall'ora espressa con una precisione di 7 cifre (06:05:07.9999999 AM), seguita da una differenza di fuso orario dall'ora UTC espressa in ore e minuti (più 8 ore e 0 minuti). Per l'esempio seguente, questo valore è stato inserito una `String` campo denominato `MyDateTime.Value`.  
   
  Per convertire questi dati in uno o più valori CLR, è possibile adottare una delle strategie seguenti:  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36062806"
   
          Se la stringa `MyDateTime.Value` include una differenza UTC, la funzione `DateTime.Parse` regola in primo luogo l'ora in base alla differenza UTC: 7 AM, - [`+08:00`] con l'ora UTC 11 PM. della notte precedente). La funzione `DateTime.Parse` applica quindi la differenza UTC del server di report locale e, se necessario, regola nuovamente l'ora in base all'ora legale. Ad esempio, a Redmond, Washington, la differenza tra ora locale e ora legale è `[-07:00]`, ovvero 7 ore prima delle 23.00. Il risultato è il valore `DateTime` seguente: `2007-07-06 04:07:07 PM` (6 luglio 2007 alle 4.07 PM).  
   
- Per ulteriori informazioni sulla conversione di stringhe `DateTime` tipi di dati, vedere [l'analisi di stringhe di data e ora](http://go.microsoft.com/fwlink/?LinkId=89703), [formattazione di data e ora per impostazioni cultura specifiche](http://go.microsoft.com/fwlink/?LinkId=89704), e [scelta Tra DateTime, DateTimeOffset e TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) su MSDN.  
+ Per altre informazioni sulla conversione di stringhe `DateTime` tipi di dati, vedere [analisi di stringhe di data e ora](http://go.microsoft.com/fwlink/?LinkId=89703), [formattazione di data e ora per impostazioni cultura specifiche](http://go.microsoft.com/fwlink/?LinkId=89704), e [scelta Tra DateTime, DateTimeOffset e TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) su MSDN.  
   
 -   Aggiungere un nuovo campo calcolato al set di dati del report che utilizza un'espressione per estrarre parti della stringa. Per altre informazioni, vedere [Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   

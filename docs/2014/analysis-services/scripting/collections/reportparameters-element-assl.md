@@ -1,5 +1,5 @@
 ---
-title: Elemento ReportParameters (ASSL) | Documenti Microsoft
+title: Elemento ReportParameters (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportParameters element
 ms.assetid: 0e138e8f-8313-47f2-96e1-cd189eec26bb
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 96337ac9f31e654d88bef1b0ae077f7a73171ec2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 004b23b3cbd2aa22dff73514b03257ac50dddd8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282107"
 ---
 # <a name="reportparameters-element-assl"></a>Elemento ReportParameters (ASSL)
-  Contiene la raccolta di [ReportParameter](../objects/reportparameter-element-assl.md) elementi per un [ReportAction](../data-type/action-data-type-assl.md) elemento.  
+  Contiene la raccolta di [ReportParameter](../objects/reportparameter-element-assl.md) gli elementi per una [ReportAction](../data-type/action-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36055977"
 |Elementi padre|[Action](../objects/action-element-assl.md) di tipo [ReportAction](../data-type/action-data-type-assl.md)|  
 |Elementi figlio|[ReportParameter](../objects/reportparameter-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.ReportParameterCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

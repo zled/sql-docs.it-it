@@ -1,5 +1,5 @@
 ---
-title: Transazioni tra contenitori | Documenti Microsoft
+title: Transazioni tra contenitori | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e09f7b68748aa40620196b0402ce81521591781a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68d22f34ca98f2e7b98320a437a236269e7a9182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310471"
 ---
 # <a name="cross-container-transactions"></a>Transazioni tra contenitori
   Le transazioni tra contenitori sono transazioni utente implicite o esplicite che includono chiamate a stored procedure compilate in modo nativo o operazioni in tabelle ottimizzate per la memoria.  
@@ -29,7 +29,7 @@ ms.locfileid: "36066521"
  Qualsiasi query interpretata che faccia riferimento a tabelle ottimizzate per la memoria viene considerata parte di una transazione tra contenitori, sia che venga eseguita da una transazione esplicita o implicita sia in modalità autocommit.  
   
 ##  <a name="isolation"></a> Isolamento di singole operazioni  
- A ogni transazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è associato un livello di isolamento. Il livello di isolamento predefinito è READ COMMITTED. Per utilizzare un livello di isolamento diverso, è possibile impostare il livello di isolamento mediante [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
+ A ogni transazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è associato un livello di isolamento. Il livello di isolamento predefinito è READ COMMITTED. Per usare un livello di isolamento diverso, è possibile impostare il livello di isolamento utilizzando [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  È spesso necessario effettuare operazioni in tabelle ottimizzate per la memoria in un livello di isolamento diverso dalle operazioni in tabelle basate su disco. In una transazione è possibile impostare un livello di isolamento diverso per una raccolta di istruzioni o per una singola operazione di lettura.  
   
@@ -69,13 +69,13 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>Semantica di isolamento per singole operazioni  
  Una transazione T serializzabile viene eseguita in isolamento completo. È come se per tutte le altre transazioni fosse stato eseguito il commit prima dell'avvio di T o l'avvio dopo il commit di T. Il comportamento diventa più complesso quando operazioni diverse in una transazione presentano livelli di isolamento diversi.  
   
- La semantica generale dei livelli di isolamento delle transazioni nel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], insieme a implicazioni relative al blocco, è illustrato in [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
+ La semantica generale dei livelli di isolamento delle transazioni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], insieme alle implicazioni sul blocco, è illustrato nella [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  Per le transazioni tra contenitori in cui operazioni diverse possono avere livelli di isolamento diversi, è necessario comprendere la semantica di isolamento delle singole operazioni di lettura. Le operazioni di scrittura sono sempre isolate. Le scritture in transazioni diverse non possono avere un'influenza reciproca.  
   
  Un'operazione di lettura dei dati restituisce un numero di righe che soddisfa una condizione di filtro.  
   
- Operazioni di lettura vengono eseguite come parte di una transazione T. dei livelli di isolamento per le operazioni di lettura può essere comprese in termini di,  
+ Operazioni di lettura vengono eseguite come parte di una transazione T. dei livelli di isolamento per le operazioni di lettura può essere riconosciute in termini di,  
   
  Stato di commit  
  Lo stato di commit indica se il commit dei dati letti è garantito.  
@@ -86,7 +86,7 @@ commit
  Garanzie di stabilità per i dati letti fornite automaticamente alla transazione T.  
  La stabilità indica se le operazioni di lettura della transazione sono ripetibili, ovvero se in caso di ripetizione di tali operazioni verrebbero restituite le stesse righe e le stesse versioni di riga.  
   
- Alcune garanzie fanno riferimento all'ora di fine logica della transazione. L'ora di fine logica è in genere l'ora in cui viene eseguito il commit della transazione nel database. Se la transazione accede a tabelle ottimizzate per la memoria, l'ora di fine logica è tecnicamente l'inizio della fase di convalida. (Per altre informazioni, vedere la discussione di durata delle transazioni nella [transazioni in tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Alcune garanzie fanno riferimento all'ora di fine logica della transazione. L'ora di fine logica è in genere l'ora in cui viene eseguito il commit della transazione nel database. Se la transazione accede a tabelle ottimizzate per la memoria, l'ora di fine logica è tecnicamente l'inizio della fase di convalida. (Per altre informazioni, vedere la discussione su durata delle transazioni nel [transazioni in tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Indipendentemente dal livello di isolamento, in una transazione (T) vengono sempre rilevati i relativi aggiornamenti:  
   
@@ -103,7 +103,7 @@ commit
  Vengono garantiti il commit e la stabilità dei dati letti fino all'ora di fine logica della transazione.  
   
  SERIALIZABLE  
- Tutte le garanzie di REPEATABLE READ oltre a scarto di righe fantasma e coerenza transazionale rispetto a tutte le operazioni di lettura serializzabili eseguite da T. fantasma prevenzione significa che l'operazione di analisi può restituire solo le righe aggiuntive scritte da T, ma non righe scritte da altre transazioni.  
+ Tutte le garanzie di REPEATABLE READ oltre a scarto di righe fantasma e coerenza transazionale rispetto a tutte le operazioni di lettura serializzabili eseguite da T. fantasma prevenzione significa che l'operazione di analisi può restituire solo le righe aggiuntive scritte da T, ma nessuna righe scritte da altre transazioni.  
   
  Si consideri la transazione seguente:  
   
@@ -139,7 +139,7 @@ commit
   
  Il lato basato su disco di una transazione T specificata raggiunge un determinato livello di isolamento X se viene soddisfatta una delle condizioni indicate di seguito:  
   
--   Inizia in X. Vale a dire, il valore predefinito della sessione era X, perché è stata eseguita `SET TRANSACTION ISOLATION LEVEL`, o è il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] predefinito.  
+-   Inizia in X. Vale a dire l'impostazione predefinita della sessione era X, perché è stata eseguita `SET TRANSACTION ISOLATION LEVEL`, o è il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] predefinito.  
   
 -   Durante la transazione il livello di isolamento predefinito viene modificato in X utilizzando `SET TRANSACTION ISOLATION LEVEL`.  
   
@@ -187,11 +187,11 @@ commit
   
  Per le transazioni tra contenitori di sola lettura nella modalità autocommit viene eseguito semplicemente il rollback alla fine della transazione. Non viene eseguita alcuna convalida.  
   
- Le transazioni tra contenitori di sola lettura implicite o esplicite eseguono la convalida in fase di commit se la transazione accede alle tabelle ottimizzate per la memoria nell'isolamento REPEATABLE READ o SERIALIZABLE. Per informazioni dettagliate sulla convalida vedere la sezione sul rilevamento dei conflitti, convalida, e verifica la dipendenza di Commit in [transazioni in tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Le transazioni tra contenitori di sola lettura implicite o esplicite eseguono la convalida in fase di commit se la transazione accede alle tabelle ottimizzate per la memoria nell'isolamento REPEATABLE READ o SERIALIZABLE. Per informazioni dettagliate sulla convalida vedere la sezione sul rilevamento dei conflitti, convalida, e dipendenza di Commit consente di archiviare [transazioni in tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sulle transazioni nelle tabelle con ottimizzazione per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
- [Linee guida per la logica di riesecuzione per le transazioni nelle tabelle con ottimizzazione per la memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
+ [Informazioni sulle transazioni nelle tabelle ottimizzate per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Linee guida per i livelli di isolamento delle transazioni con tabelle ottimizzate per la memoria](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
+ [Linee guida per la logica di riesecuzione per le transazioni in tabelle con ottimizzazione per la memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

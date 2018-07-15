@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
 - user-defined variables [Integration Services]
@@ -21,13 +21,13 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6a5737635ffd69a7d09a93ac1104a1ee65b8277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7352ff51810a16f2c3e81b5362bad764955f67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283617"
 ---
 # <a name="integration-services-ssis-variables"></a>Variabili di Integration Services (SSIS)
   Nelle variabili vengono archiviati valori che possono essere usati in fase di esecuzione da un pacchetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e dai relativi contenitori, attività e gestori di eventi. Anche gli script nell'attività Script e nel componente script possono utilizzare le variabili. I vincoli di precedenza che definiscono la sequenza delle attività e dei contenitori in un flusso di lavoro possono utilizzare variabili quando le definizioni di vincolo includono espressioni.  
@@ -118,17 +118,17 @@ ms.locfileid: "36066993"
  IncludeInDebugDump  
  Indica se il valore della variabile viene incluso nei file di dump del debug.  
   
- Per le variabili definite dall'utente e le variabili di sistema, il valore predefinito per il **InclueInDebugDump** opzione `true`.  
+ Per variabili definite dall'utente e variabili di sistema, il valore predefinito per il **InclueInDebugDump** opzione è `true`.  
   
- Tuttavia, per le variabili definite dall'utente, il sistema Reimposta il **IncludeInDebugDump** opzione `false` quando vengono soddisfatte le condizioni seguenti:  
+ Tuttavia, per le variabili definite dall'utente, il sistema viene reimpostato il **IncludeInDebugDump** possibilità `false` quando vengono soddisfatte le condizioni seguenti:  
   
--   Se il **EvaluateAsExpression** variabile è impostata su `true`, il sistema Reimposta il **IncludeInDebugDump** opzione per `false`.  
+-   Se il **EvaluateAsExpression** variabile è impostata su `true`, la reimpostazione di **IncludeInDebugDump** possibilità `false`.  
   
-     Per includere il testo dell'espressione come valore della variabile nei file di dump del debug, impostare il **IncludeInDebugDump** opzione `true`.  
+     Per includere il testo dell'espressione come valore della variabile nei file di dump del debug, impostare il **IncludeInDebugDump** possibilità `true`.  
   
--   Se il tipo di dati della variabile viene modificato in una stringa, il sistema Reimposta il **IncludeInDebugDump** opzione `false`.  
+-   Se il tipo di dati della variabile viene modificato in una stringa, il sistema viene reimpostato il **IncludeInDebugDump** possibilità `false`.  
   
- Durante la reimpostazione di **IncludeInDebugDump** opzione `false`, questo potrebbe quindi sostituire il valore selezionato dall'utente.  
+ Durante la reimpostazione di **IncludeInDebugDump** possibilità `false`, ciò potrebbe quindi sostituire il valore selezionato dall'utente.  
   
  valore  
  Il valore di una variabile definita dall'utente può essere un valore letterale o un'espressione. Le variabili includono opzioni per l'impostazione del valore e del relativo tipo di dati. Queste due proprietà devono essere compatibili. Non è ad esempio possibile utilizzare un valore stringa insieme a un tipo di dati Integer.  
@@ -146,14 +146,14 @@ ms.locfileid: "36066993"
   
  Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)], vedere [Finestra Variabili](../../2014/integration-services/variables-window.md).  
   
- Per ulteriori informazioni sulle proprietà delle variabili e per ulteriori informazioni sull'impostazione a livello di programmazione di queste proprietà, vedere <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
+ Per altre informazioni sulle proprietà delle variabili e per altre informazioni sull'impostazione a livello di programmazione di queste proprietà, vedere <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Aggiungere, eliminare o modificare l'ambito della variabile definita dall'utente in un pacchetto](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
+ [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
- [Impostare le proprietà di una variabile definita dall'utente](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)  
+ [Impostazione delle proprietà di una variabile definita dall'utente](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)  
   
- [Utilizzare i valori delle variabili e parametri in un pacchetto figlio](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
+ [Usare i valori di variabili e parametri in un pacchetto figlio](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
   
  [Mapping dei parametri di query a variabili in un componente flusso di dati](data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   

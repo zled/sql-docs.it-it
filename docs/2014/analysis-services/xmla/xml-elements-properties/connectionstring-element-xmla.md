@@ -1,5 +1,5 @@
 ---
-title: Elemento ConnectionString (XMLA) | Documenti Microsoft
+title: Elemento ConnectionString (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: 3b0575aa-79ed-4f14-ae7e-dd587af4cdb1
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 12d69bfe2b8dc8bda91bc873167bb3208203d728
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e7345d2a35d80a2ce4d72875c4afb082b57ec1a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293211"
 ---
 # <a name="connectionstring-element-xmla"></a>Elemento ConnectionString (XMLA)
-  Contiene una stringa di connessione utilizzata dall'elemento padre [posizione](location-element-xmla.md) oppure [origine](source-element-xmla.md) elemento.  
+  Contiene una stringa di connessione utilizzata dall'elemento padre [ubicazione](location-element-xmla.md) oppure [origine](source-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,15 +62,15 @@ ms.locfileid: "36062281"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[Percorso](location-element-xmla.md), [origine](source-element-xmla.md)|  
+|Elementi padre|[Ubicazione](location-element-xmla.md), [origine](source-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per gli elementi `Location`, l'elemento `ConnectionString` contiene la stringa di connessione utilizzata dal comando `Restore` o `Synchronize` per aggiornare un'origine dati locale o connettersi a un'istanza remota.  
   
  Per gli elementi `Source`, l'elemento `ConnectionString` contiene la stringa di connessione utilizzata dal comando `Synchronize` per connettersi all'istanza di origine.  
   
- Per ulteriori informazioni sul backup e ripristino degli oggetti, vedere [backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Per altre informazioni sul backup e ripristino degli oggetti, vedere [backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento Restore &#40;XMLA&#41;](../xml-elements-commands/restore-element-xmla.md)   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dc51cc2f2211238213ed6f25e18b907d16b08f10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9c64c9382e760374c0870e6ec1ef1b4d0dd2b607
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303781"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   Ottimizzazione guidata motore di database (DTA) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] analizza i database e fornisce consigli da utilizzare per ottimizzare le prestazioni di query. È possibile utilizzare Ottimizzazione guidata motore di database per selezionare e creare un set ottimale di indici, viste indicizzate e partizioni di tabella senza che sia necessario conoscere in modo approfondito la struttura del database o le caratteristiche interne di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con DTA, è possibile eseguire le attività seguenti.  
@@ -97,7 +97,7 @@ ms.locfileid: "36065569"
   
     2.  Gli indici inseriti nelle indicazioni non offrono un miglioramento delle prestazioni delle query adeguato per la progettazione fisica del database corrente.  
   
-    3.  L'utente che esegue Ottimizzazione guidata motore di Database non è un membro del `db_owner` ruolo del database o il `sysadmin` ruolo predefinito del server. Le query nel carico di lavoro vengono analizzate nel contesto di sicurezza dell'utente che esegue Ottimizzazione guidata motore di database. L'utente deve essere membro del ruolo del database `db_owner`.  
+    3.  L'utente che esegue Ottimizzazione guidata motore di Database non è un membro del `db_owner` ruolo del database o `sysadmin` ruolo predefinito del server. Le query nel carico di lavoro vengono analizzate nel contesto di sicurezza dell'utente che esegue Ottimizzazione guidata motore di database. L'utente deve essere membro del ruolo del database `db_owner`.  
   
 -   Ottimizzazione guidata motore di database archivia i dati delle sessioni di ottimizzazione e le altre informazioni nel database `msdb`. Se vengono apportate modifiche al database `msdb` esiste il rischio di perdere dati delle sessioni di ottimizzazione. Per eliminare tale rischio, implementare una strategia di backup appropriata per il database `msdb`.  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento EstimatedCount (ASSL) | Documenti Microsoft
+title: Elemento EstimatedCount (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - EstimatedCount element
 ms.assetid: ce84b54a-8ab2-42f4-a7dd-e10a3d41cb4d
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c865a89d1c67bcb4155aa771ee6709a0068a7bbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a69d67554d0090e0e586421986bc97ba556c84a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300851"
 ---
 # <a name="estimatedcount-element-assl"></a>Elemento EstimatedCount (ASSL)
   Contiene il numero stimato di membri per un attributo, come definito dall'utente.  
@@ -58,11 +58,11 @@ ms.locfileid: "36055077"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[AggregationDesignAttribute](../data-type/aggregationdesignattribute-data-type-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
+|Elementi padre|[Elemento AggregationDesignAttribute](../data-type/aggregationdesignattribute-data-type-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Questo valore viene assegnato dall'utente e viene utilizzato il [elemento AggregationDesign &#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md).  
+## <a name="remarks"></a>Note  
+ Questo valore viene assegnato dall'utente e viene usato per il [elemento AggregationDesign &#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md).  
   
  Gli elementi che corrispondono ai padri di `EstimatedCount` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.AggregationDesignAttribute> e <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
