@@ -1,5 +1,5 @@
 ---
-title: Elemento (ASSL) dell'account | Documenti Microsoft
+title: Elemento (ASSL) dell'account | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Account element
 ms.assetid: 0bb7d06c-0158-4ab2-b2b1-cb50ba24f7c0
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0a99dbaee6e1eaec95385295cf1842ffcc336adf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d763b75cfb357554948565a59f5348d7fd3b725a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321171"
 ---
 # <a name="account-element-assl"></a>Elemento Account (ASSL)
-  Contiene informazioni dettagliate su un tipo di conto all'interno di un [Database](database-element-assl.md) elemento.  
+  Contiene informazioni dettagliate su un tipo di account all'interno di un [Database](database-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,10 +64,10 @@ ms.locfileid: "36169761"
 |Elementi padre|[Accounts](../collections/accounts-element-assl.md)|  
 |Elementi figlio|[AccountType](../properties/accounttype-element-assl.md), [AggregationFunction](../properties/aggregationfunction-element-assl.md), [alias](../collections/aliases-element-assl.md), [annotazioni](../collections/annotations-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
- Le dimensioni, il cui [tipo](../properties/type-element-dimension-assl.md) è impostato su *conti,* possono avere un attributo che specifica il tipo di conto, ad esempio Income, Expense e così via, rappresentato dai membri nella dimensione. Il tipo di conto viene quindi utilizzato da [misura](measure-element-assl.md) elementi, il cui [AggregationFunction](../properties/aggregatefunction-element-assl.md) è impostato su *ByAccount*, per determinare la funzione di aggregazione da utilizzare quando l'aggregazione dei membri di tale dimensione. L'elemento `Account` rappresenta un singolo tipo di conto e la funzione di aggregazione che deve essere utilizzata da tali misure.  
+## <a name="remarks"></a>Note  
+ Le dimensioni, il cui [tipo](../properties/type-element-dimension-assl.md) elemento è impostato su *conti,* possono avere un attributo che specifica il tipo di account, ad esempio Income, Expense e così via, rappresentato dai membri nella dimensione. Il tipo di conto viene quindi utilizzato dal [Measure](measure-element-assl.md) gli elementi, il cui [AggregationFunction](../properties/aggregatefunction-element-assl.md) elemento è impostato su *ByAccount*, per determinare la funzione di aggregazione da utilizzare quando l'aggregazione dei membri di tale dimensione. L'elemento `Account` rappresenta un singolo tipo di conto e la funzione di aggregazione che deve essere utilizzata da tali misure.  
   
- Un tipo di conto deve essere elencato se la funzione di aggregazione è diversa da quello predefinito utilizzato da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] per ogni tipo di conto.  
+ Un tipo di conto deve essere elencato se la funzione di aggregazione è diversa da quello predefinito utilizzato da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] per ogni tipo di account.  
   
  Il set di tipi di conto validi è fisso.  
   

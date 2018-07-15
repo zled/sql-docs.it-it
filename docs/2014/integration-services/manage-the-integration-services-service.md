@@ -1,5 +1,5 @@
 ---
-title: Gestire il servizio Integration Services | Documenti Microsoft
+title: Gestire il servizio Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - services [Integration Services], configuring
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
 caps.latest.revision: 60
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45952fdec3955614cb7b69b053ffc635d9ab2ae3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e356283274c7ea741acfabcd6d56cb6bc0db7ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281517"
 ---
 # <a name="manage-the-integration-services-service"></a>Gestione del servizio Integration Services
     
@@ -32,7 +32,7 @@ ms.locfileid: "36167123"
  Quando viene installato il componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], viene installato anche il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per impostazione predefinita, il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] viene avviato e impostato per l'avvio automatico. È tuttavia necessario installare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per utilizzare il servizio per la gestione di pacchetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] archiviati e in esecuzione.  
   
 > [!NOTE]  
->  Non è possibile connettersi a un'istanza del [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servizio il [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] versione [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Vale a dire, nella **Connetti al Server** della finestra di dialogo non è possibile immettere il nome di un server in cui solo il [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] versione il [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servizio sia in esecuzione. Tuttavia, è possibile modificare il file di configurazione per il servizio e gestire i pacchetti archiviati in un'istanza di [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] dal [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] versione [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;SSIS&#41;](service/integration-services-service-ssis-service.md).  
+>  Non è possibile connettersi a un'istanza del [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servizio le [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] versione di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Vale a dire, nella **Connetti al Server** nella finestra di dialogo è possibile specificare il nome di un server in cui solo il [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] versione del [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servizio è in esecuzione. Tuttavia, è possibile modificare il file di configurazione per il servizio e gestire i pacchetti vengono archiviati in un'istanza di [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] dal [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] versione di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;SSIS&#41;](service/integration-services-service-ssis-service.md).  
   
  È possibile installare solo una singola istanza del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in un computer. Il servizio non è specifico di una particolare istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Connettersi al servizio utilizzando il nome del computer sul quale è in esecuzione il servizio.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36167123"
   
 ### <a name="to-view-service-events-for-integration-services-service"></a>Per visualizzare gli eventi per il servizio di Integration Services  
   
--   [Visualizza eventi per il servizio Integration Services](../../2014/integration-services/view-events-for-the-integration-services-service.md)  
+-   [Visualizzare eventi per il servizio Integration Services](../../2014/integration-services/view-events-for-the-integration-services-service.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md)   

@@ -1,11 +1,11 @@
 ---
-title: Definizione di tabelle e colonne UDT | Documenti Microsoft
+title: La definizione di tabelle e colonne UDT | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -25,19 +25,19 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6f6952ca421734b02b410a006b13304d144f0d6e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0225bb7be9cc100e05f3c5119a0b87db6b2d7be7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700002"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358183"
 ---
-# <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>Utilizzo di tipi definiti dall'utente - definizione delle colonne e tabelle di tipo definito dall'utente
+# <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>Utilizzo di tipi definiti dall'utente - definizione di tabelle e colonne UDT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Dopo che l'assembly contenente il tipo definito dall'utente (UDT) è stata registrata definizione un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, e può essere utilizzato in una definizione di colonna.  
+  Una volta che l'assembly contenente il tipo definito dall'utente (UDT) è stata registrata definizione una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, può essere utilizzato in una definizione di colonna.  
   
 ## <a name="creating-tables-with-udts"></a>Creazione di tabelle con tipo definito dall'utente  
- Per la creazione di una colonna con tipo definito dall'utente in una tabella non è necessaria una sintassi speciale. È possibile utilizzare il nome del tipo definito dall'utente in una definizione di colonna come se fosse uno dei tipi di dati intrinseci di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CREATE TABLE seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione crea una tabella denominata **punti**, con una colonna denominata **ID,** che è definita come un **int** colonna identity e chiave primaria per la tabella. La seconda colonna è denominata **PointValue**, con un tipo di dati **punto**. Il nome dello schema utilizzato in questo esempio viene **dbo**. Si noti che per specificare un nome di schema è necessario disporre delle autorizzazioni appropriate. Se si omette il nome dello schema, viene utilizzato lo schema predefinito per l'utente del database.  
+ Per la creazione di una colonna con tipo definito dall'utente in una tabella non è necessaria una sintassi speciale. È possibile utilizzare il nome del tipo definito dall'utente in una definizione di colonna come se fosse uno dei tipi di dati intrinseci di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CREATE TABLE seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione crea una tabella denominata **punti**, con una colonna denominata **ID** che viene definito come un **int** colonna identity e il chiave primaria per la tabella. La seconda colonna è denominata **PointValue**, con un tipo di dati **punto**. Il nome dello schema usato in questo esempio viene **dbo**. Si noti che per specificare un nome di schema è necessario disporre delle autorizzazioni appropriate. Se si omette il nome dello schema, viene utilizzato lo schema predefinito per l'utente del database.  
   
 ```  
 CREATE TABLE dbo.Points   

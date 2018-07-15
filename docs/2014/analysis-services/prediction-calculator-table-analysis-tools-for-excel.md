@@ -1,5 +1,5 @@
 ---
-title: Calcolo stime (strumenti di analisi tabelle per Excel) | Documenti Microsoft
+title: Calcolo stime (strumenti di analisi tabelle per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model, regression
 - Table Analysis tools
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - prediction calculator
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac962304d0870c3f0882a02a0a97eb3f266aaa9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fde8a692652cbe166eaf2075a3cd0da5e17a7d6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301191"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Calcolo stime (Strumenti di analisi tabelle per Excel)
   ![Strumento calcolo stime](media/tat-predcal.gif "strumento calcolo stime")  
   
- Il **calcolo stime** strumento consente di creare una scorecard che può essere utilizzata per analizzare i nuovi dati e valutare le opzioni o esiste il rischio. Ad esempio, se si dispone di dati cronologici e demografici sui clienti, il **calcolo stime** strumento può aiutare con due attività fondamentali:  
+ Il **calcolo stime** lo strumento consente di creare una scorecard che può essere utilizzata per analizzare i nuovi dati e valutare le opzioni o rischio. Ad esempio, se sono disponibili dati cronologici e demografici sui clienti, il **calcolo stime** degli strumenti utili per due attività fondamentali:  
   
 -   Generazione di un'analisi sottostante dei dati demografici, del comportamento di acquisto e di diversi altri fattori.  
   
@@ -44,40 +44,40 @@ ms.locfileid: "36069937"
   
 1.  Aprire una tabella di Excel contenente i dati che si desidera analizzare.  
   
-2.  Fare clic su **calcolo stime** sul **Analizza** scheda.  
+2.  Fare clic su **calcolo stime** nel **Analizza** scheda.  
   
-3.  Nel **calcolo stime** della finestra di dialogo per la destinazione, scegliere la colonna che si desidera stimare, ad esempio il comportamento di acquisto.  
+3.  Nel **calcolo stime** nella finestra di dialogo per la destinazione, scegliere la colonna che si desidera stimare, ad esempio comportamento di acquisto.  
   
-4.  Specificare il valore di destinazione. Se il valore è numerico, utilizzare l'opzione **nell'intervallo**, quindi digitare i valori minimo e massimi per l'intervallo desiderato. Se il valore è discreto, selezionare il **esattamente** opzione e quindi selezionare il valore nell'elenco a discesa.  
+4.  Specificare il valore di destinazione. Se il valore è numerico, seleziona l'ozione **nell'intervallo**, quindi digitare i valori minimi e massimo per l'intervallo desiderato. Se il valore è discreto, selezionare la **esattamente** opzione e quindi selezionare il valore nell'elenco a discesa.  
   
-5.  Fare clic su **Seleziona colonne da utilizzare per l'analisi**.  
+5.  Fare clic su **scegliere le colonne da utilizzare per l'analisi**.  
   
 6.  Nel **selezione avanzata colonne** finestra di dialogo, selezionare le colonne contenenti informazioni utili. Rimuovere eventuali colonne non rilevanti per l'analisi. Fare clic su **OK**.  
   
      Per evitare di distorcere i risultati, rimuovere anche le colonne contenenti informazioni duplicate. Se, ad esempio, sono presenti una colonna Income contenente dati numerici e una colonna Income Group contenente le etichette High, Medium e Low, non includere entrambe le colonne nello stesso modello. Creare invece un modello separato per ogni colonna.  
   
-7.  Nel **opzioni di Output** sezione, selezionare **calcolo operativo** per creare l'analisi e la scorecard in una cartella di lavoro di Excel. Selezionare **stampa Calcolatrice** per creare l'analisi e generare un report che può essere stampato e utilizzato per il punteggio manualmente.  
+7.  Nel **opzioni di Output** sezione, selezionare **calcolo operativo** per creare l'analisi e la scorecard in una cartella di lavoro di Excel. Selezionare **calcolatrice stampa** per creare l'analisi e anche generare un report che può essere stampato e utilizzato per la classificazione manuale.  
   
 8.  Fare clic su **Esegui**.  
   
      Tramite lo strumento vengono creati nuovi fogli di lavoro contenenti i report e le scorecard.  
   
 ### <a name="requirements"></a>Requisiti  
- Il **calcolo stime** strumento utilizza l'algoritmo Microsoft Logistic Regression, che può essere utilizzata con valori discreti, nonché dati numerici discretizzati e continui.  
+ Il **calcolo stime** strumento utilizza l'algoritmo Microsoft Logistic Regression, che possono essere usati con i valori discreti, nonché dati numerici discretizzati e continui.  
   
 ## <a name="understanding-the-scoring-reports"></a>Informazioni sui report per l'assegnazione dei punteggi  
  Se si selezionano entrambe le opzioni di output, tramite lo strumento Calcolo stime vengono creati nella cartella di lavoro corrente i tre nuovi fogli di lavoro seguenti:  
   
--   Un **Report di stima**che contiene i risultati dell'analisi, con tabelle interattive e grafici che consentono di verificare le interazioni e i profitti.  
+-   Oggetto **Report di stima**che contiene i risultati dell'analisi, con le tabelle interattive e grafici che consentono di sperimentare le interazioni e i profitti.  
   
--   Un oggetto interattivo **calcolo stime** che facilita la creazione di punteggi.  
+-   Un oggetto interattivo **calcolo stime** che consente di creare punteggi.  
   
--   Un **calcolo stampabile** con istruzioni e coefficienti da utilizzare nell'assegnazione dei punteggi.  
+-   Oggetto **calcolo stampabile** con istruzioni e coefficienti da utilizzare nell'assegnazione dei punteggi.  
   
 -   In questa sezione vengono descritte le informazioni incluse in ogni report e viene illustrato come utilizzare le varie opzioni dei report.  
   
 ### <a name="prediction-report-with-graphs"></a>Report di stima con grafici  
- Il primo report di stima è intitolato **Report calcolo stime per il \<lo stato di destinazione > di \<targetattribute >**. Questo report contiene una tabella di fattori derivati dall'analisi, insieme agli strumenti che consentono di valutare l'impatto finanziario di una determinata analisi.  
+ Il titolo è il primo report di stima **Report calcolo stime per il \<stato destinazione > dei \<attributo di destinazione >**. Questo report contiene una tabella di fattori derivati dall'analisi, insieme agli strumenti che consentono di valutare l'impatto finanziario di una determinata analisi.  
   
 #### <a name="table-for-specifying-costs-and-profits"></a>Tabella per la specifica di costi e profitti  
  Il primo strumento di questo report, che si trova in alto a sinistra nel report, è una tabella in cui è possibile specificare i costi e i profitti associati alla stima corretta e non corretta di un valore.  Questi costi e profitti sono necessari per calcolare il valore di soglia ottimale per il punteggio per lo strumento di calcolo.  
@@ -92,7 +92,7 @@ ms.locfileid: "36069937"
 #### <a name="chart-for-viewing-maximum-profit"></a>Grafico per la visualizzazione del profitto massimo  
  Man mano che si immettono i valori nella tabella, i grafici correlati vengono aggiornati automaticamente per indicare il punto migliore per massimizzare il profitto in base al modello corrente. Nel grafico a linee a destra di questa tabella è visualizzato il profitto per diversi valori di soglia per il punteggio. Il profitto viene stimato utilizzando le cifre relative a profitto e costo digitate nella tabella, in base alle stime e alle probabilità del modello.  
   
- Ad esempio, se nella tabella di sinistra superiore, la cella per **valore di soglia suggerito per massimizzare i profitti** contiene il valore 500, il grafico sul lato destro mostrerà 500 come punto più elevato nel grafico a linee. Questo valore 500 significa che per massimizzare i profitti è necessario utilizzare le prime 500 indicazioni del modello di data mining, ordinate in base alla probabilità.  
+ Ad esempio, se nella tabella di sinistra superiore, la cella per la finestra **valore di soglia suggerito per massimizzare i profitti** Mostra il valore 500, il grafico sul lato destro verrà visualizzato 500 come il punto più alto nel grafico a linee. Questo valore 500 significa che per massimizzare i profitti è necessario utilizzare le prime 500 indicazioni del modello di data mining, ordinate in base alla probabilità.  
   
 #### <a name="table-listing-scores-for-each-attribute-and-value"></a>Tabella con i punteggi per ogni attributo e valore  
  La tabella in basso a sinistra nel report mostra una suddivisione dettagliata dei valori rilevati e indica in che modo ogni valore influisce sul risultato. Non è possibile modificare i valori in questa tabella, che sono visualizzati solo per semplificare la comprensione della stima.  
@@ -124,7 +124,7 @@ ms.locfileid: "36069937"
  Anche se, ad esempio, il primo grafico suggerisce che rivolgendosi ai primi 500 clienti stimati dal modello è possibile ottenere il massimo profitto, dopo aver analizzato il secondo grafico è possibile stabilire che i costi da sostenere rivolgendosi ai clienti errati sono troppo elevati e decidere pertanto di limitare la campagna di marketing ai primi 400 clienti.  
   
 ### <a name="interactive-prediction-calculator"></a>Calcolo stime interattivo  
- Il secondo foglio di lavoro creato dallo strumento calcolo stime è denominato **calcolo stime per il \<lo stato di destinazione > di \<targetattribute >**. Si tratta di un foglio di lavoro interattivo che è possibile utilizzare per calcolare i singoli punteggi. Poiché in questo foglio di lavoro vengono utilizzati modelli e statistiche archiviati nel modello, è possibile provare a utilizzare valori diversi e vedere in che modo questi influiscono sul punteggio stimato. Anche questo report è costituito da due sezioni, una interattiva e una fornita come riferimento.  
+ Il secondo foglio di lavoro creato dallo strumento calcolo stime è denominato **calcolo stime per il \<stato destinazione > dei \<attributo di destinazione >**. Si tratta di un foglio di lavoro interattivo che è possibile utilizzare per calcolare i singoli punteggi. Poiché in questo foglio di lavoro vengono utilizzati modelli e statistiche archiviati nel modello, è possibile provare a utilizzare valori diversi e vedere in che modo questi influiscono sul punteggio stimato. Anche questo report è costituito da due sezioni, una interattiva e una fornita come riferimento.  
   
 #### <a name="first-table"></a>Prima tabella  
  È possibile selezionare o digitare un nuovo valore nel **valore** colonna della tabella per vedere come la modifica del valore influisce sul punteggio.  
@@ -143,26 +143,26 @@ ms.locfileid: "36069937"
 |Cars|2|50|  
 |Commute Distance|0-1 Miles|99|  
 |Region|North America|0|  
-|Age|37 - 46|5|  
+|Age|37 - 46 per cui|5|  
 |Total||491|  
 |Prediction for 'Yes'||FALSE|  
   
- Quando si digita il nuovo valore, il punteggio visualizzato nella cella Prediction for Yes viene modificato in TRUE e il **impatto relativo** punteggi per i vari attributi sono anch'esso aggiornati.  
+ Quando si digita il nuovo valore, il punteggio visualizzato nella cella Prediction for Yes viene modificato in TRUE e il **impatto relativo** assegna un punteggio per i vari attributi sono anch'esso aggiornati.  
   
 > [!NOTE]  
->  Anche se si modifica un solo valore, ad esempio il numero di auto, i valori e gli impatti degli altri attributi possono cambiare. Questo avviene in quanto i modelli di data mining spesso consentono di individuare relazioni complesse tra i dati e la modifica di una variabile qualsiasi può avere effetti imprevisti. Per questo motivo, è consigliabile utilizzare lo strumento Calcolo stime interattivo per provare valori diversi o esplorare il modello di data mining per comprendere meglio le interazioni. Per altre informazioni, vedere [Esplora modello](prediction-calculator-table-analysis-tools-for-excel.md).  
+>  Anche se si modifica un solo valore, ad esempio il numero di auto, i valori e gli impatti degli altri attributi possono cambiare. Questo avviene in quanto i modelli di data mining spesso consentono di individuare relazioni complesse tra i dati e la modifica di una variabile qualsiasi può avere effetti imprevisti. Per questo motivo, è consigliabile utilizzare lo strumento Calcolo stime interattivo per provare valori diversi o esplorare il modello di data mining per comprendere meglio le interazioni. Per altre informazioni, vedere [esplorare modelli](prediction-calculator-table-analysis-tools-for-excel.md).  
   
 #### <a name="score-breakdown"></a>Suddivisione punteggio  
  In questa tabella sono indicati i singoli punteggi per ogni possibile stato delle colonne di input e l'impatto relativo del punteggio sui risultati. Questa tabella è statica e serve solo come riferimento.  
   
 ### <a name="printable-prediction-calculator"></a>Calcolo stime stampabile  
- Il terzo foglio di lavoro creato dallo strumento calcolo stime è denominato **PrintablePrediction calcolo per il \<lo stato di destinazione > di \<targetattribute >**. Questa scorecard può essere stampata e utilizzata per calcolare manualmente i punteggi quando non si è al computer.  
+ Il terzo foglio di lavoro creato dallo strumento calcolo stime è denominato **PrintablePrediction calcolatore per le \<stato destinazione > dei \<attributo di destinazione >**. Questa scorecard può essere stampata e utilizzata per calcolare manualmente i punteggi quando non si è al computer.  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>Per stampare e utilizzare il report per l'assegnazione dei punteggi generato da Calcolo stime  
   
-1.  Fare clic sulla scheda intitolato **stime stampabile per \<attributo >**.  
+1.  Fare clic sulla scheda denominata **calcolo stime stampabile per \<attributo >**.  
   
-2.  Nel menu del File di Excel, selezionare **anteprima di stampa**.  
+2.  Nel menu File di Excel, selezionare **anteprima di stampa**.  
   
 3.  Modificare l'orientamento della pagina, i margini e altre opzioni di stampa fino a posizionare la scorecard nella pagina nel modo desiderato.  
   
@@ -174,12 +174,12 @@ ms.locfileid: "36069937"
   
 6.  Inserire il maggior numero di attributi possibile per garantire l'accuratezza.  
   
-7.  Calcolare la somma dei punteggi per ogni attributo e immettere il numero nella **totale** riga.  
+7.  Calcolare la somma dei punteggi per ogni attributo e immettere il numero dei **totale** riga.  
   
-8.  Convertire il punteggio in un risultato stimato utilizzando i criteri stampati sul foglio immediatamente dopo il **totale** riga.  
+8.  Convertire il punteggio a un risultato stimato utilizzando i criteri stampati sul foglio immediatamente dopo il **totale** riga.  
   
 ## <a name="related-tools"></a>Strumenti correlati  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce l'algoritmo Microsoft Logistic Regression per l'utilizzo con questo tipo di analisi. Se ha già familiarità con la regressione logistica, è possibile creare facilmente modelli di regressione logistica usando il **avanzate** opzioni di Client di Data Mining per Excel. Per altre informazioni, vedere [modellazione avanzata &#40;aggiuntivi di Data Mining per Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Per ulteriori informazioni sulle opzioni e i parametri per i modelli di regressione logistica, vedere l'argomento "Algoritmo Microsoft Logistic Regression" nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentazione Online.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce l'algoritmo Microsoft Logistic Regression per l'utilizzo con questo tipo di analisi. Se si ha già familiarità con regressione logistica, è possibile creare facilmente modelli di regressione logistica usando il **avanzate** opzione dei Client di Data Mining per Excel. Per altre informazioni, vedere [modellazione avanzata &#40;aggiuntivi di Data Mining per Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Per altre informazioni sulle opzioni e i parametri per i modelli di regressione logistica, vedere l'argomento "Algoritmo Microsoft Logistic Regression" nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentazione Online.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)  

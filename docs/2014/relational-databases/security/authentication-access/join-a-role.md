@@ -5,10 +5,9 @@ ms.date: 07/14/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.MEMBERSHIP.F1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d01aa38a22025763f824b67073319ceaeacbdd5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 61557c9cbc9d11a23af9bfc0beda9ab84b319eca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214941"
 ---
 # <a name="join-a-role"></a>aggiungere un ruolo
   In questo argomento si descrive come assegnare ruoli agli account di accesso e agli utenti di database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Utilizzare i ruoli disponibili in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per gestire in modo efficace le autorizzazioni. Assegnare autorizzazioni ai ruoli, quindi aggiungere e rimuovere utenti e account di accesso ai ruoli. Utilizzando i ruoli, non è necessario gestire singolarmente le autorizzazioni per ciascun utente.  
@@ -66,7 +65,7 @@ ms.locfileid: "36070020"
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Permissions  
- È necessario `ALTER ANY ROLE` autorizzazione per il database `ALTER` l'autorizzazione per il ruolo o l'appartenenza **db_securityadmin**.  
+ Richiede `ALTER ANY ROLE` autorizzazione per il database `ALTER` l'autorizzazione per il ruolo o l'appartenenza **db_securityadmin**.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   

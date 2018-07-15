@@ -1,5 +1,5 @@
 ---
-title: Editor origine ADO NET (pagina colonne) | Documenti Microsoft
+title: Editor origine ADO NET (pagina colonne) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.columns.f1
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 791d2e660c3672e63b3fea12ad28afcf46e9ffa6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fc9021085fd238ac2c86fbe73d7db372540cabd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287687"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>Editor origine ADO NET (pagina Colonne)
   Usare la pagina **Colonne** della finestra di dialogo **Editor origine ADO NET** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  
@@ -48,7 +48,7 @@ ms.locfileid: "36166116"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor origine ADO NET &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [Editor origine ADO NET &#40;pagina di Output di errore&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Editor origine ADO NET &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Gestione connessione ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

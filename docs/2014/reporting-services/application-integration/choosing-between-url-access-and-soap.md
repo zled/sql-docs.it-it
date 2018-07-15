@@ -1,5 +1,5 @@
 ---
-title: Scelta tra accesso con URL e SOAP | Documenti Microsoft
+title: Scelta tra accesso con URL e SOAP | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - Web service [Reporting Services], application integration
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
 caps.latest.revision: 39
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ddeb463427f159717d899f73031306f05fb424e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7d8d60cd6b91e93dbf0fcd71e8cc995a405af88b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280537"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>Scelta tra accesso con URL e SOAP
   L'integrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni personalizzate può risultare complessa. La complessità non è tuttavia dovuta al modello di programmazione o alle API, ma alle numerose modalità di integrazione disponibili. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato progettato interamente come piattaforma di sviluppo e, in quanto tale, offre flessibilità di programmazione. Alla flessibilità è associata l'esigenza di prendere decisioni importanti relativamente all'integrazione delle funzionalità di navigazione e gestione dei report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni aziendali esistenti.  
   
- ![Scenari di programmazione di Reporting Services](../../../2014/reporting-services/media/bk-ext-04.gif "Reporting Services, scenari di programmazione")  
+ ![Scenari di programmazione di Reporting Services](../../../2014/reporting-services/media/bk-ext-04.gif "Reporting Services, gli scenari di programmazione")  
 La programmazione in Reporting Services supporta un'ampia gamma di scenari.  
   
  È possibile integrare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni personalizzate in due modi, ovvero tramite l'accesso con URL e l'API SOAP di Reporting Services. La modalità da utilizzare dipende da diversi fattori. In alcuni casi, l'integrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni aziendali personalizzate richiede l'utilizzo sia dell'accesso con URL che di SOAP. È necessario porsi le domande seguenti:  
@@ -46,7 +46,7 @@ La programmazione in Reporting Services supporta un'ampia gamma di scenari.
   
  Per altre informazioni sulla barra degli strumenti dei report, vedere [Visualizzatore HTML e barra degli strumenti dei report](../html-viewer-and-the-report-toolbar.md).  
   
- Per ulteriori informazioni sull'accesso tramite URL, vedere [l'accesso con URL &#40;SSRS&#41;](../url-access-ssrs.md).  
+ Per altre informazioni sull'accesso tramite URL, vedere [l'accesso con URL &#40;SSRS&#41;](../url-access-ssrs.md).  
   
  L'accesso con URL è utile per la visualizzazione dei report, ma non fornisce le funzionalità di gestione degli spazi dei nomi e dei report che possono essere essenziali per qualsiasi scenario aziendale di creazione di report. In questo caso, è consigliabile utilizzare le ampie e ricche funzionalità dell'API SOAP di Reporting Services. Con l'API SOAP è possibile gestire e distribuire report, creare pianificazioni, configurare le proprietà del server, gestire lo spazio dei nomi del server di report, creare sottoscrizioni e altro ancora. L'API SOAP espone il set completo di funzionalità di gestione in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. L'API SOAP può consentire inoltre la visualizzazione e la navigazione dei report tramite il metodo <xref:ReportExecution2005.ReportExecutionService.Render%2A> dell'API. La visualizzazione dei report tramite l'API SOAP non consente tuttavia l'abilitazione delle funzionalità di visualizzazione predefinite della barra degli strumenti dei report, né la gestione automatica dell'interattività dei report fornita dall'accesso con URL.  
   

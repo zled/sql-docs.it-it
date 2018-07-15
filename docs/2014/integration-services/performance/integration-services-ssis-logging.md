@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
 - Windows Event log provider [Integration Services]
@@ -27,13 +27,13 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9611d78d6b94038511b29577aca5aaefb36366d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2656998d20bec2d0133a7158a3695f4163943181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291047"
 ---
 # <a name="integration-services-ssis-logging"></a>Registrazione di Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili provider di log che è possibile utilizzare per implementare la registrazione in pacchetti, contenitori e attività. Tramite la registrazione è possibile acquisire informazioni di run-time su un pacchetto, che consentono di controllare e risolvere i problemi del pacchetto ogni volta che viene eseguito. Nel log è ad esempio possibile acquisire il nome dell'operatore che ha eseguito il pacchetto, nonché la data e l'ora di inizio e di fine dell'esecuzione.  
@@ -207,18 +207,18 @@ ms.locfileid: "36158017"
 ## <a name="related-tasks"></a>Related Tasks  
  Nell'elenco seguente sono contenuti collegamenti ad argomenti che illustrano come eseguire attività correlate alla funzionalità di registrazione.  
   
--   [Finestra Configura log SSIS finestra di dialogo](../configure-ssis-logs-dialog-box.md)  
+-   [Finestra di dialogo Configura log SSIS](../configure-ssis-logs-dialog-box.md)  
   
--   [Abilitare la registrazione in SQL Server Data Tools di pacchetti](../enable-package-logging-in-sql-server-data-tools.md)  
+-   [Abilitare la registrazione di pacchetti in SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md)  
   
--   [Abilitare la registrazione per l'esecuzione del pacchetto nel Server SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md)  
+-   [Abilitare la registrazione per l'esecuzione di pacchetti nel server SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md)  
   
--   [Visualizzare le voci di Log nella finestra Registra eventi](../view-log-entries-in-the-log-events-window.md)  
+-   [Visualizzare le voci di log nella finestra Registra eventi](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  [Strumento DTLoggedExec per la registrazione completa e dettagliata (progetto CodePlex)](http://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare le voci di Log nella finestra Registra eventi](../view-log-entries-in-the-log-events-window.md)  
+ [Visualizzare le voci di log nella finestra Registra eventi](../view-log-entries-in-the-log-events-window.md)  
   
   

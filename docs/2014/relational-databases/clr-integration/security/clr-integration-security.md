@@ -1,13 +1,11 @@
 ---
-title: Sicurezza dell'integrazione con CLR | Documenti Microsoft
+title: Sicurezza dell'integrazione CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - database objects [CLR integration], security
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 689d425c2f13a442b1d8bbd5515939135f44fa0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 5037f3bb0d77fd25ad17b761f8c7943aef61200c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064269"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349593"
 ---
 # <a name="clr-integration-security"></a>Sicurezza per l'integrazione con CLR
-  Il modello di sicurezza del [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] common language runtime (CLR) gestisce e protegge l'accesso tra diversi tipi di oggetti CLR e non CLR in esecuzione all'interno di [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] istruzione o un altro oggetto CLR in esecuzione sul server. Le chiamate tra gli oggetti vengono definite collegamenti. I tipi di controllo della sicurezza eseguiti su questi oggetti dipendono dai tipi di collegamento utilizzati.  
+  Il modello di sicurezza del [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] common language runtime (CLR) gestisce e protegge l'accesso tra diversi tipi di oggetti CLR e non CLR in esecuzione in [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] istruzione o un altro oggetto CLR in esecuzione sul server. Le chiamate tra gli oggetti vengono definite collegamenti. I tipi di controllo della sicurezza eseguiti su questi oggetti dipendono dai tipi di collegamento utilizzati.  
   
  Il modello di sicurezza dell'integrazione con CLR presenta gli obiettivi seguenti:  
   
@@ -50,16 +48,16 @@ ms.locfileid: "36064269"
  [Attributi di protezione host e programmazione dell'integrazione con CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Vengono fornite informazioni sui valori di attributi di protezione host che non sono consentiti negli assembly SAFE e EXTERNAL_ACCESS.  
   
- [Collegamenti nella sicurezza dell'integrazione con CLR](../../../database-engine/dev-guide/links-in-clr-integration-security.md)  
+ [Collegamenti nella sicurezza per l'integrazione con CLR](../../../database-engine/dev-guide/links-in-clr-integration-security.md)  
  Viene illustrato come parti del codice utente possano chiamarsi reciprocamente in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Rappresentazione e la sicurezza dell'integrazione con CLR](../../../database-engine/dev-guide/impersonation-and-clr-integration-security.md)  
+ [Rappresentazione e sicurezza per l'integrazione con CLR](../../../database-engine/dev-guide/impersonation-and-clr-integration-security.md)  
  Viene illustrato con il codice gestito acceda a risorse esterne utilizzando la rappresentazione.  
   
- [Chiamanti consentendo parzialmente attendibili](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
+ [Accettazione di chiamanti parzialmente attendibili](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
  Vengono illustrati i problemi che si verificano quando un metodo gestito richiama un metodo di una classe contenuta in un altro assembly.  
   
- [Domini applicazione e sicurezza dell'integrazione con CLR](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  
+ [Domini applicazione e sicurezza per l'integrazione con CLR](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  
  Viene descritto come caricare gli assembly nei domini applicazione.  
   
 ## <a name="see-also"></a>Vedere anche  

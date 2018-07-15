@@ -16,15 +16,15 @@ helpviewer_keywords:
 - custom assemblies [Reporting Services], about custom assemblies
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
 caps.latest.revision: 31
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ceeed9cb6688ca488e3726c5419f4cffa443e1df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ef7579e104fecc5d73e35398f9e54b7b9d8bd7e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301741"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>Utilizzo di assembly personalizzati con i report
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile scrivere codice personalizzato per i valori, gli stili e la formattazione degli elementi dei report. È ad esempio possibile utilizzare il codice personalizzato per formattare le valute in base alle impostazioni locali, per contrassegnare determinati valori con una formattazione speciale o per applicare altre regole di business in uso nella società. Un metodo per includere questo codice nei report consiste nel creare un assembly di codice personalizzato usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], a cui sia possibile fare riferimento dai file di definizione del report. Il server chiama le funzioni degli assembly personalizzati durante l'esecuzione di un report. Gli assembly personalizzati possono essere utilizzati per recuperare funzioni specifiche che si intende utilizzare nei report.  

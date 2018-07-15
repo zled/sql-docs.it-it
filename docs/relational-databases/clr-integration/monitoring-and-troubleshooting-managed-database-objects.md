@@ -1,12 +1,11 @@
 ---
-title: Monitoraggio e risoluzione dei problemi di oggetti di Database gestiti | Documenti Microsoft
+title: Monitoraggio e risoluzione dei problemi di oggetti di Database gestiti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
@@ -17,12 +16,12 @@ caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 741a863617109c6193fe45e0fe9da94136890e96
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 895d99a7f693443a11340157be96a68b8d107d16
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702762"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355593"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Monitoraggio e risoluzione dei problemi relativi agli oggetti di database gestiti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

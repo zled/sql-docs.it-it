@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], PowerShell
 - scripts [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 caps.latest.revision: 22
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 02ae3d24f1f9f642876b4314a41bc2823fc8c622
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 15ead723c73da69d9dd8e6f41b1bf5533eb3c313
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284797"
 ---
 # <a name="database-engine-scripting"></a>Script del motore di database
   Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] supporta l'ambiente di scripting di [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell per gestire le istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e gli oggetti nelle istanze. È anche possibile compilare ed eseguire query nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] che contengono [!INCLUDE[tsql](../../includes/tsql-md.md)] e XQuery in ambienti molto simili agli ambienti di scripting.  
@@ -34,7 +34,7 @@ ms.locfileid: "36167829"
   
 -   Un provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che espone le gerarchie dei modelli SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) come percorsi di PowerShell simili ai percorsi del file system. È possibile utilizzare le classi del modello SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) per gestire gli oggetti rappresentati in ciascun nodo del percorso.  
   
--   Un set di cmdlet di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che implementa i comandi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Uno dei cmdlet è **Invoke-Sqlcmd**, Ciò consente di eseguire [!INCLUDE[ssDE](../../includes/ssde-md.md)] gli script da eseguire con delle Query il `sqlcmd` utilità.  
+-   Un set di cmdlet di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che implementa i comandi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Uno dei cmdlet è **Invoke-Sqlcmd**, Ciò consente di eseguire [!INCLUDE[ssDE](../../includes/ssde-md.md)] gli script da eseguire con delle Query di `sqlcmd` utilità.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include le caratteristiche seguenti per l'esecuzione di PowerShell:  
   
@@ -51,19 +51,19 @@ ms.locfileid: "36167829"
   
 -   Istruzioni del linguaggio XQuery.  
   
--   Comandi e variabili dal `sqlcmd` utilità.  
+-   I comandi e variabili di `sqlcmd` utilità.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre tre ambienti per la compilazione e l'esecuzione di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] :  
   
 -   Le query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e il relativo debug possono essere eseguiti in modo interattivo nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile codificare ed eseguire il debug di varie istruzioni in una sessione, quindi salvare tutte le istruzioni in un solo file script.  
   
--   Il `sqlcmd` utilità della riga di comando consente di eseguire in modo interattivo [!INCLUDE[ssDE](../../includes/ssde-md.md)] query e anche esecuzione esistente [!INCLUDE[ssDE](../../includes/ssde-md.md)] i file script delle query.  
+-   Il `sqlcmd` utilità della riga di comando consente di eseguire in modo interattivo [!INCLUDE[ssDE](../../includes/ssde-md.md)] query e anche eseguire esistente [!INCLUDE[ssDE](../../includes/ssde-md.md)] i file script delle query.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] In genere, i file script delle query del [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vengono codificati in modo interattivo usando l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Il file può essere aperto in un secondo momento in uno degli ambienti seguenti:  
   
 -   Usare il menu di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **File**/**Apri** per aprire il file in una nuova finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
--   Utilizzo di **-i * * * input_file* parametro per eseguire il file con il `sqlcmd` utilità.  
+-   Uso di **-i * * * input_file* parametro per eseguire il file con il `sqlcmd` utilità.  
   
 -   Usare il parametro **-QueryFromFile** per eseguire il file con il cmdlet **Invoke-Sqlcmd** negli script di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell.  
   

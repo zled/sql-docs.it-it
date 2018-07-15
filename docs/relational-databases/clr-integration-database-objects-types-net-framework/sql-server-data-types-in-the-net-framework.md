@@ -1,11 +1,11 @@
 ---
-title: Tipi di dati SQL Server in .NET Framework | Documenti Microsoft
+title: Tipi di dati SQL Server in .NET Framework | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,16 +22,16 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fe3a5c99e2c1e9bf569ecdbb1ab31d683d340206
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ed5a1608807d1a05638ee1854ff6676c4cdc7db6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702052"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350193"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Tipi di dati di SQL Server in .NET Framework
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Il **SqlTypes** libreria fa parte della libreria di classi base del [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. ed è progettata per fornire tipi di dati con la stessa semantica e la stessa precisione di quelle disponibili nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo argomento viene descritta la nuova semantica per i programmatori di .NET Framework e vengono introdotti i tipi implementati nel **System.Data.SqlTypes** dello spazio dei nomi che sia presenti il **System. Data** libreria.  
+  Il **SqlTypes** libreria fa parte della libreria di classi base del [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. ed è progettata per fornire tipi di dati con la stessa semantica e la stessa precisione di quelle disponibili nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo argomento viene descritta la nuova semantica per i programmatori di .NET Framework e sono stati introdotti i tipi implementati nel **System.Data.SqlTypes** dello spazio dei nomi incluso nel **System. Data** libreria.  
   
  Nella tabella seguente sono elencati gli argomenti inclusi in questa sezione.  
   

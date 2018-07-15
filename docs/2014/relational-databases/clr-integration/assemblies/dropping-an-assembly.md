@@ -1,13 +1,11 @@
 ---
-title: Eliminazione di un Assembly | Documenti Microsoft
+title: Eliminazione di un Assembly | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - dropping assemblies
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3551d0971a90c77135ca3e74b30d3009108646c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 3920b679e017d5d0e4f069dea29ada7ba97bf13b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156932"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354593"
 ---
 # <a name="dropping-an-assembly"></a>Eliminazione di un assembly
   Gli assembly registrati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando l'istruzione CREATE ASSEMBLY possono essere eliminati quando la funzionalità che forniscono non è più necessaria. L'eliminazione di un assembly ne comporta la rimozione insieme a tutti i file associati, ad esempio i file di debug, dal database. Per eliminare un assembly, utilizzare l'istruzione DROP ASSEMBLY con la sintassi seguente:  
@@ -48,7 +46,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Funzioni, stored procedure o trigger che utilizzano variabili o parametri del tipo definito dall'utente (UDT), creati nel database con la clausola WITH SCHEMABINDING.  
   
 ### <a name="finding-udt-dependencies"></a>Ricerca di dipendenze di tipi definiti dall'utente (UDT)  
- È necessario innanzitutto eliminare tutti gli oggetti dipendenti, quindi eseguire l'istruzione DROP TYPE. I seguenti [!INCLUDE[tsql](../../../includes/tsql-md.md)] consente di individuare tutte le colonne e i parametri che utilizzano un tipo definito dall'utente nella query il **AdventureWorks** database.  
+ È necessario innanzitutto eliminare tutti gli oggetti dipendenti, quindi eseguire l'istruzione DROP TYPE. Quanto segue [!INCLUDE[tsql](../../../includes/tsql-md.md)] consente di individuare tutte le colonne e i parametri che utilizzano un tipo definito dall'utente nella query il **AdventureWorks** database.  
   
 ```  
 USE Adventureworks;  
@@ -69,7 +67,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione degli assembly di integrazione con CLR](managing-clr-integration-assemblies.md)   
+ [La gestione degli assembly dell'integrazione CLR](managing-clr-integration-assemblies.md)   
  [Modifica di un Assembly](altering-an-assembly.md)   
  [Creazione di un Assembly](creating-an-assembly.md)   
  [DROP AGGREGATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   

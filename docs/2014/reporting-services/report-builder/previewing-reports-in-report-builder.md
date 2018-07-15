@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0e722f2884b0137b261f8442021199f4cc1cb0ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6bb76e6e17562ae1ed16acba6a63f17d665ca05b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318051"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Anteprima di report in Generatore report
   Durante la creazione di un report, è utile visualizzarne spesso l'anteprima per verificare che il contenuto visualizzato corrisponda a quanto desiderato. Per visualizzare l'anteprima del report, fare clic su **Esegui**. Il report viene visualizzato nella modalità di anteprima.  
@@ -80,7 +80,7 @@ ms.locfileid: "36157672"
  Se un sottoreport utilizzato dal report viene modificato dopo la creazione della sessione di modifica, non sarà possibile visualizzare in anteprima il report. Per visualizzare correttamente in anteprima il report, è necessario salvare il report o fare clic su **Aggiorna** per ottenere dati aggiornati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](../report-data/report-datasets-ssrs.md)   
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Grafici &#40;Generatore report e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9b5c7c1d879b2ffc9cb333bed193af9239996536
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1271756e0a8caf036872e03aa1f55fa1da259860
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313135"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Abilitare e disabilitare la stampa sul lato client per Reporting Services
   Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] controllo ActiveX **RSClientPrint**, consente la stampa sul lato client per i report visualizzati in un browser. Tramite il controllo viene visualizzata una finestra di dialogo di stampa personalizzata che supporta funzionalità comuni ad altre finestre di questo tipo. Tra le funzionalità sono incluse l'anteprima di stampa, le selezioni delle pagine per specificare pagine e intervalli particolari, i margini di pagina e l'orientamento. Sebbene la funzionalità di stampa sul alto client sia abilitata per impostazione predefinita, è possibile disabilitarla per evitare che venga utilizzata.  
@@ -28,11 +28,11 @@ ms.locfileid: "36158145"
 >  Per il download dei controlli ActiveX, sono necessarie le autorizzazioni di amministratore.  
   
 ## <a name="downloading-the-activex-control"></a>Download del controllo ActiveX  
- Ogni utente che desidera utilizzare la caratteristica di stampa deve scaricare e installare il controllo ActiveX che consente di stampare sul client. La prima volta che un utente fa clic il **stampante** icona sulla barra degli strumenti report, il controllo viene scaricato nel computer di Microsoft ActiveX. Dopo il download del controllo, il **Print** consente di visualizzare la finestra di dialogo ogni volta che l'utente fa clic il **stampante** icona.  
+ Ogni utente che desidera utilizzare la caratteristica di stampa deve scaricare e installare il controllo ActiveX che consente di stampare sul client. La prima volta che un utente fa clic il **stampante** icona sulla barra degli strumenti report, il controllo viene scaricato nel computer Microsoft ActiveX. Dopo il download del controllo, il **Print** consente di visualizzare la finestra di dialogo ogni volta che l'utente fa clic il **stampante** icona.  
   
  A seconda delle impostazioni del browser, è possibile che venga richiesto di installare il controllo, che venga impedito di farlo oppure che il controllo venga installato in modo trasparente in background.  
   
- Per [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, le impostazioni che influiscono sul download del controllo ActiveX e installazione sono specificate tramite il **ActiveX controlli e plug-in** nodo il **impostazioni di sicurezza** pagina per l'area di contenuto Web. Le impostazioni seguenti determinano se gli utenti possono scaricare ed eseguire il controllo di stampa, in base alle preferenze di sicurezza dell'area Web:  
+ Per [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, le impostazioni che influiscono sull'installazione e download del controllo ActiveX sono specificate tramite il **ActiveX controlli e plug-in** nodo la **le impostazioni di sicurezza** pagina l'area di contenuto Web. Le impostazioni seguenti determinano se gli utenti possono scaricare ed eseguire il controllo di stampa, in base alle preferenze di sicurezza dell'area Web:  
   
 -   Scarica controlli ActiveX con firma elettronica.  
   
@@ -40,13 +40,13 @@ ms.locfileid: "36158145"
   
 -   Esegui controlli e plug-in ActiveX.  
   
- Gli utenti che desiderano utilizzare **RSClientPrint** per eseguire la stampa lato client devono abilitare le opzioni seguenti:  
+ Gli utenti che desiderano utilizzare **RSClientPrint** per eseguire la stampa sul lato client, è necessario abilitare le opzioni seguenti:  
   
 -   **Scarica controlli ActiveX con firma** e **Esegui Script controlli ActiveX contrassegnati come sicuri per lo scripting** per scopi di installazione.  
   
--   **Esegui controlli ActiveX e plug-in** per operazioni di stampate in corso.  
+-   **Eseguire i controlli ActiveX e plug-in** per operazioni di stampa in corso.  
   
- Il **RSClientPrint** controllo ActiveX è firmato, ovvero contiene un certificato digitale valido da [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ Il **RSClientPrint** controllo ActiveX è firmato, ovvero contiene un certificato digitale valido [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 ## <a name="enabling-and-disabling-client-side-printing"></a>Abilitazione e disabilitazione della stampa sul lato client  
  Gli amministratori di server di report hanno la possibilità di disabilitare la caratteristica di stampa impostando la proprietà di sistema di server di report **EnableClientPrinting** a `false`. Questa impostazione disabilita la stampa sul lato client per tutti i report gestiti dal server. Per impostazione predefinita **EnableClientPrinting** è impostata su `true`. È possibile disabilitare la stampa sul lato client nei modi seguenti:  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tuning databases [SQL Server]
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7ad466c0792e3666f7407f6cb120ad932ad1e936
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ed2001ff159681f78a9287be8e1931ee5d432948
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282287"
 ---
 # <a name="launching-database-engine-tuning-advisor"></a>Avvio dello strumento Ottimizzazione guidata motore di database
   Accedere in primo luogo all'interfaccia utente grafica (GUI) dello strumento Ottimizzazione guidata motore di database. Al primo uso, per inizializzare l'applicazione è necessario che lo strumento Ottimizzazione guidata motore di database sia avviato da un membro del ruolo predefinito del server **sysadmin** . Dopo l'inizializzazione i membri del ruolo predefinito del database **db_owner** possono usare lo strumento Ottimizzazione guidata motore di database per ottimizzare i database di cui sono proprietari. Per altre informazioni sull'inizializzazione di Ottimizzazione guidata motore di database, vedere [Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "36156119"
   
  Per impostazione predefinita, la configurazione all'avvio dello strumento Ottimizzazione guidata motore di database è quella illustrata nella figura seguente:  
   
- ![Finestra predefinita Ottimizzazione guidata motore di database](media/defaultdtagui.gif "finestra predefinita di ottimizzazione guidata motore di Database")  
+ ![Finestra predefinita da Ottimizzazione guidata motore di database](media/defaultdtagui.gif "finestra predefinita di ottimizzazione guidata motore di Database")  
   
 > [!NOTE]  
 >  Nella scheda e nella casella **Nome sessione** vengono visualizzati il nome del computer e l'istanza a cui si è connessi. Inoltre, vengono visualizzate la data e l'ora correnti.  
@@ -50,6 +50,6 @@ ms.locfileid: "36156119"
 >  Lo strumento Ottimizzazione guidata motore di database può usare come input file in formato XML quando uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] viene importato dall'editor di query di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Per altre informazioni, vedere la sezione relativa all'avvio dello strumento Ottimizzazione guidata motore di database dall'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Layout e impostazione delle opzioni dello strumento](lesson-1-2-setting-tool-options-and-layout.md)  
+ [Impostazione del layout e delle opzioni dello strumento](lesson-1-2-setting-tool-options-and-layout.md)  
   
   

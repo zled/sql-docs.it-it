@@ -1,5 +1,5 @@
 ---
-title: Configurare SQL Server per l'utilizzo di Soft-NUMA (SQL Server) | Documenti Microsoft
+title: Configurare SQL Server per l'utilizzo di Soft-NUMA (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/12/2016
 ms.prod: sql-server-2014
@@ -8,41 +8,41 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
 - non-uniform memory access
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 827975fcb4c5bbba6253f3b44e1813a6e70f6fcf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 434e569b17fa70b6f6b3f4763e54e08e271dc99b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279559"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Configurare SQL Server per l'utilizzo di Soft-NUMA (SQL Server)
-I processori moderni sono costituiti da multipli a molti core per socket. Ogni socket è solitamente rappresentato come un unico nodo NUMA. Il motore di database di SQL Server suddivide le varie strutture interne e i thread del servizio per nodo NUMA. Con i processori che contengono da 10 a più core per socket, utilizzando software NUMA (soft-NUMA) per suddividere i nodi NUMA hardware in genere aumenta la scalabilità e prestazioni.   
+I processori moderni sono costituiti da multipli a molti core per socket. Ogni socket è solitamente rappresentato come un unico nodo NUMA. Il motore di database di SQL Server suddivide le varie strutture interne e i thread del servizio per nodo NUMA. Con i processori che contiene 10 o più core per socket, l'uso di NUMA (soft-NUMA) per suddividere i nodi NUMA hardware in genere aumenta la scalabilità e prestazioni.   
 
 > [!NOTE]
 > L'architettura soft-NUMA consente di aggiungere processori a caldo.
   
 ## <a name="automatic-soft-numa"></a>Architettura soft-NUMA automatica
 
-A partire da SQL Server 2014 Service Pack 2, ogni volta che il server del motore di database rileva più di 8 processori fisici all'avvio, vengono creati automaticamente nodi soft-NUMA se il flag di traccia 8079 è abilitato come parametro di avvio. Core del processore di Hyper-thread non vengono presi in considerazione per il conteggio dei processori fisici. Quando il numero di processori fisici rilevato è superiore a 8 per ogni socket, il servizio motore di database crea nodi soft-NUMA che idealmente contengono 8 core, può essere tuttavia ridotto a 5 o incrementato a 9 processori logici per nodo. La dimensione del nodo hardware può essere limitata da una maschera di affinità di CPU. Il numero di nodi NUMA non supererà mai il numero massimo di nodi NUMA supportati.
+A partire da SQL Server 2014 Service Pack 2, ogni volta che il server del motore di database rileva più di 8 processori fisici all'avvio, vengono creati automaticamente nodi soft-NUMA se il flag di traccia 8079 è abilitato come parametro di avvio. Memorie centrali del processore e con hyperthreading non vengono presi in considerazione per il conteggio dei processori fisici. Quando il numero di processori fisici rilevato è superiore a 8 per ogni socket, il servizio motore di database crea nodi soft-NUMA che idealmente contengono 8 core, può essere tuttavia ridotto a 5 o incrementato a 9 processori logici per nodo. La dimensione del nodo hardware può essere limitata da una maschera di affinità di CPU. Il numero di nodi NUMA non supererà mai il numero massimo di nodi NUMA supportati.
 
-Senza il flag di traccia, soft-NUMA è disabilitato per impostazione predefinita. È possibile abilitare soft-NUMA tramite il flag di traccia 8079. Per rendere effettiva la modifica del valore di questa impostazione è necessario riavviare il motore di database.
+Senza il flag di traccia, soft-NUMA è disabilitato per impostazione predefinita. È possibile abilitare soft-NUMA usando il flag di traccia 8079. Per rendere effettiva la modifica del valore di questa impostazione è necessario riavviare il motore di database.
 
-La figura seguente mostra il tipo di informazioni riguardanti soft-NUMA che verrà visualizzato nel log degli errori di SQL Server quando SQL Server rilevi nodi NUMA hardware con più di 8 processori logici e, se il flag di traccia 8079 è abilitato.
+La figura seguente illustra il tipo di informazioni riguardanti soft-NUMA che verrà visualizzato nel log degli errori di SQL Server quando SQL Server rilevi nodi NUMA hardware con più di 8 processori logici e se il flag di traccia 8079 è abilitato.
 
 ![Soft-NUMA](./media/soft-numa-sql-server/soft-numa.PNG)
 
 ## <a name="manual-soft-numa"></a>Architettura soft-NUMA manuale
   
-Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'utilizzo di soft-NUMA manuale, è necessario modificare il Registro di sistema per aggiungere una maschera di affinità di configurazione di nodo. La maschera soft-NUMA può essere dichiarata come voce del Registro di sistema binaria, DWORD (esadecimale o decimale) o QWORD (esadecimale o decimale). Per configurare un numero maggiore rispetto alle prime 32 CPU, utilizzare i valori del Registro di sistema QWORD o BINARY. I valori QWORD non possono essere usati nelle versioni precedenti a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. È necessario riavviare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] per configurare soft-NUMA.  
+Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per usare soft-NUMA manuale, è necessario modificare il Registro di sistema per aggiungere una maschera di affinità di configurazione di nodo. La maschera soft-NUMA può essere dichiarata come voce del Registro di sistema binaria, DWORD (esadecimale o decimale) o QWORD (esadecimale o decimale). Per configurare un numero maggiore rispetto alle prime 32 CPU, utilizzare i valori del Registro di sistema QWORD o BINARY. I valori QWORD non possono essere usati nelle versioni precedenti a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. È necessario riavviare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] per configurare soft-NUMA.  
   
 > [!TIP]  
 >  Le CPU sono numerate partendo da 0.  

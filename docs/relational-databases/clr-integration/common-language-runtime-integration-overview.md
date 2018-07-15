@@ -1,12 +1,11 @@
 ---
-title: Panoramica dell'integrazione con Common Language Runtime (CLR) | Documenti Microsoft
+title: Panoramica di Common Language Runtime (CLR) Integration | Microsoft Docs
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - managed code [SQL Server]
@@ -21,14 +20,14 @@ caps.latest.revision: 64
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ebc2a886b525d356dadaa665e0d1815fb6e97d91
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d79fe5e7d56e58e48ae92a6f934b11f8b3b42b67
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701702"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352653"
 ---
-# <a name="common-language-runtime-integration-overview"></a>Panoramica dell'integrazione con Common Language Runtime
+# <a name="common-language-runtime-integration-overview"></a>Panoramica di integrazione di Common Language Runtime
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include ora l'integrazione del componente CRL (Common Language Runtime) di .NET Framework per [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. CLR fornisce codice gestito con servizi quali l'integrazione tra linguaggi diversi, la sicurezza da accesso di codice, la gestione della durata degli oggetti e il supporto per il debug e il profiling. Grazie all'integrazione con Common Language Runtime, gli sviluppatori di applicazioni e gli utenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hanno ora la possibilità di scrivere stored procedure, trigger, tipi definiti dall'utente, funzioni definite dall'utente (scalari e con valori di tabella) e funzioni di aggregazione definite dall'utente utilizzando qualsiasi linguaggio di .NET Framework, inclusi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include la versione preinstallata di 4 di .NET Framework.  
@@ -42,18 +41,18 @@ ms.locfileid: "35701702"
   
 -   **Miglioramento della sicurezza e protezione.** Il codice gestito è in esecuzione in un ambiente CLR, ospitato dal motore di database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo utilizza per fornire un'alternativa più sicura alle stored procedure estese disponibili in versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Possibilità di definire tipi di dati e le funzioni di aggregazione.** I tipi definiti dall'utente e le funzioni di aggregazione definite dall'utente sono due nuovi oggetti di database gestiti che espandono le capacità di archiviazione ed esecuzione di query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Possibilità di definire i tipi di dati e funzioni di aggregazione.** I tipi definiti dall'utente e le funzioni di aggregazione definite dall'utente sono due nuovi oggetti di database gestiti che espandono le capacità di archiviazione ed esecuzione di query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   **Sviluppo semplificato attraverso un ambiente standardizzato.** Lo sviluppo di database è integrato nelle versioni future dell'ambiente di sviluppo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET. Gli sviluppatori utilizzano per lo sviluppo e il debug degli script e degli oggetti di database gli stessi strumenti impiegati per scrivere componenti e servizi .NET Framework di livello intermedio o di livello client.  
   
--   **Potenziale miglioramento delle prestazioni e scalabilità.** In molte situazioni, i modelli di compilazione ed esecuzione del linguaggio .NET Framework consentono di ottenere prestazioni migliori rispetto a Transact-SQL.  
+-   **Possibilità di migliorare le prestazioni e scalabilità.** In molte situazioni, i modelli di compilazione ed esecuzione del linguaggio .NET Framework consentono di ottenere prestazioni migliori rispetto a Transact-SQL.  
   
  Nella tabella seguente sono elencati gli argomenti inclusi in questa sezione.  
   
  [Panoramica dell'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-overview.md)  
  Vengono descritti i tipi di oggetti che è possibile compilare utilizzando l'integrazione con CLR e vengono esaminati i requisiti per la compilazione di oggetti di database tramite questa integrazione.  
   
- [Che cos'è una novità di integrazione con CLR](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
+ [Novità dell'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
  Vengono descritte le nuove caratteristiche di questa versione.  
   
  [Architettura dell'integrazione con CLR](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  

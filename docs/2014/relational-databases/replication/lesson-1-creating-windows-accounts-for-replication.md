@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
@@ -16,13 +16,13 @@ ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a7cf067ff7ebfb4f9990b424acf73d5084470d12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3bd3b0369c990b6db3dc1cbb44f7fd387289ce9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303651"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lezione 1: Creazione di account di Windows per la replica
   In questa lezione verranno creati account di Windows per l'esecuzione degli agenti di replica. Verrà creato un account di Windows separato nel server locale per gli agenti seguenti:  
@@ -45,7 +45,7 @@ ms.locfileid: "36158434"
   
 3.  Fare clic con il pulsante destro del mouse su **Utenti** e scegliere **Nuovo utente**.  
   
-4.  Immettere `repl_snapshot` nella **nome utente** casella, specificare la password e altre informazioni rilevanti e quindi fare clic su **crea** per creare l'account repl_snapshot.  
+4.  Immettere `repl_snapshot` nella **nome utente** casella, specificare la password e altre informazioni rilevanti e quindi fare clic su **Create** per creare l'account repl_snapshot.  
   
 5.  Ripetere il passaggio precedente per creare gli account repl_logreader, repl_distribution e repl_merge.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36158434"
   
 3.  Fare clic con il pulsante destro del mouse su **Utenti** e scegliere **Nuovo utente**.  
   
-4.  Immettere `repl_distribution` nella **nome utente** casella, specificare la password e altre informazioni rilevanti e quindi fare clic su **crea** per creare l'account repl_distribution.  
+4.  Immettere `repl_distribution` nella **nome utente** casella, specificare la password e altre informazioni rilevanti e quindi fare clic su **Create** per creare l'account repl_distribution.  
   
 5.  Ripetere il passaggio precedente per creare l'account repl_merge.  
   

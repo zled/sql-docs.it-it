@@ -1,5 +1,5 @@
 ---
-title: Eseguire SQL Server importazione / esportazione guidata | Documenti Microsoft
+title: Eseguire SQL Server importazione / esportazione guidata | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
 - starting SQL Server Import and Export Wizard
@@ -18,34 +18,34 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 817172e78c7f7702aa4dc9d7555b25f6866a6897
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d39f6988fafe56210e5641b85f54adb644b8d8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307992"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Esecuzione dell'Importazione/Esportazione guidata SQL Server
-  Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] costituisce il metodo più semplice per la copia di dati tra origini dati e per la costruzione di pacchetti di base. Per ulteriori informazioni sulla procedura guidata, vedere [SQL Server di importazione / esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
+  Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] costituisce il metodo più semplice per la copia di dati tra origini dati e per la costruzione di pacchetti di base. Per altre informazioni sulla procedura guidata, vedere [SQL Server importazione / esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
   
- Per un video che illustra come usare il SQL Server di importazione / esportazione guidata per creare un pacchetto che Esporta dati da un database di SQL Server in un foglio di calcolo di Microsoft Excel, vedere [esportazione di dati di SQL Server in Excel (Video di SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131024).  
+ Per un video che illustra come usare SQL Server importazione / esportazione guidata per creare un pacchetto che Esporta dati da un database di SQL Server in un foglio di calcolo di Microsoft Excel, vedere [esportazione di dati di SQL Server in Excel (Video di SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131024).  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>Per avviare Importazione/Esportazione guidata SQL Server  
   
--   Nel **avviare** dal menu **tutti i programmi**, scegliere**Microsoft SQL Server** e quindi fare clic su **importazione ed esportazione dati**.  
+-   Nel **avviare** dal menu **tutti i programmi**, scegliere**Microsoft SQL Server** e quindi fare clic su **importare ed esportare dati**.  
   
      -oppure-  
   
-     In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], fare doppio clic sui **pacchetti SSIS** cartella e quindi fare clic su **SSISImport / esportazione guidata**.  
+     Nelle [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], fare doppio clic il **pacchetti SSIS** cartella e quindi fare clic su **SSISImport / esportazione guidata**.  
   
      -oppure-  
   
-     In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]via il **progetto** menu, fare clic su **SSISImport / esportazione guidata**.  
+     Nella [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]via il **Project** menu, fare clic su **SSISImport / esportazione guidata**.  
   
      -oppure-  
   
-     In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettere il [!INCLUDE[ssDE](../../includes/ssde-md.md)] tipo di server, espandere database, fare doppio clic su un database, scegliere **attività**e quindi fare clic su **l'importazione dei dati** o **esportare dati**.  
+     Nella [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)] tipo di server, espandere database, fare doppio clic su un database, scegliere **attività**e quindi fare clic su **Import Data** o **esportare i dati**.  
   
      -oppure-  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36169698"
     > [!NOTE]  
     >  Il provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per Oracle non supporta i tipi di dati Oracle BLOB, CLOB, NCLOB, BFILE e UROWID. Pertanto, l'origine OLE DB non è in grado di estrarre i dati da tabelle che contengono colonne con tali tipi di dati.  
   
-     Le destinazioni di dati disponibili includono [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provider di dati, i provider OLE DB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, Excel, l'accesso e la destinazione File Flat.  
+     Le destinazioni di dati disponibili includono [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provider di dati, i provider OLE DB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, Excel, accesso e la destinazione File Flat.  
   
 3.  Impostare le opzioni per il tipo di destinazione selezionato.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36169698"
   
          Se l'origine è un provider [!INCLUDE[vstecado](../../includes/vstecado-md.md)], sarà inoltre possibile utilizzare l'opzione per la copia dei risultati della query specificando la stringa DBCommand come query.  
   
-         Se i dati di origine sono una vista, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata converte automaticamente la visualizzazione in una tabella nella destinazione.  
+         Se l'origine dati è una vista, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata converte automaticamente la visualizzazione in una tabella di destinazione.  
   
     -   Indicare se la tabella di destinazione dovrà essere eliminata e quindi ricreata e se consentire IDENTITY_INSERT.  
   
@@ -121,11 +121,11 @@ ms.locfileid: "36169698"
   
 6.  Salvare ed eseguire un pacchetto.  
   
-     Se la procedura guidata viene avviata da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o dal prompt dei comandi, il pacchetto potrà essere eseguito immediatamente. È possibile salvare il pacchetto per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** database o nel file System. Per ulteriori informazioni sul **msdb** del database, vedere [gestione dei pacchetti &#40;servizio SSIS&#41;](../service/package-management-ssis-service.md).  
+     Se la procedura guidata viene avviata da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o dal prompt dei comandi, il pacchetto potrà essere eseguito immediatamente. È facoltativamente possibile salvare il pacchetto per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** database o nel file System. Per altre informazioni sul **msdb** del database, vedere [Gestione pacchetti &#40;servizio SSIS&#41;](../service/package-management-ssis-service.md).  
   
-     Quando si salva il pacchetto, è possibile impostarne il livello di protezione e, se per quest'ultimo si utilizza una password, specificarla. Per ulteriori informazioni sui livelli di protezione pacchetto, vedere [controllo di accesso per i dati sensibili nei pacchetti](../security/access-control-for-sensitive-data-in-packages.md).  
+     Quando si salva il pacchetto, è possibile impostarne il livello di protezione e, se per quest'ultimo si utilizza una password, specificarla. Per altre informazioni sui livelli di protezione del pacchetto, vedere [controllo di accesso per dati sensibili nei pacchetti](../security/access-control-for-sensitive-data-in-packages.md).  
   
-     Se la procedura guidata viene avviata da un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel progetto [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], non è possibile eseguire il pacchetto dalla procedura guidata. Il pacchetto verrà invece aggiunto al progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] da cui è stata avviata la procedura guidata. È quindi possibile eseguire il pacchetto in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+     Se la procedura guidata viene avviata da un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] progetto [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], non è possibile eseguire il pacchetto dalla procedura guidata. Il pacchetto verrà invece aggiunto al progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] da cui è stata avviata la procedura guidata. È quindi possibile eseguire il pacchetto in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
     > [!NOTE]  
     >  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], l'opzione per salvare il pacchetto creato dalla procedura guidata non è disponibile.  

@@ -1,5 +1,5 @@
 ---
-title: Configurare le proprietà di creazione di report per i report Power View | Documenti Microsoft
+title: Configurare le proprietà di creazione di report per i report Power View | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 0f2e5e76b9779ce2cc8362d93ebe2389db8fb8da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee7bcbbb5294047c2499cabd4c094e15563883d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304371"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurare le proprietà di creazione di report per i report Power View
   In questa lezione supplementare si imposteranno le proprietà dei report per il progetto Adventure Works Internet Sales Model. Con le proprietà dei report risulta più semplice, per gli utenti finali, selezionare e visualizzare i dati del modello in Power View. Si imposteranno inoltre le proprietà per nascondere alcune colonne e tabelle, nonché per creare nuovi dati da utilizzare nei grafici.  
@@ -108,7 +108,7 @@ ms.locfileid: "36155694"
   
 6.  Seguire la stessa procedura per la tabella **Geography** , selezionando i campi seguenti e mettendoli in questo ordine.  
   
-     **Città**, **State Province codice**, **stato indicativo di paese**.  
+     **Città**, **State Province Code**, **stato indicativo di paese**.  
   
 7.  Infine, seguire la stessa procedura per la tabella **Product** , selezionando i campi seguenti e mettendoli in questo ordine.  
   

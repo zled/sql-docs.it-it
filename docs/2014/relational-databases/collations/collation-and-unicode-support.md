@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
 - expression-level collations [SQL Server]
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5f7ba7721287907142e7966b6d4e298afa07a89f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0547ac482e5dc56ec3b5e207b5776f5c8fbdab4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287337"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-  Le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forniscono regole di ordinamento e proprietà di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati per i dati. Le regole di confronto utilizzate con, ad esempio i tipi di dati character `char` e `varchar` determinano il codice di pagina e i caratteri corrispondenti che possono essere rappresentati per quel tipo di dati. Sia che si installi una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si ripristini il backup di un database o si stabiliscano connessioni tra database server e client, è importante comprendere i requisiti delle impostazioni locali, l'ordinamento e la modalità di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati dei dati da usare. Per visualizzare l'elenco delle regole di confronto disponibili nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
+  Le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forniscono regole di ordinamento e proprietà di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati per i dati. Le regole di confronto utilizzate con, ad esempio i tipi di dati character `char` e `varchar` dettare il codice di pagina e i caratteri corrispondenti che possono essere rappresentati per quel tipo di dati. Sia che si installi una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si ripristini il backup di un database o si stabiliscano connessioni tra database server e client, è importante comprendere i requisiti delle impostazioni locali, l'ordinamento e la modalità di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati dei dati da usare. Per visualizzare l'elenco delle regole di confronto disponibili nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
   
  Selezionando le regole di confronto per un server, un database, una colonna o un'espressione, vengono assegnate determinate caratteristiche ai dati che influiranno sui risultati di molte operazioni eseguite nel database. Ad esempio, quando viene costruita una query tramite ORDER BY, l'ordinamento del set di risultati può dipendere dalle regole di confronto applicate al database o specificate in una clausola COLLATE al livello di espressione della query.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36169922"
   
  Non è possibile modificare le regole di confronto del database di sistema se non modificandole per il server.  
   
- Le regole di confronto del database vengono usate per tutti i metadati nel database e rappresentano l'impostazione predefinita per tutte le colonne stringa, gli oggetti temporanei, i nomi di variabili e qualsiasi altra stringa usata nel database. Quando le regole di confronto di un database utente vengono modificate, è possibile che si verifichino conflitti tra le regole di confronto quando vengono eseguite query nelle tabelle temporanee di accesso al database. Tabelle temporanee sono sempre archiviate nel `tempdb` database di sistema che utilizzerà le regole di confronto per l'istanza. L'esecuzione di query di confronto dei dati di tipo carattere tra database utente e `tempdb` può non riuscire se le regole di confronto causano un conflitto nella valutazione dei dati di tipo carattere. È possibile risolvere il problema specificando la clausola COLLATE nella query. Per altre informazioni, vedere [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations).  
+ Le regole di confronto del database vengono usate per tutti i metadati nel database e rappresentano l'impostazione predefinita per tutte le colonne stringa, gli oggetti temporanei, i nomi di variabili e qualsiasi altra stringa usata nel database. Quando le regole di confronto di un database utente vengono modificate, è possibile che si verifichino conflitti tra le regole di confronto quando vengono eseguite query nelle tabelle temporanee di accesso al database. Le tabelle temporanee sono sempre archiviate nel `tempdb` database di sistema, che userà le regole di confronto per l'istanza. L'esecuzione di query di confronto dei dati di tipo carattere tra database utente e `tempdb` può non riuscire se le regole di confronto causano un conflitto nella valutazione dei dati di tipo carattere. È possibile risolvere il problema specificando la clausola COLLATE nella query. Per altre informazioni, vedere [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations).  
   
  Regole di confronto a livello di colonna  
  Quando una tabella viene creata o modificata, è possibile specificare regole di confronto per ciascuna colonna di stringhe di caratteri utilizzando la clausola COLLATE. Se non si specificano regole di confronto, alla colonna verranno assegnate le regole di confronto predefinite del database.  
@@ -148,7 +148,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Supplementary_Characters"></a> Caratteri supplementari  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fornisce tipi di dati, ad esempio `nchar` e `nvarchar` per archiviare dati Unicode. Questi tipi di dati codificano il testo in un formato denominato *UTF-16*. L'Unicode Consortium assegna a ogni carattere un punto di codice univoco, che corrisponde a un valore nell'intervallo compreso tra 0x0000 e 0x10FFFF. Benché i caratteri più frequentemente usati siano associati a valori di punti di codice compresi in una parola a 16 bit in memoria e su disco, i caratteri con valori di punti di codice maggiori di 0xFFFF richiedono due parole a 16 bit consecutive. Questi caratteri sono denominati *caratteri supplementari*e le due parole a 16 bit consecutive sono denominate *coppie di surrogati*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fornisce i tipi di dati, ad esempio `nchar` e `nvarchar` per archiviare dati Unicode. Questi tipi di dati codificano il testo in un formato denominato *UTF-16*. L'Unicode Consortium assegna a ogni carattere un punto di codice univoco, che corrisponde a un valore nell'intervallo compreso tra 0x0000 e 0x10FFFF. Benché i caratteri più frequentemente usati siano associati a valori di punti di codice compresi in una parola a 16 bit in memoria e su disco, i caratteri con valori di punti di codice maggiori di 0xFFFF richiedono due parole a 16 bit consecutive. Questi caratteri sono denominati *caratteri supplementari*e le due parole a 16 bit consecutive sono denominate *coppie di surrogati*.  
   
  Se si utilizzano caratteri supplementari:  
   

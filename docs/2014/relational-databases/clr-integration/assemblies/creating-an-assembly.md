@@ -1,13 +1,11 @@
 ---
-title: Creazione di un Assembly | Documenti Microsoft
+title: Creazione di un Assembly | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], creating
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7f58e9cd0122739b7d55e8cfe96731a39684fc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: a7dcaae61cdfa6466f8f7194b4f93977ec2e7d97
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067198"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353345"
 ---
 # <a name="creating-an-assembly"></a>Creazione di un assembly
   Gli oggetti di database gestiti, ad esempio le stored procedure o i trigger, vengono compilati e quindi distribuiti in unità denominate assembly. Gli assembly DLL gestiti devono essere registrati in [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] prima di poter usare le funzionalità fornite dall'assembly. Per registrare l'assembly in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], utilizzare l'istruzione CREATE ASSEMBLY. In questo argomento viene descritto come registrare un assembly in un database tramite l'istruzione CREATE ASSEMBLY e specificare le impostazioni di sicurezza per l'assembly.  
@@ -87,7 +85,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  Le due condizioni elencate in precedenza vengono verificate in fase di caricamento dell'assembly (fase che include l'esecuzione). Per caricare l'assembly, è necessario che si verifichi almeno una delle due condizioni.  
   
- È consigliabile che il [proprietà di Database TRUSTWORTHY](../../security/trustworthy-database-property.md) in un database di non essere impostato su `ON` solo per l'esecuzione di common language runtime (CLR) codice nel processo server. È invece consigliabile creare una chiave asimmetrica dal file di assembly nel database master. È quindi necessario creare un account di accesso con mapping alla chiave asimmetrica e concedere a tale account di accesso l'autorizzazione `EXTERNAL ACCESS ASSEMBLY` o `UNSAFE ASSEMBLY`.  
+ È consigliabile che il [proprietà di Database TRUSTWORTHY](../../security/trustworthy-database-property.md) in un database di non essere impostato su `ON` solo per eseguire common language runtime (CLR) di codice nel processo server. È invece consigliabile creare una chiave asimmetrica dal file di assembly nel database master. È quindi necessario creare un account di accesso con mapping alla chiave asimmetrica e concedere a tale account di accesso l'autorizzazione `EXTERNAL ACCESS ASSEMBLY` o `UNSAFE ASSEMBLY`.  
   
  Nell'esempio [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni prima di eseguire l'istruzione CREATE ASSEMBLY.  
   
@@ -132,14 +130,14 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = UNSAFE;  
 ```  
   
- Per ulteriori informazioni sulle autorizzazioni per ognuna delle impostazioni, vedere [sicurezza dell'integrazione con CLR](../security/clr-integration-security.md).  
+ Per altre informazioni sulle autorizzazioni per ognuna delle impostazioni, vedere [CLR Integration Security](../security/clr-integration-security.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione degli assembly di integrazione con CLR](managing-clr-integration-assemblies.md)   
+ [La gestione degli assembly dell'integrazione CLR](managing-clr-integration-assemblies.md)   
  [Modifica di un Assembly](altering-an-assembly.md)   
  [Eliminazione di un Assembly](dropping-an-assembly.md)   
- [Sicurezza di accesso di codice dell'integrazione CLR](../security/clr-integration-code-access-security.md)   
+ [Sicurezza dall'accesso di codice integrazione CLR](../security/clr-integration-code-access-security.md)   
  [Proprietà di database TRUSTWORTHY](../../security/trustworthy-database-property.md)   
- [Chiamanti consentendo parzialmente attendibili](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
+ [Accettazione di chiamanti parzialmente attendibili](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
   
   

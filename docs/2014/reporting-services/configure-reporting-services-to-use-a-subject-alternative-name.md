@@ -1,5 +1,5 @@
 ---
-title: Configurare Reporting Services per utilizzare un nome alternativo del soggetto | Documenti Microsoft
+title: Configurare Reporting Services per usare un nome alternativo del soggetto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 caps.latest.revision: 4
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3826590033cfd21bc12fa623633f88d9fa11d76b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2890cea5f4c39d27ce89d4d9c5bcc3efe7384039
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284787"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurare Reporting Services per usare un nome alternativo del soggetto
   Questo argomento descrive come configurare [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS) in modo da usare un nome alternativo del soggetto (SAN) modificando il file rsreportserver.config e usando lo strumento Netsh.exe.  
@@ -32,9 +32,9 @@ ms.locfileid: "36054502"
   
  Per usare un nome alternativo del soggetto, è necessario che il certificato SSL sia registrato nel server, firmato e che contenga la chiave privata. Non è possibile usare un certificato autofirmato.  
   
- URL nei [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] possono essere configurati per usare un certificato SSL. In genere, un certificato contiene solo un nome del soggetto che consente un solo URL per una sessione SSL (Secure Sockets Layer). Il nome alternativo del soggetto è un campo aggiuntivo nel certificato che consente a un servizio SSL di essere in ascolto e valido per molti URL nonché di condividere la porta SSL con altre applicazioni. Il nome alternativo del soggetto è simile al seguente: www.s2.com.  
+ URL nei [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] può essere configurato per usare un certificato SSL. In genere, un certificato contiene solo un nome del soggetto che consente un solo URL per una sessione SSL (Secure Sockets Layer). Il nome alternativo del soggetto è un campo aggiuntivo nel certificato che consente a un servizio SSL di essere in ascolto e valido per molti URL nonché di condividere la porta SSL con altre applicazioni. Il nome alternativo del soggetto è simile al seguente: www.s2.com.  
   
- Per ulteriori informazioni sulle impostazioni SSL [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [configurare connessioni SSL in un Server di Report in modalità nativa](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Per altre informazioni sulle impostazioni SSL per [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [configurare connessioni SSL in un Server di Report in modalità nativa](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurare SSRS per usare un nome alternativo del soggetto per l'URL servizio Web  
   

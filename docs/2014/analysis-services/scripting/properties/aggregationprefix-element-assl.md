@@ -1,5 +1,5 @@
 ---
-title: Elemento AggregationPrefix (ASSL) | Documenti Microsoft
+title: Elemento AggregationPrefix (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationPrefix element
 ms.assetid: 1581e0df-ae8e-41ce-9c92-f0f7cac487f2
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 84f7b086e1cdc2516f0912a4580d0b3eb45132ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7f7fe7ad16c8949116edb13c7d2c9b5144443dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293281"
 ---
 # <a name="aggregationprefix-element-assl"></a>Elemento AggregationPrefix (ASSL)
   Definisce il prefisso comune da usare per i nomi di aggregazione in tutto l'elemento padre associato.  
@@ -61,7 +61,7 @@ ms.locfileid: "36170224"
 |Elementi padre|[Cubo](../objects/cube-element-assl.md), [Database](../objects/database-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [partizione](../objects/partition-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  I prefissi di aggregazione generano nomi di aggregazione nel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e generare i nomi delle tabelle nel database relazionale per aggregazioni archiviate in una partizione OLAP (ROLAP) relazionali.  
   
  Un nome di aggregazione completamente espanso contiene le parti seguenti:  
@@ -70,15 +70,15 @@ ms.locfileid: "36170224"
   
  Le prime quattro parti del nome di aggregazione costituiscono il prefisso di aggregazione. L'utente fornisce le prime quattro parti:  
   
--   *DatabasePrefix* rappresenta il valore di `AggregationPrefix` associato all'elemento un `Database` elemento.  
+-   *DatabasePrefix* rappresenta il valore della `AggregationPrefix` elemento associato a un `Database` elemento.  
   
--   *CubePrefix* rappresenta il valore di `AggregationPrefix` associato all'elemento un `Cube` elemento.  
+-   *CubePrefix* rappresenta il valore della `AggregationPrefix` elemento associato a un `Cube` elemento.  
   
--   *MeasureGroupPrefix* rappresenta il valore di `AggregationPrefix` associato all'elemento un `MeasureGroup` elemento.  
+-   *MeasureGroupPrefix* rappresenta il valore della `AggregationPrefix` elemento associato a un `MeasureGroup` elemento.  
   
--   *PartitionPrefix* rappresenta il valore di `AggregationPrefix` associato all'elemento un `Partition` elemento.  
+-   *PartitionPrefix* rappresenta il valore della `AggregationPrefix` elemento associato a un `Partition` elemento.  
   
- La quinta parte del nome, *AggregationID*, è un ID definito dal sistema e gli utenti non hanno controllo su questa parte del nome.  
+ La parte del nome del quinta *AggregationID*, è un ID definito dal sistema e gli utenti non dispongono di alcun controllo su questa parte del nome.  
   
  Gli elementi che corrispondono agli elementi padre di `AggregationPrefix` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.MeasureGroup> e <xref:Microsoft.AnalysisServices.Partition>.  
   

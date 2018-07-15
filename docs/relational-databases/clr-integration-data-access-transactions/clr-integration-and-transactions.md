@@ -1,11 +1,11 @@
 ---
-title: Integrazione con CLR e transazioni | Documenti Microsoft
+title: Integrazione con CLR e transazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,16 +20,16 @@ caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc733e8514647c639d8d7e82b80ce59ba157809a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: f928519eb9a94d59210c826311d187c717edf054
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695012"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356153"
 ---
 # <a name="clr-integration-and-transactions"></a>Integrazione con CLR e transazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Il **System. Transactions** spazio dei nomi fornisce un framework per le transazioni completamente integrato con ADO.NET e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrazione common language runtime (CLR). **System. Transactions** e ADO.NET insieme per estendere e semplificare l'utilizzo di transazioni distribuite e locali nelle applicazioni gestite.  
+  Il **System. Transactions** spazio dei nomi fornisce un framework per le transazioni completamente integrato con ADO.NET e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrazione common language runtime (CLR). **System. Transactions** e ADO.NET utilizzati congiuntamente per estendere e semplificare l'utilizzo di transazioni distribuite e locali nelle applicazioni gestite.  
   
 > [!NOTE]  
 >  Una procedura CLR definita dall'utente non può stabilire una connessione allo stesso server nel quale viene eseguita, ovvero una connessione loopback, ed essere integrata nella stessa transazione. Un eventuale tentativo di connessione verrà bloccato e il controllo non verrà restituito alla procedura definita dall'utente. Verrà pertanto generato un errore di timeout (messaggio 1206) nella procedura definita dall'utente.  

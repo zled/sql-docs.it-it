@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c4f2ae1acfdc15bd8ca2882a7d5acbff88acf965
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5b50efbb6879866d459a775f2c6a0f9ffd86228f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311311"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Parti del report in Progettazione report (SSRS)
   In Progettazione report, dopo aver creato tabelle, grafici e altri elementi del report in un progetto, è possibile pubblicarli come *parti di report* in un server di report o in un sito di SharePoint integrato con un server di report in modo da permetterne il riutilizzo in altri report.  

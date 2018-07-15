@@ -1,5 +1,5 @@
 ---
-title: Elaborare la finestra di dialogo (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Elaborare la finestra di dialogo (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processdialog.f1
 ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5788bce44bc3ad63956183ac4e8950a0ace11d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 187de4a1978b20065080f50a1d9924e8d1138e7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315001"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Elabora (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Elabora** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per elaborare oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per visualizzare la finestra di dialogo **Elabora** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , è possibile:  
@@ -47,7 +47,7 @@ ms.locfileid: "36166266"
  Consente di visualizzare il tipo dell'oggetto da elaborare.  
   
  **Opzioni elaborazione**  
- Consente di selezionare il tipo di elaborazione da eseguire sull'oggetto selezionato. Per ulteriori informazioni sulle opzioni di elaborazione disponibili, vedere [l'elaborazione di oggetti modello multidimensionale](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Consente di selezionare il tipo di elaborazione da eseguire sull'oggetto selezionato. Per altre informazioni sulle opzioni di elaborazione disponibili, vedere [elaborazione di oggetti modello multidimensionale](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  **Impostazioni**  
  Consente di visualizzare il collegamento ipertestuale **Configura** al momento della selezione di **Elaborazione incrementale** in **Opzioni elaborazione** per cubi, gruppi di misure o partizioni. Per aprire la finestra di dialogo **Aggiornamento incrementale** , fare clic su **Configura** . Per altre informazioni sulla finestra di dialogo **Aggiornamento incrementale**, vedere [Finestra di dialogo Aggiornamento incrementale &#40;Analysis Services - Dati multidimensionali&#41;](incremental-update-dialog-box-analysis-services-multidimensional-data.md).  

@@ -1,13 +1,11 @@
 ---
-title: Durata delle transazioni | Documenti Microsoft
+title: Durata delle transazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - Transact-SQL vs. managed code
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c56a98e5cd9670f8dd3a86265aa50a7f0f57b5af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4a007db3f753bf803e2ecf9b8d1775bd8723ac3b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158475"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352518"
 ---
 # <a name="transaction-lifetimes"></a>Durata delle transazioni
   Vi è un'importante differenza tra le transazioni avviate nelle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] e quelle avviate in codice gestito: il codice CLR (Common Language Runtime) non può sbilanciare lo stato della transazione all'immissione o all'uscita di una chiamata CLR. Tenere presenti le implicazioni seguenti correlate a questa differenza:  

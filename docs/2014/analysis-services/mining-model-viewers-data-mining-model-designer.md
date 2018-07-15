@@ -1,5 +1,5 @@
 ---
-title: Visualizzatori dei modelli (Progettazione modelli di Data Mining) di data mining | Documenti Microsoft
+title: Visualizzatori dei modelli (Progettazione modelli di Data Mining) di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.viewers.f1
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e04799cbd5d78f82612732506e460008a4138117
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9fd7d89abbbbce1c55b20227d44c191cf315d52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293631"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Visualizzatori modello di data mining (Progettazione modelli di data mining)
   Usare la scheda **Visualizzatore modello di data mining** per l'esplorazione dei modelli di data mining contenuti in una struttura di data mining.  
@@ -46,7 +46,7 @@ ms.locfileid: "36167954"
   
 -   L'immagine inferiore illustra lo stesso modello visualizzato usando **Microsoft Generic Content Tree Viewer**. In questo visualizzatore viene presentato il contenuto del modello di data mining in base a uno schema standardizzato. Per altre informazioni, vedere [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](microsoft-generic-content-tree-viewer-data-mining.md).  
   
- ![Panoramica di progettazione modelli di data mining](media/generic-mining-model-tab1.gif "Panoramica di progettazione modelli di data mining")  
+ ![Panoramica di progettazione modelli di data mining](media/generic-mining-model-tab1.gif "Panoramica della progettazione di modelli di data mining")  
   
 ## <a name="viewers-and-their-components"></a>Visualizzatori e relativi componenti  
  A seconda del modello selezionato, verrà mostrato un visualizzatore diverso, adattato all'algoritmo utilizzato per creare il modello di data mining selezionato. In ogni visualizzatore personalizzato sono disponibili molti strumenti e finestre di dialogo che consentono di esplorare le statistiche e gli schemi del modello.  
@@ -69,11 +69,11 @@ ms.locfileid: "36167954"
   
     -   [Scheda diagramma dei cluster &#40;visualizzatore modello di Data Mining&#41;](cluster-diagram-tab-mining-model-viewer.md)  
   
-    -   [Cluster profili della scheda &#40;visualizzatore modello di Data Mining&#41;](cluster-profiles-tab-mining-model-viewer.md)  
+    -   [Scheda profili di cluster &#40;visualizzatore modello di Data Mining&#41;](cluster-profiles-tab-mining-model-viewer.md)  
   
     -   [Scheda caratteristiche cluster &#40;visualizzatore modello di Data Mining&#41;](cluster-characteristics-tab-mining-model-viewer.md)  
   
-    -   [Scheda Analisi discriminante tra cluster &#40;visualizzatore modello di Data Mining&#41;](cluster-discrimination-tab-mining-model-viewer.md)  
+    -   [Scheda Analisi discriminante del cluster &#40;visualizzatore modello di Data Mining&#41;](cluster-discrimination-tab-mining-model-viewer.md)  
   
     -   [Finestra di dialogo legenda data mining &#40;visualizzatore modello di Data Mining&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
@@ -107,11 +107,11 @@ ms.locfileid: "36167954"
   
     -   [Scheda rete di dipendenze &#40;visualizzatore modello di Data Mining&#41;](dependency-network-tab-mining-model-viewer.md)  
   
-    -   [Attributo profili della scheda &#40;visualizzatore modello di Data Mining&#41;](attribute-profiles-tab-mining-model-viewer.md)  
+    -   [Attributo definisce il profilo della scheda &#40;visualizzatore modello di Data Mining&#41;](attribute-profiles-tab-mining-model-viewer.md)  
   
     -   [Scheda Caratteristiche attributo &#40;visualizzatore modello di Data Mining&#41;](attribute-characteristics-tab-mining-model-viewer.md)  
   
-    -   [Scheda Analisi discriminante tra dell'attributo &#40;visualizzatore modello di Data Mining&#41;](attribute-discrimination-tab-mining-model-viewer.md)  
+    -   [Scheda Analisi discriminante dell'attributo &#40;visualizzatore modello di Data Mining&#41;](attribute-discrimination-tab-mining-model-viewer.md)  
   
 ### <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm  
   
@@ -121,19 +121,19 @@ ms.locfileid: "36167954"
   
     -   [Rete neurale &#40;visualizzatore modello di Data Mining&#41;](neural-network-mining-model-viewer.md)  
   
-    -   [Finestra di dialogo nodo trova &#40;visualizzatore modello di Data Mining&#41;](find-node-dialog-box-mining-model-viewer.md)  
+    -   [Dialogo Trova nodo &#40;visualizzatore modello di Data Mining&#41;](find-node-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-sequence-clustering-algorithm"></a>Algoritmo Microsoft Sequence Clustering  
   
 -   [Visualizzare un modello usando il Visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-    -   [Sequence Clustering scheda diagramma dei Cluster &#40;visualizzatore modello di Data Mining](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
+    -   [Scheda diagramma dei Cluster di Clustering delle sequenze &#40;visualizzatore modello di Data Mining](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
   
-    -   [Sequence Clustering Cluster profili della scheda &#40;visualizzatore modello di Data Mining](sequence-clustering-cluster-profiles-tab-mining-model-viewer.md)  
+    -   [Sequence Clustering Cluster definisce il profilo della scheda &#40;visualizzatore modello di Data Mining](sequence-clustering-cluster-profiles-tab-mining-model-viewer.md)  
   
-    -   [Sequence Clustering scheda caratteristiche Cluster &#40;visualizzatore modello di Data Mining&#41;](sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md)  
+    -   [Scheda caratteristiche Cluster di Clustering delle sequenze &#40;visualizzatore modello di Data Mining&#41;](sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md)  
   
-    -   [Sequence Clustering scheda Analisi discriminante tra Cluster &#40;visualizzatore modello di Data Mining&#41;](sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md)  
+    -   [Scheda Analisi discriminante tra Cluster di Clustering delle sequenze &#40;visualizzatore modello di Data Mining&#41;](sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md)  
   
     -   [Sequence Clustering scheda transizioni di stato &#40;visualizzatore modello di Data Mining&#41;](sequence-clustering-cluster-transition-tab-mining-model-viewer.md)  
   
@@ -141,16 +141,16 @@ ms.locfileid: "36167954"
   
 -   [Visualizzare un modello usando il Visualizzatore Microsoft Times Series](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
-    -   [Scheda del modello &#40;visualizzatori dei modelli di Data Mining&#41;](model-tab-mining-model-viewers.md)  
+    -   [Modello della scheda &#40;visualizzatori modello di Data Mining&#41;](model-tab-mining-model-viewers.md)  
   
-    -   [Grafico scheda &#40;visualizzatori dei modelli di Data Mining&#41;](chart-tab-mining-model-viewers.md)  
+    -   [Grafico della scheda &#40;visualizzatori modello di Data Mining&#41;](chart-tab-mining-model-viewers.md)  
   
     -   [Finestra di dialogo legenda data mining &#40;visualizzatore modello di Data Mining&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzazione di modelli di data mining &#40;progettazione modello di Data Mining&#41;](mining-models-view-data-mining-model-designer.md)   
- [Visualizzazione struttura di data mining &#40;progettazione modello di Data Mining&#41;](mining-structure-view-data-mining-model-designer.md)   
- [Finestra di progettazione grafico accuratezza modello di data mining &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Visualizzazione di modelli di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-models-view-data-mining-model-designer.md)   
+ [Visualizzazione struttura di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Finestra di progettazione grafico accuratezza di data mining &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Generatore di Query di stima &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
   
   

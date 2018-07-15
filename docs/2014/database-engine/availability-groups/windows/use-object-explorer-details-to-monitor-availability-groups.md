@@ -1,14 +1,13 @@
 ---
-title: Usare dettagli Esplora oggetti per monitorare i gruppi di disponibilità (SQL Server Management Studio) | Documenti Microsoft
+title: Usare dettagli Esplora oggetti per monitorare i gruppi di disponibilità (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.OEdetails.f1
 helpviewer_keywords:
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: 28
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 29e86a6914ced21ac6c5941c2f728b18da2c7f9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ffadee68a6990a193d794a9af714fd7cd7f5ea08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282203"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>Utilizzare Dettagli Esplora oggetti per monitorare Gruppi di disponibilità (SQL Server Management Studio)
   In questo argomento viene illustrato come utilizzare il riquadro **Dettagli Esplora oggetti** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per monitorare e gestire i database di disponibilità AlwaysOn, le repliche di disponibilità e i gruppi di disponibilità esistenti.  
@@ -39,7 +38,7 @@ ms.locfileid: "36158044"
   
 -   **Dettagli Esplora oggetti:**  
   
-     [Dettagli del gruppo di disponibilità](#AvGroupsDetails)  
+     [Dettagli gruppo di disponibilità](#AvGroupsDetails)  
   
      [Dettagli replica di disponibilità](#AvReplicaDetails)  
   
@@ -148,7 +147,7 @@ ms.locfileid: "36158044"
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
- [Utilizzare il Dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [Usare il Dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Visualizzare le proprietà dei gruppi di disponibilità &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)   
  [Visualizzazione delle proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef3d71e52b29895111378ad26973f819bcf14076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1c020e8c27a7e4e2e7d22eb5a89308ddab5b8112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296691"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>Procedura guidata Crea database (Gestione configurazione Master Data Services)
   Usare la procedura guidata **Crea database** per creare un database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -50,7 +50,7 @@ ms.locfileid: "36064485"
   
 |Nome del controllo|Description|  
 |------------------|-----------------|  
-|**Nome utente**|Specificare un account utente di dominio per il [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] amministratore di sistema. Per tutti i [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] le applicazioni Web associate a questo database, tale utente possono aggiornare tutti i modelli e i dati in tutte le aree funzionali. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).|  
+|**Nome utente**|Specificare un account utente di dominio per essere il [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] amministratore di sistema. Per tutti i [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] le applicazioni Web associate a questo database, tale utente possono aggiornare tutti i modelli e i dati in tutte le aree funzionali. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).|  
   
 ## <a name="summary"></a>Riepilogo  
  Consente di visualizzare un riepilogo delle opzioni selezionate. Esaminare le selezioni e quindi fare clic su **Avanti** per iniziare a creare il database con le impostazioni specificate.  
@@ -60,7 +60,7 @@ ms.locfileid: "36064485"
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagina Configurazione database &#40;Gestione configurazione Master Data Services&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Impostare il Database e il sito Web per Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Configurare il Database e il sito Web per Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Requisiti del database &#40;Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
   
   

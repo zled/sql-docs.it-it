@@ -1,5 +1,5 @@
 ---
-title: Proprietà FlagName (classe ServerSettingsGeneralFlag) | Documenti Microsoft
+title: Proprietà FlagName (classe ServerSettingsGeneralFlag) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - FlagName property
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1f17e4af06f6f4e1c61c861bf2769f2f89f2b283
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 5301ee43c8f4fde1d0a8b25541ada2e494aef43c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313391"
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>Proprietà FlagName (classe ServerSettingsGeneralFlag)
   Ottiene il nome del flag.  
@@ -48,9 +48,9 @@ object
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il nome del flag.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete Server e le librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

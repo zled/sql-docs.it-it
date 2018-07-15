@@ -1,13 +1,11 @@
 ---
-title: Codifica dei tipi definiti dall'utente | Documenti Microsoft
+title: Codifica dei tipi definiti dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -33,20 +31,20 @@ helpviewer_keywords:
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab1bc1114d6bfd0ab29a2cc1e16b73466baa1d9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 25560f82b1a697618dd606f7df8393abb74727c6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068049"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354423"
 ---
 # <a name="coding-user-defined-types"></a>Codifica dei tipi definiti dall'utente
   Quando si codifica la definizione del tipo definito dall'utente (UDT), è necessario implementare varie caratteristiche a seconda che il tipo UDT venga implementato come classe o come struttura, nonché a seconda delle opzioni di formato e di serializzazione scelte.  
   
- Nell'esempio contenuto in questa sezione viene illustrata l'implementazione di un tipo definito dall'utente `Point` come `struct` (o `Structure` in Visual Basic). Il `Point` tipo definito dall'utente costituito X e Y coordinate implementate come routine delle proprietà.  
+ Nell'esempio contenuto in questa sezione viene illustrata l'implementazione di un tipo definito dall'utente `Point` come `struct` (o `Structure` in Visual Basic). Il `Point` tipo definito dall'utente è costituita da X e coordinata Y implementate come routine delle proprietà.  
   
  Quando si definisce un tipo definito dall'utente sono richiesti gli spazi dei nomi seguenti:  
   
@@ -202,7 +200,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ## <a name="implementing-the-tostring-method"></a>Implementazione del metodo ToString  
- Il metodo `ToString` converte il tipo definito dall'utente `Point` in un valore stringa. In questo caso, viene restituita la stringa "NULL" per un'istanza Null del tipo `Point`. Il metodo `ToString` inverte il metodo `Parse` utilizzando un `System.Text.StringBuilder` per restituire un oggetto `System.String` delimitato da virgole costituito dai valori delle coordinate X e Y. Poiché **InvokeIfReceiverIsNull** valore predefinito è false, il controllo per un'istanza null di `Point` non è necessaria.  
+ Il metodo `ToString` converte il tipo definito dall'utente `Point` in un valore stringa. In questo caso, viene restituita la stringa "NULL" per un'istanza Null del tipo `Point`. Il metodo `ToString` inverte il metodo `Parse` utilizzando un `System.Text.StringBuilder` per restituire un oggetto `System.String` delimitato da virgole costituito dai valori delle coordinate X e Y. In quanto **InvokeIfReceiverIsNull** il valore predefinito è false, il controllo per un'istanza null del `Point` non è necessaria.  
   
 ```vb  
 Private _x As Int32  
@@ -292,7 +290,7 @@ public Int32 Y
 ```  
   
 ## <a name="validating-udt-values"></a>Convalida dei valori dei tipi definiti dall'utente  
- Quando si utilizzano i dati dei tipi definiti dall'utente, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] converte automaticamente i valori binari in valori dei tipi definiti dall'utente. Ai fini di tale processo di conversione, viene verificato che i valori siano appropriati al formato di serializzazione del tipo e che il valore possa essere deserializzato correttamente. In questo modo si garantisce che possa essere convertito il valore nuovo in formato binario. Nel caso dei tipi definiti dall'utente ordinati per byte, questo processo assicura anche che il valore binario risultante corrisponda al valore binario originale. In questo modo si impedisce che valori non validi vengano resi persistenti nel database. In alcuni casi, questo livello di controllo può risultare inadeguato. Una convalida aggiuntiva può essere necessaria quando è necessario che i valori dei tipi definiti dall'utente si trovino in un dominio o in un intervallo previsto. Un tipo definito dall'utente che implementa, ad esempio, una data potrebbe richiedere che il valore del giorno sia un numero positivo compreso in un determinato intervallo di valori validi.  
+ Quando si utilizzano i dati dei tipi definiti dall'utente, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] converte automaticamente i valori binari in valori dei tipi definiti dall'utente. Ai fini di tale processo di conversione, viene verificato che i valori siano appropriati al formato di serializzazione del tipo e che il valore possa essere deserializzato correttamente. Ciò garantisce che il valore può essere convertito al formato binario. Nel caso dei tipi definiti dall'utente ordinati per byte, questo processo assicura anche che il valore binario risultante corrisponda al valore binario originale. In questo modo si impedisce che valori non validi vengano resi persistenti nel database. In alcuni casi, questo livello di controllo può risultare inadeguato. Una convalida aggiuntiva può essere necessaria quando è necessario che i valori dei tipi definiti dall'utente si trovino in un dominio o in un intervallo previsto. Un tipo definito dall'utente che implementa, ad esempio, una data potrebbe richiedere che il valore del giorno sia un numero positivo compreso in un determinato intervallo di valori validi.  
   
  La proprietà `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName` di `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` consente all'utente di fornire il nome di un metodo di convalida che il server esegue quando i dati sono assegnati a un tipo definito dall'utente o convertiti in un tipo definito dall'utente. `ValidationMethodName` viene chiamato anche durante l'esecuzione dell'utilità bcp, BULK INSERT, DBCC CHECKDB, CHECKFILEGROUP DBCC, CHECKTABLE DBCC, query distribuita e operazioni della chiamata RPC (Remote Procedure Call) (RPC) di flusso TDS (tabular data stream). Il valore predefinito per `ValidationMethodName` è Null e indica che non è stato specificato alcun metodo di convalida.  
   
@@ -372,10 +370,10 @@ private bool ValidatePoint()
 ### <a name="validation-method-limitations"></a>Limitazioni del metodo di convalida  
  Il server chiama il metodo di convalida durante l'esecuzione delle conversioni e non quando i dati vengono inseriti impostando singole proprietà o utilizzando un'istruzione INSERT [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- È necessario chiamare esplicitamente il metodo di convalida da setter di proprietà e il `Parse` metodo se si desidera che il metodo di convalida da eseguire in tutte le situazioni. Questa operazione non è obbligatoria e in alcuni casi può essere anche sconsigliata.  
+ È necessario chiamare esplicitamente il metodo di convalida dai Setter delle proprietà e il `Parse` metodo se si desidera che il metodo di convalida da eseguire in tutte le situazioni. Questa operazione non è obbligatoria e in alcuni casi può essere anche sconsigliata.  
   
 ### <a name="parse-validation-example"></a>Esempio di convalida del metodo Parse  
- Per garantire che il `ValidatePoint` metodo viene richiamato nel `Point` (classe), è necessario chiamarlo dal `Parse` (metodo) e dalla proprietà valori delle coordinate routine che impostano gli assi X e Y. Frammento di codice seguente viene illustrato come chiamare il `ValidatePoint` metodo di convalida dal `Parse` (funzione).  
+ Per garantire che il `ValidatePoint` metodo viene richiamato nel `Point` (classe), è necessario chiamarlo dal `Parse` (metodo) e dalla proprietà valori delle coordinate che impostano gli assi X e Y. Il frammento di codice seguente viene illustrato come chiamare le `ValidatePoint` metodo di convalida di `Parse` (funzione).  
   
 ```vb  
 <SqlMethod(OnNullCall:=False)> _  
@@ -421,7 +419,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ### <a name="property-validation-example"></a>Esempio di convalida delle proprietà  
- Frammento di codice seguente viene illustrato come chiamare il `ValidatePoint` metodo di convalida dalle routine delle proprietà che imposta le coordinate X e Y.  
+ Il frammento di codice seguente viene illustrato come chiamare il `ValidatePoint` metodo di convalida la routine di proprietà che impostano le coordinate X e Y.  
   
 ```vb  
 Public Property X() As Int32  
@@ -495,10 +493,10 @@ public Int32 Y
 ```  
   
 ## <a name="coding-udt-methods"></a>Codifica dei metodi UDT  
- Quando si codificano i metodi UDT, è consigliabile valutare la possibilità che l'algoritmo utilizzato possa cambiare nel tempo. In questo caso è possibile creare una classe separata per i metodi utilizzati dal tipo definito dall'utente. Se l'algoritmo cambia, è possibile ricompilare la classe con il nuovo codice e caricare l'assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza influire sul tipo definito dall'utente. In molti casi i tipi definiti dall'utente possono essere ricaricati utilizzando l'istruzione ALTER ASSEMBLY [!INCLUDE[tsql](../../includes/tsql-md.md)], anche se tale operazione potrebbe provocare problemi con i dati esistenti. Ad esempio, il `Currency` UDT incluso con il **AdventureWorks** Usa database di esempio un **ConvertCurrency** funzione per convertire i valori di valuta, che è implementata in una classe separata. È possibile che gli algoritmi di conversione cambino nel tempo in modo imprevedibile o che venga richiesta una nuova funzionalità. Separare il **ConvertCurrency** funzione dal `Currency` implementazione del tipo definito dall'utente offre una maggiore flessibilità durante la pianificazione per le modifiche future.  
+ Quando si codificano i metodi UDT, è consigliabile valutare la possibilità che l'algoritmo utilizzato possa cambiare nel tempo. In questo caso è possibile creare una classe separata per i metodi utilizzati dal tipo definito dall'utente. Se l'algoritmo cambia, è possibile ricompilare la classe con il nuovo codice e caricare l'assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza influire sul tipo definito dall'utente. In molti casi i tipi definiti dall'utente possono essere ricaricati utilizzando l'istruzione ALTER ASSEMBLY [!INCLUDE[tsql](../../includes/tsql-md.md)], anche se tale operazione potrebbe provocare problemi con i dati esistenti. Ad esempio, il `Currency` UDT è inclusa con il **AdventureWorks** Usa database di esempio un **ConvertCurrency** funzione per convertire i valori di valuta, che viene implementato in una classe separata. È possibile che gli algoritmi di conversione cambino nel tempo in modo imprevedibile o che venga richiesta una nuova funzionalità. Separando il **ConvertCurrency** funzione di `Currency` implementazione UDT offre maggiore flessibilità durante la pianificazione per le modifiche future.  
   
 ### <a name="example"></a>Esempio  
- Il `Point` classe contiene tre metodi semplici per il calcolo della distanza: **distanza**, **DistanceFrom** e **DistanceFromXY**. Ognuno di essi restituisce un valore `double` che calcola la distanza da `Point` a zero, la distanza da un punto specificato a `Point` e la distanza dalle coordinate X e Y specificate a `Point`. **Distanza** e **DistanceFrom** ogni chiamata **DistanceFromXY**e viene illustrato come utilizzare i diversi argomenti per ogni metodo.  
+ Il `Point` classe contiene tre metodi semplici per il calcolo della distanza: **Distance**, **DistanceFrom** e **DistanceFromXY**. Ognuno di essi restituisce un valore `double` che calcola la distanza da `Point` a zero, la distanza da un punto specificato a `Point` e la distanza dalle coordinate X e Y specificate a `Point`. **Distanza** e **DistanceFrom** ogni chiamata **DistanceFromXY**e viene illustrato come usare argomenti diversi per ogni metodo.  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -548,7 +546,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  La classe `Microsoft.SqlServer.Server.SqlMethodAttribute` fornisce attributi personalizzati che possono essere utilizzati per contrassegnare le definizioni di metodo allo scopo di specificare il determinismo, il comportamento in caso di chiamate Null e per indicare se un metodo è di tipo mutatore. Per queste proprietà si presuppone l'uso dei valori predefiniti e l'attributo personalizzato viene utilizzato solo quando è necessario un valore non predefinito.  
   
 > [!NOTE]  
->  La classe `SqlMethodAttribute` eredita dalla classe `SqlFunctionAttribute` e pertanto `SqlMethodAttribute` eredita i campi `FillRowMethodName` e `TableDefinition` da `SqlFunctionAttribute`. Questo implica, contrariamente al vero, la possibilità di scrivere un metodo con valori di tabella. Il metodo viene compilato e l'assembly viene distribuito, ma un errore sul `IEnumerable` restituire tipo viene generato in fase di esecuzione con il messaggio seguente: "metodi, proprietà o campi '\<nome >' nella classe\<classe >' nell'assembly '\<assembly >' ha tipo restituito non valido. "  
+>  La classe `SqlMethodAttribute` eredita dalla classe `SqlFunctionAttribute` e pertanto `SqlMethodAttribute` eredita i campi `FillRowMethodName` e `TableDefinition` da `SqlFunctionAttribute`. Questo implica, contrariamente al vero, la possibilità di scrivere un metodo con valori di tabella. Il metodo viene compilato e l'assembly viene distribuito, ma un errore sul `IEnumerable` restituire tipo viene generato in fase di esecuzione con messaggio analogo al seguente: "metodi, proprietà o campi '\<nome >' nella classe\<classe >' nell'assembly '\<assembly >' ha tipo restituito non valido. "  
   
  Nella tabella seguente sono descritte alcune delle proprietà `Microsoft.SqlServer.Server.SqlMethodAttribute` rilevanti che possono essere utilizzate nei metodi UDT con i relativi valori predefiniti.  
   
@@ -625,7 +623,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  Lo scopo del riempimento è assicurare che le impostazioni cultura vengano separate completamente dal valore di valuta, in modo che quando un tipo definito dall'utente viene confrontato con un altro tipo nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)], i byte delle impostazioni cultura vengono confrontati con i byte delle impostazioni cultura e i valori dei byte della valuta vengono confrontati con i valori dei byte della valuta.  
   
- Per il codice completo per il `Currency` UDT, seguire le istruzioni per l'installazione di CLR esempi in [motore di Database di SQL Server Samples](http://msftengprodsamples.codeplex.com/).  
+ Per l'elenco di codice per il `Currency` UDT, seguire le istruzioni per l'installazione di CLR i campioni nel [motore di Database di SQL Server Samples](http://msftengprodsamples.codeplex.com/).  
   
 ### <a name="currency-attributes"></a>Attributi di Currency  
  Il tipo definito dall'utente (UDT) `Currency` viene definito con gli attributi seguenti:  
@@ -749,7 +747,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- Per il codice completo per il `Currency` UDT, vedere [motore di Database di SQL Server Samples](http://msftengprodsamples.codeplex.com/).  
+ Per l'elenco di codice per il `Currency` definito dall'utente, vedere [motore di Database di SQL Server Samples](http://msftengprodsamples.codeplex.com/).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un tipo definito dall'utente](creating-user-defined-types.md)  

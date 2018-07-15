@@ -1,5 +1,5 @@
 ---
-title: Elemento InstanceSelection (ASSL) | Documenti Microsoft
+title: Elemento InstanceSelection (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - InstanceSelection element
 ms.assetid: 908a2da9-274c-40d2-87dc-4641cb8d77e6
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b36f0c3c5d29c88c499dea6e70ab4dd0cee1b42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9babb9e5066d00b8a396d52dfb2dbdfc2f0b4cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279767"
 ---
 # <a name="instanceselection-element-assl"></a>Elemento InstanceSelection (ASSL)
   Fornisce un hint alle applicazioni client sul modo in cui deve venire visualizzato un elenco di elementi, in base al numero previsto di elementi presenti nell'elenco.  
@@ -59,7 +59,7 @@ ms.locfileid: "36077667"
 |Elemento padre|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe seguenti.  
   
 |valore|Description|  

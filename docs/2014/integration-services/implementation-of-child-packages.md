@@ -1,5 +1,5 @@
 ---
-title: Implementazione di pacchetti figlio | Documenti Microsoft
+title: Implementazione di pacchetti figlio | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - child packages
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 caps.latest.revision: 38
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85a9e6c93f0b1c3157f9814508ee4fb9263cd444
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbf5d3d4142c543f5bd0ab3cebae72eeea3bb432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171076"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287587"
 ---
 # <a name="implementation-of-child-packages"></a>Implementazione di pacchetti figlio
   Quando si implementa il bilanciamento del carico tramite [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], i pacchetti figlio vengono installati su altri server per sfruttare il tempo di CPU o di server disponibile. Per creare ed eseguire i pacchetti figlio è necessario attenersi alla procedura seguente:  
@@ -71,8 +71,8 @@ ms.locfileid: "36171076"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog [SSIS: l'accesso alle variabili in un pacchetto padre](http://go.microsoft.com/fwlink/?LinkId=257729), sul sito Web consultingblogs.emc.com.  
+-   Intervento nel blog concernente [SSIS: l'accesso a variabili in un pacchetto padre](http://go.microsoft.com/fwlink/?LinkId=257729), sul sito Web consultingblogs.emc.com.  
   
--   Intervento nel blog [SSIS: deve eseguire i pacchetti figlio in-process o out-of-process?](http://go.microsoft.com/fwlink/?LinkId=220819), sul sito Web consultingblogs.emc.com.  
+-   Intervento nel blog concernente [SSIS: è necessario eseguire pacchetti figlio in-process o out-of-process?](http://go.microsoft.com/fwlink/?LinkId=220819), sul sito Web consultingblogs.emc.com.  
   
   

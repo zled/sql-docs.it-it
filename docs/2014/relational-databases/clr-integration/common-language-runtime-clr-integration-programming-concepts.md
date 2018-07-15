@@ -1,13 +1,11 @@
 ---
-title: Common Language Runtime (CLR) integrazione programmazione di concetti | Documenti Microsoft
+title: Concetti della programmazione di Common Language Runtime (CLR) Integration | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - .NET Framework [SQL Server]
 ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3f508cdada9905c2a8ec322319df58cb5504af14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b4b2ee2815f89770d3c9af182237fb7d888424bc
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158471"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350093"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Concetti relativi alla programmazione dell'integrazione con CLR (Common Language Runtime)
   A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è inclusa l'integrazione del componente CRL (Common Language Runtime) di .NET Framework per [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. È pertanto possibile scrivere stored procedure, trigger, tipi definiti dall'utente, funzioni definite dall'utente, funzioni di aggregazione definite dall'utente e funzioni di flusso con valori di tabella usando qualsiasi linguaggio di .NET Framework, inclusi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
@@ -34,7 +32,7 @@ ms.locfileid: "36158471"
  Lo spazio dei nomi Microsoft.SqlServer.Server include la funzionalità principali per la programmazione CLR in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Lo spazio dei nomi Microsoft.SqlServer.Server, tuttavia, viene trattato nella documentazione di .NET Framework SDK. Questa documentazione non è inclusa nella documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Per impostazione predefinita, durante l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene installato .NET Framework, ma non .NET Framework SDK. Se SDK non è installato nel computer né incluso nella raccolta della documentazione online, i collegamenti al contenuto SDK presenti in questa sezione non funzionano. Installare .NET Framework SDK, Una volta installato, aggiungere SDK alla documentazione Online e al sommario seguendo le istruzioni in [installazione di .NET Framework SDK](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
+>  Per impostazione predefinita, durante l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene installato .NET Framework, ma non .NET Framework SDK. Se SDK non è installato nel computer né incluso nella raccolta della documentazione online, i collegamenti al contenuto SDK presenti in questa sezione non funzionano. Installare .NET Framework SDK, Una volta installato, aggiungere il SDK alla documentazione Online e al sommario seguendo le istruzioni disponibili nel [installazione di .NET Framework SDK](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
   
  Nella tabella seguente vengono elencati gli argomenti disponibili in questa sezione.  
   
@@ -44,7 +42,7 @@ ms.locfileid: "36158471"
  [Assembly &#40;Motore di database&#41;](assemblies-database-engine.md)  
  Viene descritto come usare gli assembly in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per distribuire funzioni, stored procedure, trigger, aggregazioni definite dall'utente e tipi definiti dall'utente scritti usando uno dei linguaggi di codice gestito di Common Language Runtime (CLR) di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework e non [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- [La creazione di oggetti di Database con Common Language Runtime &#40;CLR&#41; integrazione](database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
+ [Compilazione di oggetti di Database con Common Language Runtime &#40;CLR&#41; integrazione](database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
  Vengono descritti i tipi di oggetti che è possibile compilare usando CLR e vengono esaminati i requisiti per la compilazione di oggetti di database CLR.  
   
  [Accesso ai dati da oggetti di database CLR](data-access/data-access-from-clr-database-objects.md)  

@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di query XPath con spazi dei nomi (classi gestite SQLXML) | Documenti Microsoft
+title: Esecuzione di query XPath con spazi dei nomi (classi gestite SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,22 +20,22 @@ helpviewer_keywords:
 - namespaces [SQLXML], XPath queries
 ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67857d58d05f11f2b93465aec6cf3e0d7b2b2017
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c6be18c85f7c7baf1f38c492699bf9cb42209b0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284687"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Esecuzione di query XPath con spazi dei nomi (classi gestite SQLXML)
   Le query XPath possono includere spazi dei nomi. Se gli elementi dello schema sono qualificati con spazio dei nomi, ovvero utilizzano uno spazio dei nomi di destinazione, le query XPath sullo schema devono specificare lo spazio dei nomi.  
   
  Poiché l'utilizzo del carattere jolly (*) non è supportato in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, è necessario specificare la query XPath utilizzando un prefisso di spazio dei nomi. Per risolvere il prefisso, utilizzare la proprietà di spazi dei nomi per specificare l'associazione dello spazio dei nomi.  
   
- Nell'esempio seguente, la query XPath specifica spazi dei nomi utilizzando il carattere jolly (\*) e le funzioni XPath Local e namespace-uri(). La query XPath restituisce tutti gli elementi in cui il nome locale è `Employee` e l'URI dello spazio dei nomi è `urn:myschema:Contacts`.  
+ Nell'esempio seguente, la query XPath specifica spazi dei nomi usando il carattere jolly (\*) e le funzioni di XPath Local e namespace-uri(). La query XPath restituisce tutti gli elementi in cui il nome locale è `Employee` e l'URI dello spazio dei nomi è `urn:myschema:Contacts`.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
@@ -59,7 +59,7 @@ ms.locfileid: "36155727"
   
  Poiché questo schema definisce lo spazio dei nomi di destinazione, una query XPath, ad esempio "Employee", eseguita sullo schema deve includere lo spazio dei nomi.  
   
- Nell'applicazione di esempio C# seguente viene eseguita una query XPath sullo schema XSD precedente (MySchema.xml). Per risolvere il prefisso, specificare l'associazione dello spazio dei nomi utilizzando la proprietà di spazi dei nomi dell'oggetto SqlXmlCommand.  
+ Nell'applicazione di esempio C# seguente viene eseguita una query XPath sullo schema XSD precedente (MySchema.xml). Per risolvere il prefisso, specificare l'associazione dello spazio dei nomi usando la proprietà di spazi dei nomi dell'oggetto SqlXmlCommand.  
   
 > [!NOTE]  
 >  Nel codice è necessario specificare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione.  

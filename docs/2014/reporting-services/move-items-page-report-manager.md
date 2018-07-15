@@ -1,5 +1,5 @@
 ---
-title: Spostamento degli elementi (gestione Report) | Documenti Microsoft
+title: Spostamento degli elementi (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8de86adb899b08cf37151524f2b451b6c54723b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5914bd0020a2d82e9f38ed4f5b60f0c880aaeb66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290277"
 ---
 # <a name="move-items-page-report-manager"></a>Pagina Spostamento elementi (Gestione report)
   La pagina di spostamento degli elementi consente di spostare un report, una cartella o altri elementi in una nuova posizione nel server di report. È possibile digitare il percorso della nuova posizione oppure utilizzare una visualizzazione albero per selezionare una nuova posizione nello spazio dei nomi del server di report. Si possono spostare solo gli elementi per i quali si dispone delle autorizzazioni per lo spostamento e che sono archiviati nel server di report corrente.  
@@ -41,7 +41,7 @@ ms.locfileid: "36077733"
 2.  Nella barra degli strumenti fare clic su **Visualizzazione Dettagli**.  
   
     > [!NOTE]  
-    >  Se viene visualizzato solo **visualizzazione affiancata**, ci si trova già nella **visualizzazione dettagli**.  
+    >  Se viene visualizzato solo **visualizzazione affiancata**, ci si trova già in **visualizzazione dettagli**.  
   
 3.  Selezionare la casella accanto all'elemento, quindi fare clic su **Sposta** nella barra degli strumenti. È possibile selezionare più di una casella se si desidera spostare più elementi nello stesso percorso nuovo.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36077733"
 2.  Nella barra degli strumenti fare clic su **Visualizzazione Affiancata**.  
   
     > [!NOTE]  
-    >  Se viene visualizzato solo **visualizzazione dettagli**, ci si trova già nella **visualizzazione affiancata**.  
+    >  Se viene visualizzato solo **visualizzazione dettagli**, ci si trova già in **visualizzazione affiancata**.  
   
 3.  Passare con il puntatore del mouse su un elemento, quindi fare clic sulla freccia a discesa.  
   
@@ -70,10 +70,10 @@ ms.locfileid: "36077733"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Pagina delle proprietà generale, le cartelle &#40;gestione Report&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
+ [Pagina delle proprietà generale, cartelle di &#40;gestione Report&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Pagina delle proprietà Generale, Report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Pagina delle proprietà generale, le risorse &#40;gestione Report&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   
  [Pagina delle proprietà generale, origini dati condivise &#40;gestione Report&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Creazione, modifica e rimozione di schemi | Documenti Microsoft
+title: Creazione, modifica e rimozione di schemi | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - schemas [SMO]
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a9d25849fe2882c8d9fe249e1146297c07f3eec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7bfbd8aa8265fd0cdc4615cb8a5ed2065e559138
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290347"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>Creazione, modifica e rimozione di schemi
   L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Schema> rappresenta un contesto di proprietà per un oggetto di database. La proprietà <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> rappresenta una raccolta di oggetti <xref:Microsoft.SqlServer.Management.Smo.Schema>.  
   
 ## <a name="example"></a>Esempio  
- Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto di Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C#&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-schema-in-visual-basic"></a>Creazione, modifica e rimozione di uno schema in Visual Basic  
  In questo esempio di codice viene illustrato come creare uno schema e assegnarlo a un oggetto di database. Il programma concede quindi l'autorizzazione a un utente e successivamente crea una nuova tabella nello schema.  

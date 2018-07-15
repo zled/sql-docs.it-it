@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati DataItem (ASSL) | Documenti Microsoft
+title: Tipo di dati DataItem (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataItem data type
 ms.assetid: f4f5155f-9c3d-49a1-a390-a9c734fafbce
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d5622ca2cdda5a08bdcfdfd486e44b6fcd8fbf7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2646dcce64672d98d33ecff3575016269379325
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300891"
 ---
 # <a name="dataitem-data-type-assl"></a>Tipo di dati DataItem (ASSL)
   Definisce un tipo di dati primitivo che rappresenta le caratteristiche relative ai dati di un elemento di dati, ad esempio una colonna o un attributo.  
@@ -65,10 +65,10 @@ ms.locfileid: "36063441"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Annotazioni](../collections/annotations-element-assl.md), [regole di confronto](../properties/collation-element-assl.md), [DataSize](../properties/datasize-element-assl.md), [DataType](../properties/datatype-element-assl.md), [formato](../properties/format-element-assl.md), [InvalidXmlCharacters ](../properties/invalidxmlcharacters-element-assl.md), [MimeType](../properties/mimetype-element-assl.md), [NullProcessing](../properties/nullprocessing-element-assl.md), [origine](../properties/source-element-binding-assl.md), [Trimming](../properties/trimming-element-assl.md)|  
+|Elementi figlio|[Le annotazioni](../collections/annotations-element-assl.md), [regole di confronto](../properties/collation-element-assl.md), [DataSize](../properties/datasize-element-assl.md), [DataType](../properties/datatype-element-assl.md), [formato](../properties/format-element-assl.md), [InvalidXmlCharacters ](../properties/invalidxmlcharacters-element-assl.md), [MimeType](../properties/mimetype-element-assl.md), [NullProcessing](../properties/nullprocessing-element-assl.md), [origine](../properties/source-element-binding-assl.md), [Trimming](../properties/trimming-element-assl.md)|  
 |Elementi derivati|Vedere la tabella nei Commenti.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il tipo di dati `DataItem` viene utilizzato per qualsiasi elemento dei dati che può essere associato; ad esempio, una misura, un chiave dell'attributo e un nome di attributo. I dettagli che sono attinenti e le impostazioni predefinite che si applicano, dipendono dall'utilizzo; ad esempio, i nomi di attributo devono essere stringhe.  
   
  Un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] accetta solo un determinato set di tipi di dati. L’utilizzo di altri tipi di dati comporta un errore, piuttosto che una conversione implicita in uno dei tipi validi.  
@@ -77,7 +77,7 @@ ms.locfileid: "36063441"
   
 |Elemento padre|Elemento di tipo `DataItem`|Commenti|  
 |--------------------|----------------------------------|--------------|  
-|[Oggetto AttributeTranslation](../objects/column-element-assl.md)|`Source` elemento del `DataItem` deve essere di tipo [ColumnBinding](binding-data-type-assl.md) o [AttributeBinding](attributebinding-data-type-assl.md)|  
+|[AttributeTranslation](../objects/column-element-assl.md)|`Source` elemento del `DataItem` deve essere di tipo [ColumnBinding](binding-data-type-assl.md) o [AttributeBinding](attributebinding-data-type-assl.md)|  
 |[DimensionAttribute](../objects/customrollupcolumn-element-assl.md)|`Source` elemento del `DataItem` deve essere di tipo [ColumnBinding](binding-data-type-assl.md) o [AttributeBinding](attributebinding-data-type-assl.md)|  
 |[DimensionAttribute](../objects/customrolluppropertiescolumn-element-assl.md)|`Source` elemento del `DataItem` deve essere di tipo [ColumnBinding](binding-data-type-assl.md) o [AttributeBinding](attributebinding-data-type-assl.md)|  
 |[DimensionAttribute](../objects/keycolumn-element-assl.md)|`Source` elemento del `DataItem` deve essere di tipo [ColumnBinding](binding-data-type-assl.md), [AttributeBinding](attributebinding-data-type-assl.md) o [TimeBinding](timebinding-data-type-assl.md)|  

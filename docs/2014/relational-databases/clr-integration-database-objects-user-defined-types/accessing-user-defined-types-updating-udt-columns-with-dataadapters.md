@@ -1,13 +1,11 @@
 ---
-title: L'aggiornamento delle colonne di tipo definito dall'utente con DataAdapter | Documenti Microsoft
+title: Aggiornamento di colonne UDT con DataAdapter | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -25,21 +23,21 @@ helpviewer_keywords:
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 683e1f82aaf76a21f20fed02b6be1c39347d7302
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 7a69065a293d5ffedba91308c9b4ac7c6d02b7c7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055498"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354873"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>Aggiornamento di colonne con tipo definito dall'utente con DataAdapter
   Per la modifica e il recupero dei dati i tipi definiti dall'utente utilizzano `System.Data.DataSet` e `System.Data.SqlClient.SqlDataAdapter`.  
   
 ## <a name="populating-a-dataset"></a>Popolamento di set di dati  
- È possibile utilizzare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT per selezionare i valori delle colonne con tipo definito dall'utente per popolare un set di dati utilizzando un adattatore dati. Nell'esempio seguente si presuppone di disporre di un **punti** tabella definita con la struttura seguente e alcuni dati di esempio. I seguenti [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni consentono di creare le **punti** tabella e inserire alcune righe.  
+ È possibile utilizzare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT per selezionare i valori delle colonne con tipo definito dall'utente per popolare un set di dati utilizzando un adattatore dati. L'esempio seguente presuppone la presenza di un **punti** tabella definita con la struttura seguente e alcuni dati di esempio. Quanto segue [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni consentono di creare le **punti** di tabella e inserire alcune righe.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -51,7 +49,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- Nel frammento di codice ADO.NET seguente recupera una stringa di connessione valida, crea un nuovo `SqlDataAdapter`e popola una `System.Data.DataTable` con le righe di dati dal **punti** tabella.  
+ Il frammento di codice ADO.NET seguente recupera una stringa di connessione valida, crea un nuovo `SqlDataAdapter`e popola una `System.Data.DataTable` con le righe di dati dalle **punti** tabella.  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  

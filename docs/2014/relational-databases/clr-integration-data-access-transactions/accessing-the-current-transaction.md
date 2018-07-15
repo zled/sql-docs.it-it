@@ -1,13 +1,11 @@
 ---
-title: Accesso alla transazione corrente | Documenti Microsoft
+title: Accesso alla transazione corrente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 618b272195dc61179db7ac36a19cc30f5eaa2aef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: dad95c2d2fc02e46b139f29889315873f21887e7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167896"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351813"
 ---
 # <a name="accessing-the-current-transaction"></a>Accesso alla transazione corrente
   Se una transazione è attiva quando viene immesso il codice CLT (Common Language Runtime) in esecuzione su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la transazione viene esposta mediante la classe `System.Transactions.Transaction`. Per accedere alla transazione corrente viene utilizzata la proprietà `Transaction.Current`. Nella maggior parte dei casi non è necessario accedere in modo esplicito alla transazione. Per le connessioni al database, ADO.NET controlla `Transaction.Current` automaticamente quando viene chiamato il metodo `Connection.Open` e integra in modo trasparente la connessione in tale transazione, a meno che la parola chiave `Enlist` non venga impostata su false nella stringa di connessione.  
@@ -48,7 +46,7 @@ ms.locfileid: "36167896"
   
 -   La funzione o procedura gestita può restituire un valore utilizzando un parametro di output. La procedura [!INCLUDE[tsql](../../includes/tsql-md.md)] chiamante può controllare il valore restituito e, se necessario, eseguire `ROLLBACK TRANSACTION`.  
   
--   La funzione o procedura gestita può generare un'eccezione personalizzata. La chiamata [!INCLUDE[tsql](../../includes/tsql-md.md)] può rilevare l'eccezione generata dalla procedura gestita o funzione in un blocco try/catch ed eseguire procedure `ROLLBACK TRANSACTION`.  
+-   La funzione o procedura gestita può generare un'eccezione personalizzata. Il chiamante [!INCLUDE[tsql](../../includes/tsql-md.md)] può rilevare l'eccezione generata dalla procedura gestita o funzione in un blocco try/catch ed eseguire procedure `ROLLBACK TRANSACTION`.  
   
 -   La funzione o procedura gestita può annullare la transazione corrente chiamando il metodo `Transaction.Rollback` se viene soddisfatta una determinata condizione.  
   

@@ -1,13 +1,11 @@
 ---
-title: Requisiti del tipo definito dall'utente | Documenti Microsoft
+title: Requisiti del tipo definito dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,18 +20,18 @@ helpviewer_keywords:
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 14286261d2f157f208fe8d918e4fe1705f58eb97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ff2d8987dee15e39a5f85e4efc01f0bdaef27e06
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158002"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350073"
 ---
 # <a name="user-defined-type-requirements"></a>Requisiti per i tipi definiti dall'utente
-  È necessario apportare più importanti decisioni di progettazione durante la creazione di un tipo definito dall'utente (UDT) per l'installazione nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Benché nella maggior parte dei casi sia consigliabile creare il tipo definito dall'utente come struttura, la creazione come classe rappresenta un'altra opzione valida. Perché il tipo venga registrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la definizione del tipo definito dall'utente deve essere conforme alle specifiche relative alla creazione di tali tipi.  
+  È necessario apportare alcune decisioni di progettazione importante durante la creazione di un tipo definito dall'utente (UDT) per l'installazione nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Benché nella maggior parte dei casi sia consigliabile creare il tipo definito dall'utente come struttura, la creazione come classe rappresenta un'altra opzione valida. Perché il tipo venga registrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la definizione del tipo definito dall'utente deve essere conforme alle specifiche relative alla creazione di tali tipi.  
   
 ## <a name="requirements-for-implementing-udts"></a>Requisiti per l'implementazione di tipi definiti dall'utente  
  Ai fini dell'esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il tipo definito dall'utente deve implementare i requisiti seguenti nella relativa definizione:  
@@ -74,7 +72,7 @@ ms.locfileid: "36158002"
 ## <a name="native-serialization"></a>Serializzazione nativa  
  La scelta degli attributi di serializzazione corretti per il tipo definito dall'utente dipende dal tipo definito dall'utente che si desidera creare. Nel formato di serializzazione `Native` viene utilizzata una struttura molto semplice che consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di archiviare una rappresentazione nativa efficace del tipo definito dall'utente nel disco. Il formato `Native` rappresenta la scelta consigliata se il tipo definito dall'utente è semplice e contiene solo campi dei tipi seguenti:  
   
- **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
+ **bool**, **byte**, **sbyte**, **breve**, **ushort**, **int**, ** uint**, **lungo**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, ** SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
  I tipi di valore composti da campi in cui sono utilizzati i tipi elencati in precedenza costituiscono candidati validi per il formato `Native`, ad esempio `structs` in Visual C# (o `Structures`, come viene denominato in Visual Basic). Un tipo definito dall'utente specificato, ad esempio, con il formato di serializzazione `Native` può contenere un campo di un altro tipo definito dall'utente specificato anch'esso con il formato `Native`. Se la definizione del tipo definito dall'utente è più complessa e contiene tipi di dati non inclusi nell'elenco precedente, è invece necessario specificare il formato di serializzazione `UserDefined`.  
   
@@ -86,7 +84,7 @@ ms.locfileid: "36158002"
   
 -   `System.Runtime.InteropServices.StructLayoutAttribute` deve essere specificato come `StructLayout.LayoutKindSequential` se il tipo definito dall'utente è specificato in una classe e non in una struttura. Questo attributo controlla il layout fisico dei campi dati e viene utilizzato per forzare la disposizione dei membri in base all'ordine in cui vengono visualizzati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza questo attributo per determinare l'ordine dei campi per i tipi definiti dall'utente con più valori.  
   
- Per un esempio di un tipo definito dall'utente definito con `Native` serializzazione, vedere il punto di tipo definito dall'utente in [codifica di tipi](creating-user-defined-types-coding.md).  
+ Per un esempio di un tipo definito dall'utente definito con `Native` serializzazione, vedere il punto di tipo definito dall'utente nella [codifica di tipi](creating-user-defined-types-coding.md).  
   
 ## <a name="userdefined-serialization"></a>Serializzazione UserDefined  
  L'impostazione del formato `UserDefined` per l'attributo `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` garantisce allo sviluppatore il controllo completo sul formato binario. Quando si specifica la proprietà dell'attributo `Format` come `UserDefined`, è necessario effettuare le operazioni seguenti nel codice:  
@@ -150,10 +148,10 @@ ms.locfileid: "36158002"
 -   Minore o uguale a (<=)  
   
 ### <a name="implementing-nullability"></a>Implementazione del supporto dei valori Null  
- Oltre a specificare correttamente gli attributi per gli assembly, la classe deve inoltre supportare i valori Null. Benché i tipi definiti dall'utente caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportino i valori Null, perché un tipo definito dall'utente possa riconoscere un valore Null è necessario che la classe implementi l'interfaccia `INullable`. Per ulteriori informazioni e un esempio di come implementare ammissione di valori null in un tipo definito dall'utente, vedere [codifica di tipi](creating-user-defined-types-coding.md).  
+ Oltre a specificare correttamente gli attributi per gli assembly, la classe deve inoltre supportare i valori Null. Benché i tipi definiti dall'utente caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportino i valori Null, perché un tipo definito dall'utente possa riconoscere un valore Null è necessario che la classe implementi l'interfaccia `INullable`. Per altre informazioni e un esempio di come implementare l'ammissione di valori null in un tipo definito dall'utente, vedere [codifica di tipi](creating-user-defined-types-coding.md).  
   
 ### <a name="string-conversions"></a>Conversioni di stringhe  
- Per supportare la conversione di stringhe da e verso il tipo definito dall'utente, è necessario fornire un metodo `Parse` e un metodo `ToString` nella classe. Il metodo `Parse` consente la conversione di una stringa in un tipo definito dall'utente. Tale metodo deve essere dichiarato come `static` (o `Shared` in Visual Basic) e accetta un parametro di tipo `System.Data.SqlTypes.SqlString`. Per ulteriori informazioni e un esempio di come implementare il `Parse` e `ToString` i metodi, vedere [codifica di tipi](creating-user-defined-types-coding.md).  
+ Per supportare la conversione di stringhe da e verso il tipo definito dall'utente, è necessario fornire un metodo `Parse` e un metodo `ToString` nella classe. Il metodo `Parse` consente la conversione di una stringa in un tipo definito dall'utente. Tale metodo deve essere dichiarato come `static` (o `Shared` in Visual Basic) e accetta un parametro di tipo `System.Data.SqlTypes.SqlString`. Per altre informazioni e un esempio di come implementare il `Parse` e `ToString` metodi, vedere [codifica di tipi](creating-user-defined-types-coding.md).  
   
 ## <a name="xml-serialization"></a>Serializzazione XML  
  I tipi definiti dall'utente devono supportare la conversione da e verso il tipo di dati `xml` rispettando la conformità al contratto per la serializzazione XML. Nello spazio dei nomi `System.Xml.Serialization` sono contenute classi utilizzate per la serializzazione di oggetti in documenti o flussi di formato XML. È possibile scegliere di implementare la serializzazione `xml` utilizzando l'interfaccia `IXmlSerializable`, che fornisce formattazione personalizzata per la serializzazione e la deserializzazione XML.  

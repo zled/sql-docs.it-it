@@ -1,13 +1,11 @@
 ---
-title: Oggetto SqlPipe | Documenti Microsoft
+title: Oggetto SqlPipe | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - tabular results
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b67acce373f412ef4adca2c9957f4f5046f35a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 61ece1402c9675f4f737098580283f1a6e777b76
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169013"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350853"
 ---
 # <a name="sqlpipe-object"></a>Oggetto SqlPipe
   Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è molto comune scrivere una stored procedure (o una stored procedure estesa) per l'invio di risultati o parametri di output al client chiamante.  
@@ -59,7 +57,7 @@ ms.locfileid: "36169013"
 >  Dopo la chiamata al metodo `SendResultsStart`, è possibile chiamare solo `SendResultsRow` e `SendResultsEnd`. La chiamata di qualsiasi altro metodo nella stessa istanza di `SqlPipe` provoca una `InvalidOperationException`. `SendResultsEnd` imposta `SqlPipe` di nuovo nello stato iniziale nel quale possono essere chiamati gli altri metodi.  
   
 ### <a name="example"></a>Esempio  
- La stored procedure `uspGetProductLine` restituisce il nome, il numero di prodotto, il colore e il prezzo di listino di tutti i prodotti di una linea dei prodotti specificata. Questa stored procedure accetta corrispondenze esatte per *prodLine*.  
+ La stored procedure `uspGetProductLine` restituisce il nome, il numero di prodotto, il colore e il prezzo di listino di tutti i prodotti di una linea dei prodotti specificata. Questa stored procedure accetta corrispondenze esatte *prodLine*.  
   
  C#  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - data viewers [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 05cd35ed1dcb6c819f2833eff81226e102d86c81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3fe70b27d885f3c94039f79b49c961e526fddec1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308001"
 ---
 # <a name="debugging-data-flow"></a>Debug di un flusso di dati
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] includono funzionalità e strumenti che è possibile usare per la risoluzione dei problemi dei flussi di dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -53,7 +53,7 @@ ms.locfileid: "36168563"
   
 #### <a name="to-add-a-data-viewer"></a>Per aggiungere un visualizzatore dati  
   
--   [Aggiungere un visualizzatore dati a un flusso di dati](../add-a-data-viewer-to-a-data-flow.md)  
+-   [Aggiunta di un visualizzatore dati a un flusso di dati](../add-a-data-viewer-to-a-data-flow.md)  
   
 ## <a name="row-counts"></a>Conteggi delle righe  
  Il numero delle righe passate lungo un percorso viene visualizzato nell'area di progettazione della scheda **Flusso di dati** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , accanto al percorso. Tale numero viene aggiornato periodicamente mentre i dati si spostano lungo il percorso.  

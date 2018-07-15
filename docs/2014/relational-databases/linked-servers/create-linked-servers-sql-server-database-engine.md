@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server (starting with 2008)
 f1_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fcfb3933a1ce88855ec32a9b4ac86a5c2075819d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 47292d5659b5244a6c318b330b45825ad5408486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294787"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Creazione di server collegati (Motore di database di SQL Server)
   In questo argomento viene illustrato come creare un server collegato e come accedere ai dati da un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La creazione di server collegati consente di utilizzare dati di più origini. Il server collegato non deve essere un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia si tratta di uno scenario comune.  
@@ -41,7 +41,7 @@ ms.locfileid: "36171228"
 ##  <a name="Security"></a> Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
- Quando si utilizza [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni, è necessario `ALTER ANY LINKED SERVER` l'autorizzazione per il server o l'appartenenza nel **setupadmin** ruolo predefinito del server. Quando si utilizza [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] richiede `CONTROL SERVER` autorizzazione o l'appartenenza al **sysadmin** ruolo predefinito del server.  
+ Quando si usa [!INCLUDE[tsql](../../includes/tsql-md.md)] (istruzioni), richiede `ALTER ANY LINKED SERVER` autorizzazione nel server o l'appartenenza al **setupadmin** ruolo predefinito del server. Quando si usa [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] richiede `CONTROL SERVER` autorizzazioni o appartenenza al gruppo il **sysadmin** ruolo predefinito del server.  
   
 ##  <a name="Procedures"></a> Come creare un server collegato  
  È possibile utilizzare uno degli elementi seguenti:  

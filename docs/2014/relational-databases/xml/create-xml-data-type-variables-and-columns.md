@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 62f1bd69d60fb7a0c919b07a8582d28a08e666e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3c7b01d8238c4e82fd66dd7bba85d47ae2bbe83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309391"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Creazione di variabili e colonne con tipo di dati XML
-  Il tipo di dati `xml` è un tipo di dati predefinito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è simile ad altri tipi predefiniti quali `int` e `varchar`. Come con altri tipi predefiniti, è possibile usare il `xml` tipo di dati come tipo di colonna quando si crea una tabella come un tipo di variabile, tipo di parametro, un tipo restituito dalla funzione, o in [CAST e CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+  Il tipo di dati `xml` è un tipo di dati predefinito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è simile ad altri tipi predefiniti quali `int` e `varchar`. Come con altri tipi predefiniti, è possibile usare la `xml` tipo di dati come tipo di colonna quando si crea una tabella come un tipo di variabile, tipo di parametro, un tipo restituito dalla funzione, o in [CAST e CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ## <a name="creating-columns-and-variables"></a>Creazione di colonne e variabili  
  Per creare una colonna di tipo `xml` come parte di una tabella, usare un'istruzione `CREATE TABLE` come illustrato nell'esempio seguente:  
@@ -95,7 +95,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- Alternativa all'utilizzo di vincoli, è possibile creare un wrapper, una funzione definita dall'utente per eseguire il wrapping di `xml` metodo con tipo di dati e specificare funzione definita dall'utente nel vincolo check, come illustrato nell'esempio seguente.  
+ Un'alternativa all'utilizzo di vincoli consiste nel creare un wrapper, una funzione definita dall'utente per eseguire il wrapping di `xml` metodo con tipo di dati e specificare funzione definita dall'utente nel vincolo check, come illustrato nell'esempio seguente.  
   
  Nell'esempio seguente, il vincolo in `Col2` specifica che tutte le istanze XML archiviate nella colonna devono avere un elemento `<ProductDescription>` contenente un attributo `ProductID` . Il vincolo viene imposto da questa funzione definita dall'utente:  
   
@@ -131,7 +131,7 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>Utilizzo di un'unica tabella o di più tabelle  
- Un `xml` colonna tipo di dati può essere creato in una tabella che contiene altre colonne relazionali o in una tabella separata con una relazione di chiave esterna con una tabella principale.  
+ Un `xml` colonna tipo di dati può essere creato in una tabella che contiene altre colonne relazionali oppure in una tabella separata con una relazione di chiave esterna con una tabella principale.  
   
  Creare un `xml` colonna tipo di dati nella stessa tabella quando viene soddisfatta una delle condizioni seguenti:  
   
@@ -141,7 +141,7 @@ INSERT INTO T values(1,'<Product />')
   
  Creare il `xml` colonna tipo di dati in una tabella separata se vengono soddisfatte le condizioni seguenti:  
   
--   Si desidera compilare un indice XML sul `xml` colonna tipo di dati, ma la chiave primaria della tabella principale è diversa dalla chiave di clustering, la tabella principale non ha una chiave primaria o la tabella principale è un heap (nessuna chiave di clustering). Questa situazione può verificarsi quando si utilizza una tabella principale esistente.  
+-   Si desidera compilare un indice XML sul `xml` colonna tipo di dati, ma la chiave primaria della tabella principale è diversa dalla chiave di clustering, la tabella principale non dispone di una chiave primaria o la tabella principale è un heap (nessuna chiave di clustering). Questa situazione può verificarsi quando si utilizza una tabella principale esistente.  
   
 -   Si desidera evitare che l'analisi della tabella venga rallentata a causa della presenza della colonna XML, che utilizza spazio sia che venga archiviata all'interno delle righe che all'esterno delle righe.  
   

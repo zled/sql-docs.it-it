@@ -1,5 +1,5 @@
 ---
-title: Destinazione dell'istogramma | Documenti Microsoft
+title: Destinazione dell'istogramma | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bucketing target [SQL Server extended events]
 - event bucketing target
 - targets [SQL Server extended events], bucketing
 ms.assetid: 2ea39141-7eb0-4c74-abf8-114c2c106a19
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dcee8251ba073d87f94fc4be18bc6e77c6113361
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f524357956a2832b2eee50a2659e065e34d3e070
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293121"
 ---
 # <a name="histogram-target"></a>Destinazione dell'istogramma
   La destinazione dell'istogramma raggruppa le occorrenze di un tipo di evento specifico in base ai dati relativi all'evento. I raggruppamenti di eventi sono conteggiati in base a una colonna di evento oppure a un'azione specificata. È possibile utilizzare la destinazione dell'istogramma dell'evento per risolvere i problemi relativi alle prestazioni. Grazie all'identificazione degli eventi che si verificano più di frequente, è infatti possibile individuare elementi specifici che indicano la causa potenziale di un problema relativo alle prestazioni.  
@@ -33,9 +33,9 @@ ms.locfileid: "36155686"
 |Opzione|Valori consentiti|Description|  
 |------------|--------------------|-----------------|  
 |slot|Qualsiasi valore intero. Questo valore è facoltativo.|Valore specificato dall'utente che indica il numero massimo di raggruppamenti da mantenere. Quando questo valore viene raggiunto, i nuovi eventi che non appartengono ai gruppi esistenti vengono ignorati.<br /><br /> Si noti che per migliorare le prestazioni, il numero di slot viene arrotondato alla potenza di 2 più vicina.|  
-|filtering_event_name|Qualsiasi evento presente nella sessione degli eventi estesi. Questo valore è facoltativo.|Valore specificato dall'utente utilizzato per identificare una classe di eventi. Nel bucket vengono inserite solo le istanze dell'evento specificato. Tutti gli altri eventi vengono ignorati.<br /><br /> Se si specifica questo valore, è necessario usare il formato *nome_pacchetto*.*nome_evento*, ad esempio `'sqlserver.checkpoint_end'`. Per identificare il nome del pacchetto, è possibile utilizzare la query seguente:<br /><br /> Selezionare p.name, se.event_name<br />DA sys.dm_xe_session_events se<br />Creare un JOIN xe_packages p<br />IN se_event_package_guid = p.guid<br />ORDER BY p.name, se.event_name<br /><br /> <br /><br /> Se non si specifica il valore filtering_event_name, l'opzione source_type deve essere impostata su 1 (impostazione predefinita).|  
+|filtering_event_name|Qualsiasi evento presente nella sessione degli eventi estesi. Questo valore è facoltativo.|Valore specificato dall'utente utilizzato per identificare una classe di eventi. Nel bucket vengono inserite solo le istanze dell'evento specificato. Tutti gli altri eventi vengono ignorati.<br /><br /> Se si specifica questo valore, è necessario usare il formato *nome_pacchetto*.*nome_evento*, ad esempio `'sqlserver.checkpoint_end'`. Per identificare il nome del pacchetto, è possibile utilizzare la query seguente:<br /><br /> Selezionare p.name, se.event_name<br />DA sys.dm_xe_session_events se<br />JOIN xe_packages p<br />ON se_event_package_guid = p.guid<br />ORDER BY p.name, se.event_name<br /><br /> <br /><br /> Se non si specifica il valore filtering_event_name, l'opzione source_type deve essere impostata su 1 (impostazione predefinita).|  
 |source_type|Tipo di oggetto su cui è basato il bucket. Si tratta di un valore facoltativo che, se non è specificato, assumerà il valore predefinito 1.|I valori consentiti sono i seguenti:<br /><br /> 0 per un evento<br /><br /> 1 per un'azione|  
-|origine|Colonna di evento o nome dell'azione.|Colonna di evento o nome dell'azione utilizzato come origine dati.<br /><br /> Quando si specifica una colonna di evento per origine, è necessario specificare una colonna dall'evento utilizzato per il valore filtering_event_name. Per identificare le possibili colonne, utilizzare la query seguente:<br /><br /> DM xe_object_columns FROM SELECT name<br />Object_name WHERE = '\<NomeEvento >'<br />Column_type e! = 'readonly'<br /><br /> Quando si specifica una colonna di evento per origine, non è necessario includere il nome del pacchetto nel valore dell'origine.<br /><br /> Quando si specifica un nome di azione per origine, è necessario utilizzare una delle azioni configurate per la raccolta nella sessione eventi per cui viene utilizzata la destinazione specifica. Per individuare valori potenziali per il nome di azione, è possibile eseguire una query sulla colonna action_name della vista sys.dm_xe_sesssion_event_actions.<br /><br /> Se si usa un nome di azione come origine dati, è necessario specificare il valore dell'origine nel formato *nome_pacchetto*.*nome_azione*.|  
+|origine|Colonna di evento o nome dell'azione.|Colonna di evento o nome dell'azione utilizzato come origine dati.<br /><br /> Quando si specifica una colonna di evento per origine, è necessario specificare una colonna dall'evento utilizzato per il valore filtering_event_name. Per identificare le possibili colonne, utilizzare la query seguente:<br /><br /> DM xe_object_columns FROM SELECT name<br />WHERE object_name = '\<NomeEvento >'<br />Column_type e! = 'readonly'<br /><br /> Quando si specifica una colonna di evento per origine, non è necessario includere il nome del pacchetto nel valore dell'origine.<br /><br /> Quando si specifica un nome di azione per origine, è necessario utilizzare una delle azioni configurate per la raccolta nella sessione eventi per cui viene utilizzata la destinazione specifica. Per individuare valori potenziali per il nome di azione, è possibile eseguire una query sulla colonna action_name della vista sys.dm_xe_sesssion_event_actions.<br /><br /> Se si usa un nome di azione come origine dati, è necessario specificare il valore dell'origine nel formato *nome_pacchetto*.*nome_azione*.|  
   
  Nell'esempio seguente viene illustrato, a un livello elevato, il modo in cui i dati vengono raccolti nella destinazione dell'istogramma. Nell'esempio la destinazione dell'istogramma viene utilizzata per contare il numero di volte in cui si verifica ogni tipo di attesa. A tale scopo, è necessario specificare le opzioni seguenti quando si definisce la destinazione dell'istogramma:  
   
@@ -79,7 +79,7 @@ ADD TARGET package0.histogram
 (SET slots = 32, filtering_event_name = 'sqlserver.checkpoint_end', source_type = 0, source = 'database_id')  
 ```  
   
- Per altre informazioni, vedere [trovare gli oggetti con il massimo di blocchi acquisiti su di essi](../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md), e [Monitor di sistema attività mediante gli eventi estesi](../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
+ Per altre informazioni, vedere [trovare gli oggetti con il massimo di blocchi acquisiti su di essi](../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md), e [Monitor di sistema attività usando gli eventi estesi](../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
 ## <a name="reviewing-the-target-output"></a>Analisi dell'output di destinazione  
  La destinazione dell'istogramma serializza i dati in un programma o una procedura chiamante in formato XML. L'output della destinazione non è conforme ad alcuno schema.  

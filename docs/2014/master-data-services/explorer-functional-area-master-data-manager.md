@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1b92e520492b579009c0f68e07592b7c2916fd75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e1e100be7ab60e98b53681cf11a811b9627cfb57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309981"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Area funzionale Esplora risorse (Gestione dati master)
   Nell'area funzionale Esplora risorse, è possibile aggiornare dati e utilizzare gerarchie e raccolte.  
@@ -27,7 +27,7 @@ ms.locfileid: "36169029"
 ## <a name="data-management"></a>Gestione dati  
  [Gli attributi &#40;Master Data Services&#41;](attributes-master-data-services.md)  
   
- [Modificare il tipo dell'attributo &#40;componente aggiuntivo MDS per Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)  
+ [Modificare il tipo di attributo &#40;componente aggiuntivo MDS per Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)  
   
  [I membri &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
@@ -47,10 +47,10 @@ ms.locfileid: "36169029"
   
  [Le regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
- [Convalidare membri specifici rispetto alle regole Business &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+ [Convalidare membri specifici rispetto a regole Business &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
 ## <a name="hierarchies-and-collections"></a>Gerarchie e raccolte  
- [Gerarchie &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)  
+ [Gerarchie di &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)  
   
  [Spostare membri all'interno di una gerarchia di &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)  
   

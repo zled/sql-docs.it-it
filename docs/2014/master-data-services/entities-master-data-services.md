@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], about entities
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cc52b0264c547c6dd6fabe14cd82762193a5f2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 6f0888b95eb765313b2cf766b0f61c1d71f642b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306041"
 ---
 # <a name="entities-master-data-services"></a>Entità (Master Data Services)
   Le entità sono oggetti contenuti nei modelli [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Ogni entità contiene membri che sono le righe dei dati master gestiti.  
@@ -69,7 +69,7 @@ ms.locfileid: "36077826"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Creare una nuova entità.|[Creare un'entità &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
-|Specificare che un'entità può contenere attributi, gerarchie esplicite e raccolte.|[Abilitare un'entità per gerarchie esplicite e raccolte &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|Specificare che un'entità può contenere attributi, gerarchie esplicite e raccolte.|[Abilitare un'entità per gerarchie esplicite e raccolte di &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |Modificare il nome di un'entità esistente.|[Modificare un nome di entità &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
 |Eliminare un'entità esistente.|[Eliminare un'entità &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
 |Assegnare autorizzazioni alle entità.|[Assegnare autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  

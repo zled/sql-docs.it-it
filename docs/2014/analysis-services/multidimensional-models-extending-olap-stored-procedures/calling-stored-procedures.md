@@ -1,5 +1,5 @@
 ---
-title: Chiamata di Stored procedure | Documenti Microsoft
+title: Chiamata di Stored procedure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CALL statement
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed6cad7159c7ef8873c7fd1d9d9ba153380e2c33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb799a4e366c0301998b46d7244438aabd2c4411
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299151"
 ---
 # <a name="calling-stored-procedures"></a>Chiamata di stored procedure
   È possibile chiamare stored procedure nel server o da un'applicazione client. In entrambi i casi le stored procedure vengono sempre eseguite nel server, nel contesto del server o di un database. Non sono richieste autorizzazioni speciali per eseguire una stored procedure. Dopo che una stored procedure viene aggiunta da un assembly al contesto del server o del database, qualsiasi utente può eseguire la stored procedure purché il ruolo di quell'utente consenta le operazioni eseguite dalla stored procedure.  
@@ -87,7 +87,7 @@ CALL(MyVoidFunction)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione di assembly di modello multidimensionale](../multidimensional-models/multidimensional-model-assemblies-management.md)   
+ [Gestione di assembly di modelli multidimensionali](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [Definizione delle stored procedure](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

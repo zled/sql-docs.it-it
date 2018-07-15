@@ -1,5 +1,5 @@
 ---
-title: Mostra finestra di dialogo tabella (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Dialogo Mostra tabelle (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.showtabledialog.f1
 helpviewer_keywords:
 - Show Table dialog box
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a025d6134391a02c107e4103dd696b4720c5834
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90ee18b4b16650337255393a392c0b85744aeb3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284077"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Mostra tabelle (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Mostra tabelle** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per includere tabelle della vista origine dati associata a una dimensione, a un cubo o a una struttura di data mining. Questa finestra di dialogo può essere visualizzata in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] nei modi seguenti:  

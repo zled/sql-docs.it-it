@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 - data collector [SQL Server], Transact-SQL
 - data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1bd9b3d11069fd035c9a96fcba8d2114f6df0eeb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a682e89cb0c6f419b29d36faa3970730baf4b22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296521"
 ---
 # <a name="manage-data-collection"></a>Gestire raccolta dati
-  È possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure e funzioni per gestire aspetti diversi della raccolta dati, ad esempio l'abilitazione o la disabilitazione della raccolta di dati, la modifica di una raccolta di set di configurazione o la visualizzazione dei dati nel data warehouse di gestione .  
+  È possibile usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure e funzioni per gestire aspetti diversi della raccolta dati, ad esempio l'abilitazione o disabilitazione della raccolta di dati, la modifica di una raccolta di set di configurazione o la visualizzazione dei dati nel data warehouse di gestione .  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>Gestire la raccolta dati tramite SQL Server Management Studio  
- È possibile eseguire le seguenti attività legate all'agente di raccolta di dati utilizzando Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+ È possibile eseguire le seguenti attività correlate dell'agente di raccolta dati utilizzando Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [Configurazione del data warehouse di gestione &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36155681"
 > [!IMPORTANT]  
 >  A differenza delle normali stored procedure, le stored procedure dell'agente di raccolta dati utilizzano parametri fortemente tipizzati e non supportano la conversione automatica del tipo di dati. Se tali parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituisce un errore.  
   
- È possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare ed eseguire gli esempi di codice forniti. Per altre informazioni, vedere [Esplora oggetti](../../ssms/object/object-explorer.md). In alternativa, è possibile creare la query con un editor qualsiasi e salvarla in un file di testo con estensione sql. È possibile eseguire la query dal prompt dei comandi di Windows mediante il `sqlcmd` utilità. Per altre informazioni, vedere [Usare l'utilità sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
+ È possibile usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare ed eseguire gli esempi di codice fornito. Per altre informazioni, vedere [Esplora oggetti](../../ssms/object/object-explorer.md). In alternativa, è possibile creare la query con un editor qualsiasi e salvarla in un file di testo con estensione sql. È possibile eseguire la query dal prompt dei comandi di Windows usando il `sqlcmd` utilità. Per altre informazioni, vedere [Usare l'utilità sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
   
 ### <a name="stored-procedures-and-views"></a>Stored procedure e viste  
  **Utilizzo dell'agente di raccolta dati**  

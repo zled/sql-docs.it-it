@@ -1,5 +1,5 @@
 ---
-title: Completare la creazione guidata Report | Documenti Microsoft
+title: Completare la creazione guidata rapporto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.finish.f1
 ms.assetid: d430bc08-61b4-439f-956e-2e825ca7113b
 caps.latest.revision: 28
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bdbefcdf04166d0c1e54dff3965f04b1f8f5d06a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b9f101d61676b5364db2637bc9f0ff6f36c9daf1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297901"
 ---
 # <a name="complete-the-report-wizard"></a>Completare Creazione guidata report
   Utilizzare questa pagina per assegnare un nome al report e controllare le opzioni da applicare al report.  
@@ -37,6 +37,6 @@ ms.locfileid: "36155716"
  Selezionare questa opzione per visualizzare un'anteprima del report creato. In caso contrario, il report verrà aperto in visualizzazione Progettazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida della creazione guidata report](../../2014/reporting-services/report-wizard-help.md)  
+ [Guida della Creazione guidata report](../../2014/reporting-services/report-wizard-help.md)  
   
   

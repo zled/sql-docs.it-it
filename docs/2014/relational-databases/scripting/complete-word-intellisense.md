@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - word completion [IntelliSense]
 - IntelliSense [SQL Server], Complete Word option
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Complete Word option [IntelliSense]
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 15f0ed007f77ff3d877052d26460f96d891df09e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f88cd9adf3fd0c5fea3a350c8712abc8137c35a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318111"
 ---
 # <a name="complete-word-intellisense"></a>Completa parola (IntelliSense)
   L'opzione Completa parola di [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense immette la parte rimanente di un nome di variabile, di comando o di funzione dopo che è stato digitato un numero di caratteri sufficiente per identificare il termine in modo univoco.  

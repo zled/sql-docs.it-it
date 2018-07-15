@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a90757714b06ed29a4cd742a4d39bc83e80a294d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2a0a3f41c30293d8befc14efa9fb331e611da74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300501"
 ---
 # <a name="delete-packages"></a>Eliminazione di pacchetti
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]è possibile eliminare i pacchetti salvati nel file system. Se si elimina un pacchetto, quest'ultimo verrà eliminato definitivamente e non potrà essere ripristinato in un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

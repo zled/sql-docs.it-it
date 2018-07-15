@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati MeasureGroupBinding (out-of-line) (ASSL) | Documenti Microsoft
+title: Tipo di dati MeasureGroupBinding (out-of-line) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupBinding data type
 ms.assetid: e6c65597-89ac-457e-a0e5-01d85449a1b7
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4c467267028e60910be01466754648e216c685d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1b67e063402a1488f77c3fc8bf43e54f580c513
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291507"
 ---
 # <a name="measuregroupbinding-data-type-out-of-line-assl"></a>Tipo di dati MeasureGroupBinding (out-of-line) (ASSL)
   Definisce un tipo di dati primitivo che rappresenta un'associazione a un gruppo di misure.  
@@ -64,8 +64,8 @@ ms.locfileid: "36067758"
 |Elementi figlio|[Le dimensioni](../collections/dimensions-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [ID](../properties/id-element-assl.md), [misure](../collections/measures-element-assl.md), [partizioni](../collections/partitions-element-assl.md), [origine](../properties/source-element-binding-assl.md)|  
 |Elementi derivati|Vedere [associazione](binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
- Per altre informazioni, vedere la sezione, delle associazioni Line, in [origini dati e le associazioni &#40;multidimensionali SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+## <a name="remarks"></a>Note  
+ Per altre informazioni, vedere la sezione, di associazioni di riga, nella [origini dati e associazioni &#40;multidimensionale di SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi Analysis Services Scripting Language XML dei dati &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

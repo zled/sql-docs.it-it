@@ -1,5 +1,5 @@
 ---
-title: Eliminazione di un modello di Data Mining da una struttura di Data Mining | Documenti Microsoft
+title: Eliminare un modello di Data Mining da una struttura di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], mining models
 - deleting mining models
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], deleting
 ms.assetid: 9ab1506b-856e-4762-a663-5adf15ac71e3
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c9aea1e3f6bc05891544a1435704707021293f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5d2a4500de682ecf9d0745c472d793ac4848235
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319441"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>Eliminare un modello di data mining da una struttura di data mining
   È possibile eliminare i modelli di data mining usando Progettazione modelli di data mining, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]o istruzioni DMX.  
@@ -51,7 +51,7 @@ ms.locfileid: "36169106"
   
 ### <a name="delete-a-mining-model-using-dmx"></a>Eliminare un modello di data mining tramite DMX  
   
--   [MODELLO DI DATA MINING DI RILASCIO &AMP;#40;DMX&AMP;#41;](/sql/dmx/drop-mining-model-dmx)  
+-   [DROP MINING MODEL &AMP;#40;DMX&AMP;#41;](/sql/dmx/drop-mining-model-dmx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)  

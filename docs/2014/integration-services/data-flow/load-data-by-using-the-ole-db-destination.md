@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - loading data
 - OLE DB destination [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e50a959032cf560c3989226e39b1a8a52eac3489
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 41f32b80f39ad4176f801f86ef2e54f008f81b96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295101"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Caricamento dei dati tramite la destinazione OLE DB
   È possibile aggiungere e configurare una destinazione OLE DB solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine.  

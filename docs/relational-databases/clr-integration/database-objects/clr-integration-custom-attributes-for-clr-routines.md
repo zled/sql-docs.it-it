@@ -1,12 +1,11 @@
 ---
-title: Attributi personalizzati per routine CLR | Documenti Microsoft
+title: Gli attributi personalizzati per routine CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -25,19 +24,19 @@ caps.latest.revision: 82
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c5c496cc6d8e74cf917c964b51da58dba3a6615c
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 865d305e5d85fd58ab85148f74cc5159323674bb
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697222"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356123"
 ---
-# <a name="clr-integration-custom-attributes-for-clr-routines"></a>Attributi personalizzati di integrazione CLR per le routine CLR
+# <a name="clr-integration-custom-attributes-for-clr-routines"></a>Attributi personalizzati di integrazione di CLR per routine CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Gli attributi elencati possono essere applicati per le routine di common language runtime (CLR), tipi definiti dall'utente e aggregazioni definite dall'utente che sono registrate nei [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se l'attributo non viene applicato, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assume il valore predefinito. Gli attributi elencati vengono definiti nel **SQLServer** dello spazio dei nomi.  
+  Gli attributi elencati è applicabile per le routine di common language runtime (CLR), tipi definiti dall'utente e aggregazioni definite dall'utente registrati nel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se l'attributo non viene applicato, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assume il valore predefinito. Gli attributi elencati vengono definiti nel **SQLServer** dello spazio dei nomi.  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>Attributo SqlUserDefinedAggregate  
- Il **SqlUserDefinedAggregate** attributo indica che il metodo deve essere registrato come una funzione di aggregazione definita dall'utente. Ogni aggregazione definita dall'utente deve essere annotata con questo attributo.  
+ Il **SqlUserDefinedAggregate** attributo indica che il metodo deve essere registrato come aggregazione definita dall'utente. Ogni aggregazione definita dall'utente deve essere annotata con questo attributo.  
   
  Per altre informazioni, vedere [SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626).  
   
@@ -47,7 +46,7 @@ ms.locfileid: "35697222"
  Per altre informazioni, vedere [SqlFunctionAttribute](http://go.microsoft.com/fwlink/?LinkId=128019).  
   
 ## <a name="the-sqlfacet-attribute"></a>Attributo SqlFacet  
- Il **SqlFacet** attributo viene utilizzato per restituire le informazioni relative al tipo restituito di un'espressione di tipo definito dall'utente (UDT).  
+ Il **SqlFacet** attributo viene utilizzato per restituire le informazioni sul tipo restituito di un'espressione di tipo definito dall'utente (UDT).  
   
  Per altre informazioni, vedere [SqlFacetAttribute](http://go.microsoft.com/fwlink/?LinkId=128020).  
   
@@ -67,7 +66,7 @@ ms.locfileid: "35697222"
  Per altre informazioni, vedere [SqlUserDefinedTypeAttribute](http://go.microsoft.com/fwlink/?LinkId=128024).  
   
 ## <a name="the-sqlmethod-attribute"></a>Attributo SqlMethod  
- Il **SqlMethod** attributo viene utilizzato per indicare le proprietà di accesso determinismo e i dati di un metodo o una proprietà in un tipo definito dall'utente.  
+ Il **SqlMethod** attributo viene utilizzato per indicare le proprietà di accesso di determinismo e i dati di un metodo o una proprietà in un tipo definito dall'utente.  
   
  Per altre informazioni, vedere [SqlMethodAttribute](http://go.microsoft.com/fwlink/?LinkId=128025).  
   

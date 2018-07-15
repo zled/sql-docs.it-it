@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS containers
 - containers [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c1cdd3b3a75560d1ced61684e1063f4571115833
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06ba65f48edc9434eb1cec485e0f219958e52a1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283627"
 ---
 # <a name="integration-services-containers"></a>Contenitori in Integration Services
   I contenitori sono oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che forniscono la struttura ai pacchetti e i servizi alle attività. Supportano la ripetizione dei flussi di controllo nei pacchetti e consentono di raggruppare attività e contenitori in unità di lavoro significative. Oltre alle attività, i contenitori possono includere anche altri contenitori.  
@@ -34,7 +34,7 @@ ms.locfileid: "36171276"
   
 -   Ripetere determinate attività per ogni elemento di una raccolta, ad esempio i file in una cartella, schemi o oggetti SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects). Un pacchetto può ad esempio eseguire istruzioni Transact-SQL disponibili in più file.  
   
--   Ripetere le attività finché un'espressione specificata restituisce `false`. Un pacchetto può ad esempio inviare un messaggio di posta elettronica diverso per sette volte, ovvero uno per ogni giorno della settimana.  
+-   Ripetere determinate attività finché un'espressione specificata restituisce `false`. Un pacchetto può ad esempio inviare un messaggio di posta elettronica diverso per sette volte, ovvero uno per ogni giorno della settimana.  
   
 -   Creare gruppi di attività e contenitori che devono avere esito positivo o negativo come singola unità. Un pacchetto può ad esempio raggruppare attività che eliminano e aggiungono righe in una tabella di database e quindi eseguire il commit o il rollback di tutte le attività quando una di queste non riesce.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36171276"
 |`FailPackageOnFailure`|Valore booleano che specifica se il pacchetto deve essere interrotto in caso di errore nel contenitore. Il valore predefinito per questa proprietà è `False`.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>.|  
 |`FailParentOnFailure`|Valore booleano che specifica se il contenitore padre deve essere interrotto in caso di errore nel contenitore. Il valore predefinito per questa proprietà è `False`.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>.|  
 |`ForcedExecutionValue`|Se `ForceExecutionValue` è impostata su `True`, l'oggetto che contiene il valore di esecuzione facoltativo per il contenitore. Il valore predefinito di questa proprietà è **0**.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>.|  
-|`ForcedExecutionValueType`|Il tipo di dati `ForcedExecutionValue`. Il valore predefinito di questa proprietà è `Int32`.|  
+|`ForcedExecutionValueType`|Tipo di dati di `ForcedExecutionValue`. Il valore predefinito di questa proprietà è `Int32`.|  
 |`ForceExecutionResult`|Valore che specifica il risultato forzato dell'esecuzione del pacchetto o del contenitore. I valori sono `None`, `Success`, `Failure`, e `Completion`. Il valore predefinito per questa proprietà è `None`.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
 |`ForceExecutionValue`|Valore booleano che specifica se il valore di esecuzione facoltativo del contenitore deve essere forzato in modo da contenere un valore specifico. Il valore predefinito di questa proprietà è `False`.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>.|  
 |`ID`|GUID del contenitore, assegnato al momento della creazione del pacchetto. Questa proprietà è di sola lettura.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>(Indici per tabelle con ottimizzazione per la memoria).|  
@@ -87,7 +87,7 @@ ms.locfileid: "36171276"
  I contenitori includono flussi di controllo costituiti da eseguibili e vincoli di precedenza. Possono inoltre utilizzare variabili e gestori di eventi. Il contenitore Host attività costituisce un'eccezione perché, dal momento che incapsula una singola attività, non utilizza vincoli di precedenza.  
   
 ### <a name="executables"></a>Eseguibili  
- Il termine eseguibile si riferisce alle attività a livello di contenitore e a qualsiasi contenitore all'interno del contenitore in considerazione. Un eseguibile può essere costituito da uno dei contenitori e una delle attività disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oppure da un'attività personalizzata. Per altre informazioni, vedere [le attività di Integration Services](integration-services-tasks.md) e [Integration Services contenitori](integration-services-containers.md).  
+ Il termine eseguibile si riferisce alle attività a livello di contenitore e a qualsiasi contenitore all'interno del contenitore in considerazione. Un eseguibile può essere costituito da uno dei contenitori e una delle attività disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oppure da un'attività personalizzata. Per altre informazioni, vedere [attività di Integration Services](integration-services-tasks.md) e [contenitori in Integration Services](integration-services-containers.md).  
   
 ### <a name="precedence-constraints"></a>Vincoli di precedenza  
  I vincoli di precedenza collegano in un flusso di controllo ordinato i contenitori e le attività presenti in uno stesso contenitore padre. Per altre informazioni, vedere [Vincoli di precedenza](precedence-constraints.md).  

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 82b27a6c90694626a5afc1f2256f1b10868f723f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2c6bcbf4ce4a3bb3121bd55b8df95070de817f93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232691"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Esportazione in un file CSV (Generatore report e SSRS)
   L'estensione per il rendering CSV (Comma-Separated Value) consente di eseguire il rendering di report come rappresentazione bidimensionale dei dati di un report in un formato di testo normale standardizzato, facilmente leggibile e interscambiabile con numerose applicazioni.  
   
- Per la separazione dei campi e delle righe con l'estensione per il rendering CSV viene usato un delimitatore di stringhe di caratteri che è possibile configurare per impostare un carattere diverso dalla virgola. Il file risultante può essere aperto in un foglio di calcolo, ad esempio [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] , oppure usato come formato di importazione per altri programmi. Il report esportato diventa un file CSV e restituisce un tipo MIME di `text/csv`.  
+ Per la separazione dei campi e delle righe con l'estensione per il rendering CSV viene usato un delimitatore di stringhe di caratteri che è possibile configurare per impostare un carattere diverso dalla virgola. Il file risultante può essere aperto in un foglio di calcolo, ad esempio [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] , oppure usato come formato di importazione per altri programmi. Il report esportato viene salvato come file con estensione csv e restituisce il tipo MIME di `text/csv`.  
   
  Se si desidera usare dati correlati a grafici, barre dei dati, grafici sparkline, misuratori e indicatori in [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], esportare il report in un file CSV, quindi aprire il file in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "36171175"
 ## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il Rendering di Report differenti &#40;SSRS e Generatore Report&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

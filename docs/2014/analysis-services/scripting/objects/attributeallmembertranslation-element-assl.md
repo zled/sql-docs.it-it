@@ -1,5 +1,5 @@
 ---
-title: Elemento AttributeAllMemberTranslation (ASSL) | Documenti Microsoft
+title: Elemento AttributeAllMemberTranslation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeAllMemberTranslation element
 ms.assetid: 4b0c61dd-6666-4bf4-9b23-c9d8e315c414
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a93f67722e16034d256f4af16c582ef986b4b521
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d70f1420c0324cf1f1a2b3bb06fb68394268071
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314691"
 ---
 # <a name="attributeallmembertranslation-element-assl"></a>Elemento AttributeAllMemberTranslation (ASSL)
   Contiene una traduzione per la didascalia del `All` membro di un [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) elemento.  
@@ -48,7 +48,7 @@ ms.locfileid: "36169321"
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|[Conversione](../data-type/translation-data-type-assl.md)|  
+|Tipo di dati e lunghezza|[Traduzione](../data-type/translation-data-type-assl.md)|  
 |Valore predefinito|None|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36169321"
 |Elementi padre|[AttributeAllMemberTranslations](../collections/translations-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L’elemento che corrisponde al padre della raccolta `AttributeAllMemberTranslations` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Vedere anche  
