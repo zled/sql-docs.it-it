@@ -1,5 +1,5 @@
 ---
-title: Installare riesecuzione distribuita dal Prompt dei comandi | Documenti Microsoft
+title: Installare riesecuzione distribuita dal Prompt dei comandi | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac0e2f55a599741e087c338de01e96ee148b463a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1cc56f35b44636493fe022b7adbc2270bf121e55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310841"
 ---
 # <a name="install-distributed-replay-from-the-command-prompt"></a>Installare Riesecuzione distribuita dal prompt dei comandi
   L'installazione di una nuova istanza di Riesecuzione distribuita dal prompt dei comandi consente di specificare le funzionalità da installare e le relative modalità di configurazione. L'installazione dal prompt dei comandi supporta l'installazione, il ripristino, l'aggiornamento e la disinstallazione dei componenti Riesecuzione distribuita. Quando l'installazione viene eseguita tramite il prompt dei comandi, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è supportata la modalità non interattiva completa tramite il parametro /Q.  

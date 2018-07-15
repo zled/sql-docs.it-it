@@ -1,5 +1,5 @@
 ---
-title: Verifica delle query che verranno ottimizzate (basata sull'utilizzo di ottimizzazione guidata) | Documenti Microsoft
+title: Verifica delle query che verranno ottimizzate (basata sull'utilizzo di ottimizzazione guidata) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.usagebasedoptimizationwizard.reviewresults.f1
 ms.assetid: b206f39e-5fa3-4b5c-babf-c604c0dfd82a
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b15063160f7e3469ac7f0d2d82ca98577bf9f682
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3838a070f464bf5eff3ec1f80a52ed0a7a6863f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310821"
 ---
 # <a name="review-the-queries-that-will-be-optimized-usage-based-optimization-wizard"></a>Verifica delle query che verranno ottimizzate (Ottimizzazione guidata basata sulle statistiche di utilizzo)
   Usare la pagina **Verifica delle query che verranno ottimizzate** per visualizzare e selezionare le query recuperate dal log di query che verranno usate dall'Ottimizzazione guidata basata sulle statistiche di utilizzo per progettare le aggregazioni relative alle partizioni selezionate.  
   
 ## <a name="options"></a>Opzioni  
- **(Seleziona)**  
+ **(Selezionare)**  
  Selezionare la casella di controllo relativa alla query di cui si desidera progettare le aggregazioni.  
   
  **Richiesta del client**  

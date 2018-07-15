@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6d9f0a4fd663cfcd6bf3e3bad827429bc2f0133b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 38a2dbeed7220f0300015ba8741795603856f898
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279397"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Backup di un database con tabelle con ottimizzazione per la memoria
   Il backup delle tabelle con ottimizzazione per la memoria viene eseguito durante i normali backup di database. Per le tabelle basate su disco, il CHECKSUM di coppie di file di dati e file differenziali viene convalidato durante il backup del database per rilevare eventuali danneggiamenti di archiviazione.  
@@ -43,7 +43,7 @@ ms.locfileid: "36066954"
 |IN TRANSITION TO TOMBSTONE|Solo metadati del file|  
 |TOMBSTONE|Solo metadati del file|  
   
- Le dimensioni dei backup del database con una o più tabelle ottimizzate per la memoria sono in genere maggiori delle relative dimensioni in memoria ma inferiori all'archiviazione su disco. Le dimensioni aggiuntive dipendono dal numero di righe eliminate e dal numero di coppie di file di checkpoint negli stati MERGE SOURCE e REQUIRED FOR BACKUP/HA che dipendono indirettamente dal carico di lavoro. Per una descrizione degli stati delle coppie di file di checkpoint, vedere [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ Le dimensioni dei backup del database con una o più tabelle ottimizzate per la memoria sono in genere maggiori delle relative dimensioni in memoria ma inferiori all'archiviazione su disco. Le dimensioni aggiuntive dipendono dal numero di righe eliminate e dal numero di coppie di file di checkpoint negli stati MERGE SOURCE e REQUIRED FOR BACKUP/HA che dipendono indirettamente dal carico di lavoro. Per descrizioni degli stati delle coppie di file di checkpoint, vedere [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
 ### <a name="estimating-size-of-full-database-backup"></a>Stima delle dimensioni di un backup completo del database  
   

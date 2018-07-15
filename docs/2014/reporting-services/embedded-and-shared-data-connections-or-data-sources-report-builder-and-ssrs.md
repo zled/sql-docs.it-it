@@ -1,5 +1,5 @@
 ---
-title: Incorporate e condivise le connessioni dati o origini dati (Generatore Report e SSRS) | Documenti Microsoft
+title: Incorporate e condivise le connessioni dati o origini dati (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - embedded data sources
 - shared data sources
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
 caps.latest.revision: 28
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6c75ca2d608e54df537ec5bc37f7f84312d5955c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f83f7b150fb709e4b6716f8a49d802949a62e9dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282637"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>Connessioni dati o origini dati incorporate e condivise (Generatore report e SSRS)
   Nei report vengono usate le connessioni dati per il recupero di dati per un report quando viene eseguita una query o viene elaborato il report. È possibile scegliere da un elenco di tipi di connessione dati incorporati per la connessione a un database relazionale, un database multidimensionale, un servizio Web o ad altre origini di dati. Per la descrizione delle connessioni dati vengono usati i termini riportati di seguito.  
@@ -52,12 +52,12 @@ ms.locfileid: "36066919"
   
  In Progettazione report non è possibile individuare un'origine dati condivisa nel server di report. È possibile creare origini dati condivisi come parte di un progetto in Esplora soluzioni e scegliere se distribuirle in un server di report. È possibile scegliere di usarle solo in locale a causa delle differenze nelle credenziali richieste dal computer in uso o dal server di report. Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
- L'icona seguente indica un elemento dell'origine dati condivisa nella gerarchia di cartelle del server di report: ![icona dell'origine dati condivisa](media/hlp-16datasource.png "icona dell'origine dati condivisa")  
+ L'icona seguente indica un elemento di origine dati condivisa nella gerarchia di cartelle del server di report: ![icona dell'origine dati condivisa](media/hlp-16datasource.png "icona di origine dati condivisa")  
   
 ## <a name="embedded-data-sources"></a>Origini dati incorporate  
  Una connessione a un'origine dati incorporata è una connessione dati salvata nella definizione del report. Le informazioni di connessione a un'origine dati incorporata possono essere usate solo dal report che la contiene. Per definire e gestire le origini dati incorporate, usare la finestra di dialogo **Proprietà origine dati** .  
   
-##  <a name="Comparing"></a> Confronto tra origini dati condivise e incorporate  
+##  <a name="Comparing"></a> Confronto tra incorporate e origini dati condivise  
  Nella tabella seguente vengono riepilogate le differenze fra le origini dati incorporate e quelle condivise:  
   
 |Description|Origine dati<br /><br /> origine dati|Condivisa<br /><br /> origine dati|  
@@ -72,10 +72,10 @@ ms.locfileid: "36066919"
  Le credenziali vengono usate per creare un'origine dati incorporata, per eseguire una query o per recuperare dati durante l'elaborazione di report. Il proprietario dell'origine dati determina il tipo di credenziali che è necessario usare per accedere ai dati. Le credenziali sono gestite indipendentemente dalla connessione dati in un server di report, un sito di SharePoint o in un computer locale in un ambiente di creazione di report. A seconda del tipo di origine dati, è possibile salvare le credenziali per evitare la richiesta o di impostare di chiedere conferma a ciascun utente. Le credenziali necessarie potrebbero variare a seconda se la connessione all'origine dati viene eseguita dal computer in uso o dal server di report. Per altre informazioni, vedere [specificare le credenziali in Generatore Report](../../2014/reporting-services/specify-credentials-in-report-builder.md) e [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-data/report-datasets-ssrs.md)   
- [Concetti di creazione di report &#40;SSRS e Generatore Report&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Concetti relativi alla creazione di report &#40;Report e SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Origini dati supportate da Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Aggiungere e verificare una connessione dati o un'origine dati &#40;SSRS e Generatore Report&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [Set di dati condivisi e incorporati &#40;Generatore report e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Editor origine OData (pagina Output degli errori) | Documenti Microsoft
+title: Editor origine OData (pagina Output degli errori) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.erroroutput.f1
 ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7b76a5399a88118fc0f09c381d2def5e8fb038e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97ac6b0096c7b0ba99baa3868ffcb46c1505b8c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064278"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291037"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Editor origine OData (pagina Output degli errori)
   Usare la pagina **Output degli errori** della finestra di dialogo **Editor origine OData** per selezionare le opzioni di gestione degli errori e impostare le proprietà delle colonne di output degli errori.  
@@ -52,7 +52,7 @@ ms.locfileid: "36064278"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor origine OData &#40;pagina di connessione&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [Editor origine OData &#40;pagina colonne&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [Editor origine OData &#40;(pagina colonne)&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [Origine OData](data-flow/odata-source.md)   
  [Gestione connessione OData](connection-manager/odata-connection-manager.md)  
   

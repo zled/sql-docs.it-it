@@ -1,5 +1,5 @@
 ---
-title: Modificare la visualizzazione dei risultati di traccia | Documenti Microsoft
+title: Modificare la visualizzazione dei risultati di traccia | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5bb647bb704bee1b33eee00c9b13903d48140ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2c1e9c9c2d0041e2e09156e4f33744ea1964812
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302761"
 ---
 # <a name="modify-the-trace-results-view"></a>Modificare la visualizzazione dei risultati della traccia
   In questo argomento viene descritto come modificare la vista dei risultati di traccia di una sessione di Eventi estesi in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] eseguendo le attività seguenti.  
@@ -36,7 +36,7 @@ ms.locfileid: "36064089"
   
 6.  [Filtrare i risultati](#Filter)  
   
-7.  [Ricerca di testo nelle colonne](#Search)  
+7.  [Cercare il testo nelle colonne](#Search)  
   
 8.  [Modificare le impostazioni di visualizzazione](#ChangeDisplay)  
   
@@ -45,9 +45,9 @@ ms.locfileid: "36064089"
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È possibile anche con il pulsante destro fare clic sul nome della sessione e quindi selezionare **controlla i dati dinamici**.  
+    >  È possibile anche con il pulsante destro fare clic sul nome della sessione e quindi selezionare **Controlla dati dinamici**.  
   
-2.  Nella finestra dei risultati di traccia, l'intestazione di colonna e quindi scegliere **Scegli colonne**.  
+2.  Nella finestra dei risultati della traccia, fare doppio clic sull'intestazione di colonna e quindi selezionare **Scegli colonne**.  
   
 3.  Nella sezione **Colonne disponibili** della finestra di dialogo **Scegli colonne** selezionare i nomi delle colonne che si desidera aggiungere, quindi fare clic su pulsante della freccia DESTRA.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36064089"
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È possibile anche con il pulsante destro fare clic sul nome della sessione e quindi selezionare **controlla i dati dinamici**.  
+    >  È possibile anche con il pulsante destro fare clic sul nome della sessione e quindi selezionare **Controlla dati dinamici**.  
   
 2.  Nella finestra dei risultati della traccia fare clic con il pulsante destro del mouse sull'intestazione di colonna, quindi fare clic su **Scegli colonne**.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36064089"
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È possibile anche con il pulsante destro fare clic sul nome della sessione e quindi selezionare **controlla i dati dinamici**.  
+    >  È possibile anche con il pulsante destro fare clic sul nome della sessione e quindi selezionare **Controlla dati dinamici**.  
   
 2.  Nella finestra dei risultati della traccia fare clic con il pulsante destro del mouse sull'intestazione di colonna, quindi fare clic su **Scegli colonne**.  
   
@@ -95,14 +95,14 @@ ms.locfileid: "36064089"
   
 4.  Per modificare il nome della colonna unita, nella casella **Nome colonna unita** della finestra di dialogo **Nuova colonna unita** immettere il nuovo nome.  
   
-     Per modificare le colonne, unire il **colonne originali da unire** , selezionare le colonne da unire nell'elenco a discesa e quindi fare clic su **OK**.  
+     Per modificare le colonne che si desidera unire, nella **colonne originali da unire** , selezionare le colonne da unire nell'elenco a discesa e quindi fare clic su **OK**.  
   
 #### <a name="to-delete-merged-columns"></a>Per eliminare colonne unite  
   
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È possibile anche con il pulsante destro fare clic sul nome della sessione e quindi selezionare **controlla i dati dinamici**.  
+    >  È possibile anche con il pulsante destro fare clic sul nome della sessione e quindi selezionare **Controlla dati dinamici**.  
   
 2.  Nella finestra dei risultati della traccia fare clic con il pulsante destro del mouse sull'intestazione di colonna, quindi fare clic su **Scegli colonne**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36064089"
 -   Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È possibile anche a destra fare clic sul nome della sessione, selezionare **controlla i dati dinamici**, quindi fare clic sul **arresta Feed di dati** pulsante sulla barra degli strumenti.  
+    >  È anche possibile fare clic sul nome della sessione, selezionare **Controlla dati dinamici**, quindi fare clic sui **arresta Feed di dati** pulsante sulla barra degli strumenti.  
   
 -   Nella finestra dei risultati della traccia fare clic con il pulsante destro del mouse sull'intestazione di colonna che si desidera ordinare. Selezionare **Ordinamento crescente** o **Ordinamento decrescente** per ordinare le colonne rispettivamente in ordine crescente o decrescente.  
   
@@ -128,16 +128,16 @@ ms.locfileid: "36064089"
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È possibile anche a destra fare clic sul nome della sessione, selezionare **controlla i dati dinamici**, quindi fare clic sul **arresta Feed di dati** pulsante sulla barra degli strumenti eventi estesi.  
+    >  È anche possibile fare clic sul nome della sessione, selezionare **Controlla dati dinamici**, quindi fare clic sui **arresta Feed di dati** pulsante sulla barra degli strumenti eventi estesi.  
   
-2.  Nella finestra dei risultati di traccia, fare doppio clic su intestazione di colonna si desidera raggruppare e quindi fare clic su **Raggruppa per questa colonna**.  
+2.  Nella finestra dei risultati della traccia, fare doppio clic su intestazione di colonna si desidera raggruppare e quindi fare clic su **Raggruppa per questa colonna**.  
   
 #### <a name="to-group-the-results-by-multiple-columns"></a>Per raggruppare i risultati per più colonne  
   
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È possibile anche a destra fare clic sul nome della sessione, selezionare **controlla i dati dinamici**, quindi fare clic sul **arresta Feed di dati** pulsante sulla barra degli strumenti.  
+    >  È anche possibile fare clic sul nome della sessione, selezionare **Controlla dati dinamici**, quindi fare clic sui **arresta Feed di dati** pulsante sulla barra degli strumenti.  
   
 2.  Fare clic sul pulsante **Raggruppamento** sulla barra degli strumenti Eventi estesi.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "36064089"
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È possibile anche a destra fare clic sul nome della sessione, selezionare **controlla i dati dinamici**, quindi fare clic sul **arresta Feed di dati** pulsante sulla barra degli strumenti.  
+    >  È anche possibile fare clic sul nome della sessione, selezionare **Controlla dati dinamici**, quindi fare clic sui **arresta Feed di dati** pulsante sulla barra degli strumenti.  
   
     > [!NOTE]  
     >  L'aggregazione viene eseguita su un gruppo, pertanto è necessario raggruppare i risultati prima di effettuare l'aggregazione.  
@@ -178,7 +178,7 @@ ms.locfileid: "36064089"
   
      Verrà visualizzata la finestra di dialogo **Aggregazione** in cui vengono mostrate le colonne disponibili per l'aggregazione.  
   
-3.  Sotto **tipo di aggregazione**, scegliere in che modo si desidera aggregare la colonna corrispondente nell'elenco a discesa.  
+3.  Sotto **tipo di aggregazione**, selezionare in che modo si desidera aggregare la colonna corrispondente nell'elenco a discesa.  
   
 4.  Nel **Ordina aggregazione per** , selezionare la colonna che si desidera ordinare in base dall'elenco a discesa.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "36064089"
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È possibile anche con il pulsante destro fare clic sul nome della sessione e quindi selezionare **controlla i dati dinamici**.  
+    >  È possibile anche con il pulsante destro fare clic sul nome della sessione e quindi selezionare **Controlla dati dinamici**.  
   
 2.  Nella finestra dei risultati della traccia selezionare i risultati che si desidera filtrare, quindi nella barra degli strumenti Eventi estesi fare clic sul pulsante **Filtri** .  
   
@@ -214,12 +214,12 @@ ms.locfileid: "36064089"
   
 -   Se non è presente né l'azione né il campo, viene visualizzato NULL.  
   
-##  <a name="Search"></a> Ricerca di testo nelle colonne  
+##  <a name="Search"></a> Cercare il testo nelle colonne  
   
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È possibile anche con il pulsante destro fare clic sul nome della sessione e quindi selezionare **controlla i dati dinamici**.  
+    >  È possibile anche con il pulsante destro fare clic sul nome della sessione e quindi selezionare **Controlla dati dinamici**.  
   
 2.  Fare clic sul pulsante **Trova** sulla barra degli strumenti Eventi estesi.  
   
@@ -227,13 +227,13 @@ ms.locfileid: "36064089"
   
      È possibile selezionare una delle ultime 20 stringhe di ricerca nell'elenco a discesa.  
   
-4.  Nel **Cerca in** , selezionare il percorso in cui cercare il testo specificato dall'elenco a discesa. Per la ricerca, utilizzare le opzioni seguenti:  
+4.  Nel **Cerca in** selezionare il percorso in cui cercare il testo specificato nell'elenco a discesa. Per la ricerca, utilizzare le opzioni seguenti:  
   
     -   **Colonne della tabella**. Utilizzare questa opzione per eseguire ricerche in tutte le colonne visibili nella finestra di traccia.  
   
     -   **Dettagli**. Utilizzare questa opzione per eseguire ricerche in tutte le colonne (promosse e non promosse) della finestra di traccia selezionate prima di aprire la finestra di dialogo **Trova in eventi estesi** .  
   
-    -   **\<Nome colonna di evento >**. Utilizzare questa opzione per eseguire ricerche in una colonna specifica dell'evento dall'elenco a discesa.  
+    -   **\<Nome di colonna di evento >**. Utilizzare questa opzione per eseguire ricerche in una colonna specifica dell'evento dall'elenco a discesa.  
   
 5.  Utilizzare le opzioni seguenti per specificare la modalità con cui si desidera definire la ricerca:  
   
@@ -255,7 +255,7 @@ ms.locfileid: "36064089"
 1.  Aprire un file XEL per visualizzare i risultati della traccia.  
   
     > [!NOTE]  
-    >  È possibile anche con il pulsante destro fare clic sul nome della sessione e quindi selezionare **controlla i dati dinamici**.  
+    >  È possibile anche con il pulsante destro fare clic sul nome della sessione e quindi selezionare **Controlla dati dinamici**.  
   
 2.  Nella finestra dei risultati della traccia, dal menu o sulla barra degli strumenti degli eventi estesi scegliere **Impostazioni di visualizzazione**.  
   

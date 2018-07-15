@@ -1,5 +1,5 @@
 ---
-title: Analysis Services Scripting Language (ASSL) riferimento | Documenti Microsoft
+title: Analysis Services Scripting Language (ASSL) Reference | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - object definition language [Analysis Services Scripting Language]
 ms.assetid: ca0e852e-9002-4224-a0f0-bd96f2fc5c65
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99ae3057baf60cda23fdce68289d07c213e89d3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd9fbcce8769deb49168e734542fe5296c5672f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234241"
 ---
 # <a name="analysis-services-scripting-language-assl-reference"></a>Guida di riferimento ad Analysis Services Scripting Language (ASSL)
   Applicazioni di comunicare con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzando comandi XML e descrizioni degli oggetti. La parte di linguaggio di definizione di oggetto di questo sottolinguaggio di XML è rappresentata in Analysis Services Scripting Language (ASSL).  
@@ -46,7 +46,7 @@ ms.locfileid: "36055786"
 |Argomento|Description|  
 |-----------|-----------------|  
 |[Gerarchia Analysis Services Scripting Language XML elemento &#40;ASSL&#41;](analysis-services-scripting-language-xml-element-hierarchy-assl.md)|Un diagramma dettagliato della gerarchia di elementi in ASSL.|  
-|[Gerarchia dei tipi di servizi di analisi dei dati XML nel linguaggio di Scripting &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)|Un diagramma dettagliato della gerarchia di ereditarietà di tipi di dati in ASSL.|  
+|[Gerarchia dei tipi di Analysis Services Scripting Language XML Data &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)|Un diagramma dettagliato della gerarchia di ereditarietà di tipi di dati in ASSL.|  
 |[Elementi Analysis Services Scripting Language XML &#40;ASSL&#41;](analysis-services-scripting-language-xml-elements-assl.md)|Riferimento della sintassi per ogni elemento nello schema di ASSL.|  
 |[Tipi Analysis Services Scripting Language XML dei dati &#40;ASSL&#41;](data-type/analysis-services-scripting-language-xml-data-types-assl.md)|Riferimento della sintassi per ogni tipo di dati nello schema di ASSL.|  
   

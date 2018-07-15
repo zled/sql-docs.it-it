@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e5c5909a4cd6a098498029abaccd77ce568dc217
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9b11a175ddf9a7a12610c2f3588e4bbf42ac7802
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317841"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Installazione del cluster di failover di SQL Server
   Per installare un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , è necessario creare e configurare un'istanza del cluster di failover eseguendo il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -87,6 +87,6 @@ ms.locfileid: "36064607"
  [Operazioni preliminari all'installazione del clustering di failover](before-installing-failover-clustering.md)   
  [Creare un nuovo cluster di failover di SQL Server &#40;programma di installazione&#41;](create-a-new-sql-server-failover-cluster-setup.md)   
  [Installare SQL Server 2014 dal Prompt dei comandi](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [Aggiornare un Cluster di Failover SQL Server](../windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+ [Aggiornare un cluster di failover di SQL Server](../windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

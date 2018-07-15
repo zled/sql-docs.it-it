@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponentdetails.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 56b26f0c43df3257fc563ea246045ad3baf1e3ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 73a67a807ee928315b264ea52bd0d993e0ee81f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295081"
 ---
 # <a name="script-component"></a>Componente script
   Il componente Script ospita lo script e consente a un pacchetto di includere ed eseguire codice script personalizzato. È possibile utilizzare il componente script nei pacchetti per gli scopi seguenti:  
@@ -94,9 +94,9 @@ ms.locfileid: "36064314"
 ### <a name="configuring-the-script-component-in-the-designer"></a>Configurazione del componente script in Progettazione  
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Script**, fare clic su uno degli argomenti seguenti:  
   
--   [Editor trasformazione script &#40;pagina colonne di Input&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [Editor trasformazione script &#40;Input (pagina colonne)&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [Editor trasformazione script &#40;valori di input e output pagina&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [Editor trasformazione script &#40;di input e output di pagina&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
 -   [Editor trasformazione script &#40;pagina Script&#41;](../../script-transformation-editor-script-page.md)  
   

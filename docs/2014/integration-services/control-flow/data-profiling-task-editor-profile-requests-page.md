@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.profilerequests.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1a493e342b9637d6e1498e38f9689897d8b65e64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc2c19b0ae0247a8cccbb75f56d943ef277625e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292911"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   Utilizzare la pagina **Richieste profilo** di **Editor attività Profiling dati** per selezionare e configurare i profili che si desidera calcolare. In una singola attività Profiling dati è possibile calcolare più profili per più colonne o combinazioni di colonne in più tabelle o viste.  
@@ -74,7 +74,7 @@ ms.locfileid: "36068562"
 |**Richiesta profilo Distribuzione lunghezze di colonna**|Consente di calcolare un profilo Distribuzione lunghezze di colonna.<br /><br /> Il profilo Distribuzione lunghezze di colonna segnala tutte le singole lunghezze dei valori stringa nella colonna selezionata e la percentuale di righe nella tabella rappresentata da ogni lunghezza. e consente di identificare eventuali problemi nei dati, ad esempio i valori non validi. Si analizza, ad esempio, una colonna di codici a due caratteri degli stati degli Stati Uniti e si individuano valori con lunghezza maggiore di due caratteri.|  
 |**Richiesta profilo Rapporto di valori Null nella colonna**|Consente di calcolare un profilo Rapporto di valori Null nella colonna.<br /><br /> Il profilo Rapporto di valori Null nella colonna segnala la percentuale di valori Null nella colonna selezionata. e consente di identificare eventuali problemi nei dati, ad esempio un rapporto inaspettatamente elevato di valori Null in una colonna. Si analizza, ad esempio, una colonna contenente CAP e si individua una percentuale eccessivamente elevata di codici mancanti.|  
 |**Richiesta profilo Criteri di ricerca colonna**|Consente di calcolare un profilo Criteri di ricerca colonna.<br /><br /> Il profilo Criteri di ricerca colonna segnala un set di espressioni regolari che analizzano la percentuale specificata di valori in una colonna stringa. Questo profilo consente di identificare eventuali problemi nei dati, ad esempio le stringhe non valide. Questo profilo può inoltre indicare espressioni regolari che possono essere utilizzate in futuro per convalidare nuovi valori. Un profilo di criteri di ricerca di una colonna contenente CAP, ad esempio, può produrre le espressioni regolari \d{5}-\d{4}, \d{5} e \d{9}. Se vengono visualizzate altre espressioni regolari, è probabile che i dati contengano valori non validi o in formato non corretto.|  
-|**Richiesta profilo Statistiche di colonna**|Selezionare questa opzione per calcolare un profilo Statistiche di colonna utilizzando le impostazioni predefinite per tutte le colonne applicabili nella tabella o nella vista selezionata.<br /><br /> Profilo statistiche di colonna segnala le statistiche, ad esempio minima, massima, Media e deviazione standard per le colonne numeriche e minima e massima per `datetime` colonne. Questo profilo consente di identificare eventuali problemi nei dati, ad esempio le date non valide. Si analizza, ad esempio, una colonna di date cronologiche e si individua una data massima successiva alla data corrente.|  
+|**Richiesta profilo Statistiche di colonna**|Selezionare questa opzione per calcolare un profilo Statistiche di colonna utilizzando le impostazioni predefinite per tutte le colonne applicabili nella tabella o nella vista selezionata.<br /><br /> Profilo statistiche di colonna segnala le statistiche, ad esempio minimo, massimo, medio e deviazione standard per le colonne numeriche e minima e massima per `datetime` colonne. Questo profilo consente di identificare eventuali problemi nei dati, ad esempio le date non valide. Si analizza, ad esempio, una colonna di date cronologiche e si individua una data massima successiva alla data corrente.|  
 |**Richiesta profilo Distribuzione valori di colonna**|Consente di calcolare un profilo Distribuzione valori di colonna.<br /><br /> Il profilo Distribuzione valori di colonna segnala tutti i valori distinct nella colonna selezionata e la percentuale di righe della tabella rappresentata da ogni valore. Questo profilo può inoltre segnalare i valori che rappresentano più percentuali specificate nella tabella. Il profilo consente infine di identificare eventuali problemi nei dati, ad esempio un numero non corretto di valori distinct in una colonna. Si analizza, ad esempio, una colonna contenente gli stati degli Stati Uniti e si individuano più di 50 valori distinct.|  
 |**Richiesta profilo Dipendenza funzionale**|Consente di calcolare un profilo Dipendenza funzionale.<br /><br /> Il profilo Dipendenza funzionale segnala il livello di dipendenza dei valori inclusi in una colonna (colonna dipendente) dai valori presenti in un'altra colonna o set di colonne (colonna determinante). e consente inoltre di identificare eventuali problemi nei dati, ad esempio i valori non validi. Si analizza, ad esempio, la dipendenza tra una colonna contenente i codici postali ZIP (Stati Uniti) e una colonna contenente gli stati degli Stati Uniti. Benché uno stesso codice postale debba essere sempre associato allo stesso stato, il profilo individua alcune violazioni di questa dipendenza.|  
 |**Richiesta profilo Inclusione valore**|Consente di calcolare un profilo Inclusione valore.<br /><br /> Il profilo Inclusione valore calcola la sovrapposizione dei valori tra due colonne o set di colonne. Questo profilo può inoltre determinare se una colonna o un set di colonne è adatto a fungere da chiave esterna tra le tabelle selezionate. Il profilo consente infine di identificare eventuali problemi nei dati, ad esempio i valori non validi. Si analizza, ad esempio, la colonna ProductID di una tabella Sales e si individua che la colonna contiene valori non disponibili nella colonna ProductID della tabella Products.|  
@@ -134,21 +134,21 @@ ms.locfileid: "36068562"
   
  Queste opzioni variano in base al profilo selezionato. Per informazioni sulle opzioni specifiche per singoli tipi di profilo, vedere gli argomenti seguenti.  
   
--   [Le opzioni di richiesta profilo chiave candidata &#40;attività Profiling dati&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di richiesta profilo chiave candidata &#40;attività Profiling dati&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
 -   [Opzioni di richiesta profilo rapporto di valori Null di colonna &#40;attività Profiling dati&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Le opzioni di richiesta del profilo statistiche di colonna &#40;attività Profiling dati&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di richiesta profilo statistiche di colonna &#40;attività Profiling dati&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo distribuzione valori colonna &#40;attività Profiling dati&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di richiesta profilo distribuzione valori di colonna &#40;attività Profiling dati&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo distribuzione lunghezza colonna &#40;attività Profiling dati&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di richiesta profilo distribuzione lunghezze di colonna &#40;attività Profiling dati&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di richiesta profilo criterio colonne &#40;attività Profiling dati&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di richiesta profilo criteri di ricerca colonna &#40;attività Profiling dati&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Le opzioni di richiesta profilo dipendenza funzionale &#40;attività Profiling dati&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di richiesta profilo dipendenza funzionale &#40;attività Profiling dati&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Le opzioni di richiesta profilo inclusione valore &#40;attività Profiling dati&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di richiesta profilo inclusione valore &#40;attività Profiling dati&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor attività Profiling dati &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)   

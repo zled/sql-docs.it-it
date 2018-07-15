@@ -1,5 +1,5 @@
 ---
-title: OLE DB per OLAP Schema Rowsets | Documenti Microsoft
+title: OLE DB per i set di righe dello Schema OLAP | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,23 +17,23 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB for OLAP
 ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 898749e17cb5b85e61a2b2c3a94b7247a7ab219b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 406451b0e8e6edce92d69cde493888f70813f4de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306481"
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>Set di righe dello schema OLE DB per OLAP
   Il provider di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) supporta i set di righe dello schema OLE DB per OLAP seguenti.  
   
 > [!NOTE]  
->  Per verificare se un provider dell'origine dati specifica supporta un set di righe, utilizzare il `DISCOVER_ENUMERATIONS` set di righe con la [Discover](../../xmla/xml-elements-methods-discover.md) metodo.  
+>  Per verificare se un provider dell'origine dati specifica supporta un set di righe, usare il `DISCOVER_ENUMERATIONS` set di righe con i [Discover](../../xmla/xml-elements-methods-discover.md) (metodo).  
   
- È anche possibile trovare informazioni dettagliate su questi set di righe, cercare l'argomento "Rowset dello Schema OLAP", in MSDN Library in questo [sito Web Microsoft](http://go.microsoft.com/fwlink/?LinkId=15426).  
+ È anche possibile trovare informazioni dettagliate su questi set di righe eseguendo una ricerca per l'argomento "Rowset dello Schema OLAP", in MSDN Library all'indirizzo ciò [sito Web Microsoft](http://go.microsoft.com/fwlink/?LinkId=15426).  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   

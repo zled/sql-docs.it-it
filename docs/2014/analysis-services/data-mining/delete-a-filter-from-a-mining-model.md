@@ -1,5 +1,5 @@
 ---
-title: Eliminare un filtro da un modello di Data Mining | Documenti Microsoft
+title: Eliminare un filtro da un modello di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [Analysis Services]
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 143ab55a3ebfa3036fe23afd120d8b9c36f73a77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 535859d04212b09af5a96745f3fb4e234af3f6e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289847"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Eliminare un filtro da un modello di data mining
   Quando si crea un filtro in un modello di data mining, è possibile creare modelli in un subset dei dati nella vista origine dati. I filtri sono anche utili per il test dell'accuratezza del modello su un subset dei dati originali.  
@@ -49,7 +49,7 @@ ms.locfileid: "36063206"
 -   Nella finestra di dialogo **Editor filtri** fare clic con il pulsante destro del mouse su una riga della griglia e quindi scegliere **Elimina tutto**.  
   
 ## <a name="working-with-model-filters-using-the-properties-window"></a>Utilizzo dei filtri di modelli con la finestra Proprietà  
- Se si desidera eliminare l'intero filtro, non è necessario aprire le finestre di dialogo Editor filtri. Sono disponibili nelle condizioni di filtro che è stato creato il `Filter` proprietà del modello di data mining.  
+ Se si desidera eliminare l'intero filtro, non è necessario aprire le finestre di dialogo Editor filtri. Le condizioni di filtro creata sono disponibili nel `Filter` proprietà del modello di data mining.  
   
 > [!NOTE]  
 >  È possibile visualizzare le proprietà di un modello di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ma non in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -58,13 +58,13 @@ ms.locfileid: "36063206"
   
 1.  In Esplora soluzioni fare clic sul modello di data mining che contiene il filtro.  
   
-2.  Nel **delle proprietà** finestra destro del mouse sul testo del filtro nella `Filter` proprietà, quindi selezionare **Seleziona tutto**.  
+2.  Nel **delle proprietà** finestra, fare clic sul testo del filtro nella `Filter` proprietà e selezionare **Seleziona tutto**.  
   
 3.  Premere il tasto BACKSPACE o CANC.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Il drill-Through nei dati del Case da un modello di Data Mining](drill-through-to-case-data-from-a-mining-model.md)   
- [Procedure dettagliate e attività di modello di data mining](mining-model-tasks-and-how-tos.md)   
+ [Procedure dettagliate e le attività del modello di data mining](mining-model-tasks-and-how-tos.md)   
  [Filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
   
   

@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 caps.latest.revision: 21
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 93471f74f608febd0f6920b0b93646eac394eb35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a72521b1d2c40eb50954ea16676e17ec40d7d07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317521"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Visualizzazione e lettura del log di diagnostica dell'istanza del cluster di failover
   Tutti gli errori critici e gli eventi di avviso relativi alla DLL risorse SQL Server vengono scritti nel registro eventi di Windows. Un log in esecuzione relativo a informazioni di diagnostica specifiche di SQL Server viene acquisito dalla stored procedure di sistema [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) e viene scritto nei file di log di diagnostica del cluster di failover di SQL Server, noti anche come log *SQLDIAG*.  
@@ -33,7 +32,7 @@ ms.locfileid: "36062800"
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Recommendations"></a> Indicazioni  
- Per impostazione predefinita, il SQLDIAG vengono archiviati in una cartella LOG locale della directory dell'istanza SQL Server, ad esempio "c\programmi\microsoft c:\Programmi\Microsoft SQL Server\MSSQL12. \<InstanceName > \mssql\log. ' del nodo proprietario dell'istanza di Cluster di Failover di AlwaysOn (FCI). La dimensione di ogni file di log SQLDIAG è pari a 100 MB. Successivamente, tali file di log vengono archiviati nel computer prima di essere riciclati per i nuovi log.  
+ Per impostazione predefinita, i file SQLDIAG vengono archiviati in una cartella LOG locale della directory dell'istanza di SQL Server, ad esempio "c\programmi\microsoft c:\Programmi\Microsoft SQL Server\MSSQL12. \<NomeIstanza > \mssql\log. ' del nodo proprietario dell'istanza Cluster AlwaysOn Failover (FCI). La dimensione di ogni file di log SQLDIAG è pari a 100 MB. Successivamente, tali file di log vengono archiviati nel computer prima di essere riciclati per i nuovi log.  
   
  Nei log viene utilizzato il formato di file degli eventi estesi. La funzione di sistema **sys.fn_xe_file_target_read_file** può essere usata per leggere i file creati dagli eventi estesi. Viene restituito un evento per riga in formato XML. Eseguire una query sulla vista di sistema per analizzare i dati XML come set di risultati. Per altre informazioni, vedere [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).  
   
@@ -97,7 +96,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  Per un esempio di questa procedura, vedere [Esempio (Transact-SQL)](#TsqlExample)più avanti in questa sezione.  
   
- Tramite l'istruzione Data Definition Language (DDL), `ALTER SERVER CONFIGURATION`, è possibile avviare o arrestare la registrazione dei dati di diagnostica acquisiti dal [sp_server_diagnostics &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) procedura e log SQLDIAG set i parametri di configurazione, ad esempio il conteggio del rollover dei file, le dimensioni di file di log e percorso del file. Per dettagli sulla sintassi, vedere [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
+ Tramite l'istruzione di definizione del linguaggio DDL (Data), `ALTER SERVER CONFIGURATION`, è possibile avviare o arrestare la registrazione dei dati di diagnostica acquisiti dal [sp_server_diagnostics &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) procedure e log SQLDIAG set i parametri di configurazione, ad esempio il conteggio del rollover dei file, le dimensioni di file di log e percorso del file. Per dettagli sulla sintassi, vedere [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
   
 ###  <a name="ConfigTsqlExample"></a> Esempi (Transact-SQL)  
   

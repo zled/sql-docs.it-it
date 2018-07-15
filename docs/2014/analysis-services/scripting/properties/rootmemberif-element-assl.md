@@ -1,5 +1,5 @@
 ---
-title: Elemento RootMemberIf (ASSL) | Documenti Microsoft
+title: Elemento RootMemberIf (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RootMemberIf element
 ms.assetid: b695e271-c748-4abc-a09f-acb1014f768f
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a923b08efc636d2635d60b00f85c42dc00a312e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7ac45d2111b8d3631160ce78f131f98d53230e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280297"
 ---
 # <a name="rootmemberif-element-assl"></a>Elemento RootMemberIf (ASSL)
   Determina il modo in cui vengono identificati il membro o i membri radice di un attributo padre.  
@@ -61,15 +61,15 @@ ms.locfileid: "36065213"
 |Elemento padre|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il valore della `RootMemberIf` elemento viene utilizzato solo dagli attributi padre (in altre parole, il valore del [utilizzo](usage-element-dimensionattribute-assl.md) elemento del `DimensionAttribute` elemento padre è impostato su *padre*) per determinare la radice ( in primo piano) membri di una gerarchia padre-figlio.  
+## <a name="remarks"></a>Note  
+ Il valore del `RootMemberIf` elemento viene utilizzato solo dagli attributi padre (in altre parole, il valore della [utilizzo](usage-element-dimensionattribute-assl.md) elemento del `DimensionAttribute` elemento padre è impostato su *padre*) per determinare la radice ( in primo piano) membri di una gerarchia padre-figlio.  
   
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
 |-----------|-----------------|  
 |*ParentIsBlankSelfOrMissing*|Solo i membri che soddisfano una o più delle condizioni descritte per *ParentIsBlank*, *ParentIsSelf*, o *ParentIsMissing* vengono trattati come membri radice.|  
-|*ParentIsBlank*|Solo i membri con un valore null, pari a zero o una stringa vuota nelle colonne chiave rappresentate dal [KeyColumns](../collections/columns-element-assl.md) insieme `DimensionAttribute` vengono trattati come membri radice.|  
+|*ParentIsBlank*|Solo i membri con un valore null, pari a zero o una stringa vuota nelle colonne chiave rappresentate dal [KeyColumns](../collections/columns-element-assl.md) insieme di `DimensionAttribute` vengono trattati come membri radice.|  
 |*ParentIsSelf*|Solo i membri che hanno se stessi come padre vengono trattati come membri radice.|  
 |*ParentIsMissing*|Solo i membri per i quali non è possibile trovare l'elemento padre vengono trattati come membri radice.|  
   

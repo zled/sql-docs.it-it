@@ -1,5 +1,5 @@
 ---
-title: Configura visualizzatore dati (scheda grafico a colonne) | Documenti Microsoft
+title: Configura visualizzatore dati (scheda colonna grafico) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.columnchart.f1
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6654682a03cd4ad1af9e45f88e64de3a149a6ece
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49d3ad4fbd21db0eaa7588cd54a03ee9c613077c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308141"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>Configura visualizzatore dati (scheda Grafico a colonne)
   Utilizzare la scheda **Istogramma** della finestra di dialogo **Configura visualizzatore dati** per specificare una colonna da visualizzare in forma di barre in un grafico. Il numero di barre indica il numero di valori di dati discreti nella colonna, mentre l'altezza della barra indica il numero di occorrenze di ogni valore. Il grafico riflette il contenuto di un solo buffer.  

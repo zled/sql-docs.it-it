@@ -1,5 +1,5 @@
 ---
-title: Database elemento (ASSL) | Documenti Microsoft
+title: Elemento (ASSL) Databases | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Databases element
 ms.assetid: 2806a074-d47e-4434-9599-04888783770f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 55063b20e5a98c2fc9d716083eebaf6e92d96ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fadc9be7e7abc588c83515a6a199a37161075916
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289647"
 ---
 # <a name="databases-element-assl"></a>Elemento Databases (ASSL)
   Contiene la raccolta di [Database](../objects/database-element-assl.md) gli elementi associati a un [Server](../objects/server-element-assl.md) elemento.  
@@ -63,7 +63,7 @@ ms.locfileid: "36064130"
 |Elementi padre|[Server](../objects/server-element-assl.md)|  
 |Elementi figlio|[Database](../objects/database-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.DatabaseCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

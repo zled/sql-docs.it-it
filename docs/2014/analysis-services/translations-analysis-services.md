@@ -1,5 +1,5 @@
 ---
-title: Traduzioni (Analysis Services) | Documenti Microsoft
+title: Traduzioni (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, translations [Analysis Services]
 - translations [Analysis Services], about translations
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - translations [Analysis Services]
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 196e55fb22a5e14344f1c379bb8eb77bdd8bf387
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fce0d8195895fafdfe519ddc1609f0d22a0be0cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293291"
 ---
 # <a name="translations-analysis-services"></a>Traduzioni (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Solo dati multidimensionali  
   
  In un modello di dati multidimensionale di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è possibile incorporare più traduzioni di una didascalia per fornire stringhe specifiche delle impostazioni locali in base all'identificatore LCID. È possibile aggiungere traduzioni per il nome del database, gli oggetti cubo e gli oggetti dimensione del database.  
   
- La definizione di una traduzione crea i metadati e la didascalia tradotta all'interno del modello, ma per eseguire il rendering delle stringhe localizzate in un'applicazione client, è necessario impostare la proprietà `Language` per l'oggetto o passare un parametro `Locale Identifier` nella stringa di connessione, impostando ad esempio `LocaleIdentifier=1036` per restituire le stringhe francesi. Pensare di usare `Locale Identifier` se si vuole supportare più traduzioni simultanee dello stesso oggetto in lingue diverse. Impostazione di `Language` proprietà funziona, ma influisce anche sull'elaborazione e query, comportando conseguenze impreviste. Impostazione `Locale Identifier` rappresenta la scelta migliore, poiché viene utilizzato solo per restituire le stringhe tradotte.  
+ La definizione di una traduzione crea i metadati e la didascalia tradotta all'interno del modello, ma per eseguire il rendering delle stringhe localizzate in un'applicazione client, è necessario impostare la proprietà `Language` per l'oggetto o passare un parametro `Locale Identifier` nella stringa di connessione, impostando ad esempio `LocaleIdentifier=1036` per restituire le stringhe francesi. Pensare di usare `Locale Identifier` se si vuole supportare più traduzioni simultanee dello stesso oggetto in lingue diverse. L'impostazione di `Language` proprietà funziona, ma influisce anche sull'elaborazione e query, che potrebbe avere conseguenze impreviste. Impostazione `Locale Identifier` rappresenta la scelta migliore, perché viene usato solo per restituire le stringhe tradotte.  
   
  Una traduzione è costituita da un identificatore delle impostazioni locali (LCID), una didascalia tradotta per l'oggetto (ad esempio, il nome di una dimensione o di un attributo) e facoltativamente un'associazione a una colonna che fornisce i valori dei dati nella lingua di destinazione. È possibile avere più traduzioni, ma è possibile usarne solo una per ogni connessione specifica. In teoria, non vi sono limiti al numero di traduzioni che è possibile incorporare nel modello, ma ogni traduzione aggiunge complessità al test e tutte le traduzioni devono condividere le stesse regole di confronto, pertanto quando si progetta la soluzione tenere presenti questi vincoli normali.  
   
@@ -124,6 +124,6 @@ ms.locfileid: "36064119"
  [Scenari di globalizzazione per Analysis Services multidimensionale](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Lingue e regole di confronto &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [Impostare o modificare le regole di confronto delle colonne](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [Globalizzazione suggerimenti e procedure consigliate &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

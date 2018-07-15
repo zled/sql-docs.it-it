@@ -1,5 +1,5 @@
 ---
-title: Elemento Folder (XMLA) | Documenti Microsoft
+title: Elemento Folder (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Folder element
 ms.assetid: 87b305b0-57e3-4ec3-9d80-f1bcf3ce7540
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 64bc73db4cfb1fee4471e474bf498094751edcf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9bc961679619f15211689b4f118f511edbadac8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283917"
 ---
 # <a name="folder-element-xmla"></a>Elemento Folder (XMLA)
-  Contiene un percorso di archiviazione di file system da aggiornare per un [posizione](location-element-xmla.md) elemento durante un [ripristinare](../xml-elements-commands/restore-element-xmla.md) oppure [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) comando.  
+  Contiene un percorso di archiviazione file system da aggiornare per un [posizione](location-element-xmla.md) elemento durante una [ripristinare](../xml-elements-commands/restore-element-xmla.md) o [Sincronizza](../xml-elements-commands/synchronize-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,12 +64,12 @@ ms.locfileid: "36067884"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Cartelle](folders-element-xmla.md)|  
-|Elementi figlio|[Nuova](new-element-xmla.md), [originale](original-element-xmla.md)|  
+|Elementi figlio|[Nuove](new-element-xmla.md), [originale](original-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `Folder`, se specificato, modifica le posizioni di archiviazione degli oggetti contenuti nel file di backup (per i comandi `Restore` ) o nel database dell'istanza di origine (per i comandi `Synchronize` ) in modo che il valore dell'elemento `Original` corrisponda a quello dell'elemento `New`.  
   
- Per ulteriori informazioni sul backup e ripristino degli oggetti, vedere [backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Per altre informazioni sul backup e ripristino degli oggetti, vedere [backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento StorageLocation &#40;ASSL&#41;](../../scripting/properties/storagelocation-element-assl.md)   

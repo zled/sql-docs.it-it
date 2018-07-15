@@ -1,5 +1,5 @@
 ---
-title: Selezionare una finestra di dialogo di colonna (configurazione guidata Business Intelligence) | Documenti Microsoft
+title: Selezionare una finestra di dialogo di colonna (configurazione guidata Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.columnselection.f1
 ms.assetid: bf25d649-f35a-458b-a8f4-9b159b3b2abe
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 69400a145f24e6aa09a7f66868e76863ecebf71d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5267a67bcf89cb386731f612952ae661defde9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317021"
 ---
 # <a name="select-a-column-dialog-box-business-intelligence-wizard"></a>Finestra di dialogo Seleziona colonna (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare la finestra di dialogo **Seleziona colonna** per selezionare una colonna da un elenco di tabelle presenti in una visualizzazione albero. Questa finestra di dialogo viene aperta dalla Configurazione guidata funzionalità di Business Intelligence.  
@@ -31,7 +31,7 @@ ms.locfileid: "36064798"
  Fare clic su questo pulsante per selezionare una colonna per la Configurazione guidata funzionalità di Business Intelligence.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Business Intelligence guidata F1 Help](business-intelligence-wizard-f1-help.md)   
+ [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

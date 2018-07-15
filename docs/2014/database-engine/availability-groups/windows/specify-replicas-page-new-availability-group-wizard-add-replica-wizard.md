@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.newagwizard.listeners.f1
 - sql12.swb.newagwizard.specifyreplicas.f1
 - sql12.swb.addreplicawizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 caps.latest.revision: 33
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 878e1a5df6e67129c9146b1ff0c47e4167b54950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a25a08e57395ca8523b29f976b93179e0989a8ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279637"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Pagina Specifica repliche (Creazione guidata Gruppo di disponibilità: Aggiungi replica)
   In questo argomento vengono descritte le opzioni della pagina **Specifica repliche** . Questa pagina si trova nella [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e nella [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Tramite la pagina **Specifica repliche** è possibile specificare e configurare una o più repliche di disponibilità da aggiungere al gruppo di disponibilità. Nella pagina sono presenti quattro schede, presentate nella tabella seguente. Fare clic sul nome di una scheda nella tabella per accedere alla sezione corrispondente, più avanti in questo argomento.  
@@ -126,7 +125,7 @@ ms.locfileid: "36068787"
  Specifica che si preferisce che i processi di backup ignorino il ruolo delle repliche di disponibilità nella scelta della replica per l'esecuzione dei backup. Si noti che i processi di backup potrebbero valutare altri fattori, ad esempio la priorità di backup di ogni replica di disponibilità in combinazione con lo stato operativo e lo stato connesso.  
   
 > [!IMPORTANT]  
->  L'impostazione della preferenza di backup non viene forzata. L'interpretazione di questa preferenza dipende dall'eventuale logica su cui si basano gli script dei processi di backup per i database in un determinato gruppo di disponibilità. Per altre informazioni, vedere [repliche secondarie attive: Backup su repliche secondarie (gruppi di disponibilità AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  L'impostazione della preferenza di backup non viene forzata. L'interpretazione di questa preferenza dipende dall'eventuale logica su cui si basano gli script dei processi di backup per i database in un determinato gruppo di disponibilità. Per altre informazioni, vedere [repliche secondarie attive: Backup in repliche secondarie (gruppi di disponibilità AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ### <a name="replica-backup-priorities-grid"></a>Griglia Priorità di backup replica  
  Utilizzare la griglia **Priorità di backup replica** per specificare le priorità di backup per ciascuna replica del gruppo di disponibilità. La griglia include le colonne seguenti:  
@@ -210,11 +209,11 @@ ms.locfileid: "36068787"
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [Creare un Endpoint del mirroring per i gruppi di disponibilità AlwaysOn &#40;PowerShell per SQL Server&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Creare un Endpoint del mirroring per i gruppi di disponibilità AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
- [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

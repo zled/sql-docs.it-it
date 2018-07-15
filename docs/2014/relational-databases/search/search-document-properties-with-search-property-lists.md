@@ -5,10 +5,9 @@ ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - full-text search [SQL Server], properties
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 caps.latest.revision: 49
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3aec36dc9ba7771cd83cea8ddc1deafe3bf1a648
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f107485b73df58e8d2da53f111cb522e1d3846bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292301"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca
   In passato non era possibile distinguere il contenuto delle proprietà del documento dal contenuto del corpo del documento. Ciò limitava le query full-text a ricerche generiche in documenti interi. Attualmente, invece, è possibile configurare un indice full-text per supportare la ricerca con ambito proprietà di particolari proprietà, ad esempio Author e Title, per tipi di documenti supportati in una colonna di dati binari `varbinary`, `varbinary(max)` (incluso `FILESTREAM`) o `image`. Questa modalità di ricerca è nota come *ricerca basata su proprietà*.  
@@ -65,7 +64,7 @@ ms.locfileid: "36068467"
 ##  <a name="impact"></a> Impatto dell'abilitazione della ricerca basata su proprietà  
  La configurazione di un indice full-text per supportare la ricerca basata su una o più proprietà aumenta le dimensioni dell'indice, a seconda del numero di proprietà specificate nell'elenco di proprietà di ricerca e del contenuto di ogni proprietà.  
   
- Test di corpi tipici di Microsoft Word<sup>®</sup>, Excel<sup>®</sup>e PowerPoint<sup>®</sup> documenti, è stato configurato un full-text indice per indicizzare le proprietà di ricerca. L'indicizzazione di queste proprietà ha comportato l'aumento delle dimensioni dell'indice full-text di circa il 5%. Si prevede che tale aumento approssimativo delle dimensioni caratterizzerà la maggior parte dei corpi di documento. In ultima analisi l'aumento delle dimensioni dipenderà, tuttavia, dalla quantità di dati della proprietà nel corpo di un determinato documento rispetto alla quantità di dati complessivi.  
+ Test di corpi tipici di Microsoft Word<sup>®</sup>, Excel<sup>®</sup>e PowerPoint<sup>®</sup> documenti, è stata configurata una proprietà di ricerca tipica dell'indice a indice full-text. L'indicizzazione di queste proprietà ha comportato l'aumento delle dimensioni dell'indice full-text di circa il 5%. Si prevede che tale aumento approssimativo delle dimensioni caratterizzerà la maggior parte dei corpi di documento. In ultima analisi l'aumento delle dimensioni dipenderà, tuttavia, dalla quantità di dati della proprietà nel corpo di un determinato documento rispetto alla quantità di dati complessivi.  
   
   
   

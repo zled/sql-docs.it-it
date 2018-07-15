@@ -1,5 +1,5 @@
 ---
-title: Progettare riquadro (visualizzazione stima modello di Data Mining) | Documenti Microsoft
+title: Riquadro (visualizzazione stima modello di Data Mining) di progettazione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.design.f1
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f170ff6d780871a6ddbb9b1048fb0a521b4fb015
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ea979da7db4f0288a01a7bfe9655d1fb34518d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316031"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Riquadro Progettazione (visualizzazione Stima modello di data mining)
   Il riquadro **Progettazione** contiene il generatore delle query di stima che consente di compilare le stime di data mining. È possibile progettare query di stima che utilizzano tabelle di dati di input da una vista origine dati per generare stime bulk oppure creare query di stima singleton per fornire valori singoli.  
@@ -39,7 +39,7 @@ ms.locfileid: "36064360"
  **Passare alla visualizzazione dei risultati della query**  
  Fare clic su questo pulsante per spostarsi tra i riquadri **Progettazione**, **Query**e **Risultato** . Se si passa al riquadro **Risultato** , verrà eseguita la query.  
   
- **Salvare il risultato della query**  
+ **Salva risultati query**  
  Consente di aprire la finestra di dialogo **Salva risultati query di data mining** .  
   
  **Query singleton**  
@@ -57,7 +57,7 @@ ms.locfileid: "36064360"
  **Seleziona tabella/e di Input**  
  Consente di visualizzare le tabelle di input selezionate contenenti dati noti su cui basare le stime.  
   
- **Eliminare una tabella**  
+ **Elimina tabella**  
  Consente di eliminare la tabella selezionata. Questo pulsante è disabilitato se non è stata selezionata una tabella o non esiste.  
   
  **Seleziona tabella del Case**  
@@ -95,8 +95,8 @@ ms.locfileid: "36064360"
  Consente di specificare una condizione o un'espressione utente da applicare a una colonna. È possibile trascinare le colonne dalle tabelle contenenti il modello di data mining e dalle tabelle di input sulla cella.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensioni Data Mining &#40;DMX&#41; riferimento istruzione](/sql/dmx/data-mining-extensions-dmx-statements)   
- [Data nuove interfacce Query di Data Mining](data-mining/data-mining-query-tools.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle istruzioni](/sql/dmx/data-mining-extensions-dmx-statements)   
+ [Data Mining nuove interfacce Query](data-mining/data-mining-query-tools.md)   
  [Generatore di Query di stima &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
   
   

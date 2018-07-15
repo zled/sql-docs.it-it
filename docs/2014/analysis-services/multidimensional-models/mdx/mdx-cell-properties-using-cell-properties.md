@@ -1,5 +1,5 @@
 ---
-title: Utilizzando le proprietà delle celle (MDX) | Documenti Microsoft
+title: Usando le proprietà delle celle (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - intrinsic cell properties [MDX]
 - cells [MDX]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - CELL PROPERTIES keyword
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 496fbb18fa454b17b78dc54d598a96a88e5dcb8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ba678db945252692d72901aab725224a6dfb503
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301221"
 ---
 # <a name="using-cell-properties-mdx"></a>Utilizzo delle proprietà delle celle (MDX)
   Nel linguaggio MDX (Multidimensional Expressions) le proprietà delle celle includono informazioni sul contenuto e il formato delle celle di un'origine dei dati multidimensionale, ad esempio un cubo.  
@@ -32,7 +32,7 @@ ms.locfileid: "36055584"
  MDX supporta l'utilizzo della parola chiave CELL PROPERTIES in un'istruzione MDX SELECT per il recupero delle proprietà intrinseche delle celle. Le proprietà intrinseche delle celle vengono in genere utilizzate per la presentazione visiva dei dati delle celle.  
   
 ## <a name="cell-properties-keyword-syntax"></a>Sintassi della parola chiave CELL PROPERTIES  
- Utilizzare la sintassi seguente per il `CELL PROPERTIES` parola chiave di MDX `SELECT` istruzione:  
+ Usare la sintassi seguente per il `CELL PROPERTIES` parola chiave di MDX `SELECT` istruzione:  
   
 ```  
 SELECT [<axis_specification>  
@@ -56,22 +56,22 @@ SELECT [<axis_specification>
 |`ACTION_TYPE`|Maschera di bit che indica i tipi di azioni esistenti sulla cella. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Nota: le operazioni di drill-through non sono incluse per le query che contengono un set nella clausola WHERE.|  
 |**BACK_COLOR**|Colore di sfondo per la visualizzazione della proprietà `VALUE` o `FORMATTED_VALUE`. Per altre informazioni, vedere [Contenuto di FORE_COLOR e BACK_COLOR &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |`CELL_ORDINAL`|Numero ordinale della cella nel set di dati.|  
-|**FONT_FLAGS**|Maschera di bit che indica in dettaglio gli effetti sul carattere. Ad esempio, il valore 5 rappresenta la combinazione di grassetto (`MDFF_BOLD`) e sottolineato (`MDFF_UNDERLINE`) effetti di carattere. Il valore è il risultato di un'operazione con OR bit per bit su una o più delle costanti seguenti:<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  
+|**FONT_FLAGS**|Maschera di bit che indica in dettaglio gli effetti sul carattere. Ad esempio, il valore 5 rappresenta la combinazione degli stili grassetto (`MDFF_BOLD`) e sottolineato (`MDFF_UNDERLINE`) effetti di carattere. Il valore è il risultato di un'operazione con OR bit per bit su una o più delle costanti seguenti:<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  
 |**FONT_NAME**|Il tipo di carattere da utilizzare per visualizzare il `VALUE` o `FORMATTED_VALUE` proprietà.|  
 |**FONT_SIZE**|Dimensioni del carattere da utilizzare per la visualizzazione della proprietà `VALUE` o `FORMATTED_VALUE`.|  
 |**FORE_COLOR**|Colore di primo piano per la visualizzazione della proprietà `VALUE` o `FORMATTED_VALUE`. Per altre informazioni, vedere [Contenuto di FORE_COLOR e BACK_COLOR &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md).|  
-|`FORMAT`|Uguale a `FORMAT_STRING`.|  
-|`FORMAT_STRING`|La stringa di formato utilizzata per creare il `FORMATTED_VALUE` valore della proprietà. Per altre informazioni, vedere [Contenuto di FORMAT_STRING &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md).|  
+|`FORMAT`|Uguale allo `FORMAT_STRING`.|  
+|`FORMAT_STRING`|La stringa di formato usata per creare il `FORMATTED_VALUE` valore della proprietà. Per altre informazioni, vedere [Contenuto di FORMAT_STRING &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md).|  
 |`FORMATTED_VALUE`|La stringa di caratteri che rappresenta una visualizzazione formattata del `VALUE` proprietà.|  
 |`LANGUAGE`|Le impostazioni locali dove verrà applicato `FORMAT_STRING`. `LANGUAGE` in genere utilizzate per la conversione di valuta.|  
-|`UPDATEABLE`|Valore che indica se la cella può essere aggiornata. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> `MD_MASK_ENABLED` (0x00000000) la cella può essere aggiornata.<br /><br /> `MD_MASK_NOT_ENABLED` (0x10000000) la cella non può essere aggiornata.<br /><br /> `CELL_UPDATE_ENABLED` (0x00000001) la cella può essere aggiornata nel set di celle.<br /><br /> `CELL_UPDATE_ENABLED_WITH_UPDATE` (0x00000002) la cella può essere aggiornata con un'istruzione update. Se si aggiorna una cella foglia non abilitata per la scrittura, l'aggiornamento potrebbe non riuscire.<br /><br /> `CELL_UPDATE_NOT_ENABLED_FORMULA` (0x10000001) la cella non può essere aggiornato perché la cella ha un membro calcolato le sue coordinate; la cella è stata recuperata con un set in where clausola. È possibile aggiornare una cella anche se il suo valore è influenzato da una formula o da una cella calcolata, ovvero si trova in un punto qualsiasi del percorso di aggregazione. In questo scenario, il valore finale della cella potrebbe non essere il valore aggiornato, perché il risultato è influenzato dal calcolo.<br /><br /> `CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE` (0x10000002) la cella non può essere aggiornata perché le misure non sum (count, min, max, distinct count, semiadditive e) non possono essere aggiornate.<br /><br /> `CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE` (0x10000003) la cella non può essere aggiornata perché la cella non esiste solo quelle in corrispondenza dell'intersezione di una misura e un membro della dimensione non correlati al gruppo di misure della misura.<br /><br /> `CELL_UPDATE_NOT_ENABLED_SECURE` (0x10000005) la cella non può essere aggiornata perché la cella è protetta.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CALCLEVEL` (0x10000006) riservata per utilizzi futuri.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE` (0x10000007) la cella non può essere aggiornata a causa di motivi interni.<br /><br /> `CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE` (0x10000009) la cella non può essere aggiornata perché l'aggiornamento non è supportato nel modello di data mining, indiretto o dimensioni di data mining.|  
+|`UPDATEABLE`|Valore che indica se la cella può essere aggiornata. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> `MD_MASK_ENABLED` (0x00000000) la cella può essere aggiornata.<br /><br /> `MD_MASK_NOT_ENABLED` (0x10000000) la cella non può essere aggiornata.<br /><br /> `CELL_UPDATE_ENABLED` (0x00000001) la cella può essere aggiornata nel set di celle.<br /><br /> `CELL_UPDATE_ENABLED_WITH_UPDATE` (0x00000002) la cella può essere aggiornata con un'istruzione update. Se si aggiorna una cella foglia non abilitata per la scrittura, l'aggiornamento potrebbe non riuscire.<br /><br /> `CELL_UPDATE_NOT_ENABLED_FORMULA` (0x10000001) la cella non può essere aggiornata perché la cella contiene un membro calcolato le sue coordinate; la cella è stata recuperata con un set in where clausola. È possibile aggiornare una cella anche se il suo valore è influenzato da una formula o da una cella calcolata, ovvero si trova in un punto qualsiasi del percorso di aggregazione. In questo scenario, il valore finale della cella potrebbe non essere il valore aggiornato, perché il risultato è influenzato dal calcolo.<br /><br /> `CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE` (0x10000002) la cella non può essere aggiornata perché non è possibile aggiornare misure non sum (count, min, max, distinct count, semiadditive e).<br /><br /> `CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE` (0x10000003) la cella non può essere aggiornata perché non esiste, poiché si trova in corrispondenza dell'intersezione di una misura e un membro della dimensione non correlato al gruppo di misure della misura.<br /><br /> `CELL_UPDATE_NOT_ENABLED_SECURE` (0x10000005) la cella non può essere aggiornata perché è protetta.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CALCLEVEL` (0x10000006) riservato per utilizzi futuri.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE` (0x10000007) la cella non può essere aggiornata per motivi interni.<br /><br /> `CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE` (0x10000009) la cella non può essere aggiornata perché l'aggiornamento non è supportato in modelli di data mining, indirette o di dimensioni di data mining.|  
 |`VALUE`|Valore non formattato della cella.|  
   
- Solo il `CELL_ORDINAL`, `FORMATTED_VALUE`, e `VALUE` le proprietà delle celle sono necessari. Tutte le proprietà delle celle, intrinseche o specifiche del provider, sono definite nel set di righe dello schema `PROPERTIES`, inclusi i tipi di dati e il supporto del provider. Per ulteriori informazioni sul `PROPERTIES` set di righe dello schema, vedere [set di righe MDSCHEMA_PROPERTIES](../../schema-rowsets/ole-db-olap/mdschema-properties-rowset.md).  
+ Solo le `CELL_ORDINAL`, `FORMATTED_VALUE`, e `VALUE` le proprietà di cella sono obbligatorie. Tutte le proprietà delle celle, intrinseche o specifiche del provider, sono definite nel set di righe dello schema `PROPERTIES`, inclusi i tipi di dati e il supporto del provider. Per altre informazioni sul `PROPERTIES` set di righe dello schema, vedere [set di righe MDSCHEMA_PROPERTIES](../../schema-rowsets/ole-db-olap/mdschema-properties-rowset.md).  
   
- Per impostazione predefinita, se il `CELL PROPERTIES` parola chiave non viene utilizzato, le proprietà di cella restituite sono `VALUE`, `FORMATTED_VALUE`, e `CELL_ORDINAL` (in tale ordine). Se il `CELL PROPERTIES` parola chiave viene utilizzata, vengono restituite solo le proprietà di cella dichiarate in modo esplicito con la parola chiave.  
+ Per impostazione predefinita, se il `CELL PROPERTIES` parola chiave non viene utilizzato, le proprietà di cella restituite sono `VALUE`, `FORMATTED_VALUE`, e `CELL_ORDINAL` (in questo ordine). Se il `CELL PROPERTIES` parola chiave viene usata, vengono restituite solo le proprietà delle celle indicate in modo esplicito con la parola chiave.  
   
- Nell'esempio seguente illustra l'uso del `CELL PROPERTIES` parola chiave in una query MDX:  
+ Nell'esempio seguente viene illustrato l'utilizzo del `CELL PROPERTIES` parola chiave in una query MDX:  
   
 ```  
 SELECT  
@@ -81,7 +81,7 @@ FROM [Adventure Works]
 CELL PROPERTIES VALUE, FORMATTED_VALUE, FORMAT_STRING, FORE_COLOR, BACK_COLOR  
 ```  
   
- Le proprietà delle celle non vengono restituiti per le query MDX che restituiscono set di righe bidimensionali; In questo caso, ogni cella viene rappresentata come se solo il `FORMATTED_VALUE` proprietà della cella sono stati restituiti.  
+ Proprietà delle celle non vengono restituiti per le query MDX che restituiscono set di righe bidimensionali; In questo caso, ogni cella viene rappresentata come se solo il `FORMATTED_VALUE` proprietà della cella sono stati restituiti.  
   
 ## <a name="setting-cell-properties"></a>Impostazione delle proprietà delle celle  
  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] è possibile impostare le proprietà di cella in diverse posizioni. È possibile, ad esempio, impostare la proprietà Stringa di formato per misure regolari nella scheda Struttura cubo dell'Editor di cubi in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. La stessa proprietà può essere impostata per misure calcolate definite nel cubo nella scheda Calcoli dell'Editor di cubi. La stringa di formato delle misure calcolate definite nella clausola WITH di una query è anch'essa definita in questa clausola. La query seguente illustra come è possibile impostare le proprietà di cella in una misura calcolata:  

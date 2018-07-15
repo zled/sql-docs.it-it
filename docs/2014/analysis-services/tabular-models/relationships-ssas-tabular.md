@@ -1,5 +1,5 @@
 ---
-title: Relazioni (SSAS tabulare) | Documenti Microsoft
+title: Relazioni (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2796fb23a51d0da71e4314cdbeaab70a13332d5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 517446889205621e4cb9b866e858f53a622bf75d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314537"
 ---
 # <a name="relationships-ssas-tabular"></a>Relazioni (SSAS tabulare)
   Nei modelli tabulari, una relazione è una connessione tra due tabelle di dati e consente di stabilire in che modo devono essere correlati i dati nelle due tabelle. È ad esempio possibile mettere in correlazione una tabella Clienti e una tabella Ordini per mostrare il nome del cliente associato a ciascun ordine.  
@@ -116,7 +116,7 @@ ms.locfileid: "36068131"
 ### <a name="single-active-relationship-between-tables"></a>Singola relazione attiva tra tabelle  
  Più relazioni possono comportare dipendenze ambigue tra le tabelle. Per creare calcoli accurati, è necessario un unico percorso da una tabella a quella successiva. Di conseguenza, può essere presente una sola relazione attiva tra ogni coppia di tabelle. In AdventureWorks DW 2012, ad esempio, la tabella DimDate contiene una colonna, DateKey, correlata a tre colonne diverse della tabella FactInternetSales: OrderDate, DueDate e ShipDate. Se si tenta di importare queste tabelle, la prima relazione viene creata correttamente, ma per le relazioni successive che riguardano la stessa colonna verrà visualizzato il messaggio di errore seguente:  
   
- \* Relazione: tabella [colonna 1] -> tabella [colonna 2] - stato: errore - motivo: Impossibile creare una relazione tra le tabelle \<tabella 1 > e \<tabella 2 >. Tra due tabelle può esistere solo una relazione diretta o indiretta.  
+ \* Relazione: tabella [colonna 1] -> tabella [colonna 2] - stato: errore - motivo: Impossibile creare una relazione tra le tabelle \<tabella 1 > e \<la tabella 2 >. Tra due tabelle può esistere solo una relazione diretta o indiretta.  
   
  Se sono presenti due tabelle unite da più relazioni, sarà necessario importare più copie della tabella contenente la colonna di ricerca e creare una relazione tra ogni coppia di tabelle.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "36068131"
 |Argomento|Description|  
 |-----------|-----------------|  
 |[Creare una relazione tra due tabelle &#40;tabulare di SSAS&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Viene descritto come creare manualmente una relazione tra due tabelle.|  
-|[Eliminazione di relazioni di &#40;tabulare di SSAS&#41;](relationships-ssas-tabular.md)|Viene descritto come eliminare una relazione e le ramificazioni dovute all'eliminazione di relazioni.|  
+|[Eliminare le relazioni &#40;tabulare di SSAS&#41;](relationships-ssas-tabular.md)|Viene descritto come eliminare una relazione e le ramificazioni dovute all'eliminazione di relazioni.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle e colonne &#40;tabulare di SSAS&#41;](tables-and-columns-ssas-tabular.md)   

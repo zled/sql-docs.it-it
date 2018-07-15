@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup compression [SQL Server], Resource Governor
 - backup compression [SQL Server], CPU usage
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ccf5e1d6127f3116cda2895f367bd22fedba2ebc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: bc9e5e2f75d253e45a11d88fe9fbf6c527b71d03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283487"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup (Transact-SQL)
   Per impostazione predefinita, l'esecuzione di backup mediante la compressione aumenta in modo significativo l'utilizzo della CPU e la CPU aggiuntiva utilizzata dal processo di compressione può avere un impatto negativo sulle operazioni simultanee. È necessario quindi creare un backup compresso con priorità bassa in una sessione con utilizzo della CPU limitato da[Resource Governor](../resource-governor/resource-governor.md) nel caso in cui si verifichi una contesa di CPU. In questo argomento viene presentato uno scenario che classifica le sessioni di un particolare utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguendone mapping a un gruppo del carico di lavoro di Resource Governor che limita l'utilizzo della CPU in tali casi.  

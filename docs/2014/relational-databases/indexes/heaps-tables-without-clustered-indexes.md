@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - heaps
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d9dcc09b04614851fb9c07116be84be0e249742c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: abcd7a3ba58bd80c8fb14605d76764a7357f960c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279197"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Heap (tabelle senza indici cluster)
   Un heap è una tabella per cui non è disponibile un indice cluster. Nelle tabelle archiviate come heap è possibile creare uno o più indici non cluster. I dati vengono archiviati nell'heap senza un ordine specificato. In genere i dati vengono inizialmente archiviati nell'ordine in cui le righe vengono inserite nella tabella, tuttavia [!INCLUDE[ssDE](../../includes/ssde-md.md)] può spostare i dati nell'heap in modo da archiviare le righe in modo efficiente, pertanto non è possibile prevedere l'ordine dei dati. Per garantire l'ordine delle righe restituite da un heap, è necessario utilizzare il `ORDER BY` clausola. Per specificare l'ordine di archiviazione delle righe, creare un indice cluster nella tabella, in modo che essa non sia un heap.  

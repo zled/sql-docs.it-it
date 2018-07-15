@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0333a544f1e907de5fa86b290fa6d88f1edb7c01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: dea720120f13f1546af8a1ab9bdd572badabb350
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292121"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Più serie in un grafico (Generatore report e SSRS)
   Se in un grafico sono presenti più serie, è necessario identificare il sistema ottimale per confrontarle. È possibile utilizzare un grafico in pila per mostrare le proporzioni relative di ogni serie. Se si confrontano solo due serie che condividono un asse delle categorie (x), utilizzare l'asse secondario. Ciò si rivela utile per mostrare due serie correlate di dati, ad esempio, prezzo e volume o reddito e tasse. Se il grafico diventa illeggibile, utilizzare più aree del grafico per creare una maggiore separazione visiva tra le diverse serie.  
@@ -60,6 +60,6 @@ ms.locfileid: "36069336"
 ## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Visualizzazione di una serie con più intervalli di dati in un grafico &#40;Generatore report e SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
- [Tipi di grafico &#40;SSRS e Generatore Report&#41;](chart-types-report-builder-and-ssrs.md)  
+ [Tipi di grafico &#40;Report e SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Regole di confronto del Database non compatibile motore Server (Upgrade Advisor) | Documenti Microsoft
+title: Regole di confronto del Database non compatibile motore Server (Upgrade Advisor) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5a81084ff6eba37d8a6fcc2643a760d879dcf13c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e182df78fc7faae8a50092fd51a8f2c0964fe2bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286647"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>Regole di confronto del server del motore di database incompatibili (Upgrade Advisor)
-  Upgrade Advisor ha rilevato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sta utilizzando un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che è configurato per utilizzare una regola di confronto server incompatibili.  
+  Preparazione aggiornamento ha rilevato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilizza un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che è configurato per utilizzare una regola di confronto server incompatibili.  
   
 ||  
 |-|  
@@ -32,15 +32,15 @@ ms.locfileid: "36068844"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Description  
- Upgrade Advisor ha rilevato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sta utilizzando un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che è configurato per utilizzare una regola di confronto server incompatibili.  
+ Preparazione aggiornamento ha rilevato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilizza un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che è configurato per utilizzare una regola di confronto server incompatibili.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità SharePoint viene usata l'architettura di servizi condivisi SharePoint. In SharePoint non viene supportato [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] configurato per la distinzione tra maiuscole e minuscole o per regole di confronto del server o per regole di confronto del server binarie. Le regole di confronto incompatibili includono regole di confronto che per impostazione predefinita supportano la distinzione tra maiuscole e minuscole o che sono binarie e regole di confronto di base che per impostazione predefinita sono compatibili ma sono state configurate con alcune delle designazioni delle regole di confronto seguenti:  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità SharePoint viene utilizzata l'architettura di servizi condivisi SharePoint. In SharePoint non viene supportato [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] configurato per la distinzione tra maiuscole e minuscole o per regole di confronto del server o per regole di confronto del server binarie. Le regole di confronto incompatibili includono regole di confronto che per impostazione predefinita supportano la distinzione tra maiuscole e minuscole o che sono binarie e regole di confronto di base che per impostazione predefinita sono compatibili ma sono state configurate con alcune delle designazioni delle regole di confronto seguenti:  
   
 -   **Binario**  
   
 -   **Distinzione maiuscole/minuscole**  
   
--   **Punto di codice binario**  
+-   **Binary-punti di codice**  
   
  Poiché le regole di confronto del server [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] correnti sono incompatibili, l'aggiornamento è bloccato.  
   
@@ -49,6 +49,6 @@ ms.locfileid: "36068844"
   
 -   [Eseguire l'aggiornamento e la migrazione di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=233227)  
   
--   [Selezione di una regola di confronto di SQL Server](http://go.microsoft.com/fwlink/?LinkId=233226)  
+-   [Selezione di un confronto di SQL Server](http://go.microsoft.com/fwlink/?LinkId=233226)  
   
   

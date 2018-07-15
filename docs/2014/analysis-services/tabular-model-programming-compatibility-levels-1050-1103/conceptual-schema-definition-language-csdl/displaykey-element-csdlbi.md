@@ -1,5 +1,5 @@
 ---
-title: Elemento DisplayKey (CSDLBI) | Documenti Microsoft
+title: Elemento DisplayKey (CSDLBI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 7d881278-1e77-42e1-8cfc-f1bbd9ec2340
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 907bb04d59225180fad91b63971d578181c6663d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: adcf9e8b2b87e0302158bbbf5652d8c32277170f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297151"
 ---
 # <a name="displaykey-element-csdlbi"></a>Elemento DisplayKey (CSDLBI)
   L'elemento DisplayKey contiene un elenco degli elementi seguenti che insieme costituiscono un identificatore sicuro. DisplayKey è presente unicamente come elemento figlio dell'elemento EntityType. Può fare riferimento a colonne o estremità del ruolo.  
@@ -32,7 +32,7 @@ ms.locfileid: "36068792"
 |----------|-----------------|-----------------|  
 |IsDisplayKey|no|True o false.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Questo elemento è relativo ai report. L'elemento a cui si applica questo attributo non deve essere la chiave della tabella effettiva, solo un elemento che verrà presentato come chiave. Tuttavia la colonna utilizzata per DisplayKey deve contenere valori univoci.  
   
 ## <a name="example"></a>Esempio  

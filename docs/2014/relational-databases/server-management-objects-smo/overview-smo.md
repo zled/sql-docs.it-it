@@ -1,5 +1,5 @@
 ---
-title: Panoramica (SMO) | Documenti Microsoft
+title: Panoramica (SMO) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 caps.latest.revision: 68
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85d8e44514e4d26be4c720e562c4db7ac7b7af12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 28ccb6ff5219277d25d56670cf46f84e8e7726fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315661"
 ---
 # <a name="overview-smo"></a>Panoramica (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) sono progettati per la gestione a livello di programmazione di oggetti [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare SMO per compilare applicazioni di gestione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizzate. Sebbene [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sia un'applicazione potente e completa per la gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in alcuni casi è possibile che sia necessario utilizzare un'applicazione SMO.  
@@ -49,11 +49,11 @@ ms.locfileid: "36067784"
   
 -   Partizionamento di tabelle e indici per l'archiviazione di dati in uno schema di partizione. Per altre informazioni, vedere [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
--   Endpoint HTTP per la gestione di richieste SOAP. Per altre informazioni, vedere [implementazione endpoint](tasks/implementing-endpoints.md).  
+-   Endpoint HTTP per la gestione di richieste SOAP. Per altre informazioni, vedere [implementazione di endpoint](tasks/implementing-endpoints.md).  
   
 -   Isolamento dello snapshot e controllo delle versioni a livello di riga per maggiore concorrenza. Per altre informazioni, vedere [utilizzo dell'isolamento dello Snapshot](../native-client/features/working-with-snapshot-isolation.md).  
   
--   La raccolta di XML Schema, gli indici XML e il tipo di dati XML garantiscono la convalida e l'archiviazione di dati XML. Per altre informazioni, vedere [raccolte di XML Schema &#40;SQL Server&#41; ](../xml/xml-schema-collections-sql-server.md) e [tramite schemi XML](tasks/using-xml-schemas.md).  
+-   La raccolta di XML Schema, gli indici XML e il tipo di dati XML garantiscono la convalida e l'archiviazione di dati XML. Per altre informazioni, vedere [raccolte di XML Schema &#40;SQL Server&#41; ](../xml/xml-schema-collections-sql-server.md) e [utilizzando gli schemi XML](tasks/using-xml-schemas.md).  
   
 -   Database di snapshot per la creazione di copie di database in sola lettura.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36067784"
   
 -   Trigger DDL per l'aggiunta di funzionalità quando si verificano eventi DDL. Per altre informazioni, vedere [Trigger DDL](../triggers/ddl-triggers.md).  
   
- Lo spazio dei nomi SMO è <xref:Microsoft.SqlServer.Management.Smo>. SMO viene implementato come un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Ciò significa che common language runtime dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 2.0 deve essere installata prima di utilizzare gli oggetti SMO. Gli assembly SMO vengono installati per impostazione predefinita nel Global Assembly Cache (GAC) con l'opzione SDK di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli assembly si trovano in [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Per altre informazioni, vedere la [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentazione.  
+ Lo spazio dei nomi SMO è <xref:Microsoft.SqlServer.Management.Smo>. SMO viene implementato come un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Ciò significa che common language runtime dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 2.0 deve essere installata prima di usare gli oggetti SMO. Gli assembly SMO vengono installati per impostazione predefinita nel Global Assembly Cache (GAC) con l'opzione SDK di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli assembly si trovano in [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Per altre informazioni, vedere la [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentazione.  
   
 ## <a name="smo-classes"></a>Classi SMO  
  Le classi SMO includono due categorie: classi di istanze e classi di utilità.  
@@ -115,7 +115,7 @@ ms.locfileid: "36067784"
   
  **Scripting**  
   
- In SMO la generazione di script è stata migliorata e spostata nella classe `Scripter`. Il `Scripter` (classe) è possibile individuare le dipendenze, comprendere le relazioni tra oggetti e consentire la modifica della gerarchia delle dipendenze. L'oggetto scripting principale è l'oggetto `Scripter`. Sono inoltre disponibili diversi oggetti di supporto che gestiscono le dipendenze e rispondono agli eventi di stato e di errore.  
+ In SMO la generazione di script è stata migliorata e spostata nella classe `Scripter`. Il `Scripter` classe può individuare dipendenze, comprendere le relazioni tra oggetti e consentire la modifica della gerarchia di dipendenze. L'oggetto scripting principale è l'oggetto `Scripter`. Sono inoltre disponibili diversi oggetti di supporto che gestiscono le dipendenze e rispondono agli eventi di stato e di errore.  
   
  L'oggetto `Scripter` supporta le seguenti opzioni di scripting avanzate:  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36067784"
   
 -   Risposta agli eventi di errore  
   
- **Unique Resource Name**  
+ **Nomi di risorse univoci**  
   
  Un concetto chiave nell'utilizzo della libreria di oggetti SMO è rappresentato dai nomi di risorse univoci (URN, Unique Resource Name). L'URN utilizza una sintassi simile a XPath. XPath è un percorso della gerarchia utilizzato per specificare un oggetto nel quale ogni livello dispone di qualificatori e funzioni. In SMO l'URN dispone di due elementi: percorso e denominazione degli attributi con funzionalità limitata. Il percorso viene utilizzato per specificare il percorso dell'oggetto mentre la denominazione degli attributi consente un grado di filtraggio.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36067784"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- L'URN di un oggetto può essere recuperato facendo riferimento alla proprietà dell'URN. L'oggetto Scripter utilizza inoltre gli URN come parametri che passano i riferimenti all'oggetto al metodo dell'oggetto `Scripter`. È inoltre possibile specificare un URN per il **GetSmoObject** metodo il `Server` oggetto. utilizzato per creare un'istanza dell'oggetto SMO.  
+ L'URN di un oggetto può essere recuperato facendo riferimento alla proprietà dell'URN. L'oggetto Scripter utilizza inoltre gli URN come parametri che passano i riferimenti all'oggetto al metodo dell'oggetto `Scripter`. Inoltre, è possibile specificare un URN per il **GetSmoObject** metodo il `Server` oggetto. utilizzato per creare un'istanza dell'oggetto SMO.  
   
 ## <a name="new-sql-server-features-represented-in-smo"></a>Nuove funzionalità di SQL Server rappresentate in SMO  
  **Partizionamento di tabelle e indici**  
@@ -150,7 +150,7 @@ ms.locfileid: "36067784"
   
  Le richieste di mirroring del database e SOAP vengono gestite dagli endpoint mediante l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Endpoint>.  
   
- **Controllo delle versioni a livello di isolamento o la riga dello snapshot**  
+ **Controllo delle versioni a livello di riga/isolamento dello snapshot**  
   
  L'isolamento dello snapshot (controllo delle versioni a livello di riga) è rappresentato da nuove proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   

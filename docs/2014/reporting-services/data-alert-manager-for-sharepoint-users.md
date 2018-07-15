@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
@@ -16,13 +16,13 @@ ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0d482e6c217e8af61a2419fc3bf5e0c82e09d420
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e09359864b17d3d354df518d43395253b711ab6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234771"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Gestione avvisi dati per utenti di SharePoint
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Reporting Services include Gestione avvisi dati, per consentire agli Information Worker di SharePoint di gestire gli avvisi dati. È possibile visualizzare informazioni sugli avvisi creati, eliminare avvisi, aprire definizioni di avviso per la modifica ed eseguire avvisi su richiesta. È possibile scegliere di visualizzare gli avvisi solo per un singolo report o per tutti i report. Nella figura seguente sono illustrate le funzionalità disponibili per gli Information Worker in Gestione avvisi dati.  
@@ -43,7 +43,7 @@ ms.locfileid: "36067753"
   
  ![Aprire Gestione avvisi dati dal menu di scelta rapida dei report](media/rs-openalertmanager.gif "Aprire Gestione avvisi dati dal menu di scelta rapida dei report")  
   
- In Gestione avvisi dati è inclusa una tabella in cui sono elencati il nome dell'avviso, il nome del report, il nome dell'utente che ha creato la definizione di avviso, il numero di volte in cui il messaggio di avviso è stato inviato, l'ultima esecuzione dell'avviso, l'ultima modifica alla definizione di avviso e lo stato del messaggio di avviso più recente. Se il messaggio di avviso non può essere generato o inviato, nella colonna relativa allo stato sono incluse informazioni sull'errore che consentono di risolvere i problemi relativi all'avviso. Per altre informazioni, vedere [Gestisci avvisi dati personali in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
+ In Gestione avvisi dati è inclusa una tabella in cui sono elencati il nome dell'avviso, il nome del report, il nome dell'utente che ha creato la definizione di avviso, il numero di volte in cui il messaggio di avviso è stato inviato, l'ultima esecuzione dell'avviso, l'ultima modifica alla definizione di avviso e lo stato del messaggio di avviso più recente. Se il messaggio di avviso non può essere generato o inviato, nella colonna relativa allo stato sono incluse informazioni sull'errore che consentono di risolvere i problemi relativi all'avviso. Per altre informazioni, vedere [gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
   
  Nella tabella seguente sono illustrati i dati di esempio di una tabella di Gestione avvisi dati. Quando si verifica un errore, il messaggio di errore e l'identificatore della voce nel log (un GUID) vengono inclusi nel campo **Stato** nella tabella.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36067753"
   
   
 ##  <a name="DeleteAlerts"></a> Eliminare avvisi dati  
- Le definizioni di avviso dati vengono eliminate da Gestione avvisi dati. Un Information Worker può eliminare le definizioni di avviso create personalmente. Non è possibile eliminare definizioni di avviso create da altri utenti. Per altre informazioni, vedere [Gestisci avvisi dati personali in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
+ Le definizioni di avviso dati vengono eliminate da Gestione avvisi dati. Un Information Worker può eliminare le definizioni di avviso create personalmente. Non è possibile eliminare definizioni di avviso create da altri utenti. Per altre informazioni, vedere [gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
   
  Quando si elimina una definizione di avviso, questa viene eliminata in modo permanente. Se si desidera solamente sospendere i messaggi di avviso, è necessario modificare il criterio di ricorrenza oppure la data di inizio e di fine nella definizione di avviso. Per altre informazioni, vedere [Modificare un avviso dati nella finestra di progettazione di avvisi](edit-a-data-alert-in-alert-designer.md).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36067753"
   
   
 ##  <a name="RunAlerts"></a> Eseguire avvisi dati  
- In Gestione avvisi dati sono incluse informazioni sull'ultima elaborazione della definizione di avviso da parte del servizio avvisi e sul numero di volte che il messaggio di avviso dati è stato inviato. Potrebbe essere necessario eseguire e inviare il messaggio di avviso immediatamente, anziché attendere per l'ora specificata nella pianificazione. Quando si esegue un avviso da Gestione avvisi dati, la pianificazione degli avvisi viene sovrascritta e l'elaborazione della definizione di avviso inizia entro un periodo compreso tra uno e cinque minuti, a seconda del tempo necessario per eseguire il report e di quanto è occupato il server di report nel momento in cui si sceglie di eseguire l'avviso. Se, tuttavia, è stato specificato che un messaggio deve essere inviato solamente se i risultati cambiano, ma i risultati non sono cambiati, non viene creato né inviato alcun messaggio. Per altre informazioni, vedere [Gestisci avvisi dati personali in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
+ In Gestione avvisi dati sono incluse informazioni sull'ultima elaborazione della definizione di avviso da parte del servizio avvisi e sul numero di volte che il messaggio di avviso dati è stato inviato. Potrebbe essere necessario eseguire e inviare il messaggio di avviso immediatamente, anziché attendere per l'ora specificata nella pianificazione. Quando si esegue un avviso da Gestione avvisi dati, la pianificazione degli avvisi viene sovrascritta e l'elaborazione della definizione di avviso inizia entro un periodo compreso tra uno e cinque minuti, a seconda del tempo necessario per eseguire il report e di quanto è occupato il server di report nel momento in cui si sceglie di eseguire l'avviso. Se, tuttavia, è stato specificato che un messaggio deve essere inviato solamente se i risultati cambiano, ma i risultati non sono cambiati, non viene creato né inviato alcun messaggio. Per altre informazioni, vedere [gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
   
 > [!NOTE]  
 >  Dopo avere fatto clic sull'opzione **Esegui**  , sono necessari alcuni secondi per aggiornare il valore della colonna **Stato** in modo da indicare che è in corso l'elaborazione dell'avviso. Se si fa clic sull'opzione **Esegui**  più volte, l'avviso verrà elaborato più volte. Questa operazione provoca un consumo inutile delle risorse del server di report e potrebbe avere un impatto sulle prestazioni del server di report. Per visualizzare informazioni aggiornate sull'avviso, fare clic sul pulsante Aggiorna del Web browser per verificare aggiornamenti di stato e altre informazioni.  
@@ -85,7 +85,7 @@ ms.locfileid: "36067753"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di progettazione avviso dati](../../2014/reporting-services/data-alert-designer.md)   
- [Crea un avviso dati nella finestra di progettazione avviso dati](create-a-data-alert-in-data-alert-designer.md)   
+ [Creare un avviso dati nella finestra di progettazione avviso dati](create-a-data-alert-in-data-alert-designer.md)   
  [Avvisi dati di Reporting Services](../ssms/agent/alerts.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Configurazione dell'integrazione dei servizi (servizio SSIS) | Documenti Microsoft
+title: Configurazione dell'integrazione dei servizi Service (servizio SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - configuration files [Integration Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - default configuration files
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 caps.latest.revision: 70
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4d934191b491d4e8d348b7bd91004afc8f8f9545
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71a0436edf57e820b7e6b559814f65823d4390eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283677"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Configurazione del servizio Integration Services (servizio SSIS)
     
 > [!IMPORTANT]  
 >  In questo argomento viene illustrato il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servizio Windows per la gestione dei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] supporta il servizio per la compatibilità con le versioni precedenti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è possibile gestire oggetti come i pacchetti del server Integration Services.  
   
- Il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] si basa su un file di configurazione per le relative impostazioni. Per impostazione predefinita, il nome del file di configurazione è MsDtsSrvr. ini, e il file si trova nella cartella %ProgramFiles%\Microsoft SQL Server\120\DTS\Binn.  
+ Il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] si basa su un file di configurazione per le relative impostazioni. Per impostazione predefinita, il nome file di configurazione è MsDtsSrvr. ini, e il file si trova nella cartella %ProgramFiles%\Microsoft SQL Server\120\DTS\Binn.  
   
  In genere, non è necessario apportare modifiche a tale file, né modificarne il percorso predefinito. Sarà tuttavia necessario modificare il file di configurazione se i pacchetti sono archiviati in un'istanza denominata o remota del [!INCLUDE[ssDE](../includes/ssde-md.md)]o in più istanze del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Se si sposta il file di configurazione in un percorso diverso da quello predefinito, sarà necessario modificare la chiave del Registro di sistema tramite cui viene specificato il percorso del file.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36068556"
   
 -   Le cartelle radice da visualizzare per [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nella finestra Esplora oggetti di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sono le cartelle MSDB e File System.  
   
--   I pacchetti nel file system che il [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gestito dal servizio sono memorizzati in %ProgramFiles%\Microsoft SQL Server\120\DTS\Packages.  
+-   I pacchetti nel file system che il [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gestiti dal servizio si trovano in %ProgramFiles%\Microsoft SQL Server\120\DTS\Packages.  
   
  In questo file di configurazione è inoltre specificato quale database msdb contiene i pacchetti che verranno gestiti dal servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per impostazione predefinita, il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è configurato per gestire i pacchetti archiviati nel database msdb dell'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)] installata in contemporanea con [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se contemporaneamente non viene installata alcuna istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)] , il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è configurato per gestire i pacchetti contenuti nel database msdb dell'istanza predefinita locale del [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36068556"
 ```  
   
 ## <a name="modification-of-the-configuration-file-location"></a>Modifica del percorso del file di configurazione  
-La chiave del Registro di sistema **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\ServiceConfigFile** specifica il percorso e il nome per la configurazione file [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilizzata dal servizio. Il valore predefinito della chiave del Registro di sistema viene **C:\Program Files\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**. È possibile aggiornare il valore della chiave del Registro di sistema per utilizzare un nome e un percorso diversi per il file di configurazione. Si noti che il numero di versione nel percorso (120 per SQL Server [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]) varia a seconda della versione di SQL Server. 
+La chiave del Registro di sistema **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\ServiceConfigFile** specifica il percorso e il nome per la configurazione file [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilizzato dal servizio. Il valore predefinito della chiave del Registro di sistema viene **C:\Program Files\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**. È possibile aggiornare il valore della chiave del Registro di sistema per utilizzare un nome e un percorso diversi per il file di configurazione. Si noti che il numero di versione nel percorso (120 per SQL Server [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]) variano a seconda della versione di SQL Server. 
   
   
 > [!CAUTION]  

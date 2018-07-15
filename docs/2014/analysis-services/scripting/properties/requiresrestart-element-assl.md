@@ -1,5 +1,5 @@
 ---
-title: Elemento RequiresRestart (ASSL) | Documenti Microsoft
+title: Elemento RequiresRestart (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RequiresRestart element
 ms.assetid: 9e98f956-c41e-4e15-a7bd-e17c10ee6fc6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cde3c22439c06e254191a2a732e7030fab36cc7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7790c12c0b5889ef89991de042db8d8a6a93a7e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295421"
 ---
 # <a name="requiresrestart-element-assl"></a>Elemento RequiresRestart (ASSL)
-  Contiene un valore di sola lettura associato a un [ServerProperty](../objects/serverproperty-element-assl.md) elemento che determina se la modifica del valore della proprietà server richiede che l'istanza venga riavviata rendere effettive le modifiche.  
+  Contiene un valore di sola lettura associato a un [ServerProperty](../objects/serverproperty-element-assl.md) elemento che determina se la modifica del valore della proprietà del server richiede che l'istanza venga riavviata rendere effettiva la modifica.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,8 +61,8 @@ ms.locfileid: "36055975"
 |Elemento padre|[ServerProperty](../objects/serverproperty-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `RequiresRestart` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ServerProperty>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `RequiresRestart` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento ServerProperties &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   

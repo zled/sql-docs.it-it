@@ -1,5 +1,5 @@
 ---
-title: Gruppo elemento (ASSL) | Documenti Microsoft
+title: Elemento (ASSL) di gruppo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Group element
 ms.assetid: 7df4ba90-b39f-4d8a-8db1-b73639a522a6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6b10e557c91a27305ca0b9bff1d989e327b3b6f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bb2883a3cb988a2e6f53c4eca0c0e16da4ff74d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215851"
 ---
 # <a name="group-element-assl"></a>Elemento Group (ASSL)
   Definisce un gruppo di membri associati a un attributo.  
@@ -62,7 +62,7 @@ ms.locfileid: "36063694"
 |Elementi padre|[Gruppi](../collections/groups-element-assl.md)|  
 |Elementi figlio|[Members](../collections/members-element-assl.md), [Name](../properties/name-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.Group>.  
   
 ## <a name="see-also"></a>Vedere anche  

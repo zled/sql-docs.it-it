@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 025d087a662fbf641d60e42314a7116df4632bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: fd3b765bff38ea006a1dd1a60fe861373715ee80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309421"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Pianificare un report mappa (Generatore report e SSRS)
   Report validi presentano informazioni che consentono una migliore comprensione e determinano azioni specifiche. Per presentare i dati analitici, ad esempio i totali delle vendite o i dati demografici, rispetto a uno sfondo geografico, è possibile aggiungere una mappa al report. Una mappa può contenere più livelli, in ciascuno dei quali vengono visualizzati elementi della mappa definiti da un tipo specifico di dati spaziali, ossia punti che rappresentano posizioni, linee che rappresentano percorsi o poligoni che rappresentano aree. È possibile associare i dati analitici agli elementi della mappa su ogni livello.  
@@ -66,7 +66,7 @@ ms.locfileid: "36064625"
   
 -   Mappe dai report nella raccolta mappe.  
   
--   I siti di terze parti che offrono dati spaziali come file di forma ESRI o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dati spaziali.  
+-   Siti di terze parti che offrono dati spaziali come file di forma ESRI o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dati spaziali.  
   
 -   Tessere mappa di Bing che forniscono uno sfondo per la vista mappa. Per visualizzare le sezioni in una mappa, è necessario configurare il server di report per supportare i servizi Web di Bing Maps.  
   
@@ -168,6 +168,6 @@ ms.locfileid: "36064625"
  [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Esercitazione: Report mappa &#40;Generatore report&#41;](../tutorial-map-report-report-builder.md)   
  [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Risolvere i problemi di report: Eseguire il mapping di report &#40;SSRS e Generatore Report&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere i problemi di report: I report di mappa &#40;Report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

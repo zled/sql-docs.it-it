@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 38dccbf58c4e0cbfee98b10c7cd8974198bceabc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 111a6cddaae54f05bb751e569487c4b94542bf07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300001"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guida di riferimento ai messaggi e agli errori di Integration Services
   Nelle tabelle seguenti vengono riportati gli errori, gli avvisi e i messaggi informativi predefiniti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , elencati in ordine numerico crescente all'interno di ciascuna categoria. Vengono inoltre indicati i codici numerici e nomi simbolici corrispondenti. Ognuno degli errori è definito come campo nella classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> nello spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> .  

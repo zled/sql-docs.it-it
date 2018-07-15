@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
 - SQL Database
@@ -31,15 +31,15 @@ helpviewer_keywords:
 - Database connectivity
 ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 27e9da24bae4d85fa067289de06e47c40523c7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4ea9205cafecced4ce0f72282c88e63ab5838a46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314051"
 ---
 # <a name="database-lifecycle-management"></a>Gestione del ciclo di vita del database
   DLM (Database lifecycle management, gestione del ciclo di vita del database) è un approccio basato su criteri per la gestione dei database e delle risorse dei dati. DLM non è un prodotto, bensì un approccio completo per la gestione dello schema, dei dati e dei metadati del database per un'applicazione di database. L'approccio attento e dinamico a DLM consente a un'organizzazione di gestire le risorse dei dati in base ai livelli appropriati di prestazioni, protezione, disponibilità e costi.  

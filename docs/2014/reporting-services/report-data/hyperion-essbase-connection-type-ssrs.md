@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 48296d180c5959ddbcd8377f65a87941aed1a00c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 94a17b12d3d9c5ce30db7a57e76c3053008ff281
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232537"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo di connessione Hyperion Essbase (SSRS)
   Per includere dati da un'origine dati esterna [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]che consente di recuperare dati multidimensionali da un'origine dati esterna [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -69,18 +69,18 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ##  <a name="Extended"></a> Proprietà di campo estese  
- L'estensione per l'elaborazione dati di [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] supporta proprietà di campo estese. Proprietà di campo estese sono proprietà a sommarsi `Value` e `IsMissing` che sono definiti per un campo del set di dati, l'estensione per l'elaborazione dati. Le proprietà estese includono proprietà predefinite e proprietà personalizzate. Le proprietà predefinite sono comuni a più origini dei dati, mentre quelle personalizzate sono specifiche di ogni origine dei dati.  
+ L'estensione per l'elaborazione dati di [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] supporta proprietà di campo estese. Proprietà di campo estese sono proprietà oltre alla `Value` e `IsMissing` che vengono definite per un campo del set di dati dall'estensione per l'elaborazione dati. Le proprietà estese includono proprietà predefinite e proprietà personalizzate. Le proprietà predefinite sono comuni a più origini dei dati, mentre quelle personalizzate sono specifiche di ogni origine dei dati.  
   
- Le proprietà di campo estese non vengono visualizzate nel riquadro Dati report come elementi che è possibile trascinare nel layout del report. Invece trascinare il campo padre della proprietà nel report e quindi modificare la proprietà predefinita da `Value` alla proprietà di cui si desidera utilizzare.  
+ Le proprietà di campo estese non vengono visualizzate nel riquadro Dati report come elementi che è possibile trascinare nel layout del report. In alternativa, è trascinare il campo padre della proprietà nel report e quindi modificare la proprietà predefinita da `Value` alla proprietà da usare.  
   
- Il nome di una proprietà di campo estesa viene visualizzato nella descrizione comandi quando il puntatore del mouse passa su un campo nel riquadro dei metadati di Progettazione query. Per ulteriori informazioni su Progettazione query è possibile utilizzare per esplorare i dati sottostanti, vedere [interfaccia utente di progettazione Query di Hyperion Essbase](hyperion-essbase-query-designer-user-interface.md).  
+ Il nome di una proprietà di campo estesa viene visualizzato nella descrizione comandi quando il puntatore del mouse passa su un campo nel riquadro dei metadati di Progettazione query. Per altre informazioni sulla finestra Progettazione query è possibile usare per esplorare i dati sottostanti, vedere [interfaccia utente di progettazione Query Hyperion Essbase](hyperion-essbase-query-designer-user-interface.md).  
   
 > [!NOTE]  
 >  I valori per le proprietà di campo estese sono disponibili solo se vengono inclusi nell'espressione MDX e vengono forniti dall'origine dati quando il report viene eseguito e vengono recuperati i dati per i relativi set di dati. È quindi possibile fare riferimento a tali valori delle proprietà `Field` in qualsiasi espressione utilizzando la sintassi descritta nella sezione seguente. Poiché, tuttavia, questi campi sono specifici del provider di dati in uso e non fanno parte del linguaggio RDL, eventuali modifiche apportate a tali valori non vengono salvate con la definizione del report.  
   
   
 ### <a name="predefined-field-properties"></a>Proprietà di campo predefinite  
- Proprietà di campo generalmente supportate da più provider di dati e incluse nella query MDX sottostante relativa a un set di dati di report. Ad esempio, la proprietà delle dimensioni MDX MEMBER_UNIQUE_NAME è mappata alla proprietà di campo del set di dati report predefiniti `UniqueName`. Per includere il valore del nome univoco in una casella di testo, usare l'espressione `=Fields!`*\<FieldName>*`.UniqueName`.  
+ Proprietà di campo generalmente supportate da più provider di dati e incluse nella query MDX sottostante relativa a un set di dati di report. Ad esempio, le proprietà delle dimensioni MDX MEMBER_UNIQUE_NAME è mappata alla proprietà di campo set di dati del report predefinito `UniqueName`. Per includere il valore del nome univoco in una casella di testo, usare l'espressione `=Fields!`*\<FieldName>*`.UniqueName`.  
   
  Nella tabella seguente viene riportato un elenco delle proprietà di campo predefinite che è possibile utilizzare per un'origine dati [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
   
@@ -119,7 +119,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 ##  <a name="HowTo"></a> Procedure  
  Questa sezione contiene istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati:  
   
- [Aggiungere e verificare una connessione dati o un'origine dati &#40;SSRS e Generatore Report&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -129,7 +129,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 ##  <a name="Related"></a> Sezioni correlate  
  In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le informazioni necessarie sulle procedure per definire, personalizzare e usare parti di un report correlate ai dati.  
   
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-datasets-ssrs.md)  
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6f9391fb8b85e551f2f1904e164c7d86f2dcacc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a9f2efa4761248c94a6db7a2747184808ffce3d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067940"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299361"
 ---
 # <a name="index-element-dta"></a>Index - elemento (DTA)
   Contiene informazioni su un indice che si desidera creare o eliminare per una configurazione specificata dall'utente.  
@@ -49,7 +49,7 @@ ms.locfileid: "36067940"
 |`Online`|`boolean`|Facoltativo. Specifica un indice in grado di eseguire operazioni che richiedono spazio su disco temporaneo mentre il server è online. Impostare su "true" o "false", ad esempio:<br /><br /> `<Index Online="true">`<br /><br /> Per impostazione predefinita, questo attributo è impostato su "false".<br /><br /> Per altre informazioni, vedere [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).|  
 |`IndexSizeInMB`|`double`|Facoltativo. Specifica le dimensioni massime dell'indice in megabyte, ad esempio:<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> Nessuna impostazione predefinita.|  
 |`NumberOfRows`|`integer`|Facoltativo. Simula diverse dimensioni di indice, che rispecchiano in maniera efficiente diverse dimensioni di tabella, ad esempio:<br /><br /> `<Index NumberOfRows="3000">`<br /><br /> Nessuna impostazione predefinita.|  
-|`QUOTED_IDENTIFIER`|`boolean`|Facoltativo. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seguirà le regole ISO relative alle virgolette che delimitano gli identificatori e le stringhe letterali. È necessario attivare questo attributo se l'indice è definito in una colonna calcolata o in una vista. La sintassi seguente, ad esempio, consente di attivare l'attributo:<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> Per impostazione predefinita, l'attributo è disattivato.<br /><br /> Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).|  
+|`QUOTED_IDENTIFIER`|`boolean`|Facoltativo.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seguirà le regole ISO relative alle virgolette che delimitano gli identificatori e le stringhe letterali. È necessario attivare questo attributo se l'indice è definito in una colonna calcolata o in una vista. La sintassi seguente, ad esempio, consente di attivare l'attributo:<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> Per impostazione predefinita, l'attributo è disattivato.<br /><br /> Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).|  
 |`ARITHABORT`|`boolean`|Facoltativo. Interrompe una query quando si verifica un errore di divisione per zero o di overflow durante l'esecuzione della query stessa. È necessario attivare questo attributo se l'indice è definito in una colonna calcolata o in una vista. La sintassi seguente, ad esempio, consente di attivare l'attributo:<br /><br /> `<Index ARITHABORT [...]>`<br /><br /> Per impostazione predefinita, l'attributo è disattivato.<br /><br /> Per altre informazioni, vedere [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql).|  
 |`CONCAT_NULL_YIELDS_`<br /><br /> `NULL`|`boolean`|Facoltativo. Controlla se i risultati di concatenazione vengono considerati valori Null o stringhe vuote. È necessario attivare questo attributo se l'indice è definito in una colonna calcolata o in una vista. La sintassi seguente, ad esempio, consente di attivare l'attributo:<br /><br /> `<Index CONCAT_NULL_YIELDS_NULL [...]>`<br /><br /> Per impostazione predefinita, l'attributo è disattivato.<br /><br /> Per altre informazioni, vedere [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).|  
 |`ANSI_NULLS`|`boolean`|Facoltativo. Specifica il comportamento conforme allo standard ISO degli operatori di confronto uguale a (=) e diverso da (<>) quando questi vengono utilizzati con valori Null. È necessario attivare questo attributo se l'indice è definito in una colonna calcolata o in una vista. La sintassi seguente, ad esempio, consente di attivare l'attributo:<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> Per impostazione predefinita, l'attributo è disattivato.<br /><br /> Per altre informazioni, vedere [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql).|  

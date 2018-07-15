@@ -1,5 +1,5 @@
 ---
-title: Eseguire una query elemento (XMLA) | Documenti Microsoft
+title: Eseguire una query elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Query element
 ms.assetid: 5a4544e4-012f-4a47-942c-23596400ea16
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e01c14cb889a7d2953c98d8dfeee3bb89eee344e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 02feb5cb14e6b6acdc6100070495d0c84b89e483
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293243"
 ---
 # <a name="query-element-xmla"></a>Elemento Query (XMLA)
-  Contiene una query all'interno di [query](queries-element-xmla.md) raccolta utilizzata dal [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) comando durante l'ottimizzazione basata sull'utilizzo.  
+  Contiene una query all'interno di [query](queries-element-xmla.md) raccolta usata per il [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) comando durante l'ottimizzazione basata sull'utilizzo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,10 +63,10 @@ ms.locfileid: "36068326"
 |Elementi padre|[Query](queries-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il comando `DesignAggregations` supporta l'ottimizzazione basata sulle statistiche di utilizzo includendo uno o più elementi `Query` nella raccolta `Queries` del comando. Ogni `Query` elemento rappresenta una query di tipo goal utilizzata dal processo di progettazione per definire le aggregazioni destinate alle query utilizzate più di frequente. È possibile specificare la propria query di tipo goal, oppure è possibile utilizzare le informazioni archiviate da un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nel log di query per recuperare informazioni su più di frequente query utilizzate.  
+## <a name="remarks"></a>Note  
+ Il comando `DesignAggregations` supporta l'ottimizzazione basata sulle statistiche di utilizzo includendo uno o più elementi `Query` nella raccolta `Queries` del comando. Ogni `Query` elemento rappresenta una query di tipo goal utilizzata dal processo di progettazione per definire le aggregazioni destinate alle query utilizzate più di frequente. È possibile specificare query di tipo goal personalizzate oppure è possibile usare le informazioni archiviate da un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nel log di query per recuperare informazioni su più di frequente query utilizzate.  
   
- Se si progettano in modo iterativo le aggregazioni, è sufficiente passato query di tipo goal al primo `DesignAggregations` comando perché la [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza archivia queste query e le utilizza durante le successive `DesignAggregations` comandi. Dopo avere passato query di tipo goal al primo comando `DesignAggregations` di un processo iterativo, qualsiasi comando `DesignAggregations` successivo che contiene query di tipo goal nella proprietà `Queries` genera un errore.  
+ Se si siano progettando in modo iterativo le aggregazioni, è sufficiente passato query di tipo goal al primo `DesignAggregations` comando perché la [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza archivia queste query e le utilizza durante le successive `DesignAggregations` comandi. Dopo avere passato query di tipo goal al primo comando `DesignAggregations` di un processo iterativo, qualsiasi comando `DesignAggregations` successivo che contiene query di tipo goal nella proprietà `Queries` genera un errore.  
   
  L'elemento `Query` contiene un valore delimitato da virgole in cui sono presenti gli argomenti seguenti:  
   
@@ -81,9 +81,9 @@ ms.locfileid: "36068326"
  La stringa "011" fa riferimento ad esempio a una query relativa a una dimensione con tre attributi, di cui il secondo e il terzo sono inclusi nella query.  
   
 > [!NOTE]  
->  Alcuni attributi non vengono considerati nel set di dati. Per ulteriori informazioni sugli attributi esclusi, vedere [delle proprietà (XMLA)](query-element-xmla.md).  
+>  Alcuni attributi non vengono considerati nel set di dati. Per altre informazioni sugli attributi esclusi, vedere [Properties (XMLA)](query-element-xmla.md).  
   
- Ogni dimensione nel gruppo di misure che contiene la progettazione delle aggregazioni è rappresentata da un *Dataset* valore il `Query` elemento. L'ordine dei valori *Dataset* deve corrispondere all'ordine delle dimensioni incluse nel gruppo di misure.  
+ Ogni dimensione nel gruppo di misure che contiene la progettazione delle aggregazioni è rappresentata da un *set di dati* valore il `Query` elemento. L'ordine dei valori *Dataset* deve corrispondere all'ordine delle dimensioni incluse nel gruppo di misure.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Progettazione di aggregazioni &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   

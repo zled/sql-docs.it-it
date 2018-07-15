@@ -1,5 +1,5 @@
 ---
-title: Configurare una distribuzione con scalabilità orizzontale a Server di Report in modalità nativa (Gestione configurazione SSRS) | Documenti Microsoft
+title: Configurare una distribuzione di tipo Scale-Out Server di Report in modalità nativa (Gestione configurazione SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
@@ -17,13 +17,13 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 04d66fcb5151a325402ff541fb4fd4f97d442d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 153d97c15dcde21e70f29aeb77d80aee1e55adc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296071"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa (Gestione configurazione SSRS)
   Reporting Services in modalità nativa supporta un modello di distribuzione con scalabilità orizzontale che consente di eseguire più istanze del server di report che condividono un singolo database del server di report. Le distribuzioni con scalabilità orizzontale vengono utilizzate per aumentare la scalabilità di server di report in modo che siano in grado di gestire più utenti simultanei e carichi di esecuzione di report maggiori. Distribuzioni di questo tipo possono essere utilizzate inoltre per dedicare server specifici all'elaborazione di report interattivi o pianificati  
@@ -42,7 +42,7 @@ ms.locfileid: "36067349"
   
  **Per pianificare, installare e configurare una distribuzione con scalabilità orizzontale, effettuare le operazioni seguenti:**  
   
--   Revisione [installare SQL Server 2014 dall'installazione guidata di &#40;programma di installazione di&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online per istruzioni su come installare le istanze di server di report.  
+-   Revisione [installare SQL Server 2014 dall'installazione guidata di &#40;installazione&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online per istruzioni su come installare istanze del server di report.  
   
 -   Se si intende ospitare la distribuzione con scalabilità orizzontale in un cluster con bilanciamento del carico di rete, è necessario configurare tale cluster prima di configurare la distribuzione con scalabilità orizzontale. Per altre informazioni, vedere [Configurare un server di report in un cluster per il bilanciamento del carico di rete](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
@@ -90,13 +90,13 @@ ms.locfileid: "36067349"
   
     4.  Digitare il nome del server dell'istanza del Motore di database di SQL Server che ospita il database del server di report che si desidera utilizzare. Il server deve essere lo stesso a cui ci si è connessi durante i passaggi del set di istruzioni precedente.  
   
-    5.  Fare clic su **Verifica connessione**, quindi fare clic su **successivo**.  
+    5.  Fare clic su **Test connessione**, quindi fare clic su **successivo**.  
   
-    6.  In **Database del Server di Report**, selezionare il database creato per il primo server di report e quindi fare clic su **successivo**. Il nome predefinito è ReportServer. Non selezionare ReportServerTempDB. Questo database viene utilizzato solo per l'archiviazione temporanea dei dati durante l'elaborazione dei report. Se l'elenco dei database è vuoto, ripetere i quattro passaggi precedenti per stabilire una connessione al server.  
+    6.  Nelle **Database del Server di Report**, selezionare il database creato per il primo server di report e quindi fare clic su **successivo**. Il nome predefinito è ReportServer. Non selezionare ReportServerTempDB. Questo database viene utilizzato solo per l'archiviazione temporanea dei dati durante l'elaborazione dei report. Se l'elenco dei database è vuoto, ripetere i quattro passaggi precedenti per stabilire una connessione al server.  
   
     7.  Nella pagina Credenziali selezionare il tipo di account e il tipo di credenziali utilizzati dal server di report per la connessione al database del server di report. È possibile utilizzare le stesse credenziali della prima istanza del server di report oppure altre credenziali. Scegliere **Avanti**.  
   
-    8.  Fare clic su **riepilogo** e quindi fare clic su **fine**.  
+    8.  Fare clic su **Summary** e quindi fare clic su **fine**.  
   
 4.  Configurare l'URL del servizio Web ReportServer. Non eseguire ancora il test dell'URL. L'URL non verrà risolto se prima il server di report non viene unito alla distribuzione con scalabilità orizzontale.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36067349"
   
      ![Screenshot parziale della pagina Distribuzione con scalabilità orizzontale](../../../2014/sql-server/install/media/scaloutscreen.gif "Screenshot parziale della pagina Distribuzione con scalabilità orizzontale")  
   
-3.  Nella pagina distribuzione con scalabilità orizzontale, selezionare l'istanza di server di report in attesa di essere aggiunta alla distribuzione, quindi fare clic su **Aggiungi Server**.  
+3.  Nella pagina distribuzione con scalabilità orizzontale, selezionare l'istanza di server di report che è in attesa di aggiunta alla distribuzione, quindi fare clic su **Aggiungi Server**.  
   
     > [!NOTE]  
     >  **Problema:** quando si cerca di aggiungere un'istanza del server di report di Reporting Services alla distribuzione con scalabilità orizzontale, è possibile che vengano visualizzati messaggi di errore simili a quelli tramite cui viene indicata la negazione dell'accesso.  

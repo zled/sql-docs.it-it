@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - static database views
 - snapshots [SQL Server database snapshots]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e7c3cb27b119505d015d8725262d017ab6d9c1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4c478f8a5d60d2604b95146fc1a712742e3f3420
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320401"
 ---
 # <a name="database-snapshots-sql-server"></a>Snapshot del database (SQL Server)
   Uno snapshot del database è una vista statica di sola lettura di un database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ovvero il *database di origine*. Lo snapshot del database è consistente dal punto di vista transazionale con il database di origine al momento della creazione dello snapshot. Lo snapshot di un database deve risiedere sempre nella stessa istanza del server dove si trova il relativo database di origine. Con l'aggiornamento del database di origine, viene aggiornato anche lo snapshot del database. Pertanto, più a lungo viene conservato uno snapshot del database, più è probabile che utilizzi tutto il proprio spazio disponibile su disco.  

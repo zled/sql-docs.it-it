@@ -1,5 +1,5 @@
 ---
-title: Programmazione AMO complementari classi e metodi | Documenti Microsoft
+title: Programmazione AMO complementari classi e metodi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,29 +21,29 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d7f1a2a00b91e9bff4b735ff80d4ac927032ea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 66fcd0c30acb2ddf62288cb549b96b74ebf7f7b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317331"
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>Programmazione di classi e metodi AMO complementari
   In questo argomento sono incluse le sezioni seguenti:  
   
--   [Classe di assembly](#Assembly)  
+-   [Classe assembly](#Assembly)  
   
 -   [Backup e ripristino](#BU)  
   
--   [Trace (classe)](#TRC)  
+-   [Trace-classe](#TRC)  
   
 -   [Classe CaptureLog e capturexml](#CL)  
   
-##  <a name="Assembly"></a> Classe di assembly  
- Gli assembly consentono agli utenti di estendere le funzionalità di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] aggiungendo nuove stored procedure o funzioni MDX (Multidimensional Expressions). Per altre informazioni, vedere [AMO altre classi e metodi](amo-other-classes-and-methods.md).  
+##  <a name="Assembly"></a> Classe assembly  
+ Assembly di consentono agli utenti di estendere le funzionalità di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mediante l'aggiunta di nuove stored procedure o funzioni MDX (Multidimensional Expressions). Per altre informazioni, vedere [AMO altre classi e metodi](amo-other-classes-and-methods.md).  
   
  L'aggiunta e l'eliminazione di assembly sono operazioni semplici e possono essere eseguite in modalità online. Per aggiungere un assembly al database o all'oggetto server, è necessario disporre dei diritti di amministratore del database o del server rispettivamente.  
   
@@ -103,7 +103,7 @@ static public void RestoreAdventureWorks(Server svr)
 }  
 ```  
   
-##  <a name="TRC"></a> Trace (classe)  
+##  <a name="TRC"></a> Trace-classe  
  Per eseguire il monitoraggio dell'attività del server, è necessario utilizzare due tipi di tracce, ovvero le tracce della sessione e le tracce del server. La funzionalità di traccia eseguita sul server può indicare la modalità di esecuzione dell'attività corrente nel server (tracce della sessione), mentre le tracce possono fornire informazioni relative all'attività complessiva del server senza che sia necessario essere connessi al server stesso (tracce del server).  
   
  Durante l'esecuzione della traccia relativa all'attività corrente (tracce della sessione), il server invia all'applicazione corrente notifiche sugli eventi provocati dall'applicazione stessa che si verificano attualmente nel server. Gli eventi vengono acquisiti utilizzando gestori di eventi nell'applicazione corrente. È necessario innanzitutto assegnare le routine di gestione dell'evento all'oggetto <xref:Microsoft.AnalysisServices.SessionTrace>, quindi avviare la traccia della sessione.  

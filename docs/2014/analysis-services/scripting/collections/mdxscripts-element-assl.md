@@ -1,5 +1,5 @@
 ---
-title: Elemento MdxScripts (ASSL) | Documenti Microsoft
+title: Elemento MdxScripts (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MdxScripts element
 ms.assetid: 0aaa849f-e723-4245-8c16-7ed049590fd2
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2fc6e9f226cbb528d7332260b730f672ce041222
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 559508cd5a0b0c16554bae2ed6a1adc185f9ed9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312451"
 ---
 # <a name="mdxscripts-element-assl"></a>Elemento MdxScripts (ASSL)
   Contiene la raccolta di [MdxScript](../objects/mdxscript-element-assl.md) gli elementi associati a un [cubo](../objects/cube-element-assl.md) elemento.  
@@ -61,9 +61,9 @@ ms.locfileid: "36067476"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Cube](../objects/cube-element-assl.md)|  
-|Elementi figlio|[MdxScript](../objects/mdxscript-element-assl.md)|  
+|Elementi figlio|[Elemento MdxScript](../objects/mdxscript-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.MdxScriptCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

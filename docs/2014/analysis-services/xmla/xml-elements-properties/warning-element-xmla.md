@@ -1,5 +1,5 @@
 ---
-title: Elemento warning (XMLA) | Documenti Microsoft
+title: Elemento warning (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Warning element
 ms.assetid: a34a6caa-4b68-486b-8f50-cdc124c65888
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 398fb36522144ec52b8c47fec4c2d4b2b3c87909
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ace514fd6a35fb376846c659ef64b9a40d1c116d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215751"
 ---
 # <a name="warning-element-xmla"></a>Elemento Warning (XMLA)
   Contiene informazioni su un avviso restituito da un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -71,13 +71,13 @@ ms.locfileid: "36064107"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|ErrorCode|Richiesto `UnsignedInt` attributo. Contiene il codice numerico restituito dell'avviso.|  
-|Severity|Parametro facoltativo `String` attributo. Contiene la gravità dell'avviso.|  
-|Description|Parametro facoltativo `String` attributo. Contiene il testo descrittivo dell’avviso.|  
-|Origine|Parametro facoltativo `String` attributo. Contiene il nome del componente che genera l'avviso.|  
-|FileGuida|Parametro facoltativo `String` attributo. Contiene il percorso o URL al file Guida o all’argomento che descrive l'avviso.|  
+|ErrorCode|Obbligatorio `UnsignedInt` attributo. Contiene il codice numerico restituito dell'avviso.|  
+|Severity|Facoltativo `String` attributo. Contiene la gravità dell'avviso.|  
+|Description|Facoltativo `String` attributo. Contiene il testo descrittivo dell’avviso.|  
+|Origine|Facoltativo `String` attributo. Contiene il nome del componente che genera l'avviso.|  
+|FileGuida|Facoltativo `String` attributo. Contiene il percorso o URL al file Guida o all’argomento che descrive l'avviso.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento Error &#40;XMLA&#41;](error-element-xmla.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services]
 - consolidated members [Master Data Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 caps.latest.revision: 10
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa1613512d6114a760b984da50089e2f524a083a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 934dbb8ff42bfbb3c334131f77e33d44d8542223
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307981"
 ---
 # <a name="members-master-data-services"></a>Membri (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]i membri sono i dati master fisici. Ad esempio, un membro può essere una bicicletta Road-150 in un'entità Product o un cliente specifico in un'entità Customer.  
@@ -69,22 +69,22 @@ ms.locfileid: "36064716"
 |Creare un nuovo membro consolidato.|[Creare un membro consolidato &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|  
 |Eliminare un membro o una raccolta esistente.|[Eliminare un membro o una raccolta &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
 |Riattivare una raccolta o un membro eliminato.|[Riattivare un membro o una raccolta &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|Aggiornare i valori dell'attributo di un membro.|[Modificare il tipo dell'attributo &#40;componente aggiuntivo MDS per Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|Aggiornare i valori dell'attributo di un membro.|[Modificare il tipo di attributo &#40;componente aggiuntivo MDS per Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 |Spostare i membri in una gerarchia.|[Spostare membri all'interno di una gerarchia di &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Panoramica di master Data Services](master-data-services-overview-mds.md)  
+-   [Panoramica di Master Data Services](master-data-services-overview-mds.md)  
   
 -   [Entità &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
 -   [Gli attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [Gerarchie &#40;Master Data Services&#41;](hierarchies-master-data-services.md)  
+-   [Gerarchie di &#40;Master Data Services&#41;](hierarchies-master-data-services.md)  
   
 -   [Le raccolte &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
--   [Le autorizzazioni foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [Autorizzazioni per elementi foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
 -   [Consolidare le autorizzazioni &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   

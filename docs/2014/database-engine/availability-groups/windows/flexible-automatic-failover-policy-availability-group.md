@@ -1,14 +1,13 @@
 ---
-title: Criteri di Failover flessibili per Failover automatico di un gruppo di disponibilità (SQL Server) | Documenti Microsoft
+title: Criteri di Failover flessibili per Failover automatico di un gruppo di disponibilità (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
 - Availability Groups [SQL Server], failover
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 caps.latest.revision: 28
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 7ffd60a301d21862d275a95f69f47e18b0d80ded
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 122b48613f0eabe85b18539e594db5602b0c6abd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293181"
 ---
 # <a name="flexible-failover-policy-for-automatic-failover-of-an-availability-group-sql-server"></a>Criteri di failover flessibili per failover automatico di un gruppo di disponibilità (SQL Server)
   Con i criteri di failover flessibili viene garantito un controllo granulare delle condizioni che causano un [failover automatico](failover-and-failover-modes-always-on-availability-groups.md) per un gruppo di disponibilità. Modificando le condizioni di errore che attivano un failover automatico e la frequenza di controlli di integrità, è possibile aumentare o diminuire la probabilità di un failover automatico per supportare il Contratto di servizio per la disponibilità elevata.  
@@ -72,10 +71,10 @@ ms.locfileid: "36064985"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Funzionamento: Timeout Lease AlwaysOn di SQL Server](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)  
+-   [Funzionamento: Timeout Lease di AlwaysOn di SQL Server](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Modalità di disponibilità (gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md)   
  [Failover e modalità di Failover &#40;gruppi di disponibilità AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   

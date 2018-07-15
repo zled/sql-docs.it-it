@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - '| (bitwise inclusive OR)'
 - bitwise inclusive OR (|)
@@ -16,13 +16,13 @@ ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5e3b514636551083aa8e6576ec1e4115f574ec6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3cef0a13b840d7e209e12f3e68a0ce085fe7364
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283557"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (OR inclusivo bit per bit) (espressione SSIS)
   Viene eseguita un'operazione con OR bit per bit su due valori integer. Confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se uno dei due bit ha valore 1, il bit del risultato verrà impostato su 1, altrimenti verrà impostato su 0 (0).  
@@ -44,7 +44,7 @@ integer_expression1 | integer_expression2
 ## <a name="result-types"></a>Tipi restituiti  
  Dipendenti dai tipi di dati dei due argomenti. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se una delle due condizioni è Null, il risultato dell'espressione sarà Null.  
   
 ## <a name="expression-examples"></a>Esempi di espressione  
@@ -97,9 +97,9 @@ ReorderPoint | SafetyStockLevel
  00000111  
   
 ## <a name="see-also"></a>Vedere anche  
- [&#124;&#124;&#40;OR logico&#41; &#40;espressione SSIS&#41;](logical-or-ssis-expression.md)   
+ [&#124;&#124;&#40;OR logico&#41; &#40;espressione di SSIS&#41;](logical-or-ssis-expression.md)   
  [^ &#40;OR esclusivo bit per bit&#41; &#40;Espressione SSIS&#41;](bitwise-exclusive-or-ssis-expression.md)   
- [Associatività e precedenza operatori](operator-precedence-and-associativity.md)   
- [Gli operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md)  
+ [Precedenza e associatività degli operatori](operator-precedence-and-associativity.md)   
+ [Gli operatori &#40;espressione di SSIS&#41;](operators-ssis-expression.md)  
   
   

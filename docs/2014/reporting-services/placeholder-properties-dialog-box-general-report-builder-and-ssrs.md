@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà segnaposto, generale (Generatore Report e SSRS) | Documenti Microsoft
+title: Finestra di dialogo Proprietà segnaposto, generale (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10131"
 - sql12.rtp.rptdesigner.placeholderproperties.general.f1
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ed0c21a7b55e0cf2387595e1c24dc430151f1e05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03c093382d1027c984e3ee1c953bd803dcbdbe25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309731"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà segnaposto, Generale (Generatore report e SSRS)
   Utilizzare la finestra di dialogo **Proprietà segnaposto** per modificare il valore, la descrizione comando e le opzioni di markup di un segnaposto in una casella di testo.  
@@ -48,9 +48,9 @@ ms.locfileid: "36063986"
  [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [Aggiungere il codice HTML a un report &#40;Generatore report e SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Caselle di testo &#40;SSRS e Generatore Report&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
+ [Le caselle di testo &#40;Report e SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Formattazione di testo e segnaposto &#40;SSRS e Generatore Report&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Importazione di HTML in un Report &#40;SSRS e Generatore Report&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Formattazione di testo e segnaposto &#40;Report e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Importazione di HTML in un Report &#40;Report e SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
   
   

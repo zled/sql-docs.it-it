@@ -1,5 +1,5 @@
 ---
-title: Pagina delle proprietà generale, modelli (gestione Report) | Documenti Microsoft
+title: Pagina delle proprietà generale, modelli (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 12eda8ffbf8183f5992c2e149c4b2e9bd44b1912
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0101ea532307b4e3dd06d1dc22879f59a682f867
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280667"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Pagina delle proprietà Generale, Modelli (Gestione report)
   La pagina delle proprietà Generale per i modelli di report consente di rinominare, eliminare, spostare o sostituire il file di definizione del modello, con estensione smdl. Nella parte superiore della pagina vengono visualizzati il nome dell'utente che ha creato o modificato il modello e la data e ora di creazione o modifica.  
@@ -47,7 +47,7 @@ ms.locfileid: "36055633"
  Indica una descrizione del modello. Questa descrizione viene visualizzata nella pagina Contenuto per gli utenti autorizzati ad accedere al modello.  
   
  **Nascondi in visualizzazione elenco**  
- Selezionare questa casella di controllo per nascondere l'elemento quando è impostata la visualizzazione Elenco per la cartella. La visualizzazione Elenco rappresenta una modalità di visualizzazione per il contenuto delle cartelle supportata in Gestione report. È possibile impostare questa opzione [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] per definire come questo elemento viene visualizzato in Gestione Report. Per ulteriori informazioni sulle modalità di visualizzazione in Gestione Report, vedere [pagina contenuto &#40;gestione Report&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
+ Selezionare questa casella di controllo per nascondere l'elemento quando è impostata la visualizzazione Elenco per la cartella. La visualizzazione Elenco rappresenta una modalità di visualizzazione per il contenuto delle cartelle supportata in Gestione report. È possibile impostare questa opzione [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] per definire come questo elemento viene visualizzato in Gestione Report. Per altre informazioni sulle modalità di visualizzazione in Gestione Report, vedere [pagina contenuto &#40;gestione Report&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
   
  **Applica**  
  Fare clic per salvare le modifiche.  
@@ -74,7 +74,7 @@ ms.locfileid: "36055633"
  Fare clic per rigenerare un modello predefinito che sostituisce la versione corrente. Questa opzione viene visualizzata dopo la generazione del modello. Il modello generato è basato sull'origine dati condivisa. Non è possibile personalizzare il modello prima di generarlo. Dopo la generazione è tuttavia possibile fare clic su **Modifica** per aprire la definizione del modello, salvarla nel file system, quindi aggiungerla a un progetto in Progettazione modelli. Dopo avere personalizzato il modello, è possibile caricarlo nel server di report come nuovo elemento oppure fare clic su **Aggiorna** in questa pagina per sostituire il modello generato con la versione modificata in Progettazione modelli.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Associare un Report o un modello a un'origine dati condivisa &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [Associare un Report o modello a un'origine dati condivisa &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Guida sensibile al contesto del server di report in Management Studio](tools/report-server-in-management-studio-f1-help.md)  
   
   

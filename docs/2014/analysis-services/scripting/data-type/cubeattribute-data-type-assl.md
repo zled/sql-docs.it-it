@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati CubeAttribute (ASSL) | Documenti Microsoft
+title: Tipo di dati CubeAttribute (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeAttribute data type
 ms.assetid: 114ffb44-460b-4971-b31b-dd844e960b81
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dce594145db99d7edfa991c2e975f62e55d3ef34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1df72c234fe7835d739e2b1835b01041aa9cbe6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319351"
 ---
 # <a name="cubeattribute-data-type-assl"></a>Tipo di dati CubeAttribute (ASSL)
   Definisce un tipo di dati primitivo che rappresenta un attributo associato a un [cubo](../objects/cube-element-assl.md) elemento.  
@@ -64,14 +64,14 @@ ms.locfileid: "36067276"
 |Elementi figlio|[AggregationUsage](../properties/aggregationusage-element-assl.md), [annotazioni](../collections/annotations-element-assl.md), [AttributeHierarchyEnabled](../properties/enabled-element-assl.md), [AttributeHierarchyOptimizedState](../properties/state-element-assl.md), [ AttributeHierarchyVisible](../properties/visible-element-assl.md), [AttributeID](../properties/id-element-assl.md)|  
 |Elementi derivati|[Attributo](../objects/attribute-element-assl.md) ([attributi](../collections/attributes-element-assl.md) insieme [CubeDimension](dimension-data-type-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
- Il *AttributeHierarchyOptimizedState* elemento non è supportato quando si esegue il servizio di configurazione DeploymentMode valori delle proprietà di 1 o 2 (modalità SharePoint o tabulare, utilizzata per eseguire PowerPivot e database modello tabulare).  
+## <a name="remarks"></a>Note  
+ Il *AttributeHierarchyOptimizedState* elemento non è supportato quando si esegue il servizio di configurazione DeploymentMode valori delle proprietà di 1 o 2 (modalità SharePoint o tabulare, usata per eseguire PowerPivot e database modello tabulare).  
   
- Un attributo non può essere aggiunto come un livello di una gerarchia quando la proprietà *AtttributeHierarchyEnabled*, è impostato su FALSE e l'istanza in cui opera DeploymentMode 1 o 2 (modalità server SharePoint o tabulare).  
+ Non è possibile aggiungere un attributo come livello di una gerarchia quando la proprietà *AtttributeHierarchyEnabled*, è impostato su FALSE e l'istanza viene utilizzata in DeploymentMode 1 o 2 (modalità server SharePoint o tabulare).  
   
- Gli attributi nel [CubeDimension](dimension-data-type-assl.md) elemento che non sono inclusi in modo esplicito nel [attributi](../collections/attributes-element-assl.md) parte raccolta diventano della raccolta con i valori predefiniti assegnati. Dopo gli attributi vengono aggiunti alla raccolta, gli attributi possono essere restituiti tramite il [Discover](../../xmla/xml-elements-methods-discover.md) metodo.  
+ Attributi inclusi nel [CubeDimension](dimension-data-type-assl.md) elemento che non sono inclusi in modo esplicito nel [attributi](../collections/attributes-element-assl.md) parte raccolta diventano della raccolta con i valori predefiniti assegnati. Dopo che gli attributi vengono aggiunti alla raccolta, gli attributi possono essere restituiti tramite il [Discover](../../xmla/xml-elements-methods-discover.md) (metodo).  
   
- Il [AggregationUsage](../properties/aggregationusage-element-assl.md) controlli elemento come [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] automaticamente progettare aggregazioni per l'attributo. L'elemento `AggregationUsage` non vincola alcuna aggregazione creata manualmente per il cubo.  
+ Il [AggregationUsage](../properties/aggregationusage-element-assl.md) controlli elemento modo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] automaticamente progettare aggregazioni per l'attributo. L'elemento `AggregationUsage` non vincola alcuna aggregazione creata manualmente per il cubo.  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.CubeAttribute>.  
   

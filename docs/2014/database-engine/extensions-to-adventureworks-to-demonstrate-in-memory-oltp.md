@@ -1,5 +1,5 @@
 ---
-title: Estensioni a AdventureWorks per illustrare OLTP In memoria | Documenti Microsoft
+title: Estensioni a AdventureWorks per illustrare OLTP In memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6bc04894a372f4391c12622158673e4ba4068098
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f8135f70466ecef4fb77a876a38823af7dd8c27d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312331"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Estensioni a AdventureWorks per illustrare OLTP in memoria
     
 ## <a name="overview"></a>Panoramica  
- In questo esempio viene illustrata la nuova [!INCLUDE[hek_2](../includes/hek-2-md.md)] funzionalità, che fa parte di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Mostra le nuove tabelle con ottimizzazione per la memoria e stored procedure compilate in modo nativo e può essere utilizzato per illustrare i vantaggi delle prestazioni di [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
+ In questo esempio viene illustrata la nuova [!INCLUDE[hek_2](../includes/hek-2-md.md)] funzionalità, che fa parte di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Mostra le nuove tabelle con ottimizzazione per la memoria e stored procedure compilate in modo nativo che può essere utilizzato per illustrare i vantaggi delle prestazioni di [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
 >  Per visualizzare questo argomento per SQL Server 2016, vedere [Estensioni a AdventureWorks per illustrare OLTP in memoria](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
@@ -49,14 +49,14 @@ ms.locfileid: "36067478"
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM: edizione Evaluation, Developer o Enterprise  
   
--   Per il test delle prestazioni, un server con specifiche simili all'ambiente di produzione. Per questo particolare esempio sono necessari almeno 16 GB di memoria disponibili per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per linee guida generali sull'hardware per [!INCLUDE[hek_2](../includes/hek-2-md.md)], vedere post di blog seguente:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Per il test delle prestazioni, un server con specifiche simili all'ambiente di produzione. Per questo particolare esempio sono necessari almeno 16 GB di memoria disponibili per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per linee guida generali sull'hardware per [!INCLUDE[hek_2](../includes/hek-2-md.md)], vedere il blog seguente:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installazione dell'esempio di [!INCLUDE[hek_2](../includes/hek-2-md.md)] basato su AdventureWorks  
  Per installare l'esempio, seguire i passaggi riportati di seguito.  
   
 1.  Scaricare l'archivio per il backup completo del database AdventureWorks2014:  
   
-    1.  Aprire il seguente: [ http://msftdbprodsamples.codeplex.com/downloads/get/880661 ](http://msftdbprodsamples.codeplex.com/downloads/get/880661).  
+    1.  I seguenti argomenti: [ http://msftdbprodsamples.codeplex.com/downloads/get/880661 ](http://msftdbprodsamples.codeplex.com/downloads/get/880661).  
   
     2.  Quando richiesto, salvare il file in una cartella locale.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "36067478"
   
 -   *Colonne calcolate*. Le colonne calcolate SalesOrderNumber e TotalDue vengono omesse, poiché in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] non sono supportate colonne calcolate nelle tabelle ottimizzate per la memoria. La nuova vista Sales.vSalesOrderHeader_extended_inmem riflette le colonne SalesOrderNumber e TotalDue. Pertanto, può essere utilizzata qualora queste colonne fossero necessarie.  
   
--   *Vincoli di chiave esterna* non sono supportati per le tabelle con ottimizzazione per la memoria in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Inoltre, SalesOrderHeader_inmem è una tabella attiva nel carico di lavoro di esempio e i vincoli di chiavi esterne comportano un'ulteriore elaborazione per tutte le operazioni DML, in quanto sono necessarie ricerche in tutte le altre tabelle a cui viene fatto riferimento in questi vincoli. Pertanto, si presuppone che l'applicazione garantisca l'integrità referenziale e questa integrità non venga convalidata quando vengono inserite le righe. L'integrità referenziale per i dati di questa tabella può essere verificata utilizzando la stored procedure dbo.usp_ValidateIntegrity, tramite lo script seguente:  
+-   *Vincoli di chiave esterna* non sono supportati per le tabelle ottimizzate per la memoria in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Inoltre, SalesOrderHeader_inmem è una tabella attiva nel carico di lavoro di esempio e i vincoli di chiavi esterne comportano un'ulteriore elaborazione per tutte le operazioni DML, in quanto sono necessarie ricerche in tutte le altre tabelle a cui viene fatto riferimento in questi vincoli. Pertanto, si presuppone che l'applicazione garantisca l'integrità referenziale e questa integrità non venga convalidata quando vengono inserite le righe. L'integrità referenziale per i dati di questa tabella può essere verificata utilizzando la stored procedure dbo.usp_ValidateIntegrity, tramite lo script seguente:  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -466,7 +466,7 @@ END
  Si utilizzerà lo strumento ostress per eseguire gli script utilizzando diverse connessioni simultanee. Si utilizzerà il parametro "-n" per controllare il numero di connessioni e il parametro "r" per controllare il numero di volte in cui lo script viene eseguito in ogni connessione.  
   
 #### <a name="functional-validation-of-the-workload"></a>Convalida funzionale del carico di lavoro  
- Per verificare che tutto funzioni, si inizierà con un test di esempio, utilizzando 10 connessioni simultanee e 5 iterazioni, inserendo un totale di 10 * 5 \* 20 = 1000 ordini di vendita.  
+ Per verificare tutto funziona, si inizierà con un test di esempio, utilizzando 10 connessioni simultanee e 5 iterazioni, inserendo un totale di 10 * 5 \* 20 = 1000 ordini di vendita.  
   
  Con il comando seguente si supponga di usare l'istanza predefinita nel computer locale. Se si utilizza un'istanza denominata o un server remoto, modificare il nome del server di conseguenza, utilizzando il parametro -S.  
   

@@ -1,5 +1,5 @@
 ---
-title: Elenchi (Generatore Report e SSRS) | Documenti Microsoft
+title: Elenchi (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0fcc8632285b80b2b4ba00310b8718650e39d99b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 43558261eff0d22d597cdfe63f7d01137aa467a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296031"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Elenchi (Generatore report e SSRS)
   Un'area dati elenco viene ripetuta con ogni gruppo o riga nel set di dati del report. È possibile utilizzare un elenco per creare form o report in formato libero, ad esempio fatture, o in combinazione ad altre aree dati, nonché definire elenchi contenenti il numero desiderato di elementi del report. Per offrire più gruppi di dati, gli elenchi possono essere nidificati l'uno nell'altro.  
@@ -77,7 +77,7 @@ ms.locfileid: "36068650"
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento a funzioni di aggregazione &#40;SSRS e Generatore Report&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Riferimento a funzioni di aggregazione &#40;Report e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

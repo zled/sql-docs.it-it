@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttoserver.options.registeredservers.f1
 ms.assetid: ba34b01a-6289-4eb8-8341-fa3d9ec87b3f
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a066ea5db7108405fca18636dfd5d14f03f58ae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 670d2e23467d80ee1a183ad3f5c5aae46ce64067
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283937"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>Connetti al server (pagina Parametri aggiuntivi per la connessione)
   Nella finestra di dialogo di **connessione** al server di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sono disponibili le opzioni relative ai valori della stringa di connessione più comuni. Usare la pagina **Parametri aggiuntivi per la connessione** per aggiungere più parametri di connessione alla stringa di connessione.  

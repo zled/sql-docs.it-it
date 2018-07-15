@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], adding
 - adding users [Master Data Services]
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9846928c838869dead6f323d9fa5116e50793ce7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 8ac2ea33acb750b030bf75b39ba420ee90eb8784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295061"
 ---
 # <a name="add-a-user-master-data-services"></a>Aggiungere un utente (Master Data Services)
   Aggiungere un utente all'elenco **Utenti** in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per iniziare il processo di assegnazione dell'autorizzazione all'applicazione Web. Prima che un utente nell'elenco possa accedere a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], è necessario assegnare all'utente l'autorizzazione per una o più aree funzionali e oggetti modello.  

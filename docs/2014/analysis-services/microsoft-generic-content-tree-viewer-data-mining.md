@@ -1,5 +1,5 @@
 ---
-title: Microsoft Generic Content Tree Viewer (Data Mining) | Documenti Microsoft
+title: Microsoft Generic Content Tree Viewer (Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.contentviewer.f1
 ms.assetid: 751b4393-f6fd-48c1-bcef-bdca589ce34c
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb48d0ce455c41f6e684b54af86bb6ff5f8eddfb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85c2cccfe0d5b578c0faa359ca3c276b654aaa21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286177"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Microsoft Generic Content Tree Viewer (Data mining)
   In **Microsoft Generic Content Tree Viewer** vengono visualizzate informazioni dettagliate sul contenuto di un modello di data mining in un formato di tabella HTML standardizzato. Questa vista è utile poiché vengono esposti la struttura sottostante del modello, nonché i dettagli sui coefficienti, sulla distribuzione dei valori e così via.  
@@ -43,7 +43,7 @@ ms.locfileid: "36067692"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori dei modelli di data mining &#40;progettazione modello di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Query di Data Mining](data-mining/data-mining-queries.md)  
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Query di data mining](data-mining/data-mining-queries.md)  
   
   

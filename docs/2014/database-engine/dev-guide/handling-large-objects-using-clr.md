@@ -1,5 +1,5 @@
 ---
-title: Gestione degli oggetti di grandi dimensioni tramite CLR | Documenti Microsoft
+title: Gestione degli oggetti di grandi dimensioni tramite CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3cb48a2c342d24bd4d7df12dc3fd7759ffb06e8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9408351a786192be62ca9c7c5e0cd8305effc3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310351"
 ---
 # <a name="handling-large-objects-using-clr"></a>Gestione di oggetti di grandi dimensioni tramite CLR
   Nell'esempio `HandlingLOBUsingCLR` relativo a SQL Server viene illustrato il trasferimento di oggetti di grandi dimensioni (LOB) tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un file system accessibile dal server tramite stored procedure Common Language Runtime (CLR). In questo esempio viene illustrata la procedura di accesso ai file nel codice sul lato server e quindi la procedura di richiamo di query dinamiche e di stored procedure dalle stored procedure basate su CLR. Viene inoltre descritta la procedura di registrazione e annullamento della registrazione di metodi e assembly CLR tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -28,7 +28,7 @@ ms.locfileid: "36067867"
 ## <a name="prerequisites"></a>Prerequisiti  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](http://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](http://go.microsoft.com/fwlink/?LinkId=31046)Express  
   
 -   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](http://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -578,7 +578,7 @@ END  -- END of sp_InsertDocument
 GO  
 ```  
   
- I seguenti [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) testare l'esempio eseguendo le stored procedure.  
+ Quanto segue [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) verifica l'esempio mettendo alla prova le stored procedure.  
   
 ```  
 USE AdventureWorks  

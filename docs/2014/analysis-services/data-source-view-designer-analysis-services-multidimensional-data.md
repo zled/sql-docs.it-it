@@ -1,5 +1,5 @@
 ---
-title: Visualizza finestra di progettazione (Analysis Services - dati multidimensionali) dell'origine dati | Documenti Microsoft
+title: Progettazione viste (Analysis Services - dati multidimensionali) dell'origine dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.f1
 helpviewer_keywords:
 - Data Source View Designer
 ms.assetid: 6f40a074-761f-440b-a999-09b755bd86ce
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b440c0186e60e6622d861110a8de2284e2b2589
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08fb948e9dd0cd401e1cc2fa3fe2a4bc60ff4e11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296051"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>Progettazione vista origine dati (Analysis Services - Dati multidimensionali)
   Una vista origine dati è una vista logica di un'origine dati relazionale esterna utilizzata per creare cubi e dimensioni in un modello multidimensionale.  
@@ -56,7 +56,7 @@ ms.locfileid: "36068592"
 |Creare un diagramma di tutte o parte delle tabelle e relazioni in una vista origine dati.|[Utilizzare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati nei modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Aggiungendo o rimuovendo tabelle o viste nei dati di una vista origine &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Vista di origine aggiungendo o rimuovendo tabelle o viste in una Data &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
   

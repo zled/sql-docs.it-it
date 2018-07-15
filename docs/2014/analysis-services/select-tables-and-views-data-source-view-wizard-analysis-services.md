@@ -1,5 +1,5 @@
 ---
-title: Selezione tabelle e viste (Creazione guidata vista origine di dati) (Analysis Services) | Documenti Microsoft
+title: Selezione tabelle e viste (Creazione guidata vista origine di dati) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selecttablesandviews.f1
 ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8bf3897fe2466b00c0346590147884696b632b7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0ec6553114e5a6a5a0700a852c56d4be51eba39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279507"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>Selezione tabelle e viste (Creazione guidata vista origine dati) (Analysis Services)
   La pagina **Selezione tabelle e viste** consente di selezionare le tabelle o le viste dall'origine dati da includere nella vista origine dati.  
@@ -56,7 +56,7 @@ ms.locfileid: "36068794"
  Aggiunge tutte le tabelle correlate a quelle elencate in **Oggetti inclusi**. Questa opzione non consente di aggiungere visualizzazioni, bensì permette di aggiungere tabelle partizionate. Se si seleziona un criterio di corrispondenza dei nomi nella pagina **Corrispondenza nomi** della procedura guidata, questa opzione include anche le tabelle logicamente correlate in base al criterio selezionato. Vengono inoltre incluse le tabelle correlate a nuove tabelle correlate aggiunte e quelle che presentano una struttura identica alla tabella originale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 del Creazione guidata vista origine dati &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
- [Viste origine dati nei modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Guida F1 del guidata vista origine dati &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

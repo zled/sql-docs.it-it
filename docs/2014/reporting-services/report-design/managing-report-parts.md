@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c74ae6ba5a8f69a0fef8f5fce9f4a18828867c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b8b08d19493528f1c93cea4752f548040fb47322
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286697"
 ---
 # <a name="managing-report-parts"></a>Gestione di parti di report
-  A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], report parti possono essere pubblicate nei server di report e riutilizzate in altri report e da altri utenti se dispongono delle autorizzazioni appropriate.  
+  A partire [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], parti del report possono essere pubblicate nei server di report e riutilizzate in altri report e da altri utenti se hanno le autorizzazioni appropriate.  
   
  Le parti del report possono essere inoltre riutilizzate da più utenti e in più report. Gli utenti possono cercare le parti del report nel server e aggiungerle a un report.  Possono inoltre essere informati sugli aggiornamenti apportati alla parte del report nel server e ripubblicare nuove versioni di una parte del report. Queste azioni di creazione di report possono essere interessate e controllate dalle autorizzazioni di sicurezza di Reporting Services.  In questo argomento vengono illustrate le proprietà delle parti del report e viene descritto il comportamento delle parti del report presenti nel server.  
   
@@ -95,11 +95,11 @@ ms.locfileid: "36068416"
 -   Le parti di report utilizzano gli stessi criteri di autorizzazione del tipo di elemento risorsa esistente. Dal punto di vista dell'ereditarietà della sicurezza, all'interno di una cartella non esiste alcuna differenza tra gli elementi risorsa tradizionali e le parti di report. La parte del report eredita gli stessi criteri di autorizzazione delle immagini presenti nella stessa cartella. Quando occorre fare distinzione, è possibile configurare la sicurezza a livello di elemento per le parti del report desiderate. In alternativa, le parti del report devono essere posizionate in cartelle separate con le autorizzazioni desiderate configurate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le parti del report e set di dati in Generatore Report](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Parti del report e set di dati in Generatore Report](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Pagina delle proprietà generale, parti del Report &#40;gestione Report&#41;](../general-properties-page-report-parts-report-manager.md)   
  [Spostamento degli elementi &#40;gestione Report&#41;](../move-items-page-report-manager.md)   
  [Gestione contenuto del Server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Risoluzione dei problemi relativi a parti del Report &#40;SSRS e Generatore Report&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Risolvere i problemi di parti del Report &#40;Report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Parti del report in Progettazione report &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a8b3a780db49bc34d0060a33f934ea7169cae3bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f9fac39f0b11bdc2bbf14b054bfe8947bf767906
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309291"
 ---
 # <a name="add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs"></a>Aggiungere stili smussato, rilievo e trama a un grafico (Generatore report e SSRS)
   Quando si utilizzano determinati tipi di grafico, è possibile specificare un effetto di disegno per aumentarne l'effetto visivo. Tali effetti vengono applicati solo alle serie, mentre non influiscono su altri elementi del grafico.  
@@ -28,7 +28,7 @@ ms.locfileid: "36055628"
   
  Quando si utilizza una variante di un grafico a barre o di un istogramma, è possibile applicare stili di trama, ad esempio cilindro, spicchio e chiaroscuro, alle singole barre o colonne.  
   
- Oltre a questi stili di disegno, è possibile aggiungere bordi e ombreggiature a molti elementi del grafico per conferire un effetto ottico di profondità. Per ulteriori informazioni su altri modi per formattare il grafico, vedere [formattazione di un grafico &#40;Generatore Report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md).  
+ Oltre a questi stili di disegno, è possibile aggiungere bordi e ombreggiature a molti elementi del grafico per conferire un effetto ottico di profondità. Per altre informazioni su altri modi per formattare il grafico, vedere [formattazione di un grafico &#40;Generatore Report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,9 +64,9 @@ ms.locfileid: "36055628"
  ![Grafico a barre con effetto di disegno LightToDark](../media/rs-bardrawingeffects-lighttodark.gif "Grafico a barre con effetto di disegno LightToDark")  
   
 ## <a name="see-also"></a>Vedere anche  
- [Grafici a barre &#40;SSRS e Generatore Report&#41;](charts-report-builder-and-ssrs.md)   
+ [Grafici a barre &#40;Report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Istogrammi &#40;Generatore report e SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
- [I grafici a torta &#40;SSRS e Generatore Report&#41;](pie-charts-report-builder-and-ssrs.md)   
- [Formattazione di un grafico &#40;SSRS e Generatore Report&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [I grafici a torta &#40;Report e SSRS&#41;](pie-charts-report-builder-and-ssrs.md)   
+ [Formattazione di un grafico &#40;Report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

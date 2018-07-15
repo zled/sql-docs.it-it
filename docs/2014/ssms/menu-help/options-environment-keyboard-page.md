@@ -1,5 +1,5 @@
 ---
-title: Opzioni (pagina ambiente tastiera) | Documenti Microsoft
+title: Opzioni (ambiente-tastiera pagina) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5a2a4085c6c45d7d415e9a364a86792d2631ffe1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 23347ea7c91134d80eefdb00c5226e579162fff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292081"
 ---
-# <a name="options-environment-keyboard-page"></a>Opzioni (pagina ambiente tastiera)
+# <a name="options-environment-keyboard-page"></a>Opzioni (ambiente-tastiera pagina)
   La finestra di dialogo **Opzioni** consente di personalizzare lo schema della tastiera per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Utilizzare questa opzione per scegliere uno schema della tastiera. Per accedere alla pagina, scegliere **Opzioni** dal menu **Strumenti** , selezionare la cartella **Ambiente** e quindi fare clic su **Tastiera**.  
   
  Nell'elenco a discesa **Schema tastiera** sono incluse tutte le raccolte disponibili di tasti di scelta rapida. Selezionare uno schema specifico dall'elenco per caricarlo. Quando si è pronti a uscire dalla finestra di dialogo **Opzioni** , fare clic su **OK**. Lo schema selezionato verrà caricato in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

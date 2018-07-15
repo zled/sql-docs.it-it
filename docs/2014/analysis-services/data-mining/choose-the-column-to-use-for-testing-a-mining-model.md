@@ -1,5 +1,5 @@
 ---
-title: Scegliere la colonna da utilizzare per testare un modello di Data Mining | Documenti Microsoft
+title: Scegliere la colonna da usare per il test di un modello di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], predictable mining columns
 - Mining Accuracy Chart [Analysis Services], columns
 - predictable mining columns [Analysis Services]
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c6ef161be9da0dfa64653753858ea4e17809404
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0458e4ad7b17b4f4713b8aa1aad0a10dba88098
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304661"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Scegliere la colonna da utilizzare per il test di un modello di data mining
   Prima di poter misurare l'accuratezza di un modello di data mining, è necessario decidere quale risultato si desidera valutare. La maggior parte dei modelli di data mining richiede che si scelga almeno una colonna da utilizzare come attributo stimabile quando si crea il modello. Pertanto, quando si testa l'accuratezza del modello, è in genere necessario selezionare quell'attributo da testare.  

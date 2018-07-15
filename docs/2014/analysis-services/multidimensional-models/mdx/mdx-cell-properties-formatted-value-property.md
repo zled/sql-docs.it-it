@@ -1,5 +1,5 @@
 ---
-title: LANGUAGE e FORMAT_STRING in FORMATED_VALUE | Documenti Microsoft
+title: LANGUAGE e FORMAT_STRING in FORMATED_VALUE | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e68843728ebf28dca0734c7d12953d90b3449e72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319271"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE e FORMAT_STRING in FORMATED_VALUE
   La proprietà FORMATTED_VALUE è compilata in base alle interazioni delle proprietà VALUE, FORMAT_STRING e LANGUAGE della cella. In questo argomento viene illustrato come interagiscono queste proprietà per compilare la proprietà FORMATTED_VALUE.  
@@ -148,7 +148,7 @@ ms.locfileid: "36068149"
 ## <a name="see-also"></a>Vedere anche  
  [Contenuto di FORMAT_STRING &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
  [Utilizzo delle proprietà di cella &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
- [Creazione e utilizzo di valori di proprietà &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
+ [Creazione e utilizzo di valori della proprietà &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
  [Nozioni fondamentali sulle Query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Proprietà del cubo | Documenti Microsoft
+title: Le proprietà del cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,15 +33,15 @@ helpviewer_keywords:
 - ProactiveCaching property
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: beae78f264c9ac0ce3aef5690f4e11e51ef191c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 785bc878c238b1fbba5acbd7ba3bc0525b8d6cc6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312481"
 ---
 # <a name="cube-properties"></a>Proprietà dei cubi
   I cubi dispongono di proprietà che è possibile impostare per influire sul funzionamento a livello di cubo. Nella tabella seguente è disponibile un riepilogo di tali proprietà.  
@@ -49,7 +49,7 @@ ms.locfileid: "36063722"
 > [!NOTE]  
 >  Alcune proprietà vengono impostate automaticamente quando si crea il cubo e non possono essere modificate.  
   
- Per ulteriori informazioni su come impostare le proprietà dei cubi, vedere [Progettazione cubi &#40;Analysis Services - dati multidimensionali&#41;](../cube-designer-analysis-services-multidimensional-data.md).  
+ Per altre informazioni su come impostare le proprietà dei cubi, vedere [Progettazione cubi &#40;Analysis Services - dati multidimensionali&#41;](../cube-designer-analysis-services-multidimensional-data.md).  
   
 |Proprietà|Description|  
 |--------------|-----------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "36063722"
 |`Visible`|Determina la visibilità del cubo.|  
   
 > [!NOTE]  
->  Per ulteriori informazioni sull'impostazione dei valori per la proprietà ErrorConfiguration quando si lavora con i valori null e altri problemi di integrità dei dati, vedere [la gestione di problemi di integrità dei dati in Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Per altre informazioni sull'impostazione di valori per la proprietà ErrorConfiguration quando si lavora con i valori null e altri problemi di integrità dei dati, vedere [la gestione di problemi di integrità dei dati di Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## <a name="see-also"></a>Vedere anche  
  [La memorizzazione nella cache &#40;partizioni&#41;](partitions-proactive-caching.md)  

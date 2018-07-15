@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati PerspectiveAction (ASSL) | Documenti Microsoft
+title: Tipo di dati PerspectiveAction (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveAction data type
 ms.assetid: a0e4a545-688c-4d4e-b05f-0008d3503349
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 70e3e3df8f864c862dd101b97eeeabb63066e051
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8886962d5b2014d3cdaa466861d4693319d21d34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067073"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316911"
 ---
 # <a name="perspectiveaction-data-type-assl"></a>Tipo di dati PerspectiveAction (ASSL)
   Definisce un tipo di dati primitivo che rappresenta le informazioni su un'azione in un [prospettiva](../objects/perspective-element-assl.md) elemento.  
@@ -57,10 +57,10 @@ ms.locfileid: "36067073"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[ActionID](../properties/id-element-assl.md), [annotazioni](../collections/annotations-element-assl.md)|  
+|Elementi figlio|[Elemento ActionID](../properties/id-element-assl.md), [annotazioni](../collections/annotations-element-assl.md)|  
 |Elementi derivati|[Azione](../objects/action-element-assl.md) ([azioni](../collections/actions-element-assl.md) insieme [prospettiva](../objects/perspective-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.PerspectiveAction>.  
   
 ## <a name="see-also"></a>Vedere anche  

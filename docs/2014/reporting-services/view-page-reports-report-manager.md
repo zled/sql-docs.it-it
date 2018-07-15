@@ -1,5 +1,5 @@
 ---
-title: Pagina Visualizza, report (gestione Report) | Documenti Microsoft
+title: Pagina Visualizza, report (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 582855613306e0a0660f16708baec0a670706360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ff8af0b8badf1bc1bbee5e864f825af9d0ab03c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311231"
 ---
 # <a name="view-page-reports-report-manager"></a>Pagina Visualizza, Report (Gestione report)
   La pagina Visualizza per i report consente di visualizzare un report. La prima volta che si apre un report in Gestione report, questo viene visualizzato in formato HTML. I report HTML includono una barra degli strumenti dei report visualizzata nella parte superiore del report, che consente di spostarsi tra le pagine del report, eseguire ricerche all'interno di un report oppure esportarlo in un diverso formato. Nella figura seguente viene illustrata la barra degli strumenti dei report.  
@@ -43,6 +43,6 @@ Barra degli strumenti dei report
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

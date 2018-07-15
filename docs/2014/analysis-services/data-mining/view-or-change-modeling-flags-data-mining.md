@@ -1,5 +1,5 @@
 ---
-title: Visualizzare o modificare flag di modellazione (Data Mining) | Documenti Microsoft
+title: Visualizzare o modificare flag di modellazione (Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d1169735-fb18-417b-b8d6-9a161e444020
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 235b87b8f0aba0753044511f955cedab031e0ac1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7a225d0c20148d8e9728b1e502a36ccc3b0891b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303141"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Visualizzare o modificare flag di modellazione (Data mining)
   I flag di modellazione sono proprietà impostate in una colonna della struttura di data mining o in colonne del modello di data mining per controllare la modalità di elaborazione dei dati durante l'analisi da parte dell'algoritmo.  
@@ -55,7 +55,7 @@ ms.locfileid: "36066605"
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e attività di modello di data mining](mining-model-tasks-and-how-tos.md)   
- [I flag di modellazione &#40;Data Mining&#41;](modeling-flags-data-mining.md)  
+ [Procedure dettagliate e le attività del modello di data mining](mining-model-tasks-and-how-tos.md)   
+ [Flag di modellazione &#40;Data Mining&#41;](modeling-flags-data-mining.md)  
   
   

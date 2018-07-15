@@ -1,5 +1,5 @@
 ---
-title: Strutture di data mining (Analysis Services - Data Mining) | Documenti Microsoft
+title: Strutture di data mining (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - mining structures [Analysis Services], about mining structures
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 caps.latest.revision: 76
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fd363ece9193f05bf3cb9026b8520b027023b015
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c51246efc1e93c596ad18aec7ba4e72e1399e2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288497"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Strutture di data mining (Analysis Services – Data mining)
   La struttura di data mining definisce i dati in base ai quali vengono compilati i modelli di data mining: specifica la vista dell'origine dati, il numero e il tipo di colonne e una partizione facoltativa in set di training e di testing. Una singola struttura di data mining può supportare più modelli di data mining che condividono lo stesso dominio. Nel diagramma seguente viene illustrata la relazione della struttura di data mining con l'origine dati e con i modelli di data mining che la compongono.  
   
- ![Elaborazione dei dati: origine-struttura al modello](../media/dmcon-modelarch.gif "l'elaborazione dei dati: origine-struttura al modello")  
+ ![L'elaborazione dei dati: origine-struttura al modello](../media/dmcon-modelarch.gif "l'elaborazione dei dati: origine-struttura al modello")  
   
  La struttura di data mining nel diagramma è basata su un'origine dati che contiene più tabelle o viste, unite in join nel campo CustomerID. Una tabella contiene informazioni sui clienti, ad esempio l'area geografica, l'età, il reddito e il sesso, mentre la tabella nidificata correlata contiene più righe di informazioni aggiuntive su ogni cliente, ad esempio i prodotti che il cliente ha acquistato. Nel diagramma viene evidenziato che è possibile compilare più modelli in una struttura di data mining e che i modelli possono utilizzare colonne diverse della struttura.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36065010"
 ### <a name="processing-mining-structures"></a>Elaborazione di strutture di data mining  
  Fino a quando non viene elaborata, una struttura di data mining è soltanto un contenitore di metadati. Quando si elabora una struttura di data mining, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene creata una cache locale per l'archiviazione delle statistiche relative ai dati, delle informazioni sul modo in cui vengono discretizzati gli eventuali attributi continui e di altre informazioni che verranno utilizzate successivamente dai modelli di data mining. Il modello di data mining non consente di archiviare queste informazioni di riepilogo, tuttavia permette di fare riferimento alle informazioni memorizzate nella cache quando è stata elaborata la struttura di data mining. Pertanto, non è necessario rielaborare la struttura ogni volta che si aggiunge un nuovo modello a una struttura esistente, bensì è sufficiente elaborare solo il modello.  
   
- È possibile scegliere di rimuovere questa cache dopo l'elaborazione, se la cache è molto grande o se si desidera rimuovere i dati dettagliati. Se non si desidera memorizzare i dati nella cache, è possibile modificare la proprietà `CacheMode` della struttura di data mining in `ClearAfterProcessing`. In questo modo, la cache verrà distrutta dopo l'elaborazione dei modelli. Impostazione di `CacheMode` proprietà `ClearAfterProcessing` disabiliterà il drill-through dal modello di data mining.  
+ È possibile scegliere di rimuovere questa cache dopo l'elaborazione, se la cache è molto grande o se si desidera rimuovere i dati dettagliati. Se non si desidera memorizzare i dati nella cache, è possibile modificare la proprietà `CacheMode` della struttura di data mining in `ClearAfterProcessing`. In questo modo, la cache verrà distrutta dopo l'elaborazione dei modelli. Impostando il `CacheMode` proprietà `ClearAfterProcessing` verrà disabilitato il drill-through dal modello di data mining.  
   
  Tuttavia, dopo aver eliminato la cache, non sarà possibile aggiungere nuovi modelli alla struttura di data mining. Se si aggiunge un nuovo modello di data mining alla struttura o si modificano le proprietà dei modelli esistenti, sarebbe necessario innanzitutto rielaborare la struttura di data mining. Per altre informazioni, vedere [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](processing-requirements-and-considerations-data-mining.md).  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36065010"
 |Attività|Collegamenti|  
 |-----------|-----------|  
 |Utilizzare le strutture di data mining relazionali|[Creare una nuova struttura di data mining relazionale](create-a-new-relational-mining-structure.md)<br /><br /> [Aggiungere una tabella nidificata a una struttura di data mining](add-a-nested-table-to-a-mining-structure.md)|  
-|Utilizzare le strutture di data mining basate su cubi OLAP|[Creare una nuova struttura di data mining OLAP](create-a-new-olap-mining-structure.md)<br /><br /> [Filtrare il cubo di origine per una struttura di Data Mining](../filter-the-source-cube-for-a-mining-structure.md)|  
+|Utilizzare le strutture di data mining basate su cubi OLAP|[Creare una nuova struttura di data mining OLAP](create-a-new-olap-mining-structure.md)<br /><br /> [Filtrare il cubo di origine per una struttura di data mining](../filter-the-source-cube-for-a-mining-structure.md)|  
 |Utilizzare le colonne in una struttura di data mining|[Aggiungere colonne a una struttura di data mining](add-columns-to-a-mining-structure.md)<br /><br /> [Rimuovere colonne da una struttura di data mining](remove-columns-from-a-mining-structure.md)|  
 |Eseguire una query sulle proprietà e sui dati della struttura di data mining o modificarli|[Modificare le proprietà di una struttura di data mining](change-the-properties-of-a-mining-structure.md)|  
 |Utilizzare le origini dati sottostanti e aggiornare i dati di origine|[Modificare la vista origine dati usata per una struttura di data mining](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Elaborare una struttura di data mining](process-a-mining-structure.md)|  

@@ -1,5 +1,5 @@
 ---
-title: Scheda caratteristiche (Visualizzatore modello di Data Mining) dell'attributo | Documenti Microsoft
+title: Scheda caratteristiche (Visualizzatore modello di Data Mining) dell'attributo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.characteristics.f1
 ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a2e67e05ac9129bd667f50bc4b6acbe673d8729
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc627e45bdf57b956dd55795b48dde642eed4bf7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234261"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>Scheda Caratteristiche attributo (Visualizzatore modello di data mining)
   Usare il riquadro **Caratteristiche attributo** per esplorare le relazioni tra i risultati e gli attributi di input in un modello Naive Bayes. È possibile scegliere il valore dell'attributo di destinazione, quindi visualizzare un elenco degli attributi di input che influiscono maggiormente sui risultati.  
@@ -55,7 +55,7 @@ ms.locfileid: "36067303"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori dei modelli di data mining &#40;progettazione modello di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbe6727f9f3a031e5400dcb260095a518ca69dd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1aea3a970763cc47c48176cb0fdd5f14a005258b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314411"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Impostazione del mirroring del database (SQL Server)
   In questa sezione vengono illustrati i prerequisiti, le indicazioni e la procedura per l'impostazione del mirroring del database. Per un'introduzione al mirroring del database, vedere [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "36064088"
   
 1.  È necessario che il server principale, il server mirror e il server di controllo, se presente, siano ospitati in istanze di server distinte, situate in sistemi host distinti. Per ogni istanza del server è necessario un endpoint del mirroring del database. Se è necessario creare un endpoint del mirroring di database, assicurarsi che sia accessibile alle altre istanze del server.  
   
-     La forma di autenticazione utilizzata per il mirroring del database da un'istanza del server corrisponde a una proprietà dell'endpoint del mirroring del database dell'istanza. Per il mirroring del database sono disponibili due tipi di sicurezza del trasporto: l'autenticazione di Windows o l'autenticazione basata sui certificati. Per altre informazioni, vedere [sicurezza trasporto per il mirroring del Database e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
+     La forma di autenticazione utilizzata per il mirroring del database da un'istanza del server corrisponde a una proprietà dell'endpoint del mirroring del database dell'istanza. Per il mirroring del database sono disponibili due tipi di sicurezza del trasporto: l'autenticazione di Windows o l'autenticazione basata sui certificati. Per altre informazioni, vedere [protezione del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
      I requisiti per l'accesso alla rete sono specifici della forma di autenticazione, come segue:  
   
@@ -48,7 +47,7 @@ ms.locfileid: "36064088"
   
          Per abilitare l'autenticazione del certificato per il mirroring del database in una determinata istanza del server, l'amministratore di sistema deve configurare ogni istanza del server per l'utilizzo dei certificati nelle connessioni in uscita e in ingresso. Le connessioni in uscita devono essere configurate per prime. Per altre informazioni, vedere [Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-2.  Verificare che nel server mirror siano presenti account di accesso per tutti gli utenti del database. Per altre informazioni, vedere [impostare degli account di accesso per gruppi di disponibilità AlwaysOn o mirroring del Database &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
+2.  Verificare che nel server mirror siano presenti account di accesso per tutti gli utenti del database. Per altre informazioni, vedere [Set di account di accesso per gruppi di disponibilità AlwaysOn o mirroring del Database &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
   
 3.  Sull'istanza del server che ospiterà il database mirror, configurare il resto dell'ambiente richiesto per il database con mirroring. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
@@ -150,7 +149,7 @@ ms.locfileid: "36064088"
   
  **Transact-SQL/SQL Server Management Studio**  
   
--   [Ridurre i tempi di inattività per i database con mirroring durante l'aggiornamento di istanze del Server](upgrading-mirrored-instances.md)  
+-   [Riduzione al minimo del tempo di inattività per i database con mirroring quando si aggiornano le istanze del server](upgrading-mirrored-instances.md)  
   
 -   [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
@@ -161,7 +160,7 @@ ms.locfileid: "36064088"
 ## <a name="see-also"></a>Vedere anche  
  [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Mirroring del database: Interoperabilità e coesistenza &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
- [Sicurezza del trasporto per gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Sicurezza del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md)  
   
   

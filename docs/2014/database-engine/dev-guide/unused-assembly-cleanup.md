@@ -1,5 +1,5 @@
 ---
-title: Pulizia degli Assembly inutilizzati | Documenti Microsoft
+title: Pulizia degli Assembly inutilizzati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 277847c61e7ea41c569e2b73485e845c0c1da055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2951bc509d3ab745a9fd56766284cb6763444cc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300701"
 ---
 # <a name="unused-assembly-cleanup"></a>Pulizia degli assembly inutilizzati
   L'esempio `AssemblyCleanup` contiene una stored procedure .NET, che consente di eseguire la pulizia degli assembly inutilizzati nel database corrente tramite l'esecuzione di query sui cataloghi di metadati. L'unico parametro, `visible_assemblies`, viene utilizzato per specificare se gli assembly visibili inutilizzati devono essere o meno eliminati. Per impostazione predefinita un valore "false" indica che solo gli assembly invisibili inutilizzati vengono eliminati; in caso contrario vengono eliminati tutti gli assembly inutilizzati. Il set di assembly inutilizzati è formato dagli assembly che non dispongono di alcun punto di ingresso definito (routine/tipi e aggregazioni) e a cui nessun assembly utilizzato fa riferimento direttamente o indirettamente.  
@@ -28,7 +28,7 @@ ms.locfileid: "36063399"
 ## <a name="prerequisites"></a>Prerequisiti  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](http://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](http://go.microsoft.com/fwlink/?LinkId=31046)Express  
   
 -   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](http://go.microsoft.com/fwlink/?linkid=62796)  
   

@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d51e71307cceec375cc410debf112cd066d6c10b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 441434839fa15b1f9345ddecf55eef3f7f248724
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307461"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Creazione e gestione di indici full-text
   Le informazioni contenute negli indici full-text vengono utilizzate dal motore di ricerca full-text per compilare query full-text che consentono di cercare rapidamente parole o combinazioni di parole specifiche in una tabella. In un indice full-text vengono archiviate informazioni su parole significative e sulla relativa posizione all'interno di una o più colonne di una tabella di database. Un indice full-text è un tipo speciale di indice funzionale basato su token compilato e gestito dal motore di ricerca full-text per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il processo di compilazione di un indice full-text è diverso da quello di altri tipi di indici. Anziché creare un albero B basato su un valore archiviato in una riga specifica, il motore di ricerca full-text compila una struttura con indice invertito, compresso e in pila dai singoli token dal testo indicizzato.  Le dimensioni di un indice full-text sono limitate solo dalle risorse di memoria disponibili del computer in cui viene eseguita l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -31,7 +30,7 @@ ms.locfileid: "36068025"
 > [!NOTE]  
 >  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, il motore di ricerca full-text si trova nel processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anziché in un servizio distinto. L'integrazione del motore di ricerca full-text nel Motore di database consente di ottimizzare la gestibilità della ricerca full-text, l'esecuzione delle query miste e le prestazioni generali.  
   
- È consentito un solo indice full-text per tabella. Per creare un indice full-text su una tabella, quest'ultima deve contenere una colonna singola, univoca e non Null. È possibile compilare un indice full-text su colonne di tipo `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, e `varbinary(max)` può essere indicizzato per ricerca full-text. Creazione di un indice full-text in una colonna i cui dati è di tipo `varbinary`, `varbinary(max)`, `image`, o `xml` richiede la specifica di una colonna di tipo. Una *colonna del tipo* è una colonna di tabella in cui è possibile archiviare l'estensione file (doc, pdf, xls e così via) del documento in ogni riga.  
+ È consentito un solo indice full-text per tabella. Per creare un indice full-text su una tabella, quest'ultima deve contenere una colonna singola, univoca e non Null. È possibile compilare un indice full-text su colonne di tipo `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, e `varbinary(max)` può essere indicizzato per ricerca full-text. Creazione di un indice full-text in una colonna contenente i dati che è di tipo `varbinary`, `varbinary(max)`, `image`, o `xml` richiede di specificare una colonna di tipo. Una *colonna del tipo* è una colonna di tabella in cui è possibile archiviare l'estensione file (doc, pdf, xls e così via) del documento in ogni riga.  
   
  Il processo di creazione e gestione di un indice full-text è definito *popolamento* (noto anche come *ricerca per indicizzazione*). Sono disponibili tre tipi di popolamento dell'indice full-text: popolamento completo, popolamento basato sul rilevamento delle modifiche e popolamento incrementale basato su timestamp. Per altre informazioni, vedere [Popolamento degli indici full-text](populate-full-text-indexes.md).  
   
@@ -90,7 +89,7 @@ ms.locfileid: "36068025"
   
  La colonna **ColId** contiene un valore che corrisponde a una particolare colonna con indicizzazione full-text.  
   
- Il `DocId` colonna contiene valori per un integer a otto byte con mapping a un determinato valore chiave full-text in una tabella con indicizzazione full-text. Questo mapping è necessario se la chiave full-text non è un tipo di dati integer. In questi casi, i mapping tra full-text valori di chiave e `DocId` valori vengono mantenuti in una tabella separata denominata DocId Mapping. Per eseguire una query per questi mapping usare la stored procedure di sistema [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Per soddisfare una condizione di ricerca, è necessario creare un join tra i valori DocId della tabella precedente e la tabella DocId Mapping per recuperare le righe dalla tabella di base su cui viene eseguita la query. Se il valore della chiave full-text della tabella di base è di tipo integer, il valore viene utilizzato direttamente come DocId e non è necessario alcun mapping. Pertanto, l'utilizzo di valori chiave full-text di tipo integer può contribuire all'ottimizzazione delle query full-text.  
+ Il `DocId` colonna contiene valori per un integer a otto byte con mapping a un determinato valore chiave full-text in una tabella con indicizzazione full-text. Questo mapping è necessario se la chiave full-text non è un tipo di dati integer. In questi casi, i valori di chiave i mapping tra full-text e `DocId` vengono mantenuti i valori in una tabella separata denominata DocId Mapping. Per eseguire una query per questi mapping usare la stored procedure di sistema [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Per soddisfare una condizione di ricerca, è necessario creare un join tra i valori DocId della tabella precedente e la tabella DocId Mapping per recuperare le righe dalla tabella di base su cui viene eseguita la query. Se il valore della chiave full-text della tabella di base è di tipo integer, il valore viene utilizzato direttamente come DocId e non è necessario alcun mapping. Pertanto, l'utilizzo di valori chiave full-text di tipo integer può contribuire all'ottimizzazione delle query full-text.  
   
  La colonna **Occurrence** contiene un valore di tipo integer. Per ogni valore DocId è presente un elenco di valori di occorrenza corrispondenti agli offset relativi di una particolare parola chiave all'interno di DocId. I valori di occorrenza sono utili per determinare le corrispondenze di frase o prossimità, ad esempio frasi con valori di occorrenza numericamente adiacenti. Sono inoltre utili per calcolare i punteggi di pertinenza, ad esempio il numero di occorrenze di una parola chiave in un DocId può essere utilizzato per l'assegnazione del punteggio.  
   

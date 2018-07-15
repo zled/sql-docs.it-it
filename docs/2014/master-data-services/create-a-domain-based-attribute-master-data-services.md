@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], creating
 - creating domain-based attributes [Master Data Services]
 - attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5323072d5c58fcbe37becd00daacaac6ed3fb161
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fd6e0a992dd4f23b6da24ed70cb884025c969537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320451"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Creare un attributo basato su dominio (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un attributo basato su dominio per popolare i valori di un attributo con i membri di un'entità.  
@@ -59,7 +59,7 @@ ms.locfileid: "36064277"
   
     -   Se l'attributo è per raccolte, nel riquadro **Attributi raccolta** fare clic su **Aggiungi attributo raccolta**.  
   
-7.  Nel **Aggiungi l'attributo** pagina, selezionare il **basati su dominio** opzione.  
+7.  Nel **Aggiungi attributo** pagina, selezionare la **basati su dominio** opzione.  
   
 8.  Nella casella **Nome** digitare un nome per l'attributo. Non deve essere lo stesso nome dell'entità che si utilizza per l'origine dei valori di attributo.  
   

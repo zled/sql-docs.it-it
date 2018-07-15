@@ -1,5 +1,5 @@
 ---
-title: Creare una dimensione di tipo Data | Documenti Microsoft
+title: Creare una dimensione di tipo Data | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - dimensions [Analysis Services], time
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f57269c2f2400b9ccf2e090fd0c0a97a21c9efc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1e38812dbdff6ecf36bd0c1398ce733d29af6e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315089"
 ---
 # <a name="create-a-date-type-dimension"></a>Creare una dimensioni di tipo Date
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] una dimensione temporale è un tipo di dimensione i cui attributi rappresentano periodi di tempo, ovvero anni, semestri, trimestri, mesi e giorni. Questi periodi in una dimensione temporale offrono livelli di granularità basati sul tempo per l'analisi e la generazione di report. Gli attributi sono organizzati in gerarchie e la granularità della dimensione temporale è determinata principalmente dalle necessità aziendali e di generazione di report per i dati cronologici. Per la maggior parte dei dati finanziari e sulle vendite, ad esempio, nelle applicazioni di Business Intelligence viene utilizzata una granularità mensile o trimestrale.  
@@ -72,8 +72,8 @@ ms.locfileid: "36068140"
 >  Non è possibile utilizzare la Configurazione guidata funzionalità di Business Intelligence per aggiungere funzionalità di Business Intelligence per le gerarchie temporali alle dimensioni temporali del server. Tramite la Configurazione guidata funzionalità di Business Intelligence viene aggiunta una gerarchia per supportare le funzionalità di Business Intelligence per le gerarchie temporali e tale gerarchia deve essere associata a una colonna della tabella della dimensione temporale. Le dimensioni temporali del server non dispongono di una tabella della dimensione temporale corrispondente e pertanto non supportano questa gerarchia aggiuntiva.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una dimensione temporale generando una tabella dei tempi](create-a-time-dimension-by-generating-a-time-table.md)   
- [Business Intelligence guidata F1 Help](../business-intelligence-wizard-f1-help.md)   
- [Tipi di dimensione](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
+ [Creare una dimensione temporale generando una tabella temporale](create-a-time-dimension-by-generating-a-time-table.md)   
+ [Guida F1 di Business Intelligence guidata](../business-intelligence-wizard-f1-help.md)   
+ [Tipi di dimensioni](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b4bd6884ed4994f55fb9edd816505796ea47c60b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef0ed6a2af2d48010550997d7ba216a91f2728f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296991"
 ---
 # <a name="transfer-jobs-task"></a>Attività Trasferisci processi
   L'attività Trasferisci processi trasferisce uno o più processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tra istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -47,7 +47,7 @@ ms.locfileid: "36064779"
  L'attività Trasferisci processi genera un evento informativo in cui è indicato il numero di processi trasferiti. Genera inoltre un evento di avviso quando un processo viene sovrascritto. Non viene riportato lo stato incrementale del trasferimento, ma solo il completamento 0% e 100%.  
   
 ## <a name="execution-value"></a>Valore di esecuzione  
- Il valore di esecuzione, definito nella proprietà `ExecutionValue` dell'attività, restituisce il numero di processi trasferiti. Tramite l'assegnazione di una variabile definita dall'utente per il `ExecValueVariable` proprietà dell'attività dei processi di trasferimento, le informazioni sul trasferimento dei processi possono essere rese disponibili ad altri oggetti nel pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
+ Il valore di esecuzione, definito nella proprietà `ExecutionValue` dell'attività, restituisce il numero di processi trasferiti. Tramite l'assegnazione di una variabile definita dall'utente per il `ExecValueVariable` proprietà dei processi di trasferimento attività, informazioni sul trasferimento dei processi possono essere rese disponibili ad altri oggetti nel pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Voci di log  
  L'attività Trasferisci processi include le voci di log personalizzate seguenti:  
@@ -68,7 +68,7 @@ ms.locfileid: "36064779"
   
 -   [Editor attività Trasferisci processi &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor attività Trasferisci processi &#40;processi pagina&#41;](../transfer-jobs-task-editor-jobs-page.md)  
+-   [Editor attività Trasferisci processi &#40;processi di pagina&#41;](../transfer-jobs-task-editor-jobs-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   

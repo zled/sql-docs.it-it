@@ -1,5 +1,5 @@
 ---
-title: Eseguire una query elemento (ASSL) | Documenti Microsoft
+title: Eseguire una query elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Query element
 ms.assetid: 832c3337-de6d-43b2-8f1c-75bdba76539b
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fac4774f6e8a2694ee79691a84f3333ab1a4226b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2917bfe5a0050a3e3baa17838dffc1e1d94a0172
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308411"
 ---
 # <a name="query-element-assl"></a>Elemento Query (ASSL)
   Contiene il testo della query che esegue la notifica.  
@@ -57,8 +57,8 @@ ms.locfileid: "36068133"
 |Elemento padre|[QueryNotification](../objects/querynotification-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `Query` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.QueryNotification>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `Query` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.QueryNotification>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipo di dati ProactiveCachingQueryBinding &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

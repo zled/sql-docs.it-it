@@ -1,5 +1,5 @@
 ---
-title: Set di righe DISCOVER_CSDL_METADATA | Documenti Microsoft
+title: Set di righe DISCOVER_CSDL_METADATA | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3bac193969cb4f5392944a79351b44390b013596
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29f94bd307f0e863e6ff8e54b7b0ec54281f20b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293529"
 ---
 # <a name="discovercsdlmetadata-rowset"></a>Set di righe DISCOVER_CSDL_METADATA
   Restituisce informazioni su un modello di dati di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] (tabulare o multidimensionale), fornendo la definizione del modello nel formato CSDLBI (Conceptual Schema Definition Language) con annotazioni Business Intelligence. CSDLBI si basa su CSDL, un XML Schema utilizzato da Entity Data Framework per la comunicazione tra un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e il client [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)]. Le annotazioni Business Intelligence forniscono metadati aggiuntivi sui modelli tabulari e sugli oggetti in essi contenuti. Per altre informazioni sui modelli di dati tabulari, vedere [Annotazioni CSDL per Business Intelligence &#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36068587"
 |`METADATA`|`DBTYPE_WSTR`|no|Stringa contenente la definizione XML di un'origine dati e delle relative proprietà, in base allo schema CSDLBI.|  
 |`CUBE_ID`|`DBTYPE_WSTR`|Sì|Identificatore di stringa.<br /><br /> Questa restrizione è facoltativa per i database multidimensionali. Se sono disponibili più cubi e la restrizione viene omessa, viene restituito il cubo predefinito.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  DISCOVER_CSDL_METADATA dispone dei requisiti seguenti:  
   
 -   La richiesta DISCOVER non verrà completata se un database non viene specificato tramite la restrizione CATALOG_NAME.  
@@ -126,7 +126,7 @@ ms.locfileid: "36068587"
 |ADOMDNAME|Csdl|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Set di righe dello Schema di Analysis Services](../analysis-services-schema-rowsets.md)   
+ [I set di righe dello Schema di Analysis Services](../analysis-services-schema-rowsets.md)   
  [Annotazioni CSDL per Business Intelligence &#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   

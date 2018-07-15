@@ -1,5 +1,5 @@
 ---
-title: Nuova colonna nell'output di sp_helptrigger potrebbe influire sulle applicazioni | Documenti Microsoft
+title: La nuova colonna nell'output di sp_helptrigger potrebbe influire sulle applicazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sp_helptrigger
 ms.assetid: b7c42a8f-f2e0-4fa3-b046-3cf39c854c47
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2d62b9b9546fa113557bf962d68876d8c55a71ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8d8cb7b6623cd15e2e7617a1ae63baeaebe4e375
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306987"
 ---
 # <a name="new-column-in-output-of-sphelptrigger-may-impact-applications"></a>La nuova colonna nell'output di sp_helptrigger potrebbe influire sulle applicazioni
-  stored procedure di trigger_schemaias l'ultima colonna nel set di risultati restituita dal sistema sp_helptrigger.  
+  l'ultima colonna nel set di risultati restituita dal sistema sp_helptrigger trigger_schemaias di stored procedure.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Per ottenere informazioni sui trigger definiti in una specifica tabella, eseguire una query sulla vista del catalogo sys.triggers.  
@@ -37,6 +37,6 @@ ms.locfileid: "36064830"
   
 ## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;nuovo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

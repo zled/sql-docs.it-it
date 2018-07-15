@@ -1,5 +1,5 @@
 ---
-title: I ruoli utente per Change Data Capture Service for Oracle by Attunity | Documenti Microsoft
+title: I ruoli utente per Change Data Capture Service per Oracle di attunity | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 196e8b952073fa4799c86549f1efdb26449c841c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc2db9d3a5df677cd1d687d2c5431c7db4affad0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295151"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Ruoli utente per il servizio CDC (Change Data Capture) per Oracle di Attunity
   In questa sezione sono descritti i ruoli utente per il servizio Change Data Capture per Oracle di Attunity. I ruoli descritti sono ruoli del database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ruoli di Windows o ruoli del database Oracle.  

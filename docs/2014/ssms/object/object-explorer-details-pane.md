@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.report.f1
 - sql12.swb.summary.general.f1
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 45c9e3808bb3d546441060431c0d311f22c95904
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5a24c1f4e695b86d27737dc09df33a7a91f2bdac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313137"
 ---
 # <a name="object-explorer-details-pane"></a>Riquadro Dettagli di Esplora oggetti
   Dettagli Esplora oggetti è un componente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] che fornisce una vista tabulare di tutti gli oggetti nel server e offre un'interfaccia utente che consente di gestire tali oggetti. Le funzionalità di Esplora oggetti variano leggermente in base al tipo di server, ma in genere comprendono le funzionalità di sviluppo per i database e di gestione per tutti i tipi di server.  

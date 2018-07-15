@@ -1,5 +1,5 @@
 ---
-title: Introduzione a Data Mining (componenti aggiuntivi Data Mining per Excel Data) | Documenti Microsoft
+title: Introduzione a Data Mining (componenti aggiuntivi Data Mining per Excel Data) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2d82f4569dbdf2c9e6c686c1235300de40bf445
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0faa8178d535fa5cd493f65e002e27e5565059c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303131"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Introduzione al data mining (componenti aggiuntivi Data mining per Excel)
   Il data mining è il processo di individuazione di modelli significativi nei dati. È un complemento naturale del processo di esplorazione e comprensione dei dati tramite gli strumenti tradizionali di Business Intelligence. Gli algoritmi automatici sono in grado di elaborare grandi quantità di dati e di individuare modelli e tendenze altrimenti non evidenti.  
   
- Per eseguire il data mining, si raccolgono dati che riguardano una domanda specifica, ad esempio "chi sono i clienti?" o "quali prodotti sono stati acquistati?" e quindi applicato un algoritmo per trovare le correlazioni statistiche nei dati. I modelli e le tendenze individuati tramite l'analisi vengono archiviati come modello di data mining. Il modello di data mining può quindi essere applicato ai nuovi dati in scenari aziendali come i seguenti:  
+ Per eseguire il data mining, si raccolgono i dati relativi a una domanda specifica, ad esempio "chi sono i clienti?" o "quali prodotti sono stati acquistati?" e quindi applicare un algoritmo per trovare le correlazioni statistiche nei dati. I modelli e le tendenze individuati tramite l'analisi vengono archiviati come modello di data mining. Il modello di data mining può quindi essere applicato ai nuovi dati in scenari aziendali come i seguenti:  
   
 -   Si utilizzano tendenze precedenti per prevedere le vendite del successivo trimestre, i requisiti di inventario, la soddisfazione del cliente.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "36068164"
   
  Una volta completato il modello, esaminare i risultati e identificare le modalità per modificare i dati od ottenere risultati migliori. Veramente di rado il primo modello fornisce tutte le risposte. Il data mining è di norma un processo iterativo.  
   
- Quando si creano contenitori per i dati in modalità differenti o aggiungendo nuove colonne, ricordarsi di utilizzare il **modello di documento** guidata per acquisire uno snapshot dei metadati e i risultati di ogni modello. La disponibilità di un record semplifica la traccia dello stato di avanzamento nell'esplorazione.  
+ Quando si creano contenitori per i dati in modalità differenti o si aggiungono nuove colonne, ricordarsi di usare la **modello di documento** guidata consente di acquisire uno snapshot dei metadati e i risultati di ogni modello. La disponibilità di un record semplifica la traccia dello stato di avanzamento nell'esplorazione.  
   
  [Esplorazione e pulizia dei dati](exploring-and-cleaning-data.md)  
   
 ## <a name="validate-your-model"></a>Convalidare il modello  
- Quando si esegue una procedura guidata o uno strumento, l'algoritmo analizza il contenuto dei dati e determina se esiste un modello statisticamente valido. Se l'algoritmo non trova modelli validi, viene visualizzato un messaggio di errore. Tuttavia, anche quando un modello viene correttamente creato, è possibile testarlo per vedere se le supposizioni vengono convalidate. È possibile utilizzare strumenti come il [grafico accuratezza modello di &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) o [convalida incrociata &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](cross-validation-sql-server-data-mining-add-ins.md) per generare statistiche misure della qualità del modello.  
+ Quando si esegue una procedura guidata o uno strumento, l'algoritmo analizza il contenuto dei dati e determina se esiste un modello statisticamente valido. Se l'algoritmo non trova modelli validi, viene visualizzato un messaggio di errore. Tuttavia, anche quando un modello viene correttamente creato, è possibile testarlo per vedere se le supposizioni vengono convalidate. È possibile usare strumenti come il [grafico di accuratezza &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) oppure [convalida incrociata &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](cross-validation-sql-server-data-mining-add-ins.md) per generare statistiche misure di qualità dei modelli.  
   
  Una volta valutati i risultati del primo modello, è opportuno porsi le domande seguenti:  
   
@@ -128,10 +128,10 @@ ms.locfileid: "36068164"
   
  [Visualizzazione di modelli &#40;componenti aggiuntivi data mining per Office&#41;](viewing-models-data-mining-add-ins-for-office.md)  
   
- [Convalida dei modelli e utilizzo dei modelli per la stima &#40;componenti aggiuntivi data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [Convalida dei modelli e utilizzo dei modelli per la stima &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cosa è incluso nei dati di componenti aggiuntivi Data Mining per Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
- [Riferimento tecnico &#40;componenti aggiuntivi data mining per Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
+ [Che cosa è incluso nei dati di componenti aggiuntivi Data Mining per Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
+ [Riferimento tecnico per &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
   
   

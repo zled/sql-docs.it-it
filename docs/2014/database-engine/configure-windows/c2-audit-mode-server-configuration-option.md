@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - auditing [SQL Server]
 - audits [SQL Server], C2 Audit Mode option
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - recording attempts
 ms.assetid: 5a8d73a6-c4f6-4967-ba11-ecbcfc90b9cc
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5071449b484c4c4a816fb09cbbbf67b8ba090129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8c1df67cd3d6e9778bfdee691660e31de5bcb6d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285727"
 ---
 # <a name="c2-audit-mode-server-configuration-option"></a>Opzione di configurazione del server c2 audit mode
   È possibile configurare l'opzione C2 audit mode tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o con l'opzione **c2 audit mode** in **sp_configure**. Questa opzione consente di configurare il server per la registrazione dei tentativi di accesso alle istruzioni e agli oggetti riusciti e non riusciti. Tali informazioni risultano utili per documentare l'attività del server e per tenere traccia delle possibili violazioni dei criteri di sicurezza  

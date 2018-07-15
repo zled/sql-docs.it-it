@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scheduling jobs [SQL Server]
 - SQL Server Agent jobs, scheduling
 - jobs [SQL Server Agent], scheduling
 ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c7430671ad6ebbd65953727adacfb154aa612155
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9b76c883ceeed6b9758f8a132052b2e1b170fc05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312871"
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
   In questo argomento viene descritto come pianificare un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -116,6 +116,6 @@ ms.locfileid: "36064601"
  Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql) e [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql).  
   
 ##  <a name="SMO"></a> Utilizzo di SQL Server Management Objects  
- Utilizzare la `JobSchedule` classe utilizzando un linguaggio di programmazione scelto, ad esempio Visual Basic, Visual c# o PowerShell. Per altre informazioni, vedere[SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Usare il `JobSchedule` classe utilizzando un linguaggio di programmazione desiderato, ad esempio Visual Basic, Visual c# o PowerShell. Per altre informazioni, vedere[SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
   
   

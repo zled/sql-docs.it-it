@@ -1,5 +1,5 @@
 ---
-title: Accedere Provider WMI per gestione della configurazione mediante WQL | Documenti Microsoft
+title: Accedere ai Provider WMI per Gestione configurazione usando WQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, WQL
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3c9ced24edc7e7f3537a73d074cf7cd73128dc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f35c895597bf19a7cc4ad20614d2d2f29521504e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313361"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Accedere al provider WMI per la gestione della configurazione tramite WQL
   In questa sezione viene illustrato come eseguire le istruzioni WQL ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Management Instrumentation Query Language) sul provider WMI per Gestione computer.  
@@ -40,7 +40,7 @@ ms.locfileid: "36064652"
   
 3.  Nel primo campo di testo digitare lo spazio dei nomi del provider WMI per Gestione computer: root\Microsoft\SqlServer\ComputerManagement11. Fare clic su **Connetti**.  
   
-4.  Fare clic su **Query**. Digitare una query che restituisca i servizi correnti in esecuzione nel computer locale: **selezionare \* da SqlService.** Fare clic su **Applica**.  
+4.  Fare clic su **Query**. Digitare una query che restituisca i servizi correnti in esecuzione nel computer locale: **seleziona \* da SqlService.** Fare clic su **Applica**.  
   
 5.  Ridefinire ulteriormente la query aggiungendo `WHERE ServiceName = "MSSQLSERVER"`.  
   
