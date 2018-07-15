@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2ccf39ac0ed4a45f7163d5be6b45ad7201bce47b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b8d4695edc8d87c9462ea0cc94aa538e0108fd2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284627"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Informazioni sui gruppi (Generatore report e SSRS)
   In Generatore report un gruppo è un set di dati denominato che deriva dal set di dati del report associato a un'area dati. In sostanza, organizza una vista di un set di dati del report. Tutti i gruppi in un'area dati specificano viste diverse dello stesso set di dati del report.  
@@ -95,7 +95,7 @@ ms.locfileid: "36068866"
   
  Dopo avere aggiunto un gruppo, gli handle di riga e colonna dell'area dati cambiano per riflettere l'appartenenza a un gruppo. Quando si elimina un gruppo, è possibile scegliere se eliminare solo la definizione di gruppo o il gruppo e tutte le righe e le colonne associate. Per altre informazioni, vedere [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report e SSRS&#41;](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
- Per limitare i dati da visualizzare o utilizzare in calcoli relativi ai dati di dettaglio o di gruppo, impostare dei filtri sul gruppo. Per altre informazioni, vedere [aggiungere i filtri di set di dati, filtri delle aree dati e i filtri di gruppo &#40;Generatore Report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
+ Per limitare i dati da visualizzare o utilizzare in calcoli relativi ai dati di dettaglio o di gruppo, impostare dei filtri sul gruppo. Per altre informazioni, vedere [aggiungere filtri per set di dati, aree dati e filtri di gruppo &#40;Generatore Report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
   
  Per impostazione predefinita, quando si crea un gruppo, l'espressione di ordinamento per il gruppo equivale all'espressione di raggruppamento. Per modificare l'ordinamento, modificare l'espressione di ordinamento. Per altre informazioni, vedere [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -103,10 +103,10 @@ ms.locfileid: "36068866"
  Le celle in una riga o colonna di un'area dati Tablix possono appartenere a più gruppi di righe e di colonne. Quando si definisce un'espressione nella casella di testo di una cella che utilizza una funzione di aggregazione (ad esempio `=Sum(Fields!FieldName.Value`), l'ambito del gruppo predefinito per una cella è il gruppo figlio più interno a cui appartiene. Quando una cella appartiene sia a gruppi di righe che di colonne, l'ambito è rappresentato dai gruppi più interni di entrambe le categorie. È possibile anche scrivere espressioni che calcolino i subtotali di aggregazione di cui viene calcolato l'ambito per un gruppo rispetto a un altro set di dati. È possibile ad esempio calcolare la percentuale di un gruppo rispetto al gruppo di colonne e a tutti i dati dell'area dati (ad esempio `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). Per altre informazioni, vedere [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md) e [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere o eliminare un gruppo in un'area dati &#40;SSRS e Generatore Report&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [Aggiungere o eliminare un gruppo in un'area dati &#40;Report e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
  [Aggiungere un totale a un gruppo o a un'area dati Tablix &#40;Generatore report e SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
  [Ordinamento dei dati in un'area dati &#40;Generatore report e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Azione di drill-down &#40;SSRS e Generatore Report&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [Azione drill-down &#40;Report e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

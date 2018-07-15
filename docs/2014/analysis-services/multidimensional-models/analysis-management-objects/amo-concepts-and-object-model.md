@@ -1,5 +1,5 @@
 ---
-title: Modello a oggetti e i concetti di AMO | Documenti Microsoft
+title: Modello a oggetti e i concetti di AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -21,24 +21,24 @@ helpviewer_keywords:
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 623caca0bf51815328bc24992a8f2d2928b9cab2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f692a0b5d66cc52107b93480bdf9d4541a84603
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310721"
 ---
 # <a name="amo-concepts-and-object-model"></a>Modello a oggetti AMO e concetti relativi
-  In questo argomento fornisce una definizione di Analysis Management Objects (AMO), correlazione agli altri strumenti e librerie disponibili nell'architettura di AMO [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e una spiegazione concettuale di tutti gli oggetti AMO principali.  
+  In questo argomento fornisce una definizione di oggetti AMO (Analysis Management), come AMO è correlato ad altri strumenti e librerie disponibili nell'architettura del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e una spiegazione concettuale di tutti gli oggetti AMO principali.  
   
- AMO è una raccolta completa di classi di gestione per [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] che può essere utilizzata a livello di programmazione nello spazio dei nomi di <xref:Microsoft.AnalysisServices> in un ambiente gestito. Le classi sono incluse nel file AnalysisServices, che in genere si trova in cui il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programma di installazione installa i file, sotto la cartella \100\SDK\Assemblies\\. Per utilizzare le classi AMO, includere un riferimento a tale assembly nei progetti.  
+ AMO è una raccolta completa di classi di gestione per [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] che può essere utilizzata a livello di programmazione nello spazio dei nomi di <xref:Microsoft.AnalysisServices> in un ambiente gestito. Le classi sono incluse nel file AnalysisServices, in genere disponibile in cui il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programma di installazione installa i file, sotto la cartella \100\SDK\Assemblies\\. Per utilizzare le classi AMO, includere un riferimento a tale assembly nei progetti.  
   
- Tramite AMO in grado di creare, modificare ed eliminare oggetti quali cubi, dimensioni, strutture di data mining e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database; su tutti questi oggetti, le azioni possono essere eseguite dall'applicazione in .NET Framework. È inoltre possibile elaborare e aggiornare le informazioni archiviate nei database di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Tramite AMO in grado di creare, modificare ed eliminare oggetti quali cubi, dimensioni, strutture di data mining e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database, su tutti questi oggetti, le azioni possono essere eseguite dall'applicazione in .NET Framework. È inoltre possibile elaborare e aggiornare le informazioni archiviate nei database di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- AMO non consente di eseguire query sui dati. Per eseguire una query dei dati, utilizzare [lo sviluppo con ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
+ AMO non consente di eseguire query sui dati. Per eseguire una query dei dati, usare [lo sviluppo con ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
   
  In questo argomento sono incluse le sezioni seguenti:  
   
@@ -46,12 +46,12 @@ ms.locfileid: "36068822"
   
  [Architettura di AMO](#AMOArchitecture)  
   
- [Tramite AMO](#bkmk_UsingAMO)  
+ [Utilizzo di AMO](#bkmk_UsingAMO)  
   
- [Automatizzazione di attività amministrative con AMO](#AutomatingAdministrativeTaskswithAMO)  
+ [Automazione delle attività amministrative con AMO](#AutomatingAdministrativeTaskswithAMO)  
   
 ##  <a name="AMOintheAnalysisServicesArchitecture"></a> AMO nell'architettura di Analysis Services  
- Per motivi strutturali, AMO è destinato alla gestione di oggetti e non all'esecuzione di query sui dati. Se l'utente deve eseguire query [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dati da un'applicazione client, l'applicazione client deve utilizzare [allo sviluppo con ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
+ Per motivi strutturali, AMO è destinato alla gestione di oggetti e non all'esecuzione di query sui dati. Se l'utente deve eseguire query [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dati da un'applicazione client, l'applicazione client deve usare [allo sviluppo con ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
   
 ##  <a name="AMOArchitecture"></a> Architettura di AMO  
  AMO è una libreria completa di classi progettata per gestire un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] da un'applicazione client in codice gestito in .NET Framework versione 2.0.  
@@ -60,9 +60,9 @@ ms.locfileid: "36068822"
   
  Nella figura seguente viene illustrata una vista di alto livello della gerarchia di AMO in cui sono incluse classi principali. Nella figura viene illustrata la posizione delle classi tra i relativi contenitori e peer. Un oggetto <xref:Microsoft.AnalysisServices.Dimension> appartiene a un oggetto <xref:Microsoft.AnalysisServices.Database> e <xref:Microsoft.AnalysisServices.Server> e può essere creato in qualsiasi momento come un oggetto <xref:Microsoft.AnalysisServices.DataSource> e <xref:Microsoft.AnalysisServices.MiningStructure>. È necessario creare un'istanza di determinate classi peer prima che sia possibile utilizzarne altre. È necessario ad esempio creare un'istanza di <xref:Microsoft.AnalysisServices.DataSource> prima di aggiungere un nuovo oggetto <xref:Microsoft.AnalysisServices.Dimension> o <xref:Microsoft.AnalysisServices.MiningStructure>.  
   
- ![Vista di alto livello di classi AMO](../../../analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "AMO classi vista di alto livello")  
+ ![Vista di alto livello di classi AMO](../../../analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "vista di alto livello di classi AMO")  
   
- Un *oggetto principale* è una classe che rappresenta un oggetto completo come entità intera e non come parte di un altro oggetto. Gli oggetti principali includono <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Dimension> e <xref:Microsoft.AnalysisServices.MiningStructure>, poiché da soli costituiscono entità. Un oggetto <xref:Microsoft.AnalysisServices.Level>, tuttavia, non è un oggetto principale poiché costituisce una parte di un oggetto <xref:Microsoft.AnalysisServices.Dimension>. Gli oggetti principali possono essere creati, eliminati, modificati oppure elaborati indipendentemente da altri oggetti. Gli oggetti secondari sono oggetti che possono essere creati solo come parte della creazione dell'oggetto principale padre e vengono in genere creati in questa fase. I valori per gli oggetti secondari devono essere definiti nel momento della creazione poiché per questo tipo di oggetti non è prevista una creazione predefinita.  
+ Oggetto *oggetto principale* è una classe che rappresenta un oggetto completo come entità intera e non come parte di un altro oggetto. Gli oggetti principali includono <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Dimension> e <xref:Microsoft.AnalysisServices.MiningStructure>, poiché da soli costituiscono entità. Un oggetto <xref:Microsoft.AnalysisServices.Level>, tuttavia, non è un oggetto principale poiché costituisce una parte di un oggetto <xref:Microsoft.AnalysisServices.Dimension>. Gli oggetti principali possono essere creati, eliminati, modificati oppure elaborati indipendentemente da altri oggetti. Gli oggetti secondari sono oggetti che possono essere creati solo come parte della creazione dell'oggetto principale padre e vengono in genere creati in questa fase. I valori per gli oggetti secondari devono essere definiti nel momento della creazione poiché per questo tipo di oggetti non è prevista una creazione predefinita.  
   
  Nella figura seguente vengono illustrati gli oggetti principali contenuti in un oggetto <xref:Microsoft.AnalysisServices.Server>.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36068822"
 |[Classi di sicurezza AMO](amo-security-classes.md)|Classi che consentono di controllare l'accesso ad altri oggetti e di gestire la sicurezza.|  
 |[Altre classi e altri metodi AMO](amo-other-classes-and-methods.md)|Classi e metodi che consentono agli amministratori OLAP o responsabili delle operazioni di data mining di completare le attività giornaliere.|  
   
-##  <a name="bkmk_UsingAMO"></a> Tramite AMO  
+##  <a name="bkmk_UsingAMO"></a> Utilizzo di AMO  
  AMO risulta particolarmente utile per automatizzare attività ripetitive, ad esempio la creazione di nuove partizioni in un gruppo di misure in base a nuovi dati nella tabella dei fatti o la riesecuzione del training di un modello di data mining con nuovi dati. Tali attività che creano nuovi oggetti vengono eseguite in genere su base mensile, settimanale o trimestrale e il relativo nome basato sui nuovi dati può essere assegnato in modo semplice dall'applicazione.  
   
 ##### <a name="analysis-services-administrators"></a>Amministratori di Analysis Services  
@@ -100,7 +100,7 @@ ms.locfileid: "36068822"
 ##### <a name="data-mining-advanced-users"></a>Utenti esperti di operazioni di data mining  
  Per gli utenti esperti in operazioni di data mining, AMO risulta estremamente utile se sono presenti set di modelli di grandi dimensioni di cui è necessario rieseguire periodicamente il training.  
   
-##  <a name="AutomatingAdministrativeTaskswithAMO"></a> Automatizzazione di attività amministrative con AMO  
+##  <a name="AutomatingAdministrativeTaskswithAMO"></a> Automazione delle attività amministrative con AMO  
  La maggior parte delle attività ripetitive vengono progettate, distribuite e gestite meglio se per lo sviluppo viene utilizzato [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] anziché un'applicazione in qualsiasi linguaggio selezionato dall'utente. Per attività ripetitive che non possono essere automatizzate tramite [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], è tuttavia possibile utilizzare AMO. AMO risulta utile inoltre quando si desidera sviluppare un'applicazione specializzata per Business Intelligence tramite [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ##### <a name="automatic-object-management"></a>Gestione automatica degli oggetti  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.chartareaproperties.3doptions.f1
 - "10256"
@@ -21,18 +21,18 @@ f1_keywords:
 - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd6084c7d426693abbaa29c60aa2c5ad0b0011ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 33e11e05c4678fbbde7c97175498f94e092ffe43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280477"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Grafici (Generatore report e SSRS)
-  Se si desidera riepilogare i dati in formato visivo, usare l'area dati del grafico. I grafici consentono di presentare volumi elevati di informazioni aggregate in modo immediato. Prima di creare un grafico, è importante preparare e identificare con attenzione i dati, in modo da procedere rapidamente e con maggiore efficienza. Per altre informazioni, vedere [Aggiungere un grafico a un report &#40;Generatore report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Per iniziare a usare un grafico immediatamente, vedere la barra, colonna, grafico sparkline e le esercitazioni di grafico a torta in [esercitazioni &#40;Generatore Report&#41; ](../report-builder-tutorials.md) o la barra e le esercitazioni di grafico a torta in [esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
+  Se si desidera riepilogare i dati in formato visivo, usare l'area dati del grafico. I grafici consentono di presentare volumi elevati di informazioni aggregate in modo immediato. Prima di creare un grafico, è importante preparare e identificare con attenzione i dati, in modo da procedere rapidamente e con maggiore efficienza. Per altre informazioni, vedere [Aggiungere un grafico a un report &#40;Generatore report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Per iniziare a usare un grafico immediatamente, vedere la barra, colonne, grafici sparkline ed esercitazioni relative ai grafici a torta in [esercitazioni &#40;Generatore Report&#41; ](../report-builder-tutorials.md) o la barra e le esercitazioni di grafico a torta in [esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
   
  Nella figura seguente sono illustrati molti dei diversi elementi usati nel grafico.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36066001"
   
   
 ##  <a name="AggregateValues"></a> Aggregazione dei valori di un campo dati nel grafico  
- Per impostazione predefinita, quando si aggiunge un campo all'area Valori del grafico, in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene calcolata un'aggregazione per il campo. Se si trascina un campo sul grafico senza rilasciarlo in un'area specifica, il grafico determinerà se questo campo appartiene all'asse delle categorie (x) o all'asse dei valori (y) in base al tipo di dati del campo. I campi numerici rilasciati nell'area Valori vengono aggregati tramite la funzione SUM. Se il tipo di dati del campo valore è String nell'area Valori, nel grafico non è possibile visualizzare un valore numerico, anche se nei campi sono contenuti numeri; viene pertanto visualizzata la funzione COUNT. Per evitare questo comportamento, assicurarsi che i campi usati includano tipi di dati numerici anziché stringhe con numeri formattati. È possibile utilizzare un'espressione Visual Basic per convertire i valori String in un tipo di dati numerici usando la `CDbl` o `CInt` costante. Nell'espressione complessa seguente, ad esempio, viene convertito un campo denominato `MyField` che contiene valori numerici formattati come stringhe.  
+ Per impostazione predefinita, quando si aggiunge un campo all'area Valori del grafico, in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene calcolata un'aggregazione per il campo. Se si trascina un campo sul grafico senza rilasciarlo in un'area specifica, il grafico determinerà se questo campo appartiene all'asse delle categorie (x) o all'asse dei valori (y) in base al tipo di dati del campo. I campi numerici rilasciati nell'area Valori vengono aggregati tramite la funzione SUM. Se il tipo di dati del campo valore è String nell'area Valori, nel grafico non è possibile visualizzare un valore numerico, anche se nei campi sono contenuti numeri; viene pertanto visualizzata la funzione COUNT. Per evitare questo comportamento, assicurarsi che i campi usati includano tipi di dati numerici anziché stringhe con numeri formattati. È possibile utilizzare un'espressione Visual Basic per convertire i valori stringa in un tipo di dati numerici usando la `CDbl` o `CInt` costante. Nell'espressione complessa seguente, ad esempio, viene convertito un campo denominato `MyField` che contiene valori numerici formattati come stringhe.  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
@@ -121,38 +121,38 @@ ms.locfileid: "36066001"
   
   
 ##  <a name="InThisSection"></a> Contenuto della sezione  
- [Aggiungere un grafico a un Report &#40;SSRS e Generatore Report&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Aggiungere un grafico a un Report &#40;Report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  Vengono descritti i primi passaggi per l'aggiunta di un grafico al report.  
   
- [Tipi di grafico &#40;SSRS e Generatore Report&#41;](chart-types-report-builder-and-ssrs.md)  
+ [Tipi di grafico &#40;Report e SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
  Vengono descritti tutti i tipi e i sottotipi di grafico disponibili in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], con alcune considerazioni e procedure consigliate per il relativo utilizzo.  
   
- [Formattazione di un grafico &#40;SSRS e Generatore Report&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [Formattazione di un grafico &#40;Report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
  Utilizzo della formattazione per migliorare l'aspetto complessivo ed evidenziare i punti dati principali del grafico.  
   
- [Punti dati nei grafici vuoti e Null &#40;SSRS e Generatore Report&#41;](charts-report-builder-and-ssrs.md)  
+ [Punti dati nei grafici vuoti e Null &#40;Report e SSRS&#41;](charts-report-builder-and-ssrs.md)  
  Vengono riportate considerazioni relative all'utilizzo di grafici basati su campi con valori vuoti o Null.  
   
- [Visualizzazione di una serie con più intervalli di dati in un grafico &#40;SSRS e Generatore Report&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [Visualizzazione di una serie con più intervalli di dati in un grafico &#40;Report e SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
  Viene descritto come aggiungere interruzioni di scala a una serie che contiene più di un intervallo di dati.  
   
- [Più serie in un grafico &#40;SSRS e Generatore Report&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
+ [Più serie in un grafico &#40;Report e SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
  Vengono illustrati diversi metodi per mostrare più serie sullo stesso grafico, inclusi i tipi di grafico combinati, tramite l'asse secondario, specificando tipi di grafico diversi e usando più aree del grafico.  
   
- [Collegamento più aree dati allo stesso set di dati &#40;SSRS e Generatore Report&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [Collegamento più aree dati allo stesso set di dati &#40;Report e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
  Vengono fornite diverse visualizzazioni di dati dello stesso set di dati del report.  
   
- [Aggiungere o eliminare un gruppo in un grafico &#40;SSRS e Generatore Report&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [Aggiungere o eliminare un gruppo in un grafico &#40;Report e SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
  Viene illustrata l'aggiunta di gruppi e di gruppi nidificati a un grafico.  
   
- [Aggiungere una media mobile a un grafico &#40;SSRS e Generatore Report&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Aggiungere una media mobile a un grafico &#40;Report e SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
  Viene illustrato l'utilizzo della formula della Media mobile per calcolare la media dei dati nella serie.  
   
- [Risolvere i grafici &#40;SSRS e Generatore Report&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [Risolvere i problemi di grafici &#40;Report e SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
  Vengono forniti suggerimenti per l'utilizzo dei grafici.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Immagini, caselle di testo, rettangoli e righe &#40;SSRS e Generatore Report&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Le immagini, caselle di testo, rettangoli e linee &#40;Report e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Aree dati annidate &#40;Generatore report e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
  [Esercitazione: Aggiungere un istogramma al report &#40;Generatore report&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   

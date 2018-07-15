@@ -1,5 +1,5 @@
 ---
-title: Elemento Annotation (ASSL) | Documenti Microsoft
+title: Elemento Annotation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Annotation element
 ms.assetid: 7d75291a-47b4-498a-8ba4-3d093b8513b2
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5dfe8ea881948de8ed53cea0ddcff1e1325a96d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0453688aab37831c54bad3080a34409b078740bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304501"
 ---
 # <a name="annotation-element-assl"></a>Elemento Annotation (ASSL)
   Contiene elementi utilizzati per estendere lo schema ASSL (Analysis Services Scripting Language).  
@@ -63,7 +63,7 @@ ms.locfileid: "36069288"
 |Elementi padre|[Annotazioni](../collections/annotations-element-assl.md)|  
 |Elementi figlio|[Nome](../properties/name-element-assl.md), [valore](../properties/value-element-assl.md), [visibilità](../properties/visibility-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `Annotation` fornisce estensibilità dello schema ASSL per tutti gli oggetti ad esclusione di quelli utilizzati esclusivamente per definire un tipo di dati complesso. L'elemento `Value` dell'elemento `Annotation` può contenere valori XML validi di qualsiasi spazio dei nomi XML diverso da ASSL, soggetti alle regole seguenti:  
   
 -   Il valore XML può contenere solo elementi.  

@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], about administrators
 - administrators [Master Data Services]
 - models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 11abfb4949bdd7917066ed785dd1014efc026e9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fcad38283e902b305afc5db3e47671b12e91b41f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304121"
 ---
 # <a name="administrators-master-data-services"></a>Amministratori (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] sono presenti due tipi di amministratore: gli amministratori di modelli e l'amministratore di sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 ## <a name="model-administrators"></a>Amministratori di modelli  
- In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un amministratore del modello è un utente che ha **aggiornamento** autorizzazioni assegnate all'oggetto modello di livello principale per il **oggetti modello** scheda e nessun altro assegnate autorizzazioni.  
+ Nella [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un amministratore di modelli è un utente che ha **Update** autorizzazione assegnata all'oggetto modello di livello superiore nella **oggetti modello** scheda e nessun altro assegnate le autorizzazioni.  
   
 -   Se l'utente dispone dell'accesso all'area funzionale **Esplora risorse** , l'utente può aggiungere, eliminare e aggiornare tutti i dati master in questa area.  
   
@@ -54,13 +54,13 @@ ms.locfileid: "36066111"
   
 |Tipo di amministratore|Description|  
 |------------------------|-----------------|  
-|Amministratore del sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Le autorizzazioni assegnate in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] non influenzano l'accesso dell'amministratore.<br /><br /> Dispone automaticamente **aggiornamento** delle autorizzazioni necessarie per tutti i modelli.<br /><br /> Dispone automaticamente dell'accesso a tutte le aree funzionali.<br /><br /> In MDM. tbluser il valore di **ID** colonna **1**.|  
-|Amministratore di modelli|Le autorizzazioni assegnate in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] determinano se l'utente è o meno un amministratore di modelli.<br /><br /> Può essere un amministratore di modelli in base alle autorizzazioni assegnate in modo esplicito o in base alle autorizzazioni ereditate da un gruppo.<br /><br /> È un amministratore solo per i modelli che hanno **aggiornamento** autorizzazione assegnata all'oggetto modello di livello principale e non altre autorizzazioni.<br /><br /> Dispone dell'accesso solo alle aree funzionali per le quali è stato concesso l'accesso.<br /><br /> In MDM. tbluser il valore di **ID** colonna non **1**.|  
+|Amministratore del sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Le autorizzazioni assegnate in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] non influenzano l'accesso dell'amministratore.<br /><br /> Dispone automaticamente **Update** l'autorizzazione a tutti i modelli.<br /><br /> Dispone automaticamente dell'accesso a tutte le aree funzionali.<br /><br /> In MDM. tbluser il valore di **ID** colonna viene **1**.|  
+|Amministratore di modelli|Le autorizzazioni assegnate in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] determinano se l'utente è o meno un amministratore di modelli.<br /><br /> Può essere un amministratore di modelli in base alle autorizzazioni assegnate in modo esplicito o in base alle autorizzazioni ereditate da un gruppo.<br /><br /> È un amministratore solo per i modelli che hanno **Update** assegnata all'oggetto modello di livello superiore l'autorizzazione e non altre autorizzazioni.<br /><br /> Dispone dell'accesso solo alle aree funzionali per le quali è stato concesso l'accesso.<br /><br /> In MDM. tbluser il valore di **ID** colonna non è **1**.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare un amministratore di modelli &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md)   
  [Modificare l'Account amministratore di sistema &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)   
  [Creare un database Master Data Services](install-windows/create-a-master-data-services-database.md)   
- [Le notifiche &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
+ [Notifiche &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
   
   

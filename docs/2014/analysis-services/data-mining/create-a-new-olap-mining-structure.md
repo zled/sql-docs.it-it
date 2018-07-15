@@ -1,5 +1,5 @@
 ---
-title: Creare una nuova struttura di Data Mining OLAP | Documenti Microsoft
+title: Creare una nuova struttura di Data Mining OLAP | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], OLAP
 - mining structures [Analysis Services], creating
 - OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5f39fe05cef96739205c06ecc00cf4481e141b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc5138c448aa0f149916bc61be35a0ce5d75e8c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297441"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Creare una nuova struttura di data mining OLAP
   È possibile usare la Creazione guidata modello di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per creare una struttura di data mining che usa dati da un modello multidimensionale. I modelli di data mining basati su cubi OLAP possono utilizzare la colonna e i valori di tabelle dei fatti, dimensioni e gruppi di misure come attributi per l'analisi.  
@@ -84,7 +84,7 @@ ms.locfileid: "36065957"
   
         -   Se si desidera includere la colonna come uno degli attributi stimabili per il modello, selezionare **Stima**.  
   
-        -   Qualsiasi elemento che si includono nella struttura ma non si specifica come input o attributo stimabile viene aggiunto alla struttura con il flag `Ignore`; ciò significa che i dati vengono elaborati quando si compila il modello ma non utilizzati nell'analisi ed è disponibile solo per ripristino di emergenza illthrough. Questo aspetto può essere utile se si desidera includere dettagli come i nomi dei clienti, ma non si desidera utilizzarli nell'analisi.  
+        -   Qualsiasi elemento incluso nella struttura, ma non si specifica come input o attributo stimabile viene aggiunto alla struttura con il flag `Ignore`; ciò significa che i dati vengono elaborati quando si compila il modello, ma non viene usato nell'analisi ed è disponibile solo per il ripristino di emergenza illthrough. Questo aspetto può essere utile se si desidera includere dettagli come i nomi dei clienti, ma non si desidera utilizzarli nell'analisi.  
   
      Fare clic su **Fine** per chiudere la parte della procedura guidata correlata alle tabelle annidate. È possibile ripetere il processo per aggiungere più colonne nidificate.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36065957"
   
 13. Nella pagina **Completamento procedura guidata** specificare un nome per la nuova struttura di data mining OLAP e per il modello di data mining iniziale.  
   
-14. Fare clic su **Fine**.  
+14. Scegliere **Fine**.  
   
 15. Nella pagina **Completamento procedura guidata** è anche disponibile l'opzione per creare una dimensione del modello di data mining e/o un cubo usando la dimensione del modello di data mining. Queste opzioni sono supportate solo per i modelli compilati utilizzando gli algoritmi seguenti:  
   

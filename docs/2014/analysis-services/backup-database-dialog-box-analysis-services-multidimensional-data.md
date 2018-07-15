@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Database (Analysis Services - dati multidimensionali) di backup | Documenti Microsoft
+title: Finestra di dialogo Database (Analysis Services - dati multidimensionali) di backup | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.Backup.f1
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 64e8b814cab69ca66127f28b55062232e45a60fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d325d1cb634f1fb7548ff0a1030c97e866681b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234441"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Backup database (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Backup database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per eseguire il backup di un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in un file di backup in formato file di backup di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] con estensione abf.  
@@ -64,7 +64,7 @@ ms.locfileid: "36068601"
 > [!NOTE]  
 >  Se questa opzione non viene selezionata e il file di backup specificato in **File di backup** o il file di backup remoto specificato in **File di backup remoto** esiste, si verifica un errore.  
   
- **Applicare la compressione**  
+ **Applica compressione**  
  Selezionare questa opzione per comprimere il contenuto del file di backup e dei file di backup remoti eventualmente specificati.  
   
  **Crittografa file di backup**  

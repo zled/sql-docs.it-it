@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - managing data in a table
 ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fc4ffd0658e150e0fee8913f20d3e5cc02384f68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b152587ad63cd09281e61dcc746fd1dc18cda1b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297911"
 ---
 # <a name="summary-managing-data-in-a-hierarchical-table"></a>Riepilogo: Gestione di dati in una tabella gerarchica
   Il tipo di dati `hierarchyid` consente di facilitare la creazione delle tabelle che riflettono i dati gerarchici e quindi di creare indici depth-first e breadth-first per accedere in modo efficiente alla tabella. Utilizzare i metodi gerarchici per eseguire query e modificare i dati.  
@@ -30,7 +30,7 @@ ms.locfileid: "36070232"
  [Esercitazione: Uso del tipo di dati hierarchyid](tutorial-using-the-hierarchyid-data-type.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dati gerarchici &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
+ [I dati gerarchici &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
  [Guida di riferimento ai metodi per il tipo di dati hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

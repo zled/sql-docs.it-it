@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 00f6cc4f2a6d2283a44b91319362bf0cd171a448
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d30e1259da07f315b424747ad977917e8c68eb30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285476"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Passaggio 4: Aggiunta di una destinazione file flat
   L'output degli errori della trasformazione Lookup Currency Key reindirizza alla trasformazione Script tutte le righe di dati in cui l'operazione di ricerca ha avuto esito negativo. Per migliorare le informazioni sugli errori, la trasformazione Script esegue uno script che ottiene la descrizione degli errori.  
@@ -40,11 +40,11 @@ ms.locfileid: "36077827"
   
 6.  Nella finestra di dialogo **Formato file flat** verificare che sia stato selezionato **Delimitato** e quindi scegliere **OK**.  
   
-7.  Nel **Editor gestione connessione File Flat**nella **nome gestione connessione** digitare `Error Data`.  
+7.  Nel **Editor gestione connessione File Flat**, nella **nome gestione connessione** nella casella `Error Data`.  
   
 8.  Nella finestra di dialogo **Editor gestione connessione file flat** fare clic su **Sfoglia**e individuare la cartella in cui archiviare il file.  
   
-9. Nel **Open** della finestra di dialogo per **nome File**, tipo `ErrorOutput.txt`e quindi fare clic su **aprire**.  
+9. Nel **aperto** della finestra di dialogo per **nome File**, tipo `ErrorOutput.txt`e quindi fare clic su **Open**.  
   
 10. Nella finestra di dialogo **Editor gestione connessione file flat** verificare che nella casella **Impostazioni locali** sia presente Inglese (Stati Uniti) e che nella **Tabella codici** sia presente 1252 (ANSI -Latino I).  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36077827"
 15. Fare clic su **OK**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Passaggio 5: Test del pacchetto creato nella lezione 4 dell'esercitazione](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+ [Passaggio 5: Test del pacchetto creato nell'esercitazione della lezione 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

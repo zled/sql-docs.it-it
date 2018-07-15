@@ -1,5 +1,5 @@
 ---
-title: Avvisi (progettazione Database) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Avvisi (progettazione Database) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.warnings.f1
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e00890be8fac0fb97f0887034d5c7b04c049ebd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44fddc4c62bc9d0fddc71cf2b4249c3fab8d0d68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233851"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Avvisi (Progettazione database) (Analysis Services - Dati multidimensionali)
   Usare la scheda **Avvisi** per visualizzare e ignorare totalmente le regole e per visualizzare e riattivare istanze specifiche di avvisi ignorati. La scheda **Avvisi** visualizza due griglie: **Regole per gli avvisi di progettazione** e **Avvisi ignorati**.  
@@ -66,14 +66,14 @@ ms.locfileid: "36068776"
  **Commenti**  
  Visualizza il commento immesso quando l'avviso è stato ignorato. Qui è possibile aggiungere o modificare un commento.  
   
- **Abilitare nuovamente**  
+ **Abilitare di nuovo**  
  Riattiva gli avvisi selezionati.  
   
 > [!NOTE]  
 >  Se un oggetto ha un avviso, ma è in uno stato non valido o è stato rimosso manualmente dal progetto, verrà visualizzata un'icona Errori nell'elenco accanto all'avviso. Per ignorare l'avviso, selezionarlo, quindi fare clic su **Riabilita**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Chiudere la finestra di dialogo avviso &#40;Analysis Services - dati multidimensionali&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
- [Generale &#40;finestra di progettazione di Database&#41; &#40;Analysis Services - dati multidimensionali&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
+ [Chiudere la finestra di dialogo di avviso &#40;Analysis Services - dati multidimensionali&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
+ [Generale &#40;finestra di progettazione del Database&#41; &#40;Analysis Services - dati multidimensionali&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Creare una dimensione utilizzando una tabella esistente | Documenti Microsoft
+title: Creare una dimensione utilizzando una tabella esistente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], dimensions
 - main dimension tables
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - standard dimensions [Analysis Services]
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d01e7148df98b5b05cb3adac6e5f64ce68905191
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ff912d4c828efec8bacd163ae6b47f980a94beb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319251"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Creare una dimensione utilizzando una tabella esistente
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile usare Creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione da una tabella esistente. A questo scopo selezionare l'opzione **Usa una tabella esistente** nella pagina **Seleziona metodo di creazione** della procedura guidata. L'utilizzo di questa opzione fa sì che la struttura della dimensione venga creata in base alle tabelle della dimensione, alle relative colonne e a tutte le relazioni tra colonne presenti in una vista origine dati esistente. La procedura guidata campiona i dati nella tabella di origine e nelle tabelle correlate. Usa questi dati per definire le colonne attributo basate sulle colonne nelle tabelle delle dimensioni, nonché per definire le gerarchie di attributi, denominate gerarchie *definite dall'utente* . È possibile utilizzare Progettazione dimensioni al termine della Creazione guidata dimensione per aggiungere, rimuovere e configurare attributi e gerarchie nella dimensione.  
@@ -57,12 +57,12 @@ ms.locfileid: "36069723"
 ## <a name="selecting-dimension-attributes"></a>Selezione degli attributi della dimensione  
  Dopo avere selezionato tutte le tabelle dimensione, tramite la pagina **Selezione attributi dimensione** scegliere gli attributi che si desidera includere nella dimensione da tali tabelle. Tutte le colonne sottostanti di queste tabelle sono disponibili come potenziali attributi della dimensione. L'attributo chiave della dimensione deve essere selezionato e deve essere abilitato per esplorare.  
   
- Per impostazione predefinita, la procedura guidata imposta il tipo di un attributo su `Regular`. Comunque, è necessario eseguire il mapping di attributi specifici ad un tipo di attributo diverso che meglio rappresenta i dati. Ad esempio, la tabella dbo.DimAccount nel database di esempio [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW contiene una colonna AccountCodeAlternateKey che fornisce il numero del conto. Anziché impostare il tipo `Regular` per questo attributo, si potrebbe voler eseguire il mapping di questo attributo per il `Account Number` tipo.  
+ Per impostazione predefinita, la procedura guidata imposta il tipo di un attributo su `Regular`. Comunque, è necessario eseguire il mapping di attributi specifici ad un tipo di attributo diverso che meglio rappresenta i dati. Ad esempio, la tabella dbo.DimAccount nel database di esempio [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW contiene una colonna AccountCodeAlternateKey che fornisce il numero del conto. Anziché impostare il tipo su `Regular` per questo attributo, si potrebbe voler eseguire il mapping di questo attributo per il `Account Number` tipo.  
   
 > [!NOTE]  
 >  Se il tipo di dimensione e i tipi di attributo standard non sono stati definiti al momento della creazione della dimensione, è possibile utilizzare la Configurazione guidata funzionalità di Business Intelligence per impostare tali valori dopo aver creato la dimensione. Per altre informazioni, vedere [Aggiungere funzionalità di Business Intelligence per le dimensioni a una dimensione](bi-wizard-add-dimension-intelligence-to-a-dimension.md) o (per una dimensione di tipo conti) [Aggiungere funzionalità di Business Intelligence per la contabilità a una dimensione](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
- La procedura guidata imposta automaticamente il tipo di dimensione in base ai tipi di attributo specificati. I tipi di attributo specificati nella procedura guidata hanno impostato i `Type` proprietà per gli attributi. L'impostazione della proprietà `Type` per la dimensione ed i suoi attributi offre informazioni sui contenuti di una dimensione alle applicazioni server e client. In alcuni casi, questi `Type` le impostazioni delle proprietà solo fornire indicazioni per le applicazioni client e sono facoltativi. In altri casi, come per gli account, il tempo o valuta le dimensioni, questi `Type` le impostazioni delle proprietà determinano un comportamento specifico basato su server e potrebbe essere necessario per implementare determinati comportamenti del cubo.  
+ La procedura guidata imposta automaticamente il tipo di dimensione in base ai tipi di attributo specificati. I tipi di attributo specificati nella procedura guidata hanno impostato il `Type` proprietà per gli attributi. L'impostazione della proprietà `Type` per la dimensione ed i suoi attributi offre informazioni sui contenuti di una dimensione alle applicazioni server e client. In alcuni casi, questi `Type` solo le impostazioni delle proprietà forniscono materiale sussidiario per le applicazioni client ed è facoltative. In altri casi, ad esempio per gli account, tempo o valuta le dimensioni, questi `Type` le impostazioni delle proprietà determinano comportamenti specifici basati su server e possono essere necessarie per implementare determinati comportamenti del cubo.  
   
  Per altre informazioni sui tipi di dimensione e attributo, vedere [Tipi di dimensioni](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md), [Configurare tipi di attributi](attribute-properties-configure-attribute-types.md).  
   
@@ -91,9 +91,9 @@ ms.locfileid: "36069723"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare una dimensione generando una tabella Non temporale nell'origine dati](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
- [Creare una dimensione temporale generando una tabella dei tempi](create-a-time-dimension-by-generating-a-time-table.md)   
+ [Creare una dimensione temporale generando una tabella temporale](create-a-time-dimension-by-generating-a-time-table.md)   
  [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)   
- [Creare una dimensione temporale generando una tabella dei tempi](create-a-time-dimension-by-generating-a-time-table.md)   
+ [Creare una dimensione temporale generando una tabella temporale](create-a-time-dimension-by-generating-a-time-table.md)   
  [Creare una dimensione generando una tabella non temporale nell'origine dati](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

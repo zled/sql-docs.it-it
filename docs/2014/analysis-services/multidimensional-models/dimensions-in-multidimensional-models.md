@@ -1,5 +1,5 @@
 ---
-title: Dimensioni nei modelli multidimensionali | Documenti Microsoft
+title: Dimensioni nei modelli multidimensionali | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLAP [Analysis Services], dimensions
 - dimensions [Analysis Services], about dimensions
 - OLAP objects [Analysis Services], dimensions
 ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f048b8c4a531ce32714a7bda328a60102e0ef2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 41e833e61095082e16511daae92eaed8e950ba73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303061"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensioni nei modelli multidimensionali
   Una dimensione di database è una raccolta di oggetti correlati, denominati attributi, che è possibile utilizzare per offrire informazioni sui dati della tabella dei fatti in uno o più cubi. Gli attributi tipici di una dimensione dei prodotti possono ad esempio essere costituiti da nome del prodotto, categoria di prodotto, linea di prodotti, dimensioni del prodotto e prezzo del prodotto. Tali oggetti sono associati a una o più colonne di una o più tabelle di una vista origine dati Per impostazione predefinita, questi attributi sono visibili come gerarchie di attributo e possono essere utilizzati per acquisire familiarità con le tabelle dei fatti in un cubo. Possono inoltre essere organizzati in gerarchie definite dall'utente che definiscono percorsi di navigazione utili per l'esplorazione dei dati di un cubo.  
@@ -44,7 +44,7 @@ ms.locfileid: "36069495"
 ## <a name="in-this-section"></a>Argomenti della sezione  
  Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  
   
- [Definire le dimensioni del Database](define-database-dimensions.md)  
+ [Definire le dimensioni del database](define-database-dimensions.md)  
  Descrive come modificare e configurare una dimensione di database tramite Progettazione dimensioni.  
   
  [Riferimento alle proprietà degli attributi delle dimensioni](dimension-attribute-properties-reference.md)  
@@ -56,7 +56,7 @@ ms.locfileid: "36069495"
  [Creare gerarchie definite dall'utente](user-defined-hierarchies-create.md)  
  Descrive come definire, modificare e configurare un gerarchia definita dall'utente degli attributi di una dimensione tramite Progettazione dimensioni.  
   
- [Utilizzare la procedura guidata di Business Intelligence per migliorare le dimensioni](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
+ [Usare la Configurazione guidata funzionalità di Business Intelligence per migliorare le dimensioni](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Descrive come ottimizzare una dimensione di database mediante la Configurazione guidata funzionalità di Business Intelligence.  
   
 ## <a name="see-also"></a>Vedere anche  

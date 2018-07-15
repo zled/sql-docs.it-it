@@ -1,5 +1,5 @@
 ---
-title: Gli sviluppatori&#39;s Guide (replica) | Documenti Microsoft
+title: Per gli sviluppatori&#39;Guida (replica) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - replication [SQL Server], development
 ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fb0ffaba9b07a24c6d3ae27e442c4b4e41d8f255
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8726fd8595c769513fa56203f33fd2a3ee58b0e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320272"
 ---
-# <a name="developer39s-guide-replication"></a>Gli sviluppatori&#39;s Guide (replica)
+# <a name="developer39s-guide-replication"></a>Per gli sviluppatori&#39;Guida (replica)
   La possibilità da configurare, gestire e monitorare a livello di codice una topologia di replica consente di semplificare le attività di replica ripetute e di migliorare l'esperienza utente per le applicazioni basate sulla replica. Mediante la programmazione della replica, è possibile offrire funzionalità di replica personalizzate agli utenti finali, senza che sia necessario conoscere le stored procedure di replica e i file eseguibili degli agenti di replica o utilizzare l'interfaccia di replica implementata da [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
  Di seguito vengono descritti gli scenari in cui le applicazioni possono trarre vantaggio dall'accesso a livello di codice ai servizi di replica:  

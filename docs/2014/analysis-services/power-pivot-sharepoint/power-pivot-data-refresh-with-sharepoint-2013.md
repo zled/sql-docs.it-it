@@ -1,5 +1,5 @@
 ---
-title: Aggiornamento dati PowerPivot con SharePoint 2013 | Documenti Microsoft
+title: Aggiornamento dati PowerPivot con SharePoint 2013 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca3c358b6cd8d371a0b93b33ab449998a38d24b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa5a4ddce8c51b3e360c4fc4f243b90b310fd07f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280777"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>Aggiornamento dati PowerPivot con SharePoint 2013
   L'aggiornamento dei modelli di dati di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in SharePoint 2013 prevede l'utilizzo di Excel Services come componente principale per caricare e aggiornare i modelli di dati in un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eseguita in modalità SharePoint. Il server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito esternamente alla farm di SharePoint.  
   
- Architettura dell'aggiornamento dati precedenti era basata esclusivamente sul servizio di sistema PowerPivot per caricare e aggiornare i modelli di dati in una modalità SharePoint [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza. L'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] veniva eseguita localmente nel server applicazioni PowerPivot. Con la nuova architettura, inoltre, è stato introdotto un nuovo metodo per gestire le informazioni di pianificazione, ad esempio i metadati dell'elemento della cartella di lavoro nella raccolta documenti. L'architettura in SharePoint 2013 Excel Services supporta sia l' **aggiornamento dati interattivo** che l' **aggiornamento dati pianificato**.  
+ Architettura dell'aggiornamento dati precedenti era basata esclusivamente sul servizio di sistema PowerPivot per caricare e aggiornare modelli di dati in una modalità SharePoint [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza. L'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] veniva eseguita localmente nel server applicazioni PowerPivot. Con la nuova architettura, inoltre, è stato introdotto un nuovo metodo per gestire le informazioni di pianificazione, ad esempio i metadati dell'elemento della cartella di lavoro nella raccolta documenti. L'architettura in SharePoint 2013 Excel Services supporta sia l' **aggiornamento dati interattivo** che l' **aggiornamento dati pianificato**.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36069725"
   
 4.  **Nota:** la cartella di lavoro aggiornata non viene salvata di nuovo automaticamente nella raccolta documenti.  
   
- ![l'aggiornamento dati interattivo](../media/as-interactive-datarefresh-sharepoint2013.gif "l'aggiornamento dati interattivo")  
+ ![l'aggiornamento dati interattivo](../media/as-interactive-datarefresh-sharepoint2013.gif "aggiornamento dati interattivo")  
   
 ###  <a name="bkmk_windows_auth_interactive_data_refresh"></a> Autenticazione di Windows con connessioni dati della cartella di lavoro e aggiornamento dati interattivo  
  Tramite Excel Services viene inviato al server Analysis Services un comando di elaborazione per fare in modo che il server rappresenti un account utente. Per ottenere diritti di sistema sufficienti per eseguire il processo di delega di rappresentazione utente, è necessario il privilegio **Agire come parte del sistema operativo** nel server locale per l'account del servizio Analysis Services. Tramite il server Analysis Services deve inoltre essere possibile delegare le credenziali dell'utente alle origini dati. Il risultato della query viene inviato a Excel Services.  
@@ -167,7 +167,7 @@ ms.locfileid: "36069725"
   
     -   Salvare di nuovo la cartella di lavoro nel database di contenuto.  
   
- ![gestire i menu di scelta rapida aggiornamento dati](../media/as-manage-datarefresh-sharepoint2013.gif "gestire menu di scelta rapida aggiornamento dati")  
+ ![gestire i menu di scelta rapida dati aggiornamento](../media/as-manage-datarefresh-sharepoint2013.gif "gestire menu di scelta rapida aggiornamento dati")  
   
 > [!TIP]  
 >  Per informazioni sull'aggiornamento delle cartelle di lavoro da SharePoint online, vedere [cartelle di lavoro di aggiornamento di Excel con modelli PowerPivot incorporati da SharePoint Online (white paper)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  
@@ -198,7 +198,7 @@ ms.locfileid: "36069725"
   
 2.  Nella parte inferiore del dashboard si notino **Aggiornamento dati: attività recente** e **Aggiornamento dati: errori recenti**.  
   
-3.  Per ulteriori informazioni su dati di utilizzo e sulla relativa abilitazione, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+3.  Per altre informazioni sui dati di utilizzo e sulla relativa abilitazione, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **Dati del log di diagnostica:** è possibile visualizzare i dati del log di diagnostica di SharePoint correlati all'aggiornamento dati. Innanzitutto, verificare la configurazione della registrazione dei dati di diagnostica per il **servizio PowerPivot** nella pagina **Monitoraggio** di Amministrazione centrale SharePoint. È possibile che sia necessario aumentare il livello di registrazione per l'evento meno critico nel log. Impostare, ad esempio, temporaneamente il valore su **Dettagliato** , quindi eseguire di nuovo le operazioni di aggiornamento dati.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "36069725"
   
 -   La categoria **Aggiornamento dati**.  
   
- Controllare **Configura registrazione diagnostica**. Per altre informazioni, vedere [Configura e visualizzare i file di Log di SharePoint e la registrazione diagnostica &#40;PowerPivot per SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
+ Controllare **Configura registrazione diagnostica**. Per altre informazioni, vedere [configurare e visualizzare i file di Log di SharePoint e la registrazione diagnostica &#40;PowerPivot per SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 ##  <a name="datarefresh_additional_authentication"></a> Considerazioni aggiuntive sull'autenticazione  
  Tramite le impostazioni della finestra di dialogo **Impostazioni autenticazione Excel Services** in Excel 2013 è possibile stabilire l'identità Windows utilizzata da Excel Services e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per l'aggiornamento dati.  
@@ -240,6 +240,6 @@ ms.locfileid: "36069725"
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
- [Installazione PowerPivot per SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [Installazione di PowerPivot per SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

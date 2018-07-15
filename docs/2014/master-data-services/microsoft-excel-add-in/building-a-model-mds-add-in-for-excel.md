@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ba6915e8d5e39af32279fbaca208c97fd076d337
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cd4544aefe0f8a5b474b073ef4279f50c4d8a434
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320291"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Compilazione di un modello (componente aggiuntivo MDS per Excel)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]gli amministratori possono eseguire un subset delle funzioni amministrative disponibili nell'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
@@ -64,11 +64,11 @@ ms.locfileid: "36068742"
   
 -   [Esportazione di dati &#40;Master Data Services&#41;](../overview-exporting-data-master-data-services.md)  
   
--   [Gerarchie &#40;Master Data Services&#41;](../hierarchies-master-data-services.md)  
+-   [Gerarchie di &#40;Master Data Services&#41;](../hierarchies-master-data-services.md)  
   
 -   [Le raccolte &#40;Master Data Services&#41;](../collections-master-data-services.md)  
   
--   [Versioni di &#40;Master Data Services&#41;](../versions-master-data-services.md)  
+-   [Le versioni &#40;Master Data Services&#41;](../versions-master-data-services.md)  
   
 -   [Sicurezza &#40;Master Data Services&#41;](../security-master-data-services.md)  
   

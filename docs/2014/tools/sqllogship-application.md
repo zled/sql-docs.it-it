@@ -1,5 +1,5 @@
 ---
-title: Applicazione sqllogship | Documenti Microsoft
+title: Applicazione sqllogship | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 66b07b7867d8337941c052818d665d9590550806
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 065491c5bdf2254f6ee356383f7992c6d52b6c0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306681"
 ---
 # <a name="sqllogship-application"></a>Applicazione sqllogship
   L'applicazione **sqllogship** esegue un'operazione di backup, copia o ripristino e le attività di pulizia associate per una configurazione per il log shipping. L'operazione viene eseguita su una specifica istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per un database specifico.  
   
- ![Icona collegamento dell'argomento](../../2014/database-engine/media/topic-link.gif "icona Collegamento argomento") per le convenzioni della sintassi, vedere [prompt dei comandi riferimento utilità &#40;motore di Database&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Icona di collegamento un argomento](../../2014/database-engine/media/topic-link.gif "icona di collegamento argomento") per le convenzioni della sintassi, vedere [prompt dei comandi di riferimento all'utilità &#40;motore di Database&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -73,12 +73,12 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
  **-querytimeout** *timeout_value*  
  Specifica la quantità di tempo assegnata per l'avvio dell'operazione specificata prima del timeout del tentativo. Il valore predefinito non prevede un periodo di timeout. *timeout_value* corrisponde a **int****  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  È consigliabile utilizzare i processi di backup, copia e ripristino per eseguire le operazioni corrispondenti, quando possibile. Per avviare questi processi da un'operazione batch o un'altra applicazione, chiamare la stored procedure [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) .  
   
  La cronologia di log shipping creata da **sqllogship** è intercalata dalla cronologia creata dai processi di backup, copia e ripristino del log shipping. Se si prevede di usare ripetutamente **sqllogship** per eseguire operazioni di backup, copia o ripristino per una configurazione per il log shipping, prendere in considerazione di disabilitare il processo o i processi per il log shipping corrispondenti. Per altre informazioni, vedere [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
- Il **sqllogship** dell'applicazione, SqlLogShip.exe, viene installato nella directory x:\Program Files\Microsoft SQL Server\120\Tools\Binn.  
+ Il **sqllogship** applicazione SqlLogShip.exe, viene installato nella directory Programmi\Microsoft SQL Server\120\Tools\Binn x:\Programmi\Microsoft.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  **sqllogship** usa l'autenticazione di Windows. L'account con autenticazione di Windows utilizzato per l'esecuzione del comando deve disporre delle autorizzazioni di accesso alle directory di Windows e delle autorizzazioni per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il requisito dipende dal fatto che il comando **sqllogship** specifichi l'opzione **-backup**, **-copy**oppure **-restore** .  

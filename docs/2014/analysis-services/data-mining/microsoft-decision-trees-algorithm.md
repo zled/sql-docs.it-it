@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Decision Trees | Documenti Microsoft
+title: Algoritmo Microsoft Decision Trees | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], discrete attributes
 - predictions [Analysis Services], continuous attributes
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
 caps.latest.revision: 70
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dc3f7cac98736fe558bf19ce00fc57115cade782
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff4f1b4bb2311231e09e6e150592c6a2dabb3d19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310781"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Algoritmo Microsoft Decision Trees
-  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Decision Trees è un algoritmo di classificazione e regressione incluso in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la modellazione predittiva di attributi discreti e continui.  
+  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees è un algoritmo di classificazione e regressione disql [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la modellazione predittiva di attributi discreti e continui.  
   
  Per gli attributi discreti, l'algoritmo esegue le stime in base alle relazioni tra le colonne di input in un set di dati. I valori, noti come stati, di tali colonne vengono utilizzati per stimare gli stati di una colonna designata come stimabile. In particolare, l'algoritmo identifica le colonne di input correlate alla colonna stimabile. Se ad esempio, in uno scenario finalizzato alla stima dei clienti che probabilmente acquisteranno una bicicletta, nove su dieci tra i clienti più giovani acquistano la bicicletta mentre solo due su dieci tra i clienti meno giovani la acquistano, l'algoritmo desume che l'età rappresenta un criterio di stima valido per l'acquisto di biciclette. L'albero delle decisioni esegue le stime in base alla tendenza verso un determinato risultato.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "36069309"
 ## <a name="how-the-algorithm-works"></a>Funzionamento dell'algoritmo  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees compila un modello di data mining creando una serie di divisioni nell'albero. Queste divisioni sono rappresentate come *nodi*. L'algoritmo aggiunge un nodo al modello ogni volta che rileva una colonna di input correlata in modo significativo alla colonna stimabile. Il modo in cui l'algoritmo determina una divisione varia a seconda che venga stimata una colonna continua o discreta.  
   
- L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees usa la *selezione delle caratteristiche* come guida per la selezione degli attributi più utili. Selezione funzionalità viene utilizzata da tutti i [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] algoritmi di data mining per migliorare le prestazioni e la qualità dell'analisi. La caratteristica di selezione degli attributi è importante per impedire agli attributi poco importanti di utilizzare il processore. Se si utilizza un numero eccessivo di input o di attributi stimabili quando si progetta un modello di data mining, l'elaborazione del modello può richiedere molto tempo oppure la memoria potrebbe risultare insufficiente. I metodi usati per determinare se dividere l'albero includono le metriche standard del settore per *entropia* e le reti bayesiane *.* Per altre informazioni sui metodi usati per selezionare attributi significativi e quindi assegnare un punteggio e classificare gli attributi, vedere [Selezione delle caratteristiche &#40;Data mining&#41;](feature-selection-data-mining.md).  
+ L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees usa la *selezione delle caratteristiche* come guida per la selezione degli attributi più utili. Selezione delle caratteristiche viene utilizzata da tutti [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] algoritmi di data mining per migliorare le prestazioni e la qualità dell'analisi. La caratteristica di selezione degli attributi è importante per impedire agli attributi poco importanti di utilizzare il processore. Se si utilizza un numero eccessivo di input o di attributi stimabili quando si progetta un modello di data mining, l'elaborazione del modello può richiedere molto tempo oppure la memoria potrebbe risultare insufficiente. I metodi usati per determinare se dividere l'albero includono le metriche standard del settore per *entropia* e le reti bayesiane *.* Per altre informazioni sui metodi usati per selezionare attributi significativi e quindi assegnare un punteggio e classificare gli attributi, vedere [Selezione delle caratteristiche &#40;Data mining&#41;](feature-selection-data-mining.md).  
   
- Un problema comune nei modelli di data mining che è il modello diventa troppo sensibile alle piccole differenze nei dati di training, in tal caso viene denominato *eccessivamente adattato* oppure *training eccessivo*. Non è possibile generalizzare un modello overfitted agli altri set di dati. Per evitare l'overfitting di un particolare set di dati, nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees vengono utilizzate tecniche per il controllo della crescita dell'albero. Per una spiegazione più dettagliata del funzionamento dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees, vedere [Guida di riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md).  
+ Un problema comune nei modelli di data mining è che il modello diventa troppo sensibile alle piccole differenze nei dati di training, nel qual caso viene detto *eccessivamente adattato* oppure *training eccessivo*. Non è possibile generalizzare un modello overfitted agli altri set di dati. Per evitare l'overfitting di un particolare set di dati, nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees vengono utilizzate tecniche per il controllo della crescita dell'albero. Per una spiegazione più dettagliata del funzionamento dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees, vedere [Guida di riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md).  
   
 ### <a name="predicting-discrete-columns"></a>Stima di colonne discrete  
  Per illustrare il modo in cui l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees compila un albero per una colonna stimabile discreta, è possibile usare un istogramma. Nel diagramma seguente viene illustrato un istogramma che traccia la colonna stimabile Bike Buyers in base alla colonna di input Age. L'istogramma mostra che l'età consente di determinare se una persona acquisterà o meno una bicicletta.  
@@ -96,7 +96,7 @@ ms.locfileid: "36069309"
   
  Per informazioni generali sulla creazione di query in base ai modelli di data mining, vedere [Query di data mining](data-mining-queries.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 -   Supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   
@@ -106,8 +106,8 @@ ms.locfileid: "36069309"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft Decision Trees algoritmo riferimento tecnico](microsoft-decision-trees-algorithm-technical-reference.md)   
- [Esempi di Query modello di alberi delle decisioni](decision-trees-model-query-examples.md)   
- [Contenuto del modello di albero delle decisioni di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Riferimento tecnico algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)   
+ [Esempi di Query del modello di alberi delle decisioni](decision-trees-model-query-examples.md)   
+ [Contenuto dei modelli di albero delle decisioni di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

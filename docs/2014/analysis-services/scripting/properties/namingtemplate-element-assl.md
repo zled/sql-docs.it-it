@@ -1,5 +1,5 @@
 ---
-title: Elemento NamingTemplate (ASSL) | Documenti Microsoft
+title: Elemento NamingTemplate (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8eb2589b0b33a0b3268e6104b51c3e3612ad894
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ba346be8664cf26992143c15789684c503fdf2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300841"
 ---
 # <a name="namingtemplate-element-assl"></a>Elemento NamingTemplate (ASSL)
   Definisce come vengono denominati i livelli in una gerarchia padre-figlio costruita dal [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) elemento padre.  
@@ -61,8 +61,8 @@ ms.locfileid: "36069013"
 |Elemento padre|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il valore della `NamingTemplate` elemento viene utilizzato solo dagli attributi padre (in altre parole, il valore del [utilizzo](usage-element-dimensionattribute-assl.md) elemento del `DimensionAttribute` elemento padre è impostato su *padre*).  
+## <a name="remarks"></a>Note  
+ Il valore del `NamingTemplate` elemento viene utilizzato solo dagli attributi padre (in altre parole, il valore della [utilizzo](usage-element-dimensionattribute-assl.md) elemento del `DimensionAttribute` elemento padre è impostato su *padre*).  
   
  Quando un attributo padre viene utilizzato per costruire una gerarchia, i livelli della gerarchia vengono determinati dalle relazioni padre-figlio fra membri contenuti nell'attributo padre. Impossibile dedurre i nomi del livello dai nomi di attributo utilizzati per la gerarchia, a differenza di altre dimensioni.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36069013"
   
  Utilizzare due asterischi (*) per includere l'asterisco (\*) carattere in un nome di livello come parte di un modello di denominazione.  
   
- L'elemento che corrisponde al padre di `NamingTemplate` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ L'elemento che corrisponde al padre di `NamingTemplate` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento NamingTemplateTranslations &#40;ASSL&#41;](../collections/translations-element-assl.md)   

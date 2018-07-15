@@ -1,5 +1,5 @@
 ---
-title: Funzione LocalDBStopInstance | Documenti Microsoft
+title: Funzione LocalDBStopInstance | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d17ccc37d7e181e32ee5dde7706bae73fe9c847
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6c18afbf238fde8b7a713cb8830a89b6193b6aa2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302301"
 ---
 # <a name="localdbstopinstance-function"></a>Funzione LocalDBStopInstance
   Viene arrestata l'esecuzione dell'istanza del database locale di SQL Server Express specificata.  
@@ -106,7 +106,7 @@ HRESULT LocalDBStopInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Errore imprevisto. Per informazioni, vedere il registro eventi.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Per un esempio di codice che utilizza l'API LocalDB, vedere [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  

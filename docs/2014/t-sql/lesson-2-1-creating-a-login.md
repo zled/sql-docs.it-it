@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating a login
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33e3b3bcccfc88a3071a053de7154bf16d50265d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 3ec962379f992bcb89b6227cf3af13705d1193ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312771"
 ---
 # <a name="creating-a-login"></a>Creazione di un account di accesso
   Per accedere a [!INCLUDE[ssDE](../includes/ssde-md.md)] è necessario che gli utenti dispongano di un account di accesso. L'account di accesso può rappresentare l'identità dell'utente come un account di Windows o come membro di un gruppo di Windows oppure un account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] esistente solo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se possibile, è consigliabile utilizzare l'autenticazione di Windows.  
@@ -30,7 +30,7 @@ ms.locfileid: "36065730"
   
 ### <a name="to-create-a-new-windows-account"></a>Per creare un nuovo account di Windows  
   
-1.  Fare clic su **avviare**, fare clic su **eseguire**, nel **aprire** , digitare `%SystemRoot%\system32\compmgmt.msc /s`, quindi fare clic su **OK** per aprire il programma di gestione Computer.  
+1.  Fare clic su **avviare**, fare clic su **eseguire**, nel **aprire** , digitare `%SystemRoot%\system32\compmgmt.msc /s`, quindi fare clic su **OK** per aprire l'applicazione Gestione Computer.  
   
 2.  In **Utilità di sistema**espandere **Utenti e gruppi locali**, fare clic con il pulsante destro del mouse su **Utenti**e quindi scegliere **Nuovo utente**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36065730"
     >  Poiché `Mary` non è un account di dominio, il nome utente può essere autenticato solo nel computer in questione.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Concessione dell'accesso a un Database](lesson-2-2-granting-access-to-a-database.md)  
+ [Concessione dell'accesso a un database](lesson-2-2-granting-access-to-a-database.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   

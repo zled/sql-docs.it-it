@@ -1,5 +1,5 @@
 ---
-title: Ricerca e visualizzazione dei report in Gestione Report (Generatore Report e SSRS) | Documenti Microsoft
+title: Ricerca e visualizzazione dei report in Gestione Report (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fca55f69bcd97e0b3ac2199383cf28c0ad327313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fed7c8d79acf9f02620e6f11ac6eaee08113a819
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313193"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>Ricerca e visualizzazione di report in Gestione report (Generatore report e SSRS)
   Gestione report è uno strumento basato sul Web in cui sono disponibili funzionalità per la visualizzazione e la gestione dei report. Fa parte di un'installazione del server di report. Per aprire Gestione report, digitare l'URL relativo in una finestra del browser. Per informazioni sui requisiti del browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md). Per ulteriori informazioni sulla configurazione di un URL di Gestione report nel server di report, rivolgersi all'amministratore di sistema. Per altre informazioni, vedere [Configurare Gestione report &#40;modalità nativa&#41;](../report-server/configure-web-portal.md).  
   
- Le autorizzazioni che l'amministratore di sistema ha impostato sul server di report determinano gli elementi che vengono visualizzati quando si utilizza Gestione report. Le autorizzazioni vengono concesse tramite un'assegnazione di ruolo. Per individuare e visualizzare report, è necessario disporre di un'assegnazione di ruolo che includa l'attività Visualizzazione di report. Per individuare un report in un server di report, cercarlo in base al nome o alla descrizione oppure esplorare le cartelle del server di report. È possibile cercare o individuare solo report pubblicati o caricati nel server di report. Per ulteriori informazioni su come eseguire la ricerca di un report, vedere [ricerca di report e altri elementi di &#40;Generatore Report e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
+ Le autorizzazioni che l'amministratore di sistema ha impostato sul server di report determinano gli elementi che vengono visualizzati quando si utilizza Gestione report. Le autorizzazioni vengono concesse tramite un'assegnazione di ruolo. Per individuare e visualizzare report, è necessario disporre di un'assegnazione di ruolo che includa l'attività Visualizzazione di report. Per individuare un report in un server di report, cercarlo in base al nome o alla descrizione oppure esplorare le cartelle del server di report. È possibile cercare o individuare solo report pubblicati o caricati nel server di report. Per altre informazioni su come eseguire la ricerca di un report, vedere [ricerca di report e altri elementi di &#40;Generatore Report e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -59,7 +59,7 @@ Barra multifunzione di Gestione report
 -   Per cercare testo specifico all'interno di un report, utilizzare la barra degli strumenti nella parte superiore del report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca di report e altri elementi &#40;SSRS e Generatore Report&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [Ricerca di report e altri elementi &#40;Report e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

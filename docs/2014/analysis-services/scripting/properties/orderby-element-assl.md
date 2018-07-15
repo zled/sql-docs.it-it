@@ -1,5 +1,5 @@
 ---
-title: Elemento OrderBy (ASSL) | Documenti Microsoft
+title: Elemento OrderBy (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OrderBy element
 ms.assetid: d7a0564b-430e-44eb-913a-fe1f98917d0f
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 18fa2af79937c7f927413f0e601b6969bbfeb3bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2151ac4cdcaa095d663682c936158557c1fea2be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291317"
 ---
 # <a name="orderby-element-assl"></a>Elemento OrderBy (ASSL)
   Descrive in che modo ordinare i membri contenuti nell'attributo.  
@@ -61,14 +61,14 @@ ms.locfileid: "36069496"
 |Elemento padre|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
 |-----------|-----------------|  
 |*Nome*|Ordina per nome del membro.|  
 |*Key*|Ordina per chiave del membro.|  
-|*AttributeKey*|Ordina per chiave del membro dell'attributo specificato nella [OrderByAttributeID](id-element-assl.md) elemento di `DimensionAttribute`.|  
+|*AttributeKey*|Ordinare per chiave del membro dell'attributo specificato nel [OrderByAttributeID](id-element-assl.md) elemento `DimensionAttribute`.|  
 |*AttributeName*|Ordina per nome del membro dell'attributo specificato nell'elemento `OrderByAttributeID` di `DimensionAttribute`.|  
   
  L'enumerazione che corrisponde ai valori consentiti di `OrderBy` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.OrderBy>.  

@@ -1,5 +1,5 @@
 ---
-title: Elemento Assemblies (ASSL) | Documenti Microsoft
+title: Elemento Assemblies (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Assemblies element
 ms.assetid: 8c9be991-0717-4fcf-97d9-13df0f27da05
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 777a1125d36f0d874ef85645c688ececffc2c869
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2990946d1e124027cf653db3148c55d4c828a3e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314811"
 ---
 # <a name="assemblies-element-assl"></a>Elemento Assemblies (ASSL)
-  Contiene la raccolta di [Assembly](../objects/assembly-element-assl.md) gli elementi associati a un [Server](../objects/server-element-assl.md) oppure [Database](../objects/database-element-assl.md) elemento.  
+  Contiene la raccolta di [assieme](../objects/assembly-element-assl.md) gli elementi associati a un [Server](../objects/server-element-assl.md) oppure [Database](../objects/database-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36064994"
 |Elementi padre|[Database](../objects/database-element-assl.md), [Server](../objects/server-element-assl.md)|  
 |Elementi figlio|[Assembly](../objects/assembly-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.AssemblyCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

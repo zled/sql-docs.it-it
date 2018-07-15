@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - auditing [Reporting Services]
 - verifying report execution
@@ -21,13 +21,13 @@ ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6ed7df4dc1c9bb9af8aa48a8b53506ebeab767ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be05b7ef8ffde732d6bdd85fb17be6aa25683134
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319851"
 ---
 # <a name="verifying-a-report-run"></a>Verifica dell'esecuzione di un report
   Per visualizzare informazioni sullo stato di elaborazione di un report, è possibile utilizzare i file di log oppure controllare le informazioni sullo stato visualizzate con il report in Gestione report.  
@@ -44,13 +44,13 @@ ms.locfileid: "36065042"
   
 |Tipo di report|Posizione delle informazioni sulla data e l'ora|Operazioni da eseguire per visualizzare le informazioni|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|Report che viene eseguito come snapshot del report|Pagina Contenuto. Per altre informazioni, vedere [Pagina Contenuto &#40;Gestione report&#41;](../contents-page-report-manager.md).|1) Individuare la cartella che contiene il report.<br />2) Impostare la visualizzazione Dettagli per la cartella.<br />3) 3) si noti la data e ora nella **quando eseguire** colonna.|  
+|Report che viene eseguito come snapshot del report|Pagina Contenuto. Per altre informazioni, vedere [Pagina Contenuto &#40;Gestione report&#41;](../contents-page-report-manager.md).|1) Individuare la cartella che contiene il report.<br />2) Impostare la visualizzazione Dettagli per la cartella.<br />3) 3) prendere nota della data e ora nella **, quando eseguita** colonna.|  
 |Snapshot della cronologia del report|Pagina delle proprietà Cronologia. Per altre informazioni, vedere [Pagina delle proprietà Opzioni snapshot &#40;Gestione report&#41;](../snapshot-options-properties-page-report-manager.md).|1) Aprire il report.<br />2) Fare clic sulla pagina **Proprietà** .<br />3) Fare clic sulla scheda **Cronologia** .<br />4) Osservare data e ora nella colonna **Data ultima esecuzione** .|  
 |Report memorizzato nella cache|Pianificazione utilizzata per creare e aggiornare il report memorizzato nella cache.|1) Aprire il report.<br />2) Fare clic sulla pagina **Proprietà** .<br />3) Fare clic sulla scheda **Esecuzione** .<br />4) Aprire la pianificazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [File di log e origini di Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Impostare le proprietà di elaborazione di Report](set-report-processing-properties.md)   
+ [Impostare le proprietà di elaborazione dei Report](set-report-processing-properties.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)  
   
   

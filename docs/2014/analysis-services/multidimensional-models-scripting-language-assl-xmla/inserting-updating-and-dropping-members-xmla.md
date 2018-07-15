@@ -1,5 +1,5 @@
 ---
-title: Inserimento, aggiornamento ed eliminazione di membri (XMLA) | Documenti Microsoft
+title: Inserimento, aggiornamento ed eliminazione di membri (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - dimensions [Analysis Services], XML for Analysis
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b283d0eec203422b97b9e7981783ac81999dc18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 394a0448101846db2b6852224e39fedc2dd5fe74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308521"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Inserimento, aggiornamento ed eliminazione di membri (XMLA)
-  È possibile usare il [inserire](../xmla/xml-elements-commands/insert-element-xmla.md), [aggiornare](../xmla/xml-elements-commands/update-element-xmla.md), e [eliminare](../xmla/xml-elements-commands/drop-element-xmla.md) comandi XML for Analysis (XMLA) consentono rispettivamente di inserire, aggiornare o eliminare membri da una dimensione abilitata per la scrittura. Per ulteriori informazioni sulle dimensioni abilitate per la scrittura, vedere [dimensioni abilitate per la scrittura](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+  È possibile usare la [inserire](../xmla/xml-elements-commands/insert-element-xmla.md), [aggiornare](../xmla/xml-elements-commands/update-element-xmla.md), e [Drop](../xmla/xml-elements-commands/drop-element-xmla.md) comandi XML for Analysis (XMLA) consentono rispettivamente di inserire, aggiornare o eliminare membri da una dimensione abilitata per la scrittura. Per altre informazioni sulle dimensioni abilitate per la scrittura, vedere [dimensioni abilitate per la scrittura](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 ## <a name="inserting-new-members"></a>Inserimento di nuovi membri  
  Il comando `Insert` consente di inserire nuovi membri in attributi specificati in una dimensione abilitata per la scrittura.  
@@ -109,7 +109,7 @@ ms.locfileid: "36069061"
     >  Gli elementi `Attribute` inclusi in un comando `Drop` devono contenere solo le proprietà `AttributeName` e `Keys`. In caso contrario, è possibile che si verifichi un errore.  
   
 ### <a name="dropping-members-in-parent-attributes"></a>Eliminazione di membri in attributi padre  
- Impostazione di [DeleteWithDescendants](../xmla/xml-elements-properties/deletewithdescendants-element-xmla.md) proprietà indica che i discendenti di un membro padre devono essere eliminati anche con il membro padre. Se questo valore è impostato su false, i discendenti immediati del membro padre vengono invece promossi al livello in cui il membro padre si trovava in precedenza.  
+ Impostando il [DeleteWithDescendants](../xmla/xml-elements-properties/deletewithdescendants-element-xmla.md) proprietà indica che i discendenti del membro padre devono essere eliminati anche con il membro padre. Se questo valore è impostato su false, i discendenti immediati del membro padre vengono invece promossi al livello in cui il membro padre si trovava in precedenza.  
   
 > [!IMPORTANT]  
 >  Per eliminare sia il membro padre che i relativi discendenti, è sufficiente che un utente disponga delle autorizzazioni per l'eliminazione del solo membro padre e non è necessario che disponga delle autorizzazioni per l'eliminazione dei discendenti.  

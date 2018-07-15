@@ -1,5 +1,5 @@
 ---
-title: Conversioni di valuta (Analysis Services) | Documenti Microsoft
+title: Conversioni di valuta (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple currency conversions
 - monetary data [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - many-to-one currency conversions [Analysis Services]
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe7eb5df9c2f25912d95aa9b0d72a6effaf06f2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d2a439a5ef4d422b69b95d1c76dbeefa39b658a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289827"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversioni di valuta (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Solo dati multidimensionali  
@@ -58,7 +58,7 @@ ms.locfileid: "36070169"
  Dimensione di tipo Valuta  
  Una dimensione del database definita con le impostazioni seguenti:  
   
--   Il `Type` proprietà della dimensione è impostata su Currency.  
+-   Il `Type` della dimensione è impostata su Currency.  
   
 -   La proprietà `Type` di un attributo della dimensione è impostata su CurrencyName.  
   
@@ -72,18 +72,18 @@ ms.locfileid: "36070169"
   
 -   Tra una dimensione temporale e il gruppo di misure di tipo Tasso esiste una relazione tra dimensioni di tipo Regolare.  
   
--   Facoltativamente, la proprietà `Type` è impostata su ExchangeRate. Anche se nella configurazione guidata utilizza le relazioni con dimensioni di ora e valuta per identificare i gruppi di misure tasso, l'impostazione di `Type` proprietà su ExchangeRate consente alle applicazioni identificare più facilmente misura frequenza client gruppi.  
+-   Facoltativamente, la proprietà `Type` è impostata su ExchangeRate. Mentre nella configurazione guidata Usa le relazioni con dimensioni di ora e valuta per identificare i gruppi di misure tasso, l'impostazione di `Type` proprietà su ExchangeRate consente alle applicazioni identificare più facilmente misure frequenza client gruppi.  
   
 -   Una o più misure, che rappresentano i tassi di cambio inclusi nel gruppo di misure di tipo Tasso.  
   
  Dimensione di tipo Valuta report  
  La dimensione, specificata dalla Configurazione guidata funzionalità di Business Intelligence dopo che è stata definita una conversione di valuta, contenente le valute report per la conversione. La dimensione di tipo Valuta report è basata su una query denominata, definita nella vista origine dati su cui è basata la dimensione di tipo Valuta associata al gruppo di misure di tipo Tasso, che deriva dalla tabella della dimensione principale della dimensione di tipo Valuta. La dimensione è definita con le impostazioni seguenti:  
   
--   Il `Type` proprietà della dimensione è impostata su Currency.  
+-   Il `Type` della dimensione è impostata su Currency.  
   
--   Il `Type` dell'attributo chiave per la dimensione è impostata su CurrencyName.  
+-   Il `Type` dell'attributo chiave della dimensione è impostata su CurrencyName.  
   
--   Il `Type` di un attributo all'interno della dimensione è impostata su CurrencyDestination e la colonna associata all'attributo contiene gli identificatori di valuta che rappresentano le valute report per la conversione di valuta.  
+-   Il `Type` proprietà di un attributo all'interno della dimensione è impostata su CurrencyDestination e la colonna associata all'attributo contiene gli identificatori di valuta che rappresentano le valute report per la conversione di valuta.  
   
 ## <a name="defining-currency-conversions"></a>Definizione delle conversioni di valuta  
  La Configurazione guidata funzionalità di Business Intelligence consente di definire la funzionalità di conversione di valuta per un cubo. In alternativa, le conversioni di valuta possono essere definite in modo manuale tramite script MDX.  

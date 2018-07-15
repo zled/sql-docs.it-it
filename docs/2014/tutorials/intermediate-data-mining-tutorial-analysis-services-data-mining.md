@@ -1,5 +1,5 @@
 ---
-title: Intermedi dell'esercitazione sul Data Mining (Analysis Services - Data Mining) | Documenti Microsoft
+title: Esercitazione intermedia sul Data Mining (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 404b31d5-27f4-4875-bd60-7b2b8613eb1b
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 545c219623331ef167731c3142f36642e530307a
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2286ab1890865e651f8166ebd4cc8f0dd42274f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301301"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Esercitazione intermedia sul data mining (Analysis Services - Data mining)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] offre un ambiente integrato per la creazione e utilizzo di modelli di data mining. È possibile eseguire facilmente l'associazione a origini dati, creare e testare più modelli sugli stessi dati e distribuire modelli da utilizzare nelle analisi predittive.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce un ambiente integrato per la creazione e utilizzo di modelli di data mining. È possibile eseguire facilmente l'associazione a origini dati, creare e testare più modelli sugli stessi dati e distribuire modelli da utilizzare nelle analisi predittive.  
   
  Nell'esercitazione di base sul data mining è stato descritto come utilizzare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare una soluzione di data mining e sono stati compilati tre modelli a supporto di una campagna di mailing diretto per analizzare il comportamento di acquisto dei clienti e per individuare i potenziali acquirenti.  
   
@@ -37,32 +37,32 @@ ms.locfileid: "36312299"
 ## <a name="lesson-scenarios"></a>Scenari della lezione  
  Dopo la conclusione positiva della campagna di mailing diretto, si supponga di aver ricevuto la richiesta di sfruttare le proprie conoscenze di data mining per sviluppare diversi nuovi modelli da utilizzare nella pianificazione aziendale. Di seguito vengono descritte alcune di queste attività:  
   
--   **La previsione:** si creerà un *time series* modello per stimare le vendite dei prodotti in diverse aree del mondo. Verranno sviluppati singoli modelli per ogni area e imparare a usare *Stima incrociata*.  
+-   **Previsioni:** verrà creata una *time series* modello per prevedere le vendite di prodotti in diverse aree in tutto il mondo. Verranno sviluppati singoli modelli per ogni area e verrà informazioni su come usare *stime incrociate*.  
   
--   **Analisi degli acquisti:** si creerà un *modello di associazione*, per analizzare raggruppamenti di prodotti acquistati durante le visite al [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] sito e-commerce. Questo modello di analisi degli acquisti può essere utilizzato per consigliare prodotti ai clienti.  
+-   **Market basket analysis:** creerai un' *modello di associazione*, per analizzare raggruppamenti di prodotti acquistati durante le visite al [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] sito di e-commerce. Questo modello di analisi degli acquisti può essere utilizzato per consigliare prodotti ai clienti.  
   
--   **Analisi delle sequenze:** compili una *modello sequence clustering*, per analizzare l'ordine in cui i clienti acquistano i prodotti. Sulla base di questo modello è possibile pianificare le modifiche alla progettazione del sito Web o le nuove offerte di prodotti.  
+-   **Analisi delle sequenze:** crei una *modello sequence clustering*, per analizzare l'ordine in cui i clienti acquistano i prodotti. Sulla base di questo modello è possibile pianificare le modifiche alla progettazione del sito Web o le nuove offerte di prodotti.  
   
--   **Analisi dei fattori:** utilizzare un *rete neurale* modello per esplorare le possibili cause di qualità del servizio insufficiente dati call center. In base alle informazioni approfondite del modello preliminare, si creerà un *modello di regressione logistica* per stimare le strategie per migliorare l'esperienza dei clienti.  
+-   **Analisi dei fattori:** usi un *neural network* modello per esplorare le possibili cause di qualità del servizio insufficiente in dati call center. Basato su informazioni approfondite del modello preliminare, si creerà una *modello di regressione logistica* per prevedere le strategie per migliorare l'esperienza dei clienti.  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
  In questa esercitazione viene illustrato come creare e utilizzare tipi diversi di algoritmi di data mining. L'esercitazione è suddivisa nelle lezioni seguenti:  
   
- [Lezione 1: Creazione della soluzione intermedia di Data Mining &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
+ [Lezione 1: Creazione della soluzione intermedia di Data Mining &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
  In questa lezione verrà creato un nuovo progetto basato sul database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], per supportare diverse nuove viste origine dati e molti più modelli di data mining.  
   
- [Lezione 2: Compilazione di uno Scenario di previsione &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Lezione 2: Compilazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
  In questa lezione verrà creato un modello di data mining che può essere utilizzato in uno scenario di previsione. Verranno inoltre esplorati i modelli di data mining compilati con l'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series.  
   
  Verranno compilati modelli per le singole aree geografiche, oltre a un modello generale che può essere utilizzato per la stima incrociata.  
   
- [Lezione 3: Compilazione di uno Scenario Market Basket &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lezione 3: Compilazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
  In questa lezione verrà aggiunta una nuova vista origine dati e verrà illustrato come utilizzare le chiavi e le tabelle nidificate. In base a questi dati, verrà creato un modello di data mining che può essere utilizzato in uno scenario di analisi degli acquisti. Verranno inoltre esplorati i modelli di data mining compilati con l'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Association.  
   
- [Lezione 4: Compilazione di una Scenario di Clustering delle sequenze &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [Lezione 4: Compilazione di una Scenario di Clustering delle sequenze &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
  In questa lezione verrà creato un modello di data mining che può essere utilizzato in uno scenario di clustering delle sequenze. Verranno inoltre esaminati i modelli di data mining compilati con l'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering.  
   
- [Lezione 5: Compilazione di modelli di regressione logistica e di rete neurale &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Lezione 5: Creazione di reti neurali e modelli di regressione logistica &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
  In questa lezione si creeranno alcuni modelli di data mining correlati, utilizzando Microsoft Neural Network e gli algoritmi di Microsoft Logistic Regression. Si apprenderà inoltre a utilizzare le viste origine dati per esplorare i dati sottostanti i modelli.  
   
 ## <a name="requirements"></a>Requisiti  
@@ -79,6 +79,6 @@ ms.locfileid: "36312299"
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione di base di Data Mining](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Esercitazione su DMX per bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
- [Esercitazione su DMX per market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md)  
+ [Esercitazione su DMX per Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md)  
   
   

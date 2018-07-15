@@ -1,5 +1,5 @@
 ---
-title: Elemento Workload (DTA) | Documenti Microsoft
+title: Elemento Workload (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 71a7bfe2fe4d613117c1b52e83a7767a474a791e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b2ff6e041783707a6c9a7fa5e2f4472fa8cd901a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315011"
 ---
 # <a name="workload-element-dta"></a>Elemento Workload (DTA)
   Specifica il carico di lavoro da utilizzare per una sessione di ottimizzazione.  
@@ -53,15 +53,15 @@ ms.locfileid: "36068826"
 |**Elemento padre**|[Avviare e usare Ottimizzazione guidata motore di database](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
 |**Elementi figlio**|[File di elemento &#40;DTA&#41;](file-element-dta.md)<br /><br /> [Elemento database per il carico di lavoro &#40;DTA&#41;](database-element-for-workload-dta.md)<br /><br /> [Elemento EventString &#40;DTA&#41;](eventstring-element-dta.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Un carico di lavoro è un set di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sui database che si desidera ottimizzare. Ottimizzazione guidata motore di database può utilizzare come carichi di lavoro script [!INCLUDE[tsql](../../includes/tsql-md.md)] , file di traccia e tabelle di traccia.  
   
- Se viene specificato un carico di lavoro in un file di input XML e un carico di lavoro nella riga di comando con lo strumento **dta** , per l'ottimizzazione verrà utilizzato il carico di lavoro specificato nella riga di comando. Tutte le opzioni di ottimizzazione specificate nella riga di comando prevalgono su quelle specificate in un file di input XML. L'unica eccezione è rappresentata dal caso in cui una configurazione definita dall'utente venga specificata in modalità di valutazione nel file di input XML. Ad esempio, se viene immessa una configurazione nel `Configuration` elemento del file di input XML e `EvaluateConfiguration` elemento viene anche specificato come una delle opzioni di ottimizzazione, le opzioni di ottimizzazione specificate nel file di input XML sostituiranno le opzioni di ottimizzazione immesse dalla la riga di comando.  
+ Se viene specificato un carico di lavoro in un file di input XML e un carico di lavoro nella riga di comando con lo strumento **dta** , per l'ottimizzazione verrà utilizzato il carico di lavoro specificato nella riga di comando. Tutte le opzioni di ottimizzazione specificate nella riga di comando prevalgono su quelle specificate in un file di input XML. L'unica eccezione è rappresentata dal caso in cui una configurazione definita dall'utente venga specificata in modalità di valutazione nel file di input XML. Ad esempio, se viene immessa una configurazione nel `Configuration` elemento del file di input XML e `EvaluateConfiguration` elemento viene specificato come una delle opzioni di ottimizzazione, le opzioni di ottimizzazione specificate nel file di input XML sostituiranno le opzioni di ottimizzazione immesse dalla la riga di comando.  
   
  È necessario specificare un carico di lavoro per ogni sessione di ottimizzazione.  
   
 ## <a name="example"></a>Esempio  
- Esempio di codice seguente specifica la **MyDatabase.MyDBOwner.TuningTable001** tabella di traccia per il `Workload` elemento. La tabella **TuningTable001** è stata creata con il modello Tuning di SQL Server Profiler e salvando l'output della traccia come tabella.  
+ L'esempio di codice seguente specifica i **MyDatabase.MyDBOwner.TuningTable001** tabella di traccia per il `Workload` elemento. La tabella **TuningTable001** è stata creata con il modello Tuning di SQL Server Profiler e salvando l'output della traccia come tabella.  
   
 ```  
 <DTAXML ...>  

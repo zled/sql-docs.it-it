@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
 - Integration Services packages, expressions
@@ -22,13 +22,13 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9cb824a3e2c0321b8fcb782d8f7827e395afc2b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b4d8718e8a30fdc55da6601ad24e54923d9ae526
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289377"
 ---
 # <a name="use-property-expressions-in-packages"></a>utilizzo delle espressioni di proprietà nei pacchetti
   Un'espressione di proprietà è un'espressione assegnata a una proprietà per consentire l'aggiornamento dinamico della proprietà in fase di esecuzione. Un'espressione di proprietà, ad esempio, consente di aggiornare la riga A utilizzata dall'attività Invia messaggi inserendo un indirizzo di posta elettronica archiviato in una variabile.  
@@ -56,10 +56,10 @@ ms.locfileid: "36065181"
   
  Una proprietà può utilizzare una sola espressione di proprietà e a sua volta un'espressione di proprietà può essere applicata a una sola proprietà. È tuttavia possibile compilare più espressioni di proprietà identiche e assegnarle a proprietà diverse.  
   
- Alcune proprietà vengono impostate utilizzando valori specificati da enumeratori. Per fare riferimento a un membro di un enumeratore in un'espressione di proprietà, è necessario utilizzare il valore numerico equivalente al nome descrittivo di tale membro dell'enumeratore. Se, ad esempio, un'espressione di proprietà imposta il `LoggingMode` proprietà, che utilizza un valore di `DTSLoggingMode` enumerazione, l'espressione di proprietà deve utilizzare 0, 1 o 2 anziché i nomi descrittivi `Enabled`, `Disabled`, o `UseParentSetting`. Per altre informazioni, vedere [Costanti enumerate in espressioni di proprietà](enumerated-constants-in-property-expressions.md).  
+ Alcune proprietà vengono impostate utilizzando valori specificati da enumeratori. Per fare riferimento a un membro di un enumeratore in un'espressione di proprietà, è necessario utilizzare il valore numerico equivalente al nome descrittivo di tale membro dell'enumeratore. Ad esempio, se un'espressione di proprietà imposta la `LoggingMode` proprietà, che usa un valore compreso il `DTSLoggingMode` enumerazione, l'espressione di proprietà deve utilizzare 0, 1 o 2 anziché i nomi descrittivi `Enabled`, `Disabled`, o `UseParentSetting`. Per altre informazioni, vedere [Costanti enumerate in espressioni di proprietà](enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Interfaccia utente delle espressioni di proprietà  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornisce un set di strumenti per la compilazione e la gestione delle espressioni di proprietà.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornisce un set di strumenti per la creazione e la gestione delle espressioni di proprietà.  
   
 -   Pagina **Espressioni** degli editor personalizzati delle attività e dei contenitori Ciclo For e Ciclo Foreach. In pagina **Espressioni** è possibile modificare espressioni e visualizzare un elenco delle espressioni di proprietà usate da un'attività o da un contenitore Ciclo Foreach o Ciclo For.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36065181"
  Le espressioni di proprietà vengono caricate dopo il caricamento delle configurazioni di pacchetto. Le variabili, ad esempio, vengono innanzitutto aggiornate dalle relative configurazioni e quindi vengono valutate e caricate le espressioni di proprietà che utilizzano tali variabili. Di conseguenza, le espressioni di proprietà utilizzano sempre i valori delle variabili impostati dalle configurazioni.  
   
 > [!NOTE]  
->  Non è possibile usare il `Set` opzione del **dtexec** utilità per popolare un'espressione di proprietà.  
+>  Non è possibile usare la `Set` opzione del **dtexec** utilità per popolare un'espressione di proprietà.  
   
  Nella tabella seguente è indicato quando vengono valutate e caricate le espressioni di proprietà di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
@@ -108,9 +108,9 @@ ms.locfileid: "36065181"
 |Enumeratori Foreach|Dopo il caricamento delle configurazioni<br /><br /> Prima della convalida<br /><br /> Prima dell'esecuzione<br /><br /> Prima di ogni enumerazione del ciclo|  
   
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>Utilizzo di espressioni di proprietà nel ciclo Foreach  
- È spesso consigliabile implementare un'espressione di proprietà per impostare il valore della proprietà `ConnectionString` delle gestioni connessioni utilizzate nel contenitore Ciclo Foreach. Dopo che l'enumeratore esegue il mapping al valore corrente a una variabile in ogni iterazione del ciclo, l'espressione di proprietà è possibile utilizzare il valore di questa variabile per aggiornare il valore di `ConnectionString` proprietà in modo dinamico.  
+ È spesso consigliabile implementare un'espressione di proprietà per impostare il valore della proprietà `ConnectionString` delle gestioni connessioni utilizzate nel contenitore Ciclo Foreach. Dopo l'enumeratore esegue il mapping relativo valore corrente a una variabile in ogni iterazione del ciclo, l'espressione di proprietà può usare il valore di questa variabile per aggiornare il valore della `ConnectionString` proprietà in modo dinamico.  
   
- Se si desidera utilizzare espressioni di proprietà con la proprietà `ConnectionString` delle gestioni connessioni per file, più file, file flat e più file flat utilizzate da un ciclo Foreach, sarà necessario tenere conto di alcuni aspetti. Un pacchetto può essere configurato in modo da eseguire contemporaneamente più file eseguibili impostando la proprietà `MaxConcurrentExecutables` su un valore maggiore di 1 o al valore -1. Il valore -1 indica che il numero massimo di file eseguibili che possono essere eseguiti contemporaneamente è uguale al numero di processori più due. Per evitare conseguenze negative dell'esecuzione parallela di file eseguibili, il valore di `MaxConcurrentExecutables` deve essere impostato su 1. Se `MaxConcurrentExecutables` non è impostata su 1, il valore di `ConnectionString` proprietà non può essere garantita e i risultati sono imprevedibili.  
+ Se si desidera utilizzare espressioni di proprietà con la proprietà `ConnectionString` delle gestioni connessioni per file, più file, file flat e più file flat utilizzate da un ciclo Foreach, sarà necessario tenere conto di alcuni aspetti. Un pacchetto può essere configurato in modo da eseguire contemporaneamente più file eseguibili impostando la proprietà `MaxConcurrentExecutables` su un valore maggiore di 1 o al valore -1. Il valore -1 indica che il numero massimo di file eseguibili che possono essere eseguiti contemporaneamente è uguale al numero di processori più due. Per evitare conseguenze negative dell'esecuzione parallela di file eseguibili, il valore di `MaxConcurrentExecutables` deve essere impostato su 1. Se `MaxConcurrentExecutables` non è impostata su 1, il valore della `ConnectionString` proprietà non può essere garantita e i risultati sono imprevedibili.  
   
  Considerare, ad esempio, un ciclo Foreach che enumera i file in una cartella, recupera i nomi dei file e quindi utilizza l'attività Esegui SQL per inserire ogni nome di file in una tabella. Se la proprietà `MaxConcurrentExecutables` non è impostata su 1 e due istanze dell'attività Esegui SQL tentano di scrivere contemporaneamente nella tabella, potrebbero verificarsi conflitti di scrittura.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36065181"
  Le espressioni di esempio seguenti illustrano l'utilizzo di variabili di sistema, operatori, funzioni e valori letterali stringa nelle espressioni di proprietà.  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>Espressione di proprietà per la proprietà LoggingMode di un pacchetto  
- L'espressione di proprietà seguente consente di impostare la proprietà LoggingMode di un pacchetto. Nell'espressione sono utilizzate le funzioni DAY e GETDATE per ottenere un valore intero che rappresenta la parte del giorno in una data. Se il numero del giorno è 1 o 15, la registrazione verrà abilitata, altrimenti sarà disabilitata. Il valore 1 è il numero intero equivalente al membro di enumeratore LoggingMode `Enabled`, e il valore 2 è il numero intero equivalente al membro `Disabled`. Nell'espressione è necessario utilizzare il valore numerico corrispondente al nome del membro desiderato dell'enumeratore.  
+ L'espressione di proprietà seguente consente di impostare la proprietà LoggingMode di un pacchetto. Nell'espressione sono utilizzate le funzioni DAY e GETDATE per ottenere un valore intero che rappresenta la parte del giorno in una data. Se il numero del giorno è 1 o 15, la registrazione verrà abilitata, altrimenti sarà disabilitata. Il valore 1 è il valore intero equivalente al membro enumeratore LoggingMode `Enabled`, e il valore 2 è il valore intero equivalente al membro `Disabled`. Nell'espressione è necessario utilizzare il valore numerico corrispondente al nome del membro desiderato dell'enumeratore.  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   
@@ -176,6 +176,6 @@ ms.locfileid: "36065181"
 -   Articolo tecnico relativo agli [esempi di espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md)  
+ [Uso di variabili nei pacchetti](../use-variables-in-packages.md)  
   
   

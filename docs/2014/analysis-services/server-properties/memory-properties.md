@@ -1,5 +1,5 @@
 ---
-title: Proprietà della memoria | Documenti Microsoft
+title: Proprietà della memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LowMemoryLimit property
 - MinimumAllocatedMemory property
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c80e57803c1635cf6688ac8d8a562aa7e40f8818
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77902cfe21cf2f486007f802c0556bd410f46d4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286377"
 ---
 # <a name="memory-properties"></a>Proprietà della memoria
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà della memoria del server elencate nella tabella seguente. Per le linee guida di impostazione di queste proprietà, vedere la [Guida operativa di SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
@@ -51,7 +51,7 @@ ms.locfileid: "36065924"
  Si noti che `TotalMemoryLimit` deve essere sempre minore di `HardMemoryLimit`  
   
  `HardMemoryLimit`  
- Specifica una soglia di memoria superata la quale le sessioni utente attive verranno immediatamente terminate dall'istanza per ridurre l'utilizzo della memoria. Per tutte le sessioni terminate verrà visualizzato un errore che indica l'annullamento a causa di un numero eccessivo di richieste di memoria. Il valore predefinito, pari a zero (0), significa che il `HardMemoryLimit` verrà impostato su un valore a metà tra `TotalMemoryLimit` e la memoria fisica totale del sistema; se la memoria fisica del sistema è maggiore dello spazio di indirizzo virtuale dell'indirizzo del processo, quindi virtuale lo spazio verrà utilizzato per calcolare `HardMemoryLimit`.  
+ Specifica una soglia di memoria superata la quale le sessioni utente attive verranno immediatamente terminate dall'istanza per ridurre l'utilizzo della memoria. Per tutte le sessioni terminate verrà visualizzato un errore che indica l'annullamento a causa di un numero eccessivo di richieste di memoria. Il valore predefinito, ovvero zero (0), il `HardMemoryLimit` verrà impostato su un valore mediano tra `TotalMemoryLimit` e la memoria fisica totale del sistema; se la memoria fisica del sistema è maggiore dello spazio di indirizzo virtuale dell'indirizzo del processo, quindi virtuale lo spazio verrà utilizzato per calcolare `HardMemoryLimit`.  
   
  `VirtualMemoryLimit`  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -63,9 +63,9 @@ ms.locfileid: "36065924"
   
  Il valore predefinito è**1** . Questa proprietà abilita il paging su disco utilizzando il file di paging del sistema operativo (pagefile.sys).  
   
- Quando `VertiPaqPagingPolicy` è impostato su 1, è meno probabile che venga completata a causa di limitazioni di memoria perché il server tenterà di eseguire il paging su disco utilizzando il metodo che è stato specificato l'elaborazione. L'impostazione della proprietà `VertiPaqPagingPolicy` non garantisce che non si verificheranno mai gli errori della memoria. Gli errori di memoria insufficiente si possono comunque verificare nelle condizioni seguenti:  
+ Quando si `VertiPaqPagingPolicy` è impostato su 1, l'elaborazione è meno probabile che venga completata a causa di limitazioni di memoria perché il server tenterà di eseguire il paging su disco utilizzando il metodo specificato. L'impostazione della proprietà `VertiPaqPagingPolicy` non garantisce che non si verificheranno mai gli errori della memoria. Gli errori di memoria insufficiente si possono comunque verificare nelle condizioni seguenti:  
   
--   Non c'è abbastanza memoria per tutti i dizionari. Durante l'elaborazione, Analysis Services blocca i dizionari per ogni colonna in memoria e tutti i dizionari insieme non può superare il valore specificato per `VertiPaqMemoryLimit`.  
+-   Non c'è abbastanza memoria per tutti i dizionari. Durante l'elaborazione, Analysis Services blocca i dizionari per ogni colonna in memoria e tutti i dizionari insieme non può essere maggiore del valore specificato per `VertiPaqMemoryLimit`.  
   
 -   Lo spazio dell'indirizzo virtuale è insufficiente per il processo.  
   

@@ -1,5 +1,5 @@
 ---
-title: Tipo di elemento (Dimension) (ASSL) | Documenti Microsoft
+title: Tipo di elemento (Dimension) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 6a2798b1-26c7-49d8-b556-e681c69d9574
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 582d5b2052f2681630c5f0cd86facacd5e7cfc91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6afa3b273200630a4d36e0c4df679c58efb6bd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283947"
 ---
 # <a name="type-element-dimension-assl"></a>Elemento Type (Dimension) (ASSL)
   Fornisce informazioni sul contenuto della dimensione.  
@@ -61,8 +61,8 @@ ms.locfileid: "36065919"
 |Elemento padre|[Dimension](../objects/dimension-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Alcuni valori per `Type`, ad esempio *account*, determinare un comportamento specifico.  
+## <a name="remarks"></a>Note  
+ Alcuni valori per `Type`, ad esempio *account*, determinano comportamenti specifici.  
   
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
@@ -73,20 +73,20 @@ ms.locfileid: "36065919"
 |*Geography*|La dimensione contiene attributi geografici.|  
 |*Organizzazione*|La dimensione contiene attributi organizzativi.|  
 |*BillOfMaterials*|La dimensione contiene attributi della distinta base.|  
-|*Accounts*|La dimensione contiene attributi relativi ai conti. **Nota:** questo valore indica che la dimensione supporta le funzionalità specifiche per le dimensioni dell'account.|  
+|*Accounts*|La dimensione contiene attributi relativi ai conti. **Nota:** questo valore indica che la dimensione supporta le funzionalità specifiche delle dimensioni di tipo conti.|  
 |*Clienti*|La dimensione contiene attributi relativi ai clienti.|  
 |*Prodotti*|La dimensione contiene attributi relativi ai prodotti.|  
 |*Scenario*|La dimensione contiene attributi relativi agli scenari.|  
-|*Quantitativa*|La dimensione contiene attributi quantitativi.|  
+|*Quantitative*|La dimensione contiene attributi quantitativi.|  
 |*Utilità*|La dimensione contiene attributi di utilità.|  
 |*Valuta*|La dimensione contiene attributi di valuta.|  
-|*Velocità*|La dimensione contiene attributi relativi al tasso di cambio.|  
+|*Tariffe*|La dimensione contiene attributi relativi al tasso di cambio.|  
 |*Channel*|La dimensione contiene attributi relativi ai canali.|  
 |*Innalzamento di livello*|La dimensione contiene attributi relativi alle promozioni.|  
   
  L'enumerazione che corrisponde ai valori consentiti di `Type` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.DimensionType>.  
   
- L'elemento che corrisponde al padre di `Type` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Dimension>.  
+ L'elemento che corrisponde al padre di `Type` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Unire partizioni in Analysis Services (SSAS - multidimensionale) | Documenti Microsoft
+title: Unire partizioni in Analysis Services (SSAS - multidimensionale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], merging
 - merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b926c685b87f863c0b04e4ce570bec2573aebdf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78fcd5ce33ba73b4eb11e6449b84f3afe3f2028a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306571"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Unire partizioni in Analysis Services (SSAS - Multidimensionale)
   È possibile unire partizioni in un database [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente per consolidare i dati delle tabelle dei fatti da più partizioni dello stesso gruppo di misure.  
@@ -73,7 +73,7 @@ ms.locfileid: "36069303"
 ##  <a name="bkmk_Where"></a> Aggiornare l'origine partizione in seguito all'unione delle partizioni  
  Le partizioni vengono segmentate per query, ad esempio la clausola WHERE di una query SQL utilizzata per elaborare i dati, o per una tabella o query denominata che fornisce dati alla partizione. La proprietà `Source` nella partizione indica se la partizione è associata a una query o una tabella.  
   
- Quando si uniscono partizioni, il contenuto delle partizioni viene consolidato, ma la `Source` proprietà non viene aggiornata per riflettere l'ambito aggiuntivo della partizione. Ciò significa che se successivamente si rielaborerà una partizione che mantiene originale `Source`, si otterranno dati errati dalla partizione. La partizione aggregherà dati in modo errato al livello padre. Nell'esempio seguente viene illustrato questo comportamento.  
+ Quando si uniscono partizioni, il contenuto delle partizioni viene consolidato, ma il `Source` proprietà non viene aggiornata per riflettere l'ambito aggiuntivo della partizione. Ciò significa che se successivamente si rielaborerà una partizione che mantiene l'originale `Source`, si otterranno dati errati dalla partizione. La partizione aggregherà dati in modo errato al livello padre. Nell'esempio seguente viene illustrato questo comportamento.  
   
  **Problema**  
   
@@ -81,16 +81,16 @@ ms.locfileid: "36069303"
   
  **Soluzione**  
   
- La soluzione consiste nell'aggiornare il `Source` proprietà, regolando la clausola WHERE o query denominata oppure unendo manualmente i dati dalle tabelle dei fatti sottostante, per garantire che l'elaborazione successiva sia accurata per via dell'ambito esteso della partizione.  
+ La soluzione consiste nell'aggiornare il `Source` proprietà, regolando la clausola WHERE o la query denominata oppure unendo manualmente i dati dalle tabelle dei fatti sottostanti, per garantire che l'elaborazione successiva sia accurata per via dell'ambito esteso della partizione.  
   
  In questo esempio, dopo aver unito la partizione 3 alla partizione 2, è possibile applicare il filtro ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet') nella partizione 2 risultante per specificare che devono essere estratti dalla tabella dei fatti solo i dati relativi a [ColaDecaf] e a [ColaDiet] e che devono essere esclusi i dati relativi a [ColaFull]. In alternativa, è possibile specificare i filtri per la partizione 2 e la partizione 3 in fase di creazione, in modo che vengano combinati durante il processo di unione. In entrambi i casi, il cubo non conterrà dati duplicati dopo l'elaborazione della partizione.  
   
  **Conclusione**  
   
- Dopo l'unione di partizioni, controllare sempre il `Source` per verificare il filtro sia corretto per i dati uniti. Se si inizia con una partizione che include dati cronologici per Q1, Q2 e Q3 e si unisce quindi Q4, è necessario modificare il filtro affinché includa Q4. In caso contrario, la successiva elaborazione della partizione genererà risultati errati. Non sarà corretta per Q4.  
+ Dopo aver unito le partizioni, controllare sempre il `Source` per verificare il filtro sia corretto per i dati uniti. Se si inizia con una partizione che include dati cronologici per Q1, Q2 e Q3 e si unisce quindi Q4, è necessario modificare il filtro affinché includa Q4. In caso contrario, la successiva elaborazione della partizione genererà risultati errati. Non sarà corretta per Q4.  
   
 ##  <a name="bkmk_fact"></a> Considerazioni speciali per le partizioni segmentate dalla tabella dei fatti o dalla query denominata  
- Oltre alle query, le partizioni possono essere segmentate anche per tabella o query denominata. Se la partizione di origine e la partizione di destinazione utilizzano la stessa tabella dei fatti in un'origine dati o in una vista origine dati, la proprietà `Source` sarà valida in seguito all'unione delle partizioni. Specifica i dati della tabella dei fatti appropriati alla partizione risultante. Poiché i fatti necessari per la partizione risultante sono contenuti nel fatto di non tabella, alcuna modifica al `Source` proprietà è necessaria.  
+ Oltre alle query, le partizioni possono essere segmentate anche per tabella o query denominata. Se la partizione di origine e la partizione di destinazione utilizzano la stessa tabella dei fatti in un'origine dati o in una vista origine dati, la proprietà `Source` sarà valida in seguito all'unione delle partizioni. Specifica i dati della tabella dei fatti appropriati alla partizione risultante. Poiché i fatti necessari per la partizione risultante sono contenuti in fatto di tabella, non è possibile modificare per il `Source` proprietà è necessaria.  
   
  Le partizioni che utilizzano dati di più tabelle dei fatti o più query denominate richiedono ulteriori attività. In questo caso è necessario unire in modo manuale i dati della tabella dei fatti della partizione di origine alla tabella dei fatti della partizione di destinazione.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36069303"
   
 1.  In Esplora oggetti espandere il nodo **Gruppi di misure** del cubo contenente le partizioni che si desidera unire, quindi espandere **Partizioni**e fare clic con il pulsante destro del mouse sulla partizione di destinazione dell'operazione di unione. Se ad esempio si spostano dati delle tabelle dei fatti trimestrali in una partizione in cui sono archiviati dati delle tabelle dei fatti annuali, selezionare la partizione che contiene i dati delle tabelle dei fatti annuali.  
   
-2.  Fare clic su **Unisci partizioni** per aprire la **Unisci partizione \<nome partizione >** finestra di dialogo.  
+2.  Fare clic su **Unisci partizioni** per aprire il **Unisci partizione \<nome partizione >** nella finestra di dialogo.  
   
 3.  In **Partizioni di origine**selezionare la casella di controllo accanto a ogni partizione di origine che si desidera unire alla partizione di destinazione, quindi fare clic su **OK**.  
   
@@ -130,13 +130,13 @@ ms.locfileid: "36069303"
   
 4.  Fare clic con il pulsante destro del mouse sulla partizione che contiene i dati accumulati e scegliere **Proprietà**.  
   
-5.  Aprire il `Source` proprietà e modificare la clausola WHERE in modo che includa i dati della partizione appena uniti. Si tenga presente che il `Source` proprietà non viene aggiornata automaticamente. Se si Rielabora senza prima aggiornare il `Source`, si potrebbero ottenere tutti i dati previsti.  
+5.  Aprire il `Source` proprietà e modificare la clausola WHERE in modo che includa i dati della partizione appena uniti. Si tenga presente che il `Source` proprietà non viene aggiornata automaticamente. Se esegue la rielaborazione senza prima aggiornare il `Source`, potrebbe non ottenere tutti i dati previsti.  
   
 ##  <a name="bkmk_partitionsXMLA"></a> Come unire partizioni mediante XMLA  
  Per informazioni, vedere l'argomento [Unione di partizioni &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti l'elaborazione di Analysis Services](processing-analysis-services-objects.md)   
+ [Elaborazione di Analysis Services gli oggetti](processing-analysis-services-objects.md)   
  [Partizioni &#40;Analysis Services - dati multidimensionali&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Creare e gestire una partizione locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
  [Creare e gestire una partizione remota &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   

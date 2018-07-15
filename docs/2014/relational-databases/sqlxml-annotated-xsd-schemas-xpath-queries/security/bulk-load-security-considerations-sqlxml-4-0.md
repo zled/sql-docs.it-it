@@ -1,5 +1,5 @@
 ---
-title: Considerazioni sulla sicurezza di carico (SQLXML 4.0) di massa | Documenti Microsoft
+title: Considerazioni sulla sicurezza di carico (SQLXML 4.0) in blocco | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML Bulk Load [SQLXML], security
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c64b20924f12a94b467f32659009bea9760d0e71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 428041edc6418e71f08b757b622b6e5ebb640dba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280557"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Considerazioni sulla sicurezza del caricamento bulk (SQLXML 4.0)
   Di seguito sono riportate alcune linee guida relative alla sicurezza quando si utilizza il caricamento bulk XML:  
@@ -59,6 +59,6 @@ ms.locfileid: "36066043"
 -   Se l'utente imposta un file di log degli errori in cui scrivere gli errori relativi a SQLXML, a ogni esecuzione del caricamento bulk il file verrà sovrascritto con i dati dell'ultimo processo di caricamento bulk.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione del caricamento Bulk dei dati XML &#40;SQLXML 4.0&#41;](../bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Caricamento Bulk di dati XML &#40;SQLXML 4.0&#41;](../bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

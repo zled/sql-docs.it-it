@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati PartitionBinding (ASSL) | Documenti Microsoft
+title: Tipo di dati PartitionBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PartitionBinding data type
 ms.assetid: 859d4b47-31c7-4678-9388-254fec484299
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4e265cd83401d480de74adf89949dd8edf73616
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c34bee83ab6a32fe10d00b6d3450412e12729dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281917"
 ---
 # <a name="partitionbinding-data-type-assl"></a>Tipo di dati PartitionBinding (ASSL)
   Definisce un tipo di dati derivato che rappresenta un'associazione a un [partizione](../objects/partition-element-assl.md) elemento.  
@@ -62,10 +62,10 @@ ms.locfileid: "36077678"
 |Elementi figlio|[CubeID](../../xmla/xml-elements-properties/id-element-xmla.md), [DatabaseID](../../xmla/xml-elements-properties/databaseid-element-xmla.md), [PartitionID](../../xmla/xml-elements-properties/partitionid-element-xmla.md), [origine](../properties/source-element-binding-assl.md)|  
 |Elementi derivati|Vedere [associazione](binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
- Per ulteriori informazioni sul `Binding` tipo, incluse le tabelle di oggetti di Analysis Services Scripting Language (ASSL) del `Binding` tipo e la gerarchia di ereditarietà dei `Binding` tipi, vedere [tipo di dati Binding &#40;ASSL&#41;](binding-data-type-assl.md).  
+## <a name="remarks"></a>Note  
+ Per altre informazioni sul `Binding` tipo, incluse le tabelle di oggetti di Analysis Services Scripting Language (ASSL) del `Binding` tipo e la gerarchia di ereditarietà dei `Binding` tipi, vedere [associazione tipo di dati &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Per una panoramica delle associazioni dati in ASSL, vedere [origini dati e le associazioni &#40;multidimensionali SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Per una panoramica delle associazioni di dati in ASSL, vedere [origini dati e associazioni &#40;multidimensionale di SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi Analysis Services Scripting Language XML dei dati &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

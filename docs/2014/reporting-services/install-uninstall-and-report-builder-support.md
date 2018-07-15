@@ -1,5 +1,5 @@
 ---
-title: Installazione, disinstallazione e supporto di Generatore Report | Documenti Microsoft
+title: Installare, disinstallare e supporto di Generatore Report | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administering Report Builder
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 caps.latest.revision: 29
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ad374db45d6c106cef7ab2f3ff150143f0aa3029
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f6a75e3f558b13b1bd068341249c73649699256
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311441"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installazione, disinstallazione e supporto di Generatore report
   Generatore report è uno strumento di creazione di report che consente di creare, aggiornare e condividere report, parti del report e set di dati condivisi. Generatore report è disponibile in due versioni: autonoma e [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. La versione autonoma viene installata nel computer in uso dall'utente o da un amministratore. Il [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] versione viene installata automaticamente con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] e scaricato nel computer da Gestione Report o un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -29,15 +29,15 @@ ms.locfileid: "36065331"
  La versione autonoma di Generatore Report non è installata con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. È necessario scaricarla e installarla separatamente da [Generatore report di Microsoft® SQL Server® 2012](http://go.microsoft.com/fwlink/?LinkId=401502).  
   
 > [!NOTE]  
->  Non è possibile installare Generatore report in computer basati sul processore Itanium. Questo vale per il [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] sia alla versione autonoma di Generatore Report.  
+>  Non è possibile installare Generatore report in computer basati sul processore Itanium. Questo vale per il [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] e nelle versioni autonome di Generatore Report.  
   
- In genere, un amministratore installa e configura [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], concede l'autorizzazione per utilizzare la versione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] di Generatore report e gestisce cartelle e autorizzazioni per report, parti del report e set di dati condivisi salvati nel server di report. Per ulteriori informazioni [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] amministrazione, vedere [del Server di Report di Reporting Services &#40;modalità nativa&#41; ](report-server/reporting-services-report-server-native-mode.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione in linea](http://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
+ In genere, un amministratore installa e configura [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], concede l'autorizzazione per utilizzare la versione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] di Generatore report e gestisce cartelle e autorizzazioni per report, parti del report e set di dati condivisi salvati nel server di report. Per altre informazioni sulle [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] amministrazione, vedere [del Server di Report di Reporting Services &#40;in modalità nativa&#41; ](report-server/reporting-services-report-server-native-mode.md) nelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione Online di](http://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
   
 ##  <a name="Installing"></a> Installazione di Generatore Report  
- Generatore report è disponibile come server autonomo e [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] versioni. Utente o dall'amministratore scaricare e installare la versione autonoma nel computer in uso, mentre il [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] versione viene installata con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Generatore report può essere scaricato dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkID=186083).  
+ Generatore report è disponibile nella versione autonoma e [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] versioni. Utente o l'amministratore di scaricare e installare la versione autonoma nel computer in uso, mentre il [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] versione viene installata con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Generatore report può essere scaricato dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkID=186083).  
   
 > [!NOTE]  
->  Generatore report non può essere installato in computer basati sul processore Itanium 64. Questo vale per il [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] sia alla versione autonoma di Generatore Report.  
+>  Generatore report non può essere installato in computer basati sul processore Itanium 64. Questo vale per il [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] e nelle versioni autonome di Generatore Report.  
   
  Prima di installare una delle versioni di Generatore report, verificare i requisiti di sistema e installare qualsiasi prerequisito necessario.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36065331"
   
  .NET Framework 3.5 è disponibile gratuitamente e può essere scaricato dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkID=110520).  
   
- È possibile installare Generatore Report in qualsiasi [!INCLUDE[msCoName](../includes/msconame-md.md)] sistema operativo Windows che supporti il [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 3.5. ad esempio Windows Vista o Windows 7.  
+ È possibile installare Generatore Report in qualsiasi [!INCLUDE[msCoName](../includes/msconame-md.md)] sistema operativo Windows che supporta il [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 3.5. ad esempio Windows Vista o Windows 7.  
   
  È consigliabile che i computer sui quali verrà eseguito Generatore report dispongano di 512 MB di RAM. A seconda della complessità dei report che si eseguono, è tuttavia possibile utilizzare una quantità maggiore o minore di RAM.  
   
@@ -55,21 +55,21 @@ ms.locfileid: "36065331"
   
  È anche possibile eseguire l'installazione dalla riga di comando per includere opzioni quali, ad esempio, quelle che consentono di rendere l'installazione invisibile all'utente nonché di scrivere file di log per l'installazione. Nella documentazione relativa a Windows Installer, che consente di eseguire i file con estensione msi, vengono fornite informazioni sulle opzioni disponibili.  
   
- Per altre informazioni, vedere [Install Report Builder autonomo versione &#40;Generatore Report&#41;](install-windows/install-report-builder.md).  
+ Per altre informazioni, vedere [installa versione di autonoma di Generatore Report &#40;Generatore Report&#41;](install-windows/install-report-builder.md).  
   
  Un amministratore può utilizzare anche un software quale Microsoft Systems Manager Server (SMS) per installare automaticamente il programma nel computer in uso. Per informazioni sull'utilizzo del software specifico per l'installazione di Generatore report, fare riferimento alla relativa documentazione.   
   
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Installazione della versione ClickOnce di Generatore report nel computer in uso  
  Il [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] versione di Generatore Report viene installato con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Viene installata sia con le installazioni native sia con quelle integrate di SharePoint di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] è una tecnologia Microsoft per la distribuzione di applicazioni Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] consente agli utenti di installare ed eseguire un'applicazione Windows quale Generatore report facendo clic su un collegamento in una pagina Web. Per ulteriori informazioni sulla distribuzione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] le applicazioni, applicare [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] sicurezza delle applicazioni oppure eseguendo [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applicazioni nell'area Internet, vedere la "ClickOnce distribuzione per applicazioni Windows Form", "sicurezza in Panoramica sui Windows Form"o"Distribuzione Panoramica di applicazioni attendibili"articoli sul [!INCLUDE[msCoName](../includes/msconame-md.md)] sito Web MSDN all'indirizzo [www.microsoft.com/msdn](http://www.microsoft.com/msdn).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] è una tecnologia Microsoft per la distribuzione di applicazioni Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] consente agli utenti di installare ed eseguire un'applicazione Windows quale Generatore report facendo clic su un collegamento in una pagina Web. Per altre informazioni sulla distribuzione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] le applicazioni, applicare [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] protezione dell'applicazione oppure eseguendo [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applicazioni nell'area Internet, vedere la "distribuzione per Windows Form applicazioni ClickOnce", "sicurezza di Windows Forms Overview"o"Trusted Application Deployment Overview"gli articoli pubblicati sul [!INCLUDE[msCoName](../includes/msconame-md.md)] sito Web MSDN all'indirizzo [www.microsoft.com/msdn](http://www.microsoft.com/msdn).  
   
- Il [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] versione di Generatore Report si trova nel server di report e viene installato nel computer in uso quando si fa clic il **Generatore Report** pulsante in Gestione Report o fare clic sui **Report di Generatore Report** opzione il **nuovo documento** menu in una raccolta di SharePoint.  
+ Il [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] versione di Generatore Report si trova nel server di report e viene installato nel computer in uso quando si fa clic il **Generatore Report** pulsante in Gestione Report oppure fare clic sui **Report di Generatore Report** opzione il **nuovo documento** menu in una raccolta di SharePoint.  
   
 > [!NOTE]  
 >  Se nel menu **Nuovo documento** non sono elencate le opzioni **Report di Generatore report**, **Modello di Generatore report**e **Origine dati report** , i relativi tipi di contenuto devono essere aggiunti alla raccolta di SharePoint.   
   
- Generatore report può essere aperto da Gestione report o da una raccolta di SharePoint. Per ulteriori informazioni sull'apertura di Generatore Report, vedere [avvio di Generatore Report &#40;Generatore Report&#41;](report-builder/start-report-builder.md).  
+ Generatore report può essere aperto da Gestione report o da una raccolta di SharePoint. Per altre informazioni sull'apertura di Generatore Report, vedere [avviare Generatore Report &#40;Generatore Report&#41;](report-builder/start-report-builder.md).  
   
 ### <a name="report-builder-languages"></a>Lingue di Generatore report  
  Generatore report è disponibile in 21 lingue oltre all'inglese. Durante il download della versione autonoma di Generatore report, selezionare la lingua che si desidera installare, tenendo presente che è necessario ripetere il download per ogni lingua scelta.  
@@ -105,9 +105,9 @@ ms.locfileid: "36065331"
   
   
 ##  <a name="Uninstalling"></a> Disinstallazione di Generatore Report  
- È possibile disinstallare la versione autonoma di Generatore report dal Pannello di controllo o dalla riga di comando. Questa regola si applica solo alla versione autonoma di Generatore report. Il [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] di Generatore Report non può essere disinstallata separatamente. Viene sempre installato e disinstallato con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ È possibile disinstallare la versione autonoma di Generatore report dal Pannello di controllo o dalla riga di comando. Questa regola si applica solo alla versione autonoma di Generatore report. Il [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] di Generatore Report non può essere disinstallato separatamente. Viene sempre installato e disinstallato con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
- Per altre informazioni, vedere [disinstallare autonomo versione di Generatore Report &#40;Generatore Report&#41;](install-windows/uninstall-report-builder.md).  
+ Per altre informazioni, vedere [disinstallare stand-alone versione di Generatore Report &#40;Generatore Report&#41;](install-windows/uninstall-report-builder.md).  
   
   
 ##  <a name="Supporting"></a> Supporto di Generatore Report  
@@ -130,7 +130,7 @@ ms.locfileid: "36065331"
   
 -   Immagini quali immagini di sfondo e loghi che potrebbero essere utilizzati in più report e archiviati esternamente dai report per una gestione più semplice.  
   
- Per altre informazioni, vedere [gestione del contenuto di Server di Report &#40;modalità nativa SSRS&#41; ](report-server/report-server-content-management-ssrs-native-mode.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione in linea](http://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
+ Per altre informazioni, vedere [Gestione contenuto del Server di Report &#40;modalità nativa SSRS&#41; ](report-server/report-server-content-management-ssrs-native-mode.md) nelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione Online di](http://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
   
 ### <a name="permissions"></a>Autorizzazioni  
  L'amministratore concede l'autorizzazione al server di report. In qualità di utente di Generatore report, è necessario disporre delle autorizzazioni per il server di report prima di poter accedere al contenuto e alle funzionalità del server di report. Ad esempio potrebbe essere necessario utilizzare le parti del report archiviate nel server di report, aggiornare i report e salvarli nuovamente nel server di report, nonché eseguire i report in Gestione report. A seconda delle necessità e delle attività che si eseguono, possono essere concesse autorizzazioni di livello inferiore o superiore. Ad esempio, le autorizzazioni con privilegi minori vengono concesse agli utenti che devono solo aprire i report condivisi rispetto agli utenti che devono modificare un report condiviso.  
@@ -149,14 +149,14 @@ ms.locfileid: "36065331"
   
 -   Utilizzare il livello di autorizzazione di collaborazione, concesso al gruppo Membri per impostazioni predefinita, per consentire all'utente di gestire report e origini dati condivise nelle cartelle pubbliche. Questo livello di autorizzazione è concesso agli utenti più esperti.  
   
- Per informazioni generali sulle autorizzazioni e la creazione e utilizzo dei ruoli, vedere la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] documentazione nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione Online di](http://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
+ Per informazioni generali sulle autorizzazioni e la creazione e utilizzo dei ruoli, vedere la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] documentazione nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione in linea](http://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
   
 ### <a name="configuration-of-report-server"></a>Configurazione del server di report  
  Quando si creano report in Generatore report e ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installata in Windows Vista, Windows Server 2008 o Windows 7, è possibile che si verifichi un errore di accesso negato quando si tenta di accedere al server di report per aprire o salvare un report. Questo errore è causato dalla funzionalità di sicurezza Controllo account utente disponibile in Windows Vista, Windows Server 2008 e Windows 7 che limita l'utilizzo eccessivo di autorizzazioni elevate rimuovendo le autorizzazioni di amministratore al momento dell'accesso alle applicazioni.  
   
  Tramite la configurazione aggiuntiva, tuttavia, il server di report è disponibile per gli utenti di Generatore report. È possibile aggiungere gli URL di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ai siti attendibili. Per impostazione predefinita, Internet Explorer 7.0 o versioni successive viene eseguito in Modalità protetta in Windows Vista, Windows Server 2008 e Windows 7. La Modalità protetta è una funzionalità che impedisce alle richieste del browser di accedere a processi di alto livello eseguiti nello stesso computer. È possibile disabilitare la modalità protetta per le applicazioni del server di report aggiungendo le applicazioni come Siti attendibili. È necessario disporre dell'autorizzazione di amministratore per apportare questa modifica.  
   
- Per ulteriori informazioni sulla configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [Gestione configurazione Reporting Services &#40;CANC&#41; ](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode) nel [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) sul sito msdn.microsoft.com.  
+ Per altre informazioni sulla configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [Gestione configurazione Reporting Services &#40;CANC&#41; ](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode) nel [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) sul sito msdn.microsoft.com.  
   
   
 ##  <a name="SampleDatabases"></a> Database di esempio SQL Server  
@@ -166,13 +166,13 @@ ms.locfileid: "36065331"
   
 -   Il database OLTP Adventure Works supporta scenari di elaborazione di transazioni online standard per un produttore di biciclette fittizio (Adventure Works Cycles). Negli scenari sono inclusi i reparti di fabbricazione, vendite, acquisti, gestione dei prodotti, gestione dei contatti e risorse umane.  
   
--   Il [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database di seguito viene illustrato come compilare un data warehouse.  
+-   Il [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database viene illustrato come compilare un data warehouse.  
   
 -   Il progetto [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] può essere utilizzato per compilare un database AS per gli scenari di Business Intelligence.  
   
- I database di esempio non sono inclusi in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e non è installato quando si installa [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] o la versione autonoma di Generatore Report. possono però essere scaricati dal sito Web [CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). Tutte le versioni dei database di esempio vengono scaricate insieme. È possibile anche scaricare le versioni precedenti del database rilasciate con [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)].  
+ I database di esempio non sono inclusi con [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e non è installato quando si installa [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] o la versione autonoma di Generatore Report. possono però essere scaricati dal sito Web [CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). Tutte le versioni dei database di esempio vengono scaricate insieme. È possibile anche scaricare le versioni precedenti del database rilasciate con [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)].  
   
- Per i prerequisiti e istruzioni sul download e il [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database di esempio, vedere [prerequisiti di installazione per SQL Server 2008 Sample Databases](http://go.microsoft.com/fwlink/?LinkId=166648) e [installazione dei database di esempio ](http://go.microsoft.com/fwlink/?LinkId=166649) su CodePlex.  
+ Per i prerequisiti e istruzioni su come scaricare e installare il [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database di esempio, vedere [prerequisiti di installazione per i database di esempio di SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=166648) e [installando i database di esempio ](http://go.microsoft.com/fwlink/?LinkId=166649) su CodePlex.  
   
   
 ##  <a name="HowTo"></a> Procedure  

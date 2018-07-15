@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 0d742a0985177d9a6c860c6dedcb34eba128c930
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: ece469ea1140265ef70ecbd720bad350ca04905b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290873"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilità per tabelle con ottimizzazione per la memoria
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] fornisce durabilità completa per le tabelle ottimizzate per la memoria. Quando viene eseguito il commit di una transazione che ha modificato una tabella ottimizzata per la memoria, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], come avviene per le tabelle basate su disco, garantisce che le modifiche vengano rese permanenti, ovvero che saranno mantenute in seguito a un riavvio del database, a condizione che lo spazio di archiviazione sottostante sia disponibile. I componenti chiave della durabilità sono due: registrazione delle transazioni e salvataggio in modo permanente delle modifiche ai dati nell'archiviazione su disco.  
@@ -117,7 +117,7 @@ ms.locfileid: "36066468"
 ### <a name="life-cycle-of-a-cfp"></a>Ciclo di vita di una coppia di file di checkpoint  
  Le coppie di file di checkpoint attraversano sette stati prima di poter essere deallocate. In qualsiasi momento, le coppie di file di checkpoint si trovano in una delle fasi seguenti: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE e TOMBSTONE. Per una descrizione di queste fasi, vedere [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
- Dopo aver tenuto conto dello spazio di archiviazione utilizzato dalle coppie di file di checkpoint nei vari stati, lo spazio di archiviazione complessivo utilizzato dalle tabelle ottimizzate per la memoria durevoli può essere di oltre due volte maggiore delle dimensioni delle tabelle in memoria. La DMV [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) è possibile eseguire query per elencare tutti i checkpoint nel filegroup con ottimizzazione per la memoria, incluse le relative fasi. La transizione delle coppie di file di checkpoint dallo stato MERGE SOURCE a TOMBSTONE e infine a Garbage Collection può richiedere fino a cinque checkpoint, con ogni checkpoint seguito da un backup del log delle transazioni, se il database è configurato per il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  
+ Dopo aver tenuto conto dello spazio di archiviazione utilizzato dalle coppie di file di checkpoint nei vari stati, lo spazio di archiviazione complessivo utilizzato dalle tabelle ottimizzate per la memoria durevoli può essere di oltre due volte maggiore delle dimensioni delle tabelle in memoria. La vista DMV [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) è possibile eseguire query per elencare tutti i checkpoint nel filegroup ottimizzato per la memoria, incluse le relative fasi. La transizione delle coppie di file di checkpoint dallo stato MERGE SOURCE a TOMBSTONE e infine a Garbage Collection può richiedere fino a cinque checkpoint, con ogni checkpoint seguito da un backup del log delle transazioni, se il database è configurato per il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  
   
  È possibile forzare manualmente il checkpoint seguito dal backup del log per velocizzare il processo di Garbage Collection, ma questa operazione aggiungerà 5 coppie di file di checkpoint vuoti (5 coppie di file di dati/differenziali con un file di dati di 128 MB ciascuno). Negli scenari di produzione, i checkpoint e i backup del log automatici eseguiti come parte della strategia di backup effettuano la transazione delle coppie di file di checkpoint attraverso queste fasi senza richiedere alcun intervento manuale. La conseguenza del processo di Garbage Collection è il fatto che i database con tabelle ottimizzate per la memoria possono avere dimensioni di archiviazione maggiori rispetto alle dimensioni in memoria. Non è inusuale che le coppie di file di checkpoint abbiano dimensioni quattro volte maggiori di quelle delle tabelle ottimizzate per la memoria durevoli in memoria.  
   

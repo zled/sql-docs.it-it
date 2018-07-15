@@ -1,5 +1,5 @@
 ---
-title: 'Elenco di controllo distribuzione: Installare Reporting Services in una Farm SharePoint esistente | Documenti Microsoft'
+title: 'Elenco di controllo di distribuzione: Installare Reporting Services in una Farm SharePoint esistente | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d13c0329073781f54ac02b653b15ead4959bd96e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c7c7270a3c4ef11f12894c97b51bb6cd09389fea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297541"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Elenco di controllo per la distribuzione: installare Reporting Services in una farm di SharePoint esistente
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Server di report SharePoint può essere installato in una SharePoint Farm nuova o in una farm di SharePoint esistente. In questo argomento vengono descritti i possibili scenari e procedure consigliate per l'installazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una farm SharePoint esistente.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Server di report SharePoint può essere installato in una nuova Farm di SharePoint o in una farm di SharePoint esistente. In questo argomento vengono descritti i possibili scenari e procedure consigliate per l'installazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una farm SharePoint esistente.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Prima di eseguire il programma di installazione, esaminare le informazioni seguenti:  
@@ -30,12 +30,12 @@ ms.locfileid: "36069542"
 |Passaggio|Collegamento|  
 |----------|----------|  
 |Creare o identificare gli account utilizzati nella distribuzione di un server di report. È necessario disporre di un account del servizio server di report e di credenziali per la connessione al database del server di report||  
-|Definire un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ospitare il database del server di report. È possibile utilizzare un'istanza locale o remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È consigliabile scegliere un'istanza che si trovi in un computer dotato di sufficiente capacità di archiviazione per i report.||  
+|Definire un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ospitare il database del server di report. È possibile usare un'istanza locale o remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È consigliabile scegliere un'istanza che si trovi in un computer dotato di sufficiente capacità di archiviazione per i report.||  
 |Facoltativo. Se si desidera utilizzare la funzionalità di posta elettronica del server di report per le sottoscrizioni, individuare il nome del server o del gateway SMTP utilizzato per il servizio di posta elettronica nell'organizzazione|[Configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)|  
 |Nota: Se si sta aggiornando un computer da una precedente versione CTP [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e sono state apportate modifiche personalizzate ai file di configurazione, sarà necessario apportare le stesse modifiche ai file di configurazione, dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. I file interessati sono **web.config** e **client.config**.||  
   
 ## <a name="installation-scenarios"></a>Scenari di installazione  
- Nella tabella seguente vengono descritti i possibili scenari quando si installa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una farm SharePoint esistente. Modalità locale consente l'esecuzione del rendering report in locale dalla raccolta documenti di SharePoint, senza l'integrazione con un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server di report. A differenza del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i prodotti SharePoint è obbligatorio. Per altre informazioni sulla modalità locale, vedere [Report in modalità locale e Modalità connessa ed nel Visualizzatore di Report &#40;Reporting Services in modalità SharePoint&#41; ](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) e [dove trovare il componente aggiuntivo di Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+ Nella tabella seguente vengono descritti gli scenari possibili durante l'installazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una farm SharePoint esistente. Modalità locale consente l'esecuzione del rendering report in locale dalla raccolta documenti di SharePoint, senza l'integrazione con un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server di report. A differenza del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i prodotti SharePoint è obbligatorio. Per altre informazioni sulla modalità locale, vedere [Report in modalità locale e Report nel Visualizzatore di Report in modalità locale &#40;Reporting Services in modalità SharePoint&#41; ](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) e [dove trovare il componente aggiuntivo di Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 |Avvio configurazione|Flusso di lavoro|Fine della configurazione|Commenti|  
 |----------------------------|--------------|--------------------------|--------------|  
@@ -51,12 +51,12 @@ ms.locfileid: "36069542"
 |**Installazione e configurazione iniziale**||  
 |Installare il componente aggiuntivo SharePoint in tutti i computer front-end Web.|[Aggiungere un ulteriore front-end Web di Reporting Services a una farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Installare SQL Server [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services e il motore di database.|[Installare la modalità SharePoint di Reporting Services per SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
-|Creare almeno un'applicazione di servizio SSRS e configurare l'associazione applicazione di servizio.|Vedere la sezione 'Applicazione di servizio' [installare Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
+|Creare almeno un'applicazione di servizio SSRS e configurare l'associazione applicazione di servizio.|Vedere la sezione "Applicazione di servizio" in [installare Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |**Configurazione aggiuntiva**||  
 |Aggiungere i tipi di contenuto SSRS alla raccolta documenti.|[Aggiungere i tipi di contenuto di Server di Report a una raccolta &#40;Reporting Services in SharePoint la modalità integrata&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)|  
 |Effettuare il provisioning di SQL Server Agent|[Provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)|  
 |Configurare le impostazioni di posta elettronica per l'applicazione di servizio|[Configurare la posta elettronica per l'applicazione di servizio di Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
-|Configurare Claims to Windows Token Service (C2WTS)|[Servizio di Token delle attestazioni a Windows &#40;C2WTS&#41; e Reporting Services](../../../2014/sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)|  
+|Configurare Claims to Windows Token Service (C2WTS)|[Attestazioni per Windows Token Service &#40;C2WTS&#41; e Reporting Services](../../../2014/sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)|  
   
 ## <a name="migration-checklist"></a>Elenco di controllo per la migrazione  
  Di seguito viene fornito un elenco dei passaggi di base per la migrazione da un'installazione esistente a una nuova installazione.  
@@ -76,7 +76,7 @@ ms.locfileid: "36069542"
   
 ## <a name="see-also"></a>Vedere anche  
  [Installazione in modalità SharePoint di Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
- [Guida per l'utilizzo di funzionalità di Business Intelligence di SQL Server in una Farm di SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)   
+ [Linee guida per l'uso di funzionalità di Business Intelligence di SQL Server in una Farm di SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)   
  [Combinazioni supportate di SharePoint e Server Reporting Services e componente aggiuntivo &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
   

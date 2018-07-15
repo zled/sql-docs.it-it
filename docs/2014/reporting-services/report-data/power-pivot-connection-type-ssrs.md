@@ -1,5 +1,5 @@
 ---
-title: Tipo di connessione PowerPivot (SSRS) | Documenti Microsoft
+title: Tipo di connessione PowerPivot (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf22b7c44d554f4e82eb330752d8580102469cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3cf73cb88d2d7e88836e41e5b1a8c3a80368e8a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234751"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Tipo di connessione PowerPivot (SSRS)
   È possibile utilizzare l'estensione di elaborazione dei dati di SQL Server Analysis Services per recuperare dati da una cartella di lavoro di PowerPivot pubblicata in una raccolta PowerPivot di SharePoint.  
@@ -35,7 +35,7 @@ ms.locfileid: "36069981"
  Utilizzare il tipo di origine dati del report **Microsoft SQL Server Analysis Services**.  
   
 ## <a name="connection-string"></a>Stringa di connessione  
- La stringa di connessione è l'URL alla cartella di lavoro PowerPivot pubblicata in SharePoint nella raccolta PowerPivot o altra libreria, ad esempio, http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx.  
+ La stringa di connessione è l'URL alla cartella di lavoro di PowerPivot pubblicata in SharePoint nella raccolta PowerPivot o altra libreria, ad esempio, http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx.  
   
 ## <a name="credentials"></a>Credenziali  
  Specificare le credenziali necessarie per accedere alla cartella di lavoro di PowerPivot e al sito di SharePoint, ad esempio Autenticazione di Windows (sicurezza integrata). Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oppure [specificare le credenziali in Generatore Report](../specify-credentials-in-report-builder.md).  
@@ -51,12 +51,12 @@ ms.locfileid: "36069981"
 ## <a name="parameters"></a>Parametri  
  Nel riquadro Filtri selezionare l'opzione **Parametri** affinché un filtro crei automaticamente un parametro di report con valori disponibili che corrispondono alle selezioni del filtro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se viene aperto Generatore report dalla cartella di lavoro di PowerPivot in una raccolta PowerPivot, le tabelle pivot, i grafici pivot, i filtri dei dati e altre caratteristiche di layout e analitiche della cartella di lavoro di PowerPivot non vengono ricreati nel report. Al contrario, nel report vuoto è inclusa un'origine dati preconfigurata che punta ai dati della cartella di lavoro di PowerPivot. La progettazione di report basati su una cartella di lavoro di PowerPivot può richiedere molto tempo a seconda del numero di filtri dei dati, di filtri, di tabelle o di grafici che si desidera ricreare nel report. Un approccio migliore consiste nel prevedere la presentazione dei dati desiderati in un report indipendentemente dalla progettazione di PowerPivot.  
   
  I dati di una cartella di lavoro di PowerPivot sono molto compressi, mentre i dati recuperati dalla cartella di lavoro di PowerPivot per un report non sono compressi. Utilizzare Progettazione query per specificare i filtri e i parametri utili per limitare i dati a quelli necessari per il report.  
   
- A differenza della connessione a un cubo di Analysis Services, un modello PowerPivot non dispone di gerarchie. Per fornire una funzionalità simile ai filtri dei dati correlati nella cartella di lavoro, è necessario creare parametri di propagazione nel report. Per altre informazioni, vedere [aggiungere i parametri di propagazione a un Report &#40;Generatore Report e SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
+ A differenza della connessione a un cubo di Analysis Services, un modello PowerPivot non dispone di gerarchie. Per fornire una funzionalità simile ai filtri dei dati correlati nella cartella di lavoro, è necessario creare parametri di propagazione nel report. Per altre informazioni, vedere [aggiunta di parametri di propagazione a un Report &#40;Generatore Report e SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
   
  In alcuni casi, potrebbe essere necessario regolare le espressioni per contenere i valori dei dati sottostanti dal modello PowerPivot, nonché modificare le espressioni per convertire i dati nel tipo di dati corretto oppure aggiungere o rimuovere una funzione di aggregazione. Ad esempio, per convertire il tipo di dati da String a Integer, utilizzare `=CInt`. Verificare sempre che nel report vengano visualizzati i valori previsti dai dati del modello PowerPivot prima di pubblicare il report.  
   

@@ -1,5 +1,5 @@
 ---
-title: Aggiungere, modificare o eliminare valori disponibili per un parametro di Report (Generatore Report e SSRS) | Documenti Microsoft
+title: Aggiungere, modificare o eliminare valori disponibili per un parametro di Report (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.reportparameters.availablevalues.f1
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 379941cc87f9975bca81ed28ba773fcd9cab9592
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 034d1f252c4eb740c56218c79ddd4fe4638c166b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234741"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>Aggiungere, modificare o eliminare valori disponibili per un parametro di report (Generatore report e SSRS)
   Dopo aver creato un parametro del report, è possibile specificare un elenco di valori disponibili da visualizzare. Tale elenco limita le scelte dell'utente ai soli valori validi per il parametro.  
@@ -80,9 +80,9 @@ ms.locfileid: "36068878"
      Nell'anteprima del report l'elenco a discesa con i valori disponibili per il parametro non verrà più visualizzato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modificare l'ordine di un parametro di Report &#40;SSRS e Generatore Report&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [Aggiungere, modificare o eliminare un parametro di Report &#40;SSRS e Generatore Report&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Aggiungere parametri di propagazione a un Report &#40;SSRS e Generatore Report&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Modificare l'ordine di un parametro di Report &#40;Report e SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [Aggiungere, modificare o eliminare un parametro di Report &#40;Report e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Aggiungere parametri di propagazione a un Report &#40;Report e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Aggiungere, modificare o eliminare valori predefiniti per un parametro di report &#40;Generatore report e SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
  [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
  [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   

@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Security | Documenti Microsoft
+title: Distributed Replay Security | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 408d899379150e88684df38713f94765a0c0c7cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7c2c2a92ebbde62b20ba99539b31b4a3e40d267
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301281"
 ---
 # <a name="distributed-replay-security"></a>Sicurezza di Distributed Replay
   Prima di installare e usare le funzionalità di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Riesecuzione distribuita, è necessario leggere le importanti informazioni sulla sicurezza riportate in questo argomento. In questo argomento vengono descritti i passaggi per la configurazione della sicurezza post-installazione che è necessario eseguire prima di poter utilizzare Distributed Replay. Questo argomento illustra anche considerazioni importanti sulla protezione dei dati e importanti passaggi relativi alla rimozione.  
@@ -51,9 +51,9 @@ ms.locfileid: "36069113"
   
 1.  Effettuare una delle operazioni seguenti a seconda del sistema operativo in uso:  
   
-    -   Fare clic su **avviare**, tipo `services.msc` nel **ricerca** casella e quindi premere INVIO.  
+    -   Fare clic su **avviare**, digitare `services.msc` nel **ricerca** casella e quindi premere INVIO.  
   
-    -   Fare clic su **avviare**, fare clic su **eseguire**, tipo `services.msc`, quindi premere INVIO.  
+    -   Fare clic su **avviare**, fare clic su **eseguito**, tipo `services.msc`, quindi premere INVIO.  
   
 2.  Nella finestra di dialogo **Servizi** fare clic con il pulsante destro del mouse sul servizio che si vuole configurare, quindi scegliere **Proprietà**.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5df31e672577073c2cff8b43951d543f596523b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fd39b54d39d559608c8634345fd7c1e59835a9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285817"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Knowledge Base e domini DQS
   In questo argomento viene descritto che cos'è una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Per pulire i dati, è necessario avere informazioni su di essi. Per preparare le informazioni per un progetto Data Quality, è necessario compilare e mantenere una Knowledge Base (KB) che è possibile utilizzare in DQS per identificare dati errati o non validi. DQS consente di utilizzare sia processi assistiti da computer che interattivi per creare, compilare e aggiornare la Knowledge Base. Le informazioni in una Knowledge Base sono mantenute in domini, ognuno dei quali è specifico per un campo dati. La Knowledge Base è un repository di informazioni sui dati che consente di comprenderli e mantenerne l'integrità.  
@@ -143,7 +143,7 @@ ms.locfileid: "36155689"
 ##  <a name="Matching"></a> Corrispondenza di dati  
  Oltre ad apportare modifiche manuali a una Knowledge Base tramite la gestione del dominio, è possibile aggiungere informazioni di corrispondenza a una Knowledge Base. Per preparare DQS al processo di deduplicazione dei dati, è necessario creare criteri di corrispondenza che verranno utilizzati per calcolare la probabilità di una corrispondenza. I criteri includono una o più regole di corrispondenza create dall'amministratore dei dati per definire il modo in cui le righe di dati vengono confrontate in DQS. L'amministratore dei dati determina quali campi dati nella riga devono essere confrontati e il peso di ciascun campo nel confronto. Determina inoltre il livello di probabilità al quale si può definire una corrispondenza. Le regole di corrispondenza vengono aggiunte alla Knowledge Base per essere utilizzate nell'attività di corrispondenza nel progetto Data Quality.  
   
- Per ulteriori informazioni alla knowledge base e corrispondenza dei dati, vedere [dati corrispondenti](../../2014/data-quality-services/data-matching.md).  
+ Per altre informazioni sulla knowledge base e corrispondenza dei dati, vedere [corrispondenza di dati](../../2014/data-quality-services/data-matching.md).  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
  È possibile eseguire le operazioni seguenti su una Knowledge Base e sui relativi domini:  

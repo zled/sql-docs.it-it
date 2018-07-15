@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 41f2345cf31347fba98448a02d4d3014b8883d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: be8b75318aec2bd921a7d995f63e722f38881426
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319861"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>Funzione RunningValue (Generatore report e SSRS)
   Restituisce un'aggregazione parziale di tutti i valori numerici non Null specificati dall'espressione, valutata per l'ambito specificato.  
@@ -47,12 +47,12 @@ RunningValue(expression, function, scope)
 ## <a name="return-type"></a>Tipo restituito  
  Dipende dalla funzione di aggregazione specificata nel parametro *function* .  
   
-## <a name="remarks"></a>Remarks  
- Il valore per `RunningValue` reimpostato su 0 per ogni nuova istanza dell'ambito. Se viene specificato un gruppo, il valore corrente viene reimpostato quando viene modificata l'espressione di raggruppamento. Se viene specificata un'area dati, il valore corrente viene reimpostato per ogni nuova istanza dell'area dati. Se viene specificato un set di dati, il valore corrente non viene reimpostato nell'intero set di dati.  
+## <a name="remarks"></a>Note  
+ Il valore per `RunningValue` viene reimpostato su 0 per ogni nuova istanza dell'ambito. Se viene specificato un gruppo, il valore corrente viene reimpostato quando viene modificata l'espressione di raggruppamento. Se viene specificata un'area dati, il valore corrente viene reimpostato per ogni nuova istanza dell'area dati. Se viene specificato un set di dati, il valore corrente non viene reimpostato nell'intero set di dati.  
   
  `RunningValue` non può essere utilizzato in un filtro o un'espressione di ordinamento.  
   
- Il set di dati per il quale il valore corrente è calcolato deve avere lo stesso tipo di dati. Per convertire i dati con più tipi di dati numerici nello stesso tipo di dati, utilizzare le funzioni di conversione, ad esempio `CInt`, `CDbl` o `CDec`. Per altre informazioni, vedere [Funzioni di conversione del tipo](http://go.microsoft.com/fwlink/?LinkId=96142).  
+ Il set di dati per il quale il valore corrente è calcolato deve avere lo stesso tipo di dati. Per convertire i dati con più tipi di dati numerici nello stesso tipo di dati, usare le funzioni di conversione, ad esempio `CInt`, `CDbl` o `CDec`. Per altre informazioni, vedere [Funzioni di conversione del tipo](http://go.microsoft.com/fwlink/?LinkId=96142).  
   
  *Scope* non può essere un'espressione.  
   
@@ -92,9 +92,9 @@ RunningValue(expression, function, scope)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressione viene utilizzata nei report di &#40;SSRS e Generatore Report&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;SSRS e Generatore Report&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Set di righe DISCOVER_CALC_DEPENDENCY | Documenti Microsoft
+title: Set di righe DISCOVER_CALC_DEPENDENCY | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fff5a7975d19ca53ea9cca780f792a2d5c6057e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57f839d6c50208828de3441ec6e3c5f5f77c67c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297241"
 ---
 # <a name="discovercalcdependency-rowset"></a>Set di righe DISCOVER_CALC_DEPENDENCY
   Crea report sulle dipendenze tra i calcoli e sugli oggetti a cui si fa riferimento in tali calcoli. Tali informazioni possono essere utilizzate in un'applicazione client per segnalare problemi con formule complesse o per visualizzare avvisi quando gli oggetti correlati vengono eliminati o modificati. È inoltre possibile utilizzare il set di righe per estrarre le espressioni DAX utilizzate nelle misure o nelle colonne calcolate.  
@@ -34,8 +34,8 @@ ms.locfileid: "36066601"
   
 |Nome colonna|Indicatore del tipo|Restrizione|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`|Sì|Viene specificato il nome del database contenente l'oggetto per il quale viene richiesta l'analisi delle dipendenze. Se omesso, viene utilizzato il database corrente.<br /><br /> Il `DISCOVER_DEPENDENCY_CALC` set di righe può essere limitato tramite questa colonna.|  
-|`OBJECT_TYPE`|`DBTYPE_WSTR`|Sì|Viene indicato il tipo di oggetto per il quale viene richiesta l'analisi delle dipendenze. L'oggetto deve essere uno dei tipi seguenti:<br /><br /> -   `ACTIVE_RELATIONSHIP`: una relazione attiva<br />-   `CALC_COLUMN`: Colonna calcolata<br />-   `HIERARCHY`: una gerarchia<br />-   `MEASURE`: una misura<br />-   `RELATIONSHIP`: una relazione<br />-   `KPI`: un indicatore KPI (indicatore di prestazioni chiave)<br /><br /> Il `DISCOVER_DEPENDENCY_CALC` set di righe può essere limitato tramite questa colonna.|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`|Sì|Viene specificato il nome del database contenente l'oggetto per il quale viene richiesta l'analisi delle dipendenze. Se omesso, viene utilizzato il database corrente.<br /><br /> Il `DISCOVER_DEPENDENCY_CALC` righe può essere limitato tramite questa colonna.|  
+|`OBJECT_TYPE`|`DBTYPE_WSTR`|Sì|Viene indicato il tipo di oggetto per il quale viene richiesta l'analisi delle dipendenze. L'oggetto deve essere uno dei tipi seguenti:<br /><br /> -   `ACTIVE_RELATIONSHIP`: una relazione attiva<br />-   `CALC_COLUMN`: Colonna calcolata<br />-   `HIERARCHY`: una gerarchia<br />-   `MEASURE`: una misura<br />-   `RELATIONSHIP`: una relazione<br />-   `KPI`: un indicatore KPI (indicatore di prestazioni chiave)<br /><br /> Il `DISCOVER_DEPENDENCY_CALC` righe può essere limitato tramite questa colonna.|  
 |`QUERY`|`DBTYPE_WSTR`|Sì|Per i modelli tabulari creati in [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], è possibile includere una query o un'espressione DAX per visualizzare il grafico delle dipendenze per questa query o espressione. Tramite la restrizione QUERY viene fornita alle applicazioni client una modalità per determinare gli oggetti utilizzati da una query DAX.<br /><br /> La restrizione `QUERY` può essere specificata in XMLA o nella clausola WHERE di una query DMV. Per ulteriori informazioni, vedere la sezione degli esempi.|  
 |`TABLE`|`DBTYPE_WSTR`||Nome della tabella contenente l'oggetto per il quale vengono generate le informazioni sulle dipendenze.|  
 |`OBJECT`|`DBTYPE_WSTR`||Nome dell'oggetto per il quale vengono generate le informazioni sulle dipendenze. Se l'oggetto è una misura o una colonna calcolata, utilizzare il nome della misura. Se l'oggetto è una relazione, il nome della tabella (o dimensione del cubo) contenente la colonna che fa parte della relazione.|  
@@ -64,16 +64,16 @@ SELECT * FROM $System.DISCOVER_CALC_DEPENDENCY ORDER BY [TABLE] ASC
 ```  
   
 ## <a name="example"></a>Esempio  
- **Applicare filtri tramite una clausola WHERE**  
+ **Filtrare usando una clausola WHERE**  
   
- Nella query successiva viene illustrato come aggiungere una restrizione utilizzando la clausola WHERE. Le colonne seguenti possono essere utilizzate come filtri della query in una clausola WHERE: `Database_Name`, `Object_Type`, e `Query`.  
+ Nella query successiva viene illustrato come aggiungere una restrizione utilizzando la clausola WHERE. Le colonne seguenti possono essere utilizzate come filtri query in una clausola WHERE: `Database_Name`, `Object_Type`, e `Query`.  
   
 ```  
 SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE OBJECT_TYPE = 'RELATIONSHIP' OR OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'  
 ```  
   
 ## <a name="example"></a>Esempio  
- **Applicare filtri sulle misure e colonne calcolate per visualizzare le espressioni DAX sottostanti**  
+ **Filtrare le misure e colonne calcolate per visualizzare le espressioni DAX sottostanti**  
   
  In questa query è possibile selezionare solo la misura o la colonna calcolata e, successivamente, visualizzare l'espressione DAX utilizzata nel calcolo. Nella colonna EXPRESSION sono contenute le espressioni DAX. Se si utilizza DISCOVER_CALC_DEPENDENCY per estrarre l'espressione DAX utilizzata nel modello, questa query è sufficiente a tale scopo. Infatti vengono restituite tutte le espressioni utilizzate nel modello, in ordine crescente.  
   
@@ -82,7 +82,7 @@ SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE OBJECT_TYPE = 'MEASURE' OR 
 ```  
   
 ## <a name="example"></a>Esempio  
- **Applicare filtri tramite QUERY**  
+ **Applicare un filtro tramite QUERY**  
   
  Utilizzando la restrizione QUERY, è possibile specificare una query DAX per visualizzare tutti gli oggetti utilizzati nella query. Si consideri una query semplice come "Evaluate Customer". In base a quanto scritto, tramite questa query vengono restituite le righe dei dati dei clienti, in cui la composizione delle righe è basata sulle colonne della tabella Customer. Se ora si esegue DISCOVER_CALC_DEPENDENCY con una restrizione QUERY di "Evaluate Customer", si otterranno le colonne (o gli oggetti) utilizzate nella query. In questo caso, si tratta di un elenco di colonne della tabella Customer.  
   
@@ -91,7 +91,7 @@ SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE OBJECT_TYPE = 'MEASURE' OR 
  Nella prima query viene illustrato come specificare una restrizione QUERY per i nomi di oggetto contenenti spazi. Il secondo esempio, preso in prestito dalla pagina relativa all' [esecuzione di query DAX tramite OLE DB e ADOMD.NET](http://go.microsoft.com/fwlink/?LinkId=254329), è una query più complessa in cui sono inclusi oggetti di più tabelle.  
   
 > [!NOTE]  
->  Anche se sembra che per le query vengano utilizzate le virgolette doppie, in realtà vengono utilizzate solo quelle singole. Una coppia di virgolette racchiude ' Evaluate \<Tablename >', e tra virgolette singole utilizzate attorno il nome della tabella è necessario utilizzare caratteri di escape raddoppiando tali. Le virgolette singole attorno a un nome di tabella sono necessarie solo per i nomi di tabelle contenenti uno spazio.  
+>  Anche se sembra che per le query vengano utilizzate le virgolette doppie, in realtà vengono utilizzate solo quelle singole. Una coppia di virgolette racchiude ' Evaluate \<NomeTabella >', e virgolette racchiudono il nome della tabella devono essere sottoposti a escape raddoppiandole. Le virgolette singole attorno a un nome di tabella sono necessarie solo per i nomi di tabelle contenenti uno spazio.  
   
 ```  
 SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE ''Reseller Sales'''  
@@ -102,7 +102,7 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
 ```  
   
 ## <a name="example"></a>Esempio  
- **Esempio di XMLA restrizione QUERY**  
+ **Esempio di QUERY XMLA di restrizione**  
   
  È possibile utilizzare il comando di individuazione (Discover) di XMLA per restituire gli oggetti query in una tabella. Tramite XMLA i risultati vengono restituiti come XML non elaborato. È possibile utilizzare ADOMD.NET per analizzare i risultati in un formato più leggibile.  
   
@@ -129,7 +129,7 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
 |ADOMDNAME|DependencyGraph|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Set di righe dello Schema di Analysis Services](../analysis-services-schema-rowsets.md)   
- [Utilizzare viste a gestione dinamica &#40;viste a gestione dinamica&#41; per monitorare Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [I set di righe dello Schema di Analysis Services](../analysis-services-schema-rowsets.md)   
+ [Usare le viste a gestione dinamica &#40;viste a gestione dinamica&#41; per monitorare Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

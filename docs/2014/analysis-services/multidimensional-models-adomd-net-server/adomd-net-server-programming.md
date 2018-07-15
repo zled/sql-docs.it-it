@@ -1,5 +1,5 @@
 ---
-title: Programmazione di Server ADOMD.NET | Documenti Microsoft
+title: Programmazione di Server ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ADOMD.NET, programming
 ms.assetid: 7f7ff5be-3826-43a5-b94d-ddeec5ddb2eb
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f6829a283f7c0094769122bce156b734dab3c86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8b5c1f71f794b1bb947a4f1840f6ea1c6b990aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317321"
 ---
 # <a name="adomdnet-server-programming"></a>Programmazione di server ADOMD.NET
   I componenti server ADOMD.NET di ADOMD.NET si trovano nello spazio dei nomi `Microsoft.AnalysisServices.AdomdServer` (in msmgdsrv.dll). Utilizzare questi componenti server per creare funzioni MDX (Multidimensional Expressions) personalizzate e stored procedure che vengono eseguite in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Gli oggetti server forniscono le funzionalità per l'esecuzione di query su cubi e modelli di data mining e per la valutazione di espressioni in un contesto specifico. I vantaggi relativi alla creazione di funzioni e stored procedure personalizzate includono un'esecuzione rapida, una distribuzione centralizzata e una gestibilità migliorata.  

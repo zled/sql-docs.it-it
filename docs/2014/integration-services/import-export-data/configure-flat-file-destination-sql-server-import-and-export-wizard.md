@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 033b602d712d4ec6e0caf136b1228cd82b552e08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14e1742f83496b2976466d152cdd7aab39f76346
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289367"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurazione destinazione file flat (Importazione/Esportazione guidata SQL Server)
   Usare la **configurazione destinazione File Flat** pagina per specificare le opzioni di formattazione per file flat di destinazione e per visualizzare in anteprima i risultati prima di continuare.  
   
- Per ulteriori informazioni su questa procedura guidata, vedere [SQL Server di importazione / esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Per ulteriori informazioni sulle opzioni per avviare la procedura guidata, nonché le autorizzazioni necessarie per eseguire correttamente la procedura guidata, vedere [eseguire il Server importazione / esportazione guidata SQL](start-the-sql-server-import-and-export-wizard.md).  
+ Per altre informazioni su questa procedura guidata, vedere [SQL Server importazione / esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Per altre informazioni sulle opzioni per avviare la procedura guidata, nonché le autorizzazioni necessarie per eseguire correttamente la procedura guidata, vedere [esecuzione di SQL Server importazione / esportazione guidata](start-the-sql-server-import-and-export-wizard.md).  
   
  Lo scopo di Importazione/Esportazione guidata SQL Server è la copia di dati da un'origine a una destinazione. La procedura guidata può inoltre creare automaticamente un database di destinazione e le tabelle di destinazione. Se tuttavia è necessario copiare più database o tabelle, o altri tipi di oggetti di database, è preferibile utilizzare Copia guidata database. Per altre informazioni, vedere [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -63,9 +63,9 @@ ms.locfileid: "36069639"
 |**Barra verticale {&#124;}**|Le colonne sono delimitate da una barra verticale.|  
   
  **Anteprima**  
- Visualizzare il **Anteprima dati** finestra di dialogo i risultati di formattazione selezionate le opzioni per file flat di destinazione.  
+ Visualizzare il **Anteprima dati** nella finestra di dialogo Opzioni i risultati di formattazione selezionate per il file flat di destinazione.  
   
  **Modifica trasformazione**  
- Eliminare le righe, accodare righe e configurare le colonne nel file di destinazione utilizzando il **mapping delle colonne** finestra di dialogo.  
+ Eliminare le righe, accodare righe e configurare le colonne nel file di destinazione usando il **mapping delle colonne** nella finestra di dialogo.  
   
   

@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
 - geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1ce999d3a443ef4a691f980646997eb1c927172e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e75fa36b86a0efa24a1de7f5ebfa638b14392776
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36070021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294541"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Creazione, costruzione e query di istanze geometry
   Il tipo di dati spaziali planare `geometry`, rappresenta i dati in un sistema di coordinate Euclideo (piano). Questo tipo è implementato come tipo di dati CLR (Common Language Runtime) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Il `geometry` tipo è predefinito e disponibile in ogni database. È possibile creare le colonne della tabella di tipo `geometry` e operare sui `geometry` dati esattamente come si utilizzerebbero gli altri tipi CLR.  
+ Il `geometry` tipo è predefinito e disponibile in ogni database. È possibile creare le colonne della tabella di tipo `geometry` e operare sui `geometry` dati esattamente come si utilizzano altri tipi CLR.  
   
  Il tipo di dati `geometry` (planare) supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è conforme allo standard Open Geospatial Consortium (OGC) Simple Features for SQL Specification versione 1.1.0.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36070021"
 ##  <a name="creating"></a> Creazione o costruzione di una nuova istanza geometry  
   
 ###  <a name="existing"></a> Creazione di una nuova istanza geometry da un'istanza esistente  
- Il `geometry` tipo di dati fornisce numerosi metodi predefiniti che è possibile utilizzare per creare nuovi `geometry` istanze in base alle istanze esistenti.  
+ Il `geometry` tipo di dati fornisce numerosi metodi predefiniti che è possibile usare per creare nuovi `geometry` istanze basato sulle istanze esistenti.  
   
  **Per creare un buffer relativo a una geometria**  
  [STBuffer &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stbuffer-geometry-data-type)  
@@ -104,7 +104,7 @@ ms.locfileid: "36070021"
   
   
 ###  <a name="wkb"></a> Costruzione di un'istanza geometry da un input WKB (well-known binary)  
- WKB è un formato binario definito dal OGC Open Geospatial Consortium () che consente ai `geometry` lo scambio tra un'applicazione client e un database SQL di dati. Le funzioni seguenti accettano input WKB per costruire le geometrie:  
+ WKB è un formato binario specificato per il consorzio OGC (Open Geospatial) che consente `geometry` dati da scambiare tra un'applicazione client e un database SQL. Le funzioni seguenti accettano input WKB per costruire le geometrie:  
   
  **Per costruire qualsiasi tipo di istanza geometry da un input WKB**  
  [STGeomFromWKB &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stgeomfromwkb-geometry-data-type)  
@@ -141,7 +141,7 @@ ms.locfileid: "36070021"
   
   
 ##  <a name="returning"></a> Restituzione di WKT e WKB da un'istanza geometry  
- È possibile utilizzare i metodi seguenti per restituire sia il formato WKT o WKB di un' `geometry` istanza:  
+ È possibile usare i metodi seguenti per restituire un formato WKT o WKB di un' `geometry` istanza:  
   
  **Per restituire la rappresentazione WKT di un'istanza geometry**  
  [STAsText &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stastext-geometry-data-type)  
@@ -160,10 +160,10 @@ ms.locfileid: "36070021"
   
   
 ##  <a name="querying"></a> Esecuzione di query sulle proprietà e i comportamenti delle istanze geometry  
- Tutti i `geometry` le istanze hanno un numero di proprietà che possono essere recuperate tramite metodi che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce. Negli argomenti seguenti vengono definiti le proprietà e i comportamenti dei tipi di geometria, nonché i metodi per l'esecuzione di query per ognuno di essi.  
+ Tutti i `geometry` istanze hanno un numero di proprietà che possono essere recuperate tramite metodi che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce. Negli argomenti seguenti vengono definiti le proprietà e i comportamenti dei tipi di geometria, nonché i metodi per l'esecuzione di query per ognuno di essi.  
   
 ###  <a name="valid"></a> Informazioni sulla validità, sul tipo di istanza e su GeometryCollection  
- Una volta una `geometry` l'istanza viene costruita, è possibile utilizzare i metodi seguenti per determinare se essa è corretta, restituire il tipo di istanza o, in caso di un'istanza di raccolta, restituire un oggetto specifico `geometry` istanza.  
+ Una volta una `geometry` istanza viene costruita, è possibile usare i metodi seguenti per determinare se essa è corretta, restituire il tipo di istanza o, se si tratta di un'istanza di raccolta, restituire una specifica `geometry` istanza.  
   
  **Per restituire il tipo di istanza di una geometria**  
  [STGeometryType &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stgeometrytype-geometry-data-type)  
@@ -186,7 +186,7 @@ ms.locfileid: "36070021"
   
   
 ###  <a name="number"></a> Numero di punti  
- Tutti non vuoto `geometry` sono costituite da istanze *punti*. Tali punti rappresentano le coordinate X e Y del piano su cui vengono tracciate le geometrie. Il tipo di dati `geometry` offre numerosi metodi predefiniti per l'esecuzione di query sui punti di un'istanza.  
+ Tutti non vuoti `geometry` sono costituite da istanze *punti*. Tali punti rappresentano le coordinate X e Y del piano su cui vengono tracciate le geometrie. Il tipo di dati `geometry` offre numerosi metodi predefiniti per l'esecuzione di query sui punti di un'istanza.  
   
  **Per restituire il numero di punti che comprendono un'istanza**  
  [STNumPoints &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)  
@@ -215,7 +215,7 @@ ms.locfileid: "36070021"
   
   
 ###  <a name="dimension"></a> Dimensione  
- Un nonempty `geometry` istanza può essere 0, 1 o 2 dimensioni. Zero-dimensionale `geometries`, ad esempio `Point` e `MultiPoint`, non hanno lunghezza o area. Gli oggetti unidimensionali, ad esempio `LineString, CircularString, CompoundCurve`, e `MultiLineString`, avere una lunghezza. Le istanze bidimensionali, ad esempio `Polygon`, `CurvePolygon` e `MultiPolygon`, dispongono di area e lunghezza. Per le istanze vuote verrà indicata una dimensione di -1 e per `GeometryCollection` verrà indicata un'area dipendente dai tipi del contenuto.  
+ Un nonempty `geometry` istanza può essere 0, 1 o 2 dimensioni. Zero-dimensionale `geometries`, ad esempio `Point` e `MultiPoint`, non hanno lunghezza o area. Gli oggetti unidimensionali, ad esempio `LineString, CircularString, CompoundCurve`, e `MultiLineString`, hanno lunghezza. Le istanze bidimensionali, ad esempio `Polygon`, `CurvePolygon` e `MultiPolygon`, dispongono di area e lunghezza. Per le istanze vuote verrà indicata una dimensione di -1 e per `GeometryCollection` verrà indicata un'area dipendente dai tipi del contenuto.  
   
  **Per restituire la dimensione di un'istanza**  
  [STDimension](/sql/t-sql/spatial-geometry/stdimension-geometry-data-type)  
@@ -229,7 +229,7 @@ ms.locfileid: "36070021"
   
   
 ###  <a name="empty"></a> Vuoto  
- Un' *vuota* `geometry` istanza non contiene punti. La lunghezza dei valori vuoti `LineString, CircularString`, `CompoundCurve`, e `MultiLineString` istanze è uguale a zero. L'area dei valori vuoti `Polygon`, `CurvePolygon`, e `MultiPolygon` istanze è 0.  
+ Un' *vuote* `geometry` istanza non contiene punti. La lunghezza dei valori vuoti `LineString, CircularString`, `CompoundCurve`, e `MultiLineString` istanze è pari a zero. L'area dei valori vuoti `Polygon`, `CurvePolygon`, e `MultiPolygon` istanze è 0.  
   
  **Per determinare se un'istanza è vuota**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type).  
@@ -280,7 +280,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="envelope"></a> Envelope  
- Il *busta* di un `geometry` istanza, noto anche come il *delimitatore*, è il rettangolo allineato all'asse formato dalle minimo coordinate e massime (X, Y) dell'istanza.  
+ Il *busta* di un `geometry` , noto anche come istanza di *rettangolo delimitatore*, è il rettangolo allineato all'asse formato dal valore minimo e coordina le massime (X, Y) dell'istanza.  
   
  **Per restituire l'envelope di un'istanza**  
  [STEnvelope](/sql/t-sql/spatial-geometry/stenvelope-geometry-data-type)  
@@ -288,7 +288,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> Chiusura  
- Un *chiusa* `geometry` istanza è una figura i cui punti di inizio e di punti di fine corrispondono. `Polygon` le istanze sono considerate chiuse. Le istanze `Point` non sono considerate chiuse.  
+ Oggetto *chiusa* `geometry` istanza è una figura i cui punti di inizio e di punti di fine corrispondono. `Polygon` le istanze sono considerate chiuse. Le istanze `Point` non sono considerate chiuse.  
   
  Un anello è una semplice chiusa `LineString` istanza.  
   
@@ -320,7 +320,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ##  <a name="rel"></a> Determinazione delle relazioni esistenti tra istanze geometry  
- Il `geometry` tipo di dati fornisce molti metodi predefiniti che è possibile utilizzare per determinare le relazioni tra due `geometry` istanze.  
+ Il `geometry` tipo di dati fornisce molti metodi predefiniti che è possibile usare per determinare le relazioni tra due `geometry` istanze.  
   
  **Per determinare se due istanze includono lo stesso punto impostato**  
  [STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  

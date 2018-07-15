@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione ricerca (pagina generale) | Documenti Microsoft
+title: Editor trasformazione ricerca (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.general.f1
 ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f0ec34c82b91ee254bb314a945b53ea1f68340b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ced1e5551753ba61f81789eb8dee7d4e77dd6883
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314071"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>Editor trasformazione Ricerca (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo Editor trasformazione Ricerca per selezionare la modalità di cache, selezionare il tipo di connessione e specificare la modalità di gestione delle righe senza voci corrispondenti.  
@@ -59,6 +59,6 @@ ms.locfileid: "36068750"
  [Editor trasformazione ricerca &#40;pagina di connessione&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [Editor trasformazione Ricerca &#40;pagina Colonne&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [Editor trasformazione ricerca &#40;pagina avanzate&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Editor trasformazione ricerca &#40;pagina di Output di errore&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
+ [Editor trasformazione ricerca &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
   
   

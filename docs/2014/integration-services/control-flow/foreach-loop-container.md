@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9188401b9bbfd3b0c70d446943cfebf22dd93616
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47318402206bc0a11ce943d74df8a612acd5f128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280427"
 ---
 # <a name="foreach-loop-container"></a>Contenitore Ciclo Foreach
   Il contenitore Ciclo Foreach definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **Foreach** nei linguaggi di programmazione. In un pacchetto per l'esecuzione del ciclo viene utilizzato un enumeratore Foreach.  Il contenitore Ciclo Foreach ripete il flusso di controllo per ogni membro di un enumeratore specificato.  
@@ -41,7 +41,7 @@ ms.locfileid: "36069883"
   
 -   Foreach File Enumerator, per enumerare i file contenuti in una cartella. È possibile includere nell'enumerazione anche le sottocartelle. È ad esempio possibile leggere tutti i file con estensione log presenti nella cartella di Windows e nelle relative sottocartelle.  
   
--   Foreach From Variable Enumerator, per enumerare gli oggetti enumerabili contenuti in una variabile specificata. L'oggetto enumerabile può essere una matrice, un ADO.NET `DataTable`, un oggetto [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enumeratore e così via. È ad esempio possibile enumerare i valori di una matrice che contiene i nomi dei server.  
+-   Foreach From Variable Enumerator, per enumerare gli oggetti enumerabili contenuti in una variabile specificata. L'oggetto enumerabile può essere una matrice, a un ADO.NET `DataTable`, un [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enumeratore e così via. È ad esempio possibile enumerare i valori di una matrice che contiene i nomi dei server.  
   
 -   Foreach Item Enumerator, per enumerare elementi costituiti da raccolte. È ad esempio possibile enumerare i nomi degli eseguibili e delle directory di lavoro utilizzate dall'attività Esegui processo.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "36069883"
   
 -   Enumeratore BLOB di Azure Foreach per enumerare i BLOB in un contenitore BLOB di Archiviazione di Azure.  
   
--   File di ADLS foreach enumerator per enumerare i file in una directory ADLS.
+-   Enumeratore foreach File di ADLS per enumerare i file in una directory di Azure Data Lake Store.
   
  Nella figura seguente viene illustrato un contenitore Ciclo Foreach che include un'attività File system. Il ciclo Foreach utilizza Foreach File Enumerator e l'attività File system è configurata per la copia di un file. Se la cartella specificata dall'enumeratore contiene quattro file, il ciclo si ripeterà quattro volte e copierà quattro file.  
   
  ![Contenitore Ciclo Foreach che enumera una cartella](../media/ssis-foreachloop.gif "Contenitore Ciclo Foreach che enumera una cartella")  
   
- È possibile utilizzare una combinazione di variabili ed espressioni di proprietà per aggiornare la proprietà dell'oggetto pacchetto con il valore della raccolta dell'enumeratore. È innanzitutto necessario eseguire il mapping del valore della raccolta a una variabile definita dall'utente e quindi implementare un'espressione di proprietà sulla proprietà che utilizza la variabile. Ad esempio, il valore di raccolta dell'enumeratore Foreach File viene mappato a una variabile denominata `MyFile` e la variabile viene quindi utilizzata l'espressione di proprietà per la proprietà relativa al soggetto di un'attività Invia messaggi. Quando il pacchetto viene eseguito, la proprietà Oggetto viene aggiornata con il nome di un file ogni volta che il ciclo si ripete. Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../expressions/use-property-expressions-in-packages.md).  
+ È possibile utilizzare una combinazione di variabili ed espressioni di proprietà per aggiornare la proprietà dell'oggetto pacchetto con il valore della raccolta dell'enumeratore. È innanzitutto necessario eseguire il mapping del valore della raccolta a una variabile definita dall'utente e quindi implementare un'espressione di proprietà sulla proprietà che utilizza la variabile. Ad esempio, il valore di raccolta dell'enumeratore Foreach File viene mappato a una variabile denominata `MyFile` e la variabile viene quindi usata nell'espressione di proprietà per la proprietà Subject dell'attività Invia messaggi. Quando il pacchetto viene eseguito, la proprietà Oggetto viene aggiornata con il nome di un file ogni volta che il ciclo si ripete. Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../expressions/use-property-expressions-in-packages.md).  
   
  Le variabili sulle quali viene eseguito il mapping al valore della raccolta dell'enumeratore possono essere utilizzate anche in espressioni e script.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36069883"
 |Foreach Nodelist|Specificare l'origine del documento XML e configurare l'operazione XPath.|  
 |Foreach SMO|Specificare una connessione a un database e gli oggetti SMO da enumerare.|  
 |Blob di Azure Foreach|Specificare il contenitore blob di Azure che contiene i BLOB da enumerare.|  
-|Foreach file di ADLS|Specificare la directory ADLS che contiene file da enumerare, insieme a alcuni dei filtri.|
+|Foreach file di ADLS|Specificare la directory di Azure Data Lake Store che contiene i file da enumerare, insieme a alcuni filtri.|
   
 ## <a name="property-expressions-in-foreach-loop-containers"></a>Espressioni di proprietà nei contenitori Ciclo Foreach  
  Un pacchetto può essere configurato in modo da eseguire più eseguibili contemporaneamente. Questo tipo di configurazione deve essere tuttavia utilizzato con cautela, se il pacchetto include un contenitore Ciclo Foreach che implementa espressioni di proprietà.  
@@ -94,7 +94,7 @@ ms.locfileid: "36069883"
   
  Per informazioni dettagliate sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Configurazione di un contenitore ciclo Foreach](foreach-loop-container.md)  
+-   [Configurare un contenitore Ciclo Foreach](foreach-loop-container.md)  
   
 -   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   

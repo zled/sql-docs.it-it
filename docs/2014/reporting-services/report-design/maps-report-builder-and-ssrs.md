@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapproperties.general.f1
 - "10508"
@@ -18,15 +18,15 @@ f1_keywords:
 - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b73b5364e4ccd9cdb86210a25a8ee281dc6ad85c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 801c4ef8ce4c07491d45577224726167c86b0250
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313299"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mappe (Generatore report e SSRS)
   Per visualizzare i dati aziendali su uno sfondo geografico, è possibile aggiungere una mappa al report. Il tipo di mappa da selezionare dipende da quali informazioni si desidera comunicare nel report. È possibile aggiungere una mappa che visualizza solo le posizioni, una mappa a bolle in cui le dimensioni di queste ultime variano in base al numero di unità familiari presenti in un'area, una mappa con marcatori in cui lo stile del marcatore cambia a seconda del prodotto più remunerativo per ogni negozio oppure una mappa linea che consente di visualizzare gli itinerari tra i diversi negozi.  
@@ -175,7 +175,7 @@ ms.locfileid: "36069149"
   
 -   Se usare una connessione sicura per recuperare le sezioni dal servizio Web di Bing Maps.  
   
- Per istruzioni dettagliate, vedere [aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore Report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Per istruzioni dettagliate, vedere [aggiungere, modificare o eliminare una mappa o livello mappa &#40;Generatore Report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
  Per altre informazioni sulle tessere mappa, vedere la pagina relativa al [sistema a tessere di Bing Maps](http://go.microsoft.com/fwlink/?linkid=147315). Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](http://go.microsoft.com/fwlink/?LinkId=151371) e [Informativa sulla privacy](http://go.microsoft.com/fwlink/?LinkId=151372).  
   
@@ -254,29 +254,29 @@ ms.locfileid: "36069149"
 ##  <a name="HowTo"></a> Procedure  
  In questa sezione vengono elencate le procedure che illustrano in dettaglio le modalità di utilizzo delle mappe e dei relativi livelli nei report.  
   
--   [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;SSRS e Generatore Report&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [Aggiungere, modificare o eliminare una mappa o livello mappa &#40;Report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
--   [Modificare legende della mappa, scala dei colori e regole associate &#40;SSRS e Generatore Report&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+-   [Modificare legende della mappa, scala dei colori e regole associate &#40;Report e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [Aggiungere percorsi personalizzati a una mappa &#40;SSRS e Generatore Report&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [Aggiungere percorsi personalizzati a una mappa &#40;Report e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
 ##  <a name="Section"></a> Contenuto della sezione  
- [Pianificare un Report mappa &#40;SSRS e Generatore Report&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
+ [Pianificare un Report mappa &#40;Report e SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [Personalizzare i dati e la visualizzazione di una mappa o un livello mappa &#40;SSRS e Generatore Report&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Personalizzare i dati e la visualizzazione di una mappa o livello mappa &#40;Report e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;SSRS e Generatore Report&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Aggiungere, modificare o eliminare una mappa o livello mappa &#40;Report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [Modificare legende della mappa, scala dei colori e regole associate &#40;SSRS e Generatore Report&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Modificare legende della mappa, scala dei colori e regole associate &#40;Report e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [Aggiungere percorsi personalizzati a una mappa &#40;SSRS e Generatore Report&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [Aggiungere percorsi personalizzati a una mappa &#40;Report e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Risolvere i problemi di report: Eseguire il mapping di report &#40;SSRS e Generatore Report&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere i problemi di report: I report di mappa &#40;Report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Impostazione opzioni di conversione valuta (configurazione guidata Business Intelligence) | Documenti Microsoft
+title: Impostare le opzioni di conversione di valuta (configurazione guidata Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.calculationsettings.f1
 ms.assetid: a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e16756745d8b42bfe0043915b8d6e53b595d3669
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6ecdd5959754ab2ca7d4d9e5fc32d313dacfa00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289506"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>Impostazione opzioni di conversione valuta (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare la pagina **Impostazione opzioni di conversione valuta** per definire i calcoli di conversione della valuta per un gruppo di misure contenente tassi di cambio.  
@@ -46,7 +46,7 @@ ms.locfileid: "36065668"
  Selezionare questa opzione per indicare che i tassi di cambio nel gruppo di misure di tipo Tasso rappresentano un moltiplicatore per la valuta di esempio specificata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Business Intelligence guidata F1 Help](business-intelligence-wizard-f1-help.md)   
+ [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

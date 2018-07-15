@@ -1,5 +1,5 @@
 ---
-title: Lo Script MDX di base (MDX) | Documenti Microsoft
+title: Lo Script MDX di base (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default MDX scripts
 - statements [MDX]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - scripts [MDX], about scripts
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 501268fe4537e261b21af317fd90da32efb0e917
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fcdb7be7a4e3a9ab29dc93f899f3035cf68264c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303101"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Script MDX di base (MDX)
   In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]il processo di calcolo per un cubo è definito da uno script MDX (Multidimensional Expressions). Esistono due tipi di script MDX:  
@@ -56,7 +56,7 @@ ms.locfileid: "36065241"
  Tutte le istruzioni di scripting MDX  
  Negli script MDX le istruzioni di scripting MDX controllano il contesto e l'ambito dei calcoli e gestiscono il comportamento delle altre istruzioni contenute nello script MDX. Questa categoria include le istruzioni seguenti:  
   
--   [CALCOLARE](/sql/mdx/mdx-scripting-calculate)  
+-   [IL CALCOLO](/sql/mdx/mdx-scripting-calculate)  
   
 -   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36065241"
   
  Per altre informazioni sulle istruzioni di scripting MDX, vedere [Istruzioni di scripting MDX &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx).  
   
- [CREARE MEMBRI](/sql/mdx/mdx-data-definition-create-member)  
+ [CREA MEMBRO](/sql/mdx/mdx-data-definition-create-member)  
  L'istruzione CREATE MEMBER crea membri calcolati. Per altre informazioni sulla creazione di membri calcolati, vedere [Compilazione di membri calcolati in MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md).  
   
  [CREARE SET](/sql/mdx/mdx-data-definition-create-set)  
@@ -94,7 +94,7 @@ ms.locfileid: "36065241"
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti al linguaggio MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [Riferimento al linguaggio MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [Nozioni fondamentali sullo Scripting MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

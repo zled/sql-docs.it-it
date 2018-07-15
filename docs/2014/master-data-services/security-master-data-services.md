@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bbb9817ac5e9ef4c779dd8a283223622b28c9119
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 138ab7faa61857de9f130b9feffe7879095a32c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287567"
 ---
 # <a name="security-master-data-services"></a>Sicurezza (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]utilizzare la sicurezza per assicurare che agli utenti sia consentito l'accesso ai dati master specifici necessari per l'esecuzione dei processi e per impedire l'accesso ai dati che non devono essere loro disponibili.  
@@ -44,7 +44,7 @@ ms.locfileid: "36069630"
   
 -   [Autorizzazioni per oggetti modello](../../2014/master-data-services/model-object-permissions-master-data-services.md), che determinano gli attributi di un utente può accedere e il tipo di accesso (lettura o aggiornamento) che l'utente possiede su quegli attributi.  
   
--   Facoltativamente, [le autorizzazioni membri gerarchia](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md), che determinano i membri di un utente può accedere e il tipo di accesso (lettura o aggiornamento) l'utente disponga di tali membri.  
+-   Facoltativamente [le autorizzazioni membri gerarchia](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md), che determinano i membri di un utente può accedere e il tipo di accesso (lettura o aggiornamento) l'utente possiede su quei membri.  
   
  Quando si assegnano le autorizzazioni a attributi e membri, le autorizzazioni si intersecano e le regole determinano quale autorizzazione ha la precedenza. Per altre informazioni, vedere [How Permissions Are Determined &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md).  
   
@@ -52,11 +52,11 @@ ms.locfileid: "36069630"
   
  La figura seguente mostra la gerarchia derivata per l'entità Style e le autorizzazioni dei membri Style per un utente selezionato. Le autorizzazioni per l'aggiornamento vengono assegnate ai membri M {Men's} e U {Unisex} e le autorizzazioni di sola lettura vengono assegnate al membro con stile "Women's". L'utente potrà quindi aggiornare i record per i prodotti di tipo "Men's" e "Unisex" e potrà solo leggere i record per i prodotti con stile di tipo "Women's".  
   
- ![Applicare stili di gerarchia derivata e il membro autorizzazioni](../../2014/master-data-services/media/style-derived-hierarchy-mds.png "autorizzazioni per membri e stile gerarchia derivata")  
+ ![Applicare uno stile a gerarchie derivate e membri le autorizzazioni](../../2014/master-data-services/media/style-derived-hierarchy-mds.png "autorizzazioni gerarchia derivata di stile e membri")  
   
  Per informazioni su come creare una gerarchia, vedere [creare una gerarchia esplicita &#40;Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md) e [creare una gerarchia derivata &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md).  
   
- Per informazioni su come assegnare i membri le autorizzazioni, vedere [assegnare autorizzazioni membri gerarchia &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
+ Per informazioni su come assegnare membri le autorizzazioni, vedere [assegnare autorizzazioni membri gerarchia &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
 ## <a name="security-in-the-add-in-for-excel"></a>Sicurezza nel componente aggiuntivo di Excel  
  La sicurezza impostata nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] viene anche applicata a [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. Gli utenti possono visualizzare e utilizzare solo i dati per cui dispongono dell'autorizzazione. Gli amministratori possono eseguire attività amministrative.  
@@ -79,6 +79,6 @@ ms.locfileid: "36069630"
  [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   
  [Autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Le autorizzazioni membri gerarchia &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Modo in cui vengono determinate le autorizzazioni &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [Come vengono determinate le autorizzazioni &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

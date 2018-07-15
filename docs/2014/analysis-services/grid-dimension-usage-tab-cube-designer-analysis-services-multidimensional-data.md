@@ -1,5 +1,5 @@
 ---
-title: Griglia (scheda utilizzo dimensioni, Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Griglia (scheda utilizzo dimensioni, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5a470ffb94a457d68b8f47b30b06520984aba87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e112b3cd1a732b403c7e2da2dde185e5e4c7df5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295831"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Griglia (scheda Utilizzo dimensioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Il riquadro **Griglia** nella scheda **Utilizzo dimensioni** di Progettazione cubi consente di visualizzare e modificare le relazioni tra le dimensioni del cubo e i gruppi di misure. Ogni relazione tra dimensioni viene rappresentata come cella in una griglia, nella quale i gruppi di misure vengono visualizzati come colonne e le dimensioni come righe.  
@@ -50,7 +50,7 @@ ms.locfileid: "36066787"
  [Oggetti cubo &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Utilizzo dimensioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra degli strumenti &#40;scheda utilizzo dimensioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
+ [Sulla barra degli strumenti &#40;scheda utilizzo dimensioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
  [Utilizzo dimensioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)  
   
   

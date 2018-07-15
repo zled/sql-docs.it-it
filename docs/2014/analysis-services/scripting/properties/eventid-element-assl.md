@@ -1,5 +1,5 @@
 ---
-title: Elemento EventID (ASSL) | Documenti Microsoft
+title: Elemento EventID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - EventID element
 ms.assetid: a6b2ee50-1753-496c-af5c-206d63f2542b
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5ee579bd4bc20bea12b1dbb9490a7f9c93fde32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79fd7c49c9749430bc5e73518d2f7eeb4fc450f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310711"
 ---
 # <a name="eventid-element-assl"></a>Elemento EventID (ASSL)
-  Identifica in modo univoco un [evento](../objects/event-element-assl.md) elemento da acquisire come parte di un [traccia](../objects/trace-element-assl.md) elemento.  
+  Identifica in modo univoco un' [evento](../objects/event-element-assl.md) elemento che deve essere acquisito come parte di un [traccia](../objects/trace-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,8 +61,8 @@ ms.locfileid: "36069011"
 |Elementi padre|[Evento](../objects/event-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento corrispondente dell'elemento padre del `EventID` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.TraceEvent>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `EventID` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.TraceEvent>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento Events &#40;ASSL&#41;](../collections/events-element-assl.md)   

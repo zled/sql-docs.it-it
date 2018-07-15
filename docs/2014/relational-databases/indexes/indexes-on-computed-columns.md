@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, index creation
 - index creation [SQL Server], computed columns
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9b7d9b25ccb9404011c459ba0275f2ba0c63746a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ffa842513c5cd185c7760bc737aeb64a4c33742e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279117"
 ---
 # <a name="indexes-on-computed-columns"></a>Indici per le colonne calcolate
   È possibile definire gli indici per le colonne calcolate purché siano soddisfatti i requisiti seguenti:  
@@ -74,7 +73,7 @@ ms.locfileid: "36065587"
   
 -   Non è un'espressione dei tipi di dati `float` o `real`.  
   
--   Non usa un `float` o `real` tipo di dati nella relativa definizione. Ad esempio, nell'istruzione seguente, colonna `y` è `int` ed deterministica, ma non precisa.  
+-   Non usa un' `float` o `real` tipo di dati nella relativa definizione. Ad esempio, nell'istruzione seguente, colonna `y` è `int` e deterministica ma non precisa.  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -86,17 +85,17 @@ ms.locfileid: "36065587"
     ```  
   
 > [!NOTE]  
->  Qualsiasi `float` oppure `real` espressione sono considerata non precisa e non può essere una chiave di un indice; `float` o `real` espressione può essere utilizzata in una vista indicizzata, ma non come una chiave. Questa considerazione è valida anche per le colonne calcolate. Qualsiasi funzione, espressione o funzione definita dall'utente è considerata non precisa se includono `float` o `real` espressioni. Sono comprese le espressioni logiche (confronti).  
+>  Qualsiasi `float` oppure `real` espressione sono considerata non precisa e non può essere una chiave di un indice, un `float` o `real` espressione può essere utilizzata in una vista indicizzata, ma non come una chiave. Questa considerazione è valida anche per le colonne calcolate. Funzioni, espressioni oppure funzioni definite dall'utente sono considerate non precise se includono `float` o `real` espressioni. Sono comprese le espressioni logiche (confronti).  
   
  La proprietà **IsPrecise** della funzione COLUMNPROPERTY indica se una *computed_column_expression* è precisa.  
   
  **Data Type Requirements**  
   
--   Il *computed_column_expression* definita per la colonna calcolata non può restituire il `text`, `ntext`, o `image` tipi di dati.  
+-   Il *computed_column_expression* definita per la colonna calcolata non può restituire il `text`, `ntext`, o `image` i tipi di dati.  
   
--   Le colonne calcolate derivate da `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, e `xml` tipi di dati possono essere indicizzati, purché il tipo di dati di colonna calcolata sia consentito come colonna chiave di indice.  
+-   Le colonne calcolate derivate da `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, e `xml` i tipi di dati possono essere indicizzati, purché il tipo di dati della colonna calcolata sia consentito come colonna chiave di indice.  
   
--   Le colonne calcolate derivate da `image`, `ntext`, e `text` tipi di dati possono essere colonne non chiave (incluse) in un indice non cluster, purché il tipo di dati di colonna calcolata sia consentito come colonna non chiave dell'indice.  
+-   Le colonne calcolate derivate da `image`, `ntext`, e `text` tipi di dati possono essere colonne non chiave (incluse) in un indice non cluster purché il tipo di dati della colonna calcolata sia consentito come colonna non chiave dell'indice.  
   
  **SET Option Requirements**  
   
