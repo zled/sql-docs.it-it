@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 - merge replication conflict resolution [SQL Server replication], merge article resolvers
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fab64e66ea1a38131c4edf7e14f4ea7fb1a0fd62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1b5899d62f5d9293a21c875a2ae9de5016a2efb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280987"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Impostazione di un sistema di risoluzione dei conflitti dell'articolo di merge
   In questo argomento viene descritto come specificare un sistema di risoluzione dell'articolo di merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -91,7 +91,7 @@ ms.locfileid: "36066458"
   
 2.  Per determinare se il sistema di risoluzione desiderato è già registrato, eseguire [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) in qualsiasi database nel server di pubblicazione. Verrà visualizzata una descrizione del sistema di risoluzione personalizzato, nonché l'identificatore di classe (CLSID) di ogni sistema di risoluzione basato su COM registrato nel server di distribuzione oppure informazioni sull'assembly gestito per ogni gestore della logica di business registrato nel server di distribuzione.  
   
-3.  Se il sistema di risoluzione desiderato non è già registrato, eseguire [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) nel database di distribuzione. Specificare un nome per il sistema di risoluzione per **@article_resolver**. Nel caso di un gestore della logica di business, si tratta del nome descrittivo dell'assembly. Per i sistemi di risoluzione basati su COM, specificare il CLSID della DLL per **@resolver_clsid**e per un gestore della logica di business, specificare il valore `true` per **@is_dotnet_assembly**, il nome dell'assembly per **@dotnet_assembly_name**e il nome completo della classe che esegue l'override <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per **@dotnet_class_name**.  
+3.  Se il sistema di risoluzione desiderato non è già registrato, eseguire [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) nel database di distribuzione. Specificare un nome per il sistema di risoluzione per **@article_resolver**. Nel caso di un gestore della logica di business, si tratta del nome descrittivo dell'assembly. Per i resolver basato su COM, specificare il CLSID della DLL **@resolver_clsid**e per un gestore della logica di business, specificare il valore `true` per **@is_dotnet_assembly**, il nome dell'assembly per **@dotnet_assembly_name**e il nome completo della classe che esegue l'override <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per **@dotnet_class_name**.  
   
     > [!NOTE]  
     >  Se un assembly del gestore della logica di business non viene distribuito nella stessa directory del file eseguibile dell'agente di merge, è necessario specificare il percorso completo indicando il nome dell'assembly per **@dotnet_assembly_name**.  

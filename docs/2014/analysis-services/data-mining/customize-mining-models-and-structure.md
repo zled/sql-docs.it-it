@@ -1,5 +1,5 @@
 ---
-title: Personalizzare modelli di Data Mining e la struttura | Documenti Microsoft
+title: Personalizzare struttura e modelli di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - mining models [Analysis Services], properties
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 595e914741361fa0922da59a2e0fdc699d96054c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79790404f11ffc40ca3e4826217ab331fec92a85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286357"
 ---
 # <a name="customize-mining-models-and-structure"></a>Personalizzare struttura e modelli di data mining
   Dopo avere selezionato un algoritmo adatto alle esigenze aziendali, è possibile personalizzare il modello di data mining nei modi seguenti per migliorarne potenzialmente i risultati.  
@@ -65,7 +65,7 @@ ms.locfileid: "36156825"
 ### <a name="creating-aliases-for-model-columns"></a>Creazione di alias per le colonne del modello  
  Quando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea il modello di data mining, usa gli stessi nomi di colonna presenti nella struttura di data mining. È possibile aggiungere un alias a qualsiasi colonne del modello di data mining. Questo può facilitare la comprensione del contenuto o dell'utilizzo della colonna oppure rendere il nome più corto per semplificare la creazione delle query. Gli alias sono anche utili quando si desidera creare una copia di una colonna e assegnarle un nome descrittivo.  
   
- Creare un alias modificando la `Name` proprietà della colonna del modello di data mining. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continua a utilizzare il nome originale come ID della colonna e il nuovo valore digitato come `Name` diviene l'alias di colonna e viene visualizzato nella griglia tra parentesi accanto all'utilizzo della colonna.  
+ Creare un alias modificare la `Name` proprietà della colonna del modello di data mining. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continua a usare il nome originale come ID di colonna e il nuovo valore digitato come `Name` diventa l'alias di colonna e viene visualizzato nella griglia tra parentesi accanto all'utilizzo della colonna.  
   
  ![colonne del modello gli alias nel data mining](../media/modelcolumnalias-income.gif "colonne del modello gli alias nel data mining")  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36156825"
 |[Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)|[Algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm.md)|  
 |[Algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)|[Algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm.md)|  
 |[Algoritmo Microsoft Association Rules](microsoft-association-algorithm.md)|[Algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm.md)|  
-|[Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)||  
+|[Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)||  
   
 ## <a name="customizing-algorithm-parameters"></a>Personalizzazione dei parametri dell'algoritmo  
  Ogni algoritmo supporta parametri che è possibile utilizzare per personalizzare il comportamento dell'algoritmo e ottimizzare i risultati del modello. Per una descrizione di come utilizzare ciascun parametro, vedere gli argomenti seguenti:  
@@ -105,7 +105,7 @@ ms.locfileid: "36156825"
 |CLUSTER_SEED|[Riferimento tecnico per l'algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Riferimento tecnico per l'algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)|  
 |COMPLEXITY_PENALTY|[Riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [I flag di modellazione &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
+|FORCE_REGRESSOR|[Riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Flag di modellazione &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
 |FORECAST_METHOD|[Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)|  

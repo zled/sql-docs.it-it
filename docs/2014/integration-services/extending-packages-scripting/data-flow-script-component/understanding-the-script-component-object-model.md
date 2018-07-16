@@ -18,16 +18,16 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6201ec5007c3f7e09c2713d45bdd86badb2addfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d2c2c37e0f9c5485b530483b60da08d8da06173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316821"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Informazioni sul modello a oggetti del componente script
-  Come descritto in [codifica e debug del componente Script] (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, il progetto di componente Script contiene tre elementi di progetto:  
+  Come descritto in [codifica e debug del componente Script] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, il progetto del componente Script contiene tre elementi:  
   
 1.  L'elemento `ScriptMain`, che contiene la classe `ScriptMain` in cui si scrive il codice. La classe `ScriptMain` eredita dalla classe `UserComponent`.  
   
@@ -129,7 +129,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Contenuto dell'elemento di progetto ComponentWrapper  
  L'elemento di progetto ComponentWrapper contiene una classe denominata `UserComponent` che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La classe `ScriptMain` in cui si scrive il codice personalizzato deriva a sua volta da `UserComponent`. La classe `UserComponent` contiene i metodi seguenti:  
   
--   Un'implementazione sottoposta a override del metodo `ProcessInput`. Si tratta del metodo chiamato dal motore flusso di dati in fase di esecuzione dopo il metodo `PreExecute` e può essere chiamato più volte. `ProcessInput` trasferisce l'elaborazione per il  **\<inputbuffer > _ProcessInput** metodo. Quindi, il metodo `ProcessInput` verifica se è stata raggiunta la fine del buffer di input e, in caso affermativo, chiama il metodo `FinishOutputs` sottoponibile a override e il metodo privato `MarkOutputsAsFinished`. Il metodo `MarkOutputsAsFinished` chiama infine `SetEndOfRowset` sull'ultimo buffer di output.  
+-   Un'implementazione sottoposta a override del metodo `ProcessInput`. Si tratta del metodo chiamato dal motore flusso di dati in fase di esecuzione dopo il metodo `PreExecute` e può essere chiamato più volte. `ProcessInput` trasferisce l'elaborazione per il  **\<inputbuffer > _ProcessInput** (metodo). Quindi, il metodo `ProcessInput` verifica se è stata raggiunta la fine del buffer di input e, in caso affermativo, chiama il metodo `FinishOutputs` sottoponibile a override e il metodo privato `MarkOutputsAsFinished`. Il metodo `MarkOutputsAsFinished` chiama infine `SetEndOfRowset` sull'ultimo buffer di output.  
   
 -   Un'implementazione sottoponibile a override del metodo **\<inputbuffer>_ProcessInput**. Questa implementazione predefinita esegue il ciclo di ogni riga di input e chiama **\<inputbuffer>_ProcessInputRow**.  
   
@@ -154,7 +154,7 @@ public override void PreExecute()
   
 -   Proprietà delle funzioni di accesso di sola scrittura, denominate e tipizzate per ogni colonna di output.  
   
--   Sola scrittura  **\<colonna > _IsNull** proprietà per ogni colonna di output selezionato che è possibile utilizzare per impostare il valore della colonna su `null`.  
+-   Sola scrittura  **\<colonna > _IsNull** proprietà per ogni colonna di output selezionata che è possibile usare per impostare il valore della colonna su `null`.  
   
 -   Un metodo `AddRow` per aggiungere una nuova riga vuota nel buffer di output.  
   
@@ -206,7 +206,7 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione del componente Script nell'Editor del componente di Script] ((configuring-the-script-component-in-the-script-component-editor.md)   

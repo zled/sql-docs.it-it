@@ -1,5 +1,5 @@
 ---
-title: Concedere l'accesso personalizzato ai dati delle celle (Analysis Services) | Documenti Microsoft
+title: Concedere l'accesso personalizzato ai dati delle celle (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.celldata.f1
 helpviewer_keywords:
@@ -20,28 +20,28 @@ helpviewer_keywords:
 - custom cell data access [Analysis Services]
 ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 979209ce262ee26efbe1e4c575243d29e4a1dc56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4932341742a0760b1bfb1ccab502cbf960aa01d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077691"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317111"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Concedere l'accesso personalizzato ai dati delle celle (Analysis Services)
   La sicurezza della cella viene usata per consentire o negare l'accesso ai dati di misura all'interno di un cubo. La figura seguente mostra una combinazione di misure consentite e negate in una tabella pivot quando il ruolo dell'utente connesso consente l'accesso a determinate misure. In questo esempio, **Reseller Sales Amount** e **Reseller Total Product Cost** sono le uniche misure disponibili tramite questo ruolo. Tutte le altre misure vengono negate in modo implicito. I passaggi usati per ottenere tale risultato vengono forniti nella sezione "Consentire l'accesso a misure specifiche" riportata di seguito.  
   
  ![Tabella pivot con celle consentite e negate](../media/ssas-permscellsallowed.png "tabella pivot con celle consentite e negate")  
   
- Le autorizzazioni per le celle vengono applicate ai dati all'interno della cella e non ai relativi metadati. Si noti come nei risultati di una query la cella venga comunque visualizzata mostrando il valore `#N/A` anziché il valore effettivo. Il `#N/A` valore viene visualizzato nella cella a meno che l'applicazione client traduce il valore o un altro valore viene specificato impostando la proprietà valore di cella protetta nella stringa di connessione.  
+ Le autorizzazioni per le celle vengono applicate ai dati all'interno della cella e non ai relativi metadati. Si noti come nei risultati di una query la cella venga comunque visualizzata mostrando il valore `#N/A` anziché il valore effettivo. Il `#N/A` valore viene visualizzato nella cella a meno che l'applicazione client converte il valore o un altro valore se viene specificato impostando la proprietà Secured Cell Value nella stringa di connessione.  
   
  Per nascondere completamente la cella, è necessario limitare i membri visualizzabili, ovvero le dimensioni, gli attributi delle dimensioni e i membri degli attributi delle dimensioni. Per altre informazioni, vedere [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md).  
   
  L'amministratore può specificare se i membri del ruolo dispongono delle autorizzazioni di lettura, lettura condizionale o lettura/scrittura nelle celle di un cubo. Poiché l'assegnazione delle autorizzazioni in una cella rappresenta il livello di sicurezza più basso consentito, prima di iniziare ad applicare le autorizzazioni a questo livello è importante tenere presenti alcuni concetti:  
   
--   La sicurezza a livello di cella non può espandere i diritti limitati a un livello superiore. Ad esempio, se un ruolo nega l'accesso ai dati di dimensione, la sicurezza a livello di cella non può sostituire il set delle autorizzazioni negate. Un altro esempio: si consideri un ruolo con `Read` l'autorizzazione per un cubo e **lettura/scrittura** autorizzazione in una cella, l'autorizzazione per i dati della cella non sarà **lettura/scrittura**; sarà `Read`.  
+-   La sicurezza a livello di cella non può espandere i diritti limitati a un livello superiore. Ad esempio, se un ruolo nega l'accesso ai dati di dimensione, la sicurezza a livello di cella non può sostituire il set delle autorizzazioni negate. Un altro esempio: si consideri un ruolo con `Read` l'autorizzazione per un cubo e **lettura/scrittura** autorizzazione in una cella, l'autorizzazione di dati della cella non sarà **lettura/scrittura**; sarà `Read`.  
   
 -   Le autorizzazioni personalizzate spesso devono essere coordinate tra i membri della dimensione e le celle all'interno dello stesso ruolo. Si supponga ad esempio di volere negare l'accesso ad alcune misure correlate allo sconto per diverse combinazioni di rivenditori. Se si specifica **Resellers** come dati di dimensione e **Discount Amount come misura** , sarà necessario combinare all'interno dello stesso ruolo le autorizzazioni sia nella misura (usando le istruzioni illustrate in questo argomento) che nei membri della dimensione. Per informazioni dettagliate sull'impostazione delle autorizzazioni per la dimensione, vedere [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) .  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36077691"
      Questa espressione identifica in modo esplicito le misure visibili agli utenti. Tutte le altre misure non saranno disponibili agli utenti che si connettono tramite questo ruolo. Si noti che [CurrentMember &#40;MDX&#41;](/sql/mdx/current-mdx) imposta il contesto e viene seguito dalla misura consentita. L'effetto di questa espressione sarà quello di visualizzare il valore, se il membro corrente include **Reseller Sales Amount** o **Reseller Total Product Cost**. In caso contrario, verrà negato l'accesso. L'espressione è costituita da più parti, ognuna delle quali è racchiusa tra parentesi. Per specificare più misure viene usato l'operatore `OR`.  
   
 ## <a name="deny-access-to-specific-measures"></a>Negare l'accesso a misure specifiche  
- La seguente espressione MDX, anch'essa specificata in **Crea ruolo** | **Dati delle celle** | **Consenti lettura del contenuto del cubo**, avrà l'effetto opposto rendendo alcune misure non disponibili. In questo esempio, **Discount Amount** e **Discount Percentage** vengono resi non disponibili usando la `NOT` e `AND` operatori. Tutte le altre misure saranno visibili agli utenti che si connettono tramite questo ruolo.  
+ La seguente espressione MDX, anch'essa specificata in **Crea ruolo** | **Dati delle celle** | **Consenti lettura del contenuto del cubo**, avrà l'effetto opposto rendendo alcune misure non disponibili. In questo esempio **Discount Amount** e **Discount Percentage** vengono resi non disponibili usando il `NOT` e `AND` operatori. Tutte le altre misure saranno visibili agli utenti che si connettono tramite questo ruolo.  
   
 ```  
 (NOT Measures.CurrentMember IS [Measures].[Discount Amount]) AND (NOT Measures.CurrentMember IS [Measures].[Discount Percentage])  
@@ -102,10 +102,10 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
 ## <a name="see-also"></a>Vedere anche  
  [Generatore MDX &#40;Analysis Services - dati multidimensionali&#41;](../mdx-builder-analysis-services-multidimensional-data.md)   
- [Lo Script MDX di base &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
+ [Script MDX di base &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
  [Concedere le autorizzazioni di elaborazione &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
  [Concedere le autorizzazioni su una dimensione &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
  [Concedere l'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Concedere le autorizzazioni del cubo o modello di &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+ [Concedere le autorizzazioni del cubo o un modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
   

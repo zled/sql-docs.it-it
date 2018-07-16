@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bc9aa961911f8686ba3921fcf773ed47ecfb43a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: d1f3b7908e0ea58dad3f91b7a877fe5d64a1762a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292691"
 ---
 # <a name="database-features"></a>Caratteristiche del database
   In questa sezione sono contenute le caratteristiche e le attività associate a database, oggetti di database, tipi di dati e i meccanismi necessari per utilizzare o gestire dati.  
@@ -35,7 +35,7 @@ ms.locfileid: "36156727"
 |[Partitioned Tables and Indexes](partitions/partitioned-tables-and-indexes.md)|[Sinonimi &#40;Motore di database&#41;](synonyms/synonyms-database-engine.md)|[Notifiche degli eventi](service-broker/event-notifications.md)|  
 |[Viste](views/views.md)|[Dati XML &#40;SQL Server&#41;](xml/xml-data-sql-server.md)|[Monitoraggio e ottimizzazione delle prestazioni](performance/monitor-and-tune-for-performance.md)|  
 |[Stored procedure &#40;Motore di database&#41;](stored-procedures/stored-procedures-database-engine.md)|[Dati spaziali &#40;SQL Server&#41;](spatial/spatial-data-sql-server.md)||  
-|[Ricerca &#40;SQL Server&#41;](../database-engine/search-sql-server.md)|[Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](blob/binary-large-object-blob-data-sql-server.md)||  
+|[Ricerca di &#40;SQL Server&#41;](../database-engine/search-sql-server.md)|[Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](blob/binary-large-object-blob-data-sql-server.md)||  
 |[Funzioni definite dall'utente](user-defined-functions/user-defined-functions.md)|[Applicazioni livello dati](data-tier-applications/data-tier-applications.md)||  
 |[Statistiche](statistics/statistics.md)|[Log delle transazioni &#40;SQL Server&#41;](logs/the-transaction-log-sql-server.md)||  
 |[Guide di piano](performance/plan-guides.md)|[Checkpoint del database &#40;SQL Server&#41;](logs/database-checkpoints-sql-server.md)||  

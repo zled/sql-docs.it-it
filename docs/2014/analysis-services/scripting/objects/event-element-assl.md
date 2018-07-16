@@ -1,5 +1,5 @@
 ---
-title: Elemento Event (ASSL) | Documenti Microsoft
+title: Elemento Event (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Event element
 ms.assetid: c7911bcd-e601-4a96-a6d8-20b7c7375ff2
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 441d8758f25092d1e10128a44ace8d12f3eee79a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 119bc279e1313e0b7b8bd0790c631b8e9a896428
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233881"
 ---
 # <a name="event-element-assl"></a>Elemento Event (ASSL)
-  Definisce un' `Event` da acquisire come parte di un [traccia](trace-element-assl.md) elemento.  
+  Definisce un `Event` da acquisire come parte di un [traccia](trace-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,10 +59,10 @@ ms.locfileid: "36156798"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[eventi](../collections/events-element-assl.md)|  
+|Elementi padre|[Eventi](../collections/events-element-assl.md)|  
 |Elementi figlio|[Le colonne](../collections/columns-element-assl.md), [EventID](../properties/id-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.TraceEvent>.  
   
 ## <a name="see-also"></a>Vedere anche  

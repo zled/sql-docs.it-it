@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserting columns
 - columns [SQL Server], adding
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - adding columns
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c5480a1ff78132ac8273fde2d0f5756ce62fc263
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 70760f93bc60de7c8c4d8e86d7a32383647beee8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308821"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Aggiunta di colonne a query (Visual Database Tools)
   Per utilizzare una colonna in una query, è necessario aggiungerla alla query. È possibile aggiungere una colonna per visualizzarla nell'output della query, per utilizzarla per l'ordinamento oppure per ricercarne o riepilogarne il contenuto. È possibile decidere quali colonne utilizzate nella query devono essere incluse nel riquadro Risultati quando viene eseguita la query. Per altre informazioni, vedere [Rimuovere colonne dai risultati della query &#40;Visual Database Tools&#41;](visual-database-tools.md).  
@@ -55,10 +55,10 @@ ms.locfileid: "36066412"
 3.  Nella finestra Proprietà fare clic su **Tutte le colonne** e scegliere **Sì** o **No** dall'elenco a discesa.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Rimuovere le colonne dai risultati della Query &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Rimuovere colonne dalla query &#40;Visual Database Tools&#41;](remove-columns-from-queries-visual-database-tools.md)   
+ [Rimuovere colonne dai risultati di Query &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Rimuovere colonne da query &#40;Visual Database Tools&#41;](remove-columns-from-queries-visual-database-tools.md)   
  [Specificare i criteri di ricerca &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [Riepiloga i risultati di Query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Riepilogo dei risultati di Query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

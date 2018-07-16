@@ -1,5 +1,5 @@
 ---
-title: Configura o Ripristina PowerPivot per SharePoint 2010 (strumento di configurazione PowerPivot) | Documenti Microsoft
+title: Configurare o ripristinare PowerPivot per SharePoint 2010 (strumento di configurazione PowerPivot) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3aad2530c6f8506dd3da6224c9d91f5ae46f9f27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6cf032b8f36d9329cd3e5ae480ea5d667da2d36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284267"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Configurare o ripristinare PowerPivot per SharePoint 2010 (strumento di configurazione PowerPivot)
-  Per configurare o ripristinare un'installazione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot per SharePoint 2010, usare lo strumento di configurazione PowerPivot. Tramite lo strumento di configurazione viene innanzitutto analizzato il sistema, dopodiché viene restituito un elenco di azioni necessarie per completare o ripristinare l'installazione. Con l'installazione guidata [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] vengono installati lo strumento di configurazione PowerPivot per SharePoint 2010 e quello per SharePoint 2013. In questo argomento viene descritto lo strumento di configurazione PowerPivot per SharePoint 2010. Per ulteriori informazioni su SharePoint 2010, vedere [Configura o Ripristina PowerPivot per SharePoint 2013 &#40;strumento di configurazione PowerPivot&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md).  
+  Per configurare o ripristinare un'installazione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot per SharePoint 2010, usare lo strumento di configurazione PowerPivot. Tramite lo strumento di configurazione viene innanzitutto analizzato il sistema, dopodiché viene restituito un elenco di azioni necessarie per completare o ripristinare l'installazione. Con l'installazione guidata [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] vengono installati lo strumento di configurazione PowerPivot per SharePoint 2010 e quello per SharePoint 2013. In questo argomento viene descritto lo strumento di configurazione PowerPivot per SharePoint 2010. Per altre informazioni su SharePoint 2010, vedere [Configura o Ripristina PowerPivot per SharePoint 2013 &#40;strumento di configurazione PowerPivot&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md).  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36066263"
   
 -   La porta 80 deve essere disponibile se una delle attività selezionate richiede la creazione e la configurazione di un'applicazione Web allo strumento di configurazione.  
   
-##  <a name="bkmk_using"></a> Tramite lo strumento di configurazione PowerPivot  
+##  <a name="bkmk_using"></a> Usando lo strumento di configurazione PowerPivot  
  Nella prima pagina dello strumento viene fornito un riepilogo dei valori di input usati per configurare la farm di SharePoint. Oltre ai valori di input che è necessario specificare, per configurare il sistema sono necessari dei valori predefiniti. Vengono usati nomi predefiniti per applicazioni del servizio, database di applicazioni del servizio e proprietà di applicazioni del servizio.  
   
 > [!TIP]  
@@ -45,18 +45,18 @@ ms.locfileid: "36066263"
   
  I valori per gli account del servizio sono usati per più servizi. Ad esempio, l'account predefinito viene usato dallo strumento di configurazione PowerPivot nella prima pagina per impostare tutte le identità del pool di applicazioni. È possibile cambiare questi account in un secondo momento modificando le proprietà dell'applicazione di servizio in Amministrazione centrale.  
   
--   L'eccezione a questa regola dello strumento di configurazione di PowerPivot per SharePoint 2010 è l'account del servizio Analysis Services. Questo account viene specificato durante l'installazione e si digita una password per questo account il **registrare SQL Server Analysis Services (PowerPivot nel Server locale)** azione. Nella pagina di riepilogo non è incluso un campo per questa password, pertanto assicurarsi di immetterlo nella pagina di questa azione.  
+-   L'eccezione a questa regola dello strumento di configurazione di PowerPivot per SharePoint 2010 è l'account del servizio Analysis Services. Questo account viene specificato durante l'installazione e si digita una password per l'account tramite il **registrare SQL Server Analysis Services (PowerPivot nel Server locale)** azione. Nella pagina di riepilogo non è incluso un campo per questa password, pertanto assicurarsi di immetterlo nella pagina di questa azione.  
   
  Lo strumento dispone di un'interfaccia a schede comprendente input di parametri, script di Windows PowerShell e messaggi di stato.  
   
- Lo strumento di configurazione PowerPivot usano Windows PowerShell per configurare il server. È possibile fare clic il **Script** scheda per esaminare lo script di Windows PowerShell di.  
+ Lo strumento di configurazione PowerPivot usano Windows PowerShell per configurare il server. È possibile fare clic il **Script** pressione di tab per esaminare lo script di Windows PowerShell di.  
   
  ![Interfaccia utente dello strumento di configurazione](media/ssas-pctui.gif "interfaccia utente dello strumento di configurazione")  
   
 ##  <a name="bkmk_steps"></a> Passaggi di configurazione  
  Il collegamento allo strumento di configurazione è visibile solo quando PowerPivot per SharePoint 2010 è installato nel server locale.  
   
-1.  Nel **avviare** dal menu **tutti i programmi**, fare clic su [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], fare clic su **strumenti di configurazione**, quindi fare clic su **strumento di configurazione PowerPivot** .  
+1.  Nel **avviare** dal menu **tutti i programmi**, fare clic su [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], fare clic su **strumenti di configurazione**e quindi fare clic su **dello strumento di configurazione PowerPivot** .  
   
 2.  Fare clic su **Configura o ripristina PowerPivot per SharePoint**.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36066263"
   
 |Pagina|Valore di input|Origine|Description|  
 |----------|-----------------|------------|-----------------|  
-|**Configura o Ripristina PowerPivot per SharePoint**|Account predefinito|Utente corrente|L'account predefinito è un account utente di Windows di dominio usato per eseguire il provisioning di servizi condivisi nella farm. Viene usato per eseguire il provisioning dell'applicazione del servizio PowerPivot, il servizio di archiviazione sicura, Excel Services, l'identità del pool di applicazioni Web, l'amministratore della raccolta siti e l'account di aggiornamento dati automatico PowerPivot.<br /><br /> Per impostazione predefinita, lo strumento immetto l'account di dominio dell'utente corrente. A meno che non si intenda configurare un server a scopo di valutazione, è necessario sostituirlo con un account utente di dominio diverso.<br /><br /> È inoltre possibile modificare in seguito le identità del servizio tramite Amministrazione centrale.<br /><br /> Facoltativamente, è possibile usare lo strumento di configurazione PowerPivot per specificare gli account dedicati per gli elementi seguenti:<br /><br /> applicazione Web, tramite la pagina **Creare applicazione Web predefinita** (supponendo che si stia creando un'applicazione Web per la farm).<br /><br /> PowerPivot account di aggiornamento dati automatico, tramite il **creare Account automatico per Datarefresh** pagina in questo strumento.|  
+|**Configurare o ripristinare PowerPivot per SharePoint**|Account predefinito|Utente corrente|L'account predefinito è un account utente di Windows di dominio usato per eseguire il provisioning di servizi condivisi nella farm. Viene usato per eseguire il provisioning dell'applicazione del servizio PowerPivot, il servizio di archiviazione sicura, Excel Services, l'identità del pool di applicazioni Web, l'amministratore della raccolta siti e l'account di aggiornamento dati automatico PowerPivot.<br /><br /> Per impostazione predefinita, lo strumento immetto l'account di dominio dell'utente corrente. A meno che non si intenda configurare un server a scopo di valutazione, è necessario sostituirlo con un account utente di dominio diverso.<br /><br /> È inoltre possibile modificare in seguito le identità del servizio tramite Amministrazione centrale.<br /><br /> Facoltativamente, è possibile usare lo strumento di configurazione PowerPivot per specificare gli account dedicati per gli elementi seguenti:<br /><br /> applicazione Web, tramite la pagina **Creare applicazione Web predefinita** (supponendo che si stia creando un'applicazione Web per la farm).<br /><br /> PowerPivot account di aggiornamento dati automatico, tramite il **creare Account automatico per Datarefresh** pagina in questo strumento.|  
 ||Server di database|Istanza denominata di PowerPivot locale, se disponibile|Se un'istanza del motore di database è installata come un'istanza denominata di PowerPivot, il campo del server di database verrà popolato con questa istanza. Se il motore di database non è installato, questo campo è vuoto. È necessario fornire un'istanza. Può trattarsi di qualsiasi versione o edizione di SQL Server supportata per le farm SharePoint.|  
 ||Passphrase|Input dell'utente|Se si crea una nuova farm, la passphrase immessa sarà quella per la farm. Se si aggiunge PowerPivot per SharePoint a una farm esistente, è necessario fornire la passphrase definita per la farm al momento della creazione.|  
 ||Porta di Amministrazione centrale SharePoint|Predefinito, se necessario|Se la farm non è configurata, verranno fornite opzioni per creare la farm, incluso un endpoint HTTP per Amministrazione centrale. Per impostazione predefinita, viene usato un numero di porta generato casualmente che non è in uso.|  
@@ -103,7 +103,7 @@ ms.locfileid: "36066263"
 |**Creare applicazione del servizio PowerPivot**|Nome dell'applicazione del servizio PowerPivot|Default|Il nome predefinito è Applicazione di servizio PowerPivot predefinita. È possibile usare un valore diverso nello strumento.|  
 ||Server di database dell'applicazione del servizio PowerPivot|Default|Server di database che ospita il database dell'applicazione di servizio PowerPivot. Il nome del server predefinito corrisponde al server di database usato per la farm. È possibile usare un valore diverso nello strumento.|  
 ||Nome del database dell'applicazione del servizio PowerPivot|Default|Il nome del database predefinito è basato sul nome dell'applicazione del servizio, seguito da un GUID per assicurarne l'univocità. È possibile usare un valore diverso nello strumento.|  
-||Aggiorna le cartelle di lavoro per abilitare l'aggiornamento dei dati|Input dell'utente|L'aggiornamento dei dati ha esito negativo e non è supportato per le cartelle di lavoro di SQL Server 2008 R2 PowerPivot. L'opzione **cartelle di lavoro di aggiornamento per abilitare i dati di aggiornamento** Aggiorna le cartelle di lavoro alla versione di SQL Server 2012 PowerPivot.|  
+||Aggiorna le cartelle di lavoro per abilitare l'aggiornamento dei dati|Input dell'utente|L'aggiornamento dei dati ha esito negativo e non è supportato per le cartelle di lavoro di SQL Server 2008 R2 PowerPivot. L'opzione **cartelle di lavoro di aggiornamento per abilitare data refresh** Aggiorna le cartelle di lavoro alla versione di SQL Server 2012 PowerPivot.|  
 |**Creare applicazione Web predefinita**|Nome applicazione Web|Predefinito, se necessario|Se non esistono applicazioni Web, ne viene creata una. L'applicazione web verrà configurata per l'autenticazione in modalità classica e per l'ascolto **la porta 80**. Le dimensioni di caricamento file massime vengono impostate su 2047 MB, il massimo consentito in SharePoint. Tali dimensioni di caricamento sono necessarie per i file PowerPivot di grandi dimensioni.|  
 ||URL|Predefinito, se necessario|Viene creato un URL in base al nome del server, usando le stesse convenzioni di denominazione per i nomi file di SharePoint.|  
 ||Pool di applicazioni Web|Predefinito, se necessario|Viene creato un pool di applicazioni predefinito in IIS.|  
@@ -111,7 +111,7 @@ ms.locfileid: "36066263"
 ||Server di database dell'applicazione Web|Predefinito, se necessario|L'istanza del database predefinito viene pre-selezionata per archiviare il database dell'applicazione, tuttavia è possibile specificare un'istanza di SQL Server diversa nello strumento.|  
 ||Nome del database dell'applicazione Web|Predefinito, se necessario|Il nome del database è basato sulle convenzioni di denominazione per i nomi file di SharePoint, tuttavia è possibile scegliere un nome diverso.|  
 |**Distribuire la soluzione applicazione Web**|URL|Predefinito, se necessario|L'URL predefinito è quello dell'applicazione Web predefinita.|  
-||Dimensioni massime file (in MB)|Predefinito, se necessario|L'impostazione predefinita è 2047. Le raccolte documenti di SharePoint hanno anche una dimensione massima e l'impostazione di PowerPivot non deve superare quella della raccolta documenti. Per altre informazioni, vedere [configurare File massime di caricamento &#40;PowerPivot per SharePoint&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).|  
+||Dimensioni massime file (in MB)|Predefinito, se necessario|L'impostazione predefinita è 2047. Le raccolte documenti di SharePoint hanno anche una dimensione massima e l'impostazione di PowerPivot non deve superare quella della raccolta documenti. Per altre informazioni, vedere [configurare dimensioni di caricamento File massime &#40;PowerPivot per SharePoint&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).|  
 |**Creare raccolta siti**|Amministratore del sito|Predefinito, se necessario|Viene usato l'account predefinito. È possibile eseguire l'override di questo account nella pagina **Creare raccolta siti** .|  
 ||Posta elettronica contatto|Predefinito, se necessario|Se Microsoft Outlook è configurato nel server, viene usato l'indirizzo di posta elettronica dell'utente corrente. In caso contrario, viene usato un segnaposto.|  
 ||URL sito|Predefinito, se necessario|Viene creato l'URL del sito usando le stesse convenzioni di denominazione per gli URL di SharePoint.|  
@@ -153,11 +153,11 @@ ms.locfileid: "36066263"
 -   Scaricare lo strumento di creazione di PowerPivot sul computer della workstation in uso per creare una cartella di lavoro di PowerPivot e pubblicarla quindi su SharePoint. L'installazione dello strumento e la pubblicazione di una cartella di lavoro di PowerPivot completano il ciclo di installazione verificando l'interoperabilità dei componenti server appena installati.  
   
 ### <a name="grant-sharepoint-permissions-to-workbook-users"></a>Concedere autorizzazioni di SharePoint agli utenti delle cartelle di lavoro  
- Gli utenti devono disporre delle autorizzazioni di SharePoint per pubblicare o visualizzare cartelle di lavoro. Assicurarsi di concedere **vista** delle autorizzazioni per gli utenti che devono visualizzare cartelle di lavoro pubblicate e **collaborazione** delle autorizzazioni per gli utenti che pubblicano o gestiscono le cartelle di lavoro. Per concedere le autorizzazioni, è necessario disporre dei privilegi di amministratore della raccolta siti.  
+ Gli utenti devono disporre delle autorizzazioni di SharePoint per pubblicare o visualizzare cartelle di lavoro. Assicurarsi di concedere **View** le autorizzazioni per gli utenti che devono visualizzare cartelle di lavoro pubblicate e **collaborazione** delle autorizzazioni per gli utenti che pubblicano o gestiscono le cartelle di lavoro. Per concedere le autorizzazioni, è necessario disporre dei privilegi di amministratore della raccolta siti.  
   
 1.  Nel sito, fare clic su **Azioni sito**.  
   
-2.  Fare clic su **autorizzazioni relative ai siti**.  
+2.  Fare clic su **autorizzazioni sito**.  
   
 3.  Creare gruppi in base alle esigenze se si desidera un set di utenti con autorizzazioni **Collaborazione** e un altro gruppo per un set di utenti che dispongono solo delle autorizzazioni **Visualizza** .  
   
@@ -166,7 +166,7 @@ ms.locfileid: "36066263"
 ### <a name="install-adonet-data-services-35-sp1"></a>Installare ADO.NET Data Services 3.5 SP1  
  ADO.NET Data Services è necessario per un'esportazione dei feed di dati di elenchi SharePoint. SharePoint 2010 non include questo componente nel programma PrerequisiteInstaller, pertanto è necessario installarlo manualmente.  
   
-1.  Andare alla documentazione di requisiti hardware e software per SharePoint 2010, [determinare requisiti Hardware e Software (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
+1.  Passare alla documentazione di requisiti hardware e software per SharePoint 2010, [determinare requisiti Hardware e Software (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
   
 2.  Nella sezione relativa ai prerequisiti software di installazione cercare il collegamento per ADO.NET Data Services 3.5 che corrisponde al sistema operativo in uso.  
   
@@ -185,10 +185,10 @@ ms.locfileid: "36066263"
  Nel tempo, se si rendessero necessarie ulteriori funzionalità di elaborazione e archiviazione dati, sarà possibile aggiungere una seconda istanza del server PowerPivot per SharePoint alla farm. Per istruzioni, vedere [elenco di controllo distribuzione: scalabilità orizzontale aggiungendo server PowerPivot a una farm di SharePoint 2010](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
 ## <a name="additional-resources"></a>Risorse aggiuntive  
- ![Le impostazioni di SharePoint](media/as-sharepoint2013-settings-gear.gif "impostazioni di SharePoint") [Invia commenti e suggerimenti e informazioni di contatto tramite Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![Impostazioni di SharePoint](media/as-sharepoint2013-settings-gear.gif "impostazioni SharePoint") [Invia commenti e suggerimenti e informazioni di contatto tramite Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti di configurazione PowerPivot](power-pivot-sharepoint/power-pivot-configuration-tools.md)   
- [Amministrazione Server PowerPivot e la configurazione in Amministrazione centrale](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

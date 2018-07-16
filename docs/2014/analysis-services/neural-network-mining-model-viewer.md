@@ -1,5 +1,5 @@
 ---
-title: Rete neurale (Visualizzatore modello di Data Mining) | Documenti Microsoft
+title: Rete neurale (Visualizzatore modello di Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.neuralnet.f1
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2db48dccb854d2dc51eaae3b8202324a8feed9aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7cb93ac76fb6213817dcef3530387772e099e0e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297411"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Rete neurale (Visualizzatore modello di data mining)
   Utilizzare il visualizzatore **Microsoft Neural Network** per esplorare i modelli di data mining basati sull'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network o [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression.  
@@ -43,7 +43,7 @@ ms.locfileid: "36063723"
   
 |valore|Description|  
 |-----------|-----------------|  
-|**Attribute**|Consente di scegliere un attributo di input dall'elenco. Se si lascia l'impostazione predefinita,  **\<tutte >**, il grafico mostra un elenco di tutti gli attributi di input classificati in base alla relativa influenza sull'attributo stimabile.|  
+|**Attribute**|Consente di scegliere un attributo di input dall'elenco. Se si lascia l'impostazione predefinita,  **\<tutto >**, il grafico mostra un elenco di tutti gli attributi di input classificati in base alla relativa influenza sull'attributo stimabile.|  
 |**Value**|Consente di scegliere un valore per l'attributo di input.|  
   
  **Output**  
@@ -67,7 +67,7 @@ ms.locfileid: "36063723"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori dei modelli di data mining &#40;progettazione modello di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2bab6f72c83cc681443ee526a35fb4368db7ea6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 42311763fddcec6403494c82dca02c29480f7235
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313281"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperare ed eseguire query su dati XML
   In questo argomento vengono descritte le opzioni query che è necessario specificare per eseguire query sui dati XML. Vengono inoltre descritte le parti di istanze XML che non vengono mantenute quando vengono archiviate nei database.  
@@ -44,7 +44,7 @@ FROM T1
   
  Il risultato è `<doc/>`.  
   
- La dichiarazione XML, ad esempio `<?xml version='1.0'?>`, non è mantenuta quando si archiviano i dati XML in un'istanza del tipo di dati `xml`. Questo si verifica per motivi strutturali. La dichiarazione XML () e i relativi attributi (versione/codifica/stand-alone) vengono persi dopo i dati viene convertito nel tipo `xml`. La dichiarazione XML viene considerata come una direttiva per il parser XML. I dati XML vengono archiviati internamente come ucs-2. Tutte le altre PI nell'istanza XML vengono mantenute.  
+ La dichiarazione XML, ad esempio `<?xml version='1.0'?>`, non è mantenuta quando si archiviano i dati XML in un'istanza del tipo di dati `xml`. Questo si verifica per motivi strutturali. La dichiarazione XML () e relativi attributi (versione/encoding/stand-alone) vengono persi dopo che i dati viene convertito nel tipo `xml`. La dichiarazione XML viene considerata come una direttiva per il parser XML. I dati XML vengono archiviati internamente come ucs-2. Tutte le altre PI nell'istanza XML vengono mantenute.  
   
   
 ### <a name="order-of-attributes"></a>Ordine degli attributi  
@@ -91,7 +91,7 @@ GO
   
   
 ##  <a name="query"></a> Impostazione di opzioni query obbligatorie  
- Quando si eseguono query `xml` utilizzando le variabili o colonne di tipo `xml` metodi con tipo di dati, le opzioni seguenti devono essere impostati come illustrato.  
+ Quando si eseguono query `xml` usando le variabili o colonne di tipo `xml` metodi con tipo di dati, le opzioni seguenti devono essere impostati come illustrato.  
   
 |Opzioni SET|Valori richiesti|  
 |-----------------|---------------------|  
@@ -103,7 +103,7 @@ GO
 |NUMERIC_ROUNDABORT|OFF|  
 |QUOTED_IDENTIFIER|ON|  
   
- Se le opzioni non vengono impostate come indicato, le query e modifiche in `xml` metodi con tipo di dati avrà esito negativo.  
+ Se le opzioni non sono impostate come indicato, le query e modifiche su `xml` metodi con tipo di dati avrà esito negativo.  
   
   
 ## <a name="see-also"></a>Vedere anche  

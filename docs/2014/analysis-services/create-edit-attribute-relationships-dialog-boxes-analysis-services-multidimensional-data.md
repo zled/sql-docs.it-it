@@ -1,5 +1,5 @@
 ---
-title: Creare una relazione tra attributi e modifica attributo relazione finestre di dialogo (scheda relazione tra attributi, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Crea relazione tra attributi e modifica attributo relazione finestre di dialogo (scheda relazione tra attributi, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.createrelationshipdialog.f1
 ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 460c38c498d4827973c6ba8cc08aaab17541eff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3215615dd979714d0ec6c133818eb689d085324b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315021"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Creare finestre di dialogo Relazione tra attributi e Modifica relazione tra attributi (scheda Relazione tra attributi, Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Crea relazione tra attributi** per definire nuove relazioni tra attributi e la finestra di dialogo **Modifica relazione tra attributi** per modificare una relazione tra attributi. Per altre informazioni, vedere [Definire relazioni tra attributi](multidimensional-models/attribute-relationships-define.md).  

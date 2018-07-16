@@ -1,5 +1,5 @@
 ---
-title: Definizione periodi di tempo (Creazione guidata dimensione) | Documenti Microsoft
+title: Definizione periodi di tempo (Creazione guidata dimensione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.timefrequency.f1
 ms.assetid: 6bda6b7e-d306-4e68-9acb-84de8f44d1b4
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d0eaa7b29e84be26032618fe7470652adc1a7b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f46d6cea52d34599e44a4439121730c1412e08bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315931"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Definizione periodi di tempo (Creazione guidata dimensione)
   Utilizzare la pagina **Definizione periodi di tempo** per definire le informazioni sull'anno di calendario e le frequenze temporali da includere nella dimensione temporale o nella dimensione temporale del server.  
@@ -52,9 +52,9 @@ ms.locfileid: "36156391"
  Consente di selezionare la lingua per i membri della dimensione temporale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [F1 Guida della procedura guidata di dimensione](dimension-wizard-f1-help.md)   
- [Le dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Guida F1 di creazione guidata dimensione](dimension-wizard-f1-help.md)   
+ [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [Selezione dei calendari &#40;Creazione guidata dimensione&#41;](select-calendars-dimension-wizard.md)  
+ [Selezione calendari &#40;Creazione guidata dimensione&#41;](select-calendars-dimension-wizard.md)  
   
   

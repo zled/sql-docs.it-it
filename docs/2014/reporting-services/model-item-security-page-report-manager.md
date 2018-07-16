@@ -1,5 +1,5 @@
 ---
-title: Pagina sicurezza (gestione Report) elemento modello | Documenti Microsoft
+title: Elemento modello pagina sicurezza (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0d7f05024178334c11fccfd819aed1a4f4e023d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56cb59be6fd256ee182e7b57a5ecd7b4a103bfec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299801"
 ---
 # <a name="model-item-security-page-report-manager"></a>Pagina sicurezza elemento modello (Gestione report)
   Questa pagina consente di proteggere parti di un modello concedendo o revocando autorizzazioni di sola lettura per elementi specifici. La sicurezza degli elementi dei modelli influisce sull'esplorazione ad hoc dei dati in fase di esecuzione e sulla possibilità di utilizzare parti di un modello pubblicato per la creazione di report in Generatore report. Per utilizzare questa caratteristica, è necessario disporre delle autorizzazioni Gestione contenuto.  
@@ -74,7 +74,7 @@ ms.locfileid: "36065314"
  **Eredita autorizzazioni dall'elemento padre**  
  Selezionare questa opzione per ereditare le impostazioni di sicurezza dell'elemento padre.  
   
- **Assegna autorizzazione di lettura ai seguenti utenti e gruppi (separati da punti e virgola)**  
+ **Assegna autorizzazione di lettura ai seguenti utenti e gruppi (separati da punto e virgola)**  
  Selezionare questa opzione per impostare l'account utente o di gruppo per il quale viene stabilito l'accesso. Se si utilizza la sicurezza predefinita, gli account utente o di gruppo corrispondono agli account di dominio di Windows. Specificare gli account nel formato seguente:  *\<dominio >\\< account\>*.  
   
 ## <a name="see-also"></a>Vedere anche  

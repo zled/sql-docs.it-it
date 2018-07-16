@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3745d2334f8b8abf4c60c292bba1a820432d088e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d1883651cc37b93383792b94f94695e0775436a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319827"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Spostamento di database del server di report in un altro computer (modalità nativa SSRS)
   È possibile spostare i database del server di report usati in un'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un'istanza di un computer diverso. I database reportserver e reportservertempdb devono essere spostati o copiati insieme. Per un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono necessari entrambi i database. Il database reportservertempdb deve essere correlato tramite il nome al database reportserver primario che si sta spostando.  
@@ -62,7 +62,7 @@ ms.locfileid: "36156857"
   
 8.  Fare clic su **Aggiungi** per selezionare i file con estensione mdf e ldf del database del server di report che si desidera collegare. Ripetere il passaggio per il database temporaneo del server di report.  
   
-9. Dopo aver collegato i database, verificare che il `RSExecRole` è un ruolo del database nel database del server di report e database temporaneo. `RSExecRole` deve avere select, insert, update, delete e le autorizzazioni di riferimento nelle tabelle di database server di report e le autorizzazioni di esecuzione sulle stored procedure. Per altre informazioni, vedere [Creare RSExecRole](../security/create-the-rsexecrole.md).  
+9. Dopo avere collegato i database, verificare che il `RSExecRole` è un ruolo del database in cui il database del server di report e il database temporaneo. `RSExecRole` deve avere select, insert, update, delete e le autorizzazioni di riferimento nelle tabelle del database server report e le autorizzazioni di esecuzione nelle stored procedure. Per altre informazioni, vedere [Creare RSExecRole](../security/create-the-rsexecrole.md).  
   
 10. Avviare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi al server di report.  
   
@@ -218,7 +218,7 @@ GO
 7.  Fare clic su **Avanti** , quindi su **Fine**.  
   
 > [!NOTE]  
->  Un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] l'installazione richiede che il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] istanza include il `RSExecRole` ruolo. Quando si imposta la connessione al database del server di report tramite lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vengono eseguite le operazioni di creazione dei ruoli, registrazione dell'account di accesso e assegnazione di ruoli. Se per configurare la connessione si utilizzano approcci alternativi, in particolare l'utilità della riga di comando rsconfig.exe, il server di report non si troverà in uno stato attivo. Per renderlo disponibile il server di report, potrebbe essere necessario scrivere codice WMI. Per altre informazioni, vedere [Accedere al provider WMI per Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
+>  Oggetto [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] l'installazione richiede che il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] istanza include la `RSExecRole` ruolo. Quando si imposta la connessione al database del server di report tramite lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vengono eseguite le operazioni di creazione dei ruoli, registrazione dell'account di accesso e assegnazione di ruoli. Se per configurare la connessione si utilizzano approcci alternativi, in particolare l'utilità della riga di comando rsconfig.exe, il server di report non si troverà in uno stato attivo. Per renderlo disponibile il server di report, potrebbe essere necessario scrivere codice WMI. Per altre informazioni, vedere [Accedere al provider WMI per Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare RSExecRole](../security/create-the-rsexecrole.md)   

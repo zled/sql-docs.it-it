@@ -1,5 +1,5 @@
 ---
-title: Grafico (SQL Server Data Mining Add-ins) profitti | Documenti Microsoft
+title: Grafico (SQL Server Data Mining Add-ins) profitti | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
 - profit chart
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - mining models, testing
 ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c78d1f477b878b2ddf78e3c5446e46c249ffcb62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1639ed1ad54d8eabc861a8ec9023638ad4289d63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297361"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>Grafico profitti (componenti aggiuntivi Data mining di SQL Server)
-  ![Pulsante grafico profitti sulla barra multifunzione Data Mining](media/dmc-profitchart.gif "pulsante grafico dei profitti sulla barra multifunzione Data Mining")  
+  ![Pulsante grafico profitti sulla barra multifunzione Data Mining](media/dmc-profitchart.gif "pulsante grafico profitti sulla barra multifunzione Data Mining")  
   
  Un grafico dei profitti consente di visualizzare l'aumento dei profitti stimato associato all'utilizzo di un modello di data mining al fine di determinare i clienti che devono essere contattati in uno scenario aziendale. L'asse Y del grafico rappresenta i profitti, mentre l'asse X rappresenta la percentuale della popolazione contattata dall'azienda. Un grafico dei profitti tipico mostra un incremento dei profitti fino a un punto specifico, dopo il quale i profitti diminuiscono con l'aumentare della popolazione contattata.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36063739"
      Importo dei ricavi associati a ogni vendita effettuata.  
   
 ## <a name="using-the-profit-chart-wizard"></a>Utilizzo della procedura guidata Grafico profitti  
- Per creare un grafico dei profitti, è necessario fare riferimento a un modello di data mining esistente. È possibile esplorare modelli per trovare un modello che corrisponda ai propri dati facendo clic **Gestione modelli** oppure **Sfoglia** per vedere i dettagli relativi all'algoritmo utilizzato e le colonne nel modello di data mining.  
+ Per creare un grafico dei profitti, è necessario fare riferimento a un modello di data mining esistente. È possibile esplorare i modelli per trovare un modello che corrisponda ai propri dati facendo clic **Gestione modelli** oppure **Sfoglia** per visualizzare informazioni dettagliate sull'algoritmo utilizzato e le colonne nel modello di data mining.  
   
  Per altre informazioni, vedere [esplorazione di modelli in Excel &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](browsing-models-in-excel-sql-server-data-mining-add-ins.md) e [Gestione modelli &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](manage-models-sql-server-data-mining-add-ins.md).  
   
@@ -75,11 +75,11 @@ ms.locfileid: "36063739"
  Per la stima di un valore numerico discreto, è necessario selezionare il valore di destinazione esatto per cui eseguire la stima.  
   
 ## <a name="understanding-the-profit-chart"></a>Informazioni sul grafico dei profitti  
- Il grafico dei profitti contiene una linea verticale grigia, che è possibile spostare facendo clic su un punto del grafico. Il **legenda Data Mining** consente di visualizzare un punteggio, la popolazione corretta e la probabilità di stima che sono associati a quella della linea grigia nel grafico. Se si seleziona il punto massimo di profitti nel grafico tramite la linea grigia, è possibile utilizzare il valore della probabilità di stima al fine di determinare una soglia di probabilità per contattare un cliente.  
+ Il grafico dei profitti contiene una linea verticale grigia, che è possibile spostare facendo clic su un punto del grafico. Il **legenda Data Mining** Visualizza un punteggio, la popolazione corretta e la probabilità di stima associati con la posizione della linea grigia nel grafico. Se si seleziona il punto massimo di profitti nel grafico tramite la linea grigia, è possibile utilizzare il valore della probabilità di stima al fine di determinare una soglia di probabilità per contattare un cliente.  
   
  Se ad esempio il picco della curva dei profitti corrisponde al 55% della popolazione e la probabilità di stima associata è pari al 20%, per raggiungere i profitti massimi è consigliabile contattare solo i clienti la cui risposta viene stimata con una probabilità del 20% o superiore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Convalida dei modelli e utilizzo dei modelli per la stima &#40;componenti aggiuntivi data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [Convalida dei modelli e utilizzo dei modelli per la stima &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

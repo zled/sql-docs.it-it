@@ -1,5 +1,5 @@
 ---
-title: Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti | Documenti Microsoft
+title: Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server]
 - upgrading SQL Server, Upgrade Advisor
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - analyzing installations for upgrading [SQL Server]
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e2e852fe295ac2e72c4a06f653033f734ac6150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4e669b214e73d462f141022aa84d41224e88ac0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234421"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti
   Preparazione aggiornamento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] semplifica le attività di preparazione per l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Preparazione aggiornamento consente di analizzare i componenti installati dalle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di generare un report contenente i problemi da correggere prima o dopo l'aggiornamento.  
@@ -70,7 +70,7 @@ ms.locfileid: "36054117"
   
 -   Windows Installer a partire dalla versione 4.5. È possibile installare Windows Installer dal [sito Web di Windows Installer](http://go.microsoft.com/fwlink/?LinkId=49112).  
   
--   Microsoft .NET Framework 4. È disponibile in .NET framework 4 il [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporto di prodotto e dai [pagina di download di .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. È disponibile in .NET framework 4 il [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporto del prodotto e dal [pagina di download di .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Per eseguire l'installazione di .NET Framework 4 dai supporti di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], individuare la radice dell'unità disco. Fare quindi doppio clic sulla cartella \redist, sulla cartella DotNetFrameworks ed eseguire dotNetFx40_Full_x86_x64.exe (sia per i sistemi operativi a 32 bit che per quelli a 64 bit).  
   
@@ -78,12 +78,12 @@ ms.locfileid: "36054117"
   
  Dopo aver installato Preparazione aggiornamento, è possibile aprirlo dal **avviare** menu:  
   
--   Fare clic su **avviare**, scegliere **tutti i programmi**, scegliere [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], quindi fare clic su  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
+-   Fare clic su **avviare**, scegliere **tutti i programmi**, scegliere [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], quindi fare clic su  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Preparazione aggiornamento**.  
   
  Per ulteriori informazioni, vedere la documentazione inclusa nel download di Preparazione aggiornamento e le note sulla versione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di più versioni e istanze di SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
+ [Uso di più versioni e istanze di SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Compatibilità con le versioni precedenti](../../../2014/getting-started/backward-compatibility.md)  
   

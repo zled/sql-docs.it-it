@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: visualizzare un Report di preparazione aggiornamento | Documenti Microsoft'
+title: 'Procedura: visualizzare un Report di preparazione aggiornamento | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
 - viewing reports
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - reports [Upgrade Advisor], viewing
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b3617edd1d79e258490c0cc44fc3b21e012c4573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: df6d91d700182c7d3828d9e35ac61cfaa0b3959d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303581"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>Procedura: Visualizzazione di un report di Preparazione aggiornamento
   Preparazione aggiornamento crea report per ogni componente selezionato da analizzare. In questo argomento viene descritto come visualizzare un report di Preparazione aggiornamento dalla pagina iniziale di Preparazione aggiornamento.  
@@ -41,23 +41,23 @@ ms.locfileid: "36066419"
   
 3.  Per selezionare un report nel percorso predefinito nel computer:  
   
-    1.  Nel **Server** elenco, selezionare un server.  
+    1.  Nel **Server** elencare, selezionare un server.  
   
-    2.  Nel **istanza o componente** elenco, selezionare una combinazione componente/istanza o componente.  
+    2.  Nel **istanza o componente** elencare, selezionare una combinazione componente/istanza o componente.  
   
      Per selezionare un report in un altro percorso:  
   
-    1.  Fare clic sui **Apri Report** collegamento.  
+    1.  Scegliere il **Apri Report** collegamento.  
   
     2.  Passare al percorso del report, quindi fare doppio clic sul file XML.  
   
-     Preparazione aggiornamento consente di archiviare fino a cinque report dell'analisi precedente come cronologia. Per visualizzare questi report, fare clic sui **Report** casella di riepilogo a discesa e selezionare un report. I report vengono elencati in base al valore timestamp che indica la data e l'ora in cui sono stati generati.  
+     Preparazione aggiornamento consente di archiviare fino a cinque report dell'analisi precedente come cronologia. Per visualizzare questi report, scegliere il **Report** casella di riepilogo a discesa e selezionare un report. I report vengono elencati in base al valore timestamp che indica la data e l'ora in cui sono stati generati.  
   
      Il report contiene i dettagli seguenti per tutti i problemi rilevati:  
   
-    -   **Importanza**, che indica il livello di importanza è per risolvere il problema.  
+    -   **Importanza**, che indica quanto sia importante per risolvere il problema.  
   
-    -   **Quando correggere**, che indica se è necessario (o necessario) risolvere il problema prima o dopo l'aggiornamento a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], prima o dopo la migrazione dei dati dell'applicazione o, o in qualsiasi momento.  
+    -   **Quando correggere**, che indica se è consigliabile (o necessario) risolvere il problema prima o dopo l'aggiornamento a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], prima o dopo la migrazione di applicazioni o i dati, o in qualsiasi momento.  
   
     -   Breve descrizione del problema.  
   
@@ -67,20 +67,20 @@ ms.locfileid: "36066419"
   
 6.  Per visualizzare i dettagli per un elemento specifico, fare clic su di esso. Verrà visualizzata una descrizione del problema, oltre a opzioni aggiuntive:  
   
-    -   Per visualizzare gli oggetti in cui è stato trovato il problema, fare clic su **agli oggetti interessati Mostra**.  
+    -   Per visualizzare gli oggetti in cui è stato trovato questo problema, fare clic su **Show oggetti interessati**.  
   
     -   Per visualizzare la Guida per il problema, fare clic su **ulteriori informazioni su questo problema e su come risolvere il problema**.  
   
-    -   Per contrassegnare il problema come risolto, che nasconde il problema quando si visualizza di nuovo il report, selezionare **questo problema è stato risolto**.  
+    -   Per contrassegnare il problema come risolto, che nasconde il problema quando si visualizza il report anche in questo caso, selezionare **questo problema è stato risolto**.  
   
 > [!NOTE]  
->  Il report può contenere un elemento relativo a problemi non rilevabili, ovvero problemi che non è possibile rilevare o che genererebbero un numero eccessivo di risultati falsi positivi. Fare clic sui **ulteriori informazioni su questo problema e su come risolvere il problema** collegamento per visualizzare un elenco di problemi non rilevabili per il componente.  
+>  Il report può contenere un elemento relativo a problemi non rilevabili, ovvero problemi che non è possibile rilevare o che genererebbero un numero eccessivo di risultati falsi positivi. Scegliere il **ulteriori informazioni su questo problema e su come risolvere il problema** collegamento per visualizzare un elenco di problemi non rilevabili per il componente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedura: esportare i report](../../../2014/sql-server/install/how-to-export-reports.md)   
  [Procedura: eseguire l'analisi guidata di preparazione aggiornamento](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Procedure per Preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
- [Utilizzo di preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [Uso di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

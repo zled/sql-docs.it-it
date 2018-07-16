@@ -1,5 +1,5 @@
 ---
-title: Lingue e regole di confronto (Analysis Services) | Documenti Microsoft
+title: Lingue e regole di confronto (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows collations [Analysis Services]
 - default collations
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3279919a5a089991b09a3eea6807bec8589f7a64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e2c52f657ce161edbb82c16eda2f6f0c3084c8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293721"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Lingue e regole di confronto (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta le lingue e le regole di confronto fornite dai sistemi operativi [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Le proprietà `Language` e `Collation` vengono inizialmente impostate a livello di istanza durante l'installazione, ma in seguito possono essere modificate a livelli diversi della gerarchia di oggetti.  
   
  Solo in un modello multidimensionale è possibile impostare queste proprietà in un database o un cubo. È anche possibile impostarle nelle traduzioni create per gli oggetti all'interno di un cubo.  
   
- Quando si imposta `Language` e `Collation`, è possibile specificare le impostazioni utilizzate dal modello di dati durante l'elaborazione e l'esecuzione di query o (per i modelli multidimensionali) creare gli utenti straniera è un modello con più traduzioni in modo che esterne language può usare il modello nella propria lingua. L'impostazione delle proprietà `Language` e `Collation` in modo esplicito in un oggetto (database, modello o cubo) è utile nelle situazioni in cui il server di produzione e l'ambiente di sviluppo sono configurati per impostazioni locali diverse e si vuole essere certi che la lingua e le regole di confronto corrispondano a quelle dell'ambiente di destinazione previsto.  
+ Quando si impostano `Language` e `Collation`, si è possibile specificare le impostazioni usate dal modello di dati durante l'elaborazione e l'esecuzione di query oppure (per modelli multidimensionali) allestendo un modello con più traduzioni in modo che esterne language può usare il modello nella propria lingua. L'impostazione delle proprietà `Language` e `Collation` in modo esplicito in un oggetto (database, modello o cubo) è utile nelle situazioni in cui il server di produzione e l'ambiente di sviluppo sono configurati per impostazioni locali diverse e si vuole essere certi che la lingua e le regole di confronto corrispondano a quelle dell'ambiente di destinazione previsto.  
   
  Questo argomento include le sezioni seguenti:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36054663"
 -   [Supporto di GB18030 in Analysis Services](#bkmk_gb18030)  
   
 ##  <a name="bkmk_object"></a> Oggetti che supportano le proprietà Language e Collation  
- `Language` e `Collation` delle proprietà vengono spesso mostrate insieme: quando è possibile impostare `Language`, è inoltre possibile impostare `Collation`.  
+ `Language` e `Collation` delle proprietà vengono spesso mostrate insieme: quando è possibile impostare `Language`, è anche possibile impostare `Collation`.  
   
  È possibile impostare `Language` e `Collation` negli oggetti seguenti:  
   
@@ -65,22 +65,22 @@ ms.locfileid: "36054663"
   
 -   **Database**. Per disattivare l'ereditarietà, è possibile impostare in modo esplicito la lingua e le regole di confronto a livello di progetto usato da tutti i cubi contenuti nel database. Se non diversamente specificato, tutti i cubi nel database otterranno la lingua e le regole di confronto specificate a questo livello. Se si programma e distribuisce regolarmente usando impostazioni locali diverse (ad esempio, si sviluppa la soluzione in un computer cinese ma la si distribuisce in un server di proprietà di una filiale francese), l'impostazione della lingua e delle regole di confronto a livello di database è il primo passaggio, quello più importante, per garantire che la soluzione funzioni nell'ambiente di destinazione. È consigliabile impostare queste proprietà all'interno del progetto (tramite il comando **Modifica database** del progetto).  
   
--   **Dimensione del database**. Anche se la finestra di progettazione espone `Language` e `Collation` proprietà su una dimensione del database, impostare le proprietà di questo oggetto non è utile. Le dimensioni del database non vengono usate come oggetti autonomi, pertanto potrebbe essere difficile se non impossibile usare le proprietà definite. Quando una dimensione si trova in un cubo eredita sempre le proprietà `Language` e `Collation` dal relativo elemento padre del cubo. Tutti i valori che potrebbero essere stati impostati per l'oggetto dimensione del database autonomo vengono ignorati.  
+-   **Dimensione del database**. Anche se la finestra di progettazione espone `Language` e `Collation` proprietà in una dimensione del database, impostare le proprietà per questo oggetto non è utile. Le dimensioni del database non vengono usate come oggetti autonomi, pertanto potrebbe essere difficile se non impossibile usare le proprietà definite. Quando una dimensione si trova in un cubo eredita sempre le proprietà `Language` e `Collation` dal relativo elemento padre del cubo. Tutti i valori che potrebbero essere stati impostati per l'oggetto dimensione del database autonomo vengono ignorati.  
   
 -   **Cubo**. In quanto struttura di query primaria, è possibile impostare la lingua e le regole di confronto a livello di cubo. Ad esempio, si potrebbero voler creare versioni di un cubo in più lingue, ad esempio versioni in inglese e in cinese, all'interno dello stesso progetto, dove per ogni cubo sono definite lingua e regole di confronto specifiche.  
   
      La lingua e le regole di confronto impostate per il cubo vengono usate da tutte le misure e le dimensioni incluse nel cubo. È possibile impostare proprietà delle regole di confronto più dettagliate solo se si creano traduzioni in un attributo della dimensione. In caso contrario, supponendo che non vi siano traduzioni a livello di attributo, ci sarà un unico set di regole di confronto per ogni cubo.  
   
- Inoltre, è possibile impostare `Language`, da sola, in un **traduzione** oggetto.  
+ Inoltre, è possibile impostare `Language`, da solo, in un **Translation** oggetto.  
   
- Un oggetto Translation vien creato quando si aggiungono traduzioni a un cubo o una dimensione. `Language` fa parte della definizione di traduzione. `Collation`, d'altro canto, è impostato per il cubo o versione successiva ed è condiviso da tutte le traduzioni. Ciò è evidente nel codice XMLA di un cubo contenente traduzioni, dove si avranno più proprietà della lingua (una per ogni traduzione), ma un solo set di regole di confronto. Si noti che esiste un'eccezione per le traduzioni dell'attributo della dimensione, in cui è possibile eseguire l'override delle regole di confronto del cubo per specificare un set di regole di confronto dell'attributo che corrisponda alla colonna di origine (il motore di database supporta l'impostazione delle regole di confronto per singole colonne ed è frequente configurare le singole traduzioni per ottenere i dati dei membri da colonne di origine diverse). Ma in caso contrario, per tutte le altre traduzioni invece `Language` viene usata da se stessa, senza un `Collation` corollario. Per informazioni dettagliate, vedere [Traduzioni &#40;Analysis Services&#41;](translations-analysis-services.md).  
+ Un oggetto Translation vien creato quando si aggiungono traduzioni a un cubo o una dimensione. `Language` fa parte della definizione di traduzione. `Collation`, d'altra parte, viene impostato per il cubo o versione successiva ed è condiviso da tutte le traduzioni. Ciò è evidente nel codice XMLA di un cubo contenente traduzioni, dove si avranno più proprietà della lingua (una per ogni traduzione), ma un solo set di regole di confronto. Si noti che esiste un'eccezione per le traduzioni dell'attributo della dimensione, in cui è possibile eseguire l'override delle regole di confronto del cubo per specificare un set di regole di confronto dell'attributo che corrisponda alla colonna di origine (il motore di database supporta l'impostazione delle regole di confronto per singole colonne ed è frequente configurare le singole traduzioni per ottenere i dati dei membri da colonne di origine diverse). Ma in caso contrario, per tutte le altre traduzioni invece `Language` viene usata da sola, senza un `Collation` corollario. Per informazioni dettagliate, vedere [Traduzioni &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
 ##  <a name="bkmk_lang"></a> Supporto della lingua in Analysis Services  
- Il `Language` proprietà imposta le impostazioni locali di un oggetto, utilizzato durante l'elaborazione, le query e con `Captions` e `Translations` per supportare gli scenari multilingue. Le impostazioni locali si basano su un identificatore di lingua, ad esempio l'inglese, e su un'area, ad esempio Stati Uniti o Australia, che definiscono ulteriormente le rappresentazioni di data e ora.  
+ Il `Language` proprietà imposta le impostazioni locali di un oggetto usato durante l'elaborazione, query e con `Captions` e `Translations` per supportare gli scenari multilingue. Le impostazioni locali si basano su un identificatore di lingua, ad esempio l'inglese, e su un'area, ad esempio Stati Uniti o Australia, che definiscono ulteriormente le rappresentazioni di data e ora.  
   
  A livello di istanza, la proprietà viene impostata durante l'installazione e si basa sulla lingua del sistema operativo Windows del server (una delle 37 lingue, supponendo che sia installato un Language Pack). Non è possibile modificare la lingua nell'installazione.  
   
- Dopo l'installazione, è possibile eseguire l'override `Language` utilizzando la pagina delle proprietà di server in Management Studio o nel file di configurazione msmdsrv. ini. È possibile scegliere tra molte più lingue, comprese tutte quelle supportate dal client Windows. Se impostata a livello di istanza, sul server, `Language` determina le impostazioni locali di tutti i database che vengono distribuiti successivamente. Se ad esempio la proprietà `Language` viene impostata sul tedesco, tutti i database distribuiti nell'istanza avranno 1031 come proprietà Language, ovvero l'identificatore LCID per il tedesco.  
+ Dopo l'installazione, è possibile eseguire l'override `Language` usando la pagina delle proprietà server in Management Studio o nel file di configurazione msmdsrv. ini. È possibile scegliere tra molte più lingue, comprese tutte quelle supportate dal client Windows. Se impostata a livello di istanza, nel server, `Language` determina le impostazioni locali di tutti i database che vengono distribuiti successivamente. Se ad esempio la proprietà `Language` viene impostata sul tedesco, tutti i database distribuiti nell'istanza avranno 1031 come proprietà Language, ovvero l'identificatore LCID per il tedesco.  
   
 ###  <a name="bkmk_lcid"></a> Il valore della proprietà Language è un identificatore delle impostazioni locali (LCID)  
  I valori validi includono qualsiasi LCID visualizzato nell'elenco a discesa. In Management Studio e SQL Server Data Tools, gli LCID sono rappresentati in valori equivalenti in formato stringa. Le stesse lingue vengono visualizzate dovunque sia presente la proprietà `Language`, indipendentemente dallo strumento. Un elenco di lingue identico consente di implementare e testare le traduzioni in modo coerente in tutto il modello.  
@@ -103,7 +103,7 @@ ms.locfileid: "36054663"
 >  La proprietà `Language` non determina la lingua in cui vengono restituiti i messaggi di sistema né le stringhe che vengono visualizzate nell'interfaccia utente. Errori, avvisi e messaggi vengono localizzati in tutte le lingue supportate in Office e Office 365 e vengono usati automaticamente quando la connessione client specifica le impostazioni locali supportate.  
   
 ##  <a name="bkmk_collations"></a> Supporto delle regole di confronto in Analysis Services  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Usa regole di confronto binarie e di Windows in modo esclusivo. Non usa le regole di confronto datate di SQL Server. Un singolo set di regole di confronto viene usato in tutto il cubo ad eccezione delle traduzioni a livello di attributo. Per altre informazioni sulla definizione di traduzioni per gli attributi, vedere [Traduzioni &#40;Analysis Services&#41;](translations-analysis-services.md).  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Usa esclusivamente le regole di confronto binarie e di Windows. Non usa le regole di confronto datate di SQL Server. Un singolo set di regole di confronto viene usato in tutto il cubo ad eccezione delle traduzioni a livello di attributo. Per altre informazioni sulla definizione di traduzioni per gli attributi, vedere [Traduzioni &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
  Le regole di confronto controllano la distinzione tra maiuscole/minuscole di tutte le stringhe di un alfabeto composto da due set di caratteri maiuscoli/minuscoli distinti ad eccezione degli identificatori di oggetto. Se si usano caratteri maiuscoli e minuscoli in un identificatore di oggetto, tenere presente che la distinzione tra maiuscole e minuscole degli identificatori di oggetto non è determinata dalle regole di confronto, ma da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per gli identificatori di oggetto creati con l'alfabeto inglese non verrà mai fatta distinzione tra maiuscole e minuscole, indipendentemente dalle regole di confronto. Per il cirillico e le altre lingue che usano un alfabeto composto da due set di caratteri maiuscoli/minuscoli distinti avviene il contrario, ovvero viene sempre fatta distinzione tra maiuscole/minuscole. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md).  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36054663"
      Le regole di confronto binarie eseguono l'ordinamento in base a elementi di codice Unicode e non a valori linguistici. Ad esempio, Latin1_General_BIN e Japanese_BIN generano risultati di ordinamento identici se utilizzati su dati Unicode. Mentre un ordinamento linguistico potrebbe restituire risultati come aAbBcCdD, un ordinamento binario restituirà ABCDabcd perché l'elemento di codice di tutti i caratteri maiuscoli è complessivamente superiore rispetto agli elementi di codice dei caratteri minuscoli.  
   
 ###  <a name="bkmk_sortorder"></a> Opzioni di ordinamento  
- Le opzioni di ordinamento vengono usate per definire meglio le regole di ordinamento e confronto in base alla distinzione tra maiuscole e minuscole, caratteri accentati e non accentati, Kana e di larghezza. Ad esempio, il valore predefinito di `Collation` proprietà di configurazione per [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è Latin1_General_AS_CS, che specifica le regole di confronto Latin1_General viene utilizzato, con un ordinamento con distinzione caratteri accentati, distinzione maiuscole/minuscole.  
+ Le opzioni di ordinamento vengono usate per definire meglio le regole di ordinamento e confronto in base alla distinzione tra maiuscole e minuscole, caratteri accentati e non accentati, Kana e di larghezza. Ad esempio, il valore predefinito del `Collation` proprietà di configurazione [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è Latin1_General_AS_CS, che specifica le regole di confronto Latin1_General, con un ordinamento distinzione tra caratteri accentati, con distinzione maiuscole/minuscole.  
   
  Si noti che BIN e BIN2 sono reciprocamente esclusivi di altre opzioni di ordinamento, pertanto se si desidera usare BIN o BIN2, deselezionare l'opzione di ordinamento per la distinzione tra caratteri accentati e non accentati. Analogamente, se è selezionata l'opzione BIN2, non saranno disponibili le opzioni per effettuare o meno la distinzione tra maiuscole e minuscole, tra carattere accentati e non accentati, per la distinzione Kana e di larghezza.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "36054663"
   
 ## <a name="see-also"></a>Vedere anche  
  [Scenari di globalizzazione per Analysis Services multidimensionale](globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)   
+ [Globalizzazione suggerimenti e procedure consigliate &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)   
  [Regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

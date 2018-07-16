@@ -1,5 +1,5 @@
 ---
-title: Memorizzare nella cache le opzioni di aggiornamento (gestione Report) | Documenti Microsoft
+title: Memorizzare nella cache le opzioni di aggiornamento (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5d5a2bd4683e70523275c8da191bc74cd4de28d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734bad595344741ee47503352b440a8db320912
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282697"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Opzioni di aggiornamento Cache (Gestione report)
   La pagina Opzioni di aggiornamento cache consente di creare pianificazioni per precaricare nella cache copie temporanee di dati per un report o per un set di dati condiviso. Un piano di aggiornamento include una pianificazione e l'opzione per specificare o eseguire l'override di valori per i parametri. Per un set di dati condiviso, non è possibile eseguire l'override di valori per i parametri contrassegnati di sola lettura. È possibile creare e utilizzare più piani di aggiornamento come parte delle opzioni di aggiornamento.  
@@ -71,20 +71,20 @@ ms.locfileid: "36156418"
   
  Per altre informazioni, vedere [nuova pianificazione: modifica pagina pianificazione &#40;gestione Report&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
   
- **pianificazione condivisa**  
+ **Pianificazione condivisa**  
  Selezionare questa opzione per scegliere una pianificazione esistente.  
   
- Per altre informazioni, vedere [crea, modifica ed eliminare pianificazioni](subscriptions/create-modify-and-delete-schedules.md).  
+ Per altre informazioni, vedere [creare, modificare ed eliminare pianificazioni](subscriptions/create-modify-and-delete-schedules.md).  
   
  **@\<** *Parametro* **>**  
  Specificare una combinazione di valori dei parametri. Questa sezione viene visualizzata solo se nel set di dati o nel report corrente sono presenti parametri.  
   
  Vedere [Specifica dei parametri](#Parameters) nella sezione seguente.  
   
- **Utilizza impostazioni predefinite**  
+ **Utilizzare l'impostazione predefinita**  
  Selezionare questa opzione per utilizzare il valore predefinito per questo parametro.  
   
-##  <a name="Parameters"></a> Specifica dei parametri  
+##  <a name="Parameters"></a> Specificare i parametri  
  Per creare un piano di aggiornamento della cache, a ogni parametro del report o del set di dati condiviso deve essere associato un valore. Se nella definizione dell'elemento del report o del set di dati condiviso non è specificato alcun valore predefinito, è necessario specificarne uno. Se un valore predefinito esiste, non è necessario specificarne alcuno. Se si specifica un valore, quest'ultimo esegue l'override del valore predefinito.  
   
  Per specificare più combinazioni di valori dei parametri, è necessario creare un piano di aggiornamento della cache separato per ogni combinazione.  
@@ -106,7 +106,7 @@ ms.locfileid: "36156418"
   
  Se nella definizione del set di dati condiviso viene specificata l'opzione **Ometti dalla query** per un parametro, non è necessario fornire un valore predefinito. Questo flag indica che il parametro del set di dati non è utilizzato nella query. Il parametro viene ad esempio visualizzato nella definizione del set di dati condiviso perché è un parametro del report utilizzato solo nel filtro del set di dati.  
   
- Per visualizzare o modificare opzioni del parametro di set di dati, è necessario modificare la definizione del set di dati condiviso. Per altre informazioni, vedere [gestire set di dati condivisi](report-data/manage-shared-datasets.md).  
+ Per visualizzare o modificare opzioni del parametro di set di dati, è necessario modificare la definizione del set di dati condiviso. Per altre informazioni, vedere [gestire set di dati condiviso](report-data/manage-shared-datasets.md).  
   
 ### <a name="report-parameters"></a>Parametri report  
  Per creare correttamente un piano di aggiornamento della cache, ogni valore dei parametri del parametro deve essere valido. È necessario digitare o selezionare un valore predefinito per ogni parametro del report. Il valore che si imposta esegue l'override del valore predefinito specificato per il parametro del report sul server di report.  

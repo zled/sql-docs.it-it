@@ -1,5 +1,5 @@
 ---
-title: Working with Schema Rowsets in ADOMD.NET | Documenti Microsoft
+title: Working with Schema Rowsets in ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c6acc3ffe3a0f0b7ae5523833cbb85f0c152cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e77a3a4c7d38779da149f63644ad9a3106034f51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310751"
 ---
 # <a name="working-with-schema-rowsets-in-adomdnet"></a>Utilizzo di set di righe dello schema in ADOMD.NET
   Quando è necessario utilizzare un numero di metadati maggiore rispetto a quello disponibile nel modello a oggetti ADOMD.NET, è possibile utilizzare la funzionalità presente in ADOMD.NET per recuperare l'intervallo completo di set di righe dello schema XMLA (XML for Analysis), OLE DB, OLE DB per OLAP e OLE DB per il data mining:  
@@ -42,7 +42,7 @@ ms.locfileid: "36156809"
  **Metadati OLAP**  
  Le informazioni sullo schema fornite per un'origine dati analitici includono i database oppure i cataloghi disponibili dall'origine dati, i cubi e modelli di data mining in un database, i ruoli che esistono per i cubi nell'origine dati e altre informazioni.  
   
- Per altre informazioni: [OLE DB per OLAP i set di righe dello Schema](../schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ Per altre informazioni: [OLE DB per i set di righe dello Schema OLAP](../schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
  **Metadati di Data Mining**  
  Oltre ai metadati OLAP, i set di righe dello schema consentono di recuperare metadati di data mining. I set di righe disponibili espongono informazioni sui modelli di data mining presenti nel database, sugli algoritmi di data mining disponibili, sui parametri necessari per l'algoritmo, sulle strutture di data mining e altre informazioni.  
@@ -75,7 +75,7 @@ ms.locfileid: "36156809"
  Ciascuno di tali metodi restituisce un'istanza di un oggetto `DataSet` popolato con le informazioni sullo schema. L'oggetto `DataSet` appartiene allo spazio dei nomi `System.Data` della libreria di classi Microsoft .NET Framework.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente, la funzione GetActions accetta una connessione, il nome del cubo, una coordinata e un tipo di coordinata, recupera un [set di righe MDSCHEMA_ACTIONS](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)e restituisce le azioni disponibili per la coordinata selezionata.  
+ Nell'esempio seguente, la funzione GetActions accetta una connessione, il nome del cubo, una coordinata e un tipo di coordinata, recupera un' [set di righe MDSCHEMA_ACTIONS](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)e restituisce le azioni disponibili per la coordinata selezionata.  
   
  [!code-csharp[Adomd.NetClient#GetActions](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#getactions)]  
   
