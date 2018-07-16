@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report-specific schedules [Reporting Services]
 - shared schedules [Reporting Services]
@@ -25,26 +25,26 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c4ac89d35cfe118cb82e945ef48d87c24b56abed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5cecee40fb3eaee2bd481b38a54cbcfa686eb0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317881"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   In questo argomento vengono fornite informazioni sulla creazione, la modifica e l'eliminazione di pianificazioni.  
   
  Contenuto dell'argomento:  
   
--   [Panoramica della gestione delle pianificazioni condivise](#bkmk_overview)  
+-   [Panoramica della gestione di pianificazioni condivise](#bkmk_overview)  
   
 -   [Creare e gestire pianificazioni condivise (modalità SharePoint)](#bkmk_sharepoint)  
   
 -   [Creare e gestire pianificazioni condivise (modalità nativa)](#bkmk_native)  
   
-##  <a name="bkmk_overview"></a> Panoramica della gestione delle pianificazioni condivise  
+##  <a name="bkmk_overview"></a> Panoramica della gestione di pianificazioni condivise  
  Per gestire le pianificazioni condivise per la modalità nativa, utilizzare la pagina Pianificazioni in Gestione report o la cartella Pianificazioni condivise in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per la modalità SharePoint, utilizzare le pagine di gestione per l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  È possibile visualizzare tutte le pianificazioni condivise definite per il server di report, sospenderle e riprenderle (solo in Gestione report) e selezionare le pianificazioni da modificare o eliminare. Nella pagina Pianificazioni condivise, per ogni pianificazione è disponibile un riepilogo delle informazioni seguenti: frequenza, proprietario, data di scadenza e stato.  

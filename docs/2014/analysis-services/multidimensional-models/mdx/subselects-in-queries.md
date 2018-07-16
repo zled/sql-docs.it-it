@@ -1,5 +1,5 @@
 ---
-title: Le sub-SELECT nelle query | Documenti Microsoft
+title: Le sub-SELECT nelle query | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f5f616181a6fffe42fa04e3978142c48375adb0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce3ca1202c5e20676a4dbf1fa972f5bdfa52e9b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299181"
 ---
 # <a name="subselects-in-queries"></a>Sub-SELECT nelle query
   Le espressioni sub-SELECT sono espressioni SELECT nidificate utilizzate per limitare lo spazio del cubo dal quale viene valutata l'istruzione SELECT esterna. Le sub-SELECT consentono di definire un nuovo spazio sul quale tutti i calcoli vengono valutati.  
@@ -342,7 +342,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Come è possibile notare, ci sono differenze nei risultati in entrambi i set. La prima query ha risposto alla domanda sui prodotti più venduti nelle 5 aree principali, la seconda query ha risposto alla domanda sulle aree in cui si è verificato il maggior numero di vendite dei 5 prodotti più venduti.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Note  
  Le sub-SELECT sono sottoposte alle restrizioni e limitazioni seguenti:  
   
 -   La clausola WHERE non filtra il sottospazio.  
@@ -353,6 +353,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   La clausola HAVING non è consentita in una clausola dell'asse; usare invece un'espressione della funzione [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx) .  
   
--   Per impostazione predefinita i membri calcolati non sono consentiti nelle sub-SELECT; Tuttavia, questa restrizione può essere modificata, in una per ogni singola sessione, assegnando un valore per il `SubQueries` proprietà della stringa di connessione nel <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o `DBPROP_MSMD_SUBQUERIES` proprietà [proprietà XMLA supportate &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Vedere [i membri calcolati in sub-SELECT e sottocubi](calculated-members-in-subselects-and-subcubes.md) per una spiegazione dettagliata del comportamento dei membri calcolati a seconda dei valori di `SubQueries` o `DBPROP_MSMD_SUBQUERIES`.  
+-   Per impostazione predefinita i membri calcolati non sono consentiti nelle sub-SELECT; Tuttavia, questa restrizione può essere modificata, singola per ogni sessione, assegnando un valore per il `SubQueries` proprietà stringa di connessione <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o `DBPROP_MSMD_SUBQUERIES` proprietà nel [proprietà XMLA supportate &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Visualizzare [membri calcolati in sub-SELECT e sottocubi](calculated-members-in-subselects-and-subcubes.md) per una spiegazione dettagliata del comportamento dei membri calcolati a seconda dei valori di `SubQueries` o `DBPROP_MSMD_SUBQUERIES`.  
   
   

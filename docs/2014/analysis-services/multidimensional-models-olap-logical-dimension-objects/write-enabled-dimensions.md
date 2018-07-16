@@ -1,5 +1,5 @@
 ---
-title: Dimensioni abilitati per scrittura | Documenti Microsoft
+title: Abilitato per la scrittura dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - writeback [Analysis Services], dimensions
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f140fc79d1b93c419e64d564efec68d29821f2d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a928d7bd7e35114a174373933b974d32a1af5d40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068143"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293533"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensioni abilitate per la scrittura
     
@@ -67,6 +67,6 @@ ms.locfileid: "36068143"
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà delle dimensioni di database](database-dimension-properties.md)   
  [Partizioni abilitate per scrittura](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Le dimensioni &#40;Analysis Services - dati multidimensionali&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

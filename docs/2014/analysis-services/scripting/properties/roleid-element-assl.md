@@ -1,5 +1,5 @@
 ---
-title: Elemento RoleID (ASSL) | Documenti Microsoft
+title: Elemento RoleID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RoleID element
 ms.assetid: 811e24c9-c732-41f9-bd5f-5c9e3503706a
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b61d5f14a5b45d3275e79ab729ccee8e0b736013
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cff4cf8a86160f1f4cef93d4cd021ac917038a33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285917"
 ---
 # <a name="roleid-element-assl"></a>Elemento RoleID (ASSL)
   Identifica il ruolo per il quale sono definite le autorizzazioni.  
@@ -61,7 +61,7 @@ ms.locfileid: "36063435"
 |Elementi padre|[CubePermission](../objects/cubepermission-element-assl.md), [DatabasePermission](../objects/databasepermission-element-assl.md), [DimensionPermission](../objects/dimensionpermission-element-assl.md), [MiningModelPermission](../objects/miningmodelpermission-element-assl.md), [MiningStructurePermission ](../objects/miningstructurepermission-element-assl.md), [Autorizzazione](../data-type/permission-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Gli elementi che corrispondono ai padri di `RoleID` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.CubePermission>, <xref:Microsoft.AnalysisServices.DatabasePermission>, <xref:Microsoft.AnalysisServices.DimensionPermission>, <xref:Microsoft.AnalysisServices.MiningModelPermission>, <xref:Microsoft.AnalysisServices.MiningStructurePermission> e <xref:Microsoft.AnalysisServices.Permission>.  
   
 ## <a name="see-also"></a>Vedere anche  

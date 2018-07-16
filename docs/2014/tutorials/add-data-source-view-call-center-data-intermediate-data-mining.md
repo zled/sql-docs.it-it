@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di un tipo di dati della vista origine per dati del Call Center (esercitazione intermedia di Data Mining) | Documenti Microsoft
+title: Aggiunta di un tipo di dati della vista origine per dati di Call Center (esercitazione intermedia di Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a448e7e4-dbd1-4d31-90bc-4d4a1c23b352
 caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 128ff8a4cbd1bafcf9c15c32f5cd7c5e127710d9
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: f1e8c03f9b19ee0338915077c6177799072b2356
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291737"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Aggiunta di una vista origine dati per i dati del call center (Esercitazione intermedia sul data mining)
   In questa attività verrà aggiunta una vista origine dati da utilizzare per accedere ai dati del call center. Gli stessi dati verranno utilizzati per compilare sia il modello di rete neurale iniziale per l'esplorazione, sia il modello di regressione logistica che verrà utilizzato per preparare i consigli.  
@@ -30,13 +30,13 @@ ms.locfileid: "36312329"
   
 #### <a name="to-add-a-data-source-view"></a>Per aggiungere una vista origine dati  
   
-1.  In **Esplora soluzioni**, fare doppio clic su **viste origine dati**e selezionare **nuova vista origine dati**.  
+1.  Nelle **Esplora soluzioni**, fare doppio clic su **viste origine dati**e selezionare **nuova vista origine dati**.  
   
      Verrà avviata Creazione guidata vista origine dati.  
   
 2.  Nella pagina iniziale di **Creazione guidata vista origine dati** fare clic su **Avanti**.  
   
-3.  Nel **selezionare un'origine dati** nella pagina **origini dati relazionali**, selezionare il [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] origine dati. Se non si dispone di questa origine dati, vedere [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md). Scegliere **Avanti**.  
+3.  Nel **Vybrat Zdroj** nella pagina **origini dati relazionali**, selezionare il [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] zdroj dat. Se non hai questa origine dati, vedere [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md). Scegliere **Avanti**.  
   
 4.  Nel **selezione tabelle e viste** pagina, selezionare la tabella seguente e quindi fare clic sulla freccia a destra per aggiungerla alla vista origine dati:  
   
@@ -52,11 +52,11 @@ ms.locfileid: "36312329"
   
 7.  All'interno del riquadro Vista origine dati e scegliere **Aggiungi/Rimuovi tabelle**. Selezionare la tabella **DimDate** e fare clic su **OK**.  
   
-     Una relazione deve essere aggiunti automaticamente tra il `DateKey` colonne in ogni tabella. Si utilizzerà questa relazione per ottenere la colonna **EnglishDayNameOfWeek**, dal **DimDate** tabella e usarlo nel modello.  
+     Una relazione deve essere aggiunto automaticamente tra il `DateKey` colonne in ogni tabella. Si utilizzerà questa relazione per ottenere la colonna **EnglishDayNameOfWeek**, dalle **DimDate** di tabella e usarlo nel modello.  
   
-8.  Nella finestra di progettazione vista origine dati, fare doppio clic su nella tabella **FactCallCenter**e selezionare **nuovo calcolo denominato**.  
+8.  Nella finestra di progettazione vista origine dati, fare doppio clic nella tabella **FactCallCenter**e selezionare **nuovo calcolo denominato**.  
   
-     Nel **Crea calcolo denominato** dialogo casella, digitare i valori seguenti:  
+     Nel **Crea calcolo denominato** finestra di dialogo, digitare i valori seguenti:  
   
     |||  
     |-|-|  
@@ -64,7 +64,7 @@ ms.locfileid: "36312329"
     |**Descrizione**|Ottenere il giorno di settimana dalla tabella DimDate|  
     |**Espressione**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
   
-     Per verificare che l'espressione crei i dati è necessario, fare doppio clic su nella tabella **FactCallCenter**, quindi selezionare **Esplora dati**.  
+     Per verificare che l'espressione crei i dati è necessario, fare doppio clic nella tabella **FactCallCenter**, quindi selezionare **Esplora dati**.  
   
 9. Rivedere i dati disponibili, in modo da comprendere come vengono utilizzati nel data mining:  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36312329"
 |-----------------|--------------|  
 |FactCallCenterID|Una chiave arbitraria creata durante l'importazione dei dati nel data warehouse.<br /><br /> Questa colonna identifica record univoci e deve essere utilizzata come chiave del case per il modello di data mining.|  
 |DateKey|La data dell'operazione del call center, espressa come un Integer. Le chiavi della data di tipo Integer vengono spesso utilizzate nei data warehouse, ma è consigliabile ottenere la data nel formato di data/ora se si prevede di eseguire il raggruppamento in base ai valori di data.<br /><br /> Le date non sono univoche perché il fornitore presenta un report distinto per ogni turno di ogni giorno lavorativo.|  
-|WageType|Viene indicato se il giorno è un giorno feriale, festivo o un fine settimana.<br /><br /> È possibile che la qualità del servizio clienti nei fine settimana e i giorni della settimana, quindi si utilizzerà questa colonna come input.|  
+|WageType|Viene indicato se il giorno è un giorno feriale, festivo o un fine settimana.<br /><br /> È possibile che vi sia una differenza nella qualità del servizio clienti nei fine settimana e giorni della settimana, quindi si utilizzerà questa colonna come input.|  
 |Turno|Indica il turno per il quale vengono registrate le chiamate. In questo call center la giornata lavorativa viene divisa in quattro turni: AM, PM1, PM2 e Midnight.<br /><br /> È possibile che il turno influisca sulla qualità del servizio clienti, quindi si utilizzerà questa colonna come input.|  
 |LevelOneOperators|Indica il numero di operatori di livello 1 in servizio.<br /><br /> I dipendenti del call center iniziano a Livello 1, pertanto questi dipendenti sono meno esperti.|  
 |LevelTwoOperators|Indica il numero di operatori di livello 2 in servizio.<br /><br /> Per qualificarsi come operatore di livello 2, un dipendente deve registrare un determinato numero di ore di servizio.|  
@@ -82,14 +82,14 @@ ms.locfileid: "36312329"
 |Orders|Numero di ordini risultanti dalle chiamate.|  
 |IssuesRaised|Numero di problemi generati dalle chiamate che richiedono una soluzione.|  
 |AverageTimePerIssue|Tempo medio richiesto per rispondere a una chiamata in entrata.|  
-|ServiceGrade|Metrica che indica la qualità generale del servizio, misurata come il *frequenza di abbandono* per l'intero turno. Più elevata è la frequenza di abbandono, più è probabile che i clienti siano scontenti e che gli ordini potenziali non vengano conclusi.|  
+|ServiceGrade|Una metrica che indica la qualità generale del servizio, misurata come il *frequenza di abbandono* per l'intero turno. Più elevata è la frequenza di abbandono, più è probabile che i clienti siano scontenti e che gli ordini potenziali non vengano conclusi.|  
   
  Si noti che i dati includono quattro colonne diverse basate su una singola colonna di data: `WageType`, **DayOfWeek**, `Shift`, e `DateKey`. Solitamente nel data mining non è consigliabile utilizzare più colonne derivate dagli stessi dati, in quanto i valori sono correlati troppo strettamente tra di essi e possono nascondere altri modelli.  
   
- Tuttavia, Microsoft non utilizzerà `DateKey` nel modello perché contiene troppi valori univoci. Non vi è alcuna relazione diretta tra `Shift` e **DayOfWeek**, e `WageType` e **DayOfWeek** sono correlati solo in parte. Se la collinearità è importante, è possibile creare la struttura utilizzando tutte le colonne disponibili, quindi ignorare le colonne diverse in ogni modello e testare l'effetto.  
+ Tuttavia, non utilizzeremo `DateKey` nel modello perché contiene troppi valori univoci. Senza alcuna relazione diretta tra `Shift` e **DayOfWeek**, e `WageType` e **DayOfWeek** sono correlati solo in parte. Se la collinearità è importante, è possibile creare la struttura utilizzando tutte le colonne disponibili, quindi ignorare le colonne diverse in ogni modello e testare l'effetto.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Creazione di una struttura di rete neurale e il modello &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
+ [Creazione di una struttura di rete neurale e il modello &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  

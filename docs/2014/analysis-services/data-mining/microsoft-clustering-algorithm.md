@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Clustering | Documenti Microsoft
+title: Algoritmo Microsoft Clustering | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
 - nearest neighbor [Data Mining]
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
 caps.latest.revision: 61
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74e1a00c89050b632ca01a5f67f734484bff8de7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d42992680de6772d305c425d1f921fea44cd584
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308791"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Algoritmo Microsoft Clustering
-  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Clustering è un algoritmo di segmentazione incluso in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'algoritmo utilizza tecniche iterative per raggruppare i case di un set di dati in cluster con caratteristiche simili. Tali raggruppamenti sono utili per l'esplorazione dei dati, l'identificazione delle relative anomalie e la creazione di stime.  
+  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering è un algoritmo di segmentazione fornito da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'algoritmo utilizza tecniche iterative per raggruppare i case di un set di dati in cluster con caratteristiche simili. Tali raggruppamenti sono utili per l'esplorazione dei dati, l'identificazione delle relative anomalie e la creazione di stime.  
   
  I modelli di clustering identificano in un set di dati le relazioni che non è possibile derivare mediante l'osservazione casuale. Ad esempio, è possibile desumere per logica che le persone che si recano sul posto di lavoro in bicicletta in genere non abitano lontano. Tuttavia l'algoritmo può individuare altre caratteristiche non altrettanto ovvie sulle persone che si recano a lavoro in bicicletta. Nel diagramma seguente, il cluster A rappresenta i dati relativi alla persone che tendono a usare l'automobile per recarsi a lavoro, mentre il cluster B rappresenta i dati relativi alle persone che tendono a recarsi a lavoro in bicicletta.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36064140"
   
 -   **Colonne di input** Ogni modello deve contenere almeno una colonna di input che contiene i valori usati per compilare i cluster. È possibile includere tutte le colonne di input desiderate, ma a seconda del numero di valori in ciascuna colonna, l'aggiunta di colonne supplementari può implicare un aumento del tempo necessario per il training del modello.  
   
--   **Colonna stimabile facoltativa** L'algoritmo non richiede una colonna stimabile per compilare il modello, ma è possibile aggiungere una colonna stimabile di qualsiasi tipo di dati. I valori della colonna stimabile possono essere considerati come input per il modello di clustering oppure è possibile specificare che devono essere utilizzati solo per la stima. Ad esempio, se si desidera stimare reddito del cliente con l'algoritmo clustering ai dati demografici, ad esempio area o età, si specificherà reddito come `PredictOnly` e aggiungere tutte le altre colonne, ad esempio area o età, come input.  
+-   **Colonna stimabile facoltativa** L'algoritmo non richiede una colonna stimabile per compilare il modello, ma è possibile aggiungere una colonna stimabile di qualsiasi tipo di dati. I valori della colonna stimabile possono essere considerati come input per il modello di clustering oppure è possibile specificare che devono essere utilizzati solo per la stima. Ad esempio, se si vuole stimare il reddito dei clienti creando cluster su dati demografici, ad esempio area geografica o età, si specificherà il reddito come `PredictOnly` e aggiungere tutte le altre colonne, ad esempio area geografica o età, come input.  
   
  Per informazioni più dettagliate sui tipi di contenuto e i tipi di dati supportati per i modelli di clustering, vedere la sezione Requisiti di [Riferimento tecnico per l'algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md).  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36064140"
   
  Per informazioni sulla creazione di query in base a un modello di data mining, vedere [Query di data mining](data-mining-queries.md). Per alcuni esempi su come usare le query con un modello di clustering, vedere [Esempi di query sul modello di clustering](clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 -   Supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36064140"
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Riferimento tecnico per Microsoft Clustering algoritmo](microsoft-clustering-algorithm-technical-reference.md)   
- [Contenuto del modello di data mining per i modelli di Clustering &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [Contenuto dei modelli di data mining per i modelli di Clustering &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [Esempi di query sul modello di clustering](clustering-model-query-examples.md)  
   
   

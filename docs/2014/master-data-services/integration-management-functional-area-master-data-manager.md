@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f87fe62b7d723111231ecffc4e1c927478b8b516
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fc94ad9ffcd37479df2fa1379f4872b9ee3aa5e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283377"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Area funzionale Gestione integrazione (Gestione dati master)
   Nell'area funzionale Gestione Integrazione, gli amministratori possono importare dati dalle tabelle di staging e possono creare viste delle sottoscrizioni da utilizzare per i sistemi di sottoscrizione. Per altre informazioni sugli amministratori, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  

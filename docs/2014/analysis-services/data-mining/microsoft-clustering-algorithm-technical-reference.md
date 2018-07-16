@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico per l'algoritmo di Clustering Microsoft | Documenti Microsoft
+title: Riferimento tecnico per l'algoritmo di Clustering Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -24,22 +24,22 @@ helpviewer_keywords:
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b217484efbaf10356005187eb494065299f7ba07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1d3ff592e05d2d8ee0b7e055a095de736d61902
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306601"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Clustering
   In questa sezione viene illustrata l'implementazione dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering, inclusi i parametri che è possibile utilizzare per controllare il comportamento dei modelli di clustering. Vengono inoltre fornite istruzioni su come migliorare le prestazioni durante la creazione e l'elaborazione di modelli di clustering.  
   
  Per ulteriori informazioni sull'utilizzo dei modelli di clustering, vedere gli argomenti seguenti:  
   
--   [Contenuto del modello di data mining per i modelli di Clustering &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Contenuto dei modelli di data mining per i modelli di Clustering &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Esempi di query sul modello di clustering](clustering-model-query-examples.md)  
   
@@ -169,7 +169,7 @@ ms.locfileid: "36055387"
 |NOT NULL|La colonna non può contenere un valore Null. Se Analysis Services rileva un valore Null durante il training del modello, viene generato un errore.<br /><br /> Si applica alla colonna della struttura di data mining.|  
   
 ## <a name="requirements"></a>Requisiti  
- Un modello di clustering deve contenere una colonna chiave e le colonne di input. È inoltre possibile definire le colonne di input come stimabili. Le colonne impostate su `Predict Only` non vengono utilizzati per compilare i cluster. La distribuzione di questi valori nel cluster viene calcolata dopo la compilazione dei cluster.  
+ Un modello di clustering deve contenere una colonna chiave e le colonne di input. È inoltre possibile definire le colonne di input come stimabili. Le colonne impostate su `Predict Only` non vengono usati per compilare i cluster. La distribuzione di questi valori nel cluster viene calcolata dopo la compilazione dei cluster.  
   
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering supporta specifiche colonne di input e colonne stimabili, riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md).  
@@ -184,7 +184,7 @@ ms.locfileid: "36055387"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)   
- [Esempi di Query modello di clustering](clustering-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli di Clustering &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Esempi di Query del modello di clustering](clustering-model-query-examples.md)   
+ [Contenuto dei modelli di data mining per i modelli di Clustering &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   
