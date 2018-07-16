@@ -1,5 +1,5 @@
 ---
-title: Azioni (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Azioni (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services]
 - actions [Analysis Services], about actions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e5828886d047c6b8fcec0d511a8d1ddbd94bbae5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d77c8d49f052d11de98747ff9deee0c61e0070c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319451"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Azioni (Analysis Services - Dati multidimensionali)
   Sono disponibili azioni di diverso tipo, le quali devono pertanto essere create in modo appropriato. Di seguito vengono indicati i diversi tipi di azione.  
@@ -42,7 +42,7 @@ ms.locfileid: "36166169"
   
  La destinazione corrisponde al percorso effettivo nel cubo in cui deve verificarsi l'azione. La destinazione è composta da un tipo di destinazione e da un oggetto di destinazione. Il tipo di destinazione rappresenta il tipo di oggetto all'interno del cubo, in cui l'azione deve essere attivata. Il tipo di destinazione può essere costituito da membri del livello, celle, gerarchia, membri della gerarchia o altro. L'oggetto di destinazione è un oggetto specifico del tipo di destinazione. Se il tipo di destinazione è una gerarchia, l'oggetto di destinazione è una delle gerarchie definite nel cubo.  
   
- La condizione è un `Boolean` espressione MDX che viene valutato in corrispondenza dell'evento di azione. Se la condizione restituisce `true`, quindi viene eseguita l'azione. In caso contrario, l'azione non viene eseguita.  
+ La condizione è un `Boolean` espressione MDX che viene valutato in corrispondenza dell'evento di azione. Se la condizione restituisce `true`, l'azione viene eseguita. In caso contrario, l'azione non viene eseguita.  
   
  Il tipo rappresenta il tipo di azione da eseguire. <xref:Microsoft.AnalysisServices.Action> è una classe astratta, per usarla è necessaria una delle classi derivate. I due tipi di azione drill-through e report sono predefiniti e dispongono delle classi derivate corrispondenti <xref:Microsoft.AnalysisServices.DrillThroughAction> e <xref:Microsoft.AnalysisServices.ReportAction>. Le altre azioni sono incluse nella classe <xref:Microsoft.AnalysisServices.StandardAction> .  
   

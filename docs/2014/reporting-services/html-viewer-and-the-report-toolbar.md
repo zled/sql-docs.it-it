@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 caps.latest.revision: 32
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9671f72321630dc53243d695dca7f943e4685e7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: eb889f5f518aa5371afb2604950ba0813f5c9c92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319797"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visualizzatore HTML e barra degli strumenti dei report
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce un Visualizzatore HTML usato per visualizzare i report quando vengono richiesti dal server di report. Il Visualizzatore HTML è progettato per la visualizzazione di report in formato HTML e include una barra degli strumenti dei report, una sezione dei parametri, una sezione delle credenziali e una mappa documento. Nella barra degli strumenti dei report nel Visualizzatore HTML sono disponibili funzionalità per l'utilizzo del report oltre a opzioni per l'esportazione che consentono di visualizzare il report in formati diversi da HTML. La sezione dei parametri e la mappa documento vengono visualizzate solo se si aprono report configurati per l'utilizzo dei parametri e di un controllo mappa documento.  
   
 > [!NOTE]  
->  Sebbene non sia possibile modificare la barra degli strumenti dei report, è possibile configurare parametri nell'URL di un report affinché nascondano tale barra in un report. Per ulteriori informazioni su come nascondere la barra degli strumenti report, vedere [riferimento ai parametri di accesso URL](url-access-parameter-reference.md).  
+>  Sebbene non sia possibile modificare la barra degli strumenti dei report, è possibile configurare parametri nell'URL di un report affinché nascondano tale barra in un report. Per altre informazioni su come nascondere la barra degli strumenti di report, vedere [riferimento ai parametri di accesso URL](url-access-parameter-reference.md).  
   
 ## <a name="report-toolbar"></a>Barra degli strumenti dei report  
  La barra degli strumenti dei report include funzionalità di navigazione tra le pagine, ingrandimento o riduzione, aggiornamento, ricerca, esportazione, stampa e feed di dati per i report gestiti tramite l'estensione per il rendering HTML.  
@@ -43,12 +43,12 @@ ms.locfileid: "36167824"
   
 |Controllo o icona||Per|  
 |------------------------------|-|--------|  
-|![Pagina i controlli di navigazione](media/htmlviewer-pagenav.gif "pagina i controlli di navigazione")|**Controlli per la navigazione tra le pagine**|Aprire la prima o l'ultima pagina di un report, scorrere un report una pagina alla volta, aprire una pagina specifica di un report. Per visualizzare una pagina specifica, digitare il numero di pagina e premere INVIO.|  
-|![I controlli visualizzati nella pagina](media/htmlviewer-pagesize.gif "i controlli visualizzati nella pagina")|**Controlli per la visualizzazione delle pagine**|Ingrandire o ridurre le dimensioni della pagina del report. Oltre a modificare il valore percentuale, è possibile selezionare **Larghezza pagina** per adeguare la larghezza della pagina del report alle dimensioni della finestra del browser oppure **Pagina intera** per visualizzare l'intero report nella finestra del browser. In **Internet Explorer 5.5 e versioni successive è supportata l'opzione** Zoom [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  
+|![Pagina controlli di spostamento](media/htmlviewer-pagenav.gif "pagina controlli di spostamento")|**Controlli per la navigazione tra le pagine**|Aprire la prima o l'ultima pagina di un report, scorrere un report una pagina alla volta, aprire una pagina specifica di un report. Per visualizzare una pagina specifica, digitare il numero di pagina e premere INVIO.|  
+|![I controlli di visualizzazione della pagina](media/htmlviewer-pagesize.gif "controlli di visualizzazione della pagina")|**Controlli per la visualizzazione delle pagine**|Ingrandire o ridurre le dimensioni della pagina del report. Oltre a modificare il valore percentuale, è possibile selezionare **Larghezza pagina** per adeguare la larghezza della pagina del report alle dimensioni della finestra del browser oppure **Pagina intera** per visualizzare l'intero report nella finestra del browser. In **Internet Explorer 5.5 e versioni successive è supportata l'opzione** Zoom [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  
 |![Campo di ricerca](media/htmlviewer-search.gif "campo di ricerca")|**Campo di ricerca**|Eseguire una ricerca di contenuto nel report digitando la parola o la frase che si desidera trovare (con una lunghezza massima di 256 caratteri). La ricerca viene eseguita senza distinzione tra maiuscole e minuscole a partire dalla pagina o dalla sezione selezionata. Nell'operazione di ricerca viene incluso solo il contenuto visibile. Per cercare le occorrenze successive dello stesso valore, fare clic su **Avanti**.|  
 |![Formati di esportazione](media/htmlviewer-export.GIF "formati di esportazione")|**Formati di esportazione**|Aprire una nuova finestra del browser ed eseguire il rendering del report nel formato selezionato. I formati disponibili dipendono dalle estensioni per il rendering installate nel server di report. Per la stampa è consigliato il formato TIFF. Fare clic su **Esporta** per visualizzare il report nel formato selezionato.|  
 |![Icona della mappa documento](media/htmlviewer-docmap.GIF "icona della mappa documento")|**Icona della mappa documento**|Visualizzare o nascondere il riquadro della mappa documento in un report che include una mappa documento. Una mappa documento è un controllo per la navigazione all'interno del report simile al riquadro di navigazione in un sito Web. È possibile fare clic sugli elementi nella mappa documento per passare a un gruppo, a una pagina o a un sottoreport specifico.|  
-|![Icona della stampante](media/printer-icon.gif "sull'icona della stampante")|**Icona della stampante**|Aprire una finestra di dialogo Stampa per specificare le opzioni di stampa e stampare un report. La prima volta che si seleziona questa icona viene richiesto di scaricare il controllo di stampa.|  
+|![Icona della stampante](media/printer-icon.gif "icona della stampante")|**Icona della stampante**|Aprire una finestra di dialogo Stampa per specificare le opzioni di stampa e stampare un report. La prima volta che si seleziona questa icona viene richiesto di scaricare il controllo di stampa.|  
 ||**Visualizzare e nascondere le icone**|Visualizzare o nascondere i campi dei valori di parametro e il pulsante **Visualizza report** in un report con parametri.|  
 |![Pulsante di aggiornamento del browser nella barra degli strumenti dei report](media/htmlviewer-refresh.GIF "Pulsante di aggiornamento del browser nella barra degli strumenti dei report")|**Icona per l'aggiornamento del report**|Aggiornare il report. I dati dei report live verranno aggiornati. I report memorizzati nella cache verranno ricaricati dalla posizione di archiviazione.|  
 |![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**Icona Feed di dati**|Feed di dati generati dai report.|  
@@ -78,6 +78,6 @@ ms.locfileid: "36167824"
 ## <a name="see-also"></a>Vedere anche  
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Esportazione di report &#40;SSRS e Generatore Report&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Esportazione di report &#40;Report e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
