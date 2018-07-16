@@ -1,5 +1,5 @@
 ---
-title: Archiviazione (Analysis Services - dati multidimensionali) del cubo | Documenti Microsoft
+title: Archiviazione (Analysis Services - dati multidimensionali) del cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - storage [Analysis Services], cubes
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e0e586c404575c0e7fe3b8b04641d8dba06b0f14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e88e2987bf456a3746b7c50fc986f10f6573ba0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295931"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Archiviazione di cubi (Analysis Services - Dati multidimensionali)
-  L'archiviazione può coinvolgere solo i metadati del cubo oppure tutti i dati di origine della tabella dei fatti nonché le aggregazioni definite dalle dimensioni correlate al gruppo di misure. La quantità di dati archiviata dipende dalla modalità di archiviazione selezionata e dal numero di aggregazioni. La quantità di dati archiviata direttamente influisce sulle prestazioni di esecuzione delle query. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono utilizzate diverse tecniche per ridurre al minimo lo spazio necessario per l'archiviazione dei dati del cubo e delle aggregazioni:  
+  L'archiviazione può coinvolgere solo i metadati del cubo oppure tutti i dati di origine della tabella dei fatti nonché le aggregazioni definite dalle dimensioni correlate al gruppo di misure. La quantità di dati archiviata dipende dalla modalità di archiviazione selezionata e dal numero di aggregazioni. La quantità di dati archiviata direttamente influisce sulle prestazioni di esecuzione delle query. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono utilizzate diverse tecniche per ridurre al minimo lo spazio necessario per l'archiviazione dei dati del cubo e le aggregazioni:  
   
 -   Le opzioni di archiviazione consentono di selezionare le modalità e le posizioni di archiviazione appropriate per i dati del cubo.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36171119"
   
 -   Per le celle vuote non viene allocato alcuno spazio di archiviazione.  
   
- Le impostazioni di archiviazione vengono definite per ogni singola partizione e per ogni gruppo di misure in un cubo esiste almeno una partizione. Per altre informazioni, vedere [partizioni &#40;Analysis Services - dati multidimensionali&#41;](partitions-analysis-services-multidimensional-data.md), [l'elaborazione e modalità di archiviazione delle partizioni](partitions-partition-storage-modes-and-processing.md), [gruppidimisureemisure](../multidimensional-models/measures-and-measure-groups.md), e [creare misure e gruppi di misure nei modelli multidimensionali](../multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
+ Le impostazioni di archiviazione vengono definite per ogni singola partizione e per ogni gruppo di misure in un cubo esiste almeno una partizione. Per altre informazioni, vedere [partizioni &#40;Analysis Services - dati multidimensionali&#41;](partitions-analysis-services-multidimensional-data.md), [modalità di archiviazione delle partizioni e l'elaborazione](partitions-partition-storage-modes-and-processing.md), [misure e gruppi di misure](../multidimensional-models/measures-and-measure-groups.md), e [creare misure e gruppi di misure nei modelli multidimensionali](../multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
   
 ## <a name="partition-storage"></a>Partition Storage  
  L'archiviazione di un gruppo di misure può prevedere la suddivisione in più partizioni. Le partizioni consentono di distribuire un gruppo di misure mediante la suddivisione in segmenti discreti in un solo server o in più server e di ottimizzare le prestazioni del processo di archiviazione e delle query. Ogni partizione di un gruppo di misure può essere basata su un'origine dei dati diversa e può prevedere impostazioni di archiviazione diverse.  

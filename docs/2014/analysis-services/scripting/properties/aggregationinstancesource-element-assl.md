@@ -1,5 +1,5 @@
 ---
-title: Elemento AggregationInstanceSource (ASSL) | Documenti Microsoft
+title: Elemento AggregationInstanceSource (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationInstanceSource element
 ms.assetid: ab58c817-eb2b-4974-8470-2946ca5affea
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 318f70f156d78df90ceeb53e56cbc83f9d4e43a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd2001d304d951f4eeb2ac737e3cfe6e8526c1af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312411"
 ---
 # <a name="aggregationinstancesource-element-assl"></a>Elemento AggregationInstanceSource (ASSL)
   Identifica l'origine dei dati per le istanze di aggregazione definite dall'utente associate a un [partizione](../objects/partition-element-assl.md) elemento.  
@@ -59,12 +59,12 @@ ms.locfileid: "36170878"
 |Elementi padre|[Partizione](../objects/partition-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se questo elemento è mancante o impostato su una stringa vuota, viene utilizzata per impostazione predefinita la vista origine dati del cubo che possiede la partizione.  
   
- Per ulteriori informazioni sul `Binding` tipo, incluse le tabelle di oggetti di Analysis Services Scripting Language (ASSL) del `Binding` tipo e la gerarchia di ereditarietà dei `Binding` tipi, vedere [tipo di dati Binding &#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  
+ Per altre informazioni sul `Binding` tipo, incluse le tabelle di oggetti di Analysis Services Scripting Language (ASSL) del `Binding` tipo e la gerarchia di ereditarietà dei `Binding` tipi, vedere [associazione tipo di dati &#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  
   
- Per una panoramica delle associazioni dati in ASSL, vedere [origini dati e le associazioni &#40;multidimensionali SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Per una panoramica delle associazioni di dati in ASSL, vedere [origini dati e associazioni &#40;multidimensionale di SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

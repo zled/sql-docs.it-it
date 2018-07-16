@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 9: Creare prospettive | Documenti Microsoft'
+title: 'Lezione 9: Creare prospettive | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fe2e746ec290aeb3b8690f818875616f2b9dd2f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 55c9ef5ca0049c3adda66405f941f4270f562b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295951"
 ---
 # <a name="lesson-9-create-perspectives"></a>Lezione 9: Creare prospettive
   In questa lezione verrà creata una prospettiva Internet Sales. Una prospettiva consente di definire un subset visualizzabile di un modello in grado di offrire punti di vista mirati, specifici di un'attività aziendale o di un'applicazione del modello. Quando un utente si connette a un modello tramite una prospettiva, vengono visualizzati solo gli oggetti del modello (tabelle, colonne, misure, gerarchie e KPI) come campi definiti in tale prospettiva.  
@@ -39,13 +39,13 @@ ms.locfileid: "36167750"
   
 #### <a name="to-create-an-internet-sales-perspective"></a>Per creare una prospettiva Internet Sales  
   
-1.  In Progettazione modelli, fare clic sui **modello** menu e quindi fare clic su **prospettive**.  
+1.  In Progettazione modelli fare clic sui **Model** menu e quindi fare clic su **prospettive**.  
   
 2.  Nella finestra di dialogo **Prospettive** fare clic su **Nuova prospettiva**.  
   
-3.  Per rinominare la prospettiva, fare doppio clic sui **nuova prospettiva 1** intestazione di colonna e quindi digitare `Internet Sales`.  
+3.  Per rinominare la prospettiva, fare doppio clic il **New Perspective 1** sull'intestazione di colonna e quindi digitare `Internet Sales`.  
   
-4.  In **i campi**, selezionare le tabelle seguenti **data**, **Geography**, **prodotto**, **Product Category**, **Product Subcategory**, e `Internet Sales`.  
+4.  Nelle **i campi**, selezionare le tabelle seguenti **data**, **Geography**, **prodotto**, **Product Category**, **Product Subcategory**, e `Internet Sales`.  
   
      Si noti che sono state escluse la tabella Customer e tutte le colonne relative da questa prospettiva. In un secondo momento, nella Lezione 12 si utilizzerà la funzionalità Analizza in Excel per testare questa prospettiva. L'elenco campi tabella pivot di Excel includerà ogni tabella a eccezione di Customer.  
   

@@ -1,5 +1,5 @@
 ---
-title: Configurare un pacchetto per l'utilizzo di transazioni | Documenti Microsoft
+title: Configurare un pacchetto per l'utilizzo delle transazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], configuring packages to use
 ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8637409c0248506de68fa6615dcd6b9edbf7a5bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e443740244e6e70336eb6c711e4e7ade7d2b698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306164"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>Configurazione di un pacchetto per l'utilizzo di transazioni
   Quando si configura un pacchetto per l'utilizzo di transazioni, sono disponibili due opzioni:  
@@ -33,9 +33,9 @@ ms.locfileid: "36170850"
  Nelle procedure seguenti viene descritto come configurare entrambe le opzioni.  
   
 ## <a name="configuring-a-single-transaction"></a>Configurazione di una transazione singola  
- In questo caso, il pacchetto stesso inizializza un'unica transazione. È necessario configurare il pacchetto per avviare questa transazione impostando la proprietà TransactionOption del pacchetto da `Required`.  
+ In questo caso, il pacchetto stesso inizializza un'unica transazione. È necessario configurare il pacchetto per inizializzi questa transazione impostando la proprietà TransactionOption del pacchetto da `Required`.  
   
- In questa unica transazione verranno quindi inserite le attività e i contenitori specifici. Per integrare un'attività o un contenitore in una transazione, impostare la proprietà TransactionOption di tale attività o del contenitore su `Supported`.  
+ In questa unica transazione verranno quindi inserite le attività e i contenitori specifici. Per inserire un'attività o contenitore in una transazione, si imposta la proprietà TransactionOption dell'attività o contenitore da `Supported`.  
   
 #### <a name="to-configure-a-package-to-use-a-single-transaction"></a>Per configurare un pacchetto per l'utilizzo di una transazione singola  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36170850"
 ## <a name="configuring-multiple-transactions"></a>Configurazione di più transazioni  
  In questo caso, il pacchetto supporta le transazioni ma non ne avvia alcuna. È necessario configurare il pacchetto per supportare le transazioni impostando la proprietà TransactionOption del pacchetto da `Supported`.  
   
- Configurare quindi le attività e i contenitori desiderati all'interno del pacchetto in modo che inizializzino la transazione o vengano eseguiti con essa. Per configurare un'attività o un contenitore per avviare una transazione, si imposta la proprietà TransactionOption di tale attività o del contenitore su `Required`.  
+ Configurare quindi le attività e i contenitori desiderati all'interno del pacchetto in modo che inizializzino la transazione o vengano eseguiti con essa. Per configurare un'attività o contenitore per avviare una transazione, si imposta la proprietà TransactionOption dell'attività o contenitore da `Required`.  
   
 #### <a name="to-configure-a-package-to-use-multiple-transactions"></a>Per configurare un pacchetto per l'utilizzo di più transazioni  
   

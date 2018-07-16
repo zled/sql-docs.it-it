@@ -1,5 +1,5 @@
 ---
-title: I passaggi da elemento (XMLA) | Documenti Microsoft
+title: I passaggi da elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Steps element
 ms.assetid: a6821a2a-89ec-418b-b2dd-92adf2ccc20e
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cfafdc9aa9644b028d66b844550175a462a0258a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3b4e5b6682d0cb6778abc1dc22b7d5193ada47f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308391"
 ---
 # <a name="steps-element-xmla"></a>Elemento Steps (XMLA)
-  Specifica il numero massimo di passaggi utilizzati per il [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) comando per progettare aggregazioni.  
+  Specifica il numero massimo di passaggi utilizzati per il [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) comando per progettare le aggregazioni.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36169742"
 |Elementi padre|[DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;XMLA&#41;](xml-elements-properties.md)  

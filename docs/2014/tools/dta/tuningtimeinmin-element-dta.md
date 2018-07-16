@@ -1,5 +1,5 @@
 ---
-title: Elemento TuningTimeInMin (DTA) | Documenti Microsoft
+title: Elemento TuningTimeInMin (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - TuningTimeInMin element
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 305814974dc3cb5aeca4b265a39012f095476e48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 82821b8f8cc728c8b2f15d92af1496714414ea40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304633"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>Elemento TuningTimeInMin (DTA)
   Specifica la lunghezza massima di una sessione di ottimizzazione espressa in minuti.  
@@ -44,7 +44,7 @@ ms.locfileid: "36170491"
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|`unsignedInt`, lunghezza illimitata.|  
 |**Valore predefinito**|480 minuti (8 ore).|  
-|**Occorrenza**|Obbligatorio solo se è stato specificato un valore per il `NumberOfEvents` elemento.|  
+|**Occorrenza**|Obbligatorio a meno che non è stato specificato un valore per il `NumberOfEvents` elemento.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   

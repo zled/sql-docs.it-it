@@ -1,5 +1,5 @@
 ---
-title: Impostazione informazioni origine (Creazione guidata partizione) | Documenti Microsoft
+title: Impostazione informazioni origine (Creazione guidata partizione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.specifydsvandfacttables.f1
 ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d29067eabeb7050ec033cc5d274f9f5373c97ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6f60f8470c45e8dbc97de12d7a13b19bea9becb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310451"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Impostazione informazioni origine (Creazione guidata partizione)
   Utilizzare la pagina **Impostazione informazioni origine** per selezionare il gruppo di misure in cui creare la partizione, nonché la vista origine dati e le tabelle di filtro per la partizione.  
@@ -30,7 +30,7 @@ ms.locfileid: "36170646"
 >  Se in **Tabelle disponibili** si seleziona una tabella usata da un'altra partizione, sarà necessario specificare una query nella pagina **Limitazione righe** per evitare il rischio di duplicazioni di dati nel cubo.  
   
 ## <a name="options"></a>Opzioni  
- **gruppo di misure**  
+ **Gruppo di misure**  
  Consente di selezionare un gruppo di misure per la partizione.  
   
  **Look in**  
@@ -39,7 +39,7 @@ ms.locfileid: "36170646"
  **Tabelle dei filtri**  
  Digitare la stringa usata per limitare le tabelle visualizzate in **Tabelle disponibili**per nome tabella.  
   
- **Trova tabelle**  
+ **Trovare le tabelle**  
  Selezionare questa opzione per aggiornare l'elenco delle tabelle in **Tabelle disponibili**e per ridurre ulteriormente l'elenco, se in **Filtro tabelle**è stata specificata una stringa.  
   
  **Tabelle disponibili**  

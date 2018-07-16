@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - <= (less than or equal to operator)
 - greater than or equal to (>=)
@@ -16,13 +16,13 @@ ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 99452d60eab3dae30d16968be1d16a00ad739508
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d267dddfa262d71d4cc20696dfb1bac7f436f963
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318861"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (maggiore o uguale a) (espressione SSIS)
   Viene eseguito un confronto per determinare se la prima espressione è maggiore o uguale alla seconda. L'analizzatore di espressioni converte automaticamente numerosi tipi di dati prima di eseguire il confronto.  
@@ -50,7 +50,7 @@ expression1 >= expression2
 ## <a name="result-types"></a>Tipi restituiti  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se una delle espressioni nel confronto è Null, il risultato del confronto sarà Null. Se entrambe le espressioni sono Null, il risultato sarà Null.  
   
  Il set di espressioni *expression1* e *expression2*deve seguire una di queste regole:  
@@ -107,10 +107,10 @@ ListPrice >= 500
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [&#62;&#40;Maggiore di&#41; &#40;espressione SSIS&#41;](greater-than-ssis-expression.md)   
- [&#60;&#40;Minore di&#41; &#40;espressione SSIS&#41;](less-than-ssis-expression.md)   
+ [&#62;&#40;Maggiore di&#41; &#40;espressione di SSIS&#41;](greater-than-ssis-expression.md)   
+ [&#60;&#40;Minore di&#41; &#40;espressione di SSIS&#41;](less-than-ssis-expression.md)   
  [&#60;= &#40;minore o uguale a&#41; &#40;espressione SSIS&#41;](less-than-or-equal-to-ssis-expression.md)   
- [Associatività e precedenza operatori](operator-precedence-and-associativity.md)   
- [Gli operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md)  
+ [Precedenza e associatività degli operatori](operator-precedence-and-associativity.md)   
+ [Gli operatori &#40;espressione di SSIS&#41;](operators-ssis-expression.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Creare un'origine dati (SSAS multidimensionale) | Documenti Microsoft
+title: Creare un'origine dati (SSAS multidimensionale) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcedesigner.f1
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 caps.latest.revision: 60
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b4077a7a0df6fe7575a7844a85917c107aacac07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b0275daece83f64726f7b5dd50618d68d7c6e6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310851"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Crea un' origine dati (SSAS multidimensionale)
   In un modello multidimensionale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un oggetto di origine dati rappresenta una connessione all'origine dati dalla quale si elaborano o si importano dati. Un modello multidimensionale deve contenere almeno un oggetto di origine dati, tuttavia è possibile aggiungerne altri per combinare dati provenienti da diversi data warehouse. Utilizzare le istruzioni in questo argomento per creare un oggetto di origine dati per il modello. Per altre informazioni sull'impostazione delle proprietà per questo oggetto, vedere [Impostare le proprietà dell'origine dati &#40;SSAS multidimensionale&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -86,11 +86,11 @@ ms.locfileid: "36170916"
   
      Il provider predefinito per una nuova connessione è il provider OLE DB nativo\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Questo provider viene usato per connettersi a un'istanza del motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite OLE DB. Per le connessioni a un database relazionale SQL Server, l'utilizzo di OLE DB nativo\SQL Server Native Client 11.0 è spesso più veloce dell'utilizzo di provider alternativi.  
   
-     È possibile scegliere un provider diverso per accedere ad altre origini dati. Per un elenco di database relazionali supportati e provider [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [origini dei dati supportate &#40;multidimensionali di SSAS&#41;](supported-data-sources-ssas-multidimensional.md).  
+     È possibile scegliere un provider diverso per accedere ad altre origini dati. Per un elenco di database relazionali supportati da e provider [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [origini dati supportate &#40;multidimensionale di SSAS&#41;](supported-data-sources-ssas-multidimensional.md).  
   
 5.  Immettere le informazioni richieste dal provider selezionato per la connessione all'origine dei dati sottostante. In caso di selezione del provider **OLE DB nativo\SQL Server Native Client** , immettere le informazioni seguenti:  
   
-    1.  **Nome server** è il nome di rete dell'istanza del motore di database. Può essere specificato come l'indirizzo IP, il nome NETBIOS del computer, o un nome di dominio completo. Se il server viene installato come istanza denominata, è necessario includere il nome dell'istanza (ad esempio \<computername >\\< NomeIstanza\>).  
+    1.  **Nome server** è il nome di rete dell'istanza del motore di database. Può essere specificato come l'indirizzo IP, il nome NETBIOS del computer, o un nome di dominio completo. Se il server viene installato come istanza denominata, è necessario includere il nome dell'istanza (ad esempio, \<nomecomputer >\\< NomeIstanza\>).  
   
     2.  **Accesso al server** specifica la modalità di autenticazione della connessione. **Usa autenticazione di Windows** consente di usare l'autenticazione di Windows. **Usa autenticazione di SQL Server** consente di specificare un accesso utente per i database SQL di Windows Azure o per un'istanza di SQL Server che supporta l'autenticazione in modalità mista.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36170916"
   
 8.  Scegliere **Avanti**.  In **Completamento procedura guidata**immettere il nome di un'origine dati o usare il nome predefinito. Il nome predefinito corrisponde a quello del database specificato nella connessione. Nel riquadro **Anteprima** verrà visualizzata la stringa di connessione per la nuova origine dati.  
   
-9. Fare clic su **Fine**.  La nuova origine dati verrà visualizzata nella cartella **Origini dati** in Esplora soluzioni.  
+9. Scegliere **Fine**.  La nuova origine dati verrà visualizzata nella cartella **Origini dati** in Esplora soluzioni.  
   
 ##  <a name="bkmk_connection"></a> Creare un'origine dati utilizzando una connessione esistente  
  In un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] l'origine dati può essere basata su un'origine dei dati esistente nella soluzione oppure su un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Nella Creazione guidata origine dati sono disponibili diverse opzioni per la creazione dell'oggetto di origine dati, incluso l'utilizzo di una connessione esistente nello stesso progetto.  
@@ -155,7 +155,7 @@ ms.locfileid: "36170916"
  È possibile creare più di un oggetto di origine dati per supportare le connessioni a origini dati aggiuntive. Ogni origine dati deve disporre di colonne che sia possibile utilizzare per creare relazioni.  
   
 > [!NOTE]  
->  Se vengono definite più origini dati e query sui dati da più origini in una singola query, ad esempio per una dimensione a fiocco, è necessario definire un'origine dati che supporta le query remote tramite `OpenRowset`. Si tratterà in genere di un'origine dati di Microsoft SQL Server.  
+>  Se sono definite più origini dati e viene eseguita una query dei dati da più origini in una singola query, ad esempio per una dimensione con schema fiocco di neve, è necessario definire un'origine dati che supporta le query remote tramite `OpenRowset`. Si tratterà in genere di un'origine dati di Microsoft SQL Server.  
   
  Tra i requisiti per l'utilizzo di più origini dati sono inclusi i seguenti:  
   
@@ -177,6 +177,6 @@ ms.locfileid: "36170916"
   
 ## <a name="see-also"></a>Vedere anche  
  [Origini dati supportate &#40;multidimensionale di SSAS&#41;](supported-data-sources-ssas-multidimensional.md)   
- [Viste origine dati nei modelli multidimensionali](data-source-views-in-multidimensional-models.md)  
+ [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)  
   
   

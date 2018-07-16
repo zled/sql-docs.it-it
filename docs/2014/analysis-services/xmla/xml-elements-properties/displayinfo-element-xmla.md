@@ -1,5 +1,5 @@
 ---
-title: Elemento DisplayInfo (XMLA) | Documenti Microsoft
+title: Elemento DisplayInfo (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DisplayInfo element
 ms.assetid: 059ce038-38de-4c7d-a72f-4f919cfc7c4a
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e792ba01df58aacb42600fb9ff8ac686c026badc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 697678969f3e1f59f3a9d379d791bf285f0513be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321157"
 ---
 # <a name="displayinfo-element-xmla"></a>Elemento DisplayInfo (XMLA)
   Contiene informazioni di visualizzazione per l'elemento padre [HierarchyInfo](hierarchyinfo-element-xmla.md) oppure [membro](member-element-xmla.md) elemento.  
@@ -63,7 +63,7 @@ ms.locfileid: "36055563"
 |Elementi padre|[HierarchyInfo](hierarchyinfo-element-xmla.md), [membro](member-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `DisplayInfo` contiene vari elementi di informazioni che aiutano un'applicazione client a eseguire il rendering dell'elemento padre `HierarchyInfo` o `Member`. Il valore è equivalente alla proprietà DISPLAY_INFO definita per i set di righe dell'asse nella specifica OLE DB per OLAP.  
   
 ## <a name="see-also"></a>Vedere anche  

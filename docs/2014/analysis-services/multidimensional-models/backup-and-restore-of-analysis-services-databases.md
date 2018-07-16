@@ -1,5 +1,5 @@
 ---
-title: Backup e ripristino di database di Analysis Services | Documenti Microsoft
+title: Backup e ripristino di database di Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.Backup.f1
 - sql12.asvs.ssmsimbi.Restore.f1
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d778b7b21242cdd7f994caba33360ad61f9bf3bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3881b600453b66723afae9369fac8b18ca0012aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312631"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Backup e ripristino di database di Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è disponibile una funzionalità di backup e ripristino per poter eseguire il recupero temporizzato di un database e dei relativi oggetti. Tale funzionalità rappresenta anche una tecnica valida per l'esecuzione della migrazione dei database a server aggiornati, per lo spostamento di database tra server o per la distribuzione di un database in un server di produzione. Per il recupero dei dati, se non è già disponibile un piano di backup per i dati importanti, è consigliabile progettarlo e implementarlo appena possibile.  
@@ -128,7 +128,7 @@ ms.locfileid: "36170670"
  Per altre informazioni sul ripristino di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vedere [Opzioni di ripristino](restore-options.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Backup, ripristino e la sincronizzazione dei database &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
+ [Il backup, ripristino e sincronizzazione dei database &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
  [PowerShell per Analysis Services](../analysis-services-powershell.md)  
   
   

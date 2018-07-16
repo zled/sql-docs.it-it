@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Definizione e distribuzione di un cubo | Documenti Microsoft'
+title: 'Lezione 2: Definizione e distribuzione di un cubo | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 527781bac1cdab44c0fd750bfb939ec80ae145a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 077d422f47fa62083420713b580100afcccf1712
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284127"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Lezione 2: Definizione e distribuzione di un cubo
   Dopo aver definito una vista origine dati nel progetto di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , è possibile definire un cubo iniziale di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -40,7 +40,7 @@ ms.locfileid: "36170909"
  [Aggiunta di attributi alle dimensioni](lesson-2-3-adding-attributes-to-dimensions.md)  
  In questa attività si aggiungono attributi alle dimensioni create.  
   
- [Esame delle proprietà di dimensione e del cubo](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
+ [Esame delle proprietà del cubo e delle dimensioni](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
  In questa attività si controlla la struttura del cubo definito tramite la Creazione guidata cubo.  
   
  [Distribuzione di un progetto di Analysis Services](lesson-2-5-deploying-an-analysis-services-project.md)  
@@ -53,11 +53,11 @@ ms.locfileid: "36170909"
  [Lezione 3: Modifica di misure, attributi e gerarchie](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)   
+ [Scenario di Analysis Services Tutorial](analysis-services-tutorial-scenario.md)   
  [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Configurare le proprietà di progetto di Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
+ [Configurare proprietà di progetto di Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
  [Compilare progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [Distribuire progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17b923177aed9583b3757baadce00b6a1aa01038
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9f51af9131329a37be6772310dd2817e4f62fd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282937"
 ---
 # <a name="extensions-ssrs"></a>Estensioni (SSRS)
   Il server di report in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usa le estensioni per modulare i tipi di input o output accettati per l'autenticazione, l'elaborazione dati, il rendering e il recapito dei report. Questo semplifica l'utilizzo di nuovi standard di software del settore da parte delle installazioni esistenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , quale un nuovo schema di autenticazione o un tipo di origine dati personalizzato. Il server di report supporta estensioni di autenticazione personalizzate, estensioni per l'elaborazione dati, estensioni dell'elaborazione di report, estensioni per il rendering ed estensioni per il recapito e estensioni disponibili per gli utenti sono configurabili nel file di configurazione RSReportServer.config. Ad esempio, è possibile limitare i formati di esportazione che il visualizzatore di report può usare. Un server di report richiede almeno un'estensione di autenticazione, un'estensione per l'elaborazione dati e un'estensione per il rendering. Le estensioni personalizzate di elaborazione dei report e di recapito sono facoltative. Sono tuttavia necessarie se si desidera supportare la distribuzione dei report o i controlli personalizzati.  
@@ -59,7 +59,7 @@ ms.locfileid: "36169844"
 ## <a name="rendering-extensions"></a>Estensioni per il rendering  
  Le estensioni per il rendering consentono di trasformare i dati e le informazioni sul layout generate dall'elaboratore di report in un formato specifico del dispositivo. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] include sette estensioni per il rendering: HTML, Excel, CSV, XML, Image, PDF e [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
   
--   **Estensioni per il rendering HTML** Quando si richiede un report da un server di report tramite un Web browser, il server di report usa l'estensione per il rendering HTML per eseguire il rendering del report. L'estensione per il rendering HTML genera tutto il codice HTML con la codifica UTF-8. Per altre informazioni, vedere [esegue il Rendering in HTML &#40;Generatore Report e SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md) e [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+-   **Estensioni per il rendering HTML** Quando si richiede un report da un server di report tramite un Web browser, il server di report usa l'estensione per il rendering HTML per eseguire il rendering del report. L'estensione per il rendering HTML genera tutto il codice HTML con la codifica UTF-8. Per altre informazioni, vedere [Rendering in formato HTML &#40;Generatore Report e SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md) e [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 -   **Estensione per il rendering Excel** L'estensione per il rendering Excel viene usata per il rendering dei report in un formato visualizzabile e modificabile in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 o versioni successive. Questa estensione per il rendering crea file in formato BIFF (Binary Interchange File Format). BIFF è il formato file nativo per i dati Excel. I report di cui è stato eseguito il rendering in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] supportano tutte le caratteristiche disponibili per qualsiasi foglio di calcolo. Per altre informazioni, vedere [Esportazione in Microsoft Excel &#40;Generatore report e SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   

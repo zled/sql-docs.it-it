@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21cc9dd846af38bcbe8985f883f75ec537f58573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd0ffa2e898661a6685b9608a5e467312ae027c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320751"
 ---
 # <a name="data-flow-task"></a>Attività Flusso di dati
   L'attività Flusso di dati incapsula il motore flusso di dati che consente di spostare i dati dalle origini alle destinazioni e offre la possibilità di trasformare, pulire e modificare i dati durante lo spostamento. L'aggiunta di un'attività Flusso di dati al flusso di controllo di un pacchetto consente al pacchetto di estrarre, trasformare e caricare dati.  
@@ -53,9 +53,9 @@ ms.locfileid: "36166661"
 |Voce di log|Description|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Indica che l'attività Flusso di dati ha modificato le dimensioni del buffer. In questa voce di log vengono indicati i motivi della modifica delle dimensioni del buffer e le nuove dimensioni temporanee del buffer.|  
-|`OnPipelinePostEndOfRowset`|Indica che un componente è stato assegnato il segnale di fine del set di righe, che viene impostato dall'ultima chiamata di `ProcessInput` metodo. Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
-|`OnPipelinePostPrimeOutput`|Indica che il componente ha completato l'ultima chiamata al `PrimeOutput` metodo. A seconda del flusso di dati, è possibile che vengano scritte più voci di log. Se il componente è un'origine, questa voce di log indica che tale componente ha terminato l'elaborazione delle righe.|  
-|`OnPipelinePreEndOfRowset`|Indica che un componente sta per ricevere il segnale di fine del set di righe, che viene impostato dall'ultima chiamata di `ProcessInput` metodo. Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
+|`OnPipelinePostEndOfRowset`|Indica che un componente è stato inviato il segnale di fine del set di righe, che viene impostato dall'ultima chiamata di `ProcessInput` (metodo). Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
+|`OnPipelinePostPrimeOutput`|Indica che il componente ha completato l'ultima chiamata al `PrimeOutput` (metodo). A seconda del flusso di dati, è possibile che vengano scritte più voci di log. Se il componente è un'origine, questa voce di log indica che tale componente ha terminato l'elaborazione delle righe.|  
+|`OnPipelinePreEndOfRowset`|Indica che un componente sta per ricevere il segnale di fine del set di righe, che viene impostato dall'ultima chiamata di `ProcessInput` (metodo). Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
 |`OnPipelinePrePrimeOutput`|Indica che un componente sta per ricevere una chiamata dal metodo `PrimeOutput`. A seconda del flusso di dati, è possibile che vengano scritte più voci di log.|  
 |`OnPipelineRowsSent`|Specifica il numero delle righe inviate all'input di un componente da una chiamata al metodo `ProcessInput`. La voce di log include il nome del componente.|  
 |`PipelineBufferLeak`|Fornisce informazioni su tutti i componenti che hanno mantenuto attivi i buffer dopo la chiusura di Gestione buffer. Se vi è ancora un buffer attivo, le risorse dei buffer non sono state rilasciate e potrebbero verificarsi perdite di memoria. Nella voce di log vengono indicati il nome del componente e l'ID del buffer.|  
@@ -94,9 +94,9 @@ ms.locfileid: "36166661"
   
 |colonna|Description|valore|  
 |------------|-----------------|-----------|  
-|**PathID**|Il valore di `ID` proprietà del percorso tra l'origine OLE DB e la trasformazione ordinamento.|1185|  
-|**PathName**|Il valore di `Name` proprietà del percorso.|Output origine OLE DB|  
-|**ComponentID**|Il valore di `ID` proprietà della trasformazione ordinamento.|1180|  
+|**PathID**|Il valore dal `ID` proprietà del percorso tra l'origine OLE DB e la trasformazione ordinamento.|1185|  
+|**PathName**|Il valore dal `Name` proprietà del percorso.|Output origine OLE DB|  
+|**ComponentID**|Il valore della `ID` proprietà della trasformazione ordinamento.|1180|  
 |**ComponentName**|Valore della proprietà `Name` della trasformazione Ordinamento.|Ordina|  
 |**InputID**|Valore della proprietà `ID` dell'input della trasformazione Ordinamento.|1181|  
 |**InputName**|Valore della proprietà `Name` dell'input della trasformazione Ordinamento.|Input ordinamento|  

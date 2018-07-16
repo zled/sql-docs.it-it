@@ -1,5 +1,5 @@
 ---
-title: Elemento Invocation (ASSL) | Documenti Microsoft
+title: Elemento Invocation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Invocation element
 ms.assetid: f6bf64ad-ae57-4d46-bf92-1d07a65378bb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bd9d04f677049a932e3f974c22d7e2fb7cb8aade
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62f6b15f8aa8426930fdc3572bbd37bfb033afd6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312241"
 ---
 # <a name="invocation-element-assl"></a>Elemento Invocation (ASSL)
   Specifica come un [azione](../objects/action-element-assl.md) deve essere richiamato.  
@@ -61,7 +61,7 @@ ms.locfileid: "36170213"
 |Elemento padre|[Azione](../objects/action-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  La chiamata di un'azione dipende dall'applicazione client. Il `Invocation` elemento suggerisce a un'applicazione client come un'azione deve essere gestita e non indica all'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] come richiamare un'azione.  
   
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  

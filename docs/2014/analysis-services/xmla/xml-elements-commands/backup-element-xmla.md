@@ -1,5 +1,5 @@
 ---
-title: Eseguire il backup elemento (XMLA) | Documenti Microsoft
+title: Eseguire il backup elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Backup command
 ms.assetid: 5bcbc14c-9db9-45b2-99de-f3a265bcb0c4
 caps.latest.revision: 19
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bd1f2317c28acd2e6037520334168491ec0bbcbe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a571681f52fb34e55df238229f659aa883bc84ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215651"
 ---
 # <a name="backup-element-xmla"></a>Elemento Backup (XMLA)
   Esegue il backup di un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database in un file di backup.  
@@ -68,10 +68,10 @@ ms.locfileid: "36171294"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|Elementi figlio|[AllowOverwrite](../xml-elements-properties/allowoverwrite-element-xmla.md), [ApplyCompression](../xml-elements-properties/applycompression-element-xmla.md), [BackupRemotePartitions](../xml-elements-properties/backupremotepartitions-element-xmla.md), [File](../xml-elements-properties/file-element-xmla.md), [percorsi](../xml-elements-properties/locations-element-xmla.md), [ Oggetto](../xml-elements-properties/object-element-xmla.md), [Password](../xml-elements-properties/password-element-xmla.md), [sicurezza](../xml-elements-properties/security-element-xmla.md)|  
+|Elementi figlio|[AllowOverwrite](../xml-elements-properties/allowoverwrite-element-xmla.md), [ApplyCompression](../xml-elements-properties/applycompression-element-xmla.md), [BackupRemotePartitions](../xml-elements-properties/backupremotepartitions-element-xmla.md), [File](../xml-elements-properties/file-element-xmla.md), [posizioni](../xml-elements-properties/locations-element-xmla.md), [ Oggetto](../xml-elements-properties/object-element-xmla.md), [Password](../xml-elements-properties/password-element-xmla.md), [sicurezza](../xml-elements-properties/security-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
- Il `Backup` comando esegue il backup il [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database indicato con il [oggetto](../xml-elements-properties/object-element-xmla.md) elemento da un file di backup e, facoltativamente, esegue il backup di partizioni remote da file di backup remoti. Se l'elemento `Object` fa riferimento a un oggetto diverso da un database [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], si verifica un errore.  
+## <a name="remarks"></a>Note  
+ Il `Backup` comando esegue il backup il [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database indicato con il [oggetto](../xml-elements-properties/object-element-xmla.md) elemento in un file di backup e facoltativamente esegue il backup di partizioni remote nei file di backup remoto. Se l'elemento `Object` fa riferimento a un oggetto diverso da un database [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], si verifica un errore.  
   
  Le informazioni di `Backup` comando esegue il backup dipende dalla modalità di archiviazione utilizzata dagli oggetti nel database. Nella tabella seguente sono identificate le informazioni delle quali viene eseguito il backup in base alla modalità di archiviazione utilizzata.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "36171294"
 |OLAP ibrido (HOLAP)|Aggregazioni e metadati|  
 |OLAP relazionale (ROLAP)|Metadati|  
   
- Durante un `Backup` comando, viene inserito un blocco condiviso nel [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database indicato con il `Object` elemento. Il blocco condiviso viene rilasciato dopo il `Backup` comando è stato completato.  
+ Durante un `Backup` comando, viene inserito un blocco condiviso nel [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database indicato con il `Object` elemento. Il blocco condiviso viene rilasciato dopo il `Backup` completamento del comando.  
   
- Più `Backup` comandi possono essere eseguiti in parallelo, se i comandi sono inclusi nel [Parallel](../xml-elements-properties/parallel-element-xmla.md) raccolta di una [Batch](batch-element-xmla.md) comando. La raccolta `Parallel` consente il backup di un database in più file di backup contemporaneamente.  
+ Più `Backup` comandi possono essere eseguiti in parallelo, se i comandi sono inclusi nel [parallele](../xml-elements-properties/parallel-element-xmla.md) raccolta di un [Batch](batch-element-xmla.md) comando. La raccolta `Parallel` consente il backup di un database in più file di backup contemporaneamente.  
   
- Per ulteriori informazioni sul backup e ripristino di database, vedere [backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Per altre informazioni sul backup e ripristino di database, vedere [backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 > [!IMPORTANT]  
 >  Per ogni file di backup, l'utente che esegue il comando di backup deve disporre delle autorizzazioni per scrivere nel percorso di backup specificato per ogni file. Inoltre, l'utente deve avere uno dei ruoli seguenti: deve essere un membro di un ruolo del server per l'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oppure un membro di un ruolo del database con autorizzazioni Controllo completo (amministratore) sul database di cui eseguire il backup.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 744cfd4600c58d0c5f9508243e2635d108f7fd73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d8c4cc67ad7a3719db277840e4ca535a373e8b44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287017"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>Visualizzare i valori in percentuale in un grafico a torta (Generatore report e SSRS)
   Per impostazione predefinita, nella legenda vengono visualizzate categorie per identificare ogni valore. Se nel grafico a torta si utilizzano etichette di categorie, è possibile scegliere di mostrare le percentuali nella legenda.  
@@ -35,7 +35,7 @@ ms.locfileid: "36167803"
   
 3.  Nell'area di progettazione fare clic con il pulsante destro del mouse sulle etichette e scegliere **Proprietà etichetta serie**. Verrà visualizzata la finestra di dialogo **Proprietà etichetta serie** .  
   
-4.  Tipo di `#PERCENT` per il **etichettatura dei dati** opzione.  
+4.  Tipo di `#PERCENT` per il **dati etichetta** opzione.  
   
 5.  (Facoltativo) Per specificare il numero di cifre decimali da visualizzare nell'etichetta, digitare "#PERCENT{P*n*}" dove *n* è il numero di cifre decimali da visualizzare. Ad esempio per non visualizzare posizioni decimali, digitare "#PERCENT{P0}."  
   
@@ -43,12 +43,12 @@ ms.locfileid: "36167803"
   
 1.  Nell'area di progettazione fare clic con il pulsante destro del mouse sul grafico a torta e scegliere **Proprietà serie**. Verrà visualizzata la finestra di dialogo **Proprietà serie** .  
   
-2.  In **legenda**, tipo `#PERCENT` per il **testo legenda personalizzato** proprietà.  
+2.  Nelle **legenda**, digitare `#PERCENT` per il **testo legenda personalizzato** proprietà.  
   
 ## <a name="see-also"></a>Vedere anche  
- [I grafici a torta &#40;SSRS e Generatore Report&#41;](charts-report-builder-and-ssrs.md)   
- [Formattazione della legenda in un grafico &#40;SSRS e Generatore Report&#41;](chart-legend-formatting-report-builder.md)   
- [Le etichette dei punti di dati visualizzato di fuori di un grafico a torta &#40;SSRS e Generatore Report&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
- [Raccogliere piccole sezioni in un grafico a torta &#40;SSRS e Generatore Report&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [I grafici a torta &#40;Report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Formattazione della legenda in un grafico &#40;Report e SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [Le etichette dei punti di visualizzazione dei dati all'esterno di un grafico a torta &#40;Report e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Raccogliere piccole sezioni in un grafico a torta &#40;Report e SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

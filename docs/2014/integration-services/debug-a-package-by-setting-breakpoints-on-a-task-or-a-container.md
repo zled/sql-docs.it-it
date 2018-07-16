@@ -1,5 +1,5 @@
 ---
-title: Debug di un pacchetto impostando punti di interruzione in un'attività o un contenitore | Documenti Microsoft
+title: Debug di un pacchetto impostando punti di interruzione in un'attività o un contenitore | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], breakpoints
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 caps.latest.revision: 33
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6535657a5b193b92b76fd32fee9497e8ef76580e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b063089105af1de7656387be8cc12639498e7c37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308111"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Debug di un pacchetto impostando punti di interruzione in un'attività o in un contenitore
   In questa procedura viene descritto come impostare punti di interruzione in un pacchetto, in un'attività o in un contenitore Ciclo For, Ciclo Foreach o Sequenza.  
@@ -49,9 +49,9 @@ ms.locfileid: "36169944"
 6.  Per salvare il pacchetto, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti di risoluzione dei problemi per lo sviluppo di pacchetti](troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Risoluzione dei problemi degli strumenti per lo sviluppo di pacchetti](troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Eseguire il debug di uno Script impostando punti di interruzione in un'attività Script e componente Script](data-flow/transformations/script-component.md)   
- [La codifica e debug dell'attività Script](control-flow/script-task.md)   
+ [Codifica e debug dell'attività Script](control-flow/script-task.md)   
  [Codifica e debug del componente script](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

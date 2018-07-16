@@ -1,5 +1,5 @@
 ---
-title: Editor attività script (pagina Script) | Documenti Microsoft
+title: Editor attività script (pagina Script) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.script.f1
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 caps.latest.revision: 40
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0b5641a837761e113368eea47777c3c3bf82ee20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa423929b775dcfb50ef8d49329689820c797772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295041"
 ---
 # <a name="script-task-editor-script-page"></a>Editor attività Script (pagina Script)
   Utilizzare la pagina **Script** della finestra di dialogo **Editor attività Script** per impostare le proprietà dello script e specificare le variabili accessibili per lo script.  
@@ -62,12 +62,12 @@ ms.locfileid: "36171246"
  Apre VSTA IDE, dove è possibile creare o modificare lo script.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Pagina Generale](general-page-of-integration-services-designers-options.md)   
  [Editor attività script &#40;pagina Generale&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
  [Pagina espressioni](expressions/expressions-page.md)   
  [Esempi di attività script](extending-packages-scripting-task-examples/script-task-examples.md)   
- [Servizi di integrazione &#40;SSIS&#41; variabili](integration-services-ssis-variables.md)   
- [Aggiungere, eliminare o modificare l'ambito della variabile definita dall'utente in un pacchetto](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
+ [Integration Services &#40;SSIS&#41; le variabili](integration-services-ssis-variables.md)   
+ [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

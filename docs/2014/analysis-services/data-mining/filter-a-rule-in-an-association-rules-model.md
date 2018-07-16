@@ -1,5 +1,5 @@
 ---
-title: Filtro modello delle regole di una regola in un'associazione | Documenti Microsoft
+title: Filtro modello delle regole di una regola in un'associazione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filtering rules [Analysis Services]
 - Mining Model Viewer [Analysis Services], rules
 - Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36332206119e0cf3c75e62650f8f6d9ac60897e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2abb9180b446183764d96e95fe85f74d9bcd40f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289797"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Filtrare una regola in un modello Association Rules
   È possibile utilizzare i filtri con i modelli di associazione per limitare i risultati alle sole associazioni desiderate. È ad esempio possibile filtrare le regole in modo da visualizzare solo quelle che includono un prodotto specifico.  
@@ -63,8 +63,8 @@ ms.locfileid: "36170915"
 -   [Esempi di query sul modello di associazione](association-model-query-examples.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e attività del visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
- [Visualizzare un modello utilizzando il visualizzatore Microsoft Association Rules](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Lezione 3: Compilazione di uno Scenario Market Basket &#40;intermedi dell'esercitazione sul Data Mining&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Attività del Visualizzatore modelli e procedure dettagliate di data mining](mining-model-viewer-tasks-and-how-tos.md)   
+ [Visualizzare un modello usando il visualizzatore Microsoft Association Rules](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Lezione 3: Compilazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

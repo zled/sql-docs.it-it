@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating version flags [Master Data Services]
 - version flags [Master Data Services], creating
 - versions [Master Data Services], creating flags
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cea2d431b213d6b62106fff5c0c15c588e1b115d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 8e749d7e0be27ec7ea749073f89f192972a354f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287547"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>Creare un flag di versione (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un flag di versione da assegnare a una versione. Il flag può indicare la versione che utenti o sistemi di sottoscrizione devono usare.  
@@ -58,7 +58,7 @@ ms.locfileid: "36171055"
 -   [Assegnare un Flag a una versione &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Versioni di &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
+ [Le versioni &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [Modificare il nome di un Flag di versione &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)  
   
   

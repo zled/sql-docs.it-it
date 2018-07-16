@@ -1,5 +1,5 @@
 ---
-title: Elemento Column (ASSL) | Documenti Microsoft
+title: Elemento Column (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Column element
 ms.assetid: 10dc6d5e-c690-4415-adbb-eaeebaa29cb4
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 54fbcc7c236752d29a30ec89dafe4e7f5dfa491b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 474e094335c22ca1a715b48715e968c7dd13f515
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312431"
 ---
 # <a name="column-element-assl"></a>Elemento Column (ASSL)
   Descrive una colonna nella raccolta di colonne associate all'elemento padre.  
@@ -64,8 +64,8 @@ ms.locfileid: "36170459"
 |------------------------|---------------|  
 |[DrillThroughAction](../data-type/binding-data-type-assl.md), [CubeAttributeBinding](../data-type/attributebinding-data-type-assl.md)|  
 |[Evento](../data-type/eventcolumn-data-type-assl.md)|  
-|[MiningModel](miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|  
-|[MiningStructure](miningstructure-element-assl.md), [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
+|[Elemento MiningModel](miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|  
+|[Elemento MiningStructure](miningstructure-element-assl.md), [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
   
 |Predecessore o padre|Cardinalità|  
 |------------------------|-----------------|  

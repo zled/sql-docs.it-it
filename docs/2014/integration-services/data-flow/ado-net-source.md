@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ec77f66bc627d851295a6afa90fb515c85b2ab84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9082ded2ceacd4a29364e3ee9b513887b2fcb1a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320771"
 ---
 # <a name="ado-net-source"></a>Origine ADO NET
   L'origine ADO NET utilizza i dati di un provider .NET e li rende disponibili per il flusso di dati.  
@@ -71,7 +71,7 @@ ms.locfileid: "36167124"
 >  Quando si utilizza un'istruzione SQL per richiamare una stored procedure che restituisce risultati da una tabella temporanea, utilizzare l'opzione WITH RESULT SETS per definire metadati per il set di risultati.  
   
 > [!NOTE]  
->  Se si utilizza un'istruzione SQL per eseguire una stored procedure e il pacchetto ha esito negativo con l'errore seguente, potrebbe essere in grado di risolvere l'errore aggiungendo il `SET FMTONLY OFF` istruzione prima dell'istruzione exec.  
+>  Se si usa un'istruzione SQL per eseguire una stored procedure e il pacchetto ha esito negativo con l'errore seguente, potrebbe essere in grado di risolvere il problema aggiungendo la `SET FMTONLY OFF` istruzione prima dell'istruzione exec.  
 >   
 >  **Impossibile trovare la colonna <nome_colonna> nell'origine dati.**  
   
