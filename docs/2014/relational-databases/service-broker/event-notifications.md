@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-notifications
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e52a31296cee16b8580d08bc4eaf016f9d0cc3e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f26d6b4622d11ae9a620d5cbdb03eed737de1645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305111"
 ---
 # <a name="event-notifications"></a>Notifiche degli eventi
   Le notifiche degli eventi consentono l'invio di informazioni sugli eventi a un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Le notifiche degli eventi vengono eseguite in risposta a una serie di istruzioni DDL (Data Definition Language) [!INCLUDE[tsql](../../includes/tsql-md.md)] ed eventi di Traccia SQL mediante l'invio di informazioni sugli eventi a un servizio [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
@@ -55,7 +54,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>Concetti delle notifiche di eventi  
  Durante la creazione di una notifica degli eventi, vengono aperte una o più conversazioni [!INCLUDE[ssSB](../../includes/sssb-md.md)] tra un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il servizio di destinazione specificato. Tali conversazioni rimangono in genere aperte finché la notifica degli eventi è disponibile come oggetto nell'istanza del server. In alcune situazioni di errore è possibile che le conversazioni vengano chiuse prima dell'eliminazione della notifica. Le conversazioni non vengono mai condivise tra le notifiche degli eventi. A ogni notifica sono associate conversazioni esclusive. Se una conversazione viene terminata in modo esplicito, il servizio di destinazione non potrà più ricevere altri messaggi e la conversazione non verrà riaperta alla successiva attivazione della notifica degli eventi.  
   
- Informazioni sugli eventi vengono recapitati al [!INCLUDE[ssSB](../../includes/sssb-md.md)] servizio come una variabile di tipo `xml` che fornisce informazioni su quando si verifica un evento, sull'oggetto di database interessato, il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione batch e altre informazioni. Per altre informazioni su XML Schema prodotto dalle notifiche degli eventi, vedere [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
+ Informazioni sugli eventi viene recapitati al [!INCLUDE[ssSB](../../includes/sssb-md.md)] servizio come una variabile di tipo `xml` che fornisce informazioni su quando si verifica un evento, sull'oggetto di database interessato, il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione batch e altre informazioni. Per altre informazioni su XML Schema prodotto dalle notifiche degli eventi, vedere [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
   
 ### <a name="event-notifications-vs-triggers"></a>Notifiche degli eventi e Trigger  
  Nella tabella seguente viene eseguito il confronto fra trigger e notifiche di eventi.  
@@ -71,7 +70,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |I nomi di trigger DML sono definiti a livello di ambito dello schema. L'ambito dei nomi dei trigger DDL è il server o il database.|L'ambito dei nomi delle notifiche degli eventi è il server o il database. Le notifiche degli eventi in un evento QUEUE_ACTIVATION sono definiti a livello di ambito di una coda specifica.|  
 |Il proprietario dei trigger DML è il proprietario delle tabelle sulle quali vengono applicati.|Il proprietario di una notifica degli eventi in una coda può essere diverso dal proprietario dell'oggetto al quale viene applicata.|  
 |I trigger supportano la clausola EXECUTE AS.|Le notifiche degli eventi non supportano la clausola EXECUTE AS.|  
-|Informazioni sull'evento trigger DDL possono essere acquisite usando la funzione EVENTDATA, che restituisce un `xml` tipo di dati.|Inviare le notifiche degli eventi `xml` informazioni sugli eventi a un servizio di Service Broker. Le informazioni vengono formattate con lo stesso schema della funzione EVENTDATA.|  
+|Informazioni sull'evento trigger DDL possono essere acquisite usando la funzione EVENTDATA, che restituisce un `xml` tipo di dati.|Notifiche degli eventi inviano `xml` informazioni sugli eventi a un servizio di Service Broker. Le informazioni vengono formattate con lo stesso schema della funzione EVENTDATA.|  
 |I metadati relativi ai trigger si trovano nelle viste del catalogo **sys.triggers** e **sys.server_triggers** .|I metadati relativi alle notifiche degli eventi si trovano nelle viste del catalogo **sys.event_notifications** e **sys.server_event_notifications**.|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Notifiche degli eventi e Traccia SQL  

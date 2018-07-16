@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -19,13 +19,13 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 37c82e4f4977e9749413a29fd539379476b29c47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 4b6b76ce027321eb681a2cd6872c1b24050c569f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329911"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include funzionalità e strumenti per la risoluzione dei problemi che possono verificarsi quando si eseguono i pacchetti dopo averli completati e distribuiti.  
@@ -56,9 +56,9 @@ ms.locfileid: "36065175"
   
 -   **Aggiunta di informazioni descrittive agli output degli errori**. Per semplificare l'analisi dell'output degli errori, oltre ai due identificatori numerici specificati dall'output stesso è possibile aggiungere informazioni descrittive.  
   
-     **Aggiungere la descrizione dell'errore**. Utilizzando un componente script, è possibile analizzare in modo semplice la descrizione dell'errore. Per altre informazioni, vedere [miglioramento un Output degli errori per il componente Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+     **Aggiungere la descrizione dell'errore**. Utilizzando un componente script, è possibile analizzare in modo semplice la descrizione dell'errore. Per altre informazioni, vedere [ottimizzazione di un Output degli errori per il componente Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
-     **Aggiungere il nome della colonna errore**. Per informazioni sul nome della colonna corrispondente all'ID di colonna salvato dall'output degli errori non è sufficiente il componente script, ma sono necessarie ulteriori operazioni. Ogni ID di colonna in un flusso di dati è univoco all'interno dell'attività Flusso di dati ed è persistente nel pacchetto in fase di progettazione. L'approccio seguente consente di aggiungere il nome di colonna all'output degli errori. Per un esempio di come utilizzare questo approccio, vedere [aggiungendo il nome della colonna errore per un output degli errori](http://go.microsoft.com/fwlink/?LinkId=261546) sul sito dougbert.com.  
+     **Aggiungere il nome della colonna errore**. Per informazioni sul nome della colonna corrispondente all'ID di colonna salvato dall'output degli errori non è sufficiente il componente script, ma sono necessarie ulteriori operazioni. Ogni ID di colonna in un flusso di dati è univoco all'interno dell'attività Flusso di dati ed è persistente nel pacchetto in fase di progettazione. L'approccio seguente consente di aggiungere il nome di colonna all'output degli errori. Per un esempio di come usare questo approccio, vedere [aggiungendo il nome della colonna errore per un output degli errori](http://go.microsoft.com/fwlink/?LinkId=261546) sul sito dougbert.com.  
   
     1.  **Creare una tabella di ricerca dei nomi di colonna**. Creare un'applicazione separata in cui viene utilizzata l'API di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per eseguire un'iterazione su ogni pacchetto salvato, ogni flusso di dati nel pacchetto, ogni oggetto nel flusso di dati e ogni input e output nell'oggetto del flusso di dati. Nell'applicazione l'ID di colonna e il nome di ogni colonna devono essere persistenti nella tabella di ricerca, insieme all'ID dell'attività Flusso di dati padre e a quello del pacchetto.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "36065175"
 ## <a name="troubleshoot-run-time-validation-issues"></a>Risoluzione dei problemi relativi alla convalida in fase di esecuzione  
  A volte potrebbe non essere possibile connettersi alle origini dati o convalidare parte dei pacchetti prima di aver eseguito alcune attività nei pacchetti. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include le funzionalità seguenti per permettere di evitare gli errori di convalida che altrimenti si verificherebbero da queste condizioni:  
   
--   **Configurazione della proprietà DelayValidation per gli elementi del pacchetto non validi quando il pacchetto viene caricato**. È possibile impostare `DelayValidation` a `True` gli elementi del pacchetto la cui configurazione non è valida, per evitare errori di convalida quando viene caricato il pacchetto. Potrebbe ad esempio essere presente un'attività Flusso di dati in cui viene utilizzata una tabella di destinazione che non esiste fino a quando non viene creata in fase di esecuzione da un'attività Esegui SQL. Il `DelayValidation` proprietà può essere abilitata a livello di pacchetto o a livello di singole attività e contenitori inclusi nel pacchetto.  
+-   **Configurazione della proprietà DelayValidation per gli elementi del pacchetto non validi quando il pacchetto viene caricato**. È possibile impostare `DelayValidation` a `True` negli elementi del pacchetto la cui configurazione non è valida, per evitare errori di convalida quando il pacchetto viene caricato. Potrebbe ad esempio essere presente un'attività Flusso di dati in cui viene utilizzata una tabella di destinazione che non esiste fino a quando non viene creata in fase di esecuzione da un'attività Esegui SQL. Il `DelayValidation` proprietà può essere abilitata a livello di pacchetto o a livello di singole attività e contenitori che include il pacchetto.  
   
-     Il `DelayValidation` proprietà può essere impostata su un'attività flusso di dati, ma non su dati singoli componenti del flusso. È possibile ottenere un risultato simile impostando la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dei singoli componenti flusso di dati su `false`. Tuttavia, quando il valore di questa proprietà è `false`, il componente non è consapevole delle modifiche ai metadati delle origini dati esterne. Se impostato su `true`, il <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> proprietà consente di evitare problemi causati da blocchi nel database, in particolare quando il pacchetto vengono utilizzate transazioni.  
+     Il `DelayValidation` proprietà può essere impostata su un'attività flusso di dati, ma non sui dati singoli componenti del flusso. È possibile ottenere un risultato simile impostando la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dei singoli componenti flusso di dati su `false`. Tuttavia, quando il valore di questa proprietà è `false`, il componente non riconosce le modifiche ai metadati delle origini dati esterne. Se impostato su `true`, il <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> proprietà contribuisce a evitare problemi causati da blocchi nel database, in particolare quando nel pacchetto vengono usate transazioni.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>Risoluzione dei problemi relativi alle autorizzazioni in fase di esecuzione  
  Se si verificano errori quando si cerca di eseguire pacchetti distribuiti tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile che gli account usati non dispongano delle autorizzazioni necessarie. Per informazioni su come risolvere i problemi legati all'esecuzione di pacchetti dai processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere [Un pacchetto SSIS non viene eseguito quando viene chiamato da un passaggio di processo di SQL Server Agent](http://support.microsoft.com/kb/918760). Per altre informazioni sull'esecuzione di pacchetti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere [Processi di SQL Server Agent per i pacchetti](../packages/sql-server-agent-jobs-for-packages.md).  
@@ -114,7 +114,7 @@ ms.locfileid: "36065175"
  Se viene generato un errore di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] senza descrizione, è possibile individuare la descrizione in [Guida di riferimento ai messaggi e agli errori di Integration Services](../integration-services-error-and-message-reference.md) cercando l'errore in base al numero corrispondente. Al momento, nell'elenco non sono incluse informazioni per la risoluzione dei problemi.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Configurare un Output degli errori in un componente del flusso di dati](../configure-an-error-output-in-a-data-flow-component.md)  
+ [Configurazione di un output degli errori in un componente del flusso di dati](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Intervento nel blog relativo all' [aggiunta del nome della colonna di errore a un output degli errori](http://go.microsoft.com/fwlink/?LinkId=261546)nel sito dougbert.com.  

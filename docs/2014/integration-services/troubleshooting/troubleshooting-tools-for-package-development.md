@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -19,13 +19,13 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aae2fac11aab58193883c43e1062e12be837e065
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4ee6252daa58a5e99b8fdd5be6099e8e9de936d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320681"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include funzionalità e strumenti per la risoluzione dei problemi che possono verificarsi durante lo sviluppo di pacchetti in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -45,11 +45,11 @@ ms.locfileid: "36166419"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include le seguenti funzionalità aggiuntive per evitare errori di convalida:  
   
--   **Impostare tutto il pacchetto e tutte le connessioni per il funzionamento offline quando le origini dati non sono disponibili**. È possibile abilitare **Offline** dal menu **SSIS** . A differenza di `DelayValidation` proprietà, il **fuori** opzione è disponibile anche prima di aprire un pacchetto. È anche possibile abilitare l'opzione **Offline** per rendere più veloci le operazioni di progettazione e disabilitarla solo quando si vuole convalidare il pacchetto.  
+-   **Impostare tutto il pacchetto e tutte le connessioni per il funzionamento offline quando le origini dati non sono disponibili**. È possibile abilitare **Offline** dal menu **SSIS** . A differenza di `DelayValidation` proprietà, il **lavora Offline** opzione è disponibile anche prima di aprire un pacchetto. È anche possibile abilitare l'opzione **Offline** per rendere più veloci le operazioni di progettazione e disabilitarla solo quando si vuole convalidare il pacchetto.  
   
--   **Configurare la proprietà DelayValidation per gli elementi del pacchetto non validi fino alla fase di esecuzione**. È possibile impostare la proprietà `DelayValidation` su `True` per gli elementi del pacchetto la cui configurazione non è valida in fare di progettazione, per impedire gli errori di convalida. Potrebbe ad esempio essere presente un'attività Flusso di dati in cui viene utilizzata una tabella di destinazione che non esiste fino a quando non viene creata in fase di esecuzione da un'attività Esegui SQL. Il `DelayValidation` proprietà può essere abilitata a livello di pacchetto o a livello di singole attività e contenitori inclusi nel pacchetto. In genere è necessario lasciare questa proprietà è impostata su `True` la stessa gli elementi del pacchetto quando si distribuisce il pacchetto, per impedire gli stessi errori di convalida in fase di esecuzione.  
+-   **Configurare la proprietà DelayValidation per gli elementi del pacchetto non validi fino alla fase di esecuzione**. È possibile impostare la proprietà `DelayValidation` su `True` per gli elementi del pacchetto la cui configurazione non è valida in fare di progettazione, per impedire gli errori di convalida. Potrebbe ad esempio essere presente un'attività Flusso di dati in cui viene utilizzata una tabella di destinazione che non esiste fino a quando non viene creata in fase di esecuzione da un'attività Esegui SQL. Il `DelayValidation` proprietà può essere abilitata a livello di pacchetto o a livello di singole attività e contenitori che include il pacchetto. In genere, è necessario lasciare impostata questa proprietà su `True` negli stessi elementi del pacchetto quando si distribuisce il pacchetto, per impedire gli stessi errori di convalida in fase di esecuzione.  
   
-     Il `DelayValidation` proprietà può essere impostata su un'attività flusso di dati, ma non su dati singoli componenti del flusso. È possibile ottenere un risultato simile impostando la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dei singoli componenti flusso di dati su `false`. Tuttavia, quando il valore di questa proprietà è `false`, il componente non è consapevole delle modifiche ai metadati delle origini dati esterne.  
+     Il `DelayValidation` proprietà può essere impostata su un'attività flusso di dati, ma non sui dati singoli componenti del flusso. È possibile ottenere un risultato simile impostando la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dei singoli componenti flusso di dati su `false`. Tuttavia, quando il valore di questa proprietà è `false`, il componente non riconosce le modifiche ai metadati delle origini dati esterne.  
   
  Se gli oggetti di database utilizzati dal pacchetto risultano bloccati durante la convalida, è possibile che il processo di convalida si arresti. In questi casi, si arresterà anche Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] . È possibile riprendere la convalida usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per chiudere le sessioni associate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo problema può essere evitato anche utilizzando le impostazioni descritte in questa sezione.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "36166419"
     > [!NOTE]  
     >  Quando si esegue il debug di un pacchetto che contiene più attività Script, il debugger rileva i punti di interruzione in una sola attività Script, ignorando i punti di interruzione nelle altre attività Script. Se un'attività Script fa parte di un contenitore Ciclo Foreach o Ciclo For, il debugger ignorerà i punti di interruzione nell'attività Script dopo la prima iterazione del ciclo.  
   
- Per altre informazioni, vedere [Debug degli script](debugging-script.md). Per suggerimenti su come eseguire il debug del componente Script, vedere [codifica e debug del componente Script] (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
+ Per altre informazioni, vedere [Debug degli script](debugging-script.md). Per suggerimenti su come eseguire il debug del componente Script, vedere [codifica e debug del componente Script] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
   
 ## <a name="troubleshooting-errors-without-a-description"></a>Risoluzione dei problemi relativi agli errori senza descrizione  
  Se durante lo sviluppo di un pacchetto viene visualizzato un numero di errore di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] senza una descrizione, è possibile ottenere la descrizione in [Guida di riferimento ai messaggi e agli errori di Integration Services](../integration-services-error-and-message-reference.md). Al momento, nell'elenco non sono incluse informazioni per la risoluzione dei problemi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti di risoluzione dei problemi per l'esecuzione del pacchetto](troubleshooting-tools-for-package-execution.md)   
+ [Risoluzione dei problemi degli strumenti per l'esecuzione del pacchetto](troubleshooting-tools-for-package-execution.md)   
  [Funzionalità delle prestazioni del flusso di dati](../data-flow/data-flow-performance-features.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 517208d1fa790739a2008cd5e149147cbf91643c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 458fa987ee31f024534b184b2729667cea3597c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287227"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Chiamata di stored procedure compilate in modo nativo da applicazioni di accesso ai dati
   In questo argomento vengono fornite informazioni aggiuntive per chiamare stored procedure compilate in modo nativo da applicazioni di accesso ai dati.  
@@ -40,7 +40,7 @@ ms.locfileid: "36158672"
   
  I suggerimenti seguenti si applicano alle chiamate di stored procedure compilate in modo nativo tramite il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- Il metodo più efficace per chiamare una stored procedure una volta consiste nel rilasciare un chiamata RPC diretta utilizzando `SQLExecDirect` e clausole ODBC CALL. Non usare la [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` istruzione. Se una stored procedure viene chiamata più volte, l'esecuzione preparata è più efficiente.  
+ Il modo più efficiente chiamare una volta una stored procedure deve emettere una chiamata RPC diretta usando `SQLExecDirect` e clausole ODBC CALL. Non usare la [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` istruzione. Se una stored procedure viene chiamata più volte, l'esecuzione preparata è più efficiente.  
   
  Il metodo più efficace per chiamare una stored procedure di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] più di una volta consiste nell'utilizzare chiamate di procedure RPC preparate. Le chiamate RPC preparate vengono eseguite come indicato di seguito utilizzando il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   

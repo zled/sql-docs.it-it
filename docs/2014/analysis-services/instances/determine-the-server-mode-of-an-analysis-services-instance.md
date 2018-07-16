@@ -1,5 +1,5 @@
 ---
-title: Determinare la modalità Server di un'analisi Services istanza | Documenti Microsoft
+title: Determinare la modalità Server di analisi Services istanza | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec5ec0ebab56cd5e836385a26fc60a1c5cf1a0d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bca31a21dda5f03b29456f842afb2d4d7504c608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297431"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Determinare la modalità server di un'istanza di Analysis Services
   È possibile installare Analysis Services in una di tre modalità server: multidimensionale e data mining (valore predefinito), PowerPivot per SharePoint e tabulare. La modalità server di un'istanza di Analysis Services è determinata durante l'installazione quando si scelgono le opzioni per l'installazione del server.  
@@ -31,13 +31,13 @@ ms.locfileid: "36158556"
 ## <a name="server-icons-in-object-explorer"></a>Icone del server in Esplora oggetti  
  Il modo più semplice per determinare la modalità server consiste nel connettersi al server in SQL Server Management Studio e individuare l'icona accanto al nome del server in Esplora oggetti. Nell'illustrazione seguente vengono mostrate tre istanze di Analysis Services distribuite in modalità multidimensionale, tabulare e PowerPivot:  
   
- ![Icone Esplora oggetti per ogni modalità server](../media/ssas-ssms-servermodes.gif "icone Esplora oggetti per ogni modalità server")  
+ ![Icone Esplora oggetti per ogni modalità server](../media/ssas-ssms-servermodes.gif "icone di Esplora oggetti per ogni modalità server")  
   
 ## <a name="viewing-deploymentmode-property-in-msmdsrvini-file"></a>Visualizzazione della proprietà DeploymentMode nel file MSMDSRV.INI  
  In alternativa, è possibile verificare la proprietà `DeploymentMode` nel file msmdsrv.ini incluso in ogni istanza di Analysis Services. Il valore di questa proprietà identifica la modalità del server. I valori validi sono 0 (multidimensionale), 1 (SharePoint) o 2 (tabulare). Per aprire il file msmdsrv.ini, è necessario essere un amministratore (ovvero, un membro del ruolo server) di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questo file contiene XML strutturato. È possibile visualizzare il file usando Blocco note o qualsiasi editor di testo.  
   
 > [!CAUTION]  
->  Non modificare il valore di `DeploymentMode` proprietà. La modifica manuale della proprietà dopo l'installazione del server non è supportata.  
+>  Non modificare il valore della `DeploymentMode` proprietà. La modifica manuale della proprietà dopo l'installazione del server non è supportata.  
   
 ## <a name="about-the-deploymentmode-property"></a>Informazioni sulla proprietà DeploymentMode  
  La proprietà `DeploymentMode` consente di determinare il contesto operativo di un'istanza del server Analysis Services. Questa proprietà viene definita 'modalità server' in finestre di dialogo, messaggi e documentazione. Questa proprietà viene inizializzata dal programma di installazione in base alla modalità di installazione di Analysis Services e deve essere considerata solo per uso interno, usando sempre il valore specificato dal programma di installazione.  

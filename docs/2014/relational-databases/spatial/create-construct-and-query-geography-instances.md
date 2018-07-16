@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server]
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec18679f1d466917e99f249c75c6ebf3bc42ff8c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ea4dc0a27743e62f0a13f866895cd7fe0ed0ae79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284717"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Creare, Costruire e Istanze geografiche di Query
-  Il tipo di dati spaziali geografici, `geography`, rappresenta i dati in un sistema di coordinate terrestri. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è implementato come tipo di dati CLR (Common Language Runtime) .NET. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` tipo di dati archivia dati ellissoidali (terra), ad esempio coordinate di latitudine e longitudine GPS.  
+  Il tipo di dati spaziali geografici, `geography`, rappresenta i dati in un sistema di coordinate terrestri. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è implementato come tipo di dati CLR (Common Language Runtime) .NET. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` tipo di dati memorizza archiviare dati ellissoidali (terra rotonda assembly), ad esempio coordinate di latitudine e longitudine GPS.  
   
  Il `geography` tipo è predefinito e disponibile in ogni database. È possibile creare colonne di tabella di tipo `geography` e utilizzare dati `geography` nello stesso modo in cui verrebbero utilizzati gli altri tipi forniti dal sistema.  
   
 ##  <a name="creating"></a> Creazione o costruzione di una nuova istanza geografica  
   
 ###  <a name="existing"></a> Creazione di una nuova istanza geografica da un'istanza esistente  
- Il `geography` tipo di dati fornisce numerosi metodi predefiniti che è possibile utilizzare per creare nuovi `geography` istanze in base alle istanze esistenti.  
+ Il `geography` tipo di dati fornisce numerosi metodi predefiniti che è possibile usare per creare nuovi `geography` istanze basato sulle istanze esistenti.  
   
  **Per creare un buffer relativo a una geografia**  
  [STBuffer &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stbuffer-geography-data-type)  
@@ -51,7 +51,7 @@ ms.locfileid: "36157957"
  [STDifference &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stdifference-geography-data-type)  
   
 ###  <a name="wkt"></a> Costruzione di un'istanza geografica dall'input WKT (well-known text)  
- Il `geography` tipo di dati fornisce molti metodi predefiniti che generano una geometria dalla rappresentazione WKT Open Geospatial Consortium (OGC). Lo standard WKT è una stringa di testo che consente ai dati geografici di essere scambiati in formato testuale.  
+ Il `geography` tipo di dati fornisce molti metodi predefiniti che generano una geometria dalla rappresentazione WKT di Open Geospatial Consortium (OGC). Lo standard WKT è una stringa di testo che consente ai dati geografici di essere scambiati in formato testuale.  
   
  **Per costruire qualsiasi tipo di istanza geografica dall'input WKT**  
  [STGeomFromText &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stgeomfromtext-geography-data-type)  
@@ -80,7 +80,7 @@ ms.locfileid: "36157957"
  [STGeomCollFromText &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stgeomcollfromtext-geography-data-type)  
   
 ###  <a name="wkb"></a> Costruzione di un'istanza geografica dall'input WKB (well-known binary)  
- WKB è un formato binario definito da OGC che consente `Geography` lo scambio tra un'applicazione client e un database SQL di dati. Le seguenti funzioni accettano l'input WKB per costruire le istanze geografiche:  
+ WKB è un formato binario definito da OGC che consente `Geography` dati da scambiare tra un'applicazione client e un database SQL. Le seguenti funzioni accettano l'input WKB per costruire le istanze geografiche:  
   
  **Per costruire qualsiasi tipo di istanza geografica dall'input WKB**  
  [STGeomFromWKB &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stgeomfromwkb-geography-data-type)  
@@ -107,7 +107,7 @@ ms.locfileid: "36157957"
  [STGeomCollFromWKB &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type)STGeomCollFromWKB (tipo di dati geography)  
   
 ###  <a name="gml"></a> Costruzione di un'istanza geografica dall'input di testo GML  
- Il `geography` tipo di dati fornisce un metodo che genera una `geography` istanza da GML, una rappresentazione XML di un `geography` istanza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un subset di GML.  
+ Il `geography` tipo di dati fornisce un metodo che genera una `geography` da GML, una rappresentazione XML dell'istanza una `geography` istanza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un subset di GML.  
   
  Per altre informazioni su Geography Markup Language (GML), vedere la specifica OGC [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)(Specifiche OGC, Geography Markup Language).  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36157957"
  [GeomFromGML &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  
   
 ##  <a name="returning"></a> Restituzione di WKT e WKB da un'istanza geografica  
- È possibile utilizzare i metodi seguenti per restituire sia il formato WKT o WKB di un' `geography` istanza:  
+ È possibile usare i metodi seguenti per restituire un formato WKT o WKB di un' `geography` istanza:  
   
  **Per restituire la rappresentazione WKT di un'istanza di geografia**  
  [STAsText &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stastext-geography-data-type)  
@@ -132,10 +132,10 @@ ms.locfileid: "36157957"
  [AsGml &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
   
 ##  <a name="query"></a> Esecuzione di query sulle proprietà e i comportamenti delle istanze geografiche  
- Tutti i `geography` le istanze hanno un numero di proprietà che possono essere recuperate tramite metodi che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce. Negli argomenti seguenti vengono definite le proprietà e i comportamenti dei tipi di geografia, nonché i metodi per l'esecuzione di query per ognuno di essi.  
+ Tutti i `geography` istanze hanno un numero di proprietà che possono essere recuperate tramite metodi che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce. Negli argomenti seguenti vengono definite le proprietà e i comportamenti dei tipi di geografia, nonché i metodi per l'esecuzione di query per ognuno di essi.  
   
 ###  <a name="valid"></a> Informazioni sulla validità, sul tipo di istanza e su GeometryCollection  
- Dopo un `geography` l'istanza viene costruita, è possibile usare i metodi seguenti per restituire il tipo di istanza o se si tratta di un `GeometryCollection` dell'istanza, restituire un oggetto specifico `geography` istanza.  
+ Dopo una `geography` istanza viene costruita, è possibile usare i metodi seguenti per restituire il tipo di istanza, o se si tratta di un `GeometryCollection` dell'istanza, restituire una specifica `geography` istanza.  
   
  **Per restituire il tipo di istanza di una geografia**  
  [STGeometryType &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stgeometrytype-geography-data-type)  
@@ -150,7 +150,7 @@ ms.locfileid: "36157957"
  [STGeometryN &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stgeometryn-geography-data-type)STGeometryN (tipo di dati geography)  
   
 ###  <a name="number"></a> Numero di punti  
- Tutti non vuoto `geography` sono costituite da istanze *punti*. che rappresentano le coordinate di latitudine e longitudine terrestri sulle quali vengono tracciate le istanze `geography`. Il tipo di dati `geography` fornisce numerosi metodi predefiniti per l'esecuzione di query sui punti di un'istanza.  
+ Tutti non vuoti `geography` sono costituite da istanze *punti*. che rappresentano le coordinate di latitudine e longitudine terrestri sulle quali vengono tracciate le istanze `geography`. Il tipo di dati `geography` fornisce numerosi metodi predefiniti per l'esecuzione di query sui punti di un'istanza.  
   
  **Per restituire il numero di punti che comprendono un'istanza**  
  [STNumPoints &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stnumpoints-geography-data-type)  
@@ -177,13 +177,13 @@ ms.locfileid: "36157957"
  [STArea &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/starea-geography-data-type)  
   
 ###  <a name="empty"></a> Vuoto  
- Un' *vuota* `geography` istanza non contiene punti. La lunghezza delle istanze vuote `LineString, CircularString`, `CompoundCurve` e `MultiLineString` è 0. L'area dei valori vuoti `Polygon, CurvePolygon` e `MultiPolygon` istanze è 0.  
+ Un' *vuote* `geography` istanza non contiene punti. La lunghezza delle istanze vuote `LineString, CircularString`, `CompoundCurve` e `MultiLineString` è 0. L'area dei valori vuoti `Polygon, CurvePolygon` e `MultiPolygon` istanze è 0.  
   
  **Per determinare se un'istanza è vuota**  
  [STIsEmpty &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stisempty-geography-data-type)  
   
 ###  <a name="closure"></a> Chiusura  
- Un *chiusa* `geography` istanza è una figura i cui punti di inizio e di punti di fine corrispondono. `Polygon` le istanze sono considerate chiuse. Le istanze `Point` non sono considerate chiuse.  
+ Oggetto *chiusa* `geography` istanza è una figura i cui punti di inizio e di punti di fine corrispondono. `Polygon` le istanze sono considerate chiuse. Le istanze `Point` non sono considerate chiuse.  
   
  Un anello è una semplice chiusa `LineString` istanza.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "36157957"
  [RingN &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/ringn-geography-data-type)  
   
 ###  <a name="srid"></a> Identificatore SRID  
- Il riferimento spaziale (SRID) ID è un identificatore che specifica quale sistema di coordinate ellissoidale il `geography` istanza viene rappresentata in. Non è possibile confrontare due istanze `geography` con identificatori SRID diversi.  
+ Il riferimento spaziale (SRID) ID è un identificatore che specifica quale sistema di coordinate ellissoidale il `geography` rappresentata nell'istanza. Non è possibile confrontare due istanze `geography` con identificatori SRID diversi.  
   
  **Per impostare o restituire l'identificatore SRID di un'istanza**  
  [STSrid &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stsrid-geography-data-type)  
@@ -205,7 +205,7 @@ ms.locfileid: "36157957"
  Questa proprietà può essere modificata.  
   
 ##  <a name="rel"></a> Determinazione delle relazioni esistenti tra istanze geografiche  
- Il `geography` tipo di dati fornisce molti metodi predefiniti che è possibile utilizzare per determinare le relazioni tra due `geography` istanze.  
+ Il `geography` tipo di dati fornisce molti metodi predefiniti che è possibile usare per determinare le relazioni tra due `geography` istanze.  
   
  **Per determinare se due istanze includono lo stesso punto impostato**  
  [STEquals &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  
@@ -229,7 +229,7 @@ ms.locfileid: "36157957"
  [STSymDifference &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stsymdifference-geography-data-type)  
   
 ##  <a name="supportedsrid"></a> Le istanze geografiche devono utilizzare l'identificatore SRID supportato  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta gli identificatori SRID basati sugli standard EPSG. È necessario utilizzare un identificatore SRID supportato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le istanze `geography` se si eseguono calcoli o si utilizzano metodi con dati spaziali di geografia. L'identificatore SRID deve corrispondere a uno di quelli visualizzati nella vista del catalogo **sys.spatial_reference_systems** Come accennato in precedenza, quando si eseguono calcoli sui dati spaziali usando il `geography` tipo di dati, i risultati variano in base quale tipo di ellissoide usato nella creazione dei dati, come ogni ellissoide è assegnato un (identificatore SRID specifico SRID).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta gli identificatori SRID basati sugli standard EPSG. È necessario utilizzare un identificatore SRID supportato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le istanze `geography` se si eseguono calcoli o si utilizzano metodi con dati spaziali di geografia. L'identificatore SRID deve corrispondere a uno di quelli visualizzati nella vista del catalogo **sys.spatial_reference_systems** Come accennato in precedenza, quando si eseguono calcoli sui dati spaziali utilizzando il `geography` tipo di dati, i risultati variano in base quale tipo di ellissoide usato nella creazione dei dati, perché ogni ellissoide è assegnato una (identificatore SRID specifico SRID).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza l'identificatore predefinito SRID di 4326., che esegue il mapping al sistema di riferimento spaziale WHS 84 in caso si utilizzino metodi nelle istanze `geography`. Se si utilizzano dati da un sistema di riferimento spaziale diverso da WGS 84 (o SRID 4326), sarà necessario determinare lo specifico identificatore SRID per i dati spaziali geografici.  
   

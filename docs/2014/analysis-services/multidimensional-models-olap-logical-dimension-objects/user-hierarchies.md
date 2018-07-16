@@ -1,5 +1,5 @@
 ---
-title: Gerarchie utente | Documenti Microsoft
+title: Gerarchie definite dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -27,18 +27,18 @@ helpviewer_keywords:
 - unbalanced hierarchies [Analysis Services]
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0ba2aa7e3941803e9afcbf124a8b02647832814a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a680e531c91d56db0271f373066fb768049f7f8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286157"
 ---
 # <a name="user-hierarchies"></a>Gerarchie definite dall'utente
-  Gerarchie definite dall'utente sono gerarchie definite dall'utente di attributi utilizzati in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per organizzare i membri di una dimensione in strutture gerarchiche e offrire percorsi di navigazione in un cubo. Nella tabella seguente viene ad esempio definita una tabella per una dimensione temporale. La tabella delle dimensioni supporta tre attributi, Year, Quarter e Month.  
+  Gerarchie definite dall'utente sono gerarchie definite dall'utente di attributi che vengono usate in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per organizzare i membri di una dimensione in strutture gerarchiche e offrire percorsi di navigazione in un cubo. Nella tabella seguente viene ad esempio definita una tabella per una dimensione temporale. La tabella delle dimensioni supporta tre attributi, Year, Quarter e Month.  
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  
@@ -60,7 +60,7 @@ ms.locfileid: "36157615"
  ![Gerarchia di livello e membri per una dimensione temporale](../../../2014/analysis-services/dev-guide/media/as-levelconcepts.gif "gerarchia di livello e membri per una dimensione temporale")  
   
 > [!NOTE]  
->  Tutte le gerarchie diverse dalla gerarchia a due livelli predefinita dell'attributo vengono denominate gerarchie definite dall'utente. Per ulteriori informazioni sulle gerarchie dell'attributo, vedere [gli attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+>  Tutte le gerarchie diverse dalla gerarchia a due livelli predefinita dell'attributo vengono denominate gerarchie definite dall'utente. Per altre informazioni sulle gerarchie dell'attributo, vedere [gli attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
 ## <a name="member-structures"></a>Strutture dei membri  
  Ad eccezione delle gerarchie padre-figlio, le posizioni dei membri di una gerarchia vengono controllate dall'ordinamento degli attributi nella definizione della gerarchia. Ogni attributo nella definizione della gerarchia costituisce un livello nella gerarchia. La posizione di un membro all'interno di un livello viene determinata dall'ordinamento dell'attributo utilizzato per creare il livello. Le strutture dei membri delle gerarchie definite dall'utente possono assumere una delle quattro forme di base, a seconda della relazione esistente tra i membri.  
@@ -85,7 +85,7 @@ ms.locfileid: "36157615"
  Il livello Province viene popolato con i membri associati ad altri membri nel livello CountryRegion e i membri nel livello City vengono associati ai membri corrispondenti nel livello Province. Tuttavia, dato che il membro Vatican City nel livello CountryRegion non ha membri associati nel livello Province, i membri devono essere associati dal livello City direttamente al membro Vatican City nel livello CountryRegion. A causa delle modifiche, la gerarchia della dimensione ora risulta incompleta. Il membro padre della città Vatican City è il paese/area geografica Vatican City che non si trova nel livello immediatamente superiore al membro Vatican City nel livello City. Per altre informazioni, vedere [Gerarchie incomplete](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
   
 ### <a name="parent-child-hierarchies"></a>Gerarchie padre-figlio  
- Le gerarchie padre-figlio delle dimensioni vengono definite utilizzando un attributo speciale, denominato attributo padre, per determinare il tipo di relazione esistente tra i membri. Un attributo padre descrive una *relazione autoreferenziale*, o *self join*, in una tabella della dimensione principale. Le gerarchie padre-figlio vengono create da un unico attributo padre. A una gerarchia padre-figlio viene assegnato un solo livello, in quanto i livelli presenti nella gerarchia sono derivati dalle relazioni padre-figlio tra i membri associati all'attributo padre. Lo schema della dimensione di una gerarchia padre-figlio dipende da una relazione autoreferenziale presente nella tabella della dimensione principale. Ad esempio, il diagramma seguente illustra la **DimOrganization** tabella principale della dimensione nel [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database di esempio.  
+ Le gerarchie padre-figlio delle dimensioni vengono definite utilizzando un attributo speciale, denominato attributo padre, per determinare il tipo di relazione esistente tra i membri. Un attributo padre descrive una *relazione autoreferenziale*, o *self join*, in una tabella della dimensione principale. Le gerarchie padre-figlio vengono create da un unico attributo padre. A una gerarchia padre-figlio viene assegnato un solo livello, in quanto i livelli presenti nella gerarchia sono derivati dalle relazioni padre-figlio tra i membri associati all'attributo padre. Lo schema della dimensione di una gerarchia padre-figlio dipende da una relazione autoreferenziale presente nella tabella della dimensione principale. Ad esempio, il diagramma seguente illustra il **DimOrganization** tabella principale della dimensione nel [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database di esempio.  
   
  ![Join autoreferenziale nella tabella DimOrganization](../../../2014/analysis-services/dev-guide/media/dimorganization.gif "join autoreferenziale nella tabella DimOrganization")  
   

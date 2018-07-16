@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - manual Reporting Services migrations
 - Report Server Windows service
@@ -21,13 +21,13 @@ ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 60c6e0833fb2e8a8c20ca1dca6f3fe8bb43bed9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85ac1d802949d0398f628ba267afb4dcb354151a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309461"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Eseguire la migrazione di un'installazione di Reporting Services (modalità nativa)
   Questo argomento fornisce istruzioni dettagliate per la migrazione di una delle versioni supportate seguenti di una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa a una nuova istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -38,7 +38,7 @@ ms.locfileid: "36169846"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Richiede più passaggi, vedere [non è possibile utilizzare SQL Server 2005 per ospitare i database 2014 di Server di Report](http://support.microsoft.com/kb/2796721).  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Richiede più passaggi, vedere [è possibile usare SQL Server 2005 per ospitare database di Report Server 2014](http://support.microsoft.com/kb/2796721).  
   
 ||  
 |-|  
@@ -80,7 +80,7 @@ ms.locfileid: "36169846"
   
  Sono presenti restrizioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospitano il database del server di report. Rivedere l'argomento seguente se si riutilizza un database del server di report creato in un'installazione precedente.  
   
--   [Creare un database del Server di Report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+-   [Creare un Database del Server di Report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   
 ##  <a name="bkmk_fixed_database_name"></a> Nome fisso del database  
  Non è possibile rinominare il database del server di report poiché l'identità del database viene registrata nelle stored procedure del server di report al momento della creazione del database stesso. La ridenominazione dei database primari o temporanei del server di report causa errori durante l'esecuzione delle stored procedure, invalidando l'installazione del server di report.  
@@ -114,7 +114,7 @@ ms.locfileid: "36169846"
   
 -   Se si utilizzano fogli di stile CSS personalizzati nell'ambiente di report, tali fogli non saranno migrati e sarà necessario spostarli manualmente in seguito alla migrazione.  
   
- Per ulteriori informazioni sulle modifiche in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere la documentazione di preparazione aggiornamento e [novità di &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
+ Per altre informazioni sulle modifiche apportate [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere la documentazione Preparazione aggiornamento e [What ' s New &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
   
 ##  <a name="bkmk_backup"></a> Backup di file e dati  
  Prima di installare una nuova istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], verificare di avere eseguito il backup di tutti i file nell'installazione corrente.  
@@ -146,7 +146,7 @@ ms.locfileid: "36169846"
   
 -   [Installare SQL Server 2014 dall'installazione guidata di &#40;programma di installazione&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
   
--   [Installare SQL Server 2014 dal Prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+-   [Installazione di SQL Server 2014 dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
 ##  <a name="bkmk_move_database"></a> Spostamento del database del server di report  
  Il database del server di report contiene report pubblicati, modelli, origini dati condivise, pianificazioni, risorse, sottoscrizioni e cartelle, insieme a proprietà di sistema e di elementi e autorizzazioni per l'accesso al contenuto del server di report.  
@@ -238,12 +238,12 @@ ms.locfileid: "36169846"
   
 |Personalizzazione|Informazioni|  
 |-------------------|-----------------|  
-|Recapito tramite posta elettronica del server di report con impostazioni personalizzate|[Configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41; ](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) e [impostazioni - Gestione configurazione di posta elettronica &#40;modalità nativa SSRS&#41;](e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
+|Recapito tramite posta elettronica del server di report con impostazioni personalizzate|[Configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41; ](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) e [impostazioni posta elettronica - Configuration Manager &#40;modalità nativa SSRS&#41;](e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Impostazioni relative alle informazioni sul dispositivo|[Personalizzare i parametri di estensione per il rendering in RSReportServer.config.](../customize-rendering-extension-parameters-in-rsreportserver-config.md)|  
 |Gestione report in un'istanza remota|[Configurare Gestione Report &#40;modalità nativa&#41;](../report-server/configure-web-portal.md)|  
   
 ##  <a name="bkmk_windowsservice_group"></a> Gruppo di servizi Windows ed elenchi di controllo di accesso di sicurezza  
- In [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], è disponibile un gruppo di servizi, ovvero il gruppo di servizi Windows per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , usato per creare elenchi di controllo di accesso di sicurezza per tutte le chiavi del Registro di sistema, i file e le cartelle installate con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il nome di questo gruppo Windows viene visualizzato nel formato SQLServerReportServerUser$\<*nome_computer*>$\<*nome_istanza*>. Questo gruppo prende il posto di due gruppi di servizio di Windows in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se si dispone di elenchi ACL personalizzati associati a uno dei due il [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gruppi di Windows, sarà necessario applicare tali elenchi al nuovo gruppo per una nuova istanza di server di report in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ In [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], è disponibile un gruppo di servizi, ovvero il gruppo di servizi Windows per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , usato per creare elenchi di controllo di accesso di sicurezza per tutte le chiavi del Registro di sistema, i file e le cartelle installate con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il nome di questo gruppo Windows viene visualizzato nel formato SQLServerReportServerUser$\<*nome_computer*>$\<*nome_istanza*>. Questo gruppo sostituisce i due gruppi di servizio Windows in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se si dispone di elenchi ACL personalizzati associati a uno dei [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gruppi di Windows, è necessario applicare tali elenchi al nuovo gruppo per l'istanza di server di report nuovi in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_verify"></a> Verifica della distribuzione  
   

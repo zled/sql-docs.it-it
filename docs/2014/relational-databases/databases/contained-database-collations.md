@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2858721cdfa3de8c9ebbe2dff0897c1dd806047e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1677c81bb13261e054d352697faeaf96aefd392c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316481"
 ---
 # <a name="contained-database-collations"></a>Regole di confronto dei database indipendenti
   Varie proprietà incidono sull'ordinamento e sulla semantica di uguaglianza dei dati testuali, ad esempio distinzione maiuscole/minuscole, distinzione caratteri accentati/non accentati e linguaggio di base utilizzato. Queste qualità vengono espresse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite la scelta di regole di confronto per i dati. Per informazioni dettagliate sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](../collations/collation-and-unicode-support.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "36156725"
  In questo argomento si illustra il contenuto della modifica e si esaminano alcune aree in cui tale modifica potrebbe causare problemi.  
   
 ## <a name="non-contained-databases"></a>Database non indipendenti  
- A tutti i database sono associate regole di confronto predefinite, che possono essere impostate quando si crea o si modifica un database. Queste regole di confronto vengono utilizzate per tutti i metadati presenti nel database e come impostazione predefinita per tutte le colonne stringa all'interno del database. Gli utenti possono scegliere regole di confronto diverse per qualsiasi colonna specifica tramite il `COLLATE` clausola.  
+ A tutti i database sono associate regole di confronto predefinite, che possono essere impostate quando si crea o si modifica un database. Queste regole di confronto vengono utilizzate per tutti i metadati presenti nel database e come impostazione predefinita per tutte le colonne stringa all'interno del database. Gli utenti possono scegliere regole di confronto diverse per qualsiasi colonna specifica usando il `COLLATE` clausola.  
   
 ### <a name="example-1"></a>Esempio 1  
  Se si lavora ad esempio a Pechino, è possibile che venga utilizzata una regola di confronto cinese:  
@@ -62,7 +62,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- Questo approccio sembra relativamente semplice, ma insorgono vari problemi. Poiché le regole di confronto per una colonna sono dipendenti dal database in cui è stata creata nella tabella, i problemi insorgono se l'utilizzo delle tabelle temporanee archiviate in `tempdb`. Le regole di confronto di `tempdb` corrisponde in genere le regole di confronto per l'istanza, che non devono corrispondere le regole di confronto di database.  
+ Questo approccio sembra relativamente semplice, ma insorgono vari problemi. Poiché le regole di confronto per una colonna sono dipendenti dal database in cui viene creata la tabella, i problemi insorgono se l'utilizzo di tabelle temporanee vengono archiviate in `tempdb`. Le regole di confronto di `tempdb` corrisponde in genere le regole di confronto per l'istanza, che non deve necessariamente corrispondere le regole di confronto del database.  
   
 ### <a name="example-2"></a>Esempio 2  
  Si consideri, ad esempio, il database precedente (cinese) usato in un'istanza con regole di confronto **Latin1_General** :  
@@ -122,7 +122,7 @@ END;
   
  In un database indipendente vengono usate le regole di confronto del catalogo **Latin1_General_100_CI_AS_WS_KS_SC**. Si tratta delle stesse regole di confronto per tutti i database indipendenti in tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non è possibile modificarle.  
   
- Le regole di confronto del database vengono mantenute, ma utilizzate solo come regole di confronto predefinite per i dati utente. Per impostazione predefinita, le regole di confronto di database sono uguali alle regole di confronto del database modello, ma può essere modificato dall'utente tramite un `CREATE` o `ALTER DATABASE` comando come con i database non indipendenti.  
+ Le regole di confronto del database vengono mantenute, ma utilizzate solo come regole di confronto predefinite per i dati utente. Per impostazione predefinita, le regole di confronto del database sono uguali alle regole di confronto del database modello, ma può essere modificato dall'utente tramite un `CREATE` o `ALTER DATABASE` comando con i database non indipendente.  
   
  Nella clausola `CATALOG_DEFAULT` è disponibile la nuova parola chiave `COLLATE`, che viene utilizzata come collegamento alle regole di confronto correnti per i metadati nei database indipendenti e non indipendenti. Vale a dire, in un database non indipendente, `CATALOG_DEFAULT` restituirà le regole di confronto del database corrente, poiché i metadati vengono confrontati nelle regole di confronto del database. In un database indipendente questi due valori potrebbero essere diversi, in quanto l'utente può modificare le regole di confronto del database in modo che non corrispondano alle regole di confronto del catalogo.  
   
@@ -159,7 +159,7 @@ JOIN #T2
   
 -   Il comportamento delle regole di confronto per un batch viene determinato dal database in cui inizia il batch.  
   
- Si noti che questa decisione avviene prima di qualsiasi comando, incluso un iniziale `USE`. Se un batch inizia in un database indipendente, ma il primo comando è un `USE` su un database non indipendenti, il comportamento delle regole di confronto indipendenti verrà comunque utilizzato per il batch. In questo caso, un riferimento a una variabile, ad esempio, può avere più risultati possibili:  
+ Si noti che questa decisione avviene prima di qualsiasi comando, tra cui iniziale `USE`. Se un batch inizia in un database indipendente, ma il primo comando è un `USE` su un database non indipendente, il comportamento delle regole di confronto indipendenti verrà comunque utilizzato per il batch. In questo caso, un riferimento a una variabile, ad esempio, può avere più risultati possibili:  
   
 -   Il riferimento può trovare esattamente una corrispondenza. In questo caso il riferimento funzionerà senza errori.  
   
@@ -239,7 +239,7 @@ GO
  Il nome di oggetto '#A' non è valido.  
   
 ### <a name="example-3"></a>Esempio 3  
- Nell'esempio seguente viene illustrato il caso in cui il riferimento trova più corrispondenze originariamente distinte. Si inizierà innanzitutto `tempdb` (per cui sono le stesse regole di confronto tra maiuscole e minuscole dell'istanza) ed eseguire le istruzioni seguenti.  
+ Nell'esempio seguente viene illustrato il caso in cui il riferimento trova più corrispondenze originariamente distinte. Si inizierà innanzitutto `tempdb` (che ha le stesse regole di confronto della distinzione maiuscole/minuscole istanza) ed eseguire le istruzioni seguenti.  
   
 ```  
 USE tempdb;  

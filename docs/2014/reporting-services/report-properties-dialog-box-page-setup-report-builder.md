@@ -1,5 +1,5 @@
 ---
-title: Report delle proprietà della finestra di dialogo Imposta pagina (Generatore Report) | Documenti Microsoft
+title: Report delle proprietà della finestra di dialogo Imposta pagina (Generatore Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10080"
 ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9974b741f82d0347fe5a549dfa462bb3f973058d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 51df7fe3664e3e35bf0fb4c45a0124481d5c6ce7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306891"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>Finestra di dialogo Proprietà report, Imposta pagina (Generatore report)
   Selezionare **Imposta pagina** nella finestra di dialogo **Proprietà report**per impostare le opzioni della pagina per l'intero report.  

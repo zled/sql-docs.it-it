@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8426f8980bd10877c07d814921f3c73ee91f0c4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c22aac59568cac600904ebdd7e1508d0ada8bc98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288577"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurare un URL (Gestione configurazione SSRS)
   Per poter utilizzare Gestione report o il servizio Web ReportServer, è necessario configurare almeno un URL per ogni applicazione. La configurazione degli URL è obbligatoria se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato in modalità "solo file", ovvero se è stata selezionata l'opzione **Installa senza configurare il server** nella pagina Opzioni di installazione Server report dell'Installazione guidata. Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato con la configurazione predefinita, gli URL sono già configurati per ogni applicazione. Se si dispone di un server di report configurato per utilizzare la modalità integrata SharePoint e si esegue l'aggiornamento dell'URL del servizio Web ReportServer mediante lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario aggiornare anche l'URL in Amministrazione centrale SharePoint.  
@@ -38,7 +38,7 @@ ms.locfileid: "36158619"
   
 -   Impostare proprietà avanzate per gli URL per definire altri URL.  
   
- Per ulteriori informazioni sul modo in cui gli URL vengono archiviati e gestiti o problemi di interoperabilità, vedere [su prenotazioni e registrazione URL &#40;Gestione configurazione SSRS&#41; ](about-url-reservations-and-registration-ssrs-configuration-manager.md) e [installa Reporting Servizi e Internet Information Services Side-by-Side &#40;modalità nativa SSRS&#41;](install-reporting-and-internet-information-services-side-by-side.md)in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online. Per esaminare alcuni esempi di URL utilizzati di frequente in un'installazione di Reporting Services, vedere [Esempi di URL](#URLExamples) in questo argomento.  
+ Per altre informazioni su come gli URL vengono archiviati e gestiti o problemi di interoperabilità, vedere [sulle prenotazioni e registrazione URL &#40;Gestione configurazione SSRS&#41; ](about-url-reservations-and-registration-ssrs-configuration-manager.md) e [installa Reporting Servizi e Internet Information Services Side-by-Side &#40;modalità nativa SSRS&#41;](install-reporting-and-internet-information-services-side-by-side.md)nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online. Per esaminare alcuni esempi di URL utilizzati di frequente in un'installazione di Reporting Services, vedere [Esempi di URL](#URLExamples) in questo argomento.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Prima di creare o modificare un URL, tenere presenti gli aspetti seguenti:  
@@ -51,7 +51,7 @@ ms.locfileid: "36158619"
   
 -   Scegliere un'ora con un'attività di report ridotta. Ogni volta che la prenotazione URL cambia, è possibile che venga eseguito il riciclo dei domini applicazione per il servizio Web ReportServer e per Gestione report.  
   
--   Per una panoramica della costruzione di URL e l'utilizzo in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [configurare gli URL del Server di Report &#40;Gestione configurazione SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md).  
+-   Per una panoramica della creazione di URL e l'utilizzo in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [configurare gli URL del Server di Report &#40;Gestione configurazione SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md).  
   
 ### <a name="to-configure-a-url-for-the-report-server-web-service"></a>Per configurare un URL per il servizio Web ReportServer  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36158619"
   
          Se sono presenti più schede o la rete supporta indirizzi IPv4 e IPv6, verranno visualizzati più indirizzi IP. Se si seleziona solo un indirizzo IP, l'accesso all'applicazione sarà limitato all'indirizzo IP specificato e a qualsiasi nome host di cui il DNS esegue il mapping all'indirizzo. Non è possibile utilizzare localhost per accedere a un server di report, né utilizzare gli indirizzi IP di altre schede di rete installate nel computer server di report. Si seleziona in genere questo valore per configurare più prenotazioni di URL che specificano anche indirizzi IP o nomi host espliciti, ad esempio uno per una scheda di rete utilizzata per le connessioni Intranet e un altro per le connessioni Extranet.  
   
-5.  Specificare la porta. La porta 80 è l'impostazione predefinita per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] su [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] e Windows Server 2008 in quanto può essere condivisa con altre applicazioni. Se si desidera utilizzare un numero di porta personalizzato, sarà necessario specificarlo sempre nell'URL utilizzato per accedere al server di report. Per trovare una porta disponibile, è possibile utilizzare i metodi seguenti:  
+5.  Specificare la porta. La porta 80 è il valore predefinito per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] su [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] e Windows Server 2008 in quanto può essere condivisa con altre applicazioni. Se si desidera utilizzare un numero di porta personalizzato, sarà necessario specificarlo sempre nell'URL utilizzato per accedere al server di report. Per trovare una porta disponibile, è possibile utilizzare i metodi seguenti:  
   
     -   Al prompt dei comandi digitare il comando seguente per ottenere l'elenco delle porte TCP in uso:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36158619"
   
     -   Per informazioni sulle assegnazioni di porta TCP e le differenze tra porte note (da 0 a 1023), porte registrate (da 1024 a 49151) e porte dinamiche o private (da 49152 a 65535), vedere l'articolo [Informazioni sull'assegnazione di porte TCP/IP](http://support.microsoft.com/kb/174904)nel sito Web del supporto tecnico Microsoft.  
   
-    -   Se si utilizza Windows Firewall, è necessario aprire la porta. Per istruzioni, vedere [configurare un Firewall per l'accesso al Server di Report](../report-server/configure-a-firewall-for-report-server-access.md).  
+    -   Se si utilizza Windows Firewall, è necessario aprire la porta. Per istruzioni, vedere [configurare un Firewall for Report Server Access](../report-server/configure-a-firewall-for-report-server-access.md).  
   
 6.  Se necessario, verificare che in IIS (se installato) non sia presente una directory virtuale con lo stesso nome che si intende utilizzare.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36158619"
   
 10. Eseguire il test dell'URL facendo clic sul collegamento nella sezione **URL** della pagina. Per poter eseguire il test dell'URL, è necessario creare e configurare il database del server di report. Per istruzioni, vedere [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
-11. Inoltre, se il server di report è configurato per utilizzare la modalità integrata SharePoint, configurare l'URL del servizio Web ReportServer in Amministrazione centrale SharePoint. Per ulteriori informazioni su come aggiornare l'URL del servizio Web ReportServer in Amministrazione centrale SharePoint, vedere [configurazione e amministrazione di un Server di Report &#40;Reporting Services SharePoint Mode&#41; ](../configure-administer-report-server-reporting-services-sharepoint-mode.md) e [Server di reporting Services Report &#40;modalità SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md).  
+11. Inoltre, se il server di report è configurato per utilizzare la modalità integrata SharePoint, configurare l'URL del servizio Web ReportServer in Amministrazione centrale SharePoint. Per altre informazioni su come aggiornare l'URL del servizio Web ReportServer in Amministrazione centrale SharePoint, vedere [configurazione e amministrazione di un Server di Report &#40;Reporting Services SharePoint Mode&#41; ](../configure-administer-report-server-reporting-services-sharepoint-mode.md) e [Reporting Services Report Server &#40;in modalità SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md).  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>Per creare una prenotazione URL per Gestione report  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36158619"
   
 2.  Fare clic su **URL Gestione report**.  
   
-3.  Specificare la directory virtuale. Gestione report è in attesa sulla stessa porta e sullo stesso indirizzo IP del servizio Web ReportServer. Se Gestione report è stato configurato per puntare a un servizio Web ReportServer diverso, è necessario modificare le impostazioni URL di Gestione report nel file RSReportServer.config. Per istruzioni, vedere [configurare Gestione Report &#40;modalità nativa&#41; ](../report-server/configure-web-portal.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online.  
+3.  Specificare la directory virtuale. Gestione report è in attesa sulla stessa porta e sullo stesso indirizzo IP del servizio Web ReportServer. Se Gestione report è stato configurato per puntare a un servizio Web ReportServer diverso, è necessario modificare le impostazioni URL di Gestione report nel file RSReportServer.config. Per istruzioni, vedere [configurare Gestione Report &#40;in modalità nativa&#41; ](../report-server/configure-web-portal.md) nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online.  
   
 4.  Se è stato installato un certificato SSL, è possibile selezionarlo affinché tutte le richieste a Gestione report vengano indirizzate tramite HTTPS.  
   

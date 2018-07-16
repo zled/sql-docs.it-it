@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], databases
 - compatibility levels [SQL Server], after upgrade
 - Database Engine [SQL Server], upgrading
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a263e00df1978f09a77a4eeebbf90f0059fb2590
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b8837cb450313df1c72a255a12fe0f26e29c941f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279849"
 ---
 # <a name="upgrade-database-engine"></a>Aggiornare il motore di database
   In questo argomento vengono fornite le informazioni necessarie per la preparazione e la comprensione del processo di aggiornamento, ovvero:  
@@ -50,7 +50,7 @@ ms.locfileid: "36157797"
 >  Quando si esegue l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, scegliere tra Enterprise Edition: licenze basate su core ed Enterprise Edition. Queste due edizioni differiscono solo per le modalità di gestione delle licenze. Per altre informazioni, vedere [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Elenco di controllo preliminare all'aggiornamento  
- L'aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una versione precedente è supportato solo dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È inoltre possibile eseguire la migrazione dei database da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La migrazione può essere eseguita da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra nello stesso computer o da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer diverso. Opzioni di migrazione includono l'utilizzo della copia guidata Database, Backup e ripristino delle funzionalità, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] metodi di importazione di importazione ed esportazione guidata ed esportare globalmente.  
+ L'aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una versione precedente è supportato solo dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È inoltre possibile eseguire la migrazione dei database da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La migrazione può essere eseguita da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra nello stesso computer o da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer diverso. Opzioni di migrazione includono l'utilizzo della copia guidata Database, Backup e ripristino delle funzionalità, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] metodi di importazione di importazione / esportazione guidata ed esportare globalmente.  
   
  Prima di aggiornare il [!INCLUDE[ssDE](../../includes/ssde-md.md)], vedere gli argomenti seguenti:  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36157797"
  È possibile aggiornare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>Livello di compatibilità del database dopo l'aggiornamento  
- I livelli di compatibilità del `tempdb`, `model`, `msdb` e **risorse** i database sono impostati su 120 dopo l'aggiornamento. Per il database di sistema `master` viene mantenuto il livello di compatibilità precedente l'aggiornamento.  
+ I livelli di compatibilità del `tempdb`, `model`, `msdb` e **risorsa** database siano impostati su 120 dopo l'aggiornamento. Per il database di sistema `master` viene mantenuto il livello di compatibilità precedente l'aggiornamento.  
   
  Se il livello di compatibilità di un database utente era 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità è 90 prima dell'aggiornamento, nel database aggiornato viene impostato su 100, ovvero sul livello di compatibilità supportato più basso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -136,7 +136,7 @@ ms.locfileid: "36157797"
   
 -   Convalidare o rimuovere gli hint USE PLAN generati da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e applicati alle query su tabelle e indici partizionati.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modifica la modalità di elaborazione query su tabelle e indici partizionati. È possibile che le query su oggetti partizionati che usano l'hint USE PLAN per un piano generato da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] contengano un piano non valido in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Dopo avere eseguito l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è consigliabile eseguire le procedure indicate di seguito.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modifica la modalità di elaborazione delle query su tabelle e indici partizionati. È possibile che le query su oggetti partizionati che usano l'hint USE PLAN per un piano generato da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] contengano un piano non valido in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Dopo avere eseguito l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è consigliabile eseguire le procedure indicate di seguito.  
   
      **Quando l'hint USE PLAN è specificato direttamente in una query:**  
   
@@ -168,7 +168,7 @@ EXEC sp_fulltext_service 'pause_indexing', 0;
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiornamenti di versione ed edizione supportati](supported-version-and-edition-upgrades.md)   
- [Utilizzo di più versioni e istanze di SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
+ [Uso di più versioni e istanze di SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Compatibilità con le versioni precedenti](../../getting-started/backward-compatibility.md)   
  [Aggiornare database replicati](upgrade-replicated-databases.md)  
   

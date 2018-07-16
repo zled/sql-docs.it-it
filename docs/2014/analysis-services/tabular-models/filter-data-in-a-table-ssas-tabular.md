@@ -1,5 +1,5 @@
 ---
-title: Filtrare i dati in una tabella (SSAS tabulare) | Documenti Microsoft
+title: Filtrare i dati in una tabella (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.customfilterdb.f1
 - sql12.asvs.bidtoolset.autofiltermenu.f1
 - sql12.asvs.bidtoolset.notallitemsshowing.f1
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d58f376d4d7fde1ccd38eab1a1662fb7ad2605cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5232c34c8fdb8a76d24a623103d30863e7e9c21c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306411"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrare i dati di una tabella (SSAS tabulare)
   È possibile applicare filtri quando si importano dati per controllare le righe caricate in una tabella. Dopo aver importato i dati, non è possibile eliminare righe singole. Tuttavia, è possibile applicare filtri personalizzati per controllare la modalità in cui visualizzare tali righe. Le righe che non soddisfano i criteri di filtro sono nascoste. È possibile filtrare i dati in base a una o più colonne. I filtri sono additivi, pertanto ciascun filtro aggiuntivo è basato sul filtro corrente e consente di ridurre ulteriormente il subset di dati.  
@@ -47,7 +47,7 @@ ms.locfileid: "36156780"
   
 1.  Fare clic sulla freccia nell'intestazione della colonna per la quale si desidera cancellare un filtro.  
   
-2.  Fare clic su **deseleziona filtro da \<nome colonna >**.  
+2.  Fare clic su **Cancella filtro da \<nome colonna >**.  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>Per cancellare tutti i filtri per una tabella  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36156780"
   
 ## <a name="see-also"></a>Vedere anche  
  [Filtrare e ordinare i dati &#40;tabulare di SSAS&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [Prospettive &#40;tabulare di SSAS&#41;](perspectives-ssas-tabular.md)   
- [Ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)  
+ [Le prospettive &#40;tabulare di SSAS&#41;](perspectives-ssas-tabular.md)   
+ [I ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)  
   
   

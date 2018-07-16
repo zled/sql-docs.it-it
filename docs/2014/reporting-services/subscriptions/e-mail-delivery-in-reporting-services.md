@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], e-mail
 - e-mail [Reporting Services]
@@ -17,18 +17,18 @@ ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9af13376bd8dfe6fc182b784c250c286fcabdf6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de8849902a313391f414367ca6e51fb64c6dffdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303541"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Recapito tramite posta elettronica in Reporting Services
   In SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile un'estensione per il recapito tramite posta elettronica che consente di inviare un report a utenti o gruppi tramite posta elettronica. L'estensione per il recapito tramite posta elettronica viene configurata mediante Gestione configurazione Reporting Services e la modifica dei file di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Per distribuire o ricevere un report tramite posta elettronica, è necessario definire una sottoscrizione standard oppure una sottoscrizione guidata dai dati. È possibile sottoscrivere o distribuire un solo report per volta. Non è possibile creare una sottoscrizione che recapiti più report nello stesso messaggio di posta elettronica. Per ulteriori informazioni sulle sottoscrizioni, vedere [Create, Modify ed eliminare sottoscrizioni Standard &#40;Reporting Services in modalità nativa&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
+ Per distribuire o ricevere un report tramite posta elettronica, è necessario definire una sottoscrizione standard oppure una sottoscrizione guidata dai dati. È possibile sottoscrivere o distribuire un solo report per volta. Non è possibile creare una sottoscrizione che recapiti più report nello stesso messaggio di posta elettronica. Per altre informazioni sulle sottoscrizioni, vedere [creare, modificare ed eliminare sottoscrizioni Standard &#40;Reporting Services in modalità nativa&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
 ||  
 |-|  
@@ -77,7 +77,7 @@ ms.locfileid: "36168669"
   
 -   [Configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
--   [Impostazioni - Gestione configurazione di posta elettronica &#40;modalità nativa SSRS&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [Impostazioni posta elettronica - Gestione configurazione &#40;modalità nativa SSRS&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
  Per informazioni su come configurare un server di report in modalità SharePoint, vedere quanto segue:  
   

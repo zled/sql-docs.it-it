@@ -1,5 +1,5 @@
 ---
-title: Predefinito elemento (ASSL) | Documenti Microsoft
+title: Default (ASSL) elemento | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Default element
 ms.assetid: 02c1844c-51fb-44fe-aafb-001e53ad293c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e63263397420c1350ea8a0eef681e158b101637a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9003b574d2fd38e39eff0dc9e32ea3015d0fa99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304181"
 ---
 # <a name="default-element-assl"></a>Elemento Default (ASSL)
   Determina se il [DrillThroughAction](../data-type/action-data-type-assl.md) è l'azione di drill-through predefinita.  
@@ -61,8 +61,8 @@ ms.locfileid: "36157250"
 |Elementi padre|[DrillThroughAction](../data-type/action-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `Default` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DrillThroughAction>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `Default` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DrillThroughAction>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

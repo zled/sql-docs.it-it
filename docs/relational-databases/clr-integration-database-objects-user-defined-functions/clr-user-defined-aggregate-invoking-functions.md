@@ -1,11 +1,11 @@
 ---
-title: Richiamo di funzioni di aggregazione definita dall'utente CLR | Documenti Microsoft
+title: Richiamo di funzioni di aggregazione definita dall'utente CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -21,20 +21,20 @@ caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7731be96b2cf9eaccdad14274250346c04b67a75
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ca243bc1961b703839ff72e5b559349e3a4c3e36
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700342"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355373"
 ---
-# <a name="clr-user-defined-aggregate---invoking-functions"></a>Aggregazione definita dall'utente CLR, chiamata di funzioni
+# <a name="clr-user-defined-aggregate---invoking-functions"></a>Aggregazione definita dall'utente CLR - chiamata di funzioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Nelle istruzioni SELECT di [!INCLUDE[tsql](../../includes/tsql-md.md)] è possibile richiamare funzioni di aggregazione CLR (Common Language Runtime) definite dall'utente in base a tutte le regole applicabili alle funzioni di aggregazione del sistema.  
   
  Sono valide le regole aggiuntive seguenti:  
   
--   L'utente corrente deve disporre **EXECUTE** dell'autorizzazione per l'aggregazione definita dall'utente.  
+-   L'utente corrente deve disporre **EXECUTE** autorizzazioni nell'aggregazione definita dall'utente.  
   
 -   Aggregazioni definite dall'utente devono essere richiamate utilizzando un nome in due parti nel formato *udagg_name*.  
   
@@ -200,7 +200,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Dopo aver compilato il codice nel **MyAgg. dll**, è possibile registrare l'aggregato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come indicato di seguito:  
+ Dopo aver compilato il codice nel **MyAgg. dll**, è possibile registrare l'aggregazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come indicato di seguito:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -212,7 +212,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  L'esecuzione degli oggetti di database Visual C++, ad esempio le funzioni a valori scalari, compilati con l'opzione /clr:pure non è supportata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Come con la maggior parte delle funzioni di aggregazione, la maggior parte della logica di è presente il **Accumulate** metodo. , La stringa che viene passata come parametro per il **Accumulate** viene aggiunto al metodo il **StringBuilder** oggetto che è stata inizializzata nel **Init** (metodo). Supponendo che non si tratta la prima volta che il **Accumulate** chiamata al metodo, una virgola viene anche aggiunto al **StringBuilder** prima di aggiungere la stringa passata. Al termine delle attività di calcolo, il **Terminate** viene chiamato, che restituisce il **StringBuilder** sotto forma di stringa.  
+ Come con la maggior parte delle funzioni di aggregazione, la maggior parte della logica è il **Accumulate** (metodo). Questo caso, la stringa che viene passata come parametro per il **Accumulate** metodo viene aggiunto al **StringBuilder** oggetto inizializzato nel **Init** (metodo). Supponendo che non si tratta la prima volta che il **Accumulate** chiamata al metodo, una virgola viene anche aggiunto alle **StringBuilder** prima di aggiungere la stringa passata. Al termine delle attività di calcolo, il **Terminate** viene chiamato il metodo che restituisce il **StringBuilder** sotto forma di stringa.  
   
  Si consideri, ad esempio, una tabella con lo schema seguente:  
   
@@ -245,7 +245,7 @@ GROUP BY BookID;
 |3|Roberts, Michaels, Steven|  
   
 ## <a name="example-2"></a>Esempio 2  
- L'esempio seguente mostra un'aggregazione con due parametri per il **Accumulate** metodo.  
+ L'esempio seguente illustra una funzione di aggregazione con due parametri per il **Accumulate** (metodo).  
   
  [C#]  
   

@@ -1,5 +1,5 @@
 ---
-title: Il contenuto di FORMAT_STRING (MDX) | Documenti Microsoft
+title: Il contenuto di FORMAT_STRING (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
 - VALUE property
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f017cd8b6f3e47e5c99e563babbfa3904dbd6f2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 198fadc6d3f2e1599c98ba5146e830fef5b8be17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293591"
 ---
 # <a name="formatstring-contents-mdx"></a>Contenuto di FORMAT_STRING (MDX)
-  Il `FORMAT_STRING` formati di proprietà delle celle il `VALUE` proprietà di cella, creando il valore della `FORMATTED_VALUE` proprietà delle celle. Il `FORMAT_STRING` proprietà della cella gestisce i valori non elaborati stringa e numerici, applicando un'espressione di formato rispetto al valore da restituire un valore formattato per la `FORMATTED_VALUE` proprietà delle celle. Nelle tabelle seguenti vengono indicati in dettaglio la sintassi e i caratteri di formattazione utilizzati per gestire valori di tipo stringa e numerici.  
+  Il `FORMAT_STRING` formati di proprietà delle celle il `VALUE` proprietà di cella, creando il valore di `FORMATTED_VALUE` proprietà delle celle. Il `FORMAT_STRING` proprietà di cella gestisce valori non elaborati stringa e numerici, applicando un'espressione di formato di valore da restituire un valore formattato per il `FORMATTED_VALUE` proprietà delle celle. Nelle tabelle seguenti vengono indicati in dettaglio la sintassi e i caratteri di formattazione utilizzati per gestire valori di tipo stringa e numerici.  
   
 ## <a name="string-values"></a>Valori stringa  
  Un'espressione di formato per le stringhe può includere una sezione oppure due sezioni separate da un punto e virgola (;).  
@@ -155,7 +155,7 @@ ms.locfileid: "36169781"
 ## <a name="see-also"></a>Vedere anche  
  [LANGUAGE e FORMAT_STRING in FORMATED_VALUE](mdx-cell-properties-formatted-value-property.md)   
  [Utilizzo delle proprietà di cella &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
- [Creazione e utilizzo di valori di proprietà &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
+ [Creazione e utilizzo di valori della proprietà &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
  [Nozioni fondamentali sulle Query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

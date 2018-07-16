@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_paraminfo
 ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9576bd509f551166511920dc3f4a5736cc5e4481
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 36498f29727107e5289ee63db1e58f3035c0feca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316301"
 ---
 # <a name="srvparaminfo-extended-stored-procedure-api"></a>srv_paraminfo (API Stored procedure estesa)
     
@@ -93,7 +93,7 @@ pfNull
 ## <a name="returns"></a>Valori di codice restituiti  
  Se le informazioni sul parametro vengono ottenute correttamente, viene restituito SUCCEED; in caso contrario, FAIL. Restituisce FAIL se non esiste una stored procedure remota corrente o se non è presente nessun parametro *n* della stored procedure remota.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  **Nota sulla sicurezza** È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Vedere anche  

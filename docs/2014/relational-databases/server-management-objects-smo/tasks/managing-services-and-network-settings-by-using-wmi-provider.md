@@ -1,5 +1,5 @@
 ---
-title: Gestione dei servizi e le impostazioni di rete tramite il Provider WMI | Documenti Microsoft
+title: Gestione dei servizi e le impostazioni di rete tramite il Provider WMI | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - monitoring [SMO]
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 54c441653fd1116aa9061d143aa63ae353a43585
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9f0f9c249ac1a494a3dd965386da7160dd373818
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280627"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Gestione di servizi e di impostazioni di rete tramite il provider WMI
-  Il provider WMI è un'interfaccia pubblicata utilizzata da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) per gestire il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servizi e protocolli di rete. In SMO la <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> oggetto rappresenta il Provider WMI.  
+  Il provider WMI è un'interfaccia pubblicata utilizzata da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) per gestire il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servizi e protocolli di rete. In SMO i <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> oggetto rappresenta il Provider WMI.  
   
- Il <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> oggetto funziona indipendentemente dalla connessione stabilita con il <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e utilizza le credenziali di Windows per connettersi al servizio WMI.  
+ Il <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> oggetto funziona indipendentemente dalla connessione stabilita con il <xref:Microsoft.SqlServer.Management.Smo.Server> a un'istanza di oggetto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e utilizza le credenziali di Windows per connettersi al servizio WMI.  
   
 ## <a name="example"></a>Esempio  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

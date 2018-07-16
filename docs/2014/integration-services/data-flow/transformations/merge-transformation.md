@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergetrans.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 59af833bb371e8a3fcf43e175343cda807a8feb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bde18a7396d10ce15020e92d373239b8c3dd96c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215691"
 ---
 # <a name="merge-transformation"></a>Unione - trasformazione
   La trasformazione Unione consente di combinare due set di dati ordinati in un singolo set di dati. Le righe di ogni set di dati vengono inserite nell'output in base ai valori delle relative colonne chiave.  
@@ -77,7 +77,7 @@ ms.locfileid: "36166889"
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazione Merge Join](merge-join-transformation.md)   
- [Union All Transformation](union-all-transformation.md)   
+ [Unione input multipli-trasformazione](union-all-transformation.md)   
  [Flusso di dati](../data-flow.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)  
   

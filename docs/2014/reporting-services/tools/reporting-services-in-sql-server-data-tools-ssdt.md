@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: 71
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6d46d44f2071d473fbe62a6f15cce3a250751576
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9b2ab20a31fb36c7ca648a2363861e75e25c9179
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153810"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server Data Tools (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] è un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ambiente con funzionalità avanzate, specifiche di soluzioni di business intelligence. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] è incluso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] è un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ambiente include miglioramenti specifici di soluzioni di business intelligence. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] è incluso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Usare [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] per la creazione e la gestione di soluzioni e progetti per report di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ed elementi correlati ai report. [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] fornisce la finestra di progettazione Report ambiente di creazione. In Progettazione report è possibile aprire, modificare, visualizzare in anteprima, salvare e distribuire definizioni di report, origini dati condivise, set di dati condivisi e parti di report.  
+ Usare [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] per la creazione e la gestione di soluzioni e progetti per report di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ed elementi correlati ai report. [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] fornisce l'ambiente di creazione di progettazione Report. In Progettazione report è possibile aprire, modificare, visualizzare in anteprima, salvare e distribuire definizioni di report, origini dati condivise, set di dati condivisi e parti di report.  
   
  Questo argomento descrive le soluzioni, i progetti, i modelli di progetto e le configurazioni di [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] usati per [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], nonché le visualizzazioni, le barre degli strumenti e i collegamenti che è possibile usare in Progettazione report.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36166793"
 ##  <a name="bkmk_ReportServerProjects"></a> Progetti server di report  
  Dopo l'installazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]sono disponibili i modelli di progetto seguenti:  
   
--   **Progetto server di report.** Quando si seleziona un progetto server di report, verrà aperto Progettazione report. Un progetto Server Report è un modello di progetti Business Intelligence installato da [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] che è disponibile la **nuovo progetto** finestra di dialogo. Per altre informazioni, vedere [Aggiungere un report nuovo o esistente a un progetto report &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Le proprietà dei progetti server di report sono applicabili a tutti i report e a tutte le origini dati condivise di un progetto di [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Queste proprietà includono l'URL del server di report e i nomi di cartella per i report e le origini dati condivise. Usare la finestra di dialogo delle **pagine delle proprietà del progetto** per visualizzare i valori correnti delle proprietà. Per aprire questa finestra di dialogo, scegliere il **Project** menu, fare clic su  *\<nome progetto >* **proprietà**.  
+-   **Progetto server di report.** Quando si seleziona un progetto server di report, verrà aperto Progettazione report. Un progetto Server di Report è un modello di progetti Business Intelligence installato da [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] che è disponibile la **nuovo progetto** nella finestra di dialogo. Per altre informazioni, vedere [Aggiungere un report nuovo o esistente a un progetto report &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Le proprietà dei progetti server di report sono applicabili a tutti i report e a tutte le origini dati condivise di un progetto di [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Queste proprietà includono l'URL del server di report e i nomi di cartella per i report e le origini dati condivise. Usare la finestra di dialogo delle **pagine delle proprietà del progetto** per visualizzare i valori correnti delle proprietà. Per aprire questa finestra di dialogo, scegliere il **Project** menu, fare clic su  *\<nome progetto >* **proprietà**.  
   
 -   **Creazione guidata progetto server di report.** Quando si seleziona un progetto Creazione guidata server di report, verrà creato automaticamente un progetto server di report e verrà aperta la Creazione guidata report. Nella procedura guidata è possibile creare un report seguendo le istruzioni riportate in ogni pagina per creare una stringa di connessione a un'origine dati, impostare le credenziali dell'origine dati, progettare una query, aggiungere un'area dati Tabella o Matrice, specificare i dati del report e i gruppi, selezionare uno stile di carattere e colore, pubblicare il report in un server di report e visualizzare l'anteprima del report in locale. Dopo aver creato un report con la procedura guidata, è possibile modificarne i dati e la finestra di progettazione tramite Progettazione report nel progetto server di report.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36166793"
  Le origini dati e i set di dati nel riquadro dei dati del report rappresentano gli elementi inclusi nella definizione del report. Il riquadro dei dati del report è una funzionalità supportata da più ambienti di creazione di report. In Generatore report, è l'unico riquadro disponibile per la gestione delle origini dati e dei set di dati. In Progettazione report il riquadro dei dati del report funziona con Esplora soluzioni in cui le origini dati condivise e i set di dati condivisi vengono elencati come file. Le origini dati condivise e i set di dati condivisi nel riquadro dei dati del report devono puntare alle origini dati condivise e ai set di dati condivisi corrispondenti di Esplora soluzioni. Gli elementi del riquadro dei dati del report contengono un riferimento ai file di dati di Esplora soluzioni. Le proprietà del progetto determinano se le origini dati condivise e i set di dati condivisi vengono distribuiti nel server di report o nel sito di SharePoint. Per altre informazioni, vedere [convertire un'origine dati da incorporata a condivisa &#40;Generatore Report e SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Se non si vedere il riquadro dati Report, sul **vista** menu, fare clic su **i dati del Report**. Se il riquadro dei dati del report è mobile, è possibile ancorarlo. Per altre informazioni, vedere [Ancorare il riquadro dei dati del report in Progettazione report &#40;SSRS&#41;](dock-the-report-data-pane-in-report-designer-ssrs.md).  
+>  Se non si vedere il riquadro dati Report, nel **View** menu, fare clic su **i dati del Report**. Se il riquadro dei dati del report è mobile, è possibile ancorarlo. Per altre informazioni, vedere [Ancorare il riquadro dei dati del report in Progettazione report &#40;SSRS&#41;](dock-the-report-data-pane-in-report-designer-ssrs.md).  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
   
@@ -258,20 +258,20 @@ ms.locfileid: "36166793"
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] può essere integrato con i plug-in di origine. Usare le pagine Progetti e soluzioni della finestra di dialogo **Opzioni** per specificare il plug-in e configurare le proprietà.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modelli di report personalizzati  
- Per utilizzare report personalizzati come modelli per nuovi report, è sufficiente copiarli nella cartella ReportProject nel computer in cui è installato [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] . Per impostazione predefinita, questa cartella si trova in \<unità >: \Programmi\Microsoft Visual Studio 10.0\Common7\IDE\Private assemblies\projectitems\reportproject. Quando si aggiunge un nuovo elemento al progetto report, il report personalizzato viene visualizzato nel riquadro dei Modelli.  
+ Per utilizzare report personalizzati come modelli per nuovi report, è sufficiente copiarli nella cartella ReportProject nel computer in cui è installato [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] . Per impostazione predefinita, questa cartella è \<unità >: \Programmi\Microsoft Visual Studio 10.0\Common7\IDE\Private assemblies\projectitems\reportproject. Quando si aggiunge un nuovo elemento al progetto report, il report personalizzato viene visualizzato nel riquadro dei Modelli.  
   
  È inoltre possibile aggiungere stili personalizzati alla procedura guidata del report.  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> Supporto della riga di comando per SQL Server Data Tools  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] basa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10.0 e dell'applicazione devenv.exe sottostante. Prima di poter utilizzare queste opzioni, è necessario impostare i valori validi dei seguenti due elementi:  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] basa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10.0 e sull'applicazione devenv.exe sottostante. Prima di poter utilizzare queste opzioni, è necessario impostare i valori validi dei seguenti due elementi:  
   
 -   Proprietà del progetto per OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder e TargetServerURL.  
   
 -   Almeno un set di proprietà di configurazione, ad esempio Debug o Release.  
   
- Per altre informazioni, vedere [pubblicazione origini dati e report](../reports/publishing-data-sources-and-reports.md).  
+ Per altre informazioni, vedere [pubblicazione di origini dati e report](../reports/publishing-data-sources-and-reports.md).  
   
  Per un progetto server di report, è possibile specificare le opzioni seguenti dalla riga di comando:  
   

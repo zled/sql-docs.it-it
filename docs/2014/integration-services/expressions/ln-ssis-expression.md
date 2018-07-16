@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LN function
 - natural logarithm of expression [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7aee1568e8afc8ab87304340d34b0352a56be2df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 111c97e177f9829309e5fb727a0227b6f2150791
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308061"
 ---
 # <a name="ln-ssis-expression"></a>LN (espressione SSIS)
   Restituisce il logaritmo naturale di un'espressione numerica.  
@@ -41,7 +41,7 @@ LN(numeric_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Prima del calcolo del logaritmo viene eseguito il cast dell'espressione numerica al tipo di dati DT_R8. Per altre informazioni, vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md).  
   
  Se tramite il parametro *numeric_expression* viene restituito zero o un valore negativo, il risultato sarà Null.  
@@ -66,7 +66,7 @@ LN(@Length)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [LOG &#40;espressione SSIS&#41;](log-ssis-expression.md)   
- [Le funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md)  
+ [LOG &#40;espressione di SSIS&#41;](log-ssis-expression.md)   
+ [Le funzioni &#40;espressione di SSIS&#41;](functions-ssis-expression.md)  
   
   

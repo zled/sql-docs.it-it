@@ -1,5 +1,5 @@
 ---
-title: Creazione guidata di Data Mining (Analysis Services - Data Mining) | Documenti Microsoft
+title: Procedura guidata di Data Mining (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
 - OLAP [Analysis Services], mining models
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 caps.latest.revision: 56
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 49b3ecb1f8cc1bb63344b201145f9d6639aace89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 837acee30eb9aa6f6bf2a89c61d598abf52f972b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288417"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Creazione guidata modello di data mining (Analysis Services - Data mining)
   La Creazione guidata modello di data mining di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene avviata ogni volta che si aggiunge una nuova struttura di data mining a un progetto di data mining. La procedura guidata consente di scegliere un'origine dati e di configurare una vista origine dati per definire i dati da utilizzare per l'analisi, quindi consente di creare un modello iniziale.  
@@ -55,7 +55,7 @@ ms.locfileid: "36166502"
   
  In seguito si creerà la struttura di data mining e un modello di data mining associato. È inoltre possibile creare la struttura di data mining e aggiungere in seguito i modelli, ma in generale è più facile creare prima un modello di test.  
   
-###  <a name="BKMK_Relational"></a> Di data mining relazionali. e modelli di data mining di tipo OLAP  
+###  <a name="BKMK_Relational"></a> Data mining relazionali. e modelli di data mining di tipo OLAP  
  L'opzione successiva più importante consente di utilizzare un'origine dati relazionale o di basare il modello sui dati multidimensionali (OLAP).  
   
  A questo punto, la Creazione guidata modello di data mining può seguire due diversi percorsi a seconda che l'origine dati sia relazionale o in un cubo. Tutti i processi, a eccezione del processo di selezione dati, sono uguali, ovvero la scelta dell'algoritmo, la possibilità di aggiungere un set di dati di controllo e così via, tuttavia la selezione dei dati del cubo è più complessa rispetto all'utilizzo dei dati relazionali. (Sono inoltre disponibili opzioni aggiuntive se si crea un modello basato su un cubo.)  
@@ -122,6 +122,6 @@ ms.locfileid: "36166502"
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti di Data Mining](data-mining-tools.md)   
- [Soluzioni di Data Mining](data-mining-solutions.md)  
+ [Soluzioni di data mining](data-mining-solutions.md)  
   
   

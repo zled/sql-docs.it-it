@@ -1,5 +1,5 @@
 ---
-title: Elaborare elemento (XMLA) | Documenti Microsoft
+title: Elaborare l'elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Process command
 ms.assetid: 886fd480-c0e6-4c9b-b65e-da47f874d938
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4e90cbb8d18cdba034019e74b7b9d0b00966ee7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: face82815a0034f1e957a0a38fa822a1df447083
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289457"
 ---
 # <a name="process-element-xmla"></a>Elemento Process (XMLA)
   Elabora oggetti in un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza.  
@@ -67,10 +67,10 @@ ms.locfileid: "36166925"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|Elementi figlio|[Le associazioni](../xml-elements-properties/bindings-element-xmla.md), [DataSource](../xml-elements-properties/source-element-xmla.md), [DataSourceView](../xml-elements-properties/datasourceview-element-xmla.md), [ErrorConfiguration](../xml-elements-properties/errorconfiguration-element-xmla.md), [oggetto](../xml-elements-properties/object-element-xmla.md), [tipo Elemento &#40;XMLA&#41;](../xml-elements-properties/type-element-xmla.md), [WriteBackTableCreation](../xml-elements-properties/writebacktablecreation-element-xmla.md)|  
+|Elementi figlio|[Associazioni](../xml-elements-properties/bindings-element-xmla.md), [DataSource](../xml-elements-properties/source-element-xmla.md), [DataSourceView](../xml-elements-properties/datasourceview-element-xmla.md), [ErrorConfiguration](../xml-elements-properties/errorconfiguration-element-xmla.md), [oggetto](../xml-elements-properties/object-element-xmla.md), [tipo Elemento &#40;XMLA&#41;](../xml-elements-properties/type-element-xmla.md), [WriteBackTableCreation](../xml-elements-properties/writebacktablecreation-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
- Per ulteriori informazioni sull'elaborazione degli oggetti, vedere [l'elaborazione di oggetti &#40;XMLA&#41;](../xml-elements-objects.md).  
+## <a name="remarks"></a>Note  
+ Per altre informazioni sull'elaborazione degli oggetti, vedere [elaborazione di oggetti &#40;XMLA&#41;](../xml-elements-objects.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [I comandi &#40;XMLA&#41;](xml-elements-commands.md)  
