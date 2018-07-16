@@ -1,5 +1,5 @@
 ---
-title: Dettagli di traduzione (scheda traduzioni, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Dettagli di traduzione (scheda traduzioni, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.translations.translationpane.tranlationdetails.f1
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c3fea9b837915fff37bad632780544bcf7ebb1a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: f4051de358b2567d6473a016e7f965d15b1dd215
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306331"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Dettagli di traduzione (Scheda traduzione, Progettazione dimensioni) (Analysis Services –Dati multidimensionali)
   Usare il pannello **Dettagli di traduzione** nella scheda **Traduzioni** di Progettazione dimensioni per definire e gestire le traduzioni relative alla dimensione attualmente selezionata.  
@@ -56,16 +56,16 @@ ms.locfileid: "36170447"
   
 -   Level  
   
-     `Caption` Proprietà  
+     `Caption` proprietà  
   
  **\<Lingua >**  
  Consente di digitare o selezionare il valore della proprietà dell'oggetto dimensione nella lingua selezionata. Fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare altre finestre di dialogo, a seconda della proprietà che si sta modificando:  
   
--   `NamingTemplate` Proprietà  
+-   `NamingTemplate` proprietà  
   
      Consente di visualizzare la [Finestra di dialogo Modello denominazione livelli &#40;Analysis Services - Dati multidimensionali&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md).  
   
--   `Caption` proprietà (per gli attributi)  
+-   `Caption` proprietà (per attributi)  
   
      Consente di visualizzare la [Finestra di dialogo Traduzione dati attributo &#40;Analysis Services - Dati multidimensionali&#41;](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36170447"
 >  Questa opzione è attivata solo se si fa clic con il pulsate destro del mouse su una cella per eliminare la traduzione.  
   
  **Nuova colonna didascalia**  
- Selezionare questa opzione per visualizzare la finestra di dialogo **Traduzione dati attributo** e definire una nuova colonna di didascalia durante la modifica di un attributo nella griglia **Dettagli di traduzione** . Per abilitare questa opzione, è necessario selezionare una cella di una colonna per la traduzione relativa a un attributo nella griglia dettagli traduzione. ****  
+ Selezionare questa opzione per visualizzare la finestra di dialogo **Traduzione dati attributo** e definire una nuova colonna di didascalia durante la modifica di un attributo nella griglia **Dettagli di traduzione** . Per abilitare questa opzione, è necessario selezionare una cella di una colonna per la traduzione relativa a un attributo nella griglia **dettagli traduzione**.  
   
 > [!NOTE]  
 >  Questa opzione è attivata solo se si fa clic con il pulsante destro del mouse su una cella per eliminare la colonna per la traduzione di un attributo.  

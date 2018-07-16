@@ -1,13 +1,11 @@
 ---
-title: Oggetto SqlContext | Documenti Microsoft
+title: Oggetto SqlContext | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - context [CLR integration]
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea7cd3ca105fd599f3b157f64189210b539de4ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 46ff059b14d5937d1214e0d97ad9aa13083e7fd3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157998"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354013"
 ---
 # <a name="sqlcontext-object"></a>Oggetto SqlContext
   È possibile richiamare il codice gestito nel server quando si chiama una routine o una funzione, quando si chiama un metodo su un tipo CLR definito dall'utente o quando l'azione genera un trigger definito in uno dei linguaggi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Dal momento che l'esecuzione di questo codice viene richiesta come parte di una connessione utente, è necessario l'accesso al contesto del chiamante dal codice in esecuzione sul server. Determinate operazioni di accesso ai dati potrebbero inoltre essere valide solo se eseguite nel contesto del chiamante. L'accesso alle pseudotabelle inserite ed eliminate utilizzate nelle operazioni del trigger, ad esempio, è valido solo nel contesto del chiamante.  
@@ -33,9 +31,9 @@ ms.locfileid: "36157998"
   
  `SqlContext` fornisce l'accesso ai componenti seguenti:  
   
--   `SqlPipe`: l'oggetto `SqlPipe` rappresenta la "pipe" tramite la quale i risultati vengono propagati al client. Per ulteriori informazioni sul `SqlPipe` oggetti, vedere [oggetto SqlPipe](sqlpipe-object.md).  
+-   `SqlPipe`: l'oggetto `SqlPipe` rappresenta la "pipe" tramite la quale i risultati vengono propagati al client. Per altre informazioni sul `SqlPipe` oggetti, vedere [oggetto SqlPipe](sqlpipe-object.md).  
   
--   `SqlTriggerContext`: l'oggetto `SqlTriggerContext` può essere recuperato solo dall'interno un trigger CLR. Fornisce informazioni sull'operazione che ha attivato il trigger e una mappa delle colonne che sono state aggiornate. Per ulteriori informazioni sul `SqlTriggerContext` oggetti, vedere [SqlTriggerContext-oggetto](sqltriggercontext-object.md).  
+-   `SqlTriggerContext`: l'oggetto `SqlTriggerContext` può essere recuperato solo dall'interno un trigger CLR. Fornisce informazioni sull'operazione che ha attivato il trigger e una mappa delle colonne che sono state aggiornate. Per altre informazioni sul `SqlTriggerContext` oggetti, vedere [oggetto SqlTriggerContext](sqltriggercontext-object.md).  
   
 -   `IsAvailable`: la proprietà `IsAvailable` viene utilizzata per stabilire la disponibilità del contesto.  
   

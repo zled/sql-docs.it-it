@@ -1,5 +1,5 @@
 ---
-title: Utilizzare la raccolta PowerPivot | Documenti Microsoft
+title: Usare la raccolta PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ae0f4d1c8fea1e5e320ea0131575c01bf44008
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6864e7144ce3a1098e7733924e02978b13c744c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321261"
 ---
 # <a name="use-powerpivot-gallery"></a>Usare la raccolta PowerPivot
   La raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è una raccolta documenti di SharePoint specifica che consente un'anteprima dettagliata e la gestione dei documenti per cartelle di lavoro pubblicate di Excel e report di Reporting Services contenenti dati PowerPivot.  
@@ -33,7 +33,7 @@ ms.locfileid: "36055385"
   
 -   [Salvare una cartella di lavoro di Excel in raccolta PowerPivot](#add)  
   
--   [Creare nuovi report o le cartelle di lavoro in base a una cartella di lavoro di PowerPivot pubblicata](#newdocs)  
+-   [Creare nuovi report o cartelle di lavoro basati su una cartella di lavoro di PowerPivot pubblicata](#newdocs)  
   
 -   [Aprire una cartella di lavoro o un report in modalità pagina intera](#view)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36055385"
   
 3.  In **Carica documento**selezionare un'opzione di caricamento, quindi immettere il nome e il percorso del file che si desidera caricare. Le impostazioni della raccolta determinano il punto in cui viene visualizzato il documento. Potrebbe essere necessario aggiornare la finestra del browser per visualizzare l'ultima aggiunta.  
   
-##  <a name="newdocs"></a> Creare nuovi report o le cartelle di lavoro in base a una cartella di lavoro di PowerPivot pubblicata  
+##  <a name="newdocs"></a> Creare nuovi report o cartelle di lavoro basati su una cartella di lavoro di PowerPivot pubblicata  
  Per le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pubblicate nella raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , è possibile creare cartelle di lavoro o report di Reporting Services aggiuntivi che usano la cartella di lavoro pubblicata come origine dati connessa.  
   
 |||  

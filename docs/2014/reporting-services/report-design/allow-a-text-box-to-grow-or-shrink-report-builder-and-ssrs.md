@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2cf6653d19dad876d6412ae1c2bcfe33c680f38f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3cc7ef92ea93df0d912ec22f78ebdaba226e6114
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313091"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>Espansione o riduzione di una casella di testo (Generatore report e SSRS)
   Per impostazione predefinita, le caselle di testo presentano dimensioni fisse. È possibile impostare opzioni che consentono di espandere o ridurre la casella di testo in base al contenuto. Queste opzioni corrispondono alle proprietà `CanGrow` o `CanShrink` del riquadro Proprietà.  
@@ -38,6 +38,6 @@ ms.locfileid: "36171374"
     -   Per consentire la riduzione della casella di testo in base al contenuto, selezionare **Consenti diminuzione altezza**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Caselle di testo &#40;SSRS e Generatore Report&#41;](text-boxes-report-builder-and-ssrs.md)  
+ [Le caselle di testo &#40;Report e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   
   

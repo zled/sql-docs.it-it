@@ -1,13 +1,11 @@
 ---
-title: Supporto di valori null e confronti di logica a tre valori | Documenti Microsoft
+title: Supporto di valori null e confronti di logica a tre valori | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - SqlBoolean data type
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 07a0076cadc805b3534d778070b7b61b28e1bf3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 43420c9e796605617e3884d8b5bf0aae0c5cfb6c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158470"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353933"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Supporto dei valori Null e confronti di logica a tre valori
   Se si ha familiarità con i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile notare la somiglianza nella semantica e nella precisione dello spazio dei nomi `System.Data.SqlTypes` in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Esistono tuttavia alcune differenze, le più importanti delle quali sono illustrate nel presente argomento.  
@@ -41,7 +39,7 @@ ms.locfileid: "36158470"
  Lo spazio dei nomi `System.Data.SqlTypes` introduce un tipo `SqlBoolean` per rappresentare questa logica a 3 valori. I confronti tra gli spazi dei nomi `SqlTypes` restituiscono un tipo di valore `SqlBoolean`. Il valore UNKNOWN viene rappresentato dal valore Null del tipo `SqlBoolean`. Vengono fornite le proprietà `IsTrue`, `IsFalse` e `IsNull` per controllare il valore di un tipo `SqlBoolean`.  
   
 ## <a name="operations-functions-and-null-values"></a>Operazioni, funzioni e valori NULL  
- Tutti gli operatori aritmetici (+, -, \*, /, %), operatori bit per bit (~ &, e |), la maggior parte delle funzioni e restituiscono NULL se uno degli operandi o gli argomenti di `SqlTypes` sono NULL. La proprietà `IsNull` restituisce sempre un valore True o False.  
+ Tutti gli operatori aritmetici (+, -, \*, /, %), operatori bit per bit (~ &, e |), la maggior parte delle funzioni e restituiscono NULL se uno degli operandi o degli argomenti di `SqlTypes` sono NULL. La proprietà `IsNull` restituisce sempre un valore True o False.  
   
 ## <a name="precision"></a>Precisione  
  I valori massimi dei tipi di dati decimali CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sono diversi da quelli dei tipi di dati numerici e decimali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per i tipi di dati CLR decimali di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], inoltre, si presuppone la massima precisione. Nei tipi di dati CLR per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia, `SqlDecimal` fornisce la stessa scala e precisione massima e la stessa semantica del tipo di dati decimali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

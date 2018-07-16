@@ -1,5 +1,5 @@
 ---
-title: Elemento NullKeyConvertedToUnknown (ASSL) | Documenti Microsoft
+title: Elemento NullKeyConvertedToUnknown (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NullKeyConvertedToUnknown element
 ms.assetid: 1a6cde33-01ba-4095-b464-16d1ad3c6905
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e11f7de1b3fa7b11774a960351a1b3c974ce4f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cebeef3421533b429a38f6c5696780cb008eca69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316921"
 ---
 # <a name="nullkeyconvertedtounknown-element-assl"></a>Elemento NullKeyConvertedToUnknown (ASSL)
   Specifica l'azione da intraprendere quando si verifica un errore di conversione null.  
@@ -61,8 +61,8 @@ ms.locfileid: "36170886"
 |Elemento padre|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Si verificano errori di conversione di valori Null quando in una colonna chiave viene rilevato un valore Null, che viene interpretato come membro `Unknown`. Tuttavia, questo errore si verifica solo se il [NullProcessing](nullprocessing-element-assl.md) elemento per il [DataItem](../data-type/dataitem-data-type-assl.md) predecessore del `ErrorConfiguration` elemento padre è impostata su *UnknownMember*.  
+## <a name="remarks"></a>Note  
+ Si verificano errori di conversione di valori Null quando in una colonna chiave viene rilevato un valore Null, che viene interpretato come membro `Unknown`. Tuttavia, questo errore si verifica solo se il [NullProcessing](nullprocessing-element-assl.md) (elemento) per il [DataItem](../data-type/dataitem-data-type-assl.md) predecessore del `ErrorConfiguration` elemento padre è impostato su *UnknownMember*.  
   
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   

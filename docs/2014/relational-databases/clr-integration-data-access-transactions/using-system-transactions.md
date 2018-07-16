@@ -1,13 +1,11 @@
 ---
-title: Using System. Transactions | Documenti Microsoft
+title: Using System. Transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 44054210ce7bf889bdc6e38f181cf8b16e638215
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: cf0f57f84e4b1838b9fd2da9838891640782266b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068535"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350063"
 ---
 # <a name="using-systemtransactions"></a>Utilizzo di System.Transactions
   Tramite lo spazio dei nomi `System.Transactions` vengono forniti un framework di transazioni pienamente integrato con ADO.NET e l'integrazione con CRL di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La classe `System.Transactions.TransactionScope` rende transazionale un blocco di codice attraverso un'integrazione implicita delle connessioni in una transazione distribuita. È necessario chiamare il metodo `Complete` alla fine del blocco di codice contrassegnato da `TransactionScope`. Il metodo `Dispose` viene richiamato quando l'esecuzione del programma lascia un blocco di codice. Se il metodo `Complete` non viene chiamato, la transazione non viene più utilizzata. Se è stata generata un'eccezione che determina l'uscita del codice dall'ambito, la transazione non viene più utilizzata.  
@@ -36,7 +34,7 @@ ms.locfileid: "36068535"
   
  Se si verifica un'eccezione all'interno di `TransactionScope`, la transazione viene contrassegnata come incoerente e quindi abbandonata. Ne viene eseguito il rollback all'eliminazione di `TransactionScope`. Se non si verifica alcuna eccezione, viene eseguito il commit delle transazioni partecipanti.  
   
- È opportuno utilizzare `TransactionScope` solo quando si accede a origini dati locali e remote o a gestori di risorse esterni in quanto Infatti, `TransactionScope` determinano sempre promozione delle transazioni, anche se viene utilizzato solo all'interno di una connessione di contesto.  
+ È opportuno utilizzare `TransactionScope` solo quando si accede a origini dati locali e remote o a gestori di risorse esterni in quanto Infatti, `TransactionScope` comporta sempre promozione delle transazioni, anche se è utilizzato solo all'interno di una connessione di contesto.  
   
 > [!NOTE]  
 >  Per impostazione predefinita, la classe `TransactionScope` crea una transazione con un `System.Transactions.Transaction.IsolationLevel` di `Serializable`. A seconda dell'applicazione, è possibile abbassare il livello di isolamento per evitare che si verifichi un numero elevato di contese.  

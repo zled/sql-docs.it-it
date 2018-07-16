@@ -1,13 +1,11 @@
 ---
-title: Non consentito di tipi e membri in Data. dll | Documenti Microsoft
+title: Non consentito di tipi e membri in System | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,21 +13,21 @@ helpviewer_keywords:
 - common language runtime [SQL Server], host protection attributes
 ms.assetid: ee5f55e9-fbef-401a-be18-a2e5873c8720
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7c222c10fe13a422e5195970057fbb623cc960a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 728de68145c4deb7b259c7b59687e29e960c822a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066101"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353973"
 ---
 # <a name="disallowed-types-and-members-in-systemdatadll"></a>Tipi e membri non consentiti in System.Data.dll
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmazione dell'integrazione con (CLR) linguaggio comuni non consente l'utilizzo di un tipo o membro che dispone di un `HostProtectionAttribute` che specifica un `System.Security.Permissions.HostProtectionResource` con un valore di enumerazione `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, o `UI`. Nella tabella seguente sono elencati i membri e i tipi dell'assembly System.Data.dll i cui valori degli attributi di protezione host non sono consentiti.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmazione dell'integrazione (CLR) comuni del linguaggio non consente l'utilizzo di un tipo o membro che dispone di un `HostProtectionAttribute` che specifica una `System.Security.Permissions.HostProtectionResource` con un valore di enumerazione `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, o `UI`. Nella tabella seguente sono elencati i membri e i tipi dell'assembly System.Data.dll i cui valori degli attributi di protezione host non sono consentiti.  
   
 > [!NOTE]  
->  Questo elenco è stato generato dagli assembly supportati. Per altre informazioni, vedere [librerie di .NET Framework supportata](../clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Questo elenco è stato generato dagli assembly supportati. Per altre informazioni, vedere [librerie di .NET Framework supportate](../clr-integration/database-objects/supported-net-framework-libraries.md).  
   
 |Tipo o membro|Valori dell'attributo di protezione host|  
 |--------------------|--------------------|  

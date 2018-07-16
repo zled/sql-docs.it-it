@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c81867131974a7cf9f4bdd62b1ab84743a3b3fb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: bc4a0923e5e0d337df82e87a9086e14b61a0e945
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305461"
 ---
 # <a name="transact-sql-debugger"></a>Debugger Transact-SQL
   Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] consente di individuare errori nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] esaminandone il comportamento in fase di esecuzione. Dopo avere impostato la finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sulla modalità di debug, è possibile sospendere l'esecuzione di righe specifiche di codice e controllare le informazioni e i dati utilizzati o restituiti da tali istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -64,7 +64,7 @@ ms.locfileid: "36171003"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Descrive come configurare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per il debugging remoto.|[Configurare il Debugger Transact-SQL](configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|Descrive come configurare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per il debugging remoto.|[Configurazione del debugger Transact-SQL](configure-firewall-rules-before-running-the-tsql-debugger.md)|  
 |Descrive come avviare, arrestare e controllare l'operazione del debugger.|[Esecuzione del debugger Transact-SQL](transact-sql-debugger.md)|  
 |Descrive come utilizzare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per avanzare nel codice.|[Eseguire istruzione per istruzione il codice Transact-SQL](step-through-transact-sql-code.md)|  
 |Descrive come utilizzare il debugger per visualizzare dati [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio parametri e variabili, e informazioni sul sistema.|[Informazioni del debugger Transact-SQL](transact-sql-debugger-information.md)|  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e94eadfb707402c7fc99d5d5ea9d569f1051a6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a6713a2a55ae3326ffccef661093f97aa33a6d3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286217"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Classe di evento Lock:Timeout (timeout &gt; 0)
   La classe di evento **Lock:Timeout (timeout > 0)** indica che una richiesta di blocco su una risorsa, ad esempio una pagina, è scaduta perché la risorsa è bloccata da un'altra transazione. Il funzionamento di questa classe di evento è identico a quello della classe **Lock:Timeout**, con l'eccezione che non vengono inclusi gli eventi con valore di timeout pari a 0.  
@@ -57,7 +57,7 @@ ms.locfileid: "36171463"
 |OwnerID|`int`|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|Sì|  
 |RequestID|`int`|ID della richiesta contenente l'istruzione.|49|Sì|  
 |ssSqlProfiler|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
-|SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Ad esempio, se ci si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Login1 e si esegue un'istruzione come Account2, `SessionLoginName` indica Login1 e `LoginName` indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
+|SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Ad esempio, se ci si connette al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Account1 e si esegue un'istruzione come Login2, `SessionLoginName` indica Login1 e `LoginName` indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |SPID|`int`|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |StartTime|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |TextData|`ntext`|Valore di testo che dipende dalla classe di evento acquisita nella traccia.|1|Sì|  

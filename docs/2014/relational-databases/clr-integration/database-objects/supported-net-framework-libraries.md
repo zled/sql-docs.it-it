@@ -1,13 +1,11 @@
 ---
-title: Librerie .NET Framework è supportata | Documenti Microsoft
+title: Librerie di .NET Framework supportate | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,24 +13,24 @@ helpviewer_keywords:
 - .NET Framework [CLR Integration]
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e24738e82e9e73c5777780377207fdc4471aa47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 8c50e18862d2c3ca5b5e900c6eccebe6e921ea94
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171237"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351033"
 ---
 # <a name="supported-net-framework-libraries"></a>Librerie .NET Framework supportate
   Grazie all'integrazione di CLR in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è possibile creare stored procedure, trigger, funzioni definite dall'utente, tipi definiti dall'utente e aggregazioni definite dall'utente nel codice gestito. Con le librerie di classi .NET Framework è possibile accedere alle classi preesistenti che offrono funzionalità per manipolazione delle stringhe, operazioni matematiche avanzate, accesso ai file, crittografia e così via. A queste classi è possibile accedere da stored procedure gestite, tipi definiti dall'utente, trigger, funzioni definite dall'utente o funzioni di aggregazione definite dall'utente.  
   
 > [!NOTE]  
->  Se si gestiscono o aggiornano assembly non supportati nella global assembly cache (GAC), il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se un assembly esiste sia in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integrazione con CLR. Se si gestiscono o aggiornano assembly della GAC registrati anche nel database, inclusi gli assembly .NET Framework non supportati, assicurarsi di gestirne o aggiornarne anche la copia che si trova nei database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'istruzione `ALTER ASSEMBLY`. Per altre informazioni, vedere [articolo 949080 della Knowledge Base](http://support.microsoft.com/kb/949080).  
+>  Se si gestiscono o aggiornano assembly non supportati nella global assembly cache (GAC), il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se un assembly è presente sia in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integrazione con CLR. Se si gestiscono o aggiornano assembly della GAC registrati anche nel database, inclusi gli assembly .NET Framework non supportati, assicurarsi di gestirne o aggiornarne anche la copia che si trova nei database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'istruzione `ALTER ASSEMBLY`. Per altre informazioni, vedere [articolo 949080 della Knowledge Base](http://support.microsoft.com/kb/949080).  
   
 ## <a name="supported-libraries"></a>Librerie supportate  
- A partire da [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] include un elenco di librerie .NET Framework supportate, sono state testate per verificare che rispettino gli standard di affidabilità e sicurezza per l'interazione con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] li carica direttamente dalla Global Assembly Cache (GAC).  
+ A partire [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] include un elenco di librerie .NET Framework supportate, che sono state testate per garantire che soddisfino gli standard di affidabilità e sicurezza per l'interazione con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] li carica direttamente dalla Global Assembly Cache (GAC).  
   
  Le librerie e gli spazi dei nomi supportati dall'integrazione con CLR in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono:  
   
@@ -75,7 +73,7 @@ ms.locfileid: "36171237"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un Assembly](../assemblies/creating-an-assembly.md)   
- [Sicurezza di accesso di codice dell'integrazione CLR](../security/clr-integration-code-access-security.md)   
+ [Sicurezza dall'accesso di codice integrazione CLR](../security/clr-integration-code-access-security.md)   
  [Restrizioni relative al modello di programmazione dell'integrazione con CLR](clr-integration-programming-model-restrictions.md)  
   
   
