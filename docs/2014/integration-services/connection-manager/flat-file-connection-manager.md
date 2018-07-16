@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], Flat File
 - connections [Integration Services], flat files
@@ -20,13 +20,13 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c8af018faa1ed8de9d47cb640e485ce17d5cbe56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56b90bb24e67b5cdb511a5729c4c7396aed5e93d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285607"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
   Una gestione connessione file flat consente a un pacchetto di accedere ai dati contenuti in un file flat. L'origine e la destinazione del file flat possono ad esempio utilizzare gestioni connessioni file flat per estrarre e caricare dati.  
@@ -34,14 +34,14 @@ ms.locfileid: "36157582"
  La gestione connessione file flat è in grado di accedere a un solo file. Per fare riferimento a più file, al posto di una gestione connessione file flat utilizzare una gestione connessione per più file flat. Per ulteriori informazioni, vedere [Multiple Flat Files Connection Manager](multiple-flat-files-connection-manager.md).  
   
 ## <a name="column-length"></a>Lunghezza di colonna  
- Per impostazione predefinita la gestione connessione file flat imposta la lunghezza delle colonne di tipo stringa su 50 caratteri. Nella finestra di dialogo **Editor gestione connessione file flat** è possibile valutare dati di esempio e modificare automaticamente la lunghezza di tali colonne in modo da evitare il troncamento dei dati o il superamento della larghezza massima delle colonne. La lunghezza di una colonna di tipo stringa rimane inoltre invariata per tutto il flusso di dati, a meno che non venga modificata successivamente in un'origine file flat o in una trasformazione. Se su tali colonne di tipo stringa viene eseguito il mapping a colonne di destinazione di larghezza inferiore, verrà visualizzato un avviso nell'interfaccia utente e in fase di esecuzione potrebbero verificarsi errori dovuti al troncamento dei dati. Per evitare errori o troncamenti, è possibile ridimensionare le colonne in modo che siano compatibili con le colonne di destinazione nella gestione connessione file flat, nell'origine file flat o in una trasformazione. Per modificare la lunghezza delle colonne di output, impostare il `Length` proprietà della colonna di output sul **proprietà Input e Output** nella scheda il **Editor avanzato** finestra di dialogo.  
+ Per impostazione predefinita la gestione connessione file flat imposta la lunghezza delle colonne di tipo stringa su 50 caratteri. Nella finestra di dialogo **Editor gestione connessione file flat** è possibile valutare dati di esempio e modificare automaticamente la lunghezza di tali colonne in modo da evitare il troncamento dei dati o il superamento della larghezza massima delle colonne. La lunghezza di una colonna di tipo stringa rimane inoltre invariata per tutto il flusso di dati, a meno che non venga modificata successivamente in un'origine file flat o in una trasformazione. Se su tali colonne di tipo stringa viene eseguito il mapping a colonne di destinazione di larghezza inferiore, verrà visualizzato un avviso nell'interfaccia utente e in fase di esecuzione potrebbero verificarsi errori dovuti al troncamento dei dati. Per evitare errori o troncamenti, è possibile ridimensionare le colonne in modo che siano compatibili con le colonne di destinazione nella gestione connessione file flat, nell'origine file flat o in una trasformazione. Per modificare la lunghezza delle colonne di output, è necessario impostare il `Length` proprietà della colonna di output nel **proprietà Input e Output** scheda il **Editor avanzato** nella finestra di dialogo.  
   
  Se, dopo avere aggiunto e configurato l'origine file flat che utilizza la gestione connessione, si modifica la lunghezza delle colonne nella gestione connessione file flat, non sarà necessario ridimensionare manualmente le colonne di output nell'origine file flat. Nella finestra di dialogo **Origine file flat** è disponibile un'opzione che consente di sincronizzare i metadati delle colonne per l'origine file flat.  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>Configurazione della gestione connessione file flat  
  Quando si aggiunge una gestione connessione file flat a un pacchetto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione file flat, imposta le proprietà della connessione file flat e aggiunge la gestione connessione file flat alla raccolta `Connections` del pacchetto.  
   
- Il `ConnectionManagerType` proprietà della gestione connessione è impostata su `FLATFILE`.  
+ Il `ConnectionManagerType` della gestione connessione viene impostata su `FLATFILE`.  
   
  Per impostazione predefinita, tramite la gestione connessione file flat viene sempre verificata la presenza di un delimitatore di riga in dati senza virgolette e viene iniziata una nuova riga quando viene individuato un relativo delimitatore. In questo modo, con la gestione connessione è possibile analizzare correttamente i file con righe prive di campi colonna.  
   

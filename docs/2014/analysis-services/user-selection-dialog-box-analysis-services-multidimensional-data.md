@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Selezione utenti (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Finestra di dialogo Selezione utenti (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.userselectiondialog.f1
 ms.assetid: f7261d5e-ff2a-4597-a188-1946f343a32a
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 44372f10a991f95642f8f67787d31f7b3c9bbc73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 111c599b287ddf9ad75a8e7c98eaab121452cf33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287957"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Selezione utenti (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Selezione utenti** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per selezionare gli utenti in base ai quali filtrare le query archiviate nel log di query per l'Ottimizzazione guidata basata sulle statistiche di utilizzo.  
@@ -34,6 +34,6 @@ ms.locfileid: "36170444"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Specificare i criteri di Query &#40;basata sull'utilizzo di ottimizzazione guidata&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+ [Specificare i criteri di Query &#40;procedura guidata basata sulle statistiche&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
   

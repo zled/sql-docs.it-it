@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [Reporting Services]
 - configuring servers [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1f3c852712890d8a1cd67f9d2cabc6d5053c39ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60c593878f3c40094995a4d7b905d0bb59ff1a24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292171"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurare un firewall per l'accesso al server di report
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Alle applicazioni del server di report e ai report pubblicati si accede tramite URL che specificano un indirizzo IP, una porta e una directory virtuale. Se Windows Firewall è abilitato, la porta configurata per l'utilizzo da parte del server di report è probabilmente chiusa. Il fatto che una porta possa essere chiusa viene indicato dalla visualizzazione di una pagina Web vuota in seguito alla richiesta di un report o dalla visualizzazione di una pagina vuota quando si tenta di aprire Gestione report da un computer client remoto.  
@@ -71,29 +71,29 @@ ms.locfileid: "36169581"
   
 14. Nella pagina **Nome** immettere un nome di**ReportServer (TCP sulla porta 80)**  
   
-15. Fare clic su **Fine**.  
+15. Scegliere **Fine**.  
   
 16. Riavviare il computer.  
   
 #### <a name="to-open-port-80-on-windows-vista-or-windows-server-2008"></a>Per aprire la porta 80 in Windows Vista o Windows Server 2008  
   
-1.  Dal **avviare** dal menu fare clic su **Pannello di controllo**, fare clic su **sicurezza**, quindi fare clic su **Windows Firewall**.  
+1.  Dal **avviare** menu, fare clic su **Pannello di controllo**, fare clic su **sicurezza**e quindi fare clic su **Windows Firewall**.  
   
 2.  Fare clic su **consentire a un programma attraverso Windows Firewall**.  
   
 3.  Fare clic su **Continua**.  
   
-4.  Nella scheda Eccezioni fare clic su **Aggiungi porta**.  
+4.  Nella scheda eccezioni, fare clic su **Aggiungi porta**.  
   
 5.  In nome digitare **ReportServer (TCP sulla porta 80)**.  
   
-6.  Numero di porta, digitare **80**.  
+6.  Nel numero di porta, digitare **80**.  
   
 7.  Verificare che **TCP** sia selezionata.  
   
 8.  Fare clic su **Cambia ambito**.  
   
-9. Fare clic su **solo la rete locale (subnet)**, quindi fare clic su **OK**.  
+9. Fare clic su **solo la rete (subnet) locale**, quindi fare clic su **OK**.  
   
 10. Scegliere **OK** per chiudere la finestra di dialogo.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36169581"
 ## <a name="see-also"></a>Vedere anche  
  [Configurare l'Account del servizio ReportServer &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurare gli URL di Server di Report &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Creare un database del Server di Report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Creare un Database del Server di Report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Configurare l'Account del servizio ReportServer &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Gestire un server di report in modalità nativa di Reporting Services](manage-a-reporting-services-native-mode-report-server.md)  
   

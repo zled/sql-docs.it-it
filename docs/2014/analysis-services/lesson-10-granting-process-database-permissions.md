@@ -1,5 +1,5 @@
 ---
-title: Concessione di autorizzazioni di Database di processo | Documenti Microsoft
+title: Concessione di autorizzazioni di Database di processo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: c309ca3781bea3594c6d7e8d1b912730371635e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f3cce413fa5a5c47afa5ea9a97b142a75d23472
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306521"
 ---
 # <a name="granting-process-database-permissions"></a>Concessione di autorizzazioni per l'elaborazione di database
   Dopo l'installazione di un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], tutti i membri del ruolo di amministratore del server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nell'istanza dispongono di autorizzazioni valide per l'intero server per eseguire qualsiasi attività all'interno dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per impostazione predefinita, nessun altro utente dispone dell'autorizzazione per amministrare o visualizzare gli oggetti nell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "36168912"
   
 2.  Selezionare la casella di controllo **Elaborazione database** .  
   
-3.  Nella finestra Proprietà modificare il **nome** proprietà per questo nuovo ruolo a `Process Database Objects Role`.  
+3.  Nella finestra Proprietà modificare il **Name** proprietà del nuovo ruolo a `Process Database Objects Role`.  
   
      ![Progettazione ruoli](../../2014/tutorials/media/l10-security-1.png "progettazione ruoli")  
   

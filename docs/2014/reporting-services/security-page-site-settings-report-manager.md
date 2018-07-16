@@ -1,5 +1,5 @@
 ---
-title: Pagina sicurezza (Impostazioni sito. Gestione report) | Documenti Microsoft
+title: Pagina sicurezza (Impostazioni sito. Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: acc9a905-90f8-4544-aec6-b2ab3a1b0015
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b4115675e8f9529873eeeec5f71d2b5861fef9eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a613f3d2cadae9913f14759ca3c59252d62cd14f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294101"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Pagina sicurezza (Impostazioni sito. Gestione report)
   La pagina Sicurezza consente di visualizzare le assegnazioni di ruolo a livello di sistema che regolano l'accesso al sito del server di report. Le assegnazioni di ruolo a livello di sistema sono esterne all'ambito dello spazio dei nomi o della gerarchia di cartelle del server di report. Le assegnazioni di ruolo a livello di sistema sono globali e non possono variare per elementi specifici. Le operazioni supportate tramite le assegnazioni di ruolo a livello di sistema includono la creazione di pianificazioni condivise, l'utilizzo di Generatore report e l'impostazione di valori predefiniti per alcune caratteristiche del server.  
@@ -53,7 +53,7 @@ ms.locfileid: "36168010"
  Consente di visualizzare l'elenco di gruppi e utenti che fanno parte di un'assegnazione di ruolo esistente. Le assegnazioni di ruolo esistenti per la cartella corrente sono definite per i gruppi e gli utenti visualizzati in questa colonna. Fare clic su **Modifica** accanto a un gruppo o un nome utente per visualizzare o modificare i dettagli dell'assegnazione di ruolo.  
   
  **Roles**  
- Visualizza un elenco di una o più definizioni di ruolo che fanno parte di un'assegnazione di ruolo esistente. Se a un account utente o di gruppo vengono assegnati più ruoli, tale gruppo o utente potrà eseguire tutte le attività incluse in tutti i ruoli. Per visualizzare il set di attività supportate da ogni ruolo, utilizzare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Non è possibile visualizzare, creare, modificare o eliminare ruoli in Gestione report. Per istruzioni, vedere [creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
+ Visualizza un elenco di una o più definizioni di ruolo che fanno parte di un'assegnazione di ruolo esistente. Se a un account utente o di gruppo vengono assegnati più ruoli, tale gruppo o utente potrà eseguire tutte le attività incluse in tutti i ruoli. Per visualizzare il set di attività supportate da ogni ruolo, usare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Non è possibile visualizzare, creare, modificare o eliminare ruoli in Gestione report. Per istruzioni, vedere [creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   

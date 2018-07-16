@@ -1,5 +1,5 @@
 ---
-title: Enable-disattiva la finestra di dialogo di Writeback (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Attivare e disattivare la finestra di dialogo di Writeback (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitiondesigner.writebackenabledisable.f1
 ms.assetid: 2d254393-3f0d-4b70-8b98-87159f9f3639
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0455e8f9efc76fa8ab254ac89d17b5ffb180e4ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7c5265987b846425aff4069a723804f009a013e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286197"
 ---
-# <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Enable-disattiva la finestra di dialogo di Writeback (Analysis Services - dati multidimensionali)
+# <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Attivare e disattivare la finestra di dialogo di Writeback (Analysis Services - dati multidimensionali)
   La finestra di dialogo **Enable/Disable Writeback** (Abilita/Disabilita writeback) attiva o disabilita il writeback per un gruppo di misure in un cubo. L'attivazione del writeback su un gruppo di misure definisce una partizione writeback e crea una tabella writeback per tale gruppo di misure. La disabilitazione del writeback su un gruppo di misure elimina la partizione writeback ma non la tabella writeback, per evitare una perdita imprevista di dati. La finestra di dialogo **Enable/Disable Writeback** (Abilita/Disabilita writeback) può essere visualizzata nei modi seguenti:  
   
 -   Facendo clic su **Impostazioni writeback** nel riquadro **Gruppi di misure** della scheda **Partizioni** in Progettazione cubi.  

@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) Server | Documenti Microsoft
+title: Integration Services Server (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
 - managing packages [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 69598f8ca412e32a76ea841f9a234d01c6847718
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea60bbdac3df4cd1130ba4afee83f882f138d33d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289397"
 ---
 # <a name="integration-services-ssis-server"></a>Server Integration Services (SSIS)
   Dopo aver progettato e testato i pacchetti in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], è possibile distribuire i progetti contenenti i pacchetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,7 +36,7 @@ ms.locfileid: "36169718"
  Per una panoramica della funzionalità del catalogo SSISDB, vedere [Catalogo SSISDB](ssis-catalog.md).  
   
 ## <a name="high-availability"></a>Disponibilità elevata  
- Analogamente ad altri database utente, il `SSISDB` il database supporta il mirroring del database e la replica. Per altre informazioni sul mirroring e la replica, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+ Analogamente ad altri database utente, il `SSISDB` database supporta il mirroring del database e la replica. Per altre informazioni sul mirroring e la replica, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
  È inoltre possibile fornire la disponibilità elevata di SSISDB e i relativi contenuti utilizzando i gruppi di disponibilità SSIS e AlwaysOn. Per ulteriori informazioni, vedere il post sul blog di Matt Masson relativo a [SSIS con AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873)sul sito Web blogs.msdn.com.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36169718"
   
 -   **Database SSISDB**  
   
-     Il `SSISDB` database viene visualizzata sotto il **database** nodo in Esplora oggetti. È possibile eseguire una query sulle viste e chiamare le stored procedure tramite cui vengono gestiti il server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e gli oggetti archiviati nel server.  
+     Il `SSISDB` database viene visualizzato sotto la **database** nodo in Esplora oggetti. È possibile eseguire una query sulle viste e chiamare le stored procedure tramite cui vengono gestiti il server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e gli oggetti archiviati nel server.  
   
 -   **Cataloghi di Integration Services**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36169718"
   
 -   [Visualizzare l'elenco di pacchetti nel server Integration Services](view-the-list-of-packages-on-the-integration-services-server.md)  
   
--   [Distribuire progetti nel Server Integration Services](../deploy-projects-to-integration-services-server.md)  
+-   [Distribuire progetti nel server Integration Services](../deploy-projects-to-integration-services-server.md)  
   
 -   [Eseguire un pacchetto sul server SSIS mediante SQL Server Management Studio](../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   

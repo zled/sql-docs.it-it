@@ -1,5 +1,5 @@
 ---
-title: Set di righe mdschema_members | Documenti Microsoft
+title: Set di righe mdschema_members | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_MEMBERS rowset
 ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2473797ef34c0fd204c878da8c6044a307cc1ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d36a065ea73f249ce5c4d9dc37cc047ac864cb84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280017"
 ---
 # <a name="mdschemamembers-rowset"></a>Set di righe MDSCHEMA_MEMBERS
   Descrive i membri all'interno di un database.  
@@ -79,8 +79,8 @@ ms.locfileid: "36169325"
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`|Facoltativo.|  
 |`MEMBER_CAPTION`|`DBTYPE_WSTR`|Facoltativo.|  
 |`MEMBER_TYPE`|`DBTYPE_I4`|Facoltativo.|  
-|`TREE_OP`|`DBTYPE_I4`|(Facoltativo) Si applica solo a un singolo membro:<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) restituisce tutti i predecessori.<br />-   `MDTREEOP_CHILDREN` (`0x01`) restituisce solo i figli immediati.<br />-   `MDTREEOP_SIBLINGS` (`0x02`) restituisce i membri allo stesso livello.<br />-   `MDTREEOP_PARENT` (`0x04`) restituisce solo l'oggetto padre.<br />-   `MDTREEOP_SELF` (`0x08`) restituisce se stesso nell'elenco di righe restituite.<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) restituisce tutti i discendenti.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -1 CUBO<br />-QUOTA 2<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
+|`TREE_OP`|`DBTYPE_I4`|(Facoltativo) Si applica solo a un singolo membro:<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) restituisce tutti i predecessori.<br />-   `MDTREEOP_CHILDREN` (`0x01`) restituisce solo gli elementi figlio immediati.<br />-   `MDTREEOP_SIBLINGS` (`0x02`) restituisce i membri allo stesso livello.<br />-   `MDTREEOP_PARENT` (`0x04`) restituisce solo l'oggetto padre.<br />-   `MDTREEOP_SELF` (`0x08`) restituisce se stesso nell'elenco di righe restituite.<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) restituisce tutti i discendenti.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -1 CUBO<br />-DIMENSIONE DI 2<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe dello schema OLE DB per OLAP](ole-db-for-olap-schema-rowsets.md)  

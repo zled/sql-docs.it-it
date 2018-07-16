@@ -1,5 +1,5 @@
 ---
-title: Set di righe DISCOVER_LOCATIONS | Documenti Microsoft
+title: Set di righe DISCOVER_LOCATIONS | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6d3a1171-8e4d-4022-ade0-b785cf795d70
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cfcc451a3369a3f15e29381df3d21e7275a90f7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90fa167102e9e5a5c8a4ad916bb921205347f1c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284437"
 ---
 # <a name="discoverlocations-rowset"></a>Set di righe DISCOVER_LOCATIONS
   Restituisce informazioni sul contenuto di un file di backup. È necessario disporre dell'autorizzazione di accesso al percorso del file di backup.  

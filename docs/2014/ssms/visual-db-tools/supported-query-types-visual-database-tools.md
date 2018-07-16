@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Delete query
 - queries [SQL Server], types
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - View Designer, query types
 ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db00234849e885c82898a379bd3546e193a1a634
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 865bdf79fa72817ed3f3855be855c908d669dd10
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299421"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>Tipi di query supportati (Visual Database Tools)
   Nei riquadri Diagramma e Criteri di [Progettazione query e Progettazione viste](visual-database-tools.md) è possibile creare i tipi di query seguenti:  

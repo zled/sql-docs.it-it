@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati AggregationInstanceAttribute (ASSL) | Documenti Microsoft
+title: Tipo di dati AggregationInstanceAttribute (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationInstanceAttribute data type
 ms.assetid: fc5a98bf-7c3c-4faf-b9f8-16eb073d7dc7
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 188531a8b194c4bac5f09a22792e5ced2b662679
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8865c55a994cfb698ceea019998fe0e44e65c33b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297331"
 ---
 # <a name="aggregationinstanceattribute-data-type-assl"></a>Tipo di dati AggregationInstanceAttribute (ASSL)
   Definisce un tipo di dati primitivo che rappresenta le informazioni su un attributo utilizzato da un'istanza di aggregazione.  
@@ -55,10 +55,10 @@ ms.locfileid: "36166460"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Oggetto AttributeID](../properties/id-element-assl.md), [KeyColumns](../collections/columns-element-assl.md)|  
+|Elementi figlio|[Elemento AttributeID](../properties/id-element-assl.md), [KeyColumns](../collections/columns-element-assl.md)|  
 |Elementi derivati|[Attribute](../objects/attribute-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.AggregationInstanceAttribute>.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: Testare un'azione | Documenti Microsoft
+title: Un'azione di test | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0ec7feb3-a6b2-4be1-8036-c72b9fbc3562
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 306ec8778db44b8eeb86cdf11b9efad8b7d31e2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b28ce6368f6158ad8630010a113268dcad9e2b7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314721"
 ---
 # <a name="test-an-action"></a>Test di un'azione
-  È possibile testare un'azione utilizzando la visualizzazione Esplorazione in Progettazione cubi. L'accesso a Progettazione cubi può essere eseguito da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dopo aver creato l'azione, è necessario elaborare il cubo prima di poter testare l'azione. Per altre informazioni, vedere [l'elaborazione di oggetti modello multidimensionale](processing-a-multidimensional-model-analysis-services.md).  
+  È possibile testare un'azione utilizzando la visualizzazione Esplorazione in Progettazione cubi. L'accesso a Progettazione cubi può essere eseguito da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dopo aver creato l'azione, è necessario elaborare il cubo prima di poter testare l'azione. Per altre informazioni, vedere [elaborazione di oggetti modello multidimensionale](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-test-an-action"></a>Per testare un'azione  
   

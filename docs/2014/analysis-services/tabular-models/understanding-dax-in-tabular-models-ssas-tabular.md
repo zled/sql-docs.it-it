@@ -1,5 +1,5 @@
 ---
-title: Capire DAX nei modelli tabulari (SSAS tabulare) | Documenti Microsoft
+title: La comprensione di DAX nei modelli tabulari (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1788cadfe3f84798c7143e069fc40a0acb75883
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c4047c082a890e0ddd2871bbd35d7dbd21d363d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291437"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Informazioni su DAX nei modelli tabulari (SSAS tabulare)
   Data Analysis Expressions (DAX) è il linguaggio delle formule usato per creare calcoli personalizzati in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per cartelle di lavoro di Microsoft Excel e progetti di modelli tabulari di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le formule DAX includono funzioni, operatori e valori che consentono di eseguire calcoli avanzati sui dati in tabelle e colonne.  
@@ -128,7 +128,7 @@ ms.locfileid: "36167545"
   
 -   Operatori logici per combinare due o più espressioni e restituire un singolo risultato.  
   
- Per informazioni dettagliate sugli operatori utilizzati nelle formule DAX, vedere [riferimento agli operatori DAX per PowerPivot](https://msdn.microsoft.com/library/ee634237(v=sql.120).aspx).  
+ Per informazioni dettagliate sugli operatori usati nelle formule DAX, vedere [riferimento agli operatori DAX per PowerPivot](https://msdn.microsoft.com/library/ee634237(v=sql.120).aspx).  
   
 ##  <a name="bkmk_DAX_Formulas"></a> Formule DAX  
  Le formule DAX sono essenziali per la creazione di calcoli nelle colonne calcolate e nelle misure e per proteggere i dati tramite filtri a livello di riga. Per creare formule per colonne calcolate e misure, utilizzare la barra della formula presente nella parte superiore della finestra di Progettazione modelli. Per creare formule per i filtri di riga, utilizzare la finestra di dialogo Gestione ruoli. Lo scopo delle informazioni fornite in questa sezione è quello di facilitare la comprensione delle nozioni fondamentali relative alle formule DAX.  
@@ -222,7 +222,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -   Nelle funzioni DAX sono incluse numerose funzioni di *Business Intelligence per le gerarchie temporali* . Queste funzioni consentono di definire o selezionare intervalli di date e di eseguire calcoli dinamici in base a tali date o intervalli. Ad esempio, è possibile confrontare somme in periodi paralleli.  
   
 ### <a name="date-and-time-functions"></a>Funzioni di data e ora  
- Le funzioni di data e ora in DAX sono molto simili alle funzioni di data e ora di Microsoft Excel. Tuttavia, le funzioni DAX si basano le `datetime` tipi di dati utilizzati da Microsoft SQL Server. Per altre informazioni, vedere [funzioni data e ora &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
+ Le funzioni di data e ora in DAX sono molto simili alle funzioni di data e ora di Microsoft Excel. Tuttavia, le funzioni DAX sono basate sul `datetime` tipi di dati utilizzati da Microsoft SQL Server. Per altre informazioni, vedere [funzioni di data e ora &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
   
 ### <a name="filter-functions"></a>Funzioni di filtro  
  Le funzioni di filtro in DAX restituiscono specifici tipi di dati, cercano valori nelle tabelle correlate e filtrano in base a valori correlati. Le funzioni di ricerca utilizzano tabelle e relazioni, come un database. Le funzioni di filtro consentono di modificare il contesto dei dati per creare calcoli dinamici. Per altre informazioni, vedere [funzioni di filtro &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx).  
@@ -234,7 +234,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Le funzioni logiche eseguono operazioni su un'espressione per restituire informazioni sui valori nell'espressione. La funzione TRUE, ad esempio, consente di sapere se un'espressione che si sta valutando restituirà un valore TRUE. Per altre informazioni, vedere [funzioni logiche &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634365(v=sql.120).aspx).  
   
 ### <a name="mathematical-and-trigonometric-functions"></a>Funzioni matematiche e trigonometriche  
- Le funzioni matematiche in DAX sono molto simili alle funzioni matematiche e trigonometriche di Excel. Esistono tuttavia alcune piccole differenze nei tipi di dati numerici utilizzati dalle funzioni DAX. Per altre informazioni, vedere [funzioni matematiche e Trig &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634241(v=sql.120).aspx).  
+ Le funzioni matematiche in DAX sono molto simili alle funzioni matematiche e trigonometriche di Excel. Esistono tuttavia alcune piccole differenze nei tipi di dati numerici utilizzati dalle funzioni DAX. Per altre informazioni, vedere [funzioni matematiche e trigonometriche &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634241(v=sql.120).aspx).  
   
 ### <a name="statistical-functions"></a>Funzioni statistiche  
  In DAX sono disponibili funzioni statistiche per l'esecuzione di aggregazioni. Oltre a creare somme e medie o a trovare valori minimi e massimi, in DAX è anche possibile filtrare una colonna prima di aggregare o creare aggregazioni in base a tabelle correlate. Per altre informazioni, vedere [funzioni statistiche &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634822(v=sql.120).aspx).  
@@ -243,7 +243,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Le funzioni di testo in DAX sono molto simili alle funzioni corrispondenti in Excel. È possibile restituire parte di una stringa, cercare testo all'interno di una stringa o concatenare valori stringa. In DAX sono inoltre disponibili funzioni per il controllo dei formati per date, ore e numeri. Per altre informazioni, vedere [funzioni di testo &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634938(v=sql.120).aspx).  
   
 ### <a name="time-intelligence-functions"></a>Funzioni di Business Intelligence per le gerarchie temporali  
- Le funzioni di Business Intelligence per le gerarchie temporali disponibili in DAX consentono di creare calcoli in cui vengono utilizzate informazioni predefinite su calendari e date. Tramite gli intervalli di ore e date in combinazione con aggregazioni o calcoli è possibile compilare confronti significativi tra periodi di tempo paragonabili relativamente a vendite, scorte e così via. Per altre informazioni, vedere [le gerarchie temporali Intelligence &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx).  
+ Le funzioni di Business Intelligence per le gerarchie temporali disponibili in DAX consentono di creare calcoli in cui vengono utilizzate informazioni predefinite su calendari e date. Tramite gli intervalli di ore e date in combinazione con aggregazioni o calcoli è possibile compilare confronti significativi tra periodi di tempo paragonabili relativamente a vendite, scorte e così via. Per altre informazioni, vedere [ora funzioni di Business Intelligence &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx).  
   
 ###  <a name="bkmk_TableFunc"></a> Funzioni con valori di tabella  
  Sono disponibili funzioni DAX che consentono di eseguire l'output di tabelle, che utilizzano le tabelle come input o che svolgono entrambe le funzioni. Dal momento che una tabella può disporre di una sola colonna, le funzioni con valori di tabella utilizzano anche le singole colonne come input. Saper utilizzare tali funzioni con valori di tabella è importante per un utilizzo ottimale delle formule DAX. DAX include i seguenti tipi di funzioni con valori di tabella:  
@@ -318,9 +318,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Nei modelli tabulari sono disponibili molti modi per creare il contesto di filtro. All'interno del contesto di client in cui è possibile utilizzare il modello, ad esempio report di [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] , gli utenti possono creare filtri immediatamente aggiungendo filtri dei dati o filtri dei report sulle intestazioni di riga e di colonna. È possibile specificare anche espressioni di filtro direttamente all'interno della formula, per specificare i valori correlati, per filtrare tabelle utilizzate come input o per ottenere dinamicamente il contesto per i valori utilizzati nei calcoli. È inoltre possibile deselezionare completamente o in modo selettivo i filtri in colonne specifiche. Questa operazione risulta molto utile quando si creano formule che consentono di calcolare totali complessivi.  
   
- Per ulteriori informazioni su come creare filtri nelle formule, vedere la [funzione di filtro](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx).  
+ Per altre informazioni su come creare filtri nelle formule, vedere la [funzione di filtro](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx).  
   
- Per un esempio di modalità di deselezione dei filtri per creare totali complessivi, vedere la [funzione ALL](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).  
+ Per un esempio di come è possibile cancellare i filtri per creare totali complessivi, vedere la [funzione ALL](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).  
   
  Per esempi di come in modo selettivo deselezione e applicazione di filtri nelle formule, vedere la [funzione ALLEXCEPT](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx).  
   
@@ -335,22 +335,22 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ##### <a name="examples-of-context-in-formulas"></a>Esempi di contesto nelle formule  
   
-1.  Il [funzione RELATED](https://msdn.microsoft.com/library/ee634202(v=sql.120).aspx) espande il contesto della riga corrente per includere i valori in una colonna correlata. Ciò consente di eseguire ricerche. Nell'esempio di questo argomento viene illustrata l'interazione del contesto di filtro e del contesto di riga.  
+1.  Il [funzione RELATED](https://msdn.microsoft.com/library/ee634202(v=sql.120).aspx) espande il contesto di riga corrente per includere i valori in una colonna correlata. Ciò consente di eseguire ricerche. Nell'esempio di questo argomento viene illustrata l'interazione del contesto di filtro e del contesto di riga.  
   
-2.  Il [funzione di filtro](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx) funzione consente di specificare le righe da includere nel contesto corrente. Negli esempi di questo argomento viene inoltre illustrato come incorporare filtri in altre funzioni che eseguono aggregazioni.  
+2.  Il [funzione di filtro](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx) consente di specificare le righe da includere nel contesto corrente. Negli esempi di questo argomento viene inoltre illustrato come incorporare filtri in altre funzioni che eseguono aggregazioni.  
   
 3.  Il [funzione ALL](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx) imposta il contesto all'interno della formula. È possibile utilizzarla per eseguire l'override dei filtri applicati come risultato del contesto di query.  
   
-4.  Il [funzione ALLEXCEPT](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx) funzione consente di rimuovere tutti i filtri, ad eccezione di quello specificato. In entrambi gli argomenti sono inclusi esempi che illustrano la compilazione di formule e forniscono informazioni sui contesti complessi.  
+4.  Il [funzione ALLEXCEPT](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx) consente di rimuovere tutti i filtri, ad eccezione di quello specificato. In entrambi gli argomenti sono inclusi esempi che illustrano la compilazione di formule e forniscono informazioni sui contesti complessi.  
   
-5.  Il [funzione EARLIER](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx) e [funzione EARLIEST](https://msdn.microsoft.com/library/ee634779(v=sql.120).aspx) consentono di eseguire ciclo in tabelle mediante l'esecuzione di calcoli, facendo riferimento a un valore proveniente da un ciclo interno. Se si ha familiarità con il concetto di ricorsione e con i cicli interni ed esterni, sarà più facile apprezzare l'efficacia offerta dalle funzioni EARLIER ed EARLIEST. Se non si ha familiarità con tali concetti, è opportuno seguire con attenzione i passaggi nell'esempio per informazioni sulle modalità di utilizzo dei contesti interni ed esterni nell'esecuzione di calcoli.  
+5.  Il [funzione EARLIER](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx) e [funzione EARLIEST](https://msdn.microsoft.com/library/ee634779(v=sql.120).aspx) consentono di eseguire ciclo in tabelle mediante l'esecuzione di calcoli, facendo riferimento a un valore da un ciclo interno. Se si ha familiarità con il concetto di ricorsione e con i cicli interni ed esterni, sarà più facile apprezzare l'efficacia offerta dalle funzioni EARLIER ed EARLIEST. Se non si ha familiarità con tali concetti, è opportuno seguire con attenzione i passaggi nell'esempio per informazioni sulle modalità di utilizzo dei contesti interni ed esterni nell'esecuzione di calcoli.  
   
 ##  <a name="bkmk_RelModel"></a> Formule e modello tabulare  
  Progettazione modelli, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], è un'area in cui è possibile utilizzare più tabelle di dati e connettere le tabelle in un modello tabulare. All'interno di questo modello le tabelle sono unite da relazioni in colonne con valori (chiavi) comuni. Il modello tabulare consente di collegare valori a colonne di altre tabelle e creare calcoli più interessanti. Analogamente a un database relazionale, è possibile collegare molti livelli di tabelle correlate e utilizzare colonne di qualsiasi tabella nei risultati.  
   
  È possibile collegare ad esempio una tabella delle vendite, una tabella dei prodotti e una tabella delle categorie di prodotto e utilizzare le varie combinazioni delle colonne delle tabelle pivot e dei report. I campi correlati possono essere utilizzati per filtrare tabelle connesse o per creare calcoli in subset. Se non si ha familiarità con i database relazionali e con l'uso di tabelle e join, vedere [Relazioni &#40;SSAS tabulare&#41;](relationships-ssas-tabular.md).)  
   
- I modelli tabulari supportano più relazioni tra tabelle. Per evitare confusione o risultati errati, viene definita come relazione attiva solo una relazione per volta. Tuttavia, è possibile modificare la relazione attiva, se necessario, per attraversare connessioni diverse nei dati nei calcoli. Il [la funzione USERELATIONSHIP &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230952(v=sql.120).aspx) può essere utilizzato per specificare una o più relazioni da utilizzare in un calcolo specifico.  
+ I modelli tabulari supportano più relazioni tra tabelle. Per evitare confusione o risultati errati, viene definita come relazione attiva solo una relazione per volta. Tuttavia, è possibile modificare la relazione attiva, se necessario, per attraversare connessioni diverse nei dati nei calcoli. Il [la funzione USERELATIONSHIP &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230952(v=sql.120).aspx) può essere utilizzato per specificare una o più relazioni da usare in un calcolo specifico.  
   
  In un modello tabulare è necessario osservare le seguenti regole di progettazione delle formule:  
   
@@ -376,7 +376,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 =SUM('New Sales'[Amount]) + SUM('Past Sales'[Amount])  
 ```  
   
- Durante la valutazione di una formula, in Progettazione modelli viene verificata prima la sintassi generale, quindi vengono controllati i nomi delle colonne e delle tabelle forniti in base alle possibili colonne e tabelle del contesto corrente. Se il nome è ambiguo o non è possibile trovare la colonna o tabella, si verificherà un errore nella formula e nelle celle in cui si è verificato l'errore verrà visualizzata una stringa #ERRORE anziché il valore di dati. Per ulteriori informazioni sui requisiti di denominazione per le tabelle, colonne e altri oggetti, vedere "Requisiti per la denominazione" in [specifica della sintassi DAX per PowerPivot](https://msdn.microsoft.com/library/ee634217(v=sql.120).aspx).  
+ Durante la valutazione di una formula, in Progettazione modelli viene verificata prima la sintassi generale, quindi vengono controllati i nomi delle colonne e delle tabelle forniti in base alle possibili colonne e tabelle del contesto corrente. Se il nome è ambiguo o non è possibile trovare la colonna o tabella, si verificherà un errore nella formula e nelle celle in cui si è verificato l'errore verrà visualizzata una stringa #ERRORE anziché il valore di dati. Per altre informazioni sui requisiti di denominazione per le tabelle, colonne e altri oggetti, vedere "Requisiti per la denominazione" in [specifica della sintassi DAX per PowerPivot](https://msdn.microsoft.com/library/ee634217(v=sql.120).aspx).  
   
 ### <a name="table-relationships"></a>Relazioni tra tabelle  
  La creazione di relazioni tra le tabelle consente di eseguire ricerche di dati in un'altra tabella e di utilizzare i valori correlati per eseguire calcoli complessi. Ad esempio, è possibile utilizzare una colonna calcolata per individuare tutti i record di spedizione correlati al rivenditore corrente, quindi sommare i costi di spedizione per ognuno di essi. In molti casi, tuttavia, una relazione potrebbe non essere necessaria. È possibile usare la funzione LOOKUPVALUE in una formula per restituire il valore in *result_columnName* per la riga che soddisfa i criteri specificati nei parametri *search_column* e *search_value* .  
@@ -420,7 +420,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="bkmk_addional_resources"></a> Risorse aggiuntive  
  In [Modellazione tabulare &#40;esercitazione di AdventureWorks&#41;](../tabular-modeling-adventure-works-tutorial.md) vengono fornite istruzioni dettagliate sulla creazione di un modello tabulare che include molti calcoli in colonne calcolate, misure e filtri di riga. Per la maggior parte delle formule viene fornita una descrizione dello scopo della formula.  
   
- Il [blog del Team di PowerPivot e Analysis Services](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) fornisce informazioni, suggerimenti, notizie e annunci su [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] e PowerPivot.  
+ Il [Blog del Team PowerPivot e Analysis Services](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) fornisce informazioni, suggerimenti, notizie e annunci su [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] e PowerPivot.  
   
  In [Centro risorse di DAX](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) vengono fornite informazioni interne ed esterne su DAX, incluse numerose soluzioni DAX inviate da noti professionisti di Business Intelligence.  
   
@@ -428,7 +428,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [Data Analysis Expressions &#40;DAX&#41; riferimento](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   
  [Le misure &#40;tabulare di SSAS&#41;](measures-ssas-tabular.md)   
  [Le colonne calcolate &#40;tabulare di SSAS&#41;](ssas-calculated-columns.md)   
- [Ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)   
+ [I ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)   
  [Gli indicatori KPI &#40;tabulare di SSAS&#41;](kpis-ssas-tabular.md)   
  [Origini dati supportate &#40;SSAS tabulare&#41;](data-sources-supported-ssas-tabular.md)  
   

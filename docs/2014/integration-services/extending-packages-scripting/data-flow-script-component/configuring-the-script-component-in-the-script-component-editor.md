@@ -21,13 +21,13 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5ac2d2c8c45e359dafbed4d33dc26c3470fc13d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 7299359d6535a9a3378dc898fa61da62a969d438
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292891"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configurazione del componente script nell'editor corrispondente
   Prima di scrivere codice personalizzato nel componente script, è necessario selezionare il tipo di componente flusso di dati che si vuole creare, ovvero origine, trasformazione o destinazione, quindi configurare i relativi metadati e le relative proprietà nell'**Editor trasformazione Script**.  
@@ -54,7 +54,7 @@ ms.locfileid: "36167121"
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>Pagina Colonne di input dell'editor trasformazione Script  
  La pagina **Colonne di input** dell'**Editor trasformazione Script** viene visualizzata per trasformazioni e destinazioni, ma non per le origini. In questa pagina selezionare le colonne di input che si desidera rendere disponibili per lo script personalizzato, quindi specificare l'accesso di sola lettura o di lettura/scrittura a tali colonne.  
   
- Nel progetto di codice che verrà generato in base a questi metadati, l'elemento di progetto BufferWrapper contiene una classe per ogni input, la quale contiene proprietà delle funzioni di accesso tipizzate per ogni colonna di input selezionata. Ad esempio, se si seleziona un numero intero **CustomerID** colonna e una stringa **CustomerName** colonna da un input denominato `CustomerInput`, l'elemento di progetto BufferWrapper conterrà una `CustomerInput` (classe) che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>e il `CustomerInput` classe esporrà una proprietà integer denominata **CustomerID** e una proprietà stringa denominata **CustomerName**. Con questa convenzione è possibile scrivere codice con controllo dei tipi come riportato di seguito:  
+ Nel progetto di codice che verrà generato in base a questi metadati, l'elemento di progetto BufferWrapper contiene una classe per ogni input, la quale contiene proprietà delle funzioni di accesso tipizzate per ogni colonna di input selezionata. Ad esempio, se si seleziona un numero intero **CustomerID** colonna e una stringa **CustomerName** colonna da un input denominato `CustomerInput`, l'elemento di progetto BufferWrapper conterrà una `CustomerInput` classe che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>e il `CustomerInput` classe esporrà una proprietà integer denominata **CustomerID** e una proprietà stringa denominata **CustomerName**. Con questa convenzione è possibile scrivere codice con controllo dei tipi come riportato di seguito:  
   
 ```vb  
 Dim currentCustomerID as Integer = CustomerInput.CustomerID  
@@ -72,7 +72,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
   
 -   Se utilizzato come destinazione, il componente script supporta un input e non include output.  
   
- Nel progetto di codice che verrà generato in base a questi metadati, l'elemento di progetto BufferWrapper contiene una classe per ogni input e output. Ad esempio, se si crea un output denominato `CustomerOutput`, l'elemento di progetto BufferWrapper conterrà una `CustomerOutput` classe che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>e il `CustomerOutput` classe conterrà le proprietà delle funzioni di accesso tipizzate per ogni colonna di output creato.  
+ Nel progetto di codice che verrà generato in base a questi metadati, l'elemento di progetto BufferWrapper contiene una classe per ogni input e output. Ad esempio, se si crea un output denominato `CustomerOutput`, l'elemento di progetto BufferWrapper conterrà una `CustomerOutput` classe che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>e il `CustomerOutput` classe conterrà le proprietà di funzioni di accesso tipizzate per ogni colonna di output creato.  
   
  È possibile configurare colonne di output solo nella pagina **Input e output**. È possibile selezionare colonne di input per trasformazioni e destinazioni nella pagina **Colonne di input**. Le proprietà delle funzioni di accesso tipizzate create nell'elemento di progetto BufferWrapper saranno di sola scrittura per le colonne di output. Le proprietà delle funzioni di accesso per le colonne di input saranno di sola lettura o di lettura/scrittura a seconda del tipo di utilizzo selezionato per ogni colonna nella pagina **Colonne di input**.  
   
@@ -87,7 +87,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  La proprietà `SynchronousInputID` ha un valore diverso da zero solo nelle trasformazioni con output sincroni. Se il valore di questa proprietà è zero, significa che l'output è asincrono. Per un output sincrono, in cui le righe vengono passate all'output o agli output selezionati senza l'aggiunta di nuove righe, questa proprietà deve contenere il valore `ID` dell'input del componente.  
   
 > [!NOTE]  
->  Quando il **Editor trasformazione Script** crea il primo output, i set di editor la `SynchronousInputID` proprietà dell'output di `ID` di input del componente. Tuttavia, quando l'editor crea gli output successivi, le proprietà `SynchronousInputID` di questi output vengono impostate su zero.  
+>  Quando il **Editor trasformazione Script** crea il primo output, i set di editor la `SynchronousInputID` proprietà dell'output di `ID` dell'input del componente. Tuttavia, quando l'editor crea gli output successivi, le proprietà `SynchronousInputID` di questi output vengono impostate su zero.  
 >   
 >  Se si crea un componente con output sincroni, per ogni output è necessario che la proprietà `SynchronousInputID` sia impostata sul valore `ID` dell'input del componente. Pertanto, è necessario che il valore `SynchronousInputID` di ogni output creato dall'editor dopo il primo venga modificato da zero nel valore `ID` dell'input del componente.  
 >   
@@ -108,7 +108,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  Il valore booleano della proprietà `ValidateExternalMetadata` specifica se il componente deve eseguire la convalida delle origini dati esterne in fase di progettazione o se deve posticiparla fino alla fase di esecuzione. Per impostazione predefinita, il valore di questa proprietà è `True`, ovvero i metadati esterni vengono convalidati sia in fase di progettazione che in fase di esecuzione. È possibile impostare il valore di questa proprietà su `False` quando un'origine dati esterna non è disponibile in fase di progettazione, ad esempio se il pacchetto scarica l'origine o crea la destinazione solo in fase di esecuzione.  
   
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>Proprietà ReadOnlyVariables e ReadWriteVariables  
- È possibile immettere elenchi delimitati da virgole di variabili esistenti come valori di queste proprietà per rendere le variabili disponibili per l'accesso di sola lettura o di lettura/scrittura all'interno del codice del componente script. Le variabili sono accessibili nel codice tramite le proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> e <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> della classe di base generata automaticamente. Per altre informazioni, vedere [Using Variables in Component]((using-variables-in-the-script-component.md) di Script.  
+ È possibile immettere elenchi delimitati da virgole di variabili esistenti come valori di queste proprietà per rendere le variabili disponibili per l'accesso di sola lettura o di lettura/scrittura all'interno del codice del componente script. Le variabili sono accessibili nel codice tramite le proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> e <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> della classe di base generata automaticamente. Per altre informazioni, vedere [uso di variabili nel Component]((using-variables-in-the-script-component.md) di Script.  
   
 > [!NOTE]  
 >  Per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.  
@@ -117,7 +117,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  È possibile selezionare [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# come linguaggio di programmazione per il componente Script.  
   
 #### <a name="edit-script-button"></a>Pulsante Modifica script  
- Il pulsante **Modifica script** consente di aprire l'IDE di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) in cui scrivere lo script personalizzato. Per altre informazioni, vedere [codifica e debug di Component]((coding-and-debugging-the-script-component.md) di Script.  
+ Il pulsante **Modifica script** consente di aprire l'IDE di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) in cui scrivere lo script personalizzato. Per altre informazioni, vedere [codifica e debug di Component]((coding-and-debugging-the-script-component.md) Script.  
   
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>Pagina Gestioni connessioni dell'editor trasformazione Script  
  Nella pagina **Gestioni connessioni** dell'**Editor trasformazione Script** è possibile aggiungere e rimuovere le gestioni connessioni che si vogliono usare nello script personalizzato. Normalmente, è necessario fare riferimento a gestioni connessioni quando si crea un componente di origine o di destinazione.  
@@ -129,9 +129,9 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
     Me.Connections.MyADONETConnection  
 ```  
   
- Per altre informazioni, vedere [connessione alle origini dati in Component]((connecting-to-data-sources-in-the-script-component.md) di Script.  
+ Per altre informazioni, vedere [connessione a origini dati in Component]((connecting-to-data-sources-in-the-script-component.md) di Script.  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services  **<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [La codifica e debug del componente Script] ((coding-and-debugging-the-script-component.md)  

@@ -1,5 +1,5 @@
 ---
-title: Elenco di controllo della preparazione per il Data Mining | Documenti Microsoft
+title: Elenco di controllo della preparazione per il Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f7429dd799a1081bd1a03e985a8772b04498129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0bed960058bdc9120089d89a32a3ede0bf2f3160
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232501"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Elenco di controllo per la preparazione di data mining
   Sebbene i componenti aggiuntivi Data mining forniscano un modo piuttosto semplice e divertente per creare e provare i modelli, quando è necessario ottenere risultati ripetibili e utilizzabili, è necessario concedere il tempo appropriato per la formulazione dei requisiti aziendali di base e per il recupero e la preparazione dei dati. In questa sezione viene fornito un elenco di controllo per pianificare la ricerca e vengono descritti i problemi comuni.  
@@ -38,7 +38,7 @@ ms.locfileid: "36170016"
   
 -   È possibile eseguire il mapping dei nuovi dati di input ai risultati previsti?  
   
- **È possibile conoscere il significato, i tipi di dati e la distribuzione dei dati di input.**  
+ **È possibile sapere il significato, i tipi di dati e la distribuzione dei dati di input.**  
  Esplorare e comprendere i dati di origine. È importante che gli utenti che esaminano il modello comprendano quale tipo di dati di input sia stato utilizzato e sappiano come interpretare i tipi di dati e la variabilità, nonché il bilanciamento e la qualità.  
   
 -   Di quanti dati si dispone? Sono disponibili dati sufficienti per la modellazione?  
@@ -53,7 +53,7 @@ ms.locfileid: "36170016"
   
 -   I dati di input presentano alcuni risultati di esempio da poter utilizzare per il training?  
   
- **Sono consapevole il livello di integrità dei dati che è disponibile e il livello che necessario.**  
+ **Dichiaro di aver compreso il livello di integrità dei dati che è disponibile e il livello che necessario.**  
  Dati errati possono influire sulla qualità del modello o impedire completamente la compilazione del modello. È necessario disporre di una buona conoscenza della distribuzione e del significato dei dati e di come sono arrivati a questo stato. Sarà necessario comprendere se è possibile o appropriato semplificare i dati mediante l'assegnazione di etichette, il troncamento dei tipi di dati numerici o il riepilogo.  
   
 -   Etichette di dati: sono chiare e corrette?  
@@ -85,7 +85,7 @@ ms.locfileid: "36170016"
   
 -   Anche il framework di elaborazione dati può applicare gli algoritmi di apprendimento automatico, eseguire test e visualizzare i risultati?  
   
- **È stata decisa la granularità desiderata di stime e i dati siano stati modificati per restituire tali unità.**  
+ **È stata decisa la granularità desiderata di stime e i dati sono stati modificati per restituire tali unità.**  
  Decidere della granularità dei risultati desiderati prima della preparazione dei dati. Ad esempio, si desidera ottenere le stime di vendita giornaliere o trimestrali? Si potrebbe provare a configurare strutture dei dati diverse per gli stessi dati, per gestire diversi livelli di riepilogo.  
   
 -   Qual è l'unità di misura o l'unità di tempo corrente?  
@@ -107,7 +107,7 @@ ms.locfileid: "36170016"
   
 -   Si è deciso di utilizzare un valore di inizializzazione per il modello?  
   
- **Si dispone delle informazioni del dominio per convalidare i risultati oppure dispongono dell'accesso agli esperti che possono fornire consigli.**  
+ **Si hanno la conoscenza del dominio per convalidare i risultati, o avere accesso a esperti del settore che possono fornire consigli.**  
  Convalidare le variabili, il modello e i risultati. Richiedere l'aiuto di esperti per valutare interazioni e risultati. Tuttavia, non consentire ai presupposti di prevalere sull'evidenza. Mostrare piena apertura verso risultati nuovi e imprevisti.  
   
 -   Sono disponibili informazioni di dominio che consentono di filtrare i dati e ridurre segnalazioni non significative di input?  
@@ -115,6 +115,6 @@ ms.locfileid: "36170016"
 -   Gli esperti di dominio possono aiutare a interpretare i risultati e suggerire miglioramenti?  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scelta dei dati per il Data Mining](choosing-data-for-data-mining.md)  
+ [Scelta di dati per il data mining](choosing-data-for-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Report concetto dei parametri (Generatore Report e SSRS) | Documenti Microsoft
+title: Report concetto dei parametri (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3df4f17a75018c3b78653f5b0fb9419d3835f9e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 860099dc49e0fe383d7b53ac379c4671ead2477b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296061"
 ---
 # <a name="report-parameters-concept-report-builder-and-ssrs"></a>Concetto dei parametri di report (Generatore report e SSRS)
   È possibile aggiungere parametri a un report per collegare report correlati, controllare l'aspetto del report, filtrare i dati del report o per limitare l'ambito di un report a percorsi o utenti specifici.  
@@ -48,8 +48,8 @@ ms.locfileid: "36168672"
  Se si intende creare snapshot, cronologie o sottoscrizioni di report in un report pubblicato, è necessario capire come i parametri del report influiscono sui requisiti di progettazione per il report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti di creazione di report &#40;SSRS e Generatore Report&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Concetti relativi alla creazione di report &#40;Report e SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Esercitazione: Aggiungere un parametro al report &#40;Generatore Report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Esercitazione: Aggiungere un parametro al Report &#40;Generatore Report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   

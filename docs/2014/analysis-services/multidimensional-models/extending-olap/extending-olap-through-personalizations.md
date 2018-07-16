@@ -1,5 +1,5 @@
 ---
-title: Estensione di OLAP tramite personalizzazioni | Documenti Microsoft
+title: Estensione di OLAP tramite personalizzazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Analysis Services, extensibility
 ms.assetid: 348e49fc-4390-43c1-9b6c-61b386ff4373
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d2c1bdea4c59a047f613033ae0e8aa8515c8232f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf7785c3acd3815f78e656951e8ae3f05e125245
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280357"
 ---
 # <a name="extending-olap-through-personalizations"></a>Estensione di OLAP tramite personalizzazioni
   In Microsoft [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] sono disponibili diverse funzioni intrinseche da utilizzare con i linguaggi MDX (Multidimensional Expressions) e DMX (Data Mining Extensions). Queste funzioni sono progettate per consentire l'esecuzione di qualsiasi operazione, dai calcoli statistici standard all'attraversamento dei membri di una gerarchia. Come avviene per qualsiasi altro prodotto complesso e affidabile, tuttavia, si è avvertita l'esigenza di estendere ulteriormente le funzionalità di questo servizio.  
@@ -36,7 +36,7 @@ ms.locfileid: "36168427"
  Le estensioni della personalizzazione di SQL Server Analysis Services rappresentano la struttura di base dell'implementazione di un'architettura plug-in. Le estensioni della personalizzazione di Analysis Services rappresentano una semplice ed elegante modifica all'architettura dell'assembly gestito esistente e vengono esposte nel modello a oggetti <xref:Microsoft.AnalysisServices.AdomdServer> di Analysis Services, nella sintassi MDX e nei set di righe degli schemi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione di assembly di modello multidimensionale](../multidimensional-model-assemblies-management.md)   
+ [Gestione di assembly di modelli multidimensionali](../multidimensional-model-assemblies-management.md)   
  [Analysis Services Personalization Extensions](analysis-services-personalization-extensions.md)  
   
   

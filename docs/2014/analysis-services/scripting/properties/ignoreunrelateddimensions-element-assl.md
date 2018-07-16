@@ -1,5 +1,5 @@
 ---
-title: Elemento IgnoreUnrelatedDimensions (ASSL) | Documenti Microsoft
+title: Elemento IgnoreUnrelatedDimensions (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IgnoreUnrelatedDimensions element
 ms.assetid: c7d7a1cd-a8e0-4ae7-9464-a1d2a55a86ab
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a85e4c3b5d113b6e122f699425a8b0ffaf88a091
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c278a3109180dbd058bc7ed8212c7b05782ce3d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295461"
 ---
 # <a name="ignoreunrelateddimensions-element-assl"></a>Elemento IgnoreUnrelatedDimensions (ASSL)
   Determina se le dimensioni non correlate devono essere forzate al livello principale in caso di inclusione in una query di membri di dimensioni non correlate al gruppo di misure.  
@@ -61,10 +61,10 @@ ms.locfileid: "36166705"
 |Elemento padre|[Gruppo di misure](../objects/group-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Quando `IgnoreUnrelatedDimensions` è `true`, le dimensioni non correlate sono forzate al livello superiore; quando il valore è `false`, le dimensioni non sono forzate al livello superiore. Questa proprietà è simile a di MDX (Multidimensional Expressions) [ValidMeasure](/sql/mdx/validmeasure-mdx) (funzione).  
+## <a name="remarks"></a>Note  
+ Quando `IgnoreUnrelatedDimensions` è `true`, le dimensioni non correlate sono forzate al livello superiore; quando il valore è `false`, le dimensioni non sono forzate al livello superiore. Questa proprietà è simile a espressioni MDX (MDX) [ValidMeasure](/sql/mdx/validmeasure-mdx) (funzione).  
   
- L'elemento che corrisponde al padre di `IgnoreUnrelatedDimensions` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+ L'elemento che corrisponde al padre di `IgnoreUnrelatedDimensions` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

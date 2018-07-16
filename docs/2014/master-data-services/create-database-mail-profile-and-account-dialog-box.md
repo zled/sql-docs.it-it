@@ -1,5 +1,5 @@
 ---
-title: Creare il profilo di posta elettronica Database e la finestra di dialogo Account (Gestione configurazione Master Data Services) | Documenti Microsoft
+title: Creare il profilo di posta elettronica Database e la finestra di dialogo Account (Gestione configurazione Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82901acbfe20a0ec475fc859935c8abdf472b300
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: ef6d589c42c6abfd72975d1fbc1c98de76d908fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289127"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>Finestra di dialogo Create account e profili di Posta elettronica database (Gestione configurazione Master Data Services)
   Usare la finestra di dialogo **Crea account e profilo di Posta elettronica database** per creare un profilo di Posta elettronica database e un account di Posta elettronica database per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Questo profilo verrà utilizzato per avvisare utenti e gruppi tramite posta elettronica quando la convalida delle regole business ha esito negativo.  
@@ -44,7 +44,7 @@ ms.locfileid: "36168826"
 |**Indirizzo di posta elettronica**|Digitare il nome associato all'indirizzo di posta elettronica relativo all'account. Questo è l'indirizzo di posta elettronica dal quale viene inviata la posta elettronica e deve essere nel formato *nome_posta_elettronica*@*nome_dominio*. Un esempio di indirizzo di posta elettronica è sales@contoso.com.|  
 |**Nome visualizzato**|Impostazione facoltativa. Digitare il nome da visualizzare nei messaggi di posta elettronica inviati dall'account. Un esempio di nome visualizzato è Contoso Sales Group.|  
 |**Indirizzo di posta elettronica risposte**|Impostazione facoltativa. Digitare l'indirizzo di posta elettronica da utilizzare per le risposte ai messaggi inviati dall'account. Un esempio di indirizzo di posta elettronica per le risposte è admin@contoso.com.|  
-|**Server SMTP**|Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. È un formato di server di esempio SMTP `smtp.` *< nome_società >*`.com`. Per informazioni, rivolgersi all'amministratore del sistema di posta.|  
+|**Server SMTP**|Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. Formato di server di esempio SMTP `smtp.` *< nome_società >*`.com`. Per informazioni, rivolgersi all'amministratore del sistema di posta.|  
 |**Numero di porta**|Digitare il numero di porta del server SMTP per l'account. Il numero di porta per SMTP predefinito è 25.|  
 |**Il server necessita di una connessione sicura (SSL)**|Consente di crittografare le comunicazioni mediante SSL (Secure Sockets Layer).|  
   
@@ -62,6 +62,6 @@ ms.locfileid: "36168826"
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagina Configurazione database &#40;Gestione configurazione Master Data Services&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Impostare il Database e il sito Web per Master Data Services](set-up-the-database-and-website-for-master-data-services.md)  
+ [Configurare il database e il sito Web per Master Data Services](set-up-the-database-and-website-for-master-data-services.md)  
   
   

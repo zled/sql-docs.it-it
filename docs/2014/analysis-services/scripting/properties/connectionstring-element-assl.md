@@ -1,5 +1,5 @@
 ---
-title: Elemento ConnectionString (ASSL) | Documenti Microsoft
+title: Elemento ConnectionString (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: f74181c4-7df7-4fbd-94dd-e4ad03dffe14
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3f1782eb62cec4d028a17f380a8bd924458e1e65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca1905c6790ff71b9a263182a4812c2fedaa1e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285997"
 ---
 # <a name="connectionstring-element-assl"></a>Elemento ConnectionString (ASSL)
   Contiene la stringa di connessione crittografata per un [DataSource](../objects/datasource-element-assl.md) elemento.  
@@ -61,8 +61,8 @@ ms.locfileid: "36167146"
 |Elemento padre|[Origine dati](../objects/datasource-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `ConnectionString` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DataSource>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `ConnectionString` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DataSource>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

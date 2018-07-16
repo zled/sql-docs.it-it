@@ -1,5 +1,5 @@
 ---
-title: Elemento RestrictionList (XMLA) | Documenti Microsoft
+title: Elemento RestrictionList (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - RestrictionList element
 ms.assetid: 2297c005-381e-49a4-a207-826f7f9ea93a
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 081722ea3a5bf001b22f8c193cd5530a37809e15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 045c5644608c7f9537124450ef2c5637eebbb796
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314591"
 ---
 # <a name="restrictionlist-element-xmla"></a>Elemento RestrictionList (XMLA)
   Contiene una raccolta di colonne e dati di restrizione utilizzati dal metodo [Discover](../xml-elements-methods-discover.md) .  
@@ -63,7 +63,7 @@ ms.locfileid: "36157218"
 |Elementi padre|[Restrizioni](restrictions-element-xmla.md)|  
 |Elementi figlio|Colonne e valori di restrizione (vedere la sezione Commenti).|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `RestrictionList` contiene una raccolta di colonne di restrizione in base alla quale è possibile filtrare i dati restituiti dal metodo `Discover`. Ogni colonna di restrizione nell'elemento `RestrictionList` è definita da un elemento XML distinto. Il valore della colonna di restrizione corrisponde ai dati contenuti nell'elemento XML, mentre il nome della colonna di restrizione corrisponde al nome dell'elemento XML.  
   
 ## <a name="see-also"></a>Vedere anche  

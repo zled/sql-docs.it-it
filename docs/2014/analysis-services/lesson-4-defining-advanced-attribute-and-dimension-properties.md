@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 4: Definizione avanzate attributo e le proprietà di dimensione | Documenti Microsoft'
+title: 'Lezione 4: Definizione di Advanced attributo e proprietà dimensione | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 853ce6e8fbbc559e690c46fda0ae1d7db02d2eb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9dd26e1f755f655dd5757c35c3232ce34981da6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279811"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lezione 4: Definizione di attributo avanzato e proprietà dimensione
   In questa lezione verranno illustrate le procedure per l'utilizzo di alcune proprietà avanzate degli attributi, delle gerarchie degli attribuiti e delle proprietà delle dimensioni.  
@@ -29,32 +29,32 @@ ms.locfileid: "36168624"
   
  In questa lezione sono incluse le attività seguenti:  
   
- [Utilizzando una versione modificata del progetto Analysis Services Tutorial](lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
+ [Uso di una versione modificata del progetto Analysis Services Tutorial](lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
  In questa attività vengono illustrate le procedure per aprire, controllare e distribuire una versione modificata del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, con più gruppi di misure e dimensioni aggiuntive.  
   
- [Definizione di proprietà dell'attributo padre in una gerarchia padre-figlio](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
+ [Definizione delle proprietà degli attributi padre in una gerarchia padre-figlio](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
  In questa attività vengono illustrate le procedure per definire i nomi dei livelli in una dimensione padre-figlio e per specificare se i dati correlati ai membri padre vengono visualizzati. Per altre informazioni, vedere [gerarchia padre-figlio](multidimensional-models/parent-child-dimension.md) e [attributi nelle gerarchie padre-figlio](multidimensional-models/parent-child-dimension-attributes.md).  
   
- [Raggruppamento automatico dei membri dell'attributo](lesson-4-3-automatically-grouping-attribute-members.md)  
+ [Raggruppamento automatico dei membri degli attributi](lesson-4-3-automatically-grouping-attribute-members.md)  
  In questa attività vengono illustrate le procedure per creare automaticamente gruppi di membri dell'attributo in base alla distribuzione dei membri all'interno della gerarchia dell'attributo. Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
  [Come nascondere e disabilitare le gerarchie degli attributi](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  In questa attività vengono illustrate le procedure per disabilitare o nascondere le gerarchie degli attributi.  
   
- [Ordinamento membri dell'attributo in base a un attributo secondario](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
+ [Ordinamento dei membri dell'attributo in base a un attributo secondario](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
  In questa attività vengono illustrate le procedure per ordinare i membri della dimensione in base a un attributo secondario in modo da ottenere il tipo di ordinamento desiderato.  
   
- [Specificare le relazioni tra attributi in una gerarchia definita dall'utente](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+ [Impostazione delle relazioni tra gli attributi in una gerarchia definita dall'utente](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
  In questa attività vengono illustrate le procedure per definire le proprietà del membro per gli attributi e per specificarne le relazioni di aggregazione. Per altre informazioni, vedere [Definire relazioni tra attributi](multidimensional-models/attribute-relationships-define.md) e [Proprietà delle gerarchie definite dall'utente](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
- [Che definisce il membro sconosciuto e le proprietà di elaborazione dei valori Null](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [Definizione delle proprietà UnknownMember e NullProcessing](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
  In questa attività vengono configurate le proprietà UnknownMember e UnknownMemberName per gestire le condizioni di errore determinate dai membri Null della dimensione.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 5: Definizione delle relazioni tra le dimensioni e gruppi di misure](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [Lezione 5: Definizione delle relazioni tra dimensioni e gruppi di misure](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)   
+ [Scenario di Analysis Services Tutorial](analysis-services-tutorial-scenario.md)   
  [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento Filter (Binding) (ASSL) | Documenti Microsoft
+title: Elemento Filter (Binding) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Filter element
 ms.assetid: 3d4cd169-2903-4266-8541-540ece424b7b
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 659719ea4ba87b548b08b5b7cb680e1b28b563d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca1fe43bfe98061065cda1da5b1ff64772a4751d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291307"
 ---
 # <a name="filter-element-binding-assl"></a>Elemento Filter (Binding) (ASSL)
   Contiene un'espressione MDX (Multidimensional Expressions) che filtra il contenuto dell'elemento padre.  
@@ -61,10 +61,10 @@ ms.locfileid: "36169093"
 |Elementi padre|[CubeDimensionBinding](../data-type/binding-data-type-assl.md), [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Per ulteriori informazioni sul `Binding` tipo, incluse le tabelle di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] gli oggetti di Scripting Language (ASSL) del `Binding` tipo e la gerarchia di ereditarietà dei `Binding` tipi, vedere [associazione tipo di dati &#40;ASSL &#41;](../data-type/binding-data-type-assl.md).  
+## <a name="remarks"></a>Note  
+ Per altre informazioni sul `Binding` tipo, incluse le tabelle di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] gli oggetti di Scripting Language (ASSL) delle `Binding` tipo e la gerarchia di ereditarietà dei `Binding` tipi, vedere [associazione tipo di dati &#40;ASSL &#41;](../data-type/binding-data-type-assl.md).  
   
- Per una panoramica delle associazioni dati in ASSL, vedere [origini dati e le associazioni &#40;multidimensionali SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Per una panoramica delle associazioni di dati in ASSL, vedere [origini dati e associazioni &#40;multidimensionale di SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  Gli elementi che corrispondono ai padri di `Filter` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.CubeDimensionBinding> e <xref:Microsoft.AnalysisServices.MeasureGroupBinding>.  
   

@@ -1,5 +1,5 @@
 ---
-title: L'esecuzione di progetti e pacchetti | Documenti Microsoft
+title: Esecuzione di progetti e pacchetti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, running
 - SSIS packages, running
@@ -21,13 +21,13 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21c4bff7eb74b556aa41e27430b23e9eb2e2d061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc9e292b67bd282351bdea60068a58a39ecb0aad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287607"
 ---
 # <a name="execution-of-projects-and-packages"></a>Esecuzione di progetti e pacchetti
   Per eseguire un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è possibile usare vari strumenti, a seconda della posizione in cui sono archiviati tali pacchetti. Gli strumenti sono descritti nella tabella seguente.  
@@ -45,8 +45,8 @@ ms.locfileid: "36167289"
 |**dtexecui**<br /><br /> Per altre informazioni, vedere [Riferimento all’interfaccia utente dell’utilità di esecuzione pacchetti &#40;DtExecUI&#41;](execute-package-utility-dtexecui-ui-reference.md)|no|Sì|Sì|  
 |**SQL Server Agent**<br /><br /> Per pianificare un pacchetto, è possibile utilizzare un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.<br /><br /> Per altre informazioni, vedere [Processi di SQL Server Agent per i pacchetti](sql-server-agent-jobs-for-packages.md).|Sì|Sì|Sì|  
 |**Stored procedure predefinita**<br /><br /> Per altre informazioni, vedere [catalog.start_execution &#40;database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)|Sì|no|no|  
-|**API gestita, tramite tipi e membri dello spazio dei nomi**  <xref:Microsoft.SqlServer.Management.IntegrationServices>|Sì|no|no|  
-|**API gestita, tramite tipi e membri dello spazio dei nomi**  <xref:Microsoft.SqlServer.Dts.Runtime>|Non attualmente|Sì|Sì|  
+|**API gestita, tramite tipi e membri dello spazio dei nomi ** <xref:Microsoft.SqlServer.Management.IntegrationServices>|Sì|no|no|  
+|**API gestita, tramite tipi e membri dello spazio dei nomi ** <xref:Microsoft.SqlServer.Dts.Runtime>|Non attualmente|Sì|Sì|  
   
 ## <a name="execution-and-logging"></a>Esecuzione e registrazione  
  È possibile abilitare la registrazione per i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], nonché acquisire informazioni di run-time in file di log. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md).  

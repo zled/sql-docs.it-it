@@ -1,5 +1,5 @@
 ---
-title: Editor attività elaborazione (pagina generale) di Analysis Services | Documenti Microsoft
+title: Editor attività elaborazione (pagina generale) di Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asprocessingtask.general.f1
 helpviewer_keywords:
 - Analysis Services Processing Task Editor
 ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4eef72932d73e54defb6e6fc7fc5fbec776ca30c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92304267244e9a8cca64540baf841d9f1eb3dd03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298871"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Editor attività Elaborazione Analysis Services (pagina Generale)
   La pagina **Generale** della finestra di dialogo **Editor attività Elaborazione Analysis Services** consente di denominare e descrivere l'attività Elaborazione Analysis Services.  
@@ -41,7 +41,7 @@ ms.locfileid: "36168129"
  Consente di immettere una descrizione dell'attività Elaborazione Analysis Services.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività elaborazione di Analysis Services &#40;pagina di Analysis Services&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
  [Attività Esegui DDL Analysis Services](control-flow/analysis-services-execute-ddl-task.md)  
   

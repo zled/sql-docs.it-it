@@ -1,5 +1,5 @@
 ---
-title: Eliminare una vista origine dati (Analysis Services) | Documenti Microsoft
+title: Eliminare una vista origine dati (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting data source views
 - data source views [Analysis Services], deleting
 - removing data source views
 ms.assetid: ae3f5ca0-ecbf-4b52-8386-eb457719d854
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e4467d476acbb45e0ec18c7a28fd1a9a143c386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8d04731a4b555b6e4afe9c8697fc5c4f907a9a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284019"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>Eliminare una vista origine dati (Analysis Services)
   Se non si usa più una vista origine dati in un progetto OLAP, è possibile eliminarla dal progetto in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
@@ -34,10 +34,10 @@ ms.locfileid: "36170481"
   
  Se si elimina una vista origina dati, gli altri oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da cui dipendono non saranno validi pertanto, prima di eliminare la vista origine dati, si esaminerà l'elenco di oggetti che diventeranno non validi una volta rimossa tale vista. Esaminare con attenzione l'elenco per assicurarsi che non siano inclusi oggetti che si prevede di utilizzare ancora.  
   
- ![Finestra di dialogo oggetti Elimina](../media/ssas-olapdsv-deleteobjects.gif "finestra di dialogo Elimina oggetti")  
+ ![Dialogo Elimina oggetti](../media/ssas-olapdsv-deleteobjects.gif "nella finestra di dialogo Elimina oggetti")  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati nei modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
+ [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
  [Modificare le proprietà in una vista origine dati &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
   

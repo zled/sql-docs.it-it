@@ -1,5 +1,5 @@
 ---
-title: Utilizzare viste a gestione dinamica (DMV) per monitorare Analysis Services | Documenti Microsoft
+title: Usare le viste a gestione dinamica (DMV) per monitorare Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ef037d3d2745a5cfce8949ca7ac14e0d5743326
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 789811d4588efe47848d7a6045342d506e1975ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288567"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Utilizzare DMV per monitorare Analysis Services
   Le DMV (viste a gestione dinamica) di Analysis Services sono strutture di query che consentono di esporre informazioni sulle operazioni del server locali e sull'integrità del server. La struttura di query è un'interfaccia dei set di righe dello schema tramite cui vengono restituiti i metadati e le informazioni di monitoraggio per un'istanza di Analysis Services.  
   
- Per la maggior parte delle query DMV, utilizzare un `SELECT` istruzione e `$System` dello schema con un set di righe dello schema XML/A.  
+ Per la maggior parte delle query DMV, si utilizza un `SELECT` istruzione e `$System` schema con un set di righe dello schema XML/A.  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
@@ -102,7 +102,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Se una DMV non è disponibile per un determinato set di righe, il server restituirà l'errore seguente: "il \<schemarowset > tipo di richiesta non è stato riconosciuto dal server". Tutti gli altri errori indicano problemi con la sintassi.  
+>  Se una DMV non è disponibile per un determinato set di righe, il server restituisce l'errore seguente: "il \<schemarowset > tipo di richiesta non è stato riconosciuto dal server". Tutti gli altri errori indicano problemi con la sintassi.  
   
 |Set di righe|Description|  
 |------------|-----------------|  

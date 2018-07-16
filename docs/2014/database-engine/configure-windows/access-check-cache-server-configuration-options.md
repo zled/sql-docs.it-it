@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - access check cache option
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ba3df614d843c6a1c5a4fb12bc7c8b17cc9784da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0024a9d0f9999b372ff50d7144a23490529e472e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287897"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>Opzioni di configurazione del server access check cache
   Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]accede agli oggetti di database, il controllo dell'accesso viene memorizzato nella cache in una struttura interna denominata **cache dei risultati del controllo dell'accesso**. Le opzioni **access check cache quota** e **access check cache bucket count** determinano il numero di voci e di hash bucket utilizzati per **la cache dei risultati del controllo dell'accesso**. Raramente la modifica di tali opzioni consente di ottenere prestazioni migliori.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
 caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5439f539e126a64cff92065e049da359e89345b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f28a62753f2ce6b5474e87be95276b0f464d4314
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298341"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Procedure consigliate per chiamare stored procedure compilate in modo nativo
   Le stored procedure compilate in modo nativo:  
@@ -54,7 +54,7 @@ ms.locfileid: "36167249"
   
  Analogamente, è possibile rilevare l'utilizzo di tipi non corrispondenti tramite lo stesso XEvent `hekaton_slow_parameter_passing`, con `reason=parameter_conversion`.  
   
- Poiché è necessario implementare la logica per eseguire nuovi tentativi quando si utilizzano le tabelle ottimizzate per la memoria (in molti scenari) e poiché è necessario aggirare le limitazioni di alcune funzionalità, è possibile creare una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretata dal wrapper. Per un esempio, vedere [linee guida per la logica di tentativi per le transazioni nelle tabelle con ottimizzazione per la memoria](memory-optimized-tables.md).  
+ Poiché è necessario implementare la logica per eseguire nuovi tentativi quando si utilizzano le tabelle ottimizzate per la memoria (in molti scenari) e poiché è necessario aggirare le limitazioni di alcune funzionalità, è possibile creare una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretata dal wrapper. Per un esempio, vedere [linee guida per la logica di tentativi per le transazioni nelle tabelle ottimizzate per la memoria](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure compilate in modo nativo](natively-compiled-stored-procedures.md)  

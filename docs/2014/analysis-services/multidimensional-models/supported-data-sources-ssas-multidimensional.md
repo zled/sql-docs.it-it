@@ -1,5 +1,5 @@
 ---
-title: Origini dati supportate (SSAS multidimensionale) | Documenti Microsoft
+title: Le origini dati supportate (SSAS multidimensionale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data sources
 - data sources [Analysis Services], about data sources
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SSAS, data sources
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 caps.latest.revision: 59
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 130e0e904dcd60b8dc7838cfc8e57f7589739857
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c4d8c3c37b63568da63d65e9548b50c44bcc455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301171"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Data Sources Supported (SSAS Multidimensional)
   In questo argomento vengono descritti i tipi di origini dati che possono essere utilizzati in un modello multidimensionale.  
@@ -38,7 +38,7 @@ ms.locfileid: "36167537"
   
 |||||  
 |-|-|-|-|  
-|Origine|Versioni|Tipo di file|Provider <sup>1</sup>|  
+|Origine|Versioni|Tipo di file|I provider <sup>1</sup>|  
 |Database di Access|Microsoft Access 2007, 2010, 2013.|Estensione accdb o mdb|Provider OLE DB per Microsoft Jet 4.0.|  
 |Database relazionali di SQL Server <sup>5</sup>|Microsoft SQL Server 2005, 2008, 2008 R2, 2012, 2014 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] <sup>2</sup>, SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|(non applicabile)|Provider OLE DB per SQL Server<br /><br /> Provider OLE DB di SQL Server Native Client<br /><br /> Provider OLE DB per SQL Server Native Client 11.0<br /><br /> Provider di dati .NET Framework per SQL Client|  
 |Database relazionali Oracle|Oracle 9i, 10g, 11g.|(non applicabile)|Provider OLE DB Oracle<br /><br /> Provider di dati .NET Framework per il client Oracle<br /><br /> Provider di dati .NET Framework per SQL Server<br /><br /> Provider OLE DB MSDAORA <sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  
@@ -48,19 +48,19 @@ ms.locfileid: "36167537"
 |Database relazionali di Sybase Adaptive Server Enterprise (ASE)|15.0.2|(non applicabile)|Provider OLE DB per Sybase|  
 |Altri database relazionali|(non applicabile)|(non applicabile)|Un provider OLE DB|  
   
- <sup>1</sup> origini dati ODBC non sono supportate per le soluzioni multidimensionali. Anche se la connessione viene gestita direttamente da Analysis Services, le finestre di progettazione in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] usate per la compilazione di soluzioni non sono in grado di connettersi a un'origine dati ODBC, anche quando si usano driver MSDASQL. Se i requisiti aziendali includono un'origine dati ODBC, provare invece a compilare una soluzione tabulare.  
+ <sup>1</sup> origini dati ODBC non sono supportate per soluzioni multidimensionali. Anche se la connessione viene gestita direttamente da Analysis Services, le finestre di progettazione in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] usate per la compilazione di soluzioni non sono in grado di connettersi a un'origine dati ODBC, anche quando si usano driver MSDASQL. Se i requisiti aziendali includono un'origine dati ODBC, provare invece a compilare una soluzione tabulare.  
   
  <sup>2</sup> per altre informazioni, vedere [!INCLUDE[ssSDS](../../includes/sssds-md.md)]via [azure.microsoft.com](http://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> per ulteriori informazioni sulle [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW, vedere [SQL Server Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> per altre informazioni sul [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW, vedere [SQL Server Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
   
- <sup>4</sup> in alcuni casi, utilizzo del provider OLE DB MSDAORA può determinare errori di connessione, in particolare con le versioni più recenti di Oracle. Se vengono visualizzati degli errori, è consigliabile utilizzare uno dei provider elencati per Oracle.  
+ <sup>4</sup> in alcuni casi, tramite il provider OLE DB MSDAORA può determinare errori di connessione, in particolare con le versioni più recenti di Oracle. Se vengono visualizzati degli errori, è consigliabile utilizzare uno dei provider elencati per Oracle.  
   
  <sup>5</sup> alcune funzionalità richiedono un database relazionale di SQL Server che viene eseguito in locale. In particolare, per il writeback e l'archiviazione ROLAP viene richiesto che l'origine dati sottostante sia un database relazionale di SQL Server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Origini dati supportate &#40;tabulare di SSAS&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   
  [Origini dati nei modelli multidimensionali](data-sources-in-multidimensional-models.md)   
- [Viste origine dati nei modelli multidimensionali](data-source-views-in-multidimensional-models.md)  
+ [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)  
   
   

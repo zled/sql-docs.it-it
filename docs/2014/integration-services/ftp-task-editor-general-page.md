@@ -1,5 +1,5 @@
 ---
-title: Editor attività FTP (pagina generale) | Documenti Microsoft
+title: Editor attività FTP (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.general.f1
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 786f0d4371773f77045f0ef9cd6825057c12a937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f8761af335319cbd205eca3c57d4f6874e5829
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283637"
 ---
 # <a name="ftp-task-editor-general-page"></a>Editor attività FTP (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività FTP** per specificare la gestione connessione FTP tramite cui viene stabilita la connessione al server FTP con cui comunica l'attività. È inoltre possibile specificare un nome e una descrizione per l'attività FTP.  
@@ -52,7 +52,7 @@ ms.locfileid: "36157778"
  Consente di digitare una descrizione dell'attività FTP.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività FTP &#40;pagina trasferimento File&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Classi OLAP in AMO | Documenti Microsoft
+title: Classi OLAP in AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,26 +16,26 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6db043eff86d0cd1675674cefee6aa74508e33f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1fcf669d63554c9a57dc927cb0071fbc17a9f2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280407"
 ---
 # <a name="amo-olap-classes"></a>Classi OLAP di AMO
   Le classi OLAP della libreria AMO (Analysis Management Objects) consentono di creare, modificare, eliminare ed elaborare cubi, dimensioni e oggetti correlati, ad esempio indicatori di prestazioni chiave (KPI), azioni e memorizzazione nella cache attiva.  
   
- Per ulteriori informazioni sull'impostazione l'ambiente di programmazione AMO, come per stabilire una connessione con un server, accesso a un database o la definizione dei dati le origini e le viste origine dati, vedere [classi fondamentali AMO](amo-fundamental-classes.md).  
+ Per altre informazioni sulla configurazione dell'ambiente di programmazione AMO, come le origini per stabilire una connessione con un server, l'accesso a un database o la definizione dei dati e viste origine dati, vedere [classi fondamentali AMO](amo-fundamental-classes.md).  
   
  In questo argomento sono incluse le sezioni seguenti:  
   
 -   [Oggetti Dimension](#Dimensions)  
   
--   [Oggetti del cubo](#Cubes)  
+-   [Oggetti Cube](#Cubes)  
   
 -   [Oggetti MeasureGroup](#MeasureGroups)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36169337"
   
  Per ulteriori informazioni sui metodi e sulle proprietà disponibili, vedere <xref:Microsoft.AnalysisServices.Dimension> in <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Cubes"></a> Oggetti del cubo  
+###  <a name="Cubes"></a> Oggetti cubo  
  Per creare un cubo, aggiungerlo alla raccolta di cubi del database, quindi aggiornare l'oggetto <xref:Microsoft.AnalysisServices.Cube> nel server tramite il metodo Update. Il metodo Update del cubo può includere il parametro UpdateOptions.ExpandFull che garantisce l'aggiornamento nel server di tutti gli oggetti del cubo che sono stati modificati.  
   
  Per rimuovere un cubo, eliminarlo tramite il metodo Drop dell'oggetto <xref:Microsoft.AnalysisServices.Cube>. La rimozione di un cubo dalla raccolta non influisce sul server.  

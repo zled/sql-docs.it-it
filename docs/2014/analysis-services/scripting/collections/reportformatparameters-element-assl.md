@@ -1,5 +1,5 @@
 ---
-title: Elemento Reportformatparameter (ASSL) | Documenti Microsoft
+title: Elemento Reportformatparameter (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportFormatParameters element
 ms.assetid: f2e677bf-7b6b-4ce4-b0ec-75a4999306c9
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e76ba9b70c485a938910eef7a7285520163b1bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b11bab41072f558af5ecbea86852f129853ed6e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234211"
 ---
 # <a name="reportformatparameters-element-assl"></a>Elemento ReportFormatParameter (ASSL)
   Contiene la raccolta di elementi [ReportFormatParameter](../objects/reportformatparameter-element-asl.md) per un elemento [ReportAction](../data-type/action-data-type-assl.md) .  
@@ -63,8 +63,8 @@ ms.locfileid: "36167529"
 |Elementi padre|[Action](../objects/action-element-assl.md) di tipo [ReportAction](../data-type/action-data-type-assl.md)|  
 |Elementi figlio|[ReportFormatParameter](../objects/reportformatparameter-element-asl.md)|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `ReportFormatParameters` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ReportAction>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `ReportFormatParameters` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ReportAction>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Le raccolte &#40;ASSL&#41;](collections-assl.md)  

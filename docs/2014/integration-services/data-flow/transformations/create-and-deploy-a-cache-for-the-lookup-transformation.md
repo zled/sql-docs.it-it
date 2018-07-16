@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating cache files for Lookup transformation
 - deploying cache files for Lookup transformation
@@ -17,13 +17,13 @@ ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f82feebd86e06fb7422cb36659645b9bc9702000
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4d3ab254acde1f610d9bb5593a5e0e5b22ca179
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279657"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Creazione e distribuzione di una cache per la trasformazione Ricerca
   È possibile creare e distribuire un file di cache (.caw) per la trasformazione Ricerca. Il set di dati di riferimento è archiviato nel file di cache.  
@@ -95,6 +95,6 @@ ms.locfileid: "36169707"
 5.  Distribuire il pacchetto nel file system. Per altre informazioni, vedere [Distribuzione di pacchetti con l'utilità di distribuzione](../../deploy-packages-by-using-the-deployment-utility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un'utilità di distribuzione](../../create-a-deployment-utility.md)  
+ [Creazione di un'utilità di distribuzione](../../create-a-deployment-utility.md)  
   
   

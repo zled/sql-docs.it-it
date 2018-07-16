@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 caps.latest.revision: 15
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 399c6743f302bd616fe0a232527fcb5fc0af62ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 874a47c99ff422484a25be756d65f4b6cbf7e051
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199671"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Creare un pacchetto di distribuzione di modelli tramite MDSModelDeploy
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]usare lo strumento MDSModelDeploy per creare un pacchetto. A seconda dei comandi specificati, il pacchetto può contenere:  
@@ -30,7 +30,7 @@ ms.locfileid: "36168544"
   
  Per distribuire un pacchetto contenente solo oggetti modello, è possibile utilizzare la Distribuzione guidata modello nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Per altre informazioni, vedere [Creare un pacchetto di distribuzione di modelli tramite la procedura guidata](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
 > [!NOTE]  
-> Questa versione dello strumento MDSModelDeploy non è possibile utilizzare più di un gigabyte (GB) di memoria. Quando si crea o si distribuire modelli di grandi dimensioni usando **oggetti e dati del modello** opzione, potrebbero verificarsi errori di "Flusso è stato troppo lungo" o "memoria esaurita". Per risolvere questo problema, utilizzare MDS di gestione temporanea per distribuire i dati. o l'aggiornamento a MDS 2016 o versione successiva, che include la versione aggiornata dello strumento MDSModelDeploy.
+> Questa versione dello strumento MDSModelDeploy non è possibile usare più di gigabyte (GB) di memoria. Quando si crea o distribuire modelli di grandi dimensioni mediante **modellare gli oggetti e dati** opzione, potrebbero verificarsi errori di "Stream era troppo lunga" o "memoria insufficiente". Per risolvere questo problema, è possibile utilizzare MDS di gestione temporanea per distribuire i dati. o l'aggiornamento a MDS 2016 o versione successiva, che include la versione aggiornata dello strumento MDSModelDeploy.
 ## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   

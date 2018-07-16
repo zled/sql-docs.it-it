@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Sort Warnings event class
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d1e14cca1726ec72d60f3c309d63f1d773c521d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cb1f53dba9fc2b4289ff0d900a53401035300602
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311931"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings - classe di evento
   La classe di evento Sort Warnings indica che per le operazioni di ordinamento non è disponibile memoria sufficiente. Ciò vale soltanto per le operazioni di ordinamento eseguite in una query, ad esempio una clausola ORDER BY in un'istruzione SELECT, e non per le operazioni di ordinamento che implicano la creazione di indici.  

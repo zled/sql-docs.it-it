@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
 - tasks [Integration Services], variables
@@ -19,13 +19,13 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b820a671418fc3126f2b5904f9a2a1c0c881eaa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c5f708afa4ce172807c1e0fd0697f6f7a29542d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311971"
 ---
 # <a name="system-variables"></a>Variabili di sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include un set di variabili di sistema in cui vengono archiviate informazioni sui pacchetti in esecuzione e sui relativi oggetti. Tali variabili possono essere utilizzate nelle espressioni e nelle espressioni di proprietà per personalizzare pacchetti, contenitori, attività e gestori di eventi.  
@@ -93,7 +93,7 @@ ms.locfileid: "36158493"
 |**ProgressCountHigh**|Int32|Parte più significativa di un valore a 64 bit che indica il numero totale delle operazioni elaborate dall'evento OnProgress.|Gestore dell'evento OnProgress|  
 |`ProgressCountLow`|Int32|Parte meno significativa di un valore a 64 bit che indica il numero totale delle operazioni elaborate dall'evento OnProgress.|Gestore dell'evento OnProgress|  
 |**ProgressDescription**|String|Descrizione dell'avanzamento.|Gestore dell'evento OnProgress|  
-|`Propagate`|Boolean|Indica se l'evento viene propagato a un gestore di evento di livello superiore.<br /><br /> Nota: Il valore di `Propagate` variabile viene ignorata durante la convalida del pacchetto.<br /><br /> Se si imposta `Propagate` su `False` in un pacchetto figlio, ciò non impedisce la propagazione di un evento fino al pacchetto padre.|Tutti i gestori di eventi|  
+|`Propagate`|Boolean|Indica se l'evento viene propagato a un gestore di evento di livello superiore.<br /><br /> Nota: Il valore della `Propagate` variabile viene ignorata durante la convalida del pacchetto.<br /><br /> Se si imposta `Propagate` su `False` in un pacchetto figlio, ciò non impedisce la propagazione di un evento fino al pacchetto padre.|Tutti i gestori di eventi|  
 |`SourceDescription`|String|Descrizione dell'eseguibile nel gestore di evento che ha generato l'evento.|Tutti i gestori di eventi|  
 |`SourceID`|String|Identificatore univoco dell'eseguibile nel gestore di evento che ha generato l'evento.|Tutti i gestori di eventi|  
 |**SourceName**|String|Nome dell'eseguibile nel gestore di evento che ha generato l'evento.|Tutti i gestori di eventi|  
@@ -108,6 +108,6 @@ ms.locfileid: "36158493"
  Questa regola vale anche per le variabili definite dall'utente ma, mentre i tipi di dati delle variabili di sistema non possono essere modificati ed è necessario adattare l'utilizzo di tali variabili in base ai relativi tipi di dati, le variabili definite dall'utente sono molto più flessibili. Le variabili definite dall'utente utilizzate nelle associazioni di parametro vengono in genere definite con tipi di dati compatibili con quelli dei parametri a cui è stato eseguito il mapping.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Mapping dei parametri di Query a variabili in un'attività Esegui SQL](control-flow/execute-sql-task.md)  
+ [Mapping di parametri di query a variabili in un'attività Esegui SQL](control-flow/execute-sql-task.md)  
   
   

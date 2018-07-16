@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9b3ee40399f6fa3507e27e3d6cb98b63627dcb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 53633e4f963b9d816487721b79388b8236281010
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297061"
 ---
 # <a name="odbc-source"></a>Origine ODBC
   Tramite l'origine ODBC vengono estratti dati da un database supportato da ODBC mediante una tabella di database, una vista o un'istruzione SQL.  
@@ -76,9 +76,9 @@ ms.locfileid: "36170168"
   
 -   [Editor origine ODBC &#40;pagina Gestione connessione&#41;](../odbc-source-editor-connection-manager-page.md)  
   
--   [Editor origine ODBC &#40;pagina colonne&#41;](../odbc-source-editor-columns-page.md)  
+-   [Editor origine ODBC &#40;(pagina colonne)&#41;](../odbc-source-editor-columns-page.md)  
   
--   [Editor origine ODBC &#40;pagina di Output di errore&#41;](../odbc-source-editor-error-output-page.md)  
+-   [Editor origine ODBC &#40;pagina dell'Output degli errori&#41;](../odbc-source-editor-error-output-page.md)  
   
  La finestra di dialogo **Editor avanzato** contiene le proprietà che è possibile impostare a livello di codice.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "36170168"
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
--   [Editor origine ODBC &#40;pagina di Output di errore&#41;](../odbc-source-editor-error-output-page.md)  
+-   [Editor origine ODBC &#40;pagina dell'Output degli errori&#41;](../odbc-source-editor-error-output-page.md)  
   
--   [Editor origine ODBC &#40;pagina colonne&#41;](../odbc-source-editor-columns-page.md)  
+-   [Editor origine ODBC &#40;(pagina colonne)&#41;](../odbc-source-editor-columns-page.md)  
   
 -   [Editor origine ODBC &#40;pagina Gestione connessione&#41;](../odbc-source-editor-connection-manager-page.md)  
   

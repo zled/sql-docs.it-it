@@ -1,5 +1,5 @@
 ---
-title: Esercitazione di Data Mining dei dati di base | Documenti Microsoft
+title: Esercitazione di base di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -17,30 +17,30 @@ ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
 caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 92e55dccdd72e07b4303d6c996a002fc4fcca8af
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 5711bc105432b0d23f5fd2fd2b429449c2549258
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314971"
 ---
 # <a name="basic-data-mining-tutorial"></a>Esercitazione di base sul data mining
-  Benvenuti il [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esercitazione di base di Data Mining. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] offre un ambiente integrato per la creazione di modelli di data mining e l'esecuzione di stime. In questa esercitazione, si verrà completato uno scenario per una campagna di mailing diretto in cui vengono usati di machine learning per analizzare e comportamento di acquisto dei clienti. Verrà illustrato come utilizzare tre degli algoritmi di data mining più importanti: clustering, alberi delle decisioni e Naive Bayes. Verrà inoltre illustrato come analizzare i risultati ottenuti utilizzando i visualizzatori dei modelli di data mining e creare stime e grafici di accuratezza utilizzando strumenti di data mining inclusi in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] verrà utilizzata per tutti gli esempi.  
+  Ecco il [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esercitazione di base di Data Mining. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornisce un ambiente integrato per la creazione di modelli di data mining e l'esecuzione di stime. In questa esercitazione, si verrà completato uno scenario per una campagna di mailing diretto in cui si usa machine learning per analizzare e identificare il comportamento di acquisto dei clienti. Verrà illustrato come utilizzare tre degli algoritmi di data mining più importanti: clustering, alberi delle decisioni e Naive Bayes. Si apprenderà anche come analizzare i risultati ottenuti utilizzando i visualizzatori modelli di data mining e creare stime e grafici di accuratezza utilizzando gli strumenti di data mining inclusi in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] verrà utilizzata per tutti gli esempi.  
   
- Quando si ha familiarità con strumenti di data mining, si consiglia di completare anche il [esercitazione intermedia sul Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md). Nelle lezioni viene illustrato come utilizzare le previsioni, l'analisi Market basket, la serie temporale, i modelli di associazione, le tabelle nidificate e il clustering delle sequenze.  
+ Quando si è a proprio agio usando strumenti di data mining, è consigliabile completare anche il [esercitazione intermedia sul Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md). Nelle lezioni viene illustrato come utilizzare le previsioni, l'analisi Market basket, la serie temporale, i modelli di associazione, le tabelle nidificate e il clustering delle sequenze.  
   
 ## <a name="tutorial-scenario"></a>Scenario dell'esercitazione  
- In questa esercitazione, si è un dipendente di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] cui incarico di informazioni approfondite sui clienti della società in base a cronologia degli acquisti e utilizzando quindi che i dati cronologici per eseguire stime che possono essere usate nelle iniziative di marketing. L'azienda non ha mai eseguito operazioni di data mining, quindi è necessario creare un nuovo database specifico e impostare diversi modelli di data mining.  
+ In questa esercitazione è dipendenti [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] chi viene affidato l'incarico con informazioni approfondite sui clienti dell'azienda in base alla cronologia degli acquisti e quindi utilizzare tali dati per eseguire stime che possono essere utilizzate nelle iniziative di marketing. L'azienda non ha mai eseguito operazioni di data mining, quindi è necessario creare un nuovo database specifico e impostare diversi modelli di data mining.  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
  Questa esercitazione spiega come creare e utilizzare diversi tipi di metodi di apprendimento automatici. Verrà inoltre illustrato come creare la copia di un modello di data mining e come applicare un filtro ai dati di input per ottenere risultati diversi. Successivamente, sarà possibile confrontare i risultati di entrambi i modelli utilizzando un grafico di accuratezza. Infine, verrà utilizzata la funzione di drill-through per recuperare dati aggiuntivi dalla struttura di data mining sottostante.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Data Mining include le seguenti caratteristiche che consentono di sviluppare e confrontare più modelli predittivi e intraprendere le azioni in base ai risultati:  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Il Data Mining include le seguenti funzionalità che consentono di sviluppare e confrontare più modelli predittivi e intraprendere le azioni in base ai risultati:  
   
 -   *Set di Test di controllo -* quando si crea una struttura di data mining, è ora possibile dividere i dati nella struttura di data mining in set di training e set di testing. Ciò consente di testare i modelli in base a set di dati simili e di confrontare l'accuratezza di modelli correlati.  
   
--   *Filtri - modello di data mining*è ora possibile associare filtri a un modello di data mining e applicarli durante il training e il testing. Ciò consente di compilare facilmente modelli correlati in base a subset di dati diversi.  
+-   *-Filtri dei modelli di data mining*è ora possibile associare filtri a un modello di data mining e applicarli durante il training e il testing. Ciò consente di compilare facilmente modelli correlati in base a subset di dati diversi.  
   
 -   *Drill-through nei case della struttura e le colonne della struttura -* è possibile ora spostarsi facilmente dagli schemi generali del modello di data mining ai dettagli utilizzabili nell'origine dati.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36312389"
  [Lezione 2: Compilazione di una struttura di Mailing diretto &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
  In questa lezione verranno illustrate le procedure per la creazione di una struttura di modello di data mining che può essere utilizzata nello scenario relativo al mailing diretto.  
   
- [Lezione 3: Aggiunta e l'elaborazione di modelli](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Lezione 3: Aggiunta ed elaborazione di modelli](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  In questa lezione verranno illustrate le procedure per l'aggiunta di modelli a una struttura. I modelli creati verranno compilati con gli algoritmi seguenti:  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees  
@@ -82,11 +82,11 @@ ms.locfileid: "36312389"
  Per garantire una maggiore sicurezza, i database di esempio non vengono installati con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per installare i database ufficiali per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitare il [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) pagina e selezionare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Quando si utilizza un'esercitazione, può risultare più agevole spostarsi avanti e indietro nei passaggi se si aggiunge il **argomento successivo** e **argomento precedente** pulsanti alla barra degli strumenti del Visualizzatore di documenti.  
+>  Quando si lavora in un'esercitazione, si potrebbe risultare più agevole spostarsi avanti e indietro tra i passaggi se si aggiunge il **argomento successivo** e **argomento precedente** pulsanti alla barra degli strumenti del Visualizzatore di documenti.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Soluzioni di Data Mining](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
- [Procedure dettagliate e attività di modello di data mining](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Creazione e l'esecuzione di query modelli di Data Mining con DMX: esercitazioni su &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Procedure dettagliate e le attività del modello di data mining](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Creazione e l'esecuzione di query modelli di Data Mining con DMX: esercitazioni &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

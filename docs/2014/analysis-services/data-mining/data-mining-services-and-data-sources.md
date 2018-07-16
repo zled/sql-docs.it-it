@@ -1,5 +1,5 @@
 ---
-title: Servizi di Data Mining e origini dati | Documenti Microsoft
+title: Servizi di Data Mining e origini dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcb6d6ff58773c90a1fa5f70e638666ac92c3a2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3289ecf95c61c21942ba075b8eb20e3db074e870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297471"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Servizi di data mining e origini dati
   Il data mining richiede una connessione a un'istanza di SQL Server Analysis Services. I dati di un cubo non sono necessari per il data mining, pertanto è consigliabile l'uso di origini relazionali. Tuttavia, il data mining usa i componenti forniti dal motore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -74,14 +74,14 @@ ms.locfileid: "36158100"
 ## <a name="configuring-permissions-and-server-properties"></a>Configurazione di autorizzazioni e proprietà del server  
  Il data mining richiede autorizzazioni aggiuntive in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La maggior parte delle proprietà di data mining può essere impostata nella [finestra di dialogo Proprietà computer Analysis Server &#40;Analysis Services&#41;](../analysis-server-properties-dialog-box-analysis-services.md).  
   
- Per ulteriori informazioni sulle proprietà che è possibile configurare, vedere [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md).  
+ Per altre informazioni sulle proprietà che è possibile configurare, vedere [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md).  
   
  Le proprietà del server riportate di seguito hanno particolare rilevanza per il data mining:  
   
--   `AllowAdHocOpenRowsetQueries` Controlla l'accesso ad hoc al provider OLE DB, che vengono caricati direttamente nello spazio di memoria server.  
+-   `AllowAdHocOpenRowsetQueries` Controlla l'accesso ad hoc al provider OLE DB, caricati direttamente nello spazio di memoria server.  
   
     > [!IMPORTANT]  
-    >  Per migliorare la sicurezza, è consigliabile impostare questa proprietà su `false`. Il valore predefinito è `false`. Tuttavia, anche se questa proprietà è impostata su `false`, gli utenti possono continuare a creare query singleton e utilizzare OPENQUERY sulle origini dati consentite.  
+    >  Per migliorare la sicurezza, è consigliabile impostare questa proprietà su `false`. Il valore predefinito è `false`. Tuttavia, anche se questa proprietà è impostata `false`, gli utenti possono continuare a creare query singleton e utilizzare OPENQUERY sulle origini dati consentite.  
   
 -   **AllowedProvidersInOpenRowset** Specifica il provider, se l'accesso ad hoc è abilitato. È possibile specificare più provider, immettendo un elenco delimitato da virgole di ProgID.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36158100"
  È inoltre possibile impostare proprietà che consentono di ottimizzare il server e controllare la sicurezza per l'utilizzo client. Per altre informazioni, vedere [Proprietà di funzionalità](../server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Per ulteriori informazioni sul supporto per algoritmi plug-in dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Per altre informazioni sul supporto per algoritmi plug-in delle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Accesso a livello di codice agli oggetti di data mining  
  Per creare una connessione a un database di Analysis Services e utilizzare oggetti di data mining, è possibile utilizzare i modelli a oggetti seguenti:  

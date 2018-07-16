@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Decision descrizione dettagliata del diagramma ad albero (Data Mining Add-ins) | Documenti Microsoft
+title: Decision Trees descrizione dettagliata del diagramma dell'albero (componenti aggiuntivi Data Mining dei dati) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shapes, data mining
 - diagram, decision tree
@@ -16,41 +16,41 @@ helpviewer_keywords:
 - decision tree [data mining]
 ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 951a0e0722aaa5a631140da9ddec9255246aaffd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4b4eb570d1d81bc724c885e8c277aa662cf4ff5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291717"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Descrizione dettagliata del diagramma dell'albero delle decisioni (componenti aggiuntivi Data Mining dei dati)
-  Se è stato creato un modello di albero delle decisioni, è possibile creare un diagramma personalizzato in Visio tramite la forma Albero delle decisioni o la forma Rete di dipendenze. In questo argomento vengono descritte le personalizzazioni è possibile eseguire utilizzando la **albero delle decisioni** il data shaping e questi controlli:  
+  Se è stato creato un modello di albero delle decisioni, è possibile creare un diagramma personalizzato in Visio tramite la forma Albero delle decisioni o la forma Rete di dipendenze. In questo argomento descrive le personalizzazioni è possibile eseguire utilizzando la **albero delle decisioni** questi controlli e forme:  
   
 -   Controlli di rendering per il diagramma dell'albero delle decisioni  
   
-     Queste opzioni fanno parte della **procedura guidata albero delle decisioni** che viene avviata quando si rilascia una forma nell'area di lavoro di Visio.  
+     Queste opzioni fanno parte del **procedura guidata albero delle decisioni** che viene avviata quando si rilascia una forma nell'area di lavoro di Visio.  
   
 -   **Layout Data Mining** sulla barra degli strumenti  
   
      Queste opzioni vengono aggiunte all'area di lavoro di Visio per consentire di interagire con la forma.  
   
 ## <a name="build-a-decision-tree-diagram"></a>Compilazione di un diagramma dell'albero delle decisioni  
- Si rilascia la forma di albero delle decisioni nella pagina di Visio per avviare il **procedura guidata forma di Visio albero delle decisioni** e impostare le opzioni del diagramma.  
+ Si rilascia la forma albero delle decisioni nella pagina di Visio per avviare il **procedura guidata forma Visio per albero delle decisioni** e impostare le opzioni del diagramma.  
   
 #### <a name="use-the-decision-tree-wizard"></a>Utilizzo della Procedura guidata Albero delle decisioni  
   
-1.  Se non viene visualizzato **forme Microsoft Data Mining** nel **forme** elenco, fare clic su **più forme**, selezionare **Apri Stencil**e aprire la modello dal percorso di installazione predefinito.  
+1.  Se non viene visualizzata **forme Microsoft Data Mining** nel **forme** fare clic su **più forme**, selezionare **Apri Stencil**e aprire la modello dal percorso di installazione predefinito.  
   
      \<unità >: \Programmi file (x85) \Microsoft SQL Server 2012 DM Add-Ins  
   
 2.  Trascinare il **albero delle decisioni** la forma nella pagina.  
   
-3.  Nella pagina iniziale del **procedura guidata forma di Visio albero delle decisioni**, fare clic su **successivo**.  
+3.  Nella pagina di benvenuto del **procedura guidata forma Visio per albero delle decisioni**, fare clic su **successivo**.  
   
-4.  Nel **selezionare un'origine dati** pagina del **Creazione guidata Cluster**, scegliere una connessione a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server che contiene il modello da visualizzare.  
+4.  Nel **Vybrat Zdroj** pagina del **guidata Cluster**, scegliere una connessione a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server che contiene il modello da visualizzare.  
   
 5.  Selezionare un modello di data mining appropriato e fare clic su **successivo**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36167967"
   
      In un albero vengono modellate le interazioni che portano un risultato specifico modellato; pertanto, anche se nel modello sono contenuti più risultati, è possibile visualizzare solo un albero alla volta.  
   
-7.  Nel **selezione albero delle decisioni** della finestra di dialogo è inoltre possibile impostare queste opzioni per il rendering:  
+7.  Nel **selezione albero delle decisioni** nella finestra di dialogo è inoltre possibile impostare queste opzioni di rendering:  
   
      **Profondità massima di Rendering**  
      Utilizzare questa opzione per controllare il numero di nodi visualizzati.  
@@ -69,7 +69,7 @@ ms.locfileid: "36167967"
   
      L'impostazione predefinita è tre livelli di nodi.  
   
-     **Selezionare il colore e visualizzare il testo di valori**  
+     **Selezionare il colore e visualizzare il testo per i valori**  
      Scegliere il colore che rappresenterà ognuno dei risultati. Se non si specificano i colori, questi vengono automaticamente generati utilizzando i colori del tema del video correnti.  
   
 8.  Fare clic su **avanzate** per personalizzare le opzioni seguenti per ogni nodo nel diagramma dell'albero delle decisioni.  
@@ -104,13 +104,13 @@ ms.locfileid: "36167967"
     >  In alcuni ambienti, i connettori nel grafico potrebbero non riuscire a eseguire il rendering in Office 2013.  
   
 ## <a name="explore-and-modify-the-finished-diagram"></a>Esplorazione e modifica del diagramma completato  
- Dopo aver completato la **procedura guidata forma di Visio albero delle decisioni**, in Visio viene creato un diagramma dell'albero nella pagina in cui vengono visualizzati graficamente le regole che portano il risultato stimato.  
+ Dopo aver completato la **procedura guidata forma Visio per albero delle decisioni**, Visio consente di creare un diagramma dell'albero nella pagina in cui vengono visualizzati graficamente le regole che portano il risultato stimato.  
   
  È possibile continuare a modificare la forma utilizzando i seguenti controlli per i diagrammi dell'albero delle decisioni:  
   
 #### <a name="using-the-decision-tree-option-menus"></a>Utilizzo dei menu delle opzioni dell'albero delle decisioni  
   
-1.  Fare clic sui **Add-Ins** della barra multifunzione e quindi visualizzata una delle barre degli strumenti personalizzate utilizzate per l'utilizzo di diagrammi di data mining:  
+1.  Scegliere il **Add-Ins** della barra multifunzione e quindi visualizzare una delle barre degli strumenti personalizzate utilizzate per l'uso di diagrammi di data mining:  
   
      **Layout**  
      Consente di ottimizzare la disposizione dell'albero da adattare nella pagina corrente.  
@@ -123,9 +123,9 @@ ms.locfileid: "36167967"
   
 2.  Usare la **nuovo Layout pagina** opzione in Visio **progettazione** della barra multifunzione per provare layout dell'albero differenti.  
   
-3.  Utilizzare la **connettori** opzione il **progettazione** scheda per modificare i connettori utilizzati tra i nodi dell'albero.  
+3.  Usare la **connettori** opzione il **progettazione** pressione di tab per modificare i connettori utilizzati tra i nodi dell'albero.  
   
-4.  Utilizzare la **panoramica e Zoom** , controllare il **riquadro** area di Visio **visualizzazione** della barra multifunzione, per concentrarsi su una determinata area del diagramma.  
+4.  Usare la **panoramica e Zoom** controllo la **riquadro attività** area di Visio **visualizzazione** barra multifunzione per concentrarsi su una determinata area del diagramma.  
   
 5.  Fare clic con il pulsante destro del mouse su qualsiasi nodo dell'albero e scegliere tra queste opzioni del menu di scelta rapida specifiche dei diagrammi dell'albero delle decisioni:  
   

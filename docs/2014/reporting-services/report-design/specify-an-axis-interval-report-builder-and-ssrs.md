@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1ce88458add3922b5626a3d883a3df414d76221e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3c619ec718e3471eb6518f6604a65c97cb367508
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304991"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Specificare un intervallo dell'asse (Generatore report e SSRS)
   L'intervallo dell'asse definisce il numero di etichette e dei segni di graduazione associati su un asse. Sull'asse dei valori gli intervalli forniscono una misura coerente dei punti dati del grafico. Sull'asse delle categorie è tuttavia possibile che tale funzionalità provochi la visualizzazione delle categorie senza etichette. È possibile specificare il numero di intervalli desiderato nella proprietà intervallo dell'asse. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] il numero degli intervalli viene calcolato in fase di esecuzione, in base ai dati nel set di risultati. Per altre informazioni su come vengono calcolati gli intervalli degli assi, vedere [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
- Questo argomento non è applicabile per i valori di data o ora sull'asse delle categorie. Per impostazione predefinita, `DateTime` i valori vengono visualizzati come giorni. Per specificare un intervallo di data o ora diverso, ad esempio un mese o un intervallo orario, è necessario formattare le etichette dell'asse e impostare l'asse in modo da visualizzare istanze di tipi `DateTime` anziché di tipi `String`. È inoltre necessario impostare la proprietà intervallo. Per altre informazioni, vedere [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md).  
+ Questo argomento non è applicabile per i valori di data o ora sull'asse delle categorie. Per impostazione predefinita, `DateTime` valori vengono visualizzati come giorni. Per specificare un intervallo di data o ora diverso, ad esempio un mese o un intervallo orario, è necessario formattare le etichette dell'asse e impostare l'asse in modo da visualizzare istanze di tipi `DateTime` anziché di tipi `String`. È inoltre necessario impostare la proprietà intervallo. Per altre informazioni, vedere [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md).  
   
  Questo argomento non è applicabile ai grafici a torta, ad anello, a imbuto o a piramide che non includono assi.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36158393"
   
 1.  Fare clic con il pulsante destro del mouse sull'asse delle categorie, quindi scegliere **Proprietà asse**. Verrà visualizzata la finestra di dialogo **Proprietà asse** .  
   
-2.  In **opzioni di asse**, impostare `Interval` a **1**. Verranno visualizzate tutte le etichette dei gruppi di categorie. Se si desidera visualizzare tutte le etichette dei gruppi di categorie sull'asse X, digitare **2**.  
+2.  Nelle **opzioni di asse**, impostare `Interval` al **1**. Verranno visualizzate tutte le etichette dei gruppi di categorie. Se si desidera visualizzare tutte le etichette dei gruppi di categorie sull'asse X, digitare **2**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -51,13 +51,13 @@ ms.locfileid: "36158393"
   
 1.  Fare clic con il pulsante destro del mouse sull'asse da modificare, quindi scegliere **Proprietà asse**. Verrà visualizzata la finestra di dialogo **Proprietà asse** .  
   
-2.  In **opzioni di asse**, impostare `Interval` a **Auto**. Verrà visualizzato il numero ottimale di etichette di categorie che è possibile adattare lungo l'asse.  
+2.  Nella **opzioni di asse**, impostare `Interval` al **automatica**. Verrà visualizzato il numero ottimale di etichette di categorie che è possibile adattare lungo l'asse.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Formattazione dei punti dati in un grafico &#40;SSRS e Generatore Report&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione dei punti dati in un grafico &#40;Report e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Ordinamento dei dati in un'area dati &#40;Generatore report e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Finestra di dialogo Proprietà asse, Opzioni asse &#40;Generatore report e SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [Specificare una scala logaritmica &#40;Generatore report e SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   

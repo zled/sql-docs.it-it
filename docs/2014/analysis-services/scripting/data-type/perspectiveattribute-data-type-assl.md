@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati PerspectiveAttribute (ASSL) | Documenti Microsoft
+title: Tipo di dati PerspectiveAttribute (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveAttribute data type
 ms.assetid: bf4d45c1-e48d-4ada-bbab-49c3ac74948d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4e6125aa11dedf6fe1eda706e136caf989e3d4c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2f27d082f4d0ff13f736d00a3f6d521e830c402
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295561"
 ---
 # <a name="perspectiveattribute-data-type-assl"></a>Tipo di dati PerspectiveAttribute (ASSL)
-  Definisce un tipo di dati primitivo che rappresenta le informazioni su un attributo in un [PerspectiveDimension](dimension-data-type-assl.md) elemento.  
+  Definisce un tipo di dati primitivo che rappresenta le informazioni su un attributo in una [PerspectiveDimension](dimension-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,10 +59,10 @@ ms.locfileid: "36168619"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Annotazioni](../collections/annotations-element-assl.md), [AttributeHierarchyVisible](../properties/visible-element-assl.md), [AttributeID](../properties/id-element-assl.md), [DefaultMember](../objects/member-element-assl.md)|  
+|Elementi figlio|[Le annotazioni](../collections/annotations-element-assl.md), [AttributeHierarchyVisible](../properties/visible-element-assl.md), [AttributeID](../properties/id-element-assl.md), [DefaultMember](../objects/member-element-assl.md)|  
 |Elementi derivati|[Attributo](../objects/attribute-element-assl.md) ([attributi](../collections/attributes-element-assl.md) insieme [PerspectiveDimension](dimension-data-type-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.PerspectiveAttribute>.  
   
 ## <a name="see-also"></a>Vedere anche  

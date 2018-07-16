@@ -1,5 +1,5 @@
 ---
-title: Elemento KeyNotFound (ASSL) | Documenti Microsoft
+title: Elemento KeyNotFound (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyNotFound element
 ms.assetid: 2a93bbfa-2409-4e94-8b68-926532895a4c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 545ae163b4dda53adb60f5300e7f8b75cf926d52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58228d8f4029fecf22062a3e3c5c0c9adf3eafe1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281807"
 ---
 # <a name="keynotfound-element-assl"></a>Elemento KeyNotFound (ASSL)
   Specifica la modalità [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] risponde quando viene rilevato un errore di integrità referenziale.  
@@ -61,7 +61,7 @@ ms.locfileid: "36167147"
 |Elemento padre|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Si verificano errori di integrità referenziale quando per un valore di chiave esterna in una tabella dipendente non è presente una voce corrispondente nella tabella padre. Questo errore si verifica quando [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] elabora una dimensione in cui la tabella dei fatti fa riferimento a un valore di chiave esterna che non è presente nella tabella delle dimensioni per la dimensione oppure quando [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] elabora una partizione quando la tabella principale delle dimensioni per una dimensione inclusa nella partizione fa riferimento a un valore di chiave che non è presente in un'altra tabella delle dimensioni associata. Nel caso di gerarchie padre-figlio e di attributi padre, questo errore può inoltre verificarsi quando la tabella principale delle dimensioni per una dimensione inclusa nella partizione fa riferimento a un valore di chiave che non è presente nella stessa tabella delle dimensioni.  
   
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  

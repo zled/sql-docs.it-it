@@ -1,5 +1,5 @@
 ---
-title: Proprietà Context (classe SecurityCertificate) | Documenti Microsoft
+title: Proprietà Context (classe SecurityCertificate) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Context property
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5fb4375726dfbf9494341b4e1d0f2e1af35bc878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 40e7d2e3b604ebb4a7b78aaf040396c61ae0fceb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290357"
 ---
 # <a name="context-property-securitycertificate-class"></a>Proprietà Context (classe SecurityCertificate)
   Ottiene il contesto del certificato di sicurezza.  
@@ -48,9 +48,9 @@ object
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore di matrice `sint32` che specifica il contesto del certificato di sicurezza.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete Server e le librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   
