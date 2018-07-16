@@ -1,13 +1,11 @@
 ---
-title: Integrazione con CLR e transazioni | Documenti Microsoft
+title: Integrazione con CLR e transazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - transactions [CLR integration]
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b82456883db306009f4d2027c1cd7f91ff985f85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: d75762f7758ee6d34a5e212667915a644670920d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066971"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353363"
 ---
 # <a name="clr-integration-and-transactions"></a>Integrazione con CLR e transazioni
   Tramite lo spazio dei nomi `System.Transactions` vengono forniti un framework di transazioni pienamente integrato con ADO.NET e l'integrazione con CRL di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `System.Transactions` e ADO.NET funzionano insieme per estendere e semplificare l'utilizzo di transazioni locali e distribuite nelle applicazioni gestite.  

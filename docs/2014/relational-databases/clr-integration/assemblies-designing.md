@@ -1,13 +1,11 @@
 ---
-title: Progettazione di assembly | Documenti Microsoft
+title: Progettazione di assembly | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 486c6ad507682db3bd7ab06c674164b1d31f34bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: de9b80a9406078a6f5d4ad3a16add7c02f4bde5a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168324"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351023"
 ---
 # <a name="designing-assemblies"></a>Progettazione di assembly
   In questo argomento vengono illustrati alcuni fattori da prendere in considerazione durante la progettazione degli assembly:  
@@ -88,7 +86,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>API .NET Framework non consentite  
- Qualsiasi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] API annotate con uno dei consentiti **HostProtectionAttributes** non può essere chiamato dagli assembly SAFE ed EXTERNAL_ACCESS.  
+ Eventuali [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] API annotato con uno dei consentiti **HostProtectionAttributes** non può essere chiamato dagli assembly SAFE ed EXTERNAL_ACCESS.  
   
 ```  
 eSelfAffectingProcessMgmt  

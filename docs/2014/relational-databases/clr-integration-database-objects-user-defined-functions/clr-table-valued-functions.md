@@ -1,13 +1,11 @@
 ---
-title: Le funzioni con valori di tabella CLR | Documenti Microsoft
+title: Le funzioni con valori di tabella CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - TVFs [CLR integration]
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 caps.latest.revision: 86
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 83d955467034448e5c9a7337b674b85a12acb0c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 67bb174803f7368257217e5244ef023e2c274929
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069399"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354003"
 ---
 # <a name="clr-table-valued-functions"></a>Funzioni CLR con valori di tabella
   Una funzione con valori di tabella è una funzione definita dall'utente che restituisce una tabella.  
@@ -81,7 +79,7 @@ select * from table t cross apply function(t.column);
   
 -   Vengono generate da dati esterni. Una funzione con valori di tabella che legge, ad esempio, il log eventi e lo espone come tabella.  
   
- **Nota** una funzione con valori di tabella può eseguire solo l'accesso ai dati tramite un [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguire una query nel `InitMethod` metodo e non il `FillRow` (metodo). `InitMethod` deve essere contrassegnato con la proprietà dell'attributo `SqlFunction.DataAccess.Read` se viene eseguita una query [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ **Nota** una funzione con valori di tabella può eseguire solo l'accesso ai dati tramite un [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguire una query nella `InitMethod` metodo e non nel `FillRow` (metodo). `InitMethod` deve essere contrassegnato con la proprietà dell'attributo `SqlFunction.DataAccess.Read` se viene eseguita una query [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="a-sample-table-valued-function"></a>Funzione con valori di tabella di esempio  
  La funzione con valori di tabella seguente restituisce informazioni dal registro eventi di sistema. La funzione accetta un singolo argomento stringa contenente il nome del registro eventi da leggere.  
@@ -180,7 +178,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Esempio: Restituzione dei risultati di una query di SQL Server  
- Nell'esempio seguente viene illustrata una funzione con valori di tabella che esegue una query su un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo esempio viene utilizzato il database AdventureWorks Light di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Vedere [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) per ulteriori informazioni sul download di AdventureWorks.  
+ Nell'esempio seguente viene illustrata una funzione con valori di tabella che esegue una query su un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo esempio viene utilizzato il database AdventureWorks Light di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Visualizzare [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) per altre informazioni sul download di AdventureWorks.  
   
  Assegnare al file di codice sorgente il nome FindInvalidEmails.cs o FindInvalidEmails.vb.  
   

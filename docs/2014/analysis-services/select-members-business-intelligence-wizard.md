@@ -1,5 +1,5 @@
 ---
-title: Selezionare i membri (configurazione guidata Business Intelligence) | Documenti Microsoft
+title: Selezionare i membri (configurazione guidata Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.memberconversion.f1
 ms.assetid: 1a147461-d594-41e7-a41d-09d2d003e1e0
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 75cd6c2aeca77d55b4ec66baa3dccb4c77f4a66e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b1bdcf78e3a7fd35da53e7a39bea5c24e217ae8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321241"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>Selezione membri (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare la pagina **Selezione membri** per determinare i membri ai quali, durante la Configurazione guidata funzionalità di Business Intelligence, dovrà essere applicata la funzionalità di conversione valuta specificata nella pagina **Impostazione opzioni di conversione valuta** .  
@@ -41,7 +41,7 @@ ms.locfileid: "36157824"
 |**Misure**|Consente di selezionare la misura nel gruppo di misure di tipo Tasso che contiene il tasso di cambio da usare quando la misura selezionata in **Tipi di misure predefiniti** viene convertita.|  
   
  **Gerarchia conto**  
- Consente di applicare la funzionalità di conversione valuta a uno o più membri nella gerarchia conto della dimensione di tipo Conti inclusa nel cubo. La gerarchia conto corrisponde alla gerarchia all'interno dell'account di dimensione la cui proprietà `Type` è impostata su *Account*.  
+ Consente di applicare la funzionalità di conversione valuta a uno o più membri nella gerarchia conto della dimensione di tipo Conti inclusa nel cubo. La gerarchia conto corrisponde alla gerarchia all'interno dell'account della dimensione la cui proprietà `Type` è impostata su *Account*.  
   
  Se selezionata, nella griglia vengono visualizzate le opzioni elencate nella tabella seguente.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36157824"
 |**Misure**|Consente di selezionare la misura nel gruppo di misure di tipo Tasso che contiene il tasso di cambio da utilizzare quando le misure per il membro selezionato in **Membro conto** vengono convertite.|  
   
  **Gerarchia conto basata sul tipo**  
- Selezionare questa opzione per applicare la funzionalità di conversione valuta a tutti i membri di attributi nella gerarchia conto la cui proprietà `Type` è impostata su un tipo di conto specificato.  
+ Selezionare questa opzione per applicare la funzionalità di conversione valuta a tutti i membri di attributi inclusi nella gerarchia conto cui `Type` è impostata su un tipo di account specificato.  
   
  Se selezionata, nella griglia vengono visualizzate le opzioni elencate nella tabella seguente.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36157824"
 |**Misure**|Consente di selezionare la misura nel gruppo di misure di tipo Tasso che contiene il tasso di cambio da utilizzare quando le misure per i membri degli attributi che utilizzano il tipo di conto selezionato in **Tipo conto** vengono convertite.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Business Intelligence guidata F1 Help](business-intelligence-wizard-f1-help.md)   
+ [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

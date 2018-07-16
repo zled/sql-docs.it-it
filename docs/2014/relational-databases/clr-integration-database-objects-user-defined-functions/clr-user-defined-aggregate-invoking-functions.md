@@ -1,13 +1,11 @@
 ---
-title: Richiamo di funzioni di aggregazione definita dall'utente CLR | Documenti Microsoft
+title: Richiamo di funzioni di aggregazione definita dall'utente CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 96aaaeda1fd22044c5a4f86c11051966f3d8b341
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b648c81da85be1214dc8b1c7b78235cd23ab525a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054328"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355053"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Chiamata di funzioni di aggregazione CLR definite dall'utente
   Nelle istruzioni SELECT di [!INCLUDE[tsql](../../includes/tsql-md.md)] è possibile richiamare funzioni di aggregazione CLR (Common Language Runtime) definite dall'utente in base a tutte le regole applicabili alle funzioni di aggregazione del sistema.  
@@ -201,7 +199,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Dopo aver compilato il codice nel **MyAgg. dll**, è possibile registrare l'aggregato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come indicato di seguito:  
+ Dopo aver compilato il codice nel **MyAgg. dll**, è possibile registrare l'aggregazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come indicato di seguito:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  

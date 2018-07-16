@@ -1,13 +1,11 @@
 ---
-title: Introduzione all'integrazione con CLR | Documenti Microsoft
+title: Introduzione all'integrazione CLR con | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -27,18 +25,18 @@ helpviewer_keywords:
 - library [CLR integration]
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7616d610cbdd581325325f9ad00a57b417ef2987
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 12eb63552fea685ce9d1e453e99e785045839ac5
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064961"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349813"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introduzione all'integrazione con CLR
-  In questo argomento viene fornita una panoramica di spazi dei nomi e le librerie necessarie per compilare oggetti di database utilizzando il [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] integrazione con common language runtime (CLR) di .NET Framework. In questo argomento viene inoltre illustrato come scrivere, compilare ed eseguire una stored procedure CLR semplice scritta in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
+  In questo argomento viene fornita una panoramica delle librerie necessarie per compilare oggetti di database utilizzando gli spazi dei nomi e il [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] integrazione con common language runtime (CLR) di .NET Framework. In questo argomento viene inoltre illustrato come scrivere, compilare ed eseguire una stored procedure CLR semplice scritta in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
   
 ## <a name="required-namespaces"></a>Spazi dei nomi necessari  
  A partire da [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]. La funzionalità di integrazione CLR viene esposta in un assembly denominato system.data.dll, che fa parte di .NET Framework. Questo assembly è disponibile in Global Assembly Cache (GAC) e nella directory di .NET Framework. Poiché un riferimento a questo assembly viene in genere aggiunto tramite gli strumenti della riga di comando e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, non è necessario aggiungerlo manualmente.  
@@ -90,7 +88,7 @@ End Class
   
 ```  
   
- Questo semplice programma contiene un singolo metodo statico su una classe pubblica. Questo metodo utilizza due nuove classi, `SqlContext` e `SqlPipe`, per creare oggetti di database gestiti e restituire un messaggio di testo semplice. Il metodo assegna inoltre la stringa "Hello world!" come valore del parametro out. Questo metodo può essere dichiarato come una stored procedure in [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] stored procedure.  
+ Questo semplice programma contiene un singolo metodo statico su una classe pubblica. Questo metodo utilizza due nuove classi, `SqlContext` e `SqlPipe`, per creare oggetti di database gestiti e restituire un messaggio di testo semplice. Il metodo assegna inoltre la stringa "Hello world!" come valore di un parametro out. Questo metodo può essere dichiarato come una stored procedure in [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] stored procedure.  
   
  Il programma verrà quindi compilato come libreria, caricato in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed eseguito come stored procedure.  
   
@@ -124,7 +122,7 @@ vbc /target:library helloworld.vb
  Questi comandi consentono di avviare il compilatore Visual C# o Visual Basic utilizzando l'opzione /target per specificare la compilazione di una DLL della libreria.  
   
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>Caricamento ed esecuzione della stored procedure "Hello World" in SQL Server  
- Una volta la procedura di esempio ha compilato correttamente, è possibile eseguirne il test in [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] e creare una nuova query, connettendosi a un database di prova appropriato (ad esempio, il database di esempio AdventureWorks).  
+ Una volta compilata correttamente la procedura di esempio, è possibile testarlo in [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] e creare una nuova query, connettendosi a un database di prova appropriato (ad esempio, il database di esempio AdventureWorks).  
   
  L'esecuzione di codice CLR (Common Language Runtime) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è disattivata per impostazione predefinita. Il codice CLR può essere abilitato usando il **sp_configure** stored procedure di sistema. Per altre informazioni, vedere [Enabling CLR Integration](../clr-integration-enabling.md).  
   
@@ -181,7 +179,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure CLR](../../../database-engine/dev-guide/clr-stored-procedures.md)   
- [SQL Server In-Process estensioni specifiche per ADO.NET](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
+ [Estensioni specifiche SQL Server In-Process per ADO.NET](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [Debug di oggetti di Database CLR](../debugging-clr-database-objects.md)   
  [Sicurezza per l'integrazione con CLR](../security/clr-integration-security.md)  
   

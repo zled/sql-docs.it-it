@@ -1,13 +1,11 @@
 ---
-title: Rappresentazione e credenziali per le connessioni | Documenti Microsoft
+title: Rappresentazione e credenziali per le connessioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - database objects [CLR integration], security
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f2cc3fc4695c9e0b2a723668f09fc1bf388dabaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 9af64be53b702dfded163a06562e4f6bdf7e5a61
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168532"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350876"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>Rappresentazione e credenziali per le connessioni
   Nell'integrazione con Common Language Runtime (CRL) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'utilizzo dell'autenticazione di Windows è complesso, ma più sicuro rispetto all'autenticazione di SQL Server. Utilizzando l'autenticazione di Windows, è necessario tenere conto di alcune considerazioni.  
@@ -38,7 +36,7 @@ ms.locfileid: "36168532"
   
  In alcuni casi, può essere necessario rappresentare il chiamante tramite la proprietà `SqlContext.WindowsIdentity` anziché procedere con l'esecuzione come account di servizio. L'istanza di `WindowsIdentity` rappresenta l'identità del client che ha richiamato il codice chiamante ed è disponibile solo quando il client ha utilizzato l'autenticazione di Windows. Dopo avere ottenuto l'istanza di `WindowsIdentity`, è possibile chiamare `Impersonate` per modificare il token di sicurezza del thread e quindi aprire le connessioni ADO.NET per conto del client.  
   
- Dopo aver chiamato SQLContext.WindowsIdentity.Impersonate, è possibile accedere ai dati locali e non può accedere ai dati di sistema. Per accedere ai dati anche in questo caso è necessario chiamare WindowsImpersonationContext.  
+ Dopo aver chiamato SQLContext.WindowsIdentity.Impersonate, è possibile accedere ai dati locali e non può accedere ai dati di sistema. Per accedere ai dati anche in questo caso, è necessario chiamare WindowsImpersonationContext.  
   
  Nell'esempio seguente viene illustrata la modalità di rappresentazione del chiamante mediante la proprietà `SqlContext.WindowsIdentity`.  
   
@@ -76,7 +74,7 @@ catch
 ```  
   
 > [!NOTE]  
->  Per informazioni sulle modifiche al comportamento della rappresentazione, vedere [le modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2014](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Per informazioni sulle modifiche del comportamento della rappresentazione, vedere [le modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2014](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
  Inoltre, se è stata ottenuta l'istanza dell'identità di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, per impostazione predefinita non è possibile propagarla in un altro computer, in quanto la propagazione è limitata dall'infrastruttura di sicurezza di Windows. Esiste tuttavia un meccanismo noto come "delega" che abilita la propagazione delle identità di Windows in più computer attendibili. Altre informazioni sulla delega nell'articolo di TechNet, "[Kerberos Protocol Transition and Constrained Delegation](http://go.microsoft.com/fwlink/?LinkId=50419)".  
   

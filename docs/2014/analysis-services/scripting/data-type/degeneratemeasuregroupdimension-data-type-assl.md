@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati DegenerateMeasureGroupDimension (ASSL) | Documenti Microsoft
+title: Tipo di dati DegenerateMeasureGroupDimension (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DegenerateMeasureGroupDimension data type
 ms.assetid: a64fe908-154d-4fea-b435-afb6ee37a6fa
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45a3d778580c344e0251e271415ff729b61520b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 343668137e77f53f94df2b6bc1324c3a67d94256
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321150"
 ---
 # <a name="degeneratemeasuregroupdimension-data-type-assl"></a>Tipo di dati DegenerateMeasureGroupDimension (ASSL)
   Definisce un tipo di dati derivato che rappresenta la relazione tra una dimensione degenerata, ovvero una dimensione dei fatti, e un gruppo di misure.  
@@ -59,8 +59,8 @@ ms.locfileid: "36064123"
 |Elementi figlio|None|  
 |Elementi derivati|None|  
   
-## <a name="remarks"></a>Remarks  
- Per ulteriori informazioni sulle dimensioni dei fatti, vedere [relazioni tra dimensioni](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+## <a name="remarks"></a>Note  
+ Per altre informazioni sulle dimensioni dei fatti, vedere [relazioni di tipo](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.DegenerateMeasureGroupDimension>.  
   

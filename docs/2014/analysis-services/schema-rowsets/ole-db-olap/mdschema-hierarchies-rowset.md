@@ -1,5 +1,5 @@
 ---
-title: Set di righe MDSCHEMA_HIERARCHIES | Documenti Microsoft
+title: Set di righe MDSCHEMA_HIERARCHIES | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_HIERARCHIES rowset
 ms.assetid: 2e5b2a81-366e-4d5b-af1e-1d372bf596d9
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e8c6fa75c935256235d64ad337500923b5974c68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a38dd03023fc266c5b8505979766d90979d16f05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321221"
 ---
 # <a name="mdschemahierarchies-rowset"></a>Set di righe MDSCHEMA_HIERARCHIES
   Descrive ogni gerarchia all'interno di una determinata dimensione.  
@@ -58,7 +58,7 @@ ms.locfileid: "36069504"
 |`HIERARCHY_ORDINAL`|`DBTYPE_UI4`||Numero ordinale della gerarchia tra tutte le gerarchie del cubo.|  
 |`DIMENSION_IS_SHARED`|`DBTYPE_BOOL`||Restituisce sempre `TRUE`.|  
 |`HIERARCHY_IS_VISIBLE`|`DBTYPE_BOOL`||Valore booleano che indica se la gerarchia è visibile.<br /><br /> Restituisce `TRUE` se la gerarchia è visibile; altrimenti restituisce `FALSE`.|  
-|`HIERARCHY_ORIGIN`|`DBTYPE_UI2`||Maschera di bit che determina l'origine della gerarchia:<br /><br /> -   `MD_USER_DEFINED` Identifica le gerarchie definite dall'utente e ha un valore di `0x0000001`.<br />-   `MD_SYSTEM_ENABLED` Identifica le gerarchie di attributi e ha un valore di `0x0000002`.<br />-   `MD_SYSTEM_INTERNAL` Identifica gli attributi senza gerarchie e ha il valore **0x0000004**.<br /><br /> Una gerarchia dell'attributo padre/figlio è sia `MD_USER_DEFINED` sia `MD_SYSTEM_ENABLED`.|  
+|`HIERARCHY_ORIGIN`|`DBTYPE_UI2`||Maschera di bit che determina l'origine della gerarchia:<br /><br /> -   `MD_USER_DEFINED` Identifica le gerarchie definite dall'utente e ha un valore di `0x0000001`.<br />-   `MD_SYSTEM_ENABLED` Identifica le gerarchie di attributi e ha un valore di `0x0000002`.<br />-   `MD_SYSTEM_INTERNAL` Identifica gli attributi senza gerarchie e ha un valore pari **0x0000004**.<br /><br /> Una gerarchia dell'attributo padre/figlio è sia `MD_USER_DEFINED` sia `MD_SYSTEM_ENABLED`.|  
 |`HIERARCHY_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Il percorso da utilizzare durante la visualizzazione della gerarchia nell'interfaccia utente. I nomi delle cartelle saranno separati da un punto e virgola (;). Le cartelle nidificate sono indicate da una barra rovesciata (\\).|  
 |`INSTANCE_SELECTION`|`DBTYPE_UI2`||Hint per l'applicazione client relativo alla modalità di visualizzazione della gerarchia. Tra i valori validi sono inclusi i seguenti:<br /><br /> -   `MD_INSTANCE_SELECTION_NONE`<br />-   `MD_INSTANCE_SELECTION_DROPDOWN`<br />-   `MD_INSTANCE_SELECTION_LIST`<br />-   `MD_INSTANCE_SELECTION_FILTEREDLIST`<br />-   `MD_INSTANCE_SELECTION_MANDATORYFILTER`|  
 |`GROUPING_BEHAVIOR`|`DBTYPE_I2`||Enumerazione tramite cui viene specificato il comportamento di raggruppamento previsto dei client per questa gerarchia. Di seguito sono indicati i valori possibili:<br /><br /> -   **EncourageGrouping** (1)<br />-   **DiscourageGrouping** (2)|  
@@ -78,7 +78,7 @@ ms.locfileid: "36069504"
 |`HIERARCHY_NAME`|`DBTYPE_WSTR`|Facoltativo.|  
 |`HIERARCHY_UNIQUE_NAME`|`DBTYPE_WSTR`|Facoltativo.|  
 |`HIERARCHY_ORIGIN`|`DBTYPE_UI2`|(Facoltativo) Una restrizione predefinita è attiva su MD_USER_DEFINED e MD_SYSTEM_ENABLED.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -1 CUBO<br />-QUOTA 2<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -1 CUBO<br />-DIMENSIONE DI 2<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
 |`HIERARCHY_VISIBILITY`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -Visible 1<br />-2 non visibile<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
   
 ## <a name="see-also"></a>Vedere anche  

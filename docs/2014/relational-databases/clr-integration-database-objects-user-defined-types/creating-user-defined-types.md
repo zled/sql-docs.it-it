@@ -1,13 +1,11 @@
 ---
-title: Creazione di un tipo definito dall'utente | Documenti Microsoft
+title: Creazione di un tipo definito dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b832d8191cd153f5f11af88263f4ecbeb1021ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4446d468738ea9db533488de62705c548e777f0a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065608"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350975"
 ---
 # <a name="creating-a-user-defined-type"></a>Creazione di un tipo definito dall'utente
   Per creare un tipo definito dall'utente (UDT) che possa essere installato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario prima creare una classe in uno dei linguaggi di programmazione di .NET Framework supportati, ad esempio Visual C# o Visual Basic che sia conforme alle specifiche per la creazione di tipi definiti dall'utente. La classe può quindi essere compilata come DLL che può essere caricata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È inoltre possibile creare e distribuire tipi definiti dall'utente utilizzando Visual Studio.  
@@ -38,16 +36,16 @@ Reconfigure
 ```  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
- [Requisiti del tipo definito dall'utente](creating-user-defined-types-requirements.md)  
+ [Requisiti per i tipi definiti dall'utente](creating-user-defined-types-requirements.md)  
  Vengono descritti i requisiti per la codifica dei tipi definiti dall'utente.  
   
  [Codifica dei tipi definiti dall'utente](creating-user-defined-types-coding.md)  
  Vengono illustrate le tecniche di codifica coinvolte nella creazione di tipi definiti dall'utente.  
   
 ## <a name="example"></a>Esempio  
- Il listato di codice seguente definisce il punto di tipo definito dall'utente, come descritto in dettaglio nelle [codifica di tipi](creating-user-defined-types-coding.md).  
+ Il listato di codice seguente definisce il punto di tipo definito dall'utente, descritto dettagliatamente nelle [codifica di tipi](creating-user-defined-types-coding.md).  
   
- È possibile ottenere elenchi di codice completi per gli altri esempi discussi in questa sezione installando gli esempi CLR. Per istruzioni sull'installazione di questi esempi, vedere [motore di Database di SQL Server Samples](http://msftengprodsamples.codeplex.com/).  
+ È possibile ottenere elenchi di codice completi per gli altri esempi discussi in questa sezione installando gli esempi CLR. Per istruzioni sull'installazione di questi esempi, vedere [esempi del motore di Database di SQL Server](http://msftengprodsamples.codeplex.com/).  
   
  C#  
   

@@ -1,13 +1,11 @@
 ---
-title: Sicurezza di accesso di codice dell'integrazione CLR | Documenti Microsoft
+title: Sicurezza dall'accesso di codice integrazione di Common Language Runtime | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - EXTERNAL_ACCESS assemblies
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8ccb03b45b27150c00a5620f772afc764dc6ff0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: c2e0d51e1c3268fd7399467f22fb833e77f14131
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065854"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349883"
 ---
 # <a name="clr-integration-code-access-security"></a>Sicurezza da accesso di codice dell'integrazione con CLR
   Common Language Runtime (CLR) supporta un modello di sicurezza definito sicurezza dall'accesso di codice per il codice gestito che prevede che le autorizzazioni vengano concesse agli assembly in base all'identità del codice. Per ulteriori informazioni, vedere la sezione relativa alla sicurezza da accesso di codice in .NET Framework SDK (Software Development Kit).  
@@ -36,16 +34,16 @@ ms.locfileid: "36065854"
   
 -   Criteri del computer: criteri attivi per tutto il codice gestito in esecuzione sul computer nel quale viene installato [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Criteri utente: criteri attivi per il codice gestito ospitato da un processo. Per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servizio sia in esecuzione.  
+-   Criteri utente: criteri attivi per il codice gestito ospitato da un processo. Per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servizio è in esecuzione.  
   
 -   Criteri host: criteri impostati dall'host di CLR (in questo caso, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]), attivi per il codice gestito in esecuzione su quell'host.  
   
- Il meccanismo di sicurezza da accesso di codice supportato da CLR si basa sul presupposto che il runtime possa ospitare codice completamente o parzialmente attendibile. Le risorse protette dalla sicurezza dall'accesso di codice CLR sono in genere sottoposto a wrapping da gestito application programming interface tale autorizzazione corrispondente requirethe prima di consentire l'accesso alla risorsa. Demandfor l'autorizzazione viene soddisfatta solo se tutti i chiamanti (a livello di assembly) nello stack di chiamate hanno l'autorizzazione per la risorsa corrispondente.  
+ Il meccanismo di sicurezza da accesso di codice supportato da CLR si basa sul presupposto che il runtime possa ospitare codice completamente o parzialmente attendibile. Le risorse che sono protette dalla sicurezza dall'accesso di codice CLR vengono incapsulate in genere dall'applicazione gestita le interfacce di programmazione tale autorizzazione corrispondente requirethe prima di consentire l'accesso alla risorsa. Demandfor l'autorizzazione viene soddisfatta solo se tutti i chiamanti (a livello di assembly) nello stack di chiamate hanno l'autorizzazione per la risorsa corrispondente.  
   
- Il set di autorizzazioni di sicurezza di accesso al codice concesse al codice gestito quando viene eseguito in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] concede un set di autorizzazioni a un assembly caricato in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il set di autorizzazioni concesso al codice utente finale può essere limitato ulteriormente con la l'utente e i criteri a livello di computer.  
+ Il set di autorizzazioni di sicurezza di accesso al codice concesse al codice gestito durante l'esecuzione all'interno [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] concede un set di autorizzazioni a un assembly caricato in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il set di autorizzazioni accordate al codice utente finale può essere limitato ulteriormente il l'utente e i criteri a livello di computer.  
   
 ## <a name="sql-server-host-policy-level-permission-sets"></a>Set di autorizzazioni a livello di criteri host di SQL Server  
- Il set di autorizzazioni della sicurezza da accesso di codice concesso agli assembly al livello di criteri host di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è determinato dal set di autorizzazioni specificato durante la creazione dell'assembly. Esistono tre set di autorizzazioni: `SAFE`, `EXTERNAL_ACCESS` e `UNSAFE` (specificati mediante il **PERMISSION_SET** opzione di[CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)) .  
+ Il set di autorizzazioni della sicurezza da accesso di codice concesso agli assembly al livello di criteri host di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è determinato dal set di autorizzazioni specificato durante la creazione dell'assembly. Sono disponibili tre set di autorizzazioni: `SAFE`, `EXTERNAL_ACCESS` e `UNSAFE` (specificato utilizzando le **PERMISSION_SET** opzione del[CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)) .  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](Indici per tabelle con ottimizzazione per la memoria). Non è indicato per il dominio applicazione predefinito che sarebbe attivo quando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crea un'istanza di CLR.  
   
@@ -63,10 +61,10 @@ ms.locfileid: "36065854"
 |Autorizzazione|Valori/Descrizione|  
 |----------------|-----------------------------|  
 |`SecurityPermission`|`Execution:` autorizzazione a eseguire il codice gestito.|  
-|`SqlClientPermission`|`Context connection = true`, `context connection = yes`: è possibile utilizzare solo la connessione di contesto e la stringa di connessione può specificare solo un valore "context connection=true" o "context connection=yes".<br /><br /> **AllowBlankPassword = false:** le password vuote non sono consentite.|  
+|`SqlClientPermission`|`Context connection = true`, `context connection = yes`: è possibile utilizzare solo la connessione di contesto e la stringa di connessione può specificare solo un valore "context connection=true" o "context connection=yes".<br /><br /> **AllowBlankPassword = false:** password vuote non sono consentite.|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
- Gli assembly EXTERNAL_ACCESS dispongono delle stesse autorizzazioni `SAFE` assembly, con la possibilità aggiuntiva di accedere alle risorse di sistema esterne, ad esempio file, reti, variabili di ambiente e il Registro di sistema.  
+ Gli assembly EXTERNAL_ACCESS dispongono delle stesse autorizzazioni `SAFE` assembly, con la possibilità aggiuntiva di accedere alle risorse di sistema esterne, ad esempio file, reti, variabili di ambiente e Registro di sistema.  
   
  Gli assembly `EXTERNAL_ACCESS` dispongono anche delle autorizzazioni e dei valori seguenti:  
   
@@ -93,7 +91,7 @@ ms.locfileid: "36065854"
  Agli assembly `UNSAFE` viene concessa l'autorizzazione `FullTrust`.  
   
 > [!IMPORTANT]  
->  `SAFE` rappresenta l'impostazione di autorizzazione consigliata per gli assembly che eseguono attività di calcolo e di gestione di dati senza accedere alle risorse all'esterno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. `EXTERNAL_ACCESS` gli assembly per impostazione predefinita vengono eseguiti come le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account del servizio, l'autorizzazione per eseguire `EXTERNAL_ACCESS` devono essere specificate solo agli account attendibili per l'esecuzione come account del servizio di accesso. Dal punto di vista della sicurezza, gli assembly `EXTERNAL_ACCESS` e `UNSAFE` sono identici. Gli assembly `EXTERNAL_ACCESS` offrono tuttavia una protezione e un'affidabilità maggiore rispetto agli assembly `UNSAFE`. Che specifica `UNSAFE` consente al codice nell'assembly per eseguire operazioni non valide sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per ulteriori informazioni sulla creazione di assembly CLR in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [la gestione degli assembly di integrazione CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
+>  `SAFE` rappresenta l'impostazione di autorizzazione consigliata per gli assembly che eseguono attività di calcolo e di gestione di dati senza accedere alle risorse all'esterno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. `EXTERNAL_ACCESS` gli assembly per impostazione predefinita vengono eseguiti come le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account del servizio, l'autorizzazione per eseguire `EXTERNAL_ACCESS` deve solo essere assegnati agli account di accesso affidabili per essere eseguiti come account del servizio. Dal punto di vista della sicurezza, gli assembly `EXTERNAL_ACCESS` e `UNSAFE` sono identici. Gli assembly `EXTERNAL_ACCESS` offrono tuttavia una protezione e un'affidabilità maggiore rispetto agli assembly `UNSAFE`. Che specifica `UNSAFE` , il codice assembly può eseguire operazioni non valide sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per altre informazioni sulla creazione di assembly CLR in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [la gestione degli assembly dell'integrazione CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
   
 ## <a name="accessing-external-resources"></a>Accesso a risorse esterne  
  Se un tipo definito dall'utente, una stored procedure o un altro tipo di assembly del costrutto viene registrato con il set di autorizzazioni `SAFE`, il codice gestito in esecuzione nel costrutto non è in grado di accedere alle risorse esterne. Se tuttavia i set di autorizzazioni `EXTERNAL_ACCESS` o `UNSAFE` vengono specificati, e il codice gestito tenta di accedere a risorse esterne, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applica le regole seguenti:  
@@ -118,9 +116,9 @@ ms.locfileid: "36065854"
 |`Ability to call native code`|no|no|Sì|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza dell'integrazione con CLR](clr-integration-security.md)   
+ [Sicurezza dell'integrazione CLR](clr-integration-security.md)   
  [Attributi di protezione host e programmazione dell'integrazione con CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [Restrizioni del modello di programmazione integrazione CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
+ [Restrizioni relative al modello programmazione CLR Integration](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
  [Ambiente CLR](../clr-integration-architecture-clr-hosted-environment.md)  
   
   
