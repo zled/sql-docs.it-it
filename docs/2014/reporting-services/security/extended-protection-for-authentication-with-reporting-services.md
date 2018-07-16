@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b19170e93dbf4efb973df44fc9788c9659897424
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e1de2e37101fe69c1593169d68f314e23e6b9775
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288767"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protezione estesa per l'autenticazione con Reporting Services
-  La protezione estesa consiste in un set di miglioramenti apportati alle versioni recenti del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. La protezione estesa migliora la protezione di credenziali e autenticazione da parte delle applicazioni. La funzionalità stessa non fornisce direttamente la protezione contro attacchi specifici quale l'inoltro di credenziali, ma fornisce un'infrastruttura per le applicazioni, ad esempio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per applicare la protezione estesa per l'autenticazione.  
+  La protezione estesa consiste in un set di miglioramenti apportati alle versioni recenti del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. La protezione estesa migliora la protezione di credenziali e autenticazione da parte delle applicazioni. La funzionalità non fornisce direttamente la protezione contro attacchi specifici quale l'inoltro delle credenziali, ma rende disponibile un'infrastruttura per le applicazioni, ad esempio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per applicare la protezione estesa per l'autenticazione.  
   
  I principali miglioramenti introdotti riguardanti l'autenticazione che fanno parte della protezione estesa sono l'associazione di canale e l'associazione al servizio. Nell'associazione di canale è utilizzato un token CBT (Channel Binding Token) per verificare che il canale stabilito tra due endpoint non sia compromesso. Nell'associazione al servizio sono utilizzati nomi SPN (Service Principal Name) per convalidare la destinazione desiderata dei token di autenticazione. Per informazioni complementari sulla protezione estesa, vedere [Integrated Windows Authentication with Extended Protection (autenticazione integrata di Windows con protezione estesa)](http://go.microsoft.com/fwlink/?LinkId=179922).  
   
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supporta e applica la protezione estesa abilitata nel sistema operativo e configurata [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] accetta le richieste che specificano l'autenticazione Negotiate o NTLM ed è pertanto in grado di usufruire del supporto della protezione estesa offerto dal sistema operativo e dalle funzionalità di protezione estesa di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supporta e impone la protezione estesa abilitata nel sistema operativo e configurata in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] accetta le richieste che specificano l'autenticazione Negotiate o NTLM ed è pertanto in grado di usufruire del supporto della protezione estesa offerto dal sistema operativo e dalle funzionalità di protezione estesa di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  Per impostazione predefinita, Windows non abilita la protezione estesa. Per informazioni su come abilitare la protezione estesa in Windows, vedere [Protezione estesa per l'autenticazione](http://go.microsoft.com/fwlink/?LinkID=178431). Per garantire che l'autenticazione abbia esito positivo, è necessario che il sistema operativo e lo stack di autenticazione del client supportino entrambi la protezione estesa. Per i sistemi operativi meno recenti potrebbe essere necessario installare più aggiornamenti per ottenere un computer in grado di utilizzare appieno la protezione estesa. Per informazioni sugli ultimi sviluppi della protezione estesa, vedere la pagina relativa alle [informazioni aggiornate sulla protezione estesa](http://go.microsoft.com/fwlink/?LinkId=183362).  
   
 ## <a name="reporting-services-extended-protection-overview"></a>Cenni preliminari sulla protezione estesa di Reporting Services  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supporta e applica la protezione estesa che è stata abilitata nel sistema operativo. Se il sistema operativo non supporta la protezione estesa o la funzionalità non è stata abilitata nel sistema operativo, l'autenticazione eseguita dalla funzionalità di protezione estesa di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] avrà esito negativo. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Protezione estesa richiede anche un certificato SSL. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](configure-ssl-connections-on-a-native-mode-report-server.md)  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supporta e impone la protezione estesa abilitata nel sistema operativo. Se il sistema operativo non supporta la protezione estesa o la funzionalità non è stata abilitata nel sistema operativo, l'autenticazione eseguita dalla funzionalità di protezione estesa di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] avrà esito negativo. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Protezione estesa richiede inoltre un certificato SSL. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](configure-ssl-connections-on-a-native-mode-report-server.md)  
   
 > [!IMPORTANT]  
->  Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non abilita la protezione estesa. La funzionalità può essere attivata modificando il file di configurazione `rsreportserver.config` o utilizzando le API di WMI che consentono di aggiornare il file di configurazione. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non fornisce un'interfaccia utente per modificare o visualizzare esteso le impostazioni di protezione. Per altre informazioni, vedere la sezione relativa alle [impostazioni di configurazione](#ConfigurationSettings) in questo argomento.  
+>  Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non abilita la protezione estesa. La funzionalità può essere attivata modificando il file di configurazione `rsreportserver.config` o utilizzando le API di WMI che consentono di aggiornare il file di configurazione. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non fornisce un'interfaccia utente per visualizzare o modificare esteso le impostazioni di protezione. Per altre informazioni, vedere la sezione relativa alle [impostazioni di configurazione](#ConfigurationSettings) in questo argomento.  
   
  I problemi comuni che si verificano a causa della modifica delle impostazioni relative alla protezione estesa o alla configurazione non corretta delle impostazioni non vengono esposti con messaggi o finestre di dialogo di errore. I problemi correlati alla configurazione e alla compatibilità della protezione estesa causano problemi di autenticazione ed errori nei log di traccia di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
@@ -43,15 +43,15 @@ ms.locfileid: "36055421"
 >  È possibile che alcune tecnologie di accesso ai dati non supportino la protezione estesa. Per connettersi alle origini dati di SQL Server e al database del catalogo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene utilizzata una tecnologia di accesso ai dati. Un errore della tecnologia di accesso ai dati per supportare la protezione estesa influisce su [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nei seguenti modi:  
 >   
 >  -   Per l'istanza di SQL Server che esegue il database del catalogo di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non è possibile abilitare la protezione estesa. In caso contrario, il server di report non sarà in grado di connettersi al database del catalogo e restituirà errori di autenticazione.  
-> -   SQL Server che vengono utilizzate come [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tenta dal server di report per la connessione all'origine dati report o report, origini dati non sono abilitata la protezione estesa avrà esito negativo e restituirà errori di autenticazione.  
+> -   Istanze di SQL Server usate come [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tentativi dal server di report per connettersi all'origine dati del report o report origini dati non possono avere abilitata la protezione estesa avrà esito negativo e restituirà errori di autenticazione.  
 >   
 >  La documentazione per una tecnologia di accesso ai dati deve disporre di informazioni sul supporto per la protezione estesa.  
   
 ### <a name="upgrade"></a>Aggiornamento  
   
--   L'aggiornamento di un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] server per [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aggiunge le impostazioni di configurazione con i valori predefiniti per il `rsreportserver.config` file. Se le impostazioni sono già presenti, il [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] installazione verrà mantenute nel `rsreportserver.config` file.  
+-   L'aggiornamento di un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] server per [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aggiunge impostazioni di configurazione con i valori predefiniti per il `rsreportserver.config` file. Le impostazioni già presenti, il [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] installazione verrà mantenute nel `rsreportserver.config` file.  
   
--   Quando le impostazioni di configurazione vengono aggiunte alla `rsreportserver.config` file di configurazione, il comportamento predefinito prevede il [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] funzionalità di protezione estesa per la disattivazione è necessario abilitare la funzionalità come descritto in questo argomento. Per altre informazioni, vedere la sezione relativa alle [impostazioni di configurazione](#ConfigurationSettings) in questo argomento.  
+-   Quando le impostazioni di configurazione vengono aggiunte al `rsreportserver.config` file di configurazione, il comportamento predefinito prevede la [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] funzionalità di protezione estesa per essere disattivata ed è necessario abilitarla come descritto in questo argomento. Per altre informazioni, vedere la sezione relativa alle [impostazioni di configurazione](#ConfigurationSettings) in questo argomento.  
   
 -   Il valore predefinito per l'impostazione `RSWindowsExtendedProtectionLevel` è `Off`.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "36055421"
 -   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Upgrade Advisor non verifica che il sistema operativo o l'installazione corrente di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dispone del supporto di protezione estesa abilitato.  
   
 ### <a name="what-reporting-services-extended-protection-does-not-cover"></a>Elementi non coperti dalla protezione estesa di Reporting Services  
- Le seguenti aree funzionali e scenari non sono supportati dal [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] funzionalità di protezione estesa:  
+ Le seguenti aree funzionali e gli scenari non supportati dal [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] funzionalità di protezione estesa:  
   
--   Gli autori dei [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] estensioni di sicurezza personalizzato devono aggiungere il supporto per la protezione estesa in base all'estensione di sicurezza personalizzato.  
+-   Gli autori di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] estensioni di sicurezza personalizzate devono aggiungere supporto per la protezione estesa all'estensione di sicurezza personalizzato.  
   
--   I componenti di terze parti aggiunti o utilizzato da un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installazione deve essere aggiornata dal fornitore di terze parti, per supportare la protezione estesa. Per ulteriori informazioni, contattare il fornitore di terze parti.  
+-   I componenti di terze parti aggiunti o usati da un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installazione debba essere aggiornata dal fornitore di terze parti, per supportare la protezione estesa. Per ulteriori informazioni, contattare il fornitore di terze parti.  
   
 ## <a name="deployment-scenarios-and-recommendations"></a>Scenari di distribuzione e indicazioni  
  Negli scenari seguenti vengono illustrate distribuzioni e topologie diverse, nonché la configurazione consigliata per proteggerle con la protezione estesa di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -107,16 +107,16 @@ ms.locfileid: "36055421"
 ## <a name="configuring-reporting-rervices-extended-protection"></a>Configurazione della protezione estesa di Reporting Services  
  Il `rsreportserver.config` file contiene i valori di configurazione che controllano il comportamento di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] protezione estesa.  
   
- Per ulteriori informazioni sull'utilizzo e la modifica di `rsreportserver.config` del file, vedere [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md). Le impostazioni relative alla protezione estesa possono inoltre essere modificate e controllate utilizzando le API di WMI. Per altre informazioni, vedere [metodo SetExtendedProtectionSettings &#40;MSReportServer_ConfigurationSetting WMI&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md).  
+ Per altre informazioni sull'utilizzo e la modifica di `rsreportserver.config` file, vedere [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md). Le impostazioni relative alla protezione estesa possono inoltre essere modificate e controllate utilizzando le API di WMI. Per altre informazioni, vedere [metodo SetExtendedProtectionSettings &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md).  
   
  Quando la convalida delle impostazioni di configurazione ha esito negativo, i tipi di autenticazione `RSWindowsNTLM`, `RSWindowsKerberos` e `RSWindowsNegotiate` vengono disabilitati nel server di report.  
   
 ###  <a name="ConfigurationSettings"></a> Impostazioni di configurazione per la protezione estesa di Reporting Services  
- Nella tabella seguente vengono fornite informazioni sulle impostazioni di configurazione che vengono visualizzati nel `rsreportserver.config` per la protezione estesa.  
+ Nella tabella seguente vengono fornite informazioni sulle impostazioni di configurazione che vengono visualizzati nei `rsreportserver.config` per la protezione estesa.  
   
 |Impostazione|Description|  
 |-------------|-----------------|  
-|`RSWindowsExtendedProtectionLevel`|Specifica il grado di imposizione della protezione estesa. I valori validi sono `Off`, `Allow` e `Require`.<br /><br /> Il valore predefinito è `Off`.<br /><br /> Il valore `Off` specifica che non viene eseguita alcuna verifica dell'associazione di canale o dell'associazione al servizio.<br /><br /> Il valore `Allow` indica il supporto della protezione estesa senza tuttavia richiederlo. Il valore Allow specifica quanto segue:<br /><br /> La protezione estesa verrà imposta per le applicazioni client in esecuzione nei sistemi operativi che supportano la protezione estesa. La modalità di imposizione della protezione è determinata dall'impostazione `RsWindowsExtendedProtectionScenario`.<br /><br /> L'autenticazione sarà consentita per le applicazioni client in esecuzione nei sistemi operativi che non supportano la protezione estesa.<br /><br /> Il valore `Require` specifica quanto segue:<br /><br /> La protezione estesa verrà imposta per le applicazioni client in esecuzione nei sistemi operativi che supportano la protezione estesa.<br /><br /> L'autenticazione verrà **non** sarà consentita per le applicazioni in esecuzione nei sistemi operativi che non supportano la protezione estesa.|  
+|`RSWindowsExtendedProtectionLevel`|Specifica il grado di imposizione della protezione estesa. I valori validi sono `Off`, `Allow` e `Require`.<br /><br /> Il valore predefinito è `Off`.<br /><br /> Il valore `Off` specifica che non viene eseguita alcuna verifica dell'associazione di canale o dell'associazione al servizio.<br /><br /> Il valore `Allow` indica il supporto della protezione estesa senza tuttavia richiederlo. Il valore Allow specifica quanto segue:<br /><br /> La protezione estesa verrà imposta per le applicazioni client in esecuzione nei sistemi operativi che supportano la protezione estesa. La modalità di imposizione della protezione è determinata dall'impostazione `RsWindowsExtendedProtectionScenario`.<br /><br /> L'autenticazione sarà consentita per le applicazioni client in esecuzione nei sistemi operativi che non supportano la protezione estesa.<br /><br /> Il valore `Require` specifica quanto segue:<br /><br /> La protezione estesa verrà imposta per le applicazioni client in esecuzione nei sistemi operativi che supportano la protezione estesa.<br /><br /> L'autenticazione verrà **non** sarà consentita per le applicazioni che eseguono sistemi operativi che non supportano la protezione estesa.|  
 |`RsWindowsExtendedProtectionScenario`|Specifica le forme di protezione estesa da convalidare, cioè l'associazione di canale, l'associazione al servizio o entrambe. I valori validi sono `Any`, `Proxy` e `Direct`.<br /><br /> Il valore predefinito è `Proxy`.<br /><br /> Il valore `Any` specifica quanto segue:<br /><br /> - L'autenticazione NTLM, Kerberos e Negotiate di Windows e l'associazione di canale non sono necessari.<br /><br /> - L'associazione al servizio viene imposta.<br /><br /> Il valore `Proxy` specifica quanto segue:<br /><br /> - Autenticazione NTLM, Kerberos e Negotiate di Windows quando è presente un token di associazione di canale.<br /><br /> - L'associazione al servizio viene imposta.<br /><br /> Il valore `Direct` specifica quanto segue:<br /><br /> - Autenticazione NTLM, Kerberos e Negotiate quando è presente un token CBT. È inoltre presente una connessione SSL al servizio corrente e il token CBT per la connessione SSL corrisponde al token CBT del token NTLM, Kerberos o Negotiate.<br /><br /> - L'associazione al servizio non viene imposta.<br /><br /> <br /><br /> Nota: Questa impostazione viene ignorata se `RsWindowsExtendedProtectionLevel` è impostata su `OFF`.|  
   
  Voci di esempio nel `rsreportserver.config` file di configurazione:  
@@ -129,7 +129,7 @@ ms.locfileid: "36055421"
 ```  
   
 ## <a name="service-binding-and-included-spns"></a>Associazione al servizio e nomi SPN inclusi  
- L'associazione al servizio utilizza nomi SPN (Service Principal Name) per convalidare la destinazione desiderata dei token di autenticazione. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilizza le informazioni sulla prenotazione di URL esistenti per compilare un elenco di nomi SPN considerato valido. L'utilizzo delle informazioni sulla prenotazione di URL per la convalida dei nomi SPN e delle prenotazioni di URL consente agli amministratori di sistema di gestire entrambi gli elementi da un'unica posizione.  
+ L'associazione al servizio utilizza nomi SPN (Service Principal Name) per convalidare la destinazione desiderata dei token di autenticazione. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Usa le informazioni sulla prenotazione di URL esistenti per compilare un elenco di nomi SPN considerati validi. L'utilizzo delle informazioni sulla prenotazione di URL per la convalida dei nomi SPN e delle prenotazioni di URL consente agli amministratori di sistema di gestire entrambi gli elementi da un'unica posizione.  
   
  L'elenco di nomi SPN validi viene aggiornato all'avvio del server di report, al momento della modifica delle impostazioni di configurazione per la protezione estesa o quando viene riciclato il dominio applicazione.  
   

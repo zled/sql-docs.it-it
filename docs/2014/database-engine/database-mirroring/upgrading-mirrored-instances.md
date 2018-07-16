@@ -1,35 +1,34 @@
 ---
-title: Ridurre i tempi di inattività per i database con mirroring durante l'aggiornamento di istanze del Server | Documenti Microsoft
+title: Ridurre al minimo i tempi di inattività per i database con mirroring quando si aggiornano le istanze del Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fc5bea207d824c860d197ca75eff788f6794ecc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ba14393c7b8281ae5a9e3a141e7a3e9bd28d0399
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300821"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Riduzione al minimo del tempo di inattività per i database con mirroring quando si aggiornano le istanze del server
   Durante l'aggiornamento di istanze del server possano [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è possibile ridurre i tempi di inattività per ogni database con mirroring a un singolo failover manuale eseguendo un aggiornamento sequenza, noto come un *aggiornamento in sequenza*. L'aggiornamento in sequenza è un processo in più fasi che, nella forma più semplice, implica l'aggiornamento dell'istanza del server che attualmente funge da server mirror in una sessione di mirroring, seguito dal failover manuale del database con mirroring, dall'aggiornamento del primo server principale e dalla ripresa del mirroring. Nella pratica, il processo esatto dipende dalla modalità operativa e dal numero/layout della sessione di mirroring in esecuzione nelle istanze del server da aggiornare.  
   
 > [!NOTE]  
->  Per informazioni sull'esecuzione di un aggiornamento in sequenza per installare un service pack o hotfix, vedere [installa un Service Pack in un sistema con tempi di inattività minimi per i database con mirroring](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
+>  Per informazioni su come eseguire un aggiornamento in sequenza per installare un service pack o hotfix, vedere [installare un Service Pack in un sistema con tempi di inattività minimi per i database con mirroring](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
   
  **Preparazione consigliata (procedure consigliate)**  
   
@@ -112,7 +111,7 @@ ms.locfileid: "36055349"
     > [!NOTE]  
     >  L'avvio di una nuova sessione di mirroring richiede che tutte le istanze server eseguano la stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-3.  Dopo aver eseguito il failover, è consigliabile eseguire la [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) comando theprincipal database.  
+3.  Dopo avere effettuato il failover, è consigliabile eseguire la [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) comando theprincipal database.  
   
 4.  Aggiornare ciascuna istanza server che ora è il server mirror in tutte le sessioni di mirroring nelle quali è un server partner. In questa fase potrebbe essere necessario aggiornare più server.  
   

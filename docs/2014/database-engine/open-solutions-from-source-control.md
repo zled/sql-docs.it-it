@@ -1,5 +1,5 @@
 ---
-title: Aprire soluzioni dal controllo del codice sorgente | Documenti Microsoft
+title: Aprire soluzioni dal controllo del codice sorgente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening solutions
 - solutions [SQL Server Management Studio], opening
 ms.assetid: a96a1f0d-0183-4587-a3b0-4598309cbdd2
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d7b626cd1d4868e078174830bcfbaa4cc7abdc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0767df9d8ad010e17560b1f2b5e2e227d52a9f99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285697"
 ---
 # <a name="open-solutions-from-source-control"></a>Aprire Soluzioni dal controllo del codice sorgente
   Per aprire soluzioni direttamente dal controllo del codice sorgente, è possibile utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Quando si esegue questa operazione, viene creata automaticamente una copia della versione più recente dei file della soluzione nel percorso specificato.  
@@ -40,7 +40,7 @@ ms.locfileid: "36055556"
   
 3.  Nel **Crea progetto locale da SourceSafe** finestra di dialogo, selezionare la cartella che contiene la soluzione che si desidera aprire e fare clic su **OK**.  
   
-4.  Se esiste già una cartella di lavoro per la soluzione nell'unità disco locale, il **creare un nuovo progetto nella cartella** finestra modifiche per identificare la directory locale. Se non esiste una cartella di lavoro per la soluzione, è possibile digitare o cercare la directory locale nella quale dovrebbe essere aperta la soluzione.  
+4.  Se esiste già una cartella di lavoro per la soluzione nell'unità disco locale, il **creare un nuovo progetto nella cartella** casella Cambia per identificare la directory locale. Se non esiste una cartella di lavoro per la soluzione, è possibile digitare o cercare la directory locale nella quale dovrebbe essere aperta la soluzione.  
   
 5.  Nel **soluzione aperta** finestra di dialogo, selezionare il file della soluzione e fare clic su **OK**.  
   
