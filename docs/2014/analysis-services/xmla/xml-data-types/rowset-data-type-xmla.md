@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati rowset (XMLA) | Documenti Microsoft
+title: Tipo di dati rowset (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 554217fe6d660040b51788d82a63f11ea0b7ce7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6f7dd6bc7f19d7d3eba42c21cda71a9216cbe32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279447"
 ---
 # <a name="rowset-data-type-xmla"></a>Tipo di dati Rowset (XMLA)
-  Definisce un tipo di dati derivato che rappresenta un [radice](../xml-elements-properties/root-element-xmla.md) elemento che restituisce dati tabulari forniti da un [Discover](../xml-elements-methods-discover.md) oppure [Execute](../xml-elements-methods-execute.md) chiamata al metodo.  
+  Definisce un tipo di dati derivato che rappresenta un [radice](../xml-elements-properties/root-element-xmla.md) elemento che restituisce dati tabellari da un [Discover](../xml-elements-methods-discover.md) oppure [Execute](../xml-elements-methods-execute.md) chiamata al metodo.  
   
- **Namespace** urn: schemas-microsoft-com: XML-analysis: rowset  
+ **Namespace** urn: schemas-microsoft-com: XML-analysis: set di righe  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,13 +62,13 @@ ms.locfileid: "36170880"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Riga](../xml-elements-properties/row-element-xmla.md)|  
+|Elementi figlio|[riga](../xml-elements-properties/row-element-xmla.md)|  
 |Elementi derivati|[root](../xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
- XML non consente di utilizzare alcuni caratteri come nomi di elemento e attributo. Per risolvere i vincoli di denominazione, XML for Analysis (XMLA) supporta la codifica di base al parere [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per i nomi di colonna che contengono caratteri XML non validi in base alla specifica XML 1.0, XMLA utilizza i valori esadecimali corrispondenti per codificare i caratteri Unicode che non sono validi. I valori esadecimali vengono rappresentati da x*HHHH*\_, dove *HHHH* è l'acronimo per il codice UCS-2 esadecimale a quattro cifre per il carattere nell'ordine primo bit più significativo. Ad esempio, il nome "Dettagli Ordine" viene codificato, in XMLA, come Order_x0020_Details, sostituendo lo spazio con il codice esadecimale corrispondente.  
+## <a name="remarks"></a>Note  
+ XML non consente di utilizzare alcuni caratteri come nomi di elemento e attributo. Per soddisfare i vincoli di denominazione, XML for Analysis (XMLA) supporta la codifica definita da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per i nomi di colonna che contengono caratteri XML non validi in base alla specifica XML 1.0, XMLA utilizza i valori esadecimali corrispondenti per codificare i caratteri Unicode che non sono validi. I valori esadecimali vengono sottoposti a escape come x*HHHH*\_, dove *HHHH* è l'acronimo per il codice UCS-2 esadecimale a quattro cifre per il carattere nell'ordine primo bit più significativo. Ad esempio, il nome "Dettagli Ordine" viene codificato, in XMLA, come Order_x0020_Details, sostituendo lo spazio con il codice esadecimale corrispondente.  
   
- La codifica può rendere difficili le trasformazioni XSL (Extensible Style Language). Per supportare una ricerca rapida di effettivi e non codificati i nomi delle colonne, aggiungere il `sql:field`attributo a XML schema di set di righe per ogni colonna, come illustrato nell'esempio seguente:  
+ La codifica può rendere difficili le trasformazioni XSL (Extensible Style Language). Per supportare una ricerca rapida dei effettivi e non codificati i nomi delle colonne, aggiungere il `sql:field`attributo allo schema del set di righe XML per ogni colonna, come illustrato nell'esempio seguente:  
   
 ```  
 <xsd:element name="Order_x0020_Details" type="string" sql:field="Order Details" />  

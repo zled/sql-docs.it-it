@@ -1,5 +1,5 @@
 ---
-title: "Creazione e l'esecuzione di query modelli di Data Mining con DMX: esercitazioni (Analysis Services - Data Mining) | Documenti Microsoft"
+title: "Creazione e l'esecuzione di query modelli di Data Mining con DMX: esercitazioni (Analysis Services - Data Mining) | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,52 +8,52 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 145b81a7-c0c3-4ca3-bb32-0b482423b9a0
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 46a60e6fc75613b2f763a31185f3e3861b125fc5
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 93bdf0ee8ed305e9e3843b011ce8057894b8b287
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234403"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Creazione ed esecuzione di query sui modelli di data mining con DMX: esercitazioni (Analysis Services - Data mining)
   Dopo aver creato una soluzione di data mining utilizzando [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], è possibile creare query sui modelli di data mining per stimare le tendenze, recuperare modelli nei dati e misurare l'accuratezza dei modelli di data mining.  
   
- Le esercitazioni pratiche riportate nell'elenco seguente consentono di imparare a compilare ed eseguire query di data mining utilizzando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in modo che sia possibile ottenere il massimo dai dati.  
+ Le esercitazioni pratiche riportate nell'elenco seguente consentono di imparare a compilare ed eseguire query di data mining utilizzando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in modo che sia possibile ottenere il massimo dai tuoi dati.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
--   [Esercitazione su DMX per bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)  
+-   [Esercitazione su DMX per Bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)  
   
      In questa esercitazione viene illustrata la creazione di una nuova struttura di data mining e di modelli di data mining tramite il linguaggio DMX (Data Mining Extensions) e viene mostrato come creare query di stima DMX.  
   
--   [Esercitazione su DMX per market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md)  
+-   [Esercitazione su DMX per Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md)  
   
      In questa esercitazione viene utilizzato un scenario tipico di analisi di mercato caratterizzato da associazioni tra i prodotti che i clienti acquistano insieme. Viene inoltre illustrato come utilizzare tabelle nidificate quando si crea una struttura di data mining. Viene compilato ed eseguito il training di un modello basato su questa struttura, quindi vengono create stime utilizzando DMX.  
   
--   [Esercitazione su DMX per ora serie stima](../../2014/tutorials/time-series-prediction-dmx-tutorial.md)  
+-   [Esercitazione su DMX per le stime basate su serie temporali](../../2014/tutorials/time-series-prediction-dmx-tutorial.md)  
   
      Questa esercitazione consente di creare un modello di stima per illustrare l'utilizzo dell'istruzione CREATE MODEL (DMX). È quindi possibile aggiungere modelli correlati e personalizzare il comportamento di ognuno modificando i parametri dell'algoritmo Microsoft Time Series. Infine, è possibile creare stime e aggiornarle con i nuovi dati. La capacità di aggiornare una serie temporale durante l'esecuzione di stime è stata aggiunta in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
 ## <a name="reference"></a>Riferimento  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Estensioni Data Mining &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>Sezioni correlate  
   
--   [Esercitazione di base di Data Mining](../../2014/tutorials/basic-data-mining-tutorial.md)  
+-   [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
      In questa esercitazione vengono introdotti concetti di base, quali le modalità di creazione di un progetto e di compilazione di modelli e strutture di data mining.  
   
--   [Intermedi dell'esercitazione sul Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
+-   [Esercitazione intermedia sul Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
      Questa esercitazione contiene numerose lezioni indipendenti, ognuna delle quali presenta un tipo di modello diverso. In ogni lezione viene illustrato il processo di creazione, esplorazione e personalizzazione di un modello, oltre al processo di creazione di query di stima.  
   

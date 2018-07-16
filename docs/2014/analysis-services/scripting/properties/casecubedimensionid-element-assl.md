@@ -1,5 +1,5 @@
 ---
-title: Elemento CaseCubeDimensionID (ASSL) | Documenti Microsoft
+title: Elemento CaseCubeDimensionID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CaseCubeDimensionID element
 ms.assetid: 96720e13-7f9b-4768-ad4b-4def40758707
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e01ec48101913cb79e074a46aa118f11e514600d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8defd95c5c21acd1e6ffa1c6ca9a9546713f51f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295501"
 ---
 # <a name="casecubedimensionid-element-assl"></a>Elemento CaseCubeDimensionID (ASSL)
   Contiene l'identificatore (ID) della dimensione del cubo che correla la dimensione di data mining al gruppo di misure.  
@@ -61,8 +61,8 @@ ms.locfileid: "36171310"
 |Elemento padre|[DataMiningMeasureGroupDimension](../data-type/dimension-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `CaseCubeDimensionID` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `CaseCubeDimensionID` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

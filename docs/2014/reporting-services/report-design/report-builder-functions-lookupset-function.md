@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c7721c5cc57392f1e9968b4b59cb01ba07916f00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 05fe44b16818d52b861fe63dd657e60fef5793fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311251"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>Funzione LookupSet (Generatore report e SSRS)
   Viene restituito il set di valori corrispondenti per il nome specificato da un set di dati contenente coppie nome/valore.  
@@ -42,7 +42,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  (`Variant`) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui eseguire la corrispondenza, Ad esempio, `=Fields!CustomerID.Value`.  
   
  *result_expression*  
- (`Variant`) Espressione valutata per la riga nel set di dati in cui *espressione_origine* = *destination_expression*, che specifica il valore da recuperare. Ad esempio, `=Fields!PhoneNumber.Value`.  
+ (`Variant`) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression*, che specifica il valore da recuperare. Ad esempio, `=Fields!PhoneNumber.Value`.  
   
  *set di dati*  
  Costante che specifica il nome di un set di dati nel report, ad esempio "InformazioniDiContatto".  
@@ -50,8 +50,8 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Return  
  Restituisce un `VariantArray`, o `Nothing` se non esiste alcuna corrispondenza.  
   
-## <a name="remarks"></a>Remarks  
- Utilizzare `LookupSet` per recuperare un set di valori da set di dati specificato per una coppia nome/valore in cui è presente una relazione 1-a-molti. Ad esempio, per un identificatore di cliente in una tabella, è possibile utilizzare `LookupSet` per recuperare tutti i numeri di telefono relativi al cliente da un set di dati che non è associato all'area dati.  
+## <a name="remarks"></a>Note  
+ Usare `LookupSet` per recuperare un set di valori dal set di dati specificato per una coppia nome/valore in cui è presente una relazione 1-a-molti. Ad esempio, per un identificatore di cliente in una tabella, è possibile usare `LookupSet` per recuperare tutti i numeri di telefono relativi al cliente da un set di dati che non è associato all'area dati.  
   
  `LookupSet` esegue le operazioni seguenti:  
   
@@ -63,7 +63,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Restituisce il set di valori dell'espressione di risultato.  
   
- Per recuperare un singolo valore da un set di dati con coppie nome/valore per un nome specificato in cui è presente una relazione uno-a-uno, usare la [Funzione Lookup &#40;Generatore report e SSRS&#41;](report-builder-functions-lookup-function.md). Per chiamare `Lookup` per un set di valori, utilizzare [funzione Multilookup &#40;Generatore Report e SSRS&#41;](report-builder-functions-multilookup-function.md).  
+ Per recuperare un singolo valore da un set di dati con coppie nome/valore per un nome specificato in cui è presente una relazione uno-a-uno, usare la [Funzione Lookup &#40;Generatore report e SSRS&#41;](report-builder-functions-lookup-function.md). Per chiamare `Lookup` per un set di valori, usare [funzione Multilookup &#40;Generatore Report e SSRS&#41;](report-builder-functions-multilookup-function.md).  
   
  Sono previste le restrizioni seguenti:  
   
@@ -105,7 +105,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Usare la [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] funzione `Join` creare una stringa delimitata da un set di oggetti. Usare una virgola come separatore per combinare gli oggetti in un'unica riga. In alcuni renderer, è possibile usare un avanzamento riga di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) come separatore per elencare ogni valore su una nuova riga.  
   
- L'espressione seguente, se viene usato come proprietà del valore per una casella di testo utilizza `Join` per creare un elenco.  
+ L'espressione seguente, quando viene usata come proprietà Value per una casella di testo, Usa `Join` per creare un elenco.  
   
 ```  
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
@@ -151,9 +151,9 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressione viene utilizzata nei report di &#40;SSRS e Generatore Report&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;SSRS e Generatore Report&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

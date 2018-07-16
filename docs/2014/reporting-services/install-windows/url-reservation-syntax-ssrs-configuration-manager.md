@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 381abbb4ce34272a87f9b9a569fd6c869d0d7152
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1aabe7b98174ea420e9944c4a195a2fe3b15870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301711"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Sintassi delle prenotazioni URL (Gestione configurazione SSRS)
   In questo argomento vengono descritte le parti della stringa URL per il servizio Web ReportServer e per Gestione report. La stringa URL archiviata internamente ha una struttura diversa da un URL digitato nella barra degli indirizzi di una finestra del browser. La stringa della prenotazione URL viene visualizzata nella finestra Risultati dello strumento di configurazione di Reporting Services quando si configura un URL e nel file RSReportServer.config. Conoscere il modo in cui è definita la stringa URL può risultare utile ai fini della risoluzione dei problemi relativi alle prenotazioni URL o per eseguire una query su HTTP.SYS per visualizzare le prenotazioni URL interne definite nel server.  
   
 ## <a name="url-syntax"></a>Sintassi URL  
- L'URL di un server di report viene archiviato negli elementi `UrlString` e `VirtualDirectory`. Il motivo per cui `UrlString` e `VirtualDirectory` separati in elementi distinti è che è possibile avere più stringhe URL ma nome solo una directory virtuale per ogni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dell'applicazione.  
+ L'URL di un server di report viene archiviato negli elementi `UrlString` e `VirtualDirectory`. Il motivo per cui `UrlString` e `VirtualDirectory` separati in elementi distinti è che è possibile avere più stringhe URL ma il nome di una sola directory virtuale per ogni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dell'applicazione.  
   
  In HTTP.SYS la prenotazione URL include sia `UrlString` che `VirtualDirectory`. La sintassi per una prenotazione URL include le parti seguenti:  
   

@@ -1,5 +1,5 @@
 ---
-title: Determinazione del numero di Bucket corretto per gli indici Hash | Documenti Microsoft
+title: Determinazione del numero di Bucket corretto per gli indici Hash | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 4fa6a93a3f66a3db6c2cc7f74b11fb66073a4013
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5dbb50c928f066e595b48737da2cc2fc6b9f45eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306169"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinazione del numero di bucket corretto per gli indici hash
   È necessario specificare un valore per il `BUCKET_COUNT` parametro quando si crea la tabella con ottimizzazione per la memoria. In questo argomento vengono fornite indicazioni per determinare il valore appropriato per il parametro `BUCKET_COUNT`. Se non è possibile determinare il numero di bucket corretto, utilizzare in alternativa un indice non cluster.  Un valore `BUCKET_COUNT` errato, in particolare se troppo basso, può influire in modo significativo sulle prestazioni del carico di lavoro e sul tempo di recupero del database. È consigliabile sovrastimare il numero di bucket.  
   
  Le chiavi duplicate dell'indice possono ridurre le prestazioni con un indice hash perché viene eseguito l'hash delle chiavi nello stesso bucket, causando un aumento della catena del bucket.  
   
- Per ulteriori informazioni sugli indici hash non cluster, vedere [indici Hash](hash-indexes.md) e [linee guida per l'utilizzo di indici nelle tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Per altre informazioni sugli indici hash non cluster, vedere [indici Hash](hash-indexes.md) e [linee guida per Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Una tabella hash viene allocata per ogni indice hash in una tabella ottimizzata per la memoria. Le dimensioni della tabella hash allocata per un indice viene specificato per il `BUCKET_COUNT` parametro nel [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) o [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). Il numero di bucket verrà arrotondato internamente per eccesso alla potenza più vicina di due. Se, ad esempio, si specifica un numero di bucket pari a 300.000 si avrà un numero di bucket effettivo pari a 524.288.  
   
@@ -67,7 +67,7 @@ FROM
  Per l'indice dell'esempio in (SpecialOfferID, ProductID), si ha il calcolo 121317/484 = 251. Ciò significa che la media dei valori di chiave di indice è pari 251 ed è pertanto consigliabile un indice non cluster.  
   
 ## <a name="troubleshooting-the-bucket-count"></a>Risoluzione dei problemi relativi al numero di bucket  
- Per risolvere i problemi di conteggio bucket nelle tabelle con ottimizzazione per la memoria, usare [DM db_xtp_hash_index_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) per ottenere statistiche sui bucket vuoti e la lunghezza delle catene di righe. È possibile utilizzare la query seguente per ottenere statistiche su tutti gli indici hash nel database corrente. L'esecuzione della query può richiedere alcuni minuti se sono presenti tabelle di grandi dimensioni nel database.  
+ Per risolvere i problemi di conteggio dei bucket nelle tabelle ottimizzate per la memoria, usare [DM db_xtp_hash_index_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) per ottenere statistiche sui bucket vuoti e la lunghezza delle catene di righe. È possibile utilizzare la query seguente per ottenere statistiche su tutti gli indici hash nel database corrente. L'esecuzione della query può richiedere alcuni minuti se sono presenti tabelle di grandi dimensioni nel database.  
   
 ```tsql  
 SELECT   
@@ -147,7 +147,7 @@ GO
   
 -   Indice di chiave primaria (PK__SalesOrder...): il 36% dei bucket è vuoto, una condizione positiva. Inoltre, la lunghezza media della catena è pari a 1, un'altra condizione positiva. Non è necessario apportare alcuna modifica.  
   
- Per ulteriori informazioni sulla risoluzione dei problemi con gli indici hash con ottimizzazione per la memoria, vedere [risoluzione dei problemi comuni di prestazioni con gli indici Hash Optimized](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
+ Per altre informazioni sulla risoluzione dei problemi con gli indici hash ottimizzati per la memoria, vedere [Troubleshooting Common Performance Problems con gli indici Hash ottimizzati per la memoria](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
   
 ## <a name="detailed-considerations-for-further-optimization"></a>Considerazioni dettagliate per un'ulteriore ottimizzazione  
  In questa sezione vengono presentate altre considerazioni per l'ottimizzazione del numero di bucket.  
@@ -156,7 +156,7 @@ GO
   
 -   Più alto è il valore del numero di bucket, maggiore sarà il numero di bucket vuoti nell'indice. Ciò influisce sull'utilizzo della memoria (8 byte per bucket) e sulle prestazioni delle analisi di tabella, in quanto ogni bucket viene analizzato come parte di un'analisi di tabella.  
   
--   Più basso è il numero di bucket, più saranno i valori assegnati a un singolo bucket. Ciò riduce le prestazioni per le ricerche di punti e gli inserimenti, perché [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe essere necessario attraversare diversi valori in un singolo bucket per trovare il valore specificato nel predicato.  
+-   Più basso è il numero di bucket, più saranno i valori assegnati a un singolo bucket. Ciò riduce le prestazioni per le ricerche di punti e gli inserimenti, perché [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe essere necessario attraversare diversi valori in un singolo bucket per trovare il valore specificato nel predicato di ricerca.  
   
  Se il numero di bucket è notevolmente inferiore al numero di chiavi di indice univoche, verrà eseguito il mapping di molti valori a ogni bucket. Ciò comporta una riduzione delle prestazioni della maggior parte delle operazioni DML, in particolare delle ricerche di punti (ricerca di singole chiavi di indice) e delle operazioni di inserimento. Ad esempio, si può avere un peggioramento delle prestazioni delle query SELECT e delle operazioni UPDATE e DELETE con predicati di uguaglianza corrispondenti alle colonne chiave di indice nella clausola WHERE. Un numero di bucket basso influisce anche sul tempo di recupero del database, in quanto gli indici vengono ricreati all'avvio del database.  
   
@@ -181,7 +181,7 @@ GO
 -   Se le scansioni complete dell'indice sono le operazioni critiche per le prestazioni più frequenti, utilizzare un numero di bucket simile al numero effettivo dei valori di chiave di indice.  
   
 ### <a name="big-tables"></a>Tabelle di grandi dimensioni  
- Per le tabelle di grandi dimensioni, l'utilizzo della memoria può costituire un problema. Ad esempio, con una tabella di 250 milioni di righe che include 4 indici hash, ciascuno con un numero di bucket di un miliardo, l'overhead per le tabelle hash è 4 indici * 1 miliardo bucket \* 8 byte = 32 GB di utilizzo della memoria. Quando si sceglie un numero di bucket di 250 milioni per ciascun indice, l'overhead totale per le tabelle hash sarà di 8 GB. Si noti che questo è oltre a 8 byte dell'utilizzo della memoria ogni indice aggiunge a ogni singola riga, ovvero 8 GB in questo scenario (4 indici \* 8 byte \* 250 milioni di righe).  
+ Per le tabelle di grandi dimensioni, l'utilizzo della memoria può costituire un problema. Ad esempio, con una tabella di 250 milioni di righe che include 4 indici hash, ciascuno con un numero di bucket di un miliardo, l'overhead per le tabelle hash è di 4 indici * 1 miliardo bucket \* 8 byte = 32 GB di utilizzo della memoria. Quando si sceglie un numero di bucket di 250 milioni per ciascun indice, l'overhead totale per le tabelle hash sarà di 8 GB. Si noti che questo è oltre agli 8 byte dell'utilizzo della memoria a ogni indice aggiunge a ogni singola riga, pari a 8 GB in questo scenario (4 indici \* 8 byte \* 250 milioni di righe).  
   
  Le scansioni complete delle tabelle non fanno in genere parte del percorso critico per le prestazioni per i carichi di lavoro OLTP. Pertanto, occorre scegliere tra l'utilizzo della memoria e le prestazioni della operazioni di ricerca di punti e di inserimento:  
   

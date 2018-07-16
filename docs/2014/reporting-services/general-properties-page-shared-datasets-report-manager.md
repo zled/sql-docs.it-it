@@ -1,5 +1,5 @@
 ---
-title: Pagina delle proprietà generale, set di dati (gestione Report) condivisi | Documenti Microsoft
+title: Pagina delle proprietà generale, condivisi (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3378300841bb6ad4f37ee7b7da5d7add6e78adb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747121123f3a654ccd475913ffe8b4a8c7e79be0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290307"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Pagina delle proprietà Generale, Set di dati condivisi (Gestione report)
   La pagina Set di dati condiviso consente di visualizzare e gestire le proprietà di un elemento del set di dati condiviso.  

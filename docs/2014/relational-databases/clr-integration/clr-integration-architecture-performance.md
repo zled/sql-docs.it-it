@@ -1,13 +1,11 @@
 ---
-title: Le prestazioni dell'integrazione con CLR | Documenti Microsoft
+title: Le prestazioni dell'integrazione con CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2259cf7be33fdf0e1ded99345db8102875f95618
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: de2c903436475790b1d7b6fa01c5c59ae16f20b5
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156023"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352583"
 ---
 # <a name="performance-of-clr-integration"></a>Prestazioni dell'integrazione con CLR
   In questo argomento vengono descritte alcune delle scelte di progettazione che migliorano le prestazioni delle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integrazione con il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework common language runtime (CLR).  
@@ -40,7 +38,7 @@ ms.locfileid: "36156023"
  Il processo di compilazione restituisce un puntatore a funzione che può essere chiamato in fase di esecuzione dal codice nativo. Nel caso di funzioni definite dall'utente a valori scalari, questa chiamata alla funzione avviene su ogni riga. Per ridurre al minimo il costo della transizione tra [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e CLR, le istruzioni che contengono chiamate gestite prevedono un passaggio di avvio per identificare il dominio dell'applicazione di destinazione. Questo passaggio di identificazione riduce il costo della transizione per ogni riga.  
   
 ## <a name="performance-considerations"></a>Considerazioni sulle prestazioni  
- Nelle sezioni che seguono vengono riepilogate le considerazioni relative alle prestazioni specifiche dell'integrazione con CLR in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Informazioni più dettagliate sono disponibili "[Using CLR Integration in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=50332)" nel sito Web MSDN. Informazioni generali relative alla prestazioni del codice gestito sono reperibile "[miglioramento .NET Application Performance and Scalability](http://go.microsoft.com/fwlink/?LinkId=50333)" nel sito Web MSDN.  
+ Nelle sezioni che seguono vengono riepilogate le considerazioni relative alle prestazioni specifiche dell'integrazione con CLR in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per ulteriori informazioni sono reperibili "[Using CLR Integration in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=50332)" sul sito Web MSDN. Informazioni generali relative alle prestazioni del codice gestito possono essere disponibili in "[miglioramento .NET Application Performance and Scalability](http://go.microsoft.com/fwlink/?LinkId=50333)" sul sito Web MSDN.  
   
 ### <a name="user-defined-functions"></a>Funzioni definite dall'utente  
  Il percorso di chiamata per le funzioni CLR risulta più veloce di quello delle funzioni definite dall'utente [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Il codice gestito dispone inoltre di un vantaggio in termini di prestazioni decisamente superiore rispetto a [!INCLUDE[tsql](../../../includes/tsql-md.md)] per quanto riguarda il codice procedurale, il calcolo e la manipolazione delle stringhe. Le funzioni CLR che prevedono intense attività di calcolo e che non eseguono l'accesso ai dati vengono scritte meglio in codice gestito. Le funzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] tuttavia, eseguono l'accesso ai dati più efficientemente rispetto all'integrazione CLR.  
@@ -62,7 +60,7 @@ ms.locfileid: "36156023"
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR rispetto a Stored procedure estese  
  Le API Microsoft.SqlServer.Server che consentono alle procedure gestite di inviare di nuovo i set di risultati al client offrono prestazioni migliori rispetto alle API ODS (Open Data Services) utilizzate dalle stored procedure estese. Inoltre, le API System.Data.SqlServer supportano tipi di dati come `xml`, `varchar(max)`, `nvarchar(max)`e `varbinary(max)`, introdotti in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], mentre le API ODS non sono state estese per supportare i nuovi tipi di dati.  
   
- Con il codice gestito, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gestisce l'utilizzo di risorse come la memoria, i thread e la sincronizzazione. Questo accade in quanto le API gestite che espongono queste risorse vengono implementate nello strumento di gestione delle risorse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Viceversa, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non dispone di una vista o di un controllo sull'utilizzo delle risorse della stored procedure estesa. Ad esempio, se una stored procedure estesa utilizza una quantità eccessiva della CPU o risorse di memoria, non vi è alcuna possibilità di rilevare o verificare con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il codice gestito consente tuttavia a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di rilevare che un determinato thread non è stato prodotto per un lungo periodo di tempo e quindi imporre l'esecuzione dell'attività in modo da poter pianificare altro lavoro. Di conseguenza, l'utilizzo di codice gestito offre una maggiore scalabilità e un miglior utilizzo delle risorse di sistema.  
+ Con il codice gestito, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gestisce l'utilizzo di risorse come la memoria, i thread e la sincronizzazione. Questo accade in quanto le API gestite che espongono queste risorse vengono implementate nello strumento di gestione delle risorse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Viceversa, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non dispone di una vista o di un controllo sull'utilizzo delle risorse della stored procedure estesa. Ad esempio, se una stored procedure estesa utilizza una quantità eccessiva delle risorse della CPU o memoria, non vi è alcun modo per rilevare o verificare con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il codice gestito consente tuttavia a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di rilevare che un determinato thread non è stato prodotto per un lungo periodo di tempo e quindi imporre l'esecuzione dell'attività in modo da poter pianificare altro lavoro. Di conseguenza, l'utilizzo di codice gestito offre una maggiore scalabilità e un miglior utilizzo delle risorse di sistema.  
   
  Il codice gestito può determinare un overhead aggiuntivo, necessario per gestire l'ambiente di esecuzione ed eseguire controlli di sicurezza. Ciò avviene, ad esempio, qualora siano necessarie l'esecuzione all'interno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e numerose transizioni da codice gestito a codice nativo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiede infatti l'esecuzione di una manutenzione aggiuntiva sulle impostazioni specifiche del thread se si passa dal codice nativo a un altro tipo di codice, quindi si utilizza di nuovo il codice nativo. Di conseguenza, le stored procedure estese possono offrire prestazioni nettamente superiori rispetto al codice gestito in esecuzione all'interno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nelle situazioni in cui le transizioni tra codice gestito e codice nativo sono frequenti.  
   

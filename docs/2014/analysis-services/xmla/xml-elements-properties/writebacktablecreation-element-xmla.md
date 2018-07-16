@@ -1,5 +1,5 @@
 ---
-title: Elemento WritebackTableCreation (XMLA) | Documenti Microsoft
+title: Elemento WritebackTableCreation (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - WritebackTableCreation element
 ms.assetid: e9579d63-e28c-4d4e-9f4a-21c5da24c276
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 95b9639b34002aa69366f87cac48427624f7d0dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9908cf615ef5f767b72e639023b0444f02e71f7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319211"
 ---
 # <a name="writebacktablecreation-element-xmla"></a>Elemento WritebackTableCreation (XMLA)
   Determina se una tabella writeback viene creata durante la [processo](../xml-elements-commands/process-element-xmla.md) operazione.  
@@ -63,8 +63,8 @@ ms.locfileid: "36156264"
 |Elementi padre|[Process](../xml-elements-commands/process-element-xmla.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Per ulteriori informazioni sulle opzioni di elaborazione disponibili per gli oggetti in un'istanza di Analysis Services, vedere [l'elaborazione di oggetti modello multidimensionale](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+## <a name="remarks"></a>Note  
+ Per altre informazioni sulle opzioni di elaborazione disponibili per gli oggetti in un'istanza di Analysis Services, vedere [elaborazione di oggetti modello multidimensionale](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  Il valore dell'elemento `WritebackTableCreation` è limitato a una delle stringhe elencate nella tabella seguente.  
   

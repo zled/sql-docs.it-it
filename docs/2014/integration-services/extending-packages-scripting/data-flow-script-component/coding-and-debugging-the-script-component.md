@@ -25,13 +25,13 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5a964501cd247007b2b7de6cd277977701bc0539
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 821d47f8a112efb3c2f70a094c139fdc7936ab32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203991"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codifica e debug del componente script
   In Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] sono disponibili due modalità per il componente script: progettazione metadati e progettazione codice. Quando si apre l'**Editor trasformazione Script**, per il componente viene attivata la modalità di progettazione metadati, che consente di configurare i metadati e impostare le proprietà del componente. Dopo l'impostazione delle proprietà del componente script e la configurazione di input e output nella modalità di progettazione metadati, è possibile passare alla modalità di progettazione codice per scrivere lo script personalizzato. Per altre informazioni sulla modalità di progettazione metadati e sulla modalità di progettazione codice, vedere [Configurazione del componente script nell'editor corrispondente](configuring-the-script-component-in-the-script-component-editor.md).  
@@ -64,11 +64,11 @@ ms.locfileid: "36169248"
   
     -   Classe della raccolta `Connections` che contiene riferimenti alle connessioni selezionate nella pagina Gestione connessione dell'Editor trasformazione Script.  
   
-    -   A `Variables` classe di raccolta che contiene riferimenti alle variabili immesse nel `ReadOnlyVariable` e `ReadWriteVariables` delle proprietà nel **Script** pagina del **Editor trasformazione Script**.  
+    -   Oggetto `Variables` classe di raccolta che contiene riferimenti alle variabili immesse nel `ReadOnlyVariable` e `ReadWriteVariables` proprietà il **Script** pagina del **Editor trasformazione Script**.  
   
--   Il `BufferWrapper` elemento di progetto contiene una classe che eredita da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> per ogni input e output configurato nella **input e output** pagina del **Editor trasformazione Script**. Ognuna di queste classi contiene proprietà della funzione di accesso tipizzate corrispondenti alle colonne di input e output configurate e i buffer del flusso di dati contenenti le colonne.  
+-   Il `BufferWrapper` elemento del progetto contiene una classe che eredita da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> per ogni input e output configurato nella **input e output** pagina del **Editor trasformazione Script**. Ognuna di queste classi contiene proprietà della funzione di accesso tipizzate corrispondenti alle colonne di input e output configurate e i buffer del flusso di dati contenenti le colonne.  
   
- Per informazioni su come usare questi oggetti, metodi e proprietà, vedere [comprendere il Model]((understanding-the-script-component-object-model.md) oggetto componente Script. Per informazioni su come usare i metodi e le proprietà di queste classi in un tipo di componente script specifico, vedere la sezione [Ulteriori esempi di componente script](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Negli argomenti di esempio vengono inoltre presentati esempi di codice completi.  
+ Per informazioni su come usare questi oggetti, metodi e proprietà, vedere [comprendere la Model]((understanding-the-script-component-object-model.md) oggetto componente Script. Per informazioni su come usare i metodi e le proprietà di queste classi in un tipo di componente script specifico, vedere la sezione [Ulteriori esempi di componente script](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Negli argomenti di esempio vengono inoltre presentati esempi di codice completi.  
   
  Quando si configura il componente di script come trasformazione, nell'elemento del progetto `ScriptMain` è incluso il seguente codice generato automaticamente. Nel modello del codice sono inoltre disponibili una panoramica del componente di script, nonché informazioni aggiuntive su come recuperare e modificare oggetti SSIS, quali variabili, eventi e connessioni.  
   
@@ -175,7 +175,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|  
 |Variabili|Utilizzare le proprietà delle funzioni di accesso denominate e tipizzate nella classe della raccolta `Variables` nell'elemento del progetto `ComponentWrapper`, esposto tramite la proprietà `Variables` della classe `ScriptMain`.<br /><br /> Il metodo `PreExecute` può accedere unicamente a variabili di sola lettura. Il metodo `PostExecute` può accedere sia a variabili di sola lettura sia a variabili di lettura/scrittura.|  
 |Connessioni|Utilizzare le proprietà delle funzioni di accesso denominate e tipizzate nella classe della raccolta `Connections` nell'elemento del progetto `ComponentWrapper`, esposto tramite la proprietà `Connections` della classe `ScriptMain`.|  
-|Eventi|Generare eventi utilizzando il <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> proprietà del `ScriptMain` classe e il **incendio\<X >** metodi del <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interfaccia.|  
+|Eventi|Generare eventi tramite il <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> proprietà del `ScriptMain` classe e il **Fire\<X >** metodi del <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interfaccia.|  
 |Registrazione|Eseguire la registrazione utilizzando il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> della classe `ScriptMain`.|  
   
 ## <a name="debugging-the-script-component"></a>Debug del componente script  
@@ -189,11 +189,11 @@ public class ScriptMain : UserComponent
   
  È anche possibile monitorare l'esecuzione del componente di script utilizzando i metodi seguenti:  
   
--   Interrompere l'esecuzione e visualizzare un messaggio modale tramite il `MessageBox.Show` metodo il **Forms** dello spazio dei nomi. Rimuovere il codice al termine del processo di debug.  
+-   Interrompere l'esecuzione e visualizzare un messaggio modale tramite il `MessageBox.Show` metodo nella **Forms** dello spazio dei nomi. Rimuovere il codice al termine del processo di debug.  
   
 -   Generare eventi per messaggi informativi, avvisi ed errori. I metodi FireInformation, FireWarning e FireError visualizzano la descrizione dell'evento nella finestra **Output** di Visual Studio. I metodi FireProgress, Console.Write e Console.WriteLine, tuttavia, non visualizzano alcuna informazione nella finestra **Output**. I messaggi dell'evento FireProgress vengono visualizzati nella scheda **Stato** di Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Per altre informazioni, vedere [Generazione di eventi nel componente script](../../data-flow/transformations/script-component.md).  
   
--   Registrare eventi o messaggi definiti dall'utente nei provider di log abilitati. Per altre informazioni, vedere [registrazione nel Component]((logging-in-the-script-component.md) di Script.  
+-   Registrare eventi o messaggi definiti dall'utente nei provider di log abilitati. Per altre informazioni, vedere [accesso Component]((logging-in-the-script-component.md) di Script.  
   
  Se si vuole soltanto esaminare l'output di un componente script configurato come origine o trasformazione, senza salvare i dati in una destinazione, è possibile arrestare il flusso di dati con una [trasformazione Conteggio righe](../../data-flow/transformations/row-count-transformation.md) e collegare un visualizzatore dati all'output del componente script. Per informazioni sui visualizzatori dati, vedere [Debug di un flusso di dati](../../troubleshooting/debugging-data-flow.md).  
   
@@ -213,7 +213,7 @@ public class ScriptMain : UserComponent
   
 -   Intervento del blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661) (Problemi di installazione e configurazione di VSTA per le installazioni SSIS 2008 e R2), in blogs.msdn.com.  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione del componente script nell'editor corrispondente](configuring-the-script-component-in-the-script-component-editor.md)  

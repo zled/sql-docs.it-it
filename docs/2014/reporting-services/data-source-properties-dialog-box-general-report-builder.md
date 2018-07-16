@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo proprietà Generale (Generatore Report) dell'origine dati | Documenti Microsoft
+title: Finestra di dialogo proprietà, generale (Generatore Report) dell'origine dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: edd997ab55e63abe4b5085bbe0b11c197020c2ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30114b93158424512e9a9be6441dc5c3ab8dd460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288457"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Finestra di dialogo Proprietà origine dati, Generale (Generatore report)
   Selezionare **Generale** nella finestra di dialogo **Proprietà origine dati** per selezionare un'origine dati condivisa in un server di report o modificare le informazioni di connessione per un'origine dati incorporata nel report.  
@@ -47,12 +47,12 @@ ms.locfileid: "36168948"
  **Nome**  
  Consente di digitare il nome dell'origine dati. Tale nome deve essere univoco all'interno del report. Per impostazione predefinita, all'origine dei dati viene assegnato un nome generico, ad esempio DataSource1 o DataSource2.  
   
- **Utilizzare una connessione condivisa**  
+ **Usa una connessione condivisa**  
  Selezionare questa opzione per individuare un'origine dei dati condivisa pubblicata in un server di report.  
   
  Dopo aver selezionato un'origine dati in un server di report, in Generatore report viene mantenuta una connessione a tale server di report specifico.  
   
- **Utilizzare una connessione incorporata nel report**  
+ **Usare una connessione incorporata nel report**  
  Selezionare questa opzione per creare un'origine dei dati da utilizzare solo per il report specifico.  
   
  **Tipo**  
@@ -61,15 +61,15 @@ ms.locfileid: "36168948"
  **Stringa di connessione**  
  Immettere una stringa di connessione per l'origine dati. Fare clic su **Compila** per compilare la stringa di connessione utilizzando la finestra di dialogo **Proprietà connessione** . Fare clic sul pulsante **Espressioni** (*fx*) per modificare l'espressione.  
   
- **Usa transazione singola durante l'elaborazione di query**  
+ **Usa transazione singola durante l'elaborazione delle query**  
  Selezionare questa opzione per indicare che i set di dati che utilizzano l'origine dei dati vengono eseguiti in un'unica transazione sul database. Per includere transazioni per sottoreport che utilizzano la stessa origine dati, selezionare il sottoreport quindi impostare **MergeTransactions** su **True**nel riquadro Proprietà.  
   
  **Test connessione**  
  Fare clic su questa opzione per verificare che la connessione all'origine dati funzioni correttamente tramite le credenziali specificate. Se non è possibile stabilire la connessione, è necessario verificare le credenziali e la disponibilità del server. È possibile testare connessioni a origini dati incorporate e condivise.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-data/report-datasets-ssrs.md)   
- [Aggiungere e verificare una connessione dati o un'origine dati &#40;SSRS e Generatore Report&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Generatore Report](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Finestra di dialogo proprietà, le credenziali dell'origine dati &#40;Generatore Report&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  

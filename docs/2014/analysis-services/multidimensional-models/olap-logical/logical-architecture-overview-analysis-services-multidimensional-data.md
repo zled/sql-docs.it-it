@@ -1,5 +1,5 @@
 ---
-title: Panoramica dell'architettura logica (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Panoramica dell'architettura logica (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 89260e7ed530216d514e3237ed0ffe11322e17d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2d249097413675c4284bc8d19038eebbf88f446
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284117"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Panoramica dell'architettura logica (Analysis Services - Dati multidimensionali)
-  Analysis Services viene eseguito in una modalità di distribuzione server che determina l'architettura di memoria e l'ambiente di runtime utilizzati dai diversi tipi di modelli di Analysis Services. La modalità server viene determinata durante l'installazione. **Modalità multidimensionale e Data Mining** supporta OLAP tradizionali e il data mining. **Modalità tabulare** supporta modelli tabulari. **La modalità integrata SharePoint** fa riferimento a un'istanza di Analysis Services in cui è stato installato come PowerPivot per SharePoint, utilizzato per il caricamento e di eseguire query sui modelli di dati di Excel o PowerPivot all'interno di una cartella di lavoro.  
+  Analysis Services viene eseguito in una modalità di distribuzione server che determina l'architettura di memoria e l'ambiente di runtime utilizzati dai diversi tipi di modelli di Analysis Services. La modalità server viene determinata durante l'installazione. **Modalità multidimensionale e Data Mining** supporta OLAP tradizionali e il data mining. **Modalità tabulare** supporta modelli tabulari. **La modalità integrata SharePoint** fa riferimento a un'istanza di Analysis Services installata come PowerPivot per SharePoint, utilizzato per il caricamento ed eseguire query sui modelli di dati di Excel o PowerPivot all'interno di una cartella di lavoro.  
   
- In questo argomento viene illustrata l'architettura di base di Analysis Services quando viene utilizzato nella modalità multidimensionale e di data mining. Per ulteriori informazioni sulle altre modalità, vedere [modellazione tabulare &#40;modello tabulare di SSAS&#41; ](../../tabular-models/tabular-models-ssas.md) e [confronto tabulari e le soluzioni multidimensionali &#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ In questo argomento viene illustrata l'architettura di base di Analysis Services quando viene utilizzato nella modalità multidimensionale e di data mining. Per altre informazioni sulle altre modalità, vedere [modellazione tabulare &#40;modello tabulare di SSAS&#41; ](../../tabular-models/tabular-models-ssas.md) e [confronto tabulari e multidimensionali &#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
 ## <a name="basic-architecture"></a>Architettura di base  
- Un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] può contenere più database e un database può includere contemporaneamente oggetti OLAP e oggetti di data mining. Le applicazioni si connettono a un'istanza specifica di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e a un database specifico. Un computer server può ospitare più istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Le istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] vengono denominate come "\<nomeserver >\\< NomeIstanza\>". La figura seguente mostra tutte le relazioni indicate tra [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oggetti.  
+ Un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] può contenere più database e un database può includere contemporaneamente oggetti OLAP e oggetti di data mining. Le applicazioni si connettono a un'istanza specifica di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e a un database specifico. Un computer server può ospitare più istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Le istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] indicato come "\<nomeserver >\\< NomeIstanza\>". La figura seguente mostra tutte le relazioni indicate tra [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oggetti.  
   
  ![Relazioni tra oggetti AMO in esecuzione](../../../analysis-services/dev-guide/media/amo-runningobjects.gif "relazioni tra oggetti AMO in esecuzione")  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36158559"
 ## <a name="example"></a>Esempio  
  Il cubo Imports contiene due misure, Packages e Last, e tre dimensioni correlate, Route, Source e Time.  
   
- ![Esempio di cubo 1](../../../analysis-services/dev-guide/media/cubeintro1.gif "del cubo di esempio 1")  
+ ![Esempio 1 di cubo](../../../analysis-services/dev-guide/media/cubeintro1.gif "cubo di esempio 1")  
   
  I valori alfanumerici più piccoli disposti intorno al cubo rappresentano i membri delle dimensioni. Ad esempio, ground, Africa e 1st quarter sono rispettivamente membri delle dimensioni Route, Source e Time.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36158559"
  La dimensione Route rappresenta il mezzo di trasporto mediante il quale i beni importati giungono a destinazione. I membri di questa dimensione includono ground, nonground, air, sea, road e rail. La dimensione Source rappresenta le località in cui vengono prodotti i beni importati, ad esempio Africa o Asia. La dimensione Time rappresenta i trimestri e i semestri di un singolo anno.  
   
 ### <a name="aggregates"></a>Aggregazioni  
- Gli utenti aziendali di un cubo possono determinare il valore di qualsiasi misura per ogni membro di ogni dimensione, indipendentemente dal livello del membro all'interno della dimensione, perché in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] i valori vengono aggregati ai livelli superiori in base alle esigenze. I valori di misura nell'illustrazione precedente, ad esempio, possono essere aggregati in base a una gerarchia con il calendario standard utilizzando la gerarchia Calendar Time della dimensione temporale, come illustrato nel diagramma seguente.  
+ Gli utenti aziendali di un cubo possono determinare il valore di qualsiasi misura per ogni membro di ogni dimensione, indipendentemente dal livello del membro all'interno della dimensione, perché in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] i valori vengono aggregati ai livelli superiori in base alle esigenze. I valori delle misure nella figura precedente, ad esempio, possono essere aggregati in base a una gerarchia con il calendario standard utilizzando la gerarchia Calendar Time della dimensione temporale, come illustrato nel diagramma seguente.  
   
  ![Diagramma delle misure organizzate lungo la dimensione temporale](../../../analysis-services/dev-guide/media/cubeintro2.gif "diagramma delle misure organizzate lungo la dimensione temporale")  
   
@@ -91,10 +91,10 @@ ms.locfileid: "36158559"
 |||1st quarter|5108|1452|3656|Mar-30-99|Mar-19-99|Mar-30-99|  
 |||2nd quarter|6065|1525|4540|Jun-28-99|Jun-20-99|Jun-28-99|  
 ||2nd half||13937|3570|10367|DEC-29-99|Dec-22-99|DEC-29-99|  
-|||3rd quarter|6119|1444|4675|Sep-30-99|Set-18-99|Sep-30-99|  
+|||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99|Sep-30-99|  
 |||4th quarter|7818|2126|5692|DEC-29-99|Dec-22-99|DEC-29-99|  
   
- Dopo avere definito un cubo, è possibile creare nuove aggregazioni o modificare quelle esistenti in modo da impostare le opzioni per determinare, ad esempio, se le aggregazioni devono essere precalcolate durante la fase di elaborazione o calcolate durante l'esecuzione della query. **Argomento correlato:**[aggregazioni e le progettazioni delle aggregazioni](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+ Dopo avere definito un cubo, è possibile creare nuove aggregazioni o modificare quelle esistenti in modo da impostare le opzioni per determinare, ad esempio, se le aggregazioni devono essere precalcolate durante la fase di elaborazione o calcolate durante l'esecuzione della query. **Argomento correlato:**[aggregazioni e progettazione di aggregazioni](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Mapping di misure, attributi e gerarchie  
  Le misure, gli attributi e le gerarchie del cubo di esempio derivano dalle colonne seguenti nelle tabelle dei fatti e delle dimensioni del cubo.  
@@ -110,7 +110,7 @@ ms.locfileid: "36158559"
 |Attributo Half nella dimensione Time|1st half,2nd half|TimeDimensionTable|Half|2nd half|  
 |Attributo Quarter nella dimensione Time|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Quarter|3rd quarter|  
   
- I dati di una singola cella del cubo in genere derivano da più righe della tabella dei fatti. Ad esempio, la cella del cubo nel punto di intersezione tra il membro air, il membro Africa e il membro 1st quarter contiene un valore che deriva dall'aggregazione delle righe seguenti della **ImportsFactTable** tabella dei fatti.  
+ I dati di una singola cella del cubo in genere derivano da più righe della tabella dei fatti. Ad esempio, la cella del cubo nel punto di intersezione tra il membro air, il membro Africa e il membro 1st quarter contiene un valore che deriva dall'aggregazione le seguenti righe di **ImportsFactTable** tabella dei fatti.  
   
 |||||||  
 |-|-|-|-|-|-|  
@@ -122,7 +122,7 @@ ms.locfileid: "36158559"
 |3645541|1|6|1|20|Feb-09-99|  
 |3674906|1|6|1|36|Feb-17-99|  
   
- Nella tabella precedente, ogni riga contiene gli stessi valori per il **RouteKey**, **SourceKey**, e **TimeKey** colonne, che indica che queste righe contribuiscono alla cella del cubo stesso.  
+ Nella tabella precedente, ogni riga dispone degli stessi valori per il **RouteKey**, **SourceKey**, e **TimeKey** colonne, che indica che queste righe contribuiscono alla cella del cubo stesso.  
   
  Nell'esempio illustrato di seguito viene rappresentato un cubo molto semplice, in quanto contiene un solo gruppo di misure, e tutte le tabelle delle dimensioni vengono unite in join alla tabella dei fatti in uno schema star. Un altro schema comune è quello snowflake, in cui una o più tabelle delle dimensioni sono unite in join a un'altra tabella delle dimensioni, anziché direttamente alla tabella dei fatti. **Argomento correlato:**[dimensioni &#40;Analysis Services - dati multidimensionali&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   

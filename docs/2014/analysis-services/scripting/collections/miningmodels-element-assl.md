@@ -1,5 +1,5 @@
 ---
-title: Elemento MiningModels (ASSL) | Documenti Microsoft
+title: Elemento MiningModels (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModels element
 ms.assetid: 19824d92-2e23-4e5e-b329-e46baf709c4a
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f04f8f2f7872fb2472f1a4179019a2a74f72cc4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e1901ff4974104143928c9b5fb90d14118fda6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291607"
 ---
 # <a name="miningmodels-element-assl"></a>Elemento MiningModels (ASSL)
   Contiene la raccolta di [MiningModel](../objects/miningmodel-element-assl.md) gli elementi associati a un [MiningStructure](../objects/miningstructure-element-assl.md).  
@@ -60,10 +60,10 @@ ms.locfileid: "36166711"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[MiningStructure](../objects/miningstructure-element-assl.md)|  
-|Elementi figlio|[MiningModel](../objects/miningmodel-element-assl.md)|  
+|Elementi padre|[Elemento MiningStructure](../objects/miningstructure-element-assl.md)|  
+|Elementi figlio|[Elemento MiningModel](../objects/miningmodel-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.MiningModelCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

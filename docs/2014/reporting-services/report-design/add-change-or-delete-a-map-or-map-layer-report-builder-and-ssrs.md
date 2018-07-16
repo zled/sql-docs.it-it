@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10526"
 - sql12.rtp.rptdesigner.maptilelayerproperties.general.f1
@@ -28,15 +28,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.maplayerproperties.analyticaldata.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f9f187f50864bfccdcf093ca8270c096f5032d57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 951fe65c8cf9876d5ea5afe2e8eda25b2f8e8a1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286687"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Aggiungere, modificare o eliminare una mappa o un livello mappa (Generatore report e SSRS)
   Una mappa è una raccolta di livelli. Quando si aggiunge una mappa a un report, si definisce il primo livello. È possibile creare livelli aggiuntivi tramite la creazione guidata del livello mappa.  
@@ -45,7 +45,7 @@ ms.locfileid: "36166791"
   
  ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- I livelli mappa vengono disegnati dal basso verso l'alto nell'ordine in cui vengono visualizzati nel riquadro della mappa. Nella figura precedente, viene disegnato per primo il livello sezione e per ultimo il livello poligono. I livelli disegnati in un secondo momento potrebbero nascondere elementi della mappa di livelli disegnati in precedenza. È possibile modificare l'ordine dei livelli tramite i tasti di direzione sulla barra degli strumenti del riquadro della mappa. Per mostrare o nascondere i livelli, attivare o disattivare l'icona della visibilità. È possibile modificare la trasparenza di un livello nella `Visibility` pagina del **dati livello** finestra di dialogo proprietà.  
+ I livelli mappa vengono disegnati dal basso verso l'alto nell'ordine in cui vengono visualizzati nel riquadro della mappa. Nella figura precedente, viene disegnato per primo il livello sezione e per ultimo il livello poligono. I livelli disegnati in un secondo momento potrebbero nascondere elementi della mappa di livelli disegnati in precedenza. È possibile modificare l'ordine dei livelli tramite i tasti di direzione sulla barra degli strumenti del riquadro della mappa. Per mostrare o nascondere i livelli, attivare o disattivare l'icona della visibilità. È possibile modificare la trasparenza di un livello nel `Visibility` pagina della **dati livello** finestra di dialogo proprietà.  
   
  Nella tabella seguente vengono visualizzate le icone della barra degli strumenti per il riquadro **Mappa** .  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36166791"
   
 1.  Selezionare **Generale** nella finestra di dialogo **Proprietà punto mappa** per modificare le opzioni relative all'etichetta, alla descrizione comando e al tipo di indicatore per gli elementi della mappa seguenti:  
   
-    -   Tutti i punti dinamici o incorporati su un livello punto. Le regole relative al colore, alle dimensioni e al tipo di marcatore per i punti ignorano queste opzioni. Per ignorare le opzioni per un punto incorporato specifico, utilizzare il [incorporato scegliere Proprietà finestra di dialogo mappa, marcatore](../map-embedded-point-properties-dialog-box-marker.md) pagina.  
+    -   Tutti i punti dinamici o incorporati su un livello punto. Le regole relative al colore, alle dimensioni e al tipo di marcatore per i punti ignorano queste opzioni. Per ignorare le opzioni per un punto incorporato specifico, usare il [finestra punto incorporato mappa proprietà finestra di dialogo, marcatore](../map-embedded-point-properties-dialog-box-marker.md) pagina.  
   
     -   Punto centrale per tutti i poligoni dinamici o incorporati su un livello poligono. Le regole relative al colore, alle dimensioni e al tipo di marcatore per i punti centrali ignorano queste opzioni. Per sostituire le opzioni per un punto centrale specifico, usare la pagina [Finestra di dialogo Proprietà punto incorporato mappa, Indicatore](../map-embedded-point-properties-dialog-box-marker.md).  
   
@@ -286,6 +286,6 @@ ms.locfileid: "36166791"
   
 ## <a name="see-also"></a>Vedere anche  
  [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Risolvere i problemi di report: Eseguire il mapping di report &#40;SSRS e Generatore Report&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere i problemi di report: I report di mappa &#40;Report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

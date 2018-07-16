@@ -1,12 +1,11 @@
 ---
-title: Visual Studio regolare. Connessioni di contesto | Documenti Microsoft
+title: Visual Studio regolari. Connessioni di contesto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
@@ -16,20 +15,20 @@ caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8758f1e7c680af9d546ba2b9894304388a01e46d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 938ae2b6a740f793a87a1ed634d2d02b061a6123
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696921"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356323"
 ---
-# <a name="context-connections-vs-regular-connections"></a>Visual Studio le connessioni di contesto. Connessioni normali
+# <a name="context-connections-vs-regular-connections"></a>Connessioni di contesto e Connessioni normali
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Se si esegue una connessione a un server remoto, utilizzare sempre connessioni normali anziché connessioni di contesto. Se è necessario connettersi allo stesso server in cui è in esecuzione la stored procedure o la funzione, utilizzare la connessione di contesto nella maggior parte dei casi. Questa connessione offre vantaggi quali l'esecuzione nello stesso spazio della transazione e la non necessità di eseguire una nuova autenticazione.  
   
- L'utilizzo della connessione di contesto, inoltre, consente in genere prestazioni migliori e un minore utilizzo delle risorse. Poiché la connessione di contesto è una connessione solo in-process, può contattare il server "direttamente" ignorando il protocollo di rete e i livelli di trasporto per inviare istruzioni Transact-SQL e ricevere risultati. Viene ignorato anche il processo di autenticazione. La figura seguente illustra i componenti principali del **SqlClient** gestiti provider, nonché come i diversi componenti interagiscono tra loro quando si utilizza una connessione normale e quando si utilizza la connessione di contesto.  
+ L'utilizzo della connessione di contesto, inoltre, consente in genere prestazioni migliori e un minore utilizzo delle risorse. Poiché la connessione di contesto è una connessione solo in-process, può contattare il server "direttamente" ignorando il protocollo di rete e i livelli di trasporto per inviare istruzioni Transact-SQL e ricevere risultati. Viene ignorato anche il processo di autenticazione. La figura seguente illustra i componenti principali dei **SqlClient** gestiti provider, nonché come i diversi componenti interagiscono tra loro quando si usa una connessione normale e quando si utilizza la connessione di contesto.  
   
- ![Percorsi del codice di un contesto e una connessione normale. ] (../../../relational-databases/clr-integration/data-access/media/clrintdataaccess.gif "Percorsi di un contesto e una connessione normale del codice.")  
+ ![Percorsi del codice di un contesto e una connessione normale. ] (../../../relational-databases/clr-integration/data-access/media/clrintdataaccess.gif "i percorsi di un contesto e una connessione normale del codice.")  
   
  Poiché la connessione di contesto segue un percorso di codice più corto e interessa un numero minore di componenti, è probabile che le richieste e i risultati vengano trasmessi al e dal server più rapidamente che in una connessione normale. I tempi di esecuzione delle query nel server sono uguali per le connessioni normali e di contesto.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 25ecfabc0f48b2cc34c723e4052d89da5d7e29dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2febce5efbc51e3a25693b56f3ab000ab9101be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292871"
 ---
 # <a name="create-infopackage"></a>Crea InfoPackage
   Usare la finestra di dialogo **Crea InfoPackage** per creare un nuovo InfoPackage nel sistema SAP Netweaver BW.  
@@ -62,6 +62,6 @@ ms.locfileid: "36158501"
  Salvare e attivare il nuovo InfoPackage.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Microsoft Connector 1.1 for SAP BW F1 Guida in linea](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Guida (F1) di Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

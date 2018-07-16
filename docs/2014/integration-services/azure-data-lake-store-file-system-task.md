@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPADLSTASK.F1
 - SQL11.DTS.DESIGNER.AFPADLSTASK.F1
 ms.assetid: 02b9edd7-6ef9-463e-abbf-e1830bcae875
 caps.latest.revision: 3
-author: Lingxi-Li
-ms.author: lingxl
-manager: jhubbard
-ms.openlocfilehash: 240780efd1b12596b0ebb6156ad98c508f0e8051
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslms
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 768113129fd380d335895364344742eb9bb8e791
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292851"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Attività File system di Azure Data Lake Store
-Il **attività di Azure Data Lake archivio File System** consente agli utenti di eseguire varie operazioni del file system sul [Azure Data Lake archivio (ADLS)](https://azure.microsoft.com/en-us/services/data-lake-store/).
+Il **attività di sistema di File di Azure Data Lake Store** consente agli utenti di eseguire varie operazioni del file system sul [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/en-us/services/data-lake-store/).
 
 Per aggiungere un'attività File System di Azure Data Lake Store a un pacchetto, trascinarla dalla casella degli strumenti SSIS ai canvas di progettazione. Quindi fare doppio clic su attività, o l'attività e scegliere **modifica**, per aprire la finestra di dialogo Editor dell'attività.
 
@@ -39,11 +39,11 @@ Per qualsiasi operazione è necessario specificare una gestione della connession
 Di seguito sono riportate le descrizioni delle proprietà specifiche per ogni operazione.
 
 ## <a name="copytoadls"></a>CopyToADLS
-* **LocalDirectory:** specifica la directory di origine che contiene file da caricare.
-* **FileNamePattern:** specifica un filtro di nome file per i file di origine. Verranno caricati solo i file il cui nome corrisponde al criterio specificato. Sono supportati i caratteri jolly `*` e `?`.
+* **LocalDirectory:** specifica la directory di origine che contiene i file da caricare.
+* **FileNamePattern:** specifica un filtro di nome file per i file di origine. Verranno caricati solo i file il cui nome corrisponde al modello specificato. Sono supportati i caratteri jolly `*` e `?`.
 * **SearchRecursively:** specifica se cercare in modo ricorsivo i file da caricare all'interno della directory di origine.
 * **AzureDataLakeDirectory:** specifica la directory di destinazione di ADLS in cui caricare i file.
-* **FileExpiry:** specifica una data di scadenza e l'ora per i file caricati di ADLS o lasciare vuoto per indicare che i file non scadono mai questa proprietà.
+* **FileExpiry:** specifica una data di scadenza e l'ora per i file caricati in Azure Data Lake Store o lasciare vuoto per indicare che i file non scadono mai questa proprietà.
 
 ## <a name="copyfromadls"></a>CopyFromADLS
 * **AzureDataLakeDirectory:** specifica la directory di origine di ADLS che contiene i file da scaricare.

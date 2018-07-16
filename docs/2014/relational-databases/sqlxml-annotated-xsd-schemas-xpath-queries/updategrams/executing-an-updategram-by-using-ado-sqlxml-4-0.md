@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di un Updategram mediante ADO (SQLXML 4.0) | Documenti Microsoft
+title: Esecuzione di un Updategram mediante ADO (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,30 +16,30 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37a8cb3f06152ac2bc7dc682ae8d06e54d33ef6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ad4ed1723cc8ad49ed18304c106b0849e6bc2fb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319971"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Esecuzione di un updategram mediante ADO (SQLXML 4.0)
   Questa applicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic utilizza ADO per stabilire una connessione a un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed eseguire un updategram. L'updategram aggiorna il cognome di un dipendente specifico. In questo esempio viene utilizzato il database di esempio AdventureWorks.  
   
  In questa applicazione di esempio:  
   
--   Il **conn** oggetto (**ADODB. Connessione**) consente di stabilire una connessione a un'istanza in esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un computer server specifico.  
+-   Il **conn** oggetto (**ADODB. Connessione**) stabilisce una connessione a un'istanza attiva di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un computer server specifico.  
   
--   Il **cmd** oggetto (**ADODB**) viene eseguita durante la connessione.  
+-   Il **cmd** oggetto (**ADODB. Command**) viene eseguito durante la connessione.  
   
 -   Il sottolinguaggio del comando viene impostato su DBGUID_MSSQLXML.  
   
 -   L'updategram viene copiato nel flusso di comandi (**strmIn**).  
   
--   Flusso di output del comando è impostato il **StrmOut** oggetto (**ADODB. Flusso**) alla ricezione di eventuali dati restituiti.  
+-   Flusso di output del comando è impostato il **StrmOut** oggetto (**ADODB. Stream**) per ricevere eventuali dati restituiti.  
   
 -   Il comando (updategram) viene infine eseguito.  
   

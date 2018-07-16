@@ -1,5 +1,5 @@
 ---
-title: Elemento LastUpdate (ASSL) | Documenti Microsoft
+title: Elemento LastUpdate (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - LastUpdate element
 ms.assetid: 639db733-a082-4f57-868d-a3bcd5e7a4f6
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a0cc42c5853e34ed4b1525cde528aa349f67ae7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01429b3086f6de62b7ad0b921ad89f042c341891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302781"
 ---
 # <a name="lastupdate-element-assl"></a>Elemento LastUpdate (ASSL)
-  Contiene una sola lettura timestamp che indica l'ultima volta in cui l'oggetto associato [Database](../objects/database-element-assl.md) o uno dei principali oggetti contenuti nel database è stato modificato.  
+  Contiene una proprietà di sola lettura timestamp che indica l'ultima volta in cui l'oggetto associato [Database](../objects/database-element-assl.md) o uno degli oggetti principali contenuti nel database è stato modificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36168166"
 |Elemento padre|[Database](../objects/database-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento che corrisponde al padre di `LastUpdate` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Vedere anche  

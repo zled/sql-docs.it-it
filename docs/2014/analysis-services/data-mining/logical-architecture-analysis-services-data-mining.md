@@ -1,5 +1,5 @@
 ---
-title: Architettura logica (Analysis Services - Data Mining) | Documenti Microsoft
+title: Architettura logica (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], about mining structures
 - logical architecture [Data Mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4505a89b4ea9e815b2fedbe8dbfddbfe70bff6c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0314d921a69b20286b9c525d3de9a1fa898b74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299301"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Architettura logica (Analysis Services – Data mining)
   Il processo di data mining è basato sull'interazione di più componenti.  
@@ -45,7 +45,7 @@ ms.locfileid: "36157047"
 ##  <a name="bkmk_SourceData"></a> Dati di origine di data mining  
  Nella soluzione di data mining vengono archiviate solo le associazioni, non i dati utilizzati nel processo di data mining. I dati potrebbero essere contenuti in un database creato in una versione precedente di SQL Server, in un sistema CRM o anche in un file flat. Quando si esegue il training della struttura o del modello tramite elaborazione, viene creato e archiviato un riepilogo statistico dei dati in una cache che può essere resa persistente per l'utilizzo in operazioni successive o eliminata dopo l'elaborazione. Per altre informazioni, vedere [Strutture di data mining &#40;Analysis Services - Data mining&#41;](mining-structures-analysis-services-data-mining.md).  
   
- Si combinano dati diversi all'interno dell'oggetto vista origine dati (DSV) di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che fornisce un livello di astrazione sopra l'origine dati. È possibile specificare join tra le tabelle o aggiungere tabelle con una relazione molti-a-uno per creare colonne di tabelle nidificate. La definizione di questi oggetti, l'origine dati e la vista origine dati, viene archiviata all'interno della soluzione con le estensioni di file *.ds e \*.dsv. Per ulteriori informazioni sulla creazione e utilizzo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] origini dati e viste origine dati, vedere [origini dei dati supportate &#40;multidimensionali di SSAS&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
+ Si combinano dati diversi all'interno dell'oggetto vista origine dati (DSV) di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che fornisce un livello di astrazione sopra l'origine dati. È possibile specificare join tra le tabelle o aggiungere tabelle con una relazione molti-a-uno per creare colonne di tabelle nidificate. La definizione di questi oggetti, l'origine dati e la vista origine dati, viene archiviata all'interno della soluzione con le estensioni di file *.ds e \*.dsv. Per altre informazioni sulla creazione e utilizzo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] origini dati e viste origine dati, vedere [origini dati supportate &#40;multidimensionale di SSAS&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
  È inoltre possibile definire e modificare origini dati e viste origine dati tramite AMO o XMLA. Per altre informazioni sull'uso di questi oggetti a livello di programmazione, vedere [Panoramica dell'architettura logica &#40;Analysis Services - Dati multidimensionali&#41;](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36157047"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  Una struttura di data mining è un contenitore di dati logico che definisce il dominio di dati in base al quale vengono compilati i modelli di data mining. Una sola struttura di data mining può supportare più modelli di data mining.  
   
- Quando è necessario utilizzare i dati nella soluzione di data mining, Analysis Services legge i dati dall'origine e genera una cache di aggregazioni e altre informazioni. Per impostazione predefinita, questa cache è resa persistente in modo che i dati di training possano essere riutilizzati per supportare modelli aggiuntivi. Se è necessario eliminare la cache, modificare il `CacheMode` proprietà nell'oggetto struttura di data mining sul valore `ClearAfterProcessing`. Per altre informazioni, vedere [Classi di data mining AMO](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ Quando è necessario utilizzare i dati nella soluzione di data mining, Analysis Services legge i dati dall'origine e genera una cache di aggregazioni e altre informazioni. Per impostazione predefinita, questa cache è resa persistente in modo che i dati di training possano essere riutilizzati per supportare modelli aggiuntivi. Se è necessario eliminare la cache, modificare il `CacheMode` proprietà nell'oggetto struttura di data mining sul valore, `ClearAfterProcessing`. Per altre informazioni, vedere [Classi di data mining AMO](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
   
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] consente anche di separare i dati in set di dati di training e di test, in modo da poter testare i modelli di data mining rispetto a un set di dati selezionato a caso e rappresentativo. I dati in realtà non vengono archiviati separatamente; piuttosto i dati del case nella cache della struttura vengono contrassegnati da una proprietà che indica se tale particolare caso viene utilizzato per il training o il test. Se la cache viene eliminata, non è possibile recuperare tali informazioni.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36157047"
  Per altre informazioni, vedere [Gestione di assembly di modelli multidimensionali](../multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  **Stored procedure personalizzate**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il data mining supporta l'utilizzo di stored procedure per utilizzare oggetti di data mining. È possibile creare stored procedure personalizzate per estendere le funzionalità e utilizzare più facilmente i dati restituiti da query di stima e query contenuto.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data mining di supporta l'utilizzo di stored procedure per usare oggetti di data mining. È possibile creare stored procedure personalizzate per estendere le funzionalità e utilizzare più facilmente i dati restituiti da query di stima e query contenuto.  
   
  [Definizione delle stored procedure](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36157047"
  Inoltre, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono presenti molte stored procedure di sistema utilizzate internamente per il data mining. Benché le stored procedure di sistema siano per uso interno, possono rivelarsi utili scelte rapide. Microsoft si riserva il diritto di modificare tali stored procedure in base alle esigenze; pertanto, per l'utilizzo in fase di produzione, si consiglia di creare query tramite DMX, AMO o XMLA.  
   
  **Algoritmi plug-in personalizzati**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce un meccanismo per la creazione di algoritmi personalizzati e aggiunta di tali algoritmi come un nuovo servizio di data mining all'istanza del server.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce un meccanismo per la creazione di algoritmi personalizzati e aggiunta di tali algoritmi come nuovo servizio di data mining all'istanza del server.  
   
  In Analysis Services vengono utilizzate le interfacce COM per comunicare con gli algoritmi plug-in. Per altre informazioni sull'implementazione dei nuovi algoritmi, vedere [Algoritmi plug-in](plugin-algorithms.md).  
   
@@ -107,6 +107,6 @@ ms.locfileid: "36157047"
   
 ## <a name="see-also"></a>Vedere anche  
  [Elaborazione degli oggetti modello multidimensionale](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Estensioni Data Mining &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

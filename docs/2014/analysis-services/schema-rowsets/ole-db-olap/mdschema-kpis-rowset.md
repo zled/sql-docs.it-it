@@ -1,5 +1,5 @@
 ---
-title: Set di righe MDSCHEMA_KPIS | Documenti Microsoft
+title: Set di righe MDSCHEMA_KPIS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_KPIS rowset
 ms.assetid: 40fb5112-6a90-4455-82b3-8b6322490222
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28a5f4af179c058f822a773dc691383dbee028fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 391c27165b9b4482160b2a8396e64e46650aa87e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314771"
 ---
 # <a name="mdschemakpis-rowset"></a>Set di righe MDSCHEMA_KPIS
   Descrive gli indicatori di prestazioni chiave (KPI) all'interno di un database.  
@@ -43,7 +43,7 @@ ms.locfileid: "36169762"
 |`KPI_NAME`|`DBTYPE_WSTR`||Nome dell'indicatore di prestazioni chiave (KPI).|  
 |`KPI_CAPTION`|`DBTYPE_WSTR`||Etichetta o didascalia associata all'indicatore di prestazioni chiave (KPI). Utilizzata principalmente a scopo di visualizzazione. Se non esiste una didascalia, viene restituito `KPI_NAME`.|  
 |`KPI_DESCRIPTION`|`DBTYPE_WSTR`||Descrizione leggibile dell'indicatore di prestazioni chiave (KPI).|  
-|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Una stringa che identifica il percorso della cartella di visualizzazione che l'applicazione client utilizza per mostrarla al membro. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti da [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], la barra rovesciata (\\) è il separatore di livello. Per fornire più cartelle di visualizzazione, utilizzare un punto e virgola (;) per separare le cartelle.|  
+|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Una stringa che identifica il percorso della cartella di visualizzazione che l'applicazione client utilizza per mostrarla al membro. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti da [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], la barra rovesciata (\\) è il separatore di livello. Per fornire più cartelle di visualizzazione, usare un punto e virgola (;) per separare le cartelle.|  
 |`KPI_VALUE`|`DBTYPE_WSTR`||Nome univoco del membro nella dimensione di tipo misura per il valore dell'indicatore di prestazioni chiave (KPI).|  
 |`KPI_GOAL`|`DBTYPE_WSTR`||Nome univoco del membro nella dimensione di tipo misura per l'obiettivo dell'indicatore di prestazioni chiave (KPI).<br /><br /> Restituisce `NULL` se non esiste alcun obiettivo definito.|  
 |`KPI_STATUS`|`DBTYPE_WSTR`||Nome univoco del membro nella dimensione di tipo misura per lo stato dell'indicatore di prestazioni chiave (KPI).<br /><br /> Restituisce `NULL` se non esiste alcuno stato definito.|  

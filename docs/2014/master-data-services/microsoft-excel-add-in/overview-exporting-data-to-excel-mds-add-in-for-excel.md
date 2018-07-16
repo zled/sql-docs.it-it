@@ -1,5 +1,5 @@
 ---
-title: Il caricamento dei dati (aggiuntivo MDS per Excel) | Documenti Microsoft
+title: Il caricamento dei dati (aggiuntivo MDS per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a3b4833208f308acdbbf4a5d7ec2bcfbf8d0706d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: ad7d9de63907fb8156631880bb1af8a336412fd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290887"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>Caricamento dei dati (componente aggiuntivo MDS per Excel)
-  Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], è necessario caricare dati dal repository MDS in un foglio di lavoro di Excel attivo prima che sia possibile con esso. Una volta completato l'utilizzo dei dati, pubblicarlo sul repository MDS in modo che altri utenti possano condividerlo.  
+  Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], è necessario caricare dati dal repository MDS in un foglio di lavoro di Excel attivo prima di lavorare con esso. Una volta completato l'utilizzo dei dati, pubblicarlo sul repository MDS in modo che altri utenti possano condividerlo.  
   
  I dati che è possibile caricare sono limitati ai dati per i quali si dispone dell'autorizzazione di accesso. L'autorizzazione di accesso ai dati viene impostata nell'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] o impostata a livello di programmazione.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36166855"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Filtrare i dati MDS prima di caricarli in Excel.|[Filtrare i dati prima del caricamento &#40;componente aggiuntivo MDS per Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
-|Caricare dati MDS in Excel.|[Caricare dati da MDS in Excel](export-data-to-excel-from-master-data-services.md)|  
+|Caricare dati MDS in Excel.|[Caricare i dati da MDS in Excel](export-data-to-excel-from-master-data-services.md)|  
 |Modificare l'ordine delle colonne prima di scaricare i dati.|[Riordinare le colonne &#40;componente aggiuntivo MDS per Excel&#41;](reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  

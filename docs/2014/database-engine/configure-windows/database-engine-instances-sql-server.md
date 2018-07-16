@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4351b5581ccce3185c7354a29157f7ea9747631d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 243524a0f073ab1950398eff715bd1f1420144a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291347"
 ---
 # <a name="database-engine-instances-sql-server"></a>Istanza del motore di database (SQL Server)
-  Un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è una copia del `sqlservr.exe` eseguibile che viene eseguito come un servizio del sistema operativo. Ogni istanza gestisce diversi database di sistema e uno o più database utente. Ciascun computer può eseguire più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le applicazioni si connettono all'istanza per eseguire attività in un database gestito dall'istanza.  
+  Un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è una copia del `sqlservr.exe` eseguibile che viene eseguito come servizio di sistema operativo. Ogni istanza gestisce diversi database di sistema e uno o più database utente. Ciascun computer può eseguire più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le applicazioni si connettono all'istanza per eseguire attività in un database gestito dall'istanza.  
   
 ## <a name="instances"></a>Istanze  
  Un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] funziona come un servizio che gestisce ogni richiesta dell'applicazione per utilizzare i dati in qualsiasi database gestito da quell'istanza. È la destinazione delle richieste di connessione (accessi) da parte delle applicazioni. La connessione attraversa una connessione di rete se l'applicazione e l'istanza si trovano in computer separati. Se l'applicazione e l'istanza sono nello stesso computer, la connessione di SQL Server può essere eseguita come una connessione di rete o una connessione in memoria. Una volta completata una connessione, un'applicazione invia le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] attraverso la connessione all'istanza. L'istanza risolve le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in operazioni rispetto ai dati e agli oggetti nei database e, se le autorizzazioni necessarie sono state concesse alle credenziali di accesso, esegue l'attività. Qualsiasi dato recuperato viene restituito all'applicazione, insieme a qualsiasi messaggio, come ad esempio errori.  

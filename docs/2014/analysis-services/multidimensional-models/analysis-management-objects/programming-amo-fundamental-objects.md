@@ -1,5 +1,5 @@
 ---
-title: Programmazione di oggetti fondamentali AMO | Documenti Microsoft
+title: Programmazione di oggetti fondamentali AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c85b48c62e271dff6a4db582527c68a7735f0dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d85bbc23bd016f2e1dd1d4842a5bd66645035ec2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321301"
 ---
 # <a name="programming-amo-fundamental-objects"></a>Programmazione di oggetti fondamentali AMO
   Gli oggetti fondamentali sono in genere oggetti di semplice utilizzo che solitamente vengono creati e di cui successivamente viene creata un'istanza. Quando non sono più necessari, l'utente si disconnette da tali oggetti. Le classi fondamentali includono gli oggetti <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> e <xref:Microsoft.AnalysisServices.DataSourceView>. L'unico oggetto complesso tra gli oggetti fondamentali AMO è <xref:Microsoft.AnalysisServices.DataSourceView>, per cui è necessario utilizzare dettagli per la compilazione del modello astratto che rappresenta la vista origine dati.  
@@ -181,7 +181,7 @@ static Database CreateDatabase(Server svr, String DatabaseName)
 ### <a name="processing-a-database"></a>Elaborazione di un database  
  L'elaborazione di un database e di tutti gli oggetti figlio è un'operazione estremamente semplice perché nell'oggetto <xref:Microsoft.AnalysisServices.Database> è incluso un metodo Process.  
   
- Sebbene non siano necessari, nel metodo Process possono essere inclusi parametri. Se non viene specificato alcun parametro, tutti gli oggetti figlio verranno elaborati con la relativa opzione `ProcessDefault`. Per ulteriori informazioni sulle opzioni di elaborazione, vedere <xref:Microsoft.AnalysisServices.Database>.  
+ Sebbene non siano necessari, nel metodo Process possono essere inclusi parametri. Se non viene specificato alcun parametro, tutti gli oggetti figlio verranno elaborati con la relativa opzione `ProcessDefault`. Per altre informazioni sulle opzioni di elaborazione, vedere <xref:Microsoft.AnalysisServices.Database>.  
   
 1.  Nel codice di esempio seguente viene elaborato un database in base al relativo valore predefinito.  
   

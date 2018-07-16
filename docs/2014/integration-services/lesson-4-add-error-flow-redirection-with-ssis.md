@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 4: Aggiunta del reindirizzamento del flusso di errore | Documenti Microsoft'
+title: 'Lezione 4: Aggiunta del reindirizzamento del flusso di errore | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 caps.latest.revision: 23
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2b09bfa4b9ac8c0c6a35c57dab535fc8d1263e3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 230294eb45aec198ba5fd0cde396749bd0897b14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295091"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>Lezione 4: Aggiunta del reindirizzamento del flusso degli errori
   Per gestire gli errori che si verificano durante il processo di trasformazione, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consente di decidere sulla base dei singoli componenti e delle singole colonne come gestire i dati che non possono essere trasformati. È possibile scegliere di ignorare un errore in alcune colonne, reindirizzare l'intera riga con esito negativo o interrompere l'esecuzione del componente. Per impostazione predefinita, tutti i componenti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono configurati in modo da interrompersi quando si verificano errori. L'arresto di un componente determina l'arresto del pacchetto e di conseguenza di tutte le elaborazioni successive.  
@@ -40,13 +40,13 @@ ms.locfileid: "36158938"
   
 -   [Passaggio 1: Copia del pacchetto della lezione 3](lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [Passaggio 2: Creazione di un File danneggiato](lesson-4-2-creating-a-corrupted-file.md)  
+-   [Passaggio 2: Creazione di un file danneggiato](lesson-4-2-creating-a-corrupted-file.md)  
   
--   [Passaggio 3: Aggiunta del reindirizzamento del flusso di errore](lesson-4-3-adding-error-flow-redirection.md)  
+-   [Passaggio 3: Aggiunta del reindirizzamento del flusso degli errori](lesson-4-3-adding-error-flow-redirection.md)  
   
--   [Passaggio 4: Aggiunta di una destinazione File Flat](lesson-4-4-adding-a-flat-file-destination.md)  
+-   [Passaggio 4: Aggiunta di una destinazione file flat](lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [Passaggio 5: Test del pacchetto della lezione 4 dell'esercitazione](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [Passaggio 5: Test del pacchetto creato nell'esercitazione della lezione 4](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Inizio della lezione  
  [Passaggio 1: Copia del pacchetto della lezione 3](lesson-4-1-copying-the-lesson-3-package.md)  

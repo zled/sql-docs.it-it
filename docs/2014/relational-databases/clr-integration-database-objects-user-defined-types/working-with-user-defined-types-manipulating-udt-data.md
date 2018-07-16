@@ -1,13 +1,11 @@
 ---
-title: La modifica dei dati di tipo definito dall'utente | Documenti Microsoft
+title: La modifica dei dati di tipo definito dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -31,21 +29,21 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f618cb1faa8c1b5682e069bd7568ad9d856cdc52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b9d8d594b60b5e9ed9716d8aa3c0eed322db98fd
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167267"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349893"
 ---
 # <a name="manipulating-udt-data"></a>Manipolazione dei dati UDT
   [!INCLUDE[tsql](../../includes/tsql-md.md)] non fornisce una sintassi specifica per l'istruzione INSERT, UPDATE o DELETE quando si modificano i dati nelle colonne con tipo definito dall'utente (UDT). Le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST o CONVERT vengono utilizzate per eseguire il cast dei tipi di dati nativi al tipo UDT.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Inserimento di dati in una colonna con tipo definito dall'utente  
- I seguenti [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni inseriscono tre righe di dati di esempio nel **punti** tabella. Il **punto** tipo di dati è costituito da X valori integer e Y che sono esposte come proprietà del tipo in questione. È necessario utilizzare la funzione CAST o CONVERT per eseguire il cast di valori delimitati da virgole dei valori X e Y per il **punto** tipo. Le prime due istruzioni utilizzano la funzione CONVERT per convertire un valore stringa per il **punto** tipo e la terza istruzione utilizza la funzione CAST:  
+ Quanto segue [!INCLUDE[tsql](../../includes/tsql-md.md)] consentono di inserire tre righe di dati di esempio nel **punti** tabella. Il **punto** tipo di dati è costituita da X e Y integer valori che vengono esposti come proprietà del tipo in questione. È necessario utilizzare la funzione CAST o CONVERT per eseguire il cast di valori delimitati da virgole valori X e Y per il **punto** tipo. Le prime due istruzioni utilizzano la funzione CONVERT per convertire un valore stringa per il **punto** tipo e la terza istruzione utilizza la funzione CAST:  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -87,7 +85,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- Il **punto** UDT espone le coordinate X e Y come proprietà, è quindi possibile selezionare singolarmente. L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente consente di selezionare le coordinate X e Y separatamente:  
+ Il **punto** UDT espone le coordinate X e Y come proprietà che è quindi possibile selezionare singolarmente. L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente consente di selezionare le coordinate X e Y separatamente:  
   
 ```  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -161,7 +159,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Chiamata dei metodi UDT  
- È anche possibile richiamare i metodi definiti nel tipo definito dall'utente in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il **punto** classe contiene tre metodi `Distance`, `DistanceFrom`, e `DistanceFromXY`. Per i listati di codice la definizione di questi tre metodi, vedere [codifica di tipi](creating-user-defined-types-coding.md).  
+ È anche possibile richiamare i metodi definiti nel tipo definito dall'utente in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il **punto** classe contiene tre metodi `Distance`, `DistanceFrom`, e `DistanceFromXY`. Per i listati di codice che definisce questi tre metodi, vedere [codifica di tipi](creating-user-defined-types-coding.md).  
   
  Nell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente viene chiamato il metodo `PointValue.Distance`:  
   
@@ -172,7 +170,7 @@ SELECT ID, PointValue.X AS [Point.X],
 FROM dbo.Points;  
 ```  
   
- I risultati vengono visualizzati nel `Distance` colonna:  
+ I risultati vengono visualizzati nei `Distance` colonna:  
   
 ```  
 IDXYDistance  
@@ -182,7 +180,7 @@ IDXYDistance
 319999.0050503762308  
 ```  
   
- Il `DistanceFrom` metodo accetta un argomento di **punto** tipo di dati e Visualizza la distanza dal punto specificato a PointValue:  
+ Il `DistanceFrom` metodo accetta un argomento di **puntare** tipo di dati e Visualizza la distanza dal punto specificato a PointValue:  
   
 ```  
 SELECT ID, PointValue.ToString() AS Pnt,  

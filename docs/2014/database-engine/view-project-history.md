@@ -1,5 +1,5 @@
 ---
-title: Visualizzare cronologia progetti | Documenti Microsoft
+title: Visualizzare cronologia progetti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing project history
 - version control services [SQL Server], project history
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - historical information [SQL Server], projects
 ms.assetid: be0ea2ac-4a35-429c-9c9e-4001ea9035a4
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d99c3a27a74d41efc895489a8690d735dadd3b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e10e920a5c60d389eaec6a5af06e4597d9667967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287847"
 ---
 # <a name="view-project-history"></a>Visualizzare cronologia progetti
   Nella cronologia di un progetto di [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe (VSS) è incluso un elenco di tutte le azioni eseguite su ognuno dei file del progetto, ad esempio la creazione, l'aggiunta, l'eliminazione e il recupero di file.  
@@ -40,7 +40,7 @@ ms.locfileid: "36166217"
   
 2.  Nel **File** dal menu **controllo del codice sorgente** e fare clic su **Visualizza cronologia**.  
   
-3.  Nel **storico** \<progetto > finestra di dialogo casella, eseguire una delle azioni seguenti:  
+3.  Nel **cronologia delle** \<progetto > finestra di dialogo casella, eseguire una delle azioni seguenti:  
   
     -   Visualizzare una copia del sistema di controllo del codice sorgente di un file selezionato.  
   
@@ -58,6 +58,6 @@ ms.locfileid: "36166217"
  [Impostare e recuperare le informazioni sulla versione](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Visualizzare lo stato di File](../../2014/database-engine/view-file-status.md)   
  [Recuperare i file](../../2014/database-engine/retrieve-files.md)   
- [Confrontare i file](../../2014/database-engine/compare-files.md)  
+ [Confronto di file](../../2014/database-engine/compare-files.md)  
   
   

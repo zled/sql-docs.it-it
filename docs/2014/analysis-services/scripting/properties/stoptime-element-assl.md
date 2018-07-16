@@ -1,5 +1,5 @@
 ---
-title: Elemento StopTime (ASSL) | Documenti Microsoft
+title: Elemento StopTime (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StopTime element
 ms.assetid: 6f863d53-033b-46e0-9837-e891e739b4b0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8de76230ef19e04d921c93ce54d368e55424c230
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0a646cf736afbf78b656a2e891b6dafbcfead5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302671"
 ---
 # <a name="stoptime-element-assl"></a>Elemento StopTime (ASSL)
   Specifica la data e ora in cui un [traccia](../objects/trace-element-assl.md) elemento deve essere arrestata.  
@@ -61,7 +61,7 @@ ms.locfileid: "36157233"
 |Elemento padre|[Traccia](../objects/trace-element-assl.md)|  
 |Elementi figlio|None|  
   
- L'elemento che corrisponde al padre di `StopTime` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Trace>.  
+ L'elemento che corrisponde al padre di `StopTime` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Analizza l'elemento &#40;ASSL&#41;](../collections/traces-element-assl.md)   

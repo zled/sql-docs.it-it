@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - GeomCollection geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1a5c21c01ab776a17d3e160fee51167c426dfa0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3a0f4ad36d9664d6627d02edfc401af9ed3d8b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158187"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307521"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  Un `GeometryCollection` è una raccolta di zero o più `geometry` o `geography` istanze. Oggetto `GeometryCollection` può essere vuoto.  
+  Oggetto `GeometryCollection` è una raccolta di zero o più `geometry` o `geography` istanze. Oggetto `GeometryCollection` può essere vuoto.  
   
 ## <a name="geometrycollection-instances"></a>Istanze GeometryCollection  
   
@@ -45,7 +45,7 @@ DECLARE @g geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1), POLYGON((-1 -1, -1 -5
 ```  
   
 ### <a name="valid-instances"></a>Istanze valide  
- Un'istanza `GeometryCollection` è valida se tutte le istanze che comprendono l'istanza `GeometryCollection` sono valide. Il codice seguente illustra tre valido `GeometryCollection` istanze e una che non è valido.  
+ Un'istanza `GeometryCollection` è valida se tutte le istanze che comprendono l'istanza `GeometryCollection` sono valide. L'esempio seguente illustra tre valido `GeometryCollection` istanze e una che non è valido.  
   
 ```  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  

@@ -1,5 +1,5 @@
 ---
-title: Dati guidata F1 Guida di Data Mining (Analysis Services - Data Mining) | Documenti Microsoft
+title: I dati della Guida F1 di procedura guidata di Data Mining (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.welcome.f1
 helpviewer_keywords:
 - Mining Model Wizard
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1f66b73d25762a949322b84859d12dd02053c80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6782013eab9b190efe2f6756c1ee409598eb1619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291677"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Guida sensibile al contesto della Creazione guidata modello di data mining (Analysis Services - Data mining)
   Usare la **Creazione guidata modello di data mining** per creare una nuova struttura di data mining e un modello di data mining associato facoltativo.  
@@ -61,25 +61,25 @@ ms.locfileid: "36168205"
  Dopo aver creato la struttura di data mining e un modello di data mining facoltativo, è possibile usare **Progettazione modelli di data mining** per modificare le proprietà.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
- [Progettazione di Data Mining](data-mining/data-mining-designer.md)   
+ [Procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Progettazione modelli di Data Mining](data-mining/data-mining-designer.md)   
  [Creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)   
  [Selezione metodo di definizione &#40;Creazione guidata di Data Mining&#41;](select-the-definition-method-data-mining-wizard.md)   
  [Creare la struttura di Data Mining &#40;Creazione guidata di Data Mining&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
- [Selezionare una vista origine dati &#40;Creazione guidata di Data Mining&#41;](select-data-source-view-data-mining-wizard.md)   
- [Sfoglia vista origine dati &#40;Creazione guidata di Data Mining&#41;](browse-data-source-view-data-mining-wizard.md)   
+ [Selezione vista origine dati &#40;Creazione guidata di Data Mining&#41;](select-data-source-view-data-mining-wizard.md)   
+ [Passare a vista origine dati &#40;Creazione guidata di Data Mining&#41;](browse-data-source-view-data-mining-wizard.md)   
  [Specificare i tipi di tabella &#40;Creazione guidata di Data Mining&#41;](specify-table-types-data-mining-wizard.md)   
  [Specificare i dati di Training &#40;Creazione guidata di Data Mining&#41;](specify-the-training-data-data-mining-wizard.md)   
  [Suggerisci colonne correlate &#40;Creazione guidata di Data Mining&#41;](suggest-related-columns-data-mining-wizard.md)   
  [Selezione dimensione cubo di origine &#40;Creazione guidata di Data Mining&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
- [Selezionare la chiave del Case &#40;Creazione guidata di Data Mining&#41;](select-the-case-key-data-mining-wizard.md)   
+ [Selezione chiave del Case &#40;Creazione guidata di Data Mining&#41;](select-the-case-key-data-mining-wizard.md)   
  [Selezionare le colonne a livello di Case &#40;Creazione guidata di Data Mining&#41;](select-case-level-columns-data-mining-wizard.md)   
  [Specificare l'utilizzo colonne modello di Data Mining &#40;Creazione guidata di Data Mining&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   
  [Selezionare una dimensione del gruppo di misure &#40;Aggiunta guidata nuova tabella nidificata&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
  [Selezione chiave tabella nidificata &#40;Aggiunta guidata nuova tabella nidificata&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
  [Selezione colonne tabella nidificata &#40;Aggiunta guidata nuova tabella nidificata&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)   
- [Specificare il contenuto e tipo di dati della colonna &#40;Creazione guidata di Data Mining&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
- [Sezionare il cubo di origine &#40;Creazione guidata di Data Mining&#41;](slice-source-cube-data-mining-wizard.md)   
+ [Specificare il contenuto e il tipo di dati della colonna &#40;Creazione guidata di Data Mining&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
+ [Sezionamento cubo di origine &#40;Creazione guidata di Data Mining&#41;](slice-source-cube-data-mining-wizard.md)   
  [Completamento procedura guidata &#40;Creazione guidata di Data Mining&#41;](completing-the-wizard-data-mining-wizard.md)   
  [Specificare il contenuto della colonna e il tipo di dati &#40;Creazione guidata di Data Mining&#41;](specify-column-content-and-data-type-data-mining-wizard.md)   
  [Creare Set di Testing &#40;Creazione guidata di Data Mining&#41;](create-testing-set-data-mining-wizard.md)  

@@ -1,1 +1,1 @@
-Sincrono\-commit set di failover
+sincrono\-commit set di failover

@@ -1,5 +1,5 @@
 ---
-title: Elemento ConnectionStringSecurity (ASSL) | Documenti Microsoft
+title: Elemento ConnectionStringSecurity (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ConnectionStringSecurity element
 ms.assetid: f25c4448-bb0d-4945-bc84-9c015eefa0eb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fce202b78364b4a3de68a33416922b929521727c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9479865bd2e3f10570418ee33064bc30f4b7b786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300871"
 ---
 # <a name="connectionstringsecurity-element-assl"></a>Elemento ConnectionStringSecurity (ASSL)
   Specifica se la password dell'utente viene rimossa dalla stringa di connessione all'origine dati per scopi di sicurezza.  
@@ -61,7 +61,7 @@ ms.locfileid: "36157609"
 |Elemento padre|[Origine dati](../objects/datasource-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
 |valore|Description|  

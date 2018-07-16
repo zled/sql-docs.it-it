@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving items
 - items [Reporting Services], moving
@@ -16,13 +16,13 @@ ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b3b4ede3a29c43cf2c77b61e2fe8fb6fb3b9e6ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ac8b351e0d3cd76650df17e2aa5aa00ed427be3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309321"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Spostare o eliminare un elemento (Gestione report)
   I report e gli altri elementi relativi ai report pubblicati in un server di report vengono archiviati in cartelle. È possibile spostare gli elementi in una cartella diversa e i riferimenti a tali elementi vengono mantenuti automaticamente dal server di report. Prima di eliminare un elemento, verificare se sono presenti altri elementi che dipendono da esso.  
@@ -45,7 +45,7 @@ ms.locfileid: "36168011"
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>Per spostare un elemento dalla pagina Contenuto  
   
-1.  Avviare [gestione Report &#40;modalità nativa SSRS&#41;]... / report-manager-ssrs-nativo-mode.md).  
+1.  Avviare [gestione Report &#40;modalità nativa SSRS&#41;]... / report-manager-ssrs-native-mode.md).  
   
 2.  In Gestione report passare alla pagina **Contenuto** e individuare l'elemento da spostare.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36168011"
  In alternativa, è possibile passare all'oggetto da spostare, fare clic su **Proprietà**e quindi su **Sposta** nella parte superiore della pagina.  
   
 ## <a name="delete-an-item"></a>Eliminare un elemento  
- Prima di eliminare un elemento, determinare se è utilizzato da altri elementi. Se ad esempio si elimina un'origine dati condivisa, i report e i modelli che la utilizzano non verranno più eseguiti. Quando si elimina un report, vengono eliminate anche la cronologia del report e le sottoscrizioni associate. Per trovare elementi dipendenti per un elemento, vedere [pagina elementi dipendenti &#40;gestione Report&#41;]... / dipendente-elementi-pagina-report-manager.md).  
+ Prima di eliminare un elemento, determinare se è utilizzato da altri elementi. Se ad esempio si elimina un'origine dati condivisa, i report e i modelli che la utilizzano non verranno più eseguiti. Quando si elimina un report, vengono eliminate anche la cronologia del report e le sottoscrizioni associate. Per trovare elementi dipendenti per un elemento, vedere [pagina elementi dipendenti &#40;gestione Report&#41;]... / dipendenti-elementi-pagina-report-manager.md).  
   
 #### <a name="to-delete-a-report-or-item"></a>Per eliminare un report o un elemento  
   
-1.  Avviare [gestione Report &#40;modalità nativa SSRS&#41;]... / report-manager-ssrs-nativo-mode.md).  
+1.  Avviare [gestione Report &#40;modalità nativa SSRS&#41;]... / report-manager-ssrs-native-mode.md).  
   
 2.  In Gestione report passare alla pagina **Contenuto** e quindi individuare l'elemento da eliminare.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36168011"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina di contenuto &#40;gestione Report&#41;]... / contenuto-pagina-report-manager.md)   
+ [Contenuto della pagina &#40;gestione Report&#41;]... / contenuto-pagina-report-manager.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

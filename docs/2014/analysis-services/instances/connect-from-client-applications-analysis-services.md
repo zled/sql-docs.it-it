@@ -1,5 +1,5 @@
 ---
-title: Connessione dalle applicazioni client (Analysis Services) | Documenti Microsoft
+title: Connessione dalle applicazioni client (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d343794027e87b575b9cdaa9ee3a9dd2908438aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ee609b8a208b55509058e635b96fa70c52c4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069943"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314911"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Connessione dalle applicazioni client (Analysis Services)
   Se non si ha familiarità con Analysis Services, utilizzare le informazioni contenute in questo argomento per connettersi a un'istanza esistente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzando strumenti e applicazioni comuni. In questo argomento viene inoltre illustrato come connettersi con identità utente diverse a scopo di test.  
@@ -38,7 +38,7 @@ ms.locfileid: "36069943"
   
 -   [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autorizzare l'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> Connettersi tramite SQL Server Management Studio (SSMS)  
  Connettersi ad Analysis Services in SSMS per gestire le istanze del server e i database in modo interattivo. È inoltre possibile eseguire query MDX e XMLA per eseguire attività amministrative o recuperare dati. Diversamente da altri strumenti e applicazioni che caricano i database solo quando viene inviata una query, SSMS carica tutti i database quando ci si connette al server, presupponendo che si dispone dell'autorizzazione per visualizzare il database. Ciò significa che se nel server sono presenti numerosi database tabulari, tutti vengono caricati nella memoria di sistema quando ci si connette tramite SSMS.  
@@ -59,7 +59,7 @@ ms.locfileid: "36069943"
   
 3.  Viene sempre utilizzata l'autenticazione di Windows e l'identità utente è sempre l'utente di Windows che effettua la connessione tramite Management Studio.  
   
-     Affinché la connessione abbia esito positivo, è necessario disporre delle autorizzazioni per accedere al server o a un database nel server. Per la maggior parte delle attività da eseguire in Management Studio sono necessarie le autorizzazioni amministrative. Assicurarsi che l'account utilizzato per la connessione sia membro del ruolo di amministratore del server. Per altre informazioni, vedere [concedere le autorizzazioni di amministratore del Server &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
+     Affinché la connessione abbia esito positivo, è necessario disporre delle autorizzazioni per accedere al server o a un database nel server. Per la maggior parte delle attività da eseguire in Management Studio sono necessarie le autorizzazioni amministrative. Assicurarsi che l'account utilizzato per la connessione sia membro del ruolo di amministratore del server. Per altre informazioni, vedere [Concedi autorizzazioni di amministratore del Server &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 4.  Fare clic su **Proprietà connessione** per specificare un determinato database, impostare i valori di timeout o le opzioni di crittografia. Tra le informazioni di connessione facoltative sono incluse le proprietà di connessione utilizzate solo per la connessione corrente.  
   

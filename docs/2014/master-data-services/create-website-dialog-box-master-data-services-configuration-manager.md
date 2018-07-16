@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2ba53eed2e5d9bd7d3de0c85e27b049d002a67bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4bffa7a08382c025c3150287d1b09044d72047cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285407"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Finestra di dialogo Crea sito Web (Gestione configurazione Master Data Services)
   Usare la finestra di dialogo **Crea sito Web** per creare un nuovo sito Web nel computer locale. Quando si crea un sito Web in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], il sito viene aggiunto a Internet Information Services (IIS) nel computer locale con un'applicazione radice configurata come applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Viene inoltre creato un nuovo pool di applicazioni in cui viene inserita l'applicazione Web.  
@@ -33,7 +33,7 @@ ms.locfileid: "36166865"
 |**Nome del sito Web**|Digitare un nome per il sito Web oppure utilizzare il nome predefinito. Si tratta di un nome descrittivo utilizzato solo per identificare il sito in IIS. Non viene utilizzato per accedere al sito da un Web browser.<br /><br /> Il nome deve essere univoco in tutti i siti inclusi in IIS nel computer locale.|  
 |**Protocollo**|Consente di visualizzare **http**. Utilizzare il protocollo HTTP (Hypertext Transfer Protocol) quando non è necessario che la comunicazione tra client e server avvenga su un canale crittografato.<br /><br /> Nota: È possibile creare un sito HTTPS in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. HTTPS è il protocollo HTTP che utilizza SSL (Secure Sockets Layer) e risulta particolarmente utile nello scambio di dati riservati o personali oppure quando si desidera che gli utenti confermino l'identità del server prima della trasmissione di informazioni personali. Se è necessario trasferire informazioni tra il server e un client su un canale crittografato, è necessario utilizzare un strumento IIS, ad esempio Gestione IIS, configurare il sito con un'associazione HTTPS e associare l'associazione del sito Web a un certificato server. È necessario effettuare queste operazioni prima che sia possibile aprire correttamente il sito Web in un Web browser. Per altre informazioni sui certificati server, vedere [Configuring Server Certificates in IIS 7](http://go.microsoft.com/fwlink/?LinkId=163220) (Configurazione dei certificati server in IIS 7) nel sito [!INCLUDE[msCoName](../includes/msconame-md.md)] TechNet.|  
 |**Indirizzo IP**|Selezionare un indirizzo IP che può essere utilizzato dagli utenti per accedere al sito. Per impostazione predefinita, è selezionata l'opzione **Non assegnati** . A meno che non esista un motivo particolare per utilizzare un indirizzo IPv4 o un indirizzo IPv6 specifico, è consigliabile utilizzare il valore predefinito.<br /><br /> Con l'opzione **Non assegnati**, il sito risponde alle richieste per tutti gli indirizzi IP sulla porta e il nome host facoltativo specificato. Se un altro sito nel server ha un'associazione sulla stessa porta ma con un indirizzo IP specifico, il sito riceverà le richieste HTTP sulla porta e all'indirizzo IP specifico, mentre il sito con l'indirizzo IP impostato su **Non assegnati** riceverà tutte le altre richieste HTTP sulla porta e sugli altri indirizzi IP.|  
-|**Porta**|Digitare la porta per le richieste effettuate al sito Web. Se si seleziona il protocollo HTTP, la porta predefinita è 80. Se si specifica una porta diversa dalle porte predefinite, per connettersi al sito Web è necessario che i client specifichino il numero di porta.<br /><br /> Nota: il **sito Web predefinito** in IIS viene configurata per utilizzare il protocollo HTTP sulla porta 80 con tutti non assegnati indirizzi IP. Se si tenta di creare il sito Web in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] con le informazioni di associazione predefinite, si riceve un errore di associazione duplicata esistente. In tal caso, è necessario modificare le informazioni di associazione per il sito in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]oppure modificare le informazioni di associazione per il sito Web predefinito tramite uno strumento di IIS, ad esempio Gestione IIS. In alternativa, è possibile specificare un'intestazione host per consentire a IIS di identificare in modo univoco il sito Web. Assicurarsi di configurare il firewall in modo che il traffico venga accettato sulla porta specificata.|  
+|**Porta**|Digitare la porta per le richieste effettuate al sito Web. Se si seleziona il protocollo HTTP, la porta predefinita è 80. Se si specifica una porta diversa dalle porte predefinite, per connettersi al sito Web è necessario che i client specifichino il numero di porta.<br /><br /> Nota: I **sito Web predefinito** in IIS viene configurata per usare il protocollo HTTP sulla porta 80 con tutti non assegnati indirizzi IP. Se si tenta di creare il sito Web in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] con le informazioni di associazione predefinite, si riceve un errore di associazione duplicata esistente. In tal caso, è necessario modificare le informazioni di associazione per il sito in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]oppure modificare le informazioni di associazione per il sito Web predefinito tramite uno strumento di IIS, ad esempio Gestione IIS. In alternativa, è possibile specificare un'intestazione host per consentire a IIS di identificare in modo univoco il sito Web. Assicurarsi di configurare il firewall in modo che il traffico venga accettato sulla porta specificata.|  
 |**Intestazione host**|Valore facoltativo. Digitare un nome per l'intestazione host. Utilizzare questa opzione quando si desidera assegnare un nome host, noto anche come nome di dominio, a un computer che utilizza un singolo indirizzo IP o una singola porta. Quando si specifica un nome host, per accedere al sito Web è necessario che i client utilizzino tale nome anziché l'indirizzo IP. Quando si configura un nome host, non è possibile aprire il sito in un Web browser, a meno che il server DNS non disponga di una voce per tale nome host.<br /><br /> Se ad esempio si vuole che gli utenti accedano al sito all'indirizzo http://www.contoso.com/ è necessario specificare www.contoso.com come nome host e il server DNS deve avere una voce corrispondente.<br /><br /> Se il sito Web è disponibile in una Intranet, non è necessario specificare un nome host se gli utenti digitano il nome del server in un browser, ad esempio http://server_name. Tuttavia, se il server DNS nell'ambiente in uso è configurato per archiviare altri nomi per il server Web, sarà possibile creare un'associazione distinta per ogni nome host, in modo che gli utenti possano utilizzare gli altri nomi archiviati dal server DNS. Se è necessario configurare più nomi host per il sito, utilizzare uno strumento di IIS, ad esempio Gestione IIS, per aggiungere ulteriori associazioni di sito.|  
   
 ## <a name="application-pool"></a>Pool di applicazioni  
@@ -47,7 +47,7 @@ ms.locfileid: "36166865"
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagina configurazione Web &#40;Gestione configurazione Master Data Services&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
- [Impostare il Database e il sito Web per Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Configurare il Database e il sito Web per Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Requisiti dell'applicazione Web &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [Creare un'applicazione Web Gestione dati master &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   

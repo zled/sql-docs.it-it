@@ -1,5 +1,5 @@
 ---
-title: Personalizzare i fogli di stile per il visualizzatore HTML e gestione Report | Documenti Microsoft
+title: Personalizzare i fogli di stile per il visualizzatore HTML e gestione di Report | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - style sheets [Reporting Services]
 ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b24525eff885b183b34f5810d79e44e4509e3f06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6baf2dbbb100711b9665d5d705bce6399e3c754b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192931"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Personalizzare i fogli di stile per il visualizzatore HTML e Gestione report
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce lo stile CSS predefinito file fogli (CSS) che definiscono stili per il **report** sulla barra degli strumenti Visualizzatore HTML e per gestione Report. Gli sviluppatori Web o gli utenti con esperienza nella creazione di fogli di stile CSS possono modificare gli stili predefiniti a loro rischio per modificare i colori, i tipi di carattere e il layout della barra degli strumenti di Gestione report. Né i fogli di stile predefiniti né le istruzioni relative alla loro modifica sono documentati in questa versione.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce stile CSS predefiniti file sheets (CSS) che definiscono stili per il **report** sulla barra degli strumenti Visualizzatore HTML e per gestione Report. Gli sviluppatori Web o gli utenti con esperienza nella creazione di fogli di stile CSS possono modificare gli stili predefiniti a loro rischio per modificare i colori, i tipi di carattere e il layout della barra degli strumenti di Gestione report. Né i fogli di stile predefiniti né le istruzioni relative alla loro modifica sono documentati in questa versione.  
   
  L'errata modifica dei fogli di stile può causare errori all'apertura dei report. Se non si conoscono con esattezza le procedure per modificare i fogli di stile, utilizzare quelli predefiniti. Se si decide di personalizzare i fogli di stile, creare un backup di tutti i file con estensione css predefiniti prima di apportare qualsiasi modifica.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "36055430"
 >  Se si desidera utilizzare stili di report predefiniti, utilizzare la Creazione guidata report per creare un report. Nella Creazione guidata report sono disponibili numerosi temi che è possibile utilizzare per creare report con stili che utilizzano tipi di carattere e combinazioni di colori diversi. È possibile modificare i modelli di stile che definiscono i temi per un report.  
   
 ## <a name="reporting-services-style-sheets"></a>Fogli di stile di Reporting Services  
- Nella tabella seguente vengono descritti i file di foglio CSS stile utilizzabili in un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installazione.  
+ Nella tabella seguente vengono descritti i file di foglio CSS stile utilizzati in un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installazione.  
   
 |Foglio di stile|Description|  
 |-----------------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "36055430"
 |ReportingServices.css|Definisce gli stili per Gestione report.|  
   
 > [!NOTE]  
->  I fogli di stile Sql.css e Mailto.css vengono utilizzati per la documentazione online di Gestione report e non devono mai essere modificati. Altri fogli di stile definiscono stili per i report e per Gestione report aperti in web part di SharePoint. Tali fogli di stile includono Rswebparts.css, Sp_full.css e Sp_small.css. Non è consigliabile modificare i fogli di stile di SharePoint. Per ulteriori informazioni sull'utilizzo delle Web part, vedere [esplorare nativo modalità report con Web part di SharePoint e visualizzazione &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
+>  I fogli di stile Sql.css e Mailto.css vengono utilizzati per la documentazione online di Gestione report e non devono mai essere modificati. Altri fogli di stile definiscono stili per i report e per Gestione report aperti in web part di SharePoint. Tali fogli di stile includono Rswebparts.css, Sp_full.css e Sp_small.css. Non è consigliabile modificare i fogli di stile di SharePoint. Per altre informazioni sull'uso di Web part, vedere [esplorare nativo modalità report con Web part di SharePoint e visualizzazione &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>Configurazione di Reporting Services per l'utilizzo di un foglio di stile personalizzato  
  Il foglio di stile deve essere un file con estensione css valido e deve essere contenuto nella cartella Styles. Per impostazione predefinita, si trova nella cartella Styles \< *unità*>: \Programmi\Microsoft SQL Server\MSSQL. *n*services\reportserver\styles.  
@@ -67,7 +67,7 @@ ms.locfileid: "36055430"
 ```  
   
 ### <a name="specifying-a-style-sheet-on-a-report-url"></a>Impostazione di un foglio di stile nell'URL del report  
- È possibile utilizzare il parametro di accesso dell'URL `rc:StyleSheet` per specificare un foglio di stile personalizzato nell'URL del report. Per ulteriori informazioni su come specificare i parametri di accesso tramite URL, vedere [riferimento ai parametri di accesso URL](url-access-parameter-reference.md).  
+ È possibile utilizzare il parametro di accesso dell'URL `rc:StyleSheet` per specificare un foglio di stile personalizzato nell'URL del report. Per altre informazioni su come specificare i parametri di accesso tramite URL, vedere [riferimento ai parametri di accesso URL](url-access-parameter-reference.md).  
   
  Nell'esempio seguente viene illustrato come aggiungere stili personalizzati:  
   

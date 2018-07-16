@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arguments [SQL Server Management Studio]
 - external tools [SQL Server Management Studio]
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a568423d865e9ffea07f4e4487ea6d3680e2b417
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2693c20a4b1e26730085e9f84fcf3f920cf50314
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310911"
 ---
 # <a name="arguments-for-external-tools"></a>Strumenti esterni - Argomenti
   Gli argomenti sono variabili per le quali l'ambiente Visual Studio specifica dei valori quando viene avviato uno strumento esterno dal menu **Strumenti**. Al menu **Strumenti** è possibile aggiungere strumenti esterni, come il Blocco note, usando la finestra di dialogo **Strumenti esterni**.  
@@ -47,7 +47,7 @@ ms.locfileid: "36158364"
 |**Directory soluzione**|$(SolutionDir)|La directory della soluzione corrente (definita come unità + percorso).|  
 |**Nome file soluzione**|$(SolutionFileName)|Il nome file della soluzione corrente (definito come unità + percorso + nome file).|  
   
- <sup>1</sup> la riga corrente, colonna corrente o testo corrente è in base alla posizione del cursore nell'editor di testo come mostrato nella barra di stato.  
+ <sup>1</sup> la riga corrente, la colonna corrente o testo corrente è basato sulla posizione del cursore nell'editor di testo, come mostrato nella barra di stato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Strumenti esterni](external-tools-dialog-box.md)   

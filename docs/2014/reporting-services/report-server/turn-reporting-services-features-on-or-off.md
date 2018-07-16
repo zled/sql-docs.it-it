@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
@@ -16,13 +16,13 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1362919f44915616d244364cee116c8fab376831
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6521a2bcdf080eb4a22c9540d965d0b5829d74fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282597"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Abilitare o disabilitare le funzionalità di Reporting Services
   È possibile disabilitare le funzionalità del server di report non utilizzate come parte di una strategia di blocco per ridurre la superficie di attacco di un server di report di produzione. Nella maggior parte dei casi, è consigliabile eseguire le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] simultaneamente in modo da poter utilizzare tutte le funzionalità disponibili in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Tuttavia, a seconda del modello di distribuzione, è possibile disabilitare le funzionalità che non sono necessarie. Ad esempio, è possibile abilitare solo l'elaborazione in background se tutte le operazioni di elaborazione dei report vengono configurate come operazioni pianificate. Analogamente, se si desidera che la generazione di report venga eseguita solo in modo interattivo e su richiesta, è possibile eseguire solo il servizio Web ReportServer.  
@@ -71,7 +71,7 @@ ms.locfileid: "36166322"
   
     -   Per abilitare il servizio Web ReportServer, impostare **WebServiceAndHTTPAccessEnabled** a `True`.  
   
-    -   Per disabilitare il servizio Web ReportServer, impostare **WebServiceAndHTTPAccessEnabled** a `False`.  
+    -   Per disattivare il servizio Web ReportServer, impostare **WebServiceAndHTTPAccessEnabled** a `False`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -112,9 +112,9 @@ ms.locfileid: "36166322"
   
 4.  In **Proprietà facet**:  
   
-    -   Per abilitare gli eventi pianificati e recapito, impostare **ScheduleEventsAndReportDeliveryEnabled** a `True`.  
+    -   Per abilitare il recapito e gli eventi pianificati, impostare **ScheduleEventsAndReportDeliveryEnabled** a `True`.  
   
-    -   Per disabilitare gli eventi pianificati e recapito, impostare **ScheduleEventsAndReportDeliveryEnabled** a `False`.  
+    -   Per disabilitare il recapito e gli eventi pianificati, impostare **ScheduleEventsAndReportDeliveryEnabled** a `False`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -127,13 +127,13 @@ ms.locfileid: "36166322"
   
 1.  Aprire il file RsReportServer.config in un editor di testo. Per le istruzioni vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-2.  Per disabilitare Gestione Report, impostare `IsReportManagerEnabled` a `true`:  
+2.  Per abilitare gestione Report, impostare `IsReportManagerEnabled` a `true`:  
   
     ```  
     <IsReportManagerEnabled>true</IsReportManagerEnabled>  
     ```  
   
-3.  Per disattivare Gestione Report, impostare `IsReportManagerEnabled` a `false`:  
+3.  Per disabilitare Gestione Report, impostare `IsReportManagerEnabled` a `false`:  
   
     ```  
     <IsReportManagerEnabled>false</IsReportManagerEnabled>  
@@ -151,9 +151,9 @@ ms.locfileid: "36166322"
   
 4.  In **Proprietà facet**:  
   
-    -   Per disabilitare Gestione Report, impostare **ReportManagerEnabled** a `True`.  
+    -   Per abilitare gestione Report, impostare **ReportManagerEnabled** a `True`.  
   
-    -   Per disattivare Gestione Report, impostare **ReportManagerEnabled** a `False`.  
+    -   Per disabilitare Gestione Report, impostare **ReportManagerEnabled** a `False`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

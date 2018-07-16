@@ -1,5 +1,5 @@
 ---
-title: Set di righe DISCOVER_MEMORYUSAGE | Documenti Microsoft
+title: Set di righe DISCOVER_MEMORYUSAGE | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 248b1a999cafddd69a4b71aebdb9d52210d38646
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7cbe35889e3a703e85b37f2f1c107a9a72ecff90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304581"
 ---
 # <a name="discovermemoryusage-rowset"></a>Set di righe DISCOVER_MEMORYUSAGE
   Restituisce le statistiche di DISCOVER_MEMORYUSAGE per vari oggetti allocati dal server.  
@@ -28,7 +28,7 @@ ms.locfileid: "36067069"
 > [!WARNING]  
 >  Questo set di righe può produrre set di risultati molto grandi. Se non è possibile visualizzare i risultati perché richiedono una quantità di memoria di visualizzazione maggiore di quella consentita da SQL Server Management Studio, i risultati vengono scritti in un file temporaneo, nel percorso predefinito seguente:  
 >   
->  '\<unità >: \Users\\< nome utente\>\AppData\Local\Temp.\\< fileID\>. XML '.  
+>  «\<unità >: \Users\\< nome utente\>\AppData\Local\Temp.\\< fileID\>. XML '.  
   
  **Si applica a:** modelli tabulari, modelli multidimensionali  
   

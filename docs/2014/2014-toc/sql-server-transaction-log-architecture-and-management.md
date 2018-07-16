@@ -1,25 +1,24 @@
 ---
-title: Architettura di Log delle transazioni di SQL Server e la gestione | Documenti Microsoft
+title: Architettura di Log delle transazioni di SQL Server e la gestione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
 caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 15e0b458e74df9e40a05a4abbeeeb730b0bc0cea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167551"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301341"
 ---
 # Architettura e gestione del log delle transazioni di SQL Server
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "36167551"
   
  Quando la fine del log logico raggiunge la fine del file di log fisico, i nuovi record di log vengono nuovamente inseriti a partire dall'inizio del file di log fisico.  
   
- ![Incapsulamento intorno all'inizio del file di log vengono registrate nel log](media/tranlog4.gif "i record del Log il wrapping intorno all'inizio del file di log")  
+ ![Incapsulamento circa all'inizio del file di log vengono registrate](media/tranlog4.gif "i record del Log il wrapping intorno all'inizio del file di log")  
   
  Questo ciclo viene ripetuto all'infinito, a condizione che la fine del log logico non raggiunga mai l'inizio del log stesso. Se i vecchi record di log vengono troncati abbastanza frequentemente in modo da lasciare sempre spazio sufficiente per i nuovi record di log creati fino al checkpoint successivo, il log non viene mai riempito completamente. Se, tuttavia, la fine del log logico raggiunge l'inizio del log stesso, può verificarsi uno dei due eventi indicati di seguito:  
   

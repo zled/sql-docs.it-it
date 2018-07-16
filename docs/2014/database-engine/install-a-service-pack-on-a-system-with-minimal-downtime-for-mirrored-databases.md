@@ -1,14 +1,13 @@
 ---
-title: Installare un Service Pack in un sistema con tempi di inattività minimi per i database con mirroring | Documenti Microsoft
+title: Installare un Service Pack in un sistema con tempi di inattività minimi per i database con mirroring | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
 - database mirroring [SQL Server], upgrading system
@@ -18,18 +17,18 @@ helpviewer_keywords:
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e15b15020dcf28ad83bfbc50ab18e0005c71a4d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296921"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Installare un Service Pack in un sistema con tempi di inattività minimi per database con mirroring
-  In questo argomento viene descritta la procedura per ridurre al minimo il tempo di inattività per i database con mirroring quando vengono installati Service Pack e hotfix. Questo processo comprende l'aggiornamento sequenziale delle istanze di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] che partecipano al mirroring del database. Questa modalità di aggiornamento, è noto come un *aggiornamento in sequenza*, consente di ridurre i tempi di inattività a un singolo failover. Si noti che le sessioni in modalità a prestazioni elevate in cui il server mirror è geograficamente distante dal server principale, un aggiornamento in sequenza potrebbe non essere appropriato.  
+  In questo argomento viene descritta la procedura per ridurre al minimo il tempo di inattività per i database con mirroring quando vengono installati Service Pack e hotfix. Questo processo comprende l'aggiornamento sequenziale delle istanze di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] che partecipano al mirroring del database. Questa modalità di aggiornamento, che è noto come un *aggiornamento in sequenza*, riduce i tempi di inattività a un singolo failover. Si noti che per le sessioni in modalità a prestazioni elevate in cui il server mirror è geograficamente distante dal server principale, un aggiornamento in sequenza potrebbe non essere appropriato.  
   
  Un aggiornamento in sequenza è un processo a più stadi articolato nelle fasi seguenti:  
   
@@ -129,13 +128,13 @@ ms.locfileid: "36168865"
   
     -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: modificare l'opzione **Modalità operativa** e impostarla su **Prestazioni elevate (asincrona)** usando la [pagina Mirroring](../relational-databases/databases/database-properties-mirroring-page.md) della finestra di dialogo **Proprietà database** .  
   
-    -   In [!INCLUDE[tsql](../includes/tsql-md.md)]: uso [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) per impostare la protezione delle transazioni su OFF.  
+    -   Nelle [!INCLUDE[tsql](../includes/tsql-md.md)]: usare [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) per la protezione delle transazioni è impostata su OFF.  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>Per restituire un server di controllo del mirroring a una sessione di mirroring  
   
 1.  Facoltativamente, nella modalità a protezione elevata, ristabilire il server di controllo del mirroring su ciascuna sessione di mirroring.  
   
-     **Per ristabilire il server di controllo**  
+     **Per ristabilire il controllo del mirroring**  
   
     -   [Aggiunta o sostituzione di un server di controllo del mirroring del database &#40;SQL Server Management Studio&#41;](database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   

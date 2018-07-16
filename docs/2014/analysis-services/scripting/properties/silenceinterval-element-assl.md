@@ -1,5 +1,5 @@
 ---
-title: Elemento SilenceInterval (ASSL) | Documenti Microsoft
+title: Elemento SilenceInterval (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - SilenceInterval element
 ms.assetid: c22060a9-99ca-4b81-9df3-89b020b4d1d4
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5914d870d9ebcd288dffa19d9402bf8c92e525a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c099e86540a29c6f60fb4510266d51fceaaed98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293064"
 ---
 # <a name="silenceinterval-element-assl"></a>Elemento SilenceInterval (ASSL)
-  Definisce la quantità minima di tempo istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] viene sospeso prima di avviare il OLAP multidimensionale (MOLAP) elaborazione di un'immagine.  
+  Definisce la quantità minima di tempo l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utilizza come pausa prima di avviare il OLAP multidimensionale (MOLAP) elaborazione di un'immagine.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,8 +61,8 @@ ms.locfileid: "36158286"
 |Elemento padre|[ProactiveCaching](../objects/proactivecaching-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `SilenceInterval` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `SilenceInterval` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

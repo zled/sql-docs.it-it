@@ -1,5 +1,5 @@
 ---
-title: Set di righe MDSCHEMA_ACTIONS | Documenti Microsoft
+title: Set di righe MDSCHEMA_ACTIONS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_ACTIONS rowset
 ms.assetid: f73081f8-ac51-4286-b46e-2b34e792c3e0
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5b3e3a4c91d998e0ba0459577f1e0b469ec7f78b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c7382056922a52e734df61015df85930682d0db0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319371"
 ---
 # <a name="mdschemaactions-rowset"></a>Set di righe MDSCHEMA_ACTIONS
   Descrive le azioni che possono essere disponibili per l'applicazione client.  
@@ -47,7 +47,7 @@ ms.locfileid: "36167746"
 |`DESCRIPTION`|`DBTYPE_WSTR`||Descrizione semplice dell'azione.|  
 |`CONTENT`|`DBTYPE_WSTR`||Espressione o contenuto dell'azione da eseguire.|  
 |`APPLICATION`|`DBTYPE_WSTR`||Nome dell'applicazione da utilizzare per eseguire l'azione.|  
-|`INVOCATION`|`DBTYPE_I4`||Informazioni sulla modalità con cui richiamare l'azione:<br /><br /> -   `MDACTION_INVOCATION_INTERACTIVE` (`1`) indica un'azione regolare utilizzata durante le normali operazioni. È il valore predefinito per questa colonna.<br />-   `MDACTION_INVOCATION_ON_OPEN` (`2`) indica che l'azione deve essere eseguita quando si apre il cubo.<br />-   `MDACTION_INVOCATION_BATCH` (`4`) indica che l'azione viene eseguita come parte di un'operazione batch o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] attività.<br /><br /> Questi valori di enumerazione sono definiti nel file Msmd.h.|  
+|`INVOCATION`|`DBTYPE_I4`||Informazioni sulla modalità con cui richiamare l'azione:<br /><br /> -   `MDACTION_INVOCATION_INTERACTIVE` (`1`) indica un'azione regolare utilizzata durante il normale funzionamento. È il valore predefinito per questa colonna.<br />-   `MDACTION_INVOCATION_ON_OPEN` (`2`) indica che l'azione deve essere eseguita quando si apre la prima volta il cubo.<br />-   `MDACTION_INVOCATION_BATCH` (`4`) indica che l'azione viene eseguita come parte di un'operazione batch o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] attività.<br /><br /> Questi valori di enumerazione sono definiti nel file Msmd.h.|  
   
  Il set di righe viene ordinato in base a `CATALOG_NAME`, `SCHEMA_NAME`, `CUBE_NAME` e `ACTION_NAME`.  
   
@@ -67,14 +67,14 @@ ms.locfileid: "36167746"
 |`COORDINATE`|`DBTYPE_WSTR`|Obbligatorio|  
 |`COORDINATE_TYPE`|`DBTYPE_I4`|Obbligatorio|  
 |`INVOCATION`|`DBTYPE_I4`|(Facoltativo) L'impostazione predefinita della colonna di restrizione `INVOCATION` è il valore di `MDACTION_INVOCATION_INTERACTIVE`. Per recuperare tutte le azioni, utilizzare il valore `MDACTION_INVOCATION_ALL` nella colonna di restrizione `INVOCATION`.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -1 CUBO<br />-QUOTA 2<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(Facoltativo) Bitmap con uno dei seguenti valori validi:<br /><br /> -1 CUBO<br />-DIMENSIONE DI 2<br /><br /> La restrizione predefinita è impostata sul valore 1.|  
   
 > [!IMPORTANT]  
 >  Il valore predefinito della colonna di restrizione `INVOCATION` è `MDACTION_INVOCATION_INTERACTIVE`. Qualsiasi set di righe dello schema che non specifichi in modo esplicito un valore per questa colonna contiene solo righe con questo valore. Se si desidera che il set di righe contenga l'intero set di azioni, utilizzare la costante `MDACTION_INVOCATION_ALL` nella colonna di restrizione `INVOCATION`.  
   
  Nelle applicazioni client è possibile definire più `ACTION_TYPE` tramite l'operatore OR.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Nella tabella seguente vengono elencate le combinazioni di `COORDINATE` e `COORDINATE_TYPE` valide.  
   
 |Tipo di oggetto COORDINATE|COORDINATE_TYPE|  

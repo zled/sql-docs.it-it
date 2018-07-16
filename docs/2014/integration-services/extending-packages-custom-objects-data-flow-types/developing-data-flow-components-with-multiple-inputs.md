@@ -14,13 +14,13 @@ ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 10c2ff8df0fbcc1b9bc491a1c6a32787d0cdac55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5db0cc5bccaf05cf18aa3a7459eecfead5cd13b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285677"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Sviluppo di componenti flusso di dati con più input
   Un componente flusso di dati con più input può usare una quantità di memoria eccessiva se i relativi input generano dati a frequenze irregolari. Quando si sviluppa un componente flusso di dati personalizzato in grado di supportare due o più input, è possibile gestire l'utilizzo elevato di memoria tramite i membri dello spazio dei nomi Microsoft.SqlServer.Dts.Pipeline seguenti:  
@@ -59,9 +59,9 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 > [!NOTE]  
 >  L'implementazione del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> non deve chiamare le implementazioni nella classe di base. L'implementazione predefinita di questo metodo nella classe di base causa semplicemente la generazione di un'eccezione `NotImplementedException`.  
   
- Quando si implementa questo metodo, si imposta lo stato di un elemento nella matrice *NotImplementedException* booleana per ogni input del componente. Gli input sono identificabili tramite i relativi valori ID nella matrice *inputIDs*. Quando si imposta il valore di un elemento il *canProcess* matrice `true` per un input, il motore flusso di dati chiama il componente <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> (metodo) e fornisce ulteriori dati per l'input specificato.  
+ Quando si implementa questo metodo, si imposta lo stato di un elemento nella matrice *NotImplementedException* booleana per ogni input del componente. Gli input sono identificabili tramite i relativi valori ID nella matrice *inputIDs*. Quando si imposta il valore di un elemento nel *canProcess* matrice `true` per un input, il motore flusso di dati chiama il componente <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> (metodo) e offre maggiore quantità di dati per l'input specificato.  
   
- Mentre altri dati upstream sono disponibili, il valore della *canProcess* elemento di matrice per almeno un input deve essere sempre `true`, o l'elaborazione viene arrestata.  
+ Anche se sono disponibili più dati upstream, il valore della *canProcess* elemento di matrice per almeno un input deve essere sempre `true`, l'elaborazione viene arrestata.  
   
  Il motore del flusso di dati chiama il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> prima di inviare ogni buffer di dati per determinare quali input sono in attesa di ricevere altri dati. Quando il valore restituito indica che un input è bloccato, il motore del flusso di dati memorizza temporaneamente nella cache buffer aggiuntivi di dati per l'input anziché inviarli al componente.  
   
@@ -75,9 +75,9 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
   
 -   Per il componente non sono attualmente disponibili dati da elaborare per l'input nei buffer già ricevuti dal componente (`inputBuffers[inputIndex].CurrentRow() == null`).  
   
- Se un input è in attesa di ricevere altri dati, il componente del flusso di dati indica questa situazione impostando per `true` il valore dell'elemento nel *canProcess* matrice che corrisponde a quell'input.  
+ Se un input è in attesa di ricevere altri dati, il componente del flusso di dati indica questa impostazione per `true` il valore dell'elemento nel *canProcess* array che corrisponde a quell'input.  
   
- Viceversa, se per il componente sono ancora disponibili dati da elaborare per l'input, viene sospesa l'elaborazione dell'input. Nell'esempio a tale scopo impostare `false` il valore dell'elemento nel *canProcess* matrice che corrisponde a quell'input.  
+ Viceversa, se per il componente sono ancora disponibili dati da elaborare per l'input, viene sospesa l'elaborazione dell'input. L'esempio esegue questa impostazione per `false` il valore dell'elemento nel *canProcess* array che corrisponde a quell'input.  
   
 ```csharp  
 public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)  
@@ -92,7 +92,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 }  
 ```  
   
- Nell'esempio precedente viene usata la matrice `inputEOR` booleana per indicare se sono disponibili più dati upstream per ogni input. `EOR` nel nome della matrice rappresenta "la fine del set di righe" e fa riferimento alla proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> dei buffer del flusso di dati. In una parte dell'esempio non inclusa in questo argomento, il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> controlla il valore della proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> per ogni buffer di dati ricevuto. Se un valore `true` indica che per un input non sono disponibili altri dati upstream, il valore dell'elemento di matrice `inputEOR` per quell'input viene impostato su `true`. In questo esempio del <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> metodo imposta il valore dell'elemento corrispondente nel *canProcess* matrice `false` per un input quando il valore della `inputEOR` elemento della matrice indica che è presente nessun upstream sono disponibili dati per l'input.  
+ Nell'esempio precedente viene usata la matrice `inputEOR` booleana per indicare se sono disponibili più dati upstream per ogni input. `EOR` nel nome della matrice rappresenta "la fine del set di righe" e fa riferimento alla proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> dei buffer del flusso di dati. In una parte dell'esempio non inclusa in questo argomento, il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> controlla il valore della proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> per ogni buffer di dati ricevuto. Se un valore `true` indica che per un input non sono disponibili altri dati upstream, il valore dell'elemento di matrice `inputEOR` per quell'input viene impostato su `true`. In questo esempio del <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> metodo imposta il valore dell'elemento corrispondente nel *canProcess* matrice `false` per un input quando il valore del `inputEOR` elemento della matrice indica che vi sia nessun altro upstream sono disponibili dati per l'input.  
   
 ## <a name="implementing-the-getdependentinputs-method"></a>Implementazione del metodo GetDependentInputs  
  Se il componente flusso di dati personalizzato supporta più di due input, è necessario fornire un'implementazione per il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> della classe <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  

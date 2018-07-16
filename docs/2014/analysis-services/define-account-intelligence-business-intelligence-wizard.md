@@ -1,5 +1,5 @@
 ---
-title: Definizione funzionalità di Business Intelligence (configurazione guidata Business Intelligence) | Documenti Microsoft
+title: Definizione funzionalità di Business Intelligence (configurazione guidata Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.mapaccounttype.f1
 ms.assetid: fe4c204b-1031-4ac4-9916-8052ce2301cc
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3b55d270b9b7ae2a2094c24e0f71bdcd0f72a0ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 780f13e8ef18a4c17e3bec0322bd3c498efff4d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319241"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>Definizione funzionalità di Business Intelligence per la contabilità (Configurazione guidata funzionalità di Business Intelligence)
   La pagina **Definizione funzionalità di Business Intelligence per la contabilità** consente di eseguire il mapping dei tipi di conto definiti nell'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ai tipi di conto definiti da una tabella di origine nell'origine dei dati che fornisce i dati per la dimensione di tipo Conto.  
@@ -49,7 +49,7 @@ ms.locfileid: "36158095"
 |**Statistiche**|Rapporto calcolato di alcuni elementi oppure conteggio di elementi non aggregabili.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Business Intelligence guidata F1 Help](business-intelligence-wizard-f1-help.md)   
+ [Guida F1 di Business Intelligence guidata](business-intelligence-wizard-f1-help.md)   
  [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

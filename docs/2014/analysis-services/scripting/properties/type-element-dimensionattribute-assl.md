@@ -1,5 +1,5 @@
 ---
-title: Tipo di elemento (DimensionAttribute) (ASSL) | Documenti Microsoft
+title: Tipo di elemento (DimensionAttribute) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 64fce1f5-39b7-4d0a-ae60-21203a03bd0d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 450f25e039a4efbc2a6ae4175faf396bfbfa9ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b84675dbc0b13d7d73823126e7bc11fb75ad05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293471"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Elemento Type (DimensionAttribute) (ASSL)
   Contiene il tipo dell'attributo.  
@@ -61,7 +61,7 @@ ms.locfileid: "36167955"
 |Elemento padre|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
@@ -88,7 +88,7 @@ ms.locfileid: "36167955"
 |*CaptionDescription*|L'attributo rappresenta una descrizione.|  
 |*Channel*|L'attributo rappresenta un canale.|  
 |*Città*|L'attributo rappresenta una città.|  
-|*Società*|L'attributo rappresenta una società.|  
+|*Azienda*|L'attributo rappresenta una società.|  
 |*Continente*|L'attributo rappresenta un continente.|  
 |*Paese*|L'attributo rappresenta un paese.|  
 |*Provincia*|L'attributo rappresenta una regione.|  
@@ -122,7 +122,7 @@ ms.locfileid: "36167955"
 |*FiscalDayOfYear*|L'attributo rappresenta il numero ordinale di giorno di un anno in un calendario fiscale.|  
 |*FiscalHalfYears*|L'attributo rappresenta i semestri in un calendario fiscale.|  
 |*FiscalHalfYearsOfYear*|L'attributo rappresenta il numero ordinale di semestre di un anno in un calendario fiscale.|  
-|*FiscalMonth*|L'attributo rappresenta i mesi in un calendario fiscale.|  
+|*Mese fiscale*|L'attributo rappresenta i mesi in un calendario fiscale.|  
 |*FiscalMonthOfHalfYears*|L'attributo rappresenta il numero ordinale di mese di un semestre in un calendario fiscale.|  
 |*FiscalMonthOfQuarter*|L'attributo rappresenta il numero ordinale di mese di un trimestre in un calendario fiscale.|  
 |*FiscalMonthOfTrimester*|L'attributo rappresenta il numero ordinale di mese di un quadrimestre in un calendario fiscale.|  
@@ -198,7 +198,7 @@ ms.locfileid: "36167955"
 |*MonthOfHalfYears*|L'attributo rappresenta il numero ordinale di mese di un semestre.|  
 |*MonthOfQuarter*|L'attributo rappresenta il numero ordinale di mese di un trimestre.|  
 |*MonthOfTrimester*|L'attributo rappresenta il numero ordinale di mese di un quadrimestre.|  
-|*MonthOfYear*|L'attributo rappresenta il numero ordinale di mese di un anno.|  
+|*Mese dell'anno*|L'attributo rappresenta il numero ordinale di mese di un anno.|  
 |*Mesi*|L'attributo rappresenta i mesi.|  
 |*OrganizationalUnit*|L'attributo rappresenta un'unità organizzativa.|  
 |*OrgTitle*|L'attributo rappresenta una posizione organizzativa.|  
@@ -229,12 +229,12 @@ ms.locfileid: "36167955"
 |*ProjectCode*|L'attributo rappresenta il codice di un progetto.|  
 |*Projectcompletion*|L'attributo rappresenta lo stato di completamento di un progetto.|  
 |*ProjectEnddate*|L'attributo rappresenta la data di fine di un progetto.|  
-|*ProjectName*|L'attributo rappresenta il nome di un progetto.|  
+|*Nome progetto*|L'attributo rappresenta il nome di un progetto.|  
 |*ProjectStartDate*|L'attributo rappresenta la data di inizio di un progetto.|  
 |*Innalzamento di livello*|L'attributo rappresenta una promozione.|  
 |*QtyRangeHigh*|L'attributo rappresenta il valore massimo in un intervallo di quantità.|  
 |*QtyRangeLow*|L'attributo rappresenta il valore minimo in un intervallo di quantità.|  
-|*Quantitativa*|L'attributo rappresenta un attributo quantitativo.|  
+|*Quantitative*|L'attributo rappresenta un attributo quantitativo.|  
 |*QuarterOfHalfYear*|L'attributo rappresenta il numero ordinale di trimestre di un semestre.|  
 |*QuarterOfYear*|L'attributo rappresenta il numero ordinale di trimestre di un anno.|  
 |*Trimestri*|L'attributo rappresenta i trimestri.|  
@@ -300,10 +300,10 @@ ms.locfileid: "36167955"
   
  L'enumerazione che corrisponde ai valori consentiti di `Type` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.AttributeType>.  
   
- L'elemento che corrisponde al padre di `Type` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ L'elemento che corrisponde al padre di `Type` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attributi elemento &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
+ [Elemento Attributes &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
  [Elemento della dimensione &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  
   

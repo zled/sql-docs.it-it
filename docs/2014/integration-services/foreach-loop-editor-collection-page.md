@@ -1,5 +1,5 @@
 ---
-title: Editor ciclo foreach (pagina Raccolta) | Documenti Microsoft
+title: Editor ciclo foreach (pagina Raccolta) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50ab22c5b36390645aa8f6fb961531479e592188
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d10057943aa872c919171227f072f6b2836eba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318881"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Editor ciclo Foreach (pagina Raccolta)
   Usare la pagina **Raccolta** della finestra di dialogo **Editor ciclo Foreach** per specificare il tipo di enumeratore e configurarlo.  
@@ -42,7 +42,7 @@ ms.locfileid: "36166457"
 |**Enumeratore Foreach NodeList**|Consente di enumerare i nodi in un documento XML. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach File Enumerator**.|  
 |**Enumeratore Foreach SMO**|Consente di enumerare un oggetto SMO. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach SMO Enumerator**.|  
 |**Enumeratore Foreach BLOB di Azure**|Enumerare i file BLOB nel percorso BLOB specificato. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach Azure Blob Enumerator**.|  
-|**Enumeratore Foreach file di ADLS**|Enumerare i file in ADLS con filtri. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Enumeratore Foreach file di ADLS**.|
+|**Enumeratore Foreach file di ADLS**|Enumerare i file in Azure Data Lake Store con i filtri. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Enumeratore Foreach file di ADLS**.|
   
  **Espressioni**  
  Fare clic su **Espressioni** o espandere questa voce per visualizzare l'elenco delle espressioni di proprietà esistenti. Fare clic sul pulsante con i puntini di sospensione **(…)** per aggiungere un'espressione di proprietà per una proprietà dell'enumeratore oppure per modificare o valutare un'espressione di proprietà esistente.  
@@ -277,17 +277,17 @@ ms.locfileid: "36166457"
   
  **Blob time range from/to filter** (Filtro Intervallo di tempo BLOB da/a)  
  Specificare un filtro di intervallo di tempo. I file modificati dopo **TimeRangeFrom** e prima di **TimeRangeTo** saranno enumerati.  
-### <a name="enumerator--foreach-adls-file-enumerator"></a>Enumeratore = ADLS Foreach File Enumerator  
-Il **ADLS File Enumerator** consente a un pacchetto SSIS di enumerare i file in ADLS con filtri. La barra (`/`)-con prefisso percorso completo del file enumerati può essere archiviato in una variabile e usato nelle attività interne al contenitore ciclo Foreach.
+### <a name="enumerator--foreach-adls-file-enumerator"></a>Enumeratore = enumeratore Foreach di ADLS File  
+Il **enumeratore File di ADLS** consente a un pacchetto SSIS di enumerare i file in Azure Data Lake Store con i filtri. La barra (`/`)-con prefisso percorso completo del file enumerati può essere archiviato in una variabile e usato nelle attività interne al contenitore ciclo Foreach.
   
 **AzureDataLakeConnection**  
 Specifica una gestione connessione di Azure Data Lake o crea una nuova istanza che fa riferimento a un account ADLS.   
   
 **AzureDataLakeDirectory**  
-Specifica la directory ADLS per la ricerca.
+Specifica la directory di Azure Data Lake Store per la ricerca.
   
 **FileNamePattern**  
-Specifica un filtro per il nome file. Verranno enumerati solo i file il cui nome corrisponde al criterio specificato. Sono supportati i caratteri jolly `*` e `?`. 
+Specifica un filtro per il nome file. Da enumerare solo i file il cui nome corrisponde al modello specificato. Sono supportati i caratteri jolly `*` e `?`. 
   
 **SearchRecursively**  
 Specifica se eseguire la ricerca in modo ricorsivo all'interno della directory specificata.  
@@ -299,7 +299,7 @@ Specifica se eseguire la ricerca in modo ricorsivo all'interno della directory s
 -   Intervento nel blog relativo al [filtro dei file impostati dinamicamente da SSIS: FileSpec](http://go.microsoft.com/fwlink/?LinkId=238154)su beyondrelational.com.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor ciclo foreach &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor ciclo foreach &#40;pagina mapping variabili&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
  [Pagina espressioni](expressions/expressions-page.md)   

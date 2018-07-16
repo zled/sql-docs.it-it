@@ -1,5 +1,5 @@
 ---
-title: Proprietà Registro | Documenti Microsoft
+title: Proprietà di log | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - QueryLogFileSize property
 - QueryLogTableName property
@@ -54,15 +54,15 @@ helpviewer_keywords:
 - LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76a7f70754f211add486783019c1cd7bc7f5e24f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aee6f05c7d572f38c90754d2cf1996661d10f89d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295511"
 ---
 # <a name="log-properties"></a>Proprietà dei log
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà dei log server elencate nelle tabelle seguenti. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -80,7 +80,7 @@ ms.locfileid: "36157232"
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="error-log"></a>log degli errori  
- È possibile impostare queste proprietà a livello di istanza del server per modificare i valori predefiniti per la configurazione errori visualizzati in altri strumenti e finestre di progettazione. Vedere [configurazione errori per cubi, partizioni e l'elaborazione di dimensione &#40;SSAS - multidimensionale&#41; ](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) e <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> per ulteriori informazioni.  
+ È possibile impostare queste proprietà a livello di istanza del server per modificare i valori predefiniti per la configurazione errori visualizzati in altri strumenti e finestre di progettazione. Visualizzare [configurazione errori per cubi, partizioni e l'elaborazione di dimensione &#40;SSAS - multidimensionale&#41; ](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) e <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> per altre informazioni.  
   
  **ErrorLog\ErrorLogFileName**  
  Proprietà usata come impostazione predefinita durante operazioni di elaborazione eseguite sul server.  
@@ -111,20 +111,20 @@ ms.locfileid: "36157232"
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
  Specifica l'azione eseguita dal server quando un `KeyNotFound` errore si verifica. Le risposte valide a questo errore sono le seguenti:  
   
--   `IgnoreError` indica al server di continuare l'elaborazione senza registrare l'errore né conteggiarlo il limite degli errori di chiave. Ignorando l'errore, si consente semplicemente la continuazione dell'elaborazione senza aggiungere l'errore al numero complessivo e senza registrarlo nella schermata o nel file di log. Per il record specifico è presente un problema di integrità dei dati. Di conseguenza, il record non può essere aggiunto al database Il record verrà essere rimosso o aggregato al membro sconosciuto, come determinato dal `KeyErrorAction` proprietà.  
+-   `IgnoreError` indica al server di continuare l'elaborazione senza registrare l'errore né conteggiarlo per il limite degli errori di chiave. Ignorando l'errore, si consente semplicemente la continuazione dell'elaborazione senza aggiungere l'errore al numero complessivo e senza registrarlo nella schermata o nel file di log. Per il record specifico è presente un problema di integrità dei dati. Di conseguenza, il record non può essere aggiunto al database Il record verrà essere rimosso o aggregato al membro sconosciuto, come determinato dal `KeyErrorAction` proprietà.  
   
 -   `ReportAndContinue` indica al server di registrare l'errore, di conteggiarlo per il limite di errori di chiave e di continuare l'elaborazione. Il record che ha attivato l'errore viene rimosso o convertito in membro sconosciuto.  
   
 -   `ReportAndStop` indica al server di registrare l'errore e di arrestare immediatamente l'elaborazione, indipendentemente dal limite di errori di chiave. Il record che ha attivato l'errore viene rimosso o convertito in membro sconosciuto.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
- Specifica l'azione eseguita dal server in caso di chiave duplicata. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si è verificato l'errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il conteggio errori è inferiore al limite di errore.  
+ Specifica l'azione eseguita dal server in caso di chiave duplicata. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si è verificato l'errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione, e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il numero di errori è di sotto del limite degli errori.  
   
  **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
- Specifica l'azione eseguita dal server quando una chiave Null è stata convertita nel membro sconosciuto. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si è verificato l'errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il conteggio errori è inferiore al limite di errore.  
+ Specifica l'azione eseguita dal server quando una chiave Null è stata convertita nel membro sconosciuto. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si è verificato l'errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione, e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il numero di errori è di sotto del limite degli errori.  
   
  **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
- Specifica l'azione eseguita dal server quando `NullProcessing` è impostata su `Error` per un attributo della dimensione. Viene generato un errore quando un valore Null non è consentito in un attributo specificato. Questa proprietà di configurazione errori indica il passaggio successivo, ovvero la segnalazione dell'errore e la continuazione dell'elaborazione fino al raggiungimento del limite degli errori. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si è verificato l'errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il conteggio errori è inferiore al limite di errore.  
+ Specifica l'azione eseguita dal server quando `NullProcessing` è impostata su `Error` per un attributo della dimensione. Viene generato un errore quando un valore Null non è consentito in un attributo specificato. Questa proprietà di configurazione errori indica il passaggio successivo, ovvero la segnalazione dell'errore e la continuazione dell'elaborazione fino al raggiungimento del limite degli errori. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si è verificato l'errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione, e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il numero di errori è di sotto del limite degli errori.  
   
  **ErrorLog\ LogErrorTypes\CalculationError**  
  Proprietà usata come impostazione predefinita durante operazioni di elaborazione eseguite sul server.  

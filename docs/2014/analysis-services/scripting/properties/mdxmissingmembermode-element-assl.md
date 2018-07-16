@@ -1,5 +1,5 @@
 ---
-title: Elemento MdxMissingMemberMode (ASSL) | Documenti Microsoft
+title: Elemento MdxMissingMemberMode (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MdxMissingMemberMode element
 ms.assetid: aca6130b-5fb8-4fa1-af8b-8e1ef361926f
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: feba98157b8e3f6048e0513d7f8b11bb165ca45c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bf066a836d329096d36366b3d4a5f2835957fc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319411"
 ---
 # <a name="mdxmissingmembermode-element-assl"></a>Elemento MdxMissingMemberMode (ASSL)
   Determina la modalità di gestione dei membri mancanti per le istruzioni MDX (Multidimensional Expressions).  
@@ -59,19 +59,19 @@ ms.locfileid: "36167736"
 |Elemento padre|[Dimension](../data-type/dimension-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
 |-----------|-----------------|  
-|*Ignorare*|I membri mancanti vengono ignorati.|  
+|*Ignora*|I membri mancanti vengono ignorati.|  
 |*Errore*|Viene generato un errore se vengono rilevati membri mancanti.|  
 |*Valore predefinito*|I membri mancanti vengono ignorati.|  
   
- L'elemento che corrisponde al padre di `MdxMissingMemberMode` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Dimension>.  
+ L'elemento che corrisponde al padre di `MdxMissingMemberMode` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [(Multidimensional Expressions) &#40;MDX&#41; riferimento](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Espressioni MDX &#40;MDX&#41; riferimento](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  
   
   

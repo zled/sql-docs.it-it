@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - field terminators [SQL Server]
 - bulk importing [SQL Server], data formats
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ef7ed95cce28904377f0aa9fd1b446c89fb0db1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 957ca45730f0f16febff3c86d2c459965069bd3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303931"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Esempi di importazione ed esportazione bulk di documenti XML (SQL Server)
     
@@ -43,7 +42,7 @@ ms.locfileid: "36158906"
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...).  
   
- Per altre informazioni, vedere [importazione ed esportazione Bulk di dati tramite l'utilità bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) e [importazione Bulk dei dati tramite BULK INSERT o OPENROWSET&#40;BULK... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ Per altre informazioni, vedere [importazione ed esportazione Bulk di dati tramite l'utilità bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) e [importazione Bulk dei dati usando BULK INSERT o OPENROWSET&#40;BULK... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ## <a name="examples"></a>Esempi  
  Gli esempi sono i seguenti:  
@@ -54,12 +53,12 @@ ms.locfileid: "36158906"
   
 -   C. [Importazione bulk di dati XML da un file contenente una definizione DTD](#file_contains_dtd)  
   
--   D. [Specifica il carattere di terminazione del campo in modo esplicito utilizzando un file di formato](#field_terminator_in_format_file)  
+-   D. [Specifica il carattere di terminazione del campo in modo esplicito usando un file di formato](#field_terminator_in_format_file)  
   
 -   E. [Esportazione bulk di dati XML](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. Importazione bulk di dati XML come flusso di byte binario  
- Quando si esegue un'importazione bulk di dati XML da un file contenente una dichiarazione di codifica che si desidera applicare, specificare l'opzione SINGLE_BLOB nella clausola OPENROWSET(BULK…). L'opzione SINGLE_BLOB garantisce che il parser XML in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Importa i dati in base allo schema di codifica specificato nella dichiarazione XML.  
+ Quando si esegue un'importazione bulk di dati XML da un file contenente una dichiarazione di codifica che si desidera applicare, specificare l'opzione SINGLE_BLOB nella clausola OPENROWSET(BULK…). L'opzione SINGLE_BLOB garantisce che il parser XML di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Importa i dati in base allo schema di codifica specificato nella dichiarazione XML.  
   
 #### <a name="sample-table"></a>Tabella di esempio  
  Per testare l'esempio A, è necessario creare una tabella di esempio `T`.  
@@ -92,7 +91,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>Note  
  L'utilizzo di SINGLE_BLOB in questo caso consente di evitare una mancata corrispondenza tra la codifica del documento XML (come specificata dalla dichiarazione di codifica XML) e la tabella codici della stringa implicita del server.  
   
  Se si utilizzano tipi di dati NCLOB o CLOB e si verifica un conflitto di tabella codici o di codifica, è necessario eseguire una delle operazioni seguenti:  

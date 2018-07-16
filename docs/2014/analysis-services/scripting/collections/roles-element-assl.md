@@ -1,5 +1,5 @@
 ---
-title: Elemento roles (ASSL) | Documenti Microsoft
+title: Elemento roles (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Roles element
 ms.assetid: 4191b7ce-bae4-4200-8550-3904420efafd
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f8ced51e40e2804054a0c63368622d2df70f81fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6227c72cc4fdd20b8c739bcb6019a83fbaaaa58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295581"
 ---
 # <a name="roles-element-assl"></a>Elemento Roles (ASSL)
   Contiene la raccolta di elementi [Role](../objects/role-element-assl.md) definiti all'interno dell'elemento padre.  
@@ -63,7 +63,7 @@ ms.locfileid: "36166261"
 |Elementi padre|[Database](../objects/database-element-assl.md), [Server](../objects/server-element-assl.md)|  
 |Elementi figlio|[Ruolo](../objects/role-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `Roles` associato a un elemento `Server` contiene solo uno ruolo, denominato Administrators, che rappresenta il ruolo di amministratore del server. Il ruolo di amministratore del server non può essere modificato o eliminato, né altri ruoli possono essere aggiunti alla raccolta.  
   
  L'elemento `Roles` associato a un elemento `Database` contiene i ruoli definiti per il database.  
