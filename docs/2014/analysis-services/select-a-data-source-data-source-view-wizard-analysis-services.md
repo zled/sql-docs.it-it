@@ -1,5 +1,5 @@
 ---
-title: Selezionare un'origine dati (Creazione guidata vista origine di dati) (Analysis Services) | Documenti Microsoft
+title: Selezionare un'origine dati (Creazione guidata vista origine di dati) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selectdatasource.f1
 ms.assetid: 51282270-8ca8-42cf-8538-a6baf0006656
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98fd253da693a23ccbda57c605edb9f59dcc1540
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a7db15f7dcf8e963e9df38dbda0dd05aa208b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291417"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>Selezionare un'origine dati (Configurazione guidata vista origine dati) (Analysis Services)
   Utilizzare la pagina **Selezionare un'origine dati** per selezionare un'origine dei dati per la vista origine dati.  
@@ -42,8 +42,8 @@ ms.locfileid: "36155855"
  Apre la Creazione guidata origine dati, che consente di creare una nuova origine dei dati che verrà aggiunta al progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 del Creazione guidata vista origine dati &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
- [Viste origine dati nei modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Guida F1 guidata origine dati &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
+ [Guida F1 del guidata vista origine dati &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [La Guida F1 di creazione guidata dell'origine dati &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
   
   

@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03e1b85250115c3deb8b1615782c3e64c896bed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7a7e5c9979dfe42b956a90eb61d1a03a9ef65181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234891"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chiavi di crittografia del database e di SQL Server (Motore di database)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa le chiavi di crittografia per la protezione di dati, credenziali e informazioni di connessione archiviate in un database del server. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dispone di due tipi di chiavi: *simmetrica* e *asimmetrica*. Le chiavi simmetriche utilizzano la stessa password per crittografare e decrittografare i dati. Le chiavi asimmetriche usano una password per crittografare i dati (chiave *pubblica* ) e un'altra per decrittografare i dati (chiave *privata* ).  
@@ -35,9 +34,9 @@ ms.locfileid: "36156433"
   
  La chiave master del database è una chiave simmetrica utilizzata per proteggere le chiavi private dei certificati e le chiavi asimmetriche presenti nel database. Si può utilizzare anche per crittografare dati, ma ha limitazioni di lunghezza che la rendono meno pratica per i dati rispetto all'utilizzo di una chiave simmetrica.  
   
- Al momento della creazione, la chiave master viene crittografata con l'algoritmo Triple DES e una password specificata dall'utente. Per attivare la decrittografia automatica della chiave master, viene crittografata una copia della chiave utilizzando la SMK. Viene archiviata in entrambi i database in cui viene utilizzato e nel `master` database di sistema.  
+ Al momento della creazione, la chiave master viene crittografata con l'algoritmo Triple DES e una password specificata dall'utente. Per attivare la decrittografia automatica della chiave master, viene crittografata una copia della chiave utilizzando la SMK. Viene archiviata in entrambi i database in cui viene usato e nel `master` database di sistema.  
   
- La copia della DMK archiviata nel `master` database di sistema viene aggiornato automaticamente ogni qualvolta la DMK è modificata. Tuttavia, è possibile modificare questa impostazione predefinita tramite il `DROP ENCRYPTION BY SERVICE MASTER KEY` opzione del `ALTER MASTER KEY` istruzione. Per aprire una DMK non crittografata con la chiave master del servizio, è necessario utilizzare l'istruzione `OPEN MASTER KEY` e una password.  
+ La copia della DMK archiviata nel `master` database di sistema viene aggiornato automaticamente ogni qualvolta la DMK è modificata. Tuttavia, questa impostazione predefinita può essere modificata usando il `DROP ENCRYPTION BY SERVICE MASTER KEY` opzione del `ALTER MASTER KEY` istruzione. Per aprire una DMK non crittografata con la chiave master del servizio, è necessario utilizzare l'istruzione `OPEN MASTER KEY` e una password.  
   
 ## <a name="managing-sql-server-and-database-keys"></a>Gestione delle chiavi del SQL Server e del database  
  La gestione delle chiavi di crittografia comprende la creazione di nuove chiavi di database, la creazione di un backup delle chiavi server e del database e informazioni su quando e come ripristinare, eliminare o modificare le chiavi.  
@@ -86,7 +85,7 @@ ms.locfileid: "36156433"
   
  [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
- [Abilitare Transparent Data Encryption tramite Extensible Key Management](enable-tde-on-sql-server-using-ekm.md)  
+ [Abilitare TDE usando EKM](enable-tde-on-sql-server-using-ekm.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  

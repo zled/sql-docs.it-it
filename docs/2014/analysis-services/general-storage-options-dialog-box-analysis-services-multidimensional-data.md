@@ -1,5 +1,5 @@
 ---
-title: Generale (finestra di dialogo Opzioni di archiviazione) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Generale (finestra di dialogo Opzioni di archiviazione) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.setstorageoptions.storage.f1
 ms.assetid: ee1fac79-ae15-4c3c-9a98-33db04388817
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d71e6c2ec49565c2db822d8bb96f26257ebf4f96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c238f74f5041c0b2a549979bac0a9871847eca5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306551"
 ---
 # <a name="general-storage-options-dialog-box-analysis-services---multidimensional-data"></a>Generale (finestra di dialogo Opzioni di archiviazione) (Analysis Services - Dati multidimensionali)
   La scheda **Generale** della finestra di dialogo **Opzioni di archiviazione** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] consente di definire le impostazioni della modalità di archiviazione e della memorizzazione nella cache attiva per una dimensione, un cubo, un gruppo di misure o una partizione.  
@@ -41,13 +41,13 @@ ms.locfileid: "36067088"
 |**Elimina cache obsoleta**|Specifica il periodo compreso tra l'inizio della creazione di una nuova cache MOLAP e la rimozione di quella esistente.<br /><br /> Nota: se **Abilita memorizzazione nella cache attiva** non è selezionata, questa opzione è disabilitata. Si noti inoltre che questa opzione non deve essere impostata se **modalità di archiviazione** è impostata su HOLAP.|  
 |**Latenza**|Consente di selezionare l'intervallo e le unità di tempo del periodo compreso tra l'inizio della creazione di una nuova cache MOLAP e la rimozione di quella esistente.<br /><br /> Nota: se **Elimina cache obsoleta** non è selezionata, questa opzione è disabilitata. Si noti inoltre che questa opzione non deve essere impostata se **modalità di archiviazione** è impostata su **HOLAP**.|  
 |**Aggiorna periodicamente la cache**|Aggiorna regolarmente l'immagine MOLAP, indipendentemente dalla notifica.<br /><br /> Nota: se **Abilita memorizzazione nella cache attiva** non è selezionata, questa opzione è disabilitata. Si noti inoltre che questa opzione non deve essere impostata se **modalità di archiviazione** è impostata su **HOLAP**.|  
-|**L'intervallo di ricompilazione**|Consente di selezionare l'intervallo e le unità di tempo del periodo in cui, dopo la creazione di una nuova immagine MOLAP, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avvia di nuovo il processo relativo all'immagine MOLAP per l'oggetto, indipendentemente dalla notifica. Le notifiche ricevute dopo l'esaurimento di questo intervallo non annullano il processo relativo all'immagine MOLAP avviato dall'intervallo.<br /><br /> Nota: se **Aggiorna periodicamente la cache** non è selezionata, questa opzione è disabilitata. Si noti inoltre che questa opzione non deve essere impostata se **modalità di archiviazione** è impostata su **HOLAP**.|  
+|**Intervallo di ricompilazione**|Consente di selezionare l'intervallo e le unità di tempo del periodo in cui, dopo la creazione di una nuova immagine MOLAP, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avvia di nuovo il processo relativo all'immagine MOLAP per l'oggetto, indipendentemente dalla notifica. Le notifiche ricevute dopo l'esaurimento di questo intervallo non annullano il processo relativo all'immagine MOLAP avviato dall'intervallo.<br /><br /> Nota: se **Aggiorna periodicamente la cache** non è selezionata, questa opzione è disabilitata. Si noti inoltre che questa opzione non deve essere impostata se **modalità di archiviazione** è impostata su **HOLAP**.|  
 |**Online immediatamente**|Consente di portare gli oggetti online immediatamente. Se questa opzione è impostata, gli oggetti utilizzeranno l'archiviazione ROLAP sottostante per risolvere le query durante la ricompilazione della cache MOLAP. Se invece non è impostata, gli oggetti verranno portati online solo dopo il completamento della cache MOLAP relativa all'oggetto.|  
 |**Attiva aggregazioni ROLAP**|Consente di utilizzare le viste materializzate sull'origine dei dati sottostante per archiviare le aggregazioni.<br /><br /> Nota: se l'origine dei dati sottostante non supporta viste materializzate, verrà generato un errore durante l'elaborazione dell'oggetto.|  
 |**Applica impostazioni alle dimensioni**|Applica le impostazioni della modalità di archiviazione e della memorizzazione nella cache attiva alle dimensioni associate.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Opzioni di archiviazione &#40;Analysis Services - dati multidimensionali&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md)   
- [Le notifiche &#40;finestra di dialogo Opzioni di archiviazione&#41; &#40;Analysis Services - dati multidimensionali&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)  
+ [Notifiche &#40;finestra di dialogo Opzioni di archiviazione&#41; &#40;Analysis Services - dati multidimensionali&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Leggere l'elemento (ASSL) | Documenti Microsoft
+title: Leggere l'elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Read element
 ms.assetid: 2e2c1173-72ca-4e8a-a6cd-fd348ef96d78
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1e7f26c9064f754633420cd58a0f15197189d1ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5d4d8b256e29f3f4e4998fdc029f0d9eb3e1a893
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321201"
 ---
 # <a name="read-element-assl"></a>Elemento Read (ASSL)
   Determina se è possono leggere i dati o metadati per un determinato [CubeDimensionPermission](../data-type/permission-data-type-assl.md) oppure [autorizzazione](../data-type/permission-data-type-assl.md) elemento.  
@@ -56,10 +56,10 @@ ms.locfileid: "36077865"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[CubeDimensionPermission](../objects/cubepermission-element-assl.md), [autorizzazione](../data-type/permission-data-type-assl.md)|  
+|Elementi padre|[Oggetto CubeDimensionPermission](../objects/cubepermission-element-assl.md), [autorizzazione](../data-type/permission-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
@@ -67,14 +67,14 @@ ms.locfileid: "36077865"
 |*Nessuno*|Non è permesso alcun accesso a dati o metadati dall'oggetto padre.|  
 |*È consentito*|È consentito l'accesso in scrittura a dati e metadati dall'oggetto padre.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Gli elementi che corrispondono ai padri di `Read` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.CubeDimensionPermission> e <xref:Microsoft.AnalysisServices.Permission>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento del cubo &#40;ASSL&#41;](../objects/cube-element-assl.md)   
  [Elemento della dimensione &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Elemento CubePermission &#40;ASSL&#41;](../objects/cubepermission-element-assl.md)   
- [Tipo di dati di autorizzazione &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
+ [Tipo di dati Permission &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  
   
   

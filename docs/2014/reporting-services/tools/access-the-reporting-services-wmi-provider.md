@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - Reporting Services WMI Provider
 api_location:
@@ -22,13 +22,13 @@ ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6c3c4bb9cc188e08ad38de73c2be4949e4c6afab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4938b39c182258ac4a764fc71defa21c6fa0d05b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317861"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Accedere al provider WMI per Reporting Services
   Nel provider WMI per Reporting Services sono esposte due classi WMI per l'amministrazione di istanze del server di report in modalità nativa tramite scripting:  
@@ -92,7 +92,7 @@ PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti alla libreria del Provider WMI di Reporting Services &#40;SSRS&#41;](../wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
+ [Riferimento della libreria del Provider WMI di Reporting Services &#40;SSRS&#41;](../wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
  [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
   
   

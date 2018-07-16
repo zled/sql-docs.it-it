@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e32774c7577f357677c149bd3e222498945b9b82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e6e09fbd1af47c63d12d5c1b726e6a0ad23cf5b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294131"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Aggiungere o eliminare un indicatore (Generatore report e SSRS)
   Gli indicatori sono piccoli misuratori sui quali è possibile leggere immediatamente lo stato di un singolo valore di dati. Per altre informazioni in merito, vedere [Indicatori &#40;Generatore report e SSRS&#41;](indicators-report-builder-and-ssrs.md).  
@@ -30,11 +30,11 @@ ms.locfileid: "36068196"
   
  È possibile aggiornare i valori e gli stati di indicatori. Per altre informazioni, vedere gli argomenti seguenti:  
   
--   [Modificare le icone degli indicatori e dei set &#40;SSRS e Generatore Report&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Modificare le icone degli indicatori e dei set &#40;Report e SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Impostare e configurare le unità di misura &#40;SSRS e Generatore Report&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Impostare e configurare le unità di misura &#40;Report e SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Imposta ambito di sincronizzazione &#40;SSRS e Generatore Report&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Imposta ambito di sincronizzazione &#40;Report e SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  Poiché un indicatore viene posizionato nel pannello del misuratore, è necessario selezionare l'indicatore anziché il pannello quando si vuole configurare l'indicatore tramite la finestra di dialogo **Proprietà indicatori** o il riquadro **Proprietà** . Nell'immagine seguente viene mostrato un indicatore selezionato nel relativo pannello del misuratore.  
   

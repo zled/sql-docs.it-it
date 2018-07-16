@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico (Integration Services) | Documenti Microsoft
+title: Riferimento tecnico (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - technical reference [Integration Services]
 - Integration Services, technical reference
 ms.assetid: 69fe35ef-58df-4138-b0a5-9b1fb8c862d7
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 96523d88fd92c954e696eac3c6546e5ceb4c2d02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c9996fea859165f7635140af85e85d8ef6dd88d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306011"
 ---
 # <a name="technical-reference-integration-services"></a>Riferimento tecnico (Integration Services)
   Trovare gli strumenti, le lingue e la documentazione di riferimento per la programmazione per [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
- ![Icona della cartella File di piccole dimensioni](media/filefolder-small.gif "icona della cartella File piccola") **Change Data Capture Service e Designer**  
+ ![Icona cartella File piccola](media/filefolder-small.gif "icona cartella File piccola") **Change Data Capture Service e Designer**  
  [Servizio Change Data Capture per Oracle di Attunity](change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)  
   
  [Progettazione Change Data Capture per Oracle di Attunity](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
@@ -35,7 +35,7 @@ ms.locfileid: "36077829"
  ![Icona della cartella file piccola](media/filefolder-small.gif "Icona della cartella file piccola") **Errori ed eventi**  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
- ![Icona della cartella File di piccole dimensioni](media/filefolder-small.gif "icona della cartella File piccola") **riferimento a Transact-SQL**  
+ ![Icona cartella File piccola](media/filefolder-small.gif "icona cartella File piccola") **riferimento Transact-SQL**  
  [Viste &#40;catalogo di Integration Services&#41;](/sql/integration-services/system-views/views-integration-services-catalog)  
   
  [Stored procedure &#40;catalogo di Integration Services&#41;](/sql/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog)  

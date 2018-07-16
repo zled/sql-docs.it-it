@@ -1,5 +1,5 @@
 ---
-title: Aggiungere dati a un Report (Generatore Report e SSRS) | Documenti Microsoft
+title: Aggiungere dati a un Report (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: aeae106d4ab76cb6ab04248126b4b32e1e4a160a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2b65b1ae16a7df30d161c7f45c594678264de0a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284747"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>Aggiungere dati a un report (Generatore report e SSRS)
   Per aggiungere dati a un rapporto, è necessario creare set di dati. Ogni set di dati rappresenta il set di risultati dall'esecuzione di un comando di query su un'origine dati. Le colonne del set di risultati sono la raccolta di campi. Le righe del set di risultati sono i dati. Un set di dati non contiene i dati effettivi. Un set di dati contiene le informazioni necessarie per recuperare un set di dati specifico da un'origine dati.  
@@ -69,7 +69,7 @@ ms.locfileid: "36155715"
   
 -   [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
--   [Grafici &#40;SSRS e Generatore Report&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+-   [Grafici &#40;Report e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
 -   [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -77,9 +77,9 @@ ms.locfileid: "36155715"
   
 -   [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Parti di report &#40;SSRS e Generatore Report&#41;](../report-parts-report-builder-and-ssrs.md)  
+-   [Parti di report &#40;Report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
   
--   [Filtrare, raggruppare e ordinare i dati &#40;SSRS e Generatore Report&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+-   [Filtrare, raggruppare e ordinare i dati &#40;Report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
@@ -107,23 +107,23 @@ ms.locfileid: "36155715"
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="HowTo"></a> Procedure  
- [Aggiungere e verificare una connessione dati o un'origine dati &#40;SSRS e Generatore Report&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [Compilare una Query in Progettazione Query relazionale &#40;SSRS e Generatore Report&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [Compilare una Query in Progettazione Query relazionale &#40;Report e SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [Visualizzazione di set di dati nascosti per i valori dei parametri di dati multidimensionali &#40;SSRS e Generatore Report&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [Visualizzazione di set di dati nascosti per i valori dei parametri di dati multidimensionali &#40;Report e SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
  [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [Impostare una proprietà Nodatamessage per un'area dati &#40;SSRS e Generatore Report&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Impostare una proprietà Nodatamessage per un'area dati &#40;Report e SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Associare un parametro di Query a un parametro di Report &#40;SSRS e Generatore Report&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
+ [Associare un parametro di Query a un parametro di Report &#40;Report e SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [Definizione dei parametri in Progettazione Query MDX per Analysis Services &#40;SSRS e Generatore Report&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
+ [Definizione dei parametri in Progettazione Query MDX per Analysis Services &#40;Report e SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36155715"
   
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
- [Specificare le credenziali in Generatore Report](../specify-credentials-in-report-builder.md)  
+ [Specifica di credenziali in Generatore report](../specify-credentials-in-report-builder.md)  
   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
@@ -142,6 +142,6 @@ ms.locfileid: "36155715"
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](../report-builder/report-design-view-report-builder.md)   
- [Concetti di creazione di report &#40;SSRS e Generatore Report&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Concetti relativi alla creazione di report &#40;Report e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

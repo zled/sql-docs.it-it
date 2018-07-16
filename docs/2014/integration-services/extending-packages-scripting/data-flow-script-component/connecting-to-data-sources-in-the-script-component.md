@@ -16,18 +16,18 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4c5165a07b48354a89dcfaaf7a34f5d2ebc76739
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ebd9ac9d74ea24ba0c5d1a7178f72ab20454d6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314441"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Connessione a origini dati nel componente script
   Una gestione connessione è un'unità pratica che incapsula e archivia le informazioni necessarie per la connessione a un'origine dati di un determinato tipo. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../../connection-manager/integration-services-ssis-connections.md).  
   
- È possibile rendere disponibili le gestioni connessioni esistenti per l'accesso da parte dello script personalizzato nel componente di origine o destinazione facendo clic sui pulsanti **Aggiungi** e **Rimuovi** nella pagina **Gestioni connessioni** dell'**Editor trasformazione Script**. È tuttavia necessario scrivere codice personalizzato per caricare o salvare i dati e possibilmente per aprire e chiudere la connessione all'origine dati. Per ulteriori informazioni sul **Gestioni** pagina del **Editor trasformazione Script**, vedere [configurazione del componente Script nell'Editor del componente di Script] (( Configuring-the-Script-Component-in-the-Script-Component-editor.MD) e [Editor trasformazione Script &#40;pagina gestioni connessioni&#41;](../../script-transformation-editor-connection-managers-page.md).  
+ È possibile rendere disponibili le gestioni connessioni esistenti per l'accesso da parte dello script personalizzato nel componente di origine o destinazione facendo clic sui pulsanti **Aggiungi** e **Rimuovi** nella pagina **Gestioni connessioni** dell'**Editor trasformazione Script**. È tuttavia necessario scrivere codice personalizzato per caricare o salvare i dati e possibilmente per aprire e chiudere la connessione all'origine dati. Per altre informazioni sul **gestioni connessioni** pagina della **Editor trasformazione Script**, vedere [configurazione del componente Script nell'Editor del componente di Script] (( Configuring-the-Script-Component-in-the-Script-Component-editor.MD) e [Editor trasformazione Script &#40;pagina gestioni connessioni&#41;](../../script-transformation-editor-connection-managers-page.md).  
   
  Il componente script crea una classe di raccolta `Connections` nell'elemento di progetto `ComponentWrapper` che contiene una funzione di accesso fortemente tipizzata per ogni gestione connessione, con lo stesso nome della gestione connessione stessa. Questa raccolta viene esposta tramite la proprietà `Connections` della classe `ScriptMain`. La proprietà della funzione di accesso restituisce un riferimento alla gestione connessione come istanza di <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100>. Ad esempio, se è stata aggiunta una gestione connessione denominata `MyADONETConnection` nella pagina Gestioni connessioni della finestra di dialogo, è possibile ottenere un riferimento ad essa nello script tramite il codice seguente:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36054337"
   
  Per altre informazioni sull'uso delle gestioni connessioni con il componente script, vedere [Creazione di un'origine con il componente script](../../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md) e [Creazione di una destinazione con il componente script](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md).  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**Avvisa con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services  **<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni in Integration Services &#40;SSIS&#41;](../../connection-manager/integration-services-ssis-connections.md)   

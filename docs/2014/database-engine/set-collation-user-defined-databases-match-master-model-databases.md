@@ -1,5 +1,5 @@
 ---
-title: Impostare i database delle regole di confronto di percepire corrispondono a quelli del master di database e modello | Documenti Microsoft
+title: Impostare i database definiti dall'utente di regole di confronto corrispondono a quelle del master e i database modello | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: c686446f-dae1-4b05-a3df-837b3422988d
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b437463c35face45918e567cbf42d31f63161cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2c6cbe79e2af21444e39fb7da7546122cd273ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314581"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Impostazione delle regole di confronto dei database definiti dall'utente in modo che corrispondano a quelle dei database master e modello
   Questa regola consente di controllare se i database definiti dall'utente vengono configurati utilizzando le stesse regole di confronto di quelle per i database master e modello.  
@@ -33,7 +33,7 @@ ms.locfileid: "36054347"
   
 -   Esportare i dati dal database utente e importarli nelle nuove tabelle che utilizzano le stesse regole di confronto dei database master e modello.  
   
--   Ricompilare i database di sistema in modo che vengano utilizzate regole di confronto corrispondenti a quelle del database utente. Per ulteriori informazioni su come ricompilare i database di sistema, vedere [ricompilare database di sistema](../relational-databases/databases/system-databases.md).  
+-   Ricompilare i database di sistema in modo che vengano utilizzate regole di confronto corrispondenti a quelle del database utente. Per altre informazioni su come ricompilare i database di sistema, vedere [ricompilare database di sistema](../relational-databases/databases/system-databases.md).  
   
 -   Modificare qualsiasi stored procedure che crea join tra tabelle utente e tabelle in tempdb per creare le tabelle in tempdb utilizzando le regole di confronto del database utente. A tale scopo, aggiungere la clausola `COLLATE database_default` alle definizioni di colonna della tabella temporanea, come illustrato nell'esempio seguente:  
   

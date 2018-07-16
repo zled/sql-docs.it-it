@@ -1,12 +1,11 @@
 ---
-title: Eliminazione di un Assembly | Documenti Microsoft
+title: Eliminazione di un Assembly | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - removing assemblies
@@ -18,12 +17,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8c9948122e98c86e6c4ccb310c23b0513679379f
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e6efb9fe4c000e0fccf221a365c8c7cd5bc8050e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694322"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356923"
 ---
 # <a name="dropping-an-assembly"></a>Eliminazione di un assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Funzioni, stored procedure o trigger che utilizzano variabili o parametri del tipo definito dall'utente (UDT), creati nel database con la clausola WITH SCHEMABINDING.  
   
 ### <a name="finding-udt-dependencies"></a>Ricerca di dipendenze di tipi definiti dall'utente (UDT)  
- È necessario innanzitutto eliminare tutti gli oggetti dipendenti, quindi eseguire l'istruzione DROP TYPE. I seguenti [!INCLUDE[tsql](../../../includes/tsql-md.md)] consente di individuare tutte le colonne e i parametri che utilizzano un tipo definito dall'utente nella query il **AdventureWorks** database.  
+ È necessario innanzitutto eliminare tutti gli oggetti dipendenti, quindi eseguire l'istruzione DROP TYPE. Quanto segue [!INCLUDE[tsql](../../../includes/tsql-md.md)] consente di individuare tutte le colonne e i parametri che utilizzano un tipo definito dall'utente nella query il **AdventureWorks** database.  
   
 ```  
 USE Adventureworks;  
@@ -68,7 +67,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione degli assembly di integrazione con CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
+ [La gestione degli assembly dell'integrazione CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [Modifica di un Assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [Creazione di un Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: Connessioni dati, origini dati e stringhe di connessione in Reporting Services | Documenti Microsoft
+title: Connessioni dati, origini dati e stringhe di connessione in Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], data sources
 - reports [Reporting Services], data
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - logins [Reporting Services]
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 caps.latest.revision: 112
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2b5b0e041438ccc01254478715bf4967f305b663
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 021028f9c5039c04de522fe98b23f93a3b529eba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292261"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Connessioni dati, origini dati e stringhe di connessione in Reporting Services
-  Per includere i dati in un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report, è necessario innanzitutto creare *origini dati* e *DataSet*. Questo argomento illustra il tipo di origini dati, come creare le origini dati e informazioni importanti relative alle credenziali delle origini dati. Un'origine dati include il tipo di origine dati, le informazioni di connessione e il tipo di credenziali da usare. Esistono due tipi di origini dati, ovvero incorporate e condivise. Un'origine dati incorporata viene definita nel report e viene utilizzata solo dal report specifico, mentre un'origine dati condivisa viene definita indipendentemente da un report e può essere utilizzata da più report. Per altre informazioni, vedere [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) e [Set di dati condivisi e incorporati &#40;Generatore report e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
+  Per includere i dati in un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report, è necessario innanzitutto creare *zdroje dat* e *i set di dati*. Questo argomento illustra il tipo di origini dati, come creare le origini dati e informazioni importanti relative alle credenziali delle origini dati. Un'origine dati include il tipo di origine dati, le informazioni di connessione e il tipo di credenziali da usare. Esistono due tipi di origini dati, ovvero incorporate e condivise. Un'origine dati incorporata viene definita nel report e viene utilizzata solo dal report specifico, mentre un'origine dati condivisa viene definita indipendentemente da un report e può essere utilizzata da più report. Per altre informazioni, vedere [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) e [Set di dati condivisi e incorporati &#40;Generatore report e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ||  
 |-|  
@@ -111,33 +111,33 @@ ms.locfileid: "36054723"
   
  Quando si distribuisce un report nel server di report o nel sito di SharePoint, le relative origini dati incorporate e condivise vengono gestite in modo indipendente. Le credenziali dell'origine dati necessarie per accedere ai dati dal computer potrebbero non corrispondere da quelle necessarie per l'accesso del server di report ai dati.  
   
- ![Nota](media/rs-fyinote.png "nota"), è consigliabile verificare che le connessioni alle origini dati continuino a funzionare correttamente dopo aver pubblicato un report. Se è necessario modificare le credenziali, è possibile farlo direttamente nel server di report.  
+ ![Nota](media/rs-fyinote.png "nota")buona norma consiste nel verificare che le connessioni alle origini dati continuino a funzionare correttamente dopo aver pubblicato un report. Se è necessario modificare le credenziali, è possibile farlo direttamente nel server di report.  
   
  Per modificare le origini dati usate da un report, è possibile modificare le proprietà del report in Gestione report in modalità nativa o nelle raccolte documenti in modalità SharePoint. Per ulteriori informazioni, vedere quanto segue:  
   
--   [Archiviare le credenziali in un'origine di dati Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md) [archiviano le credenziali in un'origine di dati Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md)  
+-   [Store le credenziali in un'origine dati di Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md) [Store le credenziali in un'origine dati di Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
 -   [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
 -   [Specificare le connessioni per le estensioni per l'elaborazione dati personalizzate](report-data/specify-connections-for-custom-data-processing-extensions.md)  
   
--   [Specificare le credenziali in Generatore Report](../../2014/reporting-services/specify-credentials-in-report-builder.md)  
+-   [Specifica di credenziali in Generatore report](../../2014/reporting-services/specify-credentials-in-report-builder.md)  
   
--   [Aggiungere e verificare una connessione dati o un'origine dati &#40;SSRS e Generatore Report&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+-   [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
 ##  <a name="bkmk_connection_examples"></a> Esempi comuni di stringhe di connessione  
  Le stringhe di connessione sono la rappresentazione di testo delle proprietà di connessione per un provider di dati. Nella tabella seguente sono elencati esempi di stringhe di connessione per diversi tipi di connessione dati.  
   
 |**Origine dati**|**Esempio**|**Descrizione**|  
 |---------------------|-----------------|---------------------|  
-|Database SQL Server sul server locale|`data source="(local)";initial catalog=AdventureWorks`|Impostare il tipo di origine dati su `Microsoft SQL Server`. Per altre informazioni, vedere [Tipo di connessione SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md).|  
-|Database SQL Server sul server locale|`data source="(local)";initial catalog=AdventureWorks`|Impostare il tipo di origine dati su `Microsoft SQL Server`.|  
-|Istanza di SQL Server<br /><br /> Database|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|Impostare il tipo di origine dati su `Microsoft SQL Server`.|  
-|Database SQL Server Express|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|Impostare il tipo di origine dati su `Microsoft SQL Server`.|  
-|[!INCLUDE[ssSDS](../includes/sssds-md.md)] nel cloud|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Impostare il tipo di origine dati su `Windows Azure SQL Database`. Per altre informazioni, vedere [Tipo di connessione SQL Azure &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
-|SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Impostare il tipo di origine dati su `Microsoft SQL Server Parallel Data Warehouse`. Per altre informazioni, vedere [Tipo di connessione SQL Server Parallel Data Warehouse &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
-|Database Analysis Services sul server locale|`data source=localhost;initial catalog=Adventure Works DW`|Impostare il tipo di origine dati su `Microsoft SQL Server Analysis Services`. Per altre informazioni, vedere [Tipo di connessione Analysis Services per MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) e [Tipo di connessione di Analysis Services per DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
-|Database modello tabulare di Analysis Services con la prospettiva Sales|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|Impostare il tipo di origine dati su `Microsoft SQL Server Analysis Services`. Specificare il nome della prospettiva nell'impostazione cube=. Per altre informazioni, vedere [Perspectives &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
+|Database SQL Server sul server locale|`data source="(local)";initial catalog=AdventureWorks`|Impostare il tipo di origine dati `Microsoft SQL Server`. Per altre informazioni, vedere [Tipo di connessione SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md).|  
+|Database SQL Server sul server locale|`data source="(local)";initial catalog=AdventureWorks`|Impostare il tipo di origine dati `Microsoft SQL Server`.|  
+|Istanza di SQL Server<br /><br /> Database|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|Impostare il tipo di origine dati `Microsoft SQL Server`.|  
+|Database SQL Server Express|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|Impostare il tipo di origine dati `Microsoft SQL Server`.|  
+|[!INCLUDE[ssSDS](../includes/sssds-md.md)] nel cloud|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Impostare il tipo di origine dati `Windows Azure SQL Database`. Per altre informazioni, vedere [Tipo di connessione SQL Azure &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
+|SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Impostare il tipo di origine dati `Microsoft SQL Server Parallel Data Warehouse`. Per altre informazioni, vedere [Tipo di connessione SQL Server Parallel Data Warehouse &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
+|Database Analysis Services sul server locale|`data source=localhost;initial catalog=Adventure Works DW`|Impostare il tipo di origine dati `Microsoft SQL Server Analysis Services`. Per altre informazioni, vedere [Tipo di connessione Analysis Services per MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) e [Tipo di connessione di Analysis Services per DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
+|Database modello tabulare di Analysis Services con la prospettiva Sales|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|Impostare il tipo di origine dati `Microsoft SQL Server Analysis Services`. Specificare il nome della prospettiva nell'impostazione cube=. Per altre informazioni, vedere [Perspectives &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
 |Origine dati del modello di report su un server di report configurato in modalità nativa|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Specificare l'URL del server di report o della raccolta documenti e il percorso di un modello pubblicato nello spazio dei nomi della cartella del server di report o della raccolta documenti. Per altre informazioni, vedere [Connessione a un modello di report &#40;SSRS&#41;](report-data/report-model-connection-ssrs.md).|  
 |Origine dati del modello di report su un server di report configurato in modalità integrata SharePoint|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|Specificare l'URL del server di report o della raccolta documenti e il percorso di un modello pubblicato nello spazio dei nomi della cartella del server di report o della raccolta documenti.|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Impostare il tipo di origine dati su `OLE DB Provider for OLAP Services 8.0`.<br /><br /> È possibile ottenere una connessione più veloce alle origini dati [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] impostando la proprietà `ConnectTo` su `8.0`. Per impostare questa proprietà, usare la finestra di dialogo **Proprietà connessione** nella scheda **Proprietà avanzate** .|  
@@ -149,7 +149,7 @@ ms.locfileid: "36054723"
 |Origine dati XML, documento XML|`http://localhost/XML/Customers.xml`|Impostare il tipo di origine dati su `XML`. La stringa di connessione è un URL per il documento XML.|  
 |Origine dati XML, documento XML incorporato|*Vuoto*|Impostare il tipo di origine dati su `XML`. I dati XML vengono incorporati nella definizione del report.|  
   
- Se non è possibile connettersi a un server di report usando `localhost`, verificare che il protocollo di rete per il protocollo TCP/IP sia abilitato. Per altre informazioni, vedere [configurazione di protocolli Client](../database-engine/configure-windows/configure-client-protocols.md).  
+ Se non è possibile connettersi a un server di report usando `localhost`, verificare che il protocollo di rete per TCP/IP sia abilitato. Per altre informazioni, vedere [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md).  
   
  Per altre informazioni sulle configurazioni necessarie per connettersi a questi tipi di origini dati, vedere l'argomento specifico relativo alla connessione dati in [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) o [Origini dati supportate da Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -180,13 +180,13 @@ ms.locfileid: "36054723"
 -   Prima della pubblicazione del report, sostituire la stringa di connessione statica con un'espressione. Attendere di aver completato la progettazione del report prima di eseguire questa operazione. Dopo aver utilizzato un'espressione, non è possibile eseguire la query in Progettazione report. L'elenco dei campi del riquadro dei dati del report e l'elenco Parametri, inoltre, non verranno aggiornati automaticamente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Incorporate e condivise le connessioni dati o origini dati &#40;SSRS e Generatore Report&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Incorporate e condivise le connessioni dati o origini dati &#40;Report e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Gestire origini dati del Report](report-data/manage-report-data-sources.md)   
  [Finestra di dialogo Proprietà origine dati, credenziali](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)   
  [Finestra di dialogo Proprietà origine dati condivisa, credenziali](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
  [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Aggiungere e verificare una connessione dati o un'origine dati &#40;SSRS e Generatore Report&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
   

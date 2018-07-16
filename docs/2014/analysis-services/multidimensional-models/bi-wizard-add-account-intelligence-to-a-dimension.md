@@ -1,5 +1,5 @@
 ---
-title: Aggiungere funzionalità di Business Intelligence a una dimensione | Documenti Microsoft
+title: Aggiungere funzionalità di Business Intelligence a una dimensione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], Business Intelligence enhancements
 - Business Intelligence enhancements [Analysis Services], account intelligence
 - account intelligence [Analysis Services]
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7114a48bf24fcd7f22f68d83ecff8bf3873c3b4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80704cdf9df5481f1ec098ca29443e38fcf97bc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301181"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Aggiungere funzionalità di Business Intelligence per la contabilità a una dimensione
   È possibile aggiungere la funzionalità di Business Intelligence per la contabilità a un cubo o una dimensione per assegnare classificazioni standard, ad esempio entrate e uscite, ai membri di un attributo di tipo Conto. Questa funzionalità consente inoltre di identificare i tipi di conto, ad esempio Asset e Liability, e di assegnare l'aggregazione appropriata a ogni tipo di conto. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può usare le classificazioni per aggregare i conti nel tempo.  
@@ -54,7 +54,7 @@ ms.locfileid: "36063448"
     |**Liability**|`LastNonEmpty`|Importo di denaro o valore dei beni di cui si è debitori in un dato momento. Questo tipo di conto non cresce e quindi non viene aggregato in modo naturale nel tempo. Ad esempio, l'importo relativo all'anno è il valore dell'ultimo mese con i dati. Questo tipo di conto viene convertito da una valuta all'altra in base al tasso di fine periodo.|  
     |**Asset**|`LastNonEmpty`|Importo di denaro o valore dei beni di cui si è in possesso in un dato momento. Questo tipo di conto cresce e quindi non viene aggregato in modo naturale nel tempo. Ad esempio, l'importo relativo all'anno è il valore dell'ultimo mese con i dati. Questo tipo di conto viene convertito da una valuta all'altra in base al tasso di fine periodo.|  
     |**Balance**|`LastNonEmpty`|Conteggio risultante in un dato momento. Questo tipo di conto cresce, ma non viene aggregato in modo naturale nel tempo. Ad esempio, l'importo relativo all'anno è il valore dell'ultimo mese con i dati.|  
-    |**Flow**|`Sum`|Conteggio incrementale. Questo tipo di conto viene aggregato in base una `Sum` nel corso del tempo, ma non convertire con le regole di conversione di valuta.|  
+    |**Flow**|`Sum`|Conteggio incrementale. Consente di aggregare questo tipo di account come un `Sum` nel corso del tempo, ma non viene convertito in base alle regole di conversione di valuta.|  
     |**Expense**|`Sum`|Importo di denaro o valore dei beni speso. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo e viene convertito da una valuta all'altra in base a un tasso medio.|  
     |**Income**|`Sum`|Importo di denaro o valore dei beni ricevuto. Questo tipo di conto viene aggregato in base alla funzione `Sum` nel tempo e viene convertito da una valuta all'altra in base a un tasso medio.|  
   

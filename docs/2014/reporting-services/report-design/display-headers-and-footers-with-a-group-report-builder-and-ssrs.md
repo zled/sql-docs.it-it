@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b1870bc8fdff52294fa2430534a7aed0b0c96680
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6b8813ab6a1d623cf8578bb498ffa4435438c37c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36077740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315621"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Visualizzare intestazioni e piè di pagina con un gruppo (Generatore report e SSRS)
   È possibile stabilire se di una riga statica, ad esempio l'intestazione o il piè di pagina di un gruppo, viene eseguito il rendering con righe dinamiche associate a un gruppo in un'area dati Tablix.  
@@ -73,8 +73,8 @@ ms.locfileid: "36077740"
 5.  (Facoltativo) Visualizzare l'anteprima del report. Laddove possibile, il renderer del report mantiene il membro con i membri del gruppo di colonne specificati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le celle di area dati Tablix, le righe e colonne &#40;Generatore Report&#41; e SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [Aree dell'area dati Tablix &#40;SSRS e Generatore Report&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
+ [Celle di regione dati Tablix, le righe e colonne &#40;Generatore Report&#41; e SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Aree dell'area dati Tablix &#40;Report e SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabelle &#40;Generatore report e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

@@ -1,5 +1,5 @@
 ---
-title: Elemento ActionID (ASSL) | Documenti Microsoft
+title: Elemento ActionID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ActionID element
 ms.assetid: 2c9c66b2-a7ea-4874-a0ed-020ce3feab20
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 13e83d3a022416de56cba7bbf6693ea408b51562
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7405b3b6dd7f673b199509388d43164f47dd90eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304551"
 ---
 # <a name="actionid-element-assl"></a>Elemento ActionID (ASSL)
   Contiene il nome di un [azione](../objects/action-element-assl.md) elemento definito in un [cubo](../objects/cube-element-assl.md) elemento che viene reso disponibile in un [prospettiva](../objects/perspective-element-assl.md) elemento come un [PerspectiveAction](../data-type/action-data-type-assl.md) elemento.  
@@ -59,8 +59,8 @@ ms.locfileid: "36067274"
 |Elementi padre|[PerspectiveAction](../data-type/action-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `ActionID` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.PerspectiveAction>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `ActionID` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.PerspectiveAction>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento Actions &#40;ASSL&#41;](../collections/actions-element-assl.md)   

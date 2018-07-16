@@ -1,5 +1,5 @@
 ---
-title: Programmazione di Data Mining | Documenti Microsoft
+title: Programmazione di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,13 @@ ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 1ad8f0d8e066fde6f199af26c977b5a9ba3d8917
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: fce4bd16cdc64aeabb2367d757b0b68a5cab6144
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297371"
 ---
 # <a name="data-mining-programming"></a>Programmazione di data mining
   Se gli strumenti e i visualizzatori predefiniti disponibili in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non soddisfano i propri requisiti, è possibile estendere le funzionalità di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante la codifica di estensioni personalizzate. Questo approccio rende disponibili due opzioni:  
@@ -70,7 +70,7 @@ ms.locfileid: "36313289"
  Viene fornita un'introduzione a XML for Analysis (XMLA) e alle relative estensioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida per gli sviluppatori &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
- [Estensioni Data Mining &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Guida per sviluppatori &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

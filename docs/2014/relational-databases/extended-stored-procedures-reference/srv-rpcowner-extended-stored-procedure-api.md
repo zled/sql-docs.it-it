@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_rpcowner
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d03937c1b992f78e263a783035fce48012e01bbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0c8f633959116752457d5e5776aa963f3d1aa2a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310011"
 ---
 # <a name="srvrpcowner-extended-stored-procedure-api"></a>srv_rpcowner (API Stored procedure estesa)
     
@@ -63,7 +63,7 @@ len
 ## <a name="returns"></a>Valori di codice restituiti  
  Puntatore DBCHAR al componente proprietario con terminazione Null per la stored procedure remota corrente. Se non è presente alcuna stored procedure remota corrente, viene restituito NULL e *len* viene impostato su -1.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Questa funzione restituisce solo il componente proprietario della stored procedure remota. Non include gli identificatori facoltativi per il nome, il nome della stored procedure remota e il numero della stored procedure remota.  
   
 > [!IMPORTANT]  

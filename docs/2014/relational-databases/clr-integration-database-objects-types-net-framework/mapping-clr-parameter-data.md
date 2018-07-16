@@ -1,13 +1,11 @@
 ---
-title: Mapping tra i dati di parametro CLR | Documenti Microsoft
+title: Mapping dei dati dei parametri CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,52 +26,52 @@ helpviewer_keywords:
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 caps.latest.revision: 69
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a7c442f3bf102c668f0889f008b8a87205b2257
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 34d30e57908e8cd44eefa43d6f2d030ae0d102f7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169931"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354523"
 ---
 # <a name="mapping-clr-parameter-data"></a>Mapping dei dati dei parametri CLR
-  La tabella seguente elenca [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati, i rispettivi equivalenti in common language runtime (CLR) per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel `System.Data.SqlTypes` dello spazio dei nomi e gli equivalenti CLR nativi nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
+  La tabella seguente elenca [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati, i relativi equivalenti in common language runtime (CLR) per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel `System.Data.SqlTypes` dello spazio dei nomi e gli equivalenti CLR nativi nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 ||||  
 |-|-|-|  
 |**Tipo di dati di SQL Server**|Tipo (in System.Data.SqlTypes o Microsoft.SqlServer.Types)|**Tipo di dati CLR (.NET Framework)**|  
 |`bigint`|`SqlInt64`|**Int64, Nullable\<Int64 >**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`bit`|`SqlBoolean`|**Tipo booleano, che ammette valori null\<booleano >**|  
+|`bit`|`SqlBoolean`|**Booleano, che ammette valori null\<booleano >**|  
 |`char`|None|None|  
 |`cursor`|None|None|  
 |`date`|`SqlDateTime`|**Data/ora, che ammette valori null\<DateTime >**|  
 |`datetime`|`SqlDateTime`|**Data/ora, che ammette valori null\<DateTime >**|  
 |`datetime2`|None|**Data/ora, che ammette valori null\<DateTime >**|  
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset, Nullable\<DateTimeOffset >**|  
-|`decimal`|`SqlDecimal`|**Decimal, Nullable\<decimale >**|  
-|`float`|`SqlDouble`|**Double, ammette valori null\<Double >**|  
+|`decimal`|`SqlDecimal`|**Decimal, Nullable\<Decimal >**|  
+|`float`|`SqlDouble`|**Double, che ammette valori null\<Double >**|  
 |`geography`|`SqlGeography`<br /><br /> `SqlGeography` è definito in Microsoft.SqlServer.Types.dll, che viene installato con SQL Server e può essere scaricato dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack di](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
 |`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` è definito in Microsoft.SqlServer.Types.dll, che viene installato con SQL Server e può essere scaricato dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack di](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
 |`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` è definito in Microsoft.SqlServer.Types.dll, che viene installato con SQL Server e può essere scaricato dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack di](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
 |`image`|None|None|  
-|`int`|`SqlInt32`|**Int32, Nullable\<Int32 >**|  
-|`money`|`SqlMoney`|**Decimal, Nullable\<decimale >**|  
+|`int`|`SqlInt32`|**Int32, che ammette valori null\<Int32 >**|  
+|`money`|`SqlMoney`|**Decimal, Nullable\<Decimal >**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|None|None|  
-|`numeric`|`SqlDecimal`|**Decimal, Nullable\<decimale >**|  
+|`numeric`|`SqlDecimal`|**Decimal, Nullable\<Decimal >**|  
 |`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` rappresenta la soluzione migliore per il trasferimento dei dati e l'accesso ai dati, mentre `SQLString` è preferibile per l'esecuzione di operazioni di stringa.|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char [], Nullable\<char >**|  
-|`real`|`SqlSingle` (la gamma di `SqlSingle`, tuttavia, è maggiore di `real`)|**Singolo, ammette valori null\<singolo >**|  
+|`real`|`SqlSingle` (la gamma di `SqlSingle`, tuttavia, è maggiore di `real`)|**Singolo, ammette valori null\<Single >**|  
 |`rowversion`|None|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16, Nullable\<Int16 >**|  
-|`smallmoney`|`SqlMoney`|**Decimal, Nullable\<decimale >**|  
+|`smallmoney`|`SqlMoney`|**Decimal, Nullable\<Decimal >**|  
 |`sql_variant`|None|`Object`|  
 |`table`|None|None|  
 |`text`|None|None|  
-|`time`|None|**Oggetto TimeSpan, Nullable\<TimeSpan >**|  
+|`time`|None|**Intervallo di tempo, che ammette valori null\<TimeSpan >**|  
 |`timestamp`|None|None|  
 |`tinyint`|`SqlByte`|**Byte, che ammette valori null\<Byte >**|  
 |`uniqueidentifier`|`SqlGuid`|**GUID, che ammette valori null\<Guid >**|  

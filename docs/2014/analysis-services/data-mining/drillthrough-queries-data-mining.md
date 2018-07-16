@@ -1,5 +1,5 @@
 ---
-title: Query drill-through (Data Mining) | Documenti Microsoft
+title: Query drill-through (Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - AllowDrillThrough property
 - drillthrough [Analysis Services]
 - drillthrough [DMX]
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d80fcb2f1d8f8e735c3bd930ff43dc9a519ef5cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f49320313875576cad06168564344e4837ce03b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291667"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Query drill-through (Data mining)
   Una *query drill-through* consente di recuperare i dettagli dei case o dei dati della struttura sottostanti mediante l'invio di una query al modello di data mining. Il drill-through è utile se si desidera confrontare i case utilizzati per il training del modello con quelli utilizzati per il test del modello oppure se si desidera visualizzare ulteriori dettagli dei dati dei case.  
@@ -68,12 +68,12 @@ ms.locfileid: "36055596"
   
 -   È possibile aggiungere la capacità di eseguire il drill-through in un modello di data mining esistente, ma in tal caso il modello deve essere rielaborato prima che sia possibile eseguire il drill-through nei dati.  
   
--   Il drill-through consiste nel recupero delle informazioni sui case di training memorizzati nella cache durante l'elaborazione della struttura di data mining. Pertanto, se i dati memorizzati nella cache sono stati cancellati dopo l'elaborazione della struttura impostando la proprietà <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> su `ClearAfterProcessing`, il drill-through non funzionerà. Per abilitare il drill-through alle colonne della struttura, è necessario modificare il <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> proprietà `KeepTrainingCases` e quindi rielaborare la struttura.  
+-   Il drill-through consiste nel recupero delle informazioni sui case di training memorizzati nella cache durante l'elaborazione della struttura di data mining. Pertanto, se i dati memorizzati nella cache sono stati cancellati dopo l'elaborazione della struttura impostando la proprietà <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> su `ClearAfterProcessing`, il drill-through non funzionerà. Per abilitare il drill-through alle colonne della struttura, è necessario modificare il <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> proprietà `KeepTrainingCases` e rielaborare la struttura.  
   
 -   Se la struttura di data mining non consente il drill-through, mentre il modello di data mining lo consente, è possibile visualizzare solo le informazioni dai case del modello e non dalla struttura di data mining.  
   
 ###  <a name="bkmk_Security"></a> Problemi di sicurezza correlati al drill-through  
- Se si desidera eseguire il drill-through nei case della struttura dal modello, è necessario verificare che la struttura di data mining sia il modello di data mining è presente il [AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md) impostata su `True`. È inoltre necessario essere membro di un ruolo che disponga delle autorizzazioni di drill-through sia per la struttura sia per il modello. Per altre informazioni sulla creazione di ruoli, vedere [Progettazione ruoli &#40;Analysis Services - Dati multidimensionali&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). .  
+ Se si desidera il drill-through nei case della struttura dal modello, è necessario verificare che la struttura di data mining sia nel modello di data mining di [AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md) impostata su `True`. È inoltre necessario essere membro di un ruolo che disponga delle autorizzazioni di drill-through sia per la struttura sia per il modello. Per altre informazioni sulla creazione di ruoli, vedere [Progettazione ruoli &#40;Analysis Services - Dati multidimensionali&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). .  
   
  Le autorizzazioni di drill-through vengono impostate separatamente per la struttura e per il modello. L'autorizzazione del modello consente di eseguire il drill-through dal modello, anche se non si dispone di autorizzazioni sulla struttura. Le autorizzazioni di drill-through per la struttura consentono di includere colonne della struttura nelle query di drill-through dal modello usando la funzione [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx).  
   
@@ -104,6 +104,6 @@ ms.locfileid: "36055596"
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzatori modello di Data Mining](data-mining-model-viewers.md)   
- [Query di Data Mining](data-mining-queries.md)  
+ [Query di data mining](data-mining-queries.md)  
   
   

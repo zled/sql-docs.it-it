@@ -1,5 +1,5 @@
 ---
-title: Configurare Gestione Report (modalità nativa) | Documenti Microsoft
+title: Configurare Gestione Report (modalità nativa) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7af188d6f1adf097de20bf08ef8343c9e075c073
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9156e229188621fb6c5524f1b6bf9e25c72570c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299761"
 ---
 # <a name="configure-report-manager-native-mode"></a>Configurare Gestione report (modalità nativa)
   Gestione report è un'applicazione front-end Web utilizzata per visualizzare report, gestire il contenuto del server di report e concedere l'accesso utente a un server di report in modalità nativa. Gestione report viene installato con il servizio Web ReportServer all'interno della stessa istanza del server di report e facoltativamente configurato se si seleziona l'opzione **Installa la configurazione predefinita della modalità nativa** del programma di installazione. Può essere configurato anche come attività di post-installazione. In questo argomento vengono fornite informazioni sui seguenti scenari di configurazione di Gestione report:  
@@ -90,7 +90,7 @@ ms.locfileid: "36066910"
   
 4.  Salvare le modifiche, quindi chiudere il file.  
   
- Per ulteriori informazioni sul file di configurazione, vedere [modificare un File di configurazione di Reporting Services &#40;RSReportServer. config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md) e [File di configurazione RSReportServer](rsreportserver-config-configuration-file.md).  
+ Per altre informazioni sul file di configurazione, vedere [modificare un File di configurazione di Reporting Services &#40;RSReportServer. config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md) e [RSReportServer Configuration File](rsreportserver-config-configuration-file.md).  
   
 ##  <a name="ConfigureRemoteRS"></a> Configurare Gestione report per l'utilizzo di un server di report remoto  
  Per le configurazioni di distribuzione in cui Gestione report e il server di report si trovano in computer diversi, è necessario disporre di due installazioni distinte di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Gestione report è incorporato nel servizio del server di report e non può essere installato separatamente. Se si desidera eseguire Gestione report in un computer diverso all'interno di un proprio processo, è necessario installare un secondo server di report. Entrambe le istanze del server devono essere server di report di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
@@ -117,7 +117,7 @@ ms.locfileid: "36066910"
   
 4.  Nel computer di Gestione report modificare le impostazioni di configurazione in RSReportServer.config in modo da puntare all'istanza del server di report remoto. All'avvio, Gestione report leggerà il file di configurazione per ottenere l'URL del server di report:  
   
-    1.  Aprire RSReportServer.config in un editor di testo. Per impostazione predefinita, si trova in \Programmi\Microsoft SQL Server\MSRS11. \< *NomeIstanza*> Services\ReportServer.  
+    1.  Aprire RSReportServer.config in un editor di testo. Per impostazione predefinita, si trova in \Programmi\Microsoft SQL Server\MSRS11. \< *instancename*> Services\ReportServer..  
   
     2.  Trovare `ReportServerURL`.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "36066910"
   
     -   Nel computer di gestione Report, disabilitare `WebServiceAndHTTPAccessEnabled` e `ScheduleEventsAndReportDeliveryEnabled`.  
   
-    -   Nel computer del Server di Report, disattivare `ReportManagerEnabled`.  
+    -   Nel computer del Server di Report, disabilitare `ReportManagerEnabled`.  
   
  Per altre informazioni sulla disabilitazione delle funzionalità, vedere [Abilitare o disabilitare le funzionalità di Reporting Services](turn-reporting-services-features-on-or-off.md).  
   
@@ -164,7 +164,7 @@ ms.locfileid: "36066910"
   
 #### <a name="to-turn-off-report-manager"></a>Per disattivare Gestione report  
   
-1.  Aprire il file RSReportServer.config in un editor di testo. Per impostazione predefinita, si trova in \Programmi\Microsoft SQL Server\MSRS11. \< *NomeIstanza*> Services\ReportServer.  
+1.  Aprire il file RSReportServer.config in un editor di testo. Per impostazione predefinita, si trova in \Programmi\Microsoft SQL Server\MSRS11. \< *instancename*> Services\ReportServer..  
   
 2.  Individuare **IsReportManagerEnabled**.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB connection manager
 - data sources [Integration Services], connections
@@ -18,13 +18,13 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c6d2fd657b3fa7cd91f00f98242aed0e959dd5e9
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 11b88bd8144651abfed39fb5b68316abc23f09a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295141"
 ---
 # <a name="ole-db-connection-manager"></a>gestione connessione OLE DB
   Una gestione connessione OLE DB consente la connessione di un pacchetto a un'origine dati tramite un provider OLE DB. In una gestione connessione OLE DB tramite che si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio, è possibile usare il provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,9 +36,9 @@ ms.locfileid: "36324605"
   
  La gestione connessione OLE DB viene inoltre utilizzata per accedere alle origini dei dati OLE DB nelle attività personalizzate scritte in codice non gestito che utilizza un linguaggio quale C++.  
   
- Quando si aggiunge una gestione connessione OLE DB a un pacchetto, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una connessione di gestione che verrà risolta in una connessione OLE DB in fase di esecuzione, imposta le proprietà di gestione connessione e aggiunge la gestione connessione per il `Connections` insieme il pacchetto.  
+ Quando si aggiunge una gestione connessione OLE DB a un pacchetto, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una connessione di gestione che verrà risolta in una connessione OLE DB in fase di esecuzione, imposta le proprietà di gestione connessione e aggiunge la gestione connessione per il `Connections` raccolta di pacchetto.  
   
- Il `ConnectionManagerType` proprietà della gestione connessione è impostata su `OLEDB`.  
+ Il `ConnectionManagerType` della gestione connessione viene impostata su `OLEDB`.  
   
  Per configurare la gestione connessione OLE DB, procedere nel modo seguente:  
   
@@ -66,6 +66,6 @@ ms.locfileid: "36324605"
  [Origine OLE DB](../data-flow/ole-db-source.md)   
  [Destinazione OLE DB](../data-flow/ole-db-destination.md)   
  [Attività Esegui SQL](../control-flow/execute-sql-task.md)   
- [Servizi di integrazione &#40;SSIS&#41; le connessioni](integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; le connessioni](integration-services-ssis-connections.md)  
   
   

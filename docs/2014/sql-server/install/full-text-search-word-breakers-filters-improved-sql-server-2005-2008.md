@@ -1,5 +1,5 @@
 ---
-title: Ricerca full-Text word breaker e filtri notevolmente migliorato in SQL Server 2005 e SQL Server 2008 | Documenti Microsoft
+title: Ricerca full-Text word breaker e filtri notevolmente migliorato in SQL Server 2005 e SQL Server 2008 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [Full-Text Search]
 - word breakers [Full-Text Search]
 ms.assetid: 8d06bda9-0bbf-4baa-b270-07b1c1f640eb
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d993c20ccd1af008f032b019c40bf673802d2f79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6a28f0ba9c29be0366b34626fd1c28a7f98c404f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315571"
 ---
 # <a name="full-text-search-word-breakers-and-filters-significantly-improved-in-sql-server-2005-and-sql-server-2008"></a>I word breaker e i filtri per la ricerca full-text sono stati migliorati in modo significativo in SQL Server 2005 e SQL Server 2008
   I word breaker e i filtri sono stati modificati in modo significativo. Sono stati apportati ulteriori miglioramenti ai word breaker, tra cui una maggiore affidabilità e copertura delle lingue.  
@@ -33,6 +33,6 @@ ms.locfileid: "36067319"
  Per informazioni sui word breaker, vedere [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [Uso di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

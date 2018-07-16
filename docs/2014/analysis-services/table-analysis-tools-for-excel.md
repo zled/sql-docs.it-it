@@ -1,5 +1,5 @@
 ---
-title: Strumenti di analisi tabelle per Excel | Documenti Microsoft
+title: Strumenti di analisi tabelle per Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - getting started
 ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2614553a97cb44e1a326de1a1d37bafdd9bd42db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dde976376aa356a0b349e769821b0137eb0be29c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312341"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Strumenti di analisi tabelle per Excel
-  Strumenti di data mining nel **Analizza** sulla barra degli strumenti sono il modo più semplice per iniziare con il data mining. Ogni strumento analizza automaticamente la distribuzione e il tipo di dati e imposta i parametri per garantire la validità dei risultati. Non è necessario selezionare un algoritmo o configurare parametri complessi.  
+  Strumenti di data mining nel **Analyze** barra degli strumenti sono il modo più semplice per iniziare a usare il data mining. Ogni strumento analizza automaticamente la distribuzione e il tipo di dati e imposta i parametri per garantire la validità dei risultati. Non è necessario selezionare un algoritmo o configurare parametri complessi.  
   
  ![DM](media/dm-tabletoolsanalyze.gif "DM")  
   
- Il **Analizza** della barra multifunzione include gli strumenti seguenti:  
+ Il **Analyze** della barra multifunzione include gli strumenti seguenti:  
   
  [Analizza fattori di influenza chiave &#40;strumenti di analisi tabelle per Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
  Scegliere un valore della colonna o di output di interesse per consentire all'algoritmo di analizzare tutti i dati di input per identificare i fattori che influiscono maggiormente sulla destinazione. Facoltativamente, è possibile creare un report che confronta due valori qualsiasi in modo da poter visualizzare i cambiamenti dei fattori di influenza.  
@@ -46,7 +46,7 @@ ms.locfileid: "36067470"
   
  Il **Estendi da esempio** strumento utilizza l'algoritmo Microsoft Logistic Regression.  
   
- [Previsione &#40;strumenti di analisi tabelle per Excel&#41;](forecast-table-analysis-tools-for-excel.md)  
+ [Prevedere la &#40;strumenti di analisi tabelle per Excel&#41;](forecast-table-analysis-tools-for-excel.md)  
  Questo strumento utilizza dati che cambiano nel tempo ed esegue una stima dei valori futuri.  
   
  Il **previsione** strumento utilizza l'algoritmo Microsoft Time Series.  
@@ -83,11 +83,11 @@ ms.locfileid: "36067470"
   
  Per utilizzare i dati con Strumenti di analisi tabelle, è necessario convertire l'intervallo di dati che si desidera utilizzare in tabelle di Excel.  
   
- Se non è possibile visualizzare il **Analizza** sulla barra multifunzione, provare innanzitutto facendo clic all'interno di una tabella di dati. Il menu viene attivato solo dopo la selezione di una tabella di dati.  
+ Se non è possibile visualizzare il **Analyze** sulla barra multifunzione, provare a fare innanzitutto clic all'interno di una tabella di dati. Il menu viene attivato solo dopo la selezione di una tabella di dati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Client di Data Mining per Excel &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)   
  [Risoluzione dei problemi di diagrammi di Visio Data Mining &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)   
- [Cosa è incluso nei dati di componenti aggiuntivi Data Mining per Office](what-s-included-in-the-data-mining-add-ins-for-office.md)  
+ [Elementi inclusi nei componenti aggiuntivi Data mining per Office](what-s-included-in-the-data-mining-add-ins-for-office.md)  
   
   

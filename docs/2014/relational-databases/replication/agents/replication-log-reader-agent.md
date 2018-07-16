@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Log Reader Agent, executables
 - Log Reader Agent, parameter reference
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8bef914f1fd6a2cd4dff784808e5334d3871d81c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ff0ad36402857082e069a322e4519d64b13f7e65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215341"
 ---
 # <a name="replication-log-reader-agent"></a>Agente lettura log repliche
   Agente lettura log repliche è un eseguibile che consente di monitorare il log delle transazioni di tutti i database configurati per la replica transazionale e di copiare le transazioni contrassegnate per la replica dal log delle transazioni al database di distribuzione.  
@@ -188,7 +188,7 @@ ms.locfileid: "36064231"
  **-RecoverFromDataErrors**  
  Specifica che l'esecuzione dell'agente di lettura continua anche nel caso in cui vengano rilevati errori nei dati di colonna pubblicati da un server di pubblicazione non SQL Server. Per impostazione predefinita, tali errori comportano l'interruzione dell'agente di lettura log. Quando si utilizza **-RecoverFromDataErrors**, i dati di colonna erronei vengono replicati come NULL o come valore non Null appropriato e i messaggi di avviso vengono registrati nella tabella [MSlogreader_history](/sql/relational-databases/system-tables/mslogreader-history-transact-sql) . Questo parametro è supportato solo per i server di pubblicazione Oracle.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 > [!IMPORTANT]  
 >  Se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è stato installato per l'esecuzione con un account di sistema locale anziché un account utente di dominio (impostazione predefinita), il servizio può accedere solo al computer locale. Se l'agente di lettura log in esecuzione in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è configurato per l'utilizzo della modalità di autenticazione di Windows durante l'accesso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'agente di lettura log si interrompe. L'impostazione predefinita prevede l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per informazioni sulla modifica degli account di sicurezza, vedere [View and Modify Replication Security Settings](../security/view-and-modify-replication-security-settings.md).  

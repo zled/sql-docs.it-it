@@ -1,13 +1,11 @@
 ---
-title: Funzioni a valori scalari CLR | Documenti Microsoft
+title: Le funzioni a valori scalari CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -19,21 +17,21 @@ helpviewer_keywords:
 - scalar-valued functions
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 caps.latest.revision: 81
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93c56555b0a11e2638f58019f6214c8c6971760c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 5dee7f6654bdf4e24eb170b968dd8afa366e8211
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171240"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350933"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funzioni a valori scalari CLR
   Una funzione a valori scalari restituisce un valore singolo, come una stringa un Integer o un valore di bit. È possibile creare funzioni a valori scalari definite dall'utente nel codice gestito utilizzando qualsiasi linguaggio di programmazione di .NET Framework. Queste funzioni sono accessibili a [!INCLUDE[tsql](../../includes/tsql-md.md)] o ad altro codice gestito. Per informazioni sui vantaggi dell'integrazione con CLR e sulla scelta tra codice gestito e [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [panoramica dell'integrazione con CLR](../clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Requisiti per le funzioni a valori scalari CLR  
- Le funzioni a valori scalari di .NET Framework vengono implementate come metodi in una classe di un assembly .NET Framework. I parametri di input e il tipo restituito da un file SVF può essere uno dei tipi di dati scalari supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tranne `varchar`, `char`, `rowversion`, `text`, `ntext`, `image`, `timestamp`, `table`, o `cursor`. Le funzioni a valori scalari devono assicurare una corrispondenza tra il tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il tipo dati restituito del metodo di implementazione. Per ulteriori informazioni sulle conversioni dei tipi, vedere [Mapping dei dati di parametro CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Le funzioni a valori scalari di .NET Framework vengono implementate come metodi in una classe di un assembly .NET Framework. I parametri di input e il tipo restituito da un file SVF può essere uno dei tipi di dati scalari supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tranne `varchar`, `char`, `rowversion`, `text`, `ntext`, `image`, `timestamp`, `table`, o `cursor`. Le funzioni a valori scalari devono assicurare una corrispondenza tra il tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il tipo dati restituito del metodo di implementazione. Per altre informazioni sulle conversioni dei tipi, vedere [Mapping dei dati dei parametri CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
  In caso di implementazione di una funzione a valore scalare di .NET Framework in un linguaggio di .NET Framework, è possibile specificare l'attributo personalizzato `SqlFunction` per includere informazioni aggiuntive sulla funzione. L'attributo `SqlFunction` indica se la funzione accede ai dati o li modifica, se è deterministica e se comporta operazioni a virgola mobile.  
   
@@ -43,7 +41,7 @@ ms.locfileid: "36171240"
 >  Non contrassegnare una funzione come deterministica se non produce sempre gli stessi valori di output, dati gli stessi valori di input e lo stesso stato del database. Una funzione non propriamente deterministica ma contrassegnata come tale può causare danni a viste indicizzate e colonne calcolate. Per contrassegnare una funzione come deterministica, impostare la proprietà `IsDeterministic` su true.  
   
 ### <a name="table-valued-parameters"></a>Parametri con valori di tabella  
- I parametri con valori di tabella, ovvero tipi di tabella definiti dall'utente passati in una procedura o in una funzione, consentono di passare in modo efficiente più righe di dati al server. Pur essendo caratterizzati da funzionalità simili alle matrici di parametri, i parametri con valori di tabella offrono più flessibilità e una maggiore integrazione con [!INCLUDE[tsql](../../includes/tsql-md.md)] Consentono inoltre di ottenere prestazioni potenzialmente migliori. I parametri con valori di tabella consentono inoltre di ridurre il numero di round trip al server. Anziché inviare più richieste al server, ad esempio con un elenco di parametri scalari, è possibile inviare i dati al server sotto forma di parametro con valori di tabella. Un tipo di tabella definito dall'utente non può essere passato come parametro con valori di tabella a una stored procedure gestita o a una funzione in esecuzione nel processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], né può essere restituito dalle stesse. Per ulteriori informazioni su TVP, vedere [utilizzare parametri &#40;motore di Database&#41;](../tables/use-table-valued-parameters-database-engine.md).  
+ I parametri con valori di tabella, ovvero tipi di tabella definiti dall'utente passati in una procedura o in una funzione, consentono di passare in modo efficiente più righe di dati al server. Pur essendo caratterizzati da funzionalità simili alle matrici di parametri, i parametri con valori di tabella offrono più flessibilità e una maggiore integrazione con [!INCLUDE[tsql](../../includes/tsql-md.md)] Consentono inoltre di ottenere prestazioni potenzialmente migliori. I parametri con valori di tabella consentono inoltre di ridurre il numero di round trip al server. Anziché inviare più richieste al server, ad esempio con un elenco di parametri scalari, è possibile inviare i dati al server sotto forma di parametro con valori di tabella. Un tipo di tabella definito dall'utente non può essere passato come parametro con valori di tabella a una stored procedure gestita o a una funzione in esecuzione nel processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], né può essere restituito dalle stesse. Per altre informazioni sulle TVP, vedere [usare parametri &#40;motore di Database&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="example-of-a-clr-scalar-valued-function"></a>Esempio di una funzione a valori scalari CLR  
  Di seguito è riportata una semplice funzione a valori scalari che accede ai dati e restituisce un valore integer:  
@@ -156,8 +154,8 @@ GO
  Si noti che il nome della funzione esposto in [!INCLUDE[tsql](../../includes/tsql-md.md)] non dovere corrispondere al nome del metodo statico pubblico di destinazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Mapping tra i dati di parametro CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
- [Panoramica di attributi personalizzati di integrazione con CLR](../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)   
+ [Mapping dei dati dei parametri CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
+ [Panoramica degli attributi personalizzati di integrazione CLR](../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)   
  [Funzioni definite dall'utente](../user-defined-functions/user-defined-functions.md)   
  [Accesso ai dati da oggetti di database CLR](../clr-integration/data-access/data-access-from-clr-database-objects.md)  
   

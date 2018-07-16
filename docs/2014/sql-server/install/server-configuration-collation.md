@@ -1,5 +1,5 @@
 ---
-title: Configurazione server - regole di confronto | Documenti Microsoft
+title: Configurazione server - regole di confronto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collation configuration, SQL Server
 - collation configuration, Setup
 - collation configuration
 ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ee24c8f9234069526780db72457e178d50d5c824
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: abd57940e3caf8af66cb58fdeceebc802e877f6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290177"
 ---
 # <a name="server-configuration---collation"></a>Configurazione del server - Regole di confronto
   Nella pagina Configurazione del server - Regole di confronto dell'Istallazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile modificare le impostazioni per le regole di confronto utilizzate dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] e da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per scopi di ordinamento. Scegliere l'opzione che corrisponde alle impostazioni per le regole di confronto di installazioni diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o di un altro computer.  
   
 ## <a name="options"></a>Opzioni  
  Personalizza per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili due gruppi di regole di confronto: le regole di confronto di Windows e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le regole di confronto. È possibile specificare impostazioni distinte per le regole di confronto per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]oppure le stesse regole di confronto per entrambi i servizi.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include due gruppi di regole di confronto: le regole di confronto di Windows e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le regole di confronto. È possibile specificare impostazioni distinte per le regole di confronto per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]oppure le stesse regole di confronto per entrambi i servizi.  
   
  Per impostazione predefinita, vengono selezionate regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le impostazioni locali di sistema della lingua inglese. Le regole di confronto predefinite per le versioni localizzate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono determinate dalle impostazioni locali di sistema di Windows per il computer in uso.  
   

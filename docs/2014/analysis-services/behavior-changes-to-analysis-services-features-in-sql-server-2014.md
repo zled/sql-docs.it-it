@@ -1,5 +1,5 @@
 ---
-title: Modifiche del comportamento di Analysis Services Features in SQL Server 2014 | Documenti Microsoft
+title: Differenze di funzionamento di Analysis Services Features in SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 51e0c23301c21cfb86ace1cf99e8aacef4b77fce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 87ec5b84d5d74bae3be3c05dfcafd3a609780f82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289877"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>Differenze di funzionamento delle funzionalità di Analysis Services in SQL Server 2014
-  In questo argomento vengono illustrate le modifiche nel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per multidimensionali, tabulari, di data mining, e [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] le distribuzioni. Tali modifiche influiscono sulle modalità di utilizzo o di interazione delle funzionalità nella versione corrente rispetto alle versioni precedenti di SQL Server.  
+  In questo argomento descrive le modifiche di comportamento in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per il mining dei dati multidimensionale, tabulare, e [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] distribuzioni. Tali modifiche influiscono sulle modalità di utilizzo o di interazione delle funzionalità nella versione corrente rispetto alle versioni precedenti di SQL Server.  
   
 > [!NOTE]  
->  Al contrario, una modifica sostanziale che impedisce a un modello di dati o di un'applicazione integrata con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esecuzione. Per altre informazioni, vedere [Breaking Changes to Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
+>  Al contrario, una modifica sostanziale che impedisce a un modello di dati o applicazione integrata con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dall'esecuzione. Per altre informazioni, vedere [Breaking Changes to Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
   
  Contenuto dell'argomento:  
   
@@ -36,23 +36,23 @@ ms.locfileid: "36156117"
 -   [Modifiche del comportamento in SQL Server 2012](#bkmk_sql2012)  
   
 ##  <a name="bkmk_sql2014"></a> Modifiche del comportamento in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
- Non sono presenti nuove modifiche di comportamento annunciate per tabulari, multidimensionali, di data mining, o [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] caratteristiche in questa versione.  Tuttavia, poiché [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] è analoga a quella di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] versioni, le modifiche di comportamento da entrambe le versioni precedenti sono elencate qui per praticità, nel caso effettui l'aggiornamento da [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
+ Non sono presenti nuove modifiche di comportamento annunciate per il mining dei dati tabulari, multidimensionali, o [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] caratteristiche in questa versione.  Tuttavia, poiché [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] è analoga a quella il [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] le versioni, le modifiche di comportamento da entrambe le versioni precedenti vengono fornite qui per praticità nel caso in cui si sta aggiornando da [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
 ##  <a name="bkmk_sql2012sp1"></a> Modifiche del comportamento in [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
- Questa sezione sono illustrate le modifiche del comportamento riportate per [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] features in [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Queste modifiche si applicano anche a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ Questa sezione vengono illustrate le modifiche del comportamento riportate per [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] le funzionalità disponibili in [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Queste modifiche si applicano anche a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 |Problema|Description|  
 |-----------|-----------------|  
-|Tramite le cartelle di lavoro di SQL Server 2008 R2 PowerPivot non verranno aggiornati in modo automatico i modelli quando vengono utilizzati in SQL Server 2012 SP1 PowerPivot per SharePoint 2013. Pertanto, gli aggiornamenti dati pianificati non funzioneranno per le cartelle di lavoro di SQL Server 2008 R2 PowerPivot.|Le cartelle di lavoro 2008 R2 verrà aperto in [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)], tuttavia gli aggiornamenti pianificati non funzioneranno. Se si esamina la cronologia degli aggiornamenti, verrà visualizzato un messaggio di errore simile al seguente:<br /> "La cartella di lavoro contiene un modello PowerPivot non supportato. Il modello PowerPivot nella cartella di lavoro è nel formato di SQL Server 2008 R2 PowerPivot per Excel 2010. Sono supportati i modelli PowerPivot seguenti: <br />SQL Server 2012 PowerPivot per Excel 2010<br />SQL Server 2012 PowerPivot per Excel 2013"<br /><br /> **Modalità di aggiornamento di una cartella di lavoro:** gli aggiornamenti pianificati non funzioneranno finché la cartella di lavoro non viene aggiornata alla relativa versione 2012. Per aggiornare la cartella di lavoro e il modello in essa contenuto, completare una delle operazioni seguenti:<br /><br /> Scaricare e aprire la cartella di lavoro in Microsoft Excel 2010 con il componente aggiuntivo SQL Server 2012 PowerPivot per Excel installato. Successivamente, salvare la cartella di lavoro e ripubblicarla nel server SharePoint.<br /><br /> Scaricare e aprire la cartella di lavoro in Microsoft Excel 2013. Successivamente, salvare la cartella di lavoro e ripubblicarla nel server SharePoint.<br /><br /> <br /><br /> Per ulteriori informazioni sull'aggiornamento di cartella di lavoro, vedere [aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).|  
-|Modifica del comportamento in DAX [funzione ALL](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).|Nelle versioni precedenti a [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], se è specificare una colonna [Date] in contrassegna come tabella data per l'utilizzo in business intelligence e di colonna [Date] viene passata come argomento alla funzione ALL, a loro volta, passato come un filtro a una funzione CALCULATE, tutti i filtri per tutte le colonne nella tabella vengono ignorate, indipendentemente da qualsiasi filtro dei dati sulla colonna delle date.<br /><br /> Ad esempio,<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> Nelle versioni precedenti a [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], tutti i filtri vengono ignorati per tutte le colonne datetable, indipendentemente dalla colonna [Date] passata come argomento alla funzione ALL.<br /><br /> In [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] e in PowerPivot in Excel 2013, il comportamento ignorerà i filtri solo per la colonna specifica passata come argomento alla funzione ALL.<br /><br /> Come alternativa al nuovo comportamento e ignorare tutte le colonne come filtro per l'intera tabella, è possibile escludere la colonna [Date] dall'argomento, ad esempio:<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> Ciò produce lo stesso risultato del comportamento precedente a [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)].|  
+|Tramite le cartelle di lavoro di SQL Server 2008 R2 PowerPivot non verranno aggiornati in modo automatico i modelli quando vengono utilizzati in SQL Server 2012 SP1 PowerPivot per SharePoint 2013. Pertanto, gli aggiornamenti dati pianificati non funzioneranno per le cartelle di lavoro di SQL Server 2008 R2 PowerPivot.|Le cartelle di lavoro 2008 R2 verrà aperto in [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)], tuttavia gli aggiornamenti pianificati non funzioneranno. Se si esamina la cronologia degli aggiornamenti, verrà visualizzato un messaggio di errore simile al seguente:<br /> "La cartella di lavoro contiene un modello PowerPivot non supportato. Il modello PowerPivot nella cartella di lavoro è nel formato di SQL Server 2008 R2 PowerPivot per Excel 2010. Sono supportati i modelli PowerPivot seguenti: <br />SQL Server 2012 PowerPivot per Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013"<br /><br /> **Modalità di aggiornamento di una cartella di lavoro:** gli aggiornamenti pianificati non funzioneranno finché la cartella di lavoro non viene aggiornata alla relativa versione 2012. Per aggiornare la cartella di lavoro e il modello in essa contenuto, completare una delle operazioni seguenti:<br /><br /> Scaricare e aprire la cartella di lavoro in Microsoft Excel 2010 con il componente aggiuntivo SQL Server 2012 PowerPivot per Excel installato. Successivamente, salvare la cartella di lavoro e ripubblicarla nel server SharePoint.<br /><br /> Scaricare e aprire la cartella di lavoro in Microsoft Excel 2013. Successivamente, salvare la cartella di lavoro e ripubblicarla nel server SharePoint.<br /><br /> <br /><br /> Per altre informazioni sull'aggiornamento della cartella di lavoro, vedere [cartelle di lavoro di eseguire l'aggiornamento e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).|  
+|Modifica del comportamento in DAX [funzione ALL](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).|Nelle versioni precedenti a [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], se è specificare una colonna [Date] in contrassegna come tabella data per l'utilizzo in business intelligence e la colonna [Date] viene passata come argomento alla funzione ALL, a sua volta, passato come un filtro a una funzione CALCULATE, tutti i filtri per tutte le colonne della tabella vengono ignorati, indipendentemente dal fatto di qualsiasi filtro dei dati nella colonna relativa alla data.<br /><br /> Ad esempio,<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> Nelle versioni precedenti a [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], tutti i filtri vengono ignorati per tutte le colonne datetable, indipendentemente dalla colonna [Date] passata come argomento a tutti.<br /><br /> In [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] e in PowerPivot in Excel 2013, il comportamento verrà ignorati solo per la colonna specificata come argomento passato a tutti i filtri.<br /><br /> Come alternativa al nuovo comportamento e ignorare tutte le colonne come filtro per l'intera tabella, è possibile escludere la colonna [Date] dall'argomento, ad esempio:<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> Ciò produce lo stesso risultato del comportamento precedente a [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)].|  
   
 ##  <a name="bkmk_sql2012"></a> Modifiche del comportamento in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
- Questa sezione sono illustrate le modifiche del comportamento riportate per [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] features in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Queste modifiche si applicano anche a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ Questa sezione vengono illustrate le modifiche del comportamento riportate per [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] le funzionalità disponibili in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Queste modifiche si applicano anche a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ### <a name="analysis-services-multidimensional-mode"></a>Analysis Services, modalità multidimensionale  
   
 #### <a name="nullprocessing-option-set-to-preserve-is-no-longer-supported-for-distinct-count-measures"></a>L'opzione NullProcessing impostata su Preserve non è più supportata per le misure Distinct Count  
- Nelle versioni precedenti a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è possibile impostare [elemento NullProcessing &#40;ASSL&#41; ](scripting/properties/nullprocessing-element-assl.md) al `Preserve` per le misure distinct count.  Purtroppo questa impostazione produce spesso risultati non validi e a volte causa addirittura l'arresto anomalo del processo di elaborazione. Di conseguenza, questa configurazione non è più valida in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Il tentativo di usarla causerà la visualizzazione dell'errore di convalida seguente: "Errori nella gestione metadati. Preserve non è un valore NullProcessing valido per il \<measurename > misura distinct count. "  
+ Nelle versioni precedenti a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è possibile impostare [elemento NullProcessing &#40;ASSL&#41; ](scripting/properties/nullprocessing-element-assl.md) al `Preserve` per le misure distinct count.  Purtroppo questa impostazione produce spesso risultati non validi e a volte causa addirittura l'arresto anomalo del processo di elaborazione. Di conseguenza, questa configurazione non è più valida in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Il tentativo di usarla causerà la visualizzazione dell'errore di convalida seguente: "Errori nella gestione metadati. Preserve non è un valore valido di NullProcessing per la \<measurename > misura distinct count. "  
   
 #### <a name="cube-browser-in-management-studio-and-cube-designer-has-been-removed"></a>Visualizzatore cubi in Management Studio e Progettazione cubi sono stati rimossi  
  Il controllo Visualizzatori cubi, che consente di trascinare campi sulla struttura di una Tabella pivot in Management Studio o in Progettazione cubi, è stato rimosso dal prodotto. Il controllo era un componente OWC (Office Web Control). OWC è stato deprecato da Office e non è più disponibile.  
@@ -76,7 +76,7 @@ ms.locfileid: "36156117"
   
  Per modificare le autorizzazioni è necessario essere proprietari del sito.  
   
- **Procedura per aumentare le autorizzazioni a livello di autorizzazione per singole cartelle di lavoro di lettura**  
+ **Come aumentare le autorizzazioni a livello di autorizzazione per singole cartelle di lavoro di lettura**  
   
 1.  Fare clic sulla freccia GIÙ per aprire il menu per un documento singolo.  
   
@@ -110,6 +110,6 @@ ms.locfileid: "36156117"
   
 ## <a name="see-also"></a>Vedere anche  
  [Compatibilità con le versioni precedenti](../../2014/getting-started/backward-compatibility.md)   
- [Modifiche di rilievo in Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)  
+ [Modifiche di rilievo per Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)  
   
   

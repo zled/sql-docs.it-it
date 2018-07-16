@@ -1,5 +1,5 @@
 ---
-title: Configurare un gruppo di disponibilità di SQL Server per la scala di lettura in Linux | Documenti Microsoft
+title: Configurare un gruppo di disponibilità SQL Server per scalabilità in lettura in Linux | Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,29 +12,29 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e406248118933eb60e95e101c6812d61b72ad7a7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d29bd3e2f86a824dadef1f9886c96b28547fbf03
+ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323302"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37891062"
 ---
-# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurare un gruppo di disponibilità di SQL Server per la scala di lettura su Linux
+# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurare un gruppo di disponibilità SQL Server per scalabilità in lettura in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-È possibile configurare un SQL Server sempre nel gruppo di disponibilità (AG) per i carichi di lavoro di lettura scala in Linux. Esistono due tipi di architetture per estensivi. Un'architettura per la disponibilità elevata utilizza una Gestione cluster per assicurare la continuità aziendale migliorata. Questa architettura può includere anche repliche in scala di lettura. Per creare l'architettura a disponibilità elevata, vedere [configurare SQL Server gruppo di disponibilità AlwaysOn per la disponibilità elevata in Linux](sql-server-linux-availability-group-configure-ha.md). L'architettura di altri supporta solo i carichi di lavoro in scala di lettura. In questo articolo viene illustrato come creare un gruppo di disponibilità senza una Gestione cluster per i carichi di lavoro di lettura della scala. Questa architettura fornisce solo lettura scala. Non fornisce la disponibilità elevata.
+È possibile configurare un SQL Server Always nel gruppo di disponibilità (AG) per i carichi di lavoro di scalabilità in lettura in Linux. Esistono due tipi di architetture per i gruppi di disponibilità. Un'architettura per la disponibilità elevata utilizza una gestione di cluster per assicurare la continuità aziendale migliorata. Questa architettura può includere anche le repliche con scalabilità in lettura. Per creare l'architettura a disponibilità elevata, vedere [configurare SQL Server gruppo di disponibilità AlwaysOn per la disponibilità elevata in Linux](sql-server-linux-availability-group-configure-ha.md). L'altra architettura supporta solo i carichi di lavoro di scalabilità in lettura. Questo articolo illustra come creare un gruppo di disponibilità senza una Gestione cluster per i carichi di lavoro di scalabilità in lettura. Questa architettura fornisce solo la scalabilità in lettura. Non fornisce la disponibilità elevata.
 
 >[!NOTE]
->Un gruppo di disponibilità con `CLUSTER_TYPE = NONE` può includere le repliche ospitate in piattaforme diverse del sistema operativo. Disponibilità elevata non supportato. 
+>Un gruppo di disponibilità con `CLUSTER_TYPE = NONE` può includere repliche ospitate in diverse piattaforme del sistema operativo. Non può tuttavia supportare la disponibilità elevata. 
 
 [!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## <a name="create-the-ag"></a>Creare il gruppo di disponibilità
 
-Creare il gruppo di disponibilità. Set `CLUSTER_TYPE = NONE`. Inoltre, impostare ogni replica con `FAILOVER_MODE = NONE`. Le applicazioni client in esecuzione analitica o reporting carichi di lavoro possono direttamente la connessione ai database secondari. È anche possibile creare un elenco di routing di sola lettura. Le connessioni alla replica primaria in avanti leggere le richieste di connessione a ognuna delle repliche secondarie della lista di distribuzione in uno schema round-robin.
+Creare il gruppo di disponibilità. Impostare `CLUSTER_TYPE = NONE`. Impostare anche ogni replica con `FAILOVER_MODE = MANUAL`. Le applicazioni client che eseguono carichi di lavoro di analisi o esecuzione report possono connettersi direttamente ai database secondari. È anche possibile creare un elenco di routing di sola lettura. Le connessioni alla replica primaria inoltrano le richieste di connessione in lettura a ogni replica secondaria dell'elenco di routing in base a uno schema round-robin.
 
-Lo script di Transact-SQL seguente crea un gruppo di disponibilità denominato `ag1`. Lo script consente di configurare le repliche del gruppo di disponibilità con `SEEDING_MODE = AUTOMATIC`. Questa impostazione, SQL Server creare automaticamente il database in ciascun server secondario dopo averlo aggiunto al gruppo di disponibilità. Aggiornare lo script seguente per l'ambiente. Sostituire il `<node1>` e `<node2>` valori con i nomi delle istanze di SQL Server che ospitano le repliche. Sostituire il `<5022>` valore con la porta è impostata per l'endpoint. Nella replica primaria di SQL Server, eseguire lo script di Transact-SQL seguente:
+Lo script Transact-SQL seguente crea un gruppo di disponibilità con nome `ag1`. Lo script configura le repliche del gruppo di disponibilità con `SEEDING_MODE = AUTOMATIC`. In base a questa impostazione, SQL Server crea automaticamente il database in ciascun server secondario dopo l'aggiunta al gruppo di disponibilità. Aggiornare lo script seguente per il proprio ambiente. Sostituire i valori `<node1>` e `<node2>` con i nomi delle istanze di SQL Server che ospitano le repliche. Sostituire il valore `<5022>` con la porta impostata per l'endpoint. Nella replica primaria di SQL Server eseguire lo script Transact-SQL seguente:
 
 ```SQL
 CREATE AVAILABILITY GROUP [ag1]
@@ -58,9 +58,9 @@ CREATE AVAILABILITY GROUP [ag1]
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ```
 
-### <a name="join-secondary-sql-servers-to-the-ag"></a>Aggiungere server SQL secondario per il gruppo di disponibilità
+### <a name="join-secondary-sql-servers-to-the-ag"></a>Aggiungere server SQL secondari al gruppo di disponibilità
 
-Lo script Transact-SQL seguente aggiunge un server a un gruppo di disponibilità denominato `ag1`. Aggiornare lo script per l'ambiente. In ogni replica secondaria di SQL Server, eseguire lo script Transact-SQL seguente per creare un join del gruppo di disponibilità:
+Lo script Transact-SQL seguente aggiunge un server al gruppo di disponibilità con nome `ag1`. Aggiornare lo script per il proprio ambiente. In ogni replica secondaria di SQL Server eseguire lo script Transact-SQL seguente per l'aggiunta al gruppo di disponibilità:
 
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE);
@@ -70,22 +70,22 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE [Create post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
-Questo gruppo di disponibilità non è una configurazione a disponibilità elevata. Se è necessaria la disponibilità elevata, seguire le istruzioni in [configura un gruppo di disponibilità AlwaysOn per SQL Server in Linux](sql-server-linux-availability-group-configure-ha.md). In particolare, creare il gruppo di disponibilità con `CLUSTER_TYPE=WSFC` (in Windows) o `CLUSTER_TYPE=EXTERNAL` (in Linux). Quindi integrare con un gestore cluster utilizzando uno Windows Server failover clustering in Windows o Pacemaker in Linux.
+Questo gruppo di disponibilità non è una configurazione a disponibilità elevata. Se occorre una disponibilità elevata, seguire le istruzioni in [configurare un gruppo di disponibilità AlwaysOn per SQL Server in Linux](sql-server-linux-availability-group-configure-ha.md). In particolare, creazione del gruppo di disponibilità con `CLUSTER_TYPE=WSFC` (in Windows) o `CLUSTER_TYPE=EXTERNAL` (in Linux). Quindi integrato con un gestore del cluster usando uno di Windows Server failover clustering in Windows o Pacemaker in Linux.
 
-## <a name="connect-to-read-only-secondary-replicas"></a>Connettersi a repliche secondarie di sola lettura
+## <a name="connect-to-read-only-secondary-replicas"></a>Eseguire la connessione a repliche secondarie di sola lettura
 
-Esistono due modi per connettersi a repliche secondarie di sola lettura. Le applicazioni possono connettersi direttamente all'istanza di SQL Server che ospita la replica secondaria ed eseguire query sui database. È inoltre possibile utilizzare routing di sola lettura, che richiede un listener.
+Esistono due modi per eseguire la connessione a repliche secondarie di sola lettura. Le applicazioni possono connettersi direttamente all'istanza di SQL Server che ospita la replica secondaria ed eseguire query sui database. Oppure possono usare il routing di sola lettura, per il quale è necessario un listener.
 
 * [Repliche secondarie leggibili](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
 * [Routing di sola lettura](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)
 
-## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>Eseguire il failover la replica primaria in un gruppo di disponibilità a livello di lettura
+## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>Eseguire il failover della replica primaria in un gruppo di disponibilità con scalabilità in lettura
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-* [Configurare un gruppo di disponibilità distribuito](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
+* [Configurare gruppi di disponibilità distribuiti](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
 * [Altre informazioni sui gruppi di disponibilità](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)
 * [Eseguire un failover manuale forzato](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
 

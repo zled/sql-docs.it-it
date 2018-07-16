@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -20,13 +20,13 @@ ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0f4f4e80a193b1a9cb2f492bf2deab88af1d0f47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 317abe3278784d5328df02ec96c6f126a40d100e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234501"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint
   Per un server di report eseguito in modalità integrata SharePoint, le impostazioni di sicurezza definite nel sito di SharePoint determinano le modalità di visualizzazione e gestione di report, modelli di report e origini dei dati condivise. Se si usano le assegnazioni di autorizzazioni, i livelli di autorizzazione e i gruppi di SharePoint predefiniti, sarà possibile usare i report e gli altri documenti tramite le impostazioni di sicurezza correnti.  
@@ -137,7 +137,7 @@ ms.locfileid: "36156203"
   
 ## <a name="see-also"></a>Vedere anche  
  [Concessione di autorizzazioni per elementi del Server di Report in un sito di SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Confrontare ruoli e attività di Reporting Services con le autorizzazioni e gruppi di SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Concessione di autorizzazioni per elementi del Server di Report in un sito di SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Usare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   

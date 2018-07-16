@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tempdb database [SQL Server], collations
 - collations [SQL Server], column
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3de84f26e894f00760a45d5e65769c0db8d4b009
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e215539e97e09fd7512f7673015d07f32e956730
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298511"
 ---
 # <a name="set-or-change-the-column-collation"></a>Impostare o modificare le regole di confronto delle colonne
-  È possibile ignorare le regole di confronto di database per `char`, `varchar`, `text`, `nchar`, `nvarchar`, e `ntext` dati specificando regole di confronto diverse per una colonna specifica di una tabella e utilizzando uno dei seguenti:  
+  È possibile ignorare le regole di confronto del database per `char`, `varchar`, `text`, `nchar`, `nvarchar`, e `ntext` dati specificando regole di confronto diverse per una colonna specifica di una tabella e utilizzando uno dei seguenti:  
   
 -   Clausola COLLATE di [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) e [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql). Esempio:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36055253"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)](Indici per tabelle con ottimizzazione per la memoria). Per altre informazioni, vedere [Regole di confronto e supporto Unicode](collation-and-unicode-support.md).  
   
--   Utilizzando il `Column.Collation` proprietà [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
+-   Usando il `Column.Collation` proprietà [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   
  Non è possibile modificare le regole di confronto di una colonna a cui fa riferimento uno qualsiasi degli elementi seguenti:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36055253"
  Quando si usa il database **tempdb**, la clausola [COLLATE](/sql/t-sql/statements/collations) include un'opzione *database_default* per specificare che una colonna di una tabella temporanea utilizza le regole di confronto predefinite del database utente corrente per la connessione anziché quelle del database **tempdb**.  
   
 ## <a name="collations-and-text-columns"></a>Regole di confronto e colonne di tipo text  
- È possibile inserire o aggiornare i valori in un `text` colonna cui regole di confronto è diversa dalla tabella codici delle regole di confronto predefinite del database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte in modo implicito i valori nelle regole di confronto della colonna.  
+ È possibile inserire o aggiornare valori in un `text` colonna cui regole di confronto è diversa dalla tabella codici delle regole di confronto predefinite del database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte in modo implicito i valori nelle regole di confronto della colonna.  
   
 ## <a name="collations-and-tempdb"></a>Regole di confronto e database tempdb  
  Il database **tempdb** viene compilato a ogni avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e presenta le stesse regole di confronto predefinite del database **model** . Queste sono generalmente le stesse regole di confronto predefinite dell'istanza. Se si crea un database utente e si specificano regole di confronto predefinite diverse da quelle del database **model**, il database utente utilizzerà regole di confronto predefinite diverse da quelle di **tempdb**. Tutte le stored procedure temporanee o le tabelle temporanee vengono create e archiviate in **tempdb**. Di conseguenza, tutte le colonne implicite delle tabelle temporanee e tutte le costanti, le variabili e i parametri a cui possono essere assegnati valori predefiniti e che si trovano in stored procedure temporanee, utilizzano regole di confronto diverse da quelle degli oggetti analoghi creati in tabelle e stored procedure permanenti.  

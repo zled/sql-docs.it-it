@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
 - renaming virtual servers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], virtual servers
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: defb9efed51b1739f35d7dc8f1bdfbae12decb5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 006abb7b37e67938a060ed05ced726c3699dfbd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294011"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Ridenominare un'istanza del cluster di failover di SQL Server
   Se un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fa parte di un cluster di failover, il processo di ridenominazione del server virtuale è diverso da quello previsto per un'istanza autonoma. Per altre informazioni, vedere [Rinominare un computer che ospita un'istanza autonoma di SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "36055406"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Ulteriori considerazioni dopo la ridenominazione dell'operazione  
  Dopo la ridenominazione del nome di rete del cluster di failover, è necessario verificare e applicare le istruzioni riportate di seguito per abilitare tutti gli scenari in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** dopo la modifica del nome di rete di un'istanza del cluster di failover di [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] con lo strumento di amministrazione cluster di Windows, la futura operazione di aggiornamento o di disinstallazione potrebbe non essere completata. Per risolvere questo problema, aggiornare il **ClusterName** voce del Registro di sistema seguendo le istruzioni nella sezione sulla risoluzione del [ciò](http://go.microsoft.com/fwlink/?LinkId=244002) (http://go.microsoft.com/fwlink/?LinkId=244002).  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** dopo la modifica del nome di rete di un'istanza del cluster di failover di [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] con lo strumento di amministrazione cluster di Windows, la futura operazione di aggiornamento o di disinstallazione potrebbe non essere completata. Per risolvere questo problema, aggiornare il **NomeCluster** seguendo le istruzioni nella sezione sulla risoluzione di voce di registro di sistema [ciò](http://go.microsoft.com/fwlink/?LinkId=244002) (http://go.microsoft.com/fwlink/?LinkId=244002).  
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servizio Agent:** verificare ed effettuare le azioni aggiuntive riportate di seguito per il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent:  
   

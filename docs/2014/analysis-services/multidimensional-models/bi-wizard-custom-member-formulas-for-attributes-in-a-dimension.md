@@ -1,5 +1,5 @@
 ---
-title: Impostare formule personalizzate membro per gli attributi in una dimensione | Documenti Microsoft
+title: Impostare formule personalizzate membro per gli attributi in una dimensione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], custom member formulas
 - member formulas [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CustomRollupColumn property
 ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7354a79069de0dd3b35c9860e05f5bb69980fc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 584fa3b944671aa80e01c8f5ae0080e0c1860366
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295851"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>Impostare formule personalizzate membro per gli attributi in una dimensione
   L'aggiunta della funzionalità avanzata delle formule personalizzate membro a un cubo o a una dimensione consente di sostituire la funzione di aggregazione predefinita associata a un membro della dimensione con i risultati di un'espressione MDX (Multidimensional Expressions). Questa funzionalità avanzata imposta la proprietà `CustomRollupColumn` di un attributo specifico in una dimensione.  
@@ -42,6 +42,6 @@ ms.locfileid: "36067486"
  Nella seconda pagina **Creazione formula personalizzata membro** associare la colonna di origine contenente la formula personalizzata membro a uno o più attributi nella dimensione. Nella colonna **Attributo** selezionare la casella di controllo accanto all'attributo da associare alla colonna della formula personalizzata membro. Dopo aver selezionato ogni attributo, viene visualizzata la finestra di dialogo **Seleziona colonna** . In questa finestra di dialogo fare clic nella colonna della tabella della dimensione contenente la formula. Se dopo aver chiuso la finestra di dialogo **Seleziona colonna** si desidera modificare una selezione, fare clic nella cella **Colonna di origine** da modificare e quindi sui puntini di sospensione (**...**) per visualizzare nuovamente la finestra di dialogo **Seleziona colonna** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzare la procedura guidata di Business Intelligence per migliorare le dimensioni](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
+ [Usare la Configurazione guidata funzionalità di Business Intelligence per migliorare le dimensioni](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
   
   

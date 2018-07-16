@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 938d32c65c8eb1d7fa6087d864e62b0bb4d5d388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f2c47fee88ba536c084649669ac5cd5f53cf6d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318821"
 ---
 # <a name="error-handling"></a>Gestione degli errori
   Un'istanza di Oracle CDC estrae le modifiche da un singolo database di origine Oracle (un cluster Oracle RAC è considerato un singolo database) e scrive le modifiche di cui è stato eseguito il commit per modificare le tabelle in un database CDC nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione.  
@@ -117,7 +117,7 @@ ms.locfileid: "36170651"
  Il servizio Oracle CDC monitora i sottoprocessi dell'istanza di CDC. Quando un sottoprocesso dell'istanza di CDC viene interrotto, il servizio CDC lo disabilita nella tabella MSXDBCDC.dbo.xdbcdc_databases e ne aggiorna lo stato cdc.xdbcdc_state su ABORTED. In questo caso, viene utilizzata la finestra di dialogo Segnalazione errori Windows standard per segnalare questo errore a scopo di ulteriore analisi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Change Data Capture Designer for Oracle by Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Progettazione Change Data Capture for Oracle by Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
  [Istanza di Oracle CDC](the-oracle-cdc-instance.md)  
   
   

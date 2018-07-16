@@ -1,5 +1,5 @@
 ---
-title: Prospettive (SSAS tabulare) | Documenti Microsoft
+title: Prospettive (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3f15ca3035759717de251f6d300ace3182430ac7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ad07ccba62df7054f4ec19e0713192154ad62db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304301"
 ---
 # <a name="perspectives-ssas-tabular"></a>Prospettive (SSAS tabulare)
   Nei modelli tabulari, le prospettive consentono di definire subset visualizzabili di un modello in grado di offrire punti di vista mirati, specifici di un'attività aziendale o di un'applicazione del modello.  
@@ -51,7 +51,7 @@ ms.locfileid: "36170458"
 |[Creare e gestire prospettive &#40;tabulare di SSAS&#41;](perspectives-ssas-tabular.md)|Viene descritto come creare e gestire prospettive utilizzando la finestra di dialogo Prospettive in Progettazione modelli.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)   
- [Gerarchie &#40;tabulare di SSAS&#41;](hierarchies-ssas-tabular.md)  
+ [I ruoli &#40;tabulare di SSAS&#41;](roles-ssas-tabular.md)   
+ [Gerarchie di &#40;tabulare di SSAS&#41;](hierarchies-ssas-tabular.md)  
   
   

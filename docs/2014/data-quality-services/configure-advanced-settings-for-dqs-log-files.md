@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log files,advanced settings
 - dqs log files,advanced settings
@@ -16,13 +16,13 @@ ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f7dfcf88c7b85a0cda8edee5abd5df31eabc573f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76aebade549200438f5c3b2535c52038259c875c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304261"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configurare le impostazioni avanzate per i file di log DQS
   In questo argomento viene descritto come configurare le impostazioni avanzate per i file di log del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] e del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , ad esempio come impostare il limite delle dimensioni dei file mobili per i file di log, il modello del timestamp degli eventi e così via.  

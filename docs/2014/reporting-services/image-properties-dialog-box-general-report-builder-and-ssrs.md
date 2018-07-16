@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo proprietà, generale (Generatore Report e SSRS) immagine | Documenti Microsoft
+title: Immagine di finestra di dialogo proprietà, generale (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10051"
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 26c0378caeca7fd904cd793bc483dd28a464a5d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 7137b65223a092cc136db7fda21cd2cd0e5c2ce2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292211"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà immagine, Generale (Generatore report e SSRS)
   Selezionare **Generale** nella finestra di dialogo **Proprietà immagine** per aggiungere un'immagine, modificare il nome predefinito dell'immagine e aggiungere il testo della descrizione comando.  
@@ -43,17 +43,17 @@ ms.locfileid: "36054707"
   
 -   **Database** Scegliere questa opzione se si desidera includere un nome di campo del database che rappresenti le immagini da includere nel report.  
   
- **Utilizzare questa immagine**  
+ **Usare questa immagine**  
  Questa opzione viene visualizzata quando si seleziona l'opzione **Incorporata** o **Esterna** .  
   
  Se si intende incorporare l'immagine, selezionare l'immagine da aggiungere al report dall'elenco a discesa. Fare clic sul pulsante **Importa** per aggiungere l'immagine all'elenco a discesa.  
   
- Se si seleziona l'opzione **Esterna** , digitare l'URL dell'immagine. Per un report pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo. Ad esempio, http://\<nomeserver > / images/image1.jpg. Per un report pubblicato in un server di report configurato per la modalità integrata SharePoint, utilizzare un URL completo. Ad esempio, http://\<*NomeServerSharePoint*>/\<*sito*> / Documents/images/image1.jpg.  
+ Se si seleziona l'opzione **Esterna** , digitare l'URL dell'immagine. Per un report pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo. Ad esempio, http://\<nomeserver > / Images/immagine1.jpg. Per un report pubblicato in un server di report configurato per la modalità integrata SharePoint, utilizzare un URL completo. Ad esempio, http://\<*NomeServerSharePoint*>/\<*sito*> / Documents/images/image1.jpg.  
   
  **Importa**  
  Fare clic su questa opzione per aggiungere un'immagine all'elenco a discesa **Use this image** (Usa questa immagine).  
   
- **Utilizzare questo campo**  
+ **Usare questo campo**  
  Questa opzione viene visualizzata se si seleziona l'opzione **Database** . Selezionare il nome del campo.  
   
  **Utilizzare questo tipo MIME**  
@@ -61,7 +61,7 @@ ms.locfileid: "36054707"
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Immagini &#40;SSRS e Generatore Report&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Immagini &#40;Report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

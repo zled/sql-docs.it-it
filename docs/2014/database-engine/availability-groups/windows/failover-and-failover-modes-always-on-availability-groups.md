@@ -1,14 +1,13 @@
 ---
-title: Failover e modalità di Failover (gruppi di disponibilità AlwaysOn) | Documenti Microsoft
+title: Failover e modalità di Failover (gruppi di disponibilità AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], failover
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: 71
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: a2bff986de8e70cca18a5dc978ed05db9cc42061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 03cbd2d25c3695cc24438bc2b7f871b7cd5093f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310441"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Failover e modalità di failover (gruppi di disponibilità AlwaysOn)
   Nel contesto di un gruppo di disponibilità, il ruolo primario e il ruolo secondario delle repliche di disponibilità sono generalmente intercambiabili in un processo noto come *failover*. Sono disponibili tre tipi di failover: failover automatico (senza perdita di dati), failover manuale pianificato (senza perdita di dati) e failover manuale forzato (con possibile perdita di dati), in genere chiamato *failover forzato*. Con il failover automatico e il failover manuale pianificato vengono conservati tutti i dati. Per un gruppo di disponibilità il failover si verifica a livello di replica di disponibilità. In pratica, il failover di un gruppo di disponibilità viene eseguito in una delle relative repliche secondarie, la *destinazione di failover*corrente.  
@@ -72,7 +71,7 @@ ms.locfileid: "36170881"
 |Failover manuale pianificato|no|Sì|Sì|  
 |failover forzato|Sì|Sì|Sì**<sup>*</sup>**|  
   
- **<sup>*</sup>**  Se si esegue un comando di failover forzato su una replica secondaria sincronizzata, la replica secondaria si comporta come con un failover manuale.  
+ **<sup>*</sup>**  Se si esegue un comando di failover forzato su una replica secondaria sincronizzata, la replica secondaria si comporta come un failover manuale.  
   
  Il periodo di tempo di non disponibilità del database durante un failover dipende dal tipo di failover e da ciò che lo ha causato.  
   
@@ -239,7 +238,7 @@ ms.locfileid: "36170881"
   
 1.  Connettersi alla replica primaria.  
   
-2.  Query di `last_commit_lsn` (LSN dell'ultimo commit della transazione) e `last_commit_time` colonne (ora dell'ultimo commit) del [DM hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) vista a gestione dinamica.  
+2.  Query di `last_commit_lsn` (LSN dell'ultima transazione completata) e `last_commit_time` colonne (ora dell'ultimo commit) della [DM hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) vista a gestione dinamica.  
   
 3.  Confrontare i valori restituiti per ogni database primario e tutti i relativi database secondari. La differenza tra gli LSN ultimo commit indica la quantità di ritardo.  
   
@@ -311,15 +310,15 @@ ms.locfileid: "36170881"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Guida alle soluzioni di Microsoft SQL Server AlwaysOn per la disponibilità elevata e ripristino di emergenza](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn Team Blog: Di SQL Server AlwaysOn Team Blog ufficiale](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: Il Blog ufficiale di SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Modalità di disponibilità &#40;gruppi di disponibilità AlwaysOn&#41;](availability-modes-always-on-availability-groups.md)   
  [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Transazioni tra Database non supportate per il mirroring del Database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   
+ [Transazioni tra Database non è supportate per i gruppi di disponibilità AlwaysOn o mirroring del Database &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   
  [Criteri di failover per istanze del cluster di failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [Criteri di failover flessibili per failover automatico di un gruppo di disponibilità &#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Accesso ai dati di modelli multidimensionali (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Accesso ai dati di modelli multidimensionali (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, data access interfaces
 - objects [Analysis Services], data access interfaces
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
 caps.latest.revision: 46
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac594d938497d90acd87e047aa8370144f8e8ad2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9d979cbe0a870060d8435a4867afbed1667597e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291727"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Accesso ai dati di modelli multidimensionali (Analysis Services - Dati multidimensionali)
   Utilizzare le informazioni in questo argomento per accedere ai dati multidimensionali di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utilizzando metodi a livello di codice, script o applicazioni client che includono il supporto integrato per la connessione a un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sulla rete locale.  

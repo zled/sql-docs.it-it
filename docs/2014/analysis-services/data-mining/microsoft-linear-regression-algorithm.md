@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Linear Regression | Documenti Microsoft
+title: Algoritmo Microsoft Linear Regression | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - linear regression algorithms [Analysis Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a249f0c1a4ffde7e14841d53c01a9bdf6790931
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6efc2b76fe6a6c4b53a2b108a776f2104b02318d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36170682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315087"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algoritmo Microsoft Linear Regression
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression è una variante dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees che consente di calcolare una relazione lineare tra una variabile dipendente e indipendente e quindi di usare tale relazione per la stima.  
   
  La relazione assume la forma di un'equazione relativa alla linea che rappresenta meglio una serie di dati. Ad esempio, la linea contenuta nel diagramma seguente è la migliore rappresentazione lineare possibile dei dati.  
   
- ![Una riga che modella un set di dati](../media/linear-regression.gif "retta di modellazione di un set di dati")  
+ ![Retta di modellazione di un set di dati](../media/linear-regression.gif "retta di modellazione di un set di dati")  
   
  A ogni punto dati del diagramma corrisponde un errore associato alla relativa distanza dalla retta di regressione. I coefficienti a e b dell'equazione di regressione regolano l'angolo e la posizione della retta di regressione. È possibile ottenere l'equazione di regressione modificando i coefficienti a e b fino a quando la somma degli errori associati a tutti i punti raggiunge il minimo.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36170682"
   
  Selezionando l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression, se l'attributo stimabile è un tipo di dati numerico continuo, oltre a creare un modello di regressione lineare, è possibile creare un modello di albero delle decisioni che contenga regressioni. In questo caso, l'algoritmo suddividerà i dati quando rileverà punti di separazione appropriati, ma per alcune aree di dati creerà una formula di regressione. Per altre informazioni sugli alberi di regressione con un modello di albero delle decisioni, vedere [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 -   Non supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   

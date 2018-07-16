@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 05bcbd306dc29769db143fb4614c01d527144b82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 905d673939c1831cbe84d49e863ec401a03ec4b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290267"
 ---
 # <a name="server-properties-general-page"></a>Proprietà server (pagina Generale)
   Questa pagina consente di visualizzare o modificare il titolo utilizzato in Gestione report, abilitare o disabilitare la cartella Report personali, selezionare una definizione di ruolo per la sicurezza della cartella Report personali e abilitare o disabilitare il controllo di stampa client.  
@@ -52,8 +52,8 @@ ms.locfileid: "36156622"
  **Selezionare il ruolo da applicare a ogni cartella Report personali**  
  Consente di specificare una definizione di ruolo da utilizzare per la sicurezza della cartella Report personali. La definizione di ruolo identifica il set delle attività che sono supportate in ogni cartella Report personali.  
   
- **Consenti download per il controllo di stampa client ActiveX**  
- Imposta il `EnableClientPrinting` proprietà sistema del server di report. Se si abilita la stampa su client, gli utenti con autorizzazioni di amministrazione nel computer locale possono eseguire il download di un controllo ActiveX firmato per la stampa dei report HTML. Per altre informazioni, vedere [abilitare e disabilitare la stampa lato Client per Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ **Abilitare il download per il controllo di stampa client ActiveX**  
+ Imposta il `EnableClientPrinting` proprietà sistema del server di report. Se si abilita la stampa su client, gli utenti con autorizzazioni di amministrazione nel computer locale possono eseguire il download di un controllo ActiveX firmato per la stampa dei report HTML. Per altre informazioni, vedere [abilitare e disabilitare la stampa sul lato Client per Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare le proprietà di un server di report &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

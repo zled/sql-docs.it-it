@@ -1,5 +1,5 @@
 ---
-title: Influire sulla finestra di dialogo Analisi (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Influisce sulla finestra di dialogo di analisi (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.impactanalysisdialog.f1
 ms.assetid: 208268eb-4e14-44db-9c64-6f74b776adb6
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da3a687a637dee6b3b9df59eecebf957f06e64be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02b5ee9613672762c466ba023ccabf1fa90d5892
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054392"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299381"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Analisi di impatto (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Analisi di impatto** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per identificare ed eventualmente elaborare gli oggetti dipendenti sui quali influisce l'elaborazione degli oggetti elencati nella finestra di dialogo **Elabora** . Per visualizzare la finestra di dialogo **Analisi di impatto** , è possibile fare clic su **Analisi di impatto** nella finestra di dialogo **Elabora** .  

@@ -1,5 +1,5 @@
 ---
-title: Schemi XSD in SQLXML 4.0 con annotazioni | Documenti Microsoft
+title: In SQLXML 4.0 di schemi XSD con annotazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - schemas [SQLXML]
 ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f657dd8c4c908dd39dc46ce4e1322cb5d465f89d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 83178076a7d42bedc0f22502bc423ae4f02e1fe0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303561"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Schemi XSD con annotazioni in SQLXML 4.0
   In questa sezione vengono fornite informazioni sull'utilizzo degli schemi XSD con annotazioni in SQLXML 4.0. Nelle versioni precedenti di SQLXML, una funzionalità simile veniva fornita con gli schemi XDR (XML-Data Reduced). In questa sezione vengono inoltre fornite le informazioni su XDR per le applicazioni legacy.  
@@ -39,10 +39,10 @@ ms.locfileid: "36054513"
  [Utilizzo delle annotazioni negli schemi XSD &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)  
  Viene illustrato l'utilizzo delle annotazioni negli schemi XSD in molti scenari e vengono forniti esempi.  
   
- [Utilizzo con annotazioni agli schemi XSD nella query &#40;SQLXML 4.0&#41;](using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Utilizzando schemi XSD nelle query con annotazioni &#40;SQLXML 4.0&#41;](using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
  Viene illustrato l'utilizzo degli schemi XSD con annotazioni nelle query.  
   
- [Conversione di schemi XDR in schemi XSD equivalenti annotata &#40;SQLXML 4.0&#41;](converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)  
+ [Conversione di schemi con annotazioni XDR in schemi XSD equivalenti &#40;SQLXML 4.0&#41;](converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)  
  Viene illustrata la conversione degli schemi XDR negli schemi XSD equivalenti per SQLXML 4.0.  
   
  [Schemi XDR con annotazioni &#40;deprecate in SQLXML 4.0&#41;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
@@ -51,11 +51,11 @@ ms.locfileid: "36054513"
 ## <a name="other-resources"></a>Altre risorse  
  Ulteriori informazioni sul linguaggio di definizione di XML Schema (XSD), sul linguaggio XML Path (XPath) e su Extensible Stylesheet Language Transformations (XSLT) sono disponibili nei siti Web seguenti:  
   
--   XML Schema Part 0: Primer, W3C (raccomandazionehttp://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Primer, W3C Recommendation (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Le strutture, W3C (raccomandazionehttp://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Strutture, W3C (raccomandazionehttp://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2: Datatypes W3C (raccomandazionehttp://www.w3.org/TR/xmlschema-2/)  
+-   XML Schema Part 2: Datatypes W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
   
 -   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
   

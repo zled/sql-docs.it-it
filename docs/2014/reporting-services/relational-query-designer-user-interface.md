@@ -1,5 +1,5 @@
 ---
-title: Interfaccia utente della finestra di progettazione Query relazionale | Documenti Microsoft
+title: Interfaccia utente della finestra Progettazione Query relazionale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 99cb45aa3f0709fe9d7360938b37133317ea2c8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47fd572aad6fd135aa4563fda63fa4f36c32e45f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301873"
 ---
 # <a name="relational-query-designer-user-interface"></a>Interfaccia utente di Progettazione query relazionale
   In Progettazione report in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] sono disponibili due finestre Progettazione query, una con interfaccia grafica e una basata su testo, per la creazione di una query che consente di specificare i dati da recuperare da [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] di [!INCLUDE[msCoName](../includes/msconame-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] per un set di dati del report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
@@ -129,7 +129,7 @@ ms.locfileid: "36054497"
 -   **Rilevamento automatico** Attiva e disattiva la funzionalità di rilevamento automatico che crea automaticamente le relazioni tra tabelle. Se il rilevamento automatico è abilitato, Progettazione query crea relazioni dalle chiavi esterne delle tabelle. In caso contrario, è necessario creare le relazioni manualmente. Quando si selezionano tabelle nel riquadro **Vista di database** , la funzione di rilevamento automatico tenta di creare relazioni. Se si abilita il rilevamento automatico dopo avere creato manualmente join, tali join verranno rimossi.  
   
     > [!IMPORTANT]  
-    >  Quando si utilizza con [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] i metadati necessari a creare join non sono stato specificato e le relazioni non possono essere rilevate automaticamente. Se la query recupera dati da [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], è necessario creare tutti i join della tabella manualmente.  
+    >  Quando si usa con [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] i metadati necessari a creare join non sia disponibile e le relazioni non possono essere rilevate automaticamente. Se la query recupera dati da [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], è necessario creare tutti i join della tabella manualmente.  
   
 -   **Aggiungi relazione** Aggiunge una relazione all'elenco **Relazione** .  
   
@@ -153,7 +153,7 @@ ms.locfileid: "36054497"
   
 -   **Tabella a sinistra** Visualizza il nome della prima tabella che fa parte di una relazione di join.  
   
--   **Tipo di join** Visualizza il tipo di istruzione SQL JOIN usata nella query generata automaticamente. Per impostazione predefinita, se viene rilevato un vincolo di chiave esterna, viene utilizzato INNER JOIN. Altri tipi di join possono essere LEFT JOIN o RIGHT JOIN. Se nessuno di questi tipi di join è applicabile, nella colonna **Tipo di join** viene visualizzato **Nessuna relazione**. Non vengono creati join CROSS JOIN per le tabelle non correlate. È invece necessario creare manualmente relazioni mediante la creazione di un join delle colonne presenti nelle tabelle a sinistra e a destra. Per ulteriori informazioni sui tipi di join, vedere "Nozioni fondamentali sui JOIN" nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione Online di](http://go.microsoft.com/fwlink/?LinkId=141687) sul sito msdn.microsoft.com.  
+-   **Tipo di join** Visualizza il tipo di istruzione SQL JOIN usata nella query generata automaticamente. Per impostazione predefinita, se viene rilevato un vincolo di chiave esterna, viene utilizzato INNER JOIN. Altri tipi di join possono essere LEFT JOIN o RIGHT JOIN. Se nessuno di questi tipi di join è applicabile, nella colonna **Tipo di join** viene visualizzato **Nessuna relazione**. Non vengono creati join CROSS JOIN per le tabelle non correlate. È invece necessario creare manualmente relazioni mediante la creazione di un join delle colonne presenti nelle tabelle a sinistra e a destra. Per altre informazioni sui tipi di join, vedere "Nozioni fondamentali sui JOIN" nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione Online di](http://go.microsoft.com/fwlink/?LinkId=141687) sul sito msdn.microsoft.com...  
   
 -   **Tabella a destra** Visualizza il nome della seconda tabella nella relazione di join.  
   

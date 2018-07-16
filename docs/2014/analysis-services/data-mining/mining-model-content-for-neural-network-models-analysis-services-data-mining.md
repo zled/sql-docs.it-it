@@ -1,5 +1,5 @@
 ---
-title: Contenuto dei modelli di rete neurale modelli di data mining (Analysis Services - Data Mining) | Documenti Microsoft
+title: Contenuto dei modelli di rete neurale modelli di data mining (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - output neurons [Analysis Services]
 - neural network algorithms [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d85b7b9ce95b0dc5a24ece14aa3a1e1203f49b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d90c182f664a6b89232a74da8d9ca5294dea465e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280457"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Neural Network. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -192,7 +192,7 @@ ms.locfileid: "36156113"
  MSOLAP_NODE_SHORT_CAPTION  
  Per i modelli di rete neurale, sempre vuoto.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Lo scopo del training di un modello di rete neurale consiste nel determinare i pesi associati a ogni transizione da un input a un punto medio e da un punto medio a un endpoint. Di conseguenza, il livello di input del modello esiste principalmente per archiviare i valori effettivi utilizzati per la compilazione del modello. Nel livello nascosto vengono archiviati i pesi calcolati e vengono forniti nuovamente i puntatori agli attributi di input. Nel livello di output vengono archiviati i valori stimabili e vengono forniti nuovamente i puntatori ai punti medi nel livello nascosto.  
   
 ##  <a name="bkmk_NodeIDs"></a> Utilizzo dei nomi e degli ID dei nodi  

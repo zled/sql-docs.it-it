@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 caps.latest.revision: 31
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e5dcdb4cbe4691b397997f24118e9da5f91ba0e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 85dd4c829a05bd051fcf57f1ea299916080251a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313772"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Supporto di SQL Server Management Studio per OLTP in memoria
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è un ambiente integrato per la gestione dell'infrastruttura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce gli strumenti per configurare, monitorare e amministrare le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
@@ -157,7 +157,7 @@ ms.locfileid: "36064250"
 ## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Funzionalità non supportate in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Per gli oggetti di OLTP in memoria, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non sono supportate funzionalità e operazioni non supportate anche dal motore di database.  
   
- Per ulteriori informazioni sulla non supportato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzionalità, vedere [funzionalità supportate di SQL Server](unsupported-sql-server-features-for-in-memory-oltp.md).  
+ Per altre informazioni su non supportata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzionalità, vedere [funzionalità supportate di SQL Server](unsupported-sql-server-features-for-in-memory-oltp.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Supporto di SQL Server per OLTP in memoria](sql-server-support-for-in-memory-oltp.md)  

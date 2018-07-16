@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 757cb2570c163ceaa184d15a7e97a253129d05cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 85832491b5129111b44daa724475749086588bfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055411"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294061"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Grafici con forme (Generatore report e SSRS)
   In un grafico con forme i dati relativi ai valori vengono visualizzati come percentuali di un intero. I grafici con forme vengono solitamente utilizzati per indicare confronti proporzionali tra valori diversi in un set. Le categorie sono rappresentate da singoli segmenti della forma. Le dimensioni del segmento sono determinate dal valore. L'utilizzo dei grafici con forme è simile a quello dei grafici a torta, ad eccezione del fatto che le categorie vengono ordinate dal valore più alto a quello più basso.  
   
- In un grafico a imbuto i valori vengono visualizzati come proporzioni in decremento progressivo. Le dimensioni dell'area sono determinate dal valore delle serie espresso come percentuale del totale di tutti i valori. Ad esempio, è possibile utilizzare un grafico a imbuto per visualizzare le tendenze dei visitatori di un sito Web. Nel grafico a imbuto verrà visualizzata un'area ampia nella parte superiore, a indicare gli accessi dei visitatori alla home page, e altre aree più piccole in proporzione. Per ulteriori informazioni su come aggiungere dati a un grafico a imbuto, vedere [grafici &#40;Generatore Report e SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ In un grafico a imbuto i valori vengono visualizzati come proporzioni in decremento progressivo. Le dimensioni dell'area sono determinate dal valore delle serie espresso come percentuale del totale di tutti i valori. Ad esempio, è possibile utilizzare un grafico a imbuto per visualizzare le tendenze dei visitatori di un sito Web. Nel grafico a imbuto verrà visualizzata un'area ampia nella parte superiore, a indicare gli accessi dei visitatori alla home page, e altre aree più piccole in proporzione. Per altre informazioni su come aggiungere dati a un grafico a imbuto, vedere [i grafici &#40;Generatore Report e SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  Nella figura seguente è illustrato un esempio di grafico a imbuto.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36055411"
   
 -   I grafici con forme sono particolarmente utili per visualizzare le percentuali proporzionali in maniera ordinata. Per garantire la coerenza, i valori del set di dati nel grafico non vengono tuttavia ordinati per impostazione predefinita. È possibile ordinare i valori dal più alto al più basso per rappresentare i dati sotto forma di imbuto o piramide e ottenere una maggiore precisione. Per altre informazioni, vedere [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
--   I valori Null, vuoti, negativi e zero non hanno effetto nel calcolo dei rapporti. Per questo motivo, tali valori non vengono visualizzati in un grafico con forme. Se si desidera indicare visivamente questi tipi di valori nel grafico, scegliere un tipo di grafico diverso dal grafico con forme. Per ulteriori informazioni su come aggiungere i punti vuoti a un grafico senza forme, vedere [Aggiungi punti vuoti al grafico &#40;Generatore Report e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   I valori Null, vuoti, negativi e zero non hanno effetto nel calcolo dei rapporti. Per questo motivo, tali valori non vengono visualizzati in un grafico con forme. Se si desidera indicare visivamente questi tipi di valori nel grafico, scegliere un tipo di grafico diverso dal grafico con forme. Per altre informazioni su come aggiungere punti vuoti a un grafico senza forme, vedere [aggiunta di punti vuoti al grafico &#40;Generatore Report e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Se i colori di un grafico con forme vengono definiti utilizzando una tavolozza personalizzata, assicurarsi che tale tavolozza contenga un numero di colori sufficiente per evidenziare ogni punto dati in un colore univoco. Per altre informazioni, vedere [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36055411"
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Punti dati vuoti e Null nei grafici &#40;Generatore report e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [I grafici a torta &#40;SSRS e Generatore Report&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [I grafici a torta &#40;Report e SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo delle proprietà (SSAS - tabulare) database | Documenti Microsoft
+title: Finestra di dialogo Proprietà (SSAS - tabulare) del database | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.DatabaseProperties.f1
 ms.assetid: 0f0ec02f-7b55-40ea-8a04-ed0deb1efd7a
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 142a3eeb8ae135fa27316f4b227f13fc33c77814
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31f4e6201246467517cf3fdd39bb03906b3bde24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299331"
 ---
 # <a name="database-properties-dialog-box-ssas---tabular"></a>Finestra di dialogo Proprietà database (SSAS - Tabulare)
   In questa finestra di dialogo vengono forniti timestamp e altre informazioni descrittive, nonché proprietà personalizzabili che determinano se nel database vengono utilizzati dati memorizzati nella cache. Altre proprietà personalizzabili includono la modifica del nome del database e l'impostazione delle opzioni di rappresentazione.  
@@ -38,7 +38,7 @@ ms.locfileid: "36155687"
 |**Ultimo aggiornamento**|Consente di visualizzare la data e l'ora dell'ultimo aggiornamento dei dati del database.|  
 |**Modalità lettura / scrittura**|Si tratta di una proprietà di sola lettura, ma è possibile modificarla usando una sequenza di comandi **Detach** e **Attach** , in cui la proprietà è un parametro del comando **Attach** . Per altre informazioni, vedere [Proprietà ReadWriteMode del database](multidimensional-models/database-readwritemodes.md).|  
 |**DirectQueryMode**|Viene specificato se nel database viene utilizzata solo l'archiviazione in memoria (non l'archiviazione su disco), solo l'archiviazione basata su disco o una combinazione delle due. I valori validi sono InMemory, DirectQuery, InMemoryWithDirectQuery (per lo più basata su memoria ma in alcuni casi con paging su disco) o DirectQueryWithInMemory (per lo più basata su disco ma in alcuni casi con archiviazione in memoria). Per altre informazioni, vedere [scenari di distribuzione DirectQuery &#40;modello tabulare di SSAS&#41;](directquery-deployment-scenarios-ssas-tabular.md).|  
-|**Rappresentazione origine dati**|Viene specificato l'account di rappresentazione utilizzato per le connessioni al database quando vengono elaborati o aggiornati i dati in partizioni locali o remote, le query eseguite su un archivio dati relazionale (tramite DirectQuery), le associazioni out-of-line e la sincronizzazione del database dalla destinazione all'origine.<br /><br /> I valori validi includono l'account del servizio Analysis Services o un set specifico di credenziali di Windows. Non specificare **Usa credenziali dell'utente corrente**. Tale opzione per le credenziali non è supportata per un database modello tabulare.|  
+|**Impostazioni di rappresentazione origine dati**|Viene specificato l'account di rappresentazione utilizzato per le connessioni al database quando vengono elaborati o aggiornati i dati in partizioni locali o remote, le query eseguite su un archivio dati relazionale (tramite DirectQuery), le associazioni out-of-line e la sincronizzazione del database dalla destinazione all'origine.<br /><br /> I valori validi includono l'account del servizio Analysis Services o un set specifico di credenziali di Windows. Non specificare **Usa credenziali dell'utente corrente**. Tale opzione per le credenziali non è supportata per un database modello tabulare.|  
 |**Ultima elaborazione**|Consente di visualizzare la data e l'ora dell'ultima elaborazione del database.|  
 |**Dimensioni stimate**|Consente di visualizzare le dimensioni stimate del database.|  
 |**Percorso di archiviazione**|Specifica la posizione del database. Se il database si trova nella directory dati predefinita, questo valore sarà vuoto.|  

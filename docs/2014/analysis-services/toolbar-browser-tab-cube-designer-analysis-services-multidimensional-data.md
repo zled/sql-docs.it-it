@@ -1,5 +1,5 @@
 ---
-title: Barra degli strumenti (scheda esplorazione, Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Sulla barra degli strumenti (scheda esplorazione, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c20904d56add8256de37351c1435d06f8f526277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0735af06261d606888fe04d45e968b63f5d6403
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300921"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Esplorazione, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare le funzionalità in **Barra degli strumenti** in Progettazione cubi per eseguire operazioni comuni durante la progettazione o l'esplorazione di un cubo o del relativo oggetto oppure durante la creazione di una query MDX. Le operazioni comuni sia in fase di progettazione che in visualizzazione query includono l'impostazione del contesto utente, l'elaborazione di oggetti e l'impostazione della lingua predefinita.  
@@ -36,7 +36,7 @@ ms.locfileid: "36055565"
 |![Visualizza/nascondi celle vuote](media/rsqdicon-showemptycells.gif "Visualizza/nascondi celle vuote")|Consente di visualizzare o nascondere le celle vuote nel riquadro Dati. Questa operazione equivale a utilizzare la clausola NON EMPTY in MDX.|  
 |![Esecuzione automatica della query](media/rsqdicon-autoexecute.gif "Esecuzione automatica della query")|Consente di eseguire automaticamente la query e di visualizzarne i risultati ogni volta che viene apportata una modifica. I risultati verranno visualizzati nel riquadro Dati.|  
 |![Pulsante Mostra aggregazioni](media/rsqdicon-showaggregations.gif "Pulsante Mostra aggregazioni")|Consente di visualizzare le aggregazioni nel riquadro Dati.|  
-|![Eliminare](media/rsqdicon-delete.gif "eliminare")|Consente di eliminare dalla query la colonna selezionata nel riquadro Dati.|  
+|![Eliminare](media/rsqdicon-delete.gif "Delete")|Consente di eliminare dalla query la colonna selezionata nel riquadro Dati.|  
 |![Icona della finestra di dialogo Parametri query](media/iconqueryparameter.gif "Icona della finestra di dialogo Parametri query")|Consente di visualizzare la finestra di dialogo **Parametri query** . Quando si specificano valori per un parametro di query, viene creato automaticamente un parametro con lo stesso nome.|  
 |![Pulsante Prepara query](media/rsqdicon-preparequery.gif "Pulsante Prepara query")|Consente di preparare la query.|  
 |![Esecuzione della query](media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query di e visualizzare i risultati nel riquadro Dati.|  
@@ -72,7 +72,7 @@ ms.locfileid: "36055565"
 |**Mostra celle vuote**|Fare clic per visualizzare le celle vuote nel riquadro **Report** .|  
 |**Cancella risultati**|Fare clic per cancellare i risultati nel riquadro **Report** .|  
 |**Comandi e opzioni**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Comandi e opzioni** e modificare le proprietà avanzate per il controllo Tabella pivot di Microsoft Office 11.0 nel riquadro **Report** . Per altre informazioni sulla finestra di dialogo **Comandi e opzioni** , vedere la documentazione di Microsoft Office.|  
-|**Prospettiva**|Consente di selezionare la prospettiva da cui visualizzare i dati e i metadati nei riquadri **Metadati** e **Report** .<br /><br /> Per visualizzare il cubo senza utilizzare una prospettiva, selezionare il nome del cubo.|  
+|**Punto di vista**|Consente di selezionare la prospettiva da cui visualizzare i dati e i metadati nei riquadri **Metadati** e **Report** .<br /><br /> Per visualizzare il cubo senza utilizzare una prospettiva, selezionare il nome del cubo.|  
 |**Lingua**|Consente di selezionare la lingua con cui visualizzare i dati e i metadati nei riquadri **Metadati** e **Report** .<br /><br /> Per visualizzare il cubo con la lingua predefinita, selezionare **Predefinita**.|  
   
   

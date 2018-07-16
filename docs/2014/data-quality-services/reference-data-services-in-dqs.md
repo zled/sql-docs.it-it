@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 52445327b71dfd6dbcc20e78583d471526747701
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3ab94654466cf739f1ee4db7d842223b1f3a31aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302791"
 ---
 # <a name="reference-data-services-in-dqs"></a>Servizi dati di riferimento in DQS
   I dati di riferimento sono un set accurato e completo di dati globali correlati o categorizzati (oltre i limiti di un'impresa) disponibile presso domini pubblici attendibili o da provider premium di contenuti commerciali.  
@@ -74,7 +74,7 @@ ms.locfileid: "36156268"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Viene descritto come configurare DQS per utilizzare servizi dati di riferimento da Marketplace o da provider diretti di dati di terze parti online.|[Configurare DQS per l'uso di dati di riferimento](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)|  
-|Viene descritto come eseguire il mapping di un dominio/dominio composito in una Knowledge Base a un servizio dati di riferimento.|[Collegare un dominio o dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
+|Viene descritto come eseguire il mapping di un dominio/dominio composito in una Knowledge Base a un servizio dati di riferimento.|[Collegare un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
 |Viene descritto come pulire i dati utilizzando un servizio dati di riferimento.|[Pulire i dati mediante le informazioni dei dati di riferimento &#40;esterni&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   
   

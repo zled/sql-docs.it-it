@@ -1,5 +1,5 @@
 ---
-title: Convenzioni XML ASSL | Documenti Microsoft
+title: Convenzioni XML di ASSL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0411903c72aba9b0122beb4c0e46e9f172f4f4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d248cc39e20869752deb67c0c84c8b0aca6aafd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279897"
 ---
 # <a name="assl-xml-conventions"></a>Convenzioni XML di ASSL
   Nel linguaggio ASSL (Analysis Services Scripting Language) la gerarchia di oggetti viene rappresentata come un set di tipi di elementi, ciascuno dei quali definisce gli elementi figlio che può contenere.  
@@ -43,7 +43,7 @@ ms.locfileid: "36169773"
   
 -   Tutti gli oggetti e le proprietà vengono rappresentati come elementi, ad eccezione degli attributi XML standard, ad esempio "xml:lang".  
   
--   Sia i nomi degli elementi e i valori di enumerazione seguono la convenzione di denominazione di Microsoft .NET Framework di Pascal maiuscole/minuscole senza caratteri di sottolineatura.  
+-   Sia i nomi degli elementi e i valori di enumerazione seguono la convenzione di denominazione di Microsoft .NET Framework della convenzione Pascal maiuscole e minuscole senza caratteri di sottolineatura.  
   
 -   La combinazione di lettere maiuscole e minuscole di tutti i valori viene mantenuta. I valori relativi alle enumerazioni rispettano inoltre la distinzione tra maiuscole e minuscole.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36169773"
 |`Boolean`|False|  
 |`String`|"" (stringa vuota)|  
 |`Integer` o `Long`|0 (zero)|  
-|`Timestamp`|12:00:00 AM, 1/1/0001 (corrispondente a un le versioni di .NET Framework `System.DateTime` con 0 tick)|  
+|`Timestamp`|12:00:00 AM, 1/1/0001 (corrispondente a una le versioni di .NET Framework `System.DateTime` con 0 tick)|  
   
  Un elemento presente, ma vuoto, viene interpretato come se il relativo valore fosse una stringa Null e non quello predefinito.  
   
@@ -183,6 +183,6 @@ ms.locfileid: "36169773"
   
  `</Dimension>`  
   
- Per ulteriori informazioni sui valori predefiniti ereditati, vedere [oggetti ASSL e relative caratteristiche](assl-objects-and-object-characteristics.md).  
+ Per altre informazioni sui valori predefiniti ereditati, vedere [oggetti ASSL e relative caratteristiche](assl-objects-and-object-characteristics.md).  
   
   
