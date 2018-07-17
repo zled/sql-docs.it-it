@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 991c8ab81340b5ab9b03b79174e7a60e33b505cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52edda77eb537fb6962a183cc37591b457d33b6d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964766"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355133"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Recapito di snapshot tramite FTP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +131,7 @@ ms.locfileid: "32964766"
   
     -   Nel database di sottoscrizione del Sottoscrittore eseguire [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specificare **@publisher**, **@publisher_db**, **@publication**, le credenziali di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows utilizzate per l'esecuzione dell'agente di distribuzione nel Sottoscrittore per **@job_login** e **@job_password**e il valore **true** per **@use_ftp**.  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) per registrare la sottoscrizione pull. Per altre informazioni, vedere [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) per registrare la sottoscrizione pull. Per altre informazioni, vedere [Creazione di una sottoscrizione pull](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication-that-uses-ftp-snapshot-delivery"></a>Per creare una sottoscrizione pull in una pubblicazione di tipo merge che utilizza il recapito di snapshot tramite FTP  
   
@@ -140,7 +139,7 @@ ms.locfileid: "32964766"
   
 2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Specificare **@publisher**, **@publisher_db**, **@publication**, le credenziali di Windows utilizzate per l'esecuzione dell'agente di distribuzione nel Sottoscrittore per **@job_login** e **@job_password**e il valore **true** per **@use_ftp**.  
   
-3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) per registrare la sottoscrizione pull. Per altre informazioni, vedere [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
+3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) per registrare la sottoscrizione pull. Per altre informazioni, vedere [Creazione di una sottoscrizione pull](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
 #### <a name="to-change-one-or-more-ftp-snapshot-delivery-settings-for-a-snapshot-or-transactional-publication"></a>Per modificare una o più impostazioni del recapito di snapshot tramite FTP per una pubblicazione snapshot o transazionale  
   

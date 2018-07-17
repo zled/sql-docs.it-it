@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38df2896997fe55f9072c481eb7678ce6c870aa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c762e0ceedad4c535f5eda7bafe017ed2d61d6d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965066"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351713"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerazioni e limitazioni relative alla progettazione dei server di pubblicazione Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -149,7 +148,7 @@ ms.locfileid: "32965066"
 -   Le modifiche dello schema delle tabelle Oracle pubblicate non sono supportate. Per apportare tali modifiche, eliminare innanzitutto la pubblicazione, inserire le modifiche e quindi ricreare la pubblicazione e le eventuali sottoscrizioni.  
   
     > [!NOTE]  
-    >  Se le modifiche dello schema e le successive operazioni di eliminazione e ricreazione della pubblicazione e delle sottoscrizioni vengono eseguite in un momento in cui non è in corso alcuna attività sulle tabelle pubblicate, è possibile specificare l'opzione relativa al supporto esclusivo della replica per le sottoscrizioni. In questo modo sarà possibile sincronizzarle senza dover copiare uno snapshot in ogni Sottoscrittore. Per altre informazioni, vedere [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+    >  Se le modifiche dello schema e le successive operazioni di eliminazione e ricreazione della pubblicazione e delle sottoscrizioni vengono eseguite in un momento in cui non è in corso alcuna attività sulle tabelle pubblicate, è possibile specificare l'opzione relativa al supporto esclusivo della replica per le sottoscrizioni. In questo modo sarà possibile sincronizzarle senza dover copiare uno snapshot in ogni Sottoscrittore. Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 ### <a name="replication-security-model"></a>Modello di sicurezza della replica  
  Il modello di sicurezza per il server di pubblicazione Oracle è identico a quello per la replica transazionale standard, con le eccezioni seguenti:  

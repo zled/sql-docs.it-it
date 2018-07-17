@@ -1,10 +1,9 @@
 ---
 title: CONCAT_WS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 06/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,25 +18,25 @@ helpviewer_keywords:
 - CONCAT_WS function
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
 caps.latest.revision: 5
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: e1a3d184ccdd0a1716fdace286b2bb8ed6a6cae6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0489a09d66684cd278cd3540c6565f03a599bc2
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055188"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783677"
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Questa funzione restituisce una stringa risultante dalla concatenazione o unione in join end-to-end di due o più valori di stringa. Separa tali valori concatenati della stringa con il delimitatore specificato nel primo argomento della funzione. (`CONCAT_WS` indica *concatenare con separatore*.)
 
 ##  <a name="syntax"></a>Sintassi   
 ```sql
-CONCAT_WS ( separator, argument1, argument1 [, argumentN]… ) 
+CONCAT_WS ( separator, argument1, argument2 [, argumentN]… )
 ```
 
 ## <a name="arguments"></a>Argomenti   

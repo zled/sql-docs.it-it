@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f6fc92335de75aa6ccbf18814b262ee17cec890
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c8fd8479cc560a532c9150f4c32f16fd8524a8e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964736"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352233"
 ---
 # <a name="reinitialize-a-subscription"></a>Reinizializzare una sottoscrizione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +121,7 @@ ms.locfileid: "32964736"
   
 1.  Nel server di pubblicazione eseguire [sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md). Specificare i parametri **@publication**, **@subscriber**e **@destination_db**. La sottoscrizione verrà contrassegnata per la reinizializzazione alla successiva esecuzione dell'agente di distribuzione.  
   
-2.  (Facoltativo) Avviare l'agente di distribuzione nel server di distribuzione per sincronizzare la sottoscrizione. Per altre informazioni, vedere [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
+2.  (Facoltativo) Avviare l'agente di distribuzione nel server di distribuzione per sincronizzare la sottoscrizione. Per altre informazioni, vedere [Sincronizzazione di una sottoscrizione push](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>Per reinizializzare una sottoscrizione pull in una pubblicazione di tipo merge  
   
@@ -140,7 +139,7 @@ ms.locfileid: "32964736"
     > [!IMPORTANT]  
     >  Se si aggiunge, elimina o modifica un filtro con parametri, le modifiche in sospeso nel Sottoscrittore non possono essere caricate nel server di pubblicazione durante la reinizializzazione. Per caricare le modifiche in sospeso, sincronizzare tutte le sottoscrizioni prima di modificare il filtro.  
   
-2.  (Facoltativo) Avviare l'agente di merge nel server di distribuzione per sincronizzare la sottoscrizione. Per altre informazioni, vedere [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
+2.  (Facoltativo) Avviare l'agente di merge nel server di distribuzione per sincronizzare la sottoscrizione. Per altre informazioni, vedere [Sincronizzazione di una sottoscrizione push](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>Per impostare i criteri di reinizializzazione durante la creazione di una nuova pubblicazione di tipo merge  
   
