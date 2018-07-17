@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3ad07906a4b64281016da04ee803833e3d17542
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055158"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36255513"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *flags*  
  Indica il mapping da utilizzare tra i dati XML e il set di righe relazionale e la modalità di riempimento della colonna spill-over. *flags* è un parametro di input facoltativo. I possibili valori sono i seguenti.  
   
-|Valore byte|Description|  
+|Valore byte|Descrizione|  
 |----------------|-----------------|  
 |**0**|Per impostazione predefinita viene impostato il mapping **incentrato sugli attributi**.|  
 |**1**|Viene usato il mapping **incentrato sugli attributi**. Può essere utilizzato in combinazione con XML_ELEMENTS. In questo caso, il mapping **incentrato sugli attributi** verrà applicato per primo; il mapping **incentrato sugli elementi** verrà applicato successivamente a tutte le colonne non ancora elaborate.|  
@@ -90,7 +89,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  Nella tabella seguente viene descritta la struttura della tabella **edge**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ID univoco del nodo del documento.<br /><br /> Il valore dell'ID dell'elemento radice è 0. I valori di ID negativi sono riservati.|  
 |**parentid**|**bigint**|Identifica il padre del nodo. Il padre identificato da questo ID non corrisponde necessariamente all'elemento padre. Dipende infatti dal valore NodeType del nodo il cui padre è identificato da questo ID. Se ad esempio il nodo è di tipo testo, il relativo elemento padre potrebbe essere un nodo attributo.<br /><br /> Se il nodo si trova al livello principale nel documento XML, il relativo valore **ParentID** è NULL.|  

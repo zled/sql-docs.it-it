@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1cacaad9280c33cb331157386db2f7f919d5bb8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cecaadee0ece9db93bae59192b4e643a84b3f81
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32959146"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354783"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Esecuzione di logiche di business durante la sincronizzazione di tipo merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ ms.locfileid: "32959146"
      Operazione utile per le applicazioni in cui è necessario sostituire operazioni o valori di dati specifici. In un'applicazione, ad esempio, un'eliminazione di riga potrebbe essere trasformata in un aggiornamento speciale che imposta una colonna **status** della riga sul valore "deleted" e quindi rileva l'identità del client che ha eseguito l'eliminazione. Questa operazione potrebbe risultare utile per effettuare controlli e monitorare il flusso di lavoro.  
   
 ### <a name="custom-conflict-resolution"></a>Risoluzione personalizzata dei conflitti  
- La replica di tipo merge consente di rilevare e risolvere i conflitti, permettendo di accettare una strategia di risoluzione predefinita o di scegliere la risoluzione personalizzata per i conflitti. Per altre informazioni, vedere [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Il gestore della logica di business può essere richiamato durante l'elaborazione di modifiche ai dati in conflitto e consente di eseguire una delle due azioni seguenti:  
+ La replica di tipo merge consente di rilevare e risolvere i conflitti, permettendo di accettare una strategia di risoluzione predefinita o di scegliere la risoluzione personalizzata per i conflitti. Per altre informazioni, vedere [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Il gestore della logica di business può essere richiamato durante l'elaborazione di modifiche ai dati in conflitto e consente di eseguire una delle due azioni seguenti:  
   
 -   Accettare la risoluzione predefinita  
   

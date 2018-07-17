@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,12 +25,12 @@ caps.latest.revision: 69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf73ea957e5a918618b1172b65a905439831689
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a25fcf08c76a509e71a3bfdefbaf3c683854d07b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965326"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356363"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtri con parametri - Filtri di riga con parametri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +130,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>Impostazione di "partition options"  
  Durante la creazione di un articolo, si specifica un valore per la proprietà **partition options** in base al modo in cui i dati nella tabella filtrata verranno condivisi dai Sottoscrittori. È possibile impostare la proprietà su uno di quattro valori utilizzando [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)e la finestra di dialogo **Proprietà articolo** . La proprietà può essere impostata su uno dei due valori utilizzando la finestra di dialogo **Aggiungi filtro** o **Modifica filtro** , disponibile nella Creazione guidata nuova pubblicazione, e nella finestra di dialogo **Proprietà pubblicazione** . Nella tabella seguente vengono descritti i valori disponibili.  
   
-|Description|Valore in Aggiungi filtro e Modifica filtro|Valore in Proprietà articolo|Valore nelle stored procedure|  
+|Descrizione|Valore in Aggiungi filtro e Modifica filtro|Valore in Proprietà articolo|Valore nelle stored procedure|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |I dati nelle partizioni sono sovrapposti e il Sottoscrittore può aggiornare le colonne a cui si fa riferimento in un filtro con parametri.|**Una riga di questa tabella verrà inviata a più sottoscrizioni**|**Sovrapposte**|**0**|  
 |I dati nelle partizioni sono sovrapposti e il Sottoscrittore non può aggiornare le colonne a cui si fa riferimento in un filtro con parametri.|N/D*|**Sovrapposte, non ammesse modifiche dei dati fuori partizione**|**1**|  

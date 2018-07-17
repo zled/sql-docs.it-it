@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27b03d53f60ae4c68c35645d5991b958f1c678d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73186cdc165e13b422fb8246cfe22a7a442e84ac
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964106"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355753"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definizione e modifica di un filtro di riga statico
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ ms.locfileid: "32964106"
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Per definire un filtro di riga statico per una pubblicazione snapshot o transazionale  
   
-1.  Definire l'articolo da filtrare. Per altre informazioni, vedere [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Definire l'articolo da filtrare. Per altre informazioni, vedere [definire un articolo](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md). Specificare il nome dell'articolo per **@article**, il nome della pubblicazione per **@publication**, il nome del filtro per **@filter_name**e la clausola di filtro per **@filter_clause** (senza includere `WHERE`).  
   

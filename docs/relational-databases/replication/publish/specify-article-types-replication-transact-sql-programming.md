@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -23,12 +22,12 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09fa4bbe567677cbabe237d25790369d31ab7ec2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e333e2323729c3c699f1e4705e55f3d31f12036
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964066"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356143"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Impostazione dei tipi di articolo (programmazione Transact-SQL della replica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "32964066"
   
     -   **logbased manualboth** : articolo basato su log con filtro orizzontale e verticale in cui sia la stored procedure utilizzata per applicare il filtro orizzontale sia la vista che definisce l'articolo con filtro verticale vengono create e definite dall'utente e specificate rispettivamente per **@filter** e **@sync_object**. Per ulteriori informazioni, vedere [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
-     In questo modo viene definito un nuovo articolo per la pubblicazione. Per altre informazioni, vedere [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     In questo modo viene definito un nuovo articolo per la pubblicazione. Per altre informazioni, vedere [definire un articolo](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Per gli articoli **logbased manualboth** e **logbased manualfilter** , eseguire [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) per generare la stored procedure di filtro per un articolo con filtro orizzontale. Per altre informazioni, vedere [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
@@ -71,7 +70,7 @@ ms.locfileid: "32964066"
   
     -   **indexed view logbased manualboth** : articolo di vista indicizzata basato su log con filtro in cui sia la stored procedure utilizzata per applicare il filtro orizzontale sia la vista che definisce un articolo con filtro verticale vengono create e definite dall'utente e specificate rispettivamente per **@filter** e **@sync_object**. Per ulteriori informazioni, vedere [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
-     In questo modo viene definito un nuovo articolo per la pubblicazione. Per altre informazioni, vedere [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     In questo modo viene definito un nuovo articolo per la pubblicazione. Per altre informazioni, vedere [definire un articolo](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Per gli articoli **logbased manualboth** e **logbased manualfilter** , eseguire [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) per generare la stored procedure di filtro per un articolo con filtro orizzontale. Per altre informazioni, vedere [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
@@ -89,7 +88,7 @@ ms.locfileid: "32964066"
   
     -   **func schema only** : articolo di funzione definita dall'utente di solo schema.  
   
-     In questo modo viene definito un nuovo articolo per la pubblicazione. Per altre informazioni, vedere [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     In questo modo viene definito un nuovo articolo per la pubblicazione. Per altre informazioni, vedere [definire un articolo](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ### <a name="to-publish-a-table-or-view-article-in-a-merge-publication"></a>Per pubblicare un articolo di tabella o vista in una pubblicazione di tipo merge  
   
@@ -101,7 +100,7 @@ ms.locfileid: "32964066"
   
     -   **view schema only** : articolo di vista di solo schema.  
   
-     In questo modo viene definito un nuovo articolo per la pubblicazione. Per altre informazioni, vedere [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     In questo modo viene definito un nuovo articolo per la pubblicazione. Per altre informazioni, vedere [definire un articolo](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ### <a name="to-publish-a-stored-procedure-or-user-defined-function-article-in-a-merge-publication"></a>Per pubblicare un articolo di stored procedure o funzione definita dall'utente in una pubblicazione di tipo merge  
   
@@ -111,7 +110,7 @@ ms.locfileid: "32964066"
   
     -   **proc schema only** : articolo di stored procedure di solo schema.  
   
-     In questo modo viene definito un nuovo articolo per la pubblicazione. Per altre informazioni, vedere [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     In questo modo viene definito un nuovo articolo per la pubblicazione. Per altre informazioni, vedere [definire un articolo](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   

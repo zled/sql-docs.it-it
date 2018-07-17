@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c79e19d6cd66cd25796d63d214b0234a659a9dc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc07ddaa29dc999bef0037eeab66f51b65e27ea7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964956"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359313"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifica delle proprietà di pubblicazioni e articoli
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "32964956"
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Proprietà della pubblicazione per la replica snapshot e transazionale  
   
-|Description|Stored procedure|Proprietà|Requisiti|  
+|Descrizione|Stored procedure|Proprietà|Requisiti|  
 |-----------------|----------------------|----------------|------------------|  
 |Modifica del formato snapshot.|**sp_changepublication**|**sync_method**|Nuovo snapshot.|  
 |Modifica della posizione dello snapshot.|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Nuovo snapshot.|  
@@ -49,7 +48,7 @@ ms.locfileid: "32964956"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>Proprietà degli articoli per la replica snapshot e transazionale  
   
-|Description|Stored procedure|Proprietà|Requisiti|  
+|Descrizione|Stored procedure|Proprietà|Requisiti|  
 |-----------------|----------------------|----------------|------------------|  
 |Eliminazione di un articolo.|**sp_droparticle**|Tutti i parametri.|È possibile eliminare gli articoli prima di creare le sottoscrizioni. È possibile utilizzare le stored procedure per eliminare una sottoscrizione in un articolo. Se si utilizza [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], è necessario eliminare, ricreare e sincronizzare l'intera sottoscrizione. Per altre informazioni, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Modifica di un filtro colonne.|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
@@ -67,7 +66,7 @@ ms.locfileid: "32964956"
   
 ## <a name="publication-properties-for-merge-replication"></a>Proprietà della pubblicazione per la replica di tipo merge  
   
-|Description|Stored procedure|Proprietà|Requisiti|  
+|Descrizione|Stored procedure|Proprietà|Requisiti|  
 |-----------------|----------------------|----------------|------------------|  
 |Modifica del formato dello snapshot.|**sp_changemergepublication**|**sync_mode**|Nuovo snapshot.|  
 |Modifica della posizione dello snapshot.|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Nuovo snapshot.|  
@@ -86,7 +85,7 @@ ms.locfileid: "32964956"
   
 ## <a name="article-properties-for-merge-replication"></a>Proprietà degli articoli per la replica di tipo merge  
   
-|Description|Stored procedure|Proprietà|Requisiti|  
+|Descrizione|Stored procedure|Proprietà|Requisiti|  
 |-----------------|----------------------|----------------|------------------|  
 |Eliminazione di un articolo al quale è associato l'ultimo filtro con parametri nella pubblicazione.|**sp_dropmergearticle**|Tutti i parametri.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Eliminazione di un articolo padre in un filtro join o in un record logico con l'effetto collaterale di eliminare il join correlato.|**sp_dropmergearticle**|Tutti i parametri.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  

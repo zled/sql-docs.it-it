@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 251c3c3d0f4a5d52d5c825eba86d55199e6a94b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f0c3a94b39787a302db13d6a3a9fed26f1718e8
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32960756"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357763"
 ---
 # <a name="reinitialize-subscriptions"></a>Reinizializzare le sottoscrizioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "32960756"
 > [!IMPORTANT]  
 >  Se si aggiunge, elimina o modifica un filtro con parametri in una pubblicazione di tipo merge, non sarà possibile caricare le modifiche in sospeso dal Sottoscrittore al server di pubblicazione durante la reinizializzazione. Per caricare le modifiche in sospeso, sincronizzare tutte le sottoscrizioni prima di modificare il filtro.  
   
- Se durante la creazione della sottoscrizione è stata disattivata l'applicazione dello snapshot iniziale al Sottoscrittore e quindi si contrassegna la sottoscrizione per la reinizializzazione, non verrà applicato uno snapshot. Per altre informazioni, vedere [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+ Se durante la creazione della sottoscrizione è stata disattivata l'applicazione dello snapshot iniziale al Sottoscrittore e quindi si contrassegna la sottoscrizione per la reinizializzazione, non verrà applicato uno snapshot. Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Per reinizializzare una sottoscrizione**  
   
