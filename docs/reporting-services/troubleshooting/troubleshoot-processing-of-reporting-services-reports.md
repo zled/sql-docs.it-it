@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8e7e4ac8f6bcd7caa3267ee783befd65d0855257
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d24a053e325bda0be8ca5e9f2797922e4d85b2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299071"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Risolvere i problemi di elaborazione dei report di Reporting Services
 Dopo aver recuperato i dati del report, le informazioni sul layout e i dati vengono combinati dal componente Elaborazione report. Ciascuna proprietà dell'elemento del report contenente un'espressione viene valutata nel contesto dei dati e del layout combinati. Utilizzare le informazioni presenti in questo argomento per risolvere questi problemi.   
@@ -55,6 +55,6 @@ Nell'anteprima, visualizzare la finestra di output in [!INCLUDE[ssBIDevStudioFul
   
   
 ## <a name="see-also"></a>Vedere anche  
-[Errori ed eventi (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
+[Errori ed eventi (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
 
