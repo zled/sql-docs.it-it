@@ -1,26 +1,24 @@
 ---
 title: Aprire e salvare file con pacchetti SSIS distribuiti in Azure | Microsoft Docs
 description: Informazioni su come aprire e salvare file in locale e in Azure quando si esegue la migrazione in modalità lift-and-shift di pacchetti SSIS che usano file system locali in SSIS in Azure
-ms.date: 11/27/2017
+ms.date: 06/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: c4f9d5e91db382d59dc156ed919c1af06cc56b77
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c77d072067799df660ab1c0989eda410480de816
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410473"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37065991"
 ---
 # <a name="open-and-save-files-on-premises-and-in-azure-with-ssis-packages-deployed-in-azure"></a>Aprire e salvare file in locale e in Azure con pacchetti SSIS distribuiti in Azure
 
 Questo articolo descrive come aprire e salvare file in locale e in Azure quando si esegue la migrazione in modalità lift-and-shift di pacchetti SSIS che usano file system locali in SSIS in Azure.
-
-> [!IMPORTANT]
-> Attualmente il catalogo SSIS (SSISDB) supporta solo un singolo set di credenziali di accesso. Di conseguenza, non è possibile usare set di credenziali diversi per connettersi a più condivisioni file in locale e a condivisioni di File di Azure.
 
 ## <a name="save-temporary-files"></a>Salvare i file temporanei
 Se è necessario archiviare ed elaborare i file temporanei durante l'esecuzione di un singolo pacchetto, i pacchetti possono usare la directory di lavoro corrente (`.`) o la cartella temporanea (`%TEMP%`) dei nodi del runtime di integrazione SSIS di Azure.

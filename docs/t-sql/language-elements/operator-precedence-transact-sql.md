@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,12 +21,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 01c6a268d0a4e7a833f4a121abc46cc396de2bed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f1b4ec74c21ab999530e25c08e03f1c0c0758026
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33058348"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782332"
 ---
 # <a name="operator-precedence-transact-sql"></a>Precedenza degli operatori (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "33058348"
   
  Se due operatori di un'espressione hanno lo stesso livello di precedenza, vengono valutati da sinistra verso destra in base alla posizione nell'espressione. Nell'espressione utilizzata nell'istruzione `SET` seguente, ad esempio, l'operatore di sottrazione viene valutato prima dell'operatore di addizione.  
   
-```  
+```sql  
 DECLARE @MyNumber int;  
 SET @MyNumber = 4 - 2 + 27;  
 -- Evaluates to 2 + 27 which yields an expression result of 29.  
@@ -60,7 +59,7 @@ SELECT @MyNumber;
   
  Nell'espressione utilizzata nell'istruzione `SET` seguente, ad esempio, l'operatore di moltiplicazione ha un livello di precedenza più alto rispetto all'operatore di addizione e viene pertanto valutato per primo. Il risultato dell'espressione è `13`.  
   
-```  
+```sql  
 DECLARE @MyNumber int;  
 SET @MyNumber = 2 * 4 + 5;  
 -- Evaluates to 8 + 5 which yields an expression result of 13.  
@@ -69,7 +68,7 @@ SELECT @MyNumber;
   
  Nell'espressione utilizzata nell'istruzione `SET` seguente le parentesi fanno sì che venga eseguita per prima l'addizione. Il risultato dell'espressione è `18`.  
   
-```  
+```sql  
 DECLARE @MyNumber int;  
 SET @MyNumber = 2 * (4 + 5);  
 -- Evaluates to 2 * 9 which yields an expression result of 18.  
@@ -78,7 +77,7 @@ SELECT @MyNumber;
   
  Se in un'espressione vengono utilizzate parentesi nidificate, viene valutata per prima l'espressione più interna. Nell'esempio seguente con parentesi nidificate, l'espressione `5 - 3` corrisponde al set di parentesi più interno della struttura nidificata. Questa espressione restituisce il valore `2`. L'operatore di addizione (`+`) somma quindi questo risultato a `4`. Il valore restituito da questa operazione è `6`. Infine, il valore `6` viene moltiplicato per `2` e il risultato dell'espressione `12`.  
   
-```  
+```sql  
 DECLARE @MyNumber int;  
 SET @MyNumber = 2 * (4 + (5 - 3) );  
 -- Evaluates to 2 * (4 + 2) which then evaluates to 2 * 6, and   

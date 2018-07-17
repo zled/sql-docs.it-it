@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 6/7/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 767f6650a46e67463dd51ad67ad1d506cc96c303
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b60fb0ee5e0c02ab541bd098fb22cbfb01cd501
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055928"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421570"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +75,7 @@ ms.locfileid: "33055928"
 ## <a name="supported-string-literal-formats-for-time"></a>Formati di valore letterale stringa supportati per l'ora  
  Nella tabella seguente sono riportati i formati di valore letterale stringa validi per il tipo di dati **time**.  
   
-|SQL Server|Description|  
+|SQL Server|Descrizione|  
 |----------------|-----------------|  
 |hh:mm [: ss][:secondi frazionari][AM][PM]<br /><br /> hh:mm [: ss].secondi frazionari][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM [PM]|Il valore relativo all'ora 0 rappresenta l'ora dopo mezzanotte (AM), indipendentemente dall'indicazione AM. Non è possibile specificare PM quando l'ora è uguale a 0.<br /><br /> I valori di ora compresi tra 01 e 11 rappresentano le ore antimeridiane (prima di mezzogiorno) se non si specifica né AM né PM. Se si specifica AM, i valori indicano le ore prima di mezzogiorno, mentre rappresentano le ore postmeridiane (dopo mezzogiorno) se si specifica PM.<br /><br /> Il valore di ora 12 rappresenta l'ora che inizia a mezzogiorno se non si specifica né AM né PM. Rappresenta invece l'ora che inizia a mezzanotte se si specifica AM e l'ora che inizia a mezzogiorno se si specifica PM. Ad esempio, 12:01 indica un minuto dopo mezzogiorno, così come 12:01 PM, mentre 12:01 AM indica un minuto dopo la mezzanotte. 12:01 AM equivale a 00:01 o 00:01 AM.<br /><br /> I valori di ora compresi tra 13 e 23 rappresentano le ore postmeridiane se non si specifica né AM né PM e le ore postmeridiane se si specifica PM. Non è possibile specificare AM per valori di ora compresi tra 13 e 23.<br /><br /> Un valore relativo all'ora 24 non è valido. Per indicare la mezzanotte, utilizzare 12:00 AM o 00:00.<br /><br /> È possibile far precedere i millisecondi dai due punti (:) o da un punto (.). Se si utilizzano i due punti, il valore indica i millesimi di secondo. Un valore preceduto da un punto indica i decimi di secondo se è composto da una sola cifra, i centesimi di secondo se è composto da due cifre e i millesimi di secondo se è composto da tre cifre. Ad esempio, 12:30:20:1 indica che sono trascorsi 20 secondi e un millesimo di secondo dalle 12:30, mentre 12:30:20.1 indica che sono trascorsi venti secondi e un decimo di secondo dalle 12:30.|  
   
@@ -250,7 +249,7 @@ SELECT
 ###  <a name="ExampleB"></a> B. Inserimento dei valori letterali stringa dell'ora validi in una colonna time(7)  
  Nella tabella seguente sono elencati i diversi valori letterali stringa che possono essere inseriti in una colonna del tipo di dati **time(7)** con i valori che sono archiviati in tale colonna.  
   
-|Tipo di formato dei valori letterali stringa|Valore letterale stringa inserito|Valore time(7) archiviato|Description|  
+|Tipo di formato dei valori letterali stringa|Valore letterale stringa inserito|Valore time(7) archiviato|Descrizione|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|01:01:01:123AM|01:01:01.1230000|Se prima della precisione frazionaria dei secondi vengono utilizzati i due punti (:), la scala non può superare tre posizioni o verrà generato un errore.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567 AM'|01:01:01.1234567|Quando si specificano AM o PM, l'ora viene archiviata in formato di 24 ore senza l'AM o il PM letterale.|  
@@ -265,7 +264,7 @@ SELECT
 ### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>C. Inserimento del valore letterale stringa nelle colonne di ogni tipo di dati relativi a data e ora  
  Nella tabella seguente la prima colonna indica il valore letterale stringa dell'ora da inserire nella colonna della tabella del database della data o dell'ora visualizzate nella seconda colonna. La terza colonna indica il valore che verrà memorizzato nella colonna della tabella del database.  
   
-|Valore letterale stringa inserito|Tipo di dati colonna|Valore archiviato nella colonna|Description|  
+|Valore letterale stringa inserito|Tipo di dati colonna|Valore archiviato nella colonna|Descrizione|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|Se la precisione frazionaria dei secondi supera il valore specificato per la colonna, la stringa sarà troncata senza errori.|  
 |'2007-05-07'|**data**|NULL|Qualsiasi valore dell'ora genererà un errore nell'istruzione INSERT|  
