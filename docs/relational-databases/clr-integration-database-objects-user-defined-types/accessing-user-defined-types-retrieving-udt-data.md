@@ -1,11 +1,11 @@
 ---
-title: Il recupero dei dati di tipo definito dall'utente | Documenti Microsoft
+title: Il recupero dei dati di tipo definito dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -25,19 +25,19 @@ caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 15f0fb18dfccccbb8321366bb155e03a352fcad9
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 2c07349f7bf1cec153ccb1a57d3ba15dea70b4e2
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700582"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356073"
 ---
-# <a name="accessing-user-defined-types---retrieving-udt-data"></a>L'accesso a tipi definiti dall'utente, il recupero dei dati di tipo definito dall'utente
+# <a name="accessing-user-defined-types---retrieving-udt-data"></a>Accesso ai tipi definiti dall'utente - recupero di dati UDT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Per creare un tipo definito dall'utente (UDT) nel client, l'assembly registrato come tipo definito dall'utente in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere disponibile per l'applicazione client. L'assembly UDT può essere posizionato nella stessa directory dell'applicazione oppure nella Global Assembly Cache (GAC). È inoltre possibile impostare un riferimento all'assembly nel progetto.  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>Requisiti per l'utilizzo di tipi definiti dall'utente in ADO.NET  
- Per consentire la creazione del tipo definito dall'utente sul client, è necessario che l'assembly caricato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'assembly sul client siano compatibili. Per tipi definiti dall'utente definito con il **nativa** formato di serializzazione, gli assembly devono essere strutturalmente compatibili. Per gli assembly definiti con la **UserDefined** formato, l'assembly deve essere disponibile nel client.  
+ Per consentire la creazione del tipo definito dall'utente sul client, è necessario che l'assembly caricato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'assembly sul client siano compatibili. Per tipi definiti dall'utente definito con la **nativa** formato di serializzazione, gli assembly devono essere strutturalmente compatibili. Per gli assembly definiti con la **UserDefined** formato, l'assembly deve essere disponibile nel client.  
   
  Per recuperare i dati non elaborati da una colonna con tipo definito dall'utente in una tabella, non è necessario che sul client sia disponibile una copia dell'assembly UDT.  
   
@@ -45,20 +45,20 @@ ms.locfileid: "35700582"
 >  **SqlClient** potrebbe non riuscire a caricare un tipo definito dall'utente in caso di versioni non corrispondenti di tipo definito dall'utente o altri problemi. In questo caso, utilizzare i normali meccanismi per la risoluzione di problemi per determinare il motivo per cui l'assembly in cui è contenuto il tipo definito dall'utente non viene individuato dall'applicazione chiamante. Per ulteriori informazioni, consultare l'argomento intitolato "Diagnostica degli errori tramite gli assistenti al debug gestito" nella documentazione di .NET Framework.  
   
 ## <a name="accessing-udts-with-a-sqldatareader"></a>Accesso ai tipi definiti dall'utente con un oggetto SqlDataReader  
- Un **System.Data.SqlClient.SqlDataReader** può essere utilizzato dal codice client per recuperare un set di risultati contenente una colonna di tipo definito dall'utente, che viene esposta come un'istanza dell'oggetto.  
+ Oggetto **SqlClient. SqlDataReader** utilizzabile dal codice client per recuperare un set di risultati contenente una colonna di tipo definito dall'utente, che viene esposta come un'istanza dell'oggetto.  
   
 ### <a name="example"></a>Esempio  
- In questo esempio viene illustrato come utilizzare il **Main** metodo per creare un nuovo **SqlDataReader** oggetto. All'interno del codice di esempio si verificano le azioni seguenti:  
+ Questo esempio illustra come usare il **Main** per creare un nuovo metodo **SqlDataReader** oggetto. All'interno del codice di esempio si verificano le azioni seguenti:  
   
 1.  Il metodo Main crea un nuovo **SqlDataReader** dell'oggetto e recupera i valori della tabella Points, che include una colonna di tipo definito dall'utente denominata Point.  
   
 2.  Il tipo definito dall'utente di Point espone le coordinate X e Y definite come numeri interi.  
   
-3.  Il tipo definito dall'utente definisce una **distanza** (metodo) e una **GetDistanceFromXY** metodo.  
+3.  Il tipo definito dall'utente definisce una **distanza** metodo e un **GetDistanceFromXY** (metodo).  
   
 4.  Il codice di esempio recupera i valori delle colonne con tipo definito dall'utente di chiave primaria per dimostrare le funzionalità del tipo definito dall'utente.  
   
-5.  Il codice di esempio chiama la **Point.Distance** e **GetDistanceFromXY** metodi.  
+5.  Il codice di esempio chiama il **Point.Distance** e **GetDistanceFromXY** metodi.  
   
 6.  I risultati vengono visualizzati nella finestra della console.  
   
@@ -161,10 +161,10 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>Associazione di tipi definiti dall'utente come byte  
- In alcune situazioni può risultare utile recuperare i dati non elaborati dalla colonna con tipo definito dall'utente. Può accadere che il tipo non sia disponibile localmente o non si desideri creare un'istanza del tipo definito dall'utente. È possibile leggere i byte non elaborati in una matrice di byte utilizzando il **GetBytes** metodo di un **SqlDataReader**. Tale metodo legge un flusso di byte dall'offset di colonna specificato nel buffer di una matrice, a partire dall'offset del buffer specificato. Un'altra opzione consiste nell'utilizzare uno del **GetSqlBytes** oppure **GetSqlBinary** metodi e leggere tutto il contenuto in un'unica operazione. In entrambi i casi non viene mai creata un'istanza dell'oggetto UDT, pertanto non è necessario impostare un riferimento al tipo definito dall'utente nell'assembly client.  
+ In alcune situazioni può risultare utile recuperare i dati non elaborati dalla colonna con tipo definito dall'utente. Può accadere che il tipo non sia disponibile localmente o non si desideri creare un'istanza del tipo definito dall'utente. È possibile leggere i byte non elaborati in una matrice di byte utilizzando il **GetBytes** metodo di un **SqlDataReader**. Tale metodo legge un flusso di byte dall'offset di colonna specificato nel buffer di una matrice, a partire dall'offset del buffer specificato. Un'altra opzione consiste nell'usare uno dei **GetSqlBytes** oppure **GetSqlBinary** metodi e leggere tutto il contenuto in un'unica operazione. In entrambi i casi non viene mai creata un'istanza dell'oggetto UDT, pertanto non è necessario impostare un riferimento al tipo definito dall'utente nell'assembly client.  
   
 ### <a name="example"></a>Esempio  
- In questo esempio viene illustrato come recuperare il **punto** dati come byte non elaborati in una matrice di byte utilizzando un **SqlDataReader**. Il codice Usa un **StringBuilder** per convertire i byte non elaborati in una rappresentazione di stringa da visualizzare nella finestra della console.  
+ In questo esempio mostra come recuperare il **punto** i dati come byte non elaborati in una matrice di byte utilizzando un **SqlDataReader**. Il codice Usa un **StringBuilder** per convertire i byte non elaborati in una rappresentazione di stringa da visualizzare nella finestra della console.  
   
 ```vb  
 Option Explicit On  
@@ -270,7 +270,7 @@ class GetRawBytes
 ```  
   
 ### <a name="example-using-getsqlbytes"></a>Esempio di utilizzo di GetSqlBytes  
- In questo esempio viene illustrato come recuperare il **punto** dati come byte non elaborati in una singola operazione utilizzando il **GetSqlBytes** metodo. Il codice Usa un **StringBuilder** per convertire i byte non elaborati in una rappresentazione di stringa da visualizzare nella finestra della console.  
+ In questo esempio mostra come recuperare il **punto** i dati come byte non elaborati in una singola operazione utilizzando il **GetSqlBytes** (metodo). Il codice Usa un **StringBuilder** per convertire i byte non elaborati in una rappresentazione di stringa da visualizzare nella finestra della console.  
   
 ```vb  
 Option Explicit On  
@@ -378,13 +378,13 @@ class GetRawBytes
  I tipi definiti dall'utente possono essere utilizzati come parametri sia di input che di output nel codice ADO.NET.  
   
 ## <a name="using-udts-in-query-parameters"></a>Utilizzo dei tipi definiti dall'utente nei parametri di query  
- Tipi definiti dall'utente possono servire come i valori dei parametri quando si configura un **SqlParameter** per un **System.Data.SqlClient.SqlCommand** oggetto. Il **SqlDbType. UDT** enumerazione di una **SqlParameter** oggetto viene utilizzato per indicare che il parametro è un tipo definito dall'utente quando si chiama il **Aggiungi** metodo per il  **I parametri** insieme. Il **UdtTypeName** proprietà di un **SqlCommand** oggetto viene usato per specificare il nome completo del tipo in questione nel database utilizzando il *schema_name* sintassi. Anche se non è richiesto, l'utilizzo che il nome completo, elimina l'ambiguità dal codice.  
+ Tipi definiti dall'utente da utilizzare come valori dei parametri quando si configura un **SqlParameter** per una **System.Data.SqlClient.SqlCommand** oggetto. Il **SqlDbType. UDT** enumerazione di una **SqlParameter** oggetto viene usato per indicare che il parametro è un tipo definito dall'utente quando si chiama il **Add** metodo per il  **Parametri** raccolta. Il **UdtTypeName** proprietà di un **SqlCommand** oggetto viene usato per specificare il nome completo del tipo in questione nel database utilizzando il *schema_name* sintassi. Anche se non è richiesto, l'utilizzo che il nome completo, elimina l'ambiguità dal codice.  
   
 > [!NOTE]  
 >  Una copia locale dell'assembly UDT deve essere disponibile per il progetto client.  
   
 ### <a name="example"></a>Esempio  
- Nel codice in questo esempio viene creato **SqlCommand** e **SqlParameter** oggetti per inserire dati in una colonna di tipo definito dall'utente in una tabella. Il codice Usa il **SqlDbType. UDT** enumerazione per specificare il tipo di dati e il **UdtTypeName** proprietà del **SqlParameter** oggetto per specificare il nome completo di tipo definito dall'utente nel database.  
+ Nel codice in questo esempio viene creato **SqlCommand** e **SqlParameter** oggetti per inserire dati in una colonna di tipo definito dall'utente in una tabella. Il codice Usa il **SqlDbType. UDT** enumerazione per specificare il tipo di dati e il **UdtTypeName** proprietà del **SqlParameter** oggetto per specificare il nome completo del tipo definito dall'utente nel database.  
   
 ```vb  
 Option Explicit On  

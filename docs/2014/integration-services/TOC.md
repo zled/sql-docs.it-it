@@ -53,6 +53,7 @@
 ### [Completamento procedura guidata (Aggiornamento guidato pacchetti SSIS)](complete-the-wizard-ssis-package-upgrade-wizard.md)
 ### [Aggiornamento pacchetti (Aggiornamento guidato pacchetti SSIS)](upgrading-the-packages-ssis-package-upgrade-wizard.md)
 ## [Importazione ed esportazione guidate di SQL Server +](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
+## [Importare da o esportare in Excel](load-data-to-from-excel-with-ssis.md)
 ## [Strumenti per la risoluzione dei problemi relativi allo sviluppo dei pacchetti +](troubleshooting/troubleshooting-tools-for-package-development.md)
 ## [Eventi registrati da un pacchetto di Integration Services](performance/events-logged-by-an-integration-services-package.md)
 ## [Visualizzare le voci di log nella finestra Registra eventi](view-log-entries-in-the-log-events-window.md)

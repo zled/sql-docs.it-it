@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
 - properties [Integration Services]
@@ -28,13 +28,13 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c7cb436d29f4401122daba5985558e3bb50e665f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0619ba605e154bab645041602b95436560fa8769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279547"
 ---
 # <a name="set-package-properties"></a>Impostazione delle proprietà di un pacchetto
   Quando viene creato un pacchetto in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] utilizzando l'interfaccia grafica offerta da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , è possibile impostare le proprietà dell'oggetto pacchetto nella finestra Proprietà.  
@@ -74,7 +74,7 @@ ms.locfileid: "36157796"
 |Proprietà|Description|  
 |--------------|-----------------|  
 |`CheckpointFileName`|Nome del file in cui vengono acquisite le informazioni di checkpoint che consentono il riavvio del pacchetto. Se l'esecuzione del pacchetto viene completata correttamente, questo file verrà eliminato.|  
-|`CheckpointUsage`|Specifica quando è possibile riavviare il pacchetto. I valori sono `Never`, `IfExists`, e `Always`. Il valore predefinito di questa proprietà è `Never`, a indicare che il pacchetto non può essere riavviato. Per ulteriori informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSCheckpointUsage>.|  
+|`CheckpointUsage`|Specifica quando è possibile riavviare il pacchetto. I valori sono `Never`, `IfExists`, e `Always`. Il valore predefinito di questa proprietà è `Never`, che indica che il pacchetto non può essere riavviato. Per ulteriori informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSCheckpointUsage>.|  
 |`SaveCheckpoints`|Specifica se i checkpoint vengono scritti nel file del checkpoint durante l'esecuzione del pacchetto. Il valore predefinito di questa proprietà è `False`.|  
   
 > [!NOTE]  
@@ -99,7 +99,7 @@ ms.locfileid: "36157796"
   
 |Proprietà|Description|  
 |--------------|-----------------|  
-|`ForcedExecutionValue`|Se è impostata su ForceExecutionValue `True`, un valore che specifica il valore di esecuzione facoltativo restituito dal pacchetto. Il valore predefinito di questa proprietà è **0**.|  
+|`ForcedExecutionValue`|Se ForceExecutionValue è impostata su `True`, un valore che specifica il valore di esecuzione facoltativo restituito dal pacchetto. Il valore predefinito di questa proprietà è **0**.|  
 |`ForcedExecutionValueType`|Il tipo di dati di ForcedExecutionValue. Il valore predefinito di questa proprietà è `Int32`.|  
 |`ForceExecutionValue`|Valore booleano che specifica se il valore di esecuzione facoltativo del contenitore deve essere forzato in modo da contenere un valore specifico. Il valore predefinito di questa proprietà è `False`.|  
   
@@ -122,13 +122,13 @@ ms.locfileid: "36157796"
 |Proprietà|Description|  
 |--------------|-----------------|  
 |`Configurations`|Raccolta delle configurazioni utilizzate dal pacchetto. Per visualizzare e configurare le configurazioni del pacchetto, fare clic sul pulsante Sfoglia **(…)** .|  
-|`Expressions`|Per creare espressioni per le proprietà del pacchetto, fare clic sul pulsante Sfoglia **(…)** .<br /><br /> Nota: È possibile creare espressioni di proprietà per tutte le proprietà del pacchetto tale oggetto modello include, non solo le proprietà elencate nella finestra Proprietà.<br /><br /> Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](expressions/use-property-expressions-in-packages.md).<br /><br /> Per visualizzare le espressioni di proprietà esistenti, espandere `Expressions`. Per modificare e valutare un'espressione, fare clic sul pulsante Sfoglia **(…)** nella casella di testo dell'espressione.|  
+|`Expressions`|Per creare espressioni per le proprietà del pacchetto, fare clic sul pulsante Sfoglia **(…)** .<br /><br /> Nota: È possibile creare espressioni di proprietà per tutte le proprietà del pacchetto che include modelli, non solo le proprietà elencate nella finestra delle proprietà dell'oggetto.<br /><br /> Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](expressions/use-property-expressions-in-packages.md).<br /><br /> Per visualizzare le espressioni di proprietà esistenti, espandere `Expressions`. Per modificare e valutare un'espressione, fare clic sul pulsante Sfoglia **(…)** nella casella di testo dell'espressione.|  
 |`ForceExecutionResult`|Risultato dell'esecuzione del pacchetto. I valori sono `None`, `Success`, `Failure`, e `Completion`. Il valore predefinito di questa proprietà è `None`. Per altre informazioni, vedere T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult.|  
 |`LocaleId`|Impostazioni locali Microsoft Win32. Il valore predefinito di questa proprietà è costituito dalle impostazioni locali del sistema operativo sul computer locale.|  
 |`LoggingMode`|Valore che specifica il comportamento di registrazione del pacchetto. I valori sono `Disabled`, `Enabled`, e `UseParentSetting`. Il valore predefinito di questa proprietà è `UseParentSetting`. Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
 |`OfflineMode`|Indica se il pacchetto è in modalità offline. Questa proprietà è di sola lettura. e viene impostata a livello di progetto. In genere, Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] tenta di connettersi a ogni origine dei dati utilizzata dal pacchetto per convalidare i metadati associati alle origini e alle destinazioni. È possibile attivare l'opzione **Offline** dal menu **SSIS** anche prima di aprire un pacchetto, per impedire questi tentativi di connessione e gli errori di convalida risultanti quando le origini dei dati non sono disponibili. È anche possibile abilitare l'opzione **Offline** per rendere più veloci le operazioni di progettazione e disabilitarla solo quando si vuole convalidare il pacchetto.|  
 |`SuppressConfigurationWarnings`|Indica se gli avvisi generati dalle configurazioni vengono soppressi. Il valore predefinito di questa proprietà è `False`.|  
-|`UpdateObjects`|Indica se il pacchetto viene aggiornato in modo da utilizzare le versioni più recenti, se disponibili, degli oggetti che contiene. Se, ad esempio, questa proprietà è impostata su `True`, un pacchetto che includa un'attività Inserimento Bulk viene aggiornato per utilizzare la versione più recente dell'attività Inserimento Bulk attività [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornisce. Il valore predefinito di questa proprietà è `False`.|  
+|`UpdateObjects`|Indica se il pacchetto viene aggiornato in modo da utilizzare le versioni più recenti, se disponibili, degli oggetti che contiene. Ad esempio, se questa proprietà è impostata su `True`, un pacchetto che include un'attività Inserimento Bulk viene aggiornato per usare la versione più recente di inserimento di massa attività [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornisce. Il valore predefinito di questa proprietà è `False`.|  
   
 ###  <a name="Security"></a> Sicurezza  
  Le proprietà di questa categoria consentono di impostare il livello di protezione del pacchetto. Per altre informazioni, vedere [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md).  
@@ -143,7 +143,7 @@ ms.locfileid: "36157796"
   
 |Proprietà|Description|  
 |--------------|-----------------|  
-|`IsolationLevel`|Livello di isolamento della transazione del pacchetto.  Il valore predefinito di questa proprietà è `Serializable`. I valori validi sono <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`(Indici per tabelle con ottimizzazione per la memoria).<br /><br /> La proprietà `IsolationLevel` viene applicata automaticamente alle transazioni del pacchetto solo quando il valore della proprietà `TransactionOption` è `Required`.<br /><br /> Il valore di `IsolationLevel` proprietà richiesta da un contenitore figlio viene ignorato quando vengono soddisfatte le condizioni seguenti:<br /><br /> Il valore della proprietà `TransactionOption` del contenitore figlio è `Supported`.<br />Il contenitore figlio partecipa alla transazione di un contenitore padre.<br /><br /> Il valore della proprietà `IsolationLevel` richiesta dal contenitore viene rispettato solo quando il contenitore avvia una nuova transazione. Un contenitore avvia una nuova transazione quando le condizioni seguenti sono vere:<br /><br /> Il valore della proprietà `TransactionOption` del contenitore è `Required`.<br />Non è stata ancora avviata alcuna transazione da parte del padre.<br /><br /> <br /><br /> Nota: il `Snapshot` valore di `IsolationLevel` proprietà non è compatibile con le transazioni del pacchetto. Pertanto, non è possibile utilizzare il `IsolationLevel` proprietà per impostare il livello di isolamento delle transazioni del pacchetto per `Shapshot`. Al contrario, utilizzare una query SQL per impostare le transazioni del pacchetto `Snapshot`. Per altre informazioni, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Per ulteriori informazioni sulla proprietà `IsolationLevel`, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
+|`IsolationLevel`|Livello di isolamento della transazione del pacchetto.  Il valore predefinito di questa proprietà è `Serializable`. I valori validi sono <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`(Indici per tabelle con ottimizzazione per la memoria).<br /><br /> La proprietà `IsolationLevel` viene applicata automaticamente alle transazioni del pacchetto solo quando il valore della proprietà `TransactionOption` è `Required`.<br /><br /> Il valore della `IsolationLevel` proprietà richiesta da un contenitore figlio viene ignorato quando vengono soddisfatte le condizioni seguenti:<br /><br /> Il valore della proprietà `TransactionOption` del contenitore figlio è `Supported`.<br />Il contenitore figlio partecipa alla transazione di un contenitore padre.<br /><br /> Il valore della proprietà `IsolationLevel` richiesta dal contenitore viene rispettato solo quando il contenitore avvia una nuova transazione. Un contenitore avvia una nuova transazione quando le condizioni seguenti sono vere:<br /><br /> Il valore della proprietà `TransactionOption` del contenitore è `Required`.<br />Non è stata ancora avviata alcuna transazione da parte del padre.<br /><br /> <br /><br /> Nota: I `Snapshot` pari al `IsolationLevel` proprietà non è compatibile con le transazioni del pacchetto. Pertanto, è possibile utilizzare il `IsolationLevel` proprietà da impostare il livello di isolamento delle transazioni del pacchetto per `Shapshot`. In alternativa, usare una query SQL per impostare le transazioni del pacchetto su `Snapshot`. Per altre informazioni, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Per ulteriori informazioni sulla proprietà `IsolationLevel`, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |`TransactionOption`|Supporto delle transazioni da parte del pacchetto. I possibili valori sono `NotSupported`, `Supported` e `Required`. Il valore predefinito di questa proprietà è `Supported`. Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
 ###  <a name="Version"></a> Version  

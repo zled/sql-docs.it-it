@@ -1,5 +1,5 @@
 ---
-title: Esplorazione di un modello di rete neurale | Documenti Microsoft
+title: Esplorazione di un modello di rete neurale | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - mining models, viewing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1eecb17419c6b0f89f9049bf7d9269b2d1ec32c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ddfa179c57082eec38e14f0693cd707922f0812a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286367"
 ---
 # <a name="browsing-a-neural-network-model"></a>Esplorazione di un modello di rete neurale
   Quando si apre un modello di regressione logistica o di rete neurale utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo, simile al visualizzatore del modello di rete neurale in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Il visualizzatore consente di esplorare le correlazioni e ottenere informazioni sugli schemi del modello e sui dati sottostanti.  
@@ -93,7 +93,7 @@ ms.locfileid: "36167962"
   
 1.  Si supponga di voler fare riferimento a un gruppo specifico e visualizzare i fattori che hanno influito maggiormente sugli acquisti in tale gruppo.  
   
-     Nel **Input** riquadro, fare clic sul  **\<tutte >** cella sotto **attributo**e selezionare **Age**.  
+     Nel **Input** riquadro, fare clic sul  **\<tutti >** sotto **attributo**e selezionare **Age**.  
   
      Per **Valore** selezionare la categoria di età più giovane.  
   

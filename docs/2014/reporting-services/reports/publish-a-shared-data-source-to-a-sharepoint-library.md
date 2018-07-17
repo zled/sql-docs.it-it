@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], publishing to a SharePoint library
 - SharePoint integration [Reporting Services], publishing to a library
@@ -17,13 +17,13 @@ ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 876609eeb6f6a1490f4d2c7ad9196b08e2558646
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bff0c3d4ed7f1eb155b170f0ffdbcaac45c20ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317911"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Pubblicare un'origine dati condivisa in una raccolta di SharePoint
   Per pubblicare un'origine dati condivisa in un server di report eseguito in modalità integrata SharePoint, è necessario impostare le proprietà del progetto report in Progettazione report. Nelle proprietà del progetto tutti i riferimenti a server, report e origini dati condivise devono essere URL completi.  
@@ -40,7 +40,7 @@ ms.locfileid: "36168234"
   
 4.  Se si desidera pubblicare le origini dati condivise nel progetto e sovrascrivere origini dati condivise pubblicate in precedenza, impostare **OverwriteDataSources** su **True**.  
   
-5.  (Facoltativo) Per **TargetDataSourceFolder**, digitare un URL a una raccolta di SharePoint oppure a una cartella della raccolta, Ad esempio *http://TestServer/TestSite/Documents/DataSources*.  
+5.  (Facoltativo) Per **TargetDataSourceFolder**, digitare un URL a una raccolta di SharePoint oppure a una cartella della raccolta, Ad esempio, *http://TestServer/TestSite/Documents/DataSources*.  
   
      Se non si specifica alcun valore, verrà utilizzato il valore **TargetReportFolder** .  
   
@@ -61,6 +61,6 @@ ms.locfileid: "36168234"
  [Finestra di dialogo Pagine delle proprietà del progetto](../tools/project-property-pages-dialog-box.md)   
  [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [Pubblicazione dei report in un server di report](publishing-reports-to-a-report-server.md)   
- [Utilizzare una connessione Office Data Connection &#40;con estensione odc&#41; con i report &#40;Reporting Services in SharePoint la modalità integrata&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [Usare una connessione Office Data Connection &#40;odc&#41; con i report &#40;modalità Reporting Services in SharePoint integrata&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

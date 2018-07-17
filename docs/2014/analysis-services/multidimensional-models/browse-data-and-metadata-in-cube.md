@@ -1,5 +1,5 @@
 ---
-title: Esplorare i dati e metadati in un cubo | Documenti Microsoft
+title: Esplorare dati e metadati in un cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 61d455c9de96eed430125a9f543ec7bfc72ab7c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 319b15dec052cdae73c6b1f1a6c0fed1290d447e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288147"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Esplorare dati e metadati in un cubo
   Usare la scheda **Esplorazione** di Progettazione cubi per visualizzare i dati di un cubo. Questa vista può essere utilizzata per esaminare la struttura di un cubo e per controllare dati, calcoli, formattazione e sicurezza di oggetti di database. È possibile esaminare rapidamente un cubo quando gli utenti finali lo visualizzano negli strumenti di report o in altre applicazioni client. Quando si visualizzano dati del cubo, è possibile visualizzare dimensioni diverse, eseguire il drill-down dei membri, nonché eseguire sezionamenti tramite dimensioni.  
@@ -61,7 +61,7 @@ ms.locfileid: "36069499"
   
      \- - oppure -  
   
--   Nel **dimensione** colonna del **filtro** riquadro, fare clic su  **\<selezionare una dimensione >** selezionare una dimensione dall'elenco, quindi fare clic su  **\<Seleziona gerarchia >** nel **gerarchia** colonna e selezionare una gerarchia dall'elenco.  
+-   Nel **dimensione** della colonna della **filtro** riquadro, fare clic su  **\<selezionare una dimensione >** e selezionare una dimensione dall'elenco, quindi fare clic su  **\<Seleziona gerarchia >** nel **gerarchia** colonna e selezionare una gerarchia dall'elenco.  
   
  Dopo aver specificato la gerarchia, indicare l'operatore e l'espressione di filtro. Nella tabella seguente vengono descritti gli operatori e le espressioni di filtro.  
   

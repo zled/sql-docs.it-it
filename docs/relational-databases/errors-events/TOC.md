@@ -1,11 +1,7 @@
 # [Panoramica](errors-and-events-reference-database-engine.md)  
-# [Eventi ed errori del motore di database](database-engine-events-and-errors.md)  
 # [Informazioni sugli errori del motore di database](understanding-database-engine-errors.md)  
 # [Gravità degli errori del motore di database](database-engine-error-severities.md)  
-
-
-
-# Errori MSSQL
+# [Errori MSSQL](database-engine-events-and-errors.md)
 ## Errori da -2 a 950
 ### [-2](mssqlserver-neg2-database-engine-error.md)
 ### [-1](mssqlserver-1-database-engine-error.md)
@@ -103,7 +99,6 @@
 ### [3313](mssqlserver-3313-database-engine-error.md)
 ### [3314](mssqlserver-3314-database-engine-error.md)
 ### [3413](mssqlserver-3413-database-engine-error.md)
-### [3937](mssqlserver-3937-database-engine-error.md)
 ### [3414](mssqlserver-3414-database-engine-error.md)
 ### [3417](mssqlserver-3417-database-engine-error.md)
 ### [3431](mssqlserver-3431-database-engine-error.md)
@@ -246,7 +241,7 @@
 ### [15661](mssqlserver-15661-database-engine-error.md)
 
 ## Errori da 17.000 a 19.000
-### [17053](mssqlserver-17053-database-engine-error.md)
+### [17053](mssqlserver-17053-database-engine-error.md) 
 ### [17065](mssqlserver-17065-database-engine-error.md)
 ### [17066](mssqlserver-17066-database-engine-error.md)
 ### [17067](mssqlserver-17067-database-engine-error.md)

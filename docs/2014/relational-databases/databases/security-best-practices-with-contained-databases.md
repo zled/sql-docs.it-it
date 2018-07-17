@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: aef1d046b409a7ebcaa0cb7db8370cf2f61590eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f6bc6472ed6e40016448b9088db497c770eaaa09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300521"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Procedure consigliate per la sicurezza in database indipendenti
-  I database indipendenti sono soggetti ad alcune minacce univoche che devono essere comprese e contrastate dagli amministratori di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . La maggior parte delle minacce riguardano la `USER WITH PASSWORD` processo di autenticazione, che sposta il limite di autenticazione dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] livello a livello di database.  
+  I database indipendenti sono soggetti ad alcune minacce univoche che devono essere comprese e contrastate dagli amministratori di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . La maggior parte delle minacce correlata per il `USER WITH PASSWORD` processo di autenticazione, che sposta il limite di autenticazione dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] livello a livello di database.  
   
 ## <a name="threats-related-to-users"></a>Minacce correlate agli utenti  
- Gli utenti in un database indipendente che dispongono di `ALTER ANY USER` autorizzazione, ad esempio i membri del **db_owner** e **db_securityadmin** ruoli del database, possono concedere l'accesso al database senza il autorizzazione o se il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] amministratore. Quando si concede agli utenti l'accesso a un database indipendente, si aumenta la potenziale superficie di attacco all'intera istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Gli amministratori devono comprendere questa delega del controllo di accesso e concedano agli utenti del database indipendente le `ALTER ANY USER` l'autorizzazione. Tutti i proprietari di database hanno il `ALTER ANY USER` l'autorizzazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli amministratori devono sottoporre a un controllo periodico gli utenti di un database indipendente.  
+ Gli utenti in un database indipendente che hanno le `ALTER ANY USER` autorizzazione, ad esempio i membri del **db_owner** e **db_securityadmin** ruoli predefiniti del database, possono concedere l'accesso al database senza il autorizzazione dell'utente se il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] amministratore. Quando si concede agli utenti l'accesso a un database indipendente, si aumenta la potenziale superficie di attacco all'intera istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Gli amministratori devono comprendere questa delega del controllo di accesso e concedano agli utenti di database indipendente con cautela le `ALTER ANY USER` l'autorizzazione. Tutti i proprietari di database hanno il `ALTER ANY USER` l'autorizzazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli amministratori devono sottoporre a un controllo periodico gli utenti di un database indipendente.  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>Accesso ad altri database con l'account Guest  
  Proprietari e utenti di database che dispongono dell'autorizzazione `ALTER ANY USER` possono creare utenti del database indipendente. Dopo la connessione a un database indipendente in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utente di questo database può accedere ad altri database del [!INCLUDE[ssDE](../../includes/ssde-md.md)], se in questi database è abilitato l'account **Guest** .  
@@ -49,7 +49,7 @@ CREATE USER Carlo WITH PASSWORD = '<same password>', SID = <SID from DB1>;
 GO  
 ```  
   
- Per eseguire una query tra database, è necessario impostare il `TRUSTWORTHY` opzione sul database chiamante. Se, ad esempio, l'utente (Carlo) definito in precedenza si trova in DB1, per eseguire `SELECT * FROM db2.dbo.Table1;` l'impostazione `TRUSTWORTHY` deve essere attiva per il database DB1. Eseguire il codice seguente per impostare il `TRUSTWORHTY` l'impostazione su.  
+ Per eseguire una query tra database, è necessario impostare il `TRUSTWORTHY` opzione sul database chiamante. Se, ad esempio, l'utente (Carlo) definito in precedenza si trova in DB1, per eseguire `SELECT * FROM db2.dbo.Table1;` l'impostazione `TRUSTWORTHY` deve essere attiva per il database DB1. Eseguire il codice seguente per impostare il `TRUSTWORHTY` impostazione.  
   
 ```  
 ALTER DATABASE DB1 SET TRUSTWORTHY ON;  
@@ -58,16 +58,16 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>Creazione di un utente che duplica un account di accesso  
  Se si crea un utente di database indipendente con password usando lo stesso nome di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si connette specificando il database indipendente come catalogo iniziale, non sarà possibile stabilire la connessione con l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La connessione sarà valutata come l'entità utente di database indipendente con password nel database indipendente anziché come utente basato sull'accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo approccio potrebbe causare un attacco Denial of Service intenzionale o accidentale per l'accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Come procedura consigliata, è opportuno che i membri del ruolo predefinito del server **sysadmin** considerino la possibilità di connettersi sempre senza usare l'opzione relativa al catalogo iniziale. In questo modo l'account di accesso viene connesso al database master, evitando qualsiasi tentativo da parte del proprietario di un database di utilizzare l'accesso in modo improprio. L'amministratore potrà quindi passare al database indipendente usando la `USE`  *\<database >* istruzione. È anche possibile impostare il database indipendente come database predefinito dell'account di accesso, in modo da consentire il completamento dell'accesso al database **master**e il successivo trasferimento dell'account di accesso al database indipendente.  
+-   Come procedura consigliata, è opportuno che i membri del ruolo predefinito del server **sysadmin** considerino la possibilità di connettersi sempre senza usare l'opzione relativa al catalogo iniziale. In questo modo l'account di accesso viene connesso al database master, evitando qualsiasi tentativo da parte del proprietario di un database di utilizzare l'accesso in modo improprio. L'amministratore potrà quindi passare al database indipendente tramite il `USE`  *\<database >* istruzione. È anche possibile impostare il database indipendente come database predefinito dell'account di accesso, in modo da consentire il completamento dell'accesso al database **master**e il successivo trasferimento dell'account di accesso al database indipendente.  
   
 -   Come procedura consigliata, evitare di creare utenti del database indipendente con password con lo stesso nome degli accessi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Se l'account di accesso duplicato è disponibile, connettersi alla **master** del database senza specificare un catalogo iniziale e quindi eseguire il `USE` comando per passare al database indipendente.  
+-   Se l'account di accesso duplicato è disponibile, connettersi al **master** del database senza specificare un catalogo iniziale e quindi eseguire il `USE` comando per passare al database indipendente.  
   
 -   Quando sono presenti database indipendenti, gli utenti di database non indipendenti devono connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)] senza utilizzare un catalogo iniziale oppure specificando il nome di un database non indipendente come catalogo iniziale. In questo modo si eviterà di stabilire la connessione al database indipendente, che è meno soggetto al controllo diretto degli amministratori di [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ### <a name="increasing-access-by-changing-the-containment-status-of-a-database"></a>Aumento del livello di accesso mediante la modifica dello stato di indipendenza di un database  
- Account di accesso con il `ALTER ANY DATABASE` autorizzazione, ad esempio i membri del **dbcreator** fissa ruolo del server e gli utenti in un database non indipendente che dispongono il `CONTROL DATABASE` autorizzazione, ad esempio i membri del **db_owner**  ruolo predefinito del database, è possibile modificare l'impostazione di indipendenza di un database. Se tale impostazione viene modificata da `NONE` in `PARTIAL` o `FULL`, l'accesso utente può essere concesso creando utenti del database indipendente con password. In questo modo potrebbe essere consentito l'accesso senza che gli amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne siano a conoscenza o abbiano concesso l'autorizzazione. Per impedire che tutti i database sia indipendente, impostare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] `contained database authentication` opzione su 0. Per impedire connessioni da parte degli utenti del database indipendente con password a determinati database indipendenti, utilizzare trigger di accesso per annullare i tentativi di accesso da parte di tali utenti.  
+ Gli account di accesso con il `ALTER ANY DATABASE` autorizzazione, ad esempio i membri del **dbcreator** fisso ruolo del server e gli utenti in un database non indipendente che hanno il `CONTROL DATABASE` autorizzazione, ad esempio i membri del **db_owner**  ruolo predefinito del database, è possibile modificare l'impostazione di indipendenza di un database. Se tale impostazione viene modificata da `NONE` in `PARTIAL` o `FULL`, l'accesso utente può essere concesso creando utenti del database indipendente con password. In questo modo potrebbe essere consentito l'accesso senza che gli amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne siano a conoscenza o abbiano concesso l'autorizzazione. Per impedire che tutti i database sia indipendente, impostare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] `contained database authentication` opzione su 0. Per impedire connessioni da parte degli utenti del database indipendente con password a determinati database indipendenti, utilizzare trigger di accesso per annullare i tentativi di accesso da parte di tali utenti.  
   
 ### <a name="attaching-a-contained-database"></a>Collegamento di un database indipendente  
  Mediante il collegamento di un database indipendente, un amministratore potrebbe concedere a utenti indesiderati l'accesso all'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Un amministratore che desidera evitare questo rischio può portare il database online in modalità `RESTRICTED_USER`, in modo da impedire l'autenticazione per gli utenti del database indipendente con password. Solo le entità autorizzate tramite account di accesso potranno accedere a [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

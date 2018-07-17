@@ -1,5 +1,5 @@
 ---
-title: Strumenti di configurazione PowerPivot | Documenti Microsoft
+title: Strumenti di configurazione PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6063a6677678fb4fcf0c5f4f15a904d194271f73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2803d0bb8d4ed506208a3dff577e25ec891d6e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317011"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
   Configurare, ripristinare o rimuovere un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] con gli strumenti di configurazione PowerPivot.  
@@ -34,7 +34,7 @@ ms.locfileid: "36168901"
   
 -   [Due versioni dello strumento di configurazione](#bkmk_twoversions)  
   
--   [Panoramica dell'utilizzo di uno strumento di configurazione PowerPivot](#bkmk_overview)  
+-   [Panoramica dell'uso di uno strumento di configurazione PowerPivot](#bkmk_overview)  
   
 -   [Avviare uno degli strumenti di configurazione PowerPivot](#bmkm_start_tool)  
   
@@ -55,8 +55,8 @@ ms.locfileid: "36168901"
   
 |nome|Versione supportata di SharePoint|Configurazione dettagliata|  
 |----------|-------------------------------------|----------------------------|  
-|configurazione di PowerPivot per SharePoint 2013|SharePoint 2013|[Configura o Ripristina PowerPivot per SharePoint 2013 &#40;strumento di configurazione PowerPivot&#41;](configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
-|Strumento di configurazione PowerPivot|SharePoint 2010 con SharePoint 2010 Service Pack 1 (SP1)|[Configura o Ripristina PowerPivot per SharePoint 2010 &#40;strumento di configurazione PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md)|  
+|configurazione di PowerPivot per SharePoint 2013|SharePoint 2013|[Configurare o ripristinare PowerPivot per SharePoint 2013 &#40;strumento di configurazione PowerPivot&#41;](configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
+|Strumento di configurazione PowerPivot|SharePoint 2010 con SharePoint 2010 Service Pack 1 (SP1)|[Configurare o ripristinare PowerPivot per SharePoint 2010 &#40;strumento di configurazione PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md)|  
   
 ###  <a name="bkmk_sum_differences_betweentools"></a> Diversità tra i due strumenti di configurazione  
  Le due versioni dello strumento di configurazione sono simili ma esistono differenze nei passaggi di configurazione eseguiti dai due strumenti. Le differenze sono dovute alle modifiche tra SharePoint 2010 e SharePoint 2013 nonché alle differenze di architettura tra la versione SQL Server 2012 SP1 di PowerPivot per SharePoint e le versioni precedenti di PowerPivot per SharePoint.  
@@ -72,7 +72,7 @@ ms.locfileid: "36168901"
 |Lo strumento 2013 contiene una nuova pagina **Registra componente aggiuntivo di PowerPivot come Analisi utilizzo di Excel Services**. SharePoint 2010 Excel Services non tiene traccia dei dati sull'utilizzo di PowerPivot.||  
 ||Lo strumento 2010 include la pagina **Aggiungere MSOLAP.5 come provider attendibile** per registrare MSOLAP in modo da consentire a Excel Services in SharePoint 2010 di caricare i modelli PowerPivot. Questa pagina non fa parte dello strumento 2013. SharePoint 2013 Excel Services non utilizza il provider MSOLAP per caricare i modelli.|  
   
-##  <a name="bkmk_overview"></a> Panoramica dell'utilizzo di uno strumento di configurazione PowerPivot  
+##  <a name="bkmk_overview"></a> Panoramica dell'uso di uno strumento di configurazione PowerPivot  
  All'avvio di uno strumento di configurazione PowerPivot, viene effettuata una valutazione dell'installazione esistente per determinare quali operazioni siano applicabili. In una nuova installazione, è disponibile solo l'attività di configurazione. Dopo la configurazione del server, verrà visualizzata l'attività di rimozione. Se si inizia con un'istanza di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , l'aggiornamento sarà anche abilitato nell'elenco delle attività disponibili.  
   
  Se non si ha familiarità con Amministrazione centrale o Windows PowerShell, è possibile eseguire lo strumento di configurazione come alternativa per completare un'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
@@ -83,7 +83,7 @@ ms.locfileid: "36168901"
   
 -   [Configurazione di PowerPivot tramite Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   
--   [Guida di riferimento di PowerShell per PowerPivot per SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
+-   [Informazioni di riferimento di PowerShell per PowerPivot per SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
 > [!NOTE]  
 >  Reporting Services non viene configurato tramite lo strumento. Se si aggiunge Reporting Services all'ambiente di SharePoint, è necessario installarlo e configurarlo separatamente. Per ulteriori informazioni, vedere quanto segue:  
@@ -93,9 +93,9 @@ ms.locfileid: "36168901"
   
 ##  <a name="bmkm_start_tool"></a> Avviare uno degli strumenti di configurazione PowerPivot  
   
-1.  Nel **avviare** schermata, digitare `powerpivot`  
+1.  Nel **avviare** digitare `powerpivot`  
   
-     Nel **avviare** schermata, digitare `powerpivot` o scegliere il **Start** menu, fare clic su **tutti i programmi**, fare clic su [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], fare clic su **strumenti di configurazione** , quindi fare clic su uno dei seguenti:  
+     Nel **avviare** digitare `powerpivot` o scegliere il **Start** dal menu fare clic su **tutti i programmi**, fare clic su [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], fare clic su **gli strumenti di configurazione** , quindi fare clic su uno dei seguenti:  
   
     -   **Strumento di configurazione PowerPivot**.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36168901"
   
 3.  A seconda dello stato corrente dell'installazione, è possibile eseguire una o più delle attività seguenti:  
   
-    1.  Fare clic su **Configura o Ripristina PowerPivot per SharePoint** per completare le attività post-installazione o ripristinare un'installazione.  
+    1.  Fare clic su **Configura o Ripristina PowerPivot per SharePoint** per completare le attività di post-installazione o ripristinare un'installazione.  
   
     2.  Fare clic su **Rimuovi funzionalità, servizi, applicazioni e soluzioni** per rimuovere funzionalità e soluzioni dalla farm.  
   
@@ -128,10 +128,10 @@ ms.locfileid: "36168901"
 ## <a name="related-content"></a>Contenuto correlato  
  [Aggiornare PowerPivot per SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) descrive il flusso di lavoro che aggiorna un'installazione esistente che è già in una farm.  
   
- [Disinstallare PowerPivot per SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) descrive il flusso di lavoro che rimuove PowerPivot per servizi, soluzioni e pagine di applicazione da una farm di SharePoint.  
+ [Disinstallare PowerPivot per SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) descrive il flusso di lavoro che rimuove PowerPivot per i servizi, soluzioni e pagine dell'applicazione da una farm di SharePoint.  
   
  [Configurazione di PowerPivot tramite Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   
- [Amministrazione Server PowerPivot e la configurazione in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

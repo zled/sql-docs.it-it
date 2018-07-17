@@ -1,5 +1,5 @@
 ---
-title: Generale (progettazione Database) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Generale (progettazione Database) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.dbconfigurationpane.f1
 helpviewer_keywords:
 - Database Designer
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 435817b44643ddf1d3e6703ca2872dd5afe407c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a2af00d2dcdb6d28ab311067172e808e49539a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234271"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Generale (Progettazione database) (Analysis Services - Dati multidimensionali)
   Utilizzare la scheda **Generale** per modificare le proprietà di un database di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -71,7 +71,7 @@ ms.locfileid: "36166740"
  **Nome**  
  Consente di digitare il nome del tipo di conto.  
   
- Per aggiungere un nuovo tipo di conto, fare clic su  **\<aggiungere nuovo tipo di conto >**.  
+ Per aggiungere un nuovo tipo di account, fare clic su  **\<Aggiungi nuovo tipo di conto >**.  
   
  **Alias**  
  Consente di impostare il nome predefinito del tipo di conto per l'utilizzo con Configurazione guidata funzionalità di Business Intelligence. Se la colonna è lasciata vuota, viene utilizzato il valore predefinito indicato nella colonna **Nome** .  
@@ -82,6 +82,6 @@ ms.locfileid: "36166740"
 ## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [I database modello multidimensionale &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
- [Avvisi &#40;finestra di progettazione di Database&#41; &#40;Analysis Services - dati multidimensionali&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
+ [Gli avvisi di &#40;finestra di progettazione del Database&#41; &#40;Analysis Services - dati multidimensionali&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
   
   

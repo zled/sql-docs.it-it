@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 67
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56ef96334a4bf317bf54241d6b5ff0d129a77e58
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23c3395ce12f5a2d60c9c2472f6c4db39394e7d6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32954786"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353443"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Funzionalità deprecate nella replica di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "32954786"
   
 ## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a>Elementi deprecati in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
-|Funzionalità|Description|  
+|Funzionalità|Descrizione|  
 |-------------|-----------------|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|La replica è supportata se ogni endpoint di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rientra nelle due versioni principali della versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pertanto, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non supporta la replica in o da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|La replica è supportata se ogni endpoint di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rientra nelle due versioni principali della versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pertanto, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non supporta la replica in o da [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  

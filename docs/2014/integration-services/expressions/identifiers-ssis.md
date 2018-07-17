@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - regular identifiers [Integration Services]
 - variables [Integration Services], expressions
@@ -23,13 +23,13 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17236ca6698b1daf947d4364b38eb3ef0e9a60b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84a20b15390463d19577ab6ae800bcb7f0579bb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295051"
 ---
 # <a name="identifiers-ssis"></a>Identificatori (SSIS)
   Nelle espressioni gli identificatori sono colonne e variabili disponibili per l'operazione. Le espressioni possono utilizzare identificatori regolari e qualificati.  
@@ -116,9 +116,9 @@ ms.locfileid: "36157580"
 > [!IMPORTANT]  
 >  Per consentire all'analizzatore di espressioni di riconoscere tali variabili, è necessario racchiudere tra parentesi quadre la combinazione costituita dallo spazio dei nomi e dal nome qualificato della variabile.  
   
- Se il valore di **conteggio** nel **utente** spazio dei nomi è 10 e il valore di **conteggio** in **MyNamespace** è 2, l'espressione restituisce `true` perché l'analizzatore di espressioni le riconosce come due variabili diverse.  
+ Se il valore di **conteggio** nel **utente** dello spazio dei nomi è 10, mentre il valore di **Count** nel **MyNamespace** è 2, l'espressione restituisce `true` perché l'analizzatore di espressioni le riconosce come due variabili diverse.  
   
- Se i nomi delle variabili non sono univoci, non verrà generato alcun errore, ma l'analizzatore di espressioni valuterà l'espressione utilizzando una sola istanza della variabile e restituirà un risultato non corretto. Ad esempio, l'espressione seguente intendeva confrontare i valori (10 e 2) di due **conteggio** variabili ma l'espressione viene valutata `false` perché l'analizzatore di espressioni utilizza la stessa istanza di  **Conteggio** variabile due volte.  
+ Se i nomi delle variabili non sono univoci, non verrà generato alcun errore, ma l'analizzatore di espressioni valuterà l'espressione utilizzando una sola istanza della variabile e restituirà un risultato non corretto. Ad esempio, l'espressione seguente ha scopo di confrontare i valori (10 e 2) di due **conteggio** variabili, ma l'espressione viene valutata `false` perché l'analizzatore di espressioni usa la stessa istanza di  **Conteggio** variabile due volte.  
   
 ```  
 @Count > @Count  

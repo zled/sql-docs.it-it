@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 375f268eecba7c519941f4743d7396346a863f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21b60f8b5007ae574ab48bdd46e2e8f430b299cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316061"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordinamento dei dati per le trasformazioni Unione e Merge Join
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]le trasformazioni Unione e Merge Join richiedono dati di input ordinati. I dati di input devono essere ordinati fisicamente ed è necessario impostare le opzioni di ordinamento sugli output e sulle colonne di output nell'origine o nella trasformazione a monte. Se le opzioni di ordinamento indicano che i dati sono ordinati, mentre in realtà non lo sono, l'operazione di Unione o Merge join restituisce risultati imprevisti.  
@@ -57,7 +57,7 @@ ms.locfileid: "36168126"
     > [!IMPORTANT]  
     >  Impostazione del valore della `IsSorted` proprietà `True` non consente di ordinare i dati. Questa proprietà fornisce solo un hint ai componenti a valle in relazione all'ordinamento precedente dei dati.  
   
--   Il `SortKeyPosition` proprietà delle colonne di output che indica se una colonna è ordinata, ordinamento della colonna e la sequenza in cui vengono ordinati in più colonne. Questa proprietà deve essere impostata per ogni colonna di dati ordinati.  
+-   Il `SortKeyPosition` proprietà delle colonne di output che indica se una colonna è ordinata, dell'ordinamento della colonna e la sequenza in cui vengono ordinati in più colonne. Questa proprietà deve essere impostata per ogni colonna di dati ordinati.  
   
  Se si utilizza una trasformazione Ordinamento per ordinare i dati, entrambe le proprietà vengono impostate come richiesto dalla trasformazione Unione o Merge join, Vale a dire, la trasformazione Ordinamento imposta la `IsSorted` proprietà dell'output su `True`e imposta il `SortKeyPosition` le proprietà delle colonne di output.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "36168126"
 6.  Fare clic su  **\<nome componente > Output**e impostare il `IsSorted` proprietà `True`.  
   
     > [!NOTE]  
-    >  Se si imposta manualmente il `IsSorted` proprietà dell'output `True` e i dati non sono ordinati, alcuni potrebbero non essere presenti dati o danneggiati nella trasformazione unione o Merge Join a valle quando si esegue il pacchetto.  
+    >  Se si imposta manualmente il `IsSorted` proprietà dell'output `True` e i dati non sono ordinati, alcuni potrebbero essere mancanti dei dati o danneggiati nella trasformazione unione o Merge Join quando si esegue il pacchetto.  
   
 7.  Espandere **Colonne di output**.  
   
-8.  Scegliere la colonna che si desidera indicare come ordinata e impostarne il `SortKeyPosition` proprietà su un valore intero diverso da zero attenendosi alle linee guida:  
+8.  Scegliere la colonna che si desidera indicare come ordinata e impostare il `SortKeyPosition` proprietà su un valore intero diverso da zero attenendosi alle linee guida:  
   
     -   Il valore intero deve rappresentare una sequenza numerica che inizia con 1 e che ha incrementi di 1.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36168126"
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
-     Per questa istruzione, si imposterebbe il `SortKeyPosition` proprietà per ogni colonna come indicato di seguito:  
+     Per questa istruzione, è necessario impostare il `SortKeyPosition` proprietà per ogni colonna come indicato di seguito:  
   
     -   Impostare la proprietà `SortKeyPosition` di ColumnA su 1. In questo modo viene indicato che ColumnA è la prima colonna da ordinare e che l'ordinamento deve essere crescente.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36168126"
 11. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Trasformazione unione](merge-transformation.md)   
+ [Unione-trasformazione](merge-transformation.md)   
  [Trasformazione Merge Join](merge-join-transformation.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)   
  [Percorsi in Integration Services](../integration-services-paths.md)   

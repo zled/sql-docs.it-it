@@ -1,5 +1,5 @@
 ---
-title: Stored procedure di creazione estesa | Documenti Microsoft
+title: Stored procedure di creazione estesa | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - messages [SQL Server], extended stored procedures
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 39fd8a55e334dea4fb6e220656e55696ae325a54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 22d32b74437fe27d1a70197a420ef728dcf0ce6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311879"
 ---
 # <a name="creating-extended-stored-procedures"></a>Creazione di stored procedure estese
     
@@ -44,7 +44,7 @@ ms.locfileid: "36067176"
   
 -   Tutte le funzioni chiamate dall'esterno della DLL, ovvero tutte le funzioni Efunction delle stored procedure estese, devono essere esportate.  
   
-     È possibile esportare una funzione, elencando il nome nella sezione EXPORTS di un file con estensione def oppure è possibile anteporre il nome della funzione nel codice sorgente con dllexport, un'estensione del compilatore Microsoft (si noti che \__declspec() inizia con due caratteri di sottolineatura).  
+     È possibile esportare una funzione, il nome nella sezione EXPORTS di un file con estensione def oppure è possibile anteporre al nome di funzione nel codice sorgente con dllexport, un'estensione del compilatore Microsoft (si noti che \__declspec() inizia con due caratteri di sottolineatura).  
   
  I file seguenti sono necessari per la creazione della DLL di una stored procedure estesa.  
   
@@ -67,16 +67,16 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport) è un'estensione del compilatore specifica di Microsoft. Se il compilatore non supporta questa direttiva, è necessario esportare questa funzione all'interno della sezione EXPORTS nel file DEF.  
   
- Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato con la traccia flag - T260 o se un utente con privilegi di amministratore di sistema esegue DBCC TRACEON (260) ed estesa stored procedure di DLL non supporta GetXpVersion, un messaggio di avviso (errore 8131: stored procedure estesa DLL '% s' non Esporta \__GetXpVersion().) viene stampato nel log degli errori. (Si noti che \__GetXpVersion() inizia con due caratteri di sottolineatura.)  
+ Quando si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato con la traccia flag - T260 o se un utente con privilegi di amministratore di sistema esegue DBCC TRACEON (260) e se estesa stored procedure di DLL non supporta GetXpVersion, un messaggio di avviso (errore 8131: stored procedure estesa DLL '% s' non Esporta \__GetXpVersion().) viene stampato nel log degli errori. (Si noti che \__GetXpVersion() inizia con due caratteri di sottolineatura.)  
   
- Se la DLL della stored procedure estesa consente l'esportazione di __GetXpVersion() ma la versione restituita dalla versione è precedente rispetto a quella richiesta dal server, nel log degli errori viene stampato un messaggio di avviso indicante la versione restituita dalla funzione e la versione prevista dal server. Se viene visualizzato questo messaggio, viene restituito un valore non corretto da \__GetXpVersion() o si esegue la compilazione con una versione precedente di SRV.  
+ Se la DLL della stored procedure estesa consente l'esportazione di __GetXpVersion() ma la versione restituita dalla versione è precedente rispetto a quella richiesta dal server, nel log degli errori viene stampato un messaggio di avviso indicante la versione restituita dalla funzione e la versione prevista dal server. Se viene visualizzato questo messaggio, si restituisce un valore non corretto da \__GetXpVersion() o si esegue la compilazione con una versione precedente di SRV.  
   
 > [!NOTE]  
 >  SetErrorMode, una funzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32, non deve essere chiamata nelle stored procedure estese.  
   
  Una stored procedure estesa con esecuzione prolungata deve piuttosto chiamare srv_got_attention periodicamente in modo che la procedura possa terminare se stessa in caso di interruzione della connessione o del batch.  
   
- Per eseguire il debug della DLL di una stored procedure estesa, copiare la DLL nella directory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Per specificare il file eseguibile per la sessione di debug, immettere il percorso e il nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file eseguibile (ad esempio C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Per informazioni sugli argomenti, vedere [applicazione sqlservr](../../tools/sqlservr-application.md).  
+ Per eseguire il debug della DLL di una stored procedure estesa, copiare la DLL nella directory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Per specificare il file eseguibile per la sessione di debug, immettere il nome file e percorso dei [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file eseguibile (ad esempio, C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Per informazioni sugli argomenti, vedere [sqlservr Application](../../tools/sqlservr-application.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [srv_got_attention &#40;API Stored Procedure estesa&#41;](../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  

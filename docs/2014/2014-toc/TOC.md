@@ -1,9 +1,4 @@
 # [Documentazione online per SQL Server 2014](books-online-for-sql-server-2014.md) 
-## [Case Study: Building an Enterprise Ecosystem with Microsoft Dynamics ERP and SQL Server 2014 Replication for Scalability and Performance](case-study-building-an-enterprise-ecosystem.md) (Case study: creazione di un ecosistema aziendale con Microsoft Dynamics ERP e la replica di SQL Server 2014 per ottenere scalabilità e prestazioni)
-## [Guida per la progettazione di indici di SQL Server](sql-server-index-design-guide.md)
-## [Guida per il controllo delle versioni delle righe e il blocco della transazione](sql-server-transaction-locking-and-row-versioning-guide.md)
-## [Architettura e gestione del log delle transazioni](sql-server-transaction-log-architecture-and-management.md)
-## [Glossario](glossary.md)
 
 # [Analysis Services +](../analysis-services/analysis-services.md)
 # [Data Quality Services +](../data-quality-services/data-quality-services.md)
@@ -15,6 +10,7 @@
 # [Funzioni dei database relazionali +](../relational-databases/database-features.md)
 # [Reporting Services +](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [Esercitazioni di SQL Server 2014 +](../tutorials/tutorials-for-sql-server-2014.md)
+# [Glossario](glossary.md)
 
 # [Novità di SQL Server 2014 +](../sql-server/what-s-new-in-sql-server-2016.md)
 
@@ -30,4 +26,9 @@
 ## [Preparazione aggiornamento +](../sql-server/install/sql-server-2014-upgrade-advisor.md)
 ## [Installazione dei servizi e configurazione +](../sql-server/install/setup-and-servicing-installation.md)
 # [Guida di Configuration Manager +](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+
+# [Guida per la progettazione di indici di SQL Server](sql-server-index-design-guide.md)
+# [Guida per il controllo delle versioni delle righe e il blocco della transazione](sql-server-transaction-locking-and-row-versioning-guide.md)
+# [Architettura e gestione del log delle transazioni](sql-server-transaction-log-architecture-and-management.md)
+# [Case Study: Building an Enterprise Ecosystem with Microsoft Dynamics ERP and SQL Server 2014 Replication for Scalability and Performance](case-study-building-an-enterprise-ecosystem.md) (Case study: creazione di un ecosistema aziendale con Microsoft Dynamics ERP e la replica di SQL Server 2014 per ottenere scalabilità e prestazioni)
 

@@ -1,5 +1,5 @@
 ---
-title: Specifica gli operatori aritmetici nelle query XPath (SQLXML 4.0) | Documenti Microsoft
+title: Specifica di operatori aritmetici nelle query XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - operators [SQLXML]
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4fe4e247041306cfd00854ae021e2fb5ec64c0b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 389c249203416041831edec0f910a661f695805d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309451"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Specifica di operatori aritmetici nelle query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato come specificare operatori aritmetici in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -33,20 +33,20 @@ ms.locfileid: "36155945"
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. Specificare l'operatore aritmetico *  
- Questa query XPath restituisce  **\<OrderDetail >** gli elementi che soddisfano il predicato specificato:  
+ Questa query XPath restituisce  **\<OrderDetail >** gli elementi che soddisfanno il predicato specificato:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- Nella query `child` è l'asse e `OrderDetail` è il test di nodo (TRUE se **OrderDetail** è un  **\<nodo elemento >**, in quanto la  **\< elemento >** nodo è il nodo primario per il `child` asse). Per tutte le  **\<OrderDetail >** nodi elemento, viene applicato il test nel predicato e vengono restituiti solo i nodi che soddisfanno la condizione.  
+ Nella query `child` è l'asse e `OrderDetail` è il test di nodo (TRUE se **OrderDetail** è un  **\<nodo elemento >**, in quanto la  **\< elemento >** nodo è il nodo primario per il `child` asse). Per tutti i  **\<OrderDetail >** nodi elemento, viene applicato il test nel predicato e vengono restituiti solo i nodi che soddisfanno la condizione.  
   
 > [!NOTE]  
 >  I numeri in XPath sono numeri a virgola mobile a precisione doppia e il confronto di numeri a virgola mobile come nell'esempio causa un arrotondamento.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [schema codice di esempio](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copia il [esempi di codice schema](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello ArithmeticOperatorA.xml seguente e salvarlo nella directory in cui viene salvato il file SampleSchema1.xml.  
   

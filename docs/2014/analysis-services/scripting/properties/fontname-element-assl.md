@@ -1,5 +1,5 @@
 ---
-title: Elemento FontName (ASSL) | Documenti Microsoft
+title: Elemento FontName (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FontName element
 ms.assetid: 5560a852-9745-4abb-93d8-9cebe8a9897c
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a58b048255bd0f079f6fc8d22d4666a3f4ced29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1b179415e7b64c4d64090df6168fcc492ab1c30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289527"
 ---
 # <a name="fontname-element-assl"></a>Elemento FontName (ASSL)
-  Vengono descritte le caratteristiche di visualizzazione correlate al carattere il [CalculationProperty](../objects/calculationproperty-element-assl.md) oppure [misura](../objects/measure-element-assl.md) elemento padre.  
+  Descrive le caratteristiche di visualizzazione correlate al carattere la [CalculationProperty](../objects/calculationproperty-element-assl.md) oppure [misura](../objects/measure-element-assl.md) elemento padre.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,8 +61,8 @@ ms.locfileid: "36158284"
 |Elementi padre|[CalculationProperty](../objects/calculationproperty-element-assl.md), [misura](../objects/measure-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il `FontName` proprietà contiene un'espressione MDX (Multidimensional Expressions) e si applica a `CalculationProperty` gli elementi che hanno un [CalculationType](calculationtype-element-assl.md) dei *membro* o *celle* .  
+## <a name="remarks"></a>Note  
+ Il `FontName` proprietà contiene un'espressione MDX (Multidimensional Expressions) e si applica a `CalculationProperty` gli elementi aventi un [CalculationType](calculationtype-element-assl.md) dei *membro* o *celle* .  
   
  Gli elementi che corrispondono ai padri di `FontName` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.CalculationProperty> e <xref:Microsoft.AnalysisServices.Measure>.  
   

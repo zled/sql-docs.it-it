@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
 - backing up databases [SQL Server], SQL Server Management Studio
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 89af2b55ab06a6d034ca75d009802f126519ef06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 7d5d52c835ea69914d538138cf189c7171e07a78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320441"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Creazione di un backup completo del database (SQL Server)
   In questo argomento viene descritto come creare un backup completo del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
@@ -73,7 +72,7 @@ ms.locfileid: "36171056"
 ###  <a name="Security"></a> Sicurezza  
  TRUSTWORTHY è impostato su OFF in un backup del database. Per informazioni su come impostare TRUSTWORTHY su ON, vedere [Opzioni ALTER DATABASE SET &#40; Transact-SQL &#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
- A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] il `PASSWORD` e `MEDIAPASSWORD` non sono più disponibili le opzioni per la creazione di backup. È possibile ripristinare backup creati con password.  
+ A partire [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] il `PASSWORD` e `MEDIAPASSWORD` opzioni non sono più disponibili per la creazione di backup. È possibile ripristinare backup creati con password.  
   
 ####  <a name="Permissions"></a> Permissions  
  Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** .  
@@ -106,7 +105,7 @@ ms.locfileid: "36171056"
     > [!NOTE]  
     >  Quando si seleziona l'opzione **Differenziale** , non è possibile creare un backup di sola copia.  
   
-8.  Per **componente di Backup**, fare clic su `Database`.  
+8.  Per la **componente di Backup**, fare clic su `Database`.  
   
 9. Accettare il nome predefinito del set di backup indicato nella casella di testo **Nome** oppure immettere un nome diverso per il set di backup.  
   
@@ -276,7 +275,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
   
-1.  Utilizzare il `Backup-SqlDatabase` cmdlet. Per indicare in modo esplicito che si tratta di un backup completo del database, specificare il **- BackupAction** parametro con il valore predefinito, `Database`. Questo parametro è facoltativo per i backup completi di database.  
+1.  Usare il `Backup-SqlDatabase` cmdlet. Per indicare in modo esplicito che si tratta di un backup completo del database, specificare il **- BackupAction** parametro con il valore predefinito, `Database`. Questo parametro è facoltativo per i backup completi di database.  
   
      L'esempio seguente consente di creare un backup di database completo del database di `MyDB` nel percorso di backup predefinito dell'istanza del server `Computer\Instance`. Facoltativamente, in questo esempio viene specificato `-BackupAction Database`.  
   

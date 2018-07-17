@@ -1,7 +1,8 @@
 ---
-title: Documentazione Online di SQL Server 2014 | Documenti Microsoft
+title: Documentazione Online di SQL Server 2014 | Microsoft Docs
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
+ms.technology: release-landing
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -17,22 +18,21 @@ helpviewer_keywords:
 - Books Online [SQL Server], home page
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: 61
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 92236bc057996a66ca12484e03154d91a1bbbd58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb9c3bdbf0e8661106fe69eacd6f692273d82d32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232533"
 ---
 # Books Online for SQL Server 2014
-  Benvenuti [!INCLUDE[msCoName](../includes/msconame-md.md)]® documentazione Online per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Documentazione Online contiene le descrizioni delle attività e la documentazione di riferimento che descrive come eseguire operazioni di dati di gestione e business intelligence tramite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Benvenuti [!INCLUDE[msCoName](../includes/msconame-md.md)]® documentazione Online per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Documentazione Online contiene le descrizioni delle attività e la documentazione di riferimento che descrive come eseguire operazioni di business intelligence aziendale e di gestione di dati mediante [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Per provarlo:**  
- ![Macchina virtuale di Azure piccola](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Se si ha un account di Azure,  Quindi andare **[qui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** alla selezione di una macchina virtuale con SQL Server 2014 Service Pack 1 (SP1) già installato. Per ulteriori informazioni su SQL Server 2014 (SP1), vedere [informazioni sulla versione di SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865). 
+ ![Macchina virtuale di Azure piccola](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Se si ha un account di Azure,  Quindi andare **[qui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** creare rapidamente una macchina virtuale con SQL Server 2014 Service Pack 1 (SP1) già installato. Per altre informazioni su SQL Server 2014 (SP1), vedere [informazioni sulla versione di SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865). 
   
 ## Tecnologie di SQL Server  
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono incluse diverse tecnologie di gestione e analisi dei dati. Fare clic sui collegamenti nella tabella seguente per trovare la funzionalità, l'attività e la documentazione di riferimento attinenti a ogni tecnologia.  
@@ -45,7 +45,7 @@ ms.locfileid: "36169344"
 |![Icona di Integration Services](media/dts.gif "icona di Integration Services")|[Integration Services](../integration-services/sql-server-integration-services.md)<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è una piattaforma per la compilazione di soluzioni di integrazione dei dati ad alte prestazioni, con pacchetti che consentono l'elaborazione ETL (estrazione, trasformazione e caricamento) per il data warehousing.|  
 |![mds_cm_icon](media/mds-cm-icon.gif "mds_cm_icon")|[Master Data Services](../master-data-services/master-data-services.md)<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è la soluzione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per la gestione dei dati master. Una soluzione compilata in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] garantisce che l'esecuzione di operazioni di creazione di report e di analisi siano basate su informazioni corrette. Usando [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], si crea un repository centrale per i dati master e si gestisce un record controllabile e a protezione diretta di tali dati man mano che vengono modificati nel tempo.|  
 |![Icona della replica](media/replication.gif "icona della replica")|[Replica](../relational-databases/replication/sql-server-replication.md)<br /><br /> La replica è costituita da un set di tecnologie per la copia e la distribuzione di oggetti di database e dati da un database a un altro e dalla successiva sincronizzazione dei database allo scopo di mantenerne la consistenza. Tramite la funzione di replica è possibile distribuire i dati in diverse posizioni a utenti remoti o mobili tramite reti LAN o WAN, connessioni remote, connessioni wireless e Internet.|  
-|![Icona di Reporting Services](media/reportingservices.gif "icona di Reporting Services")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Reporting Services offre funzionalità Web aziendali per la gestione e la creazione di report usando come contenuto una serie di origini dati diverse, la pubblicazione dei report in vari formati e la gestione centralizzata della sicurezza e delle sottoscrizioni.|  
+|![Icona di Reporting Services](media/reportingservices.gif "sull'icona di Reporting Services")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Reporting Services offre funzionalità Web aziendali per la gestione e la creazione di report usando come contenuto una serie di origini dati diverse, la pubblicazione dei report in vari formati e la gestione centralizzata della sicurezza e delle sottoscrizioni.|  
   
 ## Informazioni su SQL Server nel Web:  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] pubblica informazioni aggiuntive su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in diversi siti Web.  
@@ -60,7 +60,7 @@ ms.locfileid: "36169344"
   
 -   [Centro per sviluppatori di SQL Server](http://go.microsoft.com/fwlink/?LinkId=42457)  
   
--   [Centro per sviluppatori di piattaforma di dati](http://go.microsoft.com/fwlink/?LinkId=17386)  
+-   [Data Platform Developer Center](http://go.microsoft.com/fwlink/?LinkId=17386)  
   
 -   [Centro per sviluppatori XML](http://go.microsoft.com/fwlink/?LinkId=42458)  
   

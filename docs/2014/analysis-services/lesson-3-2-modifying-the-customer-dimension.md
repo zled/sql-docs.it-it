@@ -1,5 +1,5 @@
 ---
-title: Modifica della dimensione Customer | Documenti Microsoft
+title: Modifica della dimensione Customer | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fef2880a71981b360d5ce124d6b5e2f0d8b24859
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 556ce1a91985c0e153161a90413695edd2bc4cca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310801"
 ---
 # <a name="modifying-the-customer-dimension"></a>Modifica della dimensione Customer
   È possibile migliorare l'usabilità e le funzionalità delle dimensioni di un cubo in diversi modi. Nelle attività di questo argomento verrà modificata la dimensione Customer.  
@@ -35,11 +35,11 @@ ms.locfileid: "36156814"
   
 3.  Modificare i nomi degli attributi seguenti allo stesso modo:  
   
-    -   **English Education** attributo, passare alla `Education`  
+    -   **English Education** attributo, impostare su `Education`  
   
-    -   **English Occupation** attributo, passare alla `Occupation`  
+    -   **English Occupation** attributo, impostare su `Occupation`  
   
-    -   **State Province Name** attributo, passare alla `State-Province`  
+    -   **State Province Name** attributo, impostare su `State-Province`  
   
 4.  Scegliere **Salva tutti** dal menu **File**.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "36156814"
   
 2.  Trascinare il `State-Province` dell'attributo dal **attributi** riquadro il  **\<nuovo livello >** cella il **gerarchie** riquadro, sotto il `Country-Region` livello.  
   
-3.  Trascinare il **City** dell'attributo dal **attributi** riquadro il  **\<nuovo livello >** cella il **gerarchie** riquadro sotto il `State-Province` livello.  
+3.  Trascinare il **Città** dell'attributo dal **attributi** riquadro il  **\<nuovo livello >** cella il **gerarchie** riquadro di sotto di `State-Province` livello.  
   
-4.  Nel **gerarchie** riquadro del **struttura dimensione** scheda, fare clic sulla barra del titolo del **gerarchia** gerarchia, seleziona **rinominare**, quindi digitare `Customer Geography`.  
+4.  Nel **gerarchie** riquadro della finestra il **struttura dimensione** scheda, fare clic sulla barra del titolo del **gerarchia** gerarchia, seleziona **rinominare**, quindi digitare `Customer Geography`.  
   
      Il nome della gerarchia è ora `Customer Geography`.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36156814"
   
 2.  Nel riquadro **Tabelle** a sinistra, fare clic con il pulsante destro del mouse su **Customer**e scegliere **Nuovo calcolo denominato**.  
   
-3.  Nel **Crea calcolo denominato** della finestra di dialogo tipo `FullName` nel **nome della colonna** casella, digitare o copiare e incollare il codice seguente `CASE` istruzione il **espressione**  casella:  
+3.  Nel **Crea calcolo denominato** finestra di dialogo, digitare `FullName` nel **nome colonna** casella, digitare o copiare e incollare il codice seguente `CASE` istruzione nel **espressione**  casella:  
   
     ```  
     CASE  
@@ -80,11 +80,11 @@ ms.locfileid: "36156814"
     END  
     ```  
   
-     Il `CASE` istruzione consente di concatenare il **FirstName**, **MiddleName**, e **LastName** colonne in una singola colonna che si utilizzerà il cliente dimensione come il nome visualizzato per il **cliente** attributo.  
+     Il `CASE` istruzione consente di concatenare il **FirstName**, **MiddleName**, e **LastName** colonne in una singola colonna che si userà il cliente della dimensione come il nome visualizzato per il **cliente** attributo.  
   
 4.  Fare clic su **OK**e quindi espandere **Customer** nel riquadro **Tabelle** .  
   
-     Il `FullName` calcolo denominato verrà visualizzato nell'elenco di colonne nella tabella Customer, con un'icona che indica che si tratta di un calcolo denominato.  
+     Il `FullName` calcolo denominato verrà visualizzato nell'elenco delle colonne della tabella Customer, con un'icona che indica che si tratta di un calcolo denominato.  
   
 5.  Scegliere **Salva tutti** dal menu **File**.  
   
@@ -107,13 +107,13 @@ ms.locfileid: "36156814"
   
 3.  Aprire la finestra Proprietà e fare clic sul pulsante **Nascondi automaticamente** sulla barra del titolo in modo che rimanga aperta.  
   
-4.  Nel **nome** campo della proprietà, digitare `Full Name`.  
+4.  Nel **Name** campo della proprietà, tipo `Full Name`.  
   
 5.  Fare clic nel campo proprietà **NameColumn** nella parte inferiore e quindi fare clic sul pulsante Sfoglia (**…**) per aprire la finestra di dialogo **Colonna nome** .  
   
-6.  Selezionare `FullName` in fondo il **colonna di origine** elenco e quindi fare clic su **OK**.  
+6.  Selezionare `FullName` nella parte inferiore della **Source column** elenco e quindi fare clic su **OK**.  
   
-7.  Nella scheda struttura dimensione, trascinare il `Full Name` dell'attributo dal **attributi** riquadro il  **\<nuovo livello >** cella il **gerarchie** riquadro, sotto il **City** livello.  
+7.  Nella scheda struttura dimensione trascinare il `Full Name` dell'attributo dal **attributi** riquadro nel  **\<nuovo livello >** cella il **gerarchie** riquadro, sotto il **Città** livello.  
   
 8.  Scegliere **Salva tutti** dal menu **File**.  
   
@@ -134,9 +134,9 @@ ms.locfileid: "36156814"
   
     -   `State-Province`  
   
-3.  Nella finestra Proprietà, scegliere il **AttributeHierarchyDisplayFolder** campo della proprietà nella parte superiore (potrebbe essere necessario su di esso per visualizzare il nome completo), quindi digitare `Location`.  
+3.  Nella finestra Proprietà scegliere il **AttributeHierarchyDisplayFolder** campo della proprietà nella parte superiore (potrebbe essere necessario in modo che punti a questo argomento per visualizzare il nome completo) e quindi digitare `Location`.  
   
-4.  Nel **gerarchie** riquadro, fare clic su `Customer Geography`, quindi nella finestra proprietà a destra, selezionare `Location` uguale al valore del **DisplayFolder** proprietà.  
+4.  Nel **gerarchie** riquadro, fare clic su `Customer Geography`, quindi nella finestra proprietà a destra, selezionare `Location` come valore del **DisplayFolder** proprietà.  
   
 5.  Nel riquadro **Attributi** tenere premuto CTRL e fare clic su ognuno dei seguenti attributi per selezionarli:  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36156814"
   
     -   **Yearly Income**  
   
-6.  Nella finestra Proprietà, scegliere il **AttributeHierarchyDisplayFolder** proprietà di campo nella parte superiore e quindi digitare `Demographic`.  
+6.  Nella finestra Proprietà scegliere il **AttributeHierarchyDisplayFolder** proprietà campo nella parte superiore e quindi digitare `Demographic`.  
   
 7.  Nel riquadro **Attributi** tenere premuto CTRL e fare clic su ognuno dei seguenti attributi per selezionarli:  
   
@@ -168,12 +168,12 @@ ms.locfileid: "36156814"
   
     -   **Phone**  
   
-8.  Nella finestra Proprietà, scegliere il **AttributeHierarchyDisplayFolder** campo delle proprietà e tipo `Contacts`.  
+8.  Nella finestra Proprietà scegliere il **AttributeHierarchyDisplayFolder** campo della proprietà e il tipo `Contacts`.  
   
 9. Scegliere **Salva tutti** dal menu **File**.  
   
 ## <a name="defining-composite-keycolumns"></a>Definizione della proprietà KeyColumns composta  
- La proprietà **KeyColumns** contiene la colonna o le colonne che rappresentano la chiave per l'attributo. In questa lezione, si crea una chiave composta per la **City** e `State-Province` attributi. Le chiavi composte possono essere utili quando è necessario identificare in modo univoco un attributo. Ad esempio, quando si definiscono le relazioni tra attributi più avanti in questa esercitazione, un **City** attributo deve identificare in modo univoco un `State-Province` attributo. Tuttavia, è possibile che esistano varie città con lo stesso nome in stati diversi. Per questo motivo verrà creata una chiave composta, costituita dalle colonne **StateProvinceName** e **City** per l'attributo **City** . Per altre informazioni, vedere [Modificare la proprietà KeyColumn di un attributo](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
+ La proprietà **KeyColumns** contiene la colonna o le colonne che rappresentano la chiave per l'attributo. In questa lezione, si crea una chiave composta per la **Città** e `State-Province` attributi. Le chiavi composte possono essere utili quando è necessario identificare in modo univoco un attributo. Ad esempio, quando si definiscono le relazioni tra attributi più avanti in questa esercitazione, un' **Città** attributo deve identificare in modo univoco un `State-Province` attributo. Tuttavia, è possibile che esistano varie città con lo stesso nome in stati diversi. Per questo motivo verrà creata una chiave composta, costituita dalle colonne **StateProvinceName** e **City** per l'attributo **City** . Per altre informazioni, vedere [Modificare la proprietà KeyColumn di un attributo](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
 #### <a name="to-define-composite-keycolumns-for-the-city-attribute"></a>Per definire la proprietà KeyColumns composta per l'attributo City  
   
@@ -199,7 +199,7 @@ ms.locfileid: "36156814"
   
 1.  Assicurarsi che la scheda **Struttura dimensione** per la dimensione Customer sia aperta.  
   
-2.  Nel **attributi** riquadro, fare clic sul `State-Province` attributo.  
+2.  Nel **attributi** riquadro, fare clic su di `State-Province` attributo.  
   
 3.  Nella finestra **Proprietà** fare clic nel campo **KeyColumns** e quindi sul pulsante Sfoglia (**...**).  
   
@@ -209,7 +209,7 @@ ms.locfileid: "36156814"
   
 5.  Fare clic su **OK**.  
   
-6.  Per impostare il **NameColumn** proprietà del `State-Province` attributo, fare clic sui **NameColumn** campo nella finestra proprietà e quindi fare clic su Sfoglia (**...** ) pulsante.  
+6.  Per impostare il **NameColumn** proprietà delle `State-Province` dell'attributo, fare clic sul **NameColumn** campo nella finestra proprietà e quindi fare clic su Sfoglia (**...** ) pulsante.  
   
 7.  Nell'elenco **Colonna di origine** della finestra di dialogo **Colonna nome** selezionare **StateProvinceName**e fare clic su **OK**.  
   
@@ -232,9 +232,9 @@ ms.locfileid: "36156814"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Nel diagramma, fare doppio clic sui `State-Province` dell'attributo e quindi selezionare **nuova relazione tra attributi**.  
+6.  Nel diagramma, fare doppio clic il `State-Province` dell'attributo e quindi selezionare **nuova relazione tra attributi**.  
   
-7.  Nel **Crea relazione tra attributi** finestra di dialogo, la **attributo di origine** è `State-Province`. Impostare il **attributo correlato** a `Country-Region`.  
+7.  Nel **Crea relazione tra attributi** finestra di dialogo, il **attributo di origine** è `State-Province`. Impostare il **attributo correlato** a `Country-Region`.  
   
 8.  Nell'elenco **Tipo di relazione** impostare il tipo di relazione su **Rigida**.  
   
@@ -251,7 +251,7 @@ ms.locfileid: "36156814"
   
 2.  Dopo la visualizzazione del messaggio **Distribuzione completata** , fare clic sulla scheda **Esplorazione** di Progettazione dimensioni per la dimensione Customer e fare clic sul pulsante Riconnetti a sinistra della barra degli strumenti della finestra di progettazione.  
   
-3.  Verificare che `Customer Geography` sia selezionato nel **gerarchia** elenco e quindi nel riquadro del browser, espandere **tutti**, espandere **Australia**, espandere **nuovo meridionale Wales**, quindi espandere **Coffs Harbour**.  
+3.  Verificare che `Customer Geography` sia selezionato nel **gerarchia** elenco e quindi nel riquadro di esplorazione, espandere **tutti**, espandere **Australia**, espandere **nuovo meridionale Ticino**, quindi espandere **Coffs Harbour**.  
   
      Verranno visualizzati i clienti della città.  
   

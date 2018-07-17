@@ -1,12 +1,11 @@
 ---
-title: Debug di oggetti di Database CLR | Documenti Microsoft
+title: Debug di oggetti di Database CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - database objects [CLR integration], debugging
@@ -19,21 +18,21 @@ caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 67fd37b04592bd4daeeb6a03c95d3c1976109ed4
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 5a983312beb68f266c20973e70f730eb13bd89e6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701012"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354343"
 ---
 # <a name="debugging-clr-database-objects"></a>Debug di oggetti di database CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre il supporto per il debug di oggetti CLR (Common Language Runtime) e [!INCLUDE[tsql](../../includes/tsql-md.md)] nel database. Gli aspetti principali del debug in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono la facilità di installazione e utilizzo e l'integrazione del debugger di SQL Server con il debugger di Microsoft Visual Studio. Inoltre, il debug funziona tra linguaggi diversi. Gli utenti possono passare senza problemi agli oggetti CLR da [!INCLUDE[tsql](../../includes/tsql-md.md)] e viceversa. Il debugger Transact-SQL in SQL Server Management Studio non può essere utilizzato per eseguire il debug di oggetti di database gestiti, ma è possibile eseguire il debug degli oggetti tramite i debugger disponibili in Visual Studio. Il debug di oggetti di database gestiti in Visual Studio supporta tutte le caratteristiche di debug comuni, ad esempio l'esecuzione di istruzioni e routine all'interno di routine in esecuzione nel server. Tramite i debugger è possibile impostare punti di interruzione, controllare lo stack di chiamate, controllare le variabili e modificarne i valori durante il debug. Notare che Visual Studio .NET 2003 non può essere utilizzato per la programmazione o il debug dell'integrazione CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene fornito con .NET Framework preinstallato e non è possibile utilizzare assembly di .NET Framework 2.0 in Visual Studio .NET 2003.  
   
- Per ulteriori informazioni sul debug di codice gestito utilizzando Visual Studio, vedere la "[debug del codice gestito](http://go.microsoft.com/fwlink/?LinkId=120377)" argomento nella documentazione di Visual Studio.  
+ Per altre informazioni sul debug del codice gestito tramite Visual Studio, vedere la "[Debugging Managed Code](http://go.microsoft.com/fwlink/?LinkId=120377)" argomento nella documentazione di Visual Studio.  
   
 ## <a name="debugging-permissions-and-restrictions"></a>Debug di autorizzazioni e restrizioni  
- Il debug è un'operazione con privilegi elevati e pertanto solo i membri del **sysadmin** ruolo predefinito del server sono autorizzati a eseguire questa operazione nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Il debug è un'operazione con privilegiata elevati, pertanto solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa operazione nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Durante il debug vengono applicate le restrizioni seguenti:  
   
@@ -46,25 +45,25 @@ ms.locfileid: "35701012"
 ## <a name="overview-of-debugging-managed-database-objects"></a>Cenni preliminari sul debug di oggetti di database gestiti  
  Il debug in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si basa su un modello per connessione. Un debugger può rilevare le attività ed eseguirne il debug solo nella connessione client a cui è connesso. Poiché la funzionalità del debugger non è limitata dal tipo di connessione, è possibile eseguire il debug sia di connessioni del flusso TDS sia di connessioni HTTP. Tuttavia, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente il debug delle connessioni esistenti. Il debug supporta tutte le caratteristiche di debug comuni all'interno di routine in esecuzione nel server. L'interazione tra un debugger e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene effettuata tramite Component Object Model (COM).  
   
- Per ulteriori informazioni e scenari relativi al debug gestite stored procedure, funzioni, trigger, tipi definiti dall'utente e funzioni di aggregazione, vedere la "[debug di SQL Server CLR Integration Database](http://go.microsoft.com/fwlink/?LinkId=120378)" argomento di Visual Studio documentazione.  
+ Per altre informazioni e scenari relativi al debug gestite stored procedure, funzioni, trigger, tipi definiti dall'utente e aggregazioni, vedere la "[debug di SQL Server CLR Integration Database](http://go.microsoft.com/fwlink/?LinkId=120378)" argomento in di Visual Studio documentazione.  
   
- È necessario abilitare il protocollo di rete TCP/IP nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per utilizzare Visual Studio per lo sviluppo e il debug remoti. Per ulteriori informazioni su come abilitare il protocollo TCP/IP sul server, vedere [configurazione di protocolli Client](../../database-engine/configure-windows/configure-client-protocols.md).  
+ È necessario abilitare il protocollo di rete TCP/IP nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per utilizzare Visual Studio per lo sviluppo e il debug remoti. Per altre informazioni su come abilitare il protocollo TCP/IP nel server, vedere [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  
   
 #### <a name="to-debug-a-managed-database-object"></a>Per eseguire il debug di un oggetto di database gestito  
   
 1.  Aprire Microsoft Visual Studio, creare un nuovo progetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e stabilire una connessione a un database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-2.  Creare un nuovo tipo. In **Esplora soluzioni**, fare clic sul progetto, selezionare **Add** e **nuovo elemento...** Dal **Aggiungi nuovo elemento** finestra, seleziona **Stored Procedure**, **funzione definita dall'utente**, **tipo definito dall'utente**,  **Trigger**, **aggregazione**, oppure **classe**. Specificare un nome per il file di origine del nuovo tipo, quindi fare clic su **Aggiungi**.  
+2.  Creare un nuovo tipo. Nelle **Esplora soluzioni**, fare clic sul progetto, selezionare **Add** e **nuovo elemento...** Dal **Aggiungi nuovo elemento** finestra, seleziona **Stored Procedure**, **funzione definita dall'utente**, **tipo definito dall'utente**,  **Trigger**, **aggregazione**, o **classe**. Specificare un nome per il file di origine del nuovo tipo e fare clic su **Add**.  
   
 3.  Aggiungere il codice per il nuovo tipo nell'editor di testo. Per un codice di esempio relativo a un esempio di stored procedure, vedere la sezione più avanti in questo argomento.  
   
-4.  Aggiungere uno script di test per il tipo. In **Esplora soluzioni**, espandere il **TestScripts** directory fare doppio clic su **test. SQL** per aprire il file di origine dello script di test predefinito. Aggiungere nell'editor di testo uno script di test che richiama il codice di cui eseguire il debug. Di seguito viene fornito uno script di esempio.  
+4.  Aggiungere uno script di test per il tipo. Nelle **Esplora soluzioni**, espandere il **TestScripts** directory fare doppio clic su **test** per aprire il file di origine script di test predefinito. Aggiungere nell'editor di testo uno script di test che richiama il codice di cui eseguire il debug. Di seguito viene fornito uno script di esempio.  
   
-5.  Inserire uno o più punti di interruzione nel codice sorgente. Del mouse su una riga di codice nell'editor di testo, all'interno della funzione o una routine che si desidera eseguire il debug, quindi selezionare **punto di interruzione** e **Inserisci punto di interruzione**. Il punto di interruzione viene aggiunto e la riga di codice viene evidenziata in rosso.  
+5.  Inserire uno o più punti di interruzione nel codice sorgente. Fare clic su una riga di codice nell'editor di testo, all'interno della funzione o routine che si desidera eseguire il debug, e selezionare **punto di interruzione** e **Inserisci punto di interruzione**. Il punto di interruzione viene aggiunto e la riga di codice viene evidenziata in rosso.  
   
 6.  Nel **Debug** dal menu **Avvia debug** per compilare, distribuire e testare il progetto. Verrà eseguito lo script di test in Test.sql e verrà richiamato l'oggetto di database gestito.  
   
-7.  Quando la freccia gialla che indica il puntatore all'istruzione viene visualizzata in corrispondenza del punto di interruzione, l'esecuzione del codice viene sospesa ed è possibile avviare il debug dell'oggetto di database gestito. È possibile **Esegui istruzione/routine** dal **Debug** menu per far avanzare il puntatore all'istruzione per la riga successiva del codice. Il **variabili locali** finestra consente di osservare lo stato degli oggetti attualmente evidenziati dal puntatore all'istruzione. È possibile aggiungere variabili per il **Watch** finestra. È possibile osservare lo stato delle variabili controllate durante l'intera sessione di debug, non solo quando la variabile si trova nella riga di codice attualmente evidenziata dal puntatore all'istruzione. Scegliere Continua dal menu Debug per fare avanzare il puntatore all'istruzione al successivo punto di interruzione o per completare l'esecuzione della routine se non sono presenti altri punti di interruzione.  
+7.  Quando la freccia gialla che indica il puntatore all'istruzione viene visualizzata in corrispondenza del punto di interruzione, l'esecuzione del codice viene sospesa ed è possibile avviare il debug dell'oggetto di database gestito. È possibile **Esegui istruzione/routine** dalle **Debug** menu per far avanzare il puntatore all'istruzione per la riga successiva del codice. Il **variabili locali** finestra consente di osservare lo stato degli oggetti attualmente evidenziati dal puntatore all'istruzione. È possibile aggiungere variabili per il **Watch** finestra. È possibile osservare lo stato delle variabili controllate durante l'intera sessione di debug, non solo quando la variabile si trova nella riga di codice attualmente evidenziata dal puntatore all'istruzione. Scegliere Continua dal menu Debug per fare avanzare il puntatore all'istruzione al successivo punto di interruzione o per completare l'esecuzione della routine se non sono presenti altri punti di interruzione.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituita al chiamante la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

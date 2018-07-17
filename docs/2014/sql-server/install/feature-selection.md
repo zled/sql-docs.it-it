@@ -1,5 +1,5 @@
 ---
-title: Selezione delle caratteristiche | Documenti Microsoft
+title: Selezione delle funzionalità | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - feature selection, Setup
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Components to Install page [SQL Server Installation Wizard]
 ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
 caps.latest.revision: 86
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 159c77133a5b0a218fa308ab179b2d25376432bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a00261718d83a82c595416b6dd0d9b97e8929e0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315491"
 ---
 # <a name="feature-selection"></a>Selezione caratteristiche
   Usare le caselle di controllo disponibili nella pagina **Selezione funzionalità** dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per selezionare i componenti desiderati per la propria installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -44,12 +44,12 @@ ms.locfileid: "36158603"
   
 |Funzionalità|Description|  
 |--------------|-----------------|  
-|Servizi[!INCLUDE[ssDE](../../includes/ssde-md.md)] |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] include il [!INCLUDE[ssDE](../../includes/ssde-md.md)], il servizio principale per l'archiviazione, elaborazione e la protezione dati, replica, ricerca full-text, strumenti per la gestione relazionali e dati XML e il [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] server (DQS). Le funzionalità del motore di database sono le seguenti:<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] è il servizio principale per l'archiviazione, l'elaborazione e la sicurezza dei dati.<br /><br /> Replica (facoltativo): la funzione di replica è costituita da un set di tecnologie per la copia e la distribuzione di dati e oggetti di database da un database a un altro e la successiva sincronizzazione dei database per garantirne la coerenza.<br /><br /> Ricerca full-text (facoltativa): la ricerca full-text fornisce le funzionalità necessarie per eseguire query full-text su semplici dati di tipo carattere in tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (facoltativo): [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) è una soluzione per la pulizia dei dati che consente di individuare dati incoerenti e non corretti nell'origine dati e che offre metodi computerizzati e interattivi per pulire i dati. Selezionare questa casella di controllo per installare il server DQS. Al termine dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario eseguire il file DQSInstaller.exe per *completare* l'installazione del server DQS. Se è installata l'istanza predefinita di SQL server, questo file è disponibile in C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn.<br /><br /> <br /><br /> **Cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: i componenti di replica e di ricerca full-text sono necessari e vengono selezionati automaticamente dal programma di installazione per il clustering di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando si seleziona Servizi motore di database.|  
+|Servizi[!INCLUDE[ssDE](../../includes/ssde-md.md)] |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] include il [!INCLUDE[ssDE](../../includes/ssde-md.md)], il servizio principale per l'archiviazione, elaborazione e la protezione dei dati, replica, ricerca full-text, strumenti per la gestione relazionali e dati XML e il [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] server (DQS). Le funzionalità del motore di database sono le seguenti:<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] è il servizio principale per l'archiviazione, l'elaborazione e la sicurezza dei dati.<br /><br /> Replica (facoltativo): la funzione di replica è costituita da un set di tecnologie per la copia e la distribuzione di dati e oggetti di database da un database a un altro e la successiva sincronizzazione dei database per garantirne la coerenza.<br /><br /> Ricerca full-text (facoltativa): la ricerca full-text fornisce le funzionalità necessarie per eseguire query full-text su semplici dati di tipo carattere in tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (facoltativo): [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) è una soluzione per la pulizia dei dati che consente di individuare dati incoerenti e non corretti nell'origine dati e che offre metodi computerizzati e interattivi per pulire i dati. Selezionare questa casella di controllo per installare il server DQS. Al termine dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario eseguire il file DQSInstaller.exe per *completare* l'installazione del server DQS. Se è installata l'istanza predefinita di SQL server, questo file è disponibile in C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn.<br /><br /> <br /><br /> **Cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: i componenti di replica e di ricerca full-text sono necessari e vengono selezionati automaticamente dal programma di installazione per il clustering di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando si seleziona Servizi motore di database.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include gli strumenti per la creazione e la gestione delle applicazioni di data mining e Online Analytical Processing (OLAP).|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa|Nella modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono inclusi componenti client e server per la creazione, la gestione e la distribuzione di report tabulari, matrice, grafici e in formato libero. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è inoltre una piattaforma estendibile che consente di sviluppare applicazioni di creazione di report.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] – Nativo|Nella modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono inclusi componenti client e server per la creazione, la gestione e la distribuzione di report tabulari, matrice, grafici e in formato libero. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è inoltre una piattaforma estendibile che consente di sviluppare applicazioni di creazione di report.|  
   
 > [!IMPORTANT]  
->  1.  Con il programma di installazione non è possibile configurare il bilanciamento del carico e l'indirizzamento a URL singolo per più nodi in una distribuzione con scalabilità orizzontale di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per completare una distribuzione con scalabilità orizzontale, è necessario utilizzare Windows Server, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center o un software di gestione cluster di terze parti. Per ulteriori informazioni sulla configurazione di distribuzione di Web farm, vedere [configurazione di Reporting Services per la distribuzione con scalabilità orizzontale](http://go.microsoft.com/fwlink/?LinkId=199448) (http://go.microsoft.com/fwlink/?LinkId=199448).  
+>  1.  Con il programma di installazione non è possibile configurare il bilanciamento del carico e l'indirizzamento a URL singolo per più nodi in una distribuzione con scalabilità orizzontale di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per completare una distribuzione con scalabilità orizzontale, è necessario utilizzare Windows Server, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center o un software di gestione cluster di terze parti. Per altre informazioni sulla configurazione di distribuzione di Web farm, vedere [configurazione di Reporting Services per la distribuzione con scalabilità orizzontale](http://go.microsoft.com/fwlink/?LinkId=199448) (http://go.microsoft.com/fwlink/?LinkId=199448).  
 > 2.  Per informazioni sui requisiti a livello di browser dei componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Pianificazione per il supporto browser per Reporting Services e Power View &#40;Reporting Services 2014&#41;](../../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
 > 3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è supportato in configurazioni side-by-side presenti contemporaneamente nella piattaforma a 64 bit e nel sottosistema a 32 bit (WOW64) di un server a 64 bit.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36158603"
   
 |Funzionalità|Description|  
 |-------------|-----------------|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] : SharePoint|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità SharePoint è un'applicazione basata su server per la creazione, la gestione e recapito dei report per posta elettronica, più formati di file e interattivi basati su Web. Nella modalità SharePoint la visualizzazione e la gestione dei report sono integrate nei prodotti SharePoint. Per altre informazioni, vedere [Server di report di Reporting Services &#40;modalità SharePoint&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md).|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] : SharePoint|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità SharePoint è un'applicazione basata su server per la creazione, la gestione e recapito dei report per posta elettronica più formati di file e interattivi basati sul Web. Nella modalità SharePoint la visualizzazione e la gestione dei report sono integrate nei prodotti SharePoint. Per altre informazioni, vedere [Server di report di Reporting Services &#40;modalità SharePoint&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md).|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - Componente aggiuntivo per prodotti SharePoint|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Componente aggiuntivo per prodotti SharePoint include i componenti dell'interfaccia utente e di gestione per integrare un prodotto SharePoint con un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server di report in modalità SharePoint. Per altre informazioni, vedere [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).|  
 |Client Data Quality|Il client Data Quality è un'applicazione autonoma che consente la connessione al server DQS e offre un'interfaccia utente grafica intuitiva per eseguire operazioni di pulizia o corrispondenza dei dati ed effettuare attività amministrative in DQS.|  
 |Connettività strumenti client|Negli strumenti client sono inclusi i componenti per la comunicazione tra client e server, quali le librerie di rete per DB-Library, OLEDB per OLAP, ODBC, ADODB e ADOMD+.|  
@@ -91,7 +91,7 @@ ms.locfileid: "36158603"
 -   Creare più spazio disponibile nell'unità specificata spostando gli altri file o le altre applicazioni.  
   
 ## <a name="installing-adventureworks-sample-databases"></a>Installazione dei database di esempio AdventureWorks  
- Per impostazione predefinita, i database di esempio e il codice di esempio non vengono installati come parte dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sull'installazione dei database di esempio e codice di esempio, vedere la [Microsoft SQL Server Community Projects & Samples](http://go.microsoft.com/fwlink/?LinkId=87843) (http://go.microsoft.com/fwlink/?LinkId=87843).  
+ Per impostazione predefinita, i database di esempio e il codice di esempio non vengono installati come parte dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni sull'installazione dei database di esempio e codice di esempio, vedere la [Microsoft SQL Server Community Projects & Samples](http://go.microsoft.com/fwlink/?LinkId=87843) (http://go.microsoft.com/fwlink/?LinkId=87843).  
   
  Informazioni aggiuntive sugli esempi sono disponibili in seguito all'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Dal **avviare** menu, fare clic su **tutti i programmi**, fare clic su **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, fare clic su **documentazione ed esercitazioni** , quindi fare clic su  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Samples Overview**.  
   
