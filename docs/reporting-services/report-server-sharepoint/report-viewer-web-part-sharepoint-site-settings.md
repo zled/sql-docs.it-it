@@ -12,12 +12,12 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: jt000
 ms.author: jasontre
-ms.openlocfilehash: 57e0e7ca8aa76570f70ae2279964d47f50da31aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc85547d213367d3a754e40764fa4335a45c5ce7
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024598"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926322"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>Impostazioni del sito di SharePoint per la Web part del Visualizzatore di report - Reporting Services
 
@@ -42,5 +42,5 @@ La Web part del Visualizzatore di report ha alcune impostazioni che possono esse
 
 |Impostazione|Commenti|  
 |-------------|--------------|  
-|Raccolta dei dati sull'utilizzo|Consente l'invio a Microsoft delle informazioni sugli errori e sull'uso al fine di contribuire a migliorare i prodotti. Per informazioni sui criteri di raccolta dei dati di errore di Microsoft, vedere [Informativa sulla privacy di SQL Server](https://go.microsoft.com/fwlink/?linkid=860782&clcid=0x409).|  
+|Raccolta dei dati sull'utilizzo|Consente l'invio a Microsoft delle informazioni sugli errori e sull'uso al fine di contribuire a migliorare i prodotti. Per informazioni sui criteri di raccolta dei dati di errore di Microsoft, vedere [Informativa sulla privacy di SQL Server](http://go.microsoft.com/fwlink/?LinkID=868444).|  
 |Abilita i metadati di accessibilità per i report|Imposta le [informazioni sul dispositivo `AccessibleTablix` ](../html-device-information-settings.md) per i report visualizzabili.| 
