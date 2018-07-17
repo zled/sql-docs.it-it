@@ -1,5 +1,5 @@
 ---
-title: Convalidare pacchetti SSIS distribuiti in Azure | Microsoft Docs
+title: Validate SSIS packages deployed to Azure (Convalidare pacchetti SSIS distribuiti in Azure) | Microsoft Docs
 description: Informazioni su come la procedura guidata Distribuzione pacchetto di SSIS controlla i pacchetti per individuare eventuali problemi noti che potrebbero impedire l'esecuzione dei pacchetti come previsto in Azure.
 ms.date: 11/27/2017
 ms.topic: conceptual
@@ -8,15 +8,16 @@ ms.prod_service: integration-services
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 0e19b7fe45acfdea692d1334719e9dc8721124df
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5dcdd0f396f0cb6a272af121fd03757dc8bb2b72
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328625"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262055"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Convalidare i pacchetti SQL Server Integration Services (SSIS) distribuiti in Azure
 
