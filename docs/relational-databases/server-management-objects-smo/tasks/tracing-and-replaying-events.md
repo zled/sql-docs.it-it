@@ -1,5 +1,5 @@
 ---
-title: Traccia e la riproduzione degli eventi | Documenti Microsoft
+title: Traccia e riproduzione di eventi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b4f3ccecad68cbe70fb46cc7a73497c20eca58ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ca2cf0a3903e6ec7eb917af3fb8160ef3a266e0
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967876"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984033"
 ---
 # <a name="tracing-and-replaying-events"></a>Traccia e riproduzione di eventi
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  In SMO il **traccia** e **riproduzione** gli oggetti di <xref:Microsoft.SqlServer.Management.Trace> dello spazio dei nomi forniscono l'accesso programmatico al [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] funzionalità, viene utilizzata per il monitoraggio di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. È possibile acquisire e salvare i dati di ogni evento in un file o in una tabella per operazioni di analisi successive. È ad esempio possibile monitorare un ambiente di produzione per verificare le stored procedure che influiscono sulle prestazioni a causa di un'esecuzione troppo lenta.  
+  In SMO i **traccia** e **Replay** gli oggetti nel <xref:Microsoft.SqlServer.Management.Trace> dello spazio dei nomi fornisce l'accesso al [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] funzionalità, che viene usata per monitorare un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. È possibile acquisire e salvare i dati di ogni evento in un file o in una tabella per operazioni di analisi successive. È ad esempio possibile monitorare un ambiente di produzione per verificare le stored procedure che influiscono sulle prestazioni a causa di un'esecuzione troppo lenta.  
   
- Il **traccia** e **riproduzione** oggetti forniscono un set di oggetti che può essere usato per creare tracce in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Questi oggetti possono essere utilizzati all'interno di applicazioni personalizzate per creare tracce in modo manuale per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Inoltre, SMO **traccia** oggetti possono essere utilizzati per leggere i file di traccia SQL e le tabelle create mediante il monitoraggio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], o la registrazione DTS.  
+ Il **traccia** e **Replay** oggetti forniscono un set di oggetti che può essere utilizzato per creare tracce in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Questi oggetti possono essere utilizzati all'interno di applicazioni personalizzate per creare tracce in modo manuale per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Inoltre, SMO **traccia** oggetti possono essere utilizzati per leggere i file di traccia SQL e le tabelle che sono state create monitorando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], o la registrazione DTS.  
   
- SMO **traccia** oggetti consentono di eseguire le funzioni seguenti:  
+ SMO **traccia** oggetti consentono di eseguire le attività seguenti:  
   
 -   Creare una traccia.  
   
@@ -57,13 +57,13 @@ ms.locfileid: "32967876"
   
 -   Riprodurre file di traccia o tabelle di traccia.  
   
- I dati di traccia di **traccia** e **riproduzione** oggetti possono essere utilizzati dall'applicazione SMO o possono essere esaminato manualmente mediante [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). I dati di traccia sono inoltre compatibili con la [traccia SQL](../../../relational-databases/sql-trace/sql-trace.md) stored procedure che forniscono anche le funzionalità di traccia.  
+ Dati di traccia le **traccia** e **Replay** oggetti possono essere utilizzati dall'applicazione SMO o possono essere esaminato manualmente mediante [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). I dati di traccia sono anche compatibili con il [traccia SQL](../../../relational-databases/sql-trace/sql-trace.md) stored procedure che forniscono anche le funzionalità di traccia.  
   
  Gli oggetti di traccia SMO risiedono nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Trace>, che richiede un riferimento al file Microsoft.SQLServer.ConnectionInfo.dll.  
   
- Il **traccia** e **riproduzione** oggetti richiedono un [ServerConnection](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.common.serverconnection.aspx) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> oggetto per stabilire una connessione con l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il [ServerConnection](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.common.serverconnection.aspx) risiede nell'oggetto di [Microsoft.SqlServer.Management.Common](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.common) spazio dei nomi, che richiede un riferimento al file Microsoft.SQLServer.ConnectionInfo.dll.  
+ Il **traccia** e **Replay** oggetti richiedono una [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> per stabilire una connessione all'istanza di oggetto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) risiede nell'oggetto il [Microsoft.SqlServer.Management.Common](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common) dello spazio dei nomi, che richiede un riferimento al file ConnectionInfo.  
   
 > [!NOTE]  
->  Il **traccia** e **riproduzione** oggetti non sono supportati in una piattaforma a 64 bit.  
+>  Il **traccia** e **Replay** oggetti non sono supportati su una piattaforma a 64 bit.  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn | Microsoft Docs
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 151
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d5b1b75df79f8422320089fe1a1a75fc890cfc8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 42f970d275a4dc6a03ddfb2292ce587540d4fe6b
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769737"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934903"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,8 @@ ms.locfileid: "34769737"
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Assicurarsi che il sistema non sia un controller di dominio.|I gruppi di disponibilità non sono supportati nei controller di dominio.|  
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Assicurarsi che in ogni computer sia eseguita la versione di Windows Server 2012 o successive.|[Requisiti hardware e software per l'installazione di SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Assicurarsi che ogni computer sia un nodo in un cluster WSFC.|[Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
-|![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Assicurarsi che nel cluster WSFC siano contenuti nodi sufficienti per supportare le configurazioni dei gruppi di disponibilità.|Un nodo del cluster può ospitare solo una replica di disponibilità per un gruppo di disponibilità specifico. In un nodo del cluster specificato possono essere ospitate repliche di disponibilità per numerosi gruppi di disponibilità da parte di una o più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Chiedere agli amministratori del database il numero di nodi del cluster necessario per supportare le repliche di disponibilità dei gruppi di disponibilità pianificati.<br /><br /> [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+|![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Assicurarsi che nel cluster WSFC siano contenuti nodi sufficienti per supportare le configurazioni dei gruppi di disponibilità.|Un nodo del cluster può ospitare una sola replica per un gruppo di disponibilità. Lo stesso nodo non può ospitare due repliche dallo stesso gruppo di disponibilità. Il nodo del cluster può partecipare a più gruppi di disponibilità, con una replica da ogni gruppo. <br /><br /> Chiedere agli amministratori del database il numero di nodi del cluster necessario per supportare le repliche di disponibilità dei gruppi di disponibilità pianificati.<br /><br /> [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+
   
 > [!IMPORTANT]  
 >  Inoltre, assicurarsi che l'ambiente sia configurato correttamente per la connessione a un gruppo di disponibilità. Per altre informazioni, vedere [Connettività client AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
@@ -170,8 +171,10 @@ ms.locfileid: "34769737"
   
     -   Se un thread specificato è inattivo per un certo periodo di tempo, viene rilasciato nuovamente nel pool di thread generale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . In genere, un thread inattivo viene rilasciato dopo ~15 secondi di inattività. Tuttavia, a seconda dell'ultima attività, un thread inattivo potrebbe essere mantenuto più a lungo.  
 
-    - Un'istanza di SQL Server usa fino a 100 thread per la fase di rollforward parallelo per le repliche secondarie. Ogni database usa fino a metà del numero totale di core CPU, ma non più di 16 thread per ogni database. Se il numero totale di thread necessari per una singola istanza supera 100, SQL Server usa un unico thread di fase di rollforward per tutti i database rimanenti. I thread della fase di rollforward vengono rilasciati dopo ~15 secondi di inattività. 
-
+    -   Un'istanza di SQL Server usa fino a 100 thread per la fase di rollforward parallelo per le repliche secondarie. Ogni database usa fino a metà del numero totale di core CPU, ma non più di 16 thread per ogni database. Se il numero totale di thread necessari per una singola istanza supera 100, SQL Server usa un unico thread di fase di rollforward per tutti i database rimanenti. I thread di rollforward seriale vengono rilasciati dopo ~15 secondi di inattività. 
+    
+    > [!NOTE]
+    > I database vengono scelti per il passaggio al thread singolo in base ai relativi ID di database in ordine crescente. Di conseguenza, l'ordine di creazione dei database deve essere considerato per le istanze di SQL Server che ospitano più database nel gruppo di disponibilità rispetto ai thread di lavoro disponibili. Ad esempio, in un sistema con 32 core CPU o più, tutti i database a partire dal settimo aggiunto al gruppo di disponibilità saranno in modalità di rollforward seriale, indipendentemente dal carico di lavoro di rollforward effettivo per ogni database. I database che richiedono il rollforward parallelo devono essere aggiunti per primi al gruppo di disponibilità.    
   
 -   Inoltre, nei gruppi di disponibilità vengono utilizzati thread non condivisi, come riportato di seguito:  
   

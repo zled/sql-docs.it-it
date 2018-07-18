@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87ed7a12ae763b0ad40fb0750506ca1ee2be30fe
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b15b88320c48a711539c952ea749c21d85ab6e15
+ms.sourcegitcommit: 5152caf8f4346f8b565742bc1df4e454551d63eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408353"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042591"
 ---
 # <a name="odbc-source-custom-properties"></a>Proprietà personalizzate dell'origine ODBC
   Nella tabella seguente vengono descritte le proprietà personalizzate dell'origine ODBC. È possibile impostare tutte le proprietà dalle espressioni di proprietà SSIS.  
@@ -35,7 +35,7 @@ ms.locfileid: "35408353"
 |ExposeCharColumnsAsUnicode|Boolean|Questa proprietà determina il modo in cui le colonne CHAR vengono esposte dal componente. Il valore predefinito è False, che indica che le colonne CHAR vengono esposte come stringhe a più byte (DT_STR). Se il valore è True, le colonne CHAR vengono esposte come stringhe wide (DT_WSTR).<br /><br /> **Nota**: questa proprietà non è disponibile nell' **Editor origine ODBC**, ma può essere impostata tramite l' **Editor avanzato**.|  
 |FetchMethod|Integer (enumerazione)|Metodo utilizzato per recuperare i dati. Le possibili opzioni sono Row by row (0) e Batch (1). Il valore predefinito è Batch (1).<br /><br /> Per altre informazioni su queste opzioni, vedere [Origine ODBC](../../integration-services/data-flow/odbc-source.md).<br /><br /> **Nota**: questa proprietà non è disponibile nell' **Editor origine ODBC**, ma può essere impostata tramite l' **Editor avanzato**.|  
 |SqlCommand|String|Comando SQL da eseguire quando la proprietà AccessMode è impostata su SQL Command.|  
-|StatementTimeout|Valore intero|Numero di secondi di attesa per l'esecuzione di un'istruzione SQL prima di tornare all'applicazione con un errore. Il valore predefinito è 120. Il valore 0 indica che al sistema non viene applicato alcun timeout.|  
+|StatementTimeout|Valore intero|Numero di secondi di attesa per l'esecuzione di un'istruzione SQL prima di tornare all'applicazione con un errore. Il valore predefinito è 0. Il valore 0 indica che al sistema non viene applicato alcun timeout.|  
 |TableName|String|Nome della tabella con i dati in uso quando la proprietà AccessMode è impostata su Table Name.|  
 |LobChunckSize|Valore intero|Allocazione delle dimensioni del blocco per colonne LOB.|  
 ||||  

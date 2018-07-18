@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: blob
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,18 +16,18 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23580484e323d33d06d578b63d7d3b96381d3e5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd1ef1ee5c1d2d322beb41dc60439036d490c62f
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920696"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36903784"
 ---
 # <a name="filetable-schema"></a>Schema delle tabelle FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Viene descritto lo schema predefinito e fisso di una tabella FileTable.  
   
-|Nome dell'attributo di file|Tipo|Dimensione|Default|Description|Accessibilità al file system|  
+|Nome dell'attributo di file|Tipo|Dimensione|Default|Descrizione|Accessibilità al file system|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|variabile|Oggetto **hierarchyid** che identifica la posizione dell'elemento.|Posizione del nodo corrente nel FileNamespace gerarchico.<br /><br /> Chiave primaria per la tabella.|Può essere creato e modificato impostando i valori del percorso di Windows.|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||Valore restituito dalla funzione **NEWID()** .|ID univoco per i dati FILESTREAM.|Non applicabile.|  

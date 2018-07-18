@@ -1,28 +1,26 @@
 ---
-title: Impostare le opzioni del cursore (ODBC) | Documenti Microsoft
+title: Impostare le opzioni del cursore (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], options
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4694337517f51c08273a988e105ae49fa9bb15a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a37b09f88f9156f6363ed99a9fea56b2f9a5932b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066944"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419770"
 ---
 # <a name="set-cursor-options-odbc"></a>Impostare le opzioni del cursore (ODBC)
   Per impostare le opzioni del cursore, chiamare [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) per impostare o [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) per ottenere le opzioni dell'istruzione che controllano il comportamento del cursore.  
@@ -62,6 +60,6 @@ retcode = SQLExecDirect(hstmt1, select au_lname from authors", SQL_NTS);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'esecuzione di query procedure &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+ [L'esecuzione di query procedure relative al &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

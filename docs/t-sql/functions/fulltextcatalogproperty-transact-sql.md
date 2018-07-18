@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - status information [SQL Server], full-text catalogs
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58592c26b8d5747876eda424c225bc3eca013d60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 546d1dee29425e2dba13747e2ae75c2cddd82b54
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054688"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781762"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
  *property*  
  Espressione che contiene il nome della proprietà di catalogo full-text. Nella tabella seguente vengono descritte le proprietà e le informazioni restituite.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Impostazione relativa alla distinzione tra caratteri accentati e non accentati.<br /><br /> 0 = distinzione dei caratteri accentati/non accentati disattivata<br /><br /> 1 = distinzione dei caratteri accentati/non accentati attivata|  
 |**IndexSize**|Dimensioni logiche in megabyte del catalogo full-text. Include le dimensioni della frase chiave semantica e degli indici di somiglianza del documento.<br /><br /> Per ulteriori informazioni, vedere la sezione "Note" più avanti in questo argomento.|  

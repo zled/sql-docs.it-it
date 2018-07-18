@@ -12,20 +12,22 @@ ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 05/08/2018
-ms.author: rebeccaz
+ms.date: 07/09/2018
+ms.author: aliceku
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1f545dcc5ea5ef018a6e2aaa750305245c211e69
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 49a3745e67a51ee8f5eb9625d518328f61593514
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695532"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934853"
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Transparent Data Encryption per database e data warehouse SQL
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Transparent Data Encryption (TDE) contribuisce a proteggere il database SQL di Azure e Azure Data Warehouse dagli attacchi di attività dannose. Esegue la crittografia e la decrittografia in tempo reale del database, dei backup associati e dei file di log delle transazioni inattivi senza richiedere modifiche all'applicazione. Per impostazione predefinita, Transparent Data Encryption è abilitato per tutti i database SQL di Azure appena distribuiti, ma potrebbe essere necessario abilitarlo manualmente per i database meno recenti.  
+Transparent Data Encryption (TDE) contribuisce a proteggere il database SQL di Azure e Azure Data Warehouse dagli attacchi di attività dannose. Esegue la crittografia e la decrittografia in tempo reale del database, dei backup associati e dei file di log delle transazioni inattivi senza richiedere modifiche all'applicazione. Per impostazione predefinita, la crittografia TDE è abilitata per tutti i nuovi database SQL di Azure distribuiti. Non è possibile usare TDE per crittografare il database **master** logico in database SQL.  Il database **master** contiene gli oggetti necessari per eseguire le operazioni TDE sui database utente.
+
+La crittografia TDE dovrà essere abilitata manualmente per i database precedenti o per Azure SQL Data Warehouse.  
 
 Transparent Data Encryption crittografa l'archivio di un intero database usando una chiave simmetrica denominata chiave di crittografia del database. La chiave di crittografia del database è protetta dalla protezione di Transparent Data Encryption. La protezione può essere un certificato gestito dal servizio (Transparent Data Encryption gestita dal servizio) o una chiave asimmetrica archiviata in Azure Key Vault (Bring Your Own Key). La protezione di Transparent Data Encryption si imposta a livello di server. 
 

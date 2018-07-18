@@ -1,30 +1,30 @@
 ---
-title: Scaricare i Driver Microsoft OLE DB per SQL Server | Documenti Microsoft
-description: Posizione in cui scaricare il Driver OLE DB Microsoft per SQL Server
-ms.date: 06/18/2018
+title: Scaricare il driver Microsoft OLE DB per SQL Server | Microsoft Docs
+description: Dove scaricare il driver Microsoft OLE DB per SQL Server
+ms.date: 07/03/2018
 ms.prod: sql
 ms.suite: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
-ms.openlocfilehash: be60102c1d56e3f52e32f441f427bb261df74aba
-ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
-ms.translationtype: MT
+ms.openlocfilehash: d1ae2198438313cec687813e500070ed9e87caea
+ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270982"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37872881"
 ---
-# <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Scaricare i Driver Microsoft OLE DB per SQL Server
+# <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Scaricare il driver Microsoft OLE DB per SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 ## <a name="windows"></a>Windows
-La seguente versione del Driver Microsoft OLE DB per SQL Server è disponibile per il download:
- * [Driver Microsoft OLE DB 18.0 per SQL Server](https://go.microsoft.com/fwlink/?linkid=871294)
+La versione seguente del Driver OLE DB Microsoft per SQL Server è disponibile per il download:
+ * [Driver Microsoft OLE DB 18.1 per SQL Server](https://go.microsoft.com/fwlink/?linkid=871294)
 
 ## <a name="see-also"></a>Vedere anche
-[Note sulla versione per il Driver OLE DB Microsoft per SQL Server](release-notes-for-oledb-driver-for-sql-server.md)  
+[Note sulla versione per il driver Microsoft OLE DB per SQL Server](release-notes-for-oledb-driver-for-sql-server.md)  
 [Requisiti di sistema per driver OLE DB per SQL Server](system-requirements-for-oledb-driver-for-sql-server.md)  
-[Quando utilizzare Driver OLE DB per SQL Server](when-to-use-oledb-driver-for-sql-server.md)  
+[Quando usare il driver OLE DB per SQL Server](when-to-use-oledb-driver-for-sql-server.md)  
 [Installazione del driver OLE DB per SQL Server](applications/installing-oledb-driver-for-sql-server.md)

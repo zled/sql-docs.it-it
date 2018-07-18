@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d95395b74de40bcc6f8a93a246deae9c9d799198
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 76795367b5f03e65673468d4af8e7f7c7222e73b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249741"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Esercitazione: Report mappa (Generatore report)
   Questa esercitazione intende fornire un approfondimento delle funzionalità della mappa che è possibile utilizzare per visualizzare i dati del report rispetto a uno sfondo geografico.  
@@ -35,9 +35,9 @@ ms.locfileid: "36069345"
   
 1.  [Creare una mappa con un livello poligono dalla creazione guidata mappa](#Map)  
   
-2.  [Aggiungere un livello punto mappa posizioni dei negozi di visualizzazione](#PointLayer)  
+2.  [Aggiungere un livello punto mappa ai percorsi di visualizzazione Store](#PointLayer)  
   
-3.  [Aggiungere un livello linea della mappa per visualizzare un itinerario](#LineLayer)  
+3.  [Aggiungere un livello linea mappa per visualizzare un itinerario](#LineLayer)  
   
 4.  [Aggiungere un sfondo a tessere mappe Bing](#TileLayer)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36069345"
   
 7.  [Aggiungere un punto personalizzato](#CustomPoint)  
   
-8.  [Al centro la vista mappa](#CenterView)  
+8.  [Allineare al centro la vista mappa](#CenterView)  
   
 9. [Aggiungere un titolo al Report](#Title)  
   
@@ -91,15 +91,15 @@ ms.locfileid: "36069345"
   
 4.  Fare clic su **Crea**.  
   
-5.  **Scegliere un'origine dei dati spaziali** pagina, verificare che **raccolta mappe** sia selezionata.  
+5.  **Scegliere un'origine dati spaziali** pagina, verificare che **raccolta mappe** sia selezionata.  
   
-6.  Nel riquadro raccolta mappe, espandere **States by County** sotto **USA**, fare clic su **New York**.  
+6.  Nel riquadro raccolta mappe, espandere **States by County** sotto **Stati Uniti**, fare clic su **New York**.  
   
      Nel riquadro Anteprima mappe viene visualizzata la mappa della regione di New York.  
   
 7.  Scegliere **Avanti**.  
   
-8.  Nel **Scegli dati spaziali e mappa consente di visualizzare le opzioni** pagina, accettare le impostazioni predefinite. Per impostazione predefinita, gli elementi mappa di una raccolta mappe verranno incorporati automaticamente nella definizione del report.  
+8.  Nel **scegliere i dati spaziali e Vista mappa opzioni** pagina, accettare le impostazioni predefinite. Per impostazione predefinita, gli elementi mappa di una raccolta mappe verranno incorporati automaticamente nella definizione del report.  
   
 9. Scegliere **Avanti**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36069345"
   
 12. Se è selezionata, deselezionare l'opzione **Mappa a colore singolo** .  
   
-13. Dal **campo dati** elenco a discesa fare clic su #COUNTYNAME. Nel riquadro Anteprima mappe della procedura guidata vengono visualizzati gli elementi seguenti:  
+13. Dal **datové** elenco a discesa fare clic su #COUNTYNAME. Nel riquadro Anteprima mappe della procedura guidata vengono visualizzati gli elementi seguenti:  
   
     -   Un titolo con il testo **Titolo mappa**.  
   
@@ -121,16 +121,16 @@ ms.locfileid: "36069345"
   
     -   Una scala distanza in cui sono visualizzati chilometri (km) e miglia (mi).  
   
-14. Fare clic su **Fine**.  
+14. Scegliere **Fine**.  
   
      La mappa viene aggiunta all'area di progettazione.  
   
-15. Selezionare la mappa per selezionarla e visualizzare il **riquadro livelli mappa**. Il **riquadro livelli mappa** viene visualizzato un poligono di tipo di livello **incorporata**. Ogni regione è un elemento incorporato della mappa a questo livello.  
+15. Fare clic sulla mappa per selezionarla e visualizzare il **nel riquadro livelli mappa**. Il **nel riquadro livelli mappa** Mostra un livello poligono di tipo **Embedded**. Ogni regione è un elemento incorporato della mappa a questo livello.  
   
     > [!NOTE]  
-    >  Se non viene visualizzato il **livelli mappa** riquadro, potrebbe essere visualizzato all'esterno della vista corrente. Utilizzare la barra di scorrimento nella parte inferiore della visualizzazione della struttura per modificare la visualizzazione. In alternativa, nella **vista** scheda, deseleziona il **proprietà** o la **i dati del Report** possibilità di fornire ulteriori della superficie di attacco di progettazione.  
+    >  Se non viene visualizzato il **livelli mappa** riquadro potrebbero essere visualizzato all'esterno della vista corrente. Utilizzare la barra di scorrimento nella parte inferiore della visualizzazione della struttura per modificare la visualizzazione. In alternativa, nella **vista** scheda, deseleziona il **proprietà** o la **i dati del Report** opzione per fornire più aree di superficie di progettazione.  
   
-16. Fare doppio clic su titolo della mappa e quindi fare clic su **proprietà titolo**.  
+16. Fare clic sul titolo della mappa e quindi fare clic su **proprietà titolo**.  
   
 17. Sostituire il testo del titolo con **Sales by Store**.  
   
@@ -156,13 +156,13 @@ ms.locfileid: "36069345"
   
 3.  Nella pagina **Scegliere un'origine dati spaziali** selezionare **Query spaziale di SQL Server**e fare clic su **Avanti**.  
   
-4.  Nel **scegliere un set di dati con dati spaziali di SQL Server** pagina, fare clic su **aggiungere un nuovo set di dati con dati spaziali di SQL Server**, quindi fare clic su **successivo**.  
+4.  Nel **scegliere un set di dati con dati spaziali di SQL Server** pagina, fare clic su **aggiungere un nuovo set di dati con dati spaziali di SQL Server**e quindi fare clic su **Next**.  
   
 5.  Nella pagina **Scegliere una connessione a un'origine dati spaziali di SQL Server** selezionare un'origine dati esistente o il server di report, quindi selezionare un'origine dati.  
   
 6.  Scegliere **Avanti**.  
   
-7.  In una pagina Progetta Query, fare clic su **modifica come testo**.  
+7.  La progettazione di una pagina di Query, fare clic su **modifica come testo**.  
   
 8.  Incollare il testo seguente nel riquadro della query:  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36069345"
   
      Il set di dati del report denominato DataSet1 viene creato automaticamente. Al termine della procedura guidata, è possibile utilizzare Dati report per visualizzare la relativa raccolta campi.  
   
-11. Nel **sceglie dati spaziali opzioni e Vista mappa** verificare che il **campo spaziale** è `SpatialLocation` e che il **tipo di livello** è **punto**. Accettare le altre impostazioni predefinite di questa pagina.  
+11. Nel **scegliere i dati spaziali opzioni e Vista mappa** verificare che il **campo spaziale** viene `SpatialLocation` e che il **tipo livello** è **punto**. Accettare le altre impostazioni predefinite di questa pagina.  
   
      Nella vista mappa vengono visualizzati cerchi che indicano la posizione di ogni negozio.  
   
@@ -211,29 +211,29 @@ ms.locfileid: "36069345"
   
 13. Specificare un tipo di mappa in cui vengono visualizzati marcatori che variano in base ai dati analitici. La pagina Scegli Vista mappa, scegliere **mappa con marcatori analitici**, quindi fare clic su **successivo**.  
   
-14. Nel **scegliere il set di dati analitici** pagina, fare clic su DataSet1. Questo set di dati contiene sia dati analitici sia dati spaziali che verranno visualizzati al nuovo livello punto.  
+14. Nel **scegliere il set di dati analitici** fare clic su DataSet1. Questo set di dati contiene sia dati analitici sia dati spaziali che verranno visualizzati al nuovo livello punto.  
   
 15. Scegliere **Avanti**.  
   
-16. Nel **Scegli colore del tema e visualizzazione dati** pagina, deseleziona il **Usa colori marcatore per visualizzare i dati** opzione e quindi selezionare l'opzione **Usa tipi marcatore per visualizzare dati**.  
+16. Nel **scegliere i colori del tema e visualizzazione dati** pagina, deseleziona le **Usa colori marcatore per visualizzare i dati** opzione e quindi selezionare l'opzione **Usa tipi marcatore per visualizzare i dati**.  
   
-17. In **campo dei dati**, selezionare `[Sum(SellingArea)]` per variare i tipi di marcatore per la dimensione dell'area di un negozio ha riservato all'esposizione dei prodotti.  
+17. Nelle **datové**, selezionare `[Sum(SellingArea)]` per variare i tipi di marcatore per la dimensione dell'area di un negozio ha riservato all'esposizione dei prodotti.  
   
-18. Fare clic su **Fine**.  
+18. Scegliere **Fine**.  
   
      Il livello mappa viene aggiunto al report. Nella legenda vengono visualizzati i tipi di marcatore in base ai valori indicati in SellingArea.  
   
      Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Nel riquadro **Livello mappa** viene visualizzato un nuovo livello, PointLayer1, con il tipo di origine dati spaziali **DataRegion**.  
   
-19. Aggiungere un titolo della legenda. Fare doppio clic su titolo della legenda e quindi fare clic su **proprietà titolo legenda**.  
+19. Aggiungere un titolo della legenda. Fare clic sul titolo della legenda e quindi fare clic su **proprietà titolo legenda**.  
   
 20. Eliminare il titolo e digitare **Display Area (Square Feet)**.  
   
 21. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-22. Visualizzare i valori predefiniti impostati dalla procedura guidata. Nel **riquadro livelli mappa**destro del mouse sul livello punto e quindi fare clic su **regola tipo marcatore**.  
+22. Visualizzare i valori predefiniti impostati dalla procedura guidata. Solo le regioni a cui sono associati dati analitici vengono visualizzati nei **rosso** attraverso **verde** colori dalle regole colore specificato.  
   
-     Nel **generale** scheda, i marcatori sono elencati nell'ordine in cui vengono visualizzate nella legenda. Nel **distribuzione** scheda, il numero di intervalli secondari è 5. Nel **legenda** scheda, il testo della legenda è impostato per visualizzare il valore di inizio e fine di ogni intervallo.  
+     Per rappresentare un nuovo Negozio che non è ancora stato compilato, specificare un punto e usare la **puntina da disegno** tipo di marcatore. Sulla barra degli strumenti, fare clic su **Aggiungi livello**, quindi fare clic su livello punto. Fare clic sulla freccia in giù in PointLayer2 e quindi fare clic su **Aggiungi punto**.  
   
 23. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -248,13 +248,13 @@ ms.locfileid: "36069345"
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti, fare clic su **Creazione guidata nuovo livello**.  
+2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Selezionare l'opzione **Ignora opzioni punto per questo livello**.  
   
 3.  Nella pagina **Scegliere un'origine dati spaziali** selezionare **Query spaziale di SQL Server** e fare clic su **Avanti**.  
   
 4.  Nella pagina **Scegliere un set di dati con dati spaziali di SQL Server** fare clic su **Aggiungere un nuovo set di dati con dati spaziali di SQL Server** , quindi su **Avanti**.  
   
-5.  Nel **scegliere una connessione a un'origine dati spaziali di SQL Server**, selezionare DataSource1, l'origine dati creata nella prima procedura.  
+5.  Fare clic su **marcatore**.  
   
 6.  Scegliere **Avanti**.  
   
@@ -283,9 +283,9 @@ ms.locfileid: "36069345"
   
 13. In **Scegliere combinazioni di colori e visualizzazione dati**selezionare l'opzione **Mappa a colore singolo**. Il percorso viene visualizzato in un determinato colore che dipende dal tema selezionato.  
   
-14. Fare clic su **Fine**.  
+14. Scegliere **Fine**.  
   
- La mappa viene visualizzato un nuovo livello di riga con tipo di origine dati spaziali **DataSet**. In questo esempio i dati spaziali provengono da un set di dati, tuttavia nessun dato analitico è associato alla riga.  
+ Per la **tipo di marcatore**, selezionare Star. In questo esempio i dati spaziali provengono da un set di dati, tuttavia nessun dato analitico è associato alla riga.  
   
 ##  <a name="TileLayer"></a> 4. Aggiungere uno sfondo a tessere mappa di Bing  
  Aggiungere un livello mappa in cui sia visualizzato uno sfondo a tessere mappa di Bing.  
@@ -294,7 +294,7 @@ ms.locfileid: "36069345"
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti, fare clic su **Aggiungi livello**![rs_IconMapAddLayer](../../2014/tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
+2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** . Sulla barra degli strumenti, fare clic su **Aggiungi livello** ![rs_IconMapAddLayer](../../2014/tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
   
 3.  Nell'elenco a discesa fare clic su **Livello sezione**.  
   
@@ -303,9 +303,9 @@ ms.locfileid: "36069345"
     > [!NOTE]  
     >  Nella procedura guidata è anche possibile aggiungere un livello sezione nella pagina **Scegli opzioni di dati spaziali e vista mappa** . A tale scopo, selezionare **Aggiungi sfondo Bing Maps per la vista mappa**. In un report visualizzabile, lo sfondo a sezioni visualizza le tessere mappa di Bing per l'attuale livello di allineamento al centro e zoom del viewport mappa.  
   
-4.  Fare clic sulla freccia in giù in TileLayer1 e quindi fare clic su **le proprietà del riquadro**.  
+4.  Fare clic sul punto appena aggiunto e quindi fare clic su **proprietà punto incorporato**.  
   
-5.  In **tipo**, selezionare **aereo**. La vista aerea non contiene testo.  
+5.  Nelle **testo dell'etichetta**, digitare **Store New**. La vista aerea non contiene testo.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -318,11 +318,11 @@ ms.locfileid: "36069345"
   
 2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** .  
   
-3.  Fare clic sulla freccia in giù in PolygonLayer1 e quindi fare clic su **dati livello**. Viene visualizzata la finestra di dialogo **Proprietà livello poligono mappa** .  
+3.  Pulsante destro del mouse sul viewport mappa e quindi fare clic su **proprietà Viewport**. Viene visualizzata la finestra di dialogo **Proprietà livello poligono mappa** .  
   
 4.  Fare clic su **Visibilità**.  
   
-5.  In **trasparenza (%)**, tipo **30**.  
+5.  Fare clic su **al centro e Zoom**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -342,17 +342,17 @@ ms.locfileid: "36069345"
   
 2.  Fare doppio clic sulla mappa per visualizzare il riquadro **Livello mappa** .  
   
-3.  Fare clic sulla freccia in giù in PolygonLayer1 e quindi fare clic su **dati livello**. Viene visualizzata la finestra di dialogo **Proprietà livello poligono mappa** .  
+3.  Pulsante destro del mouse sul viewport mappa e quindi fare clic su **proprietà Viewport**. Viene visualizzata la finestra di dialogo **Proprietà livello poligono mappa** .  
   
 4.  Fare clic su **Dati analitici**.  
   
 5.  Nell'elenco a discesa selezionare DataSet1. Questo set di dati è stato creato dalla procedura guidata quando è stata specificata la query dei dati spaziali per le regioni.  
   
-6.  In **campi per corrispondenze**, fare clic su **Add**. Viene aggiunta una nuova riga.  
+6.  Per altre informazioni, vedere **Maps &#40;Generatore Report e SSRS&#41;**  e il post di blog **Cartographic Adjustment of Spatial Data per SQL Server Reporting Services** sul sito Web blogs.msdn.com. Viene aggiunta una nuova riga.  
   
-7.  In **dal set di dati spaziali**, dall'elenco a discesa, fare clic su countyname nel.  
+7.  Per altre esercitazioni, vedere **esercitazioni &#40;Generatore Report&#41;**.  
   
-8.  In **dal set di dati analitici**, dall'elenco a discesa, fare clic su [County].  
+8.  Nelle **dal set di dati analitici**, dall'elenco a discesa elenco, fare clic su Countyname.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -404,13 +404,13 @@ ms.locfileid: "36069345"
   
 ##### <a name="to-set-the-format-for-the-color-scale"></a>Per impostare il formato per la scala dei colori  
   
-1.  Fare doppio clic su scala dei colori e quindi fare clic su **proprietà scala dei colori**.  
+1.  Fare doppio clic la scala dei colori e quindi fare clic su **proprietà scala dei colori**.  
   
 2.  Fare clic su **numero**.  
   
-3.  In **categoria**, fare clic su **valuta**.  
+3.  Nelle **categoria**, fare clic su **valuta**.  
   
-4.  In **decimali**, tipo **0**. Questo formato non specifica alcuna cifra decimale per la valuta.  
+4.  Nelle **posizioni decimali**, digitare **0**. Questo formato non specifica alcuna cifra decimale per la valuta.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -418,7 +418,7 @@ ms.locfileid: "36069345"
   
  La scala dei colori visualizza le vendite annuali nel formato della valuta per ogni intervallo.  
   
-###  <a name="NewLegend"></a> 6d. Creare una nuova legenda  
+###  <a name="NewLegend"></a> 6 g. Creare una nuova legenda  
  Per impostazione predefinita, tutte le regole vengono visualizzate nella prima legenda. Per migliorare la visualizzazione per una mappa, è possibile aggiungere legende.  
   
  Per modificare la visualizzazione predefinita, è possibile eseguire due passaggi: creare una nuova legenda e quindi associare i risultati della regola per un livello mappa alla nuova legenda.  
@@ -427,17 +427,17 @@ ms.locfileid: "36069345"
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Pulsante destro del mouse all'esterno del viewport mappa e quindi fare clic su **Aggiungi legenda**. Una nuova legenda viene aggiunta alla mappa in una posizione predefinita.  
+2.  Fare doppio clic all'esterno del viewport della mappa e quindi fare clic su **Aggiungi legenda**. Una nuova legenda viene aggiunta alla mappa in una posizione predefinita.  
   
-3.  Fare doppio clic su legenda e quindi fare clic su **proprietà legenda**.  
+3.  Fare doppio clic la legenda e quindi fare clic su **proprietà legenda**.  
   
-4.  In **posizionare le opzioni**, fare clic sul percorso che specifica in cui si desidera visualizzare rispetto al viewport la legenda. La mappa sull'area di progettazione cambia al fine di mostrare l'effetto delle selezioni.  
+4.  Nelle **posizionare opzioni**, fare clic sul percorso che specifica in cui si desidera visualizzare rispetto al viewport la legenda. La mappa sull'area di progettazione cambia al fine di mostrare l'effetto delle selezioni.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 6.  Fare clic su **titolo** sulla legenda per selezionare il titolo della legenda.  
   
-7.  Fare clic su **titolo** nuovamente alla modalità di inserimento per il testo. Sostituire **titolo** da **vendite (migliaia)** e quindi fare clic all'esterno del testo.  
+7.  Fare clic su **titolo** nuovamente alla modalità di inserimento per il testo. Sostituire **Title** dal **vendite (migliaia)** e quindi fare clic all'esterno del testo.  
   
  La legenda si espande per visualizzare il titolo.  
   
@@ -452,11 +452,11 @@ ms.locfileid: "36069345"
   
 3.  Fare clic su **Legenda**.  
   
-4.  In **Opzioni scala dei colori**deselezionare **Mostra nella scala dei colori**.  
+4.  Nelle **Opzioni scala dei colori**deselezionare **Mostra nella scala dei colori**.  
   
-5.  In **le opzioni della legenda**, dall'elenco a discesa, selezionare Legend2. Viene visualizzata l'opzione del testo della legenda. Per impostazione predefinita, il testo della legenda viene formattato con una stringa di formato [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] generale. Gli 0 in N0 indicano nessuna cifra decimale.  
+5.  Nelle **Opzioni legenda**, nell'elenco a discesa, selezionare Legend2. Viene visualizzata l'opzione del testo della legenda. Per impostazione predefinita, il testo della legenda viene formattato con una stringa di formato [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] generale. Gli 0 in N0 indicano nessuna cifra decimale.  
   
-6.  In **il testo della legenda**, usare il formato seguente per specificare la valuta senza cifre decimali: `#FROMVALUE {C0} - #TOVALUE {C0}`  
+6.  Nelle **testo della legenda**, usare il formato seguente per specificare la valuta senza cifre decimali: `#FROMVALUE {C0} - #TOVALUE {C0}`  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -481,16 +481,16 @@ ms.locfileid: "36069345"
   
 5.  Verificare che lo stile di riempimento sia **a tinta unita.** Le sfumature e i modelli si applicano a tutti i colori.  
   
-6.  In **colore**, fare clic sulla freccia verso il basso e quindi fare clic su **acciaio chiaro**.  
+6.  Nelle **colore**, fare clic sulla freccia verso il basso e quindi fare clic su **acciaio chiaro**.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 8.  Visualizzare l'anteprima del report.  
   
- Le regioni a cui non sono associati dati vengono visualizzate in blu. Vengono visualizzate solo le regioni a cui sono associati dati analitici nel **rosso** tramite **verde** colori dalle regole colore specificato.  
+ Le regioni a cui non sono associati dati vengono visualizzate in blu. Solo le regioni a cui sono associati dati analitici vengono visualizzati nei **rosso** attraverso **verde** colori dalle regole colore specificato.  
   
 ##  <a name="CustomPoint"></a> 7. Aggiungere un punto personalizzato  
- Per rappresentare un nuovo Negozio che non è ancora stato compilato, specificare un punto e utilizzare il **puntina da disegno** tipo di marcatore.  
+ Per rappresentare un nuovo Negozio che non è ancora stato compilato, specificare un punto e usare la **puntina da disegno** tipo di marcatore.  
   
 #### <a name="to-add-a-custom-point"></a>Per aggiungere un punto personalizzato  
   
@@ -512,23 +512,23 @@ ms.locfileid: "36069345"
   
 8.  Fare clic su **marcatore**.  
   
-9. Per **tipo di marcatore**, selezionare **stella**.  
+9. Per la **tipo di marcatore**, selezionare **Star**.  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 11. Visualizzare l'anteprima del report.  
   
- Il nuovo punto aggiunto viene visualizzato come un **stella**.  
+ Il nuovo punto aggiunto viene visualizzato come un **Star**.  
   
 #### <a name="to-add-a-label-for-the-custom-point"></a>Per aggiungere un'etichetta per il punto personalizzato  
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Destro del mouse sul punto appena aggiunto e quindi fare clic su **proprietà punto incorporato**.  
+2.  Fare clic sul punto appena aggiunto e quindi fare clic su **proprietà punto incorporato**.  
   
 3.  Fare clic su **etichette**.  
   
-4.  In **testo dell'etichetta**, tipo **nuovo negozio**.  
+4.  Nelle **testo dell'etichetta**, digitare **Store New**.  
   
 5.  In **Posizione**fare clic su **Torna all'inizio**.  
   
@@ -538,16 +538,16 @@ ms.locfileid: "36069345"
   
  L'etichetta viene visualizzata sopra la posizione del negozio.  
   
-##  <a name="CenterView"></a> Al centro la vista mappa  
+##  <a name="CenterView"></a> Allineare al centro la vista mappa  
  Modificare livello di allineamento al centro e zoom del viewport mappa.  
   
 #### <a name="to-change-the-viewport"></a>Per modificare il viewport  
   
 1.  Pulsante destro del mouse sul viewport mappa e quindi fare clic su **proprietà Viewport**.  
   
-2.  Fare clic su **allineare al centro e Zoom**.  
+2.  Fare clic su **al centro e Zoom**.  
   
-3.  Verificare che l'opzione **impostare a livello di un centro di visualizzazione e zoom** sia selezionata.  
+3.  Verificare che l'opzione **impostato a livello di una visualizzazione centro e zoom della** sia selezionata.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -584,7 +584,7 @@ ms.locfileid: "36069345"
 ## <a name="next-steps"></a>Passaggi successivi  
  Questa operazione conclude la procedura dettagliata per l'aggiunta di una mappa al report.  
   
- Per altre informazioni, vedere [Maps &#40;Generatore Report e SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) e l'intervento nel blog [Cartographic Adjustment of Spatial Data per SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) sul sito Web blogs.msdn.com.  
+ Per altre informazioni, vedere [Maps &#40;Generatore Report e SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) e il post di blog [Cartographic Adjustment of Spatial Data per SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) sul sito Web blogs.msdn.com.  
   
  Per altre esercitazioni, vedere [esercitazioni &#40;Generatore Report&#41;](report-builder-tutorials.md).  
   

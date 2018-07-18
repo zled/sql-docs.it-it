@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f37984c25fb722245d433e18904b2d48de7707df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2be02312e00441df86c3f9811c3d625fc98d18cf
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957236"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358143"
 ---
 # <a name="replication-merge-agent"></a>Agente merge repliche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,7 +171,7 @@ replmerg [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Livello di crittografia SSL (Secure Sockets Layer) utilizzato dall'agente di merge quando vengono stabilite le connessioni.  
   
-|Valore di EncryptionLevel|Description|  
+|Valore di EncryptionLevel|Descrizione|  
 |---------------------------|-----------------|  
 |**0**|Specifica che SSL non viene utilizzato.|  
 |**1**|Specifica che SSL viene utilizzato, ma l'agente non verifica che il certificato server SSL sia firmato da un'autorità emittente attendibile.|  
@@ -186,7 +185,7 @@ replmerg [-?]
   
  Specifica il tipo di scambio di dati durante la sincronizzazione. I possibili valori sono i seguenti:  
   
-|Valore di ExchangeType|Description|  
+|Valore di ExchangeType|Descrizione|  
 |------------------------|-----------------|  
 |**1**|L'agente deve caricare le modifiche ai dati dal Sottoscrittore al server di pubblicazione.|  
 |**2**|L'agente deve eseguire il download delle modifiche ai dati dal server di pubblicazione al Sottoscrittore.|  
@@ -205,7 +204,7 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  Specifica il livello di convergenza che l'agente di merge deve utilizzare. I possibili valori sono i seguenti:  
   
-|Valore di ForceConvergenceLevel|Description|  
+|Valore di ForceConvergenceLevel|Descrizione|  
 |---------------------------------|-----------------|  
 |**0** (predefinito)|Valore predefinito. Esegue un'operazione di merge standard senza convergenza aggiuntiva.|  
 |**1**|Forza la convergenza per tutte le generazioni.|  
@@ -226,7 +225,7 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  Specifica la quantità di cronologia registrata durante un'operazione di unione. Per ridurre al minimo l'effetto della registrazione della cronologia sulle prestazioni, selezionare **1**.  
   
-|Valore di HistoryVerboseLevel|Description|  
+|Valore di HistoryVerboseLevel|Descrizione|  
 |-------------------------------|-----------------|  
 |**0**|Registra il messaggio di stato dell'agente finale, i dettagli di sessione finali ed eventuali errori.|  
 |**1**|Registra i dettagli di sessione incrementali a ogni stato della sessione, inclusa la percentuale di completamento, oltre al messaggio di stato dell'agente finale, ai dettagli di sessione finali e a eventuali errori.|  
@@ -331,7 +330,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  Specifica se esiste un database Sottoscrittore.  
   
-|Valore di SubscriberDBAddOption|Description|  
+|Valore di SubscriberDBAddOption|Descrizione|  
 |---------------------------------|-----------------|  
 |**0**|Utilizza il database esistente (impostazione predefinita).|  
 |**1**|Crea un nuovo database Sottoscrittore vuoto.|  
@@ -377,7 +376,7 @@ replmerg [-?]
  **-Validate** [**0**|**1**|**2**|**3**]  
  Specifica se la convalida deve essere effettuata al termine della sessione di merge, e, in tal caso, indica il tipo di convalida. Il valore consigliato è **3** .  
   
-|Valore di Validate|Description|  
+|Valore di Validate|Descrizione|  
 |--------------------|-----------------|  
 |**0** (predefinito)|Nessuna convalida.|  
 |**1**|Convalida solo tramite conteggio delle righe.|  

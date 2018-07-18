@@ -1,27 +1,23 @@
 ---
-title: Installazione della funzionalità Distributed Replay - Panoramica | Documenti Microsoft
+title: Installazione della funzionalità Distributed Replay - Panoramica | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7ab77d42-8e84-4396-aa7f-47e2b84d59b2
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40f3f702f887593ed047d5e7307a02e0d31a4820
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69a57a42ac3fcd9b54952cca7bdb90a70e3422a9
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33067498"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36874869"
 ---
 # <a name="install-distributed-replay---overview"></a>Install Distributed Replay - Overview
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +25,7 @@ ms.locfileid: "33067498"
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Requisiti relativi a Riesecuzione distribuita](../../tools/distributed-replay/distributed-replay-requirements.md)|Argomento di procedure che elenca i requisiti per l'installazione di Riesecuzione distribuita.|  
 |[Installare Riesecuzione distribuita](../../tools/distributed-replay/install-distributed-replay.md)|Argomento di procedure che fornisce un'installazione tipica di Riesecuzione distribuita usando l'installazione guidata, sintassi e parametri di installazione di esempio per l'esecuzione di un'installazione automatica e sintassi e parametri di installazione di esempio per l'esecuzione di Riesecuzione distribuita con un file di configurazione.|  

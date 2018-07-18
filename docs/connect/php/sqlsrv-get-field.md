@@ -1,7 +1,7 @@
 ---
 title: sqlsrv_get_field | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -21,12 +21,12 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c1396662cc17d54899eb697694c452e663eaf533
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: c097a8735033be257dae8bb51d1946758f5936ae
+ms.sourcegitcommit: 5152caf8f4346f8b565742bc1df4e454551d63eb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309270"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042681"
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,6 @@ Recupera i dati dal campo specificato della riga corrente. L'accesso ai dati dei
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])  
 ```  
   
@@ -45,7 +44,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
   
 *$fieldIndex*: indice del campo da recuperare. Gli indici iniziano da zero.  
   
-*$getAsType* [facoltativo]: una **SQLSRV** costante (**SQLSRV_PHPTYPE _\***) che determina il tipo di dati PHP per i dati restituiti. Per informazioni sui tipi di dati supportati, vedere [costanti &#40;Microsoft Drivers for PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Se non viene specificato alcun tipo restituito, verrà restituito un tipo PHP predefinito. Per informazioni sui tipi PHP predefiniti, vedere [Default PHP Data Types](../../connect/php/default-php-data-types.md). Per informazioni sulla specifica dei tipi di dati PHP, vedere [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+*$getAsType* [FACOLTATIVO]: costante **SQLSRV** (**SQLSRV_PHPTYPE_&#x2a;**) che determina il tipo di dati PHP per i dati restituiti. Per informazioni sui tipi di dati supportati, vedere [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Se non viene specificato alcun tipo restituito, verrà restituito un tipo PHP predefinito. Per informazioni sui tipi PHP predefiniti, vedere [Default PHP Data Types](../../connect/php/default-php-data-types.md). Per informazioni sulla specifica dei tipi di dati PHP, vedere [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 ## <a name="return-value"></a>Valore restituito  
 I dati del campo. È possibile specificare il tipo di dati PHP dei dati restituiti usando il parametro *$getAsType* . Se non viene specificato alcun tipo di dati restituito, verrà restituito il tipo di dati PHP predefinito. Per informazioni sui tipi PHP predefiniti, vedere [Default PHP Data Types](../../connect/php/default-php-data-types.md). Per informazioni sulla specifica dei tipi di dati PHP, vedere [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
@@ -53,10 +52,10 @@ I dati del campo. È possibile specificare il tipo di dati PHP dei dati restitui
 ## <a name="remarks"></a>Remarks  
 La combinazione di **sqlsrv_fetch** e **sqlsrv_get_field** fornisce accesso forward-only ai dati.  
   
-La combinazione di **sqlsrv_fetch**/**sqlsrv_get_field** carica un solo campo del risultato di una riga del set nella memoria script e PHP consente di specificare il tipo restituito. (Per informazioni su come specificare il tipo restituito PHP, vedere [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).) Questa combinazione di funzioni consente inoltre di recuperare i dati come flusso. (Per informazioni sul recupero dei dati come flusso, vedere [recupero dei dati come flusso usando il Driver SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md).)  
+La combinazione di **sqlsrv_fetch**/**sqlsrv_get_field** carica un solo campo di una riga del set di risultati nella memoria script e consente di specificare il tipo PHP restituito. Per informazioni su come specificare il tipo PHP restituito, vedere [Procedura: Specificare i tipi di dati PHP](../../connect/php/how-to-specify-php-data-types.md). Questa combinazione di funzioni consente inoltre di recuperare i dati come flusso. Per informazioni sul recupero di dati come flusso, vedere [Recupero di dati come flusso usando il driver SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente recupera una riga di dati contenente una revisione di prodotto e il nome del revisore. Per recuperare i dati dal set di risultati, è possibile usare **sqlsrv_get_field** . Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
+L'esempio seguente recupera una riga di dati contenente una revisione di prodotto e il nome del revisore. Per recuperare i dati dal set di risultati, è possibile usare **sqlsrv_get_field** . Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  

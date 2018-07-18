@@ -1,26 +1,23 @@
 ---
-title: Requisiti per la riproduzione distribuita | Documenti Microsoft
+title: Requisiti relativi a riesecuzione distribuita | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 763e20675ce98deda5cd16957dfda4b215c80126
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.openlocfilehash: b4f47f855dd7f36d20b3191c8a91246fa3ebc34c
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36772006"
 ---
 # <a name="distributed-replay-requirements"></a>Requisiti relativi a Riesecuzione distribuita
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="input-trace-versions"></a>Versioni della traccia di input  
  Riesecuzione distribuita supporta dati di traccia di input raccolti nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]seguenti:  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  Aggiornamento cumulativo 1 e versioni successiva. Vedere - [aggiornamenti cumulativi di SQL Server 2017](http://aka.ms/sql2017cu).
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  Aggiornamento cumulativo 1 e versioni successiva. Vedere - [gli aggiornamenti cumulativi di SQL Server 2017](http://aka.ms/sql2017cu).
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
